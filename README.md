@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project serves as supplementary information for `{Paper Link}`.
+This project serves as supplementary information for `{Paper Link}`, please refer to it for more details.
 
 ```
 my-project/
