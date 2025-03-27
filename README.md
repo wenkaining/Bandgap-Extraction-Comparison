@@ -1,8 +1,8 @@
-# Bandgap Data Extraction Comparison
+# Bandgap Extraction Comparison
 
 ## Project Description
 
-This project serves as supplementary information for `Paper Link`.
+This project serves as supplementary information for `{Paper Link}`.
 
 ```
 my-project/
