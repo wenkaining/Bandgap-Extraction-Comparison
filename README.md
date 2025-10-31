@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the supplementary code and data for the paper "Optimizing Data Extraction from Materials Science Literature: A Study of Tools Using Large Language Models", which presents a comprehensive comparison of information extraction tools for automatically extracting bandgap values from materials science literature.
+This repository contains the supplementary code and data for the paper "Optimizing Data Extraction from Materials Science Literature: A Study of Tools Using Large Language Models", which presents a comprehensive comparison of information extraction tools for automatically extracting bandgap values from materials science literature. Please refer to the paper for more details.
 
 
 
@@ -281,8 +281,6 @@ If you use this code or dataset in your research, please cite our paper:
   doi={🔴DOI_PLACEHOLDER}
 }
 ```
-
-For additional support, please refer to the paper.
 
 ## License
 
