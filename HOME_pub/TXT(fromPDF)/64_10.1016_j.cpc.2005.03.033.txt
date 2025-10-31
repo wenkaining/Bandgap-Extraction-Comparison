@@ -1,0 +1,388 @@
+Computer Physics Communications 169 (2005) 139–143
+www.elsevier.com/locate/cpc
+Phase diagram for self-assembly of amphiphilic molecule C12E6
+by dissipative particle dynamics simulation
+Hiroaki Nakamura a,b,∗, Yuichi Tamura a
+a Theory and Computer Simulation Center, National Institute for Fusion Science, 322-6 Oroshi-cho, Toki, Gifu 509-5292, Japan
+b Department of Fusion Science, School of Physical Sciences, The Graduate University for Advanced Studies,
+322-6 Oroshi-cho, Toki, Gifu 509-5292, Japan
+Available online 27 April 2005
+Abstract
+In a previous study, dissipative particle dynamics simulation was used to qualitatively clarify the phase diagram of the am-
+phiphilic molecule hexaethylene glycol dodecyl ether (C12E6). In the present study, the hydrophilicity dependence of the phase
+structure was clariﬁed qualitatively by varying the interaction potential between hydrophilic molecules and water molecules in
+a dissipative particle dynamics (DPD) simulation using the Jury model. By varying the coefﬁcient of the interaction potential
+x between hydrophilic beads and water molecules as x = −20,0,10, and 20, at a dimensionless temperature of T = 0.5 and
+a concentration of amphiphilic molecules in water of φ = 50%, the phase structures grew to lamellar (x = −20), hexagonal
+(x = 0), and micellar (x = 10) phases. For x = 20, phase separation occurs between hydrophilic beads and water molecules.
+2005 Elsevier B.V. All rights reserved.
+PACS: 61.43.Bn; 36.40.-c; 36.20.Fz
+Keywords: Dissipative particle dynamics; Amphiphilic molecule; Surfactant; Phase diagram; Packing parameter; Micelle; Lamellar;
+Hexagonal structure
+1. Introduction
+The phase structure of amphiphilic molecules has
+been extensively investigated as a typical example of
+soft matter physics. For the present study, we selected
+hexaethylene glycol dodecyl ether (C12E6), a popu-
+* Corresponding author.
+E-mail address: nakamura@tcsc.nifs.ac.jp (H. Nakamura).
+lar surfactant in water that has various self-assembled
+structures.
+The phase structure of C12E6 was investigated by
+Mitchell [1] in 1983. In recent years, phase diagrams
+at equilibrium, as well as non-equilibrium and steady-
+state conditions have been investigated (see Ref. [2]).
+Israelachvili proposed the packing parameter as a
+means of clarifying the relationship between macro-
+scopic structure and microscopic molecular shape
+[3,4]. The packing parameter p is the ratio of the vol-
+ume V occupied by the hydrophobic tail to the product
+0010-4655/$ – see front matter 2005 Elsevier B.V. All rights reserved.
+doi:10.1016/j.cpc.2005.03.033140
+H. Nakamura, Y. Tamura / Computer Physics Communications 169 (2005) 139–143
+Fig. 1. Schematic diagram of packing parameter [3,4]. A gray ball
+and a twisting black line are used to denote the hydrophilic and
+hydrophobic parts, respectively, of an amphiphilic molecule. The
+packing parameter p ≡V/Sl controls the shape of the aggregates.
+Here, the parameter V is the volume occupied by the hydrophobic
+tail, S denotes the sectional area of a hydrophilic group, and l is the
+“maximum effective length” of the hydrophobic tail.
+of the sectional area of a hydrophilic group S and
+the “maximum effective length (l)” of the hydropho-
+bic tail (see Fig. 1). Spherical micelles are expected
+when p ⩽1/3. When 1/3 ⩽p ⩽1/2, cylinders are
+expected, and for p ∼1, bilayers should form.
+The concept of the packing parameter is intuitive
+and acceptable. However, calculating the packing pa-
+rameter is very difﬁcult, even by computer simulation,
+because it is almost impossible to derive macroscopic
+phase structure at the microscopic level by simulation,
+using techniques such as molecular dynamics (MD)
+simulation, for example. In order to overcome the gap
+between macroscopic behavior and microscopic mo-
+tion, dissipative particle dynamics (DPD) simulation
+has been proposed as a new mesoscopic motion simu-
+lation technique [5–8]. The DPD algorithm might be
+considered as one of the coarse-grained methods of
+molecular dynamics (MD) simulation.
+In 1999, using an empirical method, Jury et al.
+succeeded in the DPD simulation of the smectic
+mesophase of a simple amphiphilic molecule sys-
+tem with water solvent [9]. Their minimal model
+(herein referred to as the Jury model), which is
+composed of rigid AB dimers in a solvent com-
+posed of W monomers, was shown to be proper for
+the presentation of the phase diagram of surfactant
+hexaethylene glycol dodecyl ether (C12E6) and wa-
+ter (H2O) [1,9]. In addition, one of the present au-
+thors, revealed the dynamical processes of the self-
+organization of one smectic mesophase using the mod-
+iﬁed Jury model [10], where AB dimer is ﬂexible.
+Since some of the information about the interaction
+potential between particles is neglected or simpliﬁed
+in DPD simulation, we need to select the dominant
+interaction potential for the mesoscopic structure for-
+mation. Since we do not have sufﬁcient experimental
+data for the interaction potentials, deﬁning the interac-
+tion parameters in DPD simulation becomes difﬁcult.
+The present paper reports an examination of the
+dependence of macroscopic phase structure on hy-
+drophilicity by varying the interaction potential be-
+tween hydrophilic molecules and water molecules in
+DPD simulation as a ﬁrst step toward clarifying the
+relationship between interaction potentials and the
+macroscopic structure (Section 3). By strengthening
+hydrophilicity, water-particles penetrate closer to the
+hydrophilic heads (A), and therefore the heads go apart
+from each other. Moreover, the length of AB dimer be-
+comes larger, because a repulsive force between water
+(W) and hydrophobic tail (B) becomes stronger. In this
+way, it is expected that p can be varied and that macro-
+scopic structure deforms.
+In Section 3, we compare the simulation results and
+the experiments for C12E6 and C12E8. We also discuss
+about another interaction potential, that is, the head-
+head (A–A) interaction.
+2. Simulation method
+2.1. DPD algorithm
+In the present study, we used the DPD model and
+algorithm [6,9,10]. According to the ordinary DPD
+model, all atoms are coarse-grained to particles of the
+same mass. The total number of particles is deﬁned
+as N. The position and velocity vectors of particle
+i (i = 1,...,N) are indicated by ri and vi, respec-
+tively. Particle i moves according to the following
+equation of motion, where all physical quantities are
+made dimensionless in order to facilitate handling in
+actual simulation.
+(1)
+dri
+dt = vi,
+(2)
+dvi
+dt =
+N
+
+j (̸=i)
+F ij,
+where particle i interacts with another particle, j, ac-
+cording to the total force, F ij, which is comprised of
+four forces as follows:
+(3)
+F ij = F C
+ij + F R
+ij + F D
+ij + F B
+ij.
+In Eq. (3), F C
+ij is a conservative force derived from
+a potential exerted on particle i by particle j, F D
+ij andH. Nakamura, Y. Tamura / Computer Physics Communications 169 (2005) 139–143
+141
+F R
+ij are the dissipative and random forces between par-
+ticles i and j, respectively. Furthermore, neighboring
+particles on the same amphiphilic molecule are bound
+by the bond-stretching force F B
+ij. The conservative
+force F C
+ij has the following form:
+(4)
+F C
+ij ≡
+aij(1 −rij)nij
+if rij < 1,
+0
+if rij ⩾1,
+where rij ≡ri −rj,rij = |rij|, and nij ≡rij
+|rij |. For
+computational convenience, we adopted a cut-off dis-
+tance of unit length. The conservative force F C
+ij is as-
+sumed to be truncated beyond this cutoff. Coefﬁcients
+aij denote the coupling constants between particles i
+and j.
+Español and Warren proposed the following simple
+form of the random and dissipative forces [11]:
+(5)
+F R
+ij = σω(rij)nij
+ζij
+√
+t
+,
+(6)
+F D
+ij = −σ 2
+2T ω(rij)2(vij · nij)nij,
+where vij = vi −vj and ζij is a Gaussian random valu-
+able with zero mean and unit variance that is chosen
+independently for each pair (i,j) of interacting parti-
+cles at each time-step and ζij = ζji. The strength of the
+dissipative forces is determined by the dimensionless
+parameter σ. The parameter t is the dimensionless
+time-interval used to integrate the equation of motion.
+Here, the function ω is deﬁned by [6,11]:
+(7)
+ω(r) =
+1 −r
+if r < 1,
+0
+if r ⩾1.
+Finally, we use the following form as the bond-
+stretching force:
+(8)
+F B
+ij = −aBω(rij)nij,
+where aB is the potential energy coefﬁcient.
+2.2. Simulation model and parameters
+We used the modiﬁed Jury model molecule for a
+dimer composed of a hydrophilic particle (A) and a hy-
+drophobic particle (B) [9,10]. In addition, water mole-
+cules were modeled as coarse-grained particles (W).
+The masses of all particles were assumed to be unity.
+The number density of particles ρ was set to ρ = 6.
+The number of modeled amphiphilic molecules AB
+Table 1
+Table of coefﬁcients aij depending on particle type for particles i
+and j, where W is a water particle, A is a hydrophilic particle, and
+B is a hydrophobic particle. By varying the coefﬁcient x between A
+and W particles as x = −20,0,10, and 20, the dependence of the
+phase structure on the hydrophilicity is clariﬁed
+aij
+W
+A
+B
+W
+25
+x
+50
+A
+x
+25
+30
+B
+50
+30
+25
+was NAB, where the number of water molecules was
+NW. The total number of particles N ≡2NAB + NW
+was ﬁxed to N = 10000. The simulation box was set
+to cubic. The dimensionless length of the box L was
+(9)
+L =
+N
+ρ
+1/3
+∼11.85631.
+In simulation, we used a periodic boundary condition.
+The interaction coefﬁcient aij in Eq. (4) is given in Ta-
+ble 1. In order to clarify the dependence of the phase
+structure on molecular shape, we varied the coefﬁ-
+cient x between A and W particles as x = −20,0,10,
+and 20. When the coefﬁcient x is positive, the conser-
+vative force between A and W becomes repulsive. On
+the other hand, negative x gives the attractive force be-
+tween A and W.
+The coefﬁcient of the bond-stretching interaction
+potential aB is adopted as aB = 100. We set the di-
+mensionless time-interval of one step to t = 0.05.
+As the initial conﬁguration, all of the particles were
+located randomly. The velocity of each particle was
+distributed so as to satisfy a Maxwell distribution
+with dimensionless temperature T . The dimension-
+less strength of dissipative forces was σ = 3.3541
+√
+T .
+During the simulation, we set T = 0.5 and φ = 50%.
+3. Simulation results and discussions
+We demonstrated the dependence of macroscopic
+phase structure on hydrophilicity by varying the A–W
+interaction potential coefﬁcient x. By varying the co-
+efﬁcient of the interaction potential x as x = −20,
+0,10, and 20, the phase structures became lamellar
+(x = −20), hexagonal (x = 0), and micellar (x = 10)
+phases. For x = 20, phase separation occurs between
+hydrophilic beads and water molecules. The structure142
+H. Nakamura, Y. Tamura / Computer Physics Communications 169 (2005) 139–143
+Fig. 2. Formed structures for each potential coefﬁcient, x = −20 (a),
+0 (b), 10 (c), and 20 (d). Each structure is shown in Table 2. Red and
+white beads denote hydrophilic (A) and hydrophobic molecules (B),
+respectively. Blue beads represent groups of water molecules (W).
+We set T = 0.5 and φ = 50% during simulation.
+Table 2
+Table of formed structures for each x. Lamellar,
+hexagonal, and micelles phases are indicated as Lα,
+H1, and L1, respectively. For x = 20, AB molecules
+and W molecules are separated, as shown in Fig. 2
+x
+Formed structures
+−20
+Lα
+0
+H1
+10
+L1
+20
+Phase separation
+for each x is shown in Fig. 2 and summarized in Ta-
+ble 2. This ﬁgure shows that the packing parameter
+p becomes smaller from p ∼1 (lamellar phase) to
+p ∼1/3 (micellar phase), when the interaction coefﬁ-
+cient x becomes larger (i.e. less hydrophilic). (When
+x = 20, phase separation appears. In this case, the
+packing parameter p cannot be used to clarify the
+phase structure.) Thus, we could demonstrate that the
+packing parameter can be varied indirectly by chang-
+ing the hydrophilicity.
+Next, we discuss the dependence of the shape of
+AB dimer on varying the A–W interaction. In order to
+obtain the information on the molecular shape, we plot
+the radial distribution function of the solute particles
+g(r) for each x in Fig. 3. To be exact, we comment the
+Fig. 3. Solute particle radial distribution function g(r) vs. distance
+between two particles r for x = −20,0,10, and 20. The function
+g(r) is the sum of the A–A radial distribution function, the B–B
+radial distribution function, and the A–B radial distribution function.
+The ﬁrst peak l(x) of each curve corresponds to the length of AB
+dimer.
+deﬁnition of the g(r); g(r) is the sum of A–A, B–B,
+and A–B radial distribution functions. We marked the
+ﬁrst peaks for each x in the upper-right frame in Fig. 3.
+The bond-stretching interaction in AB dimer (Eq. (8))
+is the most attractive force among all interaction forces
+in the present model (Table 1). Therefore, the distance
+between A and B in an intra-molecule corresponds to
+the ﬁrst peak l(x) of g(r). From Fig. 3, it is found
+that l becomes larger, as the parameter x becomes
+smaller (i.e. the A–W interaction becomes more hy-
+drophilic). On the other hand, Fig. 2 showed that p
+becomes larger, when x becomes smaller. Therefore,
+it is found that the a conical AB dimer with the head
+particle (A) attached to a short tail (B) forms spherical
+micelles for large x and that AB dimer varies its shape
+from cone to cylinder by increasing tail’s length l, as
+x becomes smaller.
+Last, we comment on amphiphilic molecule ex-
+periments. The phase diagram of C12E6 is differentH. Nakamura, Y. Tamura / Computer Physics Communications 169 (2005) 139–143
+143
+from that of C12E8, because the hydrophilic head of
+C12E6 is shorter than that of C12E8. It is known [1]
+that the lamellar phase region in the phase diagram of
+C12E8 is narrower than that of C12E6. Moreover, the
+hexagonal phase region in the phase diagram of C12E8
+is larger than that of C12E6. In the present model,
+C12E8 corresponds to smaller x (i.e. more hydrophilic)
+than C12E6. From our simulation, it is found that the
+hexagonal phase trends to the lamellar phase, as the
+x becomes smaller. Therefore, it is expected that the
+hexagonal phase region of the diagram for smaller x
+becomes smaller than that for larger x. This predic-
+tion by simulation contradicts the experimental fact.
+This contradiction derives its origin from the fact that
+we adopted only the head–water interaction parame-
+ter x as a variable to clarify the macroscopic phase.
+It might be seen intuitively reasonable to adopt only
+the head–water interaction as a descriptor for distin-
+guishing C12E6 vs. C12E8. However, the difference
+between C12E6 and C12E8 is not only the strength of
+the head–water interaction but also that of the head–
+head interaction, by which the packing parameter can
+be controlled directly. As the result, we found that the
+head–head interaction dominates the structure forma-
+tion process of C12En series more than the head–water
+interaction.
+Acknowledgements
+This research was partially supported by the Min-
+istry of Education, Culture, Sports, Science and Tech-
+nology of Japan, Grant-in-Aid for Scientiﬁc Re-
+search (C), 2003, No. 15607019.
+References
+[1] D.J. Mitchell, G.J.T. Tiddy, L. Waring, Phase behaviour of
+polyoxyethylene surfactants with water, J. Chem. Soc., Fara-
+day Trans. 1 79 (1983) 975.
+[2] T. Kato, Microstructure of nonionic surfactants, Structure-
+Performance Relationships in Surfactants 72 (1997) 325–357.
+[3] D.J.M.J. Israelachvili, B.W. Ninham, J. Chem. Soc. Faraday
+Trans. I 72 (1976) 1525.
+[4] J. Israelachvili, Intermolecular and Surface Forces, second ed.,
+Academic Press, London, 1992.
+[5] P.J. Hoogerbrugge, J.M.V.A. Koelman, Simulating micro-
+scopic hydrodynamic phenomena with dissipative particle dy-
+namics, Europhys. Lett. 19 (1992) 155.
+[6] R.D. Groot, P.B. Warren, Dissipative particle dynamics: Bridg-
+ing the gap between atomistic and mesoscopic simulation,
+J. Chem. Phys. 107 (1997) 4423.
+[7] R.D. Groot, T.J. Madden, Dynamic simulation of diblock
+copolymer microphase separation, J. Chem. Phys. 108 (1998)
+8713.
+[8] R.D. Groot, K.L. Rabone, Mesoscopic simulation of cell mem-
+brane damage, morphology change and rupture by nonionics
+surfactants, Biophys. J. 81 (2001) 725.
+[9] S. Jury, P. Bladon, M. Cates, S. Krishna, M. Hagen, N. Rud-
+dock, P. Warren, Simulation of amphiphilic mesophases us-
+ing dissipative particle dynamics, Phys. Chem. Chem. Phys. 1
+(1999) 2051.
+[10] H. Nakamura, Mol. Simulation 30 (2004) 941.
+[11] P. Español, P. Warren, Statistical mechanics of dissipative par-
+ticle dynamics, Europhys. Lett. 30 (1995) 191.

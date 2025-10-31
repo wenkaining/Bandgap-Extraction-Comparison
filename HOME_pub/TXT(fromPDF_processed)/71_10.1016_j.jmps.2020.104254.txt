@@ -1,0 +1,457 @@
+J. Mech. Phys.
+Solids 147 (2021) 104254 Available online 27 November 2020 0022-5096/© 2020 Published by Elsevier Ltd. Contents lists available at ScienceDirect Journal of the Mechanics and Physics of Solids journal homepage: www.elsevier.com/locate/jmps A phase field formulation for dissolution-driven stress corrosion cracking Chuanjie Cui a, Rujin Ma a,∗, Emilio Martínez-Pañeda b a College of Civil Engineering, Tongji University, 200092, Shanghai, China b Department of Civil and Environmental Engineering, Imperial College London, London SW7 2AZ, UK A R T I C L E I N F O Keywords: Phase field Finite element method Stress corrosion cracking Passive film Mechanochemistry A B S T R A C T We present a new theoretical and numerical framework for modelling mechanically-assisted corrosion in elastic–plastic solids.
+Both pitting and stress corrosion cracking (SCC) can be captured, as well as the pit-to-crack transition.
+Localised corrosion is assumed to be dissolution- driven and a formulation grounded upon the film rupture–dissolution–repassivation mechanism is presented to incorporate the influence of film passivation.
+The model incorporates, for the first time, the role of mechanical straining as the electrochemical driving force, accelerating corrosion kinetics.
+The computational complexities associated with tracking the evolving metal– electrolyte interface are resolved by making use of a phase field paradigm, enabling an accurate approximation of complex SCC morphologies.
+The coupled electro-chemo-mechanical formulation is numerically implemented using the finite element method and an implicit time integration scheme; displacements, phase field order parameter and concentration are the primary variables.
+Five case studies of particular interest are addressed to showcase the predictive capabilities of the model, revealing an excellent agreement with analytical solutions and experimental measurements.
+By modelling these paradigmatic 2D and 3D boundary value problems we show that our formulation can capture: (i) the transition from activation-controlled corrosion to diffusion-controlled corrosion, (ii) the sensitivity of interface kinetics to mechanical stresses and strains, (iii) the role of film passivation in reducing corrosion rates, and (iv) the dependence of the stability of the passive film to local strain rates.
+The influence of these factors in driving the shape change of SCC defects, including the pit-to-crack transition, is a natural outcome of the model, laying the foundations for a mechanistic assessment of engineering materials and structures.
+1. Introduction The reliability and structural integrity of materials are generally governed by their interaction with the environment and the multi-physics phenomena resulting from those interactions.
+Stress corrosion cracking (SCC) is one of these phenomena, arguably the most common yet complex failure mechanism of engineering structures and components (Turnbull, 2001).
+SCC involves the propagation of cracks due to the combined action of mechanical stresses and the environment.
+It is often facilitated by pre- existing defects, such as corrosion pits, and takes place in a broad range of metallic materials and environments (Raja and Shoji, 2011).
+However, and despite decades of intensive research, the underlying physical mechanisms governing SCC are still not well understood (Turnbull, 1993; Crane and Gangloff, 2016).
+A number of mechanistic interpretations have been presented, and models ∗Corresponding author.
+E-mail addresses: rjma@tongji.edu.cn (R. Ma), e.martinez-paneda@imperial.ac.uk (E. Martínez-Pañeda).
+https://doi.org/10.1016/j.jmps.2020.104254 Received 7 September 2020; Received in revised form 20 November 2020; Accepted 23 November 2020Journal of the Mechanics and Physics of Solids 147 (2021) 104254 2 C. Cui et al. can be classified into two categories.
+The first one refers to models and mechanisms where crack propagation is driven by the anodic corrosion reaction at the crack tip, including the active path dissolution model (Parkins, 1996) or models grounded on the film rupture–dissolution–repassivation (FRDR) mechanism (Scully, 1975, 1980; Andresen and Ford, 1988).
+The second category includes models where crack growth is cathodic-driven and associated with the ingress and transport of hydrogen, such as the hydrogen- enhanced decohesion (HEDE) mechanism (Oriani, 1972; Serebrinsky et al., 2004; Kristensen et al., 2020), hydrogen enhanced localised plasticity (HELP) (Sofronis and Birnbaum, 1995) or adsorption-induced dislocation emission (AIDE) (Lynch, 1988).
+The characteristics of SCC can vary significantly from one material to another, or even between different environments within the same material, hindering a critical evaluation of the different mechanistic interpretations.
+Moreover, many of these mechanisms are not mutually exclusive and could be acting in concert.
+The development of predictive models for SCC is not only hindered by the complexity of the physical picture but also by the challenges associated with encapsulating into a numerical framework the different physics of the problem (diffusion, electrochemistry, mechanics).
+It is particularly challenging from a mathematical and computational perspective to capture how the metal–electrolyte interface evolves over time.
+SCC failures typically involve the growth of multiple pits, a pit-to-crack transition stage and the propagation of one or multiple cracks (Larrosa et al., 2018).
+Capturing the complex morphologies resulting from this three-stage process is not an easy task and typically requires defining moving interfacial boundary conditions and manually adjusting the interface topology with arbitrary criteria when merging or division occurs.
+Numerical methods have been developed to capture the moving boundary problem of localised corrosion; these include the eXtended Finite Element Method (X-FEM) (Duddu et al., 2016), Arbitrary Lagrangian–Eulerian (ALE) techniques (Sun et al., 2014) and peridynamics (Chen and Bobaru, 2015).
+However, progress is often limited by the inability to deal with arbitrary 3D geometries, cumbersome implementations or the computational cost.
+An alternative approach is the use of the phase field method, which is revolutionising the modelling of moving boundaries and interfacial problems.
+In the phase field paradigm, the boundary conditions at an interface are replaced by a differential equation for the evolution of an auxiliary (phase) field 𝜙. This phase field takes two distinct values in each of the phases (e.g., 0 and 1), with a smooth change between both values in a diffuse region near the interface.
+The problem can then be solved by integrating a set of partial differential equations for the whole system, thus avoiding the explicit treatment of the interface conditions.
+First proposed in the context of solidification and micro-structure evolution, phase field methods are finding ever-expanding applications (Biner, 2017), including areas such as fracture mechanics (Bourdin et al., 2000; Tanné et al., 2018; Hirshikesh et al., 2019) or fatigue damage (Lo et al., 2019; Carrara et al., 2020; Kristensen and Martínez-Pañeda, 2020).
+Very recently, phase field models have been developed for environmentally-assisted material degradation, including the propagation of cracks assisted by hydrogen (Martínez- Pañeda et al., 2018; Anand et al., 2019; Wu et al., 2020) and the evolution of the aqueous electrolyte–metal interface due to material dissolution (Ståhle and Hansen, 2015; Mai et al., 2016; Mai and Soghrati, 2017; Toshniwal, 2019; Gao et al., 2020).
+In addition, recent works have coupled the concepts of phase field evolution due to fracture and material dissolution (Nguyen et al., 2017a,b, 2018).
+In this work, we develop a new phase field formulation for simulating pitting corrosion and stress corrosion cracking.
+The model builds upon the FRDR mechanism and incorporates the role of mechanics in driving interface kinetics and local film breakage.
+The predictive capabilities of the model are demonstrated by addressing a number of relevant 2D and 3D problems, including several for which analytical or experimental data exist - a remarkable agreement is observed.
+The remainder of this manuscript is organised as follows.
+The theoretical framework presented is described in Section 2.
+Details of the finite element implementation are given in Section 3.
+In Section 4 model predictions are benchmarked against analytical solutions and relevant experimental measurements; practical case studies are also addressed to demonstrate the ability of the model in tackling complex engineering problems.
+Finally, concluding remarks are given in Section 5. 2.
+Theory In this Section we formulate our coupled deformation–diffusion-material dissolution theory.
+First, the key mechanistic assump- tions are presented.
+We proceed then to develop our theory using the principle of virtual work.
+Subsequently, the governing equations for our theory are formulated, as dictated by the coupled field equations, the free-energy imbalance and a set of thermodynamically-consistent constitutive equations. 2.1.
+Phase field FRDR model Our formulation aims at capturing the process of film rupture, dissolution and repassivation.
+Metals and alloys exposed to conditions of passivation are protected by a nm-size impermeable film of metal oxides and hydroxides that effectively isolates the material from the corrosive environment (Macdonald, 1999).
+Independently of the specific cracking mechanism, film-rupture is a necessary condition for localised damage in these conditions.
+Also, a potential rationale for pitting corrosion and stress corrosion cracking is the rupture of the film due to mechanical straining, followed by localised dissolution of the metal (Scully, 1980; Jivkov, 2004).
+Repassivation follows each local film rupture event, with the new film being deposited on the bare metal under zero-strain conditions.
+Further input of mechanical work is thus needed to fracture the new film, in a cyclic process governed by the competition between filming and mechanical straining kinetics.
+As sketched in Fig. 1, the enhanced corrosion protection resulting from the development of a passive film is characterised by a drop in the corrosion current density 𝑖, relative to the corrosion current density associated with bare metal 𝑖0.
+After a drop time 𝑡𝑓, a film rupture event takes place and the bare metal current density 𝑖0 is immediately recovered.
+This is followed by a time intervalJournal of the Mechanics and Physics of Solids 147 (2021) 104254 3 C. Cui et al. Fig. 1.
+Schematic illustration of two cycles of the film rupture–dissolution–repassivation (FRDR) mechanism at the tip of a defect.
+𝑡0, during which the current flows before decay begins, such that 𝑡𝑖= 𝑡0 + 𝑡𝑓represents one film rupture–dissolution–repassivation cycle.
+Following common assumptions in the literature (Parkins, 1987), the mechanical work required to achieve film rupture can be characterised using an effective plastic strain quantity, 𝜀𝑝, such that film rupture will take place when the accumulation of the effective plastic strain over a FRDR interval 𝜀𝑝 𝑖equals a critical quantity: 𝜀𝑝 𝑖= 𝜀𝑓 with 𝜀𝑝 𝑖= ∫ 𝑡𝑖 0 ̇𝜀𝑝d𝑡 (1) where ̇𝜀𝑝is the effective plastic strain rate and 𝜀𝑓is the critical strain for film rupture, which is on the order of 0.1% (Gutman, 2007).
+Thus, the duration of each film rupture–dissolution–repassivation cycle, and the magnitude of 𝑡𝑓, will be dictated by the local values of the equivalent plastic strain and their evolution in time.
+We proceed to define the degradation of the current density as an exponential function of the time.
+Thus, during one rupture–dissolution–repassivation cycle, 𝑖(𝑡𝑖) can be expressed as: 𝑖(𝑡𝑖) = { 𝑖0, if 0 < 𝑡𝑖⩽𝑡0 𝑖0 exp (−𝑘(𝑡𝑖−𝑡0 )), if 𝑡0 < 𝑡𝑖⩽𝑡0 + 𝑡𝑓 (2) where 𝑘is a parameter that characterises the sensitivity of the corrosion rates to the stability of the passive film, as dictated by the material and the environment.
+The role of mechanical stresses and strains is typically restricted to the film rupture event.
+However, we here consider recent experimental evidence that suggests a further influence of mechanical straining, accelerating corrosion.
+For example, in Dai et al. (2020) localised corrosion is observed in Q345R steel despite the negligible effect of the passive film in the hydrofluoric acid environment considered.
+Also, as pointed out by Gutman (2007), localised corrosion rates can be notably accelerated by the influence of residual stresses.
+Thus, we enhance the definition of the corrosion current density by considering a mechanochemical term 𝑘m (Gutman, 1998) as: 𝑖𝑎(𝑡) = 𝑘m (𝜀𝑝, 𝜎ℎ ) 𝑖(𝑡𝑖) = ( 𝜀𝑝 𝜀𝑦 + 1 ) exp (𝜎ℎ𝑉𝑚 𝑅𝑇 ) 𝑖(𝑡𝑖) (3) where 𝑖𝑎is the mechanochemical corrosion current density, 𝜀𝑝is the effective plastic strain, 𝜀𝑦is the yield strain, 𝜎ℎis the hydrostatic stress, 𝑉𝑚is the molar volume, 𝑅is the gas constant, and 𝑇is the absolute temperature.
+We emphasise that 𝑘m is a local variable, a function of the local 𝜀𝑝and 𝜎ℎmagnitudes.
+Localised corrosion can be diffusion-controlled or activation-controlled.
+In the latter, the velocity of the moving pit boundary 𝛤 follows Faraday’s second law, 𝑣𝑛= 𝒗⋅𝐧= 𝑖𝑎 𝑧𝐹𝑐solid (4) where 𝐧is the unit normal vector to the pit interface, 𝐹is Faraday’s constant, 𝑧is the average charge number and 𝑐solid is the concentration of atoms in the metal.
+Then, the concentration of dissolved ions 𝑐m(𝐱, 𝑡) at a point 𝐱in the interface can be calculated according to the Rankine–Hugoniot condition as, [𝐷∇𝑐m + (𝑐m(𝐱, 𝑡) −𝑐solid ) 𝒗] ⋅𝐧= 0 (5) where 𝐷is the diffusion coefficient.
+On the other hand, corrosion becomes diffusion controlled when the surface concentration reaches the saturation concentration 𝑐sat, due to the accumulation of metal ions along the pit boundary.
+The pit interface velocity becomes then controlled by the diffusion of metal ions away from the pit boundary and the moving pit boundary velocity can be obtained by considering a saturated concentration in (5), such that 𝑣𝑛= 𝐷∇𝑐m ⋅𝐧 𝑐solid −𝑐sat (6)Journal of the Mechanics and Physics of Solids 147 (2021) 104254 4 C. Cui et al. Fig. 2.
+Schematic of the phase field approximation of the localised corrosion damage process, including the electrolyte phase (𝜙= 0), the solid metal phase (𝜙= 1), and the interface 𝛤at a time 𝑡. Modelling the moving pit interface requires the application of both Robin (5) and Dirichlet (𝑐m = 𝑐sat) boundary conditions for the activation-controlled and diffusion-controlled processes, respectively.
+Instead, we circumvent these complications by following the phase field paradigm proposed by Mai et al. (2016), approximating the interface evolution implicitly by solving for an auxiliary variable 𝜙. As shown in Fig. 2, the phase field takes values of 𝜙= 0 for the electrolyte and 𝜙= 1 for the metal, varying smoothly between these two values along the interface 𝛤. Also, for consistency, a normalised concentration is defined as 𝑐= 𝑐m∕𝑐solid (Mai et al., 2016).
+Thus, the normalised concentration 𝑐will equal 1 in the metal (solid) phase, and will approach 0 with increasing distance from the metal–electrolyte interface. 2.2.
+Principle of virtual work and balance equations Our theory deals with the coupled behaviour of two systems, one mechanical and one electrochemical, see Fig. 2.
+These two systems are coupled by the following physical phenomena: (i) the pit evolution process is accelerated by mechanics, as presented in Eqs.
+(2) and (3); and (ii) the dissolution of metals leads to a redistribution of mechanical stress.
+With respect to the mechanical contributions, the outer surface of the body is decomposed into a part 𝜕𝛺𝑢, where the displacement can be prescribed by Dirichlet- type boundary conditions, and a part 𝜕𝛺𝑇, where a traction 𝑻can be prescribed by Neumann-type boundary conditions.
+As for the electrochemical part, the external surface consists on two parts: 𝜕𝛺𝑞where the flux 𝑱is known (Neumman-type boundary conditions), and 𝜕𝛺𝑐, where the concentration is prescribed (Dirichlet-type boundary conditions).
+Accordingly, a concentration flux entering the body across 𝜕𝛺𝑞can be defined as 𝑞= 𝑱⋅𝒏. Solute diffusion is driven by the chemical potential 𝜇, as constitutively characterised below.
+We follow Duda et al. (2018) in defining a scalar field 𝜂to determine the kinematics of composition changes, such that ̇𝜂= 𝜇 and 𝜂(𝐱, 𝑡) = ∫ 𝑡 0 𝜇(𝐱, 𝑡) d𝑡 (7) Thus, from a kinematic viewpoint, the domain 𝛺can be described by the displacement 𝒖, phase field order parameter 𝜙and chemical displacement 𝜂. We denote the set of virtual fields as (𝛿𝒖, 𝛿𝜙, 𝛿𝜂) and proceed to introduce the principle of virtual work for the coupled systems as, ∫𝛺 { 𝝈∶𝛿𝜺+ 1 𝐿 𝑑𝜙 𝑑𝑡𝛿𝜙+ 𝜔𝛿𝜙+ 𝜻⋅∇𝛿𝜙−𝑑𝑐 𝑑𝑡𝑐solid 𝛿𝜂+ 𝑱⋅∇𝛿𝜂 } d𝑉= ∫𝜕𝛺 {𝑓𝛿𝜙+ 𝑞𝛿𝜂+ 𝑻⋅𝛿𝒖} d𝑆 (8) where 𝜺is the strain tensor, which is computed from the displacement field in the usual manner 𝜺= sym∇𝒖and additively decomposes into an elastic part 𝜺𝑒and a plastic part 𝜺𝑝.
+Also, we use 𝐿to denote the interface kinetics coefficient, 𝑓is the phase field microtraction and 𝜔and 𝜻are the microstress quantities work conjugate to the phase field 𝜙and the phase field gradient ∇𝜙, respectively.
+Operating, and making use of Gauss’ divergence theorem: ∫𝛺 { (∇⋅𝝈) ⋅𝛿𝒖+ ( ∇⋅𝜻−𝜔−1 𝐿 𝑑𝜙 𝑑𝑡 ) 𝛿𝜙+ ( ∇⋅𝑱+ 𝑑𝑐 𝑑𝑡𝑐solid ) 𝛿𝜂 } d𝑉= ∫𝜕𝛺 {(𝝈𝒏−𝑻) ⋅𝛿𝒖+ (𝜻⋅𝒏−𝑓) 𝛿𝜙+ (𝑱⋅𝒏−𝑞) 𝛿𝜂} d𝑆 (9)Journal of the Mechanics and Physics of Solids 147 (2021) 104254 5 C. Cui et al. Finally, considering that the left-hand side of Eq. (9) must vanish for arbitrary variations, the equilibrium equations in 𝛺for each primary kinematic variable are obtained as ∇⋅𝝈= 𝟎 (∇⋅𝜻−𝜔) −1 𝐿 𝑑𝜙 𝑑𝑡= 0 𝑑𝑐 𝑑𝑡𝑐solid + ∇⋅𝑱= 0 (10) with the right-hand side of Eq. (9) providing the corresponding set of boundary conditions on 𝜕𝛺, 𝑻= 𝝈⋅𝒏 𝑓= 𝜻⋅𝒏 𝑞= 𝑱⋅𝒏 (11) 2.3.
+Energy imbalance The first two laws of thermodynamics for a continuum body within a dynamical process of specific internal energy E and specific entropy 𝛬read (Gurtin et al., 2010), 𝑑 𝑑𝑡∫𝛺 E d𝑉= ̇𝑊𝑒(𝛺) −∫𝜕𝛺 𝑸⋅𝒏d𝑆+ ∫𝛺 𝑄d𝑉 𝑑 𝑑𝑡∫𝛺 𝛬d𝑉⩾−∫𝜕Ω 𝑸 𝑇⋅𝒏d𝑆+ ∫Ω 𝑄 𝑇d𝑉 (12) where ̇𝑊𝑒is the power of external work, 𝑸is the heat flux and 𝑄is the heat absorption.
+The resulting Clausius–Duhem inequality must be fulfilled by the free energies associated with both systems, mechanical 𝜓𝑀and electrochemical 𝜓𝐸. Thus, the energy imbalances associated with the mechanical and electrochemical systems can be obtained by assuming an isothermal process (𝑇= 𝑇0) and replacing the virtual fields (𝛿𝒖, 𝛿𝜙, 𝛿𝜂) by the realisable velocity fields ( ̇𝒖, ̇𝜙, 𝜇) in Eq. (8), 𝑑 𝑑𝑡∫𝛺 𝜓𝑀d𝑉⩽∫𝜕𝛺 𝑻⋅̇𝒖d𝑆 (13) 𝑑 𝑑𝑡∫𝛺 𝜓𝐸d𝑉⩽∫𝜕𝛺 (𝑓̇𝜙+ 𝑞𝜇) d𝑆 (14) Employing the divergence theorem and recalling the local balance Eqs.
+(10)–(11), we find the equivalent point-wise version of Eqs.
+(13)–(14) as, ̇𝜓𝑀−𝝈∶̇𝜺⩽0 (15) ̇𝜓𝐸−1 𝐿 ̈𝜙−𝜔̇𝜙−𝜻⋅∇̇𝜙+ 𝜇̇𝑐𝑐solid −𝑱⋅∇𝜇⩽0 (16) 2.4.
+Constitutive theory We proceed to define the functional form of free energy of each system and subsequently derive a set of thermodynamically consistent relations. 2.4.1.
+Constitutive prescriptions for the mechanical problem The mechanical behaviour of the solid is characterised by von Mises J2 plasticity theory.
+The extension to strain gradient plasticity (Martínez-Pañeda and Fleck, 2019; Martínez-Pañeda et al., 2019), of particular importance when dealing with sharp pits and cracks, will be addressed in future works.
+Accordingly, the mechanical free energy is decomposed into elastic 𝜓𝑒and plastic 𝜓𝑝components, both of which are degraded by the phase field, 𝜓𝑀= ℎ(𝜙) (𝜓𝑒+ 𝜓𝑝) (17) Here, ℎ(𝜙) is the degradation function characterising the transition from the undissolved solid (𝜙= 1) to the electrolyte phase (𝜙= 0).
+The definition of ℎ(𝜙) must satisfy the conditions ℎ(𝜙= 0) = 0 and ℎ(𝜙= 1) = 1; here, ℎ(𝜙) = −2𝜙3 + 3𝜙2 (18) Consistent with (15), the Cauchy stress tensor is defined as 𝝈= 𝜕𝜺𝜓𝑀and we denote 𝝈0 as the Cauchy stress tensor for the undissolved solid.
+Thus, accounting for the influence of the phase field and using 𝝈0, the mechanical force balance (10a) can be reformulated as, ∇⋅[ (ℎ(𝜙) + 𝜅) 𝝈𝟎 ] = 𝟎 (19) where 𝜅is a small positive parameter introduced to circumvent the complete degradation of the energy and ensure that the algebraic conditioning number remains well-posed.
+We adopt 𝜅= 1 × 10−7 throughout this work.
+Journal of the Mechanics and Physics of Solids 147 (2021) 104254 6 C. Cui et al. The elastic strain energy density is defined as a function of the elastic strains 𝜺𝑒and the linear elastic stiffness matrix 𝑪0 in the usual manner, 𝜓𝑒(𝜺𝑒) = 1 2 (𝜺𝑒)𝑇∶𝑪0 ∶𝜺𝑒 (20) While the plastic strain energy density is incrementally computed from the plastic strain tensor 𝜺𝑝and the Cauchy stress tensor for the undissolved solid 𝝈0 as, 𝜓𝑝= ∫ 𝑡 0 𝝈0 ∶̇𝜺𝑝d𝑡 (21) Finally, the material work hardening is defined assuming an isotropic power law hardening behaviour.
+Such that the flow stress 𝜎and the effective plastic strain 𝜀𝑝are related by, 𝜎= 𝜎𝑦 ( 1 + 𝐸𝜀𝑝 𝜎𝑦 )𝑁 (22) where 𝐸is Young’s modulus, 𝜎𝑦is the yield stress and 𝑁is the strain hardening exponent (0 ⩽𝑁⩽1). 2.4.2.
+Constitutive prescriptions for the electrochemical problem In the localised corrosion system described in Section 1, the electrochemical free energy density 𝜓𝐸can be decomposed into its chemical and interface counterparts, 𝜓𝐸= 𝜓𝑐ℎ+ 𝜓𝑖 (23) The chemical free energy density 𝜓𝑐ℎcan be further decomposed into the energy associated with material composition and a double-well potential energy (Mai et al., 2016), such that 𝜓𝑐ℎ= ℎ(𝜙) 𝜓𝑐ℎ S + (1 −ℎ(𝜙)) 𝜓𝑐ℎ L + 𝑤𝑔(𝜙) (24) where the parameter 𝑤is the height of the double well potential 𝑔(𝜙) = 𝜙2(1 −𝜙)2, and 𝜓𝑐ℎ S and 𝜓𝑐ℎ L denote the chemical free energy density terms associated with the solid and liquid phases, respectively.
+These latter two terms are defined following the KKS model (Kim et al., 1999), which assumes that each material point is a mixture of both solid and liquid phases with different concentrations but similar chemical potentials.
+Following this assumption, one reaches the following balances 𝑐= ℎ(𝜙) 𝑐S + [1 −ℎ(𝜙)] 𝑐L (25) 𝜕𝜓𝑐ℎ S (𝑐S ) 𝜕𝑐S = 𝜕𝜓𝑐ℎ L (𝑐L ) 𝜕𝑐L (26) where 𝑐S and 𝑐L are the normalised concentrations of the co-existing solid and liquid phases, respectively.
+Defining a free energy density curvature 𝐴, assumed to be similar for the solid and liquid phases, and restricting our attention to dilute solutions, we reach the following definitions for each component of the chemical free energy density, 𝜓𝑐ℎ S = 𝐴(𝑐S −𝑐Se)2 and 𝜓𝑐ℎ L = 𝐴(𝑐L −𝑐Le)2 (27) where 𝑐Se = 𝑐solid∕𝑐solid = 1 and 𝑐Le = 𝑐sat∕𝑐solid are the normalised equilibrium concentrations for the solid and liquid phases. Combining Eqs.
+(24)–(27) renders, 𝜓𝑐ℎ= 𝐴[𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le ]2 + 𝑤𝜙2 (1 −𝜙)2 (28) On the other hand, the interface free energy density 𝜓𝑖is defined as a function of the gradient of the phase field variable as: 𝜓𝑖= 𝛼 2 |∇𝜙|2 (29) where 𝛼is the gradient energy coefficient.
+In the free energy density definitions (28)–(29), the parameters 𝛼and 𝑤govern the interface energy 𝛾and its thickness 𝑙as: 𝛾= √ 𝛼𝑤 4 and 𝑙= 𝑎∗ √ 2𝛼 𝑤 (30) where 𝑎∗= 2.94 is a constant parameter corresponding to the definition of the interface region 0.05 < 𝜙< 0.95 (Abubakar et al., 2015).
+The results are sensitive to the choices of 𝛾and 𝑙, which characterise the energy barrier that separates the free energy of the coexisting phases.
+Finally, the constitutive relations for the associated stress quantities can be readily obtained by fulfilling the free energy imbalance (16), which implies −1 𝐿 ̈𝜙+ (𝜕𝜓𝐸 𝜕𝜙−𝜔 ) ̇𝜙+ (𝜕𝜓𝐸 𝜕∇𝜙−𝜻 ) ⋅∇̇𝜙+ (𝜕𝜓𝐸 𝜕𝑐 + 𝜇𝑐solid ) ̇𝑐−𝑱⋅∇𝜇⩽0 (31) Thus, the scalar microstress 𝜔, work conjugate to the phase field 𝜙, is given by 𝜔= 𝜕𝜓𝐸 𝜕𝜙 = −2𝐴[𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le ] (𝑐Se −𝑐Le)ℎ′(𝜙) + 𝑤𝑔′(𝜙) (32)Journal of the Mechanics and Physics of Solids 147 (2021) 104254 7 C. Cui et al. while the vector microstress 𝜻, work conjugate to the phase field gradient, reads 𝜻= 𝜕𝜓𝐸 𝜕∇𝜙= 𝛼∇𝜙 (33) Inserting these constitutive relations (32)–(33) into the phase field balance (10b) renders the so-called Allen–Cahn equation: 𝑑𝜙 𝑑𝑡+ 𝐿 (𝜕𝜓𝐸 𝜕𝜙−𝛼∇2𝜙 ) = 0 (34) Eq. (34) shows that material dissolution is governed by the interface kinetics coefficient 𝐿. The magnitude of 𝐿can be considered to be a constant positive number (see, e.g., Mai et al., 2016).
+Here, we assume a time-dependent 𝐿instead, enriching the modelling capabilities by establishing a relation with our FRDR mechanistic interpretation and our definition of a mechanochemically-enhanced corrosion current density 𝑖𝑎(𝑡𝑖). Thus, from Eqs.
+(2)–(3) and assuming a linear relationship between 𝐿and 𝑖𝑎, the interface kinetics coefficient over a time interval 𝑡𝑖is defined as 𝐿= { 𝑘m (𝜀𝑝, 𝜎ℎ ) 𝐿0, if 0 < 𝑡𝑖⩽𝑡0 𝑘m (𝜀𝑝, 𝜎ℎ ) 𝐿0 exp (−𝑘(𝑡𝑖−𝑡0 )), if 𝑡0 < 𝑡𝑖⩽𝑡0 + 𝑡𝑓 (35) We emphasise that the interface kinetics coefficient 𝐿includes the influence of mechanical straining via 𝑘m (𝜀𝑝, 𝜎ℎ ), and that this is a one-way coupling in that, while 𝜙reduces the material stiffness, there is no 𝐿-dependent term in the mechanical problem.
+Also, we stress that the mechanical free energy density 𝜓𝑀does not contribute to the phase field evolution, see (34).
+In other words, crack advance takes place due to localised metal loss, as postulated by the slip-dissolution model (see, e.g., Turnbull, 1993).
+The framework could be extended to incorporate other cracking mechanisms that include a contribution from 𝜓𝑀; for example, using a coupled framework such as that by Nguyen et al. (2017b).
+The material dissolution process (pitting and cracking) can be either activation-controlled or diffusion-controlled, as it will be illustrated in our first case study - Section 4.1.
+The constitutive choices for the mass transport process are obtained as follows.
+First, the chemical potential is given by, 𝜇= − 1 𝑐solid 𝜕𝜓𝐸 𝜕𝑐 = −2𝐴 𝑐solid ((𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le )) (36) Secondly, the flux 𝑱can be determined following a Fick law-type relation as, 𝑱= 𝐷 2𝐴⋅𝑐solid ⋅𝑐solid ⋅∇𝜇= −𝑐solid ⋅𝐷∇((𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le )) (37) Substituting Eqs.
+(36)–(37) into the mass transport balance Eq. (10c), the following field equation is obtained 𝑑𝑐 𝑑𝑡−∇⋅𝐷∇((𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le )) = 0 (38) which is an extension of Fick’s second law such that diffusion of metal ions only takes place along the interface and in the electrolyte. 3.
+Numerical implementation The finite element method is used to discretise and solve the coupled electro-chemo-mechanical problem.
+First, we formulate the weak form of the governing equations for the displacement (19), phase field (34), and concentration (38) problems, respectively.
+Thus, ∫𝛺 (ℎ(𝜙) + 𝜅) 𝝈0𝛿𝜺d𝑉−∫𝜕𝛺 𝑻⋅𝛿𝒖d𝑆= 0 (39) ∫𝛺 𝜕𝜙 𝜕𝑡𝛿𝜙d𝑉+ 𝐿∫𝛺 𝜕𝜓𝐸 𝜕𝜙𝛿𝜙d𝑉+ 𝐿∫𝛺 𝛼∇𝜙∇𝛿𝜙d𝑉= 0 (40) ∫𝛺 𝜕𝑐 𝜕𝑡𝛿𝑐d𝑉+ 𝐷∫𝛺 ∇[𝑐−ℎ(𝜙)(𝑐Se −𝑐Le) −𝑐Le ] ⋅∇𝛿𝑐d𝑉= 0 (41) Using Voigt notation, the nodal variables for the displacement field ̂𝐮, the phase field ̂𝜙and the normalised concentration ̂𝑐are interpolated as: 𝒖= 𝑚 ∑ 𝑖=1 𝐍𝐮 𝑖̂𝒖𝑖, 𝜙= 𝑚 ∑ 𝑖=1 𝑁𝑖̂𝜙𝑖, 𝑐= 𝑚 ∑ 𝑖=1 𝑁𝑖̂𝑐𝑖 (42) where 𝑁𝑖denotes the shape function associated with node 𝑖, for a total number of nodes 𝑚. Here, 𝐍𝐮 𝑖is a diagonal interpolation matrix with the nodal shape functions 𝑁𝑖as components.
+Similarly, using the standard strain–displacement 𝑩matrices, the associated gradient quantities are discretised as: 𝜺= 𝑚 ∑ 𝑖=1 𝐁𝐮 𝑖̂𝒖𝑖, ∇𝜙= 𝑚 ∑ 𝑖=1 𝐁𝑖̂𝜙𝑖, ∇𝑐= 𝑚 ∑ 𝑖=1 𝐁𝑖̂𝑐𝑖 (43)Journal of the Mechanics and Physics of Solids 147 (2021) 104254 8 C. Cui et al. Then, the weak form balances (39)–(41) are discretised in time and space, such that the resulting discrete equations of the balances for the displacement, phase field and concentration can be expressed as the following residuals: 𝒓𝑛+1 𝑖,𝒖= ∫𝛺 (ℎ(𝜙𝑛+1) + 𝜅) (𝐁𝐮 𝑖)𝑇𝝈0 d𝑉−∫𝜕𝛺 (𝐍𝐮 𝑖)𝑇𝑻d𝑆 (44) 𝑟𝑛+1 𝑖,𝜙= ∫𝛺 𝜙𝑛+1 −𝜙𝑛 d𝑡 𝑁𝑖d𝑉+ 𝐿∫𝛺 𝜕𝜓𝐸 𝜕𝜙𝑛+1 𝑁𝑖d𝑉+ 𝐿∫𝛺 𝛼𝐁𝑖 𝑇∇𝜙𝑛+1 d𝑉 (45) 𝑟𝑛+1 𝑖,𝑐 = ∫𝛺 𝑐𝑛+1 −𝑐𝑛 d𝑡 𝑁𝑖d𝑉+ 𝐷∫𝛺 𝐁𝑖 𝑇[∇𝑐𝑛+1 −ℎ′(𝜙𝑛+1)(𝑐Se −𝑐Le)∇𝜙𝑛+1] d𝑉 (46) where ()𝑛+1 denotes the (𝑛+1) time step and d𝑡is the time increment.
+Subsequently, the tangent stiffness matrices are calculated as: 𝐊𝑛+1 𝑖𝑗,𝒖= ∫𝛺 (ℎ(𝜙𝑛+1) + 𝜅) (𝐁𝐮 𝑖)𝑇𝑪𝒆𝒑𝐁𝐮 𝑗d𝑉 (47) 𝐊𝑛+1 𝑖𝑗,𝜙= ∫𝛺 𝑁𝑖𝑁𝑗 d𝑡 d𝑉+ 𝐿∫𝛺 𝜕2𝜓𝐸 𝜕𝜙2 𝑁𝑖𝑁𝑗d𝑉+ 𝐿∫𝛺 𝛼𝐁𝑖 𝑇𝐁𝑗d𝑉 (48) 𝐊𝑛+1 𝑖𝑗,𝑐= ∫𝛺 𝑁𝑖𝑁𝑗 d𝑡 d𝑉+ 𝐷∫𝛺 𝐁𝑖 𝑇𝐁𝑗d𝑉 (49) where 𝑪𝒆𝒑is the elastic–plastic consistent material Jacobian.
+Finally, the linearised finite element system can be expressed as: ⎡ ⎢ ⎢⎣ 𝐊𝒖 𝟎 𝟎 𝟎 𝐊𝜙 𝟎 𝟎 𝟎 𝐊𝑐 ⎤ ⎥ ⎥⎦ ⎡ ⎢ ⎢⎣ 𝒖 𝝓 𝒄 ⎤ ⎥ ⎥⎦ = ⎡ ⎢ ⎢⎣ 𝒓𝒖 𝒓𝜙 𝒓𝑐 ⎤ ⎥ ⎥⎦ (50) We solve the finite element system by means of a time parametrisation and an incremental-iterative scheme in conjunction with the Newton–Raphson method.
+Good convergence is achieved without the need for staggered schemes; the residual and stiffness matrix components are built using current values and all the equations of the system are solved at once.
+The numerical model is implemented in the finite element package ABAQUS by means of a user element subroutine (UEL).
+Abaqus2Matlab (Papazafeiropoulos et al., 2017) is used for pre-processing the input files.
+The code, with examples and accompanied documentation, can be downloaded from www.empaneda.com/codes. 4.
+Results We proceed to showcase the potential of the model in predicting localised corrosion with five case studies of particular interest.
+First, in Section 4.1, we validate our predictions with analytical solutions in the context of a pure corrosion problem, the classic benchmark of the pencil electrode test.
+Secondly, the predictions of the model are compared with experimental measurements of anodic dissolution-driven defect growth in a C-ring test, see Section 4.2.
+The influence of mechanical contributions in accelerating and governing the pit-to-crack transition in stainless steel is addressed in Section 4.3.
+Then, the interaction between multiple pits is investigated in Section 4.4 by modelling SCC in a steel plate with pre-existing defects.
+And finally, the capabilities of the model in conducting large scale 3D simulations of pit corrosion are showcased in Section 4.5. 4.1.
+Analytical verification under uniform corrosion: pencil electrode test The paradigmatic benchmark of a pencil electrode test is addressed first.
+This boundary value problem enables validating the numerical framework under pure corrosion conditions, as no mechanical load is applied and no film passivation takes place.
+The specimen, a H = 150 μm long metal wire with diameter d= 25 μm, is mounted into an epoxy coating, leaving only one end of the sample exposed to the solution — see Fig. 3.
+Thus, the problem is essentially one-dimensional and can be described by the change in time of the position of the metal–electrolyte interface 𝑥d.
+The evolution of the pit depth 𝑥d can be estimated analytically (Scheiner and Hellmich, 2007), and is found to be proportional to √ 𝑡as, 𝑥d = 2𝜉d √ 𝐷𝑡 (51) where the unknown 𝜉d is given by: 𝑐sat 𝑐solid −𝑐sat exp (−𝜉2 d ) = √ 𝜋𝜉d erf (𝜉d ) (52) A proportional dependency of the pit depth on √ 𝑡is also observed experimentally (Ernst and Newman, 2002).
+In both the experiments and the analytical study, corrosion is assumed to be diffusion-controlled; this can be achieved by using a sufficiently large applied potential such that reaction rates are high and the surface concentration reaches a saturation magnitude.
+Using the phase field method, the pencil electrode test can be conveniently modelled without the need of prescribing a moving 𝑐m = 𝑐sat Dirichlet boundary condition at the interface (Mai et al., 2016).
+Thus, as described in Fig. 3 we assign as initial conditions 𝜙= 1 and 𝑐= 1 in the metallic wire and prescribe the Dirichlet boundary conditions 𝜙= 0 and 𝑐= 0 at the pit mouth throughoutJournal of the Mechanics and Physics of Solids 147 (2021) 104254 9 C. Cui et al. Fig. 3.
+Schematic illustration of the pencil electrode test, including the initial and boundary conditions defined in the phase field model. Fig. 4.
+Pencil electrode test.
+Contours of (a) normalised concentration and (b) phase field at times 𝑡= 38 s and 𝑡= 152 s. Table 1 Corrosion and material parameters assumed for the pencil electrode test.
+Parameter Value Unit Interface energy 𝛾 0.01 N∕mm Interface thickness 𝑙 0.005 mm Diffusion coefficient 𝐷 8.5 × 10−4 mm2∕s Interface kinetics coefficient 𝐿0 2 × 106 mm2∕(N s) Free energy density curvature 𝐴 53.5 N∕mm2 Average concentration of metal 𝑐solid 143 mol∕L Average saturation concentration 𝑐sat 5.1 mol∕L the numerical experiment.
+Neumann boundary conditions 𝑱= 𝟎and 𝑓= 0 are considered at the sides, to simulate the insulation provided by the epoxy coating.
+The interface kinetics coefficient is assumed to be constant 𝐿= 𝐿0, as there is no mechanical straining or protective film.
+Following Mai et al. (2016) and Gao et al. (2020), we consider the material and corrosion parameters shown in Table 1; the values listed for the interface thickness 𝑙and the interface energy 𝛾result from the choices of a gradient energy coefficient 𝛼= 4.8 × 10−5 N and a height of double well potential 𝑤= 33.3 N/mm2, see (30).
+A uniform finite element mesh is used, with a characteristic element size 10 times smaller than the interface thickness and employing a total of 15,000 quadratic quadrilateral plane strain elements.
+The contours of the phase field 𝜙and the normalised concentration 𝑐are given in Fig. 4.
+Results are shown for two time instants, 38 and 152 s, showing how the metal corrodes and the metal–electrolyte evolves.
+Fig. 4a shows that the normalised concentration increases from 0 at the pit mouth to 𝑐sat∕𝑐solid = 0.036 at the metal–electrolyte interface; the model captures how a further increase in the pit surface concentration is prevented as saturation occurs.
+The predictions of the model are quantitatively verified against the analytical solution (51)–(52).
+As shown in Fig. 5, an excellent agreement is attained in the calculation of the evolution of the pit depth as a function of √ 𝑡. The results obtained also coincide with the numerical predictions by Mai et al. (2016) and Gao et al. (2020), further validating our numerical implementation.
+Journal of the Mechanics and Physics of Solids 147 (2021) 104254 10 C. Cui et al. Fig. 5.
+Pencil electrode test.
+Comparison of model predictions for pit depth versus time against analytical results (Scheiner and Hellmich, 2007).
+We proceed to showcase the capabilities of the model in capturing both diffusion-controlled and activation-controlled corrosion.
+In the pencil electrode test, the corrosion rate is directly controlled by a non-transient parameter 𝐿= 𝐿0.
+If 𝐿0 is sufficiently high, as in Figs. 4 and 5 (Table 1), the process is diffusion-controlled, with the electrochemical reaction at the metal–electrolyte interface occurring very fast and leading to saturation in the surface concentration of metal ions.
+On the other hand, if 𝐿0 is small, then the corrosion process is activation-controlled and the pit depth shows a linear dependence with time.
+For a given time instant, e.g. 𝑡= 150 s, one can readily see that increasing the interface kinetics coefficient raises the magnitude of the pit depth, but this sensitivity to 𝐿0 is non-linear and saturates as 𝐿0 increases; for a sufficiently large value of 𝐿0, further increasing its magnitude has no effect on the corrosion kinetics.
+Corrosion becomes then diffusion-limited and a higher value of 𝐷should be adopted to increase dissolution rates.
+Model predictions of pit growth versus time as a function of the interface kinetics parameter are shown in Fig. 6a, exhibiting a linear to parabolic trend with increasing 𝐿0.
+The pit depth evolution is also computed for a large interface kinetics parameter, 𝐿0 = 2 × 106 mm2∕(N s), and selected values of the diffusion coefficient 𝐷, see Fig. 6b.
+As expected, the corrosion reaction exhibits a significant sensitivity to the magnitude of the diffusion coefficient.
+As the influence of mechanical straining and film re-passivation and rupture are incorporated, the magnitude of 𝐿will evolve in time and the transition from activation-controlled to diffusion-controlled corrosion will be captured by the model. 4.2.
+Chemo-mechanical validation with experiments: C-ring test on Q345R steel We now verify our model by reproducing the experimental observations by Dai et al. (2020) on C-ring specimens.
+Q345R steel samples were exposed to a hydrofluoric acid corrosion environment and the growth of pits and associated cracks was quantified for different levels of applied mechanical stress.
+This choice of environment translates into a negligible influence of film passivation, as the corrosion products are mainly fluorides (not oxides) and the film is not dense enough to prevent the attack of aggressive ions (Dai et al., 2020).
+The applied strain is held constant throughout the experiment and thus the sensitivity of defect growth rates to mechanical stresses can be quantified.
+This boundary value problem enables us to validate the chemo-mechanical coupling introduced in our formulation to characterise the interplay between mechanics and corrosion kinetics, see Eq. (3).
+Note that the sensitivity of corrosion rates to applied stresses cannot be captured with conventional SCC models that restrict the influence of mechanical straining to the local film breakage mechanism (see, e.g., Mai and Soghrati, 2017).
+The configuration of the experiment is shown in Fig. 7.
+The sample is subjected to a constant strain by tightening a bolt centred in the diameter of the ring.
+The load level is characterised by the circumferential stress at the top of the sample, the region where localised corrosion will develop.
+Thus, the magnitude of the circumferential stress 𝜎𝑐is determined by placing a strain gauge in the middle of the arc, close to the extreme edge; i.e., in the vicinity of point A, see Fig. 7.
+The C-ring specimens were exposed to 40 wt% hydrofluoric acid under room temperature conditions and, using 3D optical microscopy, surface morphologies were characterised as a function of the stress level and the time (Dai et al., 2020).
+In the finite element model we discretise the domain between the two bolt holes.
+As shown in Fig. 7, the sample has an inner diameter of 20 mm and an outer diameter of 25 mm.
+The vertical and horizontal displacements are constrained at the left side, while a Dirichlet boundary condition is used to prescribe the horizontal displacement component of the right side, where the bolt is tightened.
+The load is prescribed at the beginning of the analysis and then held fixed throughout the calculation.
+The resulting circumferential stress is measured at the top of the sample (point A), to resemble the experimental measurements.
+In agreementJournal of the Mechanics and Physics of Solids 147 (2021) 104254 11 C. Cui et al. Fig. 6.
+Pencil electrode test.
+Pit depth versus time 𝑡as a function of (a) the interface kinetics coefficient 𝐿= 𝐿0, and (b) the diffusion coefficient 𝐷. Fig. 7.
+Schematic description of the C-ring SCC test including the geometry, finite element mesh, boundary conditions and dimensions.
+with the experimental work, we consider a Young’s modulus of 𝐸= 200 GPa, a Poisson’s ratio of 𝜈= 0.3 and a yield stress of 𝜎𝑦= 535 MPa for the Q345R steel.
+No stress–strain curve or strain hardening exponent is provided in Dai et al. (2020), a value of 𝑁= 0.073 is adopted based on the Q345R material characterisation by Liang et al. (2019).
+The material properties are listed in Table 2.Journal of the Mechanics and Physics of Solids 147 (2021) 104254 12 C. Cui et al. Table 2 Material properties for the Q345R steel used in the C-ring experiments.
+Parameter Value Unit Young’s modulus 𝐸 200,000 MPa Poisson’s ratio 𝜈 0.25 – Yield stress 𝜎𝑦 535 MPa Strain hardening exponent 𝑁 0.073 – Fig. 8.
+C-ring test, SCC morphology for a stress level 𝜎𝑐= 0.8 𝜎𝑦after 𝑡= 210 min: (a) observed by Dai et al. (2020), where the red contour highlights the dominant defect that we aim at reproducing; and (b) simulated by our model, where the SCC morphology contour is shown in black.
+Fig. 9. C-ring test.
+Length of the SCC region versus corrosion time 𝑡for two different mechanical stress levels.
+In regard to the corrosion parameters, those listed in Table 1 are used unless otherwise stated.
+Since no film passivation is involved, we define 𝑘= 0 in Eq. (35).
+The initial interface kinetics coefficient 𝐿0 is chosen so as to provide the best fit to the experimental data; here, 𝐿0 = 4.7 × 10−5 mm2∕(N s).
+The interface thickness is taken to be 𝑙= 0.05 mm and the finite element mesh is refined in the SCC region accordingly, with the characteristic element size being equal or smaller than 0.005 mm.
+A total of 10,681 quadrilateral quadratic elements are used.
+As shown in Fig. 8, several pits are observed in the experiments, with one of them becoming a particularly large crack — we aim at capturing this dominant localised corrosion defect and address later the occurrence of multiple pits and their interactions.
+To trigger the dominant localised defect, the Dirichlet boundary condition 𝜙= 0 is prescribed over a length of 0.05 mm in the extreme edge of the middle of the arc (point A).
+The finite element results obtained in terms of SCC defect length and shape are provided in Fig. 8; the experimental measurements from Dai et al. (2020) corresponding to the same time (𝑡= 210 min) and stress level (𝜎𝑐= 0.8𝜎𝑦) are also shown.
+Fig. 8 reveals a good agreement with experimental observations.
+A quantitative comparison with experiments for different stress levels is provided in Fig. 9.
+Results are shown in terms of the length of the SCC region, including the initial pitting and subsequentJournal of the Mechanics and Physics of Solids 147 (2021) 104254 13 C. Cui et al. Fig. 10.
+SCC from a semi-elliptical pit: geometric setup, with the initial and boundary conditions.
+cracking, as a function of time.
+A very good agreement is observed for both 𝜎𝑐= 0.55𝜎𝑦and 𝜎𝑐= 0.8𝜎𝑦.
+We emphasise that while the circumferential stress in the middle of the arc remains below the yield stress, plasticity can develop on the surface of the SCC defects as the resulting notches and cracks act as stress concentrators. 4.3.
+Parametric study: cracking from a semi-elliptical pit We proceed to conduct numerical experiments on a stainless steel plate, containing a pre-existing pit, to investigate the effect of both mechanical straining and repassivation on the SCC process.
+The geometric setup, dimensions and boundary conditions are given in Fig. 10.
+The Dirichlet boundary conditions 𝜙= 0 and 𝑐= 0 are prescribed at the surface of the pre-existing defect, which has a semi-elliptical shape with radii 0.01 and 0.02 mm.
+At 𝑡= 0, 𝑐= 1 and 𝜙= 1 are defined as initial conditions in the metallic plate, of height 0.15 mm and width of 0.3 mm.
+The mechanical load is applied by prescribing a remote horizontal displacement 𝑢∞ on the left and right edges of the sample, as shown in Fig. 10.
+The vertical displacement of the top right corner is constrained to prevent rigid body motion.
+The corrosion parameters in this study are those assumed in the pencil electrode test, see Table 1, with the exception of the interface kinetics coefficient; a magnitude of 𝐿0 = 0.001 mm2∕(N s) is adopted to ensure activation-controlled corrosion.
+The constitutive behaviour of the steel plate is characterised by a Young modulus of 𝐸= 190 GPa, a Poisson’s ratio of 𝜈= 0.3, an initial yield stress of 𝜎𝑦= 520 MPa and a strain hardening exponent of 𝑁= 0.067.
+Approximately 7,000 quadrilateral quadratic plane strain elements are used to discretise the model.
+First, we consider the case of mechanics-enhanced corrosion in the absence of a passivation mechanism.
+The goal is to characterise the role of mechanical straining in controlling the defect growth rate and shape.
+Thus, we make 𝑘= 0 in Eq. (35) and prescribe three different values of the remote displacement 𝑢∞= 0.02 μm, 𝑢∞= 0.1 μm and 𝑢∞= 0.125 μm.
+The remote displacement 𝑢∞is prescribed at the beginning of the numerical experiment and then held fixed over a total time of 900 s.
+The results obtained, in terms of the phase field and hydrostatic stress contours, are shown in Fig. 11.
+The results reveal that, when the mechanical load is small (𝑢∞= 0.02 μm), there is a negligible influence of the hydrostatic stress and the pit grows approximately the same length in all dimensions, in agreement with the corrosion evolution laws in the absence of mechanical contributions.
+However as the remote displacement is raised and the magnitude of 𝜎ℎincreases, the pit morphology changes and a pit-to-crack transition is observed.
+The dominance of the mechanics contributions becomes very clear in the case of 𝑢∞= 0.125 μm, where the stresses are sufficiently high to trigger plastic deformations and the shape of the SCC defect is governed by both the hydrostatic stress and the plastic strain distribution.
+It is also worth emphasising that mechanical straining not only sharpens the SCC defect but also increases its length.
+The length of the SCC region is shown in Fig. 12 for the three chosen values of the applied displacement 𝑢∞.
+It can be seen that the mechanical contribution has a significant effect on localised corrosion rates.
+We now turn our attention to the repassivation process and our film rupture–dissolution–repassivation (FRDR) formulation.
+Thus, we apply and hold fixed a remote displacement of 𝑢∞= 0.1 μm and consider the sensitivity of the results to changes in the material parameter characterising the corrosion sensitivity to the stability of the passive film, 𝑘- see Eqs. (2) and (35).
+Three representative values are considered: 𝑘= 2 × 10−4, 𝑘= 5 × 10−4, and 𝑘= 1 × 10−3; while the critical strain for film rupture and the time interval without repassivation are held constant at 𝜀𝑓= 3 × 10−3 and 𝑡0 = 10 s, respectively.
+The phase field contours obtained after 900 s are shown in Fig. 13.
+The impact of 𝑘in the SCC morphology is evident; higher 𝑘values accelerate the SCC defect growth rate in the pit base relative to corrosion rates at the pit mouth, sharpening the pit and triggering a pit-to-crack transition.
+Corrosion rates at the tip of the SCC defect are exacerbated as the defect sharpens and plasticity localises; the protective film is weaker in areas of high mechanical straining — see Eq. (1).
+The length of the SCC region is shown in Fig. 14 as a function of the film stability parameter 𝑘, including the case where no film is present (𝑘= 0).
+The results reveal that by introducing the repassivation process, the length of the SCC region drops slightly at an early stage, which is in accordanceJournal of the Mechanics and Physics of Solids 147 (2021) 104254 14 C. Cui et al. Fig. 11.
+SCC from a semi-elliptical pit.
+Contours of (a) the phase field and (b) hydrostatic stress for three selected values of the initial applied displacement after 𝑡= 900 s. Fig. 12.
+SCC from a semi-elliptical pit.
+Evolution in time of the SCC region for three different mechanical loads, as characterised by the remote displacement 𝑢∞. with the fact that repassivation will restrain the SCC process by decreasing the value of interface kinetics coefficient.
+After a certain time, the size of the SCC region grows faster with increasing 𝑘as film rupture occurs and the magnitude of the equivalent plastic strain increases as the defect sharpens, augmenting the interface kinetics coefficient — see Eq. (35).
+Finally, we gain insight into the model predictions at the local level by quantifying the evolution the interface kinetics coefficient as a function of time and space.
+We compare the interface kinetics coefficient 𝐿at the SCC tip to further clarify the local behaviours.
+Journal of the Mechanics and Physics of Solids 147 (2021) 104254 15 C. Cui et al. Fig. 13.
+SCC from a semi-elliptical pit.
+Contours of the phase field after 𝑡= 900 s for a remote displacement of 𝑢∞= 0.1 μm and three selected values of the film stability parameter: (a) 𝑘= 2 × 10−4, (b) 𝑘= 5 × 10−4, and (c) 𝑘= 1 × 10−3. Fig. 14.
+SCC from a semi-elliptical pit.
+Length of the SCC region as a function of time for a remote displacement of 𝑢∞= 0.1 μm and four selected values of the film stability parameter. Fig. 15.
+SCC from a semi-elliptical pit, local insight.
+(a) Evolution of the interface kinetics coefficient at the SCC tip for a remote displacement of 𝑢∞= 0.1 μm and four selected values of the film stability parameter 𝑘; and (b) spatial contour of 𝐿∕𝐿0 along the interface for 𝑡= 900 s and 𝑘= 2 × 10−4.
+First, Fig. 15a shows the evolution in time of the normalised interface kinetics coefficient 𝐿∕𝐿0 at the tip of the SCC defect for different values of the film stability coefficient 𝑘.
+The initial value of 𝐿is smaller with increasing 𝑘due to the effect of filmJournal of the Mechanics and Physics of Solids 147 (2021) 104254 16 C. Cui et al. Fig. 16. Multiple-pit SCC.
+Geometry, initial and boundary conditions.
+The centre hole is not exposed to the environment.
+passivation, in agreement with expectations.
+In all cases, the magnitude of 𝐿∕𝐿0 increases with time but eventually reaches a plateau.
+This indicates that mechanical straining dominates the corrosion process.
+Also, it is observed that SCC damage becomes more localised as the stability of the film 𝑘increases.
+This is showcased in Fig. 15b, where the spatial contour of 𝐿∕𝐿0 is shown in the interface region.
+Higher values of the interface kinetics coefficient are observed at the tip of the pit, where the mechanical fields (𝜀𝑝, 𝜎ℎ) are larger. 4.4.
+SCC driven by the interaction between multiple pits Component failure frequently takes place as a consequence of the interaction between multiple pits.
+In this section, we demonstrate the capabilities of the model in predicting failure due to the combined action of multiple pits and their coalescence, as well as investigating the role of corrosion parameters in driving the evolution of neighbouring pits.
+For this purpose, we model a steel plate with an inner defect (not exposed to the environment) and three pre-existing corrosion pits.
+As shown in Fig. 16, one of the existing pits has a semi-ellipsoidal shape with radii 0.1 and 0.2 mm, while the other two pits have a semi-circular profile and the same radius: 0.15 mm.
+The mechanical load is applied by prescribing a remote horizontal displacement equal to 𝑢∞= 0.01 on each side of the plate.
+The displacement is prescribed at the beginning of the analysis and held constant afterwards (step function).
+The corrosion and material parameters considered are those listed in Tables 1 and 2, respectively.
+However, note that a smaller value is assumed for the interface kinetics coefficient, 𝐿0 = 1 × 10−4 mm2∕(N s), so as to simulate activation-controlled corrosion.
+Also, the interface thickness is chosen to be equal to 𝑙= 0.2 mm, which is 20 times larger than the characteristic element size.
+The plate is discretised using 27,450 quadrilateral quadratic plane strain elements with reduced integration.
+In addition, the presence of a protective film and its rupture is captured by considering a film stability parameter 𝑘= 2 × 10−4.
+The SCC process is shown as a function of time in Fig. 17, where the blue and red colours correspond to the completely corroded and intact areas, respectively.
+We can see that the three pits increase in depth (Fig. 17a), with the upper two eventually branching (Fig. 17b).
+The bottom pit eventually coalesces with the central circular defect (Fig. 17c), while the branches of the upper defects sharpen — one growing towards the central defect and the other one in the direction of the bottom pit.
+Eventually, after approximately 4 h, the upper and bottom pits merge and complete failure of the plate is predicted (Fig. 17d).
+We also compare the SCC morphologies for three different values of 𝐿0 to assess the influence of the interface kinetics parameter on the corrosion process.
+The results are shown in Fig. 18 for a time of 𝑡= 0.5 h. It can be seen that the pits grow more uniformly when the initial interface kinetics parameter is higher, implying a smaller contribution of the mechanical problem with increasing 𝐿0.
+Mechanical strains and stresses enhance interface kinetics via the mechanochemical term 𝑘m (𝜀𝑝, 𝜎ℎ ), see (3) and (35).
+However, this also implies that the mechanical contribution facilitates the transition from activation-controlled corrosion to diffusion-controlled corrosion, and when 𝐿is sufficiently large such that corrosion is diffusion-limited, corrosion rates become independent of 𝐿(see Fig. 6a) and accordingly of 𝑘m.
+Consequently, for a given value of the remote load, the contribution from the mechanical problem will be larger for lower 𝐿0 magnitudes. 4.5.
+Three-dimensional predictions of SCC defect growth Finally, we extend our computational framework to model 3D SCC problems.
+The goal is to bring new insight into the mechanics of SCC defect growth and demonstrate the capabilities of our model in addressing technologically-relevant case studies.
+For this purpose, we choose to model a hemispherical pit in a sufficiently large steel plate subjected to tension, aiming to rationalise the observation of cracks initiating at the cross-section of uniaxial tension samples (Turnbull et al., 2010).
+The pit, of radius 0.15 mm, has its centre located at 3 mm from the loading edge and at 1 mm along the plate thickness.
+The geometry, initial and boundary conditions are given in Fig. 19.
+The remote displacement, applied along the 𝑥axis, is prescribed at the beginning of the numerical experiment and is held constant throughout the analysis; its magnitude equals 𝑢∞= 0.01 mm.
+The corrosion and material parameters adopted are those listed in Tables 1 and 2 with the exception of an initial kinetics coefficient of 𝐿0 = 3 × 10−4 mm2∕(N s), to ensureJournal of the Mechanics and Physics of Solids 147 (2021) 104254 17 C. Cui et al. Fig. 17. Multiple-pit SCC.
+Phase field contours at times (a) 0.5 h, (b) 1 h, (c) 2 h, and (d) 4 h. Blue and red colours respectively denote the electrolyte (𝜙= 0) and solid (𝜙= 1) regions.
+that at 𝑡= 0+ corrosion is activation-controlled.
+Also, the presence of a protective film is considered, with 𝑘= 2×10−4.
+The interface thickness is chosen to be 𝑙= 0.4 mm, which is 20 times larger than the characteristic element size.
+A total of 356,892 10-node tetrahedral elements are used; the model contains approximately 2.5 million degrees-of-freedom (DOFs).
+The predicted evolution of the SCC defect is shown in Figs. 20 and 21, in terms of 3D phase field contours.
+For the sake of a better visualisation, a cut along the 𝑦-𝑧plane is made in Fig. 20 while Fig. 21 shows the SCC region where 𝜙< 0.5.
+It can be observed that the pit tends to grow more along the 𝑦and 𝑧directions, relative to the 𝑥one.
+This shape evolution of the pit, going from hemispherical to ellipsoidal, is driven by the influence of the mechanical problem.
+Plastic straining is larger at the pit base and the regions of the pit mouth closer to the cross-section perpendicular to the applied load.
+Consequently, the magnitude of 𝑘m (𝜀𝑝, 𝜎ℎ ) isJournal of the Mechanics and Physics of Solids 147 (2021) 104254 18 C. Cui et al. Fig. 18. Multiple-pit SCC.
+Phase field contours after 0.5 h for (a) 𝐿0 = 1 × 10−4 mm2∕(N s), (b) 𝐿0 = 5 × 10−4 mm2∕(N s), and (c) 𝐿0 = 1 × 10−3 mm2∕(N s). Fig. 19.
+3D pit growth study: geometry and loading configuration.
+The pit is a hemisphere located at the centre of the upper surface of the plate.
+larger in these regions and the passive film weaker, leading to an increase in the interface kinetics coefficient.
+This is in agreement with experimental observations of increasing pit depth and the initiation of lateral cracks (Turnbull, 2001).Journal of the Mechanics and Physics of Solids 147 (2021) 104254 19 C. Cui et al. Fig. 20.
+3D pit growth study.
+Phase field contours after a time of: (a) 𝑡= 300 s, (b) 𝑡= 1200 s, and (c) 𝑡= 2100 s. Blue and red colours respectively denote the electrolyte (𝜙= 0) and solid (𝜙= 1) regions. Fig. 21.
+3D pit growth study.
+Evolution of the SCC defect (𝜙< 0.5) after a time of: (a) 𝑡= 300 s, (b) 𝑡= 1200 s, and (c) 𝑡= 2100 s. Fig. 22.
+Evolution in time of the pit depth along each of the axes of a Cartesian coordinate axis with its origin at the centre of the pit.
+The pit depth along the three Cartesian coordinate axes is shown in Fig. 22 as a function of time.
+The results show that the pit growth along the 𝑥direction is linear, i.e. activation-controlled corrosion.
+However, the results obtained along the 𝑦and 𝑧directions transition from linear to parabolic.
+In other words, the mechanical enhancement of the interface kinetics coefficient 𝐿has triggered a transition from activation-controlled to diffusion-controlled corrosion.
+The role of the mechanical contribution will eventuallyJournal of the Mechanics and Physics of Solids 147 (2021) 104254 20 C. Cui et al. become negligible as 𝐿raises above its saturation value (diffusion-limited corrosion) but those areas where mechanical straining is higher will continue to corrode faster until 𝐿reaches its saturation value everywhere, when uniform corrosion will be recovered.
+5. Concluding remarks We have presented a new formulation for predicting dissolution-driven pitting and stress corrosion cracking.
+Its main ingredients are: (i) a KKS-based phase field model for both activation-controlled and diffusion-controlled corrosion, (ii) a mechanics-enhanced interface kinetics law grounded on mechanochemical theory, and (iii) a strain rate-governed film rupture and repassivation process according to the FRDR mechanism.
+A numerical framework is also presented, with displacements, phase field and concentration of dissolved ions as degrees of freedom.
+The model is benchmarked by addressing five boundary value problems of particular interest.
+First, we model the paradigmatic pencil electrode test to verify our numerical implementation and examine the model capabilities in predicting the transition from activation-controlled to diffusion-controlled corrosion.
+Secondly, we reproduce C-ring experiments in a film-free environment to benchmark our mechanics-enhanced corrosion laws against experimental data.
+Thirdly, SCC from an ellipsoidal pit is predicted under different conditions to quantify the influence of mechanical stresses and their interplay with the film rupture and repassivation process.
+Fourthly, the interaction between multiple pits is addressed, assessing the competing influences of the coefficients characterising the mechanical, film stability and interface kinetics contributions.
+Finally, pit growth in a 3D solid is predicted to showcase the capabilities of the model in capturing large scale phenomena and impacting engineering practice.
+The main findings are: ∙The interface kinetics coefficient 𝐿governs corrosion rates.
+Corrosion kinetics rise with increasing 𝐿, going from activation- controlled to diffusion-controlled corrosion, until the process becomes diffusion-limited, when corrosion rates become insen- sitive to a further augmenting 𝐿. ∙Mechanical stresses and strains enhance corrosion kinetics, in agreement with experiments, favouring localised damage and triggering a pit-to-crack transition.
+However, if the mechanical enhancement of 𝐿is sufficiently large, the diffusion-controlled limit is reached and the influence of the mechanical contribution reaches a saturation stage.
+Thus, the influence of mechanical fields is most notable for activation-controlled corrosion.
+∙The presence of a passive film exacerbates localisation and the role of mechanics.
+The effect is more pronounced if the film stability coefficient is large as film rupture will only occur in regions where mechanical straining is high.
+Also, cracks are more likely to nucleate under activation-controlled corrosion conditions.
+Future developments could involve the extension of the model to consider other cracking mechanisms, including those driven by cathodic reactions.
+Also, material microstructure and microchemistry can play an important role and should be taken into consideration in many material systems for an accurate prediction of the initial development stages.
+CRediT authorship contribution statement Chuanjie Cui: Conceptualization, Investigation, Methodology, Software, Writing - original draft, Writing - review & editing.
+Rujin Ma: Conceptualization, Funding acquisition, Investigation, Methodology, Supervision.
+Emilio Martínez-Pañeda: Concep- tualization, Funding acquisition, Investigation, Methodology, Software, Supervision, Writing - original draft, Writing - review & editing.
+Declaration of competing interest The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgements E. Martínez-Pañeda acknowledges valuable discussions with Z.D. Harris (University of Virginia) and A. Turnbull (National Physical Laboratory).
+Chuanjie Cui and Rujin Ma acknowledge financial support from National Natural Science Foundation of China under grant No. 51878493.
+E. Martínez-Pañeda acknowledges financial support from the EPSRC, UK (grants EP/R010161/1 and EP/R017727/1) and from the Royal Commission for the 1851 Exhibition, UK (RF496/2018).
+References Abubakar, A.A., Akhtar, S.S., Arif, A.F.M., 2015.
+Phase field modeling of V2O5 hot corrosion kinetics in thermal barrier coatings. Comput. Mater. Sci. 99, 105–116.
+Anand, L., Mao, Y., Talamini, B., 2019.
+On modeling fracture of ferritic steels due to hydrogen embrittlement. J. Mech. Phys.
+Solids 122, 280–314.
+Andresen, P.L., Ford, F.P., 1988.
+Life prediction by mechanistic modeling and system monitoring of environmental cracking of iron and nickel alloys in aqueous systems. Mater. Sci.
+Eng. 103 (1), 167–184. Biner, S.B., 2017.
+Programming Phase-Field Modeling. Springer.
+Bourdin, B., Francfort, G.A., Marigo, J.-J., 2000.
+Numerical experiments in revisited brittle fracture. J. Mech. Phys.
+Solids 48 (4), 797–826.Journal of the Mechanics and Physics of Solids 147 (2021) 104254 21 C. Cui et al. Carrara, P., Ambati, M., Alessi, R., De Lorenzis, L., 2020.
+A framework to model the fatigue behavior of brittle materials based on a variational phase-field approach. Comput. Methods Appl. Mech. Engrg. 361, 112731.
+Chen, Z., Bobaru, F., 2015.
+Peridynamic modeling of pitting corrosion damage. J. Mech. Phys. Solids 78, 352–381.
+Crane, C.B., Gangloff, R.P., 2016.
+Stress corrosion cracking of Al-Mg alloy 5083 sensitized at low temperature.
+Corrosion 72 (2), 221–241.
+Dai, H., Shi, S., Guo, C., Chen, X., 2020.
+Pits formation and stress corrosion cracking behavior of Q345R in hydrofluoric acid. Corros. Sci. 166, 108443.
+Duda, F.P., Ciarbonetti, A., Toro, S., Huespe, A.E., 2018.
+A phase-field model for solute-assisted brittle fracture in elastic-plastic solids. Int. J. Plast. 102, 16–40.
+Duddu, R., Kota, N., Qidwai, S.M., 2016.
+An extended finite element method based approach for modeling crevice and pitting corrosion. J. Appl. Mech. 83 (8), 1–10.
+Ernst, P., Newman, R.C., 2002.
+Pit growth studies in stainless steel foils.
+I. Introduction and pit growth kinetics. Corros.
+Sci. 44 (5), 927–941.
+Gao, H., Ju, L., Duddu, R., Li, H., 2020.
+An efficient second-order linear scheme for the phase field model of corrosive dissolution. J. Comput. Appl. Math. 367, 112472.
+Gurtin, M.E., Fried, E., Anand, L., 2010.
+The Mechanics and Thermodynamics of continua.
+Cambridge University Press, Cambridge, UK. Gutman, E.M., 1998.
+Mechanochemistry of Materials.
+Cambridge International Science Publishing, Cambridge, UK. Gutman, E.M., 2007.
+An inconsistency in "film rupture model" of stress corrosion cracking. Corros.
+Sci. 49 (5), 2289–2302.
+Hirshikesh, Natarajan, S., Annabattula, R.K., Martínez-Pañeda, E., 2019.
+Phase field modelling of crack propagation in functionally graded materials.
+Composites B 169, 239–248. Jivkov, A.P., 2004.
+Strain-induced passivity breakdown in corrosion crack initiation. Theor. Appl. Fract.
+Mech. 42 (1), 43–52.
+Kim, S.G., Kim, W.T., Suzuki, T., 1999.
+Phase-field model for binary alloys. Phys.
+Rev. E 60 (6), 7186–7197.
+Kristensen, P.K., Martínez-Pañeda, E., 2020.
+Phase field fracture modelling using quasi-Newton methods and a new adaptive step scheme. Theor. Appl. Fract. Mech. 107, 102446.
+Kristensen, P.K., Niordson, C.F., Martínez-Pañeda, E., 2020.
+A phase field model for elastic-gradient-plastic solids undergoing hydrogen embrittlement. J. Mech. Phys. Solids 143, 104093.
+Larrosa, N.O., Akid, R., Ainsworth, R.A., 2018.
+Corrosion-fatigue: a review of damage tolerance models. Int. Mater.
+Rev. 63 (5), 283–308.
+Liang, G., Guo, H., Liu, Y., Yang, D., Li, S., 2019.
+A comparative study on tensile behavior of welded T-stub joints using Q345 normal steel and Q690 high strength steel under bolt preloading cases. Thin-Walled Struct. 137 (5), 271–283.
+Lo, Y.S., Borden, M.J., Ravi-Chandar, K., Landis, C.M., 2019.
+A phase-field model for fatigue crack growth. J. Mech. Phys. Solids 132, 103684. Lynch, S.P., 1988.
+Environmentally assisted cracking: Overview of evidence for an adsorption-induced localised-slip process. Acta Metall. 36 (10), 2639–2661.
+Macdonald, D.D., 1999.
+Passivity - the key to our metals-based civilization. Pure Appl.
+Chem. 71 (6), 951–978.
+Mai, W., Soghrati, S., 2017.
+A phase field model for simulating the stress corrosion cracking initiated from pits. Corros. Sci. 125, 87–98.
+Mai, W., Soghrati, S., Buchheit, R.G., 2016.
+A phase field model for simulating the pitting corrosion. Corros. Sci. 110, 157–166.
+Martínez-Pañeda, E., Deshpande, V.S., Niordson, C.F., Fleck, N.A., 2019.
+The role of plastic strain gradients in the crack growth resistance of metals. J. Mech. Phys.
+Solids 126, 136–150.
+Martínez-Pañeda, E., Fleck, N.A., 2019.
+Mode I crack tip fields: Strain gradient plasticity theory versus J2 flow theory. Eur. J. Mech.
+A Solids 75, 381–388.
+Martínez-Pañeda, E., Golahmar, A., Niordson, C.F., 2018.
+A phase field formulation for hydrogen assisted cracking. Comput. Methods Appl. Mech.
+Engrg. 342, 742–761.
+Nguyen, T.T., Bolivar, J., Réthoré, J., Baietto, M.C., Fregonese, M., 2017a.
+A phase field method for modeling stress corrosion crack propagation in a nickel base alloy. Int. J. Solids Struct. 112, 65–82.
+Nguyen, T.T., Bolivar, J., Shi, Y., Réthoré, J., King, A., Fregonese, M., Adrien, J., Buffiere, J.Y., Baietto, M.C., 2018.
+A phase field method for modeling anodic dissolution induced stress corrosion crack propagation. Corros. Sci. 132, 146–160.
+Nguyen, T.T., Réthoré, J., Baietto, M.C., Bolivar, J., Fregonese, M., Bordas, S.P., 2017b.
+Modeling of inter- and transgranular stress corrosion crack propagation in polycrystalline material by using phase field method. J. Mech. Behav. Mater. 26 (5–6), 181–191. Oriani, R.A., 1972.
+A mechanistic theory of hydrogen embrittlement of steels. Ber. Bunsenges. Phys Chem. 76 (8), 848–857.
+Papazafeiropoulos, G., Muñiz-Calvente, M., Martínez-Pañeda, E., 2017.
+Abaqus2Matlab: A suitable tool for finite element post-processing. Adv. Eng. Softw. 105, 9–16.
+Parkins, R.N., 1987.
+Factors influencing Stress Corrosion Crack Growth Kinetics.
+Corrosion 43 (3), 130–139.
+Parkins, R.N., 1996.
+Mechanistic aspects of intergranular Stress Corrosion Cracking of Ferritic steels.
+Corrosion 52 (5), 363–374.
+Raja, V.S., Shoji, T., 2011.
+In: Raja, V.S., Shoji, T. (Eds.), Stress Corrosion Cracking: Theory and Practice.
+Woodhead Publishing Limited, Cambridge, pp. 1–792.
+Scheiner, S., Hellmich, C., 2007.
+Stable pitting corrosion of stainless steel as diffusion-controlled dissolution process with a sharp moving electrode boundary. Corros.
+Sci. 49 (2), 319–346. Scully, J.C., 1975.
+Stress corrosion crack propagation: A constant charge criterion. Corros.
+Sci. 15 (4), 207–224. Scully, J.C., 1980.
+The interaction of strain-rate and repassivation rate in stress corrosion crack propagation. Corros.
+Sci. 20 (8–9), 997–1016.
+Serebrinsky, S., Carter, E.A., Ortiz, M., 2004.
+A quantum-mechanically informed continuum model of hydrogen embrittlement. J. Mech. Phys.
+Solids 52 (10), 2403–2430.
+Sofronis, P., Birnbaum, H., 1995.
+Mechanics of the hydrogen-dislocation-impurity interactions—I. Increasing shear modulus. J. Mech. Phys.
+Solids 43 (1), 49–90. Ståhle, P., Hansen, E., 2015.
+Phase field modelling of stress corrosion. Eng. Fail. Anal. 47, 241–251.
+Sun, W., Wang, L., Wu, T., Liu, G., 2014.
+An arbitrary Lagrangian-Eulerian model for modelling the time-dependent evolution of crevice corrosion. Corros. Sci. 78, 233–243.
+Tanné, E., Li, T., Bourdin, B., Marigo, J.-J., Maurini, C., 2018.
+Crack nucleation in variational phase-field models of brittle fracture. J. Mech. Phys. Solids 110, 80–99.
+Toshniwal, D., 2019.
+Isogeometric Analysis : Study of non-uniform Degree and Unstructured Splines, and Application to Phase Field Modeling of Corrosion (Ph.D. thesis).
+The University of Texas at Austin. Turnbull, A., 1993.
+Modelling of environment assisted cracking. Corros.
+Sci. 34 (6), 921–960. Turnbull, A., 2001.
+Modeling of the chemistry and electrochemistry in cracks - A review.
+Corrosion 57 (2), 175–188.
+Turnbull, A., Wright, L., Crocker, L., 2010.
+New insight into the pit-to-crack transition from finite element analysis of the stress and strain distribution around a corrosion pit. Corros.
+Sci. 52 (4), 1492–1498.
+Wu, J.-Y., Mandal, T.K., Nguyen, V.P., 2020.
+A phase-field regularized cohesive zone model for hydrogen assisted cracking. Comput. Methods Appl. Mech. Engrg. 358, 112614.

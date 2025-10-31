@@ -1,0 +1,595 @@
+arXiv:cond-mat/0602515v1  [cond-mat.mtrl-sci]  22 Feb 2006
+An Improved Description of the Dielectric Breakdown in Oxides Based on a
+Generalized Weibull distribution
+U. M. S. Costa and V. N. Freire
+Universidade Federal do Cear´a, Departamento de F´ısica, Caixa Postal 6030,
+Campus do Pici, 60455-900 Fortaleza, Cear´a, Brazil
+L. C. Malacarne, R. S. Mendes and S. Picoli Jr.
+Universidade Estadual de Maring´a, Departamento de F´ısica,
+87020-900 Maring´a, Paran´a, Brazil
+E. A. de Vasconcelos, E. F. da Silva Jr.
+Universidade Federal de Pernambuco, Departamento de F´ısica,
+Cidade Universit´aria, 50670-901 Recife, Pernambuco, Brazil.
+(Dated: November 26, 2024)
+In this work, we address modal parameter ﬂuctuations in statistical distributions describing
+charge-to-breakdown (QBD) and/or time-to-breakdown (tBD) during the dielectric breakdown
+regime of ultra-thin oxides, which are of high interest for the advancement of electronic technol-
+ogy. We reobtain a generalized Weibull distribution (q-Weibull), which properly describes (tBD)
+data when oxide thickness ﬂuctuations are present, in order to improve reliability assessment of
+ultra-thin oxides by time-to-breakdown (tBD) extrapolation and area scaling. The incorporation
+of ﬂuctuations allows a physical interpretation of the q-Weibull distribution in connection with
+the Tsallis statistics. In support to our results, we analyze tBD data of SiO2-based MOS devices
+obtained experimentally and theoretically through a percolation model, demonstrating an advanta-
+geous description of the dielectric breakdown by the q-Weibull distribution.
+PACS numbers: 71.20.Nr,71.30.+h, 77.22.Jp, 85.40.-e,02.50.Cw
+I.
+INTRODUCTION
+The International Technology Roadmap for Semicon-
+ductors indicates the need to decrease the SiO2 gate
+thickness to less than 3 nm to pursue the continuity of
+the Moore’s Law [1]. Research eﬀorts to maintain this
+trend have been focusing on: (i) the advantageous sub-
+stitution of SiO2 by high dielectric constant materials to
+allow equivalent gate dielectric oxide thickness bellow 1
+nm [2]; (ii) a better understanding of the fractal regime
+of ultra-thin gate dielectric oxide growth, where spatial
+inhomogeneities or ﬂuctuations are important [3, 4] con-
+siderations for the control of dielectric breakdown condi-
+tions. Consequently, the reliability of ultra-thin oxides
+for ultra-large scale integration is one of the most impor-
+tant concerns in the domain of electronics miniaturiza-
+tion nowadays [5, 6, 7].
+Two quantities which are experimentally measured
+to assess the reliability of a metal-oxide-semiconductor
+(MOS) device are: the charge-to-breakdown QBD, de-
+ﬁned as the time-integrated current density which ﬂows
+until breakdown occurs, and the time-to-breakdown
+tBD, deﬁned as the samples’ lifetime.
+These quan-
+tities are statistically distributed and are usually as-
+sumed to be Weibull distributed [8].
+In particular,
+accurate assessment of reliability of ultra-thin oxides
+is seriously aﬀected by ﬂuctuations of oxide thickness.
+These ﬂuctuations cause a deviation from the Weibull
+distribution, which is easily observed by a curvature
+in a graph of ln[−ln[1 −F(t)]] versus ln[t], being
+F(t) =
+R t
+0 P(x)dx the cumulative distribution. Extrap-
+olation of the slope of this plot from higher failure per-
+centiles to lower failure percentiles can lead to serious
+errors in reliability assessment, as shown by Wu et al.
+[5].
+Deviations from a given distribution can be generated
+by taking scale mixtures of it [9]. For instance, the scale
+parameter of the exponential and Gaussian distributions
+can be averaged by a gamma distribution. In these two
+cases, the deviation induced by the ﬂuctuation in this pa-
+rameter has been successfully employed in the description
+of physical situations, such as those related with nonex-
+ponential decay [10, 11] and turbulence [12, 13]. Further-
+more, this average process has also been connected with
+the entropic parameter q in the context of Tsallis statis-
+tics [10, 11, 12]. By taking the ﬂuctuations of the modal
+parameter of the Weibull distribution into account, we
+obtain a generalized Weibull distribution which properly
+describes tBD data when oxide ﬂuctuations are present,
+thus improving reliability assessment of ultra-thin oxides
+by tBD extrapolation and area scaling. This generalized
+Weibull distribution, without focusing ﬂuctuations, was
+discussed and applied in Ref. [14] to other systems.
+In the following section we present the generalized
+Weibull distribution employed here. The application of
+this distribution to the description of the dielectric break-
+down in oxides is considered in section 3. The last section
+is dedicated to our conclusions.2
+10
+-3
+10
+-2
+10
+-1
+10
+0
+10
+1
+10
+2
+10
+3
+10
+4
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+(a)
+Correct projection
+ 
+ 
+ln[-ln[1-F(t)]]
+tBD (sec)
+Erroneous projection
+Conventional 
+experiment window
+63%
+10%
+1%
+0.1%
+0.01%
+0.001%
+fraction failures
+10
+-3
+10
+-2
+10
+-1
+10
+0
+10
+1
+10
+2
+10
+3
+10
+4
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+(b)
+fraction failures
+0.001%
+0.01%
+0.1%
+1%
+10%
+63%
+Conventional 
+experiment window
+Correct projection
+q-Weibull distribution
+q=1.32
+ tBD (sec)
+ 
+ 
+ln[-lnq[1-Fq(t)]]
+FIG. 1:
+(a) Graph of ln[−ln[1 −F(t)]] versus tBD for 4000
+ultra-thin oxide MOS capacitors.
+The data were obtained
+from the work of Wu et al.
+[5]; (b) the same data as in
+(a) but depicted in a q-Weibull plot in which a correct tBD
+extrapolation is very clear.
+II.
+q-WEIBULL DISTRIBUTION
+The Weibull distribution often used in the statistical
+description in the study of the time-to-breakdown in elec-
+tronic devices [15] is given by
+P1(x) = β
+x0
+ x
+x0
+β−1
+exp
+"
+−
+ x
+x0
+β#
+,
+(1)
+where the parameter x0 is the modal value that corre-
+sponds to 63, 2% of the samples’ lifetime. The parameter
+β is the Weibull slope and deﬁnes the time-to-breakdown
+spreading degree.
+In order to incorporate the referred
+ﬂuctuation, we consider a Weibull compound distribu-
+tion p(x; θ) = βθxβ−1 exp(−θxβ). Here, θ = x−β
+0 , with
+β ﬁxed and x0 changing so that the new parameter θ
+is a stochastic variable ruled by the gamma probability
+density function
+1
+2
+3
+4
+5
+6
+7
+-8
+-6
+-4
+-2
+0
+2
+(a)
+ 
+ 
+ln[-ln[1-F(t)]]
+ln(tBD)
+ Area 10
+-4 mm
+2
+ Area 10
+-5 mm
+2
+tBD to 0.01% failures
+1
+2
+3
+4
+5
+6
+7
+-8
+-6
+-4
+-2
+0
+2
+(b)
+tBD to 0.01% failures
+q=1.87
+q=1.71
+ 
+ 
+ln[-lnq[1-Fq(t)]]
+ln(tBD)
+ Area 10
+-4 mm
+2
+ Area 10
+-5mm
+2
+FIG. 2: (a) Graph of ln[−lnq[1 −F d(t)]] versus ln(t) for a
+6.9 nm sample oxides subjected to a EOx = 12.7 MV/cm ap-
+plied ﬁeld. The samples have areas of 10−4 and 10−5mm2.
+The data were obtained from the work of Teramoto et al.)
+[20]; (b) the same data as in (a) but depicted in a q-Weibull
+plot showing improved area scaling.
+p(θ) = δrθr−1e−δθ
+Γ(r)
+(θ, r, δ > 0).
+(2)
+Therefore, the average in the stochastic parameter θ,
+⟨p(x; θ)⟩θ =
+Z ∞
+0
+p(x; θ)p(θ) dθ ,
+(3)
+leads to [16]
+⟨p(x; θ)⟩θ = rδrβxβ−1(xβ + δ)−(r+1).
+(4)
+Note that by naming this average Pq′(x), it can be
+written as
+Pq′(x) = β(2 −q′)
+˜x0
+ x
+˜x0
+β−1
+expq′
+"
+−
+ x
+˜x0
+β#
+,
+(5)
+where we used the q-exponential function deﬁned as
+expq′(−a x) ≡[1−(1−q′) a x]1/(1−q′) if 1−(1−q′) a x ≥0,3
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+0
+1
+2
+(a)
+tBD to 0.01% failures
+ 
+ 
+ln[-ln[1-F(t)]]
+ln[t]
+ Gate Injection q=1
+ Substrate Injection q=1
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+0
+1
+2
+3
+4
+5
+6
+(b)
+tBD to 0.01% failures
+ 
+ 
+ Gate Injection q=1.44
+ Substrate Injection q=1.93
+ln[-lnq[1-Fq(t)]]
+ln[t]
+FIG. 3: (a) Graph of ln[−ln[1 −F d(t)]] versus ln(t) from
+the percolation simulations as performed by Sombra et al.
+[21] for gate (squares) and substrate (dots) injection adjusted
+with Weibull distributions; (b) the same data as in (a) but
+depicted in a q-Weibull plot showing improved ﬁtting.
+and expq′(−a x) ≡0 if 1 −(1 −q′) a x < 0, with
+q′ = (2 + r)/(1 + r) and ˜xβ
+0 = [δ/(r + 1)].
+By comparing Eq.(1) with Eq.(5) we verify that Pq′(x)
+is a generalization of the Weibull distribution in the same
+sense that the q-exponential function generalizes the ex-
+ponential one. In view of this observation and following
+Ref. [14], we refer to Pq′(x) as q-Weibull distribution. We
+also remark that Pq′(x) contains a broad class of distri-
+butions as particular cases. In fact, in the limit q′ →1 it
+reduces to the Weibull distribution, for β →1 it gives the
+q-exponential distribution, and when q′ →1 and β →1
+it becomes the exponential distribution.
+Furthermore,
+from Eq.(4) we verify two power law regimes, one for
+small x, xβ−1, and another for large x, x−(1+rβ). Notice
+also that R ∞
+0
+Pq′(x)dx exists and is equal to one when
+q′ < 2.
+Before addressing our discussion to the application of
+the q-Weibull distribution concerning experimental and
+simulation results, we give a connection of this distri-
+bution with the Tsallis statistics.
+The ﬁrst step to-
+wards verifying this connection is based on the fact that
+the q-exponential can be viewed as a signature of the
+Tsallis statistics, since it basically replaces the exponen-
+tial in the canonical distribution.
+In fact, this canon-
+ical distribution is obtained when the Tsallis entropy
+Sq ≡(1 −PW
+i=1 pq
+i )/(1 −q) is maximized subjected to
+appropriate constraints [17]. Here, pi is the probability
+of the ith state, W is the number of accessible states,
+and q is a real parameter that rules the degree of gener-
+alization of the theory (when q →1 we recover the usual
+entropy).
+On the other hand, the q-exponential func-
+tion can be obtained from the average of the exponential
+function by using the gamma distribution, Eq. (2) [18].
+Thus, the parameter q occurring in the Tsallis statistics
+is shown to be entirely induced by the ﬂuctuations of the
+parameter of the usual exponential distribution [10]. Fol-
+lowing this interpretation, the average process employed
+to obtain Pq′(x) characterizes an implicit connection with
+the Tsallis statistics.
+III.
+APPLICATION TO DIELECTRIC
+BREAKDOWN
+To apply our distribution, Eq. (5), to investigate ex-
+perimental and numerical simulated data, we consider
+the cumulative distribution for Pq′(x), i.e.,
+Fq(t) = 1 −expq
+"
+−
+ t
+α
+β#
+,
+(6)
+with q = 1/(2−q′) and α = ˜x0/(2−q′)1/β. In connection
+with the q-exponential function, the q-logarithm function
+is usually deﬁned as [17]
+lnq(x) ≡x1−q −1
+1 −q
+,
+(7)
+thus lnq[expq(x)] = expq[lnq(x)] = x. By using Eq. (6),
+we obtain that the graph of ln[−lnq(1 −Fq(t))] versus
+ln(t) gives a straight line since
+ln[−lnq[1 −Fq(t)]] = β ln(t) −β ln(α).
+(8)
+Therefore, if a cumulative distribution relative to the di-
+electric breakdown for a given set of data, F d(t), is well
+described by the q-Weibull distribution, then the q pa-
+rameter present in the q-logarithm is obtained through a
+linear adjustment, and the parameter β is the slope of the
+graph. This procedure introduced here will be referred
+as a q-Weibull plot.
+To compare the usefulness of the Weibull and the q-
+Weibull distributions, we analyze experimental [19] and
+simulation results. Figure 1(a), which is adapted from
+the work of Wu et al. [5], shows a curvature in a graph
+ln[−ln[1 −F(t)]] versus ln[t]. The variation of this slope
+is associated with oxide thickness ﬂuctuations. In fact,
+Wu et al. [5] were able to generate this slope variation
+by performing simulations in which the oxide thickness4
+obeyed a Gaussian distribution.
+Extrapolation of the
+slope of this plot from higher failure percentiles (conven-
+tional experimental window) to lower failure percentiles
+leads to an error in tBD projection and, consequently,
+in projection of reliability. It is necessary to use large
+and time-consuming sample sizes (thousands of devices)
+in order to obtain tBD distributions down to lower per-
+centiles and avoid erroneous projections. The same tBD
+data can be correctly ﬁtted in the entire range of per-
+centiles by the q-Weibull distribution, as shown in Fig.
+1(b). In the q-Weibull plot, the data follow a straight
+line.
+We conclude that, by taking the ﬂuctuations of
+the modal parameter of the Weibull distribution into ac-
+count, one obtains a statistical distribution which com-
+pletely describes tBD data when oxide ﬂuctuations are
+present. Therefore, the q-Weibull distribution allows im-
+proved tBD projection for ultra-thin oxides and does not
+require a very large number of samples, i.e., correct tBD
+extrapolation can be performed in the conventional ex-
+perimental window. This is a striking beneﬁt brought by
+the q-Weibull distribution.
+In addition to correct tBD projection, we have found
+that the q-Weibull also improves area scaling, another
+important consideration for reliability studies [15].
+In
+Fig. 2(a), we have used the data from the work of Ter-
+amoto et al.
+[20].
+They studied the time-dependent
+dielectric breakdown for 6.9 nm thin SiO2 oxides with
+samples areas of 10−4 and 10−5 mm2, and subjected to
+a EOx = 12.7 MV/cm applied ﬁeld.
+It is clear, when
+comparing Fig. 2(a) and Fig. 2(b), that the q-Weibull
+distribution gives a better area scaling than the Weibull
+one, another remarkable beneﬁt.
+When tBD data are plotted in a limited range of per-
+centiles, the diﬀerences between the q-Weibull and the
+Weibull distributions become less apparent, but can still
+be seen.
+As an example, we consider the simulations
+performed by Sombra et al. [21]. They developed a per-
+colation model to describe the dielectric breakdown of a
+MOS capacitor investigating eﬀects of bias polarity, ox-
+ide ﬁlm thickness and electric ﬁeld strength.
+The hot
+electron injection is either through the gate or the sub-
+strate. In Fig. 3(a) we have performed a linear ﬁt of the
+simulation data of Sombra [21] with the Weibull distri-
+bution, while in Fig. 3(b) we depict the same data but
+with a linear ﬁt through the q-Weibull distribution. One
+can see once more that the q-Weibull distribution gives a
+better ﬁt than the Weibull one, for small and large tBD.
+IV.
+CONCLUSIONS
+In summary, we conclude that: (i) ﬂuctuation on the
+modal value is a mechanism to explain deviations from
+the Weibull distribution in reliability studies of electron-
+ics devices; (ii) this ﬂuctuation leads to a generalization
+of the Weibull distribution (q-Weibull distribution) and a
+connection with the Tsallis statistics; and (iii) the gener-
+alized Weibull distribution leads to a better adjustment
+of experimental and simulated data in comparison with
+the Weibull one, giving improved tBD extrapolation and
+area scaling. Finally, the results presented here can be
+very useful for an improved description of the dielectric
+breakdown in the high dielectric constant materials [2]
+which will be present in future generations of advanced
+MOS devices.
+The authors would like to acknowledge the ﬁnancial
+support received from the Brazilian National Research
+Council (CNPq) under contract CNPQ-NanoSemiMAt
+#550.015/01-9, and the Ministry of Planning (FINEP)
+through CTPETRO under contracts # 65.00.02.80.00
+and #5000013/01-2, during the development of this
+work.
+[1] The International Technology Roadmap for Semiconduc-
+tors (Semiconductor Industry Association, San Jose, CA,
+2002), see also http://public.itrs.net for the most recent
+updates.
+[2] G. D. Wilk, R. M. Wallace, and J. M. Anthony, J. Appl.
+Phys. 89, 5243 (2001); R. A. MacKee, F. J. Walker, M.
+F. Chisholm, Phys. Rev. Lett. 81, 3014 (1998); R. A.
+MacKee, F. J. Walker, M. F. Chisholm, Science 293, 468
+(2001); V. Fiorentini and G. Gulleri, Phys. Rev. Lett.
+89, 6101 (2002); D. Muller, T. Sorsch, S. Moccio, F.
+Baumann, K. Evans-Lutterdodt, and G. Timp, Nature
+399, 758 (1999).
+[3] L. Niemeyer, L. Pietronero, and H. J. Wiesmann, Phys.
+Rev. Lett. 52, 1033 (1984); M. A. F. Gomes, E. F. da
+Silva Jr., and J. A. Aguiar, Semicond. Sci. Techn., 10,
+1037 (1995).
+[4] H. J. Wiesmann, and H. R. Zeller, J. Appl. Phys. 60,
+1770 (1986).
+[5] E. Y. Wu, J. H. Stathis and L-K. Han, Semicond. Sci.
+Technol. 15, 425 (2000).
+[6] R. Degreave, B. Kaczer and G. Groeseneken, Microelec-
+tron. Reliab. 39, 1445 (1999).
+[7] M. L. Green, E. P. Gusev, R. Degreave and E. L. Gar-
+funkel, J. Appl. Phys. 90, 2057 (2001).
+[8] D. R. Wolters, and J. F. Verwey, in Instabilities in Silicon
+Devices, edited by G. Barbottin and A. Vapaile (Elsevier,
+North Holland,1986), p. 315.
+[9] B. V. Gnedenko and V. Yu. Korolev, Random Summa-
+tion: Limit Theorems and Applications (CRC, Boca Ra-
+ton, 1996).
+[10] G. Wilk and Z. Wlodarczyk, Phys. Rev. Lett 84, 2770
+(2000).
+[11] G. Wilk and Z. Wlodarczyk, Physica A 290, 55 (2001).
+[12] C. Beck, Phys. Rev. Lett. 87, 180601 (2001).
+[13] G. M. Batanov et al, Plasma Phys. Rep. 28, 111 (2002).
+[14] S. Picoli Jr., R. S. Mendes, and L. C. Malacarne, Physica
+A 324, 678 (2003).
+[15] R. Degraeve, B. Kaczer, and G. Groeseneken, Semicond.5
+Sci. Technol. 15, 436 (2000).
+[16] N. L. Johnson and S. Kotz, Distribution in Statistics:
+Continous Univariante Distribution-1, New York, John
+Wiley and Sons, 1970.
+[17] C. Tsallis, J. Stat. Phys. 52, 479 (1988); C. Tsallis,
+R. S. Mendes and A. R. Plastino, Physica A 261, 534
+(1998); C. Tsallis, in: S. Abe, Y. Okamoto (Eds.), Nonex-
+tensive Statistical Mechanics and Its Application, Lec-
+ture Notes in Physics, Springer, Heidelberg, 2001; See
+http://tsallis.cat.cbpf.br for periodically updated bibli-
+ography on the subject.
+[18] Strictly speaking, this average process only leads to q >
+1,which is just the relevant case to this work.
+[19] The experimental data were obtained through direct
+scanning of the ﬁgures and then recovering the data using
+the Opti-Graph program.
+[20] A. Teramoto,H. Umeda, K. Azamawari, K. Kobayashi,
+K. Shiga, J. Komori, Y. Ohno, and A. Shigetomi, Micro-
+electron. Reliab., 41, 47 (2001).
+[21] S. S. Sombra, U. M. S. Costa, V. N. Freire, E. A. de Vas-
+concelos, E. F. da Silva Jr., Physica A 305, 351 (2002).

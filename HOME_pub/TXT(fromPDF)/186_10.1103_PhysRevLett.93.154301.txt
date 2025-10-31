@@ -1,0 +1,522 @@
+Anomalous Behavior of the Coefﬁcient of Normal Restitution in Oblique Impact
+Hiroto Kuninaka1,* and Hisao Hayakawa2
+1Graduate School of Human and Environmental Studies, Kyoto University, Sakyo-ku, Kyoto, Japan, 606-8501
+2Department of Physics, Yoshida-south campus, Kyoto University, Sakyo-ku, Kyoto, Japan, 606-8501
+(Received 3 October 2003; published 5 October 2004)
+The coefﬁcient of normal restitution in an oblique impact is theoretically studied. Using a two-
+dimensional lattice model for an elastic disk and an elastic wall, we demonstrate that the coefﬁcient of
+normal restitution can exceed unity and has a peak against the incident angle in our simulation. We also
+explain this behavior based upon a phenomenological theory.
+DOI: 10.1103/PhysRevLett.93.154301
+PACS numbers: 45.50.Tn, 45.70.–n, 62.20.–x, 81.40.Pq
+The coefﬁcient of normal restitution e is introduced to
+determine the normal component of the postcollisional
+velocity in the collision of two materials. The coefﬁcient
+e is deﬁned by
+v c  n  ev0  n;
+(1)
+where v is the relative velocity of the centers of mass of
+two colliding materials at time  measured from the
+initial contact, c is the duration of a collision, and n is
+the unit vector normal to the contact plane. Though some
+text books of elementary physics state that e is a material
+constant, many experiments and simulations show that e
+decreases with increasing impact velocity [1]. The depen-
+dence of e on the low impact velocity is theoretically
+treated by the quasistatic theory [2–4].We also recognize
+that e can be less than unity for the normal impact
+without the introduction of any explicit dissipation, be-
+cause the macroscopic inelasticities originate in the trans-
+fer of the energy from the translational mode to the
+internal modes such as the vibrations [3,5,6].
+While e has been believed to be less than unity in most
+situations, it is recently reported that e can exceed unity
+in oblique impacts [7–9]. In particular, Louge and Adams
+[9] observed oblique impacts of a hard aluminum oxide
+sphere on a thick elastoplastic polycarbonate plate and
+found that e grows monotonically with the magnitude of
+the tangent of the incident angle . In their experiment,
+Young’s modulus of the plate is 100 times smaller than
+that of the aluminum oxide sphere. They also suggested
+that e can exceed unity for the most oblique impacts.
+In
+this
+Letter,
+we
+demonstrate
+that
+our
+two-
+dimensional simulation of the oblique impact based on
+Hamilton’s equation has yielded an increasing e with
+tan and e exceeds unity at the critical incident angle.
+Finally, we explain our results by our phenomenological
+theory.
+Let us introduce our numerical model [10]. Our model
+consists of an elastic disk and an elastic wall (Fig. 1). The
+width and the height of the wall are 8R and 2R, respec-
+tively, where R is the mean radius of the undeformed disk.
+Both side ends and the bottom of the wall are ﬁxed. We
+place 800 mass points at random in a disk with the radius
+R and 4000 mass points at random in a wall for the disk
+and the wall, respectively. We connect each mass point
+with its neighbor mass points by the Delaunay triangu-
+lation algorithm [11], and undeformed nonlinear springs
+are placed on all the connections.
+Each mass point i on the lower half boundary of the
+disk feels the force, Fli
+s   aV0 expali
+s ni
+s , where
+li
+s is the distance between the ith surface mass point of
+the disk and the nearest surface spring of the wall, a 
+300=R, V0  amc2R=2, m is the mass of each mass point,
+c is the one-dimensional velocity of sound, and ni
+s is the
+unit vector normal to the connection between two surface
+mass points of the wall [10]. We should note that the
+strong repulsion Fli
+s  is introduced to inhibit the pene-
+tration of the disk to the surface of the wall [5]. Thus, the
+dynamical equation of motion for each mass point i of the
+lower half boundary of the disk is described by
+m d2ri
+d2 
+X
+Ni
+j1
+fkaxij  kbx3
+ijg  lth
+ li
+s aV0 expali
+s ni
+s ;
+(2)
+where ri is the position of ith mass point, Ni is the number
+of mass points connected to the ith mass point, xij is the
+γ
+FIG. 1.
+The elastic disk and wall consisted of random lattice.
+VOLUME 93, NUMBER 15
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+8 OCTOBER 2004
+154301-1
+0031-9007=04=93(15)=154301(4)$22.50
+2004 The American Physical Society
+154301-1relative deformation of the spring between ith and jth
+connected mass points, and ka and kb  ka 	 103=R2
+are the spring constants. Here we introduce the step
+function x, i.e., x  1 for x 
+ 0 and x  0
+for x < 0, and the threshold length lth which is the average
+of the natural lengths of the springs of the disk. For
+internal mass points, the last term of the right hand side
+of Eq. (2) is omitted. In most of our simulations, we adopt
+ka  kd
+a  1:0 	 mc2=R2 for the disk and ka  kw
+a
+
+1:0 	 102mc2=R2 for the wall. We do not introduce any
+dissipative mechanism in this model. Thus, during a
+collision, a part of the initial translational energy of the
+disk is distributed into the vibrational energy of the disk
+and the wall. It should be noted that the macroscopic
+dissipation can be interpreted as the irreversible transfer
+of the energy from the translational motion to the internal
+vibration. When we introduce explicit dissipations in the
+model and add the gravity to the disk, we have conﬁrmed
+that the compression of the disk can be described by two-
+dimensional Hertzian contact theory [12].
+In this model, the roughness of the surfaces is impor-
+tant to make the disk rotate after a collision [10]. We
+modify the positions of the surface mass points of the ﬂat
+wall and the smooth disk by using normal random num-
+bers whose average and standard deviation are 0 and 3 	
+102R, respectively.
+Poisson’s ratio  and Young’s modulus E of this model
+can be evaluated by adding the external force to stretch
+the rectangle of random lattice numerically. We obtain
+Poisson’s ratio   7:50  0:11 	 102 and Young’s
+modulus E  9:54  0:231 	 103mc2=R2, respectively
+[10].
+We solve the dynamical equation of motion (2) for each
+mass point with the initial speed jv0j  0:1c and the
+incident angle , and determine e for each  according to
+Eq. (1). All the results in this Letter are obtained by
+averaging the results of 100 disks with different conﬁgu-
+rations of mass points.We use the fourth order symplectic
+integrator with the time step   103R=c.
+Figure 2 is the relation between e and 1  v0 
+t=v0  n  tan, where t is the unit vector vertical to
+n. The cross point is the mean value and the error bar is
+the standard deviation of 100 samples for each . This
+result shows that e increases with increasing 1 to exceed
+unity, and has a peak around 1  6:0. The behavior of e
+having the peak is in contrast to that in the experiment by
+Louge and Adams [9].
+Here, let us explain our results. Louge and Adams [9]
+suggest that their results can be explained by the rotation
+of the normal unit vector n arising from the local defor-
+mation of the wall’s surface. Thus, we aim to determine
+the angle of rotation of the unit vector  at each  from
+the theory of elasticity.
+Figure 3 is the schematic ﬁgure of a hard disk moving
+from the left to the right on a wall, where l  jxb  xaj.
+Assuming that l is small compared to R, the perimeter of
+the contact is approximated by
+fx  x  xc2=2R  yc;
+(3)
+where xc; yc is the lowest position of the disk. To calcu-
+late tan  fxb  fxa=l, we need to know the ratio
+of jxc  xaj to l. From the theory of elasticity [13], this
+ratio can be estimated as
+xc  xa
+l
+ 1  
+with   1
+ arctan 1  2
+ 2  2 ;
+(4)
+where  is the coefﬁcient of the friction.We evaluate  by
+  jJ  tj=jJ  nj with J  Mv  v0, where M is
+the mass of the disk. The cross points in Fig. 4 represent  
+calculated from our simulation, where  has a peak
+around 1  3:0. From Eqs. (3) and (4), tan is given by
+tan  2  1
+2  2
+jxc  xaj
+R
+;
+(5)
+0.95
+1
+1.1
+1.2
+1.3
+1.4
+0
+1
+2
+3
+4
+5
+6
+7
+Simulation
+Theory
+Ψ 1
+e
+FIG. 2.
+Numerical and theoretical results of the relation be-
+tween 1 and e.
+yc
+xc
+xa
+bx
+l=|    -    |
+xa
+bx
+A
+B
+y
+x
+n
+t
+FIG. 3.
+The schematic ﬁgure of a hard disk sliding on a soft
+wall. x coordinates of both ends of the contact area AB are x 
+xa and x  xb.
+VOLUME 93, NUMBER 15
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+8 OCTOBER 2004
+154301-2
+154301-2where we evaluate jxc  xaj  0:55R from the maximum
+value of the compression of the disk. From Eqs. (4) and
+(5), we obtain the relation between 1 and tan.
+Next, let us calculate e from the relation between 1
+and tan. We introduce the rotated unit vectors, n and
+t, as n  cosn  sint and t  sinn  cost, re-
+spectively. By introducing e  vc  n=v0 
+n, we can express e in terms of e as
+e  e  
+2 tan
+1  
+1 tan ;
+(6)
+where 
+1  v0  t=v0  n and 
+2  vc 
+t=v0  n. 
+1 also can be rewritten as
+
+1  1  tan=1  1 tan:
+(7)
+On the other hand, in the oblique impact of slipping disks,
+
+2 is given by
+
+2  
+1  31  e 
+(8)
+in the two-dimensional situation [14]. In Eq. (8),  ,
+deﬁned by    jJ  tj=jJ  nj, is given by
+     tan
+1   tan :
+(9)
+To draw the solid line in Fig. 2, at ﬁrst, we calculate  and
+tan for each 1. By choosing a ﬁtting parameter e 
+0:95 and substituting Eqs. (7)–(9) into Eq. (6) we obtain e
+as a function of ,  , and 1. All points are interpolated
+with the cubic spline interpolation method to draw the
+solid curve. This theoretical description of e is qualita-
+tively consistent with our numerical result, though the
+theoretical value is a little smaller than the observed
+value.
+Now, let us consider how  depends on 1 based on a
+phenomenological argument. For simplicity, we replace
+the roughness on the surface of the wall by a periodic
+array of asperities. When the disk hits one asperity, a
+fraction of the energy is absorbed in the wall. We assume
+that the tangential velocity vi1
+t
+changes to vi
+t  1 
+%vi1
+t
+when the disk hits the ith asperity. Thus, if the
+disk contacts N asperities during the impact, the tangen-
+tial speed at the release point becomes vtc  vN
+t
+
+1  %Nvt0. Here we estimate the number of contacted
+asperities during the collision as N  &lsl, where & is the
+number of the asperities in a unit length on the surface
+and lsl is the length of sliding which can be evaluated as
+lsl  vt0c with c  R=c
+
+ln4c=vn0
+p
+[6]. Thus,
+the tangential impulse Jt  J  t is approximated by
+Jt  Mf1  %&lsl  1gvt0 ’ %M&lslvt0;
+(10)
+where we assume small %. Now, we should answer the
+question how to determine %.When the impact velocity is
+large enough, % becomes smaller because the asperities
+are broken down when the disk hits them. Therefore we
+may assume the form %  %0=1  )v2t 0=v2n0 
+%0=1  )2
+1 with the introduction of the dimensionless
+parameters %0 and ). Taking into account Jn  J  n 
+M1  evn0 and the deﬁnition of   Jt=Jn, we
+obtain
+  %0&R
+1  e
+1
+1  )2
+1
+
+2
+1
+1  2
+1
+ln40
+
+1  2
+1
+q
+
+s
+jv0j
+c
+:
+(11)
+Here
+we
+use
+cos 
+
+1=1  2
+1
+q
+,
+sin 
+
+2
+1=1  2
+1
+q
+. We adopt the numerical results for the
+value of e at each 1 (Fig. 2) and jv0j=c  0:1. The
+solid curve in Fig. 4 is Eq. (11) with ﬁtting parameters
+)  0:21 and %0&R  0:18, which reproduces our nu-
+merical result. We do not claim that our simple argument
+explains the experimental result because of two ﬁtting
+parameters. However, we emphasize that our picture cap-
+tures the essence of the behavior of  in the oblique
+impact.
+Let us discuss our result. First, we emphasize that the
+novel phenomena of e exceeding unity are obtained from
+the local deformation of the soft wall for the oblique
+impacts of a hard disk. When we simulate the impact
+between a disk and a hard wall, for kw
+a
+ 10 	 kd
+a , e
+ﬂuctuates around a constant to exceed unity abruptly
+around 1  4:5 [12]. This tendency resembles the ex-
+perimental results by Calsamiglia et al. [8]. Thus, for a
+smooth increase of e to exceed unity, the wall should be
+softer than the disk. In addition, it is important to ﬁx the
+initial kinetic energy of the disk. So far, we have con-
+ﬁrmed that e does not exceed unity when 1 is controlled
+by changing vt with ﬁxed vn [10].
+Second, the initial velocity of the disk and the local
+deformation of the wall are much larger than those in the
+experimental ones in Ref. [9]. They cause the most sig-
+ 0.025
+ 0.03
+ 0.035
+ 0.04
+ 0.045
+ 0.05
+ 0.055
+ 0.06
+ 0.065
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+Simulation
+Theory
+Ψ1
+µ
+FIG. 4.
+Numerical and theoretical results of the relation be-
+tween 1 and  .
+VOLUME 93, NUMBER 15
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+8 OCTOBER 2004
+154301-3
+154301-3niﬁcant difference between our result and their result [9].
+Because of the high speed impact in our case, there is a
+peak of e for small . In fact, our simulation with jv0j 
+0:01c shows the shift of the peak for larger . Therefore,
+we expect that our model reproduces the result of Ref. [9]
+for the low impact speed. In addition, we have carried out
+simulations with a disk of 400 mass points and a wall of
+2000 mass points to check the effect of the system size.
+Although there is a slight difference between the results,
+the data are also well reproducible by our phenomeno-
+logical theory.
+Third, the local deformation of the wall also affects the
+relation between  and 1. In early studies, it has been
+shown that  depends on the impact velocity [9,15]. In
+our simulation,  has a peak around 1  3:0. This
+behavior is interpreted as that the asperities are ﬂattened
+for large vt. Equation (11) indicates that  can increase
+with increasing  as in Ref. [9] if we choose a suitable set
+of ) and %0&. The difference between the results of their
+experiment and our simulation may be explained by the
+choice of these parameters.
+Fourth, we adopt the static theory of elasticity to ex-
+plain our numerical results in this Letter. However, it is
+important to solve the time-dependent equation of the
+deformation of the wall’s surface to analyze the dynamics
+of impact phenomena. The dynamical analysis will be our
+future task.
+Finally, we indicate that the friction coefﬁcient is de-
+rived from our Hamiltonian model. This friction comes
+from the irreversible energy transfer of the macroscopic
+translational motion to the internal vibration. The irre-
+versibility is indeed related to the second law of thermo-
+dynamics if the number of the internal degrees of
+freedom is inﬁnite. However, the irreversibility in our
+system which includes only 103 mass points in a disk is
+incomplete as we can see that the Hertzian contact theory
+cannot be recovered without introduction of the explicit
+dissipation. We believe that the complete treatment of the
+inelastic collision of macroscopic materials without in-
+troduction of dissipations will be a fundamental subject
+of nonequilibrium statistical mechanics.
+In summary, we have carried out the two-dimensional
+simulation of the oblique impact of an elastic disk on an
+elastic wall. We have found that e can exceed unity in the
+oblique impact, which is attributed to the local deforma-
+tion of the wall. We have estimated the magnitude of the
+local deformation  based on the static theory of elastic-
+ity and derived the relation between e and 1 by taking
+into account the rotation of the normal unit vector of the
+wall’s surface. The relation between  and 1 is also
+related to the local deformation and is explained by the
+simple argument.
+We thank Y. Tanaka and S. Nagahiro for their valuable
+comments. We also thank M.Y. Louge for his detailed
+introduction of their experiment to us and some valuable
+comments. Parts of the numerical computation in this
+work were carried out at Yukawa Institute Computer
+Facility. This study is partially supported by the Grant-
+in-Aid of Ministry of Education, Culture, Sports, Science
+and Technology (MEXT), Japan (Grant No. 15540393),
+and the Grant-in-Aid for the 21st century COE ‘‘Center
+for Diversity and Universality in Physics’’ from MEXT,
+Japan.
+*Present
+address:
+Department
+of
+Chemistry,
+Kyoto
+University, Sakyo-ku, Kyoto, Japan, 606-8502.
+Email address: kuninaka@kuchem.kyoto-u.ac.jp
+[1] W. J. Stronge, Impact Mechanics (Cambridge University
+Press, Cambridge, 2000).
+[2] G. Kuwabara and K. Kono, Jpn. J. Appl. Phys. 26, 1230
+(1987).
+[3] W. A. M. Morgado and I. Oppenheim, Phys. Rev. E 55,
+1940 (1997).
+[4] N.V. Brilliantov, F. Spahn, J.-M. Hertzsch, and T.
+Po¨schel, Phys. Rev. E 53, 5382 (1996).
+[5] F. Gerl and A. Zippelius, Phys. Rev. E 59, 2361 (1999).
+[6] H. Hayakawa and H. Kuninaka, Chem. Eng. Sci. 57, 239
+(2002).
+[7] C. E. Smith and P.-P. Liu, J. Appl. Mech. 59, 963 (1992).
+[8] J. Calsamiglia, S.W. Kennedy, A. Chatterjee, A. Ruina,
+and J.T. Jenkins, J. Appl. Mech. 66, 146 (1999).
+[9] M.Y. Louge and M. E. Adams, Phys. Rev. E 65, 021303
+(2002).
+[10] H. Kuninaka and H. Hayakawa, J. Phys. Soc. Jpn. 72,
+1655 (2003).
+[11] K. Sugihara, Data Structure and Algorithms (Kyoritsu,
+Japan, 2001) (in Japanese).
+[12] H. Kuninaka, Ph.D. thesis, Kyoto University, 2004; H.
+Hayakawa and H. Kuninaka, Phase Transit. 77, 889
+(2004).
+[13] L. A. Galin, Contact Problems in the Theory of Elasticity
+(Gostekhizdat, Moskow, 1953).
+[14] O. R. Walton and R. L. Braun, J. Rheol. (N.Y.) 30, 949
+(1986).
+[15] D. A. Gorham and A. H. Kharaz, Powder Technol. 112,
+193 (2000).
+VOLUME 93, NUMBER 15
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+8 OCTOBER 2004
+154301-4
+154301-4

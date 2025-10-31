@@ -1,0 +1,2723 @@
+PHYSICAL REVIEW B 103, 245127 (2021)
+Editors’ Suggestion
+Topological correspondence between magnetic space group representations and subdimensions
+Adrien Bouhon
+,1,2,* Gunnar F. Lange,3 and Robert-Jan Slager
+3,†
+1Nordic Institute for Theoretical Physics (NORDITA), NORDITA, Hannes Alfvéns väg 12, 106 91 Stockholm, Sweden
+2Department of Physics and Astronomy, Uppsala University, Box 516, SE-751 21 Uppsala, Sweden
+3TCM Group, Cavendish Laboratory, University of Cambridge, J.J. Thomson Avenue, Cambridge CB3 0HE, United Kingdom
+(Received 23 November 2020; accepted 1 June 2021; published 16 June 2021)
+The past years have seen rapid progress in the classiﬁcation of topological materials. These diagnostical
+methods are increasingly getting explored in the pertinent context of magnetic structures. We report on a
+general class of electronic conﬁgurations within a set of antiferromagnetic-compatible space groups that are
+necessarily topological. Interestingly, we ﬁnd a systematic correspondence between these antiferromagnetic
+phases to necessarily nontrivial topological ferro/ferrimagnetic counterparts that are readily obtained through
+physically motivated perturbations. Addressing the exhaustive list of magnetic space groups in which this
+mechanism occurs, we also verify its presence on planes in 3D systems that were deemed trivial in existing
+classiﬁcation schemes. This leads to the formulation of the concept of subdimensional topologies, featuring
+nontriviality within part of the system that coexists with stable Weyl points away from these planes, thereby
+uncovering novel topological materials in the full 3D sense that have readily observable features in their bulk
+and surface spectrum.
+DOI: 10.1103/PhysRevB.103.245127
+I. INTRODUCTION
+With the advent of topological insulators (TIs)—gapped
+quantum matter having a topological entity by virtue of
+symmetry—the past years have seen a reinvigorated interest
+in band theory. Time reversal symmetry (TRS) has played
+a major role in these developments, standing at the basis of
+the developments of the ﬁrst models of the general notion of
+symmetry protected states [1,2]. More recently, the interplay
+with crystalline symmetries has provided a plethora of topo-
+logical characterizations [3–22]. In particular, it was found
+that a substantial fraction of topological materials can be
+diagnosed by reﬁned symmetry eigenvalue methods. Heuris-
+tically this pertains to considering combinatorial constraints
+between high-symmetry momenta in the Brillouin zone (BZ),
+which can be shown to reveal classes of band structures that
+actually match the full machinery of K-theory analysis in
+certain cases [23], and then comparing them to real space
+atomic limits in order to deﬁne nontriviality with respect to
+this reference [24,25].
+Despite the crucial role of TRS, arguably the most
+paradigmatic TI model actually involves the formulation of
+TRS-breaking Chern bands [26], manifesting the original in-
+spiration of these pursuits by quantum Hall effects. Hence,
+it is of natural interest to consider the role of magnetism
+in combination with the above recent developments. While
+the interplay of topology and magnetism entails a vast and
+established literature, ranging from spin liquids to axion insu-
+lators [27–33], there have been rather fruitful results on both
+*adrien.bouhon@gmail.com
+†rjs269@cam.ac.uk
+essential symmetry eigenvalues indicated schemes [34], that
+is symmetry indicators [35] and, very recently, topological
+quantum chemistry [36].
+Already in the nonmagnetic case the reﬁned evaluations re-
+sulted in new insights. In particular, the discrepancies between
+different approaches culminated in the formulation of the con-
+cept of fragile topology [37]. These are topological invariants
+that, unlike stable counterparts, characterize band subspaces
+separated by energy gaps from the other bands that can be
+trivialized upon the closing of the gaps [38–41]. Of particular
+interest are systems with PT or C2T symmetry that were
+early characterized through a stable Z2 invariant [42–45],
+and more recently through a fragile Z invariant [38,46] given
+by the Euler class [47–49] for which new physical effects
+have been predicted [50]. In fact, taking into account multiple
+gap conditions [49], these phases go beyond any symmetry
+eigenvalue indicated notion and relate to the momentum space
+braid trajectories of non-Abelian frame-charge characterized
+spectral nodes [48,51,52]. The role of C2T symmetry has also
+been pointed out in the nontrivial topology of the low energy
+bands of twisted bilayer graphene [53,54].
+Here we revert to the question what physical implications
+the extension to magnetic space groups (MSG) symmetries
+can bring within the above context. To this end, we start
+by a case study in space group family (SG) 75 and ﬁnd
+that within a magnetic background some Wyckhoff positions
+necessarily imply nontriviality. Turning to antiferromagnetic
+case we, for the ﬁrst time, ﬁnd a model exhibiting fragile
+and Euler class topology in a MSG and identify the protect-
+ing symmetries as well as deﬁning quantities. The magnetic
+symmetry deﬁning antiferromagnetic (AFM) order is however
+broken upon adding a generic Zeeman term, giving rise to a
+ferro/ferrimagnetic-compatible (FM) phase within the same
+2469-9950/2021/103(24)/245127(21)
+245127-1
+©2021 American Physical SocietyBOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+family. The correspondence subsequently manifests itself by
+conveying that the fragile topological nature has to translate
+into bands of ﬁnite Chern number in the FM counterpart.
+Going beyond fragile topology, we ﬁnd that the other re-
+maining possibility of this conﬁguration entails a symmetry
+protected Weyl semimetallic phase phase, characterized by a
+quantized π-Berry phase. The stable nodal phase corresponds
+to ﬁnite Z2 symmetry indicator [35] that is protected by the
+combination of the C4 and C2T symmetries. We moreover
+show that this phase possesses a systematic correspondence
+to a nontrivial Chern insulating FM counterpart at half-ﬁlling,
+characterized by an even Chern number C = 2 mod 4. We then
+generalize our ﬁndings by formulating an exhaustive list of
+tetragonal MSGs featuring this necessarily present topological
+conﬁgurations and their systematic correspondences relating
+AFM and FM counterparts. We moreover address the effect
+of adding and removing unitary symmetries leading to the
+identiﬁcation of magnetic Dirac points [55], and the gener-
+alization of the C2T protected Weyl semi-metallic phases to
+numerous MSGs. Most importantly, we ﬁnd that this mecha-
+nism can occur on planes in 3D systems that were previously
+diagnosed as trivial. At the crux of the argument lies that
+the in-plane topology must coexist with symmetry indicated
+nodes away from the subdimensional regions, such that the 3D
+conditions appear trivial. Nonetheless, these subdimensionally
+enriched topological nodal topologies exhibit robust topolog-
+ical features, such as corner modes plus Fermi arcs in the
+subdimensional gapped fragile AFM case [56], or Fermi arcs
+plus Fermi arcs in the subdimensional Weyl nodal AFM case,
+and thus pinpoint to a new class of gapped-nodal topological
+materials to explore.
+II. MAGNETIC SPACE GROUP AND MAGNETIC
+STRUCTURE: A FIRST CASE STUDY IN SG P4 (NO. 75)
+To concretize matters we depart from a simple model
+for the tetragonal magnetic space group PC4 (MSG No.
+75.5 using the BNS convention) [57,58]. The MSG can be
+decomposed into left cosets as G75.5/G75.1 = (E|0)G75.1 +
+(E|τ )′G75.1, where the space group G75.1 = C4 × T (P4, No.
+75.1 in the BNS convention) has no antiunitary symmetry [57]
+(E is the identity, the prime (·)′ stands for time reversal,
+and τ = a1/2 + a2/2). MSG75.1 (P4) has point group C4
+with the normal subgroup of translations T corresponding
+to the primitive tetragonal Bravais lattice {n1a1 + n2a2 +
+n3a3}n1,n2,n3∈Z where the primitive vectors are a1 = a(1, 0, 0),
+a2 = a(0, 1, 0), and a3 = c(0, 0, 1). In the following, we ﬁrst
+focus on the two-dimensional projection z = 0, namely we
+study the corresponding magnetic layer group pc4 (denoted
+MLG49.4.357 in [58]). In addition, we use the fact that
+MSG75.5 (PC4) is generated by (C4z|0)T (C4z is the rotation
+by π/2 around the z-axis in the positive trigonometric orienta-
+tion) and (E|τ )′T (we will call (E|τ )′ a nonsymmorphic time
+reversal symmetry (TRS) as it contains a fractional transla-
+tion).
+Generally, magnetic space groups with nonsymmorphic
+TRS, called Shubnikov space groups of type IV [57],
+correspond to AFM structure. Writing (r, m) for a mag-
+netic moment m located at r, the action of (E|τ )′ gives
+(E|τ )′(r, m) = (r + τ, −m), and the square
+[(E|τ )′]2(r, m) =
+MSG75.5
+MSG75.1
+(a)
+(b)
+2b
+2c
+FIG. 1. Background magnetic structures for MSG75.5 and 75.1
+with Wyckoff positions of interest indicated in standard notation. The
+latter MSG is effectively realized by making the oppositely-oriented
+moments (red/blue spins aligned with the ˆz axis perpendicular to
+the plane) in the former of unequal magnitude. This thus relates an
+antiferromagnetic-compatible conﬁguration of the SG75-family with
+a ferro/ferrimagnetic one.
+(r + a1 + a2, m), i.e., the moment is conserved under trans-
+lation by a Bravais lattice vector while it is ﬂipped under a
+fractional translation. Hence MSG75.5 (PC4) is compatible
+with the AFM structure drawn over one unit cell in Fig. 1(a),
+where all the moments of equal sign (pointing in the direction
+of the vertical ˆz axis) are obtained under the action of elements
+generated by (C4z|0)T. In the following, we assume the exis-
+tence of a magnetic background and describe its effect on the
+band structure’s topology of itinerant electrons. We note that
+such magnetism can be obtained directly as localized atomic
+magnetism within density functional theory frameworks [59],
+or as the solution of an effective spin Hamiltonian mapped
+from the Green’s functions of interacting electrons [60,61].
+Alternatively, effective electronic tight-binding Hamiltonians
+were derived from the double exchange model, i.e., non-
+self-interacting electrons coupled through Hund’s coupling
+to local classical magnetic moments that interact via super-
+exchange coupling [62], where the electron spins antialign
+with the local moments, and for which line-nodal semimetal-
+lic phases were recently discussed [63].
+A. Necessary crystalline fragile antiferromagnetic topology
+Adopting maximal Wyckoff position 2b [58], spanned by
+the sublattice sites rA = a1/2 and rB = τ −rA = a2/2, and
+setting one s-electronic orbital and both spin-z-1/2 compo-
+nents per site, we deﬁne the corresponding Bloch orbital basis
+functions
+|ϕα,σ, k⟩=
+
+R∈T
+eik·(R+rα)|wα,σ, R + rα⟩,
+(1)
+with α = A, B and σ =↑, ↓(taking ˆz as the quantization
+axis of the spins). Ordering the degrees of freedom as ϕ =
+(ϕA,↑, ϕA,↓, ϕB,↑, ϕB,↓), the generators of MSG75.5 (PC4), i.e.,
+C4z rotation and nonsymmorphic time reversal, are then repre-
+sented through
+⟨ϕ, Dπ/2k|(C4z|0)|ϕ, k⟩= (σx ⊗M4),
+⟨ϕ, −k|(E|τ )′|ϕ, k⟩= eik·τ (σx ⊗−iσy)K,
+(2)
+245127-2TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+where M4 = diag[e−iπ/4, eiπ/4], and Dπ/2 is the 3D rotation
+matrix by an angle π/2 around the kz axis, {σi}i=x,y,z are the
+Pauli matrices, and K is complex conjugation. Combining the
+two generators, we also obtain
+⟨ϕ, −Dπ/2k|(C4z|τ )′|ϕ, k⟩= eiDπ/2k·τ (1 ⊗−iσyM∗
+4 )K.
+(3)
+It follows that the orbit of the action of the sym-
+metries
+{(E|0), (C4z|0), (E|τ )′, (C4z|τ )′}
+on
+ϕA,↑
+is
+{ϕA,↑, ϕA,↓, ϕB,↑, ϕB,↓}, i.e., all four degrees of the freedom
+are intertwined by the symmetries of MSG75.5 (PC4).
+It can be easily checked that this remains true for any
+change of basis (i.e., under any general rotation among the
+sublattice and spinor components). Furthermore, it can be
+veriﬁed that the atomic orbitals cannot be moved to any
+other Wyckoff position without breaking the symmetries.
+We therefore conclude that {|ϕ, k⟩}k∈BZ deﬁnes a four
+dimensional elementary band representation (EBR) [25,64–
+66] as it is formed by the minimal set of localized (atomic
+like) orbitals at the sites 2b that is compatible with the
+magnetic space group symmetries, and we denote it EBR2b
+75.5.
+This agrees with Ref. [36] which lists 2b as a maximal
+Wyckoff position and excludes this EBR from the exceptional
+composite EBRs.
+A minimal tight-binding model for EBR2b
+75.5 is given by
+H(k) = t1 f1(k)σz ⊗σz
++t2 f2(k)σy ⊗1 + t3 f3(k)σx ⊗1
++ λ1g1(k)1 ⊗σ+ + λ∗
+1g∗
+1(k)1 ⊗σ−
++ λ2g2(k)σx ⊗σ+ + λ∗
+2g∗
+2(k)σx ⊗σ−,
+(4)
+with σ± = (σx ± iσy)/2 and the lattice form factors
+f1 = cos a1k −cos a2k,
+g1 = sin a1k −i sin a2k,
+f2 = cos δ1k −cos δ2k,
+g2 = sin δ1k −i sin δ2k,
+f3 = cos δ1k + cos δ2k,
+(5)
+deﬁned in terms of the bond vectors δ
+(1
+2) = (a1(−
++)a2)/2. It is
+assumed that {t1,t2,t3} are real, while {λ1, λ2} can be com-
+plex. In the following, we ﬁrst set t1,t2,t3 = 1, and λ1, λ2 =
+(1/2)eiπ/5.
+Of importance for the analysis of the band structure and
+its topology are the squares of the twofold antiunitary sym-
+metries [67,68]. The nonsymmorphic time reversal squares as
+⟨ϕ, k|[(E|τ )′]2|ϕ, k⟩= −e−ik·2τ14×4,
+(6)
+from which we get
+⟨ϕ, |[(E|τ )′]2|ϕ, ⟩= ⟨ϕ, M|[(E|τ )′]2|ϕ, M⟩= −14×4.
+(7)
+We thus conclude that there must be a twofold Kramers de-
+generacy at  and M, and we call them TRIM (time reversal
+invariant momentum) in the following. Combining the non-
+symmorphic time reversal with C2z, we get (C2z|τ )′ that is
+represented through
+⟨ϕ, −C2zk|(C2z|τ )′|ϕ, k⟩= eiDπk·τ (σx ⊗iσx)K
+(8)
+TABLE I. Character table for the magnetic space group IRREPs
+of MSG75.1 (P4), and coIRREPs of the unitary symmetries of
+MSG75.5 (PC4), at , M, and X, with ω = eiπ/4. The coIRREPs
+of MSG75.5 (PC4) are given by the pairing of the two IRREPs
+of MSG75.1 (P4) within the same column (e.g., 57 = 5 ⊕7).
+Retrieved from the Bilbao Crystallographic Server [69]. The second
+column gives the spin components located at the Wyckoff position
+2c of MSG75.1 (P4) from which the IRREPs are induced.a
+WP
+5
+6
+M8
+M7
+2c
+7
+8
+M5
+M6
+X 3
+X 4
+C4z
+↑z
+↓z
+−ω∗
+−ω
+ω∗
+ω
+ω
+−ω∗
+−ω
+ω∗
+C2z
+↑z
+↓z
+−i
+i
+−i
+i
+i
+−i
+i
+−i
+-i
+i
+aWe note that for any maximal Wyckoff position (WP) of MSG75.1
+(P4) {1a, 1b, 2c} [36,69] the spin-z components are good quantum
+numbers at  and M, which originates from the fact that the verti-
+cal C4z-axes (for WPs 1a and 1b) and C2z axes (for WPs 2c) give
+natural quantization axes for the spins. At the Wyckoff position 2c
+(compatible with the Wyckoff position 2b of MSG75.5), the spin-
+z + 1/2 (+3/2) induces {5, 6, M7, M8}, and the spin-z −1/2
+(−3/2) induces {7, 8, M5, M6}.
+and squares as
+⟨ϕ, k|[(C2z|τ )′]2|ϕ, k⟩= 14×4.
+(9)
+The existence of such an antiunatry symmetry that leaves the
+momentum invariant and squares to +1 implies that there
+exists a change of orbital basis in which the Hamiltonian is
+real symmetric [52]. This is here achieved through 
+H(k) =
+V · H(k) · V † where V = √σx ⊗iσx. We symbolically refer
+to this symmetry as the “C2T ” symmetry.
+The bands are then effectively analyzed using the (co-
+)irreducible representations at the , M, and X points. These
+are summarized in Table I (and discussed further in Ap-
+pendix D 1).
+Whenever a band structure of an EBR may be split by
+an energy gap, at least one band subspace must be topologi-
+cal, namely, either both band subspaces are stable or fragile
+topological, or one is trivial and the other must be fragile
+topological [25,37,38]. Heuristically this is the case because
+there must be an obstruction forbidding the mapping of Bloch
+eigenstates of EBR subspaces to localized Wannier functions
+(i.e., atomic limits) as a result of the space group symmetries,
+since the dimensionality of any band subspace’s Wannier basis
+(here two) is necessarily smaller than the dimensionality of
+the by deﬁnition minimal EBR (here four). As a consequence,
+the Wannier functions representing an EBR’s subspace are
+either delocalized if we impose all symmetry constraints, or
+are incompatible with the space group symmetries. From the
+induced irreducible co-representations (coIRREPs) and the
+compatibility relations among these [23,69,70], we conclude
+that EBR2b
+75.5 can be split over all high-symmetry regions of
+the Brillouin zone. We actually obtain a gapped band structure
+over the whole Brillouin zone in our minimal model, see
+Figs. 2(a) and 2(b) that gives the ordering in energy of the
+245127-3BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+Γ
+M
+Γ
+- 2
+0
+2
+E
+FIG. 2. Nontriviality in MSG75.5. (a) Full band structure of
+model deﬁned in Eq. (4) and (b) along the high-symmetry direc-
+tions with coIRREPs indicated. (c) Symmetry-based paths within the
+Brillouin zone used as base loops for the patch Wilson loop (dashed
+blue), the C4-symmetric Wilson loop (green), and the symmetry indi-
+cated Berry phase (red). The small arrows show the direction of ﬂow
+(deformation of base loops). (d) Two-band Wilson loop (blue lines),
+integrated along kx ∈[0, 2π], and total Berry phase (red dashed line)
+for the valence (equivalently, conduction) bands of EBR2b
+75.5. Integrat-
+ing along ky ∈[0, 2π] gives equivalent results. (e) Wilson loop ﬂow
+over a patch from the base loop X′ to M′. (f) C4-symmetric
+Wilson loop ﬂow from the point l0 =  to the boundary of the
+Brillouin zone, l1 = ∂BZ. Notation follows conventions of the main
+text.
+induced coIRREPs1 (deﬁned in Table I). The rational behind
+the splitting of the EBR will be explained when we address
+the symmetry indicator, which turns out to be trivial for the
+IRREPs ordering of Fig. 2(b). In the following we refer to the
+lower (higher) two-band subspace as the valence (conduction)
+subspace at half-ﬁlling. The question is then to determine the
+topology of each gapped subspace as in that case there is no
+stable symmetry indicated topology.
+As pointed out above, the C2T symmetry implies that the
+Bloch eigenvectors can be made real through the appropriate
+change of basis. It follows that (oriented) two-band subspaces
+of such Hamiltonians are topologically classiﬁed by Euler
+class χ ∈Z that can be computed as a winding of Wilson
+loop [38,47–49,52]. We ﬁnd that the Wilson loop (W[l],
+see Appendix A) of each two-band subspace winds along
+both directions (i.e., integrating along the base path lky =
+{(kx, ky)|kx ∈[0, 2π]} and scanning through ky ∈[0, 2π], and
+similarly if we exchange kx ↔ky), see Fig. 2(d). We moreover
+ﬁnd that the Berry phase (eiγB[l] = DetW[l]) of both two-band
+1The coIRREPs of MSG75.5 are obtained from the IRREPs of
+MSG75.1 with the degeneracies imposed by the extra antiunitary
+symmetries (this is practically determined by the Herring rule [57]).
+TABLE II. Character table for the magnetic space group IRREPs
+of MSG77.13 (P42), and coIRREPs of the unitary symmetries of
+MSG77.18 (PI42), at Z, A, and R, with ω = eiπ/4. The (co-)IRREPs
+at , M, and X are the same as in Table I. The coIRREPs of
+MSG77.18 are given by the pairing of the two IRREPs of MSG77.13
+within the same column. Retrieved from the Bilbao Crystallographic
+Server [69].
+WP
+Z5
+Z6
+A8
+A7
+2c
+Z8
+Z7
+A5
+A6
+R3
+R4
+(C4z|τ3)
+↑z
+↓z
+−ω
+−ω∗
+ω
+ω∗
+ω∗
+−ω
+−ω∗
+ω
+(C2z|0)
+↑z
+↓z
+−i
+i
+−i
+i
+i
+−i
+i
+−i
+-i
+i
+subspaces is π along both directions, see Fig. 2(d) (red dashed
+line), pointing to the nonorientability of the subspaces’ frames
+of Bloch eigenvectors [49]. While the Euler class is not de-
+ﬁned strictly speaking for an unorientable band subspace [71],
+we still obtain the winding of Wilson loop as an element of
+π1(O(2)) = Z since W[l] ∈O(2) when computed in the real
+gauge (i.e., using the Bloch eigenvectors of the real symmetric
+form).2 We thus conclude that each two-band subspace has a
+nonorientable nontrivial fragile topology [49]. Moreover, we
+also point out that the nontrivial π Berry-phases are actually
+appealing from a bulk-boundary perspective [72]. Indeed, they
+culminate in-gap edge states, reﬂecting a physical signature,
+see Ref. [56] for a detailed analysis.
+We further derive in Appendix A the necessary nontriv-
+iality of the split EBR2b
+75.5. Following Ref. [38], we show
+that the crystal symmetries impose a ﬁnite fractional wind-
+ing of Wilson loop over one quarter of the Brillouin zone,
+i.e., the patch bounded by the paths X′ and M′ (blue
+dashed lines) in Fig. 2(c). This results from the difference
+in the symmetry protected quantizations of the Wilson loops
+over the two base paths, i.e., Arg[eig{W[lX′]}] = [0, π] and
+Arg[eig{W[lM′]}] = [π/2, π/2], which depends on both
+the IRREPs and the spinor structure of the bands (i.e., spin-
+parallel versus spin-ﬂip parallel transports, see Appendix A),
+as is also veriﬁed through direct numerical evaluation of the
+Wilson loop over the patch in Fig. 2(e). Then, byC4 symmetry,
+the Wilson loop must have a ﬁnite integer winding over the
+whole Brillouin zone, as conﬁrmed by Fig. 2(d). We later refer
+to it as the crystalline Euler fragile topology (written CEF in
+Table III) when we address the generalization to other MSGs.
+We furthermore compute the C4-symmetric Wilson loop
+ﬂow [38,73,74] from the point l0 =  to the contour of the
+Brillouin zone l1 = ∂BS, shown in green in Fig. 2(c), and
+between which we extrapolate by taking the scaled contour
+ν∂BZ for ν ∈[0, 1]. This also exhibits a full winding shown
+in Fig. 2(f). The C4-symmetric Wilson loop winding alludes
+to the persistence of nontrivial fragile topology after breaking
+2Strictly speaking there is reduction Z →N of the classiﬁcation as
+a consequence of the facts that band subspaces are orientable and
+not oriented, and that the homotopy classes of gapped Hamiltonians
+have no ﬁxed base points [49].
+245127-4TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+TABLE III. Candidate MSGs for the (Euler) fragile/stable-nodal AFM to Chern FM mechanism, including those proﬁting from the
+subdimensional topological analysis. The table lists the AFM and corresponding FM counterparts as well as their time reversal invariant
+momenta (TRIM) which host Kramers doublets (i.e., Weyl nodes). Moreover, it details the topology by enumerating the value of C2T = ±1
+and the two-band subspace (2-BS) characterization on the kz = 0, π momentum planes. [C2T ]2 = +1 indicates Euler class (real) topology,
+while [C2T ]2 = −1 implies the twofold Kramers degeneracy of the bands. The labels CEF, CF, CW, and CC indicate crystalline Euler fragile
+(with symmetry-indicated Wilson loop quantization), crystalline fragile (with the winding of C4-symmetric Wilson loop), and crystalline Weyl
+semimetallic (with a symmetry-indicated π-Berry phase), respectively. When the 2-BS Topology is CW, we mean that there must be Weyl
+nodes connecting adjacent two-band subspaces. When we write CEF/CW, we mean that either of the topologies is realized depending on the
+ordering of IRREPs. Finally, the EBR column speciﬁes the elementary band representationsa hosting the topologyb. All FM candidates acquire
+crystalline Chern (CC) topology when obtained from their AFM parents through Zeeman splitting. The EBR data were retrieved from the
+Bilbao Crystallographic Server [69].
+AFMSG
+TRIM
+kz
+[C2T ]2
+2-BS Topology
+EBRs
+FMSG
+75.4 (Pc4)
+, M, X, X ′
+0
+π
++1
+−1
+CEF
+CF
+(2a, ↑z) ⊕(2a, ↓z), (2b, ↑z) ⊕(2b, ↓z),
+(4c, ↑z), (4c, ↓z)
+75.1 (P4)
+75.5 (PC4)
+, M, Z, A
+0
+π
++1
++1
+CEF/CW
+CEF/CW
+(2a, ↑z) ⊕(2a, ↓z), (2b, ↑z ⊕↓z),
+(4c, →y)
+75.1 (P4)
+75.6 (PI4)
+, M, R, R′
+0
+π
++1
+−1
+CEF/CW
+CF
+(2a, ↑1/2
+z
+) ⊕(2a, ↓1/2
+z
+) ⊕(2a, ↑3/2
+z
+) ⊕(2a, ↑3/2
+z
+),
+(4b, ↑z), (4b, ↓z)
+75.1 (P4)
+76.10 (Pc41)
+, M, X, X ′
+0
+π
++1
++1
+CEF
+CEF/CW
+(4a, →y), (4b, →y), (4c, →y)
+76.7 (P41)
+76.11 (PC41)
+, M, Z, A
+0
+π
++1
+−1
+CEF/CW
+CF
+(8a, →y)
+76.7 (P41)
+76.12 (PI41)
+, M, R, R′
+0
+π
++1
++1
+CEF/CW
+CEF/CW
+(4a, →y)
+76.7 (P41)
+77.16 (Pc42)
+, M, X, X ′
+0
+π
++1
+−1
+CEF
+CF
+(2a, ↑z ⊕↓z), (2b, ↑z ⊕↓z),
+(4c, ↑z), (4c, ↓z)
+77.13 (P42)
+77.17 (PC42)
+, M, Z, A
+0
+π
++1
++1
+CEF/CW
+CEF/CW
+(4a, ↑z) ⊕(4a, ↓z), (4b, ↑z) ⊕(4b, ↓z),
+(4c, →y)
+77.13 (P42)
+77.18 (PI42)
+, M, R, R′
+0
+π
++1
+−1
+CEF/CW
+CF
+(2a, ↑z ⊕↓z), (4b, ↑z) ⊕(4b, ↓z)
+77.13 (P42)
+78.22 (Pc43)
+, M, X, X ′
+0
+π
++1
++1
+CEF
+CEF/CW
+(4a, →y), (4b, →y), (4c, →y)
+78.19 (P43)
+78.23 (PC43)
+, M, Z, A
+0
+π
++1
+−1
+CEF/CW
+CF
+(8a, →y)
+78.19 (P43)
+78.24 (PI43)
+, M, R, R′
+0
+π
++1
++1
+CEF/CW
+CEF/CW
+(4a, →y)
+78.19 (P43)
+79.28 (Ic4)
+, M, X, X ′
+0
++1
+CEF
+(4a, ↑z) ⊕(4a, ↓z), (4b, ↑z ⊕↓z),
+(8c, →y)
+79.25 (I4)
+80.32 (Ic41)
+, M, X, X ′
+0
++1
+CEF
+(8a, →y), (8b, →y),
+(8c, ↑z), (8c, ↓z)
+80.29 (I41)
+81.36 (Pc¯4)
+, M, X, X ′
+0
+π
++1
+−1
+CEF
+CF
+(2a, ↑z) ⊕(2a, ↓z), (2c, ↑z) ⊕(2c, ↓z),
+(4g, ↑z), (4g, ↓z)
+81.33 (P¯4)
+81.37 (PC ¯4)
+, M, Z, A
+0
+π
++1
++1
+CEF/CW
+CEF/CW
+(2a, ↑1/2
+z
+) ⊕(2a, ↓1/2
+z
+) ⊕(2a, ↑3/2
+z
+) ⊕(2a, ↑3/2
+z
+),
+(2b, ↑1/2
+z
+) ⊕(2b, ↓1/2
+z
+) ⊕(2b, ↑3/2
+z
+) ⊕(2b, ↑3/2
+z
+),
+(2c, ↑z ⊕↓z), (2d, ↑z ⊕↓z), (4g, →y)
+81.33 (P¯4)
+81.38 (PI ¯4)
+, M, R, R′
+0
+π
++1
+−1
+CEF/CW
+CF
+(2a, ↑1/2
+z
+) ⊕(2a, ↓1/2
+z
+) ⊕(2a, ↑3/2
+z
+) ⊕(2a, ↓3/2
+z
+),
+(2b, ↑1/2
+z
+) ⊕(2b, ↓1/2
+z
+) ⊕(2b, ↑3/2
+z
+) ⊕(2b, ↓3/2
+z
+),
+(2c, ↑z ⊕↓z), (2d, ↑z ⊕↓z)
+81.33 (P¯4)
+82.42 (Ic¯4)
+, M, X, X ′
+0
++1
+CEF
+(4a, ↑z) ⊕(4a, ↓z), (4d, ↑z) ⊕(4d, ↓z),
+(8g, →y)
+82.39 (I ¯4)
+aThe EBRs are deﬁned for a given Wyckoff position and a ﬁxed spin basis. We either take the vertical ˆz-axis (C4-axis) as the quantization axis
+for the spin-1/2 (3/2) with the spin basis (↑z, ↓z), or we take a quantization axis that is perpendicular to ˆz, e.g., ˆy for which the spin basis is
+(→y, ←y) = (↑z +i ↓z, i ↑z + ↓z)/
+√
+2.
+bIn the case of a single EBR, splitable at kz = 0 and kz = π, we mean that it must host one of the listed nontrivial topologies. In the case of a
+(direct) sum of EBRs, we mean that the topology can be achieved through the permutation of IRREPs between the EBRs.
+245127-5BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+Γ
+X
+M
+Γ
+- 4
+- 2
+0
+2
+4
+E
+FIG. 3. Stable topological semimetallic phase of MSG75.5 (PC4)
+indicated by z2 = 1 mod 2, here represented by EBR2b
+75.5 at half-
+ﬁlling. Full band structure over (a) BZ and (b) along high-symmetry
+lines where two coIRREPs at X have been inverted when compared
+to Fig. 2(b).
+(C2z|0)′ symmetry, i.e., without Euler class. We refer to it as
+the crystalline fragile topology (written CF in Table III).
+These results thus constitute three complementary ways
+to reveal the necessary nontriviality of the crystalline fragile
+topology of the split EBR2b
+75.5.
+B. Stable nodal topological phases
+We can characterize the symmetry indicators of a given
+band structure by using the matrix containing all allowed
+magnetic EBRs. This results in a Z2 indicator for MSG75.5
+(PC4). As detailed in Appendix D, the explicit expression for
+this indicator is
+z2 = nX3 mod2,
+(10)
+where nX3 is the number of occupied bands at the X point
+with the IRREP X 3. In agreement with the discussion in the
+previous section, the indicator is trivial for the fragile phase
+of EBR2b
+75.5 at half-ﬁlling, as can be veriﬁed from the coIR-
+REPs of Fig. 2(b). We emphasize that this symmetry indicator
+readily generalizes for an arbitrary even number of occupied
+bands, i.e., at a ﬁlling ν ∈2Z + 2.
+We thus conclude that a stable topological phase can be
+reached through a band inversion at X. This is achieved
+for the model Eq. (4) by taking |λ2| >
+√
+2|t1|. Setting λ2 =
+(6/5)
+√
+2, we obtain the band structure of Fig. 3 that ex-
+hibits a semimetallic phase with four nodal points around 
+at half-ﬁlling. We ﬁnd that the stable symmetry indicator z2
+corresponds to a π Berry phase for the valence (conduction)
+bands along the path lq [see Fig. 2(c)], i.e., (see derivation in
+Appendix B)
+γ (1::2)
+B
+[lq] = −i ln[Det(W(1::2)[lq])]
+= −i ln
+ ξ 
+4 (1)ξ 
+4 (2)ξ M
+2 (1)ξ M
+2 (2)
+ξ M
+4 (1)ξ M
+4 (2)ξ X
+2 (1)ξ X
+2 (2)
+
+= −i ln
+
+(+1)(+1)
+(−1)ξ X
+2 (1)ξ X
+2 (2)
+
+= −i ln
+
+(−1)ξ X
+2 (1)ξ X
+2 (2)
+
+=
+
+0 mod 2π,
+if z2 = 0,
+π mod 2π,
+if z2 = 1.
+(11)
+Let us ﬁrst note that, similarly to Eq. (10), Eq. (11) can also
+be generalized for an arbitrary even number of occupied bands
+(i.e., a ﬁlling ν ∈2Z + 2). Importantly, C2T symmetry (with
+[C2T ]2 = +1) imposes the vanishing of the U(1) Berry curva-
+ture over the two-band occupied eigen-subspaces, since within
+the real basis we have F = Pf[F]iσy [52] and thus trF ≡0.
+As a consequence, the Chern number of the gapped AFM
+phase at half-ﬁlling is identically zero. From there results that
+the nontriviality of the Berry phase indicates a nodal phase
+(i.e., it indicates the obstruction to deﬁne a smooth projector
+on the occupied bands over the whole Brillouin zone due
+to the presence of topologically stable band crossings with
+the unoccupied bands), i.e., the necessary existence of an
+odd number of nodal points inside the domain bounded by
+lq. Upon the breaking of the nonsymmorphic TRS, C2zT is
+also broken, and the π Berry phase indicates a C4-symmetry
+protected Chern number at half-ﬁlling, or more generally at a
+ﬁlling ν ∈2Z + 2,
+C = 2z2 mod 4.
+(12)
+The nontrivial Chern phases are discussed in detail in the next
+section.
+We emphasize that the nodal points at general momenta are
+not indicated by the compatibility relations. Indeed, these are
+stabilized by the (C2z|τ )′ symmetry (C2T ) for which there is
+not an eigenvalue structure. Instead, the C2T symmetry quan-
+tizes the Berry phase to the values {0, π}, with π indicating
+an odd number of nodes encircled by lq. Embedded in 3D the
+nodal points correspond to single Weyl points that are pinned
+on the C2T invariant plane (i.e., at kz = 0 where −C2zk =
+IC2zk = mzk = k) by virtue of the chirality-preserving prop-
+erty of C2T . Indeed, any Weyl point leaving the kz = 0 plane
+must have a mirror symmetric image with equal chirality by
+C2T symmetry. It is therefore forbidden for a single node to
+leave the plane by conservation of Chern number. We refer to
+these phases in the 3D context as the crystalline Weyl topology
+(written CW in Table III).
+III. AFM-FM CORRESPONDENCE
+We now turn to ferro/ferrimagnetic (FM) phases associ-
+ated with SG75 obtained from the fragile and stable nodal
+AFM phases discussed above through the breaking of the
+antiunitary symmetry (E|τ )′, thereby effectively realizing
+MSG75.1 (P4, Shubnikov type I). This is done in Eq. (4) by
+adding a Zeeman coupling term ϵZ(1 ⊗σz). We ﬁnd that the
+topology of the FM-compatible phases are necessarily non-
+trivial, exhibiting Chern numbers constrained by crystalline
+symmetries that intricately relate to the topology of the AFM
+counterparts.
+We note that the correspondence discussed here must be
+contrasted from the Chern phases obtained under an external
+magnetic ﬁeld [75] which are in general not symmetry indi-
+cated.
+A. General mechanism
+Let us ﬁrst generally address the AFM-FM correspondence
+and its physical mechanisms. For this purpose it is worth
+starting from MSG83.49 (PC4/m) which is obtained from
+245127-6TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+(a)
+(b)
+FIG. 4. (a) Splitting and ordering of the EBR’s energy levels
+induced by the successive breaking of inversion (I|0) and nonsym-
+morphic time reversal (E|τ )′ symmetries. The split (t1,t2,t3 = )
+four-dimensional EBR of MSG83.49 (PC4/m), and MSG75.5 (PC4)
+for z2 = 0, separates into two split EBRs of MSG75.1 (P4) un-
+der the combined effect of Dresselhaus-Rashba spin-orbit (λ1, λ2 =
+λsoc) and Zeeman (ϵZ) couplings, giving rise to energy ordered
+pseudo-spin-polarized Chern bands (C = sign[t2], brown). Pure spin
+components are drawn in red and blue (for MSG83.49), pseudo-spin
+components are drawn in magenta and green for MSG75.1. Under a
+strong Zeeman splitting, the valence (conduction) subspaces become
+fully pseudo-spin-polarized (see text) while conserving (at ﬁxed λsoc)
+the Chern characters of the bands. b) Zeeman splitting when z2 = 1
+for the EBR of MSG75.5 (PC4) leading to a symmetry indicated
+nontrivial even Chern insulator (C = 2 mod 4) at half-ﬁlling.
+MSG75.5 by simply adding inversion symmetry, i.e., SG83
+has point group C4h. The presence of (I|τ )′ symmetry which
+squares to −1 leads to the twofold Kramers degeneracy of
+the bands over the whole Brillouin zone. The parent EBR,
+which we write EBR2c
+83.49, also splits with a topology char-
+acterized by symmetry indicated mirror Chern numbers [36].
+We readily obtain the corresponding Hamiltonian by taking
+λ1, λ2 = 0 in Eq. (4). The full splitting of EBR2c
+83.49 requires
+|t1|, |t2|, |t3| > 0 (which we symbolize by a single variable
+ in Fig. 4), where t1 is a spin-z-preserving spin-orbit cou-
+pling that acts as a delocalized Zeeman coupling on each
+sublattice orbital but changes sign between sublattice sites,
+and t2 and t3 are spin-preserving inter-sub-lattice site cou-
+plings. Due to the basal mirror symmetry ⟨ϕ, mzk|mz|ϕ, k⟩=
+1 ⊗−iσz, each band doublet can be separated into the −i and i
+mirror-eigenvalue sectors, matching with the spin-↑and spin-
+↓components (i.e., the spin z components are good quantum
+numbers over the whole Brillouin zone).
+The terms in {λ1, λ2} in Eq. (4) break inversion symmetry
+and correspond to combined Dresselhaus and Rashba spin-
+orbit couplings. The effect of the latter (symbolized by λsoc)
+is to split the Kramers degeneracy away from  and M, as
+represented schematically in Fig. 4(a) for z2 = 0 in Eq. (10).
+The conservation of Kramers doublets at  and M is due to
+the nonsymmorphic time reversal which still squares to −1
+at these points, as derived above. While the bands now have
+pseudospin components at generic momenta, the pure spin-↑
+FIG. 5. Nontriviality in MSG75.1. (a) Band structure for
+MSG75.1 obtained from the model in Eq. (4) together with Zeeman
+coupling and (b) along high-symmetry lines with the IRREPs indi-
+cated. We have taken ϵZ = 1/2. Applying Eq. (14) we ﬁnd that each
+band hosts a nonzero Chern number.
+and spin-↓components are still good quantum number at 
+and M since the terms in λ1,2 vanish there.
+The AFM-FM transition can then be modeled through a
+Zeeman term (ϵZ) that breaks the nonsymmorphic TRS lead-
+ing to the splitting of the ( and M) Kramers doublets. This
+leads to the pure spin polarization of the bands at  and
+M since, for any maximal Wyckoff position of MSSG75.1
+(P4) [36,69], spin-↑and spin-↓induce distinct sets of IRREPs
+at  and at M (see the footnote of Table I). In the following
+we thus refer to the pseudo-spin-polarizations ↑and ↓of the
+bands in the sense that the band ↑(↓) at k has the pure spin
+component ↑(↓) at  and M. This does not exclude the case,
+for dominant spin-ﬂip terms as compared to Zeeman splitting,
+of a band subspace with an opposite pure spin conﬁguration
+at  (say spin-↑) and M (spin-↓), see the discussion around
+Eq. (A6) in Appendix A. Such a conﬁguration typically re-
+quires long-range spin-ﬂip terms [36]. This results in energy
+ordered pseudo-spin-polarized Chern bands (column ϵZ > 0
+in Fig. 4, Fig. 5, and Fig. 12 in Appendix C) with the relative
+chirality of the minimal model set by sign[t2]. Further increas-
+ing Zeeman coupling (while keeping λsoc ﬁxed, see below)
+leads to fully pseudo-spin-polarized valence and conduction
+subspaces illustrated in the right column in Fig. 4(a).
+As a next step, by switching off the spin-ﬂip λ1,2 terms,
+while maintaining a dominant Zeeman splitting, we adiabat-
+ically map the fully pseudo-spin-polarized bands into pure
+spin-polarized split EBRs of MSG75.1 (P4). Indeed, the sub-
+lattice sites A and B still span a single maximal Wyckoff
+position, now labeled 2c for MSG75.1 (P4) [69,76], and
+from the absence of spin-mixing symmetry we may form
+spin polarized EBR2c,↑
+75.1, and EBR2c,↓
+75.1, from the orbital ba-
+sis (ϕA,↑, ϕB,↑), and (ϕA,↓, ϕB,↓), respectively. We write the
+adiabatic mapping of the fully pseudo-spin-polarized va-
+lence and conduction bands into spin-polarized split EBRs as
+EBR2c,↑
+75.1 ∼EBR2c,↑
+75.1 and EBR2c,↓
+75.1 ∼EBR2c,↓
+75.1. The symmetry
+breaking term (Zeeman) thus induces the following phase
+transition from one four-dimensional split EBR (of MSG75.5)
+to two two-dimensional split EBRs (of MSG75.1),
+EBR2b
+75.5 −→EBR2c,↑
+75.1 + EBR2c,↓
+75.1 ∼EBR2c,↑
+75.1 + EBR2c,↓
+75.1.
+(13)
+We emphasize that this mapping is model independent, in the
+sense that it continues to exist when we add any extra term
+in Eq. (4) that satisﬁes the symmetries of MSG75.5 (PC4)
+and MSG75.1 (P4). The symmetry broken band structure is
+245127-7BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+now split into four separated bands and the question is to
+characterize the topology of each single band.
+The symmetry indicated Berry phase for Band n (using
+the bottom-up labeling of the energy eigenvalues, i.e., En ⩽
+En+1) along the path lq = M′XM (M′=M-b2), see (in red)
+Fig. 2(a), is [6,13,77] (one-band reduction of Eq. (11), see
+derivation in Appendix B)
+γ (n)
+B [lq] = −i ln
+
+ξ 
+4 (n)ξ M
+4 (n)−1ξ M
+2 (n)ξ X
+2 (n)−1
+,
+(14)
+where ξ ¯k
+4 (n) and ξ ¯k
+2 (n) are the C4- and C2-eigenvalues, re-
+spectively, at the high-symmetry point ¯k listed in Table I.
+The Chern number of Band n, given through e−i2πC(n) =
+(eiγ (n)
+B [lq])4, is thus
+C(n) = −(2/π)γ (n)
+B [lq] mod 4,
+(15)
+see also Ref. [36]. We show below that whenever the FM
+phase is obtained from one of the (necessarily) nontrivial
+AFM phases of EBR2b
+75.5, it must be made of nontrivial Chern
+bands. Remarkably, the Zeeman splitting of the stable nodal
+phase of MSG75.5 (PC4), i.e., with z2 = 1 in Eq. (10), neces-
+sarily generates a nontrivial Chern FM phases at half-ﬁlling,
+with C = 2 mod 4 according to Eq. (12), see Fig. 4(b). This
+is discussed in detail below where we show that Eq. (12)
+matches with Eq. (14) and (15) for Band 1 and 2. Below we
+also use the pseudospin polarization to predict single bands of
+higher Chern number (i.e., C = ±3 mod 4) in some regime.
+In the following we refer to these symmetry indicated Chern
+phases as the crystalline Chern topology (we call it CC topol-
+ogy in the following).
+Before we study the AFM to FM phases correspondence
+for the model Eq. (4) in more detail, we importantly note that
+the same nontrivial AFM phases, as well as the AFM to FM
+correspondence, can be obtained from the following EBRs
+(for MSG75.5 (PC4) →MSG75.1 (P4)):
+EBR↑
+2a ⊕EBR↓
+2a →EBR↑
+1a ⊕EBR↓
+1b ⊕EBR↓
+1a ⊕EBR↑
+1b,
+EBR→
+4c →EBR→
+4d,
+(16)
+where EBR→is an EBR formed with noncolinear in-plane
+spinors {(→),C4z(→),C2z(→),C−1
+4z (→)}, i.e., with a quanti-
+zation axis that is perpendicular to the vertical C4-axis 3 (we
+chose ˆy in Table III with →y).
+B. Small Zeeman splitting
+Here we derive the topology of the FM phases obtained
+from each of the nontrivial AFM phases of EBR2b
+75.5 when
+the Zeeman splitting is small compared to the other energy
+scales (i.e., ϵZ < , λSOC in Fig. 4), underpinning the general
+mechanism outlined previously.
+3In that case however, there is no spin polarization at  and M,
+which we relate to the fact that 4d is not a maximal Wyckoff position
+for MSG75.1, i.e., the noncolinear in-plane spins at 4d can be can
+superposed on top of each other by moving them to another Wyckoff
+position with higher symmetry.
+1. Crystalline Chern ferro/ferrimagnetic topology from fragile
+AFM phase
+Starting from the gapped fragile phase of EBR2b
+75.5 (z2 = 0)
+and given the sign of the Zeeman coupling (ϵZ > 0, i.e., E↑z >
+E↓z) we predict the ordering in energy of the IRREPs of each
+split Kramers degeneracy to be E(7) < E(5) < E(8) <
+E(6), and E(M5) < E(M8) < E(M6) < E(M7). We show
+the band structure for MSG75.1 in Figs. 5(a) and 5(b) together
+with the IRREPs along high-symmetry lines thus conﬁrming
+the IRREPs ordering.
+Substituting the symmetry eigenvalues in Eq. (14), we then
+readily ﬁnd C(1) = C(4) = +1 mod 4, and C(2) = C(3) =
+−1 mod 4. We conclude that each split EBR2c
+75.1 has a stable
+Chern class topology. This is conﬁrmed by direct evaluation
+of the ﬂow of Berry phase for each band, see Fig. 12 in
+Appendix C.
+2. Crystalline Chern FM from stable nodal AFM phase
+We now start from the stable nodal phase of EBR2b
+75.5
+(z2 = 1). The breaking of nonsymmorphic TRS unlocks the
+nodal (Weyl) points which then become free to leave the basal
+momentum plane (when embedded in 3D). As for the fragile
+topological phase this results in a fully gapped band structure
+at kz = 0 where each band acquires a symmetry indicated
+Chern number given by Eq. (14). Given the band inversion
+at X between band 2 and 3 required in the fragile to stable
+topological transition [see the IRREPs ordering in Fig. 3(b)],
+we now ﬁnd band Chern numbers
+C(1) = C(2) = C(3) = C(4) = +1 mod 4.
+(17)
+Then, together with the cancellation sum rule 	4
+i=1 C(i) =
+0, we predict C(2) = −3 and C(3) = +1 [or, equivalently,
+C(2) = +1 and C(3) = −3]. This is conﬁrmed numerically
+in Fig. 13 of Appendix C. We thus reach the conclusion that
+for small Zeeman coupling the bands in the vicinity of the
+half-ﬁlling energy must exhibit a higher Chern number. Also,
+contrary to the gapped FM phase obtained from the fragile
+topological phase where the valence (conduction) subspace
+has a trivial summed topology [i.e., C(1) + C(2) = 0], we
+here necessarily obtain a nontrivial Chern phase at half-ﬁlling
+with C(1) + C(2) = ±2, thus recovering the general predic-
+tion of Eq. (12).
+C. Fully pseudo-spin-polarized FM phases
+Given the spin-z components associated with the induced
+IRREPs of the EBR at  and M (Table I), we anticipate that
+by increasing ϵZ there must be a second transition into a phase
+with fully pseudo-spin-polarized valence (conduction) bands
+(right column of Fig. 4), i.e., the ↑(↓) band has a ↑- (↓-) spin
+component at  and M. This phase transition must happen
+through two band inversions, i.e., at  and at M. Assuming
+ϵZ > 0, we infer that beyond the transition the IRREPs or-
+dering at  and M are E(7) < E(8) < E(5) < E(6),
+and E(M5) < E(M6) < E(M8) < E(M7), respectively [im-
+portantly, note the difference with the ordering of the previous
+section and Fig. 5(b)]. The question of the Chern numbers,
+as determined by Eq. (14), is then reduced to the IRREPs
+ordering at X.
+245127-8TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+First, without loss of generality we can assume that the
+lowest (highest) energy level has IRREP X 4 (X 3), as in
+Figs. 2(b) and 3(b), from which we get C(1) = C(4) =
++1 mod 4. Then, for dominant values of ϵZ and λSOC, we get
+C(2) = C(3) = −1 mod 4. If we assume intermediary values
+of ϵZ and λSOC (see below), we instead obtain C(2) = C(3) =
++1 mod 4. In the later case [similarly to the discussion below
+Eq. (17)], one of the two middle bands must exhibit a high
+Chern number of −3, giving a total Chern number of ±2 at
+half-ﬁlling for the valence/conduction space.
+We now detail the phase transition to the fully polar-
+ized phase in the context of the model Eq. (4) to underpin
+the general scheme outlined above. The fully pseudo-spin-
+polarized phase must happen through two band inversions,
+at  and M, which are analytically deﬁned for Eq. (4) by
+the conditions ϵZ > 2t3 and ϵZ > 2t2, respectively (assum-
+ing t2,3 > 0), and with the IRREPs ordering at  and M
+given above for ϵZ > 0. The general form of the energy
+eigenvalues at X for Eq. (4) including the Zeeman term is
+ϵs1,s2 = s12t1 + s2
+
+2|λ2|2 + ϵ2
+Z with s1,2 = ±1, and we ﬁnd
+E±(X 4) = ϵ−,± and E±(X 3) = ϵ+,±. Fixing t1 > 0, we note
+that E−(X 4) ⩽E+(X 4) ⩽E+(X 3) and E−(X 4) ⩽E−(X 3) ⩽
+E+(X 3). Hence, the lowest and highest energy levels are E1 =
+E−(X 4) and E4 = E+(X 3), respectively, from which we get
+C(1) = C(4) = 1 mod 4.
+The topology of the two remaining bands is then deter-
+mined by the sign of
+E−(X 3) −E+(X 4) = 2t1 −
+
+2|λ2|2 + ϵ2
+Z.
+(18)
+Let us ﬁrst we assume |λ2| >
+√
+2t1, for which we ﬁnd E2 =
+E−(X 3) < E+(X 4) = E3 for all ϵZ > 2t2, 2t3, and C(2) =
+C(3) = −1 mod 4. This case thus has zero Chern number at
+half-ﬁlling.
+If we take instead t1 > |λ2|/
+√
+2, then either ϵZ >
+
+4t2
+1 −2|λ2|2, 2t2, 2t3, and we reach the same conclusion
+as before, or
+
+4t2
+1 −2|λ2|2 > ϵZ > 2t2, 2t3, in which case
+E2 = E+(X 4) < E−(X 3) = E3, and we ﬁnd C(2) = C(3) =
++1 mod 4 which, we have shown, leads to a higher Chern
+number for band 2 or 3, thus leading to a ﬁnite Chern number
+at half-ﬁlling (C = 2 mod 4).
+We conclude this section by noting that the bands of a
+single split EBR2c,↑(↓)
+75.1
+must always carry nonzero Chern num-
+bers irrespectively of the ordering of IRREPs.
+IV. 3D TOPOLOGY AND GENERAL MSG
+Having determined the topology of the 2D projection of
+MSG75.5 (PC4) (i.e., for the corresponding magnetic layer
+group), we now address the 3D topology introducing the third
+momentum component kz. First of all, we note that each
+Kramers doublet at , M, Z, and A, are Weyl points carrying
+a chirality (Chern number). This results from the chirality of
+any crystal structure with MSG75.5 (PC4), see Sec. VI. This
+nodal topology will be manifested in terms of Fermi arcs on
+surface spectra only at quarter-ﬁlling, and more generally at
+a ﬁlling ν ∈2Z + 1. In the following, we instead focus on
+Γ
+X
+M
+A
+Z
+R
+Fragile
+Γ
+X
+M
+A
+Z
+R
+Γ
+X
+M
+A
+Z
+R
+Γ
+X
+M
+A
+Z
+R
+FIG. 6. Topology
+at
+half-ﬁlling
+of
+the
+3D
+EBR2b
+75.5
+for
+(a) (z0
+2, zπ
+2 ) = (1, 0) and (b) (1,1). The colored dots represent the
+Weyl points (and their chirality) of the crystalline Weyl (CW) phases.
+The plane with crystalline Euler fragile (CEF) topology is colored in
+green. TRIM (time reversal invariant) momenta are indicated as open
+circles. (c) Same as (b) before the annihilation of the Weyl points on
+the vertical axes. (d) Alternative to (b) when the horizontal (vertical)
+Weyl points all have equal chirality.
+the topology at half-ﬁlling, and more generally at a ﬁlling
+ν ∈2Z + 2.
+The above results are directly transferable to the kz = 0
+and kz = π planes of the 3D Brillouin zone, which leads to
+a (z0
+2, zπ
+2 ) ∈Z2
+2 classiﬁcation. If the two symmetry indicators
+are distinct, e.g., (z0
+2, zπ
+2 ) = (1, 0), they indicate the presence
+of C2z protected Weyl points (at half-ﬁlling) on the XR high-
+symmetry axis, on top of the four Weyl points on the kz = 0
+plane, while the plane at kz = π has CEF topology. These
+thus form a Z2 indicated octuplet of Weyl points (i.e., the CW
+topology). It is interesting to note that by C4 symmetry the
+Weyl points in plane must all have the same chirality, while
+the Weyl points on the XR axis must all be of the opposite
+chirality by C2T symmetry, which leads to the conﬁguration
+of Fig. 6(a) where the plane with CEF topology is colored in
+green. If we reverse the indicators, i.e., (z0
+2, zπ
+2 ) = (0, 1), the
+plane with CEF topology moves to kz = 0 and the plane with
+the Weyl nodes moves to kz = π.
+When both symmetry indicators are nonzero (obtained
+from above through a band inversion at R) both planes are
+stable nodal and we either obtain two quadruplets of Weyl
+points of opposite chirality in each horizontal plane as illus-
+trated in Fig. 6(b) [after the annihilation on the vertical axes
+of the nodes with opposite chirality visible in Fig. 6(c)], or we
+have two octuplets of Weyl points with all Weyl points on the
+245127-9BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+horizontal planes with the same chirality and all Weyl points
+on the vertical axes with the opposite chirality as shown in
+Fig. 6(d).
+Only when both symmetry indicators are zero do we re-
+trieve a gapped 3D phase where both planes kz = 0 and kz =
+π are fragile topological. Our classiﬁcation thus characterizes
+and reﬁnes the earlier prediction of a Z2 symmetry indicator
+for the 3D MSG75.5 (PC4) phases [35]. As a side remark,
+we note that planes hosting the four TRIM {, M, Z, A} char-
+acterized by (nonsymmorphic) TRS, i.e., is an antiunitary
+symmetry squaring to −1 and inverting the momentum, give
+rise to a nonsymmetry indicated Z2 index of a strong two-
+dimensional TI [32]. We note that the nonsymmorphic TRS
+squares to −1 over the whole plane that contains the four
+TRIMPs. Therefore, restricting any 3D model on that plane,
+it can be seen effectively as a 2D system with TRS and the
+index can be computed in the same way as the Kane-Mele Z2
+invariant [78].
+For completeness, let us also mention the axion insulating
+phases protected by C2T , i.e., the three-dimensional gapped
+topological phases indicated by the difference in the second
+Stiefel Whitney class between the two C2T symmetric planes
+kz = 0, π [29,30,42,79]. This phase requires that C2T squares
+to +1 on both planes and, contrary to its parent phases with
+inversion symmetry [36], it is not symmetry indicated.
+The mechanism discussed so far is directly transferable to
+the other tetragonal AFM candidate MSG81.37 (PC ¯4) and its
+FM counterpart MSG81.33 (P¯4), where the fourfold rotoin-
+version point symmetry S4 takes the place of C4. The only
+differences with MSG75.5 (PC4) are the reversal of chirality
+of the Weyl points under the action of S4 = IC4z symmetry
+and, for the 3D gapped phase, the existence of an additional
+z′
+2 ∈Z2 symmetry indicator [35] of a strong 3D TI protected
+by S4-symmetry and (nonsymmorphic) TRS [80] (see also
+Appendix D 3 where this symmetry indicator is derived for
+MSG81.36 (Pc¯4) for which it is the unique symmetry indicator
+of the 3D gapped phase, similarly to MSG81.38 (PI ¯4)). The
+nontrivial value of the symmetry indicator z′
+2 in Eq. (D4),
+corresponding to the indicator z2 identiﬁed for MSG81.33
+(P¯4) in Ref. [36], indicates a 3D axion topological insulating
+phase with a nontrivial axion angle π [36] and a quantized
+magnetoelectric response [28,81].
+We conclude
+this section
+by noting
+the candidate
+MSSG77.17 (PC42) that has a Z2 symmetry indicator [35]
+which indicates C2T protected Weyl semimetallic phases, as
+in MSG75.5 (PC4), but now with a minimal connectivity of
+bands of 4, i.e., the ﬁlling must be ν ∈4Z + 4. The 2D gapped
+phases at kz = 0, π are thus either trivial, or host the second
+Stiefel Whitney topology that is not symmetry indicated, since
+the nontrivial Euler class topology only exists within two-
+band subspaces.
+V. COEXISTENCE OF NODAL AND SUBDIMENSIONAL
+TOPOLOGIES
+In the previous MSG candidates we were guided by the
+possibility of having a nontrivial symmetry indicator of the
+3D gapped phase, signaling the possibility of splitting groups
+of bands (possibly EBRs) into (fragile) topological bands,
+see also Appendix D. We now address a class of MSGs
+that host a similar mechanism that nonetheless appear trivial
+from a standard symmetry indicator or topological quantum
+chemistry perspective. At the crux of the argument lies the
+observation that these MSGs host groups of bands (possibly
+EBRs) that can be split at planes in the Brillouin zone, host-
+ing the same (stable) topological features, while their total
+three-dimensional band structure must be connected. Conse-
+quently, within these “trivial” groups of bands, i.e., in the
+sense that they lack 3D symmetry indicators, the in-plane
+nontrivial signatures must coexist with symmetry indicated
+nodal structures located away from the (possibly) gapped
+planes. We discuss below one example where the connectivity
+of the three-dimensional EBR by itself indicates the presence
+of protected Weyl points in the direction perpendicular to the
+2D topological planes. It thus has stable 3D signatures, such
+as Fermi arcs [82], which topological origin is independent
+of the 2D topologies and their signatures. Since the 3D sym-
+metry indicators are blind to this kind of coexistence, these
+topological phases can thus only be perceived in this reﬁned
+context of subdimensional topology.
+We emphasize that our use of subdimensional topol-
+ogy is distinct from the usual correspondence between the
+topological charges of a d-dimensional node, with codimen-
+sion δ within a d + δ=D-dimensional Brillouin zone, and
+the p-dimensional gapped topologies for δ −1 ⩽p ⩽D −
+1 [46,83]. The archetypal example of this usual decent ap-
+proach is the stability of a Weyl point being captured by
+the Chern number of a gapped sphere surrounding it [84].
+We discuss below such as a situation for the case of Weyl
+nodes protected by the screw axis 42 with a chirality χ = ±2
+captured by gapped Chern planes with C = 2 mod 4. Many
+correspondences of this kind have been formulated recently
+for new types of crystal-symmetry protected gapped topolo-
+gies, e.g., Refs. [83,85–87].
+In contrast, the new subdimensional topology, we are re-
+ferring to is independent of the charges of the Weyl nodes
+protected by the screw symmetry, since we show that the
+Chern number must be zero on the 2D planes that host the
+subdimensional topology. This leads to the prediction of new
+phases with coexisting topological features, i.e., the man-
+ifestations of the nodal topology in 3D together with the
+manifestations of the nontrivial subdimensional topology.
+A. Case study of MSG77.18 (PI42)
+As an example, we take MSG77.18 (PI42) that hosts
+the mechanism discussed for MSG75.5 (PC4) as a 2D
+subdimensional topology. The coset decomposition of the
+AFM compatible MSG77.18 (PI42) in terms of its FM
+partner MSG77.13 (P42) is G77.18/G77.13 = (E|0)G77.13 +
+(E|τd)′G77.13 with τd = a1/2 + a2/2 + a3/2, where T is the
+primitive Bravais lattice and G77.13 is generated by (C4z|τ3)T
+with τ3 = a3/2. We consider the Wyckoff position (WP)
+2a [69] that is spanned by the sublattice sites rA = a1/2 and
+rB = a2/2 + a3/2. The same sites correspond to WP 2c of
+MSG77.13. Populating the sites with s-electronic orbitals and
+both spin-z-1/2 components we get the Bloch orbital basis
+|ϕ, k⟩with ϕ = (ϕA↑, ϕA↓, ϕB↑, ϕB↓) forming an elemen-
+tary band representation which we write EBR2a
+77.18. EBR2a
+77.18
+245127-10TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+resembles EBR2b
+75.5 except that it is indecomposable over the
+3D Brillouin zone.
+An other important difference with MSG75.5 (PC4) is the
+algebra of symmetries at kz = π. Taking a point on the kz = π
+plane ¯k = (kx, ky, π), the C2T symmetry in MSG77.18 (PI42)
+is represented for EBR2a
+77.18 by
+⟨ϕ, ¯k|(C2z|τd )′|ϕ, ¯k⟩= eikC2zτd⟨ϕ, ¯k|ϕ, IC2z¯k⟩(σx ⊗iσx)K
+= eikC2zτd⟨ϕ, ¯k|ϕ, ¯k −b3⟩(σx ⊗iσx)K
+= eikC2zτd ˆT (−b3)(σx ⊗iσx)K,
+(19)
+with
+ˆT (−b3) = diag(eirA·K, eirA·K, eirB·K, eirB·K)K=−b3
+=
+diag(1, 1, −1, −1).
+We
+thus
+ﬁnd
+the
+square
+to
+be
+⟨ϕ, ¯k|[(C2z|τd )′]2|ϕ, ¯k⟩= −14×4, i.e., the C2T symmetry squares
+to −1. The bands hence exhibit a twofold Kramers degeneracy
+over the whole kz = π plane
+1. Model and band structure
+We illustrate this with the following minimal 3D extension
+of Eq. (4) which we rewrite as H[ f1, f2, f3, g1, g2](k),
+H′(k) = H[ f1, f ′
+2, f ′
+3, g1, g′
+2](k)
++ ρ1h1(k)σx ⊗σz + ρ2h2(k)σy ⊗σz,
+(20)
+where the new lattice form factors are now extended to 3D
+momentum space,
+f ′
+2(k) = (cos δ′
+1k −cos δ′
+2k + cos δ′
+3k −cos δ′
+4k)/2,
+f ′
+3(k) = (cos δ′
+1k + cos δ′
+2k + cos δ′
+3k + cos δ′
+4k)/2,
+g′
+2(k) = (sin δ′
+1k −i sin δ′
+2k −sin δ′
+3k + i sin δ′
+4k)/2,
+h1(k) = (sin δ′
+1k + sin δ′
+2k + sin δ′
+3k + sin δ′
+4k)/2,
+h2(k) = (sin δ′
+1k −sin δ′
+2k + sin δ′
+3k −sin δ′
+4k)/2,
+(21)
+with δ′
+1,2 = δ1,2 + a3/2, and δ′
+3,4 = −δ1,2 + a3/2, and with
+the new real parameters ρ1, ρ2 ∈R (we take ρ1 = −1 and
+ρ2 = −2/5).
+We show the band structure of model Eq. (20) in Fig. 7(a)
+where the kz-axis covers [0, 2π], and the other axis corre-
+sponds to the successive paths X and XM within the plane
+kz = 0. The band structure along the high-symmetry lines is
+shown in Figs. 8(a) and 8(c) after a band inversion at X. We
+note the twofold degeneracy at kz = π which explains the
+degeneracies along ZR and RA in Figs. 7(a), 8(a), and 8(c).
+Importantly, the compatibility relations along the C4-
+symmetric axes Z and MA imply that the EBR cannot
+be split [69], see Appendix D 2. Indeed, the fourfold screw
+symmetry 42 ≡(C4z|τ3) imposes an exchange of branches
+between the Kramers doublets of  and Z (M and A), see the
+coIRREPs given in Table II retrieved from [69]. This leads
+to two 42-protected nodal points on the Z line (respectively,
+the MA line) at half-ﬁlling [marked by circles in Fig. 7(a)],
+and more generally at a ﬁlling ν ∈4Z + 2. We note that this
+exchange of IRREPs along the 42-axes originates from the
+monodromy of the irreducible representations of the screw
+symmetry 42 [6,66,69,83,88].
+2. Chirality of Weyl nodes protected by a screw axis 42
+Following the algebraic argument of Ref. [6], see also
+Ref. [83], we now derive the symmetry enforced chirality
+E
+E
+FIG. 7. Subdimensional gapped phases within a 3D indecompos-
+able EBR, illustrated by (a) EBR2a
+77.18 and (b) EBR2c
+77.13 obtained by
+breaking TRS through a Zeeman coupling. The Weyl nodes imposed
+at half-ﬁlling by the screw axis 42 are marked with colored circles
+indicating the sign of the symmetry-imposed chiralities.
+of χ = 2 mod 4 for each Weyl point protected by 42. Let us
+start with a sphere S surrounding one of the Weyl points,
+say the one on the upper half of the Z line. We ﬁx the
+south pole at  and the north pole at Z, see Fig. 9(a). Then,
+we divide the sphere in four quarters, one of which, let us
+call it S, is bounded by an oriented loop ∂S ≡l = lb ◦la
+(which we read as ﬁrst la followed by lb) with la = C4zl−1
+b
+(where l−1
+b
+is the reversed oriented path), see Fig. 9(a). Since
+we can recompose the total sphere through C4z actions, i.e.,
+S = S ∪C4zS ∪C2
+4zS ∪C3
+4zS, the Chern number of the two
+occupied bands over the gapped sphere thus reads
+e−i2πC[S] = (e−iγB[l])4 = e−i4γB[l],
+(22)
+by the invariance of the Berry curvature under rotation sym-
+metry [6], and where γB[l] is the Berry phase of the two
+occupied bands over the loop l = lb ◦la, i.e., (see the def-
+inition of symmetry transformation of the Wilson loop in
+Appendix A)
+e−iγB[l] = detW[l] = det(W[lb] · W[la])
+= det
+
+R
+42 · W[la]−1 ·
+
+RZ
+42
+−1 · W[la]
+
+= det
+
+R
+42 ·
+
+RZ
+4
+−1
+= χ42(5)χ42(7)
+iχ42(Z5)iχ42(Z8)
+= (−i)2 = −1,
+(23)
+where
+R
+42 = eiC4zk·τ3S
+42(i j) = S
+42(i j)
+and
+RZ
+42 =
+eiC4zkZ·τ3SZ
+42(ZiZ j) = iSZ
+42
+(C4zkZ · τ3 = b3/2 · a3/2 = π/2)
+are deﬁned in terms of the representation of symmetry (g|τg)
+in the valence band basis Sk
+(g|τg)(kik j) for a coIRREP kik j at
+a momentum k, and χ4(ki) is the character of the IRREP ki
+given in Table I (we have χ4(Zi) = χ4(i) [69]). Therefore
+γB[l] = π mod 2π and we conclude that the Chern number
+over the whole sphere, and thus the chirality of the Weyl
+point inside, is C[S] = 2 mod 4. Very interestingly, we ﬁnd
+245127-11BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+FIG. 8. Band structure along high-symmetry lines for EBR2a
+77.18
+(a) with z0
+2 = 0 and (c) with z0
+2 = 1, and for EBR2c
+77.13 obtained
+through Zeeman splitting (b) from (a) and (d) from (c).
+a quadratic dispersion in the (kx, ky)-plane at a ﬁxed kz from
+each Weyl point at half-ﬁlling in Fig. 7, see also [88].
+While the above derivation based on the symmetry reduc-
+tion of Wilson loop, ﬁrst developed in Refs. [6,83] adapting
+the Wilson loop techniques developed eariler to assess gapped
+topological phases in Refs. [13,77,89–91], is completely gen-
+eral and can be readily transferred to any other context (i.e.,
+any other space group, with or without spin-orbit coupling),
+we note some later alternative approaches in Ref. [88,92].
+3. AFM topological phases
+We now discuss the global topology of the AFM topolog-
+ical phases for MSG77.18 (PI42). We ﬁrst note that EBR2a
+77.18
+can be gapped over the planes kz = 0, π. The 2D topology
+at kz = 0 for EBR2a
+77.18 is the same as the topology discussed
+for EBR2b
+75.5, that is CEF topology versus stable nodal (CW
+topology) indicated by z2 in Eq. (10). We therefore can deﬁne
+a subdimensional z0
+2 ∈Z2 symmetry indicator. We have seen
+that on the kz = π plane the C2T symmetry squares to −1,
+Γ
+X
+M
+Z
+R
+X’
+M’
+A
+Γ
+X
+M
+Z
+R
+A
+FIG. 9. Chirality of χ = 2 mod 4 for each Weyl point protected
+by the 42 screw axis on the Z and MA lines, at half-ﬁlling (ν ∈
+4Z + 2), derived from the symmetry reduction of the Wilson loop
+(see text).
+such that there is no (real) Euler class topology. Nevertheless,
+we show in Fig. 10 the C4-symmetric Wilson loop on the
+plane kz = π for the model for MSG77.18 (PI42) Eq. (20),
+over (a) the conduction and (b) valence bands. The winding
+of Wilson loop for the conduction bands indicates a crystalline
+(non-Euler) fragile (CF) topology.
+We now determine how the subdimensional topologies (at
+kz = 0, π) interact with the topology of the 42-symmetry pro-
+tected Weyl points. We ﬁrst note that the Chern number at
+half-ﬁlling vanishes on the kz = 0, π-planes as a consequence
+of C2T symmetry (see the discussion below Eq. (11) for
+kz = 0, and at kz = π, we have F ≡0 by [C2T ]2 = −1). As
+a consequence, we can deform the sphere S of Fig. 11(a)
+into the pyramid P of Fig. 11(b), while conserving the Chern
+number, i.e., C[S] = C[P] = 2 mod 4. This equality can be
+readily veriﬁed through the symmetry reduction of the Wilson
+loop W[ld ◦lc ◦lb ◦la] similarly to the above derivation for S
+but now using both C4z and C2z transformations [6]. We note
+that even if there are nodal points on the kz = 0 plane (for
+z2 = 1), by C4 symmetry they must contribute to an increase
+of the Chern number by ±4, which leaves the quantity mod 4
+unchanged. An other consequence of C2T symmetry is that
+any Weyl point above the kz = 0 plane must have its mirror
+symmetric image underneath (kz →IC2zkz = −kz) with the
+same chiral charge. Combining the top of the pyramid in
+Fig. 9(b) with its mirror image in the kz direction, we obtain
+an octahedron O = P ∪mzP that wraps the pair of Weyl points
+on the Z line, and over which there is a total Chern number
+(chirality) of C[O] = (2 + 2) mod 8 = 4 mod 8.
+We note that O divides the 3D Brillouin zone in two sym-
+metric halves. Invoking the Nielsen-Ninomiya cancellation
+FIG. 10. C4-symmetry Wilson loop for the conduction (a) and
+valence (b) bands of EBR2a
+77.18 at kz = π.
+245127-12TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+Fragile
+Γ
+X
+M
+A
+Z
+R
+Fragile
+Γ
+X
+M
+A
+Z
+R
+Fraggilee
+(a)
+(b)
+FIG. 11. Topology at half-ﬁlling of the 3D EBR2a
+77.18 for (a) z0
+2 =
+0 and (b) 1. The colored dots represent the Weyl points and their
+chirality, with χ = ±1 for the small dots, and χ = ±2 for the big
+dots, of the crystalline Weyl (CW) phases. The double Weyl points
+on the vertical axes are protected by the screw 42 symmetry, see
+Sec. V A 2. The plane with crystalline Euler fragile (CEF) topology
+is colored in green, and the plane with (C4-symmetry protected)
+crystalline fragile (CF) topology is colored in purple. TRIM (time
+reversal invariant) momenta are indicated as open circles.
+theorem [93], it follows that the total chirality inside O (say
++4), must be compensated by the total chirality inside the
+complement of O (−4), see Fig. 9. We then arrive for z2 = 0
+to the conﬁguration of Fig. 11(a), where the green (purple)
+plane hosts a CEF (CF) topology, and where each red (blue)
+point mark a Weyl point with χ = +2 (rep. χ = −2). We ﬁ-
+nally conclude that this phase must exhibit large double Fermi
+arcs in the surface spectra connecting pairs of projected Weyl
+nodes of opposite chirality across the surface Brillouin zone.
+Also, by inverting IRREPs at X, i.e., setting z0
+2 = 1, we get
+the octuplet of Weyl points discussed above in the 3D phase
+of MSG75.5 (PC4), leading to the conﬁguration of Fig. 11(b).
+This last case must exhibit an exotic coexistence of Fermi arcs
+generated by different sets of Weyl points with qualitatively
+distinct topological origins.
+Our subdimensional analysis has thus allowed us to iden-
+tify new phases with the coexistence of 2D and 3D nodal
+topological features.
+4. AFM-FM correspondence
+We now consider the effect of breaking the nonsymmor-
+phic TRS, i.e., inducing a transition from the AFM phase
+of MSG77.18 (PI42) to the FM phase of MSG77.13 (P42).
+This can be done by including a Zeeman splitting as we did
+for MSG75. We show the band structure in Figs. 7(b), and
+along the high-symmetry lines in Figs. 8(b) and 8(d) after
+a band inversion at X. We ﬁnd that all the Kramers degen-
+eracies are split leaving gapped bands on the kz = 0 and π
+planes. Similarly to the case of MSG75.1 (P4), the topology
+of the gapped bands at ﬁxed kz are characterized through
+symmetry indicated Chern numbers (i.e., with CC topology).
+Interestingly, for moderate Zeeman coupling, the four bands
+remain fully connected along the C4-symmetric axes through
+the persistence of the C4-symmetry protected Weyl nodes, as
+indicated by the IRREP order at , Z, M, and A, as it is clearly
+shown in Figs. 8(b) and 8(d).
+We note however that, by relaxing the pairing conditions
+(i.e., from 2D coIRREPs to 1D IRREPs), there are more
+combinatorial ways of connecting the bands allowed by the
+compatibility relations for MSG77.13 (P42). In particular, the
+bands can be ordered at {, Z, M, A} as to avoid Weyl points
+at half-ﬁlling (more generally at a ﬁlling ν ∈4Z + 2).
+5. Stable 3D signatures
+We emphasize that the rational of subdimensional topolo-
+gies thus works in two manners. Firstly, because the total 3D
+EBR is connected, and thus trivial, these phases are missed
+by previous schemes. Reciprocally, the presence of in plane
+topology together with the nodes to make the EBR globally
+connected implies the coexistence of topological signatures
+of qualitatively distinct origins. On one hand, the connectivity
+condition directly induces symmetry indicated Weyl points,
+and in turn, Fermi arcs in the surface spectra. On the other
+hand, the subdimensional topology is either gapless, in which
+case it induces additional Weyl points and thus additional
+Fermi arcs, or it is gapped fragile topological, in which case
+it induces corner modes [56]. In this sense, this mechanism
+can thus be used to ﬁnd new topological signatures that are
+directly detectable via the usual routes of, e.g., angle resolved
+photoemission spectroscopy, quantum oscillation techniques
+or scanning tunneling microscopy.
+B. Generalization
+We end by generalizing our subdimensional topology
+scheme and search systematically for candidate MSGs hosting
+the planar topologies discussed so far—that is, CEF, CF, and
+CW phases for the AFM cases and CC phases for their FM
+counterpart—and the outlined mechanisms relating them. Re-
+markably, our results are directly transferable to all tetragonal
+MSGs with the point groups C4 and S4, i.e., comprising space
+group families SG75-SG82. For each family we then consider
+all the Shubnikov type IV AFM MSGs and the one type I FM
+MSG. This amounts to a total of 26 MSGs which we list in
+Table III, where we give the type of planar topologies for
+kz = 0 and kz = π, and the list of EBRs hosting these. On
+top of the single EBRs that split on both planes, kz = 0 and
+kz = π, and which must necessarily host a nontrivial planar
+topology of type indicated, we have also listed the sums of
+EBRs that can lead to a listed topology upon the permutation
+of their IRREPs. Whenever there is the choice CEF/CW, the
+topology is determined by the ordering of IRREPs. We note
+that [C2T ]2 = ±1 indicates CEF or CEF/CW (+1) versus CF
+(−1) topology 4[94] as the only alternative since the Chern
+number must vanish. Finally, all FM candidates acquire CC
+topology when obtained from their AFM parents through
+Zeeman splitting. In particular, every nodal AFM phase at
+half-ﬁlling must give rise to a nontrivial Chern FM phase
+at half-ﬁlling, thus constituting a systematic correspondence
+4In case of CEF, the quantization of the Wilson loop over the base
+path X′ follows either from the condition that ξ 
+2 (1) = ξ 
+2 (2)
+[equivalently, ξ M
+2 (1) = ξ M
+2 (2)], or if both  and X are TRIMs in
+which case the Wilson loop phases are also Kramers degenerate at
+{0, 0} or {π, π}.
+245127-13BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+between necessarily nontrivial topological phases associated
+to MSG representations.
+VI. CHIRAL FERMIONS AT HIGH-SYMMETRY
+MOMENTA AND LARGE FERMI ARCS
+All the MSGs of the table with point group C4 (i.e., the type
+IV AFM MSG75.4-MSG81.36, and the type I FM MSG75.1-
+MSG80.29) have only proper symmetries, a consequence of
+which is that any crystal structure that explicitly breaks all
+symmetries not included in their MSG must be chiral, i.e.,
+enantiomorphic (the SGs 75-76-77-78-79-80 are all among
+the 65 Sohncke space groups with no inversion, no mir-
+ror, nor rotoinversion symmetries [95]). Then, the absence
+of improper symmetry allows the existence of Weyl nodes
+at high-symmetry momenta, i.e., with nonvanishing Chern
+numbers. This is the rationale for the chiral Fermions found
+in many (nonmagnetic) material candidates with a Sohncke
+space group [6,96–100].
+We have noted that MSG75.5 (PC4) and MSG77.18 (PI42)
+exhibit Weyl nodes at every TRIMP at a ﬁlling 2Z + 1.
+MSG77.18 must also exhibit Weyl nodes on the Z- and
+MA-lines at a ﬁlling 4Z + 2 due to the monodromy of the
+irreducible representation of the screw axis 42. The same
+results apply to the FM parents MSG75.1 (P4) and MSG77.13
+(P42). The Weyl points at high-symmetry momenta for all the
+other MSGs of the table can be found similarly.
+In Ref. [6], we have given a detailed analysis of the sym-
+metry indicated higher Chern number generated by the Weyl
+points locked on a screw axis at half-ﬁlling, and derived the
+necessary existence of large Fermi arcs due to the compensa-
+tion of chirality across the Brillouin zone. This analysis can be
+readily transferred to the present situation (e.g., here C = ±2
+on the 42-axes). Large Fermi arcs has also been reported in
+other nonmagnetic chiral materials [97,98].
+In the next section, we discuss the fate of the Weyl points
+when extra improper point symmetries are included.
+We now turn to the MSGs with rotoinversion symmetry
+IC4z. Since the chirality of Weyl points is reversed under IC4z,
+the Kramer’s degeneracies at the TRIMPs (which are also
+IC4z invariant momenta) cannot form Weyl nodes at the ﬁlling
+2Z + 1. Instead, each double degeneracy at a TRIMP on the
+kz = 0 plane is continued as a nodal line for all values of
+kz [69].
+VII. RAISING AND LOWERING OF SYMMETRIES
+So far, we have focused on the topological correspondence
+between representations of magnetic space groups with the
+tetragonal point groups C4 and S4. We now brieﬂy address the
+effect of adding and removing unitary symmetries.
+A. Magnetic Dirac fermions
+Let us start by including extra unitary symmetries to
+MSSG75.5 (PC4). If we include one extra vertical mirror sym-
+metry, say my, the MSG is promoted to MSG99.169 (PC4mm)
+with the (unitary) point group C4v (4mm). Remarkably the
+four bands become all connected through a fourfold mag-
+netic Dirac node at M, similarly to the examples discussed
+in Ref. [55].
+The same happens for MSG89.93 (PC422), obtained by
+including one horizontal π-rotation symmetry (say C2y) lead-
+ing to the point group D4 (422), as well as for MSG83.49
+(PC4/m), obtained by including the basal mirror symmetry mz
+leading to the point group C4h (4/m).
+The structural chirality is lost for MSG99.169 (PC4mm)
+and MSG83.49 (PC4/m), thus preventing the existence of
+Weyl nodes at the TRIMPs, i.e., the Weyl points are absorbed
+within vertical nodal lines on the C4z-axes, and, respectively,
+within a global twofold Kramer’s degeneracy. For MSG89.93
+(PC422) instead, the structural chirality, and thus the Weyl
+nodes, are preserved.
+We note that the introduction mz allows the deﬁnition of
+C4-symmetry indicated mirror Chern numbers [13,80,101].
+The systematic study of the magnetic topological phases for
+the next magnetic superspace groups, however, lies beyond
+the scope of the present work.
+B. Weyl phases protected by [C2T]2 = +1
+The symmetry indicator Eq. (10) and its interpretation in
+terms of a Z2 quantized Berry phase Eq. (11), derived here
+for MSG75.5 (PC4), can be readily applied to many other
+MSGs with gapped 2D planes in the Brillouin zone where
+[C2T ]2 = +1. The simplest example MSG3.4 (Pa2), obtained
+by forgetting the C4 symmetry, has a Z2 symmetry indicator
+that readily corresponds to z2 Eq. (10) [35]. For many MSGs
+though, there are symmetry indicated nodal points between
+the gapped planes, i.e., similarly to MSG77.18 (PI42), such
+that they cannot be identiﬁed by a (3D) symmetry indicator
+and they have been listed as trivial [35].
+C. Chern and Weyl phases of type I MSGs
+We have discussed in detail the transition from the AFM
+Weyl phase of MSG75.5 (PC4), and MSG77.18 (PI42), to
+the subdimensional Chern insulating FM phases of MSG75.1
+(P4), and MSG77.13 (P42), respectively, obtained upon the
+breaking of the nonsymmorphic TRS. The effect of breaking
+TRS is to unlock the Weyl nodes that were pinned on the C2T
+planes, so that they move within the Brillouin zone. We con-
+clude that the symmetry indicator Z4 of the type I MSG75.1
+(P4) [35] indicates a Weyl semimetallic phase, while there
+is no symmetry indicator for MSG77.13 (P42) [35] with a
+Weyl semimetallic phase that must be assessed in terms of
+subdimensional topology.
+In the same way as we predict many AFM phases with C2T
+protected Weyl nodal phases, we predict many FM Weyl nodal
+phases indicated by subdimensional Chern phases upon the
+breaking of the nonsymmorphic TRS.
+VIII. CONCLUSIONS
+In conclusion, starting from the speciﬁc case study, MSG
+75.5 (PC4), we ﬁnd that speciﬁc Wyckoff positions (2b) in
+this magnetic ground group necessarily results in (fragile)
+topological bands. In this regard we formulated a ﬁrst generic
+model exhibiting fragile topology in the context of magnetic
+space group symmetries. Breaking the essential symmetry by
+a Zeeman term then relates the underlying AFM-compatible
+MSG with a FM counterpart in the same space group
+245127-14TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+family and ensures that the fragile topology gaps into bands
+with ﬁnite Chern number. After translating the Z2 symmetry
+indicator of the AFM MSG into a quantized Berry phase
+of a stable topological semimetallic phase, which originates
+from the combination of C4 symmetry and C2T -protected
+Euler class topology, we also discuss a similar correspondence
+to FM Chern phases. We thus unveil a systematic corre-
+spondence between necessarily nontrivial topological phases
+associated with MSG representations. Moreover, we then pro-
+mote this mechanism to three spatial dimensions, where we
+also ﬁnd novel phases characterized by the concept of sub-
+dimensional topologies. The latter feature the same in-plane
+mechanism but have 3D elementary band representations that
+are fully connected. As a result, the nontrivial 2D topol-
+ogy must coexists with nodes away from the high-symmetry
+planes, e.g., Weyl points, giving rise to additional topological
+nodal features, such as Fermi arcs, that can be diagnosed
+with established experimental methods. As a result, our work
+culminates in an exhaustive list of tetragonal MSGs (with
+the point groups C4 and S4) and their EBR content hosting
+the above correspondence. We have then addressed the ef-
+fect of adding and removing unitary symmetries that lead
+to the identiﬁcation of magnetic Dirac (fourfold) points, and
+have outlined how the symmetry indicated Weyl semi-metallic
+phases protected by C2T can be found in numerous MSGs as
+a result of our reﬁned subdimensional topological analysis.
+Given the generality of these insights and relevance of pa-
+rameters to access this physics, we hope our results pave the
+way for new pursuits in topological band structures. In fact,
+we anticipate that this coexistence effect, i.e., of gapped sub-
+dimensional topology together with independent topological
+nodes, can also occur in the nonmagnetic context culminating
+in novel gapped-nodal topological phases.
+Note added. We ﬁnally note that our results agree with
+expressions for magnetic EBRs, compatibility relations and
+symmetry indicators tabulated in Ref. [36], which was posted
+during the ﬁnalizing stages of this manuscript. We comment
+here on Ref. [101] that appeared recently and has some
+overlap with our work. Among many results not covered by
+our work, they give a complete list of MSGs that have z2
+(called z4 in their work) as one of the 3D symmetry indica-
+tors, including some of the MSGs discussed here. While the
+scope of our work was more restricted, our approach based
+on subdimensional topologies, i.e., allowing symmetry indi-
+cated nodes between gapped planes, leads us to predict many
+more MSGs with C2T protected Weyl semi-metallic phases.
+Ref. [101] also considers other Weyl semi-metallic phases
+in type I MSGs protected by IC4z symmetry, among which
+are MSG81.33 (P¯4) and MSG82.39 (P¯4). Alternatively, these
+FM phases can be readily obtained, upon the breaking of the
+nonsymmorphic TRS, from the (subdimensional) AFM Weyl
+phases of the following type IV MSG81.36 (Pc¯4), MSG81.37
+(PC ¯4), MSG81.38 (PI ¯4), and MSG82.42 (Ic¯4), all listed in our
+table.
+ACKNOWLEDGMENTS
+R.-J. S. acknowledges funding from the Marie Skłodowska
+-Curie programme under EC Grant No. 842901 and the Win-
+ton programme as well as Trinity College at the University
+of Cambridge. G.F.L acknowledges funding from the Aker
+Scholarship.
+APPENDIX A: WILSON LOOP WINDING FOR THE
+FRAGILE TOPOLOGICAL PHASE
+We algebraically derive the symmetry obstruction on the
+winding of Wilson loop over one quarter of the Brillouin zone,
+and following over the whole Brillouin zone, for the valence
+(conduction) subspace of the split EBR2b
+75.5. For this we choose
+the patch of the Brillouin zone bounded by lX′ and lM′,
+see Fig. 2(c) (blue dashed). We design a ﬂow starting with the
+base path lX′ and ending with lM′. Deﬁning the Wilson
+loop phases
+{ϕ1, ϕ2} = Arg[eig{W[lX′]}],
+{ϕ′
+1, ϕ′
+2} = Arg[eig{W[lM′]}],
+(A1)
+they must extrapolate smoothly between {ϕ1, ϕ2} and {ϕ′
+1, ϕ′
+2}
+as we smoothly deform the base path from lX′ to lM′.
+The Wilson loop over an oriented base path l : k1 →k2 is
+deﬁned through Wk2←k1 = ⟨u, k2| ˆW |u, k1⟩where |u, k1⟩is
+the matrix of Bloch eigenvectors of the band subspace un-
+der consideration, and ˆW = k2←k1
+k
+P(k) with the projector
+P(k) = |u, k⟩⟨u, k|.
+We now show that the crystal symmetries act as an obstruc-
+tion imposing the quantization of Wilson loop phases. First,
+we ﬁnd
+W[lX′] = W′←X · WX←
+= R
+2 · W−1
+X← ·
+
+RX
+2
+−1 · WX←,
+(A2)
+where R¯k
+2 = ⟨u, Dπ ¯k| ˆU(C2z)|u, ¯k⟩is the sewing matrix of
+symmetry C2z at the high-symmetry point ¯k in the valence
+Bloch eigenvectors basis (with ˆU(C2z) = 1 ⊗−iσz the rep-
+resentation of C2z in the orbital basis |ϕ, k⟩, and Dπ is the
+rotation matrix by π around the z axis). Writing |u, ¯k + K⟩=
+ˆT †(K)|u, ¯k⟩where ˆT (K) = diag(eirAK, eirAK, eirBK, eirBK) ac-
+counts for the phase factors due to the displacements of the
+sublattice sites with respect to the origin of the unit cell, we
+can rewrite R¯k
+2 = ⟨u, ¯k| ˆT (Dπ ¯k −¯k) ˆU(C2z)|u, ¯k⟩which guar-
+antees that the arbitrary gauge phase factors are removed, and
+use |u, Dπ ¯k⟩= ˆU(C2z)|u, ¯k⟩.R¯k
+2.† in the following. We note
+that at C2z-invariant momenta, i.e., Dπ ¯k = ¯k + K with K a re-
+ciprocal lattice vector, we have [ ˆT (K) ˆU(C2z), H(¯k)] = 0 and
+R¯k
+2 is diagonal. Since for the fragile phase [z2 = 0 mod 2, see
+Eq. (10), we have RX
+2 = (±)diag(i, i) and R
+2 = diag(i, −i)
+(see Table I), we readily ﬁnd
+{ϕ1, ϕ2} = {0, π} mod 2π.
+(A3)
+We emphasize that the quantization of the Wilson loop over
+X′ comes from the repetition of the IRREPs at X (equiva-
+lently at ). An alternative source of Wilson loop quantization
+is when both  and X are TRIMs in which case the Wilson
+loop phases are Kramers degenerated at {0, 0} or {π, π}.
+Considering now the base path lM′, we have
+W[lM′] = W′←M · WM←
+= R
+4 · W−1
+M← ·
+
+RM
+4
+−1 · WM←,
+(A4)
+245127-15BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+where
+R¯k
+4 = ⟨u, Dπ/2¯k| ˆU(C4z)|u, ¯k⟩= ⟨u, ¯k| ˆT (C4z¯k −
+¯k) ˆU(C4z)|u, ¯k⟩is the representation in the basis of Bloch
+eigenvectors of C4z at ¯k, with, in the orbital basis |ϕ, k⟩,
+ˆU(C4z) = σx ⊗M4 where M4 = diag(e−iπ/4, eiπ/4), and we
+have used |u, Dπ/2¯k⟩= ˆU(C4z)|u, ¯k⟩.R¯k
+4.†.
+Using parallel transported Bloch eigenvectors the Wil-
+son
+loop
+becomes
+diagonal,
+and
+we
+write
+
+WM← =
+diag(eiϕa, eiϕb). The above expression thus reduces to
+
+W[lM′] = R
+4 ·
+e−iϕa 0
+0
+e−iϕb
+
+· (RM
+4 )−1 ·
+eiϕa 0
+0
+eiϕb
+
+.
+(A5)
+Since at C4z-symmetric momenta the parallel transported
+Bloch eigenvectors are also eigenvectors of the C4z operator,
+we retrieve irreducible representations R
+4 = (±)diag(ω, ω∗)
+and RM
+4 = (±)diag(ω, −ω∗), where the signs depend on the
+coIRREPs realized at  and M (see Table I).
+The quantization of the Wilson loop 
+W [lM′] depends
+on the relative spin-z components of the parallel transported
+Bloch eigenstates at  and M, see the discussion in Ref. [38].
+Writing R¯k
+4 = diag(ξ ¯k
+4 (a), ξ ¯k
+4 (b)), we ﬁnd
+
+W[lM′] =
+
+ξ 
+4 (a)/ξ M
+4 (Ma)
+0
+0
+ξ 
+4 (b)/ξ M
+4 (Mb)
+
+. (A6)
+Assuming the same spin-z component at  and M, e.g., with
+(a, Ma, b, Mb) = (5, M8, 7, M5) (see Table I), we ﬁnd
+{ϕ′
+1, ϕ′
+2} = {π/4, π/4} mod 2π.
+(A7)
+This matches exactly with the direct numerical evaluation of
+the Wilson loop shown in Fig. 2(e) in the main text. If instead
+we assume opposite spin-z components at  and M, e.g., with
+(a, Ma, b, Mb) = (5, M5, 7, M8) (see Table I), we ﬁnd
+{ϕ′
+1, ϕ′
+2} = {0, π} mod 2π.
+(A8)
+This later quantization thus corresponds to a system where
+there is a twisting spin texture from  to M, which would
+require strong Rashba-type spin-orbit coupling.
+It thus follows that, in the absence of a twisted spin texture,
+the Wilson loop phases must wind from {ϕ1, ϕ2} = {0, π} to
+{ϕ′
+1, ϕ′
+2} = {π/4, π/4} mod 2π, as we scan over one quarter
+of the Brillouin zone through the deformation of the base
+path from lX′ to lM′. There is thus a minimal wind-
+ing of (ϕ1, ϕ2) = (ϕ′
+1, ϕ′
+2) −(ϕ1, ϕ2) = (+π/2, −π/2).
+By the action of C4 symmetry we can recover the whole
+Brillouin zone for which we predict a minimal winding of
+the Wilson loop phases of 4(ϕ1, ϕ2) = (+2π, −2π). This
+precisely predicts algebraically the numerical evaluation of
+the Wilson loop over the whole Brillouin zone shown in
+Fig. 2(d).
+We ﬁnally conclude that the valence (conduction) subspace
+of the split EBR2b
+75.5 is topologically nontrivial as indicated by
+the ﬁnite winding of Wilson loop phases.
+APPENDIX B: DERIVATION OF FORMULA EQ. (14) AND
+EQ. (11)
+We give here the algebraic derivation of the Wilson loop
+over lq = M′XM [red loop in Fig. 2(c)] as given in
+Eq. (11), from which Eq. (14) readily follows by reducing
+to a single band subspace. We use the algebraic Wilson loop
+techniques developed in Refs. [13,77] and [6,38,83].
+It is convenient to decompose the Wilson loop into the
+contributions of each segment that connects two successive
+high-symmetry points, i.e., W[lq] = WdWcWbWa, with
+Wa = ⟨u, | ˆW |u, M⟩,
+Wc = ⟨u, X| ˆW |u, M′⟩,
+Wb = ⟨u, M′| ˆW |u, ⟩,
+Wd = ⟨u, M| ˆW |u, X⟩,
+(B1)
+where M′ = M −b2.
+We now use symmetries to rewrite Wa and Wd, as
+Wa = ⟨u, | ˆW |u, M⟩= ⟨u,C4z| ˆW |u,C4zM′⟩
+= R
+4 · ⟨u, | ˆU †(C4z) ˆW ˆU(C4z)|u, M′⟩·
+
+RM′
+4
+†
+= R
+4 · W−1
+b
+·
+
+RM′
+4
+†,
+Wd = ⟨u, M| ˆW |u, X⟩= ⟨u,C2zM”| ˆW |u,C2zX’⟩
+= RM”
+2
+· ⟨u, M”| ˆU †(C2z) ˆW ˆU(C2z)|u, X’⟩·
+
+RX’
+2
+†
+= RM”
+2
+· ⟨u, M′| ˆT (−b1) ˆU †(C2z) ˆW ˆU(C2z)| ˆT †(−b1)u, X’⟩·
+
+RX’
+2
+†
+= RM”
+2
+· W−1
+c
+·
+
+RX’
+2
+†,
+(B2)
+where M” = M′ −b1 and X’ = X −b1. We thus have
+Det W[lq] = Det
+
+RM”
+2
+·
+
+RX’
+2
+† · R
+4 ·
+
+RM′
+4
+†
+.
+(B3)
+Deﬁning the irreducible representation of the symmetry
+(g|τg) in the basis of Bloch eigenstates as
+S
+¯k
+g = e−i g¯k·τgR
+¯k
+g,
+(B4)
+and substituting in the above expression, we get
+Det W[lq] = ei Nocc [(M−X )·τC2z +(−M)·τC4z ]
+× Det
+
+SM
+2 ·
+
+SX
+2
+† · S
+4 ·
+
+SM
+4
+†
+= ei Nocc [(M−X )·τC2z +(−M)·τC4z ]
+Nocc
+
+i=1
+ξ 
+4 (i)ξ M
+2 (i)
+ξ M
+4 (i)ξ X
+2 (i),
+(B5)
+245127-16TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+FIG. 12. Berry phase ﬂows for the four split bands of MSG75.1
+(P4) as obtained from gapping the fragile topological MSG75.5
+(PC4) phase. Bands 1 and 4 have Chern number C = +1. Bands 2
+and 3 exhibit Chern number C = −1.
+where Nocc is the number of occupied bands, and ξ ¯k
+g (i) is
+the eigenvalue of the symmetry (g|τg) of the ith band at the
+high-symmetry momentum ¯k. For magnetic space groups with
+symmorphic C4z and C2z symmetries (i.e., τC4z = τC2z = 0) as
+MSG75.5 (and MSG75.1), it simpliﬁes to
+Det W[lq] =
+Nocc
+
+i=1
+ξ 
+4 (i)ξ M
+2 (i)
+ξ M
+4 (i)ξ X
+2 (i).
+(B6)
+APPENDIX C: NUMERICAL COMPUTATION OF BERRY
+PHASE FLOWS FOR MSG75.1 (P4)
+We present here the numerical evaluation of the nontriv-
+iality of the case MSG75.1 (P4), i.e., for the model Eq. (4)
+with an additional Zeeman coupling. In Fig. 12, we show the
+numerically obtained Berry phase for the individual bands
+of the band structure in Fig. 5 obtained for the model of
+MSG75.1 (P4). These evaluations corroborate the analytical
+results. That is, each band shows a ﬁnite Chern number C.
+While bands 2 and 3 exhibit a value of C = 1, the other two
+bands have opposite Chern number. Finally, we also show in
+Fig. 13 the Berry phase of the bands as obtained from gapping
+the stable nodal topological MSG75.5 (PC4) band structure of
+Fig. 3. As described in the main text, the resulting spectrum
+features a single band (band number two in this case) with
+Chern number C = −3, whereas the others exhibit a Chern
+number C = 1.
+APPENDIX D: DETAILS ON SYMMETRY INDICATOR
+ANALYSIS
+We here give further detail on the symmetry indicator anal-
+ysis for some of the MSGs considered.
+FIG. 13. Berry phase ﬂows for the four split bands of MSG75.1
+(P4) obtained from the gapping of the stable nodal phase of
+MSG75.5 (PC4). Bands 1, 3, and 4 have Chern number C = +1.
+Bands 2 has has higher Chern number C = −3.
+1. Symmetry indicators for MSG75.5 (PC4)
+MSG75.5 (PC4) is derived from SG75 by including the
+operator (E|τ )′ with τ = 1
+2(a1 + a2). We can thus classify
+the possible band structures for our model by considering
+the IRREPs of SG75, and pair them appropriately to form
+coIRREPs of MSG75.5 (PC4), as described in Ref. [35]. The
+full compatibility relations [23] and EBRs for SG75 can be
+found on the Bilbao Crystallographic Server [69]. Using their
+notation (see also Table I), the compatibility relations for the
+ point are given by
+5 →Z5,
+6 →Z6,
+7 →Z7,
+7 →Z8.
+(D1)
+The compatibility relations between M and A display a similar
+structure. Finally, the compatibility relations between X and R
+are
+X 3 →R3,
+X 4 →R4.
+(D2)
+From the above relations it is evident that it sufﬁces to con-
+sider the points , X, and M as the compatibility relations
+uniquely link IRREPs at these points to all IRREPs at all
+other high-symmetry points in the 3D BZ [23]. To form the
+coIRREPs, we consider the additional constraints imposed by
+the antiunitary symmetries. These can be determined from the
+Herring rule [57] applied at each high-symmetry point. We
+only consider spinful IRREPs. At  and M (and A and Z),
+this gives pairing of inequivalent IRREPs. At X (and R), no
+additional pairing is required. To determine which IRREPs
+are paired to form the coIRREPs at  and M, we pair rep-
+resentations of g with representations of AgA−1, where g is an
+element of the unitary little group at  or M and A = (E|τ )′.
+The allowed pairings at  are 57, 68 and the pairings at
+M are M6M7, M5M8.
+The magnetic EBRs for the MSG75.5 (PC4) can be found
+from the EBRs for SG75 [69]. We note that the vector τ
+relates WP 1a (0, 0) and 1b (1/2, 1/2) in SG75, so the
+EBRs from these WPs are paired. Similarly, τ maps WP
+245127-17BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+2c (0, 1/2), (1/2, 0) in SG75 to itself, so we pair EBRs at
+WP 2c directly. We can uniquely determine which EBRs are
+paired, by realizing that the magnetic EBRs must satisfy the
+magnetic compatibility relations detailed above. This gives
+the following magnetic EBRs for MSG75.5 (PC4) (using the
+WP labels from SG75):
+(1a : 1E1 + 1b : 2E2) ↑G = (68, M6M7, 2X 3),
+(1a : 1E2 + 1b : 2E1) ↑G = (57, M5M8, 2X 3),
+(1a : 2E1 + 1b : 1E2) ↑G = (68, M5M8, 2X 4),
+(1a : 2E2 + 1b : 1E1) ↑G = (56, M6M7, 2X 4),
+(2c : 1E + 2c : 2E) ↑G = (5678, M5M6M7M8, 2X 42X 3).
+To compute the symmetry indicators, as described in Ref. [35], we compute the Smith normal form of the matrix of EBRs. This
+gives the indicator group for MSG75.5 (PC4) as Z2, in agreement with [35].
+From our magnetic EBRs, we see that it is not possible to construct a band structure with an odd number of bands in the X 3
+(or equivalently the X 4) IRREP from an integer combination of magnetic EBRs. Every other combination consistent with the
+compatibility relations can be constructed from the magnetic EBRs. Thus, the Z2 indicator can be conveniently computed as
+nX 3 mod 2,
+(D3)
+in agreement with the expression in the main text.
+2. Symmetry indicators for MSG77.18 (PI42)
+MSG77.18 (PI42) is formed from SG77, by including the operator (E|τ )′ with τ = 1
+2(a1 + a2 + a3). For the C4 symmetric
+points (, Z, M, A), the Herring test gives the same result as for 75.5. At X, the Herring test gives that the antiunitary
+symmetries impose no further degeneracies, whereas at R, the Herring test gives that each IRREP must be doubly degenerate.
+Additional degeneracies are imposed by the nonsymmorphic symmetry elements of SG77. For the C4 symmetric points, the
+nonsymmorphic symmetries constrain that the IRREPs must switch partners when moving through the BZ. This enforces gap
+closings along the kz direction, which acts as an obstruction to deﬁning two-band subspaces across the entire BZ, see Figs. 7(a)
+and 7(c). Thus the minimal connectivity of bands in the BZ is 4. The symmetry indicator group can be computed as before.
+WP 2c (0, 1/2, z), (0, 1/2, z + 1/2) of SG77 goes into WP 2a of MSG77.18 (PI42), and the two spinful site-symmetry IRREPs
+glue together. Similarly, WP 2a (0, 0, z), (0, 0, z + 1/2) and 2b (1/2, 1/2, z), (1/2, 1/2, z + 1/2) of SG77 go into WP 4b of
+MSG77.18 (PI42), and by checking the compatibility relations, we realize that IRREPs 1E pairs with 2E at the different sites.
+Thus we get three spinful magnetic EBRs, which are given by (using the WP labels from SG77):
+(2c : E1 + 2c : E2) ↑G = (5678, Z5Z6Z7Z8, M5M6M7M8, A5A6A7A8, 2X 32X 4, 2R32R4),
+(2a : E1 + 2b : E2) ↑G = (5678, Z5Z6Z7Z8, M5M6M7M8, A5A6A7A8, 4X 3, 4R3),
+(2a : E2 + 2b : E1) ↑G = (5678, Z5Z6Z7Z8, M5M6M7M8, A5A6A7A8, 4X 4, 4R4).
+Using the Smith normal form decomposition as before, we see that there’s no nontrivial indicator in this MSG, in agreement
+with Ref. [35].
+3. Symmetry indicator for MSG81.36 (Pc¯4)
+As a ﬁnal example, we here compute the symmetry indicators for MSG81.36 (Pc¯4), as an example of an MSG with S4
+rotoinversion symmetry. This MSG is generated from SG81 by including the operator (E|τ )′ with τ = 1
+2a3. SG81 is similar to
+SG75, but the C4 rotations are combined with inversion. The Herring test gives that the C2 IRREPs must glue together at the
+C2 symmetric points X and R. At the C4 symmetric points, the Herring test glues together 57 and 68, respectively, and
+similarly at M. At Z, Z5Z8 and Z6Z7 glue together respectively, and similarly at A. This assignment satisﬁes the compatibility
+relations, so the minimal connectivity of bands in the BZ is 2, and two-band subspaces can be deﬁned throughout the BZ.
+To compute the symmetry indicator group, we note that τ connects WP 1a (0, 0, 0) and 1b (0, 0, 1/2) of SG81 to form
+magnetic WP 2a. Similarly, WP 1c (1/2, 1/2, 0) and 1d (1/2, 1/2, 1/2) of SG81 connect to form magnetic WP 2c. Some of
+the nonmaximal WPs of SG81 become maximal WPs for MSG81.36 (Pc¯4), e.g., WP 2e (0, 0, z), (0, 0, −z) of SG81 goes into
+maximal magnetic WP 2b (0, 0, 1/4), (0, 0, 3/4), and similarly for nonmagnetic WP 2 f going into magnetic WP 2d. As the
+EBRs at these WPs have to satisfy compatibility relations, however, it is straightforward to investigate which site-symmetry
+IRREPs to pair. This gives the following magnetic EBRs (labelled using the WPs of SG81):
+(1a : 1E1 + 1b : 2E1) ↑G = (68, Z6Z7, M6M8, A6A7, X 3X 4, R3R4),
+(1a : 1E2 + 1b : 2E2) ↑G = (57, Z5Z8, M5M7, A5A8, X 3X 4, R3R4),
+(1a : 2E1 + 1b : 1E1) ↑G = (68, Z5Z8, M6M8, A5A8, X 3X 4, R3R4),
+(1a : 2E2 + 1b : 1E2) ↑G = (57, Z6Z7, M5M7, A6A7, X 3X 4, R3R4),
+245127-18TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+(1c : 1E1 + 1d : 2E1) ↑G = (68, Z6Z7, M5M7, A5A8, X 3X 4, R3R4),
+(1c : 1E2 + 1d : 2E2) ↑G = (57, Z5Z8, M6M8, A6A7, X 3X 4, R3R4),
+(1c : 2E1 + 1b : 1E1) ↑G = (68, Z5Z8, M5M7, A6A7, X 3X 4, R3R4),
+(1c : 2E2 + 1d : 1E2) ↑G = (57, Z6Z7, M6M8, A5A8, X 3X 4, R3R4),
+(2e : 1E + 2e : 2E) ↑G = (5678, Z5Z6Z7Z8, M5M6M7M8, A5A6A7A8, 2X 32X 4, 2R32R4),
+(2 f : 1E + 2 f : 2E) ↑G = (5678, Z5Z6Z7Z8, M5M6M7M8, A5A6A7A8, 2X 32X 4, 2R32R4).
+Computing the Smith normal form gives a single Z2 factor. Inspecting the solution space, we see that the corresponding indicator
+is given by whether the IRREPs at the C4 invariant points contain an odd or an even number of representations with subscript 5
+(or any other subscript). Thus an explicit expression for the symmetry indicator is
+z′
+2 = n5 + nZ5 + nM5 + nA5 mod 2.
+(D4)
+It has been shown in [36] for MSG81.33 (P¯4) that this symmetry indicator relates to a 3D axion topological insulating phase.
+We ﬁnally note that our results in this Appendix agree with general expressions for magnetic EBRs, compatibility relations
+and symmetry indicators in Ref. [36], which we became aware of during the ﬁnalizing stages of this manuscript.
+[1] X.-L. Qi and S.-C. Zhang, Topological insulators and super-
+conductors, Rev. Mod. Phys. 83, 1057 (2011).
+[2] M. Z. Hasan and C. L. Kane, Colloquium: Topological insula-
+tors, Rev. Mod. Phys. 82, 3045 (2010).
+[3] R.-J. Slager, A. Mesaros, V. Juriˇci´c, and J. Zaanen, The space
+group classiﬁcation of topological band-insulators, Nat. Phys.
+9, 98 (2012).
+[4] L. Fu, Topological Crystalline Insulators, Phys. Rev. Lett. 106,
+106802 (2011).
+[5] R.-J. Slager, The translational side of topological band insula-
+tors, J. Phys. Chem. Solids 128, 24 (2019), spin-Orbit Coupled
+Materials.
+[6] A. Bouhon and A. M. Black-Schaffer, Global band topology
+of simple and double dirac-point semimetals, Phys. Rev. B 95,
+241101(R) (2017).
+[7] T. Bzdušek, QuanSheng Wu, A. Rüegg, M. Sigrist, and A. A.
+Soluyanov, Nodal-chain metals, Nature (London) 538, 75
+(2016).
+[8] J. Höller and A. Alexandradinata, Topological bloch oscilla-
+tions, Phys. Rev. B 98, 024310 (2018).
+[9] B.-J. Yang and N. Nagaosa, Classiﬁcation of stable three-
+dimensional dirac semimetals with nontrivial topology, Nat.
+Commun. 5, 4898 (2014).
+[10] M. Nakagawa, R.-J. Slager, S. Higashikawa, and T. Oka, Wan-
+nier representation of ﬂoquet topological states, Phys. Rev. B
+101, 075108 (2020).
+[11] F. N. Ünal, A. Eckardt, and R.-J. Slager, Hopf characterization
+of two-dimensional ﬂoquet topological insulators, Phys. Rev.
+Research 1, 022003(R) (2019).
+[12] K. Shiozaki, M. Sato, and K. Gomi, Topological crystalline
+materials: General formulation, module structure, and wallpa-
+per groups, Phys. Rev. B 95, 235425 (2017).
+[13] C. Fang, M. J. Gilbert, and B. A. Bernevig, Bulk topological
+invariants in noninteracting point group symmetric insulators,
+Phys. Rev. B 86, 115112 (2012).
+[14] D. S. Borgnia, A. J. Kruchkov, and R.-J. Slager, Non-
+Hermitian Boundary Modes and Topology, Phys. Rev. Lett.
+124, 056802 (2020).
+[15] M. Taherinejad, K. F. Garrity, and D. Vanderbilt, Wannier cen-
+ter sheets in topological insulators, Phys. Rev. B 89, 115102
+(2014).
+[16] N. Marzari and D. Vanderbilt, Maximally localized general-
+ized wannier functions for composite energy bands, Phys. Rev.
+B 56, 12847 (1997).
+[17] V. Juriˇci´c, A. Mesaros, R.-J. Slager, and J. Zaanen, Universal
+Probes of Two-Dimensional Topological Insulators: Disloca-
+tion and π ﬂux, Phys. Rev. Lett. 108, 106403 (2012).
+[18] M. S. Scheurer and R.-J. Slager, Unsupervised Machine
+Learning and Band Topology, Phys. Rev. Lett. 124, 226401
+(2020).
+[19] A. A. Soluyanov and D. Vanderbilt, Wannier representa-
+tion of z2 topological insulators, Phys. Rev. B 83, 035108
+(2011).
+[20] R.-J. Slager, L. Rademaker, J. Zaanen, and L. Balents,
+Impurity-bound states and green’s function zeros as local sig-
+natures of topology, Phys. Rev. B 92, 085126 (2015).
+[21] A. Mesaros, R.-J. Slager, J. Zaanen, and V. Juricic, Zero-
+energy states bound to a magnetic π-ﬂux vortex in a
+two-dimensional topological insulator, Nucl. Phys. B 867, 977
+(2013).
+[22] J.-W. Rhim, J. H. Bardarson, and R.-J. Slager, Uniﬁed bulk-
+boundary correspondence for band insulators, Phys. Rev. B 97,
+115143 (2018).
+[23] J. Kruthoff, J. de Boer, J. van Wezel, C. L. Kane, and R.-
+J. Slager, Topological Classiﬁcation of Crystalline Insulators
+Through Band Structure Combinatorics, Phys. Rev. X 7,
+041069 (2017).
+[24] H. C. Po, A. Vishwanath, and H. Watanabe, Symmetry-based
+indicators of band topology in the 230 space groups, Nat.
+Commun. 8, 50 (2017).
+[25] B. Bradlyn, L. Elcoro, J. Cano, M. G. Vergniory, Z. Wang, C.
+Felser, M. I. Aroyo, and B. A. Bernevig, Topological quantum
+chemistry, Nature (London) 547, 298 (2017).
+[26] F. D. M. Haldane, Model for a Quantum Hall Effect without
+Landau Levels: Condensed-Matter Realization of the Parity
+Anomaly, Phys. Rev. Lett. 61, 2015 (1988).
+245127-19BOUHON, LANGE, AND SLAGER
+PHYSICAL REVIEW B 103, 245127 (2021)
+[27] N. Hyun Jo, L.-L. Wang, R.-J. Slager, J. Yan, Y. Wu, K. Lee, B.
+Schrunk, A. Vishwanath, and A. Kaminski, Intrinsic axion in-
+sulating behavior in antiferromagnetic MnBi6Te10, Phys. Rev.
+B 102, 045130 (2020).
+[28] X.-L. Qi, T. L. Hughes, and S.-C. Zhang, Topological ﬁeld
+theory of time-reversal invariant insulators, Phys. Rev. B 78,
+195424 (2008).
+[29] N. Varnava and D. Vanderbilt, Surfaces of axion insulators,
+Phys. Rev. B 98, 245117 (2018).
+[30] B. J. Wieder and B. A. Bernevig, The axion insulator as a
+pump of fragile topology, arXiv:1810.02373.
+[31] C. Liu, Y. Wang, H. Li, Y. Wu, Y. Li, J. Li, Ke He, Y. Xu, J.
+Zhang, and Y. Wang, Robust axion insulator and chern insula-
+tor phases in a two-dimensional antiferromagnetic topological
+insulator, Nat. Mater. 19, 522 (2020).
+[32] R. S. K. Mong, A. M. Essin, and J. E. Moore, Antiferro-
+magnetic topological insulators, Phys. Rev. B 81, 245209
+(2010).
+[33] M. M. Otrokov, I. I. Klimovskikh, H. Bentmann, D. Estyunin,
+A. Zeugner, Z. S. Aliev, S. Gaß, A. U. B. Wolter, A. V.
+Koroleva, A. M. Shikin, M. Blanco-Rey, M. Hoffmann,
+I. P. Rusinov, A. Yu. Vyazovskaya, S. V. Eremeev, Yu. M.
+Koroteev, V. M. Kuznetsov, F. Freyse, J. Sánchez-Barriga,
+I. R. Amiraslanov, M. B. Babanly, N. T. Mamedov, N. A.
+Abdullayev, V. N. Zverev, A. Alfonsov, V. Kataev, B.
+Büchner, E. F. Schwier, S. Kumar, A. Kimura, L. Petaccia,
+G. Di Santo, R. C. Vidal, S. Schatz, K. Kißner, M. Ünzelmann,
+C. H. Min, Simon Moser, T. R. F. Peixoto, F. Reinert, A. Ernst,
+P. M. Echenique, A. Isaeva, and E. V. Chulkov, Prediction
+and observation of an antiferromagnetic topological insulator,
+Nature (London) 576, 416 (2019).
+[34] R.-X. Zhang and C.-X. Liu, Topological magnetic crystalline
+insulators and corepresentation theory, Phys. Rev. B 91,
+115317 (2015).
+[35] H. Watanabe, H. C. Po, and A. Vishwanath, Structure and
+topology of band structures in the 1651 magnetic space
+groups, Sci. Adv. 4, eaat8685 (2018).
+[36] L. Elcoro, B. J. Wieder, Z. Song, Y. Xu, B. Bradlyn, and
+B. A. Bernevig, Magnetic topological quantum chemistry,
+arXiv:2010.00598 [cond-mat.mes-hall].
+[37] H. C. Po, H. Watanabe, and A. Vishwanath, Fragile Topol-
+ogy and Wannier Obstructions, Phys. Rev. Lett. 121, 126402
+(2018).
+[38] A. Bouhon, A. M. Black-Schaffer, and R.-J. Slager, Wilson
+loop approach to fragile topology of split elementary band
+representations and topological crystalline insulators with
+time-reversal symmetry, Phys. Rev. B 100, 195135 (2019).
+[39] V. Peri, Z.-D. Song, M. Serra-Garcia, P. Engeler, R. Queiroz,
+X. Huang, W. Deng, Z. Liu, B. A. Bernevig, and S. D. Huber,
+Experimental characterization of fragile topology in an acous-
+tic metamaterial, Science 367, 797 (2020).
+[40] Z. Song, L. Elcoro, N. Regnault, and B. A. Bernevig, Fragile
+Phases as Afﬁne Monoids: Full Classiﬁcation and Material
+Examples, Phys. Rev. X 10, 031001 (2020).
+[41] Y. Hwang, J. Ahn, and B.-J. Yang, Fragile topology protected
+by inversion symmetry: Diagnosis, bulk-boundary correspon-
+dence, and wilson loop, Phys. Rev. B 100, 205126 (2019).
+[42] C. Fang and L. Fu, New classes of three-dimensional topo-
+logical crystalline insulators: Nonsymmorphic and magnetic,
+Phys. Rev. B 91, 161105(R) (2015).
+[43] C. Fang, Y. Chen, H.-Y. Kee, and L. Fu, Topological nodal line
+semimetals with and without spin-orbital coupling, Phys. Rev.
+B 92, 081201(R) (2015).
+[44] J. Ahn and B.-J. Yang, Unconventional Topological Phase
+Transition in Two-Dimensional Systems with Space-Time
+Inversion
+Symmetry,
+Phys.
+Rev.
+Lett.
+118,
+156401
+(2017).
+[45] Y. X. Zhao and Y. Lu, PT-Symmetric Real Dirac Fermions and
+Semimetals, Phys. Rev. Lett. 118, 056401 (2017).
+[46] T. Bzdušek and M. Sigrist, Robust doubly charged nodal lines
+and nodal surfaces in centrosymmetric systems, Phys. Rev. B
+96, 155105 (2017).
+[47] J. Ahn, D. Kim, Y. Kim, and B.-J. Yang, Band Topol-
+ogy and Linking Structure of Nodal Line Semimetals
+with Z2 Monopole Charges, Phys. Rev. Lett. 121, 106403
+(2018).
+[48] J. Ahn, S. Park, and B.-J. Yang, Failure of Nielsen-Ninomiya
+Theorem and Fragile Topology in Two-Dimensional Systems
+with Space-Time Inversion Symmetry: Application to Twisted
+Bilayer Graphene at Magic Angle, Phys. Rev. X 9, 021013
+(2019).
+[49] A. Bouhon, T. Bzdušek, and R.-J. Slager, Geometric approach
+to fragile topology beyond symmetry indicators, Phys. Rev. B
+102, 115135 (2020).
+[50] F. N. Ünal, A. Bouhon, and R.-J. Slager, Topological Euler
+Class as a Dynamical Observable in Optical Lattices, Phys.
+Rev. Lett. 125, 053601 (2020).
+[51] QuanSheng Wu, A. A. Soluyanov, and T. Bzdušek, Non-
+abelian band topology in noninteracting metals, Science 365,
+1273 (2019).
+[52] A. Bouhon, QuanSheng Wu, R.-J. Slager, H. Weng, O. V.
+Yazyev, and T. Bzdušek, Non-abelian reciprocal braiding of
+weyl points and its manifestation in zrte, Nat. Phys. 16, 1137
+(2020).
+[53] Z. Song, Z. Wang, W. Shi, G. Li, C. Fang, and B. A. Bernevig,
+All Magic Angles in Twisted Bilayer Graphene are Topologi-
+cal, Phys. Rev. Lett. 123, 036401 (2019).
+[54] H. C. Po, L. Zou, T. Senthil, and A. Vishwanath, Faithful tight-
+binding models and fragile topology of magic-angle bilayer
+graphene, Phys. Rev. B 99, 195455 (2019).
+[55] S. M. Young and B. J. Wieder, Filling-Enforced Magnetic
+Dirac Semimetals in Two Dimensions, Phys. Rev. Lett. 118,
+186401 (2017).
+[56] G. F. Lange, A. Bouhon, and R.-J. Slager, Subdimensional
+topologies, indicators, and higher order boundary effects,
+Phys. Rev. B 103, 195145 (2021).
+[57] C. J. Bradley and A. P. Cracknell, The Mathematical Theory of
+Symmetry in Solids (Oxford University Press, Oxford, 1972).
+[58] D. B. Litvin, 1-, 2- and 3-Dimensional Magnetic Subperiodic
+Groups and Magnetic Space Groups (International Union of
+Crystallography, 1972).
+[59] J. Kübler, Theory of Itinerant Electron Magnetism (Oxford
+Science Publications, 2009).
+[60] B. Skubic, J. Hellsvik, L. Nordström, and O. Eriksson, A
+method for atomistic spin dynamics simulations: Implemen-
+tation and examples. J. Phys.: Condens. Matter 20, 315203
+(2008).
+[61] A. Bergman, L. Bergqvist, O. Eriksson, and J. Hellsvik, Atom-
+istic Spin Dynamics: Foundations and Applications (Oxford
+University Press, 2017).
+245127-20TOPOLOGICAL CORRESPONDENCE BETWEEN MAGNETIC …
+PHYSICAL REVIEW B 103, 245127 (2021)
+[62] J. L. Alonso, L.A. Fernández, F. Guinea, V. Laliena, and V.
+Martín-Mayor, Hybrid monte carlo algorithm for the double
+exchange model, Nucl. Phys. B 596, 587 (2001).
+[63] R. M. Geilhufe, F. Guinea, and V. Juriˇci´c, Hund nodal line
+semimetals: The case of a twisted magnetic phase in the
+double-exchange model, Phys. Rev. B 99, 020404(R) (2019).
+[64] J. Zak, Symmetry Speciﬁcation of Bands in Solids, Phys. Rev.
+Lett. 45, 1025 (1980).
+[65] J. Zak, Band representations and symmetry types of bands in
+solids, Phys. Rev. B 23, 2824 (1981).
+[66] L. Michel and J. Zak, Connectivity of energy bands in crystals,
+Phys. Rev. B 59, 5998 (1999).
+[67] K. Shiozaki and M. Sato, Topology of crystalline insulators
+and superconductors, Phys. Rev. B 90, 165114 (2014).
+[68] K. Shiozaki, M. Sato, and K. Gomi, Topology of nonsymmor-
+phic crystalline insulators and superconductors, Phys. Rev. B
+93, 195413 (2016).
+[69] M. I. Aroyo, A. Kirov, C. Capillas, J. M. Perez-Mato, and H.
+Wondratschek, Bilbao Crystallographic Server. II. Representa-
+tions of crystallographic point groups and space groups, Acta
+Cryst. A 62, 115 (2006).
+[70] R. Evarestov and V. P. Smirnov, Site Symmetry in Crystals
+(Springer-Verlag Berlin Heidelberg, 1997).
+[71] A. Hatcher, Vector Bundles and K-Theory (unpublished).
+[72] J. Zak, Berry’s Phase for Energy Bands in Solids, Phys. Rev.
+Lett. 62, 2747 (1989).
+[73] B. Bradlyn, Z. Wang, J. Cano, and B. A. Bernevig, Discon-
+nected elementary band representations, fragile topology, and
+wilson loops as topological indices: An example on the trian-
+gular lattice, Phys. Rev. B 99, 045140 (2019).
+[74] S. H. Kooi, G. van Miert, and C. Ortix, Classiﬁcation of
+crystalline insulators without symmetry indicators: Atomic
+and fragile topological phases in twofold rotation symmetric
+systems, Phys. Rev. B 100, 115160 (2019).
+[75] B. Lian, F. Xie, and B. A. Bernevig, Landau level of fragile
+topology, Phys. Rev. B 102, 041402(R) (2020).
+[76] International Tables for Crystallography. Volume A, Space-
+Group Symmetry, online ed. edited by T. Hahn (2006).
+[77] Z. Wang, A. Alexandradinata, R. J. Cava, and B. A. Bernevig,
+Hourglass fermions, Nature (London) 532, 189 (2016).
+[78] C. Fang, M. J. Gilbert, and B. A. Bernevig, Topological insula-
+tors with commensurate antiferromagnetism, Phys. Rev. B 88,
+085406 (2013).
+[79] J. Ahn and B.-J. Yang, Symmetry representation approach to
+topological invariants in C2zt-symmetric systems, Phys. Rev.
+B 99, 235125 (2019).
+[80] E. Khalaf, H. C. Po, A. Vishwanath, and H. Watanabe, Sym-
+metry Indicators and Anomalous Surface States of Topological
+Crystalline Insulators, Phys. Rev. X 8, 031070 (2018).
+[81] A. M. Essin, J. E. Moore, and D. Vanderbilt, Magnetoelectric
+Polarizability and Axion Electrodynamics in Crystalline Insu-
+lators, Phys. Rev. Lett. 102, 146805 (2009).
+[82] V. Mathai and G. C. Thiang, Global topology of weyl semimet-
+als and fermi arcs, J. Phys. A: Math. Theor. 50, 11LT01 (2017).
+[83] A. Bouhon and A. M. Black-Schaffer, Bulk topology of line-
+nodal structures protected by space group symmetries in class
+AI, arXiv:1710.04871 [cond-mat.mtrl-sci].
+[84] E. Kiritsis, A topological investigation of the Quantum Adia-
+batic Phase, Commun. Math. Phys. 111, 417 (1987).
+[85] M. Lin and T. L. Hughes, Topological quadrupolar semimet-
+als, Phys. Rev. B 98, 241103(R) (2018).
+[86] Z. Wang, B. J. Wieder, J. Li, B. Yan, and B. A. Bernevig,
+Higher-Order Topology, Monopole Nodal Lines, and the
+Origin of Large Fermi arcs in Transition Metal Dichalco-
+genides xte2 (x = Mo, W), Phys. Rev. Lett. 123, 186401
+(2019).
+[87] B. J. Wieder, Z. Wang, J. Cano, Xi Dai, L. M. Schoop, B.
+Bradlyn, and B. A. Bernevig, Strong and fragile topological
+dirac semimetals with higher-order fermi arcs, Nat. Commun.
+11, 627 (2020).
+[88] S. S. Tsirkin, I. Souza, and D. Vanderbilt, Composite weyl
+nodes stabilized by screw symmetry with and without time-
+reversal invariance, Phys. Rev. B 96, 045102 (2017).
+[89] T. L. Hughes, E. Prodan, and B. A. Bernevig, Inversion-
+symmetric topological insulators, Phys. Rev. B 83, 245132
+(2011).
+[90] A. Alexandradinata, Xi Dai, and B. A. Bernevig, Wilson-loop
+characterization of inversion-symmetric topological insula-
+tors, Phys. Rev. B 89, 155114 (2014).
+[91] A. Alexandradinata and B. A. Bernevig, Berry-phase descrip-
+tion of topological crystalline insulators, Phys. Rev. B 93,
+205104 (2016).
+[92] R. González-Hernández, E. Tuiran, and B. Uribe, Chiralities
+of nodal points along high symmetry lines with screw rotation
+symmetry, arXiv:2102.09970 [cond-mat.mtrl-sci].
+[93] H. B. Nielsen and M. Ninomiya, A no-go theorem for regular-
+izing chiral fermions, Phys. Lett. B 105, 219 (1981).
+[94] A. Alexandradinata, Z. Wang, and B. A. Bernevig, Topological
+Insulators from Group Cohomology, Phys. Rev. X 6, 021008
+(2016).
+[95] C. Dryzun and D. Avnir, On the abundance of chiral crystals,
+Chem. Commun. 48, 5874 (2012).
+[96] B. Bradlyn, J. Cano, Z. Wang, M. G. Vergniory, C. Felser,
+R. J. Cava, and B. A. Bernevig, Beyond dirac and weyl
+fermions: Unconventional quasiparticles in conventional crys-
+tals, Science 353, aaf5037 (2016).
+[97] G. Chang, S.-Y. Xu, B. J. Wieder, D. S. Sanchez, S.-M.
+Huang, I. Belopolski, T.-R. Chang, S. Zhang, A. Bansil, H.
+Lin, and M. Z. Hasan, Unconventional Chiral Fermions and
+Large Topological Fermi Arcs in Rhsi, Phys. Rev. Lett. 119,
+206401 (2017).
+[98] P. Tang, Q. Zhou, and S.-C. Zhang, Multiple Types of Topo-
+logical Fermions in Transition Metal Silicides, Phys. Rev. Lett.
+119, 206402 (2017).
+[99] G. Chang, B. J. Wieder, F. Schindler, D. S. Sanchez, I.
+Belopolski, S.-M. Huang, B. Singh, Di Wu, T.-R. Chang, T.
+Neupert, S.-Y. Xu, H. Lin, and M. Z. Hasan, Topological quan-
+tum properties of chiral crystals, Nat. Mater. 17, 978 (2018).
+[100] T. Zhang, R. Takahashi, C. Fang, and S. Murakami, Twofold
+quadruple weyl nodes in chiral cubic crystals, Phys. Rev. B
+102, 125148 (2020).
+[101] B. Peng, Yi Jiang, Z. Fang, H. Weng, and C. Fang, Topological
+classiﬁcation and diagnosis in magnetically ordered electronic
+materials, arXiv:2102.12645 [cond-mat.mes-hall].
+245127-21

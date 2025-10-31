@@ -1,0 +1,1999 @@
+Computer Physics Communications 288 (2023) 108722
+Contents lists available at ScienceDirect
+Computer Physics Communications
+journal homepage: www.elsevier.com/locate/cpc
+MSGCorep: A package for corepresentations of magnetic space 
+groups ✩,✩✩
+Gui-Bin Liu a,b,∗, Zeying Zhang c, Zhi-Ming Yu a,b, Yugui Yao a,b,∗
+a Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and Measurement (MOE), School of Physics, Beijing Institute of 
+Technology, Beijing 100081, China
+b Beijing Key Laboratory of Nanophotonics and Ultraﬁne Optoelectronic Systems, School of Physics, Beijing Institute of Technology, Beijing 100081, China
+c College of Mathematics and Physics, Beijing University of Chemical Technology, Beijing 100029, China
+a r t i c l e 
+i n f o
+a b s t r a c t
+Article history:
+Received 21 November 2022
+Received in revised form 27 February 2023
+Accepted 3 March 2023
+Available online 15 March 2023
+Dataset link: https://
+github .com /goodluck1982 /MSGCorep
+Keywords:
+Corepresentation
+Magnetic space group
+Magnetic little group
+Direct product
+Mathematica
+Motivated by easy access to complete corepresentation (corep) data of all the 1651 magnetic space 
+groups (MSGs) in three-dimensional space, we have developed a Mathematica package MSGCorep to 
+provide an oﬄine database of coreps and various functions to manipulate them, based on our previous 
+package SpaceGroupIrep. One can use the package MSGCorep to obtain the elements of any MSG and 
+magnetic little group, to calculate the multiplication of group elements, to obtain the small coreps at any 
+k-point and full coreps of any magnetic k-star for any MSG and show them in a user-friendly table form, 
+to calculate and show the decomposition of direct products of full coreps between any two speciﬁed 
+magnetic k-stars, and to determine the small coreps of energy bands. Both single-valued and double-
+valued coreps are supported. In addition, the 122 magnetic point groups (MPGs) and their coreps are 
+also supported by this package. To the best of our knowledge, MSGCorep is the ﬁrst package that is able 
+to calculate the direct product of full coreps for any MSG and able to determine small coreps of energy 
+bands for general purpose. In a word, the MSGCorep package is an oﬄine database and tool set for MSGs, 
+MPGs, and their coreps, and it is very useful to study the symmetries in magnetic (type-I, -III, and -IV 
+MSGs) and nonmagnetic (type-II MSGs) materials.
+Program summary
+Program title: MSGCorep
+CPC Library link to program ﬁles: https://doi .org /10 .17632 /zt9r8pp8kr.1
+Developer’s repository link: https://github .com /goodluck1982 /MSGCorep
+Licensing provisions: GNU General Public Licence 3.0
+Programming language: Wolfram
+External routines/libraries used: SpaceGroupIrep (https://github .com /goodluck1982 /SpaceGroupIrep)
+Nature of problem: The package MSGCorep provides oﬄine database and tools for easy access to 1651 
+magnetic space groups, 122 magnetic point groups, and their corepresentations (coreps). MSGCorep is 
+the ﬁrst package that is able to calculate the direct product of full coreps for any magnetic space group 
+and able to determine small coreps of energy bands for general purpose.
+Solution method: Coreps of a magnetic group are constructed from the representations of the maximal 
+unitary subgroup of the magnetic group. Based on the complete representation data of 230 space groups 
+provided by SpaceGroupIrep package, complete corep data of 1651 magnetic space groups are derived in
+MSGCorep package. A more convenient equation of induced corep, i.e. Eq. (2), is introduced to calculate 
+the full coreps of all MSGs.
+© 2023 Elsevier B.V. All rights reserved.
+✩The review of this paper was arranged by Prof. Weigel Martin.
+✩✩This paper and its associated computer program are available via the Computer Physics Communications homepage on ScienceDirect (http://www.sciencedirect .com /
+science /journal /00104655).
+* Corresponding authors at: Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and Measurement (MOE), School of Physics, 
+Beijing Institute of Technology, Beijing 100081, China.
+E-mail addresses: gbliu@bit.edu.cn (G.-B. Liu), ygyao@bit.edu.cn (Y. Yao).
+https://doi.org/10.1016/j.cpc.2023.108722
+0010-4655/© 2023 Elsevier B.V. All rights reserved.G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+1. Introduction
+Group theory and symmetries play important roles in physics, especially in the booming topological physics in the recent decade [1–6]. 
+An typical example is the application of space groups (SGs) and their representation theory in symmetry indicator method or topological 
+quantum chemistry method to classify and search symmetry-protected band topology in nonmagnetic materials [7–18], and these two 
+methods have been extended to magnetic space groups (MSGs) which are needed to describe the symmetries in magnetic materials 
+[19–21]. Consequently, more and more interests are focused on MSGs and their applications in magnetic topological materials [22–28].
+The term “magnetic (space) group” is also known as “Shubnikov (space) group” originating from A. V. Shubnikov who introduced the 
+concept of anti-symmetry operation [29]. The anti-symmetry operation commutes with all spacial operations and can be deﬁned as the 
+change of an extra two-valued property. The change of color (black or white) is usually such an anti-symmetry operation in most general 
+discussions about Shubnikov groups. While in the certain case of describing magnetic structures, time reversal operation T is the anti-
+symmetry operation which can reverse the direction (or sign) of magnetic moments. Accordingly, it can be said that MSG is a certain 
+realization of Shubnikov group. In the case of MSG, T is an anti-unitary operation, but it should be emphasized that the anti-symmetry 
+operation is not necessarily anti-unitary for general Shubnikov groups [29] and the color-changing operation is not always the same with 
+T [30]. Nevertheless, MSGs are often described in terms of changing color due to historical reasons.
+There are in total 1651 MSGs1 in three-dimensional space which can be divided into four types. The ordinary 230 SGs (also called 
+Fedorov groups), which are all unitary, constitute the type-I MSGs, i.e. MI = G where MI and G stand for type-I MSG and ordinary SG 
+respectively. It is noteworthy that type-I MSGs can describe the magnetic structures of ferromagnetic (including ferrimagnetic, the same 
+below) and antiferromagnetic, but not nonmagnetic (or paramagnetic) materials [32]. Type-II MSGs (230 in total, also called gray SGs) are 
+of the form MII = G + T G and can only describe nonmagnetic materials. Type-III MSGs (674 in total) are of the form MIII = H + T (G −H)
+in which the equi-translational subgroup H consists of half the elements in G and is also the maximal unitary subgroup of MIII. Similar to 
+type-I MSGs, type-III MSGs can describe both ferromagnetic and antiferromagnetic materials. Type-IV MSGs (517 in total) are of the form 
+MIV = G + T {E|t0}G in which {E|t0} is a pure translation in Seitz notation with t0 half a lattice vector. Type-IV MSGs can only describe 
+antiferromagnetic materials. Both type-III and type-IV MSGs are also called black-white SGs but only type-IV MSGs have black-white 
+Bravais lattice due to the existence of T {E|t0}. Alternatively, type-III and type-IV are called MT and MR respectively by Litvin [31,33] and 
+called BW1 and BW2 respectively by Grimmer [34].
+The tabulations of the irreducible representations (ireps) for the 230 SGs have been given in several monographs [29,35–38], and the 
+electronic data of them are also available in the ISOTROPY software suit [39,40], on the Bilbao Crystallographic Server (BCS) [41–43], or 
+in the SpaceGroupIrep package [44]. Introducing anti-unitary operations to MSGs makes it necessary to apply corepresentations (coreps), 
+instead of ireps, to analyze the symmetries in most physics problems. However, a complete tabulation of irreducible coreps (irreducible 
+is omitted for simplicity hereinafter) for all MSGs has been lacking for a long time. To the best of our knowledge, the ﬁrst complete 
+tabulation of coreps was calculated about two years ago for the study of magnetic topological quantum chemistry and was made publicly 
+available on BCS [20,21]. Historically, although there was a corep tabulation in a book by Miller and Love [36], the tabulation there is 
+incomplete and also diﬃcult to read, compared to the one on BCS [21]. BCS is an excellent website for showing crystallographic data. It’s 
+convenient to lookup small coreps of any speciﬁed k-point (i.e. wave vector) for any speciﬁed MSG on BCS. However, it’s not convenient 
+to process all coreps of all MSGs ergodically because BCS does not provide oﬄine tool to do this. And hence it’s horribly diﬃcult for users 
+to obtain a complete oﬄine corep dataset for all MSGs from the BCS website. Motivated by solving this problem, we have developed the 
+package MSGCorep to provide oﬄine database and functions for all coreps of MSGs, based on our homemade SpaceGroupIrep package for 
+SGs as well as their ireps [44]. Although the absence of an oﬄine BCS dataset for users hinders the direct comparison of the complete 
+MSG corep data between our MSGCorep package and BCS, the correctness of the data from MSGCorep and their agreement with BCS 
+can be guaranteed indirectly, because the corep data from MSGCorep are completely derived from the irep data from our SpaceGroupIrep
+package and the agreement of the irep data between SpaceGroupIrep and BCS have been systematically veriﬁed (refer to section 9 in [44]).
+Generally speaking, the ﬁrst step of applying the theory of MSG coreps to analyze energy bands is to determine the coreps of the 
+bands, or more speciﬁcally, the irreducible coreps of the magnetic little group (MLG), also called “small coreps” here, at any required 
+wave vector k of the bands. Similarly, for ordinary SGs this step is to determine the small representations (reps) of the little groups 
+(LGs) of the bands. There have been several tools capable of doing this, e.g. irvsp [45], qeirreps [46], IrRep [47], and SpaceGroupIrep [44]. 
+However, there is still missing such a tool which can determine the MLG small coreps for bands. Nevertheless, there is a precursor tool
+MagVasp2trace [20,48] which is used to calculate the characters (i.e. the trace data) of the unitary operations of the MLGs for bands. In 
+fact, MagVasp2trace was developed to assist the study of magnetic topological quantum chemistry, i.e. to prepare the trace data for the 
+“Check Topological Magnetic Mat.” (CTMM) function on BCS [20,49]. Although the CTMM has to determine ﬁrst the small coreps based 
+on the input trace data, it is designed to analyze the topological properties using the determined coreps, not to give the small coreps 
+directly. As a result, the CTMM is not a general tool to determine small coreps at any k-points. To meet this requirement, we developed 
+the getBandCorep function in our MSGCorep package which can determine small coreps at any k-point based on the trace data from
+MagVasp2trace. This is the ﬁrst tool to do this as we know.
+2. Theory
+2.1. Basis for corep
+Mathematically, a group rep is deﬁned by a homomorphism mapping to a matrix group [29]. However, the corep of a nonunitary group, 
+say a magnetic group M, is not deﬁned by homomorphism any more. The corep matrices D(M) obey the following algebra
+1 About the scope of the MSG concept in the 1651 Shubnikov space groups (SSGs), there are different understandings: the 1191 SSGs of types III and IV are called MSGs 
+in [29] (see the subsection 7.1 therein), the 1421 SSGs of types I, III, and IV are called MSGs in [21], and all the 1651 SSGs are called MSGs in [19,25,27,31]. In this paper, we 
+adopt the last understanding.
+2G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+∀m1,m2 ∈M
+
+D(m1)D(m2) = D(m1m2),
+m1 is unitary
+D(m1)D(m2)∗= D(m1m2),
+m1 is anti-unitary
+(1)
+and the set of matrices D(M) is not necessarily a group. The corep of M can be induced from an irep (a corep)  of its unitary (nonunitary) 
+subgroup S. However, this induction procedure is different from that of ordinary induced rep. To reﬂect this difference, here we use the 
+symbol ⇑instead of the ordinary ↑to describe the induced corep. Supposing that the (left) coset2 representatives of S are c1, c2, ··· , cr
+with r = |M|/|S| being the index of the subgroup S and |M| being the size of the set M, then for ∀m ∈M the induced corep  ⇑M of M
+is deﬁned as
+( ⇑M)μν(m) =
+⎧
+⎪⎨
+⎪⎩
+(c−1
+μ mcν),
+c−1
+μ mcν ∈S and cμ is unitary
+(c−1
+μ mcν)∗,
+c−1
+μ mcν ∈S and cμ is anti-unitary
+0,
+otherwise
+.
+(2)
+In fact, any nonunitary group M can be written as M = H + AH, in which H is the maximal unitary subgroup of M, A is an anti-unitary 
+coset representative, and the coset AH contains all anti-unitary elements in M. In terms of Eq. (2), we have S = H,  = , r = 2, c1 = E
+(identity element), c2 = A, and the obtained induced corep is
+( ⇑M)(m) =
+(m)
+0
+0
+(A−1mA)∗
+
+, ( ⇑M)(m′) =
+
+0
+(m′ A)
+(A−1m′)∗
+0
+
+(3)
+for ∀m ∈H and ∀m′ ∈AH. However, although  is irreducible for H, the induced corep  ⇑M is not necessarily irreducible in general. 
+Corep theory shows that only one irreducible corep (up to equivalence) remains after the reduction of  ⇑M and there are only three 
+cases (a), (b), and (c) [29]. In both cases (a) and (b), (m) is equivalent to (A−1mA)∗, i.e. there existing a matrix N satisfying (m) =
+N(A−1mA)∗N−1 for ∀m ∈H, while in case (c) (m) is not equivalent to (A−1mA)∗. Denoting the irreducible corep derived from  as 
+D, then for ∀m ∈H and ∀m′ ∈AH the results are
+(a)
+D(m) = (m), D(m′) = ′(m′), NN∗= (A2)
+(4)
+(b)
+D(m) =
+(m)
+0
+0
+(m)
+
+, D(m′) =
+
+0
+−′(m′)
+′(m′)
+0
+
+, NN∗= −(A2)
+(5)
+(c)
+D(m) = ( ⇑M)(m)
+(6)
+where ′(m′) ≡(m′ A−1)N. For the matrix N refer to Appendix A for details. The case of a corep D can be determined simply by the 
+following equation [29]
+	
+m′∈AH
+χ(m′ 2) =
+⎧
+⎪⎨
+⎪⎩
++|H|
+: case (a)
+−|H|
+: case (b)
+0
+: case (c)
+(7)
+in which χ is the character of . This is related to the additional degeneracy of a system when its symmetry group changes from H to M. 
+In case (a), no additional degeneracy exists, i.e. the degeneracy keeps unchanged from H to M. While in both cases (b) and (c) additional 
+degeneracy appears, i.e. the degeneracy doubles from H to M. The difference is that in case (b) two copies of the same irep of H form a 
+corep of M but in case (c) two different ireps of H form a corep of M.
+2.2. Coreps for the 1651 MSGs
+All the 1651 MSGs consist of both unitary groups (type-I) and nonunitary groups (type-II, -III, and -IV). Although corep is deﬁned 
+for nonunitary groups, it is still meaningful for unitary groups. Because Eq. (1) becomes D(m1)D(m2) = D(m1m2) for ∀m1, m2 ∈M when 
+no anti-unitary element exists in M, in which case the corep is just an ordinary rep. Accordingly, for the sake of concise and uniﬁed 
+description, we use the term “corep” for all MSGs and MLGs no matter they are unitary groups or not.
+Suppose M is an MSG and Mk is one of its MLGs. Mk is deﬁned at a certain wave vector k and consists of all the elements in M
+whose point parts transform k to its equivalent wave vectors, i.e. Mk = { Q | Q ∈M &P(Q )k .= k}. This is similar to the LG concept for 
+SG. The point part of the element Q in M is deﬁned as P(Q ) = R if Q = {R|v} and P(Q ) = T R if Q = T {R|v} = {T R|v}, in which R is 
+a rotation and v is a translation vector (not necessarily a lattice vector). The symbol .= means the equivalence between two k-points, i.e. 
+differing by a reciprocal lattice vector. And we use the convention T k = −k here. Mk is a subgroup of M, and hence M can be written as 
+M = c1Mk + c2Mk + ··· + crMk in which the ﬁrst coset representative c1 is usually set to {E|0}. Then, the magnetic (wave vector) star of 
+k can be deﬁned as ∗k = {kμ | μ = 1, 2, ··· , r} with kμ ≡P(cμ)k and k1 = k.
+For a certain MLG Mk, not all its irreducible coreps are useful to construct the corep of M. Only those compatible with the ireps of 
+the translation group are useful, whose basis functions are the Bloch functions which are important in physics. The useful ones, denoted 
+as D p
+k (p = 1, 2, ···), satisfy the following relation
+D p
+k({α|v + t}) = e−ik·t D p
+k({α|v}) for ∀t ∈L,
+(8)
+in which α can be R or T R and L is the set of all lattice vectors. These coreps are called “allowed” irreducible coreps of Mk and are 
+also termed “small coreps”. As for the own irreducible coreps of the MSG M, they can be obtained through the induction from the small 
+2 All cosets refer to left cosets unless otherwise stated.
+3G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Table 1
+The possible types and cases of both the small corep D p
+k and the full corep D p
+k ⇑M for 
+the MSG M. The symbol – means undeﬁned. The last two columns show whether the 
+additional degeneracy will appear when the symmetry group changes from G to M in 
+which G is the maximal unitary subgroup of M.
+MSG type
+D p
+k
+D p
+k ⇑M
+doubled
+doubled
+type
+case
+type
+case
+at k
+in BZ
+nonunitary 
+(type-II, -III, -IV)
+a
+a
+a
+a
+no
+no
+b
+b
+b
+b
+yes
+no
+c
+c
+c
+c
+yes
+no
+x
+–
+x
+c
+no
+yes
+unitary (type-I)
+x
+–
+x
+–
+no
+no
+coreps. That is to say, D p
+k ⇑M is an irreducible corep of M. For each kμ in the magnetic star ∗k, all coreps D p
+kμ ⇑M (μ = 1, ··· , r) are 
+equivalent to each other. Therefore, the MSG corep D p
+k ⇑M is said to belong to the whole magnetic star ∗k. It’s worth reminding that two 
+different concepts are involved here: “MLG corep” such as D p
+k and “MSG corep” such as D p
+k ⇑M. Despite this, when “corep of/for MSG” 
+is generally mentioned, its meaning may cover both MLG corep and MSG corep, because the MLG corep D p
+k of Mk can also be said to be 
+the small corep of the MSG M (at k). To differentiate from “small corep” (e.g. D p
+k) explicitly, MSG corep (e.g. D p
+k ⇑M) can also be called 
+the “full corep” of MSG.
+The key to the corep theory of MSG is to obtain the small coreps of MLG. Suppose G is the maximal unitary subgroup of M. Then G
+has to be one of the 230 SGs. And the LG of G at k, denoted as Gk, is also the maximal unitary subgroup of the MLG Mk. If Mk is unitary, 
+then Mk = Gk and the small coreps of Mk are just the small reps of Gk. But if Mk is nonunitary, the small coreps of Mk can be calculated 
+from the small reps of Gk via Eqs. (4)–(6). In either case, all the small reps of Gk are known thanks to the SpaceGroupIrep package, and 
+the small coreps of Mk can be obtained subsequently. After the small coreps D p
+k are obtained, the full coreps D p
+k ⇑M can be calculated 
+using Eq. (2). This method is more advantageous than the Eq. (7.6.23) in [29] because the latter uses the ordinary inducing process ↑and 
+works only for the cases in which Mk is nonunitary but our method Eq. (2) works no matter Mk is unitary or nounitary. This can not only 
+simplify the algorithm and logic of our package substantially, but also provides a more general and insightful understanding of coreps.
+For the full coreps of nonunitary MSGs (type-II, -III, and -IV), we extend the three cases (a), (b), and (c) to four types (a), (b), (c), and 
+(x). Both (a) and (b) keep unchanged. But the case (c) is further divided into types (c) and (x) whose judgment conditions are that the 
+corresponding MLG is nonunitary and unitary respectively. Suppose that q
+k is a small rep of Gk and the small corep of Mk derived from 
+q
+k via Eqs. (4)–(6) is D p
+k = Dq
+k. Then the type of the full corep D p
+k ⇑M can be calculated via
+	
+c∈(Mk−Gk)//T
+χq
+k(c2) =
+⎧
+⎪⎪⎪⎨
+⎪⎪⎪⎩
++|Gk//T|
+: type (a)
+−|Gk//T|
+: type (b)
+0 (Mk ̸= Gk)
+: type (c)
+0 (Mk = Gk)
+: type (x)
+(9)
+where (Mk −Gk)/ /T means the set of coset representatives for the cosets of the translation group T which are contained in Mk −Gk, and 
+χq
+k is the character of q
+k. Although the above types are deﬁned for the full corep D p
+k ⇑M, they are also meaningful for the small corep 
+D p
+k. The type (x) in Eq. (9) implies that Mk can be unitary even if M is nonunitary. For type (x), when the symmetry group changes from 
+G to M, additional degeneracy does not appear at any wave vector in the star ∗k of G, but it does appear and is doubled in the whole 
+Brillouin zone (BZ) via being further degenerate with another star ∗k′ (of G).3 According to Eq. (9), all the small coreps and full coreps of 
+type-I MSGs belong to type (x). As a result, Eq. (9) is actually applicable to all the 1651 MSGs. The advantage of introducing type (x) is to 
+deﬁne a uniﬁed concept available for all the 1651 MSGs including both unitary and nonunitary groups, while the three cases (a), (b), and 
+(c) are only deﬁned for nonunitary groups. The possible types and cases, together with their relations to the additional degeneracy, are 
+listed in Table 1.
+3. Files and installation
+The MSGCorep package is developed in Wolfram language and can be used in the Mathematica software with version ≥11.2. This 
+package is dependent on our previous package SpaceGroupIrep, so users have to make sure that SpaceGroupIrep (at best the latest version) 
+is properly installed prior to the installation of MSGCorep. Our future updates of SpaceGroupIrep will be made sure to be compatible with
+MSGCorep. The MSGCorep package mainly contains the ﬁles MSGCorep.wl, MSGData.wl, Usage.wl, and libMLGCorep.mx. The ﬁrst three are 
+core ﬁles and the fourth one contains the data of MLG coreps which are used only by the getBandCorep function. We also supply a ﬁle
+libMLGCorep.mx_RaspberryPi as an alternative version of libMLGCorep.mx working for raspberry pi platform, because Mathematica can be 
+used free of charge on raspberry pi for non-commercial usage [50]. To install the package, just put the MSGCorep folder containing the 
+above-mentioned ﬁles to the path $UserBaseDirectory/Applications/ or other available paths [44]. After installation, users can 
+use the following statement to load the MSGCorep package and start using it.
+<<"MSGCorep`"
+(* or just: <<MSGCorep` *)
+Here we provide several useful tips for users [cf. Sec. 1 in the supplementary material (SM)]:
+3 The star ∗k′ may or may not be ∗(−k), which can be embodied in the labels of full coreps. Refer to the discussion of point (ii) in the last paragraph of subsection 5.3 for 
+details, and ∗k′ =∗(−k) occurs only in the case 2) therein.
+4G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 1. Examples of MSGSymStd and MSGSymOG if their arguments are only the family number of MSG.
+• Use ?MSGCorep`* to browse all available functions in the package or ?MSGCorep`*MLG* for all functions containing MLG in their 
+names such as getMLGElem.
+• Use ?getBandCorep to see the information about a speciﬁc function such as getBandCorep.
+• Many functions have options which can enrich their functionalities. Use Options[fun] to see the available options and their default 
+values of a function fun.
+4. Conventions
+In both SpaceGroupIrep and MSGCorep packages, we follow the convention used in the classic book written by C. J. Bradley and A. P. 
+Cracknell (the BC book) [29] and call it “BC convention”. This convention is composed of various deﬁnitions and tables in the BC book, 
+such as the basis vectors of primitive cells (deﬁned in the Tab. 3.1 in the BC book, hereafter referred to as “BC-Tab. 3.1”), the names 
+and operations of rotations (BC-Tabs. 1.4, 3.2, 3.4, and 6.7*), the elements of SGs (BC-Tab. 3.7*) and MSGs (BC-Tabs. 7.2* and 7.3*), the 
+high-symmetry k-points (BC-Tab. 3.6*), small reps (BC-Tabs. 5.7*, 5.11, 6.13*, and 6.15) and their labels (BC-Tabs. 5.8* and 6.14*). Note that 
+the tables with * have corrections or adaptions given in this paper or the SM of Ref. [44].
+Historically, there are mainly two types of MSG notations (including numbers and symbols) which have been widely used for tens 
+of years, namely the Belov-Neronova-Smirnova (BNS) notations [51,52] and the Opechowski-Guccione (OG) notations [53]. Here we use 
+the BNS MSG notations listed in BC-Tab. 7.4* with some corrections and adaptions (details are given in Appendix B and Table B.2). We 
+made the adaptions to keep the BNS symbols the same as those in the latest and systematic MSG monograph written by Litvin in 2013 
+[31]. We regard these BNS symbols as the standard MSG symbols. It should be pointed out that the orientation of conventional cell in 
+BC convention, shortened as BC orientation, is not always the same as the default orientation in “International Tables for Crystallography, 
+Volume A” (hereafter referred to as ITA [54]), shortened as ITA orientation. The differences exist mainly in monoclinic and orthorhombic 
+crystal systems. In principle, a self-consistent MSG symbol should reﬂect the cell orientation. But note that the standard BNS symbols 
+that we use are not always self-consistent, because they correspond to the ITA orientation but not always to the BC orientation. For 
+comparison purpose, we list all the symbols in BC orientation in Table S1 in the SM if they are not the same with the standard symbols 
+(run showMSGSym[] to get the table). Besides, we also supply the OG numbers and symbols, which are consistent with those given by 
+Litvin [31]. It’s worth noting that, there are some differences between the symbols used here (also by Litvin) and those in ISO-MAG [55]
+and BCS, see the details in Appendix C and Tables C.5 and C.6.
+Users can use the following functions to get the MSG symbols,
+MSGSymStd[{28,92}]
+(* gives standard BNS symbol of 28.92: Pama2 *)
+MSGSymBC[{28,92}]
+(* gives the BNS symbol in BC orientation: Pbbm2 *)
+MSGSymOG[{25,12,166}] (* gives the OG symbol of 25.12.166: P2am′m′2 *)
+in which we use a list of two (three) integers {28,92} ({25,12,166}) to describe the BNS (OG) MSG number 28.92 (25.12.166). The 
+OG number {25,12,166} can be obtained by BNStoOG[{28,92}], and reversely OGtoBNS[{25,12,166}] returns {28,92}. If 
+only the family number of an MSG is given as the argument, MSGSymStd (MSGSymOG) will return all possible MSGs in this family. For 
+example, MSGSymStd[119] (MSGSymOG[119]) gives all the MSG symbols whose BNS (OG) numbers begin with 119, together with the 
+correspondence to the OG (BNS) notations, as shown in the left (right) panel of Fig. 1. From Fig. 1 one can see that the BNS family of 
+MSGs are different from the OG family of MSGs with the same family number. In addition, one can also use showMSGSym[119] to show 
+the symbols of BNS family 119 in a formatted table form, or use showMSGSym[110;;120] to show a range of families from 110 to 120.
+When we construct type-III MSGs according to BC-Tab. 7.2, we ﬁnd that the “colored” generating elements given in BC-Tab. 7.2 are 
+mistaken for many MSGs, mainly involving orthorhombic and hexagonal systems. Here, a colored element, also called a primed element, 
+means that it’s an anti-unitary element and the multiplied T is usually represented by a ′. For example, after being colored, {R|v} becomes 
+{R|v}′ which is equivalent to {R|v}T , and {R|v}′ is usually shown in red color as {R|v}′ to attract attention. Taking the orthorhombic MSG 
+28.89 (Pm′a2′) for example, the σx given in BC-Tab. 7.2 means that the generating elements of Pm′a2′ can be obtained by ﬁrst getting the 
+generating elements of SG 28 (Pma2), i.e. {σx| 1
+200} and {σy|000}, from BC-Tab. 3.7 (or run SGGenElem[[28,1]] to get them) and then 
+making the speciﬁed one, i.e. {σx| 1
+200} which is speciﬁed by its rotation part σx, colored. However, thus obtained generating elements, i.e. 
+{σx| 1
+2 00}′ and {σy|000}, are not consistent with the symbol Pm′a2′. The symbol Pm′a2′ tells us that it has a primed mirror (i.e. m′) and 
+an unprimed glide plane (i.e. a), but {σx| 1
+200}′ and {σy|000} are a primed glide reﬂection and an unprimed mirror reﬂection respectively. 
+More speciﬁcally, {σx| 1
+200}′ ({σy|000}) gives a primed glide plane b′4 (unprimed mirror m) with normal direction along x (y), and it 
+should correspond to the ﬁrst (second) place holder  in the MSG symbol P2′. So, the MSG with generating elements {σx| 1
+200}′ and 
+4 Note that in BC convention, the basis vectors of orthorhombic primitive lattice are t1 = (0, −b, 0) = −b, t2 = (a, 0, 0) = a, and t3 = (0, 0, c) = c, and the translation part 
+( 1
+2 00) in {σx| 1
+2 00} represents the translation vector 1
+2 t1 = −1
+2 b. Therefore, {σx| 1
+2 00} is a glide operation with glide direction b and it should be denoted as b in the SG 
+symbol. Furthermore, {σx| 1
+2 00}′ gives a primed glide plane b′ in the MSG symbol..
+5G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+{σy|000} should be Pb′m2′. Recalling that in BC convention the actual orientation of SG 28 is b¯ac (refer to the Table 5 in [44] or run 
+BCOrientation[28] to get it), the symbol Pb′m2′ is actually in BC orientation, and becomes Pma′2′ after converting to ITA orientation 
+(i.e. abc). However, Pma′2′ is MSG 28.90, not 28.89! If the MSG generating elements are {σx| 1
+200} and {σy|000}′, similar analyses directly 
+give the MSG symbol Pbm′2′, corresponding to Pm′a2′ (MSG 28.89) in ITA orientation. To this point, one can see that BC-Tab. 7.2 gives 
+mistaken colored generating elements for MSGs 28.89 and 28.90. We think the reason of this mistake may be that Bradley and Cracknell 
+simply copied the data in the original BNS table in [52] without essential adaptions to make them consistent with BC-Tab. 3.7. In Table B.3
+we list the corrections to all the mistaken colored generating elements in BC-Tab. 7.2. And in the Table S2 of SM elements for each MSG 
+are listed.
+When we construct type-IV MSGs, we ﬁnd that BC-Tab. 7.3 should also be adapted. Firstly, BC-Tab. 7.3 is not complete, lacking six black-
+white lattices (see Table B.4 for details), such as the Pc black-white lattice of MSG 7.28 (PcC). Secondly, for all MSGs of orthorhombic 
+crystal system, we should use the BNS symbols in BC orientation to obtain their black-white lattices. For example, MSG 51.300 should be 
+constructed through the black-white lattice Pa in its symbol in BC orientation, namely Pacmm, not the Pc in the standard symbol Pcmma. 
+Only thus can we obtain the correct elements of M51.300 (MSG 51.300) based on G51 (SG 51) whose elements are consistent with BC-Tab. 
+3.7, and the equation is M51.300 = G51 + T {E|t0}G51 with t0 taking the value 1
+2t2 of the orthorhombic Pa in BC-Tab. 7.3. Accordingly, 
+the Aa, Ac, and AC in BC-Tab. 7.3 are of no use because the actual black-white lattices are Cc, Ca, and C A respectively for corresponding 
+symbols in BC orientation.5
+In short, in order to construct MSGs from BC-Tabs. 7.2 and 7.3 correctly, the actual BC orientation has to be considered and the two 
+tables have to be corrected or adapted accordingly, or else the obtained MSG elements may not match the MSG numbers and symbols. The 
+SM of Ref. [25] mentions that there are 126 MSGs whose numbers in the BC book are different from those on BCS and it also gives the 
+correspondence between them. In fact, those 126 MSGs are merely constructed from the original BC-Tabs. 7.2 and 7.3 literally in Ref. [25], 
+which leads to the seeming differences between the BC book and BCS. However, the BNS numbers in both the BC book and on BCS should 
+not be different from the original deﬁnitions by Belov, Neronova, and Smirnova, even if the BNS symbols may be different according to 
+the cell orientation.
+5. Functionalities of MSGCorep
+5.1. Group elements and multiplication
+In SpaceGroupIrep an SG element {R|v} is described as {Rname,{v1,v2,v3}} in the code, while in MSGCorep an MSG element is 
+described as {Rname,{v1,v2,v3},au} in which au describes whether this element is anti-unitary whose value can only be 0 (no) or 1 
+(yes). For example, as MSG elements, {C2z|00 1
+2} and {C2z|00 1
+2}′ are described as {"C2z",{0,0,1/2},0} and {"C2z",{0,0,1/2},1}
+respectively in the code. To get the list of the elements in an MSG with BNS number n.m, one can use getMSGElem[{n,m}], and 
+similarly one can use getMLGElem[{n,m},k] to get the elements in the MLG of k in which k can be either the name string of 
+a BC standard k-point6 or the fractional coordinates of any k-point. We have to point out that what returns by getMSGElem and 
+getMLGElem are actually M/ /T and Mk/ /T respectively, namely the coset representatives with respect to the translation group T . If 
+the option "double"->True is used for the two functions, the elements of the corresponding double MSG (or MLG) are returned. For 
+example,
+In[1]:= getMSGElem[{28,89}]
+getMLGElem[{28,89},"A"]
+(* the coordinates of "A" are {0,u,1/2} *)
+getMLGElem[{28,89},"A","double"->True]
+showMSGSeitz/@%
+Out[1]= {{"E",{0,0,0},0},{"C2z",{1/2,0,0},1},{"σx",{1/2,0,0},0},{"σy",{0,0,0},1}}
+Out[2]= {{"E",{0,0,0},0},{"C2z",{1/2,0,0},1}}
+Out[3]= {{"E",{0,0,0},0},{"barE",{0,0,0},0},{"C2z",{1/2,0,0},1},{"barC2z",{1/2,0,0},1}}
+Out[4]= {{E|000},{E|000},{C2z| 1
+200}′,{C2z| 1
+200}′}
+in which showMSGSeitz shows an MSG element in the mathematical form and highlights anti-unitary element in red color.
+The multiplication of two MSG elements {R1|v}au1′{R2|w}au2′ = {R1R2|R1w + v}(au1⊕au2)′, the inversion of an MSG element 
+({R|v}au′)−1 = {R−1| −R−1v}au′, and the n-th power of an MSG element ({R|v}au′)n
+can be calculated by MSGSeitzTimes, 
+MSGinvSeitz, and MSGpowerSeitz in the code respectively. Here {R|v}au′ represents {R|v} if au = 0 or {R|v}′ if au = 1, and 
+the symbol ⊕means “exclusive or”. All the three functions have versions for double MSGs with a DMSG preﬁx because double MSGs have 
+different multiplication as follows:
+⎧
+⎪⎨
+⎪⎩
+{R1|v}{R2|w} = {R1R2|R1w + v}
+{R1|v}′{R2|w} = {R1|v}{R2|w}′ = {R1R2|R1w + v}′
+and
+{R1|v}′{R2|w}′ = {¯ER1R2|R1w + v}
+
+{R|v}−1 = {R−1| −R−1v}
+({R|v}′)−1 = {¯ER−1| −R−1v}′ .
+(10)
+Note the difference of T 2 between MSG and double MSG: for MSG ({E|0}′)2 = {E|0} means T 2 = E, while for double MSG ({E|0}′)2 = {¯E|0}
+means T 2 = ¯E. Finally the functions operating on (double) MSG elements are listed below.
+MSGSeitzTimes[brav][{R1,{v1,v2,v3},au1}, {R2,{w1,w2,w3},au2}, ...]
+MSGinvSeitz[brav][{R,{v1,v2,v3},au}]
+5 Taking MSG 40.208 for example, one can verify this by running MSGSymStd[{40,208}] and MSGSymBC[{40,208}] which returns Aama2 and Ccc2m respectively.
+6 A “BC standard k-point”, denoted as kBC, is a k-point whose coordinates are deﬁned in BC-Tab. 3.6*.
+6G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 2. The result of showMLGCorep[{97,155},"P"] which shows the small coreps of the P point for MSG 97.155 (I4′2′2). Part ① shows the MSG notation, the k-point 
+information such as name and coordinates, and the types of BZs. Part ② shows that SG 22 (F222) is the maximal unitary subgroup of MSG 97.155 and it also shows the 
+relations between the basis vectors of MSG 97.155 and the standard BC basis vectors of SG 22. Part ③ shows the converted k-point information from MSG 97.155 to SG 22. 
+Parts ② and ③ exist only for type-III MSGs. Part ④ is the table which shows the small coreps. Light green background shows single-valued coreps and light blue background 
+shows double-valued coreps. The ﬁrst, second, and third columns are the indexes, labels, and types of the small coreps respectively. (For interpretation of the colors in the 
+ﬁgure(s), the reader is referred to the web version of this article.)
+MSGpowerSeitz[brav][{R,{v1,v2,v3},au}, n]
+DMSGSeitzTimes[brav][{R1,{v1,v2,v3},au1}, {R2,{w1,w2,w3},au2}, ...]
+DMSGinvSeitz[brav][{R,{v1,v2,v3},au}]
+DMSGpowerSeitz[brav][{R,{v1,v2,v3},au}, n]
+In the above code, “...” implies that MSGSeitzTimes and DMSGSeitzTimes can calculate not only the multiplication of two MSG 
+elements, but also the continuous multiplication of three or more MSG elements.
+5.2. Small Coreps
+The small coreps of any MLG can be obtained by getMLGCorep[{n,m},k] and shown in table form by showMLGCorep[{n,m},k]
+in which {n,m} speciﬁes the MSG number n.m and k can be either the name string of a BC standard k-point or the numerical frac-
+tional coordinates of any k-point. For using the corep data in the code one can use getMLGCorep, but if only for display purpose 
+one can just use showMLGCorep. One example for the small coreps of the P point for MSG 97.155 (I4′2′2) is shown in Fig. 2, which 
+is obtained by showMLGCorep[{97,155},"P"]. There are four parts ①–④ in Fig. 2. Part ① shows the basic information, including 
+the MSG number 97.155 and symbol I4′2′2, the k-point name P and coordinates ( 1
+4
+1
+4
+1
+4), and the available types of BZs TetrBody(a)
+and TetrBody(b).7 Strictly speaking, the k-point name shown here is only for the BC standard k-point kBC, and for a type-II or -
+III k-point (see the Sec. 2.3 in Ref. [44] for details) this name is merely borrowed from kBC to name it. For example, if one calculate 
+showMLGCorep[{97,155},{-1/4,-1/4,-1/4}], the part ① of the result is shown below
+which implies that the input k-point k = ( ¯1
+4
+¯1
+4
+¯1
+4) is not standard and can borrow the name P from kBC = ( 1
+4
+1
+4
+1
+4) due to their relation 
+C2bkBC .= k.
+Parts ② and ③ exist only for type-III MSGs. This is because for type-I, -II, and -IV MSGs, the Bravais lattice of an MSG M is the same 
+with that of its maximal unitary subgroup G and their basis vectors are also the same, while for type-III MSGs, both Bravais lattice and 
+basis vectors may be different between M and G. In order to utilize the existing irep data of SGs to construct the coreps of MSGs, one has 
+7 Note that there are totally 22 types of BZs in BC convention and see details in BC-Figs. 3.2–3.15 and the Table 1 in [44].
+7G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+to ﬁnd the relations between the primitive cell of M and the standard “BC cell8” of G for type-III MSGs. In the example of Fig. 2, M (MSG 
+97.155) has body-centered tetragonal Bravais lattice whose basis vectors t1, t2, and t3 form a basis-vector matrix
+[t1 t2 t3] =
+⎡
+⎣
+−a/2
+a/2
+a/2
+a/2
+−a/2
+a/2
+c/2
+c/2
+−c/2
+⎤
+⎦
+(11)
+in which a and c are lattice constants, while the BC cell of G (SG 22) has face-centered orthorhombic Bravais lattice whose basis vectors 
+t′
+1, t′
+2, and t′
+3 are
+[t′
+1 t′
+2 t′
+3] =
+⎡
+⎣
+a′/2
+0
+a′/2
+0
+−b′/2
+−b′/2
+c′/2
+c′/2
+0
+⎤
+⎦
+(12)
+in which a′, b′, and c′ are also lattice constants. Part ② of Fig. 2 shows the relationship between the primitive cells of M and G in terms 
+of transformation matrix T, rotation matrix R, and the origin shift Os as follows
+R[t1 t2 t3]T =
+⎡
+⎣
+a/
+√
+2
+0
+a/
+√
+2
+0
+−a/
+√
+2
+−a/
+√
+2
+c/
+√
+2
+c/
+√
+2
+0
+⎤
+⎦= [t′
+1 t′
+2 t′
+3]
+⇒
+a′ = b′ =
+√
+2a, c′ =
+√
+2c.
+(13)
+Here Os = (s1, s2, s3) gives the shift vector s1t′
+1 + s2t′
+2 + s3t′
+3 from the origin of the cell of G to the origin of the cell of M. According to 
+the relation k′ = TT k, Part ③ of Fig. 2 gives the k-point name H and coordinates k′ = ( 1
+4
+¯1
+4
+¯1
+2) of G which correspond to the input k-point 
+P of M with coordinates k = ( 1
+4
+1
+4
+1
+4).
+Part ④ of Fig. 2 is the table of small coreps for the P point of MSG 97.155. Both single-valued small coreps (light green background) 
+and double-valued small coreps (light blue background) are shown, together with their labels (the second column) and types (the third 
+column). The row “Element” lists the elements in the MLG. In fact only the coset representatives with respect to T are listed in the table 
+and the elements whose rotation parts have bars such as {¯E|000} are not shown because their coreps can be simply obtained from the 
+coreps of their counterparts without bars. The simple relationship between them is
+
+D p
+k({ ¯R|v}[′]) = D p
+k({R|v}[′])
+for single-valued coreps
+D p
+k({ ¯R|v}[′]) = −D p
+k({R|v}[′])
+for double-valued coreps
+(14)
+in which [′] means whether primed or not. And the coreps of the elements whose translation parts differ from those given in the table by 
+a lattice vector can be obtained using Eq. (8).
+The labels of small coreps are constructed from the labels of the corresponding small reps from which the small coreps are derived.
+(i) Type-I, -II, and -IV MSGs. A small corep, say D, of type (a) or (x) is derived from only one small rep, say , and then D just uses the 
+label of . For example, the small corep P3 of MSG 97.152 (I4221′) is of type (a) and it’s derived from the small rep P3 of SG 97 (I422). 
+One can check this by running showMLGCorep[{97,152},"P"] and showLGIrepTab[97,"P"]. If D is of type (b), it contains two 
+copies of  for unitary elements, and then the label of D is two copies of the label of . For example, the small corep A5 A5 of MSG 
+65.488 (Ccmmm) is of type (b) and it’s derived from two copies of the small rep A5 of SG 65 (mmm). If D is of type (c), it contains two 
+different small reps i and  j for unitary elements, and then the label of D is the combination of the labels of i and  j. For example, the 
+small corep P2 P4 of MSG 97.152 is of type (c) and it’s the combination of the small reps P2 and P4 of SG 97. (ii) Type-III MSGs. First, an 
+elementary label is constructed according to the above-mentioned rules in case (i). Then an additional k-point name within parentheses 
+has to be preﬁxed to the elementary label to obtain the small corep label. Taking the labels (P)H1, (P)H2H2, and (P)H3H4 in Fig. 2 for 
+example, these labels contain the information about two names P and H of the k-point: P for the MSG and H for its maximal unitary 
+subgroup. A k-point may have different names for a type-III MSG and its maximal unitary subgroup, and hence the information about 
+both the k-point names is explicitly given in the labels. For more information see the Appendix A of Ref. [23]. In fact, the style of labels 
+for small coreps here is similar to that used by BCS. The difference is that we always keep the parentheses preﬁx even if the k-point 
+names are the same for both the MSG and its maximal unitary subgroup, such as the corep labels (Z)Z1 and (Z)Z2 Z4 for MSG 97.155.
+5.3. Full Coreps
+The full coreps of any MSG can be induced from the small coreps of its MLG according to Eq. (2). The calculated results can be 
+obtained by getMSGCorep[{n,m},k] and shown in table form by showMSGCorep[{n,m},k] in which {n,m} speciﬁes the MSG 
+number n.m and k which is either the name string or the numerical fractional coordinates of a k-point speciﬁes the magnetic star9 that 
+includes it. Examples for the full coreps of the magnetic star ∗X for MSG 96.144 (P432121′) and MSG 79.27 (I4′) are shown in Fig. 3
+and Fig. 4 respectively. The result of showMSGCorep, similar to that of showMLGCorep, is mainly composed of a text part and a table 
+part. The text part gives the information about the MSG, the maximal unitary subgroup, the input k-point, the magnetic k-star, and so 
+on. By default, the table part gives the full coreps of the elements in T (see the {E|t1t2t3} column in the table part) and in the coset 
+representatives with respect to T but not including those whose rotation parts have bars. For the elements whose rotation parts have 
+bars, Eq. (14) is also available if D p
+k is substituted by a full corep. To save space, rotation matrices are not shown in Figs. 3 and 4 by using 
+8 Refer to the Sec. 8 in Ref. [44] for more details.
+9 The magnetic star of a k-point can be obtained by getMagKStar[{n,m},k].
+8G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 3. The result of showMSGCorep[{96,144},"X","elem"->{1,2,9,10},"rotmat"->False] which shows the full coreps of the ∗X magnetic star for a type-II 
+MSG 96.144 (P432121′). The coreps for only 4 elements are shown due to the space limitation. Above the table, related information is shown, including the notations of the 
+MSG and its maximal unitary subgroup, the name and coordinates of the magnetic k-star and the input k-point, and so on. In the table of full coreps, light green background
+shows single-valued coreps and light blue background shows double-valued coreps. The ﬁrst, second, and third columns are the indexes, labels, and types of the full coreps 
+respectively.
+the option "rotmat"->False, and only coreps of four elements, i.e. the 1st, 2nd, 9th, and 10th ones, are shown in Fig. 3 by using the 
+option "elem"->{1,2,9,10}.
+In order to make the full coreps independent of which k-point is selected from a given magnetic star as the input of showMSGCorep, 
+the k-points in a given magnetic star have to be sorted in a ﬁxed order before the full coreps are constructed using Eq. (2). The input 
+k-point of Fig. 3 is "X" whose coordinates are kin = (0 1
+20). Its magnetic star ∗X includes two k-points, namely k1 = (0 1
+20) and k2 = ( ¯1
+200). 
+If one substitutes {-1/2,0,0} for "X" as the input k-point, i.e. kin = ( ¯1
+200), the obtained magnetic star keeps unchanged in the sense 
+of equivalence and the full coreps also keep the same.10 Note that one may ﬁnd that the matrix elements of the coreps in the {E|t1t2t3}
+column change seemingly from e−iπti to eiπti after the change of input k-point from "X" to {-1/2,0,0}, but they are indeed equal 
+because ti (i = 1, 2, 3) is always an integer here.
+The labels of full coreps are constructed based on the labels of the small coreps that induce the full coreps and all the labels of full 
+coreps have an asterisk superscript on the left to indicate that full coreps are deﬁned according to magnetic k-stars. (i) For full coreps 
+of type (x) in type-I MSGs and full coreps of types (a), (b), or (c) in all MSGs, the label of a full corep is constructed by just putting an 
+asterisk superscript on the left of the label of the corresponding small corep. For example, the labels of small coreps for the X point of 
+MSG 96.144 are X1, X2 X3, and X4 X5, and the labels of full coreps for the ∗X magnetic star of MSG 96.144 are ∗X1, ∗X2 X3, and ∗X4 X5
+respectively. (ii) For full coreps of type (x) in type-II, -III, and -IV MSGs, one magnetic k-star of an MSG corresponds to two different 
+k-stars of the maximal unitary subgroup of the MSG. The label of such a full corep should combine the labels of two small reps of the 
+maximal unitary subgroup from each of the two k-stars. To differentiate the two k-stars, two different labels have to be used for them. 
+There are three cases: 1) The two k-stars have different labels of BC convention. For example, the ∗X magnetic star corresponds to two 
+different k-stars ∗M and ∗A of SG 5, and hence its labels of full coreps are ∗(X)M1 A1, ∗(X)M2 A2, ∗(X)M3 A4, and ∗(X)M4 A3, as shown in 
+Fig. 4. This case only occurs for type-III MSGs. 2) The two k-stars are negative of each other. In such a case, the label of the second k-star 
+is obtained by underlining the label of the ﬁrst one. For example, the ∗P magnetic star of MSG 44.230 corresponds to the k-stars ∗P and 
+∗P of SG 44, and its full coreps have labels ∗P1 P1, ∗P1 P2, ∗P3 P4, and ∗P4 P3. All full coreps of type (x) for type-II and -IV MSGs are in this 
+case, but this case also occurs for type-III MSGs. 3) The k-points in both the k-stars can be identiﬁed as the same k-point name, but the 
+two k-stars are not negative of each other. In this case, one k-star uses the BC k-point name, and the other k-star uses a k-point name 
+constructed by adding a letter “A” after the BC k-point name. For example, the ∗W magnetic star of MSG 79.27 corresponds to the k-stars 
+∗U and ∗UA of SG 5, and its full coreps have labels ∗(W )U1UA1, ∗(W )U2UA2, ∗(W )U3UA4, and ∗(W )U4UA3. This case also occurs only 
+for type-III MSGs.
+5.4. Direct product of full coreps
+The decomposition (or reduction) of the direct product (Kronecker product) of two full coreps is useful to analyze the selection rules of 
+the quantum transition processes of electron [56], phonon [57,58], and magnon [59,60] in a crystal belonging to a certain MSG. Although 
+the basic calculation rules are all known, it’s cumbersome and prone to error to calculate the direct product manually. Accordingly, we 
+10 The result is not given here. One can run showMSGCorep[{96,144},{-1/2,0,0},"elem"->{1,2,9,10},"rotmat"->False] to check this.
+9G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 4. The result of showMSGCorep[{79,27},"X","rotmat"->False] which shows the full coreps of the ∗X magnetic star for a type-III MSG 79.27 (I4′). Above the 
+table, related information is shown, including the notations of the MSG and its maximal unitary subgroup, the name and coordinates of the magnetic k-star and the input 
+k-point, the conversion relations between the MSG and its maximal unitary subgroup similar to those in the parts ② and ③ of Fig. 2, and so on. In the table of full coreps, 
+light green background shows single-valued coreps and light blue background shows double-valued coreps. The ﬁrst, second, and third columns are the indexes, labels, and 
+types of the full coreps respectively.
+have developed the functions to calculate and show the decomposition of direct product of full coreps for MSGs in the MSGCorep package, 
+namely MSGCorepDirectProduct and showMSGCorepDirectProduct respectively, because there is no such a tool available to do 
+this so far as we know. Suppose M is MSG n.m and G (an ordinary SG) is its maximal unitary subgroup. i and  j are two full ireps of G, 
+and Di and D j are the corresponding two full coreps of M derived from i and  j respectively. The direct product of Di and D j
+can be reduced to the direct sum of a series of full coreps Dk of M
+Di ⊗D j =
+
+k
+dij,kDk,
+(15)
+and the task is to ﬁnd the occurrence number (reduction coeﬃcient) dij,k of the full corep Dk in the decomposition for each k. To 
+calculate dij,k, one can ﬁrst calculate the reduction coeﬃcient cij,k in the direct product i ⊗ j = 
+k cij,kk for G, which can be done 
+via the SGIrepDirectProduct function in the SpaceGroupIrep package. Then, dij,k’s can be calculated through their relations to cij,k’s 
+which are given in BC-Tab. 7.8, and in the package one can use the following codes to get the results.
+MSGCorepDirectProduct[{n,m}, k, kp]
+showMSGCorepDirectProduct[{n,m}, k, kp]
+In fact, the above codes calculate all the direct products between two magnetic stars ∗k and ∗k′ which are speciﬁed via one k-point in each 
+of them by k and kp respectively. An example is shown in Fig. 5 for the direct products between the full coreps of the magnetic stars ∗X
+and ∗R of MSG 75.4 (Pc4). There are three full coreps for the magnetic star ∗X, namely ∗X1, ∗X2, and ∗X3 X4, and three full coreps for ∗R, 
+namely ∗R1R1, ∗R2R2, and ∗R3R4. Fig. 5 shows all the nine direct products between these two sets of full coreps, which are decomposed 
+into the full coreps of the magnetic stars ∗Z and ∗A.
+5.5. Determine the small coreps of energy bands
+The small coreps of energy bands are very useful to construct the k · p models via symmetry systematically and to determine the type 
+of band crossings, just as done in Refs. [5,23–25]. These references directly tell one which small corep corresponds to which k · p model 
+and what type of band crossing, but they do not tell what is the small corep of a degenerate energy level for a given band structure. 
+To obtain the small coreps, two main steps are needed: the ﬁrst step is to calculate the characters of the elements of the MLG at a 
+desired k-point for each degenerate energy level, and the second step is to determine small coreps by looking up the character table of 
+the MLG. In fact the characters of only unitary elements need to be calculated because the equivalence of coreps only need the characters 
+of unitary elements. The ﬁrst step can be done by the tool MagVasp2trace [20,48] which is capable of post-processing the results of the 
+ﬁrst-principles code VASP [61], and the second step can be done by the readMagTrace and getBandCorep functions in MSGCorep.
+10G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 5. The result of showMSGCorepDirectProduct[{75,4},"X","R"] which shows the direct products of full coreps between two magnetic stars ∗X and ∗R for MSG 
+75.4 (Pc4). In the text part above the table, the notation such as [X, 2] after a k-point indicates the k-point name (X) and the number of k-points (2) in its magnetic star. 
+The notation such as (k1, 2) in the table indicates that the full corep in front of it, e.g. ∗Z2 Z4, is for the magnetic star of k1 and the dimension of this full corep is 2. Light 
+green (light blue) background stands for direct products between two single-valued (double-valued) full coreps, and light yellow background for direct products between a 
+single-valued full corep and a double-valued full corep.
+To successfully go through the procedure of determining small coreps, there are three points needing attention. (1) The cell used for 
+band calculation has to conform to the BC convention, i.e. the rotation matrices and translation components of the MSG elements de-
+termined from the cell have to be compatible11 with those from getMSGElem. (2) The msg.txt ﬁle which contains the MSG elements 
+used by MagVasp2trace also has to conform to the BC convention. Accordingly, do not use the msg.txt ﬁle provided in the original Mag-
+Vasp2trace package, but use the ﬁles in the BC_MSG_elements directory provided by MSGCorep. (3) For the VASP calculations which turn 
+on non-collinear spin but do not turn on spin-orbit coupling, the wavefunctions are in fact spinors. In this case, MagVasp2trace has to be 
+modiﬁed a little as follows to output correct results.
+! read (nfst ,"( A90 )") chaps
+! line 111 of init.f90: comment it
+read (nfst ,"( A20L5 )") chtp15 ,FL (2) ! line 112 of init.f90: change A15 to A20
+Then, one can ﬁrst use MagVasp2trace to generate a trace.txt ﬁle from the VASP outputs and then use the following functions in
+MSGCorep to obtain the small coreps.
+(* put the trace.txt to the working directory (check this by Directory[]) *)
+tr1=readMagTrace["trace.txt"];
+(* read the trace.txt file from MagVasp2trace *)
+cr1=getBandCorep[{n,m}, tr1];
+(* determine the small coreps of the bands *)
+showBandCorep[cr1, ik, ibs] (* show the small coreps of the ik-th k-point for bands ibs *)
+Two examples are shown in Fig. 6. Fig. 6(a) shows the bands and determined small coreps of Mn3NiN with MSG 166.101 (R ¯3m′), a 
+non-collinear antiferromagnetic material with anomalous Hall effect, magneto-optical effect, and giant anomalous Nernst effect [62,63]. 
+Another example is γ -FexMn1−x which is a topological magneto-optical antiferromagnet when 0.4 < x < 0.8 [64]. For simplicity, here the 
+2Q phase for x = 1 with MSG 134.481 (PC 42/nnm) is taken for example and its bands and determined small coreps are shown in Fig. 6(b). 
+The function showBandCorep can be used to extract the results for speciﬁed k-point and bands. For example, the right panel of 6(a) 
+lists the small coreps of the 201st k-point, which is the k-point F in the data of cr1, for the bands from 32nd to 40th, and the red dashed 
+box indicates the three bands displayed in the band diagram, namely the 37th, 38th, and 39th bands with small coreps (F)F −
+2 , (F)F +
+2 , 
+and (F)F +
+2 respectively.
+The identiﬁcation of small coreps can help one to judge whether two bands are crossed to form accidental degeneracy or anticrossed. 
+In principle, crossings between two bands with different small coreps are protected by the MSG symmetry, whereas those with the 
+same small coreps are neither protected nor prohibited by the MSG symmetry. For the latter case, band crossings can be protected by 
+a topological mechanism beyond coreps, which generally occur at generic k-points, such as the Weyl points in TaAs [65]. In practice, 
+however, anticrossings are more common than crossings between two bands with the same small coreps. For example, the seeming band 
+crossings at the positions marked by ✩ along the  and 
+ paths in Fig. 6(b) are actually anticrossings involving bands with the same 
+small coreps, which have been veriﬁed by ﬁner band data around the anticrossings. However, the positions marked by • along the Y path 
+in Fig. 6(b) are true band crossings, because the related bands have different small coreps. And one can also lookup the encyclopedia 
+of emergent particles for type-IV MSGs [24] to ﬁnd that each of these crossings along Y path are in fact of the type P-DNL, i.e. a point 
+11 Here “compatible” means the translation components can differ by any integers.
+11G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 6. Examples of the bands and their small coreps determined by getBandCorep for (a) Mn3NiN (MSG 166.101, R ¯3m′) and (b) 2Q phase of γ -FexMn1−x with x = 1 (MSG 
+134.481, PC 42/nnm). The right panels of (a) and (b) show the results of showBandCorep which give the small coreps at (a) F and (b) X k-points respectively. The integer 
+in the parentheses following the label of each small corep is the dimension of the small corep. The dashed red boxes indicate the states displayed in the band diagrams.
+residing on a Dirac nodal line. In addition, there is another case in which two bands with either the same or different small coreps are 
+crossed to form essential degeneracy which is protected by T
+symmetry and occurs at the time-reversal-invariant momenta in chiral 
+type-II MSGs [66].
+5.6. Support for magnetic point group
+As the ﬁnite subgroups of MSGs, magnetic point groups (MPGs) are also supported by the MSGCorep package, including group mul-
+tiplication, coreps, and direct product of coreps for MPGs. There are in total 122 MPGs in three-dimensional space, including 32 type-I 
+MPGs (i.e. the 32 ordinary point groups), 32 type-II MPGs (also called gray point groups), and 58 type-III MPGs (also called black-white 
+point groups). One can use showMPGinfo[] to show the information of the full list of the 122 MPGs, including their numbers, symbols, 
+unitary subgroups, types, etc. One can also specify the sequence numbers to be shown. For example, showMPGinfo[17;;28] gives the 
+MPGs with sequence numbers from 17 to 28, i.e. all the orthorhombic MPGs, as shown in Fig. 7(b). In order to simplify the relationship 
+between MPGs and MSGs, the symbol of an MPG is determined by the BNS symbol of the ﬁrst MSG whose point operations compose the 
+MPG and keep the BNS order of the MSG. For example, MSG 47.252 (Pm′m′m) is the ﬁrst MSG with the MPG m′m′m in BNS order, and 
+MPG 5.3 (2′/m) precedes MPG 5.4 (2/m′) because MSG 10.44 (P2′/m) precedes MSG 10.45 (P2/m′). Accordingly, the MPG symbols and 
+order are not always the same with those in BC-Tab. 7.1, but they happen to be the same with those used by BCS.
+An element of MPG is described as {Rname,au} in the code where Rname is the name string of the rotation and au speciﬁes the uni-
+tarity (0 for unitary and 1 for anti-unitary), such as {"C2x",0} for C2x and {"C2x",1} for C2x′(≡C2xT ). Similar to getMSGElem, one 
+can use getMPGElem to obtain the elements of an MPG. For example, either getMPGElem["2’2’2"] or getMPGElem["6.3"] gives 
+the result of {{"E",0},{"C2z",0},{"C2x",1},{"C2y",1}}. The multiplication, inversion, and power of (double) MPG elements 
+can be calculated by the following functions.
+MagRotTimes[{R1,au1}, {R2,au2}]
+(* the multiplication of two MPG elements *)
+invMagRot[{R,au}]
+(* the inverse of an MPG element *)
+powerMagRot[{R,au}, n]
+(* the n-th power of an MPG element *)
+DMagRotTimes[{R1,au1}, {R2,au2}]
+(* the multiplication of two double MPG elements *)
+invDMagRot[{R,au}]
+(* the inverse of a double MPG element *)
+powerDMagRot[{R,au}, n]
+(* the n-th power of a double MPG element *)
+In fact, as an argument of the above six functions, an MPG element can also be expressed simply in a string form with a ’ representing T , 
+such as "C2x’" which is equivalent to {"C2x",1}. Furthermore, MagRotTimes and DMagRotTimes can also calculate the continuous 
+multiplication of three MPG elements or more. For example, MagRotTimes["C2x", "C2a", "C31+’"] returns {"C4x+",1}.
+The coreps of an MPG can be obtained by getMPGCorep[mpg] and shown by showMPGCorep[mpg] in which mpg is the symbol (or 
+number) string of the MPG. One example is Fig. 7(a) which shows the coreps of the MPG m′m′m′: single-valued coreps in light green back-
+ground and double-valued coreps in light blue background, similar to the result of showMLGCorep. The decomposition of direct product 
+of MPG coreps can be calculated by MPGCorepDirectProduct[mpg] and shown by showMPGCorepDirectProduct[mpg]. For 
+example, the direct products for the coreps of MPG 8.5 (m′m′m′) are shown in Fig. 7(c). Furthermore, one can specify the input coreps by 
+12G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Fig. 7. Examples of MPG-related functions. (a) The coreps of the MPG 8.5 (m′m′m′) given by showMPGCorep. Similar to the result of showMLGCorep, single-valued 
+(double-valued) coreps are shown in light green (light blue) background. The second and third columns are the extended Mulliken labels and the  labels of the coreps 
+respectively, and the fourth column is the corep type. (b) The information of the MPGs with sequence numbers from 17 to 28 given by showMPGinfo[17;;28]. (c,d) 
+showMPGCorepDirectProduct gives the direct products (c) between all the coreps or (d) between two sets of speciﬁed coreps ({3,5} and 1;;5) with the third corep 
+emphasized in red color ("emph"->3)
+their indexes and even emphasize certain corep(s) in the results via the "emph" option. For example, Fig. 7(d) shows the direct products 
+between two sets of coreps, one set is the 3rd and 5th corep and the other set is all the coreps from the 1st to the 5th, with emphasizing 
+the 3rd corep (i.e. B2) in red color.
+6. Applications
+The MSGCorep package has been successfully applied in the systematic classiﬁcation of emergent particles, namely the quasiparticles 
+emerging from various band crossings [23,24,67]. The properties of a type of emergent particle are determined by the k · p model around 
+the band crossing, and the k · p model can be constructed according to the symmetry constraints imposed by the small coreps of the 
+degeneracy at the band crossing. In order to interface with the systematic full data of small coreps provided by MSGCorep for all k-points 
+and all MSGs, a package called MagneticKP is developed to construct k · p models based on an eﬃcient iterative simpliﬁcation algorithm 
+[68]. Accordingly, we have systematically investigated the classiﬁcation of emergent particles in all the 674 type-III MSGs [23] and 517 
+type-IV MSGs [24] by means of analyzing the k · p models obtained from MagneticKP plus MSGCorep. Furthermore, we have also proposed 
+a method of calculating the small coreps of magnetic subperiodic groups, speciﬁcally all the 528 magnetic layer groups and 394 magnetic 
+rod groups, using the small coreps data from MSGCorep, and have systematically classiﬁed the possible emergent particles existing in 
+these magnetic subperiodic groups [67].
+7. Conclusions
+We have developed a package named MSGCorep to provide convenient oﬄine access to the complete corep data of all 1651 MSGs 
+in three-dimensional space. In addition, access to the coreps of 122 MPGs is also supported by this package. The functionalities of this 
+package include: obtaining the elements of any MSG, MLG, MPG, and their double groups; calculating the multiplication, inverse, and 
+power of group elements; obtaining the small coreps at any k-point and full coreps of any magnetic k-star for any MSG and showing 
+them in a user-friendly table form; calculating and showing the decomposition of direct products of full coreps between any two speciﬁed 
+magnetic k-stars; supporting both single-valued and double-valued coreps; and determining the small coreps of energy bands. To the best 
+of our knowledge, MSGCorep is the ﬁrst package that provides tools to calculate the direct product of full coreps for any MSG and to 
+determine small coreps of energy bands for general purpose. In a word, the MSGCorep package is a useful database and tool set for the 
+MSGs, MPGs, and their coreps, it has been successfully applied in systematic studies on emergent particles, and it can play an important 
+role in future studies on both magnetic and nonmagnetic materials whose symmetries can be described by type-I, -III, and -IV MSGs and 
+by type-II MSGs respectively.
+13G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Note added
+In order to study the symmetries in magnetic materials, beyond the concept of magnetic group, another concept termed “spin group” 
+has also been proposed for a long time to treat the systems with decoupled spin rotations and lattice rotations, such as spin-wave materials 
+[69–71]. In the past two years, the concept of spin group has regained much attention and has been applied to study magnons or systems 
+with negligible spin-orbit coupling, resulting in richer topological physics observed [72–75]. Given that magnetic groups constitute a subset 
+of spin groups, we hope that the MSGCorep package can also play a certain role in the study of spin groups.
+Declaration of competing interest
+The authors declare that they have no known competing ﬁnancial interests or personal relationships that could have appeared to 
+inﬂuence the work reported in this paper.
+Data availability
+The code/data is available on https://github .com /goodluck1982 /MSGCorep.
+Acknowledgements
+The authors thank Wanxiang Feng for helpful discussions. This work is supported by the National Natural Science Foundation of China 
+(Grant Nos. 12234003, 12274028, 52161135108, 12061131002, and 12004028) and the National Key R&D Program of China (Grant Nos. 
+2022YFA1402603, and 2020YFA0308800).
+Appendix A. The matrix N in Eqs. (4) and (5)
+Although the BC book provides an equation (7.3.53) to calculate the matrix N, it cannot work in a general case because it depends on 
+an uncertain matrix X. Here we use a deﬁnite method to ﬁnd a unitary matrix N which relates an unitary irep to its equivalent unitary 
+irep. Suppose that there are in total s unitary ireps, namely p (p = 1, 2, ··· , s), of the group H, and that  = q. For simplicity, denote 
+(A−1mA)∗as ¯(m) and the task becomes to ﬁnd a matrix N satisfying ¯(m) = N−1q(m)N for ∀m ∈H, i.e.
+¯ij(m) =
+	
+k,l
+(N−1)ikq
+kl(m)Nlj =
+	
+k,l
+N∗
+kiq
+kl(m)Nlj.
+(A.1)
+Multiply two sides of the above equation by p
+k′l′(m)∗and then sum over m to get
+	
+m∈H
+p
+k′l′(m)∗¯ij(m) =
+	
+k,l
+N∗
+kiNlj
+	
+m∈H
+p
+k′l′(m)∗q
+kl(m)
+=
+	
+k,l
+N∗
+kiNlj
+|H|
+dq
+δpqδk′kδl′l = N∗
+k′iNl′ j
+|H|
+dq
+δpq,
+(A.2)
+in which the orthogonality theorem of irep matrices is used and dq is the dimension of q. Letting p = q, we get
+N∗
+kiNlj = dq
+|H|
+	
+m∈H
+q
+kl(m)∗¯ij(m).
+(A.3)
+Further letting l = k and j = i, we get
+|Nki|2 = dq
+|H|
+	
+m∈H
+q
+kk(m)∗¯ii(m).
+(A.4)
+Using the above equation to ﬁnd a nonzero element of the matrix N, e.g. N1t =
+
+|N1t|2 ̸= 0 (k = 1, i = t), then substitute k = 1 and i = t
+into Eq. (A.3) and obtain every matrix element of N by
+Nlj =
+1
+N∗
+1t
+dq
+|H|
+	
+m∈H
+q
+1l(m)∗¯tj(m).
+(A.5)
+Appendix B. Corrections and adaptions to the tables in the BC book
+BC-Tab. 7.4: As stated in the BC book, BC-Tab. 7.4 is basically the same as the original table given by Belov, Neronova, and Smirnova 
+in 1957 [52]. To be consistent with the BNS symbols given in the latest monograph about MSGs by Litvin [31], we have made some
+14G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Table B.2
+Corrections and adaptions to the BNS symbols in BC-Tab. 7.4. The column “Old” lists the original symbols in the BC 
+book, and the column “New” lists the symbols we actually use in MSGCorep. (For interpretation of the colors in the 
+table, the reader is referred to the web version of this article.)
+BNS No.
+Old
+New
+BNS No.
+Old
+New
+BNS No.
+Old
+New
+1.2
+P1′
+P11′
+204.32
+Im′3
+Im′ ¯3′
+224.110
+Pn3m
+Pn¯3m
+33.155
+PCna21
+P Ina21
+205.33
+Pa3
+Pa¯3
+224.111
+Pn3′m
+Pn¯3m1′
+114.276
+P ¯421c
+P ¯421c1′
+205.34
+Pa3′
+Pa¯31′
+224.112
+Pn′3m
+Pn′ ¯3′m
+149.22
+P31′2
+P3121′
+205.35
+Pa′3
+Pa′ ¯3′
+224.113
+Pn3m′
+Pn¯3m′
+150.26
+P321′
+P3211′
+205.36
+P Ia3
+P Ia¯3
+224.114
+Pn′3m′
+Pn′ ¯3′m′
+151.30
+P311′2
+P31121′
+206.37
+Ia3
+Ia¯3
+224.115
+P In3m
+P In¯3m
+152.34
+P3121′
+P31211′
+206.38
+Ia3′
+Ia¯31′
+225.116
+Fm3m
+Fm¯3m
+153.38
+P321′2
+P32121′
+206.39
+Ia′3
+Ia′ ¯3′
+225.117
+Fm3′m
+Fm¯3m1′
+154.42
+P3221′
+P32211′
+207.41
+P43′2
+P4321′
+225.118
+Fm′3m
+Fm′ ¯3′m
+156.50
+P3m1′
+P3m11′
+208.45
+P423′2
+P42321′
+225.119
+Fm3m′
+Fm¯3m′
+157.54
+P31′m
+P31m1′
+209.49
+F43′2
+F4321′
+225.120
+Fm′3m′
+Fm′ ¯3′m′
+158.58
+P3c1′
+P3c11′
+210.53
+F413′2
+F41321′
+225.121
+Fsm3m
+Fsm¯3m
+159.62
+P31′c
+P31c1′
+211.57
+I43′2
+I4321′
+226.122
+Fm3c
+Fm¯3c
+162.74
+P ¯31′m
+P ¯31m1′
+212.60
+P433′2
+P43321′
+226.123
+Fm3′c
+Fm¯3c1′
+163.80
+P ¯31′c
+P ¯31c1′
+213.64
+P413′2
+P41321′
+226.124
+Fm′3c
+Fm′ ¯3′c
+164.86
+P ¯3m1′
+P ¯3m11′
+214.68
+I413′2
+I41321′
+226.125
+Fm3c′
+Fm¯3c′
+165.92
+P ¯3c1′
+P ¯3c11′
+215.71
+P ¯43′m
+P ¯43m1′
+226.126
+Fm′3c′
+Fm′ ¯3′c′
+195.2
+P23′
+P231′
+216.75
+F ¯43′m
+F ¯43m1′
+226.127
+Fsm3c
+Fsm¯3c
+196.5
+F23′
+F231′
+217.79
+I ¯43′m
+I ¯43m1′
+227.128
+Fd3m
+Fd¯3m
+197.8
+I23′
+I231′
+218.82
+P ¯43′n
+P ¯43n1′
+227.129
+Fd3′m
+Fd¯3m1′
+198.10
+P213′
+P2131′
+219.86
+F ¯43′c
+F ¯43c1′
+227.130
+Fd′3m
+Fd′ ¯3′m
+199.13
+I213′
+I2131′
+220.90
+I ¯43′d
+I ¯43d1′
+227.131
+Fd3m′
+Fd¯3m′
+200.14
+Pm3
+Pm¯3
+221.92
+Pm3m
+Pm¯3m
+227.132
+Fd′3m′
+Fd′ ¯3′m′
+200.15
+Pm3′
+Pm¯31′
+221.93
+Pm3′m
+Pm¯3m1′
+227.133
+Fsd3m
+Fsd¯3m
+200.16
+Pm′3
+Pm′ ¯3′
+221.94
+Pm′3m
+Pm′ ¯3′m
+228.134
+Fd3c
+Fd¯3c
+200.17
+P Im3
+P Im¯3
+221.95
+Pm3m′
+Pm¯3m′
+228.135
+Fd3′c
+Fd¯3c1′
+201.18
+Pn3
+Pn¯3
+221.96
+Pm′3m′
+Pm′ ¯3′m′
+228.136
+Fd′3c
+Fd′ ¯3′c
+201.19
+Pn3′
+Pn¯31′
+221.97
+P Im3m
+P Im¯3m
+228.137
+Fd3c′
+Fd¯3c′
+201.20
+Pn′3
+Pn′ ¯3′
+222.98
+Pn3n
+Pn¯3n
+228.138
+Fd′3c′
+Fd′ ¯3′c′
+201.21
+P In3
+P In¯3
+222.99
+Pn3′n
+Pn¯3n1′
+228.139
+Fsd3c
+Fsd¯3c
+202.22
+Fm3
+Fm¯3
+222.100
+Pn′3n
+Pn′ ¯3′n
+229.140
+Im3m
+Im¯3m
+202.23
+Fm3′
+Fm¯31′
+222.101
+Pn3n′
+Pn¯3n′
+229.141
+Im3′m
+Im¯3m1′
+202.24
+Fm′3
+Fm′ ¯3′
+222.102
+Pn′3n′
+Pn′ ¯3′n′
+229.142
+Im′3m
+Im′ ¯3′m
+202.25
+Fsm3
+Fsm¯3
+222.103
+P In3n
+P In¯3n
+229.143
+Im3m′
+Im¯3m′
+203.26
+Fd3
+Fd¯3
+223.104
+Pm3n
+Pm¯3n
+229.144
+Im′3m′
+Im′ ¯3′m′
+203.27
+Fd3′
+Fd¯31′
+223.105
+Pm3′n
+Pm¯3n1′
+230.145
+Ia3d
+Ia¯3d
+203.28
+Fd′3
+Fd′ ¯3′
+223.106
+Pm′3n
+Pm′ ¯3′n
+230.146
+Ia3′d
+Ia¯3d1′
+203.29
+Fsd3
+Fsd¯3
+223.107
+Pm3n′
+Pm¯3n′
+230.147
+Ia′3d
+Ia′ ¯3′d
+204.30
+Im3
+Im¯3
+223.108
+Pm′3n′
+Pm′ ¯3′n′
+230.148
+Ia3d′
+Ia¯3d′
+204.31
+Im3′
+Im¯31′
+223.109
+P Im3n
+P Im¯3n
+230.149
+Ia′3d′
+Ia′ ¯3′d′
+adaptions to BC-Tab. 7.4. Firstly, we make all the symbols of type-II MSGs be the corresponding ones of type-I MSGs followed by 1′. Not 
+all the original type-II symbols in BC-Tab. 7.4 obey this rule, such as some trigonal MSGs (e.g. 149.22 P31′2) and all cubic MSGs (e.g. 
+207.41 P43′2). New symbols of this type are shown in green color in Table B.2. Secondly, all the MSG symbols derived from the PG 
+symbols m3 (Th) and m3m (O h) should be updated, because m3 and m3m have been changed to m¯3 and m¯3m respectively for tens of 
+years. This change from 3 to ¯3 involves all the MSGs with numbers n.m, n ∈[200, 206] ∪[221, 230]. Especially, there are 27 type-III MSGs 
+for which ¯3 should be further primed after the change, which are shown in blue color in Table B.2. Finally, there are two typos and the 
+corrections are shown in red color in Table B.2.
+BC-Tab. 7.2: See Table B.3 for the corrections to BC-Tab. 7.2.
+BC-Tab. 7.3: See Table B.4 for the supplement to BC-Tab. 7.3.
+15G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Table B.3
+Corrections to the “colored generating elements (CGE)” in BC-Tab. 7.2. The column “SymStd” lists the standard BNS 
+symbols. Here we also list the BNS symbols conforming to the BC orientation for comparison, if they are different 
+from the standard symbols.
+BNS No.
+SymStd
+SymBC
+CGE
+BNS No.
+SymStd
+SymBC
+CGE
+28.89
+Pm′a2′
+Pbm′2′
+σy
+57.380
+Pbc′m
+Pb′ma
+C2y, I
+28.90
+Pma′2′
+Pb′m2′
+σx
+57.381
+Pbcm′
+Pbm′a
+C2x, I
+29.101
+Pc′a2′
+1
+Pbc′2′
+1
+σy
+57.382
+Pb′c′m
+Pb′ma′
+C2x
+29.102
+Pca′2′
+1
+Pb′c2′
+1
+σx
+57.383
+Pbc′m′
+Pb′m′a
+C2x, C2y
+31.125
+Pm′n2′
+1
+Pnm′2′
+1
+σy
+57.384
+Pb′cm′
+Pbm′a′
+C2y
+31.126
+Pmn′2′
+1
+Pn′m2′
+1
+σx
+60.420
+Pbc′n
+Pcnb′
+C2x, C2y, I
+33.146
+Pn′a2′
+1
+Pbn′2′
+1
+σy
+60.421
+Pbcn′
+Pcn′b
+C2x, I
+33.147
+Pna′2′
+1
+Pb′n2′
+1
+σx
+60.422
+Pb′c′n
+Pc′nb′
+C2x
+36.174
+Cm′c2′
+1
+Ccm′2′
+1
+σy
+60.424
+Pb′cn′
+Pc′n′b
+C2x, C2y
+36.175
+Cmc′2′
+1
+Cc′m2′
+1
+σx
+160.67
+R3m′
+σd1
+38.189
+Am′m2′
+Cm2′m′
+σz
+161.71
+R3c′
+σd1
+38.190
+Amm′2′
+Cm′2′m
+σx
+166.100
+R ¯3′m′
+S+
+6 ,σd1
+38.191
+Am′m′2
+Cm′2m′
+σz,σx
+166.101
+R ¯3m′
+σd1
+39.197
+Ab′m2′
+Cm2′a′
+σz
+167.106
+R ¯3′c′
+S+
+6 ,σd1
+39.198
+Abm′2′
+Cm′2′a
+σx
+167.107
+R ¯3c′
+σd1
+39.199
+Ab′m′2
+Cm′2a′
+σz,σx
+177.151
+P6′2′2
+C+
+6
+40.205
+Am′a2′
+Cc2′m′
+σz
+177.152
+P6′22′
+C+
+6 , C′
+21
+40.206
+Ama′2′
+Cc′2′m
+σx
+178.157
+P6′
+12′2
+C+
+6
+40.207
+Am′a′2
+Cc′2m′
+σz,σx
+178.158
+P6′
+122′
+C+
+6 , C′
+21
+41.213
+Ab′a2′
+Cc2′a′
+σz
+179.163
+P6′
+52′2
+C+
+6
+41.214
+Aba′2′
+Cc′2′a
+σx
+179.164
+P6′
+522′
+C+
+6 , C′
+21
+41.215
+Ab′a′2
+Cc′2a′
+σz,σx
+180.169
+P6′
+22′2
+C+
+6
+46.243
+Im′a2′
+Ibm′2′
+σy
+180.170
+P6′
+222′
+C+
+6 , C′
+21
+46.244
+Ima′2′
+Ib′m2′
+σx
+181.175
+P6′
+42′2
+C+
+6
+51.291
+Pm′ma
+Pcmm′
+C2x, C2y, I
+181.176
+P6′
+422′
+C+
+6 , C′
+21
+51.293
+Pmma′
+Pc′mm
+C2y, I
+182.181
+P6′
+32′2
+C+
+6
+51.294
+Pm′m′a
+Pcm′m′
+C2y
+182.182
+P6′
+322′
+C+
+6 , C′
+21
+51.295
+Pmm′a′
+Pc′m′m
+C2x, C2y
+183.187
+P6′m′m
+C+
+6 ,σv1
+52.308
+Pnn′a
+Pnan′
+C2x, C2y, I
+183.188
+P6′mm′
+C+
+6
+52.309
+Pnna′
+Pna′n
+C2x, I
+184.193
+P6′c′c
+C+
+6 ,σv1
+52.310
+Pn′n′a
+Pn′an′
+C2x
+184.194
+P6′cc′
+C+
+6
+52.312
+Pn′na′
+Pn′a′n
+C2x, C2y
+185.199
+P6′
+3c′m
+C+
+6 ,σv1
+53.323
+Pm′na
+Pnm′b
+C2x, I
+185.200
+P6′
+3cm′
+C+
+6
+53.324
+Pmn′a
+Pn′mb
+C2y, I
+186.205
+P6′
+3m′c
+C+
+6 ,σv1
+53.327
+Pmn′a′
+Pn′mb′
+C2x
+186.206
+P6′
+3mc′
+C+
+6
+53.328
+Pm′na′
+Pnm′b′
+C2y
+191.236
+P6′/mm′m
+C+
+6 , C′
+21, I
+54.339
+Pc′ca
+Pcaa′
+C2x, C2y, I
+191.237
+P6′/mmm′
+C+
+6 , I
+54.341
+Pcca′
+Pc′aa
+C2y, I
+191.238
+P6′/m′m′m
+C+
+6
+54.342
+Pc′c′a
+Pca′a′
+C2y
+191.239
+P6′/m′mm′
+C+
+6 , C′
+21
+54.343
+Pcc′a′
+Pc′a′a
+C2x, C2y
+192.246
+P6′/mc′c
+C+
+6 , C′
+21, I
+57.379
+Pb′cm
+Pbma′
+C2x, C2y, I
+192.247
+P6′/mcc′
+C+
+6 , I
+Table B.4
+Black-white lattices which should be added to BC-Tab. 7.3 to make it com-
+plete.
+Crystal system
+Ordinary lattice
+Black-white lattice
+t0
+Monoclinic
+P(m)
+Pc
+1
+2 t1
+P A
+1
+2 (t1 + t3)
+Orthorhombic
+P(o)
+Pb
+1
+2 t1
+P B
+1
+2 (t2 + t3)
+Orthorhombic
+I(v
+o )
+Ia
+1
+2 (t1 + t3)
+Ib
+1
+2 (t2 + t3)
+16G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+Table C.5
+Differences of OG symbols between Litvin and ISO-
+MAG of version 1.3 as well as BCS. These symbols 
+of ISO-MAG have been changed to be the same with 
+those of Litvin in version 1.4.
+OG No.
+Litvin
+ISO-MAG (v1.3)
+16.6.104
+P F 222
+P I222
+25.9.163
+P F mm2
+P Imm2
+34.5.235
+P F nn2
+P Inn2
+47.8.354
+P F mmm
+P Immm
+48.6.363
+P F nnn
+P Innn
+153.4.1270
+P2c3112′
+P2c3112
+154.4.1274
+P2c312′1
+P2c3121
+Table C.6
+Differences of BNS symbols between Litvin and ISO-MAG as well as BCS. These symbols of ISO-MAG did not change from 
+version 1.3 to 1.4.
+BNS No.
+Litvin
+ISO-MAG
+BNS No.
+Litvin
+ISO-MAG
+BNS No.
+Litvin
+ISO-MAG
+17.13
+P A2221
+P B2221
+39.201
+Acbm2
+Abbm2
+49.274
+P Accm
+P Bccm
+18.20
+Pa21212
+Pb21212
+39.202
+ACbm2
+ABbm2
+56.372
+Paccn
+Pbccn
+18.22
+P A21212
+P B21212
+40.209
+Acma2
+Abma2
+58.402
+P Annm
+P Bnnm
+19.28
+Pa212121
+Pc212121
+40.210
+ACma2
+ABma2
+59.412
+Pammn
+Pbmmn
+32.140
+Paba2
+Pbba2
+41.217
+Acba2
+Abba2
+59.414
+P Ammn
+P Bmmn
+38.193
+Acmm2
+Abmm2
+41.218
+ACba2
+ABba2
+72.547
+Iabam
+Ibbam
+38.194
+ACmm2
+ABmm2
+48.262
+Pannn
+Pcnnn
+74.562
+Iamma
+Ibmma
+Appendix C. Differences of MSG symbols between Litvin and ISO-MAG
+The standard MSG symbols of both BNS and OG types here we use are consistent with those used by Litvin [31]. But they are different 
+from those used by ISO-MAG [55] and BCS [41] for some MSGs. We list these differences in Tables C.5 and C.6 for reference so as not to 
+result in misunderstanding in certain cases. The version 1.3 (Jan 2022) of ISO-MAG is consistent with BCS, and both Tables C.5 and C.6
+show their differences from Litvin. After our communication to one author of ISO-MAG about the differences, the version 1.4 (May 2022) 
+of ISO-MAG changed the seven OG symbols in Table C.5 to those of Litvin. However, the twenty-one BNS symbols of ISO-MAG in Table C.6
+keep the same from version 1.3 to 1.4 because the authors want to keep them consistent with BCS.
+Appendix D. Supplementary material
+Supplementary material related to this article can be found online at https://doi .org /10 .1016 /j .cpc .2023 .108722.
+References
+[1] B.J. Wieder, B. Bradlyn, J. Cano, Z. Wang, M.G. Vergniory, L. Elcoro, A.A. Soluyanov, C. Felser, T. Neupert, N. Regnault, et al., Nat. Rev. Mater. 7 (2022) 196–216, https://
+doi .org /10 .1038 /s41578 -021 -00380 -2.
+[2] B.J. Wieder, B. Bradlyn, Z. Wang, J. Cano, Y. Kim, H.-S.D. Kim, A.M. Rappe, C.L. Kane, B.A. Bernevig, Science 361 (2018) 246–251, https://doi .org /10 .1126 /science .aan2802.
+[3] P. Jadaun, D. Xiao, Q. Niu, S.K. Banerjee, Phys. Rev. B 88 (2013) 085110, https://doi .org /10 .1103 /PhysRevB .88 .085110.
+[4] L. Elcoro, Z. Song, B.A. Bernevig, Phys. Rev. B 102 (2020) 035110, https://doi .org /10 .1103 /physrevb .102 .035110.
+[5] Z.-M. Yu, Z. Zhang, G.-B. Liu, W. Wu, X.-P. Li, R.-W. Zhang, S.A. Yang, Y. Yao, Sci. Bull. 67 (2022) 375–380, https://doi .org /10 .1016 /j .scib .2021.10 .023.
+[6] L. Wu, F. Tang, X. Wan, Phys. Rev. B 104 (2021) 045107, https://doi .org /10 .1103 /PhysRevB .104 .045107.
+[7] H.C. Po, A. Vishwanath, H. Watanabe, Nat. Commun. 8 (2017) 50, https://doi .org /10 .1038 /s41467 -017 -00133 -2.
+[8] J. Kruthoff, J. de Boer, J. van Wezel, C.L. Kane, R.-J. Slager, Phys. Rev. X 7 (2017) 041069, https://doi .org /10 .1103 /physrevx .7.041069.
+[9] Z. Song, T. Zhang, Z. Fang, C. Fang, Nat. Commun. 9 (2018) 3530, https://doi .org /10 .1038 /s41467 -018 -06010 -w.
+[10] T. Zhang, Y. Jiang, Z. Song, H. Huang, Y. He, Z. Fang, H. Weng, C. Fang, Nature 566 (2019) 475–479, https://doi .org /10 .1038 /s41586 -019 -0944 -6.
+[11] F. Tang, H.C. Po, A. Vishwanath, X. Wan, Nat. Phys. 15 (2019) 470–476, https://doi .org /10 .1038 /s41567 -019 -0418 -7.
+[12] F. Tang, H.C. Po, A. Vishwanath, X. Wan, Nature 566 (2019) 486–489, https://doi .org /10 .1038 /s41586 -019 -0937 -5.
+[13] F. Tang, H.C. Po, A. Vishwanath, X. Wan, Sci. Adv. 5 (2019) eaau8725, https://doi .org /10 .1126 /sciadv.aau8725.
+[14] B. Bradlyn, L. Elcoro, J. Cano, M.G. Vergniory, Z. Wang, C. Felser, M.I. Aroyo, B.A. Bernevig, Nature 547 (2017) 298–305, https://doi .org /10 .1038 /nature23268.
+[15] J. Cano, B. Bradlyn, Z. Wang, L. Elcoro, M. Vergniory, C. Felser, M. Aroyo, B.A. Bernevig, Phys. Rev. Lett. 120 (2018) 266401, https://doi .org /10 .1103 /physrevlett .120 .266401.
+[16] J. Cano, B. Bradlyn, Z. Wang, L. Elcoro, M.G. Vergniory, C. Felser, M.I. Aroyo, B.A. Bernevig, Phys. Rev. B 97 (2018) 035139, https://doi .org /10 .1103 /physrevb .97.035139.
+[17] M.G. Vergniory, L. Elcoro, C. Felser, N. Regnault, B.A. Bernevig, Z. Wang, Nature 566 (2019) 480–485, https://doi .org /10 .1038 /s41586 -019 -0954 -4.
+[18] J. Cano, B. Bradlyn, Ann. Rev. Condens. Matter Phys. 12 (2021) 225–246, https://doi .org /10 .1146 /annurev-conmatphys -041720 -124134.
+[19] H. Watanabe, H.C. Po, A. Vishwanath, Sci. Adv. 4 (2018) eaat8685, https://doi .org /10 .1126 /sciadv.aat8685.
+[20] Y. Xu, L. Elcoro, Z.-D. Song, B.J. Wieder, M.G. Vergniory, N. Regnault, Y. Chen, C. Felser, B.A. Bernevig, Nature 586 (2020) 702–707, https://doi .org /10 .1038 /s41586 -020 -
+2837 -0.
+[21] L. Elcoro, B.J. Wieder, Z. Song, Y. Xu, B. Bradlyn, B.A. Bernevig, Nat. Commun. 12 (2021) 5965, https://doi .org /10 .1038 /s41467 -021 -26241 -8.
+[22] H. Watanabe, Phys. Rev. B 97 (2018) 165117, https://doi .org /10 .1103 /physrevb .97.165117.
+[23] G.-B. Liu, Z. Zhang, Z.-M. Yu, S.A. Yang, Y. Yao, Phys. Rev. B 105 (2022) 085117, https://doi .org /10 .1103 /PhysRevB .105 .085117.
+[24] Z. Zhang, G.-B. Liu, Z.-M. Yu, S.A. Yang, Y. Yao, Physical Review B 105 (2022) 104426, https://doi .org /10 .1103 /PhysRevB .105 .104426.
+[25] F. Tang, X. Wan, Phys. Rev. B 104 (2021) 085137, https://doi .org /10 .1103 /PhysRevB .104 .085137.
+[26] F. Tang, X. Wan, Phys. Rev. B 105 (2022) 155156, https://doi .org /10 .1103 /PhysRevB .105 .155156.
+[27] S. Ono, H.C. Po, K. Shiozaki, Phys. Rev. Res. 3 (2021) 023086, https://doi .org /10 .1103 /physrevresearch .3 .023086.
+17G.-B. Liu, Z. Zhang, Z.-M. Yu et al.
+Computer Physics Communications 288 (2023) 108722
+[28] B.A. Bernevig, C. Felser, H. Beidenkopf, Nature 603 (2022) 41–51, https://doi .org /10 .1038 /s41586 -021 -04105 -x.
+[29] C.J. Bradley, A.P. Cracknell, The Mathematical Theory of Symmetry in Solids — Representation Theory for Point Groups and Space Groups, Oxford University Press, 2009.
+[30] G. Burns, A.M. Glazer, Space Groups for Solid State Scientists, 3rd ed., Elsevier, Academic Press, Singapore, 2013.
+[31] D.B. Litvin, Magnetic group tables, international union of crystallography, https://doi .org /10 .1107 /9780955360220001, 2013.
+[32] When only geometry structures of crystals are considered, type-I MSGs can describe them. But when magnetic structures are considered, a nonmagnetic material has 
+zero magnetic moments everywhere and hence T symmetry exists. The MSGs containing T are of type-II not type-I.
+[33] D.B. Litvin, Int. Union Crystallogr. (2016) 852–865, https://doi .org /10 .1107 /97809553602060000934.
+[34] H. Grimmer, Acta Crystallogr. A 65 (2009) 145–155, https://doi .org /10 .1107 /S0108767308039007.
+[35] O.V. Kovalev, Irreducible Representations of the Space Groups, Gordon and Breach, New York, 1965.
+[36] S.C. Miller, W.F. Love, Tables of Irreducible Representations of Space Groups and Co-Representations of Magnetic Space Groups, Pruett Press, Boulder, Colo, 1967.
+[37] J. Zak, A. Casher, M. Glück, Y. Gur, The Irreducible Representations of Space Groups, Benjamin, New York, 1969.
+[38] A.P. Cracknell, B.L. Davies, S.C. Miller, W.F. Love, Kronecker Product Tables, General Introduction and Tables of Irreducible Representations of Space Groups, vol. 1, 
+IFI/Plenum, New York, 1979.
+[39] H.T. Stokes, D.M. Hatch, B.J. Campbell, ISOTROPY software suite, http://iso .byu .edu.
+[40] H.T. Stokes, B.J. Campbell, R. Cordes, Acta Cryst A 69 (2013) 388, https://doi .org /10 .1107 /s0108767313007538.
+[41] Bilbao Crystallographic Server, https://www.cryst .ehu .es.
+[42] M.I. Aroyo, A. Kirov, C. Capillas, J.M. Perez-Mato, H. Wondratschek, Acta Crystallogr. A 62 (2006) 115–128, https://doi .org /10 .1107 /S0108767305040286.
+[43] L. Elcoro, B. Bradlyn, Z. Wang, M.G. Vergniory, J. Cano, C. Felser, B.A. Bernevig, D. Orobengoa, G. de la Flor, M.I. Aroyo, J. Appl. Crystallogr. 50 (2017) 1457–1477, https://
+doi .org /10 .1107 /s1600576717011712.
+[44] G.-B. Liu, M. Chu, Z. Zhang, Z.-M. Yu, Y. Yao, Comput. Phys. Commun. 265 (2021) 107993, https://doi .org /10 .1016 /j .cpc .2021.107993.
+[45] J. Gao, Q. Wu, C. Persson, Z. Wang, Comput. Phys. Commun. 261 (2021) 107760, https://doi .org /10 .1016 /j .cpc .2020 .107760.
+[46] A. Matsugatani, S. Ono, Y. Nomura, H. Watanabe, Comput. Phys. Commun. 264 (2021) 107948, https://doi .org /10 .1016 /j .cpc .2021.107948.
+[47] M. Iraola, J.L. Mañes, B. Bradlyn, M.K. Horton, T. Neupert, M.G. Vergniory, S.S. Tsirkin, Comput. Phys. Commun. 272 (2022) 108226, https://doi .org /10 .1016 /j .cpc .2021.
+108226.
+[48] https://www.cryst .ehu .es /html /cryst /topological /Mvasp2trace .tar.gz.
+[49] J. Gao, Z. Guo, H. Weng, Z. Wang, arXiv:2204 .10556, 2022.
+[50] https://www.wolfram .com /raspberry-pi/.
+[51] N.V. Belov, N.N. Neronova, T.S. Smirnova, Sov. Phys. Crystallogr. 1 (1957) 487–488.
+[52] N.V. Belov, N.N. Neronova, T.S. Smirnova, Sov. Phys. Crystallogr. 2 (1957) 311–322.
+[53] W. Opechowski, R. Guccione, Magnetism vol. 2A, Academic Press, New York, 1965.
+[54] T. Hahn (Ed.), International Tables for Crystallography, 5th (corrected reprint) ed., Space-Group Symmetry, vol. A, Springer, Dordrecht, 2005.
+[55] H.T. Stokes, D.M. Hatch, B.J. Campbell, ISO-MAG, ISOTROPY software suite, https://iso .byu .edu /iso /magneticspacegroups .php.
+[56] P. Yang, W. Feng, G.-B. Liu, G.-Y. Guo, Y. Yao, arXiv:2302 .10606, 2023.
+[57] A.P. Cracknell, Prog. Theor. Phys. 38 (1967) 1252–1269, https://doi .org /10 .1143 /ptp .38 .1252.
+[58] A.P. Cracknell, B.L. Davies, Prog. Theor. Phys. 43 (1970) 1613–1614, https://doi .org /10 .1143 /ptp .43 .1613.
+[59] A.P. Cracknell, S.J. Joshua, Math. Proc. Camb. Philos. Soc. 66 (1969) 493–504, https://doi .org /10 .1017 /s0305004100045229.
+[60] M.R. Daniel, A.P. Cracknell, Phys. Rev. 177 (1969) 932–941, https://doi .org /10 .1103 /PhysRev.177.932.
+[61] G. Kresse, J. Furthmüller, Phys. Rev. B 54 (1996) 11169–11186, https://doi .org /10 .1103 /PhysRevB .54 .11169.
+[62] X. Zhou, J.-P. Hanke, W. Feng, F. Li, G.-Y. Guo, Y. Yao, S. Blügel, Y. Mokrousov, Physical Review B 99 (2019) 104428, https://doi .org /10 .1103 /physrevb .99 .104428.
+[63] X. Zhou, J.-P. Hanke, W. Feng, S. Blügel, Y. Mokrousov, Y. Yao, Phys. Rev. Mater. 4 (2020) 024408, https://doi .org /10 .1103 /physrevmaterials .4 .024408.
+[64] W. Feng, J.-P. Hanke, X. Zhou, G.-Y. Guo, S. Blügel, Y. Mokrousov, Y. Yao, Nat. Commun. 11 (2020) 118, https://doi .org /10 .1038 /s41467 -019 -13968 -8.
+[65] H. Weng, C. Fang, Z. Fang, B.A. Bernevig, X. Dai, Phys. Rev. X 5 (2015) 011029, https://doi .org /10 .1103 /physrevx .5 .011029.
+[66] G. Chang, B.J. Wieder, F. Schindler, D.S. Sanchez, I. Belopolski, S.-M. Huang, B. Singh, D. Wu, T.-R. Chang, T. Neupert, et al., Nat. Mater. 17 (2018) 978–985, https://
+doi .org /10 .1038 /s41563 -018 -0169 -3.
+[67] Z. Zhang, W. Wu, G.-B. Liu, Z.-M. Yu, S.A. Yang, Y. Yao, Physical Review B 107 (2023) 075405, https://doi .org /10 .1103 /physrevb .107.075405.
+[68] Z. Zhang, Z.-M. Yu, G.-B. Liu, Z. Li, S.A. Yang, Y. Yao, arXiv:2205 .05830, 2022.
+[69] W.F. Brinkman, R.J. Elliott, Proc. R. Soc. Lond. A 294 (1966) 343–358, https://doi .org /10 .1098 /rspa .1966 .0211.
+[70] W. Brinkman, R.J. Elliott, J. Appl. Phys. 37 (1966) 1457–1459, https://doi .org /10 .1063 /1.1708514.
+[71] D.B. Litvin, W. Opechowski, Physica 76 (1974) 538–554, https://doi .org /10 .1016 /0031 -8914(74 )90157 -8.
+[72] A. Corticelli, R. Moessner, P.A. McClarty, Physical Review B 105 (2022) 064430, https://doi .org /10 .1103 /physrevb .105 .064430.
+[73] L. Šmejkal, J. Sinova, T. Jungwirth, Physical Review X 12 (2022) 031042, https://doi .org /10 .1103 /physrevx .12 .031042.
+[74] P. Liu, J. Li, J. Han, X. Wan, Q. Liu, Phys. Rev. X 12 (2022) 021016, https://doi .org /10 .1103 /physrevx .12 .021016.
+[75] J. Yang, Z.-X. Liu, C. Fang, arXiv:2105 .12738, 2021.
+18

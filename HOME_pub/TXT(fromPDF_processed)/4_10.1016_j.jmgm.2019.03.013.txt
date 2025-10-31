@@ -1,0 +1,227 @@
+OpenMX Viewer: A web-based crystalline and molecular graphical user interface program Yung-Ting Lee*, Taisuke Ozaki Institute for Solid State Physics, The University of Tokyo, 5-1-5 Kashiwanoha, Kashiwa, Chiba, 277-8581, Japan a r t i c l e i n f o Article history: Received 22 December 2018 Received in revised form 8 March 2019 Accepted 8 March 2019 Available online 15 March 2019 Keywords: OpenMX Viewer Isosurface HTML5 WebGL a b s t r a c t The OpenMX Viewer (Open source package for Material eXplorer Viewer) is a web-based graphical user interface (GUI) program for visualization and analysis of crystalline and molecular structures and 3D grid data in the Gaussian cube format such as electron density and molecular orbitals.
+The web-based GUI program enables us to quickly visualize crystalline and molecular structures by dragging and dropping XYZ, CIF, or OpenMX input/output ﬁles, and analyze static/dynamic structural properties conveniently in a web browser.
+Several basic functionalities such as analysis of Mulliken charges, molecular dynamics, geometry optimization and band structure are included.
+In addition, based on marching cubes, marching tetrahedra and surface nets algorithms with Afﬁne transformation, 3D isosurface techniques are sup- ported to visualize electron density and molecular/crystalline orbitals in the cube format with super- position of a crystalline or molecular structure.
+Furthermore, the Band Structure Viewer is implemented for showing a band structure in a web browser.
+By accessing the website of the OpenMX Viewer, the latest OpenMX Viewer is always available for users to visualize various structures and analyze their properties without installations, upgrades, updates, registration, sign-in and terminal commands.
+© 2019 Elsevier Inc.
+All rights reserved.
+1. Introduction Recently, a number of theoretical and computational research studies based on ﬁrst-principles electronic structure calculations have grown in a variety of scientiﬁc ﬁelds [1e4].
+To analyze complicated data obtained by density functional theory (DFT) or other ﬁrst-principles approaches, many visualization software such as XCrySDen [5,6], VMD [7], VESTA [8] and Mercury [9,10], have provided platforms to visualize various crystalline or molecular structures and to analyze data from simulations to explain static and dynamic properties of materials.
+These visualization software are useful and important to reduce time for building or modifying structures, analyzing complicated calculation results, and measuring structural information.
+The use of such software en- hances the efﬁciency of dealing with the input/output data for calculations and analyzing simulation results.
+Since its release in 2008, HTML5 has introduced application programming interfaces (APIs) that can be connected with Java- script for constructing web applications in web browsers [11].
+Also, Web Graphics Library (WebGL) (https://www.khronos.org/webgl/) is a Javascript-based API developed for interactive 3D graphical objects without plug-in in web browsers, which is able to accelerate image processing by GPU for web canvas.
+With the advent of WebGL, Three.js, a cross-browser Javascript library, is able to utilize WebGL rendering techniques and to display animated 3D computer graphics in modern web browsers [12].
+Based on HTML5 and WebGL, one can build an application in a web browser with the same functions as one installed in conventional operating systems.
+There are several well-established examples of web-based viewers for chemistry [13], biochemistry [14] and medical imaging [15] such as: JSmol [16]; ChemDoodle [17]; Chemozart [18]; Web3DMol [19]; 3Dmol.js [20]; LiteMol [21]; and, NGL Viewer [22].
+Therefore, it will be expected that a web application can be developed to visualize crystalline and molecular structures which may provide versatile tools for analyzing simulation data.
+Furthermore, it is possible to use the same functions as applications in a web browser when users are online.
+The OpenMX Viewer is an interactive web-based crystalline and molecular structure viewer based on HTML5 Canvas 2D combined with Javascript and Three.js libraries for existing or potential users of OpenMX [23]: (1) to visualize crystal structures, isosurfaces, and band strucutres; (2) to analyze static/dynamic data of OpenMX; * Corresponding author.
+E-mail addresses: ytlee@issp.u-tokyo.ac.jp (Y.-T. Lee), t-ozaki@issp.u-tokyo.ac.jp (T. Ozaki).
+Contents lists available at ScienceDirect Journal of Molecular Graphics and Modelling journal homepage: www.elsevier.com/locate/JMGM https://doi.org/10.1016/j.jmgm.2019.03.013 1093-3263/© 2019 Elsevier Inc.
+All rights reserved.
+Journal of Molecular Graphics and Modelling 89 (2019) 192e198and, (3) to save structural information in a XYZ format, a CIF format, or an OpenMX input format by using our unique javascript libraries and functions.
+It contains three kinds of viewers - Structure Viewer, Cube 3D Viewer and Band Structure Viewer.
+In particular, we develop a new on-line 3D-isosurface viewer for lattice systems, i.e. Cube 3D Viewer, by using the Three.js library, isosurface algorithms, our parsing Gaussian cube ﬁle library and a transformation of lat- tice vectors to visualize an isosurface image in a crystal lattice in a web browser.
+The OpenMX Viewer provides a convenient GUI interface to examine a structure or simulation data by dragging- and-dropping a ﬁle in a compatible web browser, such as Chrome, Firefox or Safari, without any installations, upgrades, up- dates, registration, sign-in or terminal commands.
+In addition to OpenMX input/output formats, XYZ, CIF, and Gaussian cube for- mats are accepted as an input ﬁle by the OpenMX Viewer with our parsing ﬁle libraries in javascript.
+The latest version of the OpenMX Viewer is always on the Internet for users to use freely anywhere and at any time.
+It is also noted that the OpenMX Viewer has been released under the GNU General Public License.
+Furthermore, the OpenMX Viewer has been developed not only for analyzing OpenMX input/output ﬁles but also for supporting XYZ, CIF, and cube ﬁle formats as an input ﬁle to visualize structures and electron density, enabling a wide variety of people using other software to obtain beneﬁts with the OpenMX Viewer.
+This paper gives a brief overview of the OpenMX Viewer as below. 2.
+The features of the OpenMX Viewer The OpenMX Viewer is built to connect with ﬁrst-principle calculations for analyzing crystalline and molecular static/dy- namic structures and relevant physical and chemical properties in the ﬁrst and last step of simulations.
+Although the GUI has been originally developed for ﬁrst-principles calculations by a DFT code, OpenMX, many functionalities explained later on can be utilized by users using other DFT codes because of the use of common ﬁle formats, such as XYZ, CIF, and cube.
+The OpenMX Viewer can be utilized directly by dragging-and-dropping ﬁles to the OpenMX Viewer webpage [24] without installations, upgrades, and terminal commands.
+The main features of the OpenMX Viewer include: (1) Structure Viewer; (2) Cube 3D Viewer; and, (3) Band Structure Viewer.
+It supports several kinds of data formats listed in Table 1.
+After dragging and dropping a ﬁle to the OpenMX Viewer, it can automatically recognize a ﬁle type, read data and show results on the corresponding viewer.
+The Chrome and Firefox browsers are preferred for the OpenMX Viewer due to its good compatibility and performance.
+The main functionalities and implementations of the OpenMX Viewer are described in the following sections. 3.
+The functionalities of the OpenMX Viewer 3.1.
+Structure Viewer The Structure Viewer is capable of reading a crystalline or mo- lecular structure from standard ﬁle formats, such as XYZ ﬁles, CIF ﬁles [25], OpenMX input ﬁles (.dat) and OpenMX output ﬁles (.md), and displaying a structure by using drag-and-drop on the Structure Viewer to show static or dynamic structures in the orthographic or perspective view.
+It also includes analysis of Mulliken charges, spins, forces and velocities.
+Users can use the Analysis of Structure panel to measure: (1) a bond distance between two selected atoms; (2) a bond angle; and, (3) a dihedral angle as shown in Fig. 1.
+If a dropped ﬁle is relevant to structural optimization or molecular dynamics simulations, users can select Structural Change to check structural changes at each optimization or molecular dynamics step Table 1 Viewers and corresponding supported ﬁle types.
+Viewer Supported ﬁle types Structure Viewer (Static) XYZ type (.xyz), CIF type (.cif), OpenMX input (.dat) Structure Viewer (Dynamic) XYZ type (.xyz), OpenMX output ﬁles (.md) Cube 3D Viewer Gaussian cube ﬁles (.cube) Band Structure Viewer Band ﬁles (.Band) Fig. 1.
+The OpenMX Structure Viewer with a C60 structure in the perspective view.
+The panel of Analysis of Structure is in the top-left corner.
+The options of structural properties and styles are listed at the bottom.
+Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 193as shown in Fig. 2.
+In addition, after dragging and dropping a ﬁle to visualize the structure, users can save the structural information to another format, such as the XYZ format, CIF format or OpenMX input ﬁle format with Cartesian coordinates or fractional coordinates. 3.2.
+Cube 3D Viewer The Cube 3D Viewer is built for showing 3D isosurface images in the Gaussian cube format [26] such as electron density, difference electron density taken from superposition of atomic densities of constituent elements and molecular orbitals.
+To show an isosurface image, users can drag and drop a cube ﬁle to the OpenMX Structure Viewer window or the Cube 3D Viewer window as shown in Fig. 3.
+Atoms, a unit cell, and positive/negative isosurfaces can be rendered in the Cube 3D Viewer at the same time.
+Moreover, an isosurface image in a crystal structure can be extended to a larger supercell. 3.3.
+Band Structure Viewer The Band Structure Viewer allows us to show and check a band structure quickly by dragging-and-dropping a Band ﬁle in the end of OpenMX's band structure calculation.
+It also includes a function to rescale a band structure by using mouse wheel or buttons. Fig. 2.
+The OpenMX Structure Viewer with 1T-MoSe2 structure in the perspective view.
+The Analysis of Structure panel and the Structural Change panel are in the top-left corner and the bottom, respectively. Fig. 3.
+An isosurface of difference electron density of graphene is shown by the Cube 3D Viewer.
+The drop-down menu is in the top-right corner.
+Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 1944.
+The implementations of the OpenMX Viewer 4.1.
+Structure Viewer The Structure Viewer is developed by HTML5 canvas 2D to display a static/dynamic crystalline or molecular structure in the orthographic or perspective view by dragging-and-dropping and parsing a XYZ/CIF/OpenMX ﬁle.
+After reading structural informa- tion, the spheres of atoms and bond stickers between two atoms are prepared and saved ﬁrst.
+In the case of bond stickers, 91 bond stickers with tilted angles from 0 to 90 are drawn and stored in advance in order to reduce the effort of plotting bond stickers at each operation e.g. translations or rotations.
+Also, the images of spheres of atoms are created at the beginning of rendering opera- tions.
+During the drawing of a crystal structure at each operation, these images of spheres and bond stickers are adjusted in size and pasted to their proper place.
+Then, the structure with spheres and bond stickers will be visualized on the center of the Structure Viewer.
+In Table 2, we show the performance of the OpenMX Structure Viewer, indicating that the OpenMX Viewer provides a quick visualization of crystalline and molecular structures.
+In addition, the OpenMX Structure Viewer provides plenty of options listed in Table 3 for users to show structural properties.
+Here, eight practical options for examining structures are described as below: 1.
+A supercell can be chosen by 'Supercell' options directly.
+After selecting a supercell, the supercell structures will be changed and visualized simultaneously.
+2. 'Number' can be checked to show all of serial numbers on the top of spheres.
+3. 'Symbol' stands for printing a symbol of atomic species on the top of each sphere. 4.
+When 'Structure' is checked, the 'Analysis of Structure' panel will be shown at the top-left corner of the Structure Viewer. 5.
+When 'Dynamics' is checked, the 'Strucutral Change' panel will be shown at the bottom of the Structure Viewer. 6.
+In the 'Spin' option, there are four cases: (1) off; (2) spin; (3) spin-C; and, (4) spin-V.
+If the second case is selected, numerical values of the spin of elements in units of mB will be printed on the top of spheres.
+And, '-C0 represents the magnitude of spin by colors, while '-V0 represents them by vectors. 7.
+For 'Force' and 'Velocity' options, both of them are shown by vectors pointing to a direction, while length of the vectors de- pends on their magnitude. 8.
+In the 'Save' option, there are four cases for saving the structural information: (1) 'xyz' is for saving a XYZ ﬁle; (2) 'cif' is for saving a CIF ﬁle; (3) 'OMX(xyz)' is for generating an OpenMX input ﬁle in a Cartesian coordinate system; and, (4) 'OMX(frac)' is for generating an OpenMX input ﬁle with fractional coordinates. 4.1.1.
+Structural measurement The Analysis of Structure panel is designed to show measure- ments of a bond distance between two selected atoms, a bond angle from three selected atoms and a dihedral angle formed by four selected atoms.
+After users select any four atoms in sequence, the panel will show the element symbols and their serial number and Cartesian coordinates as shown in Fig. 1.
+The three bond lengths between two selected atoms, two angles among three selected atoms, and one dihedral angle from four selected atoms are printed in the same panel. 4.1.2.
+Animation panel The Structural Change panel is capable of showing animation of optimizations or molecular dynamics simulations and printing to- tal energy in Hartree at each step as shown in Fig. 2. Users can play an animation step-by-step or continuously from beginning to end and switch steps forward or backward.
+At the same time, selected Table 2 Performance of parsing and structure rendering a Si conventional cell with 3 different supercells.
+System File parsing [s] Creating images and rendering [s] Rotation and rendering [s] Number of atoms Javascript Memory [MB] XYZ CIF OpenMX Si 5  5  5 supercell 0.022 0.025 0.022 0.203 0.008 1000 11.703 Si 10  10  10 supercell 0.088 0.388 0.090 1.233 0.010 8000 29.703 Si 15  15  15 supercell 0.199 2.802 0.185 10.397 0.193 27000 59.297 Notes: Tests for the OpenMX Structure Viewer were performed in a Chrome browser in Linux Ubuntu 16.04 with a 4.2 GHz Intel Core i7-7700K Processor and 32 GB DDR4- 2400 MHz Memory.
+Table 3 The key options of display styles and structural properties in the OpenMX Structure Viewer.
+Options Description Default Value Supercell Setup the size of supercell (a  b  c) 1  1  1 Number Show the serial number of atoms off Symbol Show the element symbols off Bond Factor Show bonds between two atoms within a certain range 1.0 Cells Show the unit cell off Axes Show the axes off Structure Show the panel of Analysis of Structure off Dynamics Show the panel of Structural Change off Net charge Show Mulliken charge/Mulliken charge-C (with colors) off Spin Show spin/spin-C (with colors)/spin-V (with vectors) off Force Show atomic forces off Velocity Show atomic velocity off Rot on x/y/z Rotate the structure on x/y/z axis by selecting an angle 0 Save Saving ﬁles: (1) a XYZ ﬁle, (2) a CIF ﬁle, - (3) an OpenMX input ﬁle (.dat) in a Cartesian coordinate system, (4) an OpenMX input ﬁle (.dat) in a fractional coordinate system.
+Examples Select an existing data to show crystalline or molecular structure.
+- Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 195bond lengths, bond angles, and a dihedral angle at each step are shown in the Analysis of Structure panel. 4.1.3.
+Parsing CIF ﬁles The original program, CIF2CELL, for parsing CIF ﬁles is written in python [25] by using routines in the library PyCIFRW [27].
+We convert this Python code to a Javascript version, i.e. cif.js, and build it as a CIF parsing function to connect with the Structure Viewer for parsing CIF ﬁles.
+After a user drags and drops a CIF ﬁle to the Structure Viewer, the Structure Viewer will (1) analyze the CIF ﬁle by using the CIF parsing function, (2) get the atomic coordinates, cell vectors and corresponding symmetry, (3) send structural data to plot the structure, and (4) select a conventional cell or a primitive cell to show.
+After showing the structure, users can start to operate the structure in the Structure Viewer. 4.2.
+Cube 3D Viewer The Cube 3D Viewer is based on WebGL, Three.js [12], DAT.GUI (https://github.com/dataarts/dat.gui), marching cube [28] , march- ing tetrahedra [29] and surface net [30] libraries to show 3D iso- surface images in the Gaussian Cube format [26] such as electron density, difference electron density taken from superposition of atomic densities of constituent elements and molecular orbitals.
+The Three.js and isosurface libraries are released under the MIT license and DAT.GUI is released under the Apache License 2.0.
+Originally, the libraries of isosurface algorithms come from Paul Bourke's work [31].
+And, Mikola Lysenko transformed the codes to Javascript version and connected with Three.js to show isosurface images in a web browser [32].
+We followed his demo for drawing isosurfaces and modiﬁed the source code to transform each small cubic cell to one of seven lattice systems for constructing crystal isosurface images.
+In order to show an isosurface image, users can drag and drop a cube ﬁle to the OpenMX Structure Viewer window or the Cube 3D Viewer window as shown in Fig. 3.
+After reading a cube data in the 'cube.js' function and declaring two ﬂoat arrays to store positive and negative values with a default isovalue in 'read3ddata.js' function, these two positive and negative data sets are sent to one of the isosurface algorithms for producing facets or edges of two isosurfaces with different colors, respectively.
+In the last part, by Three.js, atoms, the unit cell, and the isosurface can be presented on the Cube 3D Viewer.
+In addition, a default isovalue is automatically determined by a largest absolute value divided by 200.
+And, the isovalue can be adjusted or changed continuously with a delay time by using the drop-down menu.
+In Table 4, the performance of the Cube 3D Viewer is given for reference.
+The speed of compression depends on the size of a cube data.
+The rendering time depends on the total number of grids and an isovalue because it is related to the numbers of vertices and edges created by isosurface algorithms and plotted by the Three.js library.
+In the case of surface nets, the numbers of vertices and edges required for creating an isosurface image are usually less than those in the marching cubes algorithm and marching tetrahedra algorithm.
+The use of memory and per- formance are better than other two cases.
+Moreover, the drop- down menu provides several options of display styles for users to choose.
+These options are listed in Table 5.
+Among them, four useful options are described as below: 1.
+A supercell can be chosen to generate larger and continuous isosurface images.
+However, it should be noted that plotting isosurface images will become heavier if there are many facets Table 4 Performance of creating and rendering an isosurface of a fullerene-C60 with 3 different meshes.
+System (Grids) File compressing and decompressing [s] Isovalue Creating meshes and rendering [s] JavaScript Memory [MB] Marching cubes Marching tetrahedra Surface nets Marching cubes Marching tetrahedra Surface nets C60 (84  84  84) 1.955 0.411 0.0284 1.097 2.305 0.957 213.9 597.1 103.9 C60 (125  125  125) 6.369 1.354 0.0349 4.121 7.712 3.668 357.4 897.8 263.6 C60 (150  150  150) 11.956 2.374 0.0349 7.942 16.859 7.111 750.6 1272.8 465.0 Notes: Tests for the Cube 3D Viewer were performed in a Chrome browser in Linux Ubuntu 16.04 with a 4.2 GHz Intel Core i7-7700K Processor and 32 GB DDR4-2400 MHz Memory.
+Table 5 The options of display styles in the Cube 3D Viewer.
+Options Description Default Value Projection Orthographic or Perspective projection Orthographic Algorithm 3D isosurface algorithm: Marching Cubes Marching Cubes / Marching Tetrahedra / Naive Surface Nets Supercell Setup a size of supercell a  b  c 1  1  1 System Properties: Facets Show facets of isosurface On Edges Show lines of isosurface Off Atoms Show atoms Off Unit Cell Show the unit cell On Opacity The percentage of allowing the transmission of light through a material (Range ¼ 0.0e1.0.) 1.0 (þ) Isosurface Show a positive isosurface On (-) Isosurface Show a negative isosurface On Axis Show axes Off Isovalue Setup an isovalue to show corresponding isosurface |Maximum| ¼ 200 Evolution: Start Start to change isovalue continuously Off Direction Increase a positive (on) or negative (off) isovalue continuously On Delay Time Change in isovalue per delay time (Unit ¼ second) 0.25 (s) Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 196needed to plot in the original crystal lattice.
+Drawing facets or edges is the most time-consuming part in the Cube 3D Viewer.
+2. Edges of isosurface images can be shown by selecting 'Edges'.
+After edges are shown, facets will be hidden at the same time, and vice versa.
+3. Atoms can be presented in the unit cell by checking the 'atoms' option.
+But, if atoms are behind facets, atoms will become hidden.
+4. Evolution of isosurface can be performed by checking the 'start' option.
+Both of the isovalue and isosurface will be changed gradually with a positive or negative increment after a time delay, where a positive or negative increment can be controlled by checking the 'direction' option. 4.2.1.
+Reading a cube ﬁle to get 3D-data In order to show a 3D isosurface, analysis functions in Javascript for reading the cube format and storing a cube data in two ﬂoat arrays are prepared ﬁrst.
+Once the cube data is obtained, an iso- surface with a default isovalue will be plotted by using one of the isosurface algorithms.
+However, when the cube data is larger than 5 megabytes (MB), web browsers usually do not allow us to transfer the data from the OpenMX Structure Viewer window to the Cube 3D Viewer window because the 'localStorage' in a web browser is usually limited to 5 MB.
+The dropped data will be compressed to strings ﬁrst by using a MIT-licensed 'lz-string' compressed library (https://github.com/pieroxy/lz-string) and then these compressed strings are transferred to the Cube 3D Viewer window.
+In case of a large-sized cube data, the step of compressing the data can be a bottleneck, leading to time lag in the response.
+If users want to analyze a huge cube data, they have to recognize this issue because it will cause the computer to lag. 4.2.2.
+Transformation of cell vectors Originally, a 3D isosurface image by using marching cubes al- gorithm, marching tetrahedra algorithm, or surface nets is composed of many small cubic cells.
+A dropped cube ﬁle is ﬁrst analyzed by assuming that the lattice system is cubic, regardless of the actual lattice, to calculate facets using one of the isosurface algorithms.
+In order to apply isosurface algorithms for all kinds of lattice systems, Afﬁne transformation is used to transform basis vectors of each small cubic cell to corresponding lattice vectors.
+After all of small cells are transformed, vertices and edges in small cells can be established and plotted by the Three.js library to visualize an isosurface image. 4.3.
+Band Structure Viewer The Band Structure Viewer is developed for showing a band structure quickly by dragging-and-dropping a Band ﬁle in the end of OpenMX's band structure calculation as shown in Fig. 4.
+It supports a function for zooming in/out to a certain band structure range by controlling the mouse wheel or buttons.
+The drop-down menu pro- vides options for scaling a band structure and setting display styles.
+5. Conclusions The OpenMX Viewer is an interactive web-based crystalline and molecular structure viewer for users to: (1) visualize crystal structures, isosurfaces and band strucutres; (2) analyze static/dy- namic data of OpenMX; and, (3) save structural information in a XYZ format, a CIF format, or an OpenMX input format.
+It provides three kinds of viewers, Structure Viewer, Cube 3D Viewer and Band Structure Viewer, to check various properties by dragging-and- dropping ﬁles conveniently in a compatible web browser without any installations, upgrades, updates and terminal commands.
+The Structure Viewer is capable of showing crystal structures, measuring bond lengths, bond angles, and a dihedral angle, and playing an animation of molecular dynamics simulations step-by- step or continuously.
+The Cube 3D Viewer can show an isosurface of electron density or molecular orbitals by reading a cube ﬁle.
+The Band Structure Viewer can be utilized by dragging-and-dropping a Band ﬁle to show a band structure directly in a web browser.
+In addition to OpenMX input/output formats, XYZ, CIF, and cube for- mats are accepted as an input ﬁle by the OpenMX Viewer.
+Users can always use the newest version of the OpenMX Viewer by accessing the website.
+In the near future, we plan to release the OpenMX Structure Builder for users to construct or modify their structures. Fig. 4.
+The band structure of diamond in the Band Structure Viewer, where the Fermi level is set to zero.
+Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 197Acknowledgments This paper is partly based on results obtained from a project commissioned by the New Energy and Industrial Technology Development Organization of Japan (NEDO) Grant (P16010).
+We thank Dr. Adam D. Sproson (Atmosphere and Ocean Research Institute, Univeristy of Tokyo) for proofreading the manuscript and reviewers for giving valuable comments and suggestions.
+References [1] V.I. Anisimov, F. Aryasetiawan, A.I. Lichtenstein, First-principles calculations of the electronic structure and spectra of strongly correlated systems: the LDAþU method, J. Phys. Condens.
+Matter 9 (1997) 767808. https://doi.org/10.
+1088/0953-8984/9/4/002.
+[2] C. Freysoldt, B. Grabowski, T. Hickel, J. Neugebauer, G. Kresse, A. Janotti, C.G. Van de Walle, First-principles calculations for point defects in solids, Rev. Mod.
+Phys. 86 (2014) 253e305.
+https://doi.org/10.1103/RevModPhys.86.253.
+[3] K.M. Rabe, First-principles calculations of complex metal-oxide materials, Annu. Rev. Condens.
+Matter Phys. 1 (2010) 211e235.
+https://doi.org/10.1146/ annurev-conmatphys-070909-103932.
+[4] J.J. Palacios, A.J. Prez-Jimnez, E. Louis, E. SanFabin, J.A. Vergs, First-principles approach to electrical transport in atomic-scale nanostructures, Phys.
+Rev. B 66 (2002), 035322.
+https://doi.org/10.1103/PhysRevB.66.035322.
+[5] A. Kokalj, XCrySDen - a new program for displaying crystalline structures and electron densities, J. Mol. Graph. Model. 17 (3e4) (1999) 176e179.
+https://doi. org/10.1016/S1093-3263(99) 00028-5.
+[6] A. Kokalj, Computer graphics and graphical user interfaces as tools in simu- lations of matter at the atomic scale, Comput. Mater.
+Sci. 28 (2) (2003) 155e168.
+https://doi.org/10.1016/s0927-0256(03)00104-6.
+[7] W. Humphrey, A. Dalke, K. Schulten, VMD: visual molecular dynamics, J. Mol. Graph. 14 (1) (1996) 33e38.
+https://doi.org/10.1016/0263-7855(96)00018-5.
+[8] K. Momma, F. Izumi, VESTA3 for three-dimensional visualization of crystal, volumetric and morphology data, J. Appl.
+Crystallogr. 44 (2011) 1272e1276. https://doi.org/10.1107/S0021889811038970.
+[9] C.F. Macrae, P.R. Edgington, P. McCabe, E. Pidcock, G.P. Shields, R. Taylor, M. Towler, J. van de Streek, Mercury: visualization and analysis of crystal structures, J. Appl.
+Crystallogr. 39 (2006) 453e457.
+https://doi.org/10.1107/ S002188980600731X. [10] C.F. Macrae, I.J. Bruno, J.A. Chisholm, P.R. Edgington, P. McCabe, E. Pidcock, L. Rodriguez-Monge, R. Taylor, J. van de Streek, P.A. Wood, Mercury CSD 2.0 - new features for the visualization and investigation of crystal structures, J. Appl.
+Crystallogr. 41 (2008) 466e470.
+https://doi.org/10.1107/ S0021889807067908.
+[11] A. Evans, M. Romeo, A. Bahrehmand, J. Agenjo, J. Blat, 3D graphics on the web: a survey, Comput.
+Graph. 41 (2014) 43e61.
+https://doi.org/10.1016/j.cag. 2014.02.002.
+[12] R. Cabello, three.js - Javascript 3D Library, 2012 [Online].
+Available: https:// threejs.org/. (Accessed 21 December 2018).
+[13] S. Pirhadi, J. Sunseri, D.R. Koes, Open source molecular modeling, J. Mol. Graph. Model. 69 (2016) 127e143.
+https://doi.org/10.1016/j.jmgm.2016.07. 008.
+[14] S. Yuan, H.C.S. Chan, Z. Hu, Implementing WebGL and HTML5 in macromo- lecular Vi- sualization and modern computer-aided drug design, Trends Bio- technol. 35 (2017) 559e571.
+https://doi.org/10.1016/j.tibtech.2017.03.009.
+[15] Q. Min, Z. Wang, N. Liu, An evaluation of HTML5 and WebGL for medical imaging applications, J. Healthc.
+Eng. 2018 (2018) 1592821. https://doi.org/10. 1155/2018/1592821.
+[16] R.M. Hanson, J. Prilusky, Z. Renjian, T. Nakane, J.L. Sussman, JSmol and the next- generation web-based representation of 3D molecular structure as applied to proteopedia, Isr. J. Chem. 53 (2013) 207216. https://doi.org/10.
+1002/ijch.201300024.
+[17] M.C. Burger, ChemDoodle Web Components: HTML5 toolkit for chemical graphics, interfaces, and informatics, J. Cheminf.
+7 (2015) 35. https://doi.org/ 10.1186/s13321-015-0085-3.
+[18] M. Mohebifar, F. Sajadi, Chemozart: a web-based 3D molecular structure editor and visualizer platform, J. Cheminf.
+7 (2015) [56]. https://doi.org/10.
+1186/s13321-015-0101-7.
+[19] M. Shi, J. Gao, M.Q. Zhang, Web3DMol: interactive protein structure visuali- zation based on WebGL, Nucleic Acids Res. 45 (2017) W523eW527.
+https:// doi.org/10.1093/nar/gkx383.
+[20] N. Rego, D. Koes, 3Dmol.js: molecular visualization with WebGL, Bioinfor- matics 31 (2015) 1322e1324.
+https://doi.org/10.1093/bioinformatics/btu829.
+[21] D. Sehnal, M. Deshpande, R.S. Vaekov, S. Mir, K. Berka, A. Midlik, L. Pravda, S. Velankar, J. Koa, LiteMol suite: interactive web-based visualization of large- scale macromolecular structure data, Nat.
+Methods 14 (2017) 1121e1122.
+https://doi.org/10.1038/nmeth.4499.
+[22] A.S. Rose, P.W. Hildebrand, NGL Viewer: a web application for molecular visualization, Nucleic Acids Res. 43 (2015) W576eW579.
+https://dx.doi.org/ 10.1093%2Fnar%2Fgkv402.
+[23] T. Ozaki, H. Kino, Efﬁcient projector expansion for the ab initio LCAO method, Phys.
+Rev. B 72 (4) (2005), 045121.
+https://doi.org/10.1103/PhysRevB.72. 045121.
+[24] T. Ozaki, OpenMX Viewer, 2016 [Online].
+Available: http://www.openmx- square.org/viewer/. (Accessed 21 December 2018).
+[25] T. Bjrkman, CIF2Cell: Generating geometries for electronic structure pro- grams, Comput. Phys. Commun.
+182 (2011) 11831186. https://doi.org/10.
+1016/j.cpc.2011.01.013.
+[26] M.J. Frisch, G.W. Trucks, H.B. Schlegel, G.E. Scuseria, M.A. Robb, J.R. Cheeseman, G. Scalmani, V. Barone, G.A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A.V. Marenich, J. Bloino, B.G. Janesko, R. Gomperts, B. Mennucci, H.P. Hratchian, J.V. Ortiz, A.F. Izmaylov, J.L. Sonnenberg, D. Williams-Young, F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, T. Henderson, D. Ranasinghe, V.G. Zakrzewski, J. Gao, N. Rega, G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, T. Vreven, K. Throssell, J.A. Montgomery Jr., J.E. Peralta, F. Ogliaro, M.J. Bearpark, J.J. Heyd, E.N. Brothers, K.N. Kudin, V.N. Staroverov, T.A. Keith, R. Kobayashi, J. Normand, K. Raghavachari, A.P. Rendell, J.C. Burant, S.S. Iyengar, J. Tomasi, M. Cossi, J.M. Millam, M. Klene, C. Adamo, R. Cammi, J.W. Ochterski, R.L. Martin, K. Morokuma, O. Farkas, J.B. Foresman, D.J. Fox, Gaussian 16, Revision B.01, Gaussian Inc., Wallingford CT, 2016.
+[27] J.R. Hester, A validating CIF parser: PyCIFRW, J. Appl. Crystallogr.
+39 (4) (2006) 621e625.
+https://doi.org/10.1107/S0021889806015627.
+[28] William E. Lorensen, Harvey E. Cline, Marching cubes: a high resolution 3D surface construction algorithm, Comput.
+Graph. 21 (4) (1987) 163e169. https://doi.org/10.1145/37402. 37422.
+[29] A. Doi, A. Koide, An efﬁcient method of triangulating equi-Valued surfaces by using tetra-hedral cells, IEICE Trans.
+E74-D (1) (1991) 214e224.
+[30] S.F.F. Gibson, Using distance maps for accurate surface representation in sampled Volumes, in: IEEE Symposium on Volume Visualization, 1998, p. 2330.
+https://doi.org/10.1145/288126. 288142.
+[31] P. Bourke, Polygonising a Scalar Eld, 1994 [Online].
+Available: http:// paulbourke.net/geometry/polygonise/. (Accessed 21 December 2018).
+[32] M. Lysenko, Smooth Voxel Terrain (Part 2), 2012 [Online].
+Available: https:// 0fps.net/2012/07/12/smooth-voxel-terrain-part-2/. (Accessed 21 December 2018).
+Y.-T. Lee, T. Ozaki / Journal of Molecular Graphics and Modelling 89 (2019) 192e198 198

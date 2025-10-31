@@ -1,0 +1,627 @@
+PHYSICAL REVIEW B 105, L220401 (2022)
+Letter
+Emerging two-dimensional magnetism in nonmagnetic electrides Hf2X (X = S, Se, Te)
+Shuyuan Liu,1 Chongze Wang,1 Hyunsoo Jeon,1 Yu Jia,2 and Jun-Hyung Cho
+1,*
+1Department of Physics and Research Institute for Natural Science, Hanyang University, 222 Wangsimni-ro,
+Seongdong-Ku, Seoul 04763, Republic of Korea
+2Key Laboratory for Special Functional Materials of the Ministry of Education, Henan University,
+Kaifeng 475004, People’s Republic of China
+(Received 27 March 2022; revised 10 May 2022; accepted 6 June 2022; published 13 June 2022)
+Recent experimental discoveries of two-dimensional (2D) magnets have triggered intense research activities
+to search for atomically thin magnetic systems. Using ﬁrst-principles calculations, we predict the emergence
+of 2D magnetism in the monolayers (MLs), few layers, and surfaces of nonmagnetic layered electrides Hf2X
+(X = S, Se, Te) consisting of three-atom-thick Hf-X-Hf stacks. It is revealed that each bulk Hf2X hosts a
+quantum state of Dirac nodal lines with a high density of states arising from Hf-5d cationic and interlayer
+anionic electrons around −0.9 eV below the Fermi level EF. However, for the MLs, few layers, and surfaces
+of Hf2X, such hybridized states are shifted toward EF to generate van Hove singularities, leading to a Stoner
+instability. The resulting surface ferromagnetism gives rise to strongly spin-polarized topological surface states
+at Hf2X(001), demonstrating that anionic electrons, 2D magnetism, and band topology are entangled with each
+other. Our ﬁndings will open different perspectives for the discovery of 2D magnets via exploiting surface effects
+in nonmagnetic layered electrides.
+DOI: 10.1103/PhysRevB.105.L220401
+A wide variety of two-dimensional (2D) materials have
+been explored that exhibit unique physical and chemical prop-
+erties which are strikingly different from those of their 3D
+parent compounds [1,2]. For example, in contrast to graphite,
+which is a semimetal with an overlap between the conduction
+and valence bands [3], graphene is a zero-gap semicon-
+ductor [4]; some transition-metal dichalcogenides (TMDCs)
+exhibit a change in the electronic structure from an indirect
+band gap in their bulk form to a direct band gap in mono-
+layers (MLs) [5]. By exploiting such dimensionality-driven
+novel electronic and optical properties, 2D materials including
+graphene, TMDCs, and the families of monoelemental (e.g.,
+black phosphorus [6], arsenene [7], antimonene [8], and bis-
+muthine [9]) and ternary [e.g., Bi2O2Se [10], BiOX [11], and
+CrOX (X = Cl, Br, I) [12]] compounds have been illustrated
+to provide many exciting new opportunities for diverse tech-
+nical applications at the atomic and nanometer scales [13–15].
+Nevertheless, 2D magnetism has been a long-standing elu-
+sive issue [16]. According to the Mermin-Wagner theorem
+[17], 2D magnetic systems described by the isotropic Heisen-
+berg model cannot have a long-range magnetic ordering at
+any ﬁnite temperature due to thermal ﬂuctuations. However,
+magnetocrystalline anisotropy enables the suppression of such
+thermal ﬂuctuations, thereby allowing the stabilization of 2D
+magnetism [18]. Despite the early availability of magnetic
+van der Waals (vdW)-layered crystals, the discovery of 2D
+magnetism in their ML or few-layer form has only recently
+been made experimentally [19–23]. For the vdW-layered fer-
+romagnets CrI3 [19] and Cr2Ge2Te6 [20], ferromagnetic (FM)
+order was observed to be maintained down to the ML and
+*Corresponding author: chojh@hanyang.ac.kr
+bilayer limits at low temperatures, respectively. Meanwhile,
+bulk FePS3 having an antiferromagnetic (AFM) order was
+experimentally observed to preserve its AFM property up to
+the ML and few layer [21,24]. Interestingly, for VSe2, the
+bulk does not have spontaneous magnetization, but ML VSe2
+exhibits a FM order [22,23]. This experimental evidence of
+2D magnetism in vdW-layered materials has stimulated many
+searches for a variety of 2D magnetic candidate materials [25].
+As an unconventional class of ionic compounds, 2D lay-
+ered electrides A2X consisting of a three-atom-thick building
+block of A-X-A stacks [see Fig. 1(a)] have recently been dis-
+covered to offer promising opportunities for both fundamental
+research and technological applications [26–33]. Depending
+on the cationic constituent atoms of A2X, anionic excess
+electrons conﬁned in the interstitial spaces between positively
+charged A-X-A stacks are distributed in different degrees of
+localization, which in turn lead to nonmagnetic (NM) or
+magnetic electrides [34]. So far, NM Ca2N [27], Hf2S [35],
+Sr3CrN3 [36], Sr8P5 [37], and Sr5P3 [37], paramagnetic Y2C
+[38–40], and FM Gd2C [41] and YCl [42] have been syn-
+thesized experimentally. Here, we theoretically predict the
+emergence of 2D magnetism in the MLs, few layers, and
+surfaces of the bulk nonmagnetic layered electrides Hf2X
+(X = S, Se, Te). Unlike the above-mentioned 2D vdW-layered
+magnets, the MLs and few layers of Hf2X show strong sur-
+face effects that signiﬁcantly modify their band structures
+and charge distributions at the outermost Hf layers, thereby
+inducing a Stoner instability, as will be demonstrated later.
+In this Letter, we focus on a recently synthesized [35] elec-
+tride Hf2S to explore 2D magnetism in its ML, few layer, and
+surface using ﬁrst-principles density-functional theory (DFT)
+calculations. We ﬁnd dramatic changes in the electronic struc-
+ture of ML and few layer, i.e., bulk Hf2S has a large density
+2469-9950/2022/105(22)/L220401(6)
+L220401-1
+©2022 American Physical SocietyLIU, WANG, JEON, JIA, AND CHO
+PHYSICAL REVIEW B 105, L220401 (2022)
+FIG. 1. (a) Optimized structure of bulk Hf2S and (b) its top
+view. The primitive unit cell contains two Hf-S-Hf stacks with an
+alternative AB stacking sequence. In (b), the blue and green circles
+represent Hf atoms in two different stacks, while the dashed circles
+represent X1 and X2 anions locating at hollow sites. The calculated
+band structure of bulk Hf2S is displayed in (c) together with the
+PDOS, where the projected bands onto Hf-5d and X1-, X2-s-like
+orbitals are represented by circles whose radii are proportional to the
+weights of the corresponding orbitals. The inset of (c) shows the BZ
+of the primitive unit cell. In (d), the calculated ELF of Hf2S is drawn
+on the (110) plane with a contour spacing of 0.05, where the MT
+radius of X1 and X2 anions is chosen as 1 Å. In (e), the SOC gap of
+2D nodal surfaces is displayed throughout the kz = π/c plane, where
+the black lines represent DNLs.
+of states (DOS) around −0.9 eV below the Fermi level EF,
+arising from hybridized Hf-5d cationic and interlayer anionic
+states, while ML and few-layer Hf2S exhibit a shift of such
+a van Hove singularity (vHs) toward EF. As a result, the
+outermost Hf layers in the top and bottom surfaces of MLs
+and few layers have an in-plane FM order with opposite spin
+polarizations. Moreover, we ﬁnd that the Hf2S(001) surface
+hosts nontrivial topological surface states associated with the
+bulk Dirac nodal lines, which are strongly spin polarized to
+exhibit a surface ferromagnetism. The present ﬁndings can
+also be applicable to other isoelectronic NM electrides Hf2Se
+and Hf2Te, where emerging 2D magnetism is enhanced com-
+pared to Hf2S. Therefore, we propose a different family of
+layered electrides Hf2X (X = S, Se, Te) showing an intrigu-
+ing surface-driven transformation from bulk nonmagnetic to
+2D magnetic order.
+We begin by examining the ground state of bulk Hf2S
+using DFT calculations [43]. Our spin-polarized calculations
+for bulk Hf2S show that any initial FM or AFM conﬁguration
+converges to the NM state. Therefore, bulk Hf2S has a NM
+ground state, consistent with a combined experimental and
+DFT study of Kang et al. [35]. Figures 1(a) and 1(b) show
+the optimized ground structure with the lattice parameters
+a1 = a2 = 3.375 Å and a3 = 11.764 Å, where S atoms locat-
+ing in a triangular lattice are surrounded by six Hf atoms in
+a trigonal prismatic geometry with the space group P63/mmc
+(No. 194). The calculated band structure of bulk Hf2S shows
+that Hf-5d cationic and interstitial anionic states are strongly
+hybridized around −0.9 eV below EF [49], giving rise to
+a large peak in their partial density of states (PDOS) [see
+Fig. 1(c)] [50]. Here, the anionic electrons localized at the
+positions marked as X1 and X2 in the interlayer space are well
+represented by the electron localization function (ELF) [see
+Fig. 1(d)]. These local maxima positions of ELF agree well
+with those of a previous DFT calculation [35]. Interestingly,
+for the ML and few layers of Hf2S, such hybridized Hf-5d
+cationic and interstitial anionic states are shifted toward EF,
+thereby inducing a magnetic instability, as discussed below.
+It is noticeable that there is a fourfold degenerate band
+crossing EF along the high-symmetry A-L-H-A paths, in-
+dicated by the arrow in Fig. 1(c). Using the tight-binding
+Hamiltonian with a basis of maximally localized Wannier
+functions [51,52], we ﬁnd the existence of a 2D nodal surface
+crossing EF throughout the kz = π/c plane on the boundary
+of the Brillouin zone (BZ) [53]. This nodal surface formed by
+a touching of two doubly degenerate bands is respected by the
+nonsymmorphic crystal symmetry S2z, equivalent to a combi-
+nation of twofold rotation symmetry C2z about the z axis and a
+half translation along the z direction (see the symmetry analy-
+sis in the Supplemental Material [54]). The inclusion of SOC
+lifts the fourfold degeneracy of the nodal surface except along
+the high-symmetry paths kx = 0 and kx = ±
+√
+3ky, preserving
+1D nodal lines [see Fig. 1(e)]. These Dirac nodal lines (DNLs)
+showing C3z rotation symmetry are protected by additional
+mirror symmetries [55]. Thus, bulk Hf2S is characterized as a
+topological semimetal having DNLs crossing EF.
+To reveal the effect of reduced dimensionality on the elec-
+tronic structure, we ﬁrst consider the NM phase of ML Hf2S.
+We ﬁnd that the lattice constants become a1 = a2 = 3.230
+Å, slightly smaller than those (3.375 Å) of bulk Hf2S. As
+shown in Fig. 2(a), ML Hf2S has a large peak in the PDOS
+of Hf-5d cationic and interstitial anionic states around EF.
+We increase the interlayer spacing ds [see Fig. 1(a)] in bulk
+Hf2S to examine the change of band structure. As ds increases,
+the hybridized Hf-5d cationic and interstitial anionic states
+locating around −0.9 eV are shifted toward EF (see Fig. S4
+in the Supplemental Material [54]), converging to the band
+structure of ML Hf2S. We also ﬁnd that the distribution of
+interstitial anionic electrons changes with respect to ds, i.e.,
+for bulk Hf2S, the number of electrons nX1 (nX2) within the
+mufﬁn-tin (MT) sphere of the X1 (X2) anion is 1.120 (0.405)
+electrons per ML [see Fig. 1(d)], which decreases (increases)
+to 0.904 (0.510) electrons in ML Hf2S. Such rearrangements
+of nX1 and nX2 in ML Hf2S [see Fig. 2(b)] together with
+the shift of hybridized Hf-5d cationic and interstitial anionic
+states reﬂect strong surface effects, as will be demonstrated
+at the Hf2S(001) surface. As shown in Fig. S5, the partial
+charge distributions with respect to the energy ranges exhibit
+a strong variation of anionic electrons between bulk and ML
+Hf2S, due to breaking bonds at the surfaces [56]. In this sense,
+the surface formation signiﬁcantly changes the distribution of
+interstitial anionic electrons as well as their electronic band
+structure, both of which are peculiar features of Hf2X. These
+dramatic changes of interstitial anionic states between the
+L220401-2EMERGING TWO-DIMENSIONAL MAGNETISM IN …
+PHYSICAL REVIEW B 105, L220401 (2022)
+FIG. 2. (a) Calculated band structure with PDOS and (b) ELF
+(with a contour spacing of 0.05) of the NM phase of ML Hf2S.
+The band structure and spin-polarized LDOS (projected onto Hft
+and Hfb) of the AFM phase of ML Hf2S are displayed in (c) and
+(d), respectively. The AFM spin density is also given in (d) with an
+isosurface of 0.01 e/Å3.
+bulk and surface induce the emergence of 2D ferromagnetism
+in Hf2X, as discussed below.
+Since the band structure of the NM phase of ML Hf2S
+has a vHs at EF [see Fig. 2(a)], the Stoner criterion may be
+fulﬁlled to lead to a FM instability. Indeed, we ﬁnd that the
+FM phase is favored over the NM phase by 1.55 meV per Hf
+atom. However, the AFM coupling of the ferromagnetically
+ordered magnetic moments on the outermost Hf layers is
+further stabilized compared to the FM phase by 11.41 meV
+per Hf atom. In such an AFM ground state, the calculated spin
+magnetic moments integrated within the MT spheres around
+Hf [57], X1, and X2 are 0.498μB, 0.104μB, and 0.105μB,
+respectively. Here, the AFM coupling of Hf-5d spins is likely
+driven by superexchange interactions [58–60] through the oc-
+cupied S-3p states (see Fig. S6 in the Supplemental Material
+[54]). Consequently, this AFM ordering opens a pseudogap
+for the electronic states around EF [see Fig. 2(c)]. As shown
+in Fig. 2(d), the spin-up and spin-down local DOS (LDOS)
+projected onto Hft and Hfb residing at the top and bottom
+layers exhibit a separation between occupied and unoccupied
+states [61]. By including SOC, the easy axis points along the z
+direction with a magnetic anisotropy energy of 0.76 meV per
+Hf atom, indicating that ML Hf2S has the Ising anisotropy
+with a strong AFM interlayer interaction. Since this AFM
+ML structure is revealed to be thermodynamically stable [62]
+[see Figs. S7(a) and S7(b)], we anticipate that it would be
+experimentally synthesized in the future by either mechanical
+exfoliation such as graphene [63] and MoS2 [64] or epitaxial
+FIG. 3. (a) Calculated total energies of the FM and AFM phases
+(relative to that of the NM phase) of Hf2S, Hf2Se, and Hf2Te as
+a function of N. Here, S represents the data of the (001) surface,
+obtained using a periodic slab of N = 12. The spin density (with
+a contour spacing of 0.005 e/Å3) and the LDOS of Hf-1 and Hf-2
+atoms at the Hf2S(001) surface are given in (b) and (c), respectively.
+growth on proper substrates such as silicene [65], stanene
+[66], and tellurene [67].
+Next, we investigate the stability of the FM and AFM
+phases of few-layer Hf2S with increasing the number N of
+Hf-S-Hf stacks. Figure 3(a) shows that the energy difference
+E between the FM and AFM phases decreases sharply
+even at N = 2, indicating that the top and bottom surfaces
+of few-layer Hf2S can form an isolated FM order with their
+suppressed AFM coupling. Figure 3(b) shows the spin density
+at the (001) surface, obtained using a periodic slab of N = 12
+with ∼25 Å of vacuum in between adjacent slabs. We ﬁnd
+that the spin magnetic moment exists mostly at the topmost Hf
+layer, while it is signiﬁcantly reduced at the second and third
+Hf layers (see Table I). The projected LDOS demonstrates that
+the spin-up and spin-down states arising from the Hf-1 atom
+are separated by ∼0.47 eV [68], while those from the Hf-2
+atom exhibit a little separation. By dividing this exchange
+splitting of Hf-1 by the corresponding magnetic moment, we
+can estimate the Stoner parameter I, which satisﬁes the Stoner
+criterion D(EF )I > 1 [69] [see Fig. S8(a) in the Supplemental
+Material [54]]. Here, D(EF ) is the DOS at EF from the NM
+phase. Thus, we can say that surface ferromagnetism emerg-
+ing at the Hf2S(001) surface is driven by the Stoner instability
+due to a vHs at EF arising from hybridized Hf-5d cationic and
+surface anionic states [see Fig. S8(b)]. In order to estimate the
+L220401-3LIU, WANG, JEON, JIA, AND CHO
+PHYSICAL REVIEW B 105, L220401 (2022)
+TABLE I. Calculated spin magnetic moments (in unit of μB per
+Hf atom) of Hf-1, Hf-2, and Hf-3 at the Hf2S(001), Hf2Se(001), and
+Hf2Te(001) surfaces. The values of X1 and X2 at the surface are also
+given.
+Hf-1
+Hf-2
+Hf-3
+X1
+X2
+Hf2S(001)
+0.490
+−0.011
+0.001
+0.086
+0.100
+Hf2Se(001)
+0.511
+−0.011
+0.001
+0.084
+0.092
+Hf2Te(001)
+0.536
+−0.011
+0.001
+0.083
+0.083
+Curie temperature Tc, we perform spin-polarized calculations
+for various AFM surface conﬁgurations (see Fig. S9). We
+ﬁnd that the lowest AFM conﬁguration is less stable than the
+FM one by 15.35 meV per Hf atom. Using the mean-ﬁeld
+approximation [70], we estimate a Tc of ∼118 K.
+According to the bulk-boundary correspondence of topo-
+logical nodal line semimetals [71], the presence of DNLs
+in the bulk leads to the formation of topologically protected
+surface states [72,73]. Using the Green’s function method
+based on the tight-binding Hamiltonian with maximally lo-
+calized Wannier functions [51,52], we obtain the projected
+surface spectrum of the NM Hf2S(001) surface [see Fig. 4(a)].
+There are three drumhead surface states SS1, SS2, and SS3
+along the -M-K- path near EF, which represents the hall-
+mark of DNLs [74]. Note that SS1, SS2, and SS3 are split by
+SOC-driven gap openings (see Fig. S10 in the Supplemental
+Material [54]). In Fig. 4(b), the Fermi surface of Hf2S(001)
+at a chemical potential of −0.2 eV exhibits closed Fermi
+arcs around the  and K points with helical spin textures.
+Such nontrivial topological surface states with a unique spin-
+momentum locking property [75] can be more distinguishable
+by subtracting the (001) projected bulk states from the surface
+spectrum (see Fig. S11). For the experimental measurements
+of these topological surface states, we propose the H passiva-
+tion of the Hf2S(001) surface where surface ferromagnetism
+can be removed [76]. Our DFT band structure of the H-
+passivated Hf2S(001) surface reproduces the dispersion of the
+SS1, SS2, and SS3 states around EF [see Figs. 4(c) and S10].
+Meanwhile, the DFT band structure of a clean Hf2S(001)
+surface shows that the surface-induced ferromagnetism gives
+rise to strong spin polarizations for the SS1, SS2, and SS3 states
+at Hf2S(001) [see Fig. 4(d)], indicating that the bulk DNLs
+are split into two spin-polarized nondegenerate bands due to
+time-reversal symmetry breaking at the surface. These results
+reﬂect a strong correlation between the spin degrees of free-
+dom and topological properties. It is thus likely that anionic
+electrons, 2D magnetism, and band topology are entangled
+with each other in a different class of electrides Hf2X.
+Finally, we examine 2D magnetism in other isoelectronic
+NM electrides Hf2Se and Hf2Te. Similar to the case of Hf2S,
+the MLs and few layers of Hf2Se and Hf2Te shift hybridized
+Hf-5d cationic and interlayer anionic states toward EF (see
+Fig. S13 in the Supplemental Material [54]), thereby inducing
+a 2D magnetism at their outermost Hf layers. As shown in
+Fig. 3(a), the magnetic stabilities in the MLs, few layers, and
+surfaces of Hf2Se and Hf2Te are enhanced compared to the
+corresponding ones of Hf2S. Accordingly, the spin magnetic
+moments of the Hf-1 atom in Hf2Se and Hf2Te are larger
+FIG. 4. (a) Projected surface spectrum of the NM Hf2S(001)
+surface and (b) its isoenergy surface at −0.2 eV with in-plane spin
+textures of the SS1, SS2, and SS3 surface states around the  and
+K points. The DFT band structures of the H-passivated Hf2S(001)
+and clean Hf2S(001) surfaces are given in (c) and (d), respectively.
+The former (latter) bands are obtained with (without) including SOC.
+In (d), the radii of circles are proportional to the weights of the
+projection onto Hf-1 atom.
+than that in Hf2S (see Table I). For the Hf2Se(001) and
+Hf2Te(001) surfaces, the topological surface states associated
+with the bulk DNLs also exhibit large spin splits around EF
+(see Fig. S14), leading to a strong surface ferromagnetism.
+In summary, our ﬁrst-principles DFT calculations have
+demonstrated the importance of surface effects that invoke
+the emergence of 2D magnetism in the MLs, few layers,
+and surfaces of nonmagnetic layered electrides Hf2X (X = S,
+Se, Te). Speciﬁcally, we revealed that nontrivial topological
+surface states associated with the bulk DNLs are largely spin
+polarized to form a strong ferromagnetism at the Hf2X(001)
+surfaces. Our ﬁndings provide a platform to investigate the
+intriguing interplay between electride properties, nontrivial
+band topology, and surface ferromagnetism, which will be
+promising for future spintronics technologies [77,78]. We
+found that Zr2X (X = S, Se, Te) can also exhibit similar elec-
+tronic structures, 2D magnetism, and topological properties
+[see Figs. S7(c), S7(d), S15, and Table SI], as predicted for
+Hf2X. Thus, the present prediction of surface ferromagnetism
+via the strong variation of hybridized transition-metal d or-
+bitals and interstitial anionic states between the bulks and
+surfaces of Hf2X and Zr2X is rather generic, thereby provid-
+ing a more general physical picture to support our results.
+This work was supported by the National Research Foun-
+dation of Korea (NRF) grant funded by the Korean Govern-
+ment (Grant No. 2022R1A2C1005456) and by the National
+Natural Science Foundation of China (Grant No. 12074099).
+The calculations were performed by the KISTI Supercomput-
+ing Center through the Strategic Support Program (Program
+No. KSC-2022-CRE-0073) for supercomputing application
+research.
+L220401-4EMERGING TWO-DIMENSIONAL MAGNETISM IN …
+PHYSICAL REVIEW B 105, L220401 (2022)
+[1] A. Gupta, T. Sakthivel, and S. Seal, Prog. Mater. Sci. 73, 44
+(2015).
+[2] K. S. Novoselov, A. Mishchenko, A. Carvalho, and A. H. Castro
+Neto, Science 353, aac9439 (2016).
+[3] J. C. Slonczewski and P. R. Weiss, Phys. Rev. 109, 272 (1958).
+[4] M. Sprinkle, D. Siegel, Y. Hu, J. Hicks, A. Tejeda, A. Taleb-
+Ibrahimi, P. Le Fevre, F. Bertran, S. Vizzini, H. Enriquez, S.
+Chiang, P. Soukiassian, C. Berger, W. A. de Heer, A. Lanzara,
+and E. H. Conrad, Phys. Rev. Lett. 103, 226803 (2009).
+[5] A. Splendiani, L. Sun, Y. Zhang, T. Li, J. Kim, C.-Y. Chim, G.
+Galli, and F. Wang, Nano Lett. 10, 1271 (2010).
+[6] L. Li, Y. Yu, G. Jun Ye, Q. Ge, X. Ou, H. Wu, D. Feng, X. Hui
+Chen, and Y. Zhang, Nat. Nanotechnol. 9, 372 (2014).
+[7] S. Zhang, Z. Yan, Y. Li, Z. Chen, and H. Zeng, Angew. Chem.
+127, 3155 (2015).
+[8] J. Ji, X. Song, J. Liu, Z. Yan, C. Huo, S. Zhang, M. Su, L. Liao,
+W. Wang, Z. Ni, Y. Hao, and H. Zeng, Nat. Commun. 7, 13352
+(2016).
+[9] S. Zhang, M. Xie, F. Li, Z. Yan, Y. Li, E. Kan, W. Liu, Z. Chen,
+and H. Zeng, Angew. Chem. 128, 1698 (2016).
+[10] J. Wu, H. Yuan, M. M. Meng, C. Chen, Y. Sun, Z. Chen, W.
+Dang, C. Tan, Y. Liu, J. Yin et al., Nat. Nanotechnol. 12, 530
+(2017).
+[11] X. Zhang, Z. Ai, F. Jia, and L. Zhang, J. Phys. Chem. C 112,
+747 (2008).
+[12] N. Miao, B. Xu, L. Zhu, J. Zhou, and Z. Sun, J. Am. Chem. Soc.
+140, 2417 (2018).
+[13] J. R. Schaibley, H. Yu, G. Clark, P. Rivera, J. S. Ross, K. L.
+Seyler, W. Yao, and X. Xu, Nat. Rev. Mater. 1, 16055 (2016).
+[14] M. Zeng, Y. Xiao, J. Liu, K. Yang, and L. Fu, Chem. Rev. 118,
+6236 (2018).
+[15] N. R. Glavin, R. Rao, V. Varshney, E. Bianco, A. Apte, A. Roy,
+E. Ringe, and P. M. Ajayan, Adv. Mater. 32, 1904302 (2020).
+[16] M. Gibertini, M. Koperski, A. Morpurgo, and K. Novoselov,
+Nat. Nanotechnol. 14, 408 (2019).
+[17] N. D. Mermin and H. Wagner, Phys. Rev. Lett. 17, 1133 (1966).
+[18] S. Hope, B.-Ch. Choi, P. J. Bode, and J. A. C. Bland, Phys. Rev.
+B 61, 5876 (2000).
+[19] B. Huang, G. Clark, E. Navarro-Moratalla, D. R. Klein, R.
+Cheng, K. L. Seyler, D. Zhong, E. Schmidgall, M. A. McGuire,
+D. H. Cobden et al., Nature (London) 546, 270 (2017).
+[20] C. Gong, L. Li, Z. Li, H. Ji, A. Stern, Y. Xia, T. Cao, W. Bao,
+C. Wang, Y. Wang et al., Nature (London) 546, 265 (2017).
+[21] X. Wang, K. Du, Y. Y. F. Liu, P. Hu, J. Zhang, Q. Zhang,
+M. H. S. Owen, X. Lu, C. K. Gan, P. Sengupta et al., 2D Mater.
+3, 031009 (2016).
+[22] M. Bonilla, S. Kolekar, Y. Ma, H. C. Diaz, V. Kalappattil, R.
+Das, T. Eggers, H. R. Gutierrez, M.-H. Phan, and M. Batzill,
+Nat. Nanotechnol. 13, 289 (2018).
+[23] X. Wang, D. Li, Z. Li, C. Wu, C.-M. Che, G. Chen, and X. Cui,
+ACS Nano 15, 16236 (2021).
+[24] J.-U. Lee, S. Lee, J. H. Ryoo, S. Kang, T. Y. Kim, P. Kim, C.-H.
+Park, J.-G. Park, and H. Cheong, Nano Lett. 16, 7433 (2016).
+[25] X. Jiang, Q. Liu, J. Xing, N. Liu, Y. Guo, Z. Liu, and J. Zhao,
+Appl. Phys. Rev. 8, 031305 (2021).
+[26] M. Kitano, Y. Inoue, Y. Yamazaki, F. Hayashi, S. Kanbara, S.
+Matsuishi, T. Yokoyama, S.-W. Kim, M. Hara, and H. Hosono,
+Nat. Chem. 4, 934 (2012).
+[27] K. Lee, S. W. Kim, Y. Toda, S. Matsuishi, and H. Hosono,
+Nature (London) 494, 336 (2013).
+[28] T. Inoshita, S. Jeong, N. Hamada, and H. Hosono, Phys. Rev. X
+4, 031023 (2014).
+[29] S. Yi, J.-H. Choi, K. Lee, S. W. Kim, C. H. Park, and J.-H. Cho,
+Phys. Rev. B 94, 235428 (2016).
+[30] M. Hirayama, S. Matsuishi, H. Hosono, and S. Murakami, Phys.
+Rev. X 8, 031067 (2018).
+[31] L. Liu, C. Wang, S. Yi, D. K. Kim, C. H. Park, and J.-H. Cho,
+Phys. Rev. B 99, 220401(R) (2019).
+[32] S. Liu, C. Wang, L. Liu, J.-H. Choi, H.-J. Kim, Y. Jia, C. H.
+Park, and J.-H. Cho, Phys. Rev. Lett. 125, 187203 (2020).
+[33] S. Liu, C. Wang, H. Jeon, J. Kim, and J.-H. Cho, Phys. Rev. B
+105, L041406 (2022).
+[34] S. Liu, W. Li, S. W. Kim, and J.-H. Choi, J. Phys. Chem. C 124,
+1398 (2020).
+[35] S. H. Kang, J. Bang, K. Chung, C. N. Nandadasa, G. Han, S.
+Lee, K. H. Lee, K. Lee, Y. Ma, S. H. Oh, S.-G. Kim, Y.-M.
+Kim, and S. W. Kim, Sci. Adv. 6, eaba7416 (2020).
+[36] P. Chanhom, K. E. Fritz, L. A. Burton, J. Kloppenburg, Y.
+Filinchuk, A. Senyshyn, M. Wang, Z. Feng, N. Insin, J.
+Suntivich et al., J. Am. Chem. Soc. 141, 10595 (2019).
+[37] J. Wang, K. Hanzawa, H. Hiramatsu, J. Kim, N. Umezawa,
+K. Iwanaka, T. Tada, and H. Hosono, J. Am. Chem. Soc. 139,
+15668 (2017).
+[38] X. Zhang, Z. Xiao, H. Lei, Y. Toda, S. Matsuishi, T. Kamiya, S.
+Ueda, and H. Hosono, Chem. Mater. 26, 6638 (2014).
+[39] J. Park, K. Lee, S. Y. Lee, C. N. Nandadasa, S. Kim, K. H. Lee,
+Y. H. Lee, H. Hosono, S.-G. Kim, and S. W. Kim, J. Am. Chem.
+Soc. 139, 615 (2017).
+[40] M. Hiraishi, K. M. Kojima, I. Yamauchi, H. Okabe, S.
+Takeshita, A. Koda, R. Kadono, X. Zhang, S. Matsuishi, H.
+Hosono, K. Hirata, S. Otani, and N. Ohashi, Phys. Rev. B 98,
+041104(R) (2018).
+[41] S. Y. Lee, J.-Y. Hwang, J. Park, C. N. Nandadasa, Y. Kim, J.
+Bang, K. Lee, K. H. Lee, Y. Zhang, Y. Ma, H. Hosono, Y. H.
+Lee, S.-G. Kim, and S. W. Kim, Nat. Commun. 11, 1526 (2020).
+[42] H. Y. Song, B. I. Yoo, J.-H. Choi, S.-H. Kang, J. Bang, W. Li,
+C. N. Nandadasa, D. Thapa, D. Yoon, M. J. Han, K. H. Lee,
+S. G. Kim, K. Lee, and S. W. Kim, Mater. Today Phys. 20,
+100473 (2021).
+[43] Our ﬁrst-principles DFT calculations were performed using
+the Vienna ab initio simulation package with the projector
+augmented-wave method [44–46]. The exchange-correlation
+energy was treated with the generalized-gradient approximation
+functional of Perdew-Burke-Ernzerhof [47]. The plane-wave
+basis was employed with a kinetic energy cutoff of 550 eV, and
+the k-space integration was done with 18×18×1 and 18×18×6
+meshes for ML (few layers) and bulk, respectively. All atoms
+were allowed to relax along the calculated forces until all the
+residual force components were less than 0.005 eV/Å. The
+phonon spectrum calculations of ML Hf2S were carried out
+by using the QUANTUM ESPRESSO package [48], with 6×6×1q
+points.
+[44] G. Kresse and J. Hafner, Phys. Rev. B 48, 13115 (1993).
+[45] G. Kresse and J. Furthmüller, Comput. Mater. Sci. 6, 15 (1996).
+[46] P. E. Blöchl, Phys. Rev. B 50, 17953 (1994).
+[47] J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77,
+3865 (1996); 78, 1396(E) (1997).
+[48] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C.
+Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo
+et al., J. Phys.: Condens. Matter 21, 395502 (2009).
+L220401-5LIU, WANG, JEON, JIA, AND CHO
+PHYSICAL REVIEW B 105, L220401 (2022)
+[49] This unique feature of anionic electrons in bulk Hf2X can be
+clearly seen by plotting their charge density around −0.9 eV
+(see Fig. S1). It is found that the integrated charge density
+of bulk Hf2S between −0.7 and −1.4 eV describes a charge
+distribution of hybridized Hf-5d cationic and interstitial anionic
+states, while that between EF and −0.7 eV represents Hf-5d
+states.
+[50] It is noted that for bulk Hf2S, the PDOS for S-3s and S-
+3p orbitals are located below −3 eV (see Fig. S2). Thus, S
+atoms hardly participate in hybridization with interstitial an-
+ionic states.
+[51] A.
+A.
+Mostoﬁ,
+J. R. Yates,
+Y.-S.
+Lee,
+I. Souza,
+D.
+Vanderbilt, and N. Marzari, Comput. Phys. Commun. 178, 685
+(2008).
+[52] Q. S. Wu, S. N. Zhang, H.-F. Song, M. Troyer, and A. A.
+Soluyanov, Comput. Phys. Commun. 224, 405 (2018).
+[53] As shown in Fig. S3 of the Supplemental Material [54], the
+Wannier bands of bulk Hf2S agree well with the DFT bands
+obtained using the VASP code.
+[54] See Supplemental Material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.105.L220401 for the symmetry and topol-
+ogy analyses, the partial charge density of bulk Hf2S, the PDOS
+of bulk Hf2S, the comparison of the electronic bands obtained
+using the DFT and tight-binding Hamiltonian calculations, the
+band structures of bulk Hf2S as a function of interlayer spacing
+ds, the integrated partial charge densities of bulk Hf2S and ML
+Hf2S, the PDOS of ML Hf2S, the thermodynamical stability of
+the AFM phase of ML Hf2S and Zr2S, the Stoner instability
+at the Hf2S(001) surface, the Curie temperature at Hf2S(001),
+the adsorption sites of H atoms on the Hf2S(001) surface, the
+band structures for the MLs, few layers, and surfaces of Hf2Se
+and Hf2Te, the band structure and PDOS of bulk Zr2S and the
+NM phase of ML Zr2S, and the spin magnetic moments of Zr2X
+surfaces.
+[55] We
+note
+that
+the
+mirror
+symmetry
+Mx
+having
+(x, y, z) →(−x, y, z) anticommutes with PS2z (see symmetry
+analysis in the Supplemental Material [54]), which allows the
+existence of the fourfold degenerate nodal line at kx = 0 on
+the kz = π/c plane. The topological characterizations of these
+DNLs are demonstrated by calculating the topological index,
+deﬁned as ζ1 = 1
+π
+
+cdk·A(k) along a closed loop encircling
+any of the DNLs. Here, A(k) = −i⟨uk|∂k|uk⟩is the Berry
+connection of the related Bloch bands. We obtain ζ1 = ±1 for
+the DNLs, indicating that they are stable against the lattice
+deformations conserving PS2z and mirror symmetries.
+[56] It is noted that the redistribution of anionic electrons at surfaces
+causes the upward shift of interstitial anionic states upon dimen-
+sionality reduction. Such intriguing surface effects occurring
+in Hf2X are absent in conventional layered electrides [29,31],
+the bulks of which have largely delocalized interstitial anionic
+states near EF.
+[57] The radius of the MT sphere around the Hf atom is chosen as
+1.6 Å.
+[58] P. W. Anderson, Phys. Rev. 79, 350 (1950).
+[59] J. B. Goodenough, Phys. Rev. 100, 564 (1955).
+[60] J. Kanamori, J. Phys. Chem. Solids 10, 87 (1959).
+[61] Since the electronic states with the same spin direction
+hybridize with each other, the highest occupied (lowest unoccu-
+pied) states are shifted to lower (higher) energies, corresponding
+to the superexchange mechanism [58–60].
+[62] To examine the dynamical stability of ML Hf2S, we investigate
+its phonon spectrum. It is found that the ML structure is dynam-
+ically stable without imaginary-frequency phonon modes [see
+Fig. S7(a) in the Supplemental Material [54]]. Furthermore, we
+ensure the thermodynamic stability of ML Hf2S by using ab
+initio molecular dynamics simulations. Figure S7(b) shows that
+ML Hf2S preserves its structure up to ∼1000 K without any
+structural transformation.
+[63] K. S. Novoselov, A. K. Geim, S. V. Morozov, D. Jiang, Y.
+Zhang, S. V. Dubonos, I. V. Grigorieva, and A. A. Firsov,
+Science 306, 666 (2004).
+[64] K. S. Novoselov, D. Jiang, F. Schedin, T. J. Booth, V. V.
+Khotkevich, S. V. Morozov, and A. K. Geim, Proc. Natl. Acad.
+Sci. USA 102, 10451 (2005).
+[65] B. Lalmi, H. Oughaddou, H. Enriquez, A. Kara, S. Vizzini, B.
+Ealet, and B. Aufray, Appl. Phys. Lett. 97, 223109 (2010).
+[66] F.-F. Zhu, W.-J. Chen, Y. Xu, C.-L. Gao, D.-D. Guan, C.-H. Liu,
+D. Qian, S.-C. Zhang, and J.-F. Jia, Nat. Mater. 14, 1020 (2015).
+[67] Z. Zhu, X. Cai, S. Yi, J. Chen, Y. Dai, C. Niu, Z. Guo, M. Xie,
+F. Liu, J.-H. Cho, Y. Jia, and Z. Zhang, Phys. Rev. Lett. 119,
+106101 (2017).
+[68] We estimate the exchange splitting of spin-up and spin-down
+states by calculating the average difference of their Kohn-Sham
+eigenvalues. Here, we considered the spin-up and spin-down
+states separately occupying 1.67 electrons, which are the num-
+ber of spin-up electrons occupied below EF.
+[69] H. L. Zhuang, P. R. C. Kent, and R. G. Hennig, Phys. Rev. B
+93, 134407 (2016).
+[70] G. S. Rushbrooke and P. J. Wood, Mol. Phys. 1, 257 (1958); 6,
+409 (1963).
+[71] N. P. Armitage, E. J. Mele, and A. Vishwanath, Rev. Mod. Phys.
+90, 015001 (2018).
+[72] G. Bian, T.-R. Chang, R. Sankar, S.-Y. Xu, H. Zheng, T.
+Neupert, C.-K. Chiu, S.-M. Huang, G. Chang, I. Belopolski
+et al., Nat. Commun. 7, 10556 (2016).
+[73] R. Yu, H. Weng, Z. Fang, X. Dai, and X. Hu, Phys. Rev. Lett.
+115, 036807 (2015).
+[74] I. Belopolski, K. Manna, D. S. Sanchez, G. Chang, B. Ernst,
+J. Yin, S. S. Zhang, T. Cochran, N. Shumiya, H. Zheng et al.,
+Science 365, 1278 (2019).
+[75] X.-Q. Sun, S.-C. Zhang, and Z. Wang, Phys. Rev. Lett. 115,
+076802 (2015).
+[76] We considered three possible adsorption sites of H atoms on the
+Hf2S(001) surface (see Fig. S12 in the Supplemental Material
+[54]). Among them, the adsorption of H atoms on the hollow
+site is found to be the energetically most favorable conﬁgura-
+tion.
+[77] A. R. Mellnik, J. S. Lee, A. Richardella, J. L. Grab, P. J. Mintun,
+M. H. Fischer, A. Vaezi, A. Manchon, E.-A. Kim, N. Samarth,
+and D. C. Ralph, Nature (London) 511, 449 (2014).
+[78] A. Dankert, J. Geurs, M. V. Kamalakar, S. Charpentier, and S. P.
+Dash, Nano Lett. 15, 7976 (2015).
+L220401-6

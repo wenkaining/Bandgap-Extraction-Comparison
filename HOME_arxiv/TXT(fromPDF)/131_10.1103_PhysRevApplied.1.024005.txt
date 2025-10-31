@@ -1,0 +1,959 @@
+arXiv:1401.1109v2  [cond-mat.mtrl-sci]  29 Apr 2014
+Comprehensive Ab Initio Study of Doping in Bulk ZnO with Group-V Elements
+Guido Petretto∗and Fabien Bruneval†
+CEA, DEN, Service de Recherches de M´etallurgie Physique, F-91191 Gif-sur-Yvette, France
+Despite the lack of reproducible experimental conﬁrmation, group-V elements have been consid-
+ered as possible sources of p-type doping in ZnO in the form of simple and complex defects. Using
+ab initio calculations, based on state-of-the-art hybrid exchange-correlation functional, we study a
+wide range of defects and defect complexes related with N, P, As, and Sb impurities. We show that
+none of the candidates for p-type doping can be considered a good source of holes in the valence
+band due to deep acceptor levels and low formation energies of compensating donor defects. In
+addition, we discuss the stability of complexes in diﬀerent regimes.
+I.
+INTRODUCTION
+Zinc oxide has attracted considerable interest as a
+promising material for optoelectronics applications, such
+as light-emitting diodes and solar cells, due to its large
+band gap and large exciton binding energy. The actual
+possibility of successfully employing ZnO in these kinds
+of devices relies on the ability of preparing a stable p-
+type as well as an n-type ZnO. Unfortunately, like other
+wide band gap semiconductors, ZnO suﬀers from a dop-
+ing asymmetry problem and, while n-type ZnO has been
+easily obtained, reliable p-type ZnO has not been pro-
+duced yet1.
+One of the most common ways to overcome this diﬃ-
+culty has been to incorporate group-V elements, in the
+hope that they could substitute oxygen in ZnO crystal
+and should in principle provide shallow enough acceptor
+levels. In particular, nitrogen has played the role of the
+favorite dopant, owing to its atomic size close to that of
+oxygen. Experimentally, despite the great deal of eﬀort
+devoted to the topic, only few successes in achieving p-
+type ZnO have been reported with this kind of doping2–5
+and up to now none of them has eventually led to further
+development.
+From a theoretical point of view, the understanding of
+these results and the proposition of other ways of obtain-
+ing p-type doping by means of density functional theory
+(DFT) calculations is a challenging task as well. In fact,
+the problem of the band gap underestimation related to
+the local or semilocal approximations of the exchange
+correlation functional is particularly relevant in the case
+of ZnO, with a calculated gap of only ∼0.8 eV. Calcula-
+tions performed within these approximations have shown,
+for example, a transition level of 0.4 eV for NO6 and
+shallow levels for complexes of the form XZn-2VZn7, but,
+in light of the severe gap underestimation, these results
+should be considered with care. Recently, some of these
+calculations have been updated with the introduction of
+hybrid functionals, which use an admixture of exact and
+local exchange, giving larger values of the band gap and
+providing more reliable results. According to the latest
+evaluation with hybrid functionals for some group-V re-
+lated defects8–12, the results indicate that the acceptor
+levels are much deeper than expected from previous cal-
+culations, suggesting that these are not good candidates
+for achieving p-type doping. Anyway, these calculations
+have been carried out with diﬀerent approximations and
+several of the possible defects have not been considered,
+making it diﬃcult to draw a uniform conclusion about
+the doping with group-V elements. To ﬁll this gap, in
+this paper we consider the problem of ZnO doping with
+N, P, As, and Sb in the most relevant defect conﬁgu-
+rations by means of DFT calculations based on hybrid
+functionals. We show that it is unlikely to obtain good
+acceptor states from these elements and ﬁnally, we dis-
+cuss the possibility of actually observing complex defects
+in doped samples.
+The remainder of this article is organized as follows:
+in Sec. II we introduce the methods used in our calcu-
+lations and we discuss our approximations. In Sec. III
+we begin our analysis of defects identiﬁed as promising
+for p-type doping in the literature, starting from simple
+substitutional defects XO and XZn (X=N, P, As, Sb). In
+Sec. IV we study complex defects. First, given the sta-
+bility of the N2 molecule and their importance for p-type
+doping13,14, we analyze the (N2)O and (N2)Zn defects.
+Then, we consider complexes of the form XZn-2VZn and
+XZn-VZn, which are proved to be binding in ZnO7,15. In
+this section, to evaluate the binding energies of the com-
+plexes, the isolated Zn vacancy VZn is studied as well.
+Finally, in Sec. V we discuss the possibilities of actu-
+ally observing these kinds of complexes, based on their
+binding energy.
+II.
+COMPUTATIONAL DETAILS
+Our calculations are performed in the framework
+of plane-wave pseudopotential DFT as implemented in
+the Quantum ESPRESSO package16. Norm-conserving
+pseudopotentials are employed for all the atoms, with the
+semicore Zn 3d states included in the valence electrons,
+and the energy cutoﬀset to 80 Ry. The exchange cor-
+relation potential is treated with the hybrid functional
+of Heyd, Scuseria, and Ernzerhof (HSE)17, based on the
+Perdew, Burke, and Ernzerhof (PBE) function where a
+fraction α of the exchange is replaced by Hartree-Fock
+(HF) exchange. However, the problem of choosing the
+α parameter to get accurate defect levels is still un-
+der debate and its value has been set based on several2
+schemes8,10,18.
+Because we are dealing with transition
+energies that span all the band gap, we set α = 0.45.
+This allows us to correctly reproduce the experimental
+value of the band gap of 3.44 eV and gives lattice pa-
+rameters a = 3.23 ˚A, c = 5.19 ˚A and u = 0.38, in good
+agreement with the experiments. Such a large value of
+α may aﬀect the transition levels due to the downshift
+of the valence band maximum (VBM) when the α pa-
+rameter is increased, but this fact should not alter the
+general conclusions drawn in the following. The calcu-
+lations are carried out in a 72 atom supercell with a
+2 × 2 × 2 Monkhorst-Pack grid19 to sample the Brillouin
+zone, while the Fock exchange potential is calculated us-
+ing a coarser 1 × 1 × 1 grid of Q-points20. The formation
+energies of defect D in charge state q are calculated ac-
+cording to the formula21
+Ef(D, q) = Etot(D, q) −Etot(bulk)
+−
+X
+i
+niµi + q(ǫv + ǫF + ∆V ) + ∆Eel(q),
+(1)
+where Etot(D, q) and Etot(bulk) represent the total en-
+ergy of the supercell with and without the defect, ǫv is
+the energy of the VBM, ǫF indicates the value of the
+Fermi level inside the band gap, and ∆V is a potential
+alignment term22. The electrostatic correction ∆Eel(q) is
+calculated as the monopole Madelung term23 in the gen-
+eralized case when anisotropy in the screening requires
+that the dielectric constant ε is replaced by a tensor ¯ε24:
+α =
+X
+R̸=0
+1
+√
+det ¯ε
+erfc(γ
+√
+R · ¯ε−1 · R)
+√
+R · ¯ε−1 · R
++
+X
+G̸=0
+4π
+Vc
+exp(−G · ¯ε · G/4γ2)
+G · ¯ε · G
+−
+2γ
+√
+πdet ¯ε
+−
+π
+Vcγ2 ,
+(2)
+where the sum over R and G extends over the direct and
+reciprocal lattice vectors, respectively, except for zero.
+In the case of ZnO ¯ε = diag(ε⊥, ε⊥, ε∥) with ε⊥= 7.77
+and ε∥= 8.9125.
+Finally, for each specie i, ni is the
+change in the total number of atoms to create defect D
+and µi is the corresponding chemical potential, which
+are constrained by the growth conditions. In particular,
+µZn = µ0
+Zn + ∆Hf and µO = µO2/2 for an O-rich en-
+vironment, while µZn = µ0
+Zn and µO = µO2/2 + ∆Hf
+for Zn-rich conditions.
+Here ∆Hf = −2.96 eV is the
+calculated ZnO enthalpy of formation. If needed, also
+the chemical potentials of the group-V dopants should
+be constrained as well. The results shown are under the
+dopant rich condition, using molecular N2 and P4O10,
+and solid As2O3 and Sb2O3 as dopant sources.
+Note
+that the diﬀerent compositions of these sources, which
+include oxygen in diﬀerent percentages, make a numer-
+ical comparison of the formation energies of the defects
+not straightforward.
+In order to assess the correctness of our approxima-
+tions, we performed a test for the notable case of NO. To
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+ǫF (eV)
+0.5
+1.0
+1.5
+2.0
+Formation energy (eV)
+Quantum ESPRESSO - 72 atoms
+VASP - 72 atoms
+VASP - 192 atoms
+Figure 1. Formation energy Ef of NO as a function of the
+Fermi level under Zn-rich conditions, as obtained from diﬀer-
+ent codes and supercell sizes.
+this aim we used the HSE hybrid functional and projec-
+tor augmented wave (PAW)26 potentials as implemented
+in the VASP code27, using a cutoﬀof 400 eV and setting
+α = 0.375 to correctly reproduce the experimental band
+gap8. We considered 72 atom and 192 atom supercells,
+with, respectively, a 2 × 2 × 2 and Γ k-points sampling
+for the Brillouin zone. A Madelung correction calculated
+from Eq. (2) has been applied to the charged system. As
+can be seen from the results in Fig. 1, a good convergence
+is achieved for the neutral and charged state, conﬁrming
+that a 72 atom supercell is enough to correctly describe
+these deep defects. In addition, this comparison assesses
+the reliability of the norm-conserving pseudopotentials
+compared to the more accurate PAW scheme. Note the
+impressive agreement for the transition level ǫ(0/−) and
+the fair agreement for the formation energy Ef.
+Since the NO defect has been already widely studied,
+even with hybrid functionals, it is worth comparing our
+results with those present in the literature in the case of
+α being tuned to match the experimental band gap.The
+data are summarized in Table I. Our value for the ǫ(0/−)
+transition energy of 2.1 eV is the same as obtained by
+Lany and Zunger10 for α = 0.38. The value of 1.8 eV for
+α = 0.375 calculated by Boonchun and Lambrecht28 is
+very close to our value without the Madelung correction.
+This is also in agreement with our results obtained with
+VASP (see Fig. 1). At variance, Lyons et al.9 and Sakong
+et al.29 ﬁnd a transition energy of 1.3 and 1.46, respec-
+tively, setting α = 0.36. This is in agreement with the
+result of Gallino et al.11, which, however, is obtained with
+the B3LYP hybrid functional30, making the comparison
+less straightforward.
+The reason for the disagreement
+between the two groups of results is still unclear.
+III.
+SIMPLE SUBSTITUTIONAL DEFECTS
+To discuss the relative stability of the diﬀerent kinds of
+defects and the charge transition energies, we report the
+formation energies Ef as a function of ǫF in Figs. 2 and3
+This work
+Ref.
+QE
+VASP
+10
+28
+9
+29
+11
+α
+0.45
+0.375
+0.38 0.375 0.36 0.36
+0.2
+ǫ(0/−) w/o FSC 1.87
+1.88
+1.8
+1.3
+1.32
+ǫ(0/−) w/ FSC
+2.10
+2.06
+2.1
+1.46 1.47
+Table I. Comparison of ǫ(0/−) transition energies for NO. The
+calculations are performed with hybrid functionals and the
+percentage of exact exchange α is tuned to match the band
+gap with the experimental value.
+QE and VASP columns
+contain our results calculated from Quantum ESPRESSO and
+VASP. The data are shown, when available, both with and
+without ﬁnite size correction (FSC). All values are in eV.
+0
+1
+2
+3
+ǫF (eV)
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Formation energy (eV)
+N
+0
+1
+2
+3
+ǫF (eV)
+P
+0
+1
+2
+3
+ǫF (eV)
+As
+0
+1
+2
+3
+ǫF (eV)
+Sb
+XO
+XZn
+Figure 2. Formation energy Ef of simple substitutional de-
+fects as a function of the Fermi level in Zn-rich conditions.
+The Zn-rich conditions are chosen so to best stabilize the oxy-
+gen substitution. The zero of the Fermi level has been set to
+the valence band maximum.
+3. The former ﬁgure deals with the simple substitutional
+defects under Zn-rich growth conditions and the latter
+ﬁgure focuses on complexes under O-rich conditions. As
+it is immediately evident, in most cases, defects of the
+same kind display the same qualitative behavior for all
+the dopants, and for P, As, and Sb a quantitative agree-
+ment can be recognized. We thus begin analyzing each
+specie of defect. Simple oxygen substitutional defects XO
+are single acceptors due to the missing electron in group-
+V elements compared to O. From a structural point of
+view, when using hybrid functionals the hole present in
+the neutral charge state is localized on one of the four
+bonds, producing a nonsymmetric conﬁguration.
+It has been shown that NO with the hole localized along
+the bond parallel to the c axis (NO∥) is the most sta-
+ble conﬁguration and gives good agreement with electron
+paramagnetic resonance (EPR) measurements10,11. Our
+calculations conﬁrm these results, with NO∥conﬁgura-
+tion having a 45 meV lower energy than the one with the
+hole localized along a bond perpendicular to the c axis
+(NO⊥), highlighting the ability of hybrid functionals to
+correctly describe these kinds of defects. For PO, AsO,
+and SbO we found the same tendency to hole localiza-
+tion, with the diﬀerence that XO∥is unstable and only
+conﬁgurations of the type XO⊥are observed and with a
+much smaller asymmetry in the bond lengths. Although
+defects of this kind have a stable negative charge state
+conﬁguration, they fail to be good sources of holes. In
+fact, with the notable exception of NO, all have quite high
+formation energy compared to other species, even in the
+Zn-rich limit, especially if the Fermi level is close to the
+VBM. Even if this kind of defect could be stabilized, the
+thermal transition energies ǫ(0/−) are 2.10, 2.58, 2.92,
+and 3.37 eV for N, P, As, and Sb, respectively, making
+them extremely deep acceptors. This should be enough
+to disregard the XO conﬁgurations as a possible source
+of p-type doping.
+When substituting Zn atoms, group-V elements are in-
+stead triple donors. According to our hybrid functional
+results, P and Sb bear positive charge state for all the
+values of ǫF making them good donors and in agree-
+ment with some experimental results31, while N and As
+has rather deep transition energies ǫ(0/+) = 1.1 eV and
+ǫ(0/3+) = 0.73 eV from the top of the conduction band,
+respectively.
+However, in this context it is important
+that, when ǫF is close to the valence band maximum,
+X3+
+Zn have a very small formation energy and therefore
+will certainly contribute to compensate the eﬀect of ac-
+ceptor impurities that one wants to create.
+Also in this case, due to its smaller atomic radius, NZn
+has a diﬀerent structure compared to P, As, and Sb. The
+zinc site with four bonds is not stable and the N atom
+tends to shift, bonding with a lower number of oxygen
+atoms. We observed several inequivalent metastable con-
+ﬁgurations, whose relative stability could depend also on
+the charge state of the system. These conﬁgurations of-
+ten include the formation of NOn (n=1,2,3) molecules
+which are isolated or loosely bound to the crystal lattice.
+In Fig. 2 we show only the formation energy for the most
+stable conﬁgurations found. For the neutral charge state
+N is bound to only 2 O atoms, which breaks part of the
+bonds with their Zn nearest neighbors. In the 1+ charge
+state we have a similar conﬁguration, with one of the
+O breaking all the bonds, resulting in a NO2 molecule
+bonded to the lattice through an O. Finally, for 2+ and
+3+ charge states the defect results in a NO3 molecule
+bounded to one of the neighboring Zn atoms. The ﬁnal
+structure of the NZn defect leads to strong distortions in
+the lattice and this will explain the much larger forma-
+tion energy of NZn with respect to NO, when compared
+with the behavior of the other group-V elements. In fact,
+except for As0
+Zn, where As is strongly bound to just three
+O atoms, P, As, and Sb form a symmetric conﬁguration
+after relaxation.
+IV.
+COMPLEXES
+Since we have just shown that the isolated dopant are
+ineﬀective for p-type doping, let us now move to analyze4
+0
+1
+2
+3
+ǫF (eV)
+-2
+0
+2
+4
+6
+8
+Formation energy (eV)
+N
+0
+1
+2
+3
+ǫF (eV)
+P
+0
+1
+2
+3
+ǫF (eV)
+As
+0
+1
+2
+3
+ǫF (eV)
+Sb
+VZn
+XZn-2VZn
+XZn-VZn
+(N2)O
+(N2)Zn
+Figure 3. Formation energy Ef of complex defects as a func-
+tion of the Fermi level under O-rich conditions.
+complex defects, starting from the N2 molecule, which
+can substitute an O or a Zn atom as recently identiﬁed in
+Ref. 14. In the former case each N atom binds with two
+surrounding Zn and the molecule acts as a strong double
+donor. It is also quite stable, compared with NO and even
+NZn, and this provides a further reason for the diﬃculty
+of obtaining p-type doping from N13. On the other hand,
+(N2)Zn could be a double acceptor. Recently, Lambrecht
+and Boonchun14 have studied the (N2)Zn molecule in an
+isolated conﬁguration, excitingly concluding that it has a
+relatively shallow transition energy ǫ(0/−) for both PBE
+and HSE calculations. According to our results, however,
+the system has two competing conﬁgurations, one with
+the N2 forming a bridge across two O atoms and one in
+the N2 isolated molecule conﬁguration with a S=1 spin
+conﬁguration, as shown in Fig. 4. We found that the
+most stable conﬁguration among the two is charge state
+dependent. In particular, for the neutral defect the bridg-
+ing conﬁguration is more stable by 0.25 eV. The opposite
+is true for the 1−and 2−charge states, where the isolated
+conﬁguration is much more favorable. Anyway, in both
+cases the conﬁguration with higher energy is metastable.
+The same trends are observed within PBE calculations,
+even if the formation energy diﬀerences are smaller in this
+case. With our calculation parameters, both the conﬁg-
+urations in the neutral charge state have relatively low
+formation energies, making the transition level very deep
+(ǫ(0/−) = 1.92 eV), at variance with what has been ob-
+served in Ref. 14. In addition, (N2)Zn is also less stable
+than (N2)O, even in O-rich conditions, and thus unlikely
+to be a good acceptor.
+It should be noted that the neutral isolated conﬁgu-
+ration is in a spin polarized state with spin S=1, as it
+happens for the VZn defect. This, along with the similar
+behavior for the transition energies of (N2)Zn and VZn,
+could suggest that the N2 molecule remains quite inert
+with respect to the environment and that the (N2)Zn de-
+fect acts basically as a Zn vacancy.
+Given the diﬃculties of ﬁnding a shallow acceptor
+among simple donors conﬁgurations, complexes of the
+Figure 4.
+Possible conﬁgurations for the N2 molecule on
+Zn site in 0 charged state.
+(a) The isolated conﬁguration:
+the molecule is isolated from the neighboring O atoms. (b)
+The bridging conﬁguration: the molecule is bonded to two
+O atoms. N, Zn, and O are shown as gray, violet and red
+spheres, respectively.
+form XZn-2VZn are studied, since they are expected to
+be stable acceptors due to reaction X3+
+Zn + 2V 2−
+Zn
+→
+(XZn −2VZn)−. Since the ﬁrst time they were proposed7,
+due to the results of semilocal functional calculations32
+these complexes are believed to be shallow acceptors and
+have often been used to justify the observation of p-
+type doping in experiments. Only recently Puchala and
+Morgan12 have shown that AsZn-2VZn is instead a deep
+acceptor according to hybrid DFT calculations.
+Several inequivalent conﬁgurations can be found re-
+moving three Zn atoms and adding one impurity.
+We
+thus consider four of them, shown in Fig. 5, with the
+following diﬀerent qualitative peculiarities: (1) the two
+vacancies placed at opposite sites with respect to the
+dopant7 [Fig. 5(a)], (2) two neighboring vacancies next to
+the dopant32 [Fig. 5(b)], and two neighboring vacancies
+with the dopant shifted in (3) tetrahedral [Fig. 5(c)] and
+(4) octahedral [Fig. 5(d)] interstitial positions12. For N
+the most stable structure is obtained starting from con-
+ﬁguration (3), but it ends up in a distorted conﬁguration,
+with N bound to only three O atoms. When the dopant is
+P or As conﬁgurations (2) and (3) are the most favorable
+and almost equivalent in energy, with (2) being slightly
+favored. Sb, having a larger size, prefers conﬁguration
+(4).
+Here only the values of these most stable conﬁgurations
+are reported. It can be argued that the small sizes of the
+supercell could play a role in determining the most favor-
+able conﬁguration, since the complex is quite extended
+and this could actually be the case, as demonstrated in
+some cases15. However, the diﬀerences in the formation
+energies between the various conﬁgurations are usually
+below few hundreds of meV, a quantity that will only
+marginally aﬀect the values of formation and binding en-
+ergies and will not alter the relevant conclusions of our
+work, like the transition energies being too deep and the
+formation energies of XZn-2VZn defects being much larger
+than those of XZn-VZn close to the VBM.
+These defects require several missing Zn, therefore the
+O-rich conditions should make them more stable. It can
+be seen in Fig.
+3 that, in this limit, XZn-2VZn is the5
+(a)
+(b)
+(c)
+(d)
+Figure 5. The four diﬀerent starting conﬁgurations considered
+for the XZn-2VZn defects (see text). X, Zn, and O are shown
+as yellow, violet, and red spheres, respectively, while the blue
+spheres represent the removed Zn atoms.
+acceptor with the lowest formation energy, even if still
+larger than that of XZn for a wide range inside the band
+gap. Despite their relatively low formation energies, we
+are faced again with the problem of deep values of the
+ionization energies ǫ(0/−) for all the group-V elements:
+1.53, 1.48, 1.50, and 1.69 eV for N, P, As, and Sb, re-
+spectively. Unlike for XO defects, the transition energies
+are approximately the same for all X and much smaller,
+but still too deep to provide good acceptor levels.
+Because XZn-2VZn are complex defects that involve
+three atoms, it is necessary to study the properties of
+its simpler components, namely XZn-VZn and VZn. Com-
+plexes with only one vacancy XZn-VZn are quite stable as
+well, but they do not undergo strong deformation. They
+are just hold together by the attractive Coulomb inter-
+action between X3+
+Zn and V 2−
+Zn and, as expected, they are
+donors.
+Once again the presence of the NZn leads to quite
+large formation energies for NZn-2VZn and NZn-VZn. This
+should be considered as a direct consequence of the large
+formation energy of NZn and of the lattice distortions
+that come with it.
+Finally, it can be seen that zinc vacancy is a double
+acceptor, but with a deep transition level ǫ(0/−) = 1.68
+eV and a high formation energy close to the VBM. As
+mentioned before, the neutral charge state is more stable
+in a spin polarized conﬁguration, as in the case of the
+isolated molecule conﬁguration of (N2)Zn.
+0
+1
+2
+3
+ǫF (eV)
+-4
+-3
+-2
+-1
+0
+1
+2
+3
+4
+5
+6
+Binding energy (eV)
+N
+0
+1
+2
+3
+ǫF (eV)
+P
+0
+1
+2
+3
+ǫF (eV)
+As
+0
+1
+2
+3
+ǫF (eV)
+Sb
+XZn-2VZn
+XZn-VZn
+Figure 6. Binding energy Eb of complex defects as a function
+of the Fermi level.
+V.
+STABILITY OF VACANCY RELATED
+COMPLEXES
+Up to now, we have shown that these complexes should
+not be suitable to create p-type ZnO. Nonetheless, there
+are some speculations about their possible presence in
+experiments33,34 and so it is interesting to check whether
+these kinds of defects are likely to be found or not. For
+the cluster to form, it is essential that their binding en-
+ergy Eb = Ef(X) + nEf(VZn) −Ef(X-nVZn) is positive
+and large enough to favor the complexes over the single
+components. The values of Eb for all the kinds of dopants
+are shown in Fig. 6 as a function of the Fermi level. The
+complexes including N are much less binding than those
+for the other group-V elements, and, in particular, NZn-
+VZn is almost never binding. As a further conﬁrmation
+of the scarce utility of the complexes we can see that they
+are just loosely binding in the p-type regime, while the
+binding energy grows rapidly with ǫF and could remain
+as large as 5 eV up to the conduction band minimum for
+PZn-2VZn. This suggests that it should be possible to
+observe them for large enough values of ǫF .
+To further investigate this possibility, we consider the
+case when the defects are formed out of equilibrium in
+the crystal during the growth and the total amounts of
+dopants and vacancies remain ﬁxed during the cooling
+down of the sample.
+In this process the defects could
+reorganize in complexes and the evolution of the concen-
+trations as function of the temperature T is governed by
+the mass-action law
+[X-nVZn] = [X][VZn]n exp(Eb/kBT ),
+n = 1, 2
+(3)
+where [X-nVZn], [X], and [VZn] are the defect con-
+centrations and kB is the Boltzmann constant.
+The
+experimentally reported densities of group-V elements
+are quite variable in the range 1015–1020 cm−3, while
+Zn vacancies35 could be found with a density of 1015–
+1016 cm−3.
+Thus we ﬁx the total concentrations to6
+300
+400
+500
+600
+700
+800
+900
+T (K)
+VZn
+NZn-2VZn
+VZn
+VZn
+PZn-2VZn
+PZn-VZn
+0
+1
+2
+3
+ǫF (eV)
+300
+400
+500
+600
+700
+800
+900
+T (K)
+VZn
+AsZn-2VZn
+AsZn-VZn
+AsZn-2VZn
+0
+1
+2
+3
+ǫF (eV)
+VZn
+SbZn-2VZn
+SbZn-VZn
+SbZn-2VZn
+SbZn-VZn
+Figure 7. Phase diagram showing the prevalent conﬁguration
+of the zinc vacancy conﬁgurations as a function of temper-
+ature and Fermi level. Black VZn, gray XZn-VZn and white
+XZn-2VZn.
+[X]tot=1×1017 cm−3 and [VZn]tot=1×1016 cm−3, where
+[X]tot = P
+n[X −nVZn],
+[V]tot = [VZn] + P
+n n[X −nVZn].
+(4)
+Solving the system given by Eqs. (3) and (4) for Eb(ǫF )
+and T down to room temperature, we veriﬁed that the
+concentrations tend to saturate quite fast with one of the
+defect among XZn-2VZn, XZn-VZn, and VZn dominating
+the others. Of course, in our conﬁguration the limiting
+factor for complex total concentration is [VZn]tot, while
+the group-V elements are supposed to be present in abun-
+dance. We have veriﬁed that changes of a few orders of
+magnitude in the values [X]tot and [VZn]tot only lead to
+small changes in the relative concentrations and thus do
+not alter qualitatively our ﬁndings.
+The phase diagrams reporting the defect with the high-
+est concentration are shown in Fig.
+7 and they con-
+ﬁrm that in the p-type regime the Zn vacancy should
+be the dominant defect, ruling out the XZn-2VZn as dop-
+ing sources. For larger values of ǫF , instead, it appears
+that both XZn-2VZn and XZn-VZn could be obtained, in
+agreement with some experimental result. As a ﬁnal re-
+mark, it should be pointed out that the dependence of the
+defects diﬀusivity on ǫF and T 15,36 could hinder the reor-
+ganization of the defects into complexes when decreasing
+too quickly the temperature.
+VI.
+CONCLUSION
+In conclusion, we studied the properties of ZnO doped
+with group-V elements as possible candidates to provide
+p-type doping. We show that none of the defect conﬁg-
+urations considered so far are likely to provide a good
+source of holes, due to the defects being too deep or even
+worse to their tendency to behave like donors. We con-
+sider the complexes XZn-2VZn and XZn-VZn and we pro-
+vide a justiﬁcation to the experimental observation of
+these kinds of defects.
+ACKNOWLEDGMENTS
+We thank W. R. L. Lambrecht and V. Sallet for valu-
+able discussions. This work was supported by the French
+“Agence Nationale de la Recherche” (Project No. ANR-
+11-NANO-013). This work was performed using HPC re-
+sources from GENCI-IDRIS and GENCI-TGCC (Grant
+2013-gen6018).
+∗guido.petretto@cea.fr
+† fabien.bruneval@cea.fr
+1 V.
+Avrutin,
+D.
+J.
+Silversmith,
+and
+H.
+Morko¸c,
+Proc. IEEE 98, 1269 (2010).
+2 A. Tsukazaki,
+A. Ohtomo,
+T. Onuma,
+M. Ohtani,
+T. Makino, M. Sumiya, K. Ohtani, S. F. Chichibu, S. Fuke,
+Y. Segawa, H. Ohno, H. Koinuma,
+and M. Kawasaki,
+Nat. Mater. 4, 42 (2004).
+3 T.
+Aoki,
+Y.
+Hatanaka,
+and
+D.
+C.
+Look,
+Appl. Phys. Lett. 76, 3257 (2000).
+4 Y. Ryu, S. Zhu, D. Look, J. Wrobel, H. Jeong,
+and
+H. White, J. Cryst. Growth 216, 330 (2000).
+5 F.
+X.
+Xiu,
+Z.
+Yang,
+L.
+J.
+Mandalapu,
+D.
+T.
+Zhao,
+J.
+L.
+Liu,
+and
+W.
+P.
+Beyermann,
+Appl. Phys. Lett. 87, 152101 (2005).
+6 C.
+H.
+Park,
+S.
+B.
+Zhang,
+and
+S.
+H.
+Wei,
+Phys. Rev. B 66, 073202 (2002).
+7 S. Limpijumnong, S. B. Zhang, S. H. Wei, and C. H. Park,
+Phys. Rev. Lett. 92, 155504 (2004).
+8 F. Oba, A. Togo, I. Tanaka, J. Paier,
+and G. Kresse,
+Phys. Rev. B 77, 245202 (2008).
+9 J. L. Lyons, A. Janotti,
+and C. G. Van de Walle,
+Appl. Phys.s Lett. 95, 252105 (2009).
+10 S. Lany and A. Zunger, Phys. Rev. B 81, 205209 (2010).
+11 F. Gallino, C. Di Valentin, G. Pacchioni, M. Chiesa, and
+E. Giamello, J. Mater. Chem. 20, 689 (2010).
+12 B.
+Puchala
+and
+D.
+Morgan,
+Phys. Rev. B 85, 195207 (2012).
+13 Y.
+Cui
+and
+F.
+Bruneval,
+Appl. Phys. Lett. 97, 042108 (2010).
+14 W.
+R.
+L.
+Lambrecht
+and
+A.
+Boonchun,
+Phys. Rev. B 87, 195207 (2013).
+15 B.
+Puchala
+and
+D.
+Morgan,
+Phys. Rev. B 85, 064106 (2012).
+16 P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car,
+C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococ-
+cioni, I. Dabo, A. Dal Corso, S. de Gironcoli, S. Fab-
+ris, G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougous-
+sis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari,7
+F. Mauri, R. Mazzarello,
+S. Paolini, A. Pasquarello,
+L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A. P.
+Seitsonen, A. Smogunov, P. Umari, and R. M. Wentzcov-
+itch, J. Phys. Condens. Matter 21, 395502 (2009).
+17 J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys.
+118, 8207 (2003); 124, 219906 (2006).
+18 R. Ramprasad, H. Zhu, P. Rinke,
+and M. Scheﬄer,
+Phys. Rev. Lett. 108, 066404 (2012).
+19 H. J. Monkhorst and J. D. Pack, Phys. Rev. B 13, 5188
+(1976).
+20 J.
+Paier,
+M.
+Marsman,
+K.
+Hummer,
+G.
+Kresse,
+I.
+C.
+Gerber,
+and
+J.
+G.
+´Angy´an,
+J. Chem. Phys. 124, 154709 (2006).
+21 S.
+B.
+Zhang
+and
+J.
+E.
+Northrup,
+Phys. Rev. Lett. 67, 2339 (1991).
+22 S.
+E.
+Taylor
+and
+F.
+Bruneval,
+Phys. Rev. B 84, 075155 (2011).
+23 M. Leslie and N. J. Gillan, J. Phys. C 18, 973 (1985).
+24 R. Rurali and X. Cartoix`a, Nano Lett. 9, 975 (2009).
+25 N. Ashkenov, B. N. Mbenkum, C. Bundesmann, V. Riede,
+M. Lorenz, D. Spemann, E. M. Kaidashev, A. Kasic,
+M. Schubert, M. Grundmann, G. Wagner, H. Neumann,
+V. Darakchieva, H. Arwin,
+and B. Monemar, J. Appl.
+Phys. 93, 126 (2003).
+26 P. E. Bl¨ochl, Phys. Rev. B 50, 17953 (1994).
+27 G.
+Kresse
+and
+J.
+Furthm¨uller,
+Phys. Rev. B 54, 11169 (1996); G. Kresse and D. Joubert,
+Phys. Rev. B 59, 1758 (1999).
+28 A.
+Boonchun
+and
+W.
+R.
+L.
+Lambrecht,
+Phys. Status Solidi (b) 250, 2091 (2013).
+29 S.
+Sakong,
+J.
+Gutjahr,
+and
+P.
+Kratzer,
+J. Chem. Phys. 138, 234702 (2013).
+30 A. D. Becke, J. Chem. Phys. 98, 5648 (1993).
+31 H. Y. Liu, N. Izyumskaya, V. Avrutin, ¨U. ¨Ozg¨ur, A. B.
+Yankovich, A. V. Kvit, P. M. Voyles,
+and H. Morko¸c,
+J. Appl. Phys. 112, 033706 (2012).
+32 P.
+Li,
+S.
+H.
+Deng,
+and
+J.
+Huang,
+Appl. Phys. Lett. 99, 111902 (2011).
+33 A.
+Y.
+Azarov,
+K.
+E.
+Knutsen,
+P.
+T.
+Neuvonen,
+L. Vines,
+B. G. Svensson,
+and A. Y. Kuznetsov,
+Phys. Rev. Lett. 110, 175503 (2013).
+34 E. Senthil Kumar, F. Mohammadbeigi, S. Alagha, Z. W.
+Deng, I. P. Anderson, T. Wintschel,
+and S. P. Watkins,
+Appl. Phys. Lett. 102, 132105 (2013).
+35 F. Tuomisto, V. Ranki, K. Saarinen,
+and D. C. Look,
+Phys. Rev. Lett. 91, 205502 (2003).
+36 A.
+Janotti
+and
+C.
+G.
+Van
+de
+Walle,
+Phys. Rev. B 76, 165202 (2007).

@@ -1,0 +1,308 @@
+arXiv:1310.6709v2 [cond-mat.mtrl-sci]  6 Aug 2014 First Principles Calculation of Elastic Moduli of Early-Late Transition Metal Alloys William Paul Huhn and Michael Widom Department of Physics, Carnegie Mellon University, Pittsburgh, PA 15213 Andrew M. Cheung and Gary J. Shiﬂet Department of Materials Science and Engineering, University of Virginia, Charlottesville, VA 22904 S. Joseph Poon Department of Physics, University of Virginia, Charlottesville, VA 22904 John Lewandowski Department of Materials Science and Engineering, Case Western Reserve University, Cleveland, OH 44106 Motivated by interest in the elastic properties of high strength amorphous metals, we examine the elastic properties of select crystalline phases.
+Using ﬁrst principles methods, we calculate elas- tic moduli in various chemical systems containing transition metals, speciﬁcally early (Ta,W) and late (Co,Ni).
+Theoretically predicted alloy elastic properties are veriﬁed for Ni-Ta by comparison with experimental measurements using resonant ultrasound spectroscopy.
+Comparison of our com- puted elastic moduli with eﬀective medium theories shows that alloying leads to enhancement of bulk moduli relative to averages of the pure elements, and considerable deviation of predicted and computed shear moduli.
+Speciﬁcally, we ﬁnd an enhancement of bulk modulus relative to eﬀective medium theory and propose a candidate system for high strength, ductile amorphous alloys.
+Trends in the elastic properties of chemical systems are analyzed using force constants, electronic densi- ties of state and Crystal Overlap Hamilton Populations.
+We interpret our ﬁndings in terms of the electronic structure of the alloys.
+I. INTRODUCTION Elastic moduli are important for understanding var- ious properties of amorphous metals.
+Bulk moduli, shear moduli, and their ratio correlate to glass tran- sition temperature1,2, glass forming ability3, brittle- ness4–6, Gr¨uneisen parameters7, maximum resolved shear stress at yielding8, chemical bonding type9, and possi- bly fragility9.
+Knowledge of the bulk and shear mod- uli is thus important for materials design.
+However, amorphous materials commonly contain at least 4 chem- ical species, making exhaustive experimental evaluation of candidate materials impossible.
+Empirical methods for predicting stoichiometries with desired properties are therefore necessary.
+First principles computational methods prove fruitful, owing to their chemical speciﬁcity and absence of ad- justable parameters, as well as the insight they yield into electronic structure.
+However, amorphous metals pose computational diﬃculties, as they lack both spatial peri- odicity and a unique structure.
+While the ﬁrst problem can be practically overcome by imposing suitably large periodic boundary conditions, this requires hundreds of atoms per computational cell, straining computational resources, and requiring averaging over multiple samples to remove sample dependence.
+The second problem can be partially overcome by running molecular dynamics on a liquid sample then rapidly quenching the sample.
+How- ever the requirement for equilibration further increases the computational time necessary.
+Hence we adopt a dif- ferent strategy.
+Frank Kasper phases10–12 are complex but otherwise ordinary crystalline phases.
+Due to their topological close packing they exhibit local icosahedral ordering similar to that found in many amorphous metals.
+Fig. 1 shows the standard Voronoi polyhedra of Frank-Kasper structures.
+We expect that the similar local chemical environments of the Frank Kasper phases can be used to mimic amor- phous metals, yielding “amorphous approximants”, sim- ilar in concept to “quasicrystal approximants”.
+These crystalline phases will be used to understand trends in the elastic properties of amorphous metals.
+It is ob- served that in amorphous metals, shear moduli are typ- ically 20%-30% lower, and bulk moduli 5%-10% lower, compared to crystalline phases of similar composition5.
+Many crystalline phases have small unit cells compared to system sizes required to reproduce amorphous struc- tures.
+Amorphous metals can exhibit high strength13, but of- ten at the cost of a lack of ductility owing to the ab- sence of dislocations.
+Designing amorphous alloys for high ductility is impeded both by the challenge of formu- lating accurate amorphous structural models, and by the lack of a valid predictive theory of ductility even for the case of crystalline compounds, though there are empiri- cal rules based on the Poisson ratio, or equivalently the shear/bulk modulus ratio.
+We hypothesize that relatively ductile crystalline compounds will tend to create rela- tively ductile amorphous compounds.
+Further, metallic glass composites, consisting of crystalline grains embed-2 (a) CN=10, (0,2,8) (b) CN=12, (0,0,12) (c) CN=14, (0,0,12,2) (d) CN=15, (0,0,12,3) (e) CN=16, (0,0,12,4) FIG.
+1: Frank-Kasper Voronoi polyhedra, listing coordination numbers and polyhedron codes.
+ded in an amorphous matrix, have been shown to increase the toughness, impact resistance and plastic strain to fail- ure14, further motivating the investigation into elastic properties of crystalline phases in metallic glass-forming alloy systems. II.
+BACKGROUND AND METHODS A. Elasticity The fundamental equation of linearized elasticity is σi = Cijǫj, where σ is the stress tensor, ǫ is the strain tensor, and C the stiﬀness tensor relating the two.
+Here we employ Voigt notation, converting the tensors σ and ǫ into vectors with 6 components {xx, yy, zz, xy, xz, yz}.
+For crystals C depends on the symmetry of the material in question15 and contains at least three independent pa- rameters.
+For the special case of isotropic materials C has only two independent parameters, the bulk modulus K and the shear modulus G. The non-vanishing elements are C11 = C22 = C33 = K + 4G/3, C12 = C13 = C23 = K −2G/3, and C44 = C55 = C66 = G.
+An additional elastic quantity of interest is the Poisson ratio ν, deﬁned to be the negative of the ratio of axial strain to trans- verse strain.
+For crystals ν depends on the direction of applied stress, but in the isotropic case it reduces to ν = 3 −2G/K 6 + 2G/K .
+(1) Notice that ν is a function of the shear to bulk modulus ratio G/K, also known as the Pugh ratio16.
+Ductility and Poisson’s ratio are positively correlated in both polycrystalline16 and amorphous4 solids, with ν ≥0.32 (equivalently G/K ≤0.41) proposed as a em- pirical criterion for good ductility 17.
+Seeking simultane- ously high strength and ductility, it is natural to choose chemical species which in elemental form have large K. The species chosen must also be known good glass for- mers.
+Early-late transition metal alloys ﬁt both criteria, as the transition metals from Group IV to XI all have K ≥100 GPa, and they are one of the most frequently examined classes of amorphous metals, .
+Size mismatch criteria favor using transition metals from diﬀerent rows and columns of the periodic table, e.g. Ta and W for early transition metals (ETMs), and Co and Ni as late transition metals (LTMs).
+Co and W are of particular in- terest for materials design as Co-based glasses exhibit ul- trahigh fracture strength, W-based glasses have the high- est known glass transition temperature for bulk metallic glasses, and both have high Young’s modulus9,18,19.
+Ordinary crystalline materials contain randomly ori- entated microscopic grains and appear macroscopically isotropic.
+To compute the elastic properties for these “polycrystals”, orientational averaging is required.
+Each grain is described microscopically by the same stiﬀness matrix, which contains between 3 (cubic) and 21 (tri- clinic) independent parameters20, but macroscopically the crystal is isotropic with only two independent pa- rameters K and G. In the Voigt average, the stiﬀness matrix C is averaged over orientations21, which is exact if stress is uniform throughout space.
+In the Reuss av- erage, the compliance matrix S = C−1 is averaged over orientations, which is exact if strain is uniform through- out space.
+The Voigt average systematically overesti- mates the isotropic moduli, while the Reuss average sys- tematically underestimates the moduli.
+Empirically, the arithmetic mean of the two, known as the Hill average22, gives improved agreement with experiment, and this is what we will report.
+The polycrystalline average assumes the stiﬀness ma- trices of various grains are identical to the perfect crystal, diﬀering only by relative orientation.
+To obtain macro- scopic elastic moduli in materials where chemical envi- ronment spatially varies, in particular in materials con- taining chemically distinct grains, it is necessary to in- clude eﬀects arising from ﬂuctuations in the local stiﬀ- ness matrices.
+A general class of approximation schemes known as “eﬀective medium theories” exists where each grain with its local stiﬀness matrix interacts with an ef- fective medium characterized by a background stiﬀness matrix incorporating the interactions of all other grains.
+A popular eﬀective medium theory is the coherent poten- tial approximation (CPA)23, a self-consistent formalism in which the background stiﬀness matrix is taken as the macroscopic average itself.
+The self-consistent interac- tion of grains yields a pair of coupled non-linear equa- tions, X i φi Ki −K 3Ki + 4G = 0 (2)3 and X i φi Gi −G 5G(3K + 4G) + 6(K + 2G)(Gi −G) = 0, (3) which can be solved numerically for the eﬀective K and G, where φi denotes the volume fraction of grain type i in the material.
+Ki and Gi denote the bulk and shear modulus of grain type i, respectively.
+Although intended for mixtures of crystalline grains, we will apply CPA in the limit where each grain shrinks to a single atom, to estimate the elastic moduli of com- pounds using the self-consistent average of properties of the constituent pure elements.
+Our usage of CPA may be viewed as a higher-order correction to the well-known but highly empirical “rule of mixtures” paradigm com- mon in materials design, which has already been applied to bulk metallic glasses24.
+CPA takes into account the pure elemental properties but lacks information about interspecies bonding and speciﬁc alloy crystal structure.
+Thus we take CPA as a convenient, physically motivated interpolation to establish a baseline for comparison with the computed alloy moduli revealing the speciﬁc contri- butions of structure and bonding, though we note that metallic glasses exist where trace changes in composition yield relatively large changes in K and G due to alteration of chemical bonding type25.
+B. First principles methods Our ﬁrst principles calculations use the Vienna Ab- Initio Simulation Package (VASP)26,27, a plane wave ab- initio package implementing PAW pseudopotentials28 in the PW9129 generalized gradient approximation to den- sity functional theory (DFT).
+VASP calculates total ener- gies, forces, elastic moduli, and electronic structure.
+All structures are relaxed until the maximum ionic force is below 0.01 eV/˚A, and the k-point density is subsequently increased until total energy per atom has converged to within 0.1 meV/atom.
+Default plane wave energy cutoﬀs are used for total energy calculations.
+In structures con- taining Co and Ni, spin polarization has been included.
+However, we do not include spin-orbit coupling despite the presence of 5d elements Ta and W. Total energies are converted to enthalpies of formation by subtracting from the tie-line joining the total energies of pure elements in their stable crystalline forms30.
+We perform elastic calculations using a ﬁnite diﬀerence method internal to VASP.
+To ensure proper convergence of elastic moduli, we increase the k-point density until the all polycrystalline averages converge to within 2%, then increase the energy cutoﬀuntil the polycrystalline av- erages converge.
+Convergence in energy cutoﬀoccurs at 360 eV, with the exception of Ni2Ta and Ni4W where 400 eV and 440 eV respectively were required.
+All structures were tested for mechanical stability, and elastic constants were not calculated for structures that were found to be mechanically unstable, though they were included in the enthalpy of formation plots, as it is possible for the sta- bilizing distortions to aﬀect the calculated total energy only weakly.
+To quantify bond strength between individual atoms in structures, we calculate interatomic force constants and the Crystal Overlap Hamilton Population (COHP).
+To calculate the force constant kαβ between atoms α, β at position ⃗rα,β, separated by a bond in the direction ˆγαβ, we calculate the Hessian matrix Hαβ = d2E/dδ⃗rαdδ⃗rβ.
+We use density functional perturbation theory internal to VASP to calculate H within a supercell of suﬃcient size that atoms lie at least 4.2 ˚A away from their own repeated images.
+Restricting our attention to longitudi- nal (bond stretching) interactions and assuming central forces, we deﬁne kαβ ≡ˆγαβ · Hαβ · ˆγαβ (4) as the projection of the Hessian along ˆγαβ.
+kαβ must be positive for the force to be stabilizing.
+The COHP provides an electronic structure-based characterization of interatomic bond strength31.
+One cal- culates matrix elements ⟨αL|H|βL′⟩of the density func- tional theory Hamiltonian between localized atomic or- bitals L and L′ on a pair of atoms α and β, then multi- plies by the density of states NαL,βL′ projected onto the two orbitals.
+We calculate wave functions using a TB- LMTO method32 then calculate an integrated COHP for a pair of atoms αβ, summing over atomic orbitals and integrating over energies up to the Fermi energy.
+C. Experimental Methods To check the validity of our ﬁrst principles calculations we have prepared samples of single phase alloys of Ni-Ta by arc melting the pure element constituents (Ni 99.995% and Ta 99.95%) under an argon atmosphere.
+The alloys were then suction cast into water cooled copper molds to form rods of 2mm diameter.
+Single phases of the rod samples were veriﬁed by x-ray powder diﬀraction (XRD) (Figure 2).
+Cylindrical samples were obtained by section- ing the rods with a diamond saw into 4mm segments.
+The ends of the segments were polished to a 3 micron ﬁnish.
+The elastic constants of the cylinders were cal- culated using data obtained from a Magnaﬂux Quasar Resonant Ultrasound Spectrometer.
+RUS involves plac- ing the cylindrical samples diagonally between two ul- trasonic transceivers and recording the natural modes of vibration33.
+A Levenberg-Marquardt algorithm is then used to determine the elastic constants by ﬁnding the best ﬁt solution through minimization of the diﬀerence between measured and calculated natural modes through iterative changes to the values of elastic constants.4 20 30 40 50 60 Ni 8 Ta Ni 3 Ta Ni 2 Ta NiTa I Arb. 2   FIG.
+2: XRD veriﬁcation of single phases of Ni8Ta, Ni3Ta, Ni2Ta,and NiTa.
+The RUS measurement technique is limited to non- magnetic samples.
+The study using the RUS measure- ments for comparison to theory is limited to the Ni-Ta system where single phases of Ni8Ta, Ni3Ta, Ni2Ta and NiTa, which are nonmagnetic, can be produced, allowing for RUS measurements.
+Rods of the pure elements Ni and Ta can also be cast, but of the two only Ta produces nonmagnetic rods. III.
+RESULTS In this section we ﬁrst discuss atomistic structure, then present results on thermodynamic stability for each alloy system considered, ﬁnally we address the elastic moduli.
+A. Structure Because we consider a large number of speciﬁc struc- tures, we establish a numbering scheme to unambigu- ously identify them (see Table I).
+In the text we re- fer to a given crystalline material using the notation Compound.
+Pearson (e.g. Co2Ta.cF24).
+Of particu- lar interest are the Frank-Kasper structures, which we take as amorphous approximants owing to the preva- lence of their coordination polyhedra in many metallic glasses34,35.
+Canonical Frank-Kasper polyhedra have co- ordination numbers CN=12, 14, 15 and 16.
+However, we include the Bernal holes36,37, notably CN=10, as tetrahedral but non-canonical Frank-Kasper polyhedra34 suitable for smaller atoms.
+Also, the tetrahedral close- packing of the Frank Kasper phases matches the packing properties expected in bulk metallic glasses38.
+To justify use of crystalline phases as amorphous ap- proximants, we compare Honeycutt-Andersen common neighbor statistics39,40, of crystalline and amorphous structures.
+Amorphous structures were simulated by quenching 100 atom liquid structures in NPT ensem- bles from T = 2500 K down to 300 K over runs of more Ref. Prototype Strukt. Pearson FK?
+CN 1 Cu A1 cF4 NA 12 2 W A2 cI2 NA 14 3 Mg A3 hP2 NA 12 4 Fe6W7 D85 hR13 µ 12, 14, 15, 16 5 Al2Cu C16 tI12 non-FK 10, 15 6 AuCu3 L12 cP4 NA 12, 18 7 BaPb3 hR12 NA 12, 18 8 MgNi2 C36 hP24 Laves 12, 16 9 MgZn2 C14 hP12 Laves 12, 16 10 MgCu2 C15 cF24 Laves∗ 12, 16 11 Ni3Sn D019 hP8 NA 12, 18 12 Al3Ti D022 tI8 NA 12, 14, 16 13 Cu3Ti D08 oP8 NA 12, 14, 16 14 NbPt3 mP16 NA 12, 14, 16 15 MoSi2 C11b tI6 NA 14 16 MoNi4 D1a tI10 NA 13, 14 17 Pt8Ti tI18 NA 13, 14 18 MoNi oP56 δ 12, 14, 15, 16 TABLE I: Structure types considered listing common prototype, and Strukturbericht and Pearson notations.
+Frank-Kasper phases list common names.
+∗indicates symmetry-breaking distortion.
+“Non-FK” indicates non-canonical Frank-Kasper phase containing CN=10 Bernal Hole.
+The ﬁnal column contains a list of coordination numbers from Voronoi polyhedra appearing in the structure34,36,37. than 15ps.
+All simulations were performed at the gamma point with default energy cutoﬀs.
+Shown in Figure 3 is the number of common neighbors between two bonded atoms of given types.
+We show results for Co-Ta, but Ni-Ta, Ni-W, and Co-W were also simulated and gen- erated similar results, with the exception of one Ni-W amorphous sample which was likely out of equilibrium.
+All structures have many bonds with n = 5 common neighbors, especially between unlike atomic species, re- ﬂecting the prevalence of icosahedral ordering in Frank- Kasper phases and amorphous materials.
+Very few Co- Co bonds have n = 6 common neighbors, and very few Ta-Ta bonds have n = 4 common neighbors, reﬂecting the relative sizes of Co and Ta atoms.
+Because hR13 is a canonical Frank-Kasper phase with no bonds sharing n = 4 common neighbors, we utilize tI12 to capture the role of n = 4 Co-Co bonds.
+B. Stability Figure 4 summarizes our calculated enthalpies of for- mation.
+Vertices of the convex hull of enthalpy as a func- tion of composition are predicted to be stable phases at low temperature30.
+We employ special plotting symbols to indicate phases claimed experimentally to be stable at low temperature (heavy circles) and high temperature (light circles).
+Phases whose stability or existence is in question are shown as squares.
+From the prevalence of heavy circles on or near the convex hull we see general5 4 5 6 # Common Neighbors 0 2 4 6 8 10 12 14 Bonds / Atom Ta-Ta Co-Ta Co-Co (a) Amorphous Co50Ta50 4 5 6 # Common Neighbors 0 2 4 6 8 10 12 14 Bonds / Atom Ta-Ta Co-Ta Co-Co (b) Co6Ta7.hR13 4 5 6 # Common Neighbors 0 2 4 6 8 10 12 14 Bonds / Atom Ta-Ta Co-Ta Co-Co (c) Co2Ta.tI12 FIG.
+3: Stacked bar chart of Honeycutt-Andersen common neighbor statistics39,40.
+(though imperfect) agreement with the experimentally reported phase diagrams.
+We brieﬂy summarize our ﬁnd- ings for the four alloy systems of primary interest. 1.
+Co-Ta For Co-Ta (Fig. 4a), at x = 0.25, we ﬁnd that cP4 and hR12 (reference numbers 6 and 7) are nearly degen- erate, with cP4 (stability not reported experimentally) favored by 1 meV/atom, which is closer than DFT can reliably distinguish.
+At x = 0.33, three diﬀerent Laves phases have been reported (reference numbers 8-10), with conﬂicting claims of stability and uncertain composition.
+We ﬁnd that none of these phases lies on the convex hull.
+Further, all of their structures are mechanically unstable to deformation, casting doubt on the reported structure and stability of this phase.
+In our plot, we show the en- ergy of a distorted cF24 structure which is mechanically stable, for comparison with the undistorted hP12 and hP24.
+In the vicinity of x = 0.5 lies the Frank-Kasper µ phase.
+This phase is common to many alloy systems con- taining fourth and ﬁfth row early transition metals with third row late transition metals.
+In most cases the phase shows a broad composition range at high temperature but favors an ETM-rich low temperature limit (i.e. with the mixed occupancy 3a site occupied by an ETM).
+This feature is correctly reproduced by our calculation.
+At x = 0.67, the tI12 phase (reference number 5) is a non- canonical Frank-Kasper phase, as it contains a CN=10 Bernal Hole, in addition to a canonical CN=15 Kasper polyhedron.
+2. Ni-Ta For Ni-Ta (Figure 4b) at x = 0.11 we ﬁnd Ni8Ta.tI18 to be low-temperature stable.
+The experimental phase diagram has a tI36 structure stable, however no crys- tallographic reﬁnement exists, so we use the known tI18 phase instead.
+There is disagreement on recent phase di- agrams concerning the stable structure at x = 0.25, and we ﬁnd three diﬀerent structures have nearly identical enthalpies (tI8 is the lowest).
+The main source of dis- agreement between our T = 0 K phase diagram and ex- perimental phase diagrams is the stability of NiTa.hR13, with even the ETM-rich variant lying 7 meV/atom above the convex hull.
+Fig. 2 shows the diﬀraction patterns of our experimentally cast rods, verifying the existence of the expected phases in our own samples.
+3. (Co,Ni)-W Our calculations verify the known Co3W and Ni3W phase stabilities.
+However, the reported Co7W6 phase lies above the convex hull, and additionally favors the ETM-rich limit contrary to experimental report.
+This phase has not been reported in the Ni-W alloy system, and we indeed ﬁnd it lies well above the convex hull.
+However, we will study the electronic and elastic proper- ties of this hypothetical phase in order to elucidate trends with respect to composition.
+Notice that enthalpies of formation for alloys with W are lower than enthalpies with Ta.
+This does not necessarily reﬂect lower mechan- ical stability or melting points for the compounds, as the greater cohesive energy of tungsten compared to tan- talum contributes to a reduction of the alloy formation enthalpies.
+An equiatomic Ni-W phase with orthorhom- bic symmetry has been observed low temperature sta- ble41, however no atomic structural data exists.
+Owing to similar chemical identity and Bravais lattice, we at- tempted to use the Frank-Kasper phase MoNi.oP56 with Mo substituted for W, but found that this structure lies 66 meV/atom above the convex hull and likely is not the correct phase.
+It was also too computationally expensive to compute elastic moduli for this phase.
+C. Binary Elastic Moduli We examine the eﬀect of alloying on the elastic mod- uli by using CPA to approximate a hypothetical alloy where no interspecies interactions exist.
+That is, for a well-ordered phase with stoichiometry AxB1-x, we com- pare its elastic moduli to a hypothetical solution of pure6 8 9 10 1 4 7 2 5 4 6 3 11 4 4 5 9 0.2 0.4 0.6 0.8 x -0.25 -0.2 -0.15 -0.1 -0.05 0 ∆H [eV/at] Co (Ta,W) (a) Co-(Ta,W) 4 4 13 14 2 5 17 12 15 1 16 4 4 9 18 0.2 0.4 0.6 0.8 x -0.4 -0.3 -0.2 -0.1 0 ∆H [eV/at] Ni (Ta,W) (b) Ni-(Ta,W) FIG.
+4: Enthalpies of formation for (Co,Ni)-(Ta,W) alloys.
+Values for Ta shown in black, for W shown in green.
+Plotting symbols explained in text.
+specie A and pure specie B with a stoichiometric ratio x:(1-x) in the CPA approximation.
+As input for CPA, we use our computed elemental elastic moduli.
+These agree closely with experimental moduli for Ta and W but are relatively high for Co and Ni.
+Note that our cal- culation are valid at 0 K, while the experimental values are room temperature, so it is expected that our values should be high, especially for non-refractory elements.
+As the CPA approximation only incorporates elemental elastic moduli with no atomic environmental details, the deviation of computed polycrystalline moduli from the CPA approximation yields a measure of the relative im- portance of atomic environment and alloying species for elastic moduli.
+All crystal structures are elastically anisotropic, and it is of interest to characterize the anisotropy of our amor- phous approximants.
+We deﬁne three anisotropies20,42: AZ (Zener), AG (shear) and AE (Young’s) as AZ = 2C44 C11 −C12 , AG = S44 + S66 2S44 , and AE = S11 S33 , all of which are 1 for isotropic structures, where Sij are el- ements of the compliance matrix.
+Table II compares cal- culated anisotropies of our hR13 and tI12 structures with the four pure elements.
+Our anisotropies are close to one, similar to those seen in the pure metals, with hR13 ex- hibiting less anisotropy than tI12.
+These anisotropies can be taken as estimates of the local anisotropy expected at the atomic level in actual amorphous structures.
+Recall that the polycrystalline averages are expected to reﬂect Composition Structure AZ AG AE Co-Ta hR13 0.70 0.85 1.13 Ni-Ta hR13 0.81 0.91 1.14 Co-W hR13 0.76 0.88 1.18 Ni-W hR13 1.12 1.06 1.45 Co-Ta tI12 0.90 1.17 1.27 Ni-Ta tI12 1.32 1.24 1.50 Co-W tI12 1.24 1.12 1.20 Ni-W tI12 1.42 1.16 1.07 Co hP2 1.01 1.00 1.31 Ni cF4 2.18 1 1 Ta cI2 1.16 1 1 W cI2 0.83 1 1 TABLE II: Measures of anisotropy for materials of interest.
+AG = AE = 1 for cubic structures.
+the globally isotropic properties of the bulk amorphous structures.
+Shown in Figure 5 are our calculated K values, com- pared with CPA estimates.
+All CPA estimates are indi- cated by lines, all calculated moduli by individual data points, and for Ni-Ta asterisks indicate experimental re- sults.
+Our calculated Ni-Ta bulk moduli show excellent agreement with our experimental results.
+For all four chemical families, CPA gives reasonable estimates for bulk moduli, with at most a 16% deviation between esti- mated and calculated bulk moduli.
+However, in all alloy systems and for all structures examined, CPA underes- timates the bulk modulus.
+This suggests the dominant correction to the bulk moduli is chemical bonding and not atomic environmental details such as the prevalence of tetrahedra.
+Shear moduli show relatively larger and less regular deviations from CPA, suggesting that bond topology plays a signiﬁcant role.
+Nonetheless, our cal- culated Ni-Ta shear moduli are in good agreement with experiment (crosses).
+Shown in Table III are the correlation coeﬃcient for various linear regressions across all calculated CoTa,7 0.2 0.4 0.6 0.8 xETM 0 50 100 150 200 250 300 350 Moduli [GPa] K Calc (Ta) K CPA (Ta) G Calc (Ta) G CPA (Ta) K Calc (W) K CPA (W) G Calc (W) G CPA (W) Co (Ta,W) (a) (a) Co-Ta 0.2 0.4 0.6 0.8 xW 0 50 100 150 200 250 300 350 Moduli [GPa] K Calc (Ta) K CPA (Ta) K Expt (Ta) G Calc (Ta) G CPA (Ta) G Expt (Ta) K Calc (W) K CPA (W) G Calc (W) G CPA (W) Ni (Ta,W) (b) (b) Ni-Ta FIG.
+5: Elastic moduli for (Co,Ni)-(Ta,W) compounds.
+Lines show CPA estimates.
+Data points are our DFT calculations.
+Asterisks are experimental values from our experiments on Ni-Ta alloys and from the literature for pure elements.
+∆v ∆h ∆K ∆G ∆v 0.20 -0.83 -0.66 ∆h 0.20 0.06 -0.47 ∆K -0.83 0.06 0.60 ∆G -0.66 -0.47 0.60 TABLE III: Correlation coeﬃcients for linear regressions involving elastic moduli and thermodynamic quantities of interest, where rows denote independent variables and columns dependent variables for a given regression.
+CoW, NiTa, and NiW alloys, where the sign of the corre- lation coeﬃcient denotes the sign of the slope.
+Here ∆K and ∆G (units GPa) are deviations of calculated bulk and shear moduli from CPA estimates, ∆v (units ˚A3 per atom) the deviation of volume per atom from a linear interpolation of pure elements, and ∆h (units eV per atom) the enthalpy of formation per atom as illustrated in Fig. 4. Correlations of elastic moduli with ∆v and ∆h reﬂect structure and bonding eﬀects that are miss- ing from CPA.
+There is only a weak correlation between ∆h and ∆v, though the associated slope is positive, ex- pected as increased bond strength (more negative ∆h) draws atoms closer together (more negative ∆v).
+∆G and ∆K are both correlated to ∆v, with ∆K in particu- lar strongly correlated.
+This is line with other work that shows that K and G correlate with V and that the cor- relation for K is particularly strong9.
+This is also true for individual chemical families, and for ∆K all chemical families’ regressions have similar slopes.
+This strong cor- relation of ∆K with ∆v explains why all structures have CPA underestimating the bulk moduli (positive ∆K), as all structures were also observed to have negative ∆v, as expected.
+The slopes of ∆G and ∆K are both negative, as decreasing ∆v draws atoms closer together, shortening bonds and enhancing interatomic force constants.
+The observed correlation of ∆G with ∆K is likely due to the underlying correlation of each with ∆v.
+A goal of metallic glass design is to predict glass- forming compounds with high ductility.
+Thus, as a guide, we plot the Poisson ratio’s of the various alloys under dis- cussion.
+Our computed T = 0 K crystalline Poisson ra- tios are expected to be systematically low relative to the corresponding glasses, as G decreases more rapidly than K as temperature increases43, and amorphous G and K are lower relative to crystalline values by around 30% and 10%, respectively.
+Here we see no systematic trend in the choice of Ta versus W (empty versus ﬁlled plotting sym- bols) but Ni generally has higher Poisson’s ratio than Co (red versus blue).
+Empirically, it has been observed that ν = 0.32 serves as a rough criterion for separating ductile and brittle behavior in amorphous materials6.
+The ma- jority of our Ni alloys lie above this criterion and Co alloy below.
+In particular, all Ni-W alloys satisfy this criterion, and Ni-W in the amorphous approximant structure hR13 shows particularly large Poisson’s ratios.
+Combined with the large bulk modulus due to the presence of tungsten, we propose that Ni-W is a candidate system for future research into strong amorphous materials with high duc- tility. IV.
+ANALYSIS AND DISCUSSION To understand trends in elastic constants of these alloys we now look into the interatomic interactions.
+Within a ﬁrst principles approach there is no unique decomposition of interactions into pairwise and many- body forces, and no simple notion of a chemical bond, especially for metals.
+However some heuristic measures8 0 0.2 0.4 0.6 0.8 1 xETM 0.25 0.30 0.35 0.40 ν Co-Ta Ni-Ta Co-W Ni-W FIG.
+6: Calculated Poisson ratios.
+Dashed line at ν=0.32 is putative threshold for ductility. are available.
+Here we examine the interatomic force constants, which can be regarded as springs connecting the atoms, and the crystal overlap Hamilton populations (COHPs) which are a measure of the covalency of elec- tronic wave functions.
+A. Force Constants and COHP To compare diﬀerent ETM and LTM substitutions, Ta- ble IV shows k, the mean force constants for the near neighbor bonds of a given species combination, ρCOHP, the total iCOHP per unit volume for bonds of a given species combination up to 4 ˚A, and K, the bulk moduli in the structural prototype tI12.
+To calculate the mean force constant, we sum force constants for all bonds up to 4 ˚A for a given cell then divide by the number of atoms.
+Both the mean force constant and ρCOHP correlate with the bulk moduli.
+This is especially notable in the mean force constant, where there is a large increase in mean force constant performing a Ta →W substitution and a relatively small increase performing a Ni →Co substitution, but the eﬀect is also present in ρCOHP.
+As a force constant gives a measure of the stiﬀness of an in- dividual bond, this mean force constant gives a measure of the total stiﬀness of all bonds, and bulk modulus is increased under chemical substitution by an overall in- crease in the interatomic force constant.
+We also see in Table IV that performing a Ni →Co or a Ta →W sub- stitution enhances ρCOHP.
+Thus these substitutions have enhanced the bonding nature of the electronic states.
+To further understand the enhancement of bonding, we calculate electronic densities of state (Fig. 7).
+The low-energy peak near -4 or -5 eV consists of sd-hybrid orbitals, followed by a series of higher-energy peaks con- sisting solely of d orbitals, with the Fermi level lying in the middle of the ETM d-band and at or above the top of the LTM d-band.
+For Co-W, the Co and W d bands are closely aligned, inducing strong hybridization of Co and W d orbitals.
+This eﬀect is present in all structures we have examined.
+Performing a W →Ta substitution shifts the ETM d-band up relative to the LTM d-band, decreasing the d-band overlap and diminishing hybridiza- tion.
+Performing a Co →Ni substitution shifts the LTM d-band down relative to the ETM d-band, also decreas- ing the d-band overlap.
+Both of these induce an decrease in the hybridization of the ETM-LTM d-bands.
+As hy- bridization generally creates bonding states below the Fermi level, this reduction in hybridization going from W →Ta and Co →Ni decreases the overall bonding char- acteristic of the occupied states, leading to the observed trends in ρCOHP, and hence in bulk modulus.
+B. Microstructural Details: Ternaries and Quaternaries Elemental properties provide the dominant contribu- tion to the elasticity of these ETM-LTM intermetallic compounds, as can be seen in the qualitative agree- ment of calculated alloy moduli with the CPA predic- tions shown in Fig. 5.
+In Table V we see that the small decreases in modulus from Co to Ni, and the large in- creases from Ta to W, are echoed in the moduli of the hR13 Frank-Kasper structure.
+While binary amorphous metals exist, size mismatch criteria and material property tuning favor the usage of multiple constituent species in amorphous metals for practical applications, and thus the question of transfer- ability of binary results to structures with 3 or more con- stituent species must be addressed.
+In addition, there is still the lingering need to quantify how atomic environ- ment aﬀects the elastic moduli.
+To answer both these questions, we perform chemical substitutions in a binary structure to yields ternaries and quaternary structures.
+This changes the chemical identities of formerly equiva- lent sites, altering local chemical ordering.
+Shown in Table VI is a comparison of binary hR13 structures (including also alloys with Nb, an ETM) with nearly equiatomic composition quaternary variants of hR13 and six associated ternaries.
+Site occupancies in the quaternary has been chosen to maintain the ETM/LTM nature of sites and minimize energy, and the ternaries were formed by keeping the early/late site identity ﬁxed.
+To compare our binary results to ternaries and quater- naries, we here use a simple chemical environment aver- aging scheme between ETM and LTM, with a equiatomic ABCD mixture with A and B LTM and C and D ETM approximated by 1/4*(AC+AD+BC+BD), and an ABC mixture (with C having near 50% concentration) ap- proximated by 1/2*(AC+BC).
+Here AC, AD, BC and BD refer to the relevant binary hR13 structure with the associated chemical formula.
+As an example, the pre- dicted bulk moduli of Co6Ta3W4 would be the average bulk modulus of Co6Ta7 and Co6W7.
+While this ignores interspecies ETM-ETM and LTM-LTM bonds present9 Compound ETM-ETM (44x) ETM-LTM (32x) LTM-LTM (4x) mean mean tI12 R k ρCOHP R k ρCOHP R k ρCOHP k ρCOHP K NiTa2 3.12 4.2 0.31 2.63 4.7 0.25 2.43 4.2 0.025 30.7 0.27 222 CoTa2 3.11 5.2 0.31 2.61 3.7 0.30 2.48 4.0 0.030 32.0 0.29 228 NiW2 3.02 4.0 0.31 2.55 7.6 0.34 2.38 4.3 0.041 37.7 0.31 294 CoW2 3.02 5.1 0.37 2.54 6.7 0.36 2.38 4.8 0.037 39.9 0.35 308 TABLE IV: Data for tI12.
+R are average bond lengths for nearest neighbors under 4 ˚A. k are averaged over atoms (i.e. weighted by the number of bonds per atom) in units eV/˚A2, ρCOHP is iCOHP volume density in units eV/˚A3, and K is the calculated bulk moduli in units GPa.
+-10 -8 -6 -4 -2 0 2 4 6 8 10 ε-εF (eV) 0 5 10 15 20 25 30 35 40 45 Density (states/eV) Total Co (d) Ta (d) (a) CoTa.hR13 -10 -8 -6 -4 -2 0 2 4 6 8 10 ε-εF (eV) 0 5 10 15 20 25 30 35 40 45 Density (states/eV) Total Co (d) W (d) (b) CoW.hR13 -10 -8 -6 -4 -2 0 2 4 6 8 10 ε-εF (eV) 0 5 10 15 20 25 30 35 40 45 Density (states/eV) Total Ni (d) Ta (d) (c) NiTa.hR13 -10 -8 -6 -4 -2 0 2 4 6 8 10 ε-εF (eV) 0 5 10 15 20 25 30 35 40 45 Density (states/eV) Total Ni (d) W (d) (d) NiW.hR13 FIG.
+7: Electronic densities of states for hR13 structures.
+Line segments indicate the mean and standard deviations of the element projected d-bands.
+(i.e. AB and CD), binary enthalpies of formation for ETM-ETM and LTM-LTM families are weak compared to ETM-LTM families, suggesting that as a ﬁrst approx- imation we may assume the diﬀerences in interspecies ETM-ETM and LTM-LTM bond strength average out.
+Diﬀerences between our predicted interpolated elastic moduli and computed elastic moduli follow the trends previously reported for CPA.
+Again we see bulk mod- uli negligibly aﬀected by atomic environment and pre- dominately determined by the alloying species, with de- viations in bulk moduli below 2.6% for all structures.
+For shear moduli, the structures can be placed into two categories: those structures that have only one ETM species or else two ETM species from the same group (here Nb and Ta belong to group IV) which have devi- ations in shear moduli below 3.7%, and those that have ETM species from diﬀerent groups (here W from group V together with Nb or Ta from group IV) which have10 K G K G Co 218 107 Ni 200 93 Nb (K=173, G=22) Co6Nb7 213 92 Ni6Nb7 198 81 Ta (K=202, G=61) Co6Ta7 234 106 Ni6Ta7 218 93 W (K=331, G=143) Co6W7 302 117 Ni6W7 279 77 TABLE V: Elastic moduli for pure elements and binary hR13 structures.
+Chemical Formula Calculated K, G Averaged K, G Deviation Co3Ni3Nb7 205, 87 205, 87 0.3, 0.5 Co3Nb3Ta4 225, 100 223, 99 0.7, 1.4 Co3Ni3Ta7 225, 102 226, 100 0.4, 2.2 Ni6Nb3Ta4 210, 89 208, 87 0.9, 2.2 Co3Ni3W7 290, 94 291, 97 0.3, 2.4 Co3Ni3Nb3Ta4 217, 97 216, 93 0.1, 3.7 Co6Ta4W3 261, 123 268, 111 2.5, 10.0 Co3Ni3Ta3W4 253, 115 258, 98 2.1, 14.6 Co6Nb3W4 261, 121 257, 104 1.5, 16.4 Ni6Nb3W4 241, 92 239, 79 0.8, 16.8 Ni6Ta4W3 242, 100 249, 85 2.6, 17.8 Co3Nb3Ni3W4 248, 109 248, 92 0.2, 18.7 TABLE VI: Comparison of calculated ternary and quaternary hR13 moduli with averaged values of binaries.
+Moduli are given in GPa, and deviations in percentages.
+deviations in shear moduli between 10.0% and 18.7%.
+In all cases where predicted shear moduli deviate signiﬁ- cantly from calculated shear moduli, the computed shear moduli have been enhanced.
+That mixing Co and Ni or Nb and Ta causes little de- viation in shear modulus, but mixing Ta and W does, is further evidence for the dependence of shear modulus on atomic environment.
+Co and Ni have similar atomic radii and electronegativity, as do Nb and Ta.
+For a topo- logically close packed structure like hR13, substitution of these chemical species should not noticeably aﬀect bond lengths and ionic charges, yielding similar calcu- lated and averaged results.
+However, Nb and Ta have larger atomic radii and lower electronegativity than W, leading to larger charge transfers and changes in bond length, reducing the accuracy of our averaging scheme while generally increasing bonding strength.
+V. CONCLUSIONS In this paper we examine the elasticity of various early transition metal-late transition metal crystalline binary alloys using ﬁrst principles calculations and comparison with various averaging schemes.
+Calculated bulk moduli were reasonably close to the coherent potential approx- imation using pure elemental species, but CPA predic- tions were systematically low.
+This deviation correlates strongly with volume per atom.
+Larger and less regu- lar deviations were observed for shear moduli, suggesting structural distortion being responsible for the deviation.
+Select ternary and quaternary structures were examined and conﬁrmed these trends.
+To explain the dependence of elastic moduli on chemical bonding, force constants and electronic densities of state were calculated and it was found early transition metals are responsible for the strongest bonding, which agrees with observed trends in the bulk moduli.
+We ﬁnd that Ni-W alloys have the largest Poisson ratios among the compositions studied and hence hold promise as the basis for design of ductile metallic glasses. VI.
+ACKNOWLEDGEMENTS We would like to give special thanks to DOD-DTRA for funding this research under contract number DTRA- 11-1-0064.
+1 T. Egami, Mat. Sci. Eng.
+A 2260228, 261 (1997).
+2 T. Egami, S. J. Poon, Z. Zhang, and V. Keppens, Phys.
+Rev. B 76, 024203 (2007).
+3 W. H. Wang, J. Appl.
+Phys. 99, 093506 (2006).
+4 S. J. Poon, A. Zhu, and G. J. Shiﬂet, Appl. Phys. Lett. 92, 261902 (2008).
+5 H. S. Chen, J. T. Krause, and E. Coleman, J. Non-Cryst.
+Solids 18, 157 (1975).
+6 J. J. Lewandowski, W. H. Wang, and A. L. Greer, Philos. Mag.
+Lett. 85, 77 (2005).
+7 J. Q. Wang and H. Y. Bai, Scripta Mater. 61, 453 (2009).
+8 W. L. Johnson and K. Samwer, Phys. Rev. Lett. 95, 195501 (2005).
+9 W. H. Wang, Prog. Mater.
+Sci. 57, 487 (2012).
+10 F. C. Frank and J. S. Kasper, Acta Cryst. 11, 184 (1958).
+11 F. C. Frank and J. S. Kasper, Acta Cryst. 12, 483 (1959).
+12 A. K. Sinha, Topologically close-packed structures of tran- sition metal alloys (Pergamon Press, 1972).
+13 M. Telford, Materials Today 7, 36 (2004).
+14 C. C. Hays, C. P. Kim, and W. L. Johnson, Phys. Rev. Lett. 84, 2901 (2000).
+15 L. D. Landau and E. M. Lifshitz, Theory of Elasticity, 3rd ed., Course of Theoretical Physics, Vol. 7 (Butterworth- Heinemann, 1986).
+16 S. F. Pugh, Philos.
+Mag. 45, 823 (1954).
+17 X. J. Gu, A. G. McDermott, S. J. Poon, and G. J. Shiﬂet, Appl. Phys. Lett. 88, 211905 (2006).
+18 A. Inoue, B. Shen, H. Koshiba, H. Kato, and A. R. Yavari, Nature Mater. 2, 661 (2003).
+19 M. Ohtsuki, R. Tamura, S. Takeuchi, S. Yoda, and T. Ohmura, Appl. Phys. Lett. 84, 4911 (2004).
+20 J. F. Nye, Physical Properties of Crystals: Their Represen- tation by Tensors and Matrices, 2nd ed.
+(Oxford Science11 Publications, 1985).
+21 R. Zeller and P. H. Dederichs, Phys.
+Status Solidi B 55, 831 (1973). 22 R. Hill, Proc. Phys. Soc. A 65, 349 (1952).
+23 C. W. Nan, Prog. Mater. Sci. 37, 1 (1993).
+24 Y. Zhang and A. L. Greer, J. Alloys Compd. 434-435, 2 (2007).
+25 B. Zhang, R. J. Wang, D. Q. Zhao, M. X. Pan, and W. H. Wang, Phys.
+Rev. B 73, 092201 (2006).
+26 G. Kresse and J. Hafner, Phys.
+Rev. B 43, 558 (1993).
+27 G. Kresse and J. Furthm¨uller, Phys.
+Rev. B 54, 11169 (1996).
+28 P. E. Bl¨ochl, Phys.
+Rev. B 50, 17953 (1994).
+29 J. P. Perdew and Y. Wang, Phys.
+Rev. B 45, 13244 (1992).
+30 M. Mihalkovic and M. Widom, Phys.
+Rev. B 70, 144107 (2004).
+31 R. Dronskowski and P. E. Bl¨ochl, J. Phys.
+Chem. 97, 8617 (1993).
+32 O. Jepsen and O. K. Andersen, Z. Phys. B 97, 35 (1995).
+33 A. Migliori and J. L. Sarrao, Resonant ultrasound spec- troscopy (Wiley New York, 1997).
+34 H. W. Sheng, W. K. Luo, F. M. Alamgir, J. M. Bai, and E. Ma, Nature 439, 419 (2006).
+35 X. W. Fang, C. Z. Wang, S. G. Hao, M. J. Kramer, Y. X. Yao, M. I. Mendelev, Z. J. Ding, R. E. Napolitano, and K. M. Ho, Scientiﬁc Reports 1, 194 (2011).
+36 J. D. Bernal, Proc. R. Soc. Lond. A 280, 299 (1964).
+37 D. R. Nelson, Phys.
+Rev. B 28, 5515 (1983).
+38 D. B. Miracle, JOM 64, 846 (2012).
+39 J. D. Honeycutt and H. C. Andersen, J. Phys. Chem. 91, 4950 (1987).
+40 P. Ganesh and M. Widom, Phys.
+Rev. B 77, 014205 (2008).
+41 J. M. Walsh and J. M. J. Donachie, Met. Trans. 4, 2854 (1973).
+42 D. Tromans, IJRRAS 6, 462 (2011).
+43 X. F. Liu, R. J. Wang, and W. H. Wang, Scripta Mater. 62, 254 (2010).

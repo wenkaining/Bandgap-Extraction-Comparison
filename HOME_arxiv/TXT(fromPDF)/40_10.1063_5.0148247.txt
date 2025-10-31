@@ -1,0 +1,1273 @@
+1 
+Simulation Study of the Effects of Polymer Network Dynamics and Mesh Confinement on 
+the Diffusion and Structural Relaxation of Penetrants 
+Tsai-Wei Lin1,3, Baicheng Mei2,3, Kenneth S. Schweizer1,2,3, and Charles E. Sing1,3 
+1Department of Chemical and Biomolecular Engineering, University of Illinois at Urbana-
+Champaign 
+2Department of Materials Science and Engineering, University of Illinois at Urbana-Champaign 
+3Materials Research Laboratory, University of Illinois at Urbana-Champaign 
+Abstract 
+The diffusion of small molecular penetrants through polymeric materials represents an important 
+fundamental problem, relevant to the design of materials for applications such as coatings and 
+membranes. Polymer networks hold promise in these applications, because dramatic differences 
+in molecular diffusion can result from subtle changes in the network structure. In this paper, we 
+use molecular simulation to understand the role that crosslinked network polymers have in 
+governing the molecular motion of penetrants. By considering the local, activated alpha relaxation 
+time of the penetrant and its long-time diffusive dynamics, we can determine the relative 
+importance of activated glassy dynamics on penetrants at the segmental scale versus entropic mesh 
+confinement on penetrant diffusion.  We vary several parameters, such as the crosslinking density, 
+temperature, and penetrant size, to show that crosslinks primarily affect molecular diffusion 
+through modification of the matrix glass transition, with local penetrant hopping at least partially 
+coupled to the segmental relaxation of the polymer network. This coupling is very sensitive to the 
+local activated segmental dynamics of the surrounding matrix, and we also show that penetrant 
+transport is affected by dynamic heterogeneity at low temperatures. To contrast, only at high 
+temperatures and for large penetrants or when the dynamic heterogeneity effect is weak does the2 
+effect of mesh confinement become significant, even though penetrant diffusion more broadly 
+empirically follows similar trends as established models of mesh confinement-based transport.  
+Introduction 
+The diffusive transport of molecular species through polymers is an important fundamental 
+problem, with the motion of small ‘penetrants’ being integral to the design of polymer materials 
+for a variety of applications. For example, barrier coatings,1–3 drug delivery vehicles,4,5 and self-
+healing microcapsules1,2,6 may be engineered to impede the transport of penetrants, while 
+membranes are often designed to selectively separate or filter specific small penetrants (e.g. gas,7–
+10 water,11–13 or organic molecules14,15). Membrane separations represent an especially important 
+materials design challenge,7,15 due to significant interest in finding promising alternatives to 
+distillation for chemical separations. One strategy is to impose control over pore size in materials 
+such as zeolites,16 metal organic frameworks,17,18 and covalent organic frameworks;19 however, 
+these materials have issues with mechanical properties and scalability.16–19 If the molecular 
+penetrants are especially small, such as in gas separations, then glassy amorphous polymers can 
+be another option for membranes.8–10 These materials are more mechanically robust, but despite 
+important insights from atomistic simulations and phenomenological models,20–23 they are limited 
+to small gas molecules and do not have the same size-selectivity as more precise matrix 
+structures.8–10  
+Highly-crosslinked networks have recently emerged as a promising option for the selective 
+transport of small molecules,24–26 exploiting the sensitivity of penetrant diffusion to the near-𝑇𝑔 
+coupling between the structural relaxation of the dense molecular mesh and activated hopping 
+processes. This is motivated by experimental support for the premise that, despite significant 
+molecular disorder, dense polymer networks can discern small changes in penentrant size and3 
+interactions.25 Design of crosslinked networks for selective transport requires an understanding of 
+how the molecular-scale dynamics of penetrant and matrix relaxation contribute to large-scale 
+diffusive motion. Aspects of this problem have been studied in the literature. For example, there 
+has been extensive work on studying particle transport through polymer solutions or high-
+temperature networks,27–33 which is understood to be governed by a confinement parameter 𝐶=
+𝑑/𝑎𝑥 that relates the penetrant size 𝑑 to the size of the network mesh 𝑎𝑥. This parameter quantifies 
+the extent to which the surrounding polymer matrix sterically ‘traps’ the particle, such that the 
+particle diffusion is an activated process where the network strands must entropically stretch to 
+allow the particle to hop out of its location within the mesh.27 Several expressions for the diffusion 
+constant have been considered in the literature, such as the expression proposed by Cai, et al.:27 
+ 
+𝐷𝑝∼𝑑2
+𝜏𝐶−1 exp(−𝑏𝐶2) = 𝑑2
+𝜏𝑋 
+(1) 
+This relates the diffusion constant 𝐷𝑝 to the confinement parameter 𝐶, a length scale characterized 
+by the penetrant size 𝑑, a time scale 𝜏 that Cai, et al. identify as the Rouse time of the network 
+strand, and a constant 𝑏 of order unity.27 While there are other candidate models,30 these still 
+exhibit a general form given in the second equivalence of Equation 1 as the product of two factors; 
+a quantity proportional to the elementary particle diffusion 𝑑2 𝜏
+⁄  and a factor 𝑋 dictated by the 
+network mesh and related to 𝐶 (in the case above, 𝑋= exp(−𝑏𝐶2) /𝐶). Simulations of large 
+penetrants in rubbery networks are consistent with this physical picture;28,29,34 however, the choice 
+of 𝜏 can become non-trivial as temperature is lowered for polymer melts and/or when the glass 
+transition is approached.35 For example, in uncrosslinked systems activated transport of penetrants 
+becomes dominated by molecular caging and correlated matrix elasticity effects near the glass 
+transition.35–384 
+ 
+For tight and supercooled near-𝑇𝑔 networks, the physical relationship in Equation 1 is 
+complicated by recent experimental, simulation, and theoretical investigations by the authors and 
+collaborators demonstrating that the structural relaxation in polymer networks is strongly 
+dependent on the extent of crosslinking, manifesting as a monotonic increase in the material 𝑇𝑔 
+with crosslink density.39 In this case, the time scale 𝜏 in Equation 1 is expected to depend on 
+molecular penetrant caging, which itself will be sensitive to the confinement parameter 𝐶 due to 
+its relationship with the crosslink density of the polymer network. Crosslinks could thus impact 
+penetrant motion both by affecting the structural relaxation of the surrounding network as well as 
+providing a confining mesh that obstructs penetrant motion. Our recent work demonstrated using 
+a combination of theory, experiment, and simulation that there exists a degeneracy of 
+interpretations for crosslink effects on penetrant transport between these two mechanisms, noting 
+the need to further clarify the molecular origin of this observation.40 
+In this article, we use computer simulation to study the diffusion and structural relaxation 
+of penetrants in dense, highly-crosslinked polymer networks in the computationally accessible 
+weakly-supercooled regime. Simulation will allow us to separate out the different ways that 
+crosslinks contribute to penetrant diffusion, by quantifying both the overall diffusion constant 𝐷𝑝 
+and the characteristic time scale of penetrant hopping 𝜏 in Equation 1, which we identify with a 
+penetrant alpha relaxation time 𝜏𝛼,𝑝 determined from an appropriate time correlation function as 
+discussed below. By relating particle hopping events to long-time diffusive motion, we can study 
+how these properties are affected by both crosslinking fraction and temperature. We determine that 
+(1) supercooled networks exhibit strong coupling between the network segmental relaxation and 
+penetrant hopping, with sensitivity to the crosslinking-dependent 𝑇𝑔, (2) increasing temperature 
+can lead to slower diffusion at a given 𝑇𝑔/𝑇 due to the dependence of 𝑇𝑔 on crosslink density, but5 
+this is mostly attributed to a non-trivial 𝑇 dependence of how local polymer relaxations couple to 
+penetrant motion, (3) the coupling between penetrant motion and polymer relaxation processes is 
+dependent on penetrant size 𝑑, and (4) penetrant hopping is correlated with long-time diffusion at 
+several values of 𝑇𝑔/𝑇 near 𝑇= 𝑇𝑔, but the mesh confinement only becomes apparent at high 𝑇 
+and for large penetrants. This all leads to the overall insight that, under typical conditions for 
+polymer networks and molecular penetrants, crosslinking primarily affects penetrant transport by 
+changing the effective 𝑇𝑔 and segmental relaxation time of the surrounding matrix and only 
+secondarily through mesh confinement. Serendipitously, this still manifests in a similar 
+relationship between the diffusion constant 𝐷𝑝 and 𝐶 that is consistent with the form in Equation 
+1.27,30 These molecular-level insights into penetrant diffusion and hopping clarify the fundamental 
+mechanisms governing penetrant transport and help identify ways in which both temperature and 
+network architecture can be used to engineer selectivity into a promising class of membrane 
+materials.  
+We also briefly discuss at a high level how the theoretical results in our compansion paper41 
+qualitatively compare to our present simulations. The goal is not to quantitatively use simulation 
+to test the theory, especially since the polymer and penetrant models, and range of temperatures 
+explored, are not the same. Rather, the present work and the theoretical companion paper are meant 
+to be complementary with regards to addressing the scientific problems of interest. 
+Simulation Methods 
+We use coarse-grained molecular dynamics simulations (MD) to model the diffusion of 
+spherical penetrants in crosslinked polymer networks,42 using well-established methods for 
+studying polymers near the glass transition.43–46 Our system is initially composed of 𝑁c = 20 
+linear chains with 𝑁m = 30 beads each with diameter 𝜎, modeled as standard semiflexible chains.6 
+These beads are placed in a cubic box with periodic boundary conditions in three dimensions, 
+along with 𝑁p spherical penetrants of diameter 𝑑̃. The number of penetrants 𝑁p depends on 𝑑̃, and 
+is chosen so that the volume fraction of the penetrant 𝜙𝑝=
+𝜋𝑑3𝑁𝑝
+6𝑉 is kept below  𝜙𝑝= 0.01 to 
+ensure that the addition of penetrants will not affect network dynamics and to prevent significant 
+interactions between penetrant molecules.  
+Standard dimensionless simulation quantities are employed,42,47 and denoted with tildes 
+(e.g. 𝑇̃ = 𝑇/𝑇∗). Quantities are rendered dimensionless by several characteristic values: lengths 
+are related to the bead diameter 𝜎, energies are related to the thermal energy at a reference 
+temperature 𝑘𝐵𝑇∗, and times are related to a time scale 𝜏∗= √𝑚𝜎2/𝑘𝐵𝑇∗, where  𝑚 is the 
+monomer mass. The characteristic temperature 𝑇∗ corresponds to 485K, which is determined 
+from parametrization against experiments,39 using crosslinked poly(n-butyl acrylate) (PnBA) as a 
+representative polymer that has been studied by our experimental collaborators (see details in ref. 
+35). 
+Our MD simulations consider standard potentials for coarse-grained bead-spring 
+polymers,48 including a Lennard-Jones potential 𝑈̃LJ between all non-bonded beads, and both 
+bonding 𝑈̃B and bending 𝑈̃𝜃 potentials to model each semiflexible bead-spring chain. The overall 
+energy is composed of a sum of these contributions: 
+ 
+𝑈̃ = 𝑈̃B + 𝑈̃𝜃+ 𝑈̃LJ
+= ∑𝑢̃B,𝑖𝑗
+𝑁𝑡𝑜𝑡,𝑛
+𝑖,𝑗>𝑖
++
+∑
+𝑢̃𝜃,𝑖𝑗𝑘
+𝑁𝑡𝑜𝑡,𝑛
+𝑖,𝑗>𝑖,𝑘>𝑖,𝑗
++ ∑
+∑
+∑
+∑𝑢̃LJ,𝛼𝛽,𝑖𝑗
+𝑁𝑡𝑜𝑡,𝛽
+𝑗>𝑖
+𝑁𝑡𝑜𝑡,𝛼
+𝑖
+𝛽=𝑛,𝑝
+𝛼=𝑛,𝑝
+ 
+(2) 
+Here the total system energy is written in terms of independent pairwise contributions 𝑢̃B,α,𝑖, 𝑢̃𝜃,𝛼,𝑖, 
+and 𝑢̃LJ,𝛼𝛽,𝑖𝑗. Bonded monomers interact through harmonic bonding potential:7 
+ 
+𝑢̃B,𝑖𝑗= 𝑘̃
+2 (𝑟̃𝑖𝑗−1)
+2Θ𝑖𝑗 
+(3) 
+A large spring constant 𝑘̃ = 2000 is adopted to enforce the equilibrium distance 𝑟̃𝑖𝑗= 1 between 
+bonded beads 𝑖 and 𝑗. The factor Θ𝑖𝑗 determines the connectivity between monomer pairs, with 
+Θ𝑖𝑗= 1 being connected and Θ𝑖𝑗= 0 being disconnected; these values depend on the specific 
+network that is formed. A bending energy is similarly introduced to account for chain stiffness: 
+ 
+𝑢̃𝜃,𝑖𝑗𝑘= 𝑘̃𝜃[1 −cos𝜃𝑖𝑗𝑘]Θ𝑖𝑗𝑘 
+(4) 
+Here, the bond angle is between three adjacent beads 𝑖, 𝑗, and 𝑘 whose connectivity is determined 
+by a similar factor Θ𝑖𝑗𝑘 to the one used for the bonding potential. The bending constant 𝑘̃𝜃= 1.52 
+is selected to reflect the experimental Kuhn length of PnBA.49–52 Further details of the 
+parametrization are given in the literature.39 A Lennard-Jones (LJ) potential is used to describe all 
+non-bonded interactions between particles 𝑖 and 𝑗 on species 𝛼 and 𝛽: 
+ 
+𝑢̃LJ,𝛼𝛽,𝑖𝑗= {4𝜖̃𝛼𝛽[(
+𝑑̃𝛼+ 𝑑̃𝛽
+2𝑟̃𝛼𝛽
+)
+12
+−(
+𝑑̃𝛼+ 𝑑̃𝛽
+2𝑟̃𝛼𝛽
+)
+6
+]
+0,
+otherwise
+, 𝑟̃𝛼𝛽< 𝑟̃cut = 2.5 ×
+𝑑̃𝛼+ 𝑑̃𝛽
+2
+ 
+(5) 
+Here, 𝛼, 𝛽∈{n, p}, denotes the species as either network (n) or penetrant (p), with n denoting the 
+monomer bead in the network and p denotes the penetrant. In the overall summation, 𝑁𝑡𝑜𝑡,𝑛=
+𝑁𝐶𝑁𝑚 is the total number of network beads and 𝑁𝑡𝑜𝑡,𝑝= 𝑁𝑝 is the total number of penetrant beads. 
+The monomer size 𝑑̃n = 1 is always unity (i.e., 𝑑n = 𝜎) and the penetrant size 𝑑̃p ≡𝑑̃ is an 
+important parameter for this study. In this study, we do not consider specific penetrant-polymer 
+attractions, so we set 𝜖̃nn = 𝜖̃np = 𝜖̃pp = 1.8 
+ 
+Figure 1. (a) Schematic illustrating the setup of our simulation. Monomer beads (orange) and 
+crosslinker beads (blue) interact via bonding (𝑢̃B,𝑖𝑗) and angle (𝑢̃𝜃,𝑖𝑗𝑘) potentials, and can interact 
+with each other and with the penetrant through Lennard-Jones potentials (𝑢̃LJ,𝑖𝑗). Monomer and 
+crosslinker beads have a diameter 𝑑̃𝑛= 1 and the penetrant has a diameter 𝑑̃𝑝. Crosslinking occurs 
+during an initial simulation step where ‘reactive’ beads (light blue) will form bonds with regular 
+monomers within a cutoff distance 𝑅̃min. (b) Snapshot of a typical simulation, for 𝑑𝜎
+⁄
+= 2.0 and 
+𝑓𝑐𝑟𝑜𝑠𝑠= 0.11.  
+ 
+The system is first equilibrated at 𝑇̃ = 1, 𝑃̃ = 0, and then networks are prepared by 
+crosslinking the linear chains with reactive beads randomly distributed along the chain.39,53,54 The 
+total number of reactive beads is 𝑁r = 𝑓r𝑁m𝑁c, where 𝑓r is the fraction of reactive beads which 
+tunes the crosslink density of networks. If the distance between a reactive bead and a free bead 
+(orange beads in Figure 1) is within 𝑅̃min = 1.1, a new permanent bond will be formed given an 
+assigned probability. Once a reactive bead forms a bond with a free bead, both the reactive bead 
+and the free bead are labeled as crosslink beads (dark blue beads in Figure 1) and these two beads 
+represent one crosslink ‘molecule’, in a way that reflects the specific chemistry used to synthesize 
+PnBA networks,25 where the crosslinker molecular weight is roughly twice of the molecular weight 
+of nBA. Crosslinking reactions were turned off once every reactive bead has formed a new bond 
+with another free monomer (maximum number of possible bonds has been reached). In the end,9 
+𝑁r reactive beads have reacted with the 𝑁r free beads and resulting in 2𝑁r crosslink beads 
+associated with 𝑁r crosslink molecules. The crosslink density, 𝑓cross, of networks is defined as:39 
+ 
+𝑓cross =
+𝑛crosslink
+𝑛crosslink + 𝑛monomer
+=
+𝑁r
+𝑁m𝑁c −𝑁r
+ 
+(6) 
+Here, 𝑛crosslink  and 𝑛monomer   are the number of crosslink molecules and nBA monomers, 
+respectively. Four values of crosslink fraction 𝑓cross are considered: 0.11, 0.25, 0.36, and 0.5.  
+After crosslinking, the system is cooled to a target temperature at a cooling rate 𝛤̃ =
+8.3 × 10−6 (corresponding to 𝛤= 1.25 × 109 K/s in experimental units) and further equilibrated 
+at constant 𝑃̃ = 0. Another short NPT run was performed and the mean volume 𝑉 is measured. 
+We then switch to a NVT ensemble by setting the system volume to the mean volume 𝑉 and 
+equilibrate the system before final production run at NVT. All simulations are performed in 
+LAMMPS55 with a standard Nosé-Hoover thermostat and extended ensemble barostat,42,56,57and 
+all observables were averaged over five independent simulation trajectories. 
+The polymer network is characterized by its mesh size (𝑎̃𝑥), Kuhn segment alpha relaxation 
+time (𝜏̃𝛼,K), and glass transition temperature Tg. The mesh size of networks at different crosslink 
+densities is defined as the averaged distance between two adjacent crosslink beads on the same 
+chain, and is tabulated in Table S1. The value of 𝜏̃𝛼,K at each temperature and crosslink density 
+was defined as the time where the temporal autocorrelation function of a Kuhn monomer vector, 
+𝐶𝜆(𝑡̃) = 〈𝑃2(𝒓̃3(𝑡̃) ∙𝒓̃3(0))〉 decays to 𝐶𝜆(𝑡̃max) + (1 −𝐶𝜆(𝑡̃max)) 𝑒
+⁄ , where 𝐶𝜆(𝑡̃max) represents 
+the plateau value at the long-time limit 𝑡̃max.58–62 Here, 𝑃2 is the second Legendre polynomial and 
+𝒓̃3 is a vector between two beads that are 3 bonds apart which reflects the choice of coarse-grained 
+bead relate to Kuhn segment of PnBA. 𝑇g is then defined as when the Kuhn segment alpha 
+relaxation time is 𝜏̃𝛼,K(𝑇̃g) = 105. More information can be found in our previous work.3910
+We characterize the dynamics of the penetrant motion by its alpha relaxation time, 𝜏̃𝛼,p, 
+and its diffusion coefficient 𝐷𝑝. To calculate 𝜏̃𝛼,p, we use the self-intermediate scattering function 
+(ISF) of the penetrant, which is given by:59 
+ 
+𝐹𝑠(𝒒̃, 𝑡̃) = 1
+𝑁𝑝
+∑⟨exp [−𝑖𝒒̃ ∙(𝒓̃𝑝𝑗(𝑡̃) −𝒓̃𝑝𝑗(0))]⟩
+𝑁𝑝
+𝑗
+ 
+(7) 
+where 𝒓̃𝑝𝑗 is the position of the 𝑗th penetrant at time 𝑡̃, and |𝒒̃| is set to the position of the first peak 
+of the static structure factor for the networks, corresponding to |𝒒̃| = 7.2. The value of 𝜏̃𝛼,p, is 
+defined as the time required for 𝐹𝑠(𝒒̃, 𝑡̃) to decay to either 1/𝑒 or 0.1 from its initial (𝑡̃ = 0) value 
+of unity. We characterize the mean-squared displacement (MSD) as a function of time: MSD(𝑡̃) =
+〈𝑟̃𝑝
+2(𝑡̃)〉=
+1
+𝑁𝑝∑
+⟨(𝒓̃𝑝𝑗(𝑡̃) −𝒓̃𝑝𝑗(0))
+2
+⟩
+𝑁𝑝
+𝑗
+. The diffusion coefficient of penetrant is then obtained via 
+the Einstein relation in the diffusive regime, 𝐷𝑝= lim
+𝑡̃→∞
+1
+6𝑡̃ 〈𝑟̃𝑝
+2(𝑡̃)〉.63  
+Results and Discussion 
+Penetrant Hopping and Transport in Dense Networks 
+We first characterize the diffusive motion of penetrants in polymer networks by studying 
+the mean square displacement, ⟨𝑟̃𝑝
+2(𝑡̃)⟩, of both small (𝑑/𝜎= 1.0) and large (𝑑/𝜎= 2.0) 
+penetrants. These two particle sizes are representative of experimental systems used in previous 
+work by some of the authors;26 the network polymer PnBA is coarse-grained so that 𝜎= 0.573nm, 
+and hence 𝑑𝜎
+⁄
+∼1 −2  spans the typical size of molecular penetrants.26 This choice also 
+corresponds to the general length scale of the mesh size in the literature,25,64 which here ranges 
+size from 𝑎̃𝑥∼1.3 −2.5 (see Table S1) such that the size ratio range spans 𝐶= 𝑑𝑎𝑥
+⁄
+= 0.4 −
+1.5. The MSD versus time 𝑡̃ is plotted for both particle sizes in Figures 2a and 2b for 𝑑/𝜎= 1.0 
+and 𝑑/𝜎= 2.0, respectively, varying both the crosslink density 𝑓𝑐𝑟𝑜𝑠𝑠 and temperature. These11
+plots show typical features characteristic of molecular diffusion. At short times, the particle 
+exhibits ballistic motion such that the MSD scales as ⟨𝑟̃𝑝2(𝑡̃)⟩∼𝑡̃2; however, this regime gives 
+way to a subdiffusive regime that we attribute to molecular caging by neighboring network 
+monomers. At long times, the particle can overcome the kinetic constraints imposed by these 
+cages, along with any constraints due to the network mesh, and undergo Fickian diffusion where 
+⟨𝑟̃𝑝
+2(𝑡̃)⟩∼𝑡̃1. These general features of diffusive motion are observed for both penetrant sizes and 
+all crosslink densities and temperatures, however the specifics of penetrant caging and diffusive 
+motion will be affected by these parameters.  
+The onset of the subdiffusive regime following the initial, ballistic penetrant motion 
+provides insight into the time scales of caging, and large differences in the persistence of this 
+regime are observed as 𝑓𝑐𝑟𝑜𝑠𝑠, 𝑇, and 𝑑/𝜎 are varied. To characterize this regime, we plot in 
+Figure S1 the slope of the log⟨𝑟̃𝑝
+2(𝑡̃)⟩ versus log𝑡̃  curve on a log-log plot ( 𝛽=
+𝑑log⟨𝑟̃𝑝
+2(𝑡̃)⟩𝑑log 𝑡̃
+⁄
+) as a function of time 𝑡̃. The minimum value of 𝛽 is an estimate for the time 
+𝑡̃𝛽 at which the penetrant is maximally subdiffusive or caged, and the value of ⟨𝑟̃𝑝
+2(𝑡̃𝛽)⟩
+1/2 
+correspondingly quantifies a transient localization length. A representative quantity is indicated in 
+Figures 2a and 2b with an open square, showing the caging onset for 𝑇= 300 and 𝑓𝑐𝑟𝑜𝑠𝑠= 0.11. 
+We only indicate a single representative value for each particle size, because the displacement 
+⟨𝑟̃𝑝
+2(𝑡̃𝛽)⟩
+1/2 is only weakly dependent on temperature and crosslink densities, and is far smaller 
+than the length scale of the penetrant diameter ( ⟨𝑟̃𝑝2(𝑡̃𝛽)⟩
+1/2 ∼0.22  for 𝑑𝜎
+⁄
+= 1  and 
+⟨𝑟̃𝑝2(𝑡̃𝛽)⟩
+1/2 ∼0.32 for 𝑑𝜎
+⁄
+= 2). This insensitivity leads us to interpret this onset of caging as 
+tied to the structural correlations of the surrounding melt beads.12
+For both small (𝑑𝜎
+⁄
+= 1) and large (𝑑𝜎
+⁄
+= 2) penetrants, the value of 𝛽→1 at long times 
+corresponds to Fickian behavior, however the time that it takes to reach this limit increases with 
+decreasing temperature (Figure 2 and Figure S1). This is the expected result of having less thermal 
+energy to overcome a dynamic caging barrier,24,65 especially as our simulations approach the 𝑇𝑔. 
+Similarly, an increase of crosslink density 𝑓𝑐𝑟𝑜𝑠𝑠 monotonically increases the length of this 
+subdiffusive regime and the minimum value of 𝛽 concomitantly decreases (Figure S1) so that the 
+MSD nearly exhibits a transient plateau. In principle, this is due to some combination of (1) an 
+increase in the caging barrier because of the concomitant increase in the segmental relaxation time 
+(cage lifetime) due to crosslinks39 and (2) the impact of mesh confinement impeding penetrant 
+motion.27,28,30 In this paper, a major result will be to show that the first interpretation is the 
+dominant determinant of penetrant mobility for the models studied, especially as 𝑇𝑔 is approached. 
+This is apparent already by comparing the features in the MSD versus 𝑡̃ to the mesh size 𝑎̃𝑥, which 
+are tabulated in Table S1 for several different values of 𝑓𝑐𝑟𝑜𝑠𝑠 and indicated in Figures 2 and S1 
+as open circles. This length scale is often only accessed in or near the Fickian regime, suggesting 
+that any effect of the geometric mesh on the subdiffusive transport of the penetrant in these 
+simulations is subtle and not readily apparent from the MSD versus 𝑡̃ plot alone. Despite this 
+observation, it is apparent that both the temperature and crosslink density effects still depend on 
+the penetrant size, with more pronounced changes in the subdiffusive regime for the larger (𝑑𝜎
+⁄
+=
+2) penetrants than the smaller (𝑑𝜎
+⁄
+= 1) penetrants as 𝑇 and 𝑓𝑐𝑟𝑜𝑠𝑠 are varied.13
+ 
+Figure 2. Mean square displacement ⟨𝑟̃𝑝
+2(𝑡̃)⟩ versus time 𝑡̃ of a penetrant particle with sizes (a) 
+𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0, for several values of 𝑇 and 𝑓𝑐𝑟𝑜𝑠𝑠. Open squares denote a 
+representative location for the onset of caging or transient localization, defined as the minimum 
+slope 𝛽 on this plot (see Figure S1) and chosen for 𝑇= 300K and 𝑓𝑐𝑟𝑜𝑠𝑠= 0.11. The analogous 
+point for other values of 𝑇 and 𝑓𝑐𝑟𝑜𝑠𝑠 would be almost identical. The open circles denote the length 
+scale of the polymer network mesh size, as described in Table S1. The long-time data Fickian 
+region, where the slope of this plot 𝛽= 1, is used to determine the penetrant diffusion constant 
+𝐷̃𝑝. 
+ 
+The MSD provides a molecular measure of penetrant transport, with the long-time Fickian 
+regime allowing determination of the macroscopic diffusion coefficient 𝐷̃𝑝 of the penetrant. 
+However, this quantity (𝐷̃𝑝) is determined by, in principle, the cumulative effect of both local 
+particle motions as well as any larger length-scale effects of the network mesh confinement on 
+transport. To deconvolute these contributions, we also consider the time evolution of the self-ISF 
+𝐹s(𝒒̃, 𝑡̃) in Figure 3. Here we select a value |𝒒̃| = 7.2 that is chosen to reflect the local structural 
+cage of the polymer network and not the length scale of the network mesh. The curves shown in 
+Figure 3 thus primarily account for the dynamics of local relaxation and hopping, and quantify 
+the extent to which the penetrant remains within its original cage as a function of time. The first 
+part of this decay is independent of temperature and crosslinking; this corresponds to the initial14
+ballistic motion of the penetrant observed in Figure 2, and may include contributions from partial 
+fast relaxations due to a distribution of network alpha times associated with dynamic 
+heterogeneity.66 There are some subtle differences between the different penetrant sizes (𝑑𝜎
+⁄
+=
+1.0 vs. 2.0) that we attribute to the different masses of the penetrants and is also apparent in Figure 
+2.  
+At longer times, the decay of 𝐹s(𝒒̃, 𝑡̃)  becomes strongly dependent on temperature, 
+crosslinking, and penetrant size in a manner consistent with the diffusive motion in Figure 2. At 
+high temperatures, the smaller penetrant (Figure 3a) exhibits a non-exponential, long time decay 
+of 𝐹s(𝒒̃, 𝑡̃) that we attribute to an activated, but relatively rapid, hopping process for penetrant 
+relaxation. As crosslinking increases, this long-time decay extends further, and its non-exponential 
+character becomes more pronounced. This trend is exacerbated by going to lower temperatures. 
+We find there is a significant slowing down of penetrant motion even at intermediate times; this 
+occurs around 𝑡̃ ∼1, which is roughly when the minimum in the apparent exponent 𝛽 occurs for 
+the MSD curves (in Figure 2 and S1) and is consistent with the interpretation of this as a state of 
+maximal transient penetrant caging. For larger penetrants (𝑑𝜎
+⁄
+= 2.0, Figure 3b) this slowing 
+down leads to the near transient arrest of particle motion, again at 𝑡̃ ∼1, as evidenced by a plateau 
+in 𝐹s(𝒒̃, 𝑡̃) that only begins to relax at significantly longer times as the temperature is decreased or 
+crosslinking fraction is increased. In both cases, we can attribute this arrest to the coupling of 
+penetrant hopping to the slow segmental relaxation dynamics of the surrounding polymer 
+segments, as 𝐹s(𝐪, 𝑡̃) is a local measure of relaxation that does not directly probe the length scales 
+relevant for mesh confinement. We note the penetrant hopping should also be significantly affected 
+by the crosslinking degree, although indirectly, since crosslinking has strong influence on the slow 
+segmental relaxation dynamics of the surrounding polymer segments.3915
+The trends seen in the intermediate scattering function plots in Figure 3 are largely 
+consistent with those of the MSD plots in Figure 2, however we note several important differences 
+that we will use to understand the mechanisms of penetrant motion in polymer networks. First, we 
+note the similarity of the MSD versus time plots in Figure 2a for low temperatures and crosslink 
+density (𝑇= 300K and 𝑓𝑐𝑟𝑜𝑠𝑠= 0.11) and the high temperatures and crosslink density (𝑇=
+339K and 𝑓𝑐𝑟𝑜𝑠𝑠= 0.36); these curves almost overlap, and exhibit essentially the same diffusive 
+properties. Yet, the shapes of these curves in Figure 3a for penetrant ISF are distinctly different, 
+with the characteristics of local caging more apparent in the lower temperature curve. In addition, 
+there is a distinct difference in the subdiffusive regimes seen in the MSD plots versus 𝐹s(𝒒̃, 𝑡̃), 
+which are much more pronounced. This is contrast to normal glass-forming liquids, for which the 
+same supercooling degree exhibits a weaker or shorter caging regime than for the MSD that probes 
+diffusion compared to 𝐹s(𝒒̃, 𝑡̃) which probes structural relaxation.66–73 These disparities between 
+the MSD versus time and 𝐹s(𝒒̃, 𝑡̃) suggest that mesh confinement may contribute meaningfully to 
+the transport of penetrants in tight networks, particularly for larger penetrants, and we seek to 
+refine our physical understanding of this complicated interplay of local and long-time penetrant 
+and network dynamics.16
+Figure 3. Intermediate scattering function 𝐹s(𝒒̃, 𝑡̃) of the penetrant particle with (a) 𝑑/𝜎= 1.0  
+and (b) 𝑑/𝜎= 2.0 with |𝒒̃| = 7.2 at 𝑇= 300K (solid, blue) and 339K (dashed, red) for a variety 
+of crosslink densities 𝑓𝑐𝑟𝑜𝑠𝑠 as a function of time 𝑡̃. The orange and purple horizontal lines define 
+the penetrant alpha time, with the criteria 𝐹s(𝒒̃, 𝜏̃𝛼,𝑝) = 0.1 and 𝐹s(𝒒̃, 𝜏̃𝛼,𝑝′) = 1/𝑒, respectively. 
+The former criteria (𝜏̃𝛼,𝑝) is more often used in this paper, because it includes the longer time tails 
+observed in these functions that reflect a subpopulation of penetrants in long-lived cages. The latter 
+criteria (𝜏̃𝛼,𝑝′) may more closely relate to the average hopping time that is predicted in the theory 
+developed in our companion paper,41 which does not account for dynamic heterogeneity and a 
+distribution of penetrant hopping times.  
+ 
+Comparing the Role of Particle Size, Temperature, and Crosslinking on the Hopping and Diffusive 
+Processes in Dense Networks  
+To quantify the relationship between local penetrant relaxation and diffusive motion, we 
+extract the alpha time of the penetrant 𝜏̃𝛼,𝑝 from the ISF and the diffusion constant 𝐷̃𝑝 from the 
+MSD. As described in the methods section, the diffusion constant is obtained from the long-time 
+MSD curve via the expression 𝐷𝑝= lim
+𝑡→∞
+1
+6𝑡̃ 〈𝑟̃𝑝
+2(𝑡̃)〉. The alpha time of the penetrant 𝜏̃𝛼,𝑝 is set from 
+the decay of 𝐹s(𝒒̃, 𝑡̃), and quantifies the time it takes to reach one of two possible criteria: 
+𝐹s(𝒒̃, 𝜏̃𝛼,𝑝) = 0.1 and 𝐹s(𝒒̃, 𝜏̃𝛼,𝑝′) = 1/𝑒. While the specific criterion is arbitrary, these two 
+criteria will be used to illustrate aspects of dynamic heterogeneity.66,73–75 The quantity 𝜏̃𝛼,𝑝 will 
+account for the effect of the long-time part of the relaxation curve in Figure 3. As shown in the 
+literature,66 the long-time decay of the relaxation function is typically associated with the 
+relaxation of the slowest fraction of particles and hence carries information on strong dynamic 
+heterogeneity effects. These long-time decays negligibly contribute to the value 𝜏̃𝛼,𝑝′ defined at 
+𝐹s(𝒒̃, 𝜏̃𝛼,𝑝′) = 1/𝑒, which instead only weakly accounts for dynamic heterogeneity by considering 
+the most generic particles. We consider 𝜏̃𝛼,𝑝′ obtained here to be closer to the average hopping 
+time predicted in the accompanying theoretical work,41 since the theoretical alpha times are 
+computed via a mean-field (most probable time computed) approach and dynamic heterogeneity17
+(in the sense of a distribution of hopping times of dynamic and/or structural origin) is not 
+introduced, although it can be included.76,77 Differences between how 𝜏̃𝛼,𝑝 and 𝜏̃𝛼,𝑝′ depend on 
+𝑓𝑐𝑟𝑜𝑠𝑠 do depend on both 𝑇 and 𝑑/𝜎, and as we will show can be very small or substantial. We 
+will primarily report 𝜏̃𝛼,𝑝, considering 𝜏̃𝛼,𝑝′ only where the comparison is instructive. We can thus 
+extract the key quantities in Equation 1 directly from molecular simulations, the long-time 
+diffusion 𝐷̃𝑝 and a characteristic hopping or penetrant alpha relaxation time 𝜏̃𝛼,𝑝, and examine how 
+they are related and affected by the state of the network and penetrant.  
+We start by considering 𝜏̃𝛼,𝑝, which we indicated in Figure 3 and is typically between 
+𝜏̃𝛼,𝑝= 101 −103  for 𝑑𝜎
+⁄
+= 1.0  and 𝜏̃𝛼,𝑝= 101 −104  for 𝑑𝜎
+⁄
+= 2.0 . Our goal is not to 
+determine any precise dependence on 𝑑𝜎
+⁄ , but rather to explore the differences between relatively 
+‘small’ and ‘large’ molecular penetrants in the context of experimental systems. We plot the 
+inverse penetrant mean alpha times 1/𝜏̃𝛼,𝑝 or 1/𝜏̃𝛼,𝑝′ as a function of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for several 
+different temperatures 𝑇 and crosslink fractions 𝑓𝑐𝑟𝑜𝑠𝑠 in Figure 4. We emphasize that the abscissa 
+combines two parameters we consider in our model; the temperature 𝑇 is plotted in different colors 
+in all panels of Figure 4a and b for 𝑑𝜎
+⁄
+= 1.0 and 𝑑𝜎
+⁄
+= 2.0, respectively, and is directly set in 
+our simulations. However, we note that 𝑇𝑔/𝑇 has multiple values for a given 𝑇 due to the 
+dependence of 𝑇𝑔 on 𝑓𝑐𝑟𝑜𝑠𝑠.39 For the Figure 4a inset, we replot the data to show the corresponding 
+plot of 1/𝜏̃𝛼,𝑝 versus 𝑇𝑔/𝑇, but grouping data at fixed 𝑓𝑐𝑟𝑜𝑠𝑠 instead of fixed 𝑇.18
+ 
+Figure 4. Inverse penetrant alpha time 1/𝜏̃𝛼,𝑝 calculated from simulations as a function of 
+𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for several temperatures 𝑇 and penetrant sizes (a) 𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0. In 
+(a) there is a noticeable collapse to a single curve, which we illustrate more clearly in the inset by 
+grouping the data with respect to 𝑓𝑐𝑟𝑜𝑠𝑠. This collapse is no longer observed in (b). We also plot 
+the shorter-time criteria for the penetrant alpha time 1/𝜏̃𝛼,𝑝′ versus 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 in (c) for /𝜎=
+1.0 to demonstrate that the coupling of penetrant hopping to crosslink density is noticeably weaker 
+when the long-time part of the intermediate scattering function is no longer included. The 
+dimensionless slopes of these plots are calculated and included in Table 1.   
+ 
+Figures 4a and b show that at a fixed 𝑇, the inverse penetrant alpha relaxation time 1/𝜏̃𝛼,𝑝 
+behaves exponentially with 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠), exhibiting Arrhenius-like behavior for both penetrant sizes. 
+As the temperature increases, the absolute value of the slope of this curve decreases, demonstrating 
+stronger effects of glass physics at low temperatures in relation to crosslink-induced 𝑇𝑔 changes. 
+This underscores the importance of the network segmental dynamics on penetrant diffusion, and 
+can be quantified by a change in the dimensionless slope of log𝜏̃𝛼,𝑝 versus 𝑇𝑔/𝑇. To highlight how 
+the choice of criterion 𝐹s(𝒒̃, 𝜏̃𝛼,𝑝) = 0.1 affects our results, we plot in Figure 4c how Figure 4a 
+would be changed upon choosing the alternative criterion, 𝐹s(𝒒̃, 𝜏̃𝛼,𝑝′) = 1/𝑒. In this case, similar 
+trends are observed (i.e. an increasing dimensionless slope with decreasing temperature), however 
+the magnitudes of the dimensionless slopes are significantly smaller. We speculate that this is due 
+to the neglect of longer time-scale processes that are apparent in the extended tails of the relaxation 
+functions seen in Figure 3, meaning that the 1/e criterion does not fully capture important aspects19
+of dynamic heterogeneity effects that are accounted for with the 0.1 criterion. For both criteria and 
+penetrant sizes 𝑑/𝜎, the values for the slopes of log𝜏̃𝛼,𝑝 versus 𝑇𝑔/𝑇 are calculated and tabulated 
+in Table 1 for different values of 𝑇. We note that for both penetrant sizes, these dimensionless 
+slopes exhibit similar trends to the predictions from theory in both our companion theory paper 
+and prior work,40,41 showing a modest decrease in the magnitude of the slope with increasing 
+temperature for both 𝜏̃𝛼,𝑝 and 𝜏̃𝛼,𝑝′. However, the magnitudes of the slopes are significantly larger 
+for 𝜏̃𝛼,𝑝 than the slopes for 𝜏̃𝛼,𝑝′, with the latter values in parenthesis in Table 1. We attribute this 
+to the inclusion of the longer-time component of the ISF in 𝜏̃𝛼,𝑝, which indicate that penetrant 
+hopping is influenced by dynamic heterogeneity near 𝑇𝑔 due to the slower relaxation of a 
+significant fraction of particles.66 To contrast, the longer-time decays of the ISF negligibly affect 
+𝜏̃𝛼,𝑝′, leading to a weaker apparent coupling between the near-𝑇𝑔 dynamics of the network and the 
+penetrant hopping. 
+Table 1. Dimensionless slope for log𝜏̃𝛼,𝑝 or 𝐷̃𝑝
+−1  versus 𝑇g/𝑇 from simulations at several 
+temperatures (𝑇= 300, 320, and 339K) and penetrant sizes (𝑑/𝜎 = 1 and 2). Both criteria 𝜏̃𝛼,𝑝 
+and 𝜏̃𝛼,𝑝′ (in parentheses) are considered.  
+T/K 
+𝒅/𝝈 
+300 
+320 
+339 
+𝐥𝐨𝐠 (𝝉̃𝜶,𝐩) vs 𝑻𝐠/𝑻 
+1.0 
+15.57 (7.79) 
+8.59 (3.98) 
+8.01 (1.97) 
+𝐥𝐨𝐠 (𝟏/𝑫𝐩) vs 𝑻𝐠/𝑻 
+1.0 
+9.34 
+7.48 
+5.79 
+𝐥𝐨𝐠 (𝝉̃𝜶,𝐩) vs 𝑻𝐠/𝑻 
+2.0 
+18.13 (16.10) 
+12.86 (8.78) 
+14.80 (9.60) 
+𝐥𝐨𝐠 (𝟏/𝑫𝐩) vs 𝑻𝐠/𝑻 
+2.0 
+17.47 
+19.27 
+18.12 
+ 
+The two different penetrant sizes in Figure 4a and 4b exhibit similar trends, including 
+nearly the same overall decrease of relaxation rate by a little over two decades (over all values of 
+𝑇 and 𝑓𝑐𝑟𝑜𝑠𝑠). This supports the robustness of our analysis and conclusions drawn. However, there 
+are subtle but important differences. At a fixed value of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇  (i.e. at a fixed supercooling20
+degree), we observe that the penetrant alpha time is roughly constant with decreasing temperature 
+for 𝑑𝜎
+⁄
+= 1.0. This lower temperature also corresponds to a lower value of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠) and hence 
+a lower degree of crosslinking 𝑓𝑐𝑟𝑜𝑠𝑠. This means that the degree of effective supercooling as 
+encoded in the ratio 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇  largely dictates penetrant hopping, with the absolute 
+temperature 𝑇 playing a similar role in affecting transport as the effective 𝑇𝑔. In this case, several 
+effects – changing 𝑇𝑔, absolute 𝑇, and crosslinking (𝑓𝑐𝑟𝑜𝑠𝑠) – tend to compensate resulting in a near 
+collapse of the 1/𝜏̃𝛼,𝑝 versus 𝑇𝑔/𝑇 data. This is highlighted in the inset of Figure 4a, which is the 
+same data as in the main frame but grouped by 𝑓𝑐𝑟𝑜𝑠𝑠 instead of 𝑇, and more clearly shows how 
+well this data collapses to a single curve. A similar collapse of 1/𝜏̃𝛼,𝑝 versus 𝑇𝑔/𝑇 is also observed 
+in the companion theory paper.41 Figure 4b shows that this balance no longer holds for larger 
+penetrants 𝑑𝜎
+⁄
+= 2.0, with lower 𝑇 values exhibiting faster dynamics (i.e. higher 1/𝜏̃𝛼,𝑝) at a 
+given degree of supercooling 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 due to the corresponding decrease in the 𝑓𝑐𝑟𝑜𝑠𝑠. We 
+suggest that, for 𝑑𝜎
+⁄
+= 2.0, the importance of dynamic heterogeneity is less pronounced relative 
+to that of 𝑑𝜎
+⁄
+= 1.0 penetrants due to a greater degree of self-averaging (in time and space) of the 
+distribution of matrix relaxation times by a larger penetrant. Additionally, the effect of decreasing 
+crosslinking dominates more than the effect of decreasing temperature, resulting in a higher value 
+of 1/𝜏̃𝛼,𝑝. This contrasts with Figure 4c, where 1/𝜏̃𝛼,𝑝′ increases with temperature at a fixed 
+𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇; here, dynamic heterogeneity becomes negligible, and the effects of crosslinking 
+become even less pronounced than the absolute temperature.  
+This same competition is apparent in the diffusion constant 𝐷̃𝑝, which we plot in Figure 
+5a and b for 𝑑𝜎
+⁄
+= 1.0 and 𝑑𝜎
+⁄
+= 2.0 , respectively, and at the same conditions plotted in Figure 
+4a and b. As discussed above, the diffusion constant is defined at longer time and length scales 
+than the length scale of the crosslinking mesh size (see Figures 2 and S1). This quantity is21
+influenced by dynamic heterogeneity effects at lower temperatures, where glassy dynamics 
+becomes important, but is also affected by the presence of crosslinkers. We thus expect its behavior 
+to be similar to 1/𝜏̃𝛼,𝑝 instead of 1/𝜏̃𝛼,𝑝′ , as confirmed below.  Like 1/𝜏̃𝛼,𝑝, 𝐷̃𝑝 exhibits 
+Arrhenius-like behavior as defined by a straight line on a log 𝐷̃𝑝 versus 𝑇𝑔/𝑇 plot. The primary 
+difference is in the relative magnitude change in 𝐷𝑝 at different degrees of supercooling 𝑇𝑔/𝑇. 𝐷̃𝑝 
+still exhibits a near-collapse for 𝑑𝜎
+⁄
+= 1.0, however generally decreases more slowly than 1/𝜏̃𝛼,𝑝 
+in Figure 4a.  
+For the larger penetrant size 𝑑𝜎
+⁄
+= 2.0, the situation is more complicated. In this case, 
+high temperatures 𝑇 in Figure 5b show a more dramatic decrease in 𝐷̃𝑝 with 𝑇𝑔/𝑇 than that of 
+1/𝜏̃𝛼,𝑝 in Figure 4b, but a similar decrease at lower temperatures. These effects are quantified by 
+calculating the dimensionless slope of the −log𝐷̃𝑝 versus 𝑇𝑔/𝑇 relationship, which we include in 
+Table 1 for both penetrant sizes. Here, the 𝐷̃𝑝 slopes are significantly smaller than the 1/𝜏̃𝛼,𝑝 
+slopes for 𝑑𝜎
+⁄
+= 1.0, but are similar or larger than the 1/𝜏̃𝛼,𝑝 for 𝑑𝜎
+⁄
+= 2.0. The latter behavior 
+for 𝑑𝜎
+⁄
+= 2.0 is qualitatively consistent with the results in our companion theory paper,41 which 
+finds that the diffusion constant 𝐷̃𝑝 changes with supercooling 𝑇𝑔/𝑇 are similar to, or more 
+pronounced than, the corresponding inverse 𝜏̃𝛼,𝑝. For 𝑑𝜎
+⁄
+= 1.0, however, the theory predicts that 
+the 𝐷̃𝑝 slopes are similar to the inverse 𝜏̃𝛼,𝑝 slopes, in contrast to the simulation observation that 
+the 𝐷̃𝑝 slopes are much smaller. We attribute this disparity between simulation and theory to the 
+larger importance of dynamic heterogeneity for smaller penetrants in our simulations,66 because 
+the theory only makes predictions for a mean (in a Kramers first passage time sense) penetrant 
+alpha time that is closer to the value of 𝜏̃𝛼,𝑝′. Indeed, for 𝑑𝜎
+⁄
+= 1.0 the relative slopes for 𝐷̃𝑝 and22
+1/𝜏̃𝛼,𝑝′ calculated using this criterion (in parentheses in Table 1) are much more consistent with 
+the theoretical predictions.41  
+ 
+Figure 5. (a) Penetrant diffusion constant 𝐷̃𝑝 as a function of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for several 
+temperatures 𝑇 and penetrant sizes (a) 𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0. These are the same 
+conditions as in Figure 4a and b, and similarly there is a collapse in (a) that is no longer present 
+in (b). The dimensionless slopes of these plots are calculated and included in Table 1.  
+ 
+ 
+To contextualize the relationship between the diffusion constant 𝐷̃𝑝, inverse penetrant 
+alpha time 1/𝜏̃𝛼,𝑝, temperature 𝑇, and particle size ratio 𝑑/𝜎, we plot both 𝐷̃𝑝 and 1/𝜏̃𝛼,𝑝 as a 
+function of 𝑇𝑔/𝑇 in Figure 6 for two temperatures each. We have used a multiplier 𝐴 to align these 
+data sets at the leftmost points, to compare how the effect of changing the crosslinking fraction 
+𝑓𝑐𝑟𝑜𝑠𝑠 (and concomitantly the 𝑇𝑔) on 𝐷̃𝑝 versus 1/𝜏̃𝛼,𝑝. For small particles (𝑑𝜎
+⁄
+= 1.0), the value 
+of 𝐷̃𝑝 (solid symbols) exhibits a weaker decrease with the degree of supercooling 𝑇𝑔/𝑇 than 
+1/𝜏̃𝛼,𝑝 (open symbols) for both temperatures. We believe that this is again a dynamic 
+heterogeneity effect, which may be related to the well-known breakdown of the Stokes-Einstein 
+relation in one-component glass forming liquids,66–73 where the diffusion constant is understood 
+to be dominated by the subpopulation of particles undergoing rapid transport and is thus less 
+dependent on 𝑇𝑔/𝑇 than the particle hopping time that characterizes a relaxation process.66 To23
+contrast, for larger particles (𝑑𝜎
+⁄
+= 2.0) the change in the diffusion constant 𝐷̃𝑝 tracks the change 
+in 1/𝜏̃𝛼,𝑝 with increasing 𝑓𝑐𝑟𝑜𝑠𝑠 at low temperatures (𝑇= 300K) and even decreases more than 
+1/𝜏̃𝛼,𝑝 with increasing 𝑓𝑐𝑟𝑜𝑠𝑠 at higher temperatures (𝑇= 339K). This indicates that there is an 
+additional mechanism slowing down diffusive penetrant motion at length scales longer than what 
+is probed in the intermediate scattering function (the local penetrant cage corresponding to 1/𝜏̃𝛼,𝑝), 
+which we attribute to the effect of mesh confinement. A similar comparison between 𝐷̃𝑝 and 
+1/𝜏̃𝛼,𝑝′ (not shown) for both sizes demonstrates that 𝐷̃𝑝 exhibits a stronger decrease with 𝑇𝑔/𝑇 
+than 1/𝜏̃𝛼,𝑝′  for all temperatures studied. This does not relate to the normal Stokes-Einstein 
+breakdown, because it only weakly accounts for dynamic heterogeneity, but does further suggest 
+the importance of the mesh confinement effect on the diffusion constant. 
+ 
+Figure 6. Comparison of the penetrant diffusion constant 𝐷̃𝑝 and inverse penetrant alpha time 
+1/𝜏̃𝛼,p as a function of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 at both high (339K) and a low (300K) temperatures for (a) 
+𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0. Note that 1/𝜏̃𝛼,p is vertically shifted down by a factor (a) 𝐴=
+3.89 × 10−2 and (b) 𝐴= 2.53 × 10−2 such that the leftmost point of alpha time 1/𝜏̃𝛼,p at a given 
+temperature coincides with the corresponding 𝐷̃𝑝 data point for better comparison. In (a), this 
+comparison shows that 𝐷̃𝑝 exhibits a weaker dependence than 1/𝜏̃𝛼,p with 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for all 
+temperatures, while in (b) 𝐷̃𝑝 exhibits a stronger dependence than 1/𝜏̃𝛼,p at high temperatures.24
+ 
+To isolate the role of mesh confinement, we refer to the form of Equation 1 that writes the 
+diffusion constant as the product of 1/𝜏̃𝛼,𝑝 and a mesh confinement factor 𝑋. The form predicted 
+for 𝑋 is model-dependent,27,28,30 but we can directly evaluate this quantity from simulation by 
+taking the product 𝑋= 𝐷̃𝑝𝜏̃𝛼,𝑝. We plot 𝐷̃𝑝𝜏̃𝛼,𝑝 in Figure 7 for both penetrant sizes as a function 
+of  𝑇𝑔/𝑇 and 𝑇, in analogy with Figures 4 and 5. Figure 7a plots this product for small penetrants 
+(𝑑𝜎
+⁄
+= 1.0), and as expected from Figures 4a and 5a the data roughly collapses to a single curve 
+that increases monotonically with the degree of supercooling 𝑇𝑔/𝑇. This trend is expected for one-
+component glass-forming liquids due to alpha process dynamic heterogeneity,66 so in this case the 
+network primarily affects penetrant transport through the dependence of 𝑇𝑔 on 𝑓𝑐𝑟𝑜𝑠𝑠. Notably, this 
+monotonic increase in 𝐷̃𝑝𝜏̃𝛼,𝑝′ is no longer seen when the 1/e criterion is considered (see inset to 
+Figure 7a), demonstrating that the longer time decay in the ISF should be responsible for the 
+behavior in the main panel of Figure 7a. To contrast, Figure 7b plots the product 𝐷̃𝑝𝜏̃𝛼,𝑝 for larger 
+penetrants (𝑑𝜎
+⁄
+= 2.0), and they exhibit a significant decrease with 𝑇𝑔/𝑇 for each of the higher 
+temperatures 𝑇= 339 and 320K. For a constant temperature, the increase with 𝑇𝑔/𝑇 corresponds 
+to an increase in both 𝑓𝑐𝑟𝑜𝑠𝑠 and 𝐶. We can thus attribute this dependence to the effect of mesh 
+confinement (and also the reduced importance of dynamic heterogeneity since larger particles tend 
+to average over it per discussions above), as this decrease of 𝐷̃𝑝𝜏̃𝛼,𝑝= 𝑋 with 𝐶 is predicted by 
+both Cai, et al.27 and Dell and Schweizer.30 However, this trend is less noticeable for the lowest 
+temperature 𝑇= 300 K, where within error 𝐷̃𝑝𝜏̃𝛼,𝑝 remains roughly constant (slightly 
+nonmonotonic) because at lower temperatures the dynamic heterogeneity effect becomes more 
+important. The expected increase in 𝐷̃𝑝𝜏̃𝛼,𝑝 for glassy melts due to dynamic heterogeneity appears25
+to cancel out any mesh confinement effects, indicating that the local caging and mesh confinement 
+both contribute to penetrant dynamics in this limit.   
+ 
+Figure 7. The product 𝐷̃𝑝𝜏̃𝛼,p as a function of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for several temperatures 𝑇 for (a) 
+𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0 with the 0.1 ISF decay criterion. For (a) there is a collapse to an 
+increasing curve that reflects the breakdown of Stokes-Einstein behavior typically observed in 
+fragile glass forming liquids. The inset shows the same plot, but using the 1/e criterion. For (b) at 
+high temperatures, each temperature exhibits a monotonic decrease in the product 𝐷̃𝑝𝜏̃𝛼,p that we 
+attribute to the effect of entropic mesh confinement. At low temperatures (𝑇= 300K) and 𝑑/𝜎=
+2.0 , the increase due to dynamic heterogeneity appears to counteract the effect of mesh 
+confinement, leading to a roughly constant value of 𝐷̃𝑝𝜏̃𝛼,p.  
+ 
+Network and Penetrant Dynamic Decoupling 
+ 
+To quantify penetrant dynamics we determined both the rate of local hopping via 1/𝜏̃𝛼,𝑝 
+and the long-time diffusion via 𝐷̃𝑝. Our results demonstrated that (1) both processes were primarily 
+governed by local network segmental motion (i.e. glass physics) at low temperatures, yet (2) 
+crosslinks nevertheless had a more pronounced effect on 𝐷̃𝑝 for larger penetrants (𝑑/𝜎= 2.0 
+versus 𝑑𝜎
+⁄
+= 1.0 in Table 1) or for situations that dynamic heterogeneity is not important. To 
+understand these two observations, we quantify the coupling between the penetrant alpha time 
+𝜏̃𝛼,𝑝′  and the network alpha relaxation time 𝜏̃𝛼,𝐾, where the latter is obtained from the26
+autocorrelation function of the Kuhn monomer vector per our prior work as briefly described in 
+the methods section.39 In this case, we use the short-time criterion 𝜏̃𝛼,𝑝′ due to its better consistency 
+with both the theoretical predictions,41 the weaker effect of dynamic heterogeneity, and to match 
+the 1/𝑒 criterion used in calculating 𝜏̃𝛼,𝐾 previously.39 The ratio between these two properties 
+𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 is plotted as a function of 𝑇𝑔/𝑇 in Figure 8 for both penetrant sizes and all temperatures 
+𝑇 studied; this comparison has previously demonstrated to be useful in the self-consistent 
+cooperative hopping (SCCH) theory of hard sphere mixtures and dilute penetrants in polymer 
+melts,24,65,78 and quantifies the degree of ‘dynamic coupling/decoupling’. In these previous 
+theoretical papers, the ratio 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 was studied as a function of ‘packing fraction’, which is 
+qualitatively analogous to inverse temperature.65 The theory predicted that the ratio 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 (1) 
+initially increases slightly as the temperature is lowered from high temperature, and then (2) 
+sharply decreases in a penetrant size-dependent manner (stronger decrease for smaller penetrants) 
+as temperature is further lowered towards the glassy state.  This indicates a strong decoupling 
+between penetrant and matrix dynamics in the supercooled regime. 
+ 
+In Figure 8, both penetrants show only a modest dependence of 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 on 𝑇𝑔/𝑇, 
+spanning only roughly a decade in the simulation-accessible weakly supercooled regime. We do 
+not observe the characteristic decrease in 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 theoretically predicted for the deeply 
+supercooled regime, which is expected to be computationally inaccessible, though our trends are 
+consistent with the weak changes in 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 predicted by the theory in the polymer alpha 
+relaxation time range probed in our simulation.41 Importantly, the relative magnitude of these ratios 
+is instructive. We find 𝜏̃𝛼,𝑝′/𝜏̃𝛼,𝐾 for the 𝑑/𝜎= 2.0 penetrant is at least an order of magnitude 
+larger than that for the 𝑑/𝜎= 1.0 penetrant, indicating that it is more strongly coupled to the27
+surrounding matrix as generically expected and as predicted by SCCH theory.24,41,65,78 This helps 
+explain our results for 1/𝜏̃𝛼,𝑝 and 𝐷̃𝑝 in the previous section; in those results, there was a stronger 
+dependence of 𝐷̃𝑝 for the larger penetrants on 𝑓𝑐𝑟𝑜𝑠𝑠 even at lower temperatures where mesh 
+confinement is not dominant (see Table 1). We can now attribute this to the stronger matrix-
+penetrant coupling for larger penetrants, rather than enhanced mesh confinement contribution. 
+ 
+Figure 8. Degree of decoupling between penetrant and Kuhn segment alpha relaxation times 
+quantified by the ratio 𝜏̃𝛼,p'/𝜏̃𝛼,K, as a function of 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 for several temperatures and both 
+𝑑/𝜎= 1.0  and 𝑑/𝜎= 2.0. While the trends with 𝑇𝑔(𝑓𝑐𝑟𝑜𝑠𝑠)/𝑇 are quite weak, the larger 
+penetrant 𝑑/𝜎= 2.0  couples significantly more strongly to the segmental dynamics of the 
+surrounding network, as evident in the order-of-magnitude larger value of 𝜏̃𝛼,p'/𝜏̃𝛼,K  when 
+compared to the smaller penetrant 𝑑/𝜎= 1.0.    
+ 
+Degeneracy of Mesh Size Effects Due to Confinement and Glassy Dynamics  
+ 
+From a molecular viewpoint, we only see significant mesh confinement effects on 
+penetrant diffusion in the limit of large particles and high temperatures, while for small molecules 
+or low temperatures we find that crosslinking dominantly impacts penetrant diffusion primarily 
+through its effect on the local segmental relaxation of the polymer matrix. However, even in this 
+latter limit we can demonstrate results empirically consistent with aspects of Equation 1 if we plot28
+our data versus the confinement ratio 𝐶 rather than the extent of supercooling 𝑇𝑔/𝑇. We consider 
+two candidate models for 𝑋, by plotting 𝐶𝐷̃𝑝 versus 𝐶2 in Figure 9a based on the predictions of 
+Cai, et al.27 and 𝐷̃𝑝 versus 𝐶 in Figure 9b based on the predictions of Dell and Schweizer.30 
+Despite already demonstrating that mesh confinement does not play a significant role for small 
+penetrants, these plots exhibit remarkably good agreement with the functional forms predicted by 
+both models as indicated by the nearly linear trends in these semi-log plots. However, there is a 
+non-negligible change in slope in both plots of Figure 9 as the temperature 𝑇 is changed, which is 
+not consistent with either entropic mesh confinement model.27,29,30 As per Equation 1, these 
+models that only have a temperature dependence in the prefactor 1/𝜏𝛼,𝑝  (plotted also versus 𝐶 
+from simulation in Figure S2) and not in the exponent of the entropic mesh confinement factor 𝑋. 
+This key observation, which is also shown theoretically in the companion paper,41 allows the 
+effects of crosslinking on the penetrant relaxation time to be distinguished from the effects of 
+crosslinking due to mesh confinement, in the absence of simulation determination of 1/𝜏𝛼,𝑝, 
+though this distinguishing feature may become weak as in the case of larger penetrants as is shown 
+in the supporting information (𝑑/𝜎= 2.0, Figure S3).29
+Figure 9. The penetrant diffusion constant 𝐷̃𝑝 plotted with respect to the confinement ratio 𝐶 as 
+suggested by the forms of various literature predictions for mesh confinement effects. (a) Cai, et 
+al.23 predicts that 𝐷̃𝑝∝𝐶−1 exp(−𝐶2) and (b) Dell and Schweizer26 predict that 𝐷̃𝑝∝exp(−𝑏𝐶). 
+Both ways of plotting this data appear linear, even though mesh confinement does not play a major 
+role in penetrant transport for the 𝑑/𝜎= 1.0 case plotted here. The main indication that the 
+simulations do not agree with the idea that entropic mesh confinement is dominant lie in the 
+temperature-dependent slopes, which for mesh confinement should not change with temperature.  
+Conclusion 
+In this paper, we used simulation to understand the role of glassy segmental scale dynamics versus 
+entropic mesh confinement on the diffusion and alpha relaxation of molecular penetrants in 
+permanently crosslinked polymer networks. We consider a specific form for the diffusion constant, 
+𝐷𝑝∼(𝑑2 𝜏𝛼,𝑝
+⁄
+)𝑋, that allows us to isolate the effect of network mesh confinement 𝑋 through 
+calculating and studying both the diffusion constant 𝐷̃𝑝 and the penetrant hopping or alpha 
+relaxation time 𝜏̃𝛼,𝑝. Both quantities exhibit Arrhenius-like trends with the degree of effective 
+supercooling 𝑇𝑔/𝑇 at a fixed temperature, due to the dependence of 𝑇𝑔 on the extent of 
+crosslinking. This strong coupling between penetrant hopping and crosslinking-dependent glassy 
+dynamics is consistent with theoretical predictions in the companion paper,41 but also exhibits 
+significant breakdown in the Stokes-Einstein relationship if strong dynamic heterogeneity 
+effects66,73–75 are apparent in the hopping dynamics of the smaller molecular penetrants as the 
+system is supercooled to larger values of 𝑇𝑔/𝑇.66 For small penetrants, the effect of crosslinking 
+on 𝑇𝑔 is demonstrated to dominate diffusive motion, with a collapse to a single dependence of both  
+𝜏̃𝛼,𝑝 and  𝐷̃𝑝 on 𝑇𝑔/𝑇. This collapse is no longer apparent for larger penetrants, where we show by 
+plotting the product 𝐷̃𝑝𝜏̃𝛼,𝑝 as a function of 𝑇𝑔/𝑇 that we see the signatures of mesh confinement. 
+While we find that crosslinking affects molecular penetrant transport through both its effect on 𝑇𝑔 
+and through mesh confinement, the former appears to be the dominant mechanism for our 
+simulations and we expect it will also be the dominant for deeply supercooled experiments. We30
+can also show, however, that the diffusion constant 𝐷̃𝑝 still follows trends predicted in the 
+literature for mesh confinement,27,28,30 due to a degeneracy of how crosslink fraction changes with 
+𝑇𝑔 and mesh size as predicted by SCCH theory.41 This underscores the difficulty of drawing 
+conclusions on transport mechanisms from diffusion data alone. 
+The importance of activated glassy dynamics on the diffusive motion of small molecular 
+penetrants in polymer networks suggests directions for future study, and ways in which the 
+selective transport of these species could be engineered into polymer materials. In particular, we 
+anticipate that the role of molecular shape and penetrant-matrix interactions may complicate the 
+relations we show between entropic mesh confinement and segmental relaxation. For penetrants 
+that are highly non-spherical, their size will now be related to two length-scales that may be more 
+or less affected by entropic mesh confinement, and will possess anisotropic interactions with the 
+surrounding matrix that may affect the penetrant alpha time. While related questions have been 
+theoretical studied by some of the authors,24,26 simulation will provide further molecular insight 
+into the role of these various transport effects. Finally, the important role of dynamic heterogeneity 
+on penetrant hopping suggests that there are possibilities for tuning the selectivity of molecular 
+transport in networks with dynamic or exchangeable bonds, which would introduce another 
+competing timescale that has recently been shown experimentally to affect penetrant diffusion.79 
+Acknowledgement 
+This research was supported by the U.S. Department of Energy, Office of Basic Energy Sciences, 
+Division of Materials Sciences and Engineering (Award No. DE-SC0020858), through the 
+Materials Research Laboratory at the University of Illinois at Urbana-Champaign. Helpful 
+discussions with Christopher Evans are gratefully acknowledged.31
+References: 
+(1) Blaiszik, B. J.; Kramer, S. L. B.; Olugebefola, S. C.; Moore, J. S.; Sottos, N. R.; White, S. R. 
+Self-Healing Polymers and Composites. Annu. Rev. Mater. Res. 2010, 40 (1), 179–211. 
+https://doi.org/10.1146/annurev-matsci-070909-104532. 
+(2) Patrick, J. F.; Robb, M. J.; Sottos, N. R.; Moore, J. S.; White, S. R. Polymers with 
+Autonomous 
+Life-Cycle 
+Control. 
+Nature 
+2016, 
+540 
+(7633), 
+363–370. 
+https://doi.org/10.1038/nature21002. 
+(3) Wang, H.; Keum, J. K.; Hiltner, A.; Baer, E.; Freeman, B.; Rozanski, A.; Galeski, A. 
+Confined Crystallization of Polyethylene Oxide in Nanolayer Assemblies. Science 2009, 323 
+(5915), 757–760. https://doi.org/10.1126/science.1164601. 
+(4) Wang, C.; Ge, Q.; Ting, D.; Nguyen, D.; Shen, H.-R.; Chen, J.; Eisen, H. N.; Heller, J.; 
+Langer, R.; Putnam, D. Molecularly Engineered Poly(Ortho Ester) Microspheres for 
+Enhanced Delivery of DNA Vaccines. 
+Nat. Mater. 2004, 3 (3), 190–196. 
+https://doi.org/10.1038/nmat1075. 
+(5) Li, J.; Mooney, D. J. Designing Hydrogels for Controlled Drug Delivery. Nat. Rev. Mater. 
+2016, 1 (12), 16071. https://doi.org/10.1038/natrevmats.2016.71. 
+(6) White, S. R.; Sottos, N. R.; Geubelle, P. H.; Moore, J. S.; Kessler, M. R.; Sriram, S. R.; 
+Brown, E. N.; Viswanathan, S. Autonomic Healing of Polymer Composites. Nature 2001, 
+409 (6822), 794–797. https://doi.org/10.1038/35057232. 
+(7) Galizia, M.; Chi, W. S.; Smith, Z. P.; Merkel, T. C.; Baker, R. W.; Freeman, B. D. 50th 
+Anniversary Perspective : Polymers and Mixed Matrix Membranes for Gas and Vapor 
+Separation: A Review and Prospective Opportunities. Macromolecules 2017, 50 (20), 7809–
+7843. https://doi.org/10.1021/acs.macromol.7b01718. 
+(8) Sanders, D. F.; Smith, Z. P.; Guo, R.; Robeson, L. M.; McGrath, J. E.; Paul, D. R.; Freeman, 
+B. D. Energy-Efficient Polymeric Gas Separation Membranes for a Sustainable Future: A 
+Review. Polymer 2013, 54 (18), 4729–4761. https://doi.org/10.1016/j.polymer.2013.05.075. 
+(9) Lau, C. H.; Li, P.; Li, F.; Chung, T.-S.; Paul, D. R. Reverse-Selective Polymeric Membranes 
+for 
+Gas 
+Separations. 
+Prog. 
+Polym. 
+Sci. 
+2013, 
+38 
+(5), 
+740–766. 
+https://doi.org/10.1016/j.progpolymsci.2012.09.006. 
+(10) Low, Z.-X.; Budd, P. M.; McKeown, N. B.; Patterson, D. A. Gas Permeation Properties, 
+Physical Aging, and Its Mitigation in High Free Volume Glassy Polymers. Chem. Rev. 2018, 
+118 (12), 5871–5911. https://doi.org/10.1021/acs.chemrev.7b00629. 
+(11) Li, D.; Zhang, X.; Yao, J.; Simon, G. P.; Wang, H. Stimuli-Responsive Polymer Hydrogels 
+as a New Class of Draw Agent for Forward Osmosis Desalination. Chem. Commun. 2011, 47 
+(6), 1710. https://doi.org/10.1039/c0cc04701e. 
+(12) Geise, G. M.; Lee, H.-S.; Miller, D. J.; Freeman, B. D.; McGrath, J. E.; Paul, D. R. Water 
+Purification by Membranes: The Role of Polymer Science. J. Polym. Sci. Part B Polym. Phys. 
+2010, 48 (15), 1685–1718. https://doi.org/10.1002/polb.22037. 
+(13) Geise, G. M.; Paul, D. R.; Freeman, B. D. Fundamental Water and Salt Transport Properties 
+of 
+Polymeric 
+Materials. 
+Prog. 
+Polym. 
+Sci. 
+2014, 
+39 
+(1), 
+1–42. 
+https://doi.org/10.1016/j.progpolymsci.2013.07.001. 
+(14) Feng, X.; Huang, R. Y. M. Liquid Separation by Membrane Pervaporation: A Review. Ind. 
+Eng. Chem. Res. 1997, 36 (4), 1048–1066. https://doi.org/10.1021/ie960189g. 
+(15) Sholl, D. S.; Lively, R. P. Seven Chemical Separations to Change the World. Nature 2016, 
+532 (7600), 435–437. https://doi.org/10.1038/532435a.32
+(16) Kosinov, N.; Gascon, J.; Kapteijn, F.; Hensen, E. J. M. Recent Developments in Zeolite 
+Membranes 
+for 
+Gas 
+Separation. 
+J. 
+Membr. 
+Sci. 
+2016, 
+499, 
+65–79. 
+https://doi.org/10.1016/j.memsci.2015.10.049. 
+(17) Trickett, C. A.; Helal, A.; Al-Maythalony, B. A.; Yamani, Z. H.; Cordova, K. E.; Yaghi, O. 
+M. The Chemistry of Metal–Organic Frameworks for CO2 Capture, Regeneration and 
+Conversion. 
+Nat. 
+Rev. 
+Mater. 
+2017, 
+2 
+(8), 
+17045. 
+https://doi.org/10.1038/natrevmats.2017.45. 
+(18) Qian, Q.; Asinger, P. A.; Lee, M. J.; Han, G.; Mizrahi Rodriguez, K.; Lin, S.; Benedetti, F. 
+M.; Wu, A. X.; Chi, W. S.; Smith, Z. P. MOF-Based Membranes for Gas Separations. Chem. 
+Rev. 2020, 120 (16), 8161–8266. https://doi.org/10.1021/acs.chemrev.0c00119. 
+(19) Yuan, S.; Li, X.; Zhu, J.; Zhang, G.; Van Puyvelde, P.; Van der Bruggen, B. Covalent Organic 
+Frameworks for Membrane Separation. Chem. Soc. Rev. 2019, 48 (10), 2665–2681. 
+https://doi.org/10.1039/C8CS00919H. 
+(20) Gusev, A. A.; Arizzi, S.; Suter, U. W.; Moll, D. J. Dynamics of Light Gases in Rigid Matrices 
+of 
+Dense 
+Polymers. 
+J. 
+Chem. 
+Phys. 
+1993, 
+99 
+(3), 
+2221–2227. 
+https://doi.org/10.1063/1.465283. 
+(21) Gusev, A. A.; Suter, U. W. Dynamics of Small Molecules in Dense Polymers Subject to 
+Thermal Motion. J. Chem. Phys. 1993, 99 (3), 2228–2234. https://doi.org/10.1063/1.466198. 
+(22) Karayiannis, N. Ch.; Mavrantzas, V. G.; Theodorou, D. N. Detailed Atomistic Simulation of 
+the Segmental Dynamics and Barrier Properties of Amorphous Poly(Ethylene Terephthalate) 
+and 
+Poly(Ethylene 
+Isophthalate). 
+Macromolecules 
+2004, 
+37 
+(8), 
+2978–2995. 
+https://doi.org/10.1021/ma0352577. 
+(23) Vergadou, N.; Theodorou, D. N. Molecular Modeling Investigations of Sorption and 
+Diffusion of Small Molecules in Glassy Polymers. Membranes 2019, 9 (8), 98. 
+https://doi.org/10.3390/membranes9080098. 
+(24) Mei, B.; Schweizer, K. S. Theory of the Effects of Specific Attractions and Chain 
+Connectivity on the Activated Dynamics and Selective Transport of Penetrants in Polymer 
+Melts. 
+Macromolecules 
+2022, 
+55 
+(20), 
+9134–9151. 
+https://doi.org/10.1021/acs.macromol.2c01549. 
+(25) Sheridan, G. S.; Evans, C. M. Understanding the Roles of Mesh Size, T g , and Segmental 
+Dynamics on Probe Diffusion in Dense Polymer Networks. Macromolecules 2021, 54 (23), 
+11198–11208. https://doi.org/10.1021/acs.macromol.1c01767. 
+(26) Mei, B.; Sheridan, G. S.; Evans, C. M.; Schweizer, K. S. Elucidation of the Physical Factors 
+That Control Activated Transport of Penetrants in Chemically Complex Glass-Forming 
+Liquids. 
+Proc. 
+Natl. 
+Acad. 
+Sci. 
+2022, 
+119 
+(41), 
+e2210094119. 
+https://doi.org/10.1073/pnas.2210094119. 
+(27) Cai, L.-H.; Panyukov, S.; Rubinstein, M. Hopping Diffusion of Nanoparticles in Polymer 
+Matrices. Macromolecules 2015, 48 (3), 847–862. https://doi.org/10.1021/ma501608x. 
+(28) Sorichetti, V.; Hugouvieux, V.; Kob, W. Dynamics of Nanoparticles in Polydisperse Polymer 
+Networks: From Free Diffusion to Hopping. Macromolecules 2021, 54 (18), 8575–8589. 
+https://doi.org/10.1021/acs.macromol.1c01394. 
+(29) Xu, Z.; Dai, X.; Bu, X.; Yang, Y.; Zhang, X.; Man, X.; Zhang, X.; Doi, M.; Yan, L.-T. 
+Enhanced Heterogeneous Diffusion of Nanoparticles in Semiflexible Networks. ACS Nano 
+2021, 15 (3), 4608–4616. https://doi.org/10.1021/acsnano.0c08877.33
+(30) Dell, Z. E.; Schweizer, K. S. Theory of Localization and Activated Hopping of Nanoparticles 
+in Cross-Linked Networks and Entangled Polymer Melts. Macromolecules 2014, 47 (1), 
+405–414. https://doi.org/10.1021/ma4021455. 
+(31) Poling-Skutvik, R.; Krishnamoorti, R.; Conrad, J. C. Size-Dependent Dynamics of 
+Nanoparticles in Unentangled Polyelectrolyte Solutions. ACS Macro Lett. 2015, 4 (10), 
+1169–1173. https://doi.org/10.1021/acsmacrolett.5b00616. 
+(32) Smith, M.; Poling-Skutvik, R.; Slim, A. H.; Willson, R. C.; Conrad, J. C. Dynamics of 
+Flexible Viruses in Polymer Solutions. Macromolecules 2021, 54 (10), 4557–4563. 
+https://doi.org/10.1021/acs.macromol.1c00435. 
+(33) Poling-Skutvik, R.; Slim, A. H.; Narayanan, S.; Conrad, J. C.; Krishnamoorti, R. Soft 
+Interactions Modify the Diffusive Dynamics of Polymer-Grafted Nanoparticles in Solutions 
+of 
+Free 
+Polymer. 
+ACS 
+Macro 
+Lett. 
+2019, 
+8 
+(8), 
+917–922. 
+https://doi.org/10.1021/acsmacrolett.9b00294. 
+(34) Chen, Y.; Ma, R.; Qian, X.; Zhang, R.; Huang, X.; Xu, H.; Zhou, M.; Liu, J. Nanoparticle 
+Mobility within Permanently Cross-Linked Polymer Networks. Macromolecules 2020, 53 
+(11), 4172–4184. https://doi.org/10.1021/acs.macromol.0c00334. 
+(35) Hall, D. B.; Deppe, D. D.; Hamilton, K. E.; Dhinojwala, A.; Torkelson, J. M. Probe 
+Translational and Rotational Diffusion in Polymers near Tg: Roles of Probe Size, Shape, and 
+Secondary Bonding in Deviations from Debye-Stokes-Einstein Scaling. J Non-Cryst. Sol 
+1998, 235, 48–56. 
+(36) Zhang, K.; Kumar, S. K. Molecular Simulations of Solute Transport in Polymer Melts. ACS 
+Macro Lett. 2017, 6 (8), 864–868. https://doi.org/10.1021/acsmacrolett.7b00339. 
+(37) Zhang, K.; Meng, D.; Müller-Plathe, F.; Kumar, S. K. Coarse-Grained Molecular Dynamics 
+Simulation of Activated Penetrant Transport in Glassy Polymers. Soft Matter 2018, 14 (3), 
+440–447. https://doi.org/10.1039/C7SM01941F. 
+(38) Xue, C.; Shi, X.; Tian, Y.; Zheng, X.; Hu, G. Diffusion of Nanoparticles with Activated 
+Hopping in Crowded Polymer Solutions. Nano Lett. 2020, 20 (5), 3895–3904. 
+https://doi.org/10.1021/acs.nanolett.0c01058. 
+(39) Mei, B.; Lin, T.-W.; Sheridan, G. S.; Evans, C. M.; Sing, C. E.; Schweizer, K. S. Structural 
+Relaxation and Vitrification in Dense Cross-Linked Polymer Networks: Simulation, Theory, 
+and 
+Experiment. 
+Macromolecules 
+2022, 
+55 
+(10), 
+4159–4173. 
+https://doi.org/10.1021/acs.macromol.2c00277. 
+(40) Mei, B.; Lin, T.-W.; Sheridan, G. S.; Evans, C. M.; Sing, C. E.; Schweizer, K. S. How 
+Segmental Dynamics and Mesh Confinement Determine the Selective Diffusivity of 
+Molecules 
+in 
+Crosslinked 
+Dense 
+Polymer 
+Networks. 
+ACS 
+Cent 
+Sci 
+2023. 
+https://doi.org/10.1021/acscentsci.2c01373. 
+(41) Mei, B.; Lin, T.-W.; Sing, C. E.; Schweizer, K. S. Self-Consistent Hopping Theory of 
+Activated Relaxation and Diffusion of Dilute Penetrants in Dense Crosslinked Polymer 
+Networks. ArXiv 2023. https://doi.org/10.48550/ARXIV.2301.05353. 
+(42) Frenkel, D.; Smit, B. Understanding Molecular Simulation: From Algorithms to 
+Applications; Academic Press: San Diego, CA, 2002. 
+(43) Jain, T. S.; de Pablo, J. J. Influence of Confinement on the Vibrational Density of States and 
+the Boson Peak in a Polymer Glass. J. Chem. Phys. 2004, 120 (19), 9371–9375. 
+https://doi.org/10.1063/1.1689952.34
+(44) Riggleman, R. A.; Douglas, J. F.; de Pablo, J. J. Tuning Polymer Melt Fragility with 
+Antiplasticizer 
+Additives. 
+J. 
+Chem. 
+Phys. 
+2007, 
+126 
+(23), 
+234903. 
+https://doi.org/10.1063/1.2742382. 
+(45) Simmons, D. S.; Douglas, J. F. Nature and Interrelations of Fast Dynamic Properties in a 
+Coarse-Grained Glass-Forming Polymer Melt. Soft Matter 2011, 7 (22), 11010. 
+https://doi.org/10.1039/c1sm06189e. 
+(46) Mangalara, J. H.; Mackura, M. E.; Marvin, M. D.; Simmons, D. S. The Relationship between 
+Dynamic and Pseudo-Thermodynamic Measures of the Glass Transition Temperature in 
+Nanostructured 
+Materials. 
+J. 
+Chem. 
+Phys. 
+2017, 
+146 
+(20), 
+203316. 
+https://doi.org/10.1063/1.4977520. 
+(47) Allen, M. P.; Tildesley, D. J. Computer Simulation of Liquids, 2nd Ed.; Oxford University 
+Press: Oxford, 2017. https://doi.org/10.1093/oso/9780198803195.001.0001. 
+(48) Kremer, K.; Grest, G. S. Dynamics of Entangled Linear Polymer Melts: A Molecular-
+Dynamics 
+Simulation. 
+J 
+Chem 
+Phys 
+1990, 
+92 
+(8), 
+5057–5086. 
+https://doi.org/10.1063/1.458541. 
+(49) Rubinstein, M.; Colby, R. Polymer Physics; Oxford University Press, N. Y., 2003. 
+(50) Tree, D. R.; Muralidhar, A.; Doyle, P. S.; Dorfman, K. D. Is DNA a Good Model Polymer? 
+Macromolecules 2013, 46 (20), 8369–8382. https://doi.org/10.1021/ma401507f. 
+(51) Dutta, S.; Pan, T.; Sing, C. E. Bridging Simulation Length Scales of Bottlebrush Polymers 
+Using a Wormlike Cylinder Model. Macromolecules 2019, 52 (13), 4858–4874. 
+https://doi.org/10.1021/acs.macromol.9b00363. 
+(52) Coelho, J. F. J.; Carvalho, E. Y.; Marques, D. S.; Popov, A. V.; Percec, V.; Gil, M. H. 
+Influence of the Isomeric Structures of Butyl Acrylate on Its Single-Electron Transfer-
+Degenerative Chain Transfer Living Radical Polymerization in Water Catalyzed by Na 2 S 2 
+O 
+4. 
+J. 
+Polym. 
+Sci. 
+Part 
+Polym. 
+Chem. 
+2008, 
+46 
+(19), 
+6542–6551. 
+https://doi.org/10.1002/pola.22963. 
+(53) Minina, E. S.; Sánchez, P. A.; Likos, C. N.; Kantorovich, S. S. The Influence of the Magnetic 
+Filler Concentration on the Properties of a Microgel Particle: Zero-Field Case. J. Magn. 
+Magn. Mater. 2018, 459, 226–230. https://doi.org/10.1016/j.jmmm.2017.10.107. 
+(54) Moreno, A. J.; Lo Verso, F. Computational Investigation of Microgels: Synthesis and Effect 
+of the Microstructure on the Deswelling Behavior. Soft Matter 2018, 14 (34), 7083–7096. 
+https://doi.org/10.1039/C8SM01407H. 
+(55) Plimpton, S. Fast Parallel Algorithms for Short-Range Molecular Dynamics. J Comp Phys 
+1995, 117, 1–19. 
+(56) Nosé, S. A Unified Formulation of the Constant Temperature Molecular Dynamics Methods. 
+J. Chem. Phys. 1984, 81 (1), 511–519. https://doi.org/10.1063/1.447334. 
+(57) Hoover, W. G. Canonical Dynamics: Equilibrium Phase-Space Distributions. Phys. Rev. A 
+1985, 31 (3), 1695–1697. https://doi.org/10.1103/PhysRevA.31.1695. 
+(58) Shavit, A.; Riggleman, R. A. Influence of Backbone Rigidity on Nanoscale Confinement 
+Effects in Model Glass-Forming Polymers. Macromolecules 2013, 46 (12), 5044–5052. 
+https://doi.org/10.1021/ma400210w. 
+(59) Bennemann, C.; Paul, W.; Baschnagel, J.; Binder, K. Investigating the Influence of Different 
+Thermodynamic Paths on the Structural Relaxation in a Glass-Forming Polymer Melt. J. 
+Phys. Condens. Matter 1999, 11 (10), 2179–2192. https://doi.org/10.1088/0953-
+8984/11/10/005.35
+(60) Riggleman, R. A.; Lee, H.-N.; Ediger, M. D.; de Pablo, J. J. Free Volume and Finite-Size 
+Effects in a Polymer Glass under Stress. Phys. Rev. Lett. 2007, 99 (21), 215501. 
+https://doi.org/10.1103/PhysRevLett.99.215501. 
+(61) Diaz Vela, D.; Simmons, D. S. The Microscopic Origins of Stretched Exponential Relaxation 
+in Two Model Glass-Forming Liquids as Probed by Simulations in the Isoconfigurational 
+Ensemble. J. Chem. Phys. 2020, 153 (23), 234503. https://doi.org/10.1063/5.0035609. 
+(62) Lin, E. Y.; Frischknecht, A. L.; Riggleman, R. A. Origin of Mechanical Enhancement in 
+Polymer Nanoparticle (NP) Composites with Ultrahigh NP Loading. Macromolecules 2020, 
+53 (8), 2976–2982. https://doi.org/10.1021/acs.macromol.9b02733. 
+(63) McQuarrie, D. A. Statistical Mechanics; University Science Books: Sausalito, 2000. 
+(64) Kumar, P.; Theeyancheri, L.; Chaki, S.; Chakrabarti, R. Transport of Probe Particles in a 
+Polymer Network: Effects of Probe Size, Network Rigidity and Probe–Polymer Interaction. 
+Soft Matter 2019, 15 (44), 8992–9002. https://doi.org/10.1039/C9SM01822K. 
+(65) Mei, B.; Schweizer, K. S. Activated Penetrant Dynamics in Glass Forming Liquids: Size 
+Effects, Decoupling, Slaving, Collective Elasticity and Correlation with Matrix 
+Compressibility. 
+Soft 
+Matter 
+2021, 
+17 
+(9), 
+2624–2639. 
+https://doi.org/10.1039/D0SM02215B. 
+(66) Mei, B.; Lu, Y.; An, L.; Wang, Z.-G. Two-Step Relaxation and the Breakdown of the Stokes-
+Einstein Relation in Glass-Forming Liquids. Phys. Rev. E 2019, 100 (5), 052607. 
+https://doi.org/10.1103/PhysRevE.100.052607. 
+(67) Stillinger, F. H.; Hodgdon, J. A. Translation-Rotation Paradox for Diffusion in Fragile Glass-
+Forming 
+Liquids. 
+Phys. 
+Rev. 
+E 
+1994, 
+50 
+(3), 
+2064–2068. 
+https://doi.org/10.1103/PhysRevE.50.2064. 
+(68) Hodgdon, J. A.; Stillinger, F. H. Stokes-Einstein Violation in Glass-Forming Liquids. Phys. 
+Rev. E 1993, 48 (1), 207–213. https://doi.org/10.1103/PhysRevE.48.207. 
+(69) Kumar, P.; Buldyrev, S. V.; Becker, S. R.; Poole, P. H.; Starr, F. W.; Stanley, H. E. Relation 
+between the Widom Line and the Breakdown of the Stokes–Einstein Relation in Supercooled 
+Water. 
+Proc. 
+Natl. 
+Acad. 
+Sci. 
+2007, 
+104 
+(23), 
+9575–9579. 
+https://doi.org/10.1073/pnas.0702608104. 
+(70) Becker, S. R.; Poole, P. H.; Starr, F. W. Fractional Stokes-Einstein and Debye-Stokes-
+Einstein Relations in a Network-Forming Liquid. Phys. Rev. Lett. 2006, 97 (5), 055901. 
+https://doi.org/10.1103/PhysRevLett.97.055901. 
+(71) Kumar, S. K.; Szamel, G.; Douglas, J. F. Nature of the Breakdown in the Stokes-Einstein 
+Relationship in a Hard Sphere Fluid. J. Chem. Phys. 2006, 124 (21), 214501. 
+https://doi.org/10.1063/1.2192769. 
+(72) Mazza, M. G.; Giovambattista, N.; Stanley, H. E.; Starr, F. W. Connection of Translational 
+and Rotational Dynamical Heterogeneities with the Breakdown of the Stokes-Einstein and 
+Stokes-Einstein-Debye Relations in Water. Phys. Rev. E 2007, 76 (3), 031203. 
+https://doi.org/10.1103/PhysRevE.76.031203. 
+(73) Ediger, M. D. Spatially Heterogeneous Dynamics in Supercooled Liquids. Annu. Rev. Phys. 
+Chem. 2000, 51 (1), 99–128. https://doi.org/10.1146/annurev.physchem.51.1.99. 
+(74) Mei, B.; Zhuang, B.; Lu, Y.; An, L.; Wang, Z.-G. Local-Average Free Volume Correlates 
+with Dynamics in Glass Formers. J. Phys. Chem. Lett. 2022, 13 (17), 3957–3964. 
+https://doi.org/10.1021/acs.jpclett.2c00072.36
+(75) Berthier, L.; Biroli, G. Theoretical Perspective on the Glass Transition and Amorphous 
+Materials. 
+Rev. 
+Mod. 
+Phys. 
+2011, 
+83 
+(2), 
+587–645. 
+https://doi.org/10.1103/RevModPhys.83.587. 
+(76) Xie, S.-J.; Schweizer, K. S. Microscopic Theory of Dynamically Heterogeneous Activated 
+Relaxation as the Origin of Decoupling of Segmental and Chain Relaxation in Supercooled 
+Polymer 
+Melts. 
+Macromolecules 
+2020, 
+53 
+(13), 
+5350–5360. 
+https://doi.org/10.1021/acs.macromol.0c00849. 
+(77) Xie, S.-J.; Schweizer, K. S. A Collective Elastic Fluctuation Mechanism for Decoupling and 
+Stretched Relaxation in Glassy Colloidal and Molecular Liquids. J. Chem. Phys. 2020, 152 
+(3), 034502. https://doi.org/10.1063/1.5129550. 
+(78) Zhang, R.; Schweizer, K. S. Correlated Matrix-Fluctuation-Mediated Activated Transport of 
+Dilute Penetrants in Glass-Forming Liquids and Suspensions. J. Chem. Phys. 2017, 146 (19), 
+194906. https://doi.org/10.1063/1.4983224. 
+(79) Huang, J.; Ramlawi, N.; Sheridan, G. S.; Chen, C.; Ewoldt, R. H.; Braun, P. V.; Evans, C. 
+M. Dynamic Covalent Bond Exchange Enhances Penetrant Diffusion in Dense Vitrimers. 
+Macromolecules 2023, 56 (3), 1253–1262. https://doi.org/10.1021/acs.macromol.2c02547.37
+ 
+Supporting Information Figures 
+ 
+Figure S1. Representative plots of the effective exponent 𝛽 for the mean square displacement 
+versus time ⟨𝑟̃𝑝
+2(𝑡̃)⟩∼𝑡̃𝛽  of a penetrant particle with sizes (a) 𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0, for 
+the same values of 𝑇 and 𝑓𝑐𝑟𝑜𝑠𝑠 as shown in Figure 2. 𝛽 is the slope of Figure 2, and both plots 
+show that penetrant diffusion reaches the Fickian diffusion limit of 𝛽= 1 in the long-time region. 
+The open circles denote the length scale of the polymer network mesh size, as described in Table 
+S1. Intermediate regions with more noise reflect the need to perform several distinct computational 
+runs with different data output frequency.   
+ 
+ 
+Figure S2. The inverse penetrant alpha time 1/𝜏̃𝛼,𝑝 plotted with respect to the confinement ratio 
+𝐶 for penetrant particles with sizes (a) 𝑑/𝜎= 1.0  and (b) 𝑑/𝜎= 2.0. For both particle sizes, we 
+find that they are consistent with the trend 𝜏̃𝛼,𝑝∝exp(−𝑏𝐶). This primarily reflects the local 
+glassy dynamics and not mesh confinement effects, and so this trend contributes to the apparent 
+degeneracy between the two mechanisms for crosslink effects on penetrant transport in networks.38
+ 
+Figure S3: 
+ 
+Figure S3. The penetrant diffusion constant 𝐷̃𝑝 plotted with respect to the confinement ratio 𝐶 as 
+suggested by the forms of various literature predictions for mesh confinement effects. (a) Cai, et 
+al.23 predicts that 𝐷̃𝑝∝𝐶−1 exp(−𝐶2) and (b) Dell and Schweizer26 predict that 𝐷̃𝑝∝exp(−𝑏𝐶). 
+Both ways of plotting this data appear linear, even though mesh confinement does not play the 
+sole role in penetrant transport for the 𝑑/𝜎= 2.0 case shown here.  
+ 
+Table S1. Mesh size (in unit of 𝜎) of networks at various fcross.  
+fcross 
+0.11 
+0.25 
+0.36 
+0.50 
+𝒅/𝝈= 𝟏. 𝟎 
+2.43 
+1.75 
+1.48 
+1.28 
+𝒅/𝝈= 𝟐. 𝟎 
+2.45 
+1.76 
+1.49 
+1.29

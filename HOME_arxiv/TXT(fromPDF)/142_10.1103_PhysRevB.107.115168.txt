@@ -1,0 +1,1082 @@
+Plasmons in a two-dimensional nonsymmorphic nodal-line semimetal
+Jin Cao,1, 2, 3 Hao-Ran Chang,4, ∗Xiaolong Feng,3 Yugui Yao,1, 2 and Shengyuan A. Yang3
+1Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and Measurement (MOE),
+School of Physics, Beijing Institute of Technology, Beijing, 100081, China
+2Beijing Key Lab of Nanophotonics & Ultraﬁne Optoelectronic Systems,
+School of Physics, Beijing Institute of Technology, Beijing, 100081, China
+3Research Laboratory for Quantum Materials, Singapore University of Technology and Design, Singapore 487372, Singapore
+4Department of Physics, Institute of Solid State Physics and Center for Computational Sciences,
+Sichuan Normal University, Chengdu, Sichuan 610066, China
+Recent experiments have established a type of nonsymmorphic symmetry protected nodal lines in
+the family of two-dimensional (2D) composition tunable materials NbSixTe2. Here, we theoretically
+study the plasmonic properties of such nonsymmorphic nodal-line semimetals. We show that the
+nonsymmorphic character endows the plasmons with extremely strong anisotropy.
+There exist
+both intraband and interband plasmon branches. The intraband branch is gapless and has a q1/2
+dispersion. It is most dispersive and is independent of carrier density in direction normal to the
+nodal line, whereas along the nodal line, its dispersion is largely suppressed and its frequency
+scales linearly with carrier density. The interband branches are gapped and their long wavelength
+limits are connected with van Hove singularities of the band structure. We ﬁnd that the single
+particle excitations are strongly suppressed in such systems, which decreases the Landau damping
+of plasmons. These characters are further veriﬁed by ﬁrst-principles calculations on 2D NbSixTe2.
+Interesting features in static screening of charged impurity are also discussed. Our result reveals
+characteristic plasmons in a class of nonsymmorphic topological semimetals and oﬀers guidance for
+its experimental detection and possible applications.
+I.
+INTRODUCTION
+In topological semimetals (TSMs), the Fermi surface
+is consisting of symmetry-protected band degeneracies,
+such that the low-energy electronic states can have dis-
+tinct characters in their energy dispersion, pseudospin
+structure, and interband coherence [1–4]. This leads to
+many interesting physical properties, diﬀerent from con-
+ventional metals or doped semiconductors. Clearly, the
+dimensions of the system as well as of the degeneracy
+manifold play important roles in the physics of TSMs.
+For instance, in three dimensional (3D) materials, sta-
+ble degeneracy manifolds may take the form of nodal
+points [5–11], nodal lines [12–15], or nodal surfaces [16–
+18].
+In recent works, the possible protected band de-
+generacies were systematically classiﬁed for all magnetic
+space groups [19–23].
+The TSM physics has also been actively explored in
+two-dimensional (2D) materials [24], which is another
+research focus in the past two decades [25, 26].
+In
+fact, graphene is a prominent example of 2D nodal-point
+TSMs [27], and studies on graphene drove the whole ﬁeld
+of topological materials [28]. Meanwhile, there has been a
+lot of interest in 2D nodal-line semimetals [29, 30]. Many
+candidate materials were proposed [24]. However, most
+of the proposals suﬀer one or more of the following draw-
+backs.
+(1) The nodal line is far away from the Fermi
+level. (2) Points on the nodal line have a large variation
+in energy. (3) There are other extraneous band coexist-
+ing at Fermi energy. (4) The material is hypothetical,
+∗hrchang@mail.ustc.edu.cn
+or is not stable at ambient condition. Points (1-3) make
+it diﬃcult to probe signatures of nodal-line states, and
+point (4) poses challenge for experimental studies as well
+as possible applications.
+Recently, a series of theoretical and experimental works
+have established a good TSM state in the NbSixTe2 fam-
+ily materials [31–36].
+These materials were ﬁrst syn-
+thesized in the 1990s [37].
+In the 3D bulk form, they
+are van der Waals layered materials, so 2D ultrathin
+layers can be readily obtained via mechanical exfolia-
+tion [38]. It was shown that the bulk material possesses
+hourglass nodal loops, whereas the 2D monolayer is an
+almost ideal nodal-line semimetal protected by a non-
+symmorphic symmetry [31]. More interesting, this fam-
+ily belongs to so-called composition-tunable materials,
+i.e., there exist a series of stoichiometric members with
+the formula Nb2n+1SinTe4n+2, or equivalently NbSixTe2
+with x = n/(2n + 1) ∈[1/3, 1/2] [37, 39–41]. While the
+speciﬁc band dispersion varies with n, all these members
+in 2D feature the nonsymmorphic nodal line [34]. It was
+found that the low-energy bands that make the nodal line
+are mainly from an array of NbTe2 chains, which can be
+well captured by a 2D Su-Schrieﬀer-Heeger (SSH) like
+model [36]. Evidently, the NbSixTe2 family materials of-
+fer a promising platform for studying the physics of 2D
+nodal-line TSMs.
+Among various physical properties, plasmons, the col-
+lective modes associated with density oscillations of elec-
+tron liquid, could directly manifest the distinct charac-
+ters of low-energy electronic states.
+Indeed, plasmons
+of graphene and other TSMs have attracted great inter-
+est [42–52]. However, plasmons associated with nodal-
+line states were mainly studied in 3D systems, and the
+arXiv:2211.03621v1  [cond-mat.mes-hall]  7 Nov 20222
+line is often assumed to have the shape of a perfect ring in
+Brillouin zone (BZ) [53–55]. This is not the case for the
+nonsymmorphic nodal line in 2D NbSixTe2, which tra-
+verses the BZ along a straight path and exhibits strong
+anisotropy [34, 36]. Thus, it is desirable to ﬁnd out how
+this nonsymmorphic nodal-line state impacts the plas-
+mon properties.
+In this work, we undertake this task and investigate
+the plasmons of nonsymmorphic nodal-line TSMs. First,
+by using the 2D SSH like model, we show that the plas-
+mon spectrum contains two parts, denoted as intraband
+and interband plasmons. The intraband plasmon branch
+is gapless and has a q1/2 dispersion. The scaling of plas-
+mon frequency with carrier density n (or Fermi energy)
+depends on the propagation direction, which crossovers
+from ∼n0 normal to the nodal line to ∼n along the
+line. Meanwhile, the two interband branches are gapped
+and are connected to the van Hove singularities of the
+band structure.
+All plasmon branches exhibit strong
+anisotropy and a characteristic angular dependence. The
+single particle excitations are strongly suppressed in such
+systems, such that the plasmons may enjoy less damp-
+ing and longer lifetime. By using ﬁrst-principles calcula-
+tions, we show that the key features obtained from the
+model study can indeed manifest in monolayer NbSixTe2,
+which distinguish the system from conventional metals
+and doped semiconductors. In addition, we show that the
+screening charge density induced by a charged impurity
+also exhibits an interesting signature owing to the non-
+symmorphic nodal line. Our work reveals characteristic
+plasmon modes in a class of 2D TSMs and oﬀers guid-
+ance for further experimental study on NbSixTe2 family
+materials.
+II.
+DIRAC SSH MODEL
+In order to capture the nonsymmorphic nodal line in
+NbSixTe2 family materials, a minimal lattice model was
+proposed by some of the current authors in Ref. [36]. In
+this section, we brieﬂy introduce this model and discuss
+its main features.
+As illustrated in Fig. 1(a), the model is deﬁned on
+a 2D rectangular lattice, with each unit cell containing
+two sites A and B.
+It is more illuminating by view-
+ing the model as consisting of an array of zigzag chains
+running along the x direction (see Fig. 1(a)).
+Physi-
+cally, each zigzag chain corresponds to a NbTe2 chain
+in NbSixTe2 [34]. The crucial symmetries that constrain
+the system are the glide mirror ˜
+My = {My| 1
+20} and the
+time reversal symmetry T . The glide mirror is a non-
+symmorphic symmetry which involves half lattice trans-
+lations along the mirror line. We shall see that these two
+symmetries determine the existence of the nodal line.
+The model can be constructed in two steps. First, one
+writes down the Hamiltonian for a single zigzag chain
+FIG. 1. (a) Schematic diagram of the lattice model. The unit
+cell is indicated by the black rectangle.
+(b) Brillouin zone
+(BZ) of the model. The nodal line at the boundary of BZ is
+highlighted in red. (c-d) Band structure of the model. Here,
+energy is in unit of t, we set t′ = 0.3t, and kx (ky) is in unit
+of ℓ−1
+x
+(ℓ−1
+y ).
+labeled by j:
+Hj
+chain =
+X
+i
+(ta†
+i,jbi,j + ta†
+i,jbi−1,j + h.c.),
+(1)
+where ai,j and bi,j are the particle operators for A and B
+sites in a unit cell labeled by the index (i, j). We suppress
+spin indices in the model, because the spin-orbit coupling
+strength in NbSixTe2 is found to be weak [33, 34, 36].
+This 1D model is similar to the famous SSH model [56].
+However, in SSH model, the two t’s in the parenthesis of
+(1) are typically of diﬀerent values, allowing for a dimer-
+ization pattern. In comparison, here, the two hopping
+amplitudes must be equal, as dictated by the ˜
+My sym-
+metry. It follows that the spectrum of model (1) must be
+gapless, with two bands crossing at a Dirac node at the
+BZ boundary k = π/ℓx, where k is the wave vector along
+the chain and ℓx is the lattice constant along x.
+The second step is to add the interchain coupling to
+form a 2D model. As illustrated in Fig. 1(a), the coupling
+is added between nearest sites of two neighboring chains,
+described by
+Hinter =
+X
+ij
+(t′a†
+i,j+1bi,j + t′a†
+i+1,j+1bi,j + h.c.).
+(2)
+Again, the two t′’s in (2) are dictated by
+˜
+My to be
+equal. In real materials, the interchain coupling is typi-
+cally much smaller compared to the intrachain coupling.
+This will be assumed in the following discussion.
+Combining the two parts gives the whole model
+H =
+X
+j
+Hj
+chain + Hinter.
+(3)3
+It is important to note that adding the interchain cou-
+pling does not open a gap in the spectrum. This feature
+is solely dictated by symmetry. Consider the algebraic
+relation satisﬁed by ˜
+My:
+˜
+M 2
+y = T10 = e−ikxℓx,
+(4)
+where T10 is the unit lattice translation along x (the chain
+direction). Since [T , ˜
+My] = 0 and T 2 = 1 here, we have
+(T ˜
+My)2 = e−ikxℓx.
+(5)
+Importantly, each point on the BZ boundary path kx =
+π/ℓx (X-M) is invariant under the anti-unitary symme-
+try T ˜
+My, and (T ˜
+My)2 = −1 there. Therefore, the bands
+on the X-M path must be doubly degenerate, and this
+dictates the presence of a nodal line along this path, as
+indicated in Fig. 1(b). In the current model, this nodal
+line must be formed by the crossing of the two bands.
+This also means that the Dirac node we noticed in (1)
+is not destroyed by the interchain coupling, instead, it
+extends into a Dirac line at the BZ boundary in the 2D
+model. In order to stress this important diﬀerence from
+the conventional SSH model, model (3) was termed as
+the Dirac SSH model in Ref. [36].
+After Fourier transform to momentum space, we have
+H(k) = t
+
+0
+1 + e−ikxℓx
+1 + eikxℓx
+0
+
++ t′
+
+0
+e−ikyℓy(1 + e−ikxℓx)
+eikyℓy(1 + eikxℓx)
+0
+
+,
+(6)
+where the ﬁrst term corresponds to the intrachain cou-
+pling, and the second term corresponds to the interchain
+coupling. The model can be easily diagonalized and its
+spectrum is given by
+Es(k) = 2s cos kxℓx
+2
+·
+
+t2 + 2tt′ cos(kyℓy) + t′21/2 , (7)
+with s = ±1.
+The result conﬁrms a nodal line at
+kx = π/ℓx, where the two bands cross at zero energy. The
+band structure of the model is plotted in Fig. 1(c-d), from
+which one can visualize the nodal line at the BZ bound-
+ary. One may expand (7) at a point k∗= (π/ℓx, ky) on
+the nodal line. Then, to the linear order in q, i.e., the
+deviation from k∗, we have
+Es,k∗(q) ≈−sℏvF (k∗)qx,
+(8)
+where
+vF (k∗) = ℓx
+
+t2 + 2tt′ cos(kyℓy) + t′21/2 /ℏ
+(9)
+is the Fermi velocity along kx direction at the k∗point.
+This conﬁrms the Dirac type linear band crossing at the
+nodal line.
+In this work, we always assume the model is around
+half ﬁlling, i.e., the Fermi energy is not far away from
+the Dirac line. One can easily calculate the density of
+states (DOS)
+D(E) = g
+Z
+[dk] δ(E −Es(k))
+(10)
+for the Dirac SSH model, where g = 2 is the spin degen-
+eracy, and [dk] ≡P
+s d2k/(2π)2 is a shorthand notation.
+At low energies E, DOS can be obtained by using Eq. (8)
+as
+D(E) =
+g
+πΩt
+2
+π(1 + ζ)K
+
+4ζ
+(1 + ζ)2
+
+≈
+g
+πΩt
+
+1 + 1
+4ζ2
+
+.
+(11)
+Here, Ω= ℓxℓy is the area of a unit cell, ζ = t′/t < 1
+is a small number by our assumption, K is the complete
+elliptic integral of the ﬁrst kind, and in the second step,
+we made a series expansion in ζ to the second order.
+As a common feature for nodal lines in 2D, the DOS is
+independent of energy E. This is similar to the usual 2D
+electron gas, but is distinct from 2D nodal-point TSMs
+(like graphene) whose DOS D(E) ∼E [27]. From result
+(11), the carrier density at low doping is given by
+n(EF ) = DEF ,
+(12)
+where EF is the Fermi energy.
+Before proceeding, we comment that in 2D systems,
+besides nonsymmorphic symmetry, a nodal line may also
+be protected by a horizontal symmorphic mirror plane.
+For that case, the nodal line typically has the shape of
+a ring centered around a high-symmetry point in BZ. In
+comparison, here, the nonsymmorphic nodal line in Dirac
+SSH model is enforced to be located on a path at the
+BZ boundary, and this distinct shape manifests a strong
+in-plane anisotropy. In fact, the two diﬀerent shapes of
+nodal lines, i.e., a ring around a point or a line travers-
+ing BZ, correspond to diﬀerent topological classes. As
+shown in Ref. [57], they are distinguished by the funda-
+mental (homotopy) group of BZ π1(T 2), which describes
+the winding of a loop around the BZ torus. Clearly, a
+nodal ring does not wind around the BZ, whereas the
+nodal line in Fig. 1(b) winds through the BZ once along
+the ky direction. This strong anisotropy of the nodal line
+in Dirac SSH model will manifest in the plasmon prop-
+erties, as we will discuss below.
+III.
+PLASMONS IN DIRAC SSH MODEL
+Plasmons can be identiﬁed as the zeros of the dynam-
+ical dielectric function ε (q, ω) of the system. Here, we
+evaluate ε (q, ω) for our 2D Dirac SSH model using the
+random phase approximation (RPA), so that
+ε (q, ω) = 1 −vqχ0 (q, ω) ,
+(13)
+where vq = 2πe2
+κq
+the Fourier component of Coulomb po-
+tential in 2D, κ is the background dielectric constant, and4
+χ0 is the single-particle polarization function. Explicitly,
+we have
+χ0 (q, ω) =g
+X
+ss′
+Z
+d2k
+(2π)2
+(fsk −fs′k+q) · F k,k+q
+ss′
+Es(k) −Es′(k + q) + ℏω + iη ,
+(14)
+where fsk is the Fermi distribution function for the band
+eigenstate |usk⟩, F k,k+q
+ss′
+= |⟨usk|us′k+q⟩|2 is the overlap
+form factor, and η is a small positive number related to
+the quasiparticle lifetime.
+Owing to the band structure of the Dirac SSH model
+and the constraint from the overlap form factor, we shall
+see that the contributions in χ0 from s = s′ and from
+s ̸= s′ give distinct plasmon branches and they are sep-
+arated in energy. Therefore, in the following, we shall
+study them separately. The former (from s = s′) will be
+referred to as intraband plasmons, and the latter (from
+s ̸= s′) will be called interband plasmons.
+A.
+Intraband plasmons
+In this subsection, we examine the intraband plasmons
+arising from the contributions with s = s′.
+Let’s ﬁrst consider the limit with t′ →0, where the
+analysis can be greatly simpliﬁed yet the results already
+manifest general features of the system.
+In this limit,
+the zigzag chains are totally decoupled.
+Physically, in
+NbSixTe2 family materials, this limit corresponds to the
+case with x →1/2.
+It is important to note that for this limit, we have the
+form factor
+F k,k+q
+ss′
+= δss′,
+(15)
+which means only intraband contribution exists, and the
+interband contribution is totally suppressed. Then, by
+substituting Eqs. (8) and (9) into (14), one can obtain
+χ0 (q, ω) = g vF
+πℏℓy
+q2
+x
+ω2 −ig qx
+ℏℓy
+δ (ω −vF qx) ,
+(16)
+where vF ≡ℓxt/ℏis the constant Fermi velocity normal
+to the nodal line in this limit.
+The plasmon dispersion is found by substituting (16)
+into (13) and requesting Re ε (q, ω) = 0. This gives the
+following intraband plasmon branch
+ωq =
+r
+2grs
+ΩvF
+p
+ℓxq cos θq,
+(17)
+where rs = e2/ (κℏvF ) is the dimensionless ﬁne structure
+constant, q = |q|, and θq is the (in-plane) polar angle for
+the q vector.
+There are several notable features of this intraband
+plasmon branch. First, it is gapless with a ω ∼√q dis-
+persion, which is characteristic for 2D systems, such as
+2D electron gas and graphene. Second, the dispersion is
+independent of the carrier density n (or the Fermi en-
+ergy). This behavior is in contrast to other 2D systems,
+such as 2D electron gas with ω ∼n1/2 and graphene
+(nodal-point TSM) with ω ∼n1/4 [44]. It is a character
+for a 2D nodal-line TSM. Third, as we discussed, the non-
+symmorphic nodal line here exhibits a strong anisotropy.
+This manifests in the dispersion through the cos θq de-
+pendence, so that the dispersion is largest in the x direc-
+tion and is suppressed in the y direction. Finally, due to
+the rs factor, the frequency explicitly involves the Planck
+constant ℏ. This is in contrast to ordinary electron liq-
+uids where the long wavelength plasma frequency is clas-
+sical (does not involve ℏ) [58]. As noted in Ref. [44], this
+feature indicates the quantum character of Dirac type
+fermions.
+The damping and lifetime of plasmons are closely re-
+lated to the single particle excitation (SPE) continuum,
+which can be derived from the imaginary part of the po-
+larization function. From the Eq. (16), we see that in
+the limit of decoupled chains, SPE occurs only on the
+line ω = vF qx in the (q, ω) parameter space. This is in
+sharp contrast to other 2D systems (like 2D electron gas
+and graphene) where the SPE always covers an extended
+region [42, 58]. It follows that the plasmons in the Dirac
+SSH system can be hardly damped by SPEs and should
+have a long lifetime. This feature could be beneﬁcial for
+possible plasmon-based applications.
+Next, we add the interchain coupling t′ and investigate
+its eﬀects on the intraband plasmons. Again, please note
+that we assume ζ = t′/t is small. In this case, the overlap
+form factor becomes
+F k,k+q
+ss′
+= δss′ −1
+4ss′ζ2q2
+y cos2 (kyℓy) ,
+(18)
+where higher order correction terms of O(ζ4) are ignored.
+One observes that the second term in (18) gives a correc-
+tion for the intraband contribution. Meanwhile, it also
+makes the interband contribution nonzero, which we shall
+discuss in the next subsection.
+Substituting (18) into (14) and considering the long
+wavelength limit with q ≪kF ≡EF /(ℏvF ), we ﬁnd that
+for the intraband term
+Im χintra
+0
+≈2πgω
+Z
+FS
+[dk] v−1
+sk F k,k+q
+ss
+×δ [Es(k) −Es(k + q) + ℏω] ,
+(19)
+where the integration is performed on the Fermi surface,
+and vsk = ∇kEs(k)/ℏis the group velocity of state |usk⟩.
+From this expression, the intraband SPE continuum can
+be derived as
+ℏω = Λxqx + Λyqy,
+(20)
+where Λx and Λy are functions of k, given by
+Λx = ℓxt cos
+kxℓx
+2
+ h
+1 + ζ cos (kyℓy)
+i
+,
+(21)
+Λy = −2ℓyt′ sin
+kxℓx
+2
+
+sin (kyℓy) .
+(22)5
+FIG. 2. Intraband plasmons of Dirac SSH model. (a) The
+numerical (blue solid line) and analytic (black dashed line)
+results of the intraband plasmon branch along x direction.
+The SPE continuum is marked by the green colored region.
+(b) Plot of the energy loss function, which shows ω ∼√q
+behavior. In (a) and (b), we set EF = 0. (c) Angular de-
+pendence of ω with a ﬁxed q = 0.13/ℓx and EF = 0.5t. (d)
+Plasmon frequency as a function of Fermi level EF with a
+ﬁxed q = 0.13/ℓx. In these ﬁgures, ω, qx, and EF are plotted
+in unit of t/ℏ, ℓ−1
+x , and t, respectively. And model parameters
+are the same as in Fig. 1(c,d).
+It follows that the SPE continuum evolves from a line in
+t′ = 0 limit to a fan shaped region for t′ ̸= 0 in the (q, ω)
+space, as shown in Fig. 2(a).
+The real part of χintra
+0
+can be obtained as
+Re χintra
+0
+≈g vF
+πℏℓy
+1
+ω2
+
+q2
+x −1
+4ζ2  q2
+x −2k2
+F ℓ2
+yq2
+y
+
+. (23)
+Then, the dispersion of long-wavelength intraband plas-
+mons in the presence of interchain coupling is
+ωq =
+r
+2grs
+ΩvF
+p
+ℓxq
+
+1 −1
+4ζ2
+
+cos2 θq
++1
+2ζ2k2
+F ℓ2
+y sin2 θq
+1/2
+.
+(24)
+One can see that the interchain coupling (nonzero ζ) gives
+a correction to the dispersion. In the limit of ζ →0, this
+expression reduces to Eq. (17), as expected. The previ-
+ously noted features, including the √q dependence, the
+strong anisotropy, and the quantum character (involving
+ℏexplicitly) are maintained after including the interchain
+coupling. The strongest dispersion of these plasmons is
+still along the x direction, i.e., the direction normal to
+the nodal line. Along this direction, θq = 0 and we have
+ωq =
+s
+2grs
+Ω
+
+1 −1
+4ζ2
+
+vF
+p
+ℓxq,
+(25)
+which is still independent of the carrier density n. The
+interchain coupling only gives a small correction to the
+frequency. Meanwhile, for plasmons propagating along
+the direction of nodal line, i.e, θq = π/2, we have
+ωq = √grsζvF kF
+p
+ℓyq.
+(26)
+Therefore, with the interchain coupling, the intraband
+plasmons in this direction acquire ﬁnite frequency. More-
+over, due to the kF factor, the plasmon frequency scales
+linearly with n (or EF ).
+In other words, at ﬁnite in-
+terchain coupling, there is a crossover in the scaling of
+intraband plasmon frequency from ω ∼n0 to ω ∼n,
+when θq varies from 0 to π/2. Such a crossover behavior
+clearly reﬂects the strong anisotropy of the nonsymmor-
+phic nodal line.
+These features are veriﬁed by our numerical calcula-
+tions on the Dirac SSH model. In the calculation, the
+plasmon modes are extract from the peaks of the energy
+loss function
+L (q, ω) = Im
+
+−
+1
+ε (q, ω)
+
+.
+(27)
+As shown in Fig. 2(a), the result from the numerical cal-
+culation agrees very well with the analytic formula (24).
+The plasmons are quite separated from the SPE contin-
+uum which only spans a small region. In Fig. 2(b), we
+plot the frequency versus q1/2, so that one can clearly
+see the ω ∼q1/2 dispersion. Figure 2(c) shows the angu-
+lar dependence of plasma frequency at a ﬁx wave vector
+magnitude. The frequency is maximum at direction nor-
+mal to the nodal line and is minimum along the nodal
+line, reﬂecting the strong anisotropy of the system. Fi-
+nally, in Fig. 2(d), we plot ω as a function of EF for
+diﬀerent propagation directions, which conﬁrms the scal-
+ing behavior discussed above.
+B.
+Interband plasmons
+From the overlap form factor in (18), we notice that
+along the x direction, only intraband plasmons exist.
+However, for other directions, especially the y direction,
+interband contributions with s ̸= s′ can exist when there
+is nonzero interchain coupling t′.
+For these interband
+modes, χ0 may involve virtual transitions between states
+away from the nodal line, so it is diﬃcult to get simple
+analytic result. In the following, we shall proceed with
+numerical calculation of the Dirac SSH model.
+Figure 3(a) shows the obtained energy loss function
+for q along the nodal-line (y) direction, where such inter-
+band plasmons are most pronounced. One observes that
+besides the gapless intraband branch at low frequencies,6
+FIG. 3.
+(a) Plasmon spectrum along the nodal line. The two
+upper branches are the interband plasmons. (b) The two fre-
+quencies ω1 and ω2 associated with the van Hove singularities
+at Y and Γ are marked by the red arrows. (c) Joint density of
+states (JDOS) of the model. The two frequencies manifest as
+singularities in the plot. In (a-c), the model parameters are
+the same as in Fig. 1(c,d) (with ζ = 0.3). qy and JDOS are
+plotted in units of ℓ−1
+y
+and 1/(Ωt). (d) is the same as panel
+(a) but with a smaller interchain coupling ζ = 0.1.
+there are two other gapped branches at much higher fre-
+quencies. They correspond to the interband plasmons.
+As we mentioned, these interband modes are related to
+interband virtual transitions in the band structure. Ac-
+tually, one can see that the long wavelength limit of the
+two branches encode the information of the van Hove sin-
+gularities of the Dirac SSH band structure. As indicated
+in Fig. 3(b), in the q →0 limit, the virtual transitions
+are vertical, and there are two dominant frequencies ω1
+and ω2 corresponding to the van Hove singularities at Y
+and Γ of BZ. It is more convenient to visualize these two
+frequencies as corresponding to the singularities in the
+joint density of states (JDOS), as shown in Fig 3(c). In
+the plasmon spectrum, ω1 and ω2 are exactly the limit-
+ing values of the two interband branches in the q →0
+limit. (Here, the intensity of the peak vanishes, because
+the form factor is zero in this limit.)
+With increasing
+q, the frequency of the upper branch decreases and the
+lower branch increases, and the two merge at q = π/ℓy,
+corresponding to the interband transitions from Γ to Y
+or from Y to Γ, owing to the particle-hole symmetry of
+the model.
+Another feature to be noted is that the band width of
+these two interband branches is on the order of interchain
+coupling t′.
+This can be easily understood by noting
+that this width scales with the electronic band energy
+variation along ky which is governed by t′. In Fig. 3(d),
+we plot the plasmon spectrum at a decreased value of t′
+FIG. 4. (a) Building blocks (a, b, and c chains) of NbSixTe2
+family materials. See the discussion in the text. (b-c) Side
+and top views of Nb3SiTe6, corresponding to the n = 1 case.
+The dashed lines mark the unit cell. (d) Structure of general
+conﬁguration (ab)nc, n ≥1, where n copies of (ab) chains are
+inserted between two c chains.
+as compared to Fig. 3(a). Indeed, one observes that the
+interband branches become ﬂatter.
+IV.
+MATERIAL RESULT
+We have studied the plasmonic properties of 2D Dirac
+SSH model. In this section, we shall see whether these
+properties can manifest in the real material system, i.e.,
+the monolayer NbSixTe2 family materials.
+Figures 4(b-c) show the crystal structure of Nb3SiTe6
+(i.e., x = 1/3). The structure consists of three atomic
+layers.
+The Nb and Si atoms form the middle layer,
+which are sandwiched by two layers of Te atoms. Within
+the 2D plane, the structure can be viewed as constructed
+by three basic building blocks, which are conventionally
+named as a, b, and c chains, as illustrated in Fig. 4(a). a
+and b chains contain Si atoms, and they share the same
+composition of NbSi1/2Te2. In comparison, the c chain
+does not contain Si, so it has a composition of NbTe2.
+a and b chains are connected by the glide mirror sym-
+metry ˜
+My, and they always stick together. In terms of
+these building blocks, Nb3SiTe6 in Fig. 4(c) has the con-
+ﬁguration of (ab)1c.
+Other members of the NbSixTe2
+family are obtained by repeating more (ab) chain units
+between the c chains, so they have the general conﬁgura-
+tion of (ab)nc [34], as shown in Fig. 4(d). In this picture,7
+FIG. 5. (a) BZ of NbSixTe2 family materials. (b-d) Band
+structures of (Nb2SiTe4)n(NbTe2) with n = 1, 2, 3.
+their general chemical formula may also be written as
+(Nb2SiTe4)n(NbTe2).
+We perform ﬁrst-principles calculations on the three
+member materials with n = 1, 2, 3.
+The calculation
+method is given in Appendix.
+Previous works showed
+that the spin-orbit coupling is weak in these materi-
+als [33, 34, 36], so it is neglected in our calculation. The
+obtained band structures are plotted in Fig. 5, which
+agree with previous results [34]. One observes that the
+three band structures share similar features, with a non-
+symmorphic nodal line close to the Fermi level on the
+X-M path, formed by the crossing of two bands. Previ-
+ous studies showed that the low-energy states are mainly
+from the c chains [34, 35].
+The intrachain coupling is
+strong, making sizable dispersion along the x direction
+(along the chain). The interchain coupling is relatively
+weak and it naturally decreases with increasing n.
+Based on the ﬁrst-principles band structures, we com-
+pute their plasmon spectra in RPA. First, consider the
+plasmon dispersion along x, i.e., the direction normal to
+the nodal line. The results are plotted (versus q1/2) in
+Fig. 6. One can see that there is a single gapless branch
+with ω ∼q1/2 in this direction, representing the intra-
+band plasmons, consistent with our model result in Fig. 2.
+The plasmon peaks in Fig. 6(e,f) are quite sharp, indi-
+cating their weak Landau damping and long lifetime. In-
+deed, our calculation shows that the SPE continuum for
+n = 2 or 3 is far separated from the plasmon branch. In
+comparison, the plasmon peaks for n = 1 are smeared
+out for ℏω above 50 meV [Fig. 6(d)]. This is due to the
+overlap with the SPE region [see Fig. 6(a)]. The SPE con-
+tinuum for n = 1 spans a much larger region, because the
+material’s band structure has a stronger deviation from
+the Dirac SSH model, as indicated by the red arrows in
+Fig. 5(b).
+FIG. 6.
+(a-c) Plasmon spectra along x (normal to the nodal
+line) for NbSixTe2 family materials.
+The SPE regions are
+marked by the green color.
+(d-f) show the plot of energy
+loss function in this direction and the plot is versus √q to
+explicitly show the scaling. We take EF = 0 (i.e., undoped
+case) in these calculations.
+In Fig. 7(a), we show the variation of the intraband
+plasmon frequency with Fermi energy. One observes that
+at a ﬁxed wave vector qx, the frequencies are almost in-
+dependent of EF , which conﬁrms the scaling behavior we
+ﬁnd in the model study.
+In Fig. 7(b), we plot the angular dependence of intra-
+band plasmons, showing a behavior consistent with the
+model result in Fig. 2(c). It conﬁrms that the dispersion
+is strongest along x (i.e., normal to the nodal line) and
+is suppressed along y (parallel to the nodal line).
+Next, we plot the plasmon spectra along the y direc-
+tion in Fig. 7(c). One observes that besides the intra-
+band plasmon branch at low frequency (which are almost
+entirely suppressed for n = 2, 3, indicating their very
+small interchain coupling), there are interband branches
+at higher frequencies. This agrees with the model result.
+Nevertheless, there appear to be more than two inter-
+band branches, especially for n = 2 and 3. This is due
+to the presence of other nearby bands in Fig. 5, which
+also contribute to the interband transitions. Consistent8
+FIG. 7. (a) Frequency of intraband plasmon in NbSixTe2 as a function of Fermi level EF . Here, q = 0.02 ˚A−1 and θq = 0. (b)
+Angular dependence of the intraband plasmons with a ﬁxed q = 0.02 ˚A−1. Here, we set EF = −50 meV. (c) Plasmon spectra
+along y direction for n = 1, 2, 3 cases. We set EF = 0 and the qy is in unit of 2πℓ−1
+y .
+with our model analysis, one can see that the width of
+the interband branches decreases with n. For n = 2 and
+3, these branches become very ﬂat, again reﬂecting the
+weak interchain coupling.
+V.
+DISCUSSION AND CONCLUSION
+We have discussed the distinct features of plasmons in
+the class of nonsymmorphic nodal-line TSMs. The ex-
+ample materials used in our study, namely the NbSixTe2
+family materials, already exist. Their high-quality 2D ul-
+trathin layers have been demonstrated in experiment [38].
+In addition, there exist several other isostructural materi-
+als, including TaSixTe2, NbGexTe2, and TaGexTe2, with
+the similar nodal-line band structure [31, 40, 41]. We ex-
+pect our theory can be readily tested in these materials.
+As for probing the plasmon excitations, there are sev-
+eral established experimental techniques, such as electron
+energy loss spectroscopy (EELS) [59, 60], inelastic helium
+atom scattering, and transmission electron microscopy.
+Particularly, the high-resolution EELS provides a power-
+ful tool for mapping out the plasmon spectrum. It was
+demonstrated that the technique can reach a resolution of
+a few meV and the detected frequency range can reach
+∼1 eV [60, 61].
+Hence, our predicted features in 2D
+FIG. 8.
+Screening charge density δn(r) induced by a charge
+impurity at the origin. (a) ζ = 0 and (b) ζ = 0.3. Here, x
+and y are plotted in unit of ℓx and ℓy. The model parameters
+are the same as in Fig. 1(c,d) and we take EF = 50 meV.
+NbSixTe2 should be easily detectable in experiment.
+In addition, we mention that besides plasmons, the
+unusual dielectric function for nonsymmorphic nodal-line
+TSMs may also manifest in the screening charge distribu-
+tion induced by a charge impurity. Consider a charge im-
+purity next in a 2D system. Its induced screening charge
+density δn can be expressed as
+δn(r) =
+Z
+dq
+(2π)2
+h
+1
+ε(q, 0) −1
+i
+next(q)eiq·r.
+(28)
+For usual 2D electron gas, the induced charge den-
+sity δn exhibits the well-known Friedel oscillation, with
+δn(r) ∼cos(2kF r)/r2. The oscillation wave vector 2kF
+arises from the singularity in the static dielectric func-
+tion ε(q, 0). Now, consider the Dirac SSH model. For
+the t′ →0 limit, the Fermi surface (at EF ̸= 0) are given
+by two straight lines parallel to the nodal line.
+From
+Eq. (15), singularities in ε(q, 0) arise only from the nest-
+ing vector restricted to each piece of the Fermi surface.
+Importantly, the special Fermi surface here gives not one
+but a continuum of nesting wave vectors qˆy along the y
+direction. After Fourier transform to real space, the in-
+duced charge density should exhibit peaks on a straight
+line along x through the charge impurity, as shown in
+Fig. 8(a).
+Increasing t′ to a nonzero but small value,
+we ﬁnd that the distribution of singular wave vectors
+evolve from a single line to two lines forming a cross at
+q = 0. Accordingly, the screening charge density peaks
+also transform from the horizontal line in Fig. 8(a) to two
+almost straight lines through the charge impurity as in
+Fig. 8(b).
+In conclusion, we discover interesting plasmon proper-
+ties in a class of 2D nonsymmorphic nodal-line TSMs.
+Using the Dirac SSH model, we show that the system
+possess two kinds of plasmons: the gapless intraband
+plasmons and the gapped interband plasmons. The in-
+traband plasmons has a q1/2 dependence. The disper-
+sion and the carrier density scaling are highly anisotropic.
+Normal to the nodal line, the dispersion is strongest and
+is independent of carrier density; whereas along the nodal
+line, the dispersion is largely suppressed and is linear in
+the carrier density. The interband plasmons have a quite
+ﬂat dispersion, with band width scaling with the inter-9
+chain coupling.
+Their long wavelength limits are con-
+nected with transitions between van Hove singularities of
+the band structure. Most these plasmons are separated
+from the SPE continuum, so they should have a weak
+Landau damping. The revealed features are also veriﬁed
+in the NbSixTe2 family materials via ﬁrst-principles cal-
+culations. Our work reveals new physical consequences
+of a topological state of matter. The predicted physics
+will also motivate further studies on 2D nonsymmorphic
+nodal-line TSMs and on NbSixTe2 family materials.
+ACKNOWLEDGMENTS
+The authors thank D. L. Deng for helpful discussions.
+This work is supported by Singapore MOE AcRF Tier 2
+(MOE2019-T2-1-001), the National Key R&D Program
+of China (Grant No. 2020YFA0308800), and the NSF of
+China (Grants Nos. 12234003, 12061131002, 11547200).
+Appendix A: Calculation method
+The electronic structures of the NbSixTe2 were cal-
+culated based on the density functional theory (DFT)
+using the Vienna ab-initio Simulation Package [62–64].
+The ionic potentials were treated with the projector
+augmented way pseudopotentials [65], with 4p65s14d4,
+3s23p2, and 5s25p4 valence electron conﬁgurations for
+Nb, Si, and Te atoms, respectively.
+The exchange-
+correlation energy was treated with the generalized gra-
+dient approximation [66] in the scheme of Perdew-Burke-
+Ernzerhof (PBE) [67] approach. The plane wave cutoﬀ
+energy was set to be 400 eV and the convergence thresh-
+olds for energy and force were chosen to be 10−7 eV and
+0.001 eV/˚A, respectively.
+Γ-centered k-points meshes
+with size 10 × 6 × 1 for (ab)1c and 10 × 4 × 1 for (ab)2c
+and (ab)3c were used for BZ sampling. After obtaining
+the band structure, ab-initio tight-binding models were
+constructed by using the WANNIER90 package [68]. The
+p orbitals of Te atoms and d orbitals of Nb atoms were
+used as initial input of local basis. The Wannier model
+were used to calculate the dynamical dielectric function
+in RPA.
+[1] C.-K. Chiu, J. C. Y. Teo, A. P. Schnyder, and S. Ryu,
+Rev. Mod. Phys. 88, 035005 (2016).
+[2] A. A. Burkov, Nature Materials 15, 1145 (2016).
+[3] B. Yan and C. Felser, Annual Review of Condensed Mat-
+ter Physics 8, 337 (2017).
+[4] N. P. Armitage, E. J. Mele, and A. Vishwanath, Rev.
+Mod. Phys. 90, 015001 (2018).
+[5] X. Wan, A. M. Turner, A. Vishwanath, and S. Y.
+Savrasov, Phys. Rev. B 83, 205101 (2011).
+[6] G. Xu, H. Weng, Z. Wang, X. Dai, and Z. Fang, Phys.
+Rev. Lett. 107, 186806 (2011).
+[7] S. M. Young, S. Zaheer, J. C. Y. Teo, C. L. Kane, E. J.
+Mele, and A. M. Rappe, Phys. Rev. Lett. 108, 140405
+(2012).
+[8] Z. Wang, Y. Sun, X.-Q. Chen, C. Franchini, G. Xu,
+H. Weng, X. Dai, and Z. Fang, Phys. Rev. B 85, 195320
+(2012).
+[9] B. Bradlyn,
+J. Cano,
+Z. Wang,
+M. G. Vergniory,
+C. Felser, R. J. Cava, and B. A. Bernevig, Science 353,
+aaf5037 (2016).
+[10] H. Weng, C. Fang, Z. Fang, and X. Dai, Phys. Rev. B
+93, 241202 (2016).
+[11] Z. Zhu, G. W. Winkler, Q. Wu, J. Li, and A. A.
+Soluyanov, Phys. Rev. X 6, 031003 (2016).
+[12] S. A. Yang, H. Pan, and F. Zhang, Phys. Rev. Lett. 113,
+046401 (2014).
+[13] H. Weng, Y. Liang, Q. Xu, R. Yu, Z. Fang, X. Dai, and
+Y. Kawazoe, Phys. Rev. B 92, 045108 (2015).
+[14] K. Mullen, B. Uchoa, and D. T. Glatzhofer, Phys. Rev.
+Lett. 115, 026403 (2015).
+[15] Y. Chen, Y. Xie, S. A. Yang, H. Pan, F. Zhang, M. L.
+Cohen, and S. Zhang, Nano Letters 15, 6974 (2015).
+[16] C. Zhong, Y. Chen, Y. Xie, S. A. Yang, M. L. Cohen,
+and S. B. Zhang, Nanoscale 8, 7232 (2016).
+[17] Q.-F. Liang, J. Zhou, R. Yu, Z. Wang, and H. Weng,
+Phys. Rev. B 93, 085427 (2016).
+[18] W. Wu, Y. Liu, S. Li, C. Zhong, Z.-M. Yu, X.-L. Sheng,
+Y. X. Zhao, and S. A. Yang, Phys. Rev. B 97, 115125
+(2018).
+[19] Z.-M. Yu, Z. Zhang, G.-B. Liu, W. Wu, X.-P. Li, R.-W.
+Zhang, S. A. Yang, and Y. Yao, Science Bulletin 67, 375
+(2022).
+[20] G.-B. Liu, Z. Zhang, Z.-M. Yu, S. A. Yang, and Y. Yao,
+Phys. Rev. B 105, 085117 (2022).
+[21] Z. Zhang, G.-B. Liu, Z.-M. Yu, S. A. Yang, and Y. Yao,
+Phys. Rev. B 105, 104426 (2022).
+[22] F. Tang and X. Wan, Phys. Rev. B 104, 085137 (2021).
+[23] F. Tang and X. Wan, Phys. Rev. B 105, 155156 (2022).
+[24] X. Feng, J. Zhu, W. Wu, and S. A. Yang, Chinese Physics
+B 30, 107304 (2021).
+[25] P. Mir´o, M. Audiﬀred, and T. Heine, Chem. Soc. Rev.
+43, 6537 (2014).
+[26] C. Tan, X. Cao, X.-J. Wu, Q. He, J. Yang, X. Zhang,
+J. Chen, W. Zhao, S. Han, G.-H. Nam, M. Sindoro,
+and H. Zhang, Chemical Reviews, Chemical Reviews 117,
+6225 (2017).
+[27] A. H. Castro Neto, F. Guinea, N. M. R. Peres, K. S.
+Novoselov, and A. K. Geim, Rev. Mod. Phys. 81, 109
+(2009).
+[28] C. L. Kane and E. J. Mele, Phys. Rev. Lett. 95, 226801
+(2005).
+[29] B. Feng, B. Fu, S. Kasamatsu, S. Ito, P. Cheng, C.-C.
+Liu, Y. Feng, S. Wu, S. K. Mahatha, P. Sheverdyaeva,
+P. Moras, M. Arita, O. Sugino, T.-C. Chiang, K. Shi-
+mada, K. Miyamoto, T. Okuda, K. Wu, L. Chen, Y. Yao,
+and I. Matsuda, Nature Communications 8, 1007 (2017).
+[30] L. Gao, J.-T. Sun, J.-C. Lu, H. Li, K. Qian, S. Zhang,
+Y.-Y. Zhang, T. Qian, H. Ding, X. Lin, S. Du, and H.-J.10
+Gao, Advanced Materials 30, 1707055 (2018).
+[31] S. Li, Y. Liu, S.-S. Wang, Z.-M. Yu, S. Guan, X.-L.
+Sheng, Y. Yao, and S. A. Yang, Phys. Rev. B 97, 045131
+(2018).
+[32] T. Sato, Z. Wang, K. Nakayama, S. Souma, D. Takane,
+Y. Nakata, H. Iwasawa, C. Cacho, T. Kim, T. Takahashi,
+and Y. Ando, Phys. Rev. B 98, 121111 (2018).
+[33] T. Y. Yang, Q. Wan, D. Y. Yan, Z. Zhu, Z. W. Wang,
+C. Peng, Y. B. Huang, R. Yu, J. Hu, Z. Q. Mao, S. Li,
+S. A. Yang, H. Zheng, J. F. Jia, Y. G. Shi, and N. Xu,
+Nature Materials 19, 27 (2020).
+[34] Z. Zhu, S. Li, M. Yang, X.-A. Nie, H.-K. Xu, X. Yang, D.-
+D. Guan, S. Wang, Y.-Y. Li, C. Liu, Z.-Q. Mao, N. Xu,
+Y. Yao, S. A. Yang, Y.-G. Shi, H. Zheng, and J.-F. Jia,
+npj Quantum Materials 5, 35 (2020).
+[35] B. Wang, W. Xia, S. Li, K. Wang, S. A. Yang, Y. Guo,
+and J. Xue, ACS Nano 15, 7149 (2021).
+[36] J. Zhang, Y. Lv, X. Feng, A. Liang, W. Xia, S.-K.
+Mo, C. Chen, J. Xue, S. A. Yang, L. Yang, Y. Guo,
+Y. Chen, Y. Chen, and Z. Liu, npj Quantum Materials
+7, 54 (2022).
+[37] J. Li, M. E. Badding, and F. DiSalvo, Journal of alloys
+and compounds 184, 257 (1992).
+[38] J. Hu, X. Liu, C. L. Yue, J. Y. Liu, H. W. Zhu, J. B.
+He, J. Wei, Z. Q. Mao, L. Y. Antipina, Z. I. Popov, P. B.
+Sorokin, T. J. Liu, P. W. Adams, S. M. A. Radmanesh,
+L. Spinu, H. Ji, and D. Natelson, Nature Physics 11, 471
+(2015).
+[39] L. Monconduit, M. Evain, R. Brec, J. Rouxel, and
+E. Canadell, Comptes rendus de l’Acad´emie des sci-
+ences. S´erie 2, M´ecanique, Physique, Chimie, Sciences
+de l’univers, Sciences de la Terre 316, 25 (1993).
+[40] M. Evain, A. Van der Lee, L. Monconduit, and V. Pet-
+ricek, Chemistry of materials 6, 1776 (1994).
+[41] A. Van der Lee, M. Evain, L. Monconduit, R. Brec, and
+S. Van Smaalen, Journal of Physics: Condensed Matter
+6, 933 (1994).
+[42] E. H. Hwang and S. Das Sarma, Phys. Rev. B 75, 205418
+(2007).
+[43] E. H. Hwang and S. Das Sarma, Phys. Rev. Lett. 101,
+156802 (2008).
+[44] S. Das Sarma and E. H. Hwang, Phys. Rev. Lett. 102,
+206412 (2009).
+[45] S. Raghu, S. B. Chung, X.-L. Qi, and S.-C. Zhang, Phys.
+Rev. Lett. 104, 116401 (2010).
+[46] M. Lv and S.-C. Zhang, International Journal of Modern
+Physics B 27, 1350177 (2013).
+[47] H.-R. Chang, J. Zhou, H. Zhang, and Y. Yao, Phys. Rev.
+B 89, 201411 (2014).
+[48] S. Juergens, P. Michetti, and B. Trauzettel, Phys. Rev.
+Lett. 112, 076804 (2014).
+[49] J. Zhou, H.-R. Chang, and D. Xiao, Phys. Rev. B 91,
+035114 (2015).
+[50] J. Hofmann and S. Das Sarma, Phys. Rev. B 91, 241108
+(2015).
+[51] D. E. Kharzeev, R. D. Pisarski, and H.-U. Yee, Phys.
+Rev. Lett. 115, 236402 (2015).
+[52] K. Sadhukhan, A. Politano, and A. Agarwal, Phys. Rev.
+Lett. 124, 046803 (2020).
+[53] Z. Yan, P.-W. Huang, and Z. Wang, Phys. Rev. B 93,
+085138 (2016).
+[54] J.-W. Rhim and Y. B. Kim, New Journal of Physics 18,
+043010 (2016).
+[55] J. Wang, X. Sui, W. Duan, F. Liu, and B. Huang,
+Proceedings of the National Academy of Sciences 118,
+e2023029118 (2021).
+[56] W. P. Su, J. R. Schrieﬀer, and A. J. Heeger, Phys. Rev.
+Lett. 42, 1698 (1979).
+[57] S. Li, Z.-M. Yu, Y. Liu, S. Guan, S.-S. Wang, X. Zhang,
+Y. Yao, and S. A. Yang, Phys. Rev. B 96, 081106 (2017).
+[58] G. Giuliani and G. Vignale, Quantum Theory of the Elec-
+tron Liquid (Cambridge University Press, 2005).
+[59] A. Politano, V. M. Silkin, I. A. Nechaev, M. S. Vitiello,
+L. Viti, Z. S. Aliev, M. B. Babanly, G. Chiarello, P. M.
+Echenique, and E. V. Chulkov, Phys. Rev. Lett. 115,
+216802 (2015).
+[60] X. Jia, S. Zhang, R. Sankar, F.-C. Chou, W. Wang,
+K. Kempa, E. W. Plummer, J. Zhang, X. Zhu, and
+J. Guo, Phys. Rev. Lett. 119, 136805 (2017).
+[61] S. Xue, M. Wang, Y. Li, S. Zhang, X. Jia, J. Zhou, Y. Shi,
+X. Zhu, Y. Yao, and J. Guo, Phys. Rev. Lett. 127, 186802
+(2021).
+[62] G. Kresse and J. Hafner, Phys. Rev. B 47, 558 (1993).
+[63] G. Kresse and J. Furthm¨uller, Computational Materials
+Science 6, 15 (1996).
+[64] G. Kresse and J. Furthm¨uller, Phys. Rev. B 54, 11169
+(1996).
+[65] P. E. Bl¨ochl, Phys. Rev. B 50, 17953 (1994).
+[66] J. P. Perdew, J. A. Chevary, S. H. Vosko, K. A. Jackson,
+M. R. Pederson, D. J. Singh, and C. Fiolhais, Phys. Rev.
+B 46, 6671 (1992).
+[67] J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev.
+Lett. 77, 3865 (1996).
+[68] A. A. Mostoﬁ, J. R. Yates, G. Pizzi, Y.-S. Lee, I. Souza,
+D. Vanderbilt, and N. Marzari, Computer Physics Com-
+munications 185, 2309 (2014).

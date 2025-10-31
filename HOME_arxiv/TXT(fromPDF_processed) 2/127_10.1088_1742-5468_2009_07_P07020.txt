@@ -1,0 +1,322 @@
+arXiv:0901.2733v3 [cond-mat.stat-mech]  28 Jun 2009 Stochastic growth equations on growing domains Carlos Escudero Instituto de Ciencias Matem´aticas, Consejo Superior de Investigaciones Cient´ıﬁcas, C/ Serrano 123, 28006 Madrid, Spain Abstract The dynamics of linear stochastic growth equations on growing substrates is studied.
+The sub- strate is assumed to grow in time following the power law tγ, where the growth index γ is an arbitrary positive number.
+Two diﬀerent regimes are clearly identiﬁed: for small γ the interface becomes correlated, and the dynamics is dominated by diﬀusion; for large γ the interface stays uncorrelated, and the dynamics is dominated by dilution.
+In this second regime, for short time intervals and spatial scales the critical exponents corresponding to the non-growing substrate sit- uation are recovered.
+For long time diﬀerences or large spatial scales the situation is diﬀerent.
+Large spatial scales show the uncorrelated character of the growing interface.
+Long time intervals are studied by means of the auto-correlation and persistence exponents.
+It becomes apparent that dilution is the mechanism by which correlations are propagated in this second case.
+PACS numbers: 68.35.Ct,05.40.-a,64.60.Ht 1I. INTRODUCTION Fluctuating interfaces have been the object of study of many diﬀerent works over the last decades.
+Together with the possible technological applications that their understanding may bring, as for instance in thin ﬁlm industry, there is a genuine theoretical interest in unveiling their dynamical properties.
+This is so to the extend that the Kardar-Parisi-Zhang (KPZ) equation [1], one of the most inﬂuential models for surface growth, is being currently considered as a prototypical model of nonequilibrium dynamics.
+Usually, stochastic equations modeling surface growth have been studied in static do- mains.
+On the other hand, some types of growing interfaces, as for instance radial ones, present a domain size that grows over time.
+The direct study of radial interfaces is com- plicated by nonlinear eﬀects, including the possibility of instabilities aﬀecting the radial symmetry [2, 3, 4].
+This suggests studying ﬁrst the dynamics of linear stochastic growth equations on growing domains.
+Once the eﬀect of substrate growth on the interface dynamics is understood, one could move to the more complicated case of radial growth.
+Of course, considering linear growth equations has a limited applicability to real physical systems, as important nonlinearities are being neglected.
+Still, the detailed analysis of linear stochastic growth equations has revealed important physical properties of rough surfaces [5].
+Additionally, the study of linear equations has served as a basis for the approach to the more complicated nonlinear ones [6].
+In this sense, we expect that the results presented here might bring useful insights into the dynamics of nonlinear equations on growing domains.
+Stochastic growth equations for radial interfaces have been previously considered in the literature [2, 3, 4, 7, 8].
+In [8], radial interfaces with a linearly in time growing domain are studied, and several dynamical quantities are calculated and compared to the classical values.
+Under the approximations made in this work, the only genuine radial eﬀect that is being considered is domain growth, while the possible nonlinear eﬀects are disregarded.
+This allows a perfect comparison among the results presented there and the ones that we will introduce here.
+We will also examine how decorrelation might appear in the growing interface and what is the resulting large scale structure [4], how the classical values of the critical exponents are recovered [9], and in what precise limits this occurs [10].
+The goal of this work is to put previous studies considering linearly in time growing domains in a broader context.
+This will be achieved by proposing an arbitrary power law 2growth model for the domain.
+We will focus on rough interfaces, i. e., models for which the growth exponent β is strictly positive.
+The paper is organized as follows: in section II we describe the phenomenology of domain growth. In sec.
+III we focus on the nonequilibrium dynamics of the Edwards-Wilkinson (EW) equation, and in sec.
+IV we extend these results to the general linear Langevin dynamics. In sec.
+V the temporal correlations of the ﬂuctuating interface are studied, and in sec.
+VI its persistence properties. In sec.
+VII the connection to radial growth is investigated, and the conclusions of this work are drawn in sec. VIII. II.
+GROWING DOMAINS In order to study the dynamics of stochastic growth equations on growing domains we begin considering the EW equation [11], which reads ∂th = D∇2h + F + ξ(y, t), (1) where ξ(y, t) is a zero-mean Gaussian white noise which correlation is ⟨ξ(y, t)ξ(y′, t′)⟩= ǫδ(y −y′)δ(t −t′), (2) D is the diﬀusion constant, F the constant deposition rate and ǫ the noise intensity, all these parameters being positive.
+To derive the EW equation on a growing domain we will follow the theory introduced in [12], focused on reaction diﬀusion dynamics on uniformly growing domains.
+We start considering the conservation law in integral form d dt Z St h(y, t)dy = Z St [−∇· j + F(y, t)] dy, (3) where St is the uniformly growing domain, j = −D∇h is the current generated by diﬀusion, and F(y, t) = F + ξ(y, t) is the EW growth mechanism.
+By applying Reynolds transport theorem we ﬁnd d dt Z St h(y, t)dy = Z St [∂th + ∇· (vh)] dy, (4) where v(y, t) denotes the ﬂow velocity generated by the growing domain.
+Valid as it is for any domain, the integral conservation law may be expressed in the local form ∂th + ∇· (vh) = D∇2h + F(y, t).
+(5) In this equation we readily identify two new terms, the advection one v·∇h, and the dilution one h∇· v. For every y ∈St, that has evolved from y0 ∈St0, we ﬁnd v(y, t) = ∂y/∂t.
+Let 3us now concentrate in one-dimensional substrates and then move to higher dimensionalities.
+In this case uniform growth translates into y = g(t)y0, where g(t) is a temporal function such that g(t0) = 1.
+This yields v = y ˙g/g, and thus ∂th + ˙g g (y∂yh + h) = D∂2 yh + F + ξ(y, t).
+(6) For a one-dimensional substrate (0, L(t)), with L(t) = g(t)L0, we change the spatial coordi- nate x = yL0/L(t), where L0 = L(t0), in order to map the problem into the interval (0, L0).
+This transformation counterbalances advection, and so the resulting equation reads ∂h ∂t =  L0 L(t) 2 D∂2h ∂x2 −˙g gh + F + s L0 L(t)ξ(x, t), (7) where we have used the fact that the noise is delta correlated.
+The dilution term has become h∇·v = −(˙g/g)h.
+It has been disregarded in reaction-diﬀusion systems due to its irrelevance in this context [12], but we will keep it here, where it will show its measurable eﬀects on the dynamics.
+Indeed, dilution has a transparent physical meaning: as the substrate grows the deposited material becomes distributed in a larger (d−dimensional) area.
+This matter redistribution causes in turn the propagation of correlations, additionally to diﬀusion, resulting in a diﬀerent dynamical scenario as the following sections will show.
+Now we assume that the growth function adopts the power law form g(t) = (t/t0)γ, where the growth index γ ≥0, to ﬁnd ∂h ∂t = t0 t 2γ D∂2h ∂x2 −γ t h + F + t0 t γ/2 ξ(x, t).
+(8) The growth index γ is a new degree of freedom of this problem; it cannot be deduced from the other model parameters, and has to be measured directly from the physical system under study.
+Our next step is to assume no ﬂux boundary conditions ∂xh(0, t) = ∂xh(L0, t) = 0, both due to their physical relevance and because they break translation invariance.
+It will be interesting to see how translation invariance is recovered as a consequence of decorrela- tion for rapidly growing domains.
+Lets decompose the solution in the basis formed by the eigenfunctions of the Laplacian on the domain under consideration h(x, t) = ∞ X n=0 hn(t) cos nπx L0  , (9) to reduce Eq. (8) to a stochastic diﬀerential equation for the diﬀerent modes dhn dt = −n2π2 L2 0 t0 t 2γ Dhn −γ t hn + t0 t γ/2 ξn(t), (10) 4if n ̸= 0, and dh0 dt = −γ t h0 + F + t0 t γ/2 ξ0(t).
+(11) In these equations ξn(t) is a Gaussian random variable with zero mean and correlation given by ⟨ξm(t)ξn(t′)⟩= 2ǫ L0 δmnδ(t −t′), if n, m ̸= 0, (12) ⟨ξ0(t)ξn(t′)⟩= 0, if n ̸= 0, (13) ⟨ξ0(t)ξ0(t′)⟩= ǫ L0 δ(t −t′). (14) III.
+EDWARDS-WILKINSON DYNAMICS We can straightforwardly derive the equation of motion for ⟨h0⟩ d⟨h0⟩ dt = −γ t ⟨h0⟩+ F, (15) whose long time solution reads ⟨h0⟩= F γ + 1t. (16) For the second moment we ﬁnd d⟨h2 0⟩ dt = −2γ t ⟨h2 0⟩+ 2F⟨h0⟩+ ǫtγ 0 L0tγ , (17) and the corresponding long time solution ⟨h2 0⟩= F 2 (γ + 1)2t2 + ǫt (γ + 1)L0 t0 t γ , (18) where the second summand in the right hand side of this equation will be explicitly sup- pressed due to its subleading character, but it will be taken into account implicitly later on in order to construct Dirac delta functions out of inﬁnite series.
+For the other modes we ﬁnd d⟨hn⟩ dt = −  Dn2π2t2γ 0 L2 0t2γ + γ t  ⟨hn⟩, (19) and we integrate it to ﬁnd, in the long time limit, ⟨hn⟩→0.
+The correlation obeys the equation d dt⟨hmhn⟩= −  D(m2 + n2)π2t2γ 0 L2 0t2γ + 2γ t  ⟨hmhn⟩+ 2ǫtγ 0 L0tγ δmn, (20) 5which solution is readily computable in terms of Misra functions [13]; however its concrete form is complicated and not particularly illuminating, so we will not reproduce it here.
+The long time asymptotics of this solution depends on the value of γ.
+For γ < 1/2 the interface dynamics is dominated by diﬀusion, and one ﬁnds ⟨hmhn⟩= 2ǫδmnL0 D(m2 + n2)π2  t t0 γ .
+(21) If γ > 1/2, then the interface dynamics is dominated by dilution, and the asymptotic solution reads ⟨hmhn⟩= 2ǫt0δmn (1 + γ)L0  t t0 1−γ .
+(22) Now we can reconstruct the ﬁrst moments of the solution in coordinate space.
+For the long time mean value we have ⟨h(x, t)⟩= F γ + 1t, (23) and for the long time correlation when x ̸= x′ ⟨h(x, t)h(x′, t)⟩= F 2 (γ + 1)2t2 + ǫL0 Dπ2  t t0 γ ∞ X n=1 1 n2 cos nπx L0  cos nπx′ L0  , (24) if γ < 1/2, and ⟨h(x, t)h(x′, t)⟩= F 2 (γ + 1)2t2 + 2ǫt0 (γ + 1)L0  t t0 1−γ ∞ X n=1 cos nπx L0  cos nπx′ L0  = = F 2 (γ + 1)2t2 + ǫt0 γ + 1  t t0 1−γ δ(x −x′), (25) if γ > 1/2 and asymptotically for long times, where we have used the decomposition of the Dirac delta function in the same basis as in Eq. (9) and we have implicitly taken into account the subleading term in Eq. (18).
+Changing back to the original Lagrangian coordinates, y = xL(t)/L0, we ﬁnd ⟨h(y, t)h(y′, t)⟩= F 2 (γ + 1)2t2 + ǫt γ + 1δ(y −y′), (26) the solution reduces to random deposition for long times.
+We thus see that the surface stays uncorrelated if γ > 1/2, while it becomes correlated when γ < 1/2.
+We can further analyze the correlated phase summing Eq. (24) to ﬁnd ⟨h(x, t)h(x′, t)⟩= F 2 (γ + 1)2t2 + ǫ 12DL0  t t0 γ  2L2 0 −6L0 max(x, x′) + 3(x2 + x′2)  , (27) 6and in y coordinates ⟨h(y, t)h(y′, t)⟩= F 2 (γ + 1)2t2 + ǫ 12DL(t)  2L(t)2 −6L(t) max(y, y′) + 3(y2 + y′2)  .
+(28) The one point correlation function reads ⟨h(x, t)2⟩= F 2 (γ + 1)2t2 + ǫ 12DL0  t t0 γ  2L2 0 −6L0x + 6x2 , (29) or alternatively ⟨h(y, t)2⟩= F 2 (γ + 1)2t2 + ǫ 6DL(t)  L(t)2 −3L(t)y + 3y2 .
+(30) Finally, we can calculate the height diﬀerence correlation D [h(y, t) −h(y′, t)]2E = ǫ 2D |y −y′| , (31) in agreement with the long time classical EW equation.
+Note that the one point correlation function is not spatially homogeneous due to the no-ﬂux boundary conditions (periodic boundary conditions or unbounded domains preserve the spatial homogeneity); to ﬁnd a coordinate independent result we deﬁne the surface width W(t) as in [8] W(t)2 = 1 L0 Z L0 0  ⟨h(x, t)2⟩−⟨h(x, t)⟩2 dx = ǫ 12D  t t0 γ L0 = ǫ 12DL(t).
+(32) From these formulas one ﬁnds that the width grows without achieving saturation with an exponent β∞= γ/2, and its square depends linearly on the substrate size, what allows to deﬁne the roughness exponent α = 1/2, as in the non-growing substrate case, if we accept this deﬁnition despite the absence of saturation.
+The marginal situation γ = 1/2 is characterized by an equilibrium of diﬀusion and dilution, as can be seen by regarding Eq. (20).
+In this case one can see that the correlation length in the x coordinates is λ ≈√Dt0, what yields a correlation length in the y coordinates Λ ≈ √ Dt.
+This shows that the fraction of interface that becomes correlated is Λ(t) L(t) ≈ √Dt0 L0 , (33) revealing that the interface becomes globally correlated only if diﬀusion is large enough, or alternatively if the initial system size and growth rate are small enough; otherwise, the interface only becomes partially correlated.
+7It is clear that Eq. (22) is valid if the system is observed from spatial distances |x − x′| ≫(t/t0)1/2−γ.
+This might constitute a good approximation for the two point correlation function, but it deﬁnitely breaks down when considering the one point correlation.
+In this case we have to consider again the solution of Eq. (20), but this time in the range n, m > (t/t0)γ−1/2.
+In this scale the interface is again dominated by diﬀusion and dilution may be disregarded, and we obtain the same long time solution as in Eq. (21).
+The asymptotic behavior is obtained summing this expression, but including in the sum only the modes that contribute to the short scale behavior n, m > (t/t0)γ−1/2.
+The result is ⟨h(x, t)2⟩−⟨h(x, t)⟩2 = ǫL0 Dπ2  t t0 γ X n>(t/ t0)γ−1/2 1 n2 cos2 nπx L0  ≈ ǫL0 2π2D  t t0 1/2 , (34) in the long time limit, where we have used the asymptotic expansion of the Euler-Maclaurin formula representation of the series.
+This result is valid as long as 0 ̸= x ̸= L0, otherwise ⟨h(0, t)2⟩−⟨h(0, t)⟩2 = ⟨h(L0, t)2⟩−⟨h(L0, t)⟩2 ≈ǫL0 π2D  t t0 1/2 .
+(35) Note that the behavior is now perfectly homogeneous, due to the uncorrelated character of the interface in this case.
+The only exception are the boundary points x = 0, L0, because they are aﬀected by growth only along one direction, and as a consequence their auto- correlation is twice the value of the auto-correlation of any other point not located at the boundary.
+These results hold independently of the reference frame, be it Lagrangian or Eulerian, precisely because the interface is uncorrelated.
+This allows us calculating the height diﬀerence correlation function D [h(y, t) −h(y′, t)]2E = ǫL0 2π2D  t t0 1/2 , (36) when y ̸= y′, 0 ̸= y ̸= L(t) and 0 ̸= y′ ̸= L(t).
+This shows the agreement with the short time classical EW equation.
+Note that the dependence on the system size (both initial and time dependent) is the same as in the static domain case, allowing the deﬁnition of the roughness exponent, which takes on its classical value.
+In order to clarify the γ > 1/2 dynamics more we will calculate the two point correlation function in the long time limit and short spatial scale |x −x′| ≪(t/t0)1/2−γ: ⟨h(x, t)h(x′, t)⟩−⟨h(x, t)⟩2 = |x −x′|  t t0 γ FEW " |x −x′|  t t0 γ−1/2# , (37) 8or alternatively ⟨h(y, t)h(y′, t)⟩−⟨h(y, t)⟩2 = |y −y′|FEW " |y −y′|  t t0 −1/2# , (38) where the scaling function reads FEW(u) = ǫ D  L0 2π2u cos uπ L0  + 1 2πsi uπ L0  , (39) where si(x) = − R ∞ x [sin(s)/s]ds is the sine integral.
+These results are again reminiscent of the scaling behavior of the classical EW equation.
+It is remarkable how translation invariance appeared in these formulas, despite the presence of boundary conditions, as a consequence of decorrelation. IV.
+GENERAL LINEAR LANGEVIN EQUATION We now move to a more general situation in which we consider an arbitrary diﬀusion operator of order ζ and an arbitrary spatial dimension d, see Eq. (5).
+From now on the d−dimensional coordinates will be denoted x →x and y →y for simplicity.
+In this case, we can proceed exactly in the same way as in the one-dimensional situation to ﬁnd, instead of Eq. (8), the equation ∂th = D t0 t ζγ |∇|ζh −dγ t h + F + t0 t dγ/2 ξ(x, t), (40) where the fractional operator |∇|ζ acts in Fourier space as  |∇|ζh  n = −|n|ζπζ Lζ 0 hn, (41) where (·)n denotes the corresponding Fourier transformed quantity, and n = (n1, · · · , nd).
+However, the solution of a boundary value problem for an arbitrary fractional power of the Laplacian is obtained not so straightforwardly.
+For some values of the parameter ζ (such as for instance ζ ∈(1, 2)) this operator describes L´evy ﬂights dispersal, for which even the deﬁnition of boundary presents diﬃculties [14].
+To overcome this pitfall we will decompose the solution using the same basis as in the EW equation case, see Eq. (9), in the case of a d−dimensional cubic box.
+This harmonic decomposition implies the no ﬂux boundary conditions not only for ζ = 2, but for all positive even integer values of this 9exponent.
+Indeed, for these values of ζ it is easy to check that expanding the solution in the d−dimensional analog of (9) is equivalent to prescribe the vanishing of all odd order smaller than ζ derivatives of the solution at the boundary.
+This fact allows us to propose a plausible deﬁnition of solution to the no ﬂux initial-boundary value problem (40) as the solution to this diﬀerential equation which is expressed in terms of the d−dimensional version of expression (9).
+This way the solution to the initial-boundary value problem is deﬁned in the context of evolution semigroup theory as an initial value problem in a prescribed functional domain [15], which in this case is generated by the selected eigenfunctions of the Laplacian, as in Eq. (9).
+In the present case the superuniversal threshold above which the interface becomes un- correlated turns out to be γ = 1/ζ.
+For γ greater than this value (and for large spatial scales in case of the second moment), the two ﬁrst moments of the function height are given by ⟨h(y, t)⟩= F dγ + 1t, (42) ⟨h(y, t)h(y′, t)⟩= F 2 (dγ + 1)2t2 + ǫt dγ + 1δ(y −y′).
+(43) Lets now take a look of the one point correlation function.
+We can proceed in the same way as in the previous section to ﬁnd ⟨h(x, t)2⟩−⟨h(x, t)⟩2 ∼Lζ−d 0  t t0 (ζ−d)γ X n>(t/t0)γ−1/ζ 1 |n|ζ ∼Lζ−d 0  t t0 1−d/ζ , (44) by means of the asymptotic expansion of Euler-Maclaurin formula for the series in the last step, and where X n = X n1 · · · X nd .
+(45) In Eq. (44) we have assumed x = 0 for ease of analysis, as we know that, in the limit of uncorrelated interface, all points are equivalent up to a numerical prefactor present in the boundary points [16]; the rough interface inequality ζ > d was assumed too.
+When this inequality is reversed ζ ≤d, then the series does not converge.
+The situation is the same in the case of a nongrowing domain, where for ζ ≤d the interface is ﬂat or at most logarithmically rough, but this series is divergent.
+Note that the one point correlation Eq. (44) grows as t2β, where β is the corresponding growth exponent of the model without domain growth, and as L2α 0 (and also as L(t)2α) for the corresponding classical roughness 10exponent α.
+These exponents arise as a consequence of the local behavior of the model, which is analogous to the static unbounded domain one, see below.
+The behavior of the one point correlation function also helps establishing some dynamical properties of the interface when γ < 1/ζ ⟨h(y, t)2⟩−⟨h(y, t)⟩2 ∼Lζ−d 0  t t0 (ζ−d)γ .
+(46) As in previous cases, we note that there is no saturation, unlike in the non-growing domain situation, for any γ > 0.
+One can deﬁne the roughness exponent α from the second moment dependence on the system size for long times.
+In the case of a growing domain one would have in principle two possible choices: the initial system size L0 and the time dependent size L(t).
+It turns out that both yield the same value α = (ζ −d)/2, what allows an unambiguous deﬁnition of this exponent.
+It is worthy noting that this exponent is the exactly the same as in the regime with γ = 0, with the diﬀerence that this latter case is characterized by the saturation of the ﬂuctuations.
+If we allow the deﬁnition of the long time growth exponent β∞as the power law dependence of the second moment on the temporal variable for long times, we ﬁnd β∞= γ(ζ −d)/2.
+To calculate an eﬀective dynamic exponent zeﬀwe note that the correlation length Λ travels as Λ(t) ≈(Dt)1/ζ, and so the correlated interface fraction at time t is Λ(t) L(t) ≈D1/ζtγ 0 L0 t1/ζ−γ, (47) what leaves us zeﬀ= ζ 1 −ζγ, (48) if γ < 1/ζ and ∞if γ > 1/ζ.
+One sees zeﬀ(γ = 0) = ζ and we recover the classical case, and limγ→1/ζ zeﬀ(γ) = ∞, showing the limit in which the interface becomes uncorrelated.
+In the marginal situation characterized by γ = 1/ζ diﬀusion and dilution balance each other and so the resulting dynamics is given by the concrete values of the equation parame- ters.
+As we have seen, the eﬀective dynamic exponent becomes divergent, and the resulting fraction of correlated interface is Λ(t) L(t) ≈(Dt0)1/ζ L0 , (49) what shows that for large diﬀusion and small initial system size and growth rate the interface becomes globally correlated.
+Alternatively, for small diﬀusion and large initial system size and growth rate the interface becomes only partially correlated.
+11As we have seen, the roughness exponent can be deﬁned α = (ζ −d)/2 independently of the value of γ, as in the static domain case.
+For a supercritical γ, the long time growth exponent reads β∞= (1 −d/ζ)/2, equalling the growth exponent in the classical case.
+For any γ ̸= 1/(2ζ) the inequality α ̸= β∞zeﬀholds, while the equality α = β∞ζ is true only if γ ≥1/ζ.
+On the other hand, we have the alternative relation α = β∞z∞, for z∞= max{1/γ, ζ}.
+Indeed, there is a close connection among 1/γ and the dynamic exponent, i. e., this quantity describes quantitatively the speed at which correlations propagate along the interface.
+This relation is further explored in the following sections.
+One can clarify things further by calculating the two point correlation function for those bulk points that lie closer than the correlation length |x −x′| ≪(Dt)1/ζ−γ.
+In d = 1 we obtain ⟨h(x, t)h(x′, t)⟩−⟨h(x, t)⟩2 =  |x −x′|  t t0 γζ−1 F " |x −x′|  t t0 γ−1/ζ# , (50) or alternatively ⟨h(y, t)h(y′, t)⟩−⟨h(y, t)⟩2 = |y −y′|ζ−1F " |y −y′|  t t0 −1/ζ# , (51) where the scaling function reads F(u) = ǫLζ−1 0 4πζD u1−ζ Z ∞ 1 s−ζ cos uπs L0  ds, (52) which integral can be considered as a trigonometric variant of the Misra function [13].
+These formulas have been found in the long time limit after adiabatic elimination of highly oscilla- tory functions (which results from a direct application of the Riemann-Lebesgue lemma).
+Re- sult (44) together with (51) allows us to recover the classical critical exponents α = (ζ−1)/2, β = 1/2 −1/(2ζ), and z = ζ, when we consider Lagrangian coordinates y and distances shorter than the correlation length. Note that Eqs.
+(50) and (51) only depend on |x −x′| and |y −y′| respectively and thus they are translational invariant: this is a consequence of decorrelation, what makes the interface bulk behave similarly to the case of an unbounded domain for short spatial scales.
+In this limit, boundary conditions are not aﬀecting the dynamics of bulk points, but boundary points show a diﬀerent prefactor as in the strictly local situation, see (35) and (44).
+12V. TEMPORAL CORRELATIONS In order to calculate the temporal correlations we need to consider EW dynamics Eq.(8) in the short time limit, where the growth exponent β becomes apparent.
+The homogeneous solution of its Fourier transformed representation Eq.(10) is hn(t) =  t t0 −γ exp  −n2π2D L2 0 t2γ 0 t1−2γ −t0 1 −2γ  hn(t0) ≡Gn(t)hn(t0), (53) that yields the following complete solution when the initial condition vanishes: hn(t) = Gn(t) Z t t0 G−1 n (τ) t0 τ γ/2 ξn(τ)dτ.
+(54) The one point two times correlation function then reads ⟨hn(t)hn(t′)⟩= 2ǫ L0 Gn(t)Gn(t′) Z min(t,t′) t0 G−2 n (τ) t0 τ γ dτ, (55) and after inverting Fourier we arrive at the real space expression ⟨h(x, t)h(x, t′)⟩= ∞ X n=0 ⟨hn(t)hn(t′)⟩cos2 nπx L0  .
+(56) The propagator Gn(t) suggests the scaling variable vn ∼nt1/2−γ in Fourier space, that corresponds to the real space scaling variable u ∼xtγ−1/2, as can be read directly from the last equation.
+This again suggests the deﬁnition of the eﬀective dynamical exponent zeﬀ= 2/(1 −2γ).
+If we express the correlation Eq. (55) for t = t′ in terms of the scaling variable vn (and we refer to it as C(vn) multiplied by a suitable power of t) and we introduce the ”diﬀerential” 1 ≡∆n ∼tγ−1/2∆v, we can cast the last expression in the integral form ⟨h(x, t)2⟩−⟨h(x, t)⟩2 = t1/2 Z ∞ v1 C(vn) cos2 vnπu L0  dvn, (57) where the series converges as a Riemann sum to the above integral when Dt ≪(L2 0 + Dt0)t2γ t2γ 0 , (58) or equivalently t ≪tc ∼Lzeﬀ 0 , for tc being the time it takes the correlations reaching the substrate boundaries, assuming that the substrate initial size is very large.
+If γ < 1/2, the whole substrate becomes correlated, yielding a ﬁnite tc; for γ > 1/2 the convergence of the Riemann sum to the integral is assured for all times, corresponding to the physical 13fact that the substrate never becomes correlated.
+In front of the integral we ﬁnd the factor t1/2, compatible with the growth exponent β = 1/4, and the integral can be shown to be absolutely convergent due to the Gaussian dependence of Gn(t) on n.
+The general situation in which we deal with a d−dimensional substrate and the diﬀusion is mediated by an operator of order ζ can be constructed along the same steps.
+In this case the propagator reads Gn(t) =  t t0 −dγ exp " −nζπζD Lζ 0 tγζ 0 t1−γζ −t0 1 −γζ # , (59) suggesting that the scaling variables are vn ∼nt1/ζ−γ and u ∼xtγ−1/ζ, and a deﬁnition for the eﬀective dynamical exponent zeﬀ= ζ/(1 −γζ).
+We ﬁnd again convergence of the Riemann sum to an integral for any time if γ > 1/ζ, and for short times Dt ≪(Lζ 0 + Dt0)tζγ tζγ 0 , if γ < 1/ζ, in agreement with the expression for the correlation time tc ∼Lzeﬀ 0 .
+This integral is again absolutely convergent as it decays superexponentially for large values of the scaling variable vn, leading to the result ⟨h(x, t)2⟩−⟨h(x, t)⟩2 ∼t1−d/ζ, (60) in agreement with the classical growth exponent β = 1/2 −d/(2ζ).
+We are now in position to calculate the temporal auto-correlation A(t, t′) ≡ ⟨h(x, t)h(x, t′)⟩0 ⟨h(x, t)2⟩1/2 0 ⟨h(x, t′)2⟩1/2 0 ∼  min{t, t′} max{t, t′} λ , (61) where λ is the auto-correlation exponent and ⟨·⟩0 denotes the average with the zeroth mode contribution suppressed, as in (60).
+The remaining ingredient is the correlation ⟨h(x, t)h(x, t′)⟩0.
+Going back to Eq.(56) we see that the Fourier space scaling variable now reads vn = t1−γζ + (t′)1−γζ −2τ 1−γζ 1 −γζ 1/ζ n. (62) If γ < 1/ζ the term max{t, t′}1−γζ is dominant and the factor in front of the convergent Riemann sum reads max{t, t′}−d/ζ min{t, t′}, (63) 14after the time integration has been performed and in the limit max{t, t′} ≫min{t, t′}.
+In this same limit, but when γ > 1/ζ, the term min{t, t′}1−γζ becomes dominant and the pre-factor reads max{t, t′}−dγ min{t, t′}1−d/ζ+dγ.
+(64) The resulting temporal correlation adopts the form indicated in the right hand side of (61), where λ =    β + d/ζ if γ < 1/ζ, β + γd if γ > 1/ζ, (65) or alternatively λ = β + d zλ , (66) where β = 1/2 −d/(2ζ) and the new dynamical exponent is deﬁned as zλ = min{ζ, 1/γ}.
+(67) This last form is the natural generalization of the corresponding one in [17], and tells us that correlations are propagated either by diﬀusion or dilution: the dominant mechanism is chosen in each regime.
+We can extract more information about the correlation function, as it decay properties ⟨h(x, t)h(x, t′)⟩0 ∼max{t, t′}−d/z, when max{t, t′} →∞, (68) signaling that it decays to zero for long times.
+Also, the short time behavior of the auto- correlation function is A(t, t′) ≈1 −R  1 −min{t, t′} max{t, t′} 1−d/ζ , when max{t, t′} ≈min{t, t′}, (69) homogeneously in γ, where R = R(ζ, d, γ) is a universal function of its arguments.
+This behavior is compatible to the one found in the γ = 0 case [18].
+It indicates that the short time properties of the auto-correlation are independent of the substrate growth velocity, but the long time behavior is inﬂuenced by the mechanism by which correlations are propagated, be it diﬀusion or dilution. VI.
+PERSISTENCE The persistence of a stochastic process denotes its tendency to continue in its current state.
+When considering the dynamics of a ﬂuctuating interface, one refers to the persistence 15probability P+(t1, t2) (P−(t1, t2)) as the pointwise probability that the interface remains above (below) its proﬁle at t1 up to time t2 > t1 [17, 18].
+Herein, as in [8], we concentrate on the case in which the initial proﬁle is ﬂat, and we suppress the contribution coming from the zeroth mode as in the last section.
+For the stochastic growth equations under consideration the symmetry hn →−hn for all Fourier modes n > 0 holds, implying the equality P+ = P−≡P. For long times t2 ≫t1 we have the power law behavior [17, 18] P(t1, t2) ∼(t1/t2)θ, (70) deﬁning the persistence exponent θ.
+It was previously calculated in the limit ζ →∞when γ = 0 [18] θ ≈1 2 + 2 √ 2 −1 2 d ζ , (71) up to higher order terms, and in this same limit when d = 1 and γ = 1 [8] θ ≈1 2 −1 2ζ , (72) up to higher order terms.
+The goal of this section is to calculate the persistence exponent θ in the limit ζ →∞for a ﬁnite, but otherwise arbitrary, value of γ.
+In order to proceed with the calculation, we need to consider again the normalized auto-correlation function, i. e., the left hand side of (61).
+This time we will not focus on the limit max{t, t′} ≫min{t, t′}, instead we will consider an arbitrary relation among t and t′. In this case we have [19] ⟨h(x, t)h(x, t′)⟩0 ∼max{t, t′}−dγ min{t, t′}  max{t, t′}1−γz −min{t, t′}1−γz−d/z ×  2min{t, t′} max{t, t′}γz t(t′)γz + tγzt′ −1 d/z 2F1 γd −1 γz −1, d z; 1 + γd −1 γz −1; 2min{t, t′} max{t, t′}γz t(t′)γz + tγzt′  ,(73) where 2F1(x1, x2; x3; x4) is Gauss hypergeometric function [20].
+In order to derive the per- sistence exponent we consider the auto-correlation function in logarithmic time T = ln(t) A(T, T ′) ≡ ⟨h  x, eT h  x, eT ′ ⟩0 ⟨h (x, eT)2⟩1/2 0 ⟨h (x, eT ′)2⟩1/2 0 ∼e−(β+dγ)|T−T ′|, when |T −T ′| →∞. (74) Note that this is the correlation function for the normalized (to unit variance) function height, which becomes stationary in the logarithmic temporal variable.
+For short times we have A(T, T ′) = 1 + O  |T −T ′|2β , when |T −T ′| →0, (75) 16homogeneously in γ.
+The ﬁrst order term is a power 2β = 1 −d/ζ < 1, classifying the process as a Slepian non-smooth one [21].
+This fact together with the asymptotics A(T, T ′) ∼e−(1/2+dγ)|T−T ′| when ζ →∞means that we can calculate the persistence expo- nent θ perturbatively about θ = 1/2 + dγ for large ζ (and ﬁnite d and γ) in the following fashion [8, 18] θ ≈ 1 2 + dγ   1 −1 + 2dγ π Z ∞ 0  A(τ) −e−(1/2+dγ)τ	  1 −e−(1+2dγ)τ	−3/2 dτ  , (76) for τ = |T −T ′|, yielding, in the limit ζ →∞, the result θ ≈1 2 + dγ −d 2ζ , (77) up to higher order terms.
+This last result is reminiscent of the one obtained in [8], but it is corrected by the eﬀect of dilution, as we shall discuss in the next section.
+We can see that, in the limit considered, the interface is less persistent than in the case of a static domain.
+This is so because in the uncorrelated phase dilution acts as a relaxation mechanism on the strictly local scale with a higher eﬃciency than diﬀusion.
+Note that in the limit γ →0 one does not recover the static domain result [18].
+This is so because in this calculation we have assumed γ > 1/ζ, and so the vanishing γ limit implicitly implies a faster vanishing 1/ζ limit.
+As a conclusion we ﬁnd that when γ →0 the persistence exponent θ →1/2. VII.
+CONNECTION TO RADIAL GROWTH As mentioned in the Introduction, one of the characteristics of radial growth is its growing domain interface.
+Herein, we will use the results derived in previous sections to put former derivations in radial geometry [4, 8] in a broader context.
+In this case as well dilution plays an important role on the interface dynamics.
+As radial interfaces grow in time, the interfacial matter becomes diluted among the new deposited matter and the correlations transported simultaneously.
+Note that the physical origin of dilution here is the same as in sec.
+II, and thus it is not related to the surface curvature.
+The one-dimensional radial counterpart of the general linear Langevin equation (40) could be deﬁned as [8] ∂r ∂t = γFtγ−1 + 1 rζ |∇θ|ζr + 1 √rη(θ, t), (78) 17for the ﬁeld r(θ, t), where reparametrization invariance [7] has been taken into account, but dilution has been disregarded.
+Its analysis yields, for γ > 1/ζ and performing a van Kampen system size expansion about the homogeneously growing state, the long time large angular scale correlation function [4, 23] ⟨r(θ, t)r(θ′, t)⟩0 ∼t1−γ δ(θ −θ′) ∼t δ(s −s′), (79) for γ < 1, ⟨r(θ, t)r(θ′, t)⟩0 ∼ln(t) δ(θ −θ′) ∼t ln(t) δ(s −s′), (80) for γ = 1, and ⟨r(θ, t)r(θ′, t)⟩0 ∼t1−γ 0 δ(θ −θ′) ∼tγ δ(s −s′), (81) for γ > 1, where s −s′ ∼tγ(θ −θ′) is the arc-length scale.
+For γ < 1 we recover the random deposition correlation, while for γ ≥1 we found, in the arc-length variable, an average rapid roughening version of it, this is: Z s(θ=2π) s(θ=0) ⟨r(s, t)r(s′, t)⟩0 ds ∼          t if γ < 1, t ln(t) if γ = 1, tγ if γ > 1.
+(82) This result emerges when the dilution term is not taken into account.
+When we contemplate the eﬀect of dilution, as in the previous sections, we ﬁnd a pure random deposition correlation in Lagrangian coordinates ⟨r(s, t)r(s′, t)⟩0 ∼t δ(s −s′), (83) homogeneously in γ (provided γ > 1/ζ), as in (43).
+Correspondingly, the prefactor of the Dirac delta is t1−γ in the Eulerian setting.
+One can see that the large scale results derived for radial interfaces [4, 23] are identical to the ones found here for homogeneously growing domains, once dilution is introduced.
+These results can be straightforwardly generalized to an arbitrary dimension d.
+In this case one needs d angles to parameterize the interface in the Eulerian setting, that will lead to d diﬀerent arc-lengths in Lagrangian coordinates and to a d−dimensional Dirac delta specifying the spatial properties of the uncorrelated interface.
+As a consequence one ﬁnds Z St ⟨r(s, t)r(s′, t)⟩0 ds ∼          t if γ < 1/d, t ln(t) if γ = 1/d, tγd if γ > 1/d, (84) 18when dilution is not considered; s = (s1, · · · , sd) is the set of all arc-lengths and the integral extends to the whole domain.
+If we contemplate dilution, then the resulting correlation in the large spatial scale and for long times is pure d−dimensional random deposition.
+The physical reason for this enhanced stochasticity when dilution is not present is the following.
+Dilution distributes the ﬂuctuations along the interface at the growth rate, keeping the total amount of noise constant.
+In its absence, the interface is composed of unconnected sites, and new ones are added in the process of domain growth.
+They act as independent sources of noise, and so they contribute to augment the overall ﬂuctuations.
+The study of radial growth performed in [8] on the strictly local scale does not contemplate the eﬀect of dilution either.
+For the shake of completeness, and to facilitate comparisons, we have derived the previous sections results deliberately disregarding the eﬀect of dilution.
+As expected, the long time short spatial scale behavior is reminiscent of the unbounded substrate situation, as happened in (50) and (51).
+On the contrary, the large spatial scale dynamics shows a diﬀerent phenomenology characterized by a particular random deposition eﬀective behavior.
+Equivalently, the long time interval (max{t, t′} ≫min{t, t′}) asymptotics is aﬀected by substrate growth, and the absence of dilution modiﬁes the corresponding results.
+If γ < 1/ζ, the correlation function decays to zero at inﬁnity as a power law ⟨h(x, t)h(x, t′)⟩0 ∼(max{t, t′})dγ−d/ζ, when max{t, t′} →∞, (85) while for γ > 1/ζ this correlation function approaches a non-zero value.
+This fact is related to the behavior of the Fourier modes (59), which in the absence of dilution decay to zero for γ < 1/ζ in the long time limit, while for γ > 1/ζ they approach a non-zero value asymptotically in time, analogously to the particular case analyzed in [8].
+The temporal auto-correlation function, in the absence of dilution, is ⟨h(x, t)h(x, t′)⟩0 ⟨h(x, t)2⟩1/2 0 ⟨h(x, t′)2⟩1/2 0 ∼  min{t, t′} max{t, t′} λ , (86) where λ =    1 2 + d 2ζ −dγ if γ < 1/ζ, 1 2 −d 2ζ if γ > 1/ζ, (87) or alternatively λ = β + d zeﬀ , (88) 19where β = 1/2 −d/(2ζ) and zeﬀ=    ζ/(1 −γζ) if γ < 1/ζ, ∞ if γ > 1/ζ.
+(89) From these formulas one can clearly read that when dilution is suppressed there is no mech- anism for correlation propagation and thus the system behaves as an eﬀective particular random deposition model in this limit.
+Similar information can be obtained from the per- sistence exponent, obtained this time perturbatively about θ = 1/2: θ ≈1 2 −d 2ζ , ζ →∞, (90) generalizing the previous result [8].
+This, together with numerical simulations suggesting θ ≈1/2 almost homogeneously in ζ [8], reinforce the idea of an eﬀective particular random deposition behavior.
+However, for ζ large enough θ < 1/2, and in consequence the process is more persistent than random deposition.
+This fact admits a transparent physical expla- nation.
+For a static domain θ decreases for increasing β [17]: the reason is that in this case the exponent β contains information on the relaxation properties of the interface (through its dependence on the dynamic exponent z).
+In this case relaxation is mediated by diﬀusion, that connects the diﬀerent interface points and thus pushes the interface towards its mean value, diminishing the persistence of the ﬂuctuations.
+For a growing domain, dilution acts as the relaxation mechanism when diﬀusion becomes inoperative (in the uncorrelated phase).
+Suppressing dilution, there is no relaxation mechanism left, following that the exponent β only contains information about the strictly local ﬂuctuational properties of the interface.
+Indeed, the interface variance grows as t2β (see sec.
+IV), and so for smaller β we have weaker ﬂuctuations intensity, implying a longer ﬁrst passage time.
+This implies in turn a smaller value for the persistence exponent θ, as persistence is nothing but a ﬁrst passage problem [18].
+This explains how θ may increase for increasing β, although understanding the whole numerical sequence of values for the persistent exponent in [8] would require a deeper analysis.
+These last results for the temporal auto-correlation and persistence show that in the un- correlated phase dilution is the only responsible for correlations propagation.
+Interestingly, the simulations performed in [8] for the Eden model [24] show a temporal autocorrelation function fully compatible with the one described here for an uncorrelated interface in the 20absence of dilution.
+The two persistence exponents, for above and below the mean ﬂuctua- tions (which are diﬀerent for the less symmetric Eden interface), are greater than θ = 1/2, but are notably smaller than the static domain ones [8].
+This result is surprising because for a radial cluster grown according to the Eden rules, to which new cells are added at random positions on its interface, dilution is expected to occur.
+It would be very interesting to un- veil the mechanism counterbalancing dilution in this case.
+It might be a consequence of the particular way in which an Eden cluster grows, or perhaps due to some possible nonlinear eﬀect acting on the interface as a consequence of geometry. VIII.
+CONCLUSIONS In this work the dynamics of linear stochastic growth equations whose domain size grows in time as power law tγ has been studied.
+The growth index possesses one critical value γ = 1/ζ, for ζ being the order of the diﬀusion operator.
+If γ < 1/ζ the interface correlations are propagated by means of diﬀusion at a faster speed than domain growth, resulting in a fully correlated interface.
+The time it takes correlations to travel the whole interface depends on the initial substrate size tc ∼Lzeﬀ 0 for zeﬀ= ζ/(1 −γζ), or alternatively tc ∼L(tc)ζ.
+The roughness exponent α can be deﬁned from the strictly local properties of the interface uniformly in the growth index.
+This value of α is exactly the same one that is obtained in the static domain case.
+For any γ > 0 saturation never occurs, and the interface width continues to grow for all times with a long time growth exponent β∞= αγ when γ < 1/ζ; note that in this regime β∞< β so there is partial saturation of the ﬂuctuations.
+The relation β∞= αγ also implies that correlations travel like tγ in the long time regime, after they have spread globally on the interface.
+Prior to that they propagate as t1/ζ, because diﬀusion is a faster mechanism for information transfer.
+Once they have reached the interface limits, this transfer speed is limited by the slower process of domain growth, resulting the stated exponents relation.
+This phenomenology is independent of whether we contemplate dilution or not: it is a strictly direct consequence of domain growth, not of dilution (although dilution carries on information at the same velocity).
+The regime in which γ > 1/ζ is characterized by a loss of correlation along the interface.
+This translates into a delta correlated spatial correlation for long times and large spatial scales.
+The correlations for short spatial scales and time intervals are reminiscent of the 21ones found in the case of a static unbounded domain, revealing that diﬀusion is acting at this level.
+On the other hand, large spatial scales and long time intervals both reveal that the dominant mechanism for correlations propagation is the dilution eﬀect created by domain growth.
+By means of dilution, correlations travel at the same speed at which the domain grows, so a global correlation of the interface becomes impossible.
+The situation is further clariﬁed by the calculation of the auto-correlation and persistence exponents.
+The autocorrelation exponent λ = β + d/ζ for all γ < 1/ζ (including γ = 0) shows that one site interacts with itself at former times by means of the growth process (indicated by the ﬁrst summand β) and with neighboring sites by means diﬀusion (indicated by the second summand d/ζ), which is dominant in this regime.
+If γ > 1/ζ, then the auto-correlation exponent reads λ = β + dγ.
+This illustrates how, for fast domain growth, dilution replaces diﬀusion and becomes responsible for the interaction with the neighboring sites.
+A similar conclusion is reached by analyzing the persistence of the surface ﬂuctuations.
+While the auto-correlation exponent yields information about the long time interval asymptotics, the persistence exponent carries on complimentary information obtained from averaging over all possible time interval lengths.
+It reads θ = 1/2+dγ −d/(2ζ) when ζ →∞and γ > 1/ζ, and so it is greater than in the static domain situation, what implies that the interface is less persistent.
+A reduced persistence is associated with a stronger tendency to go back to the mean, which is mediated by a stronger coupling with the neighboring points through dilution, more eﬃcient than diﬀusion in the limit considered.
+Additionally, the persistence exponent increases with the growth exponent: a higher β corresponds to stronger ﬂuctuations and thus to a shorter ﬁrst passage time.
+This is in contrast to what happens in the γ = 0 situation, where the persistence exponent decreases for increasing β [17].
+The reason for this is that in this case β contains information about the strength of the coupling among the interface sites.
+Smaller β implies a stronger coupling and a correspondingly less persistent interface.
+The crossover situation γ = 1/ζ is characterized by a nonuniversal behavior.
+There is a strong dependence on the parameter values that enter in competition to yield the resulting system dynamics.
+In the generic case γ ̸= 1/ζ, a number of the results derived in this paper can be connected to the Family-Vicsek ansatz [25] by means of the simple substitution L →L(t) taking into account the temporal evolution of the system size directly in this ansatz.
+From the results of this paper, one would expect this to be so in the regime γ < 1/ζ, 22or for γ > 1/ζ provided short spatiotemporal distances are under consideration.
+When γ > 1/ζ, and for long time intervals and/or large spatial scales one would perhaps expect a diﬀerent result.
+Indeed, in this regime correlations are propagated by means of dilution, which becomes more eﬀective than diﬀusion.
+However, the surface dynamics is still well described by the Family-Vicsek ansatz.
+To see this, consider for instance the unbounded domain situation uniformly growing with a growth index γ.
+In this case the Family-Vicsek ansatz tells us that the two points correlation is: C(|x −x′|, t) = t2βF(|x −x′|/t1/ζ−γ) in Eulerian coordinates x and 2β = 1−d/ζ for the linear stochastic growth equations considered here.
+For long times and γ > 1/ζ we ﬁnd C(|x −x′|, t) = t1−dγtdγ−d/ζF(|x −x′|/t1/ζ−γ) → t1−dγδ(x −x′) when t →∞, i. e., we recover the standard random deposition correlation.
+This result fully agrees with the correlations derived from the stochastic growth equations which take into account dilution.
+On the other hand, the correlations shown at the beginning of sec.
+VII were obtained suppressing the dilution term and cannot be derived from the Family-Vicsek ansatz.
+So we see that this ansatz implicitly takes into account dilution.
+This miracle occurs because the Family-Vicsek ansatz neglects the memory with respect to the initial condition at t0.
+However, this memory eﬀect is present in the stochastic growth equations with no dilution, leading to a diﬀerent result [22].
+Introducing dilution asymptotically erases the memory with respect to the initial condition, what implies in turn the coincidence of the results from the stochastic growth equations and from the Family- Vicsek ansatz.
+Of course, in this reasoning we have assumed the rough interface inequality ζ > d; otherwise the appearance of non-universal anomalous dimensions is indeed possible as we have shown for ζ = d in [23].
+One of the characteristics of radial growth is the growing domain size.
+We have iso- lated this eﬀect, what will hopefully allow a better understanding of the dynamics of radial interfaces.
+In order to facilitate the comparison with previous work we have deliberately neglected the dilution term on the dynamics, although this term arises naturally in the sce- nario considered.
+Our results compared favorably and extended those of [8].
+The resulting analysis in the fast growth regime showed an interface without relaxation mechanisms, and a corresponding temporal auto-correlation function decaying to a non-zero value in the long time limit.
+Once dilution is suppressed, and because diﬀusion is inoperative in the large scale for γ > 1/ζ, there is no remaining coupling among the surface sites, as revealed by the auto-correlation exponent λ = β signalling that one site only interacts with itself at diﬀer- 23ent temporal points.
+The information obtained from the persistence exponent is the same.
+Note that the no dilution assumption allows growth characteristics beyond what one would expect from the static domain results.
+For instance, an average rapid roughening eﬀect (not real rapid roughening which would imply pointwise estimates out of reach in this context) is possible for γ ≥1/d, see Eq. (84), because ﬂuctuations are no longer being distributed along the growing domain.
+Values of the persistence exponent θ < 1/2 strictly smaller than the random deposition one are possible for large values of ζ.
+Both become impossible if the domain is non-growing or if we contemplate dilution.
+Interestingly, simulations performed with the Eden model (for which γ = 1) show that it behaves as if dilution were not present [8].
+Basically, this means that an Eden cluster grows as a random deposition process, with all its interface points being completely decorrelated (even at the local scale for long time intervals), but with weaker surface ﬂuctuations as given by a smaller value of β (= 1/3 for this particular model).
+The only dissenting factor is the numerically measured value of the persistence exponents, greater than the expected θ ≈1/2 [8].
+Anyway, these values are consistent with the rest of results, as they are considerably smaller than the static domain ones [17], implying a more persistent interface.
+They may be the consequence of a KPZ nonlinearity (expected from the β = 1/3 exponent) acting on the interface, as it propa- gates correlations linearly in time [4], and so it can compete with the linearly growing Eden interface.
+When studying a radial interface, it seems necessary to take into account both reparametrization invariance [7] and dilution [12].
+The Eden model seems to be, in princi- ple, not an exception, as its interface grows by the addition of new cells randomly placed on the cluster surface.
+However, numerical results pointed to the fact that dilution is not operative in this case [8].
+It would be very interesting to understand what mechanism is counterbalancing dilution in this model.
+Some candidates are the presumed KPZ nonlinear- ity present in the Eden surface dynamics, which is able to propagate correlations linearly in time (exactly the same velocity at which dilution would operate at the linearly growing Eden interface), or the nonlinearities implied by reparametrization invariance.
+24Acknowledgments The author is grateful to Joachim Krug, Fabricio Maci`a and specially Juan J. L. Vel´azquez for helpful comments and discussions.
+This work has been partially supported by the MICINN (Spain) through Project No. MTM2008-03754.
+[1] M. Kardar, G. Parisi, and Y.-C. Zhang, Phys. Rev. Lett. 56, 889 (1986).
+[2] R. Kapral, R. Livi, G.-L. Oppo, and A. Politi, Phys.
+Rev. E 49, 2009 (1994).
+[3] M. T. Batchelor, B. I. Henry, and S. D. Watts, Physica A 260, 11 (1998).
+[4] C. Escudero, Phys. Rev. Lett. 100, 116101 (2008).
+[5] S. Majaniemi, T. Ala-Nissila, and J. Krug, Phys.
+Rev. B 53, 8071 (1996).
+[6] T. Nattermann and L.-H. Tang, Phys.
+Rev. A 45, 7156 (1992).
+[7] M. Marsili, A. Maritan, F. Toigo, and J. R. Banavar, Rev. Mod. Phys. 68, 963 (1996).
+[8] S. B. Singha, J. Stat.
+Mech. P08006 (2005).
+[9] J. Krug, Phys. Rev. Lett. 102, 139601 (2009).
+[10] C. Escudero, Phys. Rev. Lett. 102, 139602 (2009).
+[11] S. F. Edwards and D. R. Wilkinson, Proc. R. Soc. London Ser. A 381, 17 (1982).
+[12] E. J. Crampin, E. A. Gaﬀney, and P. K. Maini, Bull. Math. Biol. 61, 1093 (1999).
+[13] The Misra function is ϕn(x) = R ∞ 1 sne−xsds; R. D. Misra, Proc. Cambridge Phil. Soc. 36, 173 (1940).
+[14] R. Metzler and J. Klafter, Phys. Rep. 339, 1 (2000).
+[15] L. C. Evans, Partial Diﬀerential Equations (American Mathematical Society, Providence, Rhode Island, 2002).
+[16] We conjecture that this factor is 2b, where b is the number of faces of the hypercubic substrate the point in question belongs to; for the origin, or any other corner, b = d.
+[17] H. Kallabis and J. Krug, Europhys. Lett. 45, 20 (1999).
+[18] J. Krug, H. Kallabis, S. N. Majumdar, S. J. Cornell, A. J. Bray, and C. Sire, Phys.
+Rev. E 56, 2702 (1997).
+[19] In this expression we have suppressed all constant prefactors, including divergent terms of the form 1/(1 −dγ).
+Therefore the limit γ →1/d must be taken with caution, and one can not 25rely on this simpliﬁed formula.
+This includes as a particular case the correlation calculated in [8].
+The rest of the results in this section do not depend on this technicality.
+[20] Gauss hypergeometric function is 2F1(x1, x2; x3; x4) = P∞ n=0[(x1)n(x2)n/(x3)n]xn 4/n!, where (x1)n = x1(x1 + 1)(x1 + 2) · · · (x1 + n −1) is the rising factorial; M. Abramowitz and I. A. Stegun, Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables (Dover, New York, 1964).
+[21] D. Slepian, Bell Syst. Tech. J. 41, 463 (1962).
+[22] C. Escudero, arXiv:0811.0518.
+[23] C. Escudero, Ann. Phys. 324, 1796 (2009).
+[24] M. Eden, in Symposium on Information Theory in Biology, edited by H. P. Yockey (Pergamon Press, New York, 1958).
+[25] F. Family and T. Vicsek, J. Phys. A 18, L75 (1985). 26

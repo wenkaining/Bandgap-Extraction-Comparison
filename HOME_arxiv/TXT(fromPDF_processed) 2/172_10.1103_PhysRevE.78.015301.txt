@@ -1,0 +1,151 @@
+arXiv:0805.1666v1 [cond-mat.soft]  12 May 2008 Submitted to Physical Review Letters Equilibrium Simulation of the Slip Coefﬁcient in Nanoscale Pores Vlad P. Sokhan∗ National Physical Laboratory, Hampton Rd, Teddington TW11 0LW, United Kingdom Nicholas Quirke† Department of Chemistry, Imperial College London, London NW7 2AY, United Kingdom (Dated: October 30, 2018) Abstract Accurate prediction of interfacial slip in nanoscale channels is required by many microﬂuidic applica- tions.
+Existing hydrodynamic solutions based on Maxwellian boundary conditions include an empirical parameter that depends on material properties and pore dimensions.
+This paper presents a derivation of a new expression for the slip coefﬁcient that is not based on the assumptions concerning the details of solid- ﬂuid collisions and whose parameters are obtainable from equilibrium simulation.
+The results for the slip coefﬁcient and ﬂow rates are in good agreement with non-equilibrium molecular dynamics simulation.
+PACS numbers: PACS numbers: 47.15.gm, 47.11.Mn, 05.20.Jj, 47.90.+a, 66.20.+d, 68.08.–p c⃝Crown copyright, 2007 1Many recent experiments on nanoscale ﬂuid ﬂow of Newtonian liquids [1, 2] and related sim- ulation studies [3, 4, 5, 6] support Maxwell’s prediction of the possibility of molecular slip at a gas-solid interface [7].
+It is known to exist where the Knudsen number, deﬁned as the dimension- less ratio of molecular free path to some characteristic length, Kn = λ/L, is non-negligible, and is usually associated with low densities where λ is large.
+However, in narrow capillaries (where L is small), slip can be observed even at liquid densities.
+In the general case it is characterized by a slip coefﬁcient, ls [7, 8], which in the absence of temperature gradients relates the collective molecular velocity at the wall, the slip velocity, to the shear rate, us = ls∇u [7].
+Using kinetic theory Maxwell derived a microscopic expression for the slip coefﬁcient [7], that can be written as ls = λ  2 α −1  , (1) where λ = 2η/ρ¯c is the mean free path, η is the shear viscosity, ρ is mass density of the ﬂuid, and ¯c is the mean speed of the molecules.
+Considering only two types of wall collision, specular and diffuse (Knudsen) reﬂection, he introduced a coefﬁcient α that deﬁnes a fraction of specularly reﬂected molecules.
+In more broad sense, α deﬁnes the fraction of the ﬂux of tangential momen- tum transmitted in collisions and is often called the ‘accommodation coefﬁcient’ (TMAC) [8].
+Its value is deﬁned by the details of the solid-ﬂuid interactions and (1) implies ﬁnite slip even for purely diffusive reﬂections (α = 1).
+For specularly reﬂecting surface the slip coefﬁcient diverges since the ﬂuid cannot grip onto the surface.
+Slip in nanoscale ﬂuid ﬂow depend on many parameters inculding surface roughness [6], elec- tric properties of the interface [9], wetting conditions [5], chemical patterning of the surface [10], and is a nonlinear function of the dynamic state [11].
+Application of the generalized Navier-Stokes (NS) hydrodynamics to problems of ﬂuid ﬂow on the nanoscale is an attractive but highly non- trivial task even in simple cases such as plane Poiseuille ﬂow.
+An accurate solution requires a knowledge of the material parameters of the ﬂuid as a function of local density which deviates from its bulk value in the proximity of the interface.
+As a result, the velocity proﬁle in narrow pores also deviates from the macroscopic prediction [12].
+The usual approach is to regard the ﬂuid as incompressible and to replace the complex non-uniform ﬂow problem plus simple no-slip boundary conditions with a simple ﬂow problem but with boundary conditions that has been called ‘exceedingly difﬁcult’ for theoretical investigation [8], p. 96.
+The discontinuity in the ﬂow ﬁeld is introduced in this approach in the same way the surface excess was introduced by Gibbs in his treatment of interface boundaries at equilibrium as illustrated in Fig. 1 for the case of plane 2FIG.
+1: Full line, velocity proﬁle for the plane Poiseuille ﬂow with surface slip; dashed line, extrapolated velocity proﬁle.
+Vertical gray line marks the position of the solid.
+Dash-dotted line denotes the velocity gradient at the wall.
+Also shown are slip velocity, us, and slip coefﬁcient, ls.
+Poiseuille ﬂow in z direction (u = {0, 0, uz}) between walls at y = ±h, where the symmetry of the solution was taken into account and only one half was plotted.
+We emphasize that the ﬁnite slip us that appears in this approach is a purely artiﬁcial device introduced only to match the ap- proximate solution with the solution of full problem in the middle part of the channel.
+The full solution for the continuum velocity ﬁeld does decay to zero at the wall, as required by continuity of stresses in classical hydrodynamics [13].
+It should be noted however that the limiting value of the velocity ﬁeld cannot be observed in any experiment or in a statistical particle-based simula- tion with a continuous solid-ﬂuid potential since the velocity ﬁeld, which is deﬁned everywhere the ﬂuid density is non-zero, cannot be measured from particle velocities in regions where par- ticles are not observed due to ﬁnite sampling of the statistical ensemble, i. e. where the particle Boltzmann factor is diminishingly small but non-zero.
+There were a number of attempts to estimate the TMAC from kinetic theory [14, 15] and using 3molecular dynamics simulation of simple liquids [5, 16, 17].
+However, the results obtained by different groups and using different methods are inconcluisive [1], with large scatter in obtained values of slip coefﬁcient spanning two orders of magnitude.
+The agreement between recent ex- periments with various surfaces [18, 19, 20, 21], and and theory is also poor, with experimental values for α generally higher than the corresponding theoretical expectations [15, 16, 18].
+One of the limitations of the original Maxwell model is that it was developed to solve the half-space ﬂow, or Kramers, problem [8] in the dilute gas regime and faces problems describing ﬂow in pores of ﬁnite width.
+It is assumed that the TMAC is a local property independent of the pore width.
+The following argument however demonstrates why it could not be so.
+Viscous wall stress in plane Poiseuille ﬂow that is proportional to the velocity gradient at the wall scales as the pore width for the ﬂow of gas of the same density.
+This stress is transmitted to the wall through collisions that are independent of the pore width and therefore the momentum transferred to the wall in each collision and consequently the TMAC depends on the pore width.
+In this paper we present a method of calculating the slip coefﬁcient from equilibrium simulation that does not require assumption about the type of wall collisions avoiding thus the necessity of calculating the TMAC.
+We illustrate the method on a simple case of gravity driven plane Poiseuille ﬂow in a pore of width H = 2h and with acceleration due to an external ﬁeld g = {0, 0, g} as sketched in Fig. 1.
+The method can be extended to a more general case of Poiseuille ﬂow induced by a pressure gradient using the equivalence between the pressure gradient and gravity-driven force in the direction of ﬂow [13].
+It is convenient to reformulate the slip velocity problem (the Dirichlet boundary condition) in terms of interfacial viscosity (Neumann boundary condition), and the lateral wall stress.
+This idea goes back to Navier [22] who obtained the boundary condition for the velocity ﬁeld on the basis of particle arguments (cf. last eqn. on p. 415 in Ref.
+[22]) as, η ∂uz(y) ∂y  yw = βuz (yw) (2) where his parameter β is related to the interfacial shear viscosity η via ls = η/β.
+Note that for non- linear velocity proﬁles, as for Poiseuille ﬂow, the slip coefﬁcient, ls, (shown in ﬁgure) is different from the slip length, deﬁned as the distance from the wall where the extrapolated velocity proﬁle vanishes.
+However, if the difference between them is small, simple geometric consideration allows us to establish the relationship between the two types of boundary condition.
+Neglecting viscous dissipation, the wall shear stress in terms of the external driving force acting on ﬂuid particles, which in this case is simply σyz = ρgh [23], can be equated with the Stokesian 4drag force per unit area exerted on the wall by the moving ﬂuid [24], σyz = −FS A = Mu 2Aτ ≡ρuh τ , (3) where M is the total mass of the ﬂuid in the pore; u ≡h−1 R h 0 uz(y)dy is the mean ﬂuid velocity, and the relaxation time τ can be calculated in molecular dynamics simulation from the Langevin equation for the ﬂuid subsystem considered as a single Brownian particle using ﬂuctuation-dissipation theorem.
+It has been shown recently [24] that the ﬂuid velocity autocorre- lation function decays exponentially, C(t) = M−1kT exp (−t/τ) .
+(4) This provides a simple way to determine τ in an equilibrium simulation by ﬁtting a one-parameter exponential to velocity autocorrelation data.
+From the two expressions for the wall shear stress, a simple relationship between the ﬂuid velocity and the acceleration due to the external force, u = τg.
+(5) can be established.
+This surprisingly simple result shows that within the limits of linear regime [11] the rate of ﬂuid ﬂow in non-equilibrium steady state can be estimated from the characteristic time of the decay of ﬂuctuations at equilibrium.
+Using it, we can also estimate both the slip velocity and slip coefﬁcient.
+Since the hydrodynamic solution in this case is given by a quadratic velocity proﬁle with slip, uz(y) = ρg 2η  h2 −y2 + us, (6) using (5) and the deﬁnition of u, one obtains for slip velocity us =  τ −ρh2 3η  g, (7) and by substituting it into the deﬁnition of the slip coefﬁcient, ls = −∂u/∂y|h us, one obtains ﬁnally ls = τη ρh −h 3.
+(8) This is the main result.
+It shows that the slip coefﬁcient is independent of the external force (ﬂux), but nonlinearly depends on the pore width, both directly and indirectly through the relaxation time τ ≡τ(h).
+The connection with the Maxwell’s result can be established by using the relationship 5between the TMAC and relaxation time, f0, τ = (f0α)−1 [24].
+Taking the kinetic theory expres- sions for the wall collision frequency per particle, f0 = ¯c/4h and viscosity, obtain the expression for the slip coefﬁcient ls = λ 2 α −h 3 (9) that can be directly compared with Maxwell’s result (1).
+We note here that usage of kinetic theory expression for f0 introduces a signiﬁcant error at liquid densities, and it was used in deriving (9) only to make the same level of approximation as was in deriving (1).
+In order to test the accuracy of (8), two series of equilibrium molecular dynamics runs were per- formed.
+There are two ways of controlling the Knudsen number in simulation: either by changing the mean density of the system (the mean free path) or the pore width (the characteristic length), and we used both.
+In the ﬁrst series, the relaxation time τ was calculated as a function of ﬂuid density for a pore of ﬁxed width.
+In the second, the pore width was varied while the normal wall pressure was kept constant.
+The slip coefﬁcient estimated using (8) was compared with the values obtained directly in the parallel set of nonequilibrium molecular dynamics (NEMD) simulations of the Poiseuille ﬂow for the same systems.
+The system consists of supercritical Lennard-Jones (LJ) ﬂuid, conﬁned between two walls modeled by a rigid triangular lattice of atoms situated at yw = ±h, and periodically replicated along x and z axes to avoid edge effects.
+All interactions in the system were of the LJ form, U(r) = 4ε  (σ/r)12 −(σ/r)6 , where ε and σ are the usual energy and length parameters.
+Their values for the ﬂuid-ﬂuid interactions deﬁne the corresponding scales, and in the following reduced units [25] are used, denoted by the astersk.
+The solid-ﬂuid interaction parameters in these units were taken as εsf = 0.4348ε and σsf = 0.9462σ, which is appropriate for methane gas between carbon ‘rare-gas walls’.
+The surface number density of the solid was nsσ2 = 1.105 as in our earlier study [24] where more details about the system and the numerical scheme can be found.
+All molecular dynamics calculations were performed using the classical molecular dynamics software package MDL [26].
+The nonequilibrium steady-state conditions were realized by placing the ﬂuid in a uniform external ﬁeld parallel to the walls and coupling all ﬂuid degrees of freedom to a Nos´e-Hoover thermostat at T = 2.026 εk−1, where k is the Boltzmann constant.
+The simulation cell was of dimensions 20.181σ × H × Lz, where the dimension in the ﬂow direction, Lz, was scaled with the density to keep the number of particles in the system around 2500.
+The timestep was ∆t∗= 7.28 × 10−3 in LJ units and the integration time in each case was not less than 3.64 × 105 (50M steps).
+The value of the acceleration due to the external force was varied between g∗= 4 · 10−3 and g∗= 0.04 in order to keep the ﬂuid velocity 6below u∗= 0.2.
+The steady states reported here are known to be well within the Newtonian regime [27] and the slip velocity in the linear regime [11].
+To simplify the comparison we scaled all ﬂow related properties to a common value g∗= 4.95 · 10−3.
+In the ﬁrst series three pore widths were considered, H = 5.328σ, 10.499σ, and 20.997σ; (in the future denoted as 5σ, 10σ, and 20σ for brevity) and several number densities ranging from n∗= 0.02 (n∗= m−1ρσ3), corresponding to the rareﬁed ﬂuid at Kn = 2.34 for a narrow pore (where we used the kinetic theory expression for the mean free path and the hard sphere diameter for LJ [28]), to a dense state of n∗= 0.8 that for a wide pore gives Kn = 0.015, thus spanning more than two orders of magnitude of Knudsen numbers.
+In all cases the Reynolds number deﬁned as the ratio of inertial and viscous forces, Re = ρuH/η, was kept small, Re < 10.
+In order to calculate slip velocity using (8) we need the estimates of the shear viscosity in the channel.
+It can be calculated in equilibrium moleuclar dynamics e.g. from the stress autocorrela- tion function using Green–Kubo relations [29].
+For the bulk LJ ﬂuid it has been recently accurately estimated in molecular dynamics simulation [29].
+To simplify the calculations we used an empiri- cal equation of state for the viscosity [30] at a density equal to the mean density in the central part of the channel, where it is uniform to ﬁt the simulated data of [29] at the required temperature.
+The accuracy of this procedure was estimated by comparing the obtained values with values cal- culated from the NS hydrodynamics using the quadratic ﬁt to NEMD velocity proﬁles.
+The results for three pore widths are presented in Fig. 2.
+The agreement for the two wider pores is excelent.
+Deviation from the bulk values for the third pore, H = 5σ, is due to the overlap of adsorbed layers at two surfaces and as a consequence, to inaccuracy in determination of the corresponding bulk density.
+At low densities the viscosity markedly deviates from bulk values for all three pores when Kn ≥1.
+The ratio of the slip coefﬁcients to the pore width, calculated in NEMD and estimated from the relaxation times and bulk viscosities at densities equal to that in the middle of pore using (8) are compared on Fig. 3 for three pore widths.
+The relaxation time was estimated from the exponential ﬁt to the collective velocity autocorrelation function calculated in equilibrium molecular dynamics simulaton using the procedure described in [24].
+The statistical uncertainty in all cases is of the order of symbol size and is slightly higher for wider pores since the longer relaxation times in this case require more accurate estimation of the velocity autocorrelation time at long correlation times.
+For all pores the slip coeﬁcients calculated using the two routes agree within statistical uncertainties.
+For a given pore, both (1) and (9) predict linear dependence of the slip length on 7FIG. 2: (color online).
+Comparison of the calculated shear viscosities for three pore widths as a function of reduced number density in the centre of pore, symbols, with empirical EOS for bulk ﬂuid, dashed line.
+the Knudsen number with zero and negative offset, correspondingly.
+For two wider pores the behaviour is observed at high Knudsen numbers, Kn > 1, but with positive offset that increases with pore width.
+Surprisingly, for the narrowest pore, the slip length appears to be independent of the Knudsen number (density) for Kn > 1.
+Since density enters only the ﬁrst term in (8), this reslt indicate that in the low density regime the relxation time in narrow pores increases linearly with density.
+The results also show that for the systems with the same Knudsen number the slip length increases with the pore width.
+In order to establish whether there is a limiting value of the slip coefﬁcient a second series of calculations was performed at the normal pressure that corresponds to reduced density of n∗= 0.125 up to the pore width H = 210σ.
+Obtained values of the reduced slip coefﬁcient are compared on Fig. 4 with the Maxwell’s results using (1).
+The results estimated using (9) agree with those obtained directly in NEMD within statistical uncertainty.
+They show that at about H = 25σ the slip coefﬁcient reaches the limiting value ls = 4.77(2)σ. Maxwell’s 8FIG. 3: (color online).
+Slip coefﬁcients calculated directly in NEMD (open symbols and full lines) and estimated from the relaxation time (eqn.
+(8)), ﬁlled symbols and dashed lines) as a function of Knudsen number for three pore widths.
+Lines are drawn to guide the eye.
+theory, on the contrary, predicts linear scaling of the slip length with pore width and for the widest pore studied it gives the value ls = 77.5σ (note the difference in scales).
+This work was funded as part of the National Physical Laboratory’s Strategic Research Pro- gramme and EPSRC under grant GR/N64809/01.
+∗Electronic address: vlad.sokhan@npl.co.uk † Also at Department of Physics, University College Dublin, Ireland [1] E. Lauga, M. P. Brenner, and H. A. Stone, in Handbook of Experimental Fluid Dynamics, edited by C. Tropea, A. Yarin, and J. F. Foss (Springer, N.Y., 2007), Ch. 19.
+[2] C. Neto, D. R. Evans, E. Bonaccurso, H.-J. Butt, and V. S. J. Craig, Rep. Prog. Phys. 68, 2859 (2005). 9FIG. 4: (color online).
+Slip coefﬁcients (left scale) calculated directly in NEMD, triangles, and estimated from the relaxation time (eqn.
+(8)), circles, as a function of pore width.
+For comparison, slip coefﬁcients estimated from the Maxwell’s theory, eqn.
+(1), diamonds, are also shown (right scale).
+Lines are drawn to guide the eye.
+[3] J.-L. Barrat and L. Bocquet, Faraday Discuss. 112, 119 (1999).
+[4] Y. Zhu and S. Granick, Phys. Rev. Lett. 87, 096105 (2001).
+[5] V. P. Sokhan, D. Nicholson, and N. Quirke, J. Chem.
+Phys. 115, 3878 (2001).
+[6] C. Cottin-Bizonne, J.-L. Barrat, L. Bocquet, and E. Charlaix, Nature Mater. 2, 237 (2003).
+[7] J. C. Maxwell, Philos. Trans. R. Soc.
+London 170, 231 (1879).
+[8] C. Cercignani, Mathematical Methods in Kinetic Theory (Plenum Press, NY / Macmillan, London, 1969) [9] L. Joly, C. Ybert, E. Trizac, and L. Bocquet, J. Chem.
+Phys. 125, 204716 (2006).
+[10] T. Qian, X.-P. Wang, and P. Sheng, Phys.
+Rev. E 72, 022501 (2005).
+[11] P. A. Thompson and S. M. Troian, Nature 389, 360 (1997).
+10[12] K. P. Travis and K. E. Gubbins, J. Chem.
+Phys. 112, 1984 (2000).
+[13] G. K. Batchelor, An Introduction to Fluid Dynamics (Cambridge University Press, Cambridge 1970).
+[14] D. Nicholson and S. K. Bhatia, J. Memb.
+Sci. 275, 244 (2006).
+[15] H. Ambaye and J. R. Manson, Phys.
+Rev. E 73, 031202 (2006).
+[16] V. P. Sokhan, D. Nicholson, and N. Quirke, J. Chem.
+Phys. 117, 8531 (2002).
+[17] G. Arya, H. C. Chang, and E. J. Maginn, Molec. Simul. 29, 697 (2003).
+[18] H. Legge, J. R. Manson, and J. P. Toennies, J. Chem.
+Phys. 110, 8767 (1999).
+[19] E. B. Arkilic, K. S. Breuer, and M. A. Schmidt, J. Fluid Mech. 437, 29 (2001).
+[20] O. V. Sazhin, S. F. Borisov, and F. Sharipov, J. Vac. Sci. Technol. A 19, 2499 (2001).
+[21] B.-Y. Cao, M. Chen, and Z.-Y. Guo, Appl. Phys.
+Lett. 86, 091905 (2005).
+[22] C. L. M. H. Navier, M´em. Acad. Sci. Inst.
+France 6, 389 (1827).
+[23] V. P. Sokhan, N. Quirke, and J. Greenwood, Molec. Simul. 31, 535 (2005).
+[24] V. P. Sokhan and N. Quirke, Molec. Simul. 30, 217 (2004).
+[25] M. P. Allen and D. J. Tildesley, Computer Simulation of Liquids (Clarendon, Oxford 1987).
+[26] Molecular Dynamics Laboratory (MDL) is a classical molecular dynamics package for molecular systems developed by V. Sokhan at NPL within the Strategic Research Fellowship Programme.
+[27] J.-L. Barrat and L. Bocquet, Phys. Rev. Lett. 82, 4671 (1999).
+[28] D. Heyes, J. Chem. Soc.
+Far. 2 84, 705 (1988).
+[29] K. Meier, A. Laesecke, and S. Kabelac, J. Chem.
+Phys. 121, 3671 (2004).
+[30] L. V. Woodcock, AICHE J. 52, 438 (2005). 11

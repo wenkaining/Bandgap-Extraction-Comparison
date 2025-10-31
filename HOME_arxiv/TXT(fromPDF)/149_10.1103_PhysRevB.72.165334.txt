@@ -1,0 +1,595 @@
+arXiv:cond-mat/0502184v2  [cond-mat.mtrl-sci]  11 May 2005
+Electric ﬁeld control and optical signature of entanglement in quantum dot molecules
+Gabriel Bester and Alex Zunger
+National Renewable Energy Laboratory, Golden CO 80401
+(Dated: September 19, 2018)
+The degree of entanglement of an electron with a hole in a vertically coupled self-assembled dot
+molecule is shown to be tunable by an external electric ﬁeld. Using atomistic pseudopotential calculations
+followed by a conﬁguration interaction many-body treatment of correlations, we calculate the electronic
+states, degree of entanglement and optical absorption. We offer a novel way to spectroscopically detect
+the magnitude of electric ﬁeld needed to maximize the entanglement.
+PACS numbers: 78.67.Hc, 73.21.La, 03.67.Mn
+A pair of quantum dots or “quantum dot molecule”
+(QDM) occupied by two electrons [1, 2] or by an electron-
+hole pair [3] have been offered [1, 2, 3] as a basis for quan-
+tum computing.
+The fundamental requirement for such
+quantum algorithm is the availability of entangled states
+and the ability to entangle and disentangle the quantum bits
+(qubits). In the context of a dot molecule, an entangled
+electron-hole pair can be represented by the the maximally
+entangled Bell state eThT + eBhB, where e and h stand
+for the electron and the hole (the two qubits) and T and
+B for their localizations in top or bottom dot. The origi-
+nal proposal [3] and subsequent experiments [3, 4, 5] for
+entangled electron-hole pairs in QDMs promised a high
+degree of entanglement [3] based on analysis via simple
+models. However, later theoretical work showed [6] that
+electron-hole entanglement is generally low in such cases
+and develops a sharp maximum only at a speciﬁc interdot
+separation that critically depends on the size difference of
+the two dots. Unfortunately, it has proven to be difﬁcult
+to experimentally control so precisely the interdot distance
+and the size difference of the two dots. The question we
+address here is whether the degree of entanglement can be
+maximized by other means, more accessible experimen-
+tally than a variation of the interdot separation. We pro-
+pose and quantify theoretically that it is possible to tune
+and control the degree of entanglement by applying an ex-
+ternal electric ﬁeld in the growth direction [7, 8, 9, 10].
+The use of electric ﬁeld has been demonstrated in quantum
+dots [7, 8, 9, 10] and very recently in a single quantum dot
+molecules by Krenner et al. [11]. We predict that, while
+the entanglement at zero ﬁeld is generally low (35% for
+our case), it can reach a high value (75% in our case) at
+a speciﬁc electric ﬁeld FSmax (-5.4 kV/cm in our case).
+Moreover, precisely at this ﬁeld the ﬁrst two exciton lines
+merge, giving a well deﬁned spectroscopic signature of the
+point of maximum entanglement.
+In order to obtain reliable results for the correlated ex-
+citon states, it is of foremost importance to accurately
+account for the multi-band character of the hole states
+and for the correct strain dependence in the coupling re-
+gion (between the dots). We have thus solved the perti-
+nent Schr¨odinger equation atomistically, in a multi-band
+fashion.
+We use the Hamiltonian H
+= −1/2∇2 +
+P
+α,n vα(r −Rn) + VSO + |e|Fz under an external elec-
+tric ﬁeld F applied in [001] (z) direction. The atomistic
+pseudopotentials vα of atom of type α and the non-local
+spin-orbit potential VSO are ﬁt to reproduce InAs and GaAs
+bulk properties [6, 12]. The atomic positions {Rn} are ob-
+tained by minimizing the atomistic strain energy (via va-
+lence force ﬁeld [13]) for a given shape and size of the
+dots. Our quantum dots have a truncated cone shape (12
+nm base and 2 nm height) with a composition ranging from
+pure InAs at the top to In0.5Ga0.5As at the base, as de-
+termined in Ref. [3]. The single-particle Hamiltonian is
+diagonalized in a basis Ψ = P
+n,k An,kφn,k of pseudopo-
+tential Bloch functions φn,k as outlined in Ref. 14, thus
+permitting coupling of various Bloch states. Correlations
+are treated via a many-body expansion in Slater determi-
+nants [15, 16] where the electrons not included dynami-
+cally are represented by a model screening of the Coulomb
+and (long and short range) exchange [17]. The entangle-
+ment is calculated according to the von Neumann entropy
+of entanglement [18, 19].
+The bonding (b) and antibonding (a) electron molecular
+levels of a dot molecule will be denoted as Ea, Eb. For
+an idealized (mostly unrealistic) symmetric case the lowest
+energy molecular orbitals (MOs) develop from single-dot
+electron states eT and eB located on the bottom (B) and
+top (T) dots:
+ψ[Eb] =
+1
+√
+2
+(eT + eB);
+ψ[Ea] =
+1
+√
+2
+(eT −eB), (1)
+and similarly for the holes Ha, Hb.
+As shown previ-
+ously [6, 20], in reality, because of strain and random-
+alloy ﬂuctuations, one does not have a symmetric bonding-
+antibonding behavior even if the dot molecule is made
+of identical (but non-spherical) dots.
+This is seen in
+Fig. 1 where both electron and hole molecular orbital wave
+functions are shown for zero electric ﬁeld F = 0. We
+see that the (lighter-mass) electrons tunnel between dots,
+forming bonding-antibonding states as in Eq. (1), but the
+(heavier-mass) holes remain localized on the top (bottom)
+dot for the bonding (antibonding) MO Hb (Ha).
+The
+single-particle molecular orbital energy levels are shown
+in Fig. 2. As we apply an electric ﬁeld the molecular lev-2
+FIG. 1: Square of the ﬁrst two electron and ﬁrst two hole wave
+functions of an InGaAs/GaAs quantum dot as a function of elec-
+tric ﬁeld at an interdot separation d=7.9 nm.
+1.455
+1.460
+1.465
+1.470
+1.475
+Electron Energy (eV)
+-15
+-10
+-5
+0
+5
+10
+15
+20
+Electric Field in [001] direction (kV/cm)
+0.145
+0.150
+0.155
+0.160
+0.165
+Hole Energy (eV)
+eT
+eB
+eT
+eB
+hT
+hB
+hT
+hB
+Ea
+Eb
+Hb
+Ha
+FIG. 2: Single particle electron (upper panel) and hole (lower
+panel) eigenvalues as a function of electric ﬁeld for d=7.9 nm
+with respect to the GaAs valence band maximum. We indicate
+the localization of the MOs on top and bottom dot by eT , eB,
+hT , hB.
+els that develop from the single-dot orbitals exhibit anti-
+crossing. We have indicated in Fig. 2 the major character
+of the molecular states Ea, Eb, Ha, Hb in terms of the lo-
+calization on individual dots (eT , eB, hT and hB) using
+the calculated MO wave functions of Fig. 1. We see that
+for holes at positive ﬁelds ψ(Ha) ≃hB and ψ(Hb) ≃hA
+while for electrons ψ(Ea) ≃eT and ψ(Eb) ≃eB. The
+opposite is true for negative ﬁelds. Thus, by applying an
+electric ﬁeld we can tune the localization of the MO’s and,
+for instance, compensate for size, composition or shape dif-
+ferences of both dots. We will see that this tuning of local-
+ization will also control the degree of entanglement.
+There are four transitions between the four molecular
+levels shown as vertical arrows in Fig. 2. Their single-
+particle transition energies εi,j
+g (differences between the en-
+ergies from Fig. 2) are given in Fig. 3(a) and show maxima
+and minima vs ﬁeld. We note in Fig. 3(a) the character
+of the four transitions in terms of localization on single-
+dot orbitals. We see that at high ﬁelds, the lowest- and
+highest-energy transitions involve different dots: for exam-
+ple EbHb is eBhT at positive ﬁelds, and eT hB at negative
+ﬁelds. Thus, the corresponding dipole transitions are ex-
+pected to be weak (“dark states”). In contrast the second
+and third transitions at high ﬁelds involve the same dots:
+1.29
+1.30
+1.31
+1.32
+SP Energy (eV)
+-30
+-25
+-20
+-15
+-10
+Coulomb Energy (meV)
+1.28
+1.29
+1.30
+1.31
+Energy (eV)
+-15
+-10
+-5
+0
+5
+10
+15
+20
+Electric Field in [001] direction (kV/cm)
+1.28
+1.29
+1.30
+1.31
+CI Energy (eV)
+(c) Coulomb-Corrected
+(b) Electron-Hole Coulomb energy
+(d) Correlated Excitonic Energies
+(a) Single-Particle Transition Energies
+Single-Particle Transition Energies
+eThB
+eBhT
+eThB
+eBhT
+EbHb
+EbHa
+EaHb
+EaHa
+EaHb
+EbHb
+EbHa
+EaHa
+eBhT
+eThB
+eThB
+eBhT
+eThT
+eThT
+eBhB
+eBhB
+|4>
+|3>
+|2>
+|1>
+eThB
+eBhT
+eThB
+eBhT
+eThT
+eBhB
+EbHb
+EbHa
+EaHb
+EaHa
+FIG. 3: (Color) Transition energies for d=7.9 nm as a function
+of electric ﬁeld in different approximations: (a) Single particle
+transition energies εg (b) Direct electron-hole Coulomb matrix
+elements between MOs Je,h. (c) Transition energies including
+electron-hole Coulomb interaction: εi,j
+g
++ Ji,j
+e,h, but without cor-
+relation effects. (d) Final correlated exciton results. The bidot
+products (eT hT , etc...) are given whenever the MO states (given
+on the right) are strongly dominated by one of these products.
+for example EbHa is eBhB at positive ﬁelds and eThT at
+negative ﬁeld. Thus, the corresponding dipole transitions
+are expected to be large (“bright states”).
+The single-particle approximation underlying Fig. 3(a)
+is valid only in the case of large ﬁelds, where e-h Coulomb
+effects are small compared to the ﬁeld-driven variation in
+the single-particle levels. At these large ﬁelds, the excitons
+are pure determinants with localization on either eThT or
+eThB or eBhT or eBhB and therefore show no entangle-
+ment. We will next see that in the interesting region of
+electric ﬁelds, e −h Coulomb interactions are crucial. In
+Figure 3(b) we show the calculated electron-hole Coulomb
+interaction
+Je,h[i −j] =
+ZZ ψ⋆
+i (ra)ψ⋆
+j (rb)ψj(rb)ψi(ra)
+ǫ(ra, rb)|ra −rb|
+dra drb
+(2)3
+between the MOs (i = Ea or Eb) and (j = Ha or Hb)
+using the model of Resta [17] for the screening ǫ. This
+interaction Je,h (Fig. 3(b)) shows the reverse behavior vs
+ﬁeld compared with the MO energies εg vs ﬁeld [Fig. 3(a)].
+For example, whereas Je,h[EbHb] is maximal (less neg-
+ative) at large positive or negative ﬁelds, and minimal at
+intermediate ﬁelds, the MO band gap εg[EbHb] is minimal
+at large positive or negative ﬁelds and maximal at inter-
+mediate ﬁelds. Not surprisingly, when one calculates the
+Coulomb-corrected excitonic transition energy εi,j
+g + Ji,j
+e,h
+between the molecular states i and j [Fig. 3(c)] one sees
+a partial cancellation for the two low-energy transitions,
+EbHb and EbHa, leading to a weak dependence of the tran-
+sition energy on ﬁeld. In contrast, inspection of Figs. 3(a)
+and 3(b) for the two highest-energy transitions shows that
+the ﬁeld-dependence of εi,j
+g
+and Ji,j
+e,h reinforce each other,
+so the excitonic gap εi,j
+g + Ji,j
+e,h [Fig. 3(c)] has an ampliﬁed
+dependence on ﬁeld. We conclude that the combination of
+εg and Je,h brings the lowest-energy transitions closer to
+each other, while pushing the two higher-energy transitions
+apart. This will affect the correlation coupling between the
+MO’s, as seen next.
+The Coulomb-corrected excitonic transition energies
+εi,j
+g
++ Ji,j
+e,h neglect the interactions between the different
+conﬁgurations, i.e., the states from Fig. 3(c) are not allow
+to interact. This interaction is included in the next step via a
+conﬁguration interaction (CI)[15, 16] calculation in which
+we include all Coulomb and exchange integrals from the
+ﬁrst four electron and ﬁrst four hole states (including spin).
+The results are shown in Fig. 3(d) as a function of elec-
+tric ﬁeld. The lowest energy transitions (excitons |1⟩and
+|2⟩) have a very weak dependence on ﬁeld, similarly to the
+case without correlations [Fig. 3(c)]. In contrast to the per-
+turbative approach of Fig. 3(c) the states do not cross but
+anticrossing at -5.4 kV/cm, as expected from interacting
+states. Similarly, |3⟩and |4⟩anticross at +3.6 kV/cm but in
+a more abrupt fashion.
+To understand the correlated CI results we next ana-
+lyze |1⟩, |2⟩, |3⟩, |4⟩by decomposing the correlated exci-
+tonic states into sums of products of single-dot states eT hT ,
+eBhT , eT hB and eBhB called “bidot products” (see Ref.
+19 for details). The results of this decomposition are given
+in Fig. 4(a)(b) for states |1⟩and |2⟩as a function of the
+electric ﬁeld. Fig. 4(c) shows the degree of entanglement
+calculated for the correlated CI wave functions using the
+von Neumann formula [6, 18] S = −Tr ρe log2 ρe, where
+ρe is the reduced density matrices of the electron. When a
+state is made solely of a single bidot product such as eBhT
+it is unentangled, but when it is made of a coherent su-
+perposition, such as eBhB ± eThT , it might be entangled.
+In the case of very strong positive ﬁelds (larger than 20
+kV/cm), state |1⟩is purely eBhT (unentangled), as the ﬁeld
+pulls the electron to the bottom dot and the hole to the top
+dot. The excitons |2⟩and |3⟩are already, at moderate pos-
+itive ﬁelds, purely eBhB and eT hT, respectively, and re-
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+Occupation Probability
+-15
+-10
+-5
+0
+5
+10
+15
+20
+Electric Field in [001] direction (kV/cm)
+0
+0.2
+0.4
+0.6
+0.8
+Entanglement
+(a)
+|1>
+|2>
+ESmax
+eThB
+eBhT
+eThT
+eThT
+eBhT
+eBhB
+eBhB
+eBhB
+eThT
+(b)
+(c)
+|1>
+|2>
+FIG. 4: Occupation probabilities given as the bidot products
+eT hT or eT hB or eBhT and eBhB as a function of the electric
+ﬁeld for the ﬁrst two exciton states |1⟩(a) and |2⟩(b) for d=7.9
+nm. (c) Entropy of entanglement of the ﬁrst two excitons.
+main unentangled states at large ﬁelds. The entanglement
+of |1⟩and |2⟩[Fig. 4(c)] reaches its maximum of around
+75% at FSmax = -5.4 kV/cm. At this ﬁeld the exciton states
+|1⟩and |2⟩are mainly composed of eT hT ± eBhB con-
+ﬁgurations, as shown in Fig. 4(a)(b) [23]. The calculated
+excitonic states of Fig. 3(d) are now used to calculate the
+absorption spectra in Fig. 5. In Fig. 5 the oscillator strength
+is plotted for different values of the electric ﬁeld as a func-
+tion of the transition energy. The plot shows a total of four
+transitions marked with |1⟩, |2⟩, |3⟩, |4⟩. Since the tran-
+sitions |3⟩and |4⟩are weak, their position is marked by
+solid and open arrows respectively. The transitions |1⟩and
+|2⟩(|3⟩and |4⟩) have a weak (strong) dependence on ﬁeld
+and show an anticrossings at ESmax (ESPT). The spectra
+show that at ESmax the lowest energy exciton |1⟩becomes
+dark and progressively gains oscillator strength away from
+the anti-crossing. The point of merging of |1⟩and |2⟩at
+the ﬁeld ESmax reﬂects a “resonant conditions” with maxi-
+mum entanglement (Fig. 4). The distinct spectroscopic sig-
+nal of the anticrossing (where the lowest line progressively
+looses oscillator strength) occurs at the point of maximum
+entanglement and, we suggest, can give experimentalists a
+simple way to control a delicate quantity such as entangle-
+ment.4
+Oscillator Strength
+1.27
+1.28
+1.29
+1.30
+1.31
+1.32
+Transition Energy (eV)
+18 kV/cm
+9 kV/cm
+ESPT = 3.6 kV/cm
+-2.3 kV/cm
+ESmax = -5.4 kV/cm
+-7.2 kV/cm
+-9.0 kV/cm
+-13.5 kV/cm
+|1>|2>
+|3>
+|4>
+|1> |2>
+|3>
+|4>
+FIG. 5: Oscillator strength of the ﬁrst four transitions (ﬁrst 16
+transitions including spin) as a function of electric ﬁeld for d=7.9
+nm.
+   (a) Single-Particle
+Dot Localized Levels
+(b) Electron-Hole
+           Pairs
+(c) Electron-Hole Pairs
+   including Coulomb
+eB
+eT
+hB
+hT
+eBhB
+eBhT
+eThT
+eThB
+eBhB
+eBhT
+eThB
+eThT - eBhB
+eThT + eBhB
+eThB
+eBhT
+10 meV
+7 meV
+1.3 eV
+7 meV
+7 meV
+3 meV
+, eThT
+13 meV
+14 meV
+       (d) Excitons
+   including te and th
+|1>
+|2>
+|3>
+|4>
+FIG. 6: Formation of the highly entangled excitonic states at the
+critical ﬁeld F=-5.4 kV/cm. (a) Single particle electron and hole
+levels in the dot-localized basis. (b) Simple differences between
+the single particle electron and hole energies from (a). (c) Adding
+electron-hole direct Coulomb interaction to (b). (d) Adding elec-
+tron and hole hopping the the levels from (c)
+The physics underlying the “resonant condition”, that
+produces the high degree of entanglement, is revealed in
+Fig. 6 using the more intuitive basis of dot-localized or-
+bitals (as opposed to MO’s). To obtain dot-localized or-
+bitals, we rotate the MO’s (that are delocalized over both
+dots) until the on-site Coulomb interaction is maximized
+[21]. This procedure yields single-particle energies of the
+dot-localized orbitals, denoted as eT, eB, hT and hB in
+Fig. 6(a). Fig. 6(a) shows that at FSmax the energies of the
+dot-localized electron and hole orbitals are separated by 10
+and 7 meV respectively with a gap of 1.3 eV. Generally,
+the energy separation between eT and eB and between hT
+and hB can reﬂect size, composition or shape differences
+of the two dots. These differences can be tuned by the elec-
+tric ﬁeld. Fig. 6(b) shows the energies of simple products
+of these electron and hole states. They show two closely
+spaced levels (3 meV apart) in the center of the spectrum
+and two states 7 meV lower and higher in energy. These
+energies are different from the MO’s energies of Fig. 3(a)
+that are combinations of eThT , eThB, eBhT and eBhB
+at this ﬁeld. In the next step, in Fig. 6(c), the two-body
+Coulomb attraction is taken into account and lowers the
+eThT and eBhB states in such a way that they are about
+14 meV below the eT hB state. This is the consequence of
+a weak e −h binding for the dissociated excitons eT hB
+and eBhT . Notably, the simple products eT hT and eBhB
+are energetically nearly degenerate at this level, this is the
+“resonant condition” mentioned above. In the last step, in
+Fig. 6(d), the excitons |1⟩and |2⟩are now created by in-
+cluding the effects of electron and hole hopping that effec-
+tively produce correlated states. The excitons |1⟩and |2⟩
+are now a bonding- and antibonding-like combination of
+the energetically degenerate eT hT and eBhB states. The
+excitons |1⟩and |2⟩are now split by a small energy of
+less than 1 meV. This small splitting is conceptually very
+similar to the Davydov splitting [22] in molecular crystals.
+The analysis also reveals that |1⟩is anti-symmetric (eThT -
+eBhB) and therefore optically dark while |2⟩is symmetric
+(eThT + eBhB) and optically bright. The high symme-
+try of these states (purely symmetric and anti-symmetric)
+leads to the high degree of entanglement. Any deviations
+from FSmax will lead to a less symmetric combinations as
+1
+√
+2(αeT hT + βeBhB) with α ̸= β with lower entangle-
+ment and smaller oscillator strength.
+In conclusion, we showed that the degree of electron-
+hole entanglement in coupled quantum dots can be tuned
+by an external electric ﬁeld and that the point of maximum
+entanglement can be identiﬁed by measuring the photolu-
+minescence spectra, observing the merging of two peaks.
+This opens new ways for experimentalists to identify the
+electric ﬁeld needed to achieve maximum entanglement in
+speciﬁc dot molecules. We ﬁnally analyzed the nature of
+the excitons and revealed the interplay of single particle
+effects, direct Coulomb binding and electron and hole hop-
+ping on the many body levels. We described how these
+effects conspire to yield a highly entangled state.
+This work was supported by the US Department of En-
+ergy (SC/BES) under the LAB 03-17 initiative.
+[1] D. P. DiVincenzo, Science 270, 255 (1995).
+[2] D. Loss and D. P. DiVincenzo, Phys. Rev. A 57, 120 (1998).
+[3] M. Bayer, P. Hawrylak, K. Hinzer, S. Fafard, M. Korkusin-
+ski, Z. R. Wasilewski, O. Stern, and A. Forchel1, Science5
+291, 451 (2001).
+[4] K. Hinzer, M. Bayer, J. P. McCaffrey, P. Hawrylak, M. Ko-
+rkusinski, O. Stern, Z. R. Wasilewski, S. Fafard, and
+A. Forchel, Phys. Stat. Sol. (b) 224, 385 (2001).
+[5] M. Bayer, G. Ortner, A. Larionov, V. Timofeev, A. Forchel,
+P. Hawrylak, K. Hinzer, M. Korkusinski, S. Fafard, and
+Z. Wasilewski, Physica E 12, 900 (2002).
+[6] G. Bester, J. Shumway, and A. Zunger, Phys. Rev. Lett. 93,
+47401 (2004).
+[7] P. W. Fry, I. E. Itskevich, D. J. Mowbray, M. S. Skolnick,
+J. J. Finley, J. A. Barker, E. P. O’Reilly, L. R. Wilson, I. A.
+Larkin, P. A. Maksym, et al., Phys. Rev.
+Lett. 84, 733
+(2000).
+[8] I. Shtrichman, C. Metzner, B. D. Gerardot, W. Y. Schoen-
+feld, and P. M. Petroff, Phys. Rev. B 65 (2002).
+[9] M. Sugisaki, H. W. Ren, S. V. Nair, K. Nishi, and Y. Ma-
+sumoto, Physical Review B 66 (2002).
+[10] B. Alen, F. Bickel, K. Karrai, R. Warburton, and P. Petroff,
+Appl. Phys. Lett. 83, 2235 (2003).
+[11] H.J. Krenner, M. Sabathil, E.C. Clark, A. Kress, D. Schuh,
+M. Bichler, G. Abstreiter, and J.J. Finley, Phys. Rev. Lett.
+94, 057402 (2005).
+[12] A. J. Williamson, L.-W. Wang, and A. Zunger, Phys. Rev. B
+62, 12963 (2000).
+[13] P. N. Keating, Phys. Rev 145, 637 (1966).
+[14] L.-W. Wang and A. Zunger, Phys. Rev. B 59, 15806 (1999).
+[15] A. Szabo and N. S. Ostlund, Modern Quantum Chemistry
+(McGraw-Hill, New York, 1989).
+[16] A. Franceschetti, H. Fu, L.-W. Wang, and A. Zunger, Phys.
+Rev. B 60, 1819 (1999).
+[17] R. Resta, Phys. Rev. B 16, 2717 (1977).
+[18] C. Bennett, H. Bernstein, S. Popescu, and B. Shumacher,
+Phys. Rev. A 53, 2046 (1996).
+[19] G. Bester, A. Zunger, and J. Shumway, Phys. Rev. B 71,
+075325 (2005).
+[20] L. He, G. Bester, and A. Zunger, cond-mat/ 0503492,
+(2005).
+[21] C. Edmiston and K. Ruedenberg, Rev. Mod. Phys. 35, 457
+(1963).
+[22] D. P. Craig and S. H. Walmsley, Excitons in molecular crys-
+tals (W. A. Benjamin, INC., New York, 1968).
+[23] In order for this e-h entanglement to be useful in a quan-
+tum computation scheme, the qubits need to be physically
+separated to be addressed individually. One possibility for
+such a separation seems to be the use of in plane electric
+ﬁelds that would coherently drive the electron and hole to
+different neighboring quantum dots. This would constitute
+the next experimental challenge

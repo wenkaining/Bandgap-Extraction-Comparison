@@ -1,0 +1,105 @@
+arXiv:cond-mat/0609327v1 [cond-mat.mtrl-sci]  13 Sep 2006 Polarons and Solitons in Jahn-Teller Systems Dennis P. Clougherty Department of Physics, University of Vermont, Burlington, VT 05405-0125 USA Abstract Using a semiclassical continuum model of an electron in a deformable molecular crystal, some properties of multicomponent generalizations of the polaron–“vector polarons”– are elucidated.
+Analytical solutions for the case of two electronic bands coupled to two vibrational modes are given in detail.
+Within the model considered, the vector polaron can be classiﬁed by its wavefunction into several types and can have features that include: (1) a spatial variation in the electronic and vibrational character, and (2) low-energy internal degrees of freedom.
+For the case of electronic and vibrational degeneracy, local Jahn-Teller interactions can also lead to a novel spatiotemporal soliton, a long-lived excited state of the many-electron system sta- bilized by the conservation law resulting from degeneracy.
+Key words: polaron, soliton, Jahn-Teller eﬀect PACS: 64.70.Nd, 71.38.-k, 63.20.Kr, 71.70.Ej 1 Introduction Many of the complex solids currently under intensive theoretical and exper- imental study have common attributes.
+High Tc superconductors, fullerene- based materials, and colossal magnetoresistive manganites all feature elec- tronic and vibrational degeneracies that are a consequence of the spatial sym- metries of the crystal structure.
+These systems typically have multiple elec- tronic and structural phases competing at low temperatures.
+And there is ample evidence [1] that the electron-phonon interaction and the resulting po- laron quasiparticles play an important role in shaping many of the physical properties of these materials.
+These observations serve as motivation for the theoretical study of the eﬀects of generalized electron-phonon coupling in multiband systems.
+Using a semi- URL: physics.uvm.edu/dpc/ (Dennis P. Clougherty).
+Preprint submitted to Elsevier Science 31 August 2018classical continuum model of an electron in a deformable molecular crystal, the eﬀects of electronic and vibrational degeneracy (and near degeneracy) on polaron structure have been investigated.
+With the inclusion of local Jahn- Teller couplings within the degenerate manifolds, a multicomponent polaron emerges as a solution of the semiclassical equations of motion [2].
+Experimentally the richer vibrational and electronic structure of this “vector polaron” might well be probed using STM to image the charge density in the vicinity of a vector polaron trapped at a defect.
+This would be similar to the STM studies of the surface of an anisotropically gapped superconductor with impurities [3], where the order parameter symmetry has a great eﬀect in shap- ing spatial features of the local electron density of states in the vicinity of an impurity, and this can be seen through measurements of the local conductivity.
+2 The Model Consider a molecular solid with two orbitals per molecule: |ψ1⟩and |ψ2⟩.
+The molecule is also taken to have two vibrational modes: a breathing mode with amplitude φ0 and a symmetry-breaking mode with amplitude φ1.
+The orbitals are taken to transform under elements of the molecular point group so that the symmetry-breaking mode couples to the diﬀerence in orbital densities, a local E ⊗β Jahn-Teller term.
+The continuum Hamiltonian for this system is taken to be H = Hel + Hph + HJT (1) with Hel = Z ddxΨ†  −1 2σ0∇2 + ∆σ3  Ψ (2) Hph = Z ddx(κ0φ2 0/2 + κ1φ2 1/2) (3) and HJT = − Z ddxΨ† (g0φ0σ0 + g1φ1σ3) Ψ (4) where Ψ(x) is a two-component ﬁeld operator.
+The upper component destroys an electron from the ﬁrst orbital at x, while the lower component destroys an electron from the second orbital at x.
+In the absence of distortions, the band 2constructed from |ψ1⟩states is oﬀset in energy by 2∆from the band con- structed from |ψ2⟩states.
+The limit ∆→0 corresponds to doubly degenerate bands.
+A continuum approximation to the local E ⊗β model studied by H¨ock et al. [4] is recovered in the limit g0 →0, while the continuum Holstein molecular crystal model [5] is obtained in the limit g1 →0.
+Hence, the model of Eq. 1 combines the Holstein model and the E ⊗β model.
+3 Bogoliubov-de Gennes Equations The Bogoliubov-de Gennes (BdG) equations for this model can be found by expanding the ﬁeld operator in terms of a new real-space basis.
+Envelope functions {un, vn}∞ n=1 that modulate the molecular orbitals are introduced, and the ﬁeld operator becomes Ψ = X n  un vn  cn (5) where cn destroys an electron with amplitudes un(x) and vn(x) for the two molecular orbitals.
+A necessary condition (unitarity) on the amplitudes is then Z ddx(u∗ nun′ + v∗ nvn′) = δnn′ (6) The BdG equations for the envelope functions are then found to be  −1 2∇2 + ∆−g0φ0 −g1φ1  un = ǫnun  −1 2∇2 −∆−g0φ0 + g1φ1  vn = ǫnvn (7) From energy minimization, the distortions must satisfy the following self- consistent equations φ0 = g0 κ0 X n (|un|2 + |vn|2) φ1 = g1 κ1 X n (|un|2 −|vn|2) (8) where the sums are over all occupied states.
+3For a system with a single electron, only one term contributes to the sum.
+Eqs. 8 can be substituted into the BdG equations to obtain the two coupled nonlinear Schr¨odinger equations for the envelope functions u, v previously ob- tained in Ref.
+[2]  −1 2∇2 −ν|u|2 −η|v|2  u = (ǫ −∆)u  −1 2∇2 −η|u|2 −ν|v|2  v = (ǫ + ∆)v (9) where ν ≡g2 0/κ0 + g2 1/κ1 and η ≡g2 0/κ0 −g2 1/κ1.
+The single electron might also be thought of as occupying a conduction band or partially occupying a set of conduction bands.
+Provided the polarization eﬀects from the ﬁlled valence band are small, the “frozen” valence band ap- proximation can be made, and the identical BdG equations result.
+The spatial coordinates and the envelope functions can be scaled ξ = q 2|ǫ −∆|x  r1 r2  = s ν |ǫ −∆|  u v  (10) to yield the following equations  ∇2 −1 + r2 1 + βr2 2  r1 = 0  ∇2 −ω2 + r2 2 + βr2 1  r2 = 0 (11) where ω2 ≡(|ǫ| −∆)/(|ǫ| + ∆) and β = η/ν.
+Eqs. 11 have been previously studied in many diﬀerent contexts such as non- linear optics (propagation of light in birefringent optical ﬁbers [6]) and atomic physics (spinor Bose-Einstein condensation [7]) where the resulting Ginzburg- Landau equations have the same form.
+Although the mathematical study of systems of coupled nonlinear Schr¨odinger equations is still in its infancy, a set of known solutions in 1D and 2D to these equations that describe the components of the vector polaron wavefunction will now be summarized.
+44 Vector Polarons in 1D For one spatial dimension, three regimes can be identiﬁed where analytic solu- tions to Eq. 11 that are stable and localized are known to exist.
+In general, it is required that ǫ < 0 and |ǫ| < ∆. η and ν are restricted here to be non-negative. Thus, 0 ≤β ≤1.
+4.1 Manakov type The case of β = 1 and ω = 1 is special, as it corresponds to an integrable system.
+Manakov [8] studied this system of equations in another context.
+The symmetry of these equations gives rise to an inﬁnite set of degenerate solutions that can be labeled by a continuous parameter 0 ≤θ < 2π.
+r1(ξ) = √ 2 cos θ sech ξ r2(ξ) = √ 2 sin θ sech ξ (12) ω = 1 corresponds to exact degeneracy (∆= 0), while β = 1 results from no coupling to the symmetry-breaking mode (g1 →0).
+Consequently, the energy of the state is independent of orbital density diﬀerences.
+Thus the Manakov solution contains a zero-energy internal degree of freedom, corresponding to periodic changes in the local orbital mixing.
+4.2 Equal Amplitude type One situation that is exactly soluble is the “equal amplitude” case where r1(ξ) = r2(ξ).
+For stable, localized solutions, the parameters must be further restricted so that ω = 1.
+In this case, Eqs. 11 reduce to  d2 dξ2 −1 + (1 + β)r2 !
+r = 0 (13) The solution to this scalar nonlinear Schr¨odinger equation is the well-known bell soliton r(ξ) = s 2 1 + β sech ξ (14) 5The continuous symmetry present in the Manakov case is broken for β ̸= 1.
+However, rotations of the orbital mixing still serve as a low-energy degree of freedom for β close to 1.
+4.3 Wave-Daughter Wave type For ω < 1, corresponding to non-degeneracy of the orbitals, it is possible to have one envelope function dominate throughout the core of the localized wavefunction.
+In this wave-daughter wave approximation, the amplitude of the daughter wave r2 is much smaller than that of the primary wave r1, leading to the following approximate set of equations  d2 dξ2 −1 + r2 1 !
+r1 ≈0 d2 dξ2 −ω2 + βr2 1 !
+r2 ≈0 (15) The top equation is recognized as the scalar nonlinear Schr¨odinger equation with a solution r1(ξ) = √ 2 sech ξ (16) The primary wave provides an attractive potential for the daughter wave, and the P¨oschl-Teller equation for the daughter wave results  d2 dξ2 −ω2 + 2βsech2ξ !
+r2 = 0 (17) This is known [9] to have a single bound state for 0 < β ≤1, with r2(ξ) = α sechω ξ (18) and an eigenvalue constraint that ω = (√1 + 8β −1)/2.
+Within these cases amenable to analytical solutions, it is seen that (1) vector polaron states can support low-energy internal degrees of freedom, correspond- ing to pseudo-rotations of the electron amplitude in the orbital space; and (2) vector polaron states can have spatial variations in the orbital mixing and in the character of the distortion, as illustrated in the wave-daughter wave type.
+65 Vector Polarons in 2D Vortex vector solitary wave solutions are known to exist in 2D. Consider solu- tions to Eqs.
+11 of the form ri(ρ, φ) = ψi(ρ) exp(imiφ).
+The following coupled equations result   ∆ρ −m2 1 ρ2 −1 + ψ2 1 + βψ2 2 !
+ψ1 = 0   ∆ρ −m2 2 ρ2 −ω2 + ψ2 2 + βψ2 1 !
+ψ2 = 0 (19) where ∆ρ ≡ 1 ρ d dρ  ρ d dρ  .
+Vortex solutions to Eq. 19 may be labeled by the topological charges |m1, m2⟩.
+The simplest case is the |0, 0⟩solution, where both envelope functions are ra- dially symmetric.
+Using an analytical variational method, the existence of a localized |0, 0⟩solution has been shown [10].
+Unfortunately this solution has also been shown to be linearly unstable, as are all of these vortex solitons.
+Re- lated multipole vector solitons [12] are also linearly unstable in this simpliﬁed model.
+However, similar solutions that are linearly stable have been found for slightly modiﬁed systems of equations that include either saturable nonlinearities [10] or nonlocal nonlinearities [11].
+Saturable nonlinearities would physically corre- spond to the addition of proper vibrational anharmonicity of higher orders in this model, while nonlocal nonlinearity would correspond to gradient terms in the elastic energy.
+Consequently there are indications that semiclassical mul- ticomponent polaron states of the vortex and multipole varieties stably exist in generalized models of 2D systems.
+6 Jahn-Teller Soliton Another related continuum model that employs a local Jahn-Teller coupling can also lead to a stable soliton, a state involving a lump of excess electronic charge trapped by a time-dependent pseudo-rotation of the elastic ﬁeld [13].
+These solitons fall in the class of solutions known as non-topological Q-balls [14] that have been invoked in models of cosmological phase transitions in the early Universe [15].
+Consider a continuum model with three electronic bands linearly coupled to two degenerate elastic modes.
+Take the case of where the electronic bands 7transforms as x and y and a trivial orbital singlet; the two elastic modes transform as x and y.
+The system may be described by the following Hamil- tonian H = He + Hph + HJT (20) where He = X m=0,±1 Z d3x(−1 2ψ† m∇2ψm + Wδ|m|,1ψ† mψm) (21) Hph = X m=±1 Z d3x(|∂tφm|2 + U(|φm|2) (22) HJT = −g X m=±1 Z d3x(φ−mψ† mψ0 + H.c.) (23) where W is the energy splitting between the doublet bands and the singlet, and m labels the states in the axial angular momentum basis.
+Such a system has a continuous symmetry whose origin lies in the elec- tronic and vibrational degeneracy.
+By virtue of Noether’s theorem, a conserved charge Q results from this continuous symmetry provided it remains unbroken.
+The constraint of ﬁxed Q provides stability to the soliton state.
+For large Q, a variational ansatz called the thin wall approximation [14] has been found to give good results in calculating the soliton energy.
+The ampli- tude of the elastic deformation is taken to be constant over a ﬁnite region of space with volume V , while vanishing outside that region.
+This deforma- tion itself, however, is not constant; rather, it undergoes pseudorotations in the two-fold degenerate space.
+It is straightforward to show that the Noether charge Q is linearly proportional to the pseudorotation frequency ω and to the square of the amplitude of distortion [13] Q ≈ωξ2V (24) Thus, for suﬃciently large band splitting W, the energy of this thin-walled soliton is E = (Kph + U −EJT)V ≈1 2ω2ξ2V + U(ξ2)V −g2n0 W ξ2V ≈ Q2 2ξ2V + ˜U(ξ2)V (25) 8where Kph and U are the kinetic and potential energy density of the time- dependent distortion, EJT is the energy density from the electron-phonon interaction, n0 is the electron density, and ˜U ≡U(ξ2) −g2n0 W ξ2.
+The last step follows from using Eq. 24 to eliminate ω in favor of Q and ξ.
+As Coleman [14] showed, the resulting energy can be minimized subject to ﬁxed Q to ﬁnd the soliton energy and its size.
+E = Q v u u t2 ˜U ξ2 (26) V = Q q 2 ˜Uξ2 (27) Thus provided that the minimum value of 2 ˜U/ξ2 occurs at ξ ̸= 0, this Jahn- Teller soliton cannot decay by emitting phonons that carry away the charge Q, since the energy per charge is lower for the soliton.
+This criterion sets the requirements on the amount and type of anharmonicity that are necessary to stabilize the soliton.
+In summary, it is noted that many of the solitons, both topological and non- topological, that are found in multicomponent Ginzburg-Landau theories can be used to describe vector polarons within the semiclassical theory outlined here.
+Experimental STM studies of these states trapped at defects might be used to reveal the non-trivial spatial structure of these polarons.
+Vector polarons, together with the many-electron Q-ball-like excited state, serve as examples that systems containing electronic and vibrational degeneracy can support novel states through local Jahn-Teller interactions.
+7 Acknowledgments This work was partially supported by the National Science Foundation through a grant for the Institute for Theoretical Atomic, Molecular and Optical Physics at Harvard University and the Smithsonian Astrophysical Observatory.
+9References [1] E. Dagotto, Science 309, 257 (2005).
+[2] D. P. Clougherty and C. A. Foell, Phys.
+Rev. B 70, 052301 (2004).
+[3] J. M. Byers, M. E. Flatt´e, D. J. Scalapino, Phys. Rev. Lett. 71, 3363 (1993).
+[4] K.–H. H¨ock, H. Nickisch and H. Thomas, Helv. Phys.
+Acta 56, 237 (1983).
+[5] T. Holstein, Mol. Cryst. Liq. Cryst. 77, 235 (1981).
+[6] B. A. Malomed, Phys.
+Rev. A 43, 410 (1991).
+[7] T. L. Ho, Phys. Rev. Lett. 81, 742 (1998).
+[8] S. V. Manakov, JETP 38, 248 (1974).
+[9] L. D. Landau and E. M. Lifshitz, Quantum Mechanics (Pergamon, New York, 1977).
+[10] J. N. Malmberg et al., Opt. Lett. 25, 643 (2000).
+[11] Y. V. Kartashov et al., Opt. Lett. 31, 1483 (2006).
+[12] J. J. Garcia-Ripoll et al., Phys. Rev. Lett. 85, 82 (2000).
+[13] D. P. Clougherty, Phys. Rev. Lett. 96, 045703 (2006).
+[14] S. R. Coleman, Nucl. Phys.
+B 262, 263 (1985) [Erratum-ibid. B 269, 744 (1986)].
+[15] J. A. Frieman, G. B. Gelmini, M. Gleiser and E. W. Kolb, Phys. Rev. Lett. 60, 2101 (1988). 10

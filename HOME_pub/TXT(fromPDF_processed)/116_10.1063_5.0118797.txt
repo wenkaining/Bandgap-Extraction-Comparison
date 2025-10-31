@@ -1,0 +1,400 @@
+ View Online  Export Citation RESEARCH ARTICLE |  NOVEMBER 07 2022 Influence of the coordination defects on the dynamics and the potential energy landscape of two-dimensional silica  Projesh Kumar Roy   ; Andreas Heuer   J. Chem.
+Phys. 157, 174506 (2022) https://doi.org/10.1063/5.0118797 Articles You May Be Interested In Structural characterization of amorphized InP: Evidence for chemical disorder Appl. Phys. Lett.
+(March 1999) Unraveling thermodynamic anomalies of water: A molecular simulation approach to probe the two-state theory with atomistic and coarse-grained water models J. Chem. Phys.
+(April 2024) Kinetic study of atomic hydrogen etching of GaAs (100) J. Appl. Phys.
+(March 1995)  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp Influence of the coordination defects on the dynamics and the potential energy landscape of two-dimensional silica Cite as: J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 Submitted: 6 August 2022 • Accepted: 11 October 2022 • Published Online: 7 November 2022 Projesh Kumar Roy1,2,3 and Andreas Heuer4,a) AFFILIATIONS 1 The Institute of Mathematical Sciences, C.I.T. Campus, Taramani, Chennai 600113, India 2Homi Bhabha National Institute, Training School Complex, Anushakti Nagar, Mumbai 400094, India 3NRW Graduate School of Chemistry, Wilhelm-Klemm-Straße 10, 48149 Münster, Germany 4Institute für Physikalische Chemie, Westfälische-Wilhelms-Universitat Münster, Corrensstraße 28/30, 48149 Münster, Germany a)Author to whom correspondence should be addressed: andheuer@uni-muenster.de. URL: https://www.uni-muenster.de/Chemie.pc/en/forschung/heuer/index.html ABSTRACT The main cause of the fragile-to-strong crossover of 3D silica was previously attributed to the presence of a low-energy cutoff in the potential energy landscape.
+An important question emerges about the microscopic origin of this crossover and its generalizibility to other glass-formers.
+In this work, the fragile-to-strong crossover of a model two-dimensional (2D) glassy system is analyzed via molecular dynamics simulation, which represents 2D-silica.
+By separating the sampled defect and defect-free inherent structures, we are able to identify their respective density of state distributions with respect to energy.
+A low energy cutoff is found in both distributions.
+It is shown that the fragile-to-strong crossover can be quantitatively related to the parameters of the energy landscape, involving, in particular, the low-energy cutoff of the energy distribu- tion.
+It is also shown that the low-energy cutoff of the defect-states is determined by the formation energy of a specific defect configuration, involving two silicon and no oxygen defects.
+The low-temperature behavior of 2D silica is quantitatively compared with that of 3D silica, showing surprisingly similar behavior.
+Published under an exclusive license by AIP Publishing.
+https://doi.org/10.1063/5.0118797 I. INTRODUCTION The origin of the anomalous temperature dependence of viscos- ity is a matter of debate for glassy systems.
+In general, the dynamical behavior of glassy systems can be described either as “strong” or “fragile,” depending on the nature of the relationship between the viscosity (η) and temperature (T); i.e., the Angell plot1 [ln(η(T)) vs β, where β = 1/KBT].
+Assuming the validity of the Stokes–Einstein relation,2 one can represent η(T) ∝1/D(T), where D(T) rep- resents the diffusivity of the fluid.
+The strong glasses obey the Arrhenius-type temperature dependence of the diffusion constant, i.e., D(T) ∝exp(−βV0), where V0 is the average activation energy of the fluid.
+In contrast, the dynamics of the fragile glasses are usu- ally described with the empirical Vogel–Fulcher–Tammann (VFT) equation3–6 D(T) ∝exp( α T −T0 ), (1) where α and T0 are empirical constants.
+Experimentally, it has been shown that several compounds undergo a fragile-to-strong crossover (FSC) at a certain temperature range,7–13 which is usu- ally close to the glass transition temperature.
+Interestingly, molecules with tetrahedral ordering show a general tendency for such behavior in the bulk state.13–15 The fragile behavior of glasses at high tem- peraturesi.e., the power-law behavior of the relaxation timecan be explained with the help of mode-coupling theory.16,17 Upon cooling, the transition to Arrhenius behavior is often correlated with a sup- posed liquid–liquid phase transition, which generally occurs in the super-cooled region.18–23 However, the proper physical mechanism for FSCat either the bulk or molecular levelis not well understood.
+Potential energy landscape (PEL) analysis of the glassy systems provides a good understanding of the FSC phenomenon at low tem- peratures.
+It is known that, below the mode-coupling temperature, the dynamics and thermodynamics of the system start to corre- late, and the nature of the dynamical properties strongly reflects J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-1 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp the properties of the PEL.
+In this region, the nature of the PEL can be described by the properties of the underlying minima, i.e., Inherent States (IS).24–31 At higher temperatures, the fragile behav- ior can be linked to the multiplicity and the width of the underlying IS-energy distributions.32,33 With decreasing temperature, the con- figurational entropy of the system (Sc) decreases, and the widths of the basins in the PEL landscape become narrower.
+Following the Adam–Gibbs theory,34 one can determine the relaxation time and subsequently the diffusivity as a function of the Sc in the low- temperature region as D(T) ∝exp(−B/TSc), where B is a constant.
+Therefore, if Sc is independent of temperature,35–37 a transition from fragile to strong behavior can be related to an inflection in Sc.
+Using molecular dynamics simulations, Saksaengwijit et al.38 have shown that in the case of BKS-silica,39 there exists a cutoff in the density of states (DOS) distribution of IS’s at a certain energy.
+The presence of such a cutoff prevents Sc from vanishing at low temperatures and thus avoids the Kauzmann paradox.
+However, determination of the nature of the reduction of Sc at a low temperature is a difficult task in simulation as it is computationally demanding.40,41 Thus, proper calculation of the FSC temperature from the IS analysis remains challenging.
+The microscopic origin of FSC varies from system to sys- tem.
+Poly-amorphism37 was often suspected to be the driving force behind the FSC phenomenon.
+For example, a two-state model was proposed by Tanaka et al.42–44 to explain the viscosity anomaly of water.
+In this model, two different configurations of locally favored small clusters of water molecules control the bulk prop- erties of water.
+The FSC in water can thus be explained by the population ratio of such clusters, both of which separately fol- low the Arrhenius type temperature dependence of viscosity.
+This model predicts a smooth crossover from the fragile to the strong regime and was able to predict the crossover temperature, TFSC, quite well.43,44 In the case of several tetrahedrally ordered halide- molecules,13 e.g., ZnCl2,12,45 BeF2,10,45 GeSe2,46–48 the reduction of the Sc near FSC has also been correlated with the changes in the ordering of the local environment.
+For these materials, in both experiment12,45,48 and simulation,49,50 a sharp change has been observed in the ratio of the local edge-sharing tetrahedral order- ing to the entropically favored corner-sharing tetrahedral ordering, with a lowering temperature in the vicinity of FSC.
+These results clearly indicate that FSC is linked to the specific microscopic envi- ronment of the fluid.
+Recently, a continuum model, in conjugation to the two-state theory, has been proposed to explain the non- Arrhenius behavior of the liquids using non-linear Fokker–Plank equations.51,52 Despite the similarity between the molecular structure (tetrahe- dral) of water and silica, they exhibit several differences in terms of cluster formation.53 While the structure of the water-clusters is con- trolled by the hydrogen-bond network, the silica-clusters are con- trolled by the flexibility of the bridging-oxygen bonds.
+As a result, although water and silica exhibit some dynamical and thermody- namical similaritye.g., density anomaly, FSC, etc.their microscopic origin can be somewhat different.
+Saksaengwijit et al.38 have pos- tulated that for BKS-silica,39 the FSC can be related to a decrease in the fraction of coordination defects.
+As the temperature of the system is lowered, the fraction of the coordination defects in silica decreases.
+Recently, using replica exchange molecular dynamics, Yu et al.40 have shown that the rate of such a decrease shows a sharp increase near its fictive temperature.
+Thus, near the cutoff, one can postulate that the defect states will completely disappear.
+This, in turn, should result in an arrest in the hopping dynamics of silica as the effective activation energy for the bond-breaking process would be very large.38,54 In this paper, we study the FSC behavior of a two-dimensional silica (2D) model system, which represents an allotrope of silica, namely the two-dimensional silica55 (2D-silica).
+This material is an ideal member to study the properties of a natural glass forming sys- tem with computer simulation since an atomistic scale description of the real structure is available directly from the experiment.
+2D-silica is grown on Ru56 or Graphene surfaces57 via vapor deposition and in situ oxidation.
+The binding of 2D-silica with the underlying surface is quite weak, which makes it a free-standing material.58 However, the material is extremely thin, with a height of just approximately three atoms in the Z-direction.56 Therefore, measuring the high temperature properties of this material is quite difficult as it would desorb from the surface during heating.
+Thus, for this system, the FSC behavior is expected to be inaccessible via experiments.
+There- fore, computer simulations play an important role in elucidating the properties of this system close to the FSC.
+The objective of this paper is to show that the PEL description of the dynamical behavior works well for the description of FSC in the 2D-silica model.
+Similar to the BKS-silica model, we aim to cor- relate the presence of a cutoff in the PEL with the FSC phenomenon in 2D-silica.
+We provide further insight into the microscopic envi- ronment of 2D-silica near the FSC in terms of the coordination defects.
+The paper is organized as follows: We start with a short account of the methods in Sec. II and analyze the density of states (DOS) distributions. In Sec.
+III, we study the changes in the PEL influenced by the coordination defects and explicitly show that the FSC is related to the cutoff in the PEL.
+Afterward, we show in Sec.
+IV that a specific local arrangement of the particles is present at the low energy limit, which is independent of the system size, thus yielding insight into the structural and energetic properties of the defects.
+We finish with a conclusion and an outlook. II.
+METHODS A. Simulation In our previous studies,59–61 we have used a Yukawa type force- field to describe the structural and thermodynamical properties of 2D-silica in close similarity with the experimental results, which reads Vij(rij) = ⎡⎢⎢⎢⎢⎣ (σij rij ) 12 + (qij rij ) exp(−κrij) ⎤⎥⎥⎥⎥⎦ .
+(2) For details of the simulation parameters, we refer to Ref. 59.
+With an 80 particle system in a square box of side length 19.67 Å, we performed a molecular dynamics simulation under NVT con- ditions for a wide range of temperatures using the Nosé–Hoover chains thermostat,62,63 and an elementary timestep of 0.01.
+We sam- ple the inherent structures and their energies (EIS) by quenching the trajectory with a frequency of 100 steps.
+Except for the mean square displacement (MSD) calculations, we use the minimized structures for analysis throughout the paper. J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-2 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp B. Defects In our analysis, we separate the IS’s based on the coordination defects.
+We denote an IS as a defect-free state (abbreviation: df), if all Si particles have three O particles and all O particles have two Si particles within an empirical cutoff distance of 2.0 Å. Otherwise, the IS is termed a defect-state (abbreviation: d).
+The choice of this cutoff is based on the gSi–O(r) analysis,59 which showed a sharp peak around 1.5–1.6 Å in the low energy regime.
+Since we are interested in the structural features of the model at low temperatures, the choice of the distance cutoff is sufficient to identify any coordination defects in the structure.
+C. Reweighting With the sampled IS structures at one given temperature, one can calculate the DOS [G(EIS)] at different energies.
+This calcula- tion is performed by binning the distribution of inherent structures P(EIS, T) and reweighting the resulting energy distribution with an inverse Boltzmann factor, i.e., G(E IS) ∝P(E IS, T)eβE IS.
+(3) Naturally, one unknown energy-independent proportionality constant remains.
+Similarly, one can define Gd(EIS) and Gdf(EIS) as the DOS of the defect-states and defect-free states, respectively.
+We note that this relation, i.e., the estimation of a temperature- independent DOS, is valid as long as anharmonic effects in the vibrations within an IS are not too strong.31,64 Strictly speaking, the DOS should be rather interpreted as an effective DOS because each state is also weighted by the harmonic partition function, i.e., by the inverse square root of the frequency.31 It is known that the DOS distribution of a binary Lennard-Jones liquid or BKS-silica has a Gaussian shape over a large energy range.64–66 To determine G(EIS) over a broad energy range, based on the Boltzmann distributions from different temperatures, one could try to overlap the different G(EIS)-curves, obtained from different temperatures.
+A procedure to obtain the DOS in a statistically opti- mized way is the Weighted Histogram Analysis Method (WHAM).67 To obtain the DOS G(EIS), we use the algorithm developed by Gallicchio et al.,68 which reads for the present application G(E IS) = ∑iN(E IS, Ti) ∑iNi(Ti)fi(Ti)ci(E IS, Ti).
+(4) Here, N(EIS, Ti) is the total counts of the states at energy bin EIS at temperature Ti and N(Ti) = ∑jN(Ej IS, Ti).
+ci(EIS, Ti) is called a component of the biasing matrix, which is calculated as ci(E IS, Ti) = exp[−βiE IS].
+From there, one can optimize the normalization factor fi(Ti) as f −1 i (Ti) = ∑ j ci(Ej IS, Ti)G(Ej IS, Ti).
+We iteratively optimize the normalization factor fi(Ti) until convergence is reached and the DOS can be read off.
+Note that the resulting DOS is defined except for one proportionality constant.
+In analogy, this procedure can be applied as well for the deter- mination of Gd(EIS) and Gdf(EIS).
+However, due to the unknown proportionality constants, we would not be able to determine, e.g., the fraction of defect-free states qdf(EIS) at a given energy EIS.
+Nat- urally, from equilibrium simulations at a given temperature Ti one can directly read of this fraction qi df(E IS, Ti).
+Since this fraction is an equilibrium property, in the limit of infinite sampling, it would not depend on temperature.
+In the spirit of WHAM, we join the infor- mation from the simulations at the different temperatures for the estimation of qdf(EIS) via qdf(E IS) = ∑iN(E IS, Ti)qi df(E IS, Ti) ∑iN(E IS, Ti) .
+(5) In practice, we first determine G(EIS) (via WHAM) and qdf(EIS) as described above and then estimate the DOS for the defect-free states and defect-states, respectively, via Gdf(E IS) = G(E IS)qdf(E IS), Gd(E IS) = G(E IS)(1 −qdf(E IS)). (6) III.
+PEL PROPERTIES AND THEIR RELATION TO THE DIFFUSIVITY In this section, we investigate the DOS distributions of defect and defect-free states with energy using the WHAM optimized energy distributions in Sec.
+II C. All the important parameters, to be discussed below, are summarized in Table I. A. Density of states In Fig. 1(a), we show the Boltzmann distribution pd(EIS, T) of defect-states for a large range of temperatures.
+Whereas for the high- est temperature (curve at the right end), the distribution is basically Gaussian, one observes for lower temperatures deviations from the Gaussian shape in the low-energy range and the presence of a cutoff- energy of E cutoff d = −26.93.
+This value does not seem to depend on temperature.
+In the next step, we reconstructed the underlying DOS via sim- ple reweighting [see Fig. 1(b)].
+Indeed, we find that over a large range of energies, DOS curves overlap with each other, which confirms that TABLE I. Values of the important variables used in Sec. III.
+For the description of the variables, see the main text and the supplementary material.
+E cutoff df [Fig. 1(c)] −27.04 E cutoff d [Fig. 1(c)] −26.93 E cross 0 [Fig. 1(c)] −26.86 Emax IS [Fig. SM.1(a)] −25.77 Emax d [Fig. 1(b)] −25.89 Emax df [Fig. 1(c)] −26.56 sIS [Fig. SM.1(a)] 0.12 sd [Fig. 1(b)] 0.12 sdf [Fig. 1(c)] 0.07 V0 [Fig. 2(a)] 0.26 J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-3 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp FIG.
+1. (a) The semi-log plot for the normalized Boltzmann distributions of the defect-states for temperatures between T = 0.014 and T = 0.018.
+One can estimate the cutoff energies for the defect-states at ∼−26.93.
+(b) DOS of defect-states, obtained from the data in (a) via Boltzmann reweighting.
+The data at T = 0.015 are fitted with a Gaussian function ln G(E) = −1 2[(E −Emax d )/s]2 + c d(T) with Emax d = −25.89, s d = 0.12 and an arbitrary shift parameter cd(T).
+(c) DOS of defect-free states, obtained is a similar way as (b) with Emax df = −26.56, s df = 0.07.
+(d) The plot for the estimated DOS from the WHAM analysis for defect-states, defect-free states, and all states.
+The total DOS curve (marked as Total) is slightly shifted along the Y-axis for better visual inspection.
+The fraction of defect-free states at each energy level [qdf(EIS)] is also shown, and its values are related to the right Y-axis.
+For a complete list of different parameters, see Table I. the simulations at the lowest temperatures have been done at equi- librium.
+Similar observations can be made for the total DOS and the defect-free DOS as well (see the supplementary material, Fig. SM.1).
+In the high energy range, the DOS seems to depend on tempera- ture.
+As mentioned above, this indicates the presence of significant anharmonic effects at high temperatures.
+For a large range of ener- gies, the distribution follows a Gaussian shape.
+Importantly, in the low-energy range, the DOS of defect states decays much faster than a Gaussian distribution, reflecting the presence of the cutoff-energy.
+The analogous results for the defect-free states are shown in Fig. 1(c) [see also supplementary material Fig. SM.1(a), for DOS of all-states].
+Finally, in Fig. 1(d), we show the results of the WHAM analysis, i.e., the DOS G(EIS), G d( IS), Gdf(EIS), as well as the fraction of defect-free states qdf(EIS).
+Note that the relevant energy regime, shown in this figure, only covers the regime where the determina- tion of the DOS is not hampered by anharmonic effects.
+Moreover, for the defect-free states, we find a low-energy cutoff.
+The estimated cutoff energy of the defect-free states, E cutoff df ≈−27.04 is significantly lower than E cutoff d , namely ΔE cutoff = E cutoff d −E cutoff df ∼0.11.
+As a con- sequence, the overall DOS G(EIS) also displays the same cutoff as Gd(EIS).
+Such a cutoff-energy was also observed in the case of BKS-silica.38 Interestingly, ΔEcutoff hardly changes when increasing the sys- tem size from 80 to 200 particles [ΔEcutoff(N = 200) ∼0.12 as can be derived from the data in the supplementary material Fig. SM.2].
+This result suggests that the minimal number of particles, required J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-4 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp to create a defect state, is independent of size.
+Later, we will show that the structure of the defect-states at the cutoff energy involves a well-defined local environment other than the usual trigonal geome- try, so that the energy of 0.11 can be interpreted as a minimum defect formation energy.
+Furthermore, E cutoff df /N hardly varies with system size.
+Thus, the energy of the lowest energy state, which is a defect- free state, is an extensive property.
+Due to the local character of the formation of a defect, it is expected that ΔEcutoff is not extensive.
+This is indeed clearly seen in the supplementary material, Fig. SM.2.
+Finally, we discuss the properties of the fraction of defect-free states qdf(EIS).
+It has an asymmetric behavior: whereas at low ener- gies one observes a sharp cutoff, below which only defect-free states are available, at high temperatures there is a more gradual approach toward the limit where only defect-states are present.
+Indeed, as seen from the supplementary material (Fig. SM.1), there is no indica- tion of a strict cutoff-energy at high energies, although defect-free states become exponentially rare.
+Nevertheless, there is a fast tran- sition from the energy regime governed by defect-free states to the regime governed by defect-states.
+In fact, it takes an energy variation of less than 0.06 to change between qdf(EIS) = 0.2 and qdf(EIS) = 0.8.
+The crossover energy, E cross 0 , where qdf(EIS) = 0.5, i.e., where the number of defect-free states and defect-states is identi- cal, turns out to be −26.86.
+In terms of per-particle energies, the value of E cross 0 gets lower for a larger system size, see the supple- mentary material (Fig. SM.2).
+This is because the probability of finding defect-free states decreases exponentially with increasing system size.59 This is a consequence of the fact that a large system can be decomposed into approximately independent smaller subsys- tems.
+Then it becomes very unlikely that the total system contains no defects because this requires that every subsystem be defect- free.
+This underlines the importance of studying a smaller system size, where the statistical characterization of defect-free states is far easier.
+B. Fragile to strong crossover Next, we explore a possible relationship between the kinet- ics and the thermodynamics of the system.
+In Fig. 2(a), we show the temperature-dependent diffusion constant.
+One clearly finds a transition from non-Arrhenius to simple Arrhenius behavior, D(T) = D0 exp[−V0β], (7) i.e., a transition from fragile to strong behavior.
+We have added fits with the VFT equation in the high-temperature and an Arrhenius fit in the low-temperature regime.
+Starting from the VFT fit, the first significant deviation is seen for β ≈80.
+To relate the kinetics to the thermodynamics of the system, we provide the average IS energy (E av IS(T) in Fig. 2(b).
+Again, two tem- perature regimes can be observed.
+Both have a simple interpretation.
+If the DOS is governed by a Gaussian distribution with variance s2, one expects a linear behavior E av IS(T) = Emax IS −βs2.
+(8) Indeed, this is seen in the high-temperature regime in Fig. 2(b).
+The negative slope of 0.013 is very close to the result of the Gaussian fit (s2 = 0.014), reported in Table I.
+Naturally, in the low-temperature regime, the average energy starts to approach the cutoff energy.
+Most importantly, the impact of the cutoff energy again starts to be vis- ible around β ≈80, which is exactly the same temperature regime as observed for the FSC.
+This strongly suggests a direct causal rela- tionship between the kinetics and the thermodynamics.
+We mention in passing that the crossover temperature can be estimated from FIG.
+2. (a) Dependence of ln(1/D) on inverse temperature.
+The data in the fragile-regime (region marked in red) are fitted with the VFT equation [Eq. (1)] and data in the strong-regime (region marked in gray) are fitted with an Arrhenius equation [Eq. (7)].
+The values of α and T0 are ≈0.014 and 0.011, respectively.
+The value of V0 is ≈0.26.
+Data inside the mixed regime are not fitted using any equations, but the approximations from both the fragile and strong regimes are extrapolated to measure βFSC.
+(b) Dependence of the average IS energy on the inverse temperature.
+A linear fit is performed between 62.5 ≤β ≤77 with slope ∼−0.013.
+The cutoff energy for the total system (same as for the defect-free states, E cut df ) and defect states (E cut d ) are also shown as horizontal lines. J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-5 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp the condition E av IS(T) ≈E cutoff df + s. The second summand expresses the fact that the energy-cutoff starts to matter as soon as the cut- off is within a standard deviation of the average energy (in a Gaussian approximation).
+Using the values s = 0.12, Emax IS = −25.77 (see the supplementary material, Fig. SM.1), and E cutoff df = −27.04, one obtains β = 79.8, which is basically identical to the estimated crossover temperature of β ≈80.
+C. Comparison with bulk silica Previously, FSC has also been observed for 3D bulk silica simulated with the standard BKS forcefield38and related to the prop- erties of the energy landscape.
+In this way, the causality could be directly proven.54 Here, we perform a quantitative comparison of the FSC in order to identify similarities and differences between 2D silica and 3D silica.
+However, before starting, we estimate the crossover temperature for 3D (s = 3.5 eV, Emax IS = −1867 eV, and E cutoff df = −1910.7 eV) as T = 0.30 eV ≈3500 K, which agrees very well with the emergence of the crossover behavior of the diffusivity and the average energy, reported in Ref. 38.
+(i) System size: For the estimation of the diffusivity, one can define an energy-dependent activation energy Eeff(EIS),54 which for 3D silica can be written to a very good approxima- tion as (for E IS ≥E cutoff df ) E eff(E IS) ≈λ(E cutoff df −E IS) + V0(E cutoff df ).
+(9) More generally, the possibility to formulate a relation between activation energy and IS energy (strictly speaking, metabasin energy, which, however, for the typically visited IS at low tem- peratures is basically identical) shows the generally strong connection between the dynamic properties and the nature of the PEL for glass-forming systems.29,64,69,70 The value λ ≤1 has a simple interpretation: λ × N is the size of the hypothet- ical elementary subsystem to which relaxation processes are basically confined.
+Indeed, it has been shown31 that by dou- bling the system size, the value of λ decreases by a factor of 2.
+From the data in Ref.
+54, one can estimate λ ≈0.6.
+Thus, for the system size of N = 99, used for the simulation of bulk sil- ica, an elementary system comprises ∼60 particles.
+In the present case, we have no direct information for the esti- mation of λ.
+However, we can formulate an upper bound.
+Nat- urally, for the highest temperature where anharmonic effects do not matter (β ≈60) one still has activated behavior, i.e., E eff(E av IS(β = 60)) ≳0.
+This implies [using V0(E cutoff df ) = 0.26, see Fig. 2(a), and E av IS(β = 60) = −26.69] that λ ≤0.74.
+Thus, the hypothetical elementary subsystem has a size of less than 0.74 × 80 ≈60 particles.
+(ii) PEL landscape: A natural dimensionless number, characteriz- ing the shape of the DOS, is given by [(Emax IS −E cutoff df )]/s.
+It expresses the impact of the cutoff energy relative to the over- all shape of the Gaussian.
+In the present case, we have (−25.77 + 27.04)/0.12 = 10.6.
+Reading off the corresponding values for bulk silica from Ref. 38, we obtain (−1867 + 1910.7 eV)/3.5 eV = 12.5.
+However, for a direct comparison, we need to take into account that these ratios depend on system size.
+Whereas the energies in the numerator scale with the system size, the stan- dard deviation in the denominator scales with the square root of the system size.
+For a fair comparison, the values should be evaluated for the respective elementary system sizes.
+However, with the present data, it cannot be excluded that the elemen- tary system sizes are comparable, the same holds for the shape of the DOS.
+(iii) Defect-states vs defect-free states: One may ask for the energy to generate defects.
+In the present case, it is given by ΔEcutoff ≈0.11.
+To obtain an appropriate dimensionless num- ber, we may relate this value to the crossover temperature, yielding (0.11/(1/80)) ≈8.8.
+Interestingly, for bulk silica, there exist defect-states very close to the cutoff-energy of defect-free states.
+From the data in Ref.
+38, one may esti- mate ΔE cutoff 3 D ≈1.0 eV. This yields a ratio of (1/0.3 eV) = 3.3, which is significantly smaller than 8.8.
+One may speculate that in 3D there exist more degrees of freedom so that defects with (relatively) lower energy costs can be generated.
+(iv) Activation energy: We represent activation energy as a ratio of the low-temperature activation energy to the crossover temperature, which makes it a dimensionless number and independent of the system size.
+Whereas for the 2D system, we have a ratio of (0.26/(1/80)) ≈21, the corresponding ratio for the 3D system reads (data taken from Ref. 38) (4.84/0.30 eV) ≈16.
+Thus, the effective barriers for relaxation processes agree relatively well.
+The remaining differences may be related to a similar argument as in (iii) that in 3D there are more degrees of freedom, which allows the system to explore more energy-efficient paths. IV.
+STRUCTURAL ASPECTS At the low-temperature limit, where the system mainly resides close to the low-energy cutoff of defect-free states, the residual tran- sitions between different defect-free states naturally involve the tran- sient population defect states.
+This is supported by the observation that the low-temperature activation energy of 0.26 is significantly larger than the difference in the cutoff energies of the states with and without defects.
+Furthermore, the deviations from the linear energy dependence vs inverse temperature, expected for a Gaussian glass-former, start around the cutoff energy of defect states.
+For this purpose, we continue with the discussion of the structural prop- erties of defect states, in particular those close to their low-energy cutoff.
+A. Ring statistics We start by studying the statistics of ring sizes as a function of energy.
+We found in Fig. 3(a) that with increasing temperature, the probability of finding 5, 6, and 7 rings decreases, whereas for all other rings it increases.
+It is an expected behavior, since the large (>ringsize 7) and small (<ringsize 5) rings are quite strained and hence have higher energies.60,61 In Fig. 3(b), we show the standard deviation of the ring distribution.
+As expected in ther- modynamic equilibrium, at a given energy, the standard deviation does not depend on temperature within statistical uncertainties.
+One observes a different dependence on energy when crossing the crossover energy E cross 0 . J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-6 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp FIG.
+3. (a) Probability distribution of the ring-sizes at various temperatures.
+(b) Dependence of the standard deviation of the ring distribution (μring) with energy for defect-free states.
+Data below E cross 0 and above E cross 0 at T = 0.015 are fitted separately with a line.
+B. Energy-dependent defect properties To examine the properties of the defect-states in the low-energy limit, we sort the defect-states according to the number of defect-Si particles, denoted dSi.
+Here, we do not distinguish whether a defect- Si particle has more or less than three O neighbors.
+The probabilities of finding a specific number of defect-Si particles at a given energy are shown in Fig. 4(a).
+Clearly, the silicon defect states exactly disap- pear at E cutoff d .
+Again, the data are obtained from averaging over all temperatures, in analogy to Eq. (5).
+Actually, the average number of defect-Si particles linearly increases with energy above E cutoff d (see the supplementary material, Fig. SM.3).
+Similar to the observation of Yu et al.40 in BKS-silica, we find that the slope of the number of defect particles vs energy decreases with increasing energy.
+After exclud- ing dSi = 0 states, the appropriately renormalized data are shown in Fig. 5(a).
+We find that very close to E cutoff d , all defect-states have two silicon defects, i.e., dSi = 2.
+In particular, there are no defect states with just one silicon defect.
+They only start to appear at slightly higher energies.
+This is also reflected in the anomalous behavior of the average number of defects (excluding dSi = 0 states), shown in the supplementary material, Fig. SM.3. FIG.
+4. (a) Probability q(EIS, dSi) to find a specific defect state with dSi number of average defect-Si particles at energy EIS.
+(b) Probability q(EIS, dO) to find a specific defect state with dO number of average defect-O particles at energy EIS. J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-7 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp FIG.
+5. (a) Probability q(EIS, dSi > 0) to find a specific defect state with dSi number of average defect-Si particles at energy EIS, excluding dSi = 0 states.
+(b) Probability c(EIS, CSi–O) to find a specific combination of the co-ordinations of the defect-Si particles for dSi = 2 states at energy EIS, normalized by the total number of dSi = 2 states.
+1–4 defects are ignored in this plot due to their very small probability.
+Analogously, we study the properties of oxygen defects.
+In Fig. 4(b), the probabilities of finding a specific number of defect-O particles are shown.
+We find that already above E cutoff d no oxy- gen defects are present.
+Thus, there exists an energy range where two silicon defects are present but no oxygen defect (see below for a closer characterization of that state).
+For states slightly above E cutoff d , in average two defect-Si but no defect-O particles are present.
+The structures of the dSi = 2 defect states are further analyzed by counting different Si–O co-ordinations (CSi–O) of the partic- ipating defect-Si particles (i, j), such as Ci Si−O = 1 and Cj Si−O = 4 (abbreviation: 1-4 defect); (Ci Si−O = 2) and Cj Si−O = 2 (abbreviation: 2-2 defect); Ci Si−O = 2 and Cj Si−O = 4 (abbreviation: 2-4 defect).
+As shown in Fig. 5(b), near E cutoff d only 2-4 defect states are observed.
+Performing a similar analysis for dSi = 1 states, we find that only CSi–O = 2 co-ordination is present for the single defect-Si particle at all energies.
+We find that such a Si–O co-ordination for dSi = 1 states is not possible with dO = 0 but with dO = 1, as by definition, the co-ordination numbers of the Si and O particles are dependent on each other.
+Performing a similar co-ordination number analysis to only dO = 1 states, we find that the corresponding CO–Si is strictly 1 within our simulation set up.
+Next, we analyze the spatial correlations between the defect-Si particles in each frame by calculating the average distance between them in dependence of energy, rdefect(EIS).
+The results are shown in Fig. 6.
+We find that the minimum value is ⟨r defect(E IS)⟩∼3 Å, which is also the average distance between two Si particles in a defect-free state.59 The average distance between the defect particles increases with energy and becomes constant after a certain energy range, sug- gesting a breakdown of any spatial correlations among defect-Si particles.
+The limiting value of the average distance can be calculated by evaluating the integral, L 2 ∫ 1 0 dx∫ 1 0 dy √ x2 + y2 ∼0.77L 2 , (10) which for the 80 particle system corresponds to ∼7.55.
+C. Microscopic realizations These results suggest that there exists a locally well-defined defect structure for the defect-states close to E cutoff d .
+This structure involves no defect-O particles but two close-by defect-Si parti- cles within a distance of ∼3 Å.
+The two defect-Si particles have a coordination number of 2 and 4, respectively, yielding the average FIG. 6.
+Average distance between two defect-Si particles.
+The limit of a random distribution is shown at ⟨r defect(E IS)⟩∼7.55. J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-8 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp FIG. 7.
+Sample structures for states with (a) two defect Si particles and (b) one defect Si particle.
+The defected Si particles are marked in blue.
+The dangling Si–O bond in (b) is marked with a red ellipse.
+co-ordination numbers ⟨CSi–O⟩= 3, ⟨CO–Si⟩= 2 for the total system at E cutoff d .
+A typical structure of the dSi = 2 states close to the E cutoff d is shown in Fig. 7(a).
+Starting from a defect-free structure, one can gen- erate this defect-structure by transferring one O particle from one Si particle to an adjacent Si particle.
+With increasing energy, more O particles are transferred further along the network, and the aver- age distance between defect-Si particles (⟨r defect⟩) increases from 3 Å. This result has a trivial size dependence, as the oxygen trans- fer can happen simultaneously at larger distances.
+As a result, the value of ⟨r defect⟩in Fig. 6 may increase at low energies for large sys- tems.
+This again underlines the need to study small systems to clearly elucidate the energy-dependent structural properties at low energies.
+Furthermore, it explains our observation that the difference between the two cutoff energies, ΔEcutoff, is practically independent of system size.
+A typical state with dSi = 1 is displayed in Fig. 7(b).
+These struc- tures involve a dangling O particle with coordination number 1.
+A comparison of the states with dSi = 2 and dSi = 1 suggests that, from an energetic point of view, a state with dSi = 2 is closer to the defect- free states than a state with dSi = 1 and thus has the chance to display a lower energy.
+The result shows that the average number of defect particles and average co-ordination number of the system may not have a lin- ear relationship with energy, at least near E cutoff d .
+Indeed, as shown in the supplementary material Fig. SM.4(a) , the average co-ordination number of defect-Si states (excluding dSi = 0 states) states shows a minimum, roughly around the same location where dSi = 1 states are most populated.
+This effect can be attributed to the lower ⟨CSi–O⟩ value of dSi = 1 state as compared to dSi = 2 states.
+Interestingly, we find that for defect-O states (excluding dO = 0 states), the average co- ordination number is constant to 1 throughout the relevant energy range within our simulation set up.
+The relatively late appearance of dO = 2, 3 states in the energy spectrum might be a reason for this observation.
+V. CONCLUSION AND OUTLOOK In this work, we have shown that the phenomenon of FSC in a 2D-silica model can be directly related to the properties of the PEL.
+We find that both the defect and defect-free states have a low energy cutoff.
+The energy difference between these energies does not depend on system size, which is a first hint that the low-energy defect-states are fully local.
+Similar to the case of BKS-silica, we find that at the temperature where the system senses the presence of the final low-energy cutoff, the fragile to strong crossover (FSC) in the kinetics is observed.
+The results suggest that the emergence of the low-energy cutoff of Gdf(EIS) [or G(EIS)] is the major cause of the FSC.
+Structurally, the properties of the low-energy defect states have been clearly characterized.
+One can see that the defect ground-state is a spatially coupled pair of defect-Si particles, which does not involve any dangling bond, in contrast to a structure with just a sin- gle defect-Si particle.
+Thus, the absence of a dangling bond renders the double defect structure energetically more favorable.
+The qualitative similarity of the observed FSC phenomenon between 2D and 3D silica supports the notion that the FSC may be a generic phenomenon observed for network-forming systems.
+Furthermore, it enables a quantitative comparison, revealing the impact of dimension.
+A major difference between both systems is seen in the normalized difference of the cutoff energies of the defect and defect-free states.
+Another difference we have observed is that the low-temperature activation energy for the 2D system is ∼30% higher than for the 3D system.
+Both effects may be related to the difficulty in the 2D system of finding reaction coordinates with low energy barriers.
+Furthermore, we would like to stress that J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-9 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp the 2D activation energy is more than twice as high as the energy difference between the overall ground-state and the ground-state defect structure (0.26 vs 0.11).
+This reflects the complexity that is involved in the transition between two defect-free states, dominat- ing at low temperatures, as well as the additional impact of activation barriers.
+We would like to remark that here we observe a variety of dif- ferent defect states (Fig. 4) when increasing the energy somewhat above their cutoff energy.
+Furthermore, we found that for higher energies, the density of states behaves like a Gaussian glass-forming system, as also supported by the linear dependence of E av IS on β in Fig. 2(b).
+A well-defined second Arrhenius-regime at higher temper- atures is absent as well.
+Hence, a direct application of the two-state model42–44 does not seem to be possible.
+The present analysis has again shown that the choice of small system sizes is essential to learn about specific PEL-related proper- ties.
+Otherwise, the low-energy properties would be smeared out and it would be difficult to identify the microscopic origin of the FSC beyond the mere identification of similar crossover temperatures in the thermodynamic and kinetic properties.
+It will be interesting to use a three-body force-field (such as the Stillinger-Weber potential71) in addition to the two-body Yukawa force-field and analyze how the new 2D-silica model changes its properties near the FSC-regime.
+In the present 2D- silica model, it is possible to unambiguously separate defect and defect-free states based on a single cutoff radius at all tempera- tures.
+It remains to be seen if similar analysis can be performed on other network-forming materials that show FSC as well, such as water.
+SUPPLEMENTARY MATERIAL See the supplementary material for (i) DOS curves for defect, defect-free, and total IS distributions; (ii) DOS curves for 80- and 200-particle systems; (iii) average number of defect Si/O par- ticles with energy; and (iv) average co-ordination number with energy.
+ACKNOWLEDGMENTS The authors thank the NRW Graduate School of Chemistry and the University of Münster for providing the necessary funding.
+AUTHOR DECLARATIONS Conflict of Interest The authors have no conflicts to disclose.
+Author Contributions Projesh Kumar Roy: Data curation (lead); Formal analysis (lead); Investigation (equal); Methodology (equal); Software (lead); Visual- ization (lead); Writing – original draft (equal); Writing – review & editing (supporting).
+Andreas Heuer: Conceptualization (lead); Funding acquisition (lead); Investigation (equal); Methodology (equal); Project administration (lead); Resources (lead); Supervision (lead); Validation (lead); Writing – original draft (equal); Writing – review & editing (lead).
+DATA AVAILABILITY The data that support the findings of this study are available from the corresponding author upon reasonable request.
+REFERENCES 1C. A. Angell, J. Non-Cryst.
+Solids 131-133, 13 (1991).
+2A. Einstein, Ann. Phys. 324, 371 (1906).
+3H. Vogel, Phys. Z. 22, 645 (1921).
+4G. S. Fulcher, J. Am. Ceram. Soc. 8, 339 (1925). 5G.
+Tammann and W. Hesse, Z. Anorg. Allg. Chem. 156, 245 (1926).
+6G. W. Scherer, J. Am. Ceram. Soc. 75, 1060 (1992).
+7C. A. Angell, Annu. Rev. Phys. Chem. 34, 593 (1983).
+8C. A. Angell, Science 267, 1924 (1995).
+9K.-U. Hess, D. B. Dingwell, and E. Rössler, Chem. Geol.
+128, 155 (1996), part of Special Issue: 5th Silicate Melt Workshop.
+10M. Hemmati, C. T. Moynihan, and C. A. Angell, J. Chem.
+Phys. 115, 6663 (2001).
+11E. F. Riebling, J. Chem.
+Phys. 43, 499 (1965).
+12P. Lucas, G. J. Coleman, M. Venkateswara Rao, A. N. Edwards, C. Devaadithya, S. Wei, A. Q. Alsayoud, B. G. Potter, K. Muralidharan, and P. A. Deymier, J. Phys. Chem.
+B 121, 11210 (2017).
+13P. Lucas, J. Non-Cryst.
+Solids: X 4, 100034 (2019).
+14R. Shi and H. Tanaka, Proc. Natl. Acad.
+Sci. U. S. A. 115, 1980 (2018).
+15R. Shi and H. Tanaka, Sci. Adv. 5, eaav3194 (2019).
+16M. De Marzio, G. Camisasca, M. Rovere, and P. Gallo, J. Chem.
+Phys. 144, 074503 (2016).
+17F. W. Starr, F. Sciortino, and H. E. Stanley, Phys.
+Rev. E 60, 6757 (1999).
+18L. Xu, P. Kumar, S. V. Buldyrev, S.-H. Chen, P. H. Poole, F. Sciortino, and H. E. Stanley, Proc. Natl. Acad.
+Sci. U. S. A. 102, 16558 (2005).
+19P. H. Poole, F. Sciortino, U. Essmann, and H. E. Stanley, Nature 360, 324 (1992).
+20O. Mishima and H. E. Stanley, Nature 396, 329 (1998).
+21J. C. Palmer, F. Martelli, Y. Liu, R. Car, A. Z. Panagiotopoulos, and P. G. Debenedetti, Nature 510, 385 (2014).
+22P. H. Poole, F. Sciortino, U. Essmann, and H. E. Stanley, Phys.
+Rev. E 48, 3799 (1993).
+23P. H. Poole, U. Essmann, F. Sciortino, and H. E. Stanley, Phys.
+Rev. E 48, 4605 (1993).
+24F. H. Stillinger and T. A. Weber, Phys.
+Rev. A 25, 978 (1982).
+25F. H. Stillinger and T. A. Weber, Phys.
+Rev. A 28, 2408 (1983).
+26F. H. Stillinger and T. A. Weber, Science 225, 983 (1984).
+27F. H. Stillinger and T. A. Weber, J. Phys. Chem. 87, 2833 (1983).
+28T. A. Weber and F. H. Stillinger, J. Chem.
+Phys. 80, 2742 (1984).
+29S. Sastry, P. G. Debenedetti, and F. H. Stillinger, Nature 393, 554 (1998).
+30P. G. Debenedetti and F. H. Stillinger, Nature 410, 259 (2001).
+31A. Heuer, J. Phys.: Condens.
+Matter 20, 373101 (2008).
+32S. Sastry, Nature 409, 164 (2001).
+33L.-M. Martinez and C. A. Angell, Nature 410, 663 (2001).
+34G. Adam and J. H. Gibbs, J. Chem.
+Phys. 43, 139 (1965).
+35K. Ito, C. T. Moynihan, and C. A. Angell, Nature 398, 492 (1999).
+36I. Saika-Voivod, P. H. Poole, and F. Sciortino, Nature 412, 514 (2001).
+37I. Saika-Voivod, F. Sciortino, and P. H. Poole, Phys.
+Rev. E 69, 041503 (2004).
+38A. Saksaengwijit, J. Reinisch, and A. Heuer, Phys. Rev. Lett.
+93(1), 235701 (2004).
+39B. W. H. van Beest, G. J. Kramer, and R. A. van Santen, Phys. Rev. Lett. 64, 1955 (1990).
+40Z. Yu, Q. Liu, I. Szlufarska, and B. Wang, Phys. Rev. Mater. 5, 015602 (2021).
+41Z. Yu, D. Morgan, M. D. Ediger, and B. Wang, Phys. Rev. Lett.
+129(1), 018003 (2022).
+42H. Tanaka, J. Phys.: Condens.
+Matter 15, L703 (2003). J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-10 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46The Journal of Chemical Physics ARTICLE scitation.org/journal/jcp 43R. Shi, J. Russo, and H. Tanaka, Proc. Natl. Acad.
+Sci. U. S. A. 115, 9444 (2018).
+44R. Shi, J. Russo, and H. Tanaka, J. Chem.
+Phys. 149, 224502 (2018).
+45A. Zeidler, P. Chirawatkul, P. S. Salmon, T. Usuki, S. Kohara, H. E. Fischer, and W. S. Howells, J. Non-Cryst.
+Solids 407, 235 (2015), part of Special Issue: 7th IDMRCS: Relaxation in Complex Systems.
+46I. Petri, P. S. Salmon, and H. E. Fischer, Phys. Rev. Lett. 84, 2413 (2000).
+47W. A. Crichton, M. Mezouar, T. Grande, S. Stølen, and A. Grzechnik, Nature 414, 622 (2001).
+48T. G. Edwards and S. Sen, J. Phys. Chem. B 115, 4307 (2011).
+49P. K. Gupta and J. C. Mauro, J. Chem.
+Phys. 130, 094503 (2009).
+50M. Wilson and P. S. Salmon, Phys. Rev. Lett. 103, 157801 (2009).
+51A. C. P. Rosa, Jr., C. Cruz, W. S. Santana, and M. A. Moret, Phys.
+Rev. E 100, 022139 (2019).
+52A. C. P. Rosa, Jr., C. Cruz, W. S. Santana, E. Brito, and M. A. Moret, Phys.
+Rev. E 101, 042131 (2020).
+53J. Russo, K. Akahane, and H. Tanaka, Proc. Natl. Acad.
+Sci. U. S. A. 115, E3333 (2018).
+54A. Saksaengwijit and A. Heuer, Phys.
+Rev. E 73, 061503 (2006).
+55L. Lichtenstein, C. Büchner, B. Yang, S. Shaikhutdinov, M. Heyde, M. Sierka, R. Włodarczyk, J. Sauer, and H.-J. Freund, Angew. Chem., Int. Ed. 51, 404 (2012).
+56L. Lichtenstein, M. Heyde, and H.-J. Freund, J. Phys. Chem.
+C 116, 20426 (2012).
+57P. Y. Huang, S. Kurasch, A. Srivastava, V. Skakalova, J. Kotakoski, A. V. Krasheninnikov, R. Hovden, Q. Mao, J. C. Meyer, J. Smet, D. A. Muller, and U. Kaiser, Nano Lett. 12, 1081 (2012).
+58M. Heyde, S. Shaikhutdinov, and H.-J. Freund, Chem. Phys. Lett. 550, 1 (2012).
+59P. K. Roy, M. Heyde, and A. Heuer, Phys. Chem. Chem.
+Phys. 20, 14725 (2018).
+60P. K. Roy and A. Heuer, Phys. Rev. Lett. 122, 016104 (2019).
+61P. K. Roy and A. Heuer, J. Phys.: Condens.
+Matter 31, 225703 (2019). 62S. Nosé, J. Chem.
+Phys. 81, 511 (1984).
+63G. J. Martyna, M. L. Klein, and M. Tuckerman, J. Chem.
+Phys. 97, 2635 (1992).
+64S. Büchner and A. Heuer, Phys.
+Rev. E 60, 6507 (1999).
+65A. Heuer and S. Büchner, J. Phys.: Condens.
+Matter 12, 6535 (2000).
+66A. Heuer and A. Saksaengwijit, Phys.
+Rev. E 77, 061507 (2008).
+67S. Kumar, J. M. Rosenberg, D. Bouzida, R. H. Swendsen, and P. A. Kollman, J. Comput.
+Chem. 13, 1011 (1992).
+68E. Gallicchio, M. Andrec, A. K. Felts, and R. M. Levy, J. Phys. Chem. B 109, 6722 (2005).
+69B. Doliwa and A. Heuer, Phys. Rev. Lett. 91, 235501 (2003).
+70B. Doliwa and A. Heuer, Phys.
+Rev. E 67, 031506 (2003).
+71F. H. Stillinger and T. A. Weber, Phys.
+Rev. B 31, 5262 (1985). J. Chem.
+Phys. 157, 174506 (2022); doi: 10.1063/5.0118797 157, 174506-11 Published under an exclusive license by AIP Publishing  17 June 2025 14:31:46

@@ -1,0 +1,1323 @@
+Materials Today Communications 37 (2023) 107183
+Available online 26 September 2023
+2352-4928/© 2023 Elsevier Ltd. All rights reserved.
+Contents lists available at ScienceDirect
+Materials Today Communications
+journal homepage: www.elsevier.com/locate/mtcomm
+A DFT study on the mechanical, electronic, thermodynamic, and optical
+properties of GaN and AlN counterparts of biphenylene network
+K.A. Lopes Lima a, L.A. Ribeiro Junior a,b,∗
+a University of Brasília, Institute of Physics, 70.910-900, Brasília, Brazil
+b Computational Materials Laboratory, LCCMat, Institute of Physics, University of Brasília, 70910-900, Brasília, Brazil
+A R T I C L E
+I N F O
+Keywords:
+Biphenylene network
+Gallium and aluminum nitrides
+Optoelectronic properties
+Thermomechanical properties
+Density functional theory
+A B S T R A C T
+The biphenylene network (BPN) is notable in recent fabrication efforts to design new 2D materials. The
+stability of its boron nitride counterpart, BN-BPN, has been confirmed through numerical investigations. In
+this study, we conducted a density functional theory (DFT) analysis to examine the mechanical, electronic,
+thermodynamic, and optical properties of two other group-III counterparts of BPN: gallium nitride (BPN-GaN)
+and aluminum nitride (BPN-AlN). Our findings reveal that the band gap values for BPN-GaN and BPN-AlN
+are 2.3 eV and 3.2 eV, respectively, at the HSE06 level. Phonon- and energy-formation calculations and ab
+initio molecular dynamics (AIMD) simulations suggest that BPN-(Al,Ga)N has good structural and dynamic
+stabilities. BPN-GaN displayed negative phonon frequencies. However, results from AIMD simulations point
+to its structural integrity with no bond reconstructions at 1000 K. These materials exhibit noteworthy UV
+activity, promising prospects as UV collectors. The thermodynamic properties reveal that the heat capacity
+of both BPN-AlN and BPN-GaN increases with temperature, eventually reaching the Dulong–Petit limit at
+around 800 K. We also performed calculations to determine the electron- and hole-effective masses, charge
+carrier mobility, elastic stiffness constants, Young’s modulus, and Poisson ratio for both BPN-GaN and BPN-AlN,
+providing valuable insight into their electronic and mechanical properties.
+1. Introduction
+The rapid advancement of nanoelectronics has spurred the explo-
+ration of novel materials with unique properties to meet the evolving
+demands of high-performance electronic devices [1,2]. In this context,
+free-standing 2D hexagonal aluminum nitride (AlN) and gallium ni-
+tride (GaN) monolayers [3,4] have reemerged as promising candidates,
+drawing inspiration from the advent of graphene [5]. They share a
+hexagonal lattice structure with graphene and offer distinct features
+and exciting prospects for various optoelectronic applications [6]. One
+of the critical distinctions lies in the semiconducting band gap prop-
+erties displayed by AlN and GaN monolayers, making them highly
+attractive for these applications [7]. Their wide band gap enables effi-
+cient control of charge carriers, rendering them suitable for applications
+such as transistors [8] and light-emitting diodes (LEDs) [9]. On the
+contrary, the zero bandgap of graphene limits its usage in devices
+requiring distinct on/off switching behavior [10].
+The electronic properties of AlN and GaN monolayers arise from
+their unique atomic constituents, which include aluminum and gal-
+lium atoms. These elements exhibit distinct energy levels and bonding
+characteristics compared to carbon atoms found in graphene [7]. As
+∗Corresponding author at: University of Brasília, Institute of Physics, 70.910-900, Brasília, Brazil.
+E-mail address: ribeirojr@unb.br (L.A. Ribeiro Junior).
+a result, AlN and GaN monolayers display diverse band gap ener-
+gies and optical properties, giving rise to distinctive absorption and
+emission spectra that differ from those of graphene [6,11]. Beyond
+their electronic characteristics, AlN and GaN monolayers demonstrate
+exceptional thermal stability and mechanical properties, making them
+suitable for deployment in high-temperature environments and high-
+performance devices [12,13]. Their robustness and durability make
+them ideal for electronic applications that require resistance to extreme
+conditions [14].
+One prominent application of these materials lies in optoelectron-
+ics, specifically in developing LEDs [15,16]. GaN-based LEDs have
+significantly impacted the lighting industry by providing long-lasting
+energy-efficient alternatives to conventional incandescent and fluores-
+cent lighting sources [17]. Group-III nitrides, including AlN and GaN,
+are also useful in laser diodes [18], power electronic devices [19,20],
+and sensors [21]. The versatility and wide-ranging applications of AlN
+and GaN monolayers highlight their significance in driving techno-
+logical advances in various fields, particularly in optoelectronics and
+solid-state lighting [19]. Ongoing research and development efforts
+https://doi.org/10.1016/j.mtcomm.2023.107183
+Received 3 July 2023; Received in revised form 20 September 2023; Accepted 22 September 2023Materials Today Communications 37 (2023) 107183
+2
+K.A.L. Lima and L.A. Ribeiro Junior
+continue to explore novel materials synthesis techniques and device ar-
+chitectures to unlock their full potential in the ever-evolving landscape
+of advanced materials and electronic devices [22].
+In recent in-silico studies, a series of 2D materials based on group-III
+elements have emerged as promising candidates [23,24]. These mate-
+rials share a comparable structure with certain carbon-based mono-
+layers that have already been successfully synthesized [25–27]. One
+notable example is the boron nitride form of the biphenylene network
+(BPN) [27], known as BN-BPN [28–31], which has been proposed and
+its stability confirmed in several numerical studies based on distinct
+computational protocols. However, to fully comprehend the potential
+of this specific lattice topology and explore its practical applications,
+it is crucial to characterize other group-III counterparts of BPN. By
+investigating these counterparts, we can expand our understanding of
+their properties and identify potential applications for these materials.
+Using computational approaches for material design has become
+essential in research for several compelling reasons. Usually, theoretical
+predictions of new nanostructured materials preceded their synthesis
+by years or decades. Categorical examples are the BPN and the 2D
+monolayer of C60, which had the first theoretical works published
+by Mortazavi in 2017 [32], and Tomanek in 1990 [33], respectively.
+Simulating and predicting material properties can be performed by
+employing computational models, allowing virtual experiments and
+expediting the discovery and development of new materials. Com-
+putational techniques enable researchers to delve into the underly-
+ing physics and chemistry of materials, providing insights into their
+atomic-scale structures, electronic properties, and interactions. This
+deep understanding helps to elucidate the fundamental mechanisms
+that govern the behavior of materials and guides the design of materials
+with tailored properties.
+In this study, we employ density functional theory (DFT) calcula-
+tions to investigate the mechanical, electronic, thermodynamic, and
+optical properties of two additional group-III counterparts of BPN:
+gallium nitride (BPN-GaN) and aluminum nitride (BPN-AlN). We gain
+valuable insights into their electronic and structural features using our
+computational approach. One crucial aspect that we focused on was
+their structural stability. Interestingly, the BPN topology has proven
+suitable for designing stable group-III nitride materials.
+2. Methodology
+The CASTEP [34] code was used to perform DFT simulations, in-
+vestigating the mechanical, electronic, thermodynamic, and optical
+properties of BPN-AlN and BPN-GaN (refer to Fig. 1). In these sim-
+ulations, the exchange and correlation functions were treated using
+the generalized gradient approximation (GGA), parameterized by the
+Perdew–Burke–Ernzerhof (PBE) functional [35], as well as the Heyd–
+Scuseria–Ernzerhof (HSE06) hybrid functional [36]. To accurately ac-
+count for the interactions between the nuclear electrons of each atomic
+species, we employed norm-conserving pseudopotentials (as imple-
+mented in CASTEP) designed explicitly for gallium, aluminum, and
+nitrogen.
+For achieving electronic self-consistency, we employed the Broy
+den–Fletcher–Goldfarb–Shannon (BFGS) unrestricted nonlinear itera-
+tive algorithm [37,38]. The plane-wave basis set had an energy cutoff
+of 700 eV, and we set the convergence criteria for the energy at 1.0
+×10−5 eV. To fully relax the BPN-(Ga, Al)N lattices, we used periodic
+boundary conditions, ensuring that the residual force on each atom was
+less than 1.0 ×10−3 eV/Å and the pressure was below 0.01 GPa. During
+the lattice optimization, the basis vector along the 𝑧-direction was held
+fixed, and we employed a k-grid of 10 × 10 × 1, while for electronic
+and optical calculations, we used a k-grid of 15 × 15 × 1 and 5 × 5 × 1
+for the GGA/PBE and HSE06 methods, respectively. The partial density
+of states (PDOS) was calculated at the HSE06 level using a k-grid of
+20 × 20 × 1. The elastic properties were calculated using the LDA/CA-
+PZ method [39,40]. A vacuum region of 20 Å was considered to avoid
+spurious interactions among periodic images.
+Fig. 1. Schematic representation of the monolayers for both (a) BPN-GaN and (b)
+BPN-AlN. The unit cells are highlighted by rectangles defined by lattice vectors 𝑎and
+𝑏. Green, pink, and blue represent gallium, aluminum, and nitrogen atoms.
+The decision to employ a smaller k-grid resolution in our HSE06
+calculations, in contrast to the k-grid used in the GGA/PBE method, is
+primarily driven by computational considerations, specifically the sub-
+stantial computational cost associated with the HSE06 method. HSE06-
+based calculations involve significant computational time, which can
+limit the feasibility of employing a finer k-grid. We performed conver-
+gence tests to validate the suitability of the selected k-grid resolution for
+our HSE06 calculations. Our convergence tests verified that the chosen
+k-grid resolution maintains the required accuracy and reliability of the
+results within an acceptable margin of error.
+For the phonon calculations, we utilized the linear response method
+with a grid spacing of 0.05 1/Å and a convergence tolerance of
+10−5 eV/Å2. To assess the mechanical properties of the BPN-(Ga,Al)N
+lattices, we employed the stress–strain method based on the Voigt–
+Reuss–Hill approximation [41,42]. This method follows Hooker’s law,
+establishing a linear relationship between the Lagrangian strain and the
+Cauchy stress tensor.
+We applied an external electric field of 1.0 V/Å along the 𝑥and
+𝑦directions to investigate the optical properties. Using the complex
+dielectric constant 𝜖= 𝜖1 + 𝑖𝜖2, where 𝜖1 and 𝜖2 represent the real
+and imaginary parts of the dielectric constant, respectively, we directly
+obtained the optical quantities. To calculate the imaginary part of the
+dielectric constant, we employed Fermi’s golden rule, which considers
+interband optical transitions between the valence (VB) and conduction
+bands (CB), where
+𝜖2(𝜔) =
+4𝜋2
+𝑉𝛺𝜔2
+∑
+𝑖∈VB, 𝑗∈CB
+∑
+𝑘
+𝑊𝑘|𝜌𝑖𝑗|2 𝛿(𝜀𝑘𝑗−𝜀𝑘𝑖−ℏ𝜔).
+(1)
+In the context of optical properties, various parameters play a role.
+These include the photon frequency (𝜔), the unit cell volume (𝑉𝛺), the
+k-point weight (𝑊𝑘) in reciprocal space, and the dipole transition ma-
+trix element (𝜌𝑖𝑗). The relationship between the real (𝜖1) and imaginary
+(𝜖2) parts of the dielectric constant is established through the Kramers–
+Kronig relation [43]. Specifically, the real part of the dielectric constant
+can be expressed as:
+𝜖1(𝜔) = 1 + 1
+𝜋𝑃∫
+∞
+0
+𝑑𝜔′ 𝜔′𝜖2(𝜔′)
+𝜔′2 −𝜔2 ,
+(2)
+where 𝑃is the Cauchy principal value.
+Additional coefficients can be derived once the dielectric constant’s
+real and imaginary parts are obtained to characterize the optical prop-
+erties further. These coefficients include the absorption coefficient (𝛼),
+the optical conductivity (𝜎), and the reflectivity (𝑅). Their calculation
+involves using 𝑃and can be expressed as follows:
+𝛼(𝜔) =
+√
+2𝜔
+[
+(𝜖2
+1(𝜔) + 𝜖2
+2(𝜔))1∕2 −𝜖1(𝜔)
+]1∕2
+,
+(3)Materials Today Communications 37 (2023) 107183
+3
+K.A.L. Lima and L.A. Ribeiro Junior
+𝜎(𝜔) = 1
+4𝜋(𝜔𝜖2(𝜔)),
+(4)
+and
+𝑅(𝜔) =
+[ (𝜖1(𝜔) + 𝑖𝜖2(𝜔))1∕2 −1
+(𝜖1(𝜔) + 𝑖𝜖2(𝜔))1∕2 + 1
+]2
+.
+(5)
+To understand the thermal effect on the BPN-(Ga,Al)N lattices, we
+used CASTEP to calculate thermodynamic properties, enthalpy 𝐻(𝑇),
+free energy 𝐹(𝑇), entropy 𝑆(𝑇), and temperature times the entropy
+term 𝑆(𝑇) = 𝑈−𝐹, where 𝑈is the internal energy of the system and
+the heat capacity of the materials 𝐶𝑉(𝑇) as a function of temperature.
+The equations below are based on work by Baroni and coworkers [44].
+The temperature dependence of the enthalpy 𝐻(𝑇) is given by
+𝐻(𝑇) = 𝐸𝑡𝑜𝑡+ 𝐸𝑧𝑝+ ∫
+ℏ𝜔
+exp
+(
+ℏ𝜔
+𝑘𝐵𝑇
+)
+−1
+𝑁(𝜔)𝑑𝜔,
+(6)
+where 𝐸𝑡𝑜𝑡is the total energy, 𝐸𝑧𝑝is the zero-point vibrational energy,
+𝑘𝐵is the Boltzmann constant, ℏis the Planck’s constant, and 𝑁(𝜔) is
+the phonon density of states. 𝐸𝑧𝑝can be evaluated as:
+𝐸𝑧𝑝= 1
+2 ∫𝑁(𝜔)ℏ𝜔𝑑𝜔.
+(7)
+The vibrational contribution to the free energy 𝐹(𝑇), is written as
+𝐹(𝑇) = 𝐸𝑡𝑜𝑡+ 𝐸𝑧𝑝+ 𝑘𝐵𝑇∫𝑁(𝜔)ln
+[
+1 −exp
+(
+−ℏ𝜔
+𝑘𝐵𝑇
+)]
+𝑑𝜔.
+(8)
+The entropy 𝑆(𝑇) is expressed as follows:
+𝑆(𝑇) = 𝑘𝐵∫
+ℏ𝜔
+𝑘𝐵𝑇
+exp
+(
+ℏ𝜔
+𝑘𝐵𝑇
+)
+−1
+𝑁(𝜔)𝑑𝜔
+−𝑘𝐵∫𝑁(𝜔)ln
+[
+1 −exp
+(
+−ℏ𝜔
+𝐾𝐵𝑇
+)]
+𝑑𝜔.
+(9)
+Heat capacity as a function of temperature 𝐶𝑉(𝑇) is obtained according
+to the equation
+𝐶𝑉(𝑇) = 𝑘𝐵∫
+(
+ℏ𝜔
+𝑘𝐵𝑇
+)2
+exp
+(
+ℏ𝜔
+𝑘𝐵𝑇
+)
+[
+exp
+(
+ℏ𝜔
+𝑘𝐵𝑇
+)
+−1
+]2 𝑁(𝜔)𝑑𝜔.
+(10)
+We also calculate the effective mass (𝑚∗) of charge carriers, i.e.,
+electrons and holes. This parameter is fundamental in determining the
+overall carrier mobility in 2D materials. 𝑚∗is calculated by fitting the
+band dispersion to
+𝑚∗= ℏ2
+(𝜕2𝐸(𝑘)
+𝜕𝑘2
+)−1
+.
+(11)
+3. Results
+We first present the lattice arrangement of the optimized BPN-
+(Ga,Al)N sheets, as depicted in Fig. 1. As expected, the GGA/PBE
+and HSE06 methods yield comparable optimized parameters for these
+lattices. Therefore, in this regard, we focus on the results obtained using
+the HSE06 method, showcasing Fig. 1 and Table 1. Fig. 1 shows the
+slight distortion of the four- and eight-membered rings in the BPN-
+(Ga,Al)N lattices compared to the all-carbon BPN structure [31,45]
+while maintaining a planar configuration. These lattices possess an
+orthorhombic crystal structure and fall under the PMMA space group
+(D2H-5). The 𝑎and 𝑏lattice vectors are 9.71 Å and 5.79 Å for BPN-GaN
+and 9.61 Å and 5.62 Å for BPN-AlN.
+To assess the dynamical stability of the BPN-(Ga,Al)N sheets, we
+calculated their formation energies and the phonon dispersion relations
+along the high symmetry directions using the GGA/PBE method, as
+depicted in Fig. 2. We found formation energy values of −5.89 eV and
+−4.82 eV for BPN-AlN and BPN-GaN structures, respectively.
+Table 1
+Bond distances for the atoms highlighted in Fig. 1 calculated at the HSE06 level.
+Bond type
+Bond distance (Å)
+Bond type
+Bond distance (Å)
+Ga1-N1
+1.85
+Al1-N1
+1.81
+Ga2-N1
+1.82
+Al2-N1
+1.79
+Ga2-N2
+1.85
+Al2-N2
+1.81
+Phonon dispersion analysis of the unstrained BPN-GaN sheet (see
+Fig. 2(a)) revealed the presence of imaginary frequencies, specifically
+soft longitudinal and transverse acoustic modes [46,47]. Generally,
+this trend indicates inherent instability. On the contrary, the phonon
+dispersion diagram shown in Fig. 2(b) consists exclusively of real
+frequencies, indicating the dynamic stability of the BPN-AlN sheets. The
+absence of a band gap between the acoustic and optical modes suggests
+a high scattering process rate and a short phonon lifetime, contributing
+to this material’s relatively low lattice thermal conductivity.
+The presence of imaginary frequencies in the BPN-GaN lattice in-
+dicates its susceptibility to structural distortions, emphasizing the sig-
+nificance of this observation. Such distortions may arise from inade-
+quate bonding interactions within the material or even intrinsic stress.
+These instabilities can have adverse consequences, including phonon
+scattering, diminished thermal conductivity, and even structural defor-
+mations. The subsequent AIMD results below provide information on
+structural deformations of the BPN-GaN lattice.
+One way to assess the thermal stability of a material using AIMD
+simulations is by monitoring the total energy per atom throughout
+the simulation. In a thermally stable system, the total energy per
+atom should remain relatively constant, indicating a balanced energy
+distribution within the material. Fluctuations in the total energy per
+atom during the simulation can provide insights into the material’s
+response to thermal perturbations.
+To ensure the dynamical stabilities of BPN-(Ga,Al)N, we conducted
+5 ps of AIMD simulations at 1000 K using the GGA/PBE approach,
+as depicted in Fig. 3. The insets in the figure provide a top and side
+view of the AIMD snapshot, showcasing the lattices in their final stages
+during the simulations. A 3 × 3 × 1 supercell comprising 108 atoms was
+used. This period and system size are usually employed to investigate
+the system stability in AIMD simulations [48]. Observing both cases,
+one can see that the total energy per atom exhibits a flat pattern. The
+inset in Fig. 3(a) presents the MD snapshot (side view) of BPN-GaN
+at 5 ps, revealing some lattice distortions imposed by the tempera-
+ture. However, the top view illustrates that no bond reconstructions
+occur concerning the optimized lattice in Fig. 1. Analogously, Fig. 3(b)
+demonstrates that BPN-AlN maintains its planarity without any bond
+reconstructions. These observations suggest that both structures exhibit
+good thermal stability.
+When the formation energy of a structure lies on the convex hull,
+it is considered thermodynamically stable and experimentally viable.
+Examining the formation energy plot versus 𝑁concentrations (refer to
+Fig. 4), we have identified a global minimum structure in this 2D space.
+This minimum occurs precisely at the midpoint, with N:(Ga,Al) = 1:1
+composition, resembling a structure closely akin to all-carbon BPN.
+We now delve into the band structure characteristics of BPN-
+(Ga,Al)N lattices. The upper panels of Fig. 5 present the band structure
+profiles obtained using the GGA/PBE (black) and HSE06 (blue) meth-
+ods. In the case of BPN-GaN (see Fig. 5(a)), the band gap is indirect
+(from the X-point to the G-point) and measures 1.86 and 2.31 eV at the
+levels of GGA/PBE and HSE06, respectively. For BPN-AlN, the indirect
+band gap values from the X-point to the G-point are 2.32 eV and 3.18
+eV according to the GGA/PBE and HSE06 calculations, respectively (see
+Fig. 5(b)).
+Generally, GGA/PBE calculations underestimate band gaps [49].
+Therefore, the hybrid functional HSE06 was used to precisely obtain
+the electronic and optical properties. The band structures of bothMaterials Today Communications 37 (2023) 107183
+4
+K.A.L. Lima and L.A. Ribeiro Junior
+Fig. 2. Phonon band structure of (a) BPN-GaN and (b) BPN-AlN calculated at GGA/PBE level.
+Fig. 3. Time evolution of the total energy per atom in the (a) BPN-GaN and (b) BPN-AlN lattices at 1000 K, using the GGA/PBE approach. The insets show the top and side
+views of the final AIMD snapshot at 5 ps.
+Fig. 4. Computed formation energy as a function of the nitrogen concentration for
+BPN-like monolayers.
+BPN-(Ga,Al)N materials, as obtained from GGA/PBE, exhibit wide semi-
+conducting band gaps, which are useful in optoelectronics and high-
+power devices [50]. On the other hand, the HSE06 calculation sug-
+gests that BPN-AlN behaves as an insulator. These band structures
+are characterized by energy bands near the Fermi level that exhibit
+dispersion, indicating the delocalized nature of electronic states within
+these materials.
+The difference in predicting the band gap values for BPN-AlN and
+BPN-GaN arises from these computational methods’ inherent limita-
+tions and approximations. The HSE06 method, being a hybrid func-
+tional, incorporates a fraction of exact exchange in addition to the
+exchange–correlation functional. Including nonlocal exchange inter-
+actions tends to yield more accurate electronic structure predictions,
+especially for systems with significant electron localization or delocal-
+ization, like semiconductors. As such, the band gap calculated using
+HSE06 is often considered to provide a more reliable representation
+of electronic properties. In contrast, the PBE method relies on the
+generalized gradient approximation.
+For BPN-AlN, the hole (𝑚∗
+ℎ) and electron (𝑚∗
+𝑒) effective masses
+are 0.250𝑚0 and 0.085𝑚0, respectively. For BPN-GaN, 𝑚∗
+ℎand 𝑚∗
+𝑒are
+0.875𝑚0 and 0.038𝑚0, respectively. 𝑚0 is the electron mass. Gener-
+ally, a lower effective mass correlates with higher carrier mobility, as
+carriers experience less resistance while moving in the crystal lattice.
+These values suggest that BPN-AlN could be particularly suitable for
+applications requiring efficient hole transport, such as p-type transistor
+channels or hole-dominant charge transport layers in photodetectors
+or solar cells. In contrast, BPN-GaN, with its higher hole effective mass
+and lower electron effective mass, is anticipated to have higher electron
+mobility, when contrasted with BPN-AlN, could be advantageous for
+applications that prioritize electron transport, such as n-type transistor
+channels or electron-dominant charge transport layers in optoelec-
+tronic devices. Remarkably, the 𝑚∗
+𝑒values of BPN-(Al,Ga)N are lower
+than those for the typical wz-AlN and wz-GaN structures (0.22𝑚0 and
+0.25𝑚0 [51], respectively). This feature reinforces that BPN-(Al,Ga)N
+systems hold greater promise for applications demanding enhanced
+electronic transport efficiency than their wurtzite analogs.
+We determined the full valence-band (VB) and conduction-band
+(CB) bandwidths for BPN(Al,Ga)N systems. The VB and CB values for
+BPN-GaN are 17.76 eV and 25.70 eV, respectively. The VB and CB
+values for BPN-AlN are 16.29 eV and 21.94 eV, respectively. The band-
+width establishes a range of energy values over which electrons can
+exist within a particular band. It also captures the extent of energy val-
+ues within which electrons can occupy states, thereby influencing theirMaterials Today Communications 37 (2023) 107183
+5
+K.A.L. Lima and L.A. Ribeiro Junior
+Fig. 5. Electronic band structure for (a) BPN-GaN and (b) BPN-AlN sheets. These results were obtained using the GGA/PBE (black) and HSE06 (blue) approaches. Panels (b,e)
+and (c,f) show the total and per atom species partial density of states (PDOS) calculated at the HSE06 level, respectively.
+kinetic behavior and mobility. A wider energy bandwidth typically
+corresponds to a broader range of electron energies, which can impact
+various electronic phenomena, including conductivity, carrier mobility,
+and optical transitions. For instance, the VB values for common AlN and
+GaN monolayers are about 15.80 eV [52].
+The partial density of states (PDOS) analysis of BPN-GaN and BPN-
+AlN, using the HSE06 hybrid functional, is shown in the left and right
+bottom panels of Fig. 5, respectively. As a general trend, results indicate
+a significant predominance of p-states for both materials. In these
+cases, electronic transitions and interactions will primarily involve the
+participation of p-orbitals. These orbitals are typically associated with
+directional bonding. They are characterized by lobes with a dumbbell-
+like shape, enabling them to interact with neighboring atoms or orbitals
+in a controlled manner.
+Figs. 5(b,e) provide a comprehensive view of the total contributions
+of s, p, d, and f orbitals for both atomic species within each lattice.
+Figs. 5(c,f) illustrate the PDOS per atomic species. The p-states play
+a dominant role. In the case of BPN-GaN, Ga-p orbitals contribute
+significantly, followed closely by N-p states. Additionally, Ga-s orbitals
+primarily participate in forming the conduction band. For BPN-AlN, N-
+p orbitals have a higher contribution, with Al-p states following suit.
+Similarly, Al-s orbitals play a crucial role in shaping the conduction
+band.
+With regard to p-state properties, the behavior of p-states in a
+material has crucial implications for its electronic, optical, and trans-
+port properties. A material’s p-states can influence phenomena such
+as energy band gaps, absorption and emission of light, and charge
+mobility. For instance, the nature of p-states can determine the type
+of electronic transitions that occur, affecting the material’s optical
+characteristics. Materials with well-defined p-states often exhibit in-
+teresting optoelectronic properties, making them suitable candidates
+for applications like photovoltaics, light-emitting diodes, and sensors.Materials Today Communications 37 (2023) 107183
+6
+K.A.L. Lima and L.A. Ribeiro Junior
+Table 2
+Comparison between theoretical band gap (𝐸𝑔) using the HSE06+G0W0
+approach and experimental band gaps (𝐸𝑥𝑝), for AlN and GaN having
+wurtzite (wz) and zincblende (zb) structures. The values are given in
+electron-volt (eV), and they were reported in Ref. [54].
+Compound
+E𝑔(HSE06+G0W0) [eV]
+E𝑔(Exp) [eV]
+wz-AlN
+6.14
+6.28
+wz-GaN
+3.37
+3.50
+zb-AlN
+5.16
+5.93
+zb-GaN
+3.16
+3.30
+Furthermore, the interaction of p-states with neighboring atoms or
+external fields can influence charge transport mechanisms, affecting the
+material’s performance in electronic devices.
+Materials with well-defined p-states often exhibit interesting op-
+toelectronic properties, making them suitable candidates for photo-
+voltaics, light-emitting diodes, and sensors. Furthermore, the interac-
+tion of p-states with neighboring atoms or external fields can influence
+charge transport mechanisms, affecting the material’s performance in
+electronic devices.
+Here, it is worth comparing the BPN-AlN and BPN-GaN band
+structures with conventional AlN and GaN having wurtzite (wz) and
+zincblende (zb) structures [53]. Table 2 presents the theoretical band
+gap (𝐸𝑔) using the HSE06+G0W0 approach and corresponding exper-
+imental (Exp) band gaps for (wz, zb)-GaN and (wz, zb)-AlN structures
+reported in the literature [54]. Notably, the BNP-AlN band gap sig-
+nificantly differs from those observed in (wz, zb)-AlN. While BPN-AlN
+acts as a wide-bandgap semiconductor (wz, zb)-AlN is an insulator.
+The band structure characteristics of BPN-AlN discussed above make it
+particularly suitable for emerging optoelectronic applications, such as
+high-frequency switching devices [55], light-emitting diodes [56], and
+RF power amplifiers [57]. BPN-GaN displays similar band gap values
+to those reported for (wz, zb)-GaN. These materials also fall within
+the wide-bandgap semiconductors category, demonstrating interesting
+potential for the aforementioned applications.
+Fig. 6 presents the optical properties of the BPN-(Ga, Al)N lattices,
+focusing on the polarization of light along the 𝑥(E//X), 𝑦(E//Y),
+and z (E//Z) directions. Calculations were performed using the HSE06
+method. The solid and dashed lines correspond to the BPN-GaN and
+BPN-AlN systems. In Fig. 6(a), the optical absorption (𝛼) is shown as
+a function of the photon energy. Both BPN-(Ga,Al)N materials exhibit
+strong optical activity, primarily in the ultraviolet (UV) region.
+The refractive index (𝑅) in Fig. 6(b) shows a prominent peak at
+approximately 6.0 eV for E//(X,Y) and 5.2 eV for E//Z in the case
+of BPN-GaN, while BPN-AlN shows peaks around 6.4 eV for E//(X,Y)
+and 5.5 eV for E//Z. The absorption coefficient gradually increases
+from zero and exhibits pronounced peaks at approximately 6.0 eV for
+E//(X,Z) and 6.2 eV for E//(Y) in the case of BPN-GaN, while BPN-AlN
+shows a peak at around 6.5 eV for E//(X,Y,Z). These findings suggest
+that BPN-(Ga,Al)N materials will likely be transparent in a solution and
+hold promise as potential candidates for UV device collectors.
+In Fig. 6(c), the real part (Re) of the optical conductivity is shown
+for BPN-GaN (solid black line) and BPN-AlN (solid blue line) over a
+photon energy range of 0.0 to 7.0 eV. Both materials exhibit distinct
+peaks in their curves, with a BPN-GaN peak at 5.8 eV and a BPN-
+AlN peak at 6.1 eV. The gradual increase in the real part of optical
+conductivity up to 5.8 eV corresponds to the increasing absorption
+coefficient within this energy range. These peaks indicate regions where
+electromagnetic waves can penetrate profoundly and reflect high opti-
+cal conductivity. Therefore, targeting these specific peak energy values
+would be beneficial in optimizing BPN-(Ga,Al)N lattices for high optical
+conductivity.
+In this figure, the imaginary part (Im) of the optical conductivity is
+displayed for BPN-GaN (dashed black line) and BPN-AlN (dashed blue
+line) over a photon energy range of 0.0 to 7.0 eV. Both materials exhibit
+peaks in their respective curves, with a BPN-GaN peak at 5.0 eV and a
+BPN-AlN peak at 4.7 eV. The negative values of the imaginary part of
+optical conductivity indicate an increase in the extinction coefficient,
+which suggests a reduction in the conductivity of the BPN-(Ga,Al)N
+lattices within this energy range. Consequently, the propagation of
+electromagnetic waves within this range is also diminished.
+Fig. 6(d) illustrates the real and imaginary parts of the complex
+dielectric function for BPN-(GaN,AlN) as a function of energy. In the
+energy range of 4.0–5.0 eV, both lattices exhibit peaks in their real
+parts, which can be attributed to the electronic polarizability of these
+materials. On the contrary, the imaginary part shows peaks at 6.0 eV,
+indicating electronic transitions involving the (Ga,Al)-p character of the
+conduction states, as revealed by the PDOS analysis in Fig. 5. Beyond
+the band gap energy, the dielectric function shows a significant increase
+in its imaginary part, highlighting the strong UV absorption capabilities
+of the materials.
+To gain insights into the thermal behavior of BPN-(Ga,Al)N lattices,
+we conducted calculations to determine their thermodynamic proper-
+ties, including entropy 𝑆(𝑇), enthalpy 𝐻(𝑇), and free energy 𝐹(𝑇). We
+investigate the temperature dependence of the entropy term, expressed
+as 𝑆(𝑇) = 𝑈−𝐹, where 𝑈represents the system’s internal energy.
+Moreover, we evaluated the heat capacity 𝐶𝑉(𝑇) of the materials as
+a function of temperature. Fig. 7 displays these calculated thermody-
+namic properties, which were obtained using the GGA/PBE level of
+theory.
+Entropy measures the degree of disorder within a physical system’s
+atomic arrangements. Fig. 7 illustrates the temperature-dependent be-
+havior of 𝑇*𝑆(𝑇) in BPN-(Ga,Al)N lattices. At extremely low tempera-
+tures (below 100 K), the entropy value tends to zero, indicating a highly
+organized lattice structure with restricted atomic mobility. However,
+as the temperature rises, these monolayers exhibit increased thermal
+mobility, leading to a corresponding increase in the constituent parti-
+cles’ internal energy (𝑈), including their kinetic energy. Consequently,
+the spacing between adjacent atoms (bond distances) expands, resulting
+in the crystals’ thermal expansion. This increased particle instability
+correlates with an increase in entropy as the temperature continues to
+rise (as observed in the black curves of Fig. 7(a)).
+Fig. 7(a) also presents the temperature dependence of 𝐻(𝑇) for the
+BPN-(Ga, Al) 𝑁monolayers. At low temperatures (below 100 K), 𝐻(𝑇)
+remains constant, indicating a stable state for both materials. However,
+a quadratic relationship between 𝐻and 𝑇is observed as the tempera-
+ture exceeds this critical value. Lower values of 𝐻(𝑇) indicate a more
+favorable formation process, suggesting the thermodynamic stability of
+the lattice. This feature is consistent with the observation that higher
+temperatures result in higher 𝐻(𝑇), reducing the probability of finding
+an energetically stable structure, as depicted in Fig. 7(a). Notably, both
+materials exhibit 𝐻(𝑇) values below 6 eV for temperatures up to 1000
+K.
+It is essential to note the close relationship between 𝐻(𝑇) and 𝑈
+in crystals. The internal energy (𝑈) of the system is the sum of 𝐻(𝑇)
+and the product of pressure (𝑃) and volume (𝑉). As the temperature
+increases, the internal energy also increases. Consequently, the crystal
+undergoes thermal expansion, increasing volume (𝑉) and pressure and
+volume product (𝑃×𝑉). This trend, in turn, contributes to the elevation
+of 𝐻(𝑇) in BPN-(Ga,Al)N monolayers.
+At low temperatures, lattices absorb thermal energy similarly to har-
+monic oscillators. However, as the energy reaches a certain threshold,
+lattice anharmonicity comes into play, resulting in a linear relationship.
+This behavior is observed in both systems, where the enthalpy increases
+with rising temperature, although the degree of dependence may vary.
+The system’s internal energy (𝑈- 𝑇*𝑆) is considered to understand this
+dependence further. Notably, the rate of increase in 𝑇*𝑆surpasses that
+of the internal energy 𝑈. Fig. 7(a) depicts the temperature dependence
+of 𝐹(𝑇). The lattices maintain their structural integrity at low tempera-
+tures without inducing anharmonicity or energy losses upon receiving
+additional energy. However, at high temperatures, lattice scattering
+becomes prominent, introducing anharmonicity into the system.Materials Today Communications 37 (2023) 107183
+7
+K.A.L. Lima and L.A. Ribeiro Junior
+Fig. 6. (a) absorption coefficient (𝑎𝑙𝑝ℎ𝑎), (b) reflectivity (𝑅), (c) optical conductivity (𝜎), (d) dielectric function for photon energies ranging from 0.0 to 7.0 eV, at HSE06 level, for
+polarized light beam oriented 𝑥(E//X), 𝑦(E//Y), and z (E//Z) directions related to the material’s surface. The solid and dashed lines refer to the BPN-GaN and BPN-AlN systems.
+Fig. 7. Thermodynamic potentials of BPN-(Ga,Al)N lattices. In panel (a), the red curves show the structure formation enthalpy 𝐻(𝑇), the blue curves represent the free energy
+𝐹(𝑇), and the black curves illustrate the temperature times the entropy term (𝑇*𝑆(𝑇)). In panel (b), the heat capacity as a function of the temperature (𝐶𝑉(𝑇)) is shown in black
+and red for BPN-GaN and BPN-AlN.
+Heat capacity plays a vital role in assessing a material’s thermal
+characteristics as it measures the energy absorption when the temper-
+ature increases by one Kelvin. In Fig. 7(b), the temperature-dependent
+behavior of the heat capacity in the BPN-(Ga, Al) 𝑁monolayers is
+depicted, revealing similarities between the two materials. BPN-AlN
+exhibits a slightly higher heat capacity, suggesting a greater production
+of phonons at a given temperature than that of BPN-GaN. As the
+temperature rises, the intrinsic monolayer heat capacity also increases
+due to the greater involvement of phonons. This trend aligns with
+the structural dependency observed in time-dependent enthalpy (see
+Fig. 7(a)).
+In the temperature range of 0 to 300 K, the heat capacity ex-
+periences a steep increase with temperature, as shown in Fig. 7(b).
+However, between 300 and 1000 K, the growth rate slows down.
+The heat capacity reaches a maximum limit at temperatures beyond
+the Debye characteristic temperature (approximately 900 K for both
+materials), where all vibrations contain the same energy. This behavior
+follows the Dulong–Petit law, indicating that the specific heat capacity
+of the high-temperature lattice remains constant and independent of
+the temperature.
+The temperature-dependent behavior of entropy and enthalpy sheds
+light on the stability and phase transitions of BPN-(Ga,Al)N monolay-
+ers. Constant enthalpy at low temperatures indicates a stable state,
+while the quadratic relationship observed as temperatures rise indi-
+cates thermodynamic stability. These findings have implications for
+the design of devices with enhanced thermal stability and controlled
+phase transitions. In this sense, BPN-(Ga,Al)N monolayers could serve
+as building blocks for smart materials capable of responding to specific
+temperature ranges and finding applications in thermal actuators or
+switches. The expansion of crystals’ bond distances and the correlation
+between internal energy and enthalpy contribute to understanding
+thermal expansion mechanisms. These insights are crucial for devel-
+oping nanoscale devices where precise control of thermal expansion is
+essential.Materials Today Communications 37 (2023) 107183
+8
+K.A.L. Lima and L.A. Ribeiro Junior
+Table 3
+Elastic constants C𝑖𝑗(GPa) and maximum values for Young’s modulus (GPa) (𝑌𝑀𝐴𝑋) and maximum (𝜈𝑀𝐴𝑋) and (𝜈𝑀𝐼𝑁) Poisson’s
+ratios.
+Structure
+C11
+C12
+C22
+C44
+𝑌𝑀𝐴𝑋
+𝜈𝑀𝐴𝑋
+𝜈𝑀𝐼𝑁
+BPN-AlN
+172.93
+45.44
+135.97
+0.46
+158.39
+0.91
+0.20
+BPN-GaN
+124.51
+33.47
+104.73
+1.94
+114.50
+0.82
+0.11
+BPN-(Ga,Al)N structures could be integrated into nanoelectrome-
+chanical systems that require controlled thermal expansion for optimal
+performance. The temperature-dependent behavior of the heat capacity
+offers insights into energy absorption as temperature increases. Under-
+standing heat capacity can guide the design of materials for efficient
+energy harvesting and conversion. BPN-(Ga,Al)N monolayers could be
+employed in thermoelectric generators, converting waste heat into us-
+able electrical energy. The similarities and differences in heat capacity
+between BPN-AlN and BPN-GaN suggest distinct phonon behaviors
+that affect thermal conductivity. This insight is valuable for develop-
+ing materials with tailored thermal transport properties. BPN-(Ga,Al)N
+monolayers could be engineered to enhance or minimize thermal con-
+ductivity, making them suitable for applications ranging from efficient
+thermal insulators to high-performance thermal conductors.
+We now analyze the elastic properties of BPN-(Ga,Al)N, which play
+a crucial role in understanding microcracks behavior and materials’
+overall durability. To assess the anisotropy in their mechanical prop-
+erties, we determine the Poisson’s ratio (𝜈(𝜃)) and Young’s modulus
+(𝑌(𝜃)) under pressure in the xy plane, as given by the following
+equations [58,59]:
+𝑌(𝜃) =
+𝐶11𝐶22 −𝐶2
+12
+𝐶11𝛼4 + 𝐶22𝛽4 +
+(
+𝐶11𝐶22−𝐶2
+12
+𝐶44
+−2.0𝐶12
+)
+𝛼2𝛽2
+(12)
+and
+𝜈(𝜃) =
+(𝐶11 + 𝐶22 −
+𝐶11𝐶22−𝐶2
+12
+𝐶44
+)𝛼2𝛽2 −𝐶12(𝛼4 + 𝛽4)
+𝐶11𝛼4 + 𝐶22𝛽4 +
+(
+𝐶11𝐶22−𝐶2
+12
+𝐶44
+−2.0𝐶12
+)
+𝛼2𝛽2
+,
+(13)
+where, 𝛼= cos(𝜃) and 𝛽= sin(𝜃). The elastic constants of BPN-(Ga,Al)N
+are shown in Table 3. Furthermore, Fig. 8 provides a 2D visualization
+of the Poisson’s ratio (Fig. 8(a)) and Young’s modulus (Fig. 8(b)) in the
+xy plane for BPN-(Ga,Al)N monolayers.
+The elastic constants C11, C22, C12, and C44 obtained for the BPN-
+(Ga,Al)N monolayers, presented in Table 3, satisfy the Born–Huang
+criteria of the orthorhombic crystal (𝐶11𝐶22 −𝐶2
+12 > 0 and 𝐶44 >
+0) [60,61], indicating their good mechanical stability. Additionally,
+Young’s modulus and Poisson’s ratio of BPN-(Ga,Al)N structures were
+calculated using Eqs. (12) and (13), respectively (see Fig. 8). We found
+these properties exhibit anisotropic characteristics.
+Regarding Young’s modulus, the calculated maximum values
+(𝑌𝑀𝐴𝑋) are 158.39 GPa and 114.50 GPa for BPN-AlN and BPN-GaN, re-
+spectively. These values are smaller than those of hexagonal AlN (405.1
+GPa [62]) and GaN (287.7 GPa [63]) monolayers. These differences
+can be attributed to the porosity of the BPN-like structures, resulting
+from the presence of eight-atom rings and the rigidity of the bonds in
+the four-atom rings. These factors contribute to the reduced resilience
+of BPN-(Ga,Al)N monolayers to strain compared to their hexagonal
+counterparts [64].
+When a compressive (tensile) strain is acted in one direction, ma-
+terials tend to expand (contract) in the perpendicular direction, cor-
+responding to the positive Poisson’s ratio for ordinary materials. The
+opposite is for materials with a negative Poisson’s ratio (i.e. auxetic
+materials [65]). In Fig. 8, one can note that BPN-AlN and BPN-GaN
+have positive Poisson’s ratio, with maximum values (𝜈𝑀𝐴𝑋) about 0.91
+and 0.82, respectively. For these 𝜈𝑀𝐴𝑋values, Young’s modulus values
+are less than 20 GPa, indicating the incompressibility of these materials
+for biaxial strains, i.e., strains that are not applied solely along the 𝑥or
+𝑦directions (uniaxial strains).
+Most common materials exhibit Poisson’s ratios ranging from 0.2
+to 0.5 [66]. A Poisson’s ratio of 0.5 indicates incompressible materials
+that retain their lateral dimensions when subjected to axial strain. For
+BPN-AlN and BPN-GaN, the minimum values of their Poisson’s ratios
+(𝜈𝑀𝐼𝑁) for uniaxial strains applied along the 𝑥and 𝑦directions are 0.20
+and 0.11, respectively. These values are significantly lower than those
+observed in hexagonal AlN and GaN, which are approximately 0.46
+and 0.44 [67], respectively. The lower Poisson ratios of BPN-AlN and
+BPN-GaN can be attributed to their BPN-like structures, which possess
+a degree of porosity higher than those of their honeycomb-based lattice
+counterparts. This increased porosity allows BPN structures to undergo
+more deformation under tension, resulting in lower Poisson ratios.
+Notably, BPN-AlN and BPN-GaN exhibit distinctive mechanical re-
+sponses due to their unique BPN-like structures. Young’s modulus
+values of 158.39 GPa and 114.50 GPa for BPN-AlN and BPN-GaN are
+lower than those for their hexagonal counterparts [68,69]. This devi-
+ation is attributed to the porosity inherent in the BPN-like structures,
+which results from the presence of eight-atom rings and the rigidity
+of bonds in the four-atom rings. Consequently, these structural fea-
+tures influence the mechanical resilience of BPN-(Ga,Al)N monolayers,
+rendering them less resistant to strain than hexagonal AlN and GaN
+monolayers.
+The anisotropic mechanical behavior, reflected in Young’s modu-
+lus, makes BPN-AlN and BPN-GaN promising candidates for flexible
+electronics and nanomechanical devices. Their relatively lower Young’s
+modulus than hexagonal counterparts suggests improved deformability
+and resilience to bending or mechanical stress. This attribute is cru-
+cial in applications such as wearable electronics, sensors, and flexible
+displays, where mechanical adaptability is a key consideration.
+The Poisson’s ratio of BPN-AlN and BPN-GaN offers an intriguing
+avenue for microelectromechanical systems applications. The positive
+Poisson’s ratio indicates responsiveness to strain variations, while the
+lower values compared to hexagonal materials hint at unique de-
+formability. These attributes can be leveraged to design MEMS de-
+vices with tailored actuation and sensing capabilities. Moreover, the
+distinctive mechanical properties of BPN-(Ga,Al)N monolayers could
+contribute to energy harvesting applications. Their good deformability
+under mechanical stress can be interesting for piezoelectric energy
+conversion.
+Based on the results presented here, the advantages of BPN-(Al,Ga)N
+materials over common GaN and AlN with wurtzite and zincblende
+structures are twofold: I. Novel electronic properties: BPN-based mate-
+rials exhibit a unique atomic arrangement that can lead to innovative
+electronic properties, holding promise for electronic and optoelectronic
+devices; II. Porous structure and surface area: The BPN topology boasts a
+substantial surface area-to-volume ratio and a porous composition, ren-
+dering it suitable for various surface-dependent applications, including
+gas capture, sensing, and adsorption [70–72].
+We must acknowledge two primary disadvantages of BPN-(Al,Ga)N
+materials compared to conventional GaN and AlN structures: I. Synthesis
+and stabilization challenges: The synthesis and stabilization of BPN pose
+challenges due to its intricate structure and potential reactivity; II.
+Ongoing research and exploration: BPN remains a relatively new material,
+with its properties and potential applications still actively researched.
+Turning to the strengths of common AlN and GaN structures, the
+piezoelectric properties of wz-AlN and wz-GaN enable the efficientMaterials Today Communications 37 (2023) 107183
+9
+K.A.L. Lima and L.A. Ribeiro Junior
+Fig. 8. 2D representation of (a) Poisson’s ratio and (b) Young’s modulus in the xy plane for BPN-GaN in red and BPN-AlN in black.
+Fig. 9. Panels (a, b) illustrate the quadratic fitting curve for the BPN-(Ga,Al)N total energy as a function of the applied compressive and tensile strains to derive the in-plane
+stiffness (𝐶2𝐷). Panels (c, d) show the linear fitting diagram for the BPN-(Ga,Al)N total energy as a function of the compressive and tensile strains to derive the deformation
+potential constant (𝐸1).
+conversion between electrical and mechanical energy forms. These
+properties remain unexplored in BPN-based materials. Moreover, wz-
+GaN finds extensive utility in LEDs [73], laser diodes [74], and other
+optoelectronic devices owing to its direct band gap and high electron
+mobility. The zincblende structure facilitates the creation of quantum
+dots, holding promise for applications in quantum computing and
+advanced optical devices. Nonetheless, challenges in crystal growth
+persist, impacting the achievement of high-quality single crystals and
+subsequently affecting device performance. The synthesis and control
+of zincblende structures also present challenges, influencing device
+integration and overall performance.
+Most of the notable properties of these materials derive from their
+band gap configurations. With band gap values of 2.30 eV for BPN-
+AlN and 3.18 eV for BPN-GaN, these materials offer a tunable range
+of band gaps, enabling tailored electronic and optical functionalities.
+The variation in band gaps allows for design flexibility in different de-
+vices and applications. Moreover, BPN-AlN and BPN-GaN exhibit wide
+band gaps, making them suitable for high-power and high-temperature
+environments.
+In contrast with conventional AlN structures, the comparatively
+lower band gap of BPN-AlN could make it suitable for developing high-
+efficiency light-emitting diodes, particularly in the UV–visible spectral
+range. The wider BPN-GaN band gap lends itself to optoelectronic
+devices operating at higher photon energies. BPN-AlN and BPN-GaN,
+with their wide band gap and potential for efficient electron mobility,
+hold promise for high-frequency switching applications, such as RF
+power amplifiers and high-speed transistors.
+Leveraging their unique electronic properties, BPN-AlN and BPN-
+GaN can find utility in sensor technologies, including gas sensing,
+biosensing, and radiation detection, where their porous lattice structureMaterials Today Communications 37 (2023) 107183
+10
+K.A.L. Lima and L.A. Ribeiro Junior
+Table 4
+Calculated effective mass 𝑚∗
+𝑖, average effective mass 𝑚𝑑, in-plane stiffness 𝐶2𝐷, DP constant 𝐸1, and charge carrier mobility 𝜇for BPN-(Ga.Al)N
+monolayer. Here, 𝑚0 is the effective mass of a free electron.
+System
+Carrier
+𝑚∗
+𝑖(𝑚0)
+𝑚𝑑(𝑚0)
+𝐶2𝐷(eV/Å)
+𝐸1 (eV)
+𝜇(103 cm2 V−1 s−1)
+BPN-GaN
+x-direction
+e
+0.45
+0.45
+9.21
+4.78
+28.43
+h
+0.59
+0.76
+9.21
+−5.95
+10.70
+BPN-GaN
+y-direction
+e
+0.46
+0.45
+7.40
+4.46
+25.67
+h
+0.98
+0.76
+7.40
+5.96
+5.19
+BPN-AlN
+x-direction
+e
+0.23
+0.58
+9.67
+4.52
+57.54
+h
+1.80
+2.44
+5.57
+−5.80
+1.25
+BPN-AlN
+y-direction
+e
+1.45
+0.58
+9.67
+4.33
+9.94
+h
+3.31
+2.44
+5.57
+5.69
+0.71
+and tailored band gaps could enhance sensitivity and selectivity. The
+tunable band gaps of these materials suggest applications in photo-
+voltaic devices, where they could facilitate efficient light absorption
+and electron–hole separation.
+To understand the electronic conductance in monolayer BPN-
+(Ga,Al)N, we have extended our analysis to calculate the mobility of
+the charge carrier using the deformation potential (DP) theory [75].
+This approach is based on the effective mass approximation and is
+commonly employed for evaluating carrier mobility in 2D layered
+semiconductors. Carrier mobility (𝜇) is defined as
+𝜇=
+𝑒ℏ𝐶2𝐷
+𝑘𝐵𝑇𝑚∗
+𝑖𝑚𝑑
+(𝐸1
+)2 ,
+(14)
+where 𝑚𝑑=
+√
+𝑚∗
+𝑥𝑚∗
+𝑦represents the average effective mass. 𝐶2𝐷is the
+in-plane stiffness 𝐶2𝐷= (𝜕2𝐸∕𝜕𝛿2) ∕𝑆0 in which 𝐸, 𝛿, and 𝑆0 are the
+total energy, the applied strain and the area of the investigated system,
+respectively. 𝑚∗
+𝑖denotes the effective mass of electrons (𝑒) and holes
+(ℎ) according to Eq. (11). 𝐸1 = 𝑑𝐸𝑒𝑑𝑔𝑒∕𝑑𝛿, where 𝛿is the applied
+strain by a step of 0.5% and 𝐸𝑒𝑑𝑔𝑒is the energy of the band edges
+(VBM for the holes and CBM for electrons). VBM and CBM are the
+maximum valence and minimum conduction bands at G and X points.
+𝑘𝐵, 𝑇, 𝑒, and ℏ, correspond to Boltzmann’s constant, temperature, the
+elementary charge of an electron, and Planck’s constant.
+We summarize the values computed for 𝑚∗
+𝑖, 𝑚𝑑, 𝐶2𝐷, 𝐸1, and 𝜇at
+300 K in Table 4. By subjecting the system to both compressive and ten-
+sile strains, we calculate 𝐸1 by linear fitting of the CBM and VBM values
+for electrons and holes, respectively (see Fig. 9(a)). Subsequently, 𝐶2𝐷
+is determined by applying a quadratic fitting approach to total energy
+data as a function of compressive and tensile strains, as depicted in
+Fig. 9(b).
+The electron mobility surpasses the hole mobility, as indicated in
+Table 4. Furthermore, the carrier mobility in the BPN-(Ga,Al)N mono-
+layer exhibits anisotropic behavior, with notable distinctions between
+the 𝑥and 𝑦directions. Specifically, the carrier’s mobility along the 𝑥
+direction is considerably higher than in the 𝑦direction. This discrep-
+ancy is primarily attributed to the significantly smaller effective mass
+in the 𝑥direction than in the 𝑦direction.
+For example, in the h-AlN lattices, the electron mobility is 0.32
+and 0.295 (in units of 103 cm2 V−1 s−1) in the 𝑥and 𝑦directions,
+respectively [76]. On the contrary, the hole mobility measures 1.77 and
+1.8 (in units of 103 cm2 V−1 s−1) in these directions [76]. Notably, both
+electrons and holes in BPN-AlN exhibit higher mobility than h-AlN.
+Similarly, in the h-GaN monolayers, the electron mobility is 0.29 and
+0.30 (in units of 103 cm2 V−1 s−1) in the 𝑥and 𝑦directions, respectively,
+while the hole mobility is 1.74 and 2.39 (in units of 103 cm2 V−1 s−1)
+in the respective directions [76]. In BPN-GaN, both electrons and holes
+exhibit enhanced mobility compared to that of h-GaN. The superior
+charge carrier mobility observed in the BPN-(Ga,Al)N systems com-
+pared with that observed in the h-(Ga,Al)N systems can be attributed
+to their distinct topologies.
+4. Conclusions
+In summary, we performed DFT calculations to study the mechani-
+cal, electronic, thermodynamic, and optical properties of two group-III
+counterparts of the recently synthesized biphenylene network (BPN):
+gallium nitride (BPN-GaN) and aluminum nitride (BPN-AlN). We cal-
+culated formation energies and phonon dispersion relations along the
+high-symmetry directions to assess their dynamical stabilities. More-
+over, AIMD simulations were performed to describe their dynamical
+stability at 1000 K.
+The phonon dispersion profile of the BPN-GaN sheet revealed the
+presence of imaginary frequencies. On the contrary, the phonon dis-
+persion diagram of the BPN-AlN monolayer exclusively consists of real
+frequencies, indicating its dynamic stability. The final AIMD snapshot
+of BPN-(Al,Ga)N revealed lattice distortions. However, no bond re-
+constructions occur regarding the initially optimized lattices. These
+observations suggest that both structures exhibit good thermal stability.
+In the case of BPN-GaN, the band gap is indirect and measures
+2.31 eV and 1.86 eV at the HSE06 and GGA/PBE levels, respectively.
+For BPN-AlN, the indirect bandgap values are 2.32 eV and 3.18 eV,
+according to the GGA/PBE and HSE06 calculations, respectively. The
+band structures of both BPN-(Ga,Al)N materials exhibit wide semi-
+conducting band gaps, which find applications in optoelectronics and
+high-power devices. On the other hand, the HSE06 calculation suggests
+that BPN-AlN behaves as an insulator. The optical properties analysis
+demonstrated strong optical activity in the ultraviolet region for both
+BPN-(Ga,Al)N materials, making them potential candidates for UV
+device collectors.
+CRediT authorship contribution statement
+K.A. Lopes Lima: Data curation, Formal analysis, Methodology,
+and Writing – original draft. L.A. Ribeiro Junior: Conceptualization,
+Funding acquisition, Writing – Reviewing.
+Declaration of competing interest
+The authors declare the following financial interests/personal rela-
+tionships which may be considered as potential competing interests:
+Luiz A. Ribeiro Junior reports financial support was provided by Foun-
+dation for Research Support of the Federal District. Luiz A. Ribeiro
+Junior reports financial support was provided by National Council for
+Scientific and Technological Development.
+Data availability
+No data was used for the research described in the articleMaterials Today Communications 37 (2023) 107183
+11
+K.A.L. Lima and L.A. Ribeiro Junior
+Acknowledgments
+This work was financed by the Coordenação de Aperfeiçoamento
+de Pessoal de Nível Superior (CAPES) - Finance Code 001 and grant
+88887.691997/2022-00, Conselho Nacional de Desenvolvimento Cien-
+tifico e Tecnológico (CNPq), and FAP-DF. L.A.R.J acknowledges the
+financial support from FAP-DF grants 00193-00000853/2021-28, 0193-
+00000857/2021-14, and 00193-00000811/2021-97, FAPDF-PRONEM
+grant 00193.00001247/2021-20, and CNPq grants 302236/2018-0 and
+350176/2022-1. L.A.R.J. acknowledges Núcleo de Computação de Alto
+Desempenho (NACAD) and for providing the computational facilities.
+This work used resources of the Centro Nacional de Processamento de
+Alto Desempenho em São Paulo (CENAPAD-SP). All authors reviewed
+the manuscript.
+Data availability
+The workflow presented here was developed using the Biovia Ma-
+terials Software [77]. Data will be made available on request.
+References
+[1] Minoru Osada, Takayoshi Sasaki, Two-dimensional dielectric nanosheets: novel
+nanoelectronics from nanocrystal building blocks, Adv. Mater. 24 (2) (2012)
+210–228.
+[2] Wei Liu, Min-Sang Song, Biao Kong, Yi Cui, Flexible and stretchable energy
+storage: recent advances and future perspectives, Adv. Mater. 29 (1) (2017)
+1603436.
+[3] Austin Lee Hickman, Reet Chaudhuri, Samuel James Bader, Kazuki Nomoto,
+Lei Li, James CM Hwang, Huili Grace Xing, Debdeep Jena, Next generation
+electronics on the ultrawide-bandgap aluminum nitride platform, Semicond. Sci.
+Technol. 36 (4) (2021) 044001.
+[4] Yunxu Chen, Keli Liu, Jinxin Liu, Tianrui Lv, Bin Wei, Tao Zhang, Mengqi Zeng,
+Zhongchang Wang, Lei Fu, Growth of 2D GaN single crystals on liquid metals,
+J. Am. Chem. Soc. 140 (48) (2018) 16392–16395.
+[5] Andre Konstantin Geim, Graphene: status and prospects, Science 324 (5934)
+(2009) 1530–1534.
+[6] Morteza Ghorbanzadeh Ahangari, A. Fereidoon, Amin Hamed Mashhadzadeh,
+Interlayer
+interaction
+and
+mechanical
+properties
+in
+multi-layer
+graphene,
+Boron-Nitride, Aluminum-Nitride and Gallium-Nitride graphene-like structure: A
+quantum-mechanical DFT study, Superlattices Microstruct. 112 (2017) 30–45.
+[7] Zhongxin Wang, Guodong Wang, Xintong Liu, Shouzhi Wang, Tailin Wang,
+Shiying Zhang, Jiaoxian Yu, Gang Zhao, Lei Zhang, Two-dimensional wide band-
+gap nitride semiconductor GaN and AlN materials: properties, fabrication and
+applications, J. Mater. Chem. C 9 (48) (2021) 17201–17232.
+[8] Hong Li, Yuhang Liu, Shuai Sun, Fengbin Liu, Jing Lu, Scaling limits of
+monolayer AlN and GaN MOSFETs, Appl. Surf. Sci. (2023) 157613.
+[9] Weihuang Yang, Jinchai Li, Yong Zhang, Po-Kai Huang, Tien-Chang Lu, Hao-
+Chung Kuo, Shuping Li, Xu Yang, Hangyang Chen, Dayi Liu, et al., High density
+GaN/AlN quantum dots for deep UV LED with high quantum efficiency and
+temperature stability, Sci. Rep. 4 (1) (2014) 1–5.
+[10] Si Young Lee, Dinh Loc Duong, Quoc An Vu, Youngjo Jin, Philip Kim, Young Hee
+Lee, Chemically modulated band gap in bilayer graphene memory transistors
+with high on/off ratio, ACS Nano 9 (9) (2015) 9034–9042.
+[11] Nzar Rauf Abdullah, Botan Jawdat Abdullah, Vidar Gudmundsson, Electronic
+and optical properties of metallic nitride: A comparative study between the MN
+(M=Al, Ga, In, Tl) monolayers, Solid State Commun. 346 (2022) 114705.
+[12] L.L. Smith, R.F. Davis, M.J. Kim, R.W. Carpenter, Y. Huang, Microstructure,
+electrical properties, and thermal stability of Al ohmic contacts to n-GaN, J.
+Mater. Res. 11 (9) (1996) 2257–2262.
+[13] E. Gürbüz, S. Cahangirov, Engin Durgun, S. Ciraci, Single layers and multilayers
+of GaN and AlN in square-octagon structure: Stability, electronic properties, and
+functionalization, Phys. Rev. B 96 (20) (2017) 205427.
+[14] Laure Bouguen, Leszek Konczewicz, Sylvie Contreras, Benoit Jouault, Jean
+Camassel, Y. Cordier, High temperature behaviour of AlGaN/AlN/GaN hall-FET
+sensors, Mater. Sci. Eng. B 165 (1–2) (2009) 1–4.
+[15] Qingqing Wu, Yanan Guo, Suresh Sundaram, Jianchang Yan, Liang Zhang,
+Tongbo Wei, Xuecheng Wei, Junxi Wang, Abdallah Ougazzaden, Jinmin Li,
+Exfoliation of AlN film using two-dimensional multilayer hexagonal BN for
+deep-ultraviolet light-emitting diodes, Appl. Phys. Express 12 (1) (2018) 015505.
+[16] Jungel Ryu, Jongmyeong Kim, Yongjo Park, Euijoon Yoon, Ho Won Jang, Growth
+of GaN hexagonal arrays on partially crystallized sapphire nanomembranes for
+micro-light-emitting diodes, Cryst. Growth Des. (2022).
+[17] Dandan Zhu, Colin J. Humphreys, Solid-state lighting based on light emitting
+diode technology, Opt. Our Time (2016) 87–118.
+[18] Hiroaki Ohta, Steven P. DenBaars, Shuji Nakamura, Future of group-III nitride
+semiconductor green laser diodes, J. Opt. Soc. Amer. B 27 (11) (2010) B45–B49.
+[19] S. Noor Mohammad, Hadis Morkoç, Progress and prospects of group-III nitride
+semiconductors, Prog. Quantum Electron. 20 (5–6) (1996) 361–525.
+[20] Alex Dobrinsky, Grigory Simin, Remis Gaska, Michael Shur, III-nitride materials
+and devices for power electronics, ECS Trans. 58 (4) (2013) 129.
+[21] J. Schalwig, G. Müller, O. Ambacher, M. Stutzmann, Group-III-nitride based gas
+sensing devices, Phys. Status Solidi (a) 185 (1) (2001) 39–45.
+[22] Kirstin Alberi, Marco Buongiorno Nardelli, Andriy Zakutayev, Lubos Mitas,
+Stefano Curtarolo, Anubhav Jain, Marco Fornari, Nicola Marzari, Ichiro Takeuchi,
+Martin L Green, et al., The 2019 materials by design roadmap, J. Phys. D: Appl.
+Phys. 52 (1) (2018) 013001.
+[23] Fumiyasu Oba, Yu Kumagai, Design and exploration of semiconductors from
+first principles: A review of recent advances, Appl. Phys. Express 11 (6) (2018)
+060101.
+[24] J.T. Paul, A.K. Singh, Zheng Dong, Houlong Zhuang, B.C. Revard, B. Rijal, M.
+Ashton, A. Linscheid, M. Blonsky, D. Gluhovic, et al., Computational methods
+for 2D materials: discovery, property characterization, and application design, J.
+Phys.: Condens. Matter 29 (47) (2017) 473001.
+[25] Li Lin, Hailin Peng, Zhongfan Liu, Synthesis challenges for graphene industry,
+Nature Mater. 18 (6) (2019) 520–524.
+[26] Chee-Tat Toh, Hongji Zhang, Junhao Lin, Alexander S. Mayorov, Yun-Peng
+Wang, Carlo M. Orofeo, Darim Badur Ferry, Henrik Andersen, Nurbek Kakenov,
+Zenglong Guo, et al., Synthesis and properties of free-standing monolayer
+amorphous carbon, Nature 577 (7789) (2020) 199–203.
+[27] Qitang Fan, Linghao Yan, Matthias W Tripp, Ondřej Krejčí, Stavrina Dimos-
+thenous, Stefan R. Kachel, Mengyi Chen, Adam S. Foster, Ulrich Koert, Peter
+Liljeroth, et al., Biphenylene network: A nonbenzenoid carbon allotrope, Science
+372 (6544) (2021) 852–856.
+[28] Xue-Dan
+Ma,
+Zhen-Wei
+Tian,
+Ran
+Jia,
+Fu-Quan
+Bai,
+BN
+counterpart
+of
+biphenylene network: A theoretical investigation, Appl. Surf. Sci. 598 (2022)
+153674.
+[29] Masoud Shahrokhi, Bohayra Mortazavi, Golibjon R. Berdiyorov, New two-
+dimensional boron nitride allotropes with attractive electronic and optical
+properties, Solid State Commun. 253 (2017) 51–56.
+[30] Pavel Rublev, Nikolay V. Tkachenko, Alexander I. Boldyrev, Overlapping electron
+density and the global delocalization of 𝜋-aromatic fragments as the reason
+of conductivity of the biphenylene network, J. Comput. Chem. 44 (3) (2023)
+168–178.
+[31] Yang Han, Tingxiang Hu, Xiaochuang Liu, Shijie Jia, Hangbing Liu, Junyu Hu,
+Guolei Zhang, Longbin Yang, Guo Hong, Yi-Tung Chen, DFT characterization
+of a new possible two-dimensional BN allotrope with a biphenylene network
+structure, Phys. Chem. Chem. Phys. 25 (2023) 11613–11619.
+[32] Obaidur Rahaman, Bohayra Mortazavi, Arezoo Dianat, Gianaurelio Cuniberti,
+Timon Rabczuk, Metamorphosis in carbon network: From penta-graphene to
+biphenylene under uniaxial tension, FlatChem 1 (2017) 65–73.
+[33] V.V. Belavin, L.G. Bulusheva, A.V. Okotrub, D. Tomanek, Stability, electronic
+structure and reactivity of the polymerized fullerite forms, J. Phys. Chem. Solids
+61 (12) (2000) 1901–1911.
+[34] Stewart J. Clark, Matthew D. Segall, Chris J. Pickard, Phil J. Hasnip, Matt I.J.
+Probert, Keith Refson, Mike C. Payne, First principles methods using CASTEP, Z.
+Kristallographie-Cryst. Mater. 220 (5–6) (2005) 567–570.
+[35] John
+P.
+Perdew,
+Kieron
+Burke,
+Matthias
+Ernzerhof,
+Generalized
+gradient
+approximation made simple, Phys. Rev. Lett. 77 (18) (1996) 3865.
+[36] Jochen Heyd, Gustavo E. Scuseria, Matthias Ernzerhof, Hybrid functionals based
+on a screened Coulomb potential, J. Chem. Phys. 118 (18) (2003) 8207–8215.
+[37] John D. Head, Michael C. Zerner, A Broyden—Fletcher—Goldfarb—Shanno
+optimization procedure for molecular geometries, Chem. Phys. Lett. 122 (3)
+(1985) 264–270.
+[38] Bernd G. Pfrommer, Michel Côté, Steven G. Louie, Marvin L. Cohen, Relaxation
+of crystals with the Quasi-Newton method, J. Comput. Phys. 131 (1) (1997)
+233–240.
+[39] D.M. Ceperley, B.J. Alder, Ground state of the electron gas by a stochastic
+method, Phys. Rev. Lett. 45 (1980) 566–569.
+[40] J.P.
+Perdew,
+Alex
+Zunger,
+Self-interaction
+correction
+to
+density-functional
+approximations for many-electron systems, Phys. Rev. B 23 (1981) 5048–5079.
+[41] L. Zuo, M. Humbert, C. Esling, Elastic properties of polycrystals in the
+Voigt-Reuss-Hill approximation, J. Appl. Crystallogr. 25 (6) (1992) 751–755.
+[42] D.H. Chung, W.R. Buessem, The Voigt-Reuss-Hill approximation and elastic
+moduli of polycrystalline MgO, CaF2, 𝛽-ZnS, ZnSe, and CdTe, J. Appl. Phys.
+38 (6) (2004) 2535–2540.
+[43] Bernard A. Boukamp, A linear kronig-kramers transform test for immittance data
+validation, J. Electrochem. Soc. 142 (6) (1995) 1885.
+[44] Stefano Baroni, Stefano de Gironcoli, Andrea Dal Corso, Paolo Giannozzi,
+Phonons and related crystal properties from density-functional perturbation
+theory, Rev. Modern Phys. 73 (2001) 515–562.
+[45] Y. Luo, C. Ren, Y. Xu, J. Yu, S. Wang, M. Sun, A first-principles investigation on
+the structural, mechanical, electronic, and catalytic properties of biphenylene,
+Sci. Rep. 11 (1) (2021) 19008.
+[46] Denis L. Nika, Alexander A. Balandin, Two-dimensional phonon transport in
+graphene, J. Phys.: Condens. Matter 24 (23) (2012) 233203.Materials Today Communications 37 (2023) 107183
+12
+K.A.L. Lima and L.A. Ribeiro Junior
+[47] V.N. Popov, P. Lambin, Theoretical polarization dependence of the two-phonon
+double-resonant Raman spectra of graphene, Eur. Phys. J. B 85 (2012) 1–8.
+[48] Juan Du, Jun-jie Shi, Wen-hui Guo, Shi-ming Liu, Yong He, Chong Tian, Yao-
+hui Zhu, Hong-xia Zhong, Cerium-based lead-free chalcogenide perovskites for
+photovoltaics, Phys. Rev. B 104 (23) (2021) 235206.
+[49] Fabien Tran, Jan Doumont, Leila Kalantari, Peter Blaha, Tomáš Rauch, Pedro
+Borlido, Silvana Botti, Miguel A.L. Marques, Abhilash Patra, Subrata Jana,
+Prasanjit Samal, Bandgap of two-dimensional materials: Thorough assessment
+of modern exchange–correlation functionals, J. Chem. Phys. 155 (10) (2021)
+104103.
+[50] H. Morkoç, S. Strite, G.B. Gao, M.E. Lin, B. Sverdlov, M. Burns, Large-band-gap
+SiC, III-V nitride, and II-VI ZnSe-based semiconductor device technologies, J.
+Appl. Phys. 76 (3) (1994) 1363–1398.
+[51] Clas Persson, A. Ferreira da Silva, Rajeev Ahuja, Börje Johansson, Effective
+electronic masses in wurtzite and zinc-blende GaN and AlN, J. Cryst. Growth
+231 (3) (2001) 397–406.
+[52] Ma Guadalupe Moreno Armenta, Armando Reyes-Serrato, Miguel Avalos Borja,
+Ab initio determination of the electronic structure of beryllium-, aluminum-, and
+magnesium-nitrides: A comparative study, Phys. Rev. B 62 (8) (2000) 4890.
+[53] Zheren Zhang, Changchun Chai, Wei Zhang, Yanxing Song, Linchun Kong,
+Yintang Yang, First-principles study on III-nitride polymorphs: AlN/GaN/InN in
+the Pmn 21 phase, Materials 13 (14) (2020) 3212.
+[54] Rafael B. Araujo, J.S. De Almeida, A. Ferreira Da Silva, Electronic properties of
+III-nitride semiconductors: A first-principles investigation using the Tran-Blaha
+modified Becke-Johnson potential, J. Appl. Phys. 114 (18) (2013).
+[55] Augusto Tazzoli, Matteo Rinaldi, Gianluca Piazza, Ovenized high frequency
+oscillators based on aluminum nitride contour-mode MEMS resonators, in: 2011
+International Electron Devices Meeting, IEEE, 2011, pp. 20–22.
+[56] Yoshitaka Taniyasu, Makoto Kasu, Toshiki Makimoto, An aluminium nitride light-
+emitting diode with a wavelength of 210 nanometres, Nature 441 (7091) (2006)
+325–328.
+[57] Gianluca Piazza, Valeriy Felmetsger, Paul Muralt, Roy H. Olsson III, Richard
+Ruby, Piezoelectric aluminum nitride thin films for microelectromechanical
+systems, MRS Bull. 37 (11) (2012) 1051–1061.
+[58] Bing Wang, Qisheng Wu, Yehui Zhang, Liang Ma, Jinlan Wang, Auxetic B4N
+monolayer: A promising 2D material with in-plane negative Poisson’s ratio
+and large anisotropic mechanics, ACS Appl. Mater. Interfaces 11 (36) (2019)
+33231–33237.
+[59] Yu Zhao, Xiaoyin Li, Junyi Liu, Cunzhi Zhang, Qian Wang, A new anisotropic
+Dirac cone material: A B2S honeycomb monolayer, J. Phys. Chem. Lett. 9 (7)
+(2018) 1815–1820.
+[60] Félix Mouhat, François-Xavier Coudert, Necessary and sufficient elastic stability
+conditions in various crystal systems, Phys. Rev. B 90 (2014) 224104.
+[61] Yiran Ying, Ke Fan, Sicong Zhu, Xin Luo, Haitao Huang, Theoretical investigation
+of monolayer RhTeCl semiconductors as photocatalysts for water splitting, J.
+Phys. Chem. C 124 (1) (2020) 639–646.
+[62] Lingling Zhao, Shang Xu, Mingchao Wang, Shangchao Lin, Probing the thermo-
+dynamic stability and phonon transport in two-dimensional hexagonal aluminum
+nitride monolayer, J. Phys. Chem. C 120 (48) (2016) 27675–27681.
+[63] Geoffrey Tse, Evaluation of the structural, electronic, optical, elastic, mechanical,
+and vibrational properties of graphene-like g-gan using density functional theory,
+AIP Adv. 11 (11) (2021).
+[64] M.L. Pereira, W.F. da Cunha, R.T. de Sousa, G.D. Amvame Nze, D.S. Galvão, L.A.
+Ribeiro, On the mechanical properties and fracture patterns of the nonbenzenoid
+carbon allotrope (biphenylene network): a reactive molecular dynamics study,
+Nanoscale 14 (2022) 3200–3211.
+[65] A.V. Mazaev, O. Ajeneza, M.V. Shitikova, Auxetics materials: classification,
+mechanical properties and applications, IOP Conf. Ser. Mater. Sci. Eng. 747 (1)
+(2020) 012008.
+[66] Graeme N. Greaves, A. Lindsay Greer, Roderic S. Lakes, Tanguy Rouxel, Poisson’s
+ratio and modern materials, Nature Mater. 10 (2011) 823–837.
+[67] ZiJiang Luo, YunFan Yang, XiuZhang Yang, Bing Lv, XueFei Liu, The mechanical
+properties and strain effect on the electronic properties of III-nitride monolayers:
+ab-initio study, Mater. Res. Express 6 (11) (2019) 115915.
+[68] Zheren Zhang, Changchun Chai, Yanxing Song, Linchun Kong, Yintang Yang, A
+DFT study on physical properties of III–V compounds (AlN, GaN, AlP, and GaP)
+in the P3121 phase, Mater. Res. Express 8 (2) (2021) 025908.
+[69] Minh-Quy Le, Atomistic study on the tensile properties of hexagonal AlN, BN,
+GaN, InN and SiC sheets, J. Comput. Theor. Nanosci. 11 (6) (2014) 1458–1464.
+[70] Hsin-Tsung Chen, Dinesh Kumar Dhanthala Chittibabu, A new carbon allotrope:
+Biphenylene as promising anode materials for Li-ion and LiO2 batteries, Solid
+State Ion. 395 (2023) 116214.
+[71] Hiba Khaled Al-Jayyousi, Muhammad Sajjad, Kin Liao, Nirpendra Singh, Two-
+dimensional biphenylene: A promising anchoring material for lithium-sulfur
+batteries, Sci. Rep. 12 (1) (2022) 4653.
+[72] Xinhui Zhang, Feng Chen, Baonan Jia, Ziyi Guo, Jinbo Hao, Shuli Gao, Ge Wu,
+Le Gao, Pengfei Lu, A novel lithium decorated N-doped 4, 6, 8-biphenylene
+for reversible hydrogen storage: Insights from density functional theory, Int. J.
+Hydrogen Energy 48 (45) (2023) 17216–17229.
+[73] Supratik Guha, Nestor A. Bojarczuk, Ultraviolet and violet GaN light emitting
+diodes on silicon, Appl. Phys. Lett. 72 (4) (1998) 415–417.
+[74] Yasushi Fujimoto, Jun Nakanishi, Tsuyoshi Yamada, Osamu Ishii, Masaaki
+Yamazaki, Visible fiber lasers excited by GaN laser diodes, Prog. Quantum
+Electron. 37 (4) (2013) 185–214.
+[75] J. Bardeen, W.J.P.R. Shockley, Deformation potentials and mobilities in non-polar
+crystals, Phys. Rev. 80 (1) (1950) 72.
+[76] Kai Ren, Sake Wang, Yi Luo, Jyh-Pin Chou, Jin Yu, Wencheng Tang, Minglei
+Sun, High-efficiency photocatalyst for water splitting: a Janus MoSSe/XN (X=
+Ga, Al) van der Waals heterostructure, J. Phys. D: Appl. Phys. 53 (18) (2020)
+185504.
+[77] Dassault Systèmes, BIOVIA materials studio, San Diego (2017).

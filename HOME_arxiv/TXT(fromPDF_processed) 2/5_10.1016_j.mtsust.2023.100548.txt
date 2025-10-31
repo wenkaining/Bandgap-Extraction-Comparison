@@ -1,0 +1,332 @@
+On performance of thin-film meso-structured perovskite solar cell through experimental analysis and device simulation F. Bonn´ın-Ripoll1, Ya. B. Martynov2, R. G. Nazmitdinov 3,4, K. Tabah5, C. Pereyra5, M. Lira-Cant´u5, G. Cardona6, and R. Pujol-Nadal1 1Departament d’Enginyeria Industrial i Construcci´o, Universitat de les Illes Balears, E-07122 Palma, Spain.
+2State Scientific-Production Enterprise “Istok” Fryazino, Russia.
+3Bogoliubov Laboratory of Theoretical Physics, Joint Institute for Nuclear Research, 141980 Dubna, Russia.
+4Dubna State University, 141982 Dubna, Moscow region, Russia.
+5Catalan Institute of Nanoscience and Nanotechnology (ICN2), CSIC and the Barcelona Institute of Science and Technology (BIST), Building ICN2, Campus UAB, E-08193 Bellaterra, Barcelona, Spain. and 6Departament de Matem`atiques, Universitat de les Illes Balears, E-07122 Palma, Spain.
+In the last few years there is an unprecedented progress in the increase of the power conversion efficiency of perovskite solar cells.
+Evidently, further advances of the efficiency of these devices will depend on the constraints imposed by the optical and electronic properties of their constituents.
+Quite apparently that during the manufacturing process of a solar cell, there is an inevitable variation in the thicknesses of various functional layers, which affects the optoelectronic characteristics of the final sample.
+In this work a possible strategy of the analysis of the solar cell performance is suggested, based on statistically averaging procedure of experimental data.
+We present a case study, in which the optoelectronic properties of the meso-structured perovskite solar cell (with a mesoporous TiO2 layer) are analysed within the method providing a deeper understanding of the device operation.
+This method enables an assessment of the overall quality of the device, pointing pathways towards the maximum efficiency design of a perovskite solar cell by material properties tuning.
+Keywords: mesoporous, optoelectronic measurements and analysis, ray tracing, transfer matrix method, transport equations, power conversion efficiency I. INTRODUCTION Nowadays organic-inorganic halide perovskites, as so- lar cell light-absorbers, attract substantial attention.
+So- lar cells with such photoactive layers are considered as one of the most promising competitors to silicon-based photovoltaics, reaching efficiencies of 25.8% only in two decades of development [1].
+Low-cost production of these materials with high power conversion efficiency (PCE) pledge fast development of flexible solar cells [2].
+More- over, there is challenging future in improvement of their performance in order to reach their maximum efficiency (cf.[3]) by means: engineering of perovskite composition [4] or/and perovskite solar cell (PSC) constituents [5–9]; study and improvement of perovskite stability [10]; alter- ing characteristics of optoelectronic behavior of PSC con- stituents [11] by incorporation, for example, light trap- ping mechanisms [12]; to name just a few.
+Evidently, for further efficiency improvements of PSCs, the analysis of optical and electric properties of different layers in the device architecture is pivotal for optimizing light-harvesting in the absorber, whilst allowing coherent effects and parasitic absorption to be accounted in the stack design.
+In addition, this analysis should be based on statistically reliable estimates of noticeable dispersion of various sample parameters during the manufacturing process.
+Partially, some attempts in this direction have been done in [13–15], where various type of simulations of optoelectronic properties of PSCs have been conducted recently.
+It is worth noting that for the analysis of opti- cal properties various research groups (see, for example, [16–20]) use the software SCAPS-1D [21] as a main tool.
+This code does not, however, consider interference, scat- tering, or intermediate reflectors (see details in [21]), thus preventing the comprehensive analysis of the antireflec- tion layer’s interference and the influence of thin films thicknesses.
+Also, a broad range of electron (hole) transport ma- terials and back metal contacts have been considered to examine the performance of lead-free PSCs in [22].
+It also became common to introduce a mesoporous TiO2 layer between TiO2 electron collecting contact and per- ovskite (the main absorber layer).
+This process decreases defect density at the absorber boundary, while may in- troduce additional resistance.
+Nevertheless, the effect of a mesoporous TiO2 layer and its influence on the PSC performance remains in infancy.
+Here, we employ a ray tracing-based optoelectronic computational model [23] to reproduce the behaviour of a perovskite solar cell with a mesoporous TiO2 layer and characterize experimen- arXiv:2311.09099v1 [cond-mat.mtrl-sci]  15 Nov 20232 tal PSC samples.
+To this aim we further developed this model, incorporating a few novel elements to treat prop- erly thin-film meso-structured perovskite solar cells.
+The experimental device configuration (see Fig.1) is se- lected as the well established experimentally perovskite solar cell [24].
+The measurements of optical transmit- tance have been performed in each stage of the man- ufacturing process.
+In this n-i-p junction device struc- ture, apart the complex glass substrate, a thin and com- pact TiO2 (c-TiO2) is manufactured as an electron se- lective contact to facilitate the collection of photogener- ated electrons from perovskite absorber.
+Next, to im- prove the efficiency of carrier collection a mesoporous TiO2 (mp-TiO2) is introduced to provide a suitable per- ovskite deposition [25].
+In addition, the partial infiltra- tion of halide perovskite into the mp-TiO2 layer facili- tates higher quantum yield for photo-excited charge sep- aration.
+Spiro-OMeTAD has been utilized in establishing a good p-contact between the gold (Au) counter electrode with a perovskite absorber in our stack design.
+As men- tioned above, we will elaborate the model [23] and dis- cuss in detail the effective medium approach for analysis of the optical behaviour of mp-TiO2.
+Our approach is experimentally verified with measurements of the device reflection and transmission spectra.
+These characteris- tics have been measured by means of spectrophotometry techniques applied at each manufacturing stage.
+Finally, we make use of our approach to evaluate the dependence of the PSC performance on the properties of the meso- porous structure of the considered solar cell architecture, based on statistically averaged physical and geometrical parameters of the device. II.
+METHODOLOGY A. Device Characteristics Since electronic and optical measurements cannot be performed on the same PSC sample, we use two batches of 24 solar cells, manufactured at the same conditions.
+One batch is used for optical measurements with inter- ruptions on each phase of the process, while the second one is used for J-V characteristic measurements without any interruptions on each phase of the process.
+Considering the deposition of a material as a new phase of the process, we have performed the measurements of optical transmittance of each PSC layer in each stage of the manufacturing process (see details in Appendix A).
+Stage 1 of the manufacturing process consists of the glass substrate, assuming the material as a multilayer system itself, formed by sodalime glass, SnO2, SiO2 and fluorine doped tin oxide (FTO).
+In the stage 2 a layer of c-TiO2 of the order of tens of nanometers is added by the spray pyrolysis technique.
+Next, a mp-TiO2 layer is deposited in stage 3, followed by the subsequent deposition of a perovskite (stage 4) and Spiro-OMeTAD (stage 5), the latter three using the spin coating technique.
+Next, using a solar simulator, the J-V characteristics of the PSCs in operation a second batch of 24 solar cells has been measured.
+The result of this measurements provides the average value of the short-circuit current Jsc = 20.07 mA/cm2 with a standard deviation 0.99 mA/cm2 at ir- radiance 1000 W/m2.
+In this study we will focus on reproducing the behaviour of the reverse scan of the J- V characteristics.
+The scanning process conditions are discussed in [24].
+B. Optoelectronic Model To analyse the amount of transmitted, absorbed and reflected light in each of the materials present in the PSCs, we employ ray tracing simulations with the aid of the ray trace OTSun python package [26].
+It is a Monte Carlo ray tracing where the optics is imple- mented through the Fresnel optics equations in their most general form, complemented by the transfer-matrix method (TMM) to account for the interference phe- nomenon [27, 28].
+This software allows us to perform the simulations by loading a geometry file designed with the aid of FreeCAD [29], an open-source software for the parametric modeling of geometric figures in 3D.
+The sim- ulations require knowledge of the layer thicknesses as well as the complex refractive indexes of the corresponding materials as a function of wavelength (λ).
+In particu- lar, the complex refractive indexes of the following ma- terials have been taken from literature: FTO [41], TiO2 [42], Spiro-OMeTAD [43].
+In the case of SnO2 and SiO2 the data are taken from the material manufacturer itself.
+According to the experimental setup [24] the chemical structure of the perovskite layer has been associated with FaPbI3.
+In this case the complex refractive index data are taken from [34], where the real and imaginary parts of the refractive index have been measured for a similar perovskite.
+The physical characteristics of all layers that form the architecture of our device are displayed in Table I.
+On the other hand, if the layer contains a few con- stituents there is a need in some effective approach.
+The refractive index of the glass has been calculated from transmittance experimental measurements, while for the mp-TiO2 material we have developed the effective ap- proach to determine its complex refractive index (see be- low).
+Glass complex refractive index Since the glass substrate consists of a few thin compo- nents, to determine the glass optical properties itself the oxides films have to be removed.
+To this aim, on the glass multilayer system the etching process is done by using Zn powder and HCl solution.
+As a result, the optical prop- erties of the glass substrate has been determined with the aid of the method [44], based on the ideas discussed be-3 FIG.
+1: (a) Structure of the layers present in each manufacturing stage.
+A total of five stages in which the optical behavior has been studied.
+(b) Typical cross-section image of the sample, obtained by means of the scanning electron microscope.
+Input parameters in our calculations (References) c-TiO2 mp-TiO2 Perovskite Spiro- OMeTAD χ [eV] 4 [30] 4 [30] 3.75 [31] 2.12 [32] Eg [eV] 3.05 [33] 3.05 [33] 1.66 [34] 3.1 [35] m⋆ e 1 1 1 1 m⋆ h 1 1 1 1 Nd/a[cm−3] 1 × 1018 variable 0 1 × 1021 µ [cm2/Vs] 0.006 [36] 0.006 [36] variable 0.0001 [37] ε 60 [38] 42.45** 60 [39] 3 [40] ℓD[nm] 4 4 variable 0.5 TABLE I: Characteristics of the considered semiconductors: TiO2, FAPbI3 (Perovskite), Spiro-OMeTAD.
+We use the following notations: χ is an electron affinity; Eg is an energy gap; m⋆ e/h is an effective electron/hole mass; Nd/a, is a donor/acceptor concentration; µ is a mobility; ε is a permittivity; ℓD is a diffusion length.
+(**) The definition of the permittivity of the mp-TiO2 is discussed in Sec.II B; see Eq.10 and the accompanying discussion. low.
+If the slab of material has plane-parallel faces, and a material is absorbing partially (k2 ≪n), the real part n and the imaginary part k of the refractive index of the slab can be calculated from the intensity of reflectance R(λ) ≡R and transmittance T(λ) ≡T spectra (for the sake of convenience we omit the symbol λ).
+In particular, the following analytical formulas have been used: k = λ 4πd ln h RF · T R −RF i , (1) n = 1 + RF 1 −RF + h 4RF (1 −RF ) 2 −k2i1/2 , (2) where the slab geometrical thickness, d, is assumed as known, and RF = (2 + T 2 −(1 −R)2 −{[2 + T 2 −(1 −R)2]2 −4R(2 −R)}1/2)(2(2 −R))−1 .
+(3) Experimental results for the transmittance T(λ) and reflectance R(λ) spectra, and the complex refractive in- dex, obtained by means of Eqs.(1)–(3), are shown in Fig.2.
+Mesoporous layer as an effective medium: an optical approach Mesoporous TiO2 is one of the commonly used elec- tron transport materials (ETMs) in PSCs. The mp-TiO24 FIG.
+2: Left panel: the results of transmittance and reflectance measurements of the glass substrate as a function of the wavelength are shown.
+Right panel: the real (n) and imaginary (k) components of the calculated complex refractive index of the glass substrate as a function of the wavelength are displayed.
+film serves not only as a scaffold for the perovskite layer but also as a route for electron transport.
+However, in many simulations (see, for example, [45–48]) the effect of the porosity of the mesoporous TiO2 layer on opti- cal and electronic properties meso-structured perovskite solar cells is ignored.
+The presence of mesoporous thin films requires a proper approach to determine its optical characteriza- tion.
+Several effective medium approximations have been suggested to describe the optical properties of heteroge- neous thin films by considering them as a homogeneous media with an effective refractive index, along with effec- tive absorption coefficient.
+Most of the models have been developed for the effective refractive index omitting the absorption coefficient (see for a review [49]).
+However, the absorption can affect the optoelectronic properties of ETM, and, consequently, the properties of the whole system.
+To consider the complex refractive index we apply the Volume Average Theory (VAT) model, discussed among others in [49].
+It provides the effective complex refractive index (subindex eff) of a material (see Eqs.(4)–(7)) com- posed of a continuous phase material matrix (subindex c) and a dispersed phase material matrix (subindex d), with a porosity p: n2 eff = 1 2(A + p A2 + B2) (4) k2 eff = 1 2(−A + p A2 + B2) (5) A = p(n2 d −k2 d) + (1 −p)(n2 c −k2 c) (6) B = 2pndkd + 2(1 −p)nckc (7) The properties of the mp-TiO2 material can be charac- terized using an effective medium that contains a mixture of the c-TiO2 material and air, as suggested in [50–52].
+In the latter paper, however, the effect of the extinction coefficient k is missing.
+Evidently, it may play important role, since the absorption in the mp-TiO2 layer depends on the degree of its porosity.
+To find thickness configura- tions that match best the experimental results we devel- oped the special procedure to quantify the minimal devia- tion of the theoretical estimations from the experimental values for the transmittance and the short-circuit current (see Figs.9, 10 and the accompanying text).
+Once the above analysis has been completed, to gain much more accurate results on the optical properties of the PSC we use the OTSun python package.
+Impact of porosity and Lambertian scattering The knowledge of the thickness configuration enables to us to simulate the photogeneration rate for its applica- tion into the electronic transport equations.
+For the sake of convenience we recapitulate briefly the basic steps of this procedure (see details in [23]).
+According to the Beer-Lambert law for a given absorp- tion coefficient α(λ) = 4πk(λ)/λ of a material, the loss of light intensity is a function of the path length ℓof the light beam through a material: N(ℓ, λ) = N0(0, λ)e−α(λ)ℓ. (8) Here, N0(0, λ) is the initial number of photons of the incident ray on a material per unit area, per wavelength, and per unit time (for each time when a ray impacts onto a material according to the path trajectories determined by the ray tracing simulation).
+With the aid of OTSun and Eq.(8), we calculate the generation rate produced by a single ray G(z) = Z ∞ 0 α(λ)N0(0, λ) cos θ e−α(λ)z/ cos θdλ , (9)5 where z = ℓcos θ is the depth from a semiconductor sur- face, and θ is the ray refracted angle.
+The function G(z) provides the number of electrons per unit volume and per unit time, generated at each point in the device due to the photon absorption.
+The total function G(z) is the sum of all rays (transmitted or reflected) passed at the point z.
+As a result, obtained PSC thickness con- figuration and the rate function G(z) allow to calculate the J-V characteristics by means of the transport model [23].
+In this model there is a set of parameters that are relatively well established either from literature or from measurements.
+Besides, there is another set that consists of some uncertain parameters.
+All of them are listed in Table I, where uncertain parameters are named as “vari- able”.
+The latter ones are treated as fitting parameters to explain the measured data.
+There are a few comments in order, however.
+At this stage we have to elaborate the model [23], taking into ac- count the presence of the mp-TiO2 layer.
+Consequently, to carry out the calculations within the transport model we have to define the permittivity and the conductivity of the mp-TiO2 layer σmp = qµmpNmp; here µmp is a majority carriers mobility, and Nmp is the doping con- centration.
+From the optical properties of different layers, we ob- tain the fact that the mp-TiO2 layer includes air-filled holes (porosity).
+As the concentration of these holes is small (∼20%), we apply the electrodynamic approach developed for weakly mixed systems (see the textbook [53]).
+In this case the permittivity of the mp-TiO2 mate- rial is provided by the expression for permittivity of the mixture εmix: εmix = εT iO2 + c3(εa −εT iO2)εT iO2 εa + 2εT iO2 , (10) where εT iO2 and εa are the permittivities of TiO2 and air, respectively; c is the concentration of holes.
+As for the conductivity, we make use of the fact obtained from the optical properties fitting.
+Due to small concentration of air-filled holes in the mp-TiO2 layer one can suppose that the conductivity in this layer should be reduced on 20% as well.
+As a result, it seems reasonable to assume that for the donor concentration holds the relation Nmp = 0.8 · Nc, while the mobility of the carriers remains the same µmp = µc, as in the c-TiO2 layer (see Sec.III) To obtain the better agreement with the J-V characteristics of our experimental device, we propose to vary only the unknown parameters Nmp, the mobility of carriers µ and their relaxation time τ in the perovskite layer, keeping the other parameters fixed.
+It is important to stress that OTSun provides a more accurate form of the photogeneration rate G(z) compare to the TMM approach used in Appendix A, since non- specular reflection and multiple reflection are considered.
+In particular, from images obtained with the aid of the scanning electron microscope (see Fig.8) it can be seen that the gold layer (the top layer) has nano-sized rough- ness, of the order of magnitude of its thickness (∼80 nm).
+With a high degree of certainty, it can be argued that these textures provide a Lambertian reflection to the surface.
+Such textures randomly reflect the light that impacts on the gold layer, and, consequently, increase the optical path in the perovskite, and the photocurrent (cf.[11]).
+As a result, taking into account all facts above, we obtain by means of Eq.(9) that Jsc = 20.15 mA/cm2 (see Fig.10), i.e., it is slightly higher than the TMM result and closer to the experimental value. FIG.
+3: Experimental (solid line) and theoretical (dotted line) transmittance curves for the different manufacturing stages of the PSCs under study.
+For the stage identifications see also Fig.1 III.
+RESULTS AND DISCUSSION Begin with, we recall the main result on the analy- sis of the layer thicknesses (see details in Appendix A).
+The layer configuration chosen as the theoretical model of the PSCs studied is (in nm): 11 (SiO2), 16 (SnO2), 565 (FTO), 24 (c-TiO2), 240 (mp-TiO2, porosity = 20%), 500 (Perovskite), 250 (Spiro-OMeTAD).
+The result of this final disposition that produces the best consistency be- tween theoretical and experimental values for the short- circuit current and the optical transmittance in each stage of the manufacturing process is displayed in Fig.3.
+There is a rather well agreement between experimen- tal and theoretical results, except two cases: stage 3 and stage 4.
+The visible difference between the experimen- tal and theoretical curves is located in the wavelength region 380 −500 nm.
+This result implies some inaccu- racy in estimation of the mp-TiO2 layer absorption coef- ficient.
+Theoretical result exhibits the larger absorption for the perovskite FAPbI3 (stage 4) in comparison with that of the experimental sample in the wavelength range 770 −800 nm.
+This disagreement is due to the difference between the experimental value of the perovskite absorp- tion coefficient and that adopted from [34].
+Since this difference is located at a small interval 760 < λ < 800 nm of the right boundary of the considered wavelength region, it may be safely ignored in the description of the J-V characteristics discussed below.6 The values of theoretical layer thicknesses and material parameters (see Table I) are used as the input parame- ters in the electronic transport model to fit the simulated and measured J-V characteristics of the PSC.
+The fitting procedure is described in [23] but here we mention some peculiarities: 1 The main source of difference between the simu- lated and the measured short-circuit current has been related in [23] to the reflection properties of the PSC layers.
+In present paper the reflection properties are already taken into account by our optical model.
+It results in the remarkable accord between theoretical and experimental values of the short-circuit current (see below). FIG.
+4: RMSE as a function of carrier mobility in perovskite for different doping concentration in the mp-TiO2 layer.
+The solid curves are associated with the results of calculations without any additional resistances.
+The dotted line is associated with the results obtained by means of the additional resistances (see details in the text).
+2 To fit the simulated and “measured averaged” open circuit voltage (Voc) one needs to vary the carrier lifetimes (τ) in the perovskite [23].
+Once we vary the donor concentration Nmp and the mobility µ, it is required to fit a τ-value to reproduce the ex- perimental value of Voc.
+To control the accuracy of the fitting procedure of J-V characteristics, we introduce the root mean square error RMSE = 1 N sX i [Jexp sc (Vi) −Jth sc (Vi)]2 , (11) where the number of steps N is defined by the voltage range interval V = 0 −Voc passed with a step size ∆V .
+At each new value of the voltage Vi = i·∆V , we solve the system of nonlinear trans- port equations (see Sec.2.4 in [23]) to calculate the current and compare its value with the experimen- tal data.
+The results of calculations manifest the dependence of the RMSE on values of Nmp and the mobility µ (see Fig.4).
+3 We recall that the analysis of the transmittance re- sulted in a degree of porosity of the order of 20% for the mp-TiO2 layer.
+Evidently, the presence of the porosity in the mp-TiO2 layer should affect the donor concentration in this material in compari- son to that in the c-TiO2 layer, which is 1 · 1018 cm−3 (see Table I).
+Consequently, it is natural to suppose that the donor concentration in the mp- TiO2 layer will decrease to the value 8 · 1017 cm−3, proportionally to the degree of its porosity.
+Taking into account that the porosity affects the permittiv- ity (see Eq.10) and the donor concentration of the mp-TiO2 layer, we solve the transport equations and reach the RMSE minimum (0.18 mA/cm2) at µ = 5 cm2/(V·s) (see Fig.4; triangles connected by solid yellow line).
+There is a visible difference be- tween the simulated and the “measured averaged” J-V characteristics (see Fig.5(a)).
+A fairly common trick in the calculation of J-V characteristics is to use the analogy of the PSC to a current generator in parallel with a diode (see, for example, the analysis in [11]).
+Hereafter we follow this procedure, since such an approach en- ables to us to consider the parasitic resistance of the contacts and feeding conductors, R; the leakage resistance, related to the local short-circuit of elec- tron/hole transport material layers, Rsh (see the insert in Fig.5(a)).
+Once all necessary additional resistances are gener- ated, we obtain a good agreement of our results with the experimental J-V characteristics.
+This agreement (see Fig.5(a)) is reached with the aid of the following values of the variable parame- ters: µ=15 cm2/(V·s) (see Fig.4); R=4 Ohm·cm2; Rsh →∞; τ = 2.47 ns that yields the diffusion length ℓD = p µkBTτ/|e| = 0.3 µm.
+It turns out, however, that we can obtain even bet- ter agreement varying the donor concentration in the mp-TiO2 layer.
+The variation of the RMSE between simulated and “measured averaged” J- V characteristics yields the RMSE absolute mini- mum (see Fig.4) at the “optimal” mobility µ=50 cm2/(V·s), and the donor concentration Nmp = 1 · 1017 cm−3.
+The optimal carrier lifetimes τ=0.7 ns yields again the diffusion length ℓD = 0.3 µm.
+At these parameters we obtain a remarkable agree- ment between the simulated and the “measured av- eraged” J-V characteristics, without any additional resistances (see Fig.5(b)).
+It seems that in the mp- TiO2 layer pore holes generate all necessary addi- tional resistance in the measured device.
+Conse- quently, it appears that in the real device the pore dimension occupying 20% of the mp-TiO2 layer is sufficient to affect optical properties of the PSC.
+It turns out, however, that only small part of the re- maining TiO2 take part in the conductance due to large amount of defects on the pore boundaries.7 FIG.
+5: J-V characteristics.
+In panels (a) and (b) solid line connecting solid circles is associated with the “measured averaged” values.
+The panel (a): dashed (dot-dashed) line connecting solid triangles (squares) is associated with the results obtained without (with) additional resistances at 20% porosity of mp-TiO2 layer.
+The panel (b): dashed line connecting solid triangles is associated with the results obtained without additional resistances (see for details the text).
+Light blue band around all these curves marks the range in which the measured J-V characteristics of different samples lie.
+The insert in the panel (a) displays the circuit layout of the generator.
+It is noteworthy, the parameters values obtained by means of our fitting procedure are located within the parameter range considered in literature.
+In particular, several studies suggest that the doping values of the mp- TiO2 material are in the range of 1016 to 1019 (cm−3) [54].
+Moreover, the carrier mobility range measured for perovskite is in the range from 5 to 50 (cm2/(V·s))[55].
+The degree of the accuracy of our analysis is summarized in Tables II,III.
+It demonstrates that the short-circuit current, the open circuit voltage, the fill factor and the power conversion efficiency for both simulated and ex- perimental PSC are in a remarkable agreement.
+Jsc (mA/cm2) Voc (V) FF PCE(%) Experiment 20.072 0.985 0.695 13.735 Model (a) 20.120 0.981 0.772 15.233 Model (a) + R 20.101 0.981 0.705 13.903 Model (b) 20.076 0.984 0.703 13.882 TABLE II: Main PSC parameters for the “measured averaged” device and simulated results obtained by means of our approach.
+Model (a) is associated with results displayed on the the panel Fig.5(a), without any resistance; the corresponding parameters are presented in the first column of Table III.
+Model (a) + R is associated with results displayed on the the panel Fig.5(a), with resistance; the corresponding parameters are presented in the second column of Table III.
+Model (b) is associated with results displayed on the the panel Fig.5(b); the corresponding parameters are presented in the third column of Table III.
+Parameters Model (a) Model (a) + R Model (b) Nmp (cm−3) 8 · 1017 8 · 1017 1 · 1017 µ (cm2/(V·s)) 15 15 50 τ (ns) 2.47 2.47 0.7 R (Ohm·cm2) − 4 − Rsh (Ohm·cm2) − ∞ − TABLE III: Summary of the parameters used to represent Fig.5 and Table II. IV.
+CONCLUSIONS In summary we have successfully utilized the optoelec- tronic model based on experimentally obtained optical features for planar meso-structured perovskite solar cells.
+Our optoelectronic model incorporates ray tracing simu- lations, the transfer-matrix method and the carrier trans- port equations.
+The ray tracing allows the exploration of any geometry, since the solar collector device is designed by means of the FreeCAD software.
+The combination of the ray tracing with the transfer-matrix method al- lows to perform the optical simulations considering Fres- nel optics, internal reflections of the multilayer system, scattering produced by nanoroughness layers, and effec- tive layers with some peculiarities (such as porous mate- rials).
+Large number of transmittance-reflectance measure- ments on the several stages of manufacturing process have been used to fix the uncertainties of the PSC lay- ers thicknesses and the mesoporous TiO2 layer poros- ity.
+The same number of measurements have been done to define the average J-V characteristics of experimental devices.
+The obtained results within the optoelectronic model have been further used to analyse J-V characteris-8 tics of the manufactured PSCs by means of the optimiza- tion procedure based on the multiple-use of the solution transport equations [23].
+The developed model demon- strates good agreement with both optical and electrical measurements leading to extraction of the layers thick- nesses, the porosity degree and the permittivity of the mesoporous TiO2 material, the perovskite carriers mo- bility and lifetimes.
+In addition, we have found that even small degree of the porosity can affect the performance of the experimental devices, reducing essentially the ef- fective donor concentration (i.e., the conductance) of the mp-TiO2 layer in comparison to that in the c-TiO2 layer.
+Our approach allows the study of devices with differ- ent architectures.
+Reversing the order of the materials in the solar cell structure does not affect the development of the optoelectronic simulations.
+Thus our work provides a useful platform for device optimization towards increas- ing PCE as well as appropriate tools for the analysis of various optoelectronic properties of meso-structured per- ovskite solar cells.
+ACKNOWLEDGEMENTS This work is part of the project TED2021-132758B- I00, funded by MCIN/ AEI /10.13039/501100011033/ and the European Union “Next Generation EU”/PRTR.
+It has also been co-funded by the predoctoral contracts call of the Vice-presidency and Innovation, Research and Tourism Department of the Government of the Balearic Islands and the European Social Fund (ESF) [Grant FPI/2144/2018].
+Part of this work is under Physics Ph.D. programme for F. Bonn´ın-Ripoll of the Univer- sitat de les Illes Balears (UIB, Spain).
+We thank Dr Jos´e F. Gonz´alez Morey (Serveis Cientificot`ecnics, UIB) for his technical assistance.
+This work is partially supported by the Russian Science Foundation (grant no. 23 -19- 00884).
+We thank the Spanish State Research Agency for the grant Self-Power (PID2019-104272RB-C54 / AEI / 10.13039/501100011033), the ProperPhotoMile Project (PCI2020-112185) and the OrgEnergy Excelence Net- work (CTQ2016-81911- REDT), and to the Ag`encia de Gesti´o d’Ajuts Universitaris i de Recerca (AGAUR) for the support to the consolidated Catalonia research group 2021 SGR 01617 and the Xarxa d’R+D+I Energy for Society (XRE4S).
+Part of this work is under Materi- als Science Ph.D. Degree for K.T. and the Chemistry Ph.D. programme for C.P. of the Universitat Aut`onoma de Barcelona (UAB, Spain).
+ICN2 is supported by the Severo Ochoa program from Spanish MINECO (grant no.
+SEV-2017-0706) and is funded by the CERCA Pro- gramme/Generalitat de Catalunya.” FIG.
+6: Image of the perovskite solar cell samples at the final stage of the manufacturing process.
+Appendix A: Supplementary data Device Characteristics The device fabrication and the experimental work, pre- sented in this paper, have been carried out at the facil- ities of the Institut Catal`a de Nanoci`encia i Nanotec- nologia (ICN2) in collaboration with the Nanomateri- als for Photovoltaics Energy research group.
+The per- ovskite solar cells have been fabricated with the FTO/c- TiO2/mp-TiO2/Perovskite/Spiro-OMeTAD/Au configu- ration using multi-cationic perovskite.
+Each of these ma- terials has its own synthesis and deposition process; all fabrication details are discussed in [24].
+Example of final samples is shown in Fig.6. FIG.
+7: Mean values and standard deviations of the optical transmittance measurements for each manufacturing stages of the perovskite solar cell.
+Standard deviations have been calculated at each wavelength for six experimental samples (see also the main text).9 Transmittance Transmittance measurements have been done by means of the UV-Vis CARY 4000 spectrophotometer at normal incidence, using the solid sample holder acces- sory.
+The incident radiation consists of 200 −800 nm wavelength range of the optical spectrum.
+The results of the mean value of the optical transmittance measure- ments for each stage as a function of the wavelength are shown in Fig.7.
+Our measurements make manifest that it is enough to fabricate six samples at each stage to ob- tain a reliable result for the mean value.
+Additionaly, we indicate the standard deviation from the mean value for each curve, corresponding to each stage.
+The largest deviations are obtained for the c-TiO2 and mp-TiO2 de- positions (stages 2 and 3, respectively).
+Noteworthy, up to now there is no any available criterium in literature regarding definition of the effective border line between c-TiO2 and mp-TiO2 depositions.
+In fact, one of our goals is to propose such the effective methodology. FIG.
+8: Cross-section image of the samples, obtained by means of the scanning electron microscope.
+It is quite visible the degree of the gold layer roughness.
+The extracted approximate thickness of each layer is presented in Table IV.
+Layer Thicknesses The approximate thickness of each material layers has been estimated using scanning electron microscopy (SEM) techniques (see Fig.8).
+These images are essential for modelling the PSC, since each layer thickness asses- ment is a key parameter in the following model calcula- tions.
+The heterogeneity observed in the layer thicknesses is due to the experimental process itself, subject to vari- ations in the initial conditions, the experience and skill of the technician, the correct stoichiometric balance of the compounds, etc.
+The less accuracy for the estima- tion of the c-TiO2 layer thickness is due to its extension diapason in the range of a few tens of nanometers.
+Material Thicknesses (nm) SiO2 10-30 SnO2 10-30 FTO 500-600 c-TiO2 10-30 mp-TiO2 180-300 Perovskite 400-550 Spiro-OMeTAD 200-250 TABLE IV: Thickness range of the material layers present in the PSC samples measured by scanning electron microscopy.
+Note that the substrate is formed by four different ma- terials.
+The thickness of each component in the com- pound is provided by the manufacturer itself: 2.2 mm of glass, 25 nm of SnO2 and SiO2, and 540 nm of FTO.
+Even so, in the images (see Fig.8) it can be seen that the FTO is not completely homogeneous.
+Consequently, we consider a certain range of thicknesses, in which the cal- culations for the characterization are carried out.
+From the images obtained by SEM, the thickness ranges con- sidered for the materials in the successive calculations, are shown in Table IV.
+Detailed elaboration of thickness configuration In order to fit theoretical and experimental transmit- tances, a concrete thickness configuration of the PSC structure is needed.
+Since scanning electronic microscope images show that the thicknesses of the layers is not com- pletely homogeneous, we must consider a range between which each layer thickness lies.
+Before to resolve this problem we have to analyse the optical properties of each layer.
+One of the most common theoretical tools used to analyse the optical properties of complex solar systems with a high accuracy is the so called Monte-Carlo ray tracing simulation.
+It consists of a set of techniques that determine the path of light through matter in a three-dimensional environment with computer simula- tions [56].
+We implement in our approach the Monte- Carlo ray tracing technique, adding the transfer-matrix method (TMM) to characterize the optical response of the PSC with the aid of the ray trace OTSun python package [57–59].
+In order to carry out simulations in a simpler and faster way, first, we use the TMM only to determine the thicknesses configuration.
+Based on the results discussed hereafter, the OTSun will be used (see the main text) as the subsequent step where more ac- curate calculations are needed.
+Consequently, using the ranges shown in Table IV, each possible configuration is10 considered to provide the transmittance with the aid of the TMM calculation, to obtain those that are closer to the experimental curves.
+To reach our goal we introduce the root mean square error (RMSE) of each thickness configuration for a given material thickness RMSE = 1 N v u u t λ=800 X λ=300 [T exp(λ) −T th(λ)]2 .
+(A1) Here, N is the total number of wavelength steps; the step is equal to 1 nm in all cases; T exp(T th) is the experimen- tal (theoretical) optical transmittance.
+Hereafter, it is convenient to introduce the range limits of the thickness variation for each layer as [a,b] (in nm).
+First, we carry out the calculations for the stage 1.
+To this aim we consider the following thicknesses: [10,30] for SnO2 and SiO2; [500, 600] for FTO.
+As a result, we choose those configurations that lie within 1% of the low- est RMSE.
+Next, we proceed to the stage 2 (repeating similar cal- culations), using the range limits obtained from the stage 1: [10,20] for SnO2 and SiO2; [550,600] for FTO; [10,30] for c-TiO2.
+These calculations reduce the starting range limits to [10,16], [14,20], [550,600], [22,30] for SnO2, SiO2, FTO, c-TiO2, respectively.
+Afterwards, we move to the stage 3, where both the thickness and the porosity of the mp-TiO2 are added to the system.
+An initial sweep is made considering the previous ranges plus the mp-TiO2 [180,300] layer and its porosity considered between 1% and 50%.
+Consid- ering the configurations that lie within 1% of the lowest RMSE, the material thicknesses are varied in the follow- ing intervals: [10,12] for SnO2; [14,18] for SiO2; [555,580] for FTO; [23,25] for c-TiO2; [200,300] for mp-TiO2, and its porosity reduced to the 10%–20% range.
+From our previous experience (see details in [11, 23]) it follows that small changes in layer thicknesses (in order of a few nanometers) at the stage 2 do not affect the optical transmittance of the device.
+Therefore, we choose the mean values 11, 16, 565, and 24 nm (associated with SnO2, SiO2, FTO, c-TiO2 layer thickness, respectively), which are defined within the ranges imposed by the stage 3.
+By fixing these values, we also reduce significantly the calculation time, enabling us to explore the mesoporous material and its subsequent influence on the properties of the absorbing layer.
+We recall that the stage 4 includes the perovskite layer considered in the [400,550] interval, while keeping the variability of the porosity and thickness of the mp-TiO2 layer as mentioned above.
+Since there is a complex inter- play of the transmittance through the mp-TiO2 layer and its effect on the transmittance through the perovskite, we consider the ranges of three parameters simultaneously: i) the mp-TiO2 layer thickness; ii) its porosity; iii) the perovskite thickness within 5% of the lowest RMSE se- lection.
+As a result, we obtain that: the mp-TiO2 poros- ity oscillates between 10% and 20%, while its thickness between 260 and 300 nm; the perovskite layer thick- ness oscillates between 450 and 500 nm.
+In the stage 5 the Spiro-OMeTAD layer is added with a thickness defined in [200,250] nm interval.
+Our calculations yield that the configurations within 5% of the lowest RMSE lie in the following interval (in nm): [270,300] for the mp-TiO2 layer; the porosity is defined between 15% and 20%; [450,470] for the perovskite layer; [200, 250] for the Spiro-OMeTAD layer.
+Notice that the configurations that fit better the opti- cal behaviour of the experimental samples are not nec- essarily those that fit better the electronic properties of the experimental samples.
+Consequently, our analysis is supplemented by one more parameter: the short-circuit current Jsc.
+Therefore, considering the ranges of param- eters for each material obtained under the previous pro- cedure and making them less restrictive, we proceed to the calculations of the short-circuit current Jsc, which will involve adding the gold metal layer to the system.
+Again, we have to vary the discussed parameters within the above limits (see below).
+Taking this fact into ac- count, the maximum possible photocurrent is calculated in the assumption that all absorbed photons generate electron and holes and contribute to the current [40].
+In an efficient PSC this current is closely related to the short-circuit current, Jsc.
+As a result, to reach a consis- tently between optical and electronic properties we cal- culate the short-circuit current for every configuration, taking into account that the mean value of the measured current Jsc = 20.07 mA/cm2 (see details in the main text).
+We recall that all the effects regarding the radiation- matter interaction mentioned above, are needed to eluci- date the number of absorbed photons inside active ma- terials.
+To this aim the photogeneration rate G of the creation of pairs of electrons/holes should be considered a position-dependent function within the material thick- ness.
+To this aim we employ the method proposed by Ball et al. [60] and the TMM library [27] to calculate the short-circuit current Jsc as: Jsc = q Z G(λ, z)dλdz , (A2) where q is the electron charge, and z is the depth from the semiconductor surface.
+Turning to the calculation details of the discussed procedure, first, we fix the mul- tilayer glass thicknesses at 11, 16, 565 (nm) for SnO2, SiO2, FTO, respectively; and 24 nm for c-TiO2.
+Second, it is observed that the photocurrent is very sensitive to the thickness and porosity of the mp-TiO2 layer.
+Indeed, it should be noted that at stages 2 and 3 that correspond to the deposition of the c-TiO2 and the mp-TiO2 layers, respectively, a standard deviation 10 times higher rela- tive to those for other stages (see Fig.7).
+Including the Jsc calculations to the RMSE result obtained from the transmittance fitting, we weakend the boundaries found above, in particularly, for the porosity and for the mp- TiO2 layer thickness.
+Consequently, we vary the porosity11 FIG.
+9: The short-circuit current Jsc as a function of mp-TiO2 porosity (a), mp-TiO2 thickness (b), perovskite thickness (c) and Spiro-OMeTAD thickness (d). FIG.
+10: The short-circuit Jsc as a function of the RMSE, calculated by fitting the experimental and theoretical transmittance of stage 5.
+The optimal configurations (red solid points) are located in the range of ±5% deviation from the experimental value of the short-circuit current.
+Black point corresponds to the selected case, used for comparison of experimental and theoretical J-V characteristics (see main text).
+and thickness of the mp-TiO2 layer (from 2% to 20%, from 200 to 300 nm, respectively); the perovskite thick- ness (from 450 to 550 nm); the Spiro-OMeTAD thickness (from 200 to 250 nm).
+As a result, we do calculations by varying the following parameters: 1 porosity takes 10 possible values; 2 mp-TiO2 thickness takes 11 possible values; 3 perovskite thickness takes 11 possible values; 4 Spiro-OMeTAD thickness takes 6 possible values, i.e. we have a set of 10×11×11×6 = 7260 combinations determined by the parameters variations.
+Altogether the chosen parameters provide the basis for the calculation of the set Jsc values (see Fig.9).
+Among all the possible configurations, we have selected those that hold the following criteria: i) be ≤|5|% with respect to the experimental value of the short-circuit cur- rent Jsc; ii) be ≤5% of the lowest RMSE (red region in Fig.10).
+From this selection, the configuration with the highest Jsc has been chosen denoted by the black point on Fig.10.
+The results for the short-circuit current Jsc demonstrate: i) its less sensitivity to the variation of the perovskite and Spiro-OMeTAD thicknesses; ii) while the close correspondence to the experimental value of the short-circuit current Jsc takes place at the thickness 240 nm and the porosity value = 20% of the mp-TiO2 layer.
+Summarising, according to our analysis the theoretical configuration, chosen to model the experimental samples, consists of the following layer thicknesses (in nm): 11 (SiO2), 16 (SnO2), 565 (FTO), 24 (c-TiO2), 240 (mp- TiO2, the porosity = 20%), 500 (Perovskite), 250 (Spiro- OMeTAD).
+This configuration is obtained as a result of optimization of the optical transmittance of the device configuration at the value of the short-circuit current Jsc = 19.83 mA/cm2.
+[1] H. Min, D. Y. Lee, J. Kim, G. Kim, K. S. Lee, J. Kim, M. J. Paik, Y. K. Kim, K. S. Kim, M. G. Kim, T. J. Shin, and S. Il Seok, Nature 2021 598:7881 598, 444 (2021).12 [2] V. Babu, R. Fuentes Pineda, T. Ahmad, A. O. Alvarez, L. A. Castriotta, A. Di Carlo, F. Fabregat-Santiago, and K. Wojciechowski, ACS Applied Energy Materials 3, 5126 (2020).
+[3] Y. B. Martynov, R. G. Nazmitdinov, A. Moi`a-Pol, P. P. Gladyshev, A. R. Tameev, A. V. Vannikov, and M. Pud- lak, Phys. Chem. Chem.
+Phys. 19, 19916 (2017).
+[4] R. Urz´ua-Leiva, A. Narymany Shandy, H. Xie, M. Lira- Cant´u, and G. C´ardenas-Jir´on, New journal of chemistry 44, 14642 (2020).
+[5] A. Frontera, Y. Martynov, R. G. Nazmitdinov, and A. Moi`a-Pol, in Perovskite Solar Cells: Properties, ap- plication and efficiency (Nova Science Publishers/ Inc., 2019) Chap. 3, pp. 117–174.
+[6] A. Agresti, A. Pazniak, S. Pescetelli, A. Di Vito, D. Rossi, A. Pecchia, M. Auf der Maur, A. Liedl, R. Larciprete, D. V. Kuznetsov, D. Saranin, and A. Di Carlo, Nat. Mater. 18, 1228 (2019).
+[7] Y. B. Martynov, R. G. Nazmitdinov, P. P. Gladyshev, and A. Moi`a-Pol, Mendeleev Communications 31, 459 (2021).
+[8] T. Li, S. Wang, J. Yang, X. Pu, B. Gao, Z.
+He, Q. Cao, J. Han, and X. Li, Nano Energy 82, 10.1016/J.NANOEN.2021.105742 (2021).
+[9] X. Zhang, J. Wu, S. Wang, W. Pan, M. Zhang, X. Wang, Z. Lan, and J. Lin, ACS Applied Energy Materials 4, 10.1021/ACSAEM.1C01142 (2021).
+[10] C. Pereyra, H. Xie, and M. Lira-Cantu, Journal of Energy Chemistry 60, 599 (2021).
+[11] F. Bonn´ın-Ripoll, Y. B. Martynov, G. Cardona, R. G. Nazmitdinov, and R. Pujol-Nadal, Solar Energy Materi- als and Solar Cells 200, 110050 (2019).
+[12] K. Deng, L. Li, K. Deng, and L. Li, Small Methods 10.1002/smtd.201900150 (2019).
+[13] G. Haidari, AIP Advances 10.1063/1.5110495 (2019).
+[14] A. K. Mishra and R. K. Shukla, Materials Today: Pro- ceedings 49, 3181 (2020).
+[15] A. Husainat, W. Ali, P. Cofie, J. Attia, J. Fuller, and A. Darwish, American Journal of Optics and Photonics 8, 6 (2020).
+[16] M. Al-Hattab, L. Moudou, M. Khenfouch, O. Ba- jjou, Y. Chrafih, and K. Rahmani, Solar Energy 227, 10.1016/J.SOLENER.2021.08.084 (2021).
+[17] S. S. Hussain, S. Riaz, G. A. Nowsherwan, K. Ja- hangir, A. Raza, M. J. Iqbal, I. Sadiq, S. M. Hussain, and S. Naseem, Journal of Renewable Energy 2021, 10.1155/2021/6668687 (2021).
+[18] R. K. Yadav, P. S. Pawar, R. Nandi, K. R. E. Neerugatti, Y. T. Kim, J. Y. Cho, and J. Heo, Solar Energy Materials and Solar Cells 244, 10.1016/J.SOLMAT.2022.111835 (2022).
+[19] K. Ahmad, M. Q. Khan, R. A. Khan, and H. Kim, Optical Materials 128, 10.1016/J.OPTMAT.2022.112458 (2022).
+[20] S. Karthick, S. Velumani, and J. Boucl´e, Optical Mate- rials 126, 10.1016/J.OPTMAT.2022.112250 (2022).
+[21] M. Burgelman, K. Decock, A. Niemegeers, J. Verschrae- gen, and S. Degrave, SCAPS-1D Manual (2021).
+[22] K. Deepthi Jayan and V. Sebastian, Solar Energy 217, 40 (2021).
+[23] F. Bonn´ın-Ripoll, Y. B. Martynov, R. G. Nazmitdinov, G. Cardona, and R. Pujol-Nadal, Physical Chemistry Chemical Physics 10.1039/D1CP03313A (2021).
+[24] H. Xie, Z. Wang, Z. Chen, C. Pereyra, M. Pols, K. Ga lkowski, M. Anaya, S. Fu, X. Jia, P. Tang, D. J. Ku- bicki, A. Agarwalla, H. S. Kim, D. Prochowicz, X. Bor- ris´e, M. Bonn, C. Bao, X. Sun, S. M. Zakeeruddin, L. Em- sley, J. Arbiol, F. Gao, F. Fu, H. I. Wang, K. J. Tiel- rooij, S. D. Stranks, S. Tao, M. Gr¨atzel, A. Hagfeldt, and M. Lira-Cantu, Joule 5, 1246 (2021).
+[25] H. Liu, Z. Huang, S. Wei, L. Zheng, L. Xiao, and Q. Gong, Nanoscale 8, 6209 (2016).
+[26] G. Cardona and R. Pujol-Nadal, PLOS ONE 15, e0240735 (2020).
+[27] S. Byrnes, tmm 0.1.7 : Python Package Index (2017).
+[28] S. J. Byrnes, Multilayer optical calculations (2020), arXiv:1603.02720 [physics.comp-ph].
+[29] FreeCAD: Your Own 3D Parametric Modeler (2001).
+[30] F. Liu, J. Zhu, J. Wei, Y. Li, M. Lv, S. Yang, B. Zhang, J. Yao, and S. Dai, Appl. Phys. Lett. 104, 253508 (2014). [31] A. Hima, Int.
+J. Energetica 4, 56 (2019).
+[32] F. Zhang, Z. Wang, H. Zhu, N. Pellet, J. Luo, C. Yi, X. Liu, H. Liu, S. Wang, X. Li, Y. Xiao, S. M. Zakeerud- din, D. Bi, and M. Gr¨atzel, Nano Energy 41, 469 (2017).
+[33] A. Farhana, R. Mahbub, S. S. Satter, and S. M. Ullah, Inter. J. Photoenergy 2017, 9846310 (2017).
+[34] H. W. Chen, D. P. Gulo, Y. C. Chao, and H. L. Liu, Scientific Reports 2019 9:1 9, 1 (2019).
+[35] X. Wang, L.-L. Deng, L.-Y. Wang, S.-M. Dai, Z. Xing, X.-X. Zhan, X.-Z. Lu, S.-Y. Xie, R.-B. Huang, and L.-S. Zheng, J. Mater. Chem. A 5, 1706 (2017).
+[36] K. Wojciechowski, M. Saliba, T. Leijtens, A. Abate, and H. J. Snaith, Energy Environ.
+Sci. 7, 1142 (2014).
+[37] H. J. Snaith and M. Gr¨atzel, Appl. Phys.
+Lett. 89, 262114 (2006).
+[38] S. Dutta, Leeladhar, A. Pandey, O. P. Thakur, and R. Pal, J. Vac. Sci. and Tech.
+A 33, 021507 (2015).
+[39] M. Green, A. Ho-Baillie, and H. Snaith, Nat.
+Photonics 8, 506 (2014).
+[40] J. Garc´ıa-Ca˜nadas, F. Fabregat-Santiago, H. J. Bolink, E. Palomares, G. Garcia-Belmonte, and J. Bisquert, Syn- thetic Metals 156, 944 (2006).
+[41] E. Ching-Prado, A. Watson, and H. Miranda, Journal of Materials Science: Materials in Electronics 29, 15299 (2018).
+[42] T. Siefke, S. Kroker, K. Pfeiffer, O. Puffky, K. Diet- rich, D. Franta, I. Ohl´ıdal, A. Szeghalmi, E.-B. Kley, and A. T¨unnermann, Advanced Optical Materials 4, 1780 (2016).
+[43] C. W. Chen, S. Y. Hsiao, C. Y. Chen, H. W. Kang, Z. Y. Huang, and H. W. Lin, Journal of Materials Chemistry A 3, 9152 (2015).
+[44] E. Nichelatti, J. Opt. A: Pure Appl. Opt 4, 400 (2002).
+[45] K. P. Kim, W. H. Kim, S. M. Kwon, J. Y. Kim, Y. S. Do, and S. Woo, Nanomaterials 2021, Vol. 11, Page 1233 11, 10.3390/NANO11051233 (2021).
+[46] E. Widianto, Shobih, E. S. Rosa, K. Triyana, N. M. Nursam, and I. Santoso, Optical Materials 121, 10.1016/J.OPTMAT.2021.111584 (2021).
+[47] M. Mehrabian, O. Akhavan, N. Rabiee, E. N. Afshar, and E. N. Zare, Environmental Science and Pollution Research 30, 10.1007/S11356-023-26497-1/FIGURES/6 (2023).
+[48] M. K. Hossain, G. F. Toki, A. Kuddus, M. H. Rubel, M. M. Hossain, H. Bencherif, M. F. Rahman, M. R. Is- lam, and M. Mushtaq, Scientific Reports 2023 13:1 13, 10.1038/s41598-023-28506-2 (2023).
+[49] N. J. Hutchinson, T. Coquil, A. Navid, and L. Pilon,13 Thin Solid Films 518, 2141 (2010).
+[50] E. Raoult, R. Bodeux, S. Jutteau, S. Rives, A. Yaiche, D. Coutancier, J. Rousset, and S. Collin, in EU PVSEC Proceedings, Vol.
+36th EU PVSEC 2019 (2019) pp. 757– 763.
+[51] E. Raoult, R. Bodeux, S. Jutteau, S. Rives, A. Yaiche, A. Blaizot, D. Coutancier, J. Rousset, and S. Collin, Op- tics Express 30, 9604 (2022).
+[52] A. Hern´andez-Granados, A. N. Corpus-Mendoza, P. M. Moreno-Romero, C. A. Rodr´ıguez-Casta˜neda, J. E. Pascoe-Sussoni, O. A. Castelo-Gonz´alez, E. C. Menchaca-Campos, J. Escorcia-Garc´ıa, and H. Hu, Optical Materials 88, 695 (2019).
+[53] L. Landau, E. Lifshitz, and L. Pitaevskii, Electrodynam- ics of Continuous Media: Volume 8, Course of theoretical physics (Elsevier Science, 1995) p. 460.
+[54] M. C. Sellers and E. G. Seebauer, Thin Solid Films 519, 2103 (2011).
+[55] L. M. Herz, ACS Energy Letters 2, 1539 (2017).
+[56] J. Bos-Coenraad, L. Bunthof, and J. Schermer, Solar En- ergy 155, 1188 (2017).
+[57] G. Cardona and R. Pujol-Nadal, OTSun Python Package (2018).
+[58] OTSunWebApp (2018).
+[59] F. Bonn´ın-Ripoll, G. Cardona, and R. Nadal-Pujol, Tu- torial 2 OTSun Web App (2018).
+[60] J. M. Ball, S. D. Stranks, M. T. H¨orantner, Sven H¨uttner, Wei Zhang, E. J. W. Crossland, Ivan Ramirez, Moritz Riede, M. B. Johnston, R. H. Friend, and H. J. Snaith, Energy & Environmental Science 8, 602 (2015).

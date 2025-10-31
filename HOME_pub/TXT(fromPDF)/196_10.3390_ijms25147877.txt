@@ -1,0 +1,1099 @@
+Citation: Keppert, S.; Aichner, B.;
+Rohringer, P.; Bodea, M.-A.; Müller,
+B.; Karrer, M.; Kleiner, R.; Goldobin,
+E.; Koelle, D.; Pedarnig, J.D.; et al.
+Temporal Evolution of Defects and
+Related Electric Properties in
+He-Irradiated YBa2Cu3O7−δ Thin
+Films. Int. J. Mol. Sci. 2024, 25, 7877.
+https://doi.org/10.3390/
+ijms25147877
+Academic Editor: Michal
+Cichomski
+Received: 3 July 2024
+Revised: 15 July 2024
+Accepted: 16 July 2024
+Published: 18 July 2024
+Copyright:
+© 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+ 
+International Journal of 
+Molecular Sciences
+Article
+Temporal Evolution of Defects and Related Electric Properties
+in He-Irradiated YBa2Cu3O7−δ Thin Films
+Sandra Keppert 1
+, Bernd Aichner 2
+, Philip Rohringer 2,†, Marius-Aurel Bodea 1,‡, Benedikt Müller 3,
+Max Karrer 3, Reinhold Kleiner 3
+, Edward Goldobin 3
+, Dieter Koelle 3
+, Johannes D. Pedarnig 1
+and Wolfgang Lang 2,*
+1
+Institute of Applied Physics, Johannes Kepler University Linz, 4040 Linz, Austria;
+sandra.keppert@jku.at (S.K.); johannes.pedarnig@jku.at (J.D.P.)
+2
+Faculty of Physics, University of Vienna, 1090 Vienna, Austria; bernd.aichner@univie.ac.at (B.A.)
+3
+Physikalisches Institut, Center for Quantum Science (CQ) and LISA+, University of Tübingen,
+72076 Tübingen, Germany; kleiner@uni-tuebingen.de (R.K.); gold@uni-tuebingen.de (E.G.);
+koelle@uni-tuebingen.de (D.K.)
+*
+Correspondence: wolfgang.lang@univie.ac.at
+†
+Current address: Austrian Patent Ofﬁce, 1200 Vienna, Austria.
+‡
+Current address: Inﬁneon Technologies Austria AG, 9500 Villach, Austria.
+Abstract: Thin ﬁlms of the superconductor YBa2Cu3O7−δ (YBCO) were modiﬁed by low-energy
+light-ion irradiation employing collimated or focused He+ beams, and the long-term stability of
+irradiation-induced defects was investigated. For ﬁlms irradiated with collimated beams, the resis-
+tance was measured in situ during and after irradiation and analyzed using a phenomenological
+model. The formation and stability of irradiation-induced defects are highly inﬂuenced by tem-
+perature. Thermal annealing experiments conducted in an Ar atmosphere at various temperatures
+demonstrated a decrease in resistivity and allowed us to determine diffusion coefﬁcients and the
+activation energy ∆E = (0.31 ± 0.03) eV for diffusive oxygen rearrangement within the YBCO unit
+cell basal plane. Additionally, thin YBCO ﬁlms, nanostructured by focused He+-beam irradiation
+into vortex pinning arrays, displayed signiﬁcant commensurability effects in magnetic ﬁelds. Despite
+the strong modulation of defect densities in these pinning arrays, oxygen diffusion during room-
+temperature annealing over almost six years did not compromise the signatures of vortex matching,
+which remained precisely at their magnetic ﬁelds predicted by the pattern geometry. Moreover, the
+critical current increased substantially within the entire magnetic ﬁeld range after long-term storage
+in dry air. These ﬁndings underscore the potential of ion irradiation in tailoring the superconducting
+properties of thin YBCO ﬁlms.
+Keywords: cuprate superconductor; helium-ion irradiation; long-term stability; irradiation damage
+healing; vortex pinning; room-temperature annealing; diffusion coefﬁcients; activation energy;
+commensurability effects
+1. Introduction
+High-temperature superconductors (HTSCs) are fascinating and are studied inten-
+sively due to their unconventional superconductivity. Among the HTSCs, YBa2Cu3O7−δ
+(YBCO) is a popular choice due to its easy-to-fabricate and non-toxic nature, as well as its
+high critical temperature above the boiling point of liquid nitrogen. Various experiments
+have been conducted using masked or focused ion irradiation to modify the superconduct-
+ing properties of YBCO and observe novel phenomena. These experiments include the
+creation of Josephson junctions [1–5], nanoscale superconducting quantum interference
+devices [6,7], superconducting quantum interference ﬁlters [8], and the manipulation of
+Abrikosov vortex behavior through the fabrication of artiﬁcial periodic columnar defects,
+Int. J. Mol. Sci. 2024, 25, 7877. https://doi.org/10.3390/ijms25147877
+https://www.mdpi.com/journal/ijmsInt. J. Mol. Sci. 2024, 25, 7877
+2 of 16
+which serve as pinning centers for vortices [9–14] due to a local suppression of supercon-
+ductivity [15].
+Ion-beam structuring of YBCO using light elements such as He+ ions has advan-
+tages over wet-chemical lithography and conventional ion-beam milling using Ga. Heavy
+ions with moderate energy are unsuitable as they have a limited penetration depth and
+can implant even into thin ﬁlms, while swift heavy ions produce randomly distributed
+amorphous channels in YBCO [16]. Irradiation with electrons [17] and protons [18] would
+require an impractically high dose per defect column to achieve a signiﬁcant pinning effect.
+In contrast, He+ ions with energies of at least 30 keV can penetrate through thin YBCO
+ﬁlms and create columns of point defects with reasonable doses. Furthermore, the minimal
+lateral straggle of their trajectory makes them an ideal choice [14,19].
+Thorough investigations on the long-term stability of ion irradiation-induced modiﬁ-
+cation of YBCO are essential for potential technical applications of the modiﬁed material.
+However, there is a scarcity of data on the temporal evolution of electrical properties
+immediately following ion irradiation and after long-term storage at ambient conditions.
+Research has been conducted on the time-dependent properties of Josephson junctions
+created by focused He+-ion-beam (He-FIB) irradiation [20], along with the effects of post-
+annealing in an oxygen atmosphere [20,21]. Additionally, the interplay between defect
+healing and exposure to visible light in He+-ion-irradiated YBCO ﬁlms has been investi-
+gated [22].
+In this study, we investigate the relaxation of irradiation-induced changes in the super-
+conducting properties. Firstly, we report on the results of in situ resistance measurements
+during and after the irradiation process using a collimated ion beam. We also discuss the
+impact of sample temperature on defect formation and relaxation. Next, we investigate the
+thermal annealing of the irradiated YBCO ﬁlms in an inert gas atmosphere and study the
+relaxation of defects through oxygen diffusion within the material. Finally, we report on the
+long-term stability of dense pinning arrays in YBCO ﬁlms that were fabricated by He-FIB
+irradiation using a helium ion microscope (HIM). These nanostructured YBCO ﬁlms show
+vortex matching in applied magnetic ﬁelds [13,14], and we demonstrate the long-term
+stability of these matching effects together with an overall increase in the critical current.
+2. Results and Discussion
+2.1. Defect Formation and Relaxation during and after He+ Irradiation
+In this section, we report on the modiﬁcation of 240 nm thick YBCO ﬁlms irradiated at
+different sample temperatures using a collimated He+ beam. The formation of irradiation-
+induced defects in the YBCO ﬁlms was monitored in situ by measuring the ﬁlm’s electrical
+resistance during and after the 75 keV He+ irradiation. The critical temperature before
+irradiation was Tc0 = 85 K, where Tc0 is the temperature at which the resistance drops
+below the experimental resolution. YBCO bridge 1 was irradiated at a sample temperature
+of T = 295 K with an ion-beam current density of JB = 0.102 µA/cm2 for an irradiation
+time of tir1 = 26.27 min (red line in Figure 1). An ion ﬂuence Φ = 1.0 · 1015 ions/cm2
+was applied.
+The resistance of bridge 1, R1(t), signiﬁcantly increased during He+ irradiation,
+reaching a ﬁnal value of the normalized resistance R1(tir1)/R1(0) = 4.01 at time t = tir1
+when the irradiation ended. The resistance increase during irradiation showed a slightly
+superlinear behavior over time. We attribute this increase in resistance to the displacement
+of atoms, mainly oxygen atoms in CuO chains [23], distorting the YBCO unit cells, while the
+overall oxygen content in the ﬁlms remains unchanged. It is known that such an increase in
+resistance can occur exclusively due to the disorder of oxygen atoms without any oxygen
+loss [24]. After the irradiation, the bridge resistance slightly relaxed from its maximum
+value, and it was reduced by approximately 7.8% at time t = 110 min.
+In a contrasting experiment, YBCO ﬁlm bridge 2 was irradiated with He+ ions at
+a low temperature of T = 100 K using a cryogenic sample holder. The sample was
+kept at 100 K throughout the entire measurement. The ion current density was slightlyInt. J. Mol. Sci. 2024, 25, 7877
+3 of 16
+higher at JB = 0.134 µA/cm2 (red line in Figure 2). Therefore, a shorter irradiation time
+tir2 = 20.02 min was used in order to reach the same ﬂuence of Φ = 1.0 · 1015 ions/cm2.
+The impact of low-temperature He+ irradiation is much stronger than at room tem-
+perature. The resistance R2(t) shows a huge and highly superlinear increase in YBCO ﬁlm
+bridge 2. The normalized resistance was R2(tir2)/R2(0) = 81.2 at time t = tir2 when irradi-
+ation was stopped. In strong contrast to the room-temperature experiment, no reduction in
+the bridge resistance was observed later on (t > tir2) when the sample was kept at a low
+temperature. A related work using He+-ion energies of 500 keV supports our results, as no
+relaxation of resistance was found for temperatures below 250 K [25].
+0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+1 0 0
+1 1 0
+0
+1 0 0
+2 0 0
+3 0 0
+4 0 0
+5 0 0
+Y B C O  f i l m
+ b r i d g e  1  
+T  =  2 9 5  K  
+7 5  k e V  H e
++
+Φ =  1 . 0  1 0
+1 5  c m
+- 2   
+H e l i u m
+ i o n  b e a m
+  J B   ( µ A / c m
+2 )
+R e s i s t a n c e   R
+1   ( Ω)
+T i m
+e   ( m
+i n )
+ R
+1
+0 . 0 0
+0 . 0 5
+0 . 1 0
+ 
+ J B
+Figure 1. In-situ resistance measurement of YBCO thin ﬁlm bridge 1 during and after 75 keV He+-
+ion irradiation at a temperature of T = 295 K. A collimated He+-ion beam with a current density
+JB = 0.102 µA/cm2 (red line) and a ﬂuence Φ = 1.0 · 1015 ions/cm2 was used for the irradiation.
+0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+9 0
+1 0 0
+1 1 0
+0
+1 0 0 0
+2 0 0 0
+3 0 0 0
+4 0 0 0
+5 0 0 0
+6 0 0 0
+Y B C O  f i l m
+ b r i d g e  2  
+T  =  1 0 0  K  
+7 5  k e V  H e
++  
+Φ =  1 . 0   1 0
+1 5  c m
+- 2
+ 
+ 
+R e s i s t a n c e   R
+2   ( Ω)
+T i m
+e   ( m
+i n )
+ R
+2
+0 . 0 0
+0 . 0 5
+0 . 1 0
+0 . 1 5
+ J B
+ H e l i u m
+ i o n  b e a m
+  J B   ( µ A / c m
+2 )
+Figure 2. In-situ resistance measurement of YBCO thin ﬁlm bridge 2 during and after 75 keV He+-
+ion irradiation at a temperature of T = 100 K. A collimated He+-ion beam with a current density
+JB = 0.134 µA/cm2 (red line) and a ﬂuence Φ = 1.0 · 1015 ions/cm2 was used for the irradiation.Int. J. Mol. Sci. 2024, 25, 7877
+4 of 16
+After being exposed to ion irradiation and stored at T = 100 K, bridge 2 was slowly
+warmed up to room temperature. The changes in resistance R2 and temperature T over time
+are shown in Figure 3. Remarkably, the resistance decreased from R2(100 K) = 5590 Ωafter
+irradiation to R2(295 K) = 926 Ωas the sample warmed up. The correlation of resistance
+R2 with temperature T in the inset of Figure 3 clearly indicates a thermally activated
+relaxation of irradiation-induced defects in the YBCO ﬁlm. For comparison, the resistance
+of non-irradiated YBCO would have increased by approximately a factor of three within
+the same temperature interval. However, the fact that R2 did not relax to the initial value
+before irradiation suggests that not all defects were healed.
+0
+2 0 0
+4 0 0
+6 0 0
+8 0 0
+1 0 0 0
+1 2 0 0
+0
+1 0 0 0
+2 0 0 0
+3 0 0 0
+4 0 0 0
+5 0 0 0
+6 0 0 0
+R
+2 ( 2 9 5  K )  b e f o r e  H e
++  i r r a d i a t i o n
+ 
+ 
+R e s i s t a n c e   R
+2   ( Ω)
+T i m
+e   ( m
+i n )
+ R
+2
+1 0 0
+1 5 0
+2 0 0
+2 5 0
+3 0 0
+ T e m
+p e r a t u r e   T   ( K )
+ T
+1 0 0
+1 5 0
+2 0 0
+2 5 0
+3 0 0
+0
+1
+2
+3
+4
+5
+6
+R
+2   ( k Ω)
+ 
+ 
+T  ( K )
+Figure 3. Resistance R2 and temperature T of the ion-irradiated YBCO bridge 2 during warming up
+from 100 K to 295 K. The room-temperature resistance before ion irradiation R2(295K) is indicated by
+an orange dotted line. Inset: R2 as a function of temperature.
+After the warm-up, the resistance R2(295K) = 926 Ωwas signiﬁcantly higher than the
+bridge resistance before irradiation, R2(295K) = 182 Ω, as indicated by the dotted line in
+Figure 3. Even after a storage period of 14,000 min (almost 10 days) at room temperature,
+the resistance remained elevated at R2(295K) = 836 Ω. The ratio of R2 values measured
+before irradiation and after extended storage was 4.6. For comparison, the equivalent ratio
+for YBCO bridge 1, subjected to irradiation and subsequent relaxation at room temperature,
+was 3.7, a value similar to that of bridge 2. These results lead to the conclusion that
+75 keV He+ irradiation of YBCO thin ﬁlms leads to defects with long-term stability at room
+temperature. Furthermore, it supports the assertion that beyond a certain defect density,
+room temperature is not high enough to provide the necessary energy for the complete
+healing of defects following irradiation [26,27].
+The dependence of thin ﬁlm resistance on ion ﬂuence has been modeled only very
+rarely in the literature. For NiAl metal alloy ﬁlms that were irradiated at T = 77 K with
+540 keV Bi, 360 keV Xe, 120 keV Ar, and 180 keV He ions, the observed change in ﬁlm
+resistivity was described by a model [28–30]. The fraction of ion-modiﬁed material in the
+ﬁlm was assumed to follow the Johnson–Mehl–Avrami–Kolmogorov (JMAK) equation,
+which describes the temporal evolution of phase transformation of solids under isothermal
+conditions [31]. The change in ﬁlm resistivity was assumed to be proportional to this
+damaged fraction [28]. However, the ion-induced change of NiAl resistivity was small
+and qualitatively very different from our results on YBCO ﬁlms (Figures 1 and 2), and that
+model was therefore not applicable to ﬁt our data.Int. J. Mol. Sci. 2024, 25, 7877
+5 of 16
+To model the increase in YBCO thin ﬁlm resistance during ion irradiation, we pro-
+pose another phenomenological model that takes into account the spatial distribution of
+irradiation-induced defects and the volume fraction of defective material in the ﬁlm. When
+low-energy light ions impinge on the sample, they create point-like defects in the YBCO
+thin ﬁlm. We assume that YBCO unit cells containing an irradiation defect have increased
+electrical resistivity ρ + ∆ρ compared to the resistivity ρ of pristine unit cells. To simplify
+the model, we consider that multiple defects in the same unit cell have the same impact as
+a single defect. The fraction f of material with irradiation defects depends on the time t the
+sample is exposed to the ion beam, where 0 ≤f (t) ≤1. The resistance of the irradiated
+ﬁlm R(t), normalized to the resistance of the pristine ﬁlm R0, is then given by
+R(t)
+R0
+= 1 +
+f (t)r
+1 + r(1 −f (t)d).
+(1)
+The normalized resistance depends on the increase in resistivity r = ∆ρ/ρ, the spatial
+distribution of defects described by parameter d, and the fraction f. The fraction of ion-
+modiﬁed material is expressed as f (t) = 1 −exp(−t/τ), where τ is a time constant. This
+ansatz corresponds to the JMAK model in its simplest form, and it takes into account that the
+fraction of sample material to be modiﬁed by irradiation is ﬁnite (f ≤1). The dimensionality
+parameter d characterizes, for instance, a two-dimensional (2D) random distribution of
+columnar defects extending through the entire depth of the ﬁlm (d = 1/2) or a three-
+dimensional (3D) random distribution of point-like defects in the ﬁlm (d = 2/3). A series
+and a parallel connection of two resistors would be described by d = 0 and d = 1,
+respectively. The proposed model replicates Matthiessen’s rule for d = 0 and f ≪1
+and also accounts for defect-induced modiﬁcations for larger values of f while considering
+the dimensionality of the defect structure in the material. The time constant τ corresponds
+to a characteristic ion ﬂuence Φch = JBτ/q at which the resistance experiences a notable
+increase. Here, q is the elementary charge unit of the projectile ion.
+The model function in Equation (1) was ﬁtted to the resistance of both of the irradiated
+YBCO thin ﬁlm bridges, and very good agreement was obtained (see Figure 4). For ﬁlm
+bridge 2, ion-irradiated at T = 100 K, the strongly superlinear variation of resistance with
+time of irradiation is well described by the model function (light-blue solid line in Figure 4).
+The ﬁt parameters are given in Table 1; the coefﬁcient of determination was CoD = 99.994%,
+and the chi-square value was χ2 = 0.02636. The spatial distribution of irradiation-induced
+defects was assumed to be independent of the sample temperature. Therefore, the same
+value of parameter d was used for the other bridge. The resistance increase in ﬁlm bridge 1,
+ion-irradiated at T = 295 K, is also well described by this model (light-gray solid line in
+Figure 4; CoD = 99.894%, χ2 = 0.00081).
+Table 1. Time constant τ, resistivity increase r, dimensionality parameter d, and characteristic ion
+ﬂuence Φch of YBCO thin ﬁlms irradiated with 75 keV He+ ions at different sample temperatures.
+Parameters were determined from ﬁts of the model function Equation (1) to the normalized resistance
+R(t)/R0 data.
+Parameter
+Bridge 2 (T = 100 K)
+Bridge 1 (T = 295 K)
+τ (min)
+5.83 ± 0.02
+21.60 ± 0.08
+r
+422 ± 10
+7.06 ± 0.06
+d
+0.294 ± 0.003
+0.294
+Φch (1015 cm−2)
+0.293 ± 0.001
+0.825 ± 0.003
+The shorter time constant and lower characteristic ion ﬂuence, as well as the higher
+resistivity increase observed for bridge 2, demonstrate a more efﬁcient modiﬁcation of
+YBCO ﬁlms when He+ irradiation is conducted at low temperature as opposed to the
+irradiation at room temperature of bridge 1. This is attributed to a temperature-dependent
+“annealing process” for some of the irradiation defects. The relaxation of resistance sub-Int. J. Mol. Sci. 2024, 25, 7877
+6 of 16
+sequent to irradiation at T = 295 K (Figure 1) and during warm-up after irradiation at
+T = 100 K (Figure 3) supports this conclusion. Despite its relaxation, the resistance of
+irradiated YBCO ﬁlms remains well above the intrinsic resistance prior to irradiation, per-
+sisting at elevated levels even after months of sample storage at room temperature. This
+shows that the irradiation process generates a signiﬁcant density of stable defects. A more
+sophisticated model that includes the formation of multiple defects in the same unit cell
+and the temperature-dependent relaxation of defects could result in even more precise ﬁts
+to the R(t)/R0 data obtained through measurement.
+0
+2
+4
+6
+8
+1 0
+1 2
+1 4
+1 6
+1 8
+2 0
+2 2
+2 4
+2 6
+0 . 0
+0 . 5
+1 . 0
+1 . 5
+2 . 0
+2 . 5
+3 . 0
+3 . 5
+4 . 0
+R e s i s t a n c e   R
+2 ( t )  /  R
+2 ( 0 )
+R e s i s t a n c e   R
+1 ( t )  /  R
+1 ( 0 )
+T i m
+e   t   ( m
+i n )
+B r i d g e  1
+T  =  2 9 5  K  
+ D a t a
+ F i t
+0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+7 0
+8 0
+Y B C O  t h i n  f i l m
+ 
+7 5  k e V  H e
++
+ 
+B r i d g e  2
+T  =  1 0 0  K  
+ D a t a
+ F i t
+Figure 4. Normalized resistance of YBCO thin ﬁlm during 75 keV He+ irradiation of bridge 1 at room
+temperature (black symbols) and bridge 2 at T = 100 K (blue symbols). Solid lines are ﬁts to the data.
+The dimensionality parameter extracted from the ﬁt at T = 100 K was used as a ﬁxed parameter for
+the ﬁt of the data at 295 K as well.
+2.2. Defect Relaxation during Thermal Annealing
+The results of the previous measurements unequivocally demonstrate a thermally
+activated or assisted defect relaxation process. Therefore, we now aim to determine the
+activation energy for this phenomenon. While there is extensive literature on the diffusion
+and the activation energy of oxygen in- and out-diffusion in YBCO [32] as well as damage
+healing after heavy ion bombardment [33], little is known about defect healing of point
+defects resulting from light-ion irradiation [22,23].
+Two 190 nm thick YBCO ﬁlms were deposited on MgO and irradiated at room
+temperature with 75 keV He+ ions with ﬂuences of 0.7 · 1015 ions/cm2 (sample A) and
+1.4 · 1015 ions/cm2 (sample B). The temperature-dependent resistivity of the samples mea-
+sured before and after ion irradiation reveals a high Tc0 of 90 K for the pristine sample
+and suppression of superconductivity in irradiated samples (Figure 5). After irradiation,
+the resistivity of sample B was much higher than in sample A due to the higher irradia-
+tion ﬂuence.
+For the annealing experiments, the ion-irradiated samples were placed in a quartz
+tube and heated in an inert Ar atmosphere while the change in resistance was recorded.
+Annealing temperatures were selected to be below 150 ◦C because previous test experiments
+suggested that at higher temperatures, the measurements could be affected by oxygen
+loss. Reduction of the oxygen content would lead to an increase in resistivity, possibly
+obscuring the effects of thermally activated diffusion of the displaced oxygen atoms [34].
+After warming up the sample to the target temperature and waiting for stable conditions,
+the resistivity decay was recorded. A representative behavior of defect annealing is depictedInt. J. Mol. Sci. 2024, 25, 7877
+7 of 16
+in the inset of Figure 6 for sample A at temperature T = 102 ◦C. The broken gray line
+conﬁrms a perfect exponential decay of the resistivity with time. Subsequently, sample
+A was heated to T = 126 ◦C and the measurement was repeated. A similar protocol was
+used for sample B, encompassing more temperatures, namely, 64 ◦C, 81 ◦C, 101 ◦C, 119 ◦C,
+and 142 ◦C.
+0
+5 0
+1 0 0
+1 5 0
+2 0 0
+2 5 0
+3 0 0
+0 . 1
+1
+1 0
+1 0 0
+ S a m
+p l e  B  i r r a d i a t e d
+ S a m
+p l e  A  i r r a d i a t e d
+ S a m
+p l e  A  p r i s t i n e
+R e s i s t i v i t y  ( µΩ m
+)
+T e m
+p e r a t u r e   ( K )
+Figure 5. Temperature dependence of the resistivities of thin YBCO ﬁlms: sample A before (green)
+and after irradiation with 75 keV He+ at a ﬂuence of 0.7 × 1015 ions/cm2 (lilac) and sample B after
+irradiation with a ﬂuence of 1.4 × 1015 ions/cm2 (red).
+2 . 4
+2 . 5
+2 . 6
+2 . 7
+2 . 8
+2 . 9
+3 . 0
+5 x 1 0
+  
+2 x 1 0
+  
+5 x 1 0
+  
+2 x 1 0
+  
+1 x 1 0
+  
+1 x 1 0
+  
+1 0 0
+2 0 0
+3 0 0
+4 0 0
+5 0 0
+6 . 9 0
+6 . 9 5
+7 . 0 0
+7 . 0 5
+R e s i s t i v i t y  ( µΩ m
+)
+T i m
+e  ( m
+i n )
+ S a m
+p l e  A
+ E x p .  d e c a y
+ S a m
+p l e  A
+ S a m
+p l e  B
+D i f f u s i o n  c o e f f i c i e n t  ( m
+2
+ s - 1 )
+1 0 0 0 / T  ( K
+- 1 )
+Figure 6. Diffusion−coefﬁcient D of oxygen in samples A and B after ion irradiation, determined
+from the exponential decay of the resistivity. Samples were kept at constant temperatures in the argon
+atmosphere. The broken lines are ﬁts to determine the activation energy for the rearrangement of
+oxygen atoms. The inset shows a representative example of the resistivity decrease in sample A at
+102 ◦C.Int. J. Mol. Sci. 2024, 25, 7877
+8 of 16
+For further analysis, we utilize the isothermal electric resistance relaxation technique,
+a common method for investigating oxygen diffusion in high-temperature superconduc-
+tors [35]. It allows us to calculate the diffusion coefﬁcients D at a given temperature T by
+measuring the change in resistivity ρ over time t and subsequently determine the required
+activation energy ∆E in YBCO thin ﬁlms that have been irradiated with He+ ions.
+The method is based on the relationship between oxygen concentration within the
+CuO2 planes and the CuO chains of YBCO with resistivity. Since measuring the oxygen
+concentration within these CuO chains is challenging, the changes in resistivity are assumed
+to be linearly correlated with the oxygen defects in the sample [36].
+The increase in resistivity during light-ion irradiation is mostly caused by the displace-
+ment of weakly bound oxygen atoms from the copper-oxide chains. These oxygen atoms
+are only bound by approximately 1 eV [37], which is much lower compared to oxygen in
+CuO2 planes (8 eV) [17] or any of the other components: yttrium (25 eV), barium (30 eV),
+and copper (15 eV) [38]. As a result, most irradiation-induced displacements are oxygen
+atoms from the chains [21] that are displaced by a small distance from their original posi-
+tion while not decreasing the oxygen content in the sample [23]. It is commonly assumed
+that the displaced oxygen species are often lodged along the a axis of the basal plane of
+the YBCO unit cell [39], where minimal energy is needed to shift them back into place
+again [23].
+Annealing can be used to let the displaced oxygen diffuse back into place, thereby
+lowering the resistivity. It is important to note that this diffusion is a thermally activated
+process, and the changes in resistivity over time at a ﬁxed annealing temperature need to be
+recorded. Since oxygen diffusion perpendicular to the CuO2 layers in YBCO is negligible,
+predominant diffusion within the ab plane can be assumed [32].
+Fick’s second law can be used to describe this time-dependent diffusion process,
+which states
+∂c
+∂t = D ∂2c
+∂2x.
+(2)
+In this scenario, we examine those oxygen atoms in YBCO which form the chains
+along the b axis. We consider their concentration c as a function of time t and position x.
+The diffusion coefﬁcient D is deﬁned by an Arrhenius equation that depends on the
+temperature T and the activation energy ∆E:
+D(T) = D0 · exp
+
+−∆E
+kBT
+
+,
+(3)
+where D0 is a material constant and kB is the Boltzmann constant.
+When solving Equation (2), we assume as the initial condition a homogeneous dis-
+tribution of oxygen in the CuO chains of the sample and limit the process to the sample
+volume. This allows us to ﬁnd a solution for the concentration. Subsequently, we can
+determine the relative changes in concentration [32].
+c(t) −ce
+c0 −ce
+= 8
+π2 · exp
+
+−t
+τ
+
+(4)
+with
+τ =
+b2
+π2D,
+where ce represents the saturation concentration, indicating the concentration of all the
+oxygen atoms positioned correctly in the CuO chains; c0 is the starting concentration,
+and c(t) is the concentration over time. The relaxation time τ depends on the sample width
+b and diffusion coefﬁcient D.
+Because measuring the concentration of oxygen in CuO-chain positions is hardly
+possible, we used the linear relationship between the concentration of displaced oxygenInt. J. Mol. Sci. 2024, 25, 7877
+9 of 16
+atoms and resistivity from measurements at various ion ﬂuences [23]. For temperatures
+low enough so only small changes in oxygen occur, Equation (4) can be converted to
+ln
+ρ(t) −ρe
+ρ0 −ρe
+π2
+8
+
+= −t
+τ ,
+(5)
+where ρ(t) is the time-dependent resistivity, ρ0 is the initial resistivity of the irradiated
+sample before annealing, and ρe is the saturation resistivity for t →∞. For more details on
+the derivation of Equation (5), see [32].
+In order to evaluate the oxygen diffusion coefﬁcient D(T) in the irradiated samples,
+we measured ρ(t) during the annealing at temperature T and utilized Equation (5). Since
+ρe is not accessible experimentally, the measurements were performed over timescales
+signiﬁcantly larger than τ and ρe determined from a ﬁt of the exponential decay of ρ(t) as
+exempliﬁed in the inset of Figure 6. The values of D at several different temperatures are
+displayed as an Arrhenius plot in Figure 6. The slope of the ﬁts (broken lines) allows us to
+determine the activation energy ∆E using Equation (3). Note, however, that the absolute
+values of D are subject to assumptions in the model that enter the prefactor D0, which has
+no inﬂuence on the determination of ∆E.
+The results are ∆EB = (0.31 ± 0.03) eV for sample B and ∆EA = 0.29 eV for sample
+A. It is important to note that the value for sample A is based on only two measurements.
+Nonetheless, it still indicates that the activation energy is similar for different irradiation
+ﬂuences. Other oxygen-diffusion experiments reported somewhat higher values for the ac-
+tivation energy, e.g., 1.23 eV [40], 0.8 eV [32], and 0.97 eV [41]. However, these experiments
+were conceptually different, as they measured the in- and out-diffusion of oxygen during
+annealing experiments in an oxygen atmosphere. In this scenario, diffusion is inﬂuenced by
+surface barriers [42], while in our experiments, the average oxygen content in the sample
+remains constant. A better-related study of defect recovery after irradiation with 500 keV
+He+ ions corroborates our ﬁndings and found a value of ∆E = (0.36 ± 0.05) eV [25].
+2.3. Long-Term Stability of Nanopatterned YBCO Films
+Nanopatterning of YBCO thin ﬁlms by focused-ion-beam irradiation has proven to
+be a versatile method for fabricating ultradense vortex pinning landscapes and Josephson
+junctions. However, one might have concerns about their long-term stability due to oxygen
+migration that could blur the oxygen-defect proﬁle [43]. Building on our previously
+presented experiments, we investigate the temporal evolution of the critical temperature,
+the resistivity, and the critical current of an 80 nm thick YBCO ﬁlm on MgO substrate
+that was irradiated with a 30 keV He+ focused ion beam in the HIM at room temperature.
+The columnar defects (CDs) were arranged in a square lattice with 200 nm spacings. More
+details on sample fabrication and properties are reported elsewhere [13].
+The temporal evolution of the resistivity vs. temperature characteristics and the change
+in Tc0 are illustrated in Figure 7 over a span of almost six years. The sample was kept in a
+desiccator at room temperature in the ambient atmosphere between measurements. It is
+important to emphasize that in our analysis we are only considering the days when the
+sample was stored at room temperature, as aging effects are minimal when the sample is
+kept in the cryostat at low temperature. After irradiation, the critical temperature decreased
+by approximately 3.5 K due to the inevitable straggle of some ions off their path, causing a
+minor amount of irradiation defects between the CDs. Over the storage period, Tc0 initially
+increased and reached its maximum after approximately 3.4 years. For even longer storage
+periods, a marginal decrease in Tc0 was found, accompanied by a small increase in the
+normal-state resistivity.Int. J. Mol. Sci. 2024, 25, 7877
+10 of 16
+1
+1 0
+1 0 0
+1 0 0 0
+8 5 . 0
+8 5 . 5
+8 6 . 0
+8 6 . 5
+8 7 . 0
+8 7 . 5
+8 8 . 0
+8 8 . 5
+8 9 . 0
+C r i t i c a l  t e m
+p e r a t u r e  ( K )
+T i m
+e  f r o m
+ i r r a d i a t i o n  ( d a y s )
+B e f o r e
+i r r a d i a t i o n
+8 5
+8 6
+8 7
+8 8
+8 9
+9 0
+9 1
+0
+1 0
+2 0
+3 0
+ D a y s  a f t e r
+ i r r a d i a t i o n
+ 
+      - 8
+ 
+       3
+ 
+     2 3
+ 
+   1 3 8
+ 
+ 1 2 3 0
+ 
+ 2 1 2 2
+R e s i s t a n c e  ( Ω)
+T e m
+p e r a t u r e  ( K )
+Figure 7. Zero-resistance critical temperature Tc0 over room-temperature storage time in an 80 nm
+YBCO ﬁlm before and after He-FIB irradiation imprinting a square pinning array of 200 nm spacings.
+The black bullet represents Tc0 eight days before the irradiation. The arrows indicate the sequence of
+ρ(T) measurements from which Tc0 was determined, using a 10 mΩcriterion. Inset: Evolution of
+the resistance vs. temperature characteristics of the sample with room-temperature annealing time.
+The black line represents the ρ(T) measurement of the sample before irradiation.
+The long-term stability of unirradiated thin YBCO ﬁlms has long been a topic of
+controversial discussion, especially with regard to effects of exposure to humidity and
+carbon dioxide in air [44]. Exposure to air causes YBCO to form hydroxide and carbonate
+layers on its surface [45]. Additionally, the commonly used photolithographic patterning
+exposes the ab planes of YBCO to the environment, which are more prone to environmental
+degradation [45].
+However, for irradiated samples, a competition between defect healing after irradia-
+tion, which increases Tc0, and the above-mentioned deterioration of the sample through
+decomposition, which decreases Tc0, can be anticipated. In fact, we observe an increase
+in Tc0 and a reduction in resistivity during storage in a desiccator up to a time span of
+approximately 3.4 years, which we attribute to a partial rearrangement of displaced oxygen
+atoms. The minor reversal of this trend at still longer times is probably connected with
+a saturation of the healing process and a small deterioration of the sample properties
+during dry-air exposure. Nevertheless, our data indicate a robust long-term stability of the
+nanopatterned YBCO ﬁlms if kept in dry air.
+Vortex commensurability effects occur when a magnetic ﬁeld applied parallel to the
+CDs creates a vortex density that matches the sample’s CD arrangement. Maxima of the
+critical current appear at so-called matching ﬁelds
+Bk = kΦ0/A,
+(6)
+where k is the number of pinning sites (or vortices) in the unit cell of area A of the two-
+dimensional CD lattice, and Φ0 = h/(2e) is the magnetic ﬂux quantum. The square array
+of CDs in our nanopatterned sample features a unit cell of A = (200 nm)2, leading to a ﬁrst
+matching ﬁeld B1 = 51.7 mT [13]. A sketch of the pinning lattice (green circles) and the
+positions of the trapped vortices (blue dots) at the ﬁrst matching ﬁeld is shown in the inset
+of Figure 8.Int. J. Mol. Sci. 2024, 25, 7877
+11 of 16
+The sample was kept at room temperature for three days after irradiation in the HIM
+before we conducted an initial measurement of the critical current in the superconducting
+state at T = 84.1 K (red circles in Figure 8). Another measurement was performed 2122 days
+later under the same conditions (blue circles). The matching ﬁeld is identical, indicating that
+the pinning landscape is still efﬁcient and leads to the same vortex arrangement. However,
+the overall critical current has increased over the entire magnetic ﬁeld range. In particular,
+its value at B1 became 5.8 times larger. At ﬁrst glance, this could be due to the decrease in
+the relative temperature T/Tc0 as a result of the higher Tc0, as shown in Figure 7. Typically,
+the critical current signiﬁcantly increases at temperatures further below Tc0. However,
+upon closer inspection of an additional measurement taken at the same T/Tc0 = 0.989 as
+the initial measurement, it is revealed that the critical current is still enhanced by a factor of
+1.9 after long-term storage.
+   
+  
+0
+5 0
+1 0 0
+0 . 0
+0 . 5
+1 . 0
+1 . 5
+2 . 0
+2 . 5
+3 . 0
+C r i t i c a l  c u r r e n t  ( m
+A )
+M
+a g n e t i c  f i e l d  ( m
+T )
+T i m
+e  a f t e r  i r r a d i a t i o n :
+       3  d a y s  ( T  =  8 4 . 1  K )
+ 2 1 2 2  d a y s  ( T  =  8 4 . 1  K )
+ 2 1 2 2  d a y s  ( T  =  8 4 . 7  K )
+Figure 8. Temporal evolution of the critical current in an 80 nm YBCO ﬁlm structured by He-FIB
+into a square array of defect columns with 200 nm spacings. The initial critical current measurement
+after irradiation is denoted by red circles, while the subsequent measurement following 2122 days
+(almost six years) of storage in dry air at room temperature is represented by blue circles. The green
+symbols show the corresponding measurement at 84.7 K, taken at the same reduced temperature
+T/Tc0 = 0.989 as the measurement before long-term storage. Gray broken lines represent the
+magnetic ﬁelds according to Equation (6) with values k = {−2, −1, 0, 1, 2}. Inset: Layout of the
+pinning lattice, where green circles represent the columnar defects and blue dots denote the positions
+of the trapped vortices for k = ±1.
+The long-term resilience of the matching peaks can be understood as follows: The
+spreading of the penetrating He+ ions causes a “damage gradient” perpendicular to its
+initial trajectory. The density of defects in the center of the defect column is high enough
+to withstand room-temperature annealing. However, the defect density rapidly decreases
+with the distance from the center [14]. These inter-CD regions are primarily susceptible
+to healing effects which potentially can “sharpen” the defect proﬁle around the CDs due
+to Frenkel defect recombination [46] and ultimately lead to the observed increase in Tc0,
+the reduction of the resistivity, and the increase in the critical current at the matching ﬁeld.
+Indeed, studies on He-FIB-created Josephson junctions (JJs) found that aging at room
+temperature in a nitrogen environment resulted in a signiﬁcant enhancement of the criticalInt. J. Mol. Sci. 2024, 25, 7877
+12 of 16
+current, with timescales that are highly dependent on the irradiation dose. Annealing at
+90 ◦C under low and high oxygen pressures conﬁrmed that the modiﬁcations in the JJs’ char-
+acteristics stem from repositioning oxygen atoms to their original sites rather than restoring
+the oxygen content in the ﬁlms [20]. This discovery rules out the possibility of oxygen
+depletion during He+-ion irradiation, aligning with electrical transport measurements [14].
+Other works reported good temporal stability of JJs prepared by masked Ne+-ion irra-
+diation over eight years [47] and investigated the voltage modulation of current-biased
+JJ arrays as a function of the applied magnetic ﬁeld. The increase in the voltage modula-
+tion after post-annealing at 100 ◦C in oxygen resulted from a narrowing of the barrier by
+diffusion and recombination of the low-energy oxygen defects [21].
+The ﬁndings of these various experiments indicate that controlled annealing at tem-
+peratures moderately above room temperature could be a tool to enhance the properties of
+nanostructures created by He-FIB in a reasonably short timescale while also anticipating
+healing effects and thus increasing their long-term stability.
+3. Methods and Materials
+3.1. YBCO Thin Film Production
+All YBCO thin ﬁlms in this work were produced by pulsed laser deposition (PLD) [48].
+Films were grown on single-crystal MgO (100) substrates. A stoichiometric YBCO ceramic
+fabricated via the solid-state reaction method was used as the target. Ablation was carried
+out with a KrF-excimer laser (λ = 248 nm) at a pulse repetition rate of 10 Hz with a pulse
+duration of 25 ns and a ﬂuence of 3.25 J/cm2. The deposition took place at a substrate
+temperature of 750 °C in a 0.7 mbar oxygen background. Annealing at 450 °C in 800 mbar
+oxygen background was carried out for 30 min. Finally, the ﬁlms were patterned by wet-
+chemical etching via a photolithographic mask to deﬁne geometries suitable for four-point
+resistance measurements.
+3.2. Irradiation of Thin Films
+The irradiation of YBCO using a collimated He+-ion beam was performed on an ion
+implanter (High Voltage Engineering Europa B.V., Amersfoort, the Netherlands), using a
+metal mask to shield the electrical contacts of the sample. The setup allowed for cooling
+of the sample during irradiation by a ﬂow of liquid nitrogen while also measuring the
+resistance. He+ ions with 75 keV energy were used, with 99% of them exiting the YBCO
+ﬁlm without being implanted at this energy level. To prevent channeling of He+ ions along
+the c axis of the sample, the ion incidence angle was set to 5◦off the surface normal. The ion
+ﬂuence was monitored by Faraday cups, and the irradiation was halted once the desired,
+preset ﬂuence was achieved. The ion beam current density was kept below 0.25 µA/cm2 to
+avoid inducing thermal effects during irradiation.
+The irradiated nanostructures were prepared using a HIM (ORION NanoFab, Carl
+Zeiss Microscopy, Oberkochen, Germany). An array of irradiated spots with a diameter of
+≈50 nm was created with a slightly defocused 30 keV He+-ion beam at a beam current of
+3.0 pA. A total of 50,000 ions per defect column were used to form the pinning array. More
+detailed information on creating the array of columnar defects via HIM and comprehensive
+measurements on the nanoirradiated samples can be found in [13].
+3.3. Annealing of Thin Films
+To anneal the samples above room temperature, they were placed in a quartz-glass
+tube inside a tube furnace (Heraeus RO 4/25, Hanau, Germany) with a temperature
+controller. A minimal overpressure of ﬂowing Ar gas, controlled by a gas-washing bottle
+at the back end of the quartz tube, was maintained. We made sure that the gas ﬂow did
+not compromise the temperature stability, and the sample temperature was continuously
+monitored by a platinum (Pt-100) sensor.Int. J. Mol. Sci. 2024, 25, 7877
+13 of 16
+3.4. Electrical Characterization of Thin Films
+The in situ resistivity measurements of the ﬁlms during and after irradiation were
+performed with a constant current supply (Keithley Instruments 224, Solon, OH, USA),
+with a measurement current of 1 µA, and a nanovoltmeter (Keithley Instruments SDV 182,
+Solon, OH, USA).
+The setup for the determination of the oxygen diffusion coefﬁcient and the activation
+energy consisted of a different current supply (Keithley Instruments 6221, Solon, OH, USA))
+and nanovoltmeter (Keithley Instruments 2182A, Solon, OH, USA). Here, a measurement
+current of 10 µA was chosen.
+Electrical transport measurements in magnetic ﬁelds were conducted on the HIM-
+structured samples using a closed-cycle cryocooler positioned between the poles of an
+electromagnet. The setup allows for precise temperature adjustments with a stability
+of approximately 1 mK. This was achieved by employing a ceramic temperature sensor
+(Cernox-1080, Lake Shore Cryotronics, Woburn, MA, USA) in conjunction with a temper-
+ature controller (LakeShore Cryotronics 336, Woburn, MA, USA). Critical currents were
+determined using a 100 nV criterium, corresponding to an electrical ﬁeld of 10 µV/cm.
+4. Conclusions
+In summary, we examined the long-term stability and the annealing of defects created
+by He+-ion irradiation in thin YBCO ﬁlms in in situ and ex situ experiments. The increase
+in resistivity depends strongly on the temperature at which the sample is kept during
+irradiation and can be described by a phenomenological model; while a decrease in resis-
+tivity occurs within minutes after stopping the irradiation at room temperature, no such
+relaxation is seen at 100 K. The counteracting creation and healing of oxygen displacements
+is, therefore, an important consideration for the chosen irradiation temperature.
+Monitoring the resistivity evolution at several elevated temperatures, where oxy-
+gen out-diffusion can still be ruled out, allowed us to determine the diffusion coef-
+ﬁcients for rearranging oxygen atoms into their original sites. The activation energy
+∆E = (0.31 ± 0.03) eV of this process is lower than the one for oxygen diffusion out of
+the YBCO ﬁlm, making it possible to improve sample properties by annealing at selected
+temperatures without deoxygenating them.
+Since focused He+-ion-beam irradiation is an extremely versatile tool to modulate
+the superconducting properties, we investigated the aging of vortex-pinning arrays over
+long timescales. During the initial healing period, Tc slightly increased during 3.4 years
+and only marginally decreased thereafter. The general reduction of resistivity did not
+compromise the vortex-matching signatures. On the contrary, we observed a dramatic
+increase in the critical current in the whole range of magnetic ﬁelds under investigation
+that is most notable at zero ﬁeld and at the matching peaks. Our analysis suggests that
+long-term room-temperature annealing maintains the robust pinning potential at the cores
+of the columnar defect channels while reducing the defect density surrounding them.
+These results indicate the long-term stability of He+-ion-irradiated YBCO ﬁlms at room
+temperature following an initial enhancement during a healing phase, and they underscore
+the robustness of structures fabricated using a focused He+-ion beam. This has signiﬁcant
+implications for potential applications in ﬂuxonics.
+Author Contributions: Conceptualization, J.D.P., D.K. and W.L.; methodology, B.A., B.M., J.D.P., D.K.
+and W.L.; validation, S.K., J.D.P., B.A. and W.L.; formal analysis, S.K., B.A., P.R., M.-A.B., J.D.P. and
+W.L.; investigation, B.A., B.M., P.R., M.K. and M.-A.B.; resources, J.D.P, R.K., E.G., D.K. and W.L.; data
+curation, J.D.P. and W.L.; writing—original draft preparation, S.K.; writing—review and editing, J.D.P.
+and W.L.; visualization, S.K. and B.A.; supervision, J.D.P., R.K., D.K. and W.L.; project administration,
+J.D.P., E.G., D.K. and W.L.; funding acquisition, J.D.P., D.K. and W.L. All authors have read and
+agreed to the published version of the manuscript.Int. J. Mol. Sci. 2024, 25, 7877
+14 of 16
+Funding: The research was funded in whole, or in part, by the Austrian Science Fund (FWF) grant
+I4865-N and the German Research Foundation (DFG), grant KO 1303/16-1. For the purpose of
+open access, the authors have applied a CC-BY public copyright license to any Author Accepted
+Manuscript version arising from this submission. The research is based upon work from COST
+Actions CA21144 (SuperQuMap), CA19140 (FIT4NANO), and CA19108 (Hi-SCALE) supported by
+COST (European Cooperation in Science and Technology).
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: Data are available on reasonable request from the corresponding author.
+Acknowledgments: Open Access Funding by the University of Vienna.
+Conﬂicts of Interest: Author Marius-Aurel Bodea is employed by the Inﬁneon Technologies Aus-
+tria AG. All authors declare that the research was conducted at universities in the absence of any
+commercial or ﬁnancial relationships that could be construed as a potential conﬂict of interest.
+References
+1.
+Kahlmann, F.; Engelhardt, A.; Schubert, J.; Zander, W.; Buchal, C.; Hollkott, J. Superconductor-normal-superconductor Josephson
+junctions fabricated by oxygen implantation into YBa2Cu3O7−δ. Appl. Phys. Lett. 1998, 73, 2354. [CrossRef]
+2.
+Katz, A.S.; Sun, A.G.; Woods, S.I.; Dynes, R.C. Planar thin ﬁlm YBa2Cu3O7−δ Josephson junctions via nanolithography and ion
+damage. Appl. Phys. Lett. 1998, 72, 2032. [CrossRef]
+3.
+Bergeal, N.; Grison, X.; Lesueur, J.; Faini, G.; Aprili, M.; Contour, J.P. High-quality planar high-Tc Josephson junctions. Appl. Phys.
+Lett. 2005, 87, 102502. [CrossRef]
+4.
+Cybart, S.A.; Cho, E.Y.; Wong, T.J.; Wehlin, B.H.; Ma, M.K.; Huynh, C.; Dynes, R.C. Nano Josephson superconducting tunnel
+junctions in YBa2Cu3O7−δ directly patterned with a focused helium ion beam. Nat. Nanotechnol. 2015, 10, 598. [CrossRef]
+5.
+Müller, B.; Karrer, M.; Limberger, F.; Becker, M.; Schröppel, B.; Burkhardt, C.J.; Kleiner, R.; Goldobin, E.; Koelle, D. Josephson
+Junctions and SQUIDs Created by Focused Helium-Ion-Beam Irradiation of YBa2Cu3O7. Phys. Rev. Appl. 2019, 11, 044082.
+[CrossRef]
+6.
+Bergeal, N.; Lesueur, J.; Faini, G.; Aprili, M.; Contour, J.P. High Tc superconducting quantum interference devices made by ion
+irradiation. Appl. Phys. Lett. 2006, 89, 112515. [CrossRef]
+7.
+Li, H.; Cai, H.; Cho, E.Y.; McCoy, S.J.; Wang, Y.T.; LeFebvre, J.C.; Zhou, Y.W.; Cybart, S.A. High-transition-temperature nanoscale
+superconducting quantum interference devices directly written with a focused helium ion beam.
+Appl. Phys. Lett. 2020,
+116, 070601. [CrossRef]
+8.
+Ouanani, S.; Kermorvant, J.; Ulysse, C.; Malnou, M.; Lemaître, Y.; Marcilhac, B.; Feuillet-Palma, C.; Bergeal, N.; Crété, D.; Lesueur,
+J. High-Tc superconducting quantum interference ﬁlters (SQIFs) made by ion irradiation. Supercond. Sci. Technol. 2016, 29, 094002.
+[CrossRef]
+9.
+Swiecicki, I.; Ulysse, C.; Wolf, T.; Bernard, R.; Bergeal, N.; Briatico, J.; Faini, G.; Lesueur, J.; Villegas, J.E. Strong ﬁeld-matching
+effects in superconducting YBa2Cu3O7−δ ﬁlms with vortex energy landscapes engineered via masked ion irradiation. Phys. Rev.
+B 2012, 85, 224502. [CrossRef]
+10.
+Trastoy, J.; Malnou, M.; Ulysse, C.; Bernard, R.; Bergeal, N.; Faini, G.; Lesueur, J.; Briatico, J.; Villegas, J.E. Freezing and thawing of
+artiﬁcial ice by thermal switching of geometric frustration in magnetic ﬂux lattices. Nat. Nanotechnol. 2014, 9, 710. [CrossRef]
+11.
+Haag, L.T.; Zechner, G.; Lang, W.; Dosmailov, M.; Bodea, M.A.; Pedarnig, J.D. Strong vortex matching effects in YBCO ﬁlms
+with periodic modulations of the superconducting order parameter fabricated by masked ion irradiation. Physica C 2014, 503, 75.
+[CrossRef]
+12.
+Zechner, G.; Lang, W.; Dosmailov, M.; Bodea, M.A.; Pedarnig, J.D. Transverse vortex commensurability effect and sign change of
+the Hall voltage in superconducting YBa2Cu3O7−δ thin ﬁlms with a nanoscale periodic pinning landscape. Phys. Rev. B 2018,
+98, 104508. [CrossRef]
+13.
+Aichner, B.; Müller, B.; Karrer, M.; Misko, V.R.; Limberger, F.; Mletschnig, K.L.; Dosmailov, M.; Pedarnig, J.D.; Nori, F.; Kleiner, R.;
+et al. Ultradense Tailored Vortex Pinning Arrays in Superconducting YBa2Cu3O7−δ Thin Films Created by Focused He Ion Beam
+Irradiation for Fluxonics Applications. ACS Appl. Nano Mater. 2019, 2, 5108. [CrossRef]
+14.
+Karrer, M.; Aichner, B.; Wurster, K.; Magén, C.; Schmid, C.; Hutt, R.; Budinská, B.; Dobrovolskiy, O.V.; Kleiner, R.; Lang, W.; et al.
+Vortex matching at 6 T in YBa2Cu3O7−δ thin ﬁlms by imprinting a 20-nm periodic pinning array with a focused helium-ion beam.
+Phys. Rev. Appl. 2024, 22, 014043. [CrossRef]
+15.
+Lesueur, J.; Dumoulin, L.; Quillet, S.; Radcliffe, J. Ion-beam induced metal insulator transition in YBCO ﬁlms. J. Alloy. Compd.
+1993, 195, 527. [CrossRef]
+16.
+Civale, L. Vortex pinning and creep in high-temperature superconductors with columnar defects. Supercond. Sci. Technol. 1997,
+10, A11. [CrossRef]Int. J. Mol. Sci. 2024, 25, 7877
+15 of 16
+17.
+Tolpygo, S.K.; Lin, J.Y.; Gurvitch, M.; Hou, S.Y.; Phillips, J.M. Effect of oxygen defects on transport properties and Tc of
+YBa2Cu3O6+x: Displacement energy for plane and chain oxygen and implications for irradiation-induced resistivity and Tc
+suppression. Phys. Rev. B 1996, 53, 12462. [CrossRef]
+18.
+Meyer, O.; Kroener, T.; Remmel, J.; Geerk, J.; Linker, G.; Strehlau, B.; Wolf, T. Transport and structure of ion irradiated HTSC thin
+ﬁlms. Nucl. Instr. Meth. Phys. Res. B 1992, 65, 539. [CrossRef]
+19.
+Lang, W.; Richter, H.; Marksteiner, M.; Siraj, K.; Bodea, M.A.; Pedarnig, J.D.; Grigoropoulos, C.; Bäuerle, D.; Hasenfuss, C.;
+Palmetshofer, L.; et al. Masked ion beam irradiation of high-temperature superconductors: Patterning of nano-size regions with
+high point-defect density. Int. J. Nanotechnol. 2009, 6, 704. [CrossRef]
+20.
+Karrer, M.; Wurster, K.; Linek, J.; Meichsner, M.; Kleiner, R.; Goldobin, E.; Koelle, D. Temporal evolution of electric transport
+properties of YBa2Cu3O7−δ Josephson junctions produced by focused-helium-ion-beam irradiation. Phys. Rev. Appl. 2024,
+21, 014065. [CrossRef]
+21.
+Cho, E.Y.; Kouperine, K.; Zhuo, Y.; Dynes, R.C.; Cybart, S.A. The effects of annealing a 2-dimensional array of ion-irradiated
+Josephson junctions. Supercond. Sci. Technol. 2016, 29, 094004. [CrossRef]
+22.
+Markowitsch, W.; Steiger, B.; Lang, W.; Bodea, M.A.; Pedarnig, J.D. Optically induced changes and long-term relaxations of
+resistivity and critical temperature in He+ irradiatedYBa2Cu3Ox. Thin Solid Film. 2010, 518, 7070. [CrossRef]
+23.
+Arias, D.; Sefrioui, Z.; Loos, G.D.; Agullo-Rueda, F.; Garcia-Barriocanal, J.; Leon, C.; Santamaria, J. Pair breaking by chain oxygen
+disorder in light-ion irradiated YBa2Cu3Ox thin ﬁlms. Phys. Rev. B 2003, 68, 94515. [CrossRef]
+24.
+Wang, X.Z.; Hellebrand, B.; Bäuerle, D.; Strecker, M.; Wortmann, G.; Lang, W. Oxygen ordering and superconductivity in
+GdBaSrCu3O7−x. Physica C 1995, 242, 55. [CrossRef]
+25.
+Barbour, J.C.; Venturini, E.L.; Ginley, D.S.; Kwak, J.F. Irradiation Effects in High-Temperature Superconductors. Nucl. Instr. Meth.
+Phys. Res. Sect. B 1992, 65, 531. [CrossRef]
+26.
+Liu, J.; Zhang, Z.; Wu, J.; Ma, K.; Zhao, Y.; Yu, N.; Hsieh, P.; Chu, W.K. Fluorine and hydrogen ion irradiation in YBaCuO
+superconductor. Nucl. Instrum. Methods Phys. Res. Sect. B 1991, 62, 74. [CrossRef]
+27.
+Iliffe, W.; Peng, N.; Brittles, G.; Bateman, R.; Webb, R.; Grovenor, C.; Speller, S. In-situ measurements of the effect of radiation
+damage on the superconducting properties of coated conductors. Supercond. Sci. Technol. 2021, 34, 09LT01. [CrossRef]
+28.
+Jaouen, C.; Delafond, J.; Riviere, J.P. Crystalline to amorphous transformation in NiAl: Ion irradiation studies in relation to
+cascade parameters. J. Phys. F Met. Phys. 1987, 17, 335. [CrossRef]
+29.
+Miranda, R.M.N.; Vasconcellos, M.A.Z.; Baibich, M.N.; Borges da Costa, J.A.T. Depth dependence of electrical resistivity
+transformations by ion beams. Nucl. Instrum. Methods Phys. Res. Sect. B 1997, 127–128, 132. [CrossRef]
+30.
+Karpe, N. Using electrical resistivity to analyze the kinetics of irradiation induced amorphization of metals. Nucl. Instrum.
+Methods Phys. Res. Sect. B 1995, 95, 485. [CrossRef]
+31.
+Christian, J. The Theory of Transformations in Metals and Alloys; Pergamon: Oxford, UK, 2002.
+32.
+Erb, A.; Greb, B.; Müller-Vogt, G.
+In-situ resistivity measurements during the oxygenation of YBa2Cu3O7−δ and
+Gd0.8Y0.2Ba2Cu3O7−δ single crystals. Physica C 1996, 259, 83. [CrossRef]
+33.
+Matsui, S.; Matsutera, H.; Yoshitake, T.; Fujita, J.; Ichihashi, T.; Mito, M. Ion and electron beam irradiation effects for high-Tc
+superconducting thin ﬁlms. Radiat. Eff. Defect. S. 1992, 124, 81. [CrossRef]
+34.
+Mesarwi, A.; Levenson, L.L.; Ignatiev, A. Oxygen desorption from YBa2Cu3O7−x and Bi2CaSr2Cu2O8+δ superconductors. J.
+Appl. Phys. 1991, 70, 1591. [CrossRef]
+35.
+Zhang, H.; Ye, H.; Du, K.; Huang, X.Y.; Wang, Z.H. Electric resistance relaxation and oxygen diffusion in melt-texture grown
+YBCO bulk post-annealed at high temperature. Supercond. Sci. Technol. 2002, 15, 1268. [CrossRef]
+36.
+Diosa, J.E.; Vargas, R.A.; Mellander, B.E. Oxygen diffusion in Y1−xPrxBa2Cu3O7−δ observed by resistivity measurements. J. Phys.
+Condens. Matter 1997, 9, 4621. [CrossRef]
+37.
+Cui, F.Z.; Xie, J.; Li, H.D. Preferential radiation damage of the oxygen sublattice in YBa2Cu3O7: A molecular-dynamics simulation.
+Phys. Rev. B 1992, 46, 11182. [CrossRef] [PubMed]
+38.
+Kirsanov, V.V.; Musin, N.N.; Shamarina, H.J. Displacement threshold energy in high-temperature superconductors. II. Thresholds
+for O, Ba and Y in YBa2Cu3O7 . Phys. Lett. A 1992, 171, 223. [CrossRef]
+39.
+Valles, J.M.; White, A.E.; Short, K.T.; Dynes, R.C.; Garno, J.P.; Levi, A.F.J.; Anzlowar, M.; Baldwin, K. Ion-beam-induced
+metal-insulator transition in YBa2Cu3O7−δ: A mobility edge. Phys. Rev. B 1989, 39, 11599. [CrossRef] [PubMed]
+40.
+Chen, Y.X.; Zhang, J.; Wu, Z. Oxygen diffusion in c-axis-oriented YBa2Cu3Ox ﬁlms.
+Supercond. Sci. Technol. 1992, 5, 463.
+[CrossRef]
+41.
+Rothman, S.J.; Routbort, J.L.; Welp, U.; Baker, J.E. Anisotropy of oxygen tracer diffusion in single-crystal YBa2Cu3O7−δ. Phys.
+Rev. B 1991, 44, 2326. [CrossRef]
+42.
+Tu, K.N.; Yeh, N.C.; Park, S.I.; Tsuei, C.C. Diffusion of oxygen in superconducting YBa2Cu3O7−δ ceramic oxides. Phys. Rev. B
+1989, 39, 304. [CrossRef] [PubMed]
+43.
+Zaluzhnyy, I.A.; Goteti, U.; Stoychev, B.K.; Basak, R.; Lamb, E.S.; Kisiel, E.; Zhou, T.; Cai, Z.; Holt, M.V.; Beeman, J.W.; et al.
+Structural Changes in YBa2Cu3O7 Thin Films Modiﬁed with He+-Focused Ion Beam for High-Temperature Superconductive
+Nanoelectronics. ACS Appl. Nano Mater. 2024. [CrossRef]
+44.
+Gherardi, L.; Metra, P.; Vellego, G.; Radaelli, P. Critical current decay with ageing for polycrystalline YBCO wires and rings.
+Cryogenics 1990, 30, 576. [CrossRef]Int. J. Mol. Sci. 2024, 25, 7877
+16 of 16
+45.
+Behner, H.; Rührnschopf, K.; Wedler, G.; Rauch, W. Surface reactions and long time stability of YBCO thin ﬁlms. Phys. C 1993,
+208, 419. [CrossRef]
+46.
+Sirena, M.; Matzen, S.; Bergeal, N.; Lesueur, J.; Faini, G.; Bernard, R.; Briatico, J.; Crété, D.G. Annealing of ion irradiated high Tc
+Josephson junctions studied by numerical simulations. J. Appl. Phys. 2009, 105, 023910. [CrossRef]
+47.
+Cybart, S.A.; Roediger, P.; Chen, K.; Parker, J.M.; Cho, E.Y.; Wong, T.J.; Dynes, R.C. Temporal Stability of Y–Ba–Cu–O Nano
+Josephson Junctions from Ion Irradiation. IEEE Trans. Appl. Supercond. 2013, 23, 1100103. [CrossRef]
+48.
+Bäuerle, D. Laser Processing and Chemistry; Springer Science & Business Media: Berlin/Heidelberg, Germany, 2013.
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.

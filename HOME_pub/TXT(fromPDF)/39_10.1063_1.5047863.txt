@@ -1,0 +1,4507 @@
+Assessing the performance of the recent meta-GGA density functionals for
+describing the lattice constants, bulk moduli, and cohesive energies of alkali,
+alkaline-earth, and transition metals
+Subrata Jana, Kedar Sharma, and Prasanjit Samal
+Citation: J. Chem. Phys. 149, 164703 (2018); doi: 10.1063/1.5047863
+View online: https://doi.org/10.1063/1.5047863
+View Table of Contents: http://aip.scitation.org/toc/jcp/149/16
+Published by the American Institute of Physics
+Articles you may be interested in
+Generalized Kohn–Sham iteration on Banach spaces
+The Journal of Chemical Physics 149, 164103 (2018); 10.1063/1.5037790
+Survival of the most transferable at the top of Jacob’s ladder: Defining and testing the ωB97M(2) double hybrid
+density functional
+The Journal of Chemical Physics 148, 241736 (2018); 10.1063/1.5025226
+Communication: Can excitation energies be obtained from orbital energies in a correlated orbital theory?
+The Journal of Chemical Physics 149, 131101 (2018); 10.1063/1.5052442
+Hydrogen adsorption on Pt(111) revisited from random phase approximation
+The Journal of Chemical Physics 149, 164702 (2018); 10.1063/1.5050830
+A novel density functional theory for atoms, molecules, and solids
+The Journal of Chemical Physics 149, 074104 (2018); 10.1063/1.5038262
+Low-lying excited states by constrained DFT
+The Journal of Chemical Physics 148, 144103 (2018); 10.1063/1.5018615THE JOURNAL OF CHEMICAL PHYSICS 149, 164703 (2018)
+Assessing the performance of the recent meta-GGA density functionals
+for describing the lattice constants, bulk moduli, and cohesive
+energies of alkali, alkaline-earth, and transition metals
+Subrata Jana,1,a) Kedar Sharma,2 and Prasanjit Samal1,b)
+1School of Physical Sciences, National Institute of Science Education and Research, HBNI,
+Bhubaneswar 752050, India
+2School of Physics, Indian Institute of Science Education and Research, Maruthamala, Vithura,
+Thiruvananthapuram 695551, India
+(Received 10 July 2018; accepted 2 October 2018; published online 22 October 2018)
+The bulk properties such as lattice constants, bulk moduli, and cohesive energies of alkali, alkaline-
+earth, and transition metals are studied within the framework of the recently developed meta-GGA
+(meta-Generalized Gradient Approximation) level semilocal exchange-correlation functionals. To
+establish the applicability, broadness, and accuracy of meta-GGA functionals, we also put the results
+obtained using PBE (Perdew-Burke-Ernzerhof) [J. P. Perdew et al., Phys. Rev. Lett. 77, 3865 (1996)]
+and PBE reparameterized for solid [J. P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)] GGA
+functionals. The interesting feature of the present paper is that it measures the accuracy of the recently
+developed TM (Tao-Mo), TMTPSS [TM exchange with Tao-Perdew-Staroverov-Scuseria (TPSS)]
+[J. Tao and Y. Mo, Phys. Rev. Lett. 117, 073001 (2016)] correlation, and strongly constrained and
+appropriately normed [J. Sun et al., Phys. Rev. Lett. 115, 036402 (2015)] functionals to calculate
+the aforementioned properties. Not only that, we also include other (popular) meta-GGA functionals
+in order to have a closer look at the performance of the meta-GGA functionals too. The present
+systematic investigation shows that the TM functional is accurate in describing the lattice constants
+while for cohesive energies and bulk moduli, the PBE and modiﬁed TPSS perform better compared
+to others. Published by AIP Publishing. https://doi.org/10.1063/1.5047863
+I. INTRODUCTION
+Since its advent, the Kohn-Sham (KS)1 density functional
+theory (DFT) is a de facto standard theoretical framework
+for studying the electronic structures of atoms, molecules,
+and materials. The accuracy of the KS DFT depends on
+the accuracy of the approximate exchange-correlation (XC)
+functionals. Due to the reasonable computational cost with
+comparatively well-balanced accuracy, the semilocal nature
+of the exchange-correlation functionals, i.e., the local density
+approximations (LDA),2 generalized-gradient approximations
+(GGAs),3–16 and meta-generalized gradient approximations
+(meta-GGAs),17–40 is widely used for the bulk properties
+of solids.41–56,58 The mainstream of semilocal density func-
+tionals is developed based on the satisfaction of desirable
+constraints8–16,20–24,29,30 or modeling the exchange hole30 or
+both.30 Usually, benchmarking the density functional approx-
+imations against the experimental ﬁndings is a common
+practice to measure the accuracy and applicability of the
+approximation, in particular, when a new functional is intro-
+duced. Indeed, the systematic evaluation of the properties of
+a density functional approximation guides users to properly
+choose a functional for describing the material properties.
+Also, it becomes easier to improve upon the functionals if
+a)Electronic mail: subrata.jana@niser.ac.in
+b)Electronic mail: psamal@niser.ac.in
+one knows the functional behavior for the wide range of
+systems.
+This paper assesses the performance of the recently pro-
+posed meta-GGA functionals for the bulk properties of the
+alkali, alkaline-earth, and transition metals. More speciﬁcally,
+we consider the lattice constants (or equilibrium shortest dis-
+tances), bulk moduli, and cohesive energies of transition met-
+als. It is well known that in spite of the various difﬁculties
+in describing the structural and energetic properties of transi-
+tion metals, the outcomes of DFT remain surprisingly accu-
+rate within different levels of approximations.41 Regarding
+the performance of different levels of exchange-correlation
+(XC) approximations for the bulk properties of transition met-
+als, earlier studies are made within the framework of GGA,
+meta-GGA, and hybrid functionals theory. Janthon et al.48
+studied the transition metals within the framework of GGA
+based functionals. Janthon et al.49 further explored the behav-
+ior of transition metals by including meta-GGA and hybrid
+level functionals. Besides that, Haas et al.,50 Csonka et al.,52
+Tran et al.,51 Schimka et al.,53 Hao et al.,54 and Zhang et al.55
+partly covered the lattice constants, cohesive energies, and
+bulk moduli of alkali, alkaline-earth, and transition metals.
+In this work, we perform studies involving the lattice con-
+stants (or inter-atomic distances), cohesive energies, and bulk
+moduli of the alkali, alkaline-earth, and transition metals
+within the framework of the recently developed meta-GGA
+functionals. Our comparison includes meta-GGA functionals
+0021-9606/2018/149(16)/164703/14/$30.00
+149, 164703-1
+Published by AIP Publishing.164703-2
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+like Tao-Perdew-Staroverov-Scuseria (TPSS),20 revised TPSS
+(revTPSS),21 Minnesota 2006 local (M06L) functional,19 opti-
+mized TPSS (oTPSS),28 modiﬁed TPSS (modTPSS),27 regu-
+larized TPSS (regTPSS),26 meta-GGA made simple (MS0,
+MS1, and MS2),23–25 Strongly Constrained and Appropri-
+ately Normed (SCAN),29 and Tao-Mo30 meta-GGA functional
+(TMTPSS and TM).
+Recent advances towards meta-GGA level functionals
+show that the accuracy of the functionals can be further
+improved by imposing more exact constraints on the func-
+tional construction. Especially, the SCAN and TM functionals
+show greater accuracy for the wide range of solid-state prop-
+erties. Though the performance of the SCAN functional has
+been studied for bulk properties of most of the metals,51,56,57
+the TM functional remains untested for these properties. Here,
+we present the benchmark calculations of the bulk properties of
+the 3d, 4d, and 5d transition metals, alkali, and alkaline earth
+metals by considering most of the modern meta-GGA den-
+sityfunctionals(TPSS,modTPSS,oTPSS,revTPSS,regTPSS,
+M06L, MS0, MS1, MS2, SCAN, TMTPSS, and TM), and the
+GGA [Perdew-Burke-Ernzerhof (PBE)8 and PBE functional
+parameterized for solids (PBEsols)12] based semilocal func-
+tionals. It is noteworthy to mention that due to the different
+nature of bonding present in the alkali, alkaline-earth, and tran-
+sition metals, these are often considered as the difﬁcult cases
+within semilocal exchange-correlation functionals. Though
+these are considered mainly as prototype metals and metallic
+bonding dominates, but the weak van der Waals interactions
+in closed semi-core states also play an important role.53,65
+These pose additional difﬁculty for the semilocal function-
+als to accurately describe all the bonding nature, and often in
+the benchmark calculations, these are excluded. It is shown in
+Ref. 53 that the PBE functional does not perform satisfactorily
+in describing the lattice constants of all these metals. The PBE
+functional predicts the lattice constants of 3d transition metals
+quite well, but overestimates the lattice constants for the 4d and
+5d metals.ItisalsoshowninRef.53thatthesituationimproves
+through the inclusion of the kinetic-energy density term in the
+functional construction. Due to the one electron free correla-
+tion of the revTPSS functional, it performs reasonably for the
+transition metal lattice constants. All these previous studies
+motivate us to assess the accuracy of the recently developed
+meta-GGA level semilocal functionals in predicting the afore-
+mentioned bulk properties. It is noteworthy to mention that
+the SCAN functional includes the intermediate van der Waals
+(vdW) interaction.29 Therefore, it is interesting to assess its
+performance for alkali and alkaline-earth materials, where the
+bonding is inﬂuenced by the vdW interaction in the semi-core
+states. Regarding the TM functionals, it is shown that both
+the TM and TPSS correlation perform differently with the TM
+exchange.30
+In this paper, we shed light on the behavior on the recent
+meta-GGA functional performance. To do so, we organize our
+paper as follows: In the following, we will describe our com-
+putational setup along with the test set used for benchmarking.
+Following that, we will study the inter-atomic distances, bulk
+moduli, and cohesive energies of the transition metals. Based
+on the study, we will conclude by discussing and comparing
+the results.
+II. COMPUTATIONAL DETAILS
+All computational studies are performed self-consistently
+using the plane wave code based on the projector-augmented
+method “Vienna Ab Initio Simulation Package (VASP).”59–64
+The bulk calculations are performed with 16 × 16 × 16
+Gamma-centered k-points. For the atomic calculations of
+cohesive energies, a simulation box of 18 × 19 × 20 Å3 is
+considered with 1 × 1 × 1 Gamma-centered k-points. The spin
+polarization calculations are performed for atoms. An energy
+convergence criterion of 10−6 eV has been set for bulk cal-
+culations, whereas the atomic simulations are performed with
+the energy convergence criterion of 10−5 eV. The energy cut-
+offs 500 eV to 700 eV are used for bulk calculations, whereas
+700 eV to 1000 eV are used for the atomic calculations. All
+the bulk electronic structure calculations are performed con-
+sidering non-spin polarization, except ferromagnetic Fe, Ni,
+and Co.
+The results presented in the table are arranged by sepa-
+rating out the 3d transition metals, 4d transition metals, 5d
+transition metals, alkali metals (Li, Na, K, Rb, and Cs), and
+alkaline-earth metals (Ca, Sr, and Ba). Under the ambient
+condition, all the alkali metals, alkaline-earth metals, and tran-
+sition metals show face-centered cubic (fcc), body-centered
+cubic (bcc), or hexagonal close-packed (hcp) structures. Only
+exceptions are Mn, La, and Hg. These materials show com-
+plicated hexagonal (La), rhombohedral (Hg), and cubic unit
+cells with 58 atoms (Mn). Due to the very different structures
+of La, Hg, and Mn, these are also discussed separately in all
+tables.
+In this work, we report the equilibrium inter-atomic dis-
+tances (δ). The inter-atomic distances are calculated from the
+equilibrium lattice constants depending on the structures. For
+example, the inter-atomic distances of fcc and bcc structures
+are 1/
+√
+2 and
+√
+3/2 times the lattice constants (a0). Regarding
+the hcp structure, δ =
+p
+c2/4 + a2/3, where a and c are the two
+lattice constants of the hcp structures.
+The bulk modulus (B0) is deﬁned as the variation of the
+volume (V) due to the external pressure (P). In DFT, the bulk
+modulus is measured at the equilibrium lattice constant a0 or
+volume (V0) as
+B0 = −V0
+ ∂P
+∂V
+
+a=a0 .
+(1)
+Several equations of state (EOSs)66–69 are available to ﬁt
+the energy versus volume curve for obtaining bulk moduli.
+However, in the present case, we use the fourth order Birch-
+Murnaghan equation of state66,69 through the post-processing
+tool for VASP code (VASPKIT)70 to ﬁt and obtain the bulk
+moduli of alkali, alkaline-earth, and transition metals. The
+cohesive energies are equivalent to the atomization energies in
+thecaseofthebulksolids.Itisexpressedastheenergyperatom
+as
+Ecoh = Eatom −Ebulk
+N
+,
+(2)
+where Eatom is the atomic energy and Ebulk is the bulk energy
+of the unit cell having N atoms. To compare the overall accu-
+racy of all the functionals, we present the mean-error (ME),164703-3
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+mean absolute error (MAE), mean percentage error (MPE),
+and mean absolute percentage error (MAPE) of the 3d, 4d,
+and 5d along with alkali and alkaline metals. The total ME
+(TME), total MAE (TMAE), total MPE (TMPE), and total
+MAPE (TMAPE) are also given in the last column of each
+table.
+III. RESULTS AND DISCUSSIONS
+A. Equilibrium inter-atomic distances
+In Table I, we present the benchmark calculation for the
+equilibrium inter-atomic distances. The experimental values
+presented in Table I are subtracted for the zero-point vibra-
+tional effects (ZPVEs). As mentioned before, the equilibrium
+inter-atomic distances depend on the equilibrium lattice con-
+stants according to the different lattice structures. For the
+details of the relation between the inter-atomic distances and
+equilibrium lattice constants, the readers are suggested to
+go through Ref. 48. In Fig. 1, we also show the percent-
+age deviation of our calculated values. Though the calcula-
+tions for the PBE, PBEsol, M06L, TPSS, and revTPSS are
+reported in past for several solids, in the present study, we
+recalculate all the functionals for all solids along with the
+recentlydevelopedmeta-GGAs.Inthissection,wewilldiscuss
+the functional performances according to the data present in
+Table I.
+The results in Table I follow a clear trend throughout.
+Different functionals perform differently in predicting the
+inter-atomic distances because of the underlying construc-
+tion methodology and constraint satisfaction. To start with,
+reasonably good performance is observed for the PBE GGA
+functional throughout the series. It yields fairly accurate inter-
+atomic distances for the 3d transition metals and obtains the
+least error. While it overestimates the inter-atomic distances
+for the 4d and 5d transition metals. Concerning the PBEsol
+functional, it underestimates the inter-atomic distances more
+compared to the PBE functional for 3d transition metals. It
+is noticeable for the 3d transition metals that the PBEsol
+functional yields very good inter-atomic distances for Sc and
+Ti, but underestimates the inter-atomic distances for other 3d
+metals in this series. Though the PBEsol satisﬁes the slowly
+varying electron gas limit by restoring the gradient approx-
+imation of Svendsen and von Barth,71 the PBE functional
+yields improved performance in this regard. The overestima-
+tion behavior of PBE and PBEsol can be explained from the
+self-interaction within the d shell, which increases with the
+d-band ﬁlling.53 Within the 3d transition metals, the ferro-
+magnetic Fe, Co, and Ni are known to be the most difﬁcult
+cases for the semilocal functionals due to strong correlation.
+Several attempts beyond the density functional approxima-
+tions are proposed to better the performance.74–77 However,
+quite satisfactory performance is observed using the PBE
+functional.
+Now, we discuss the performance of meta-GGA function-
+als. The TPSS meta-GGA functional shows a PBE-like trend
+for the 3d transition metals. The TPSS functional improves
+the inter-atomic distances for Sc and Ti compared to PBE
+and shows underestimation for other 3d transition metals.
+On the other hand, the revised version of it, i.e., revTPSS,
+underestimates the inter-atomic distances of 3d transition met-
+als compared to the TPSS functional for all the 3d elements
+by almost 1-3 picometer (pm). However, the TPSS performs
+PBE-like for 4d and 5d transition metals and overestimates
+the inter-atomic distances. The revTPSS follows the same
+trends as TPSS does. But, overestimation and underestima-
+tion tendency is less pronounced in the case of revTPSS. Most
+interestingly, the revTPSS closely follows the PBEsol results
+because both are constructed from the same physical point of
+view, i.e., to improve the solid-state performances.21 With the
+d band ﬁlling, the revTPSS gradually switches to PBEsol-like
+because the total charge density becomes the sum of several
+one-electron orbitals.53
+In addition to the conventional meta-GGA functionals,
+here we also include the TPSS based modiﬁed function-
+als, oTPSS and modTPSS. Both the oTPSS and modTPSS
+functionals are the parameterized form of TPSS, designed to
+perform better for the molecular test sets. The modiﬁed param-
+eters of oTPSS and modTPSS are taken from Refs. 27 and 28.
+Both functionals are tested for the molecules but not exten-
+sively tested for transition metals. It has been observed that
+both functionals moderately improve the TPSS performance
+for 3d and 4d transition metals. Whereas, for 5d transition
+metals, the TPSS and its different modiﬁed versions show
+quite similar performance. It is noticeable that as the d-band
+ﬁlling increases, both the modTPSS and oTPSS enhance the
+inter-atomic distance. This fact actually improves the perfor-
+mances of modTPSS and oTPSS compared to TPSS for several
+cases.
+Concerning the performance of M06L, it underestimates
+the inter-atomic distances for 3d transition metal elements.
+Whereas, overestimates the same for 4d and 5d. The com-
+paratively large deviation obtained with the M06L functional
+with respect to other meta-GGA functionals for 4d and 5d
+transition metals originates from the deterioration of the func-
+tional from the L(S)DA in the uniform density limit. However,
+a recently revised version of the M06L (revM06L)31 is pro-
+posedtoimprove itsperformancesforsolids. BeyondtheTPSS
+and revTPSS, a new kind of functionality has been proposed
+by Ruzsinszky et al.26 by removing the order of the limit
+problem of the revTPSS functional which is known as the
+regTPSS functional. However, unlike revTPSS, the regTPSS
+correlation is not one electron self-interaction free. Still the
+regTPSS performs quite similarly as revTPSS for 3d, 4d, and
+5d transition metals. The slight difference in the performance
+of revTPSS and regTPSS originates from the elimination of
+the order of limit anomaly and change in the correlation
+functional.
+On the next level of approximations, the meta-GGA made
+simple functionals (MS0, MS1, and MS2)23,24 are proposed
+from the same understanding as regTPSS, i.e., by removing
+the order-of-limit problem and making the functional form
+simple. The MAE corresponding to the “MS” functionals for
+3d, 4d, and 5d metals is as follows: MS0 > MS1 > MS2. This
+can be attributed to the behavior of the exchange enhance-
+ment factor of MS0, MS1, and MS2 in the s < 1 region,
+wheresisthereduceddensitygradient.Theexchangeenhance-
+ment factor of MS2 is less steep than the exchange enhance-
+ment factor of MS0 and MS1 functionals for s < 1.23,24 The164703-4
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE I. Equilibrium inter-atomic distances (δ) [in picometer (pm)] of different solid structures using PBE, PBEsol, TPSS, modTPSS, oTPSS, revTPSS,
+regTPSS, M06L, MS0, MS1, MS2, SCAN, TMTPSS, and TM functionals. The experimental values are collected from Refs. 49, 52, and 53, where the correction
+due to the zero-point vibrational effects (ZPVEs) is taken into account. For elements Mn, La, and Hg, ZPVE corrected values are not available and we report
+only the experimental values taken from Ref. 48. The abbreviations of different crystal structures (CS) considered here are bcc = body centered cubic, fcc = face
+centered cubic, hcp = hexagonal close-packed, c = cubic, h = hexagonal, and r = rhombohedral. The best values are in bold, and the most deviating values are
+in italics.
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Sc
+hcp
+330.1
+326.3
+328.4
+328.9
+328.0
+327.7
+327.5
+328.0
+331.2
+331.5
+328.9
+329.6
+328.7
+327.8
+324.4
+Ti
+hcp
+292.3
+288.8
+290.4
+290.3
+289.8
+289.2
+289.2
+291.0
+291.9
+292.1
+290.4
+290.8
+291.2
+290.1
+288.9
+V
+bcc
+258.0
+254.4
+256.1
+256.1
+255.8
+255.2
+255.1
+257.3
+255.5
+255.8
+255.2
+255.6
+256.8
+256.1
+260.6
+Cr
+bcc
+245.6
+242.4
+244.0
+244.2
+244.0
+243.0
+242.7
+244.3
+242.7
+243.0
+242.7
+243.2
+244.3
+243.5
+248.5
+Fe
+bcc
+245.3
+241.8
+243.0
+243.7
+243.1
+242.3
+241.6
+248.9
+246.4
+246.9
+245.1
+246.4
+243.8
+242.9
+245.0
+Co
+hcp
+248.8
+245.2
+246.4
+246.8
+246.4
+245.6
+244.5
+247.1
+245.4
+246.0
+245.4
+245.8
+246.4
+245.7
+248.8
+Ni
+fcc
+248.6
+244.7
+245.6
+246.0
+245.7
+244.4
+244.0
+238.6
+244.1
+244.6
+243.9
+244.3
+245.2
+244.5
+248.4
+Cu
+fcc
+257.0
+251.5
+253.0
+253.8
+253.2
+250.9
+250.7
+248.3
+250.5
+251.3
+250.2
+249.4
+252.1
+251.1
+254.4
+Zn
+hcp
+263.5
+261.1
+263.2
+263.8
+263.3
+261.4
+261.0
+263.4
+260.5
+260.9
+259.7
+258.8
+261.0
+260.5
+264.5
+ME
+0.6
+3.0
+1.5
+1.1
+1.6
+2.6
+3.0
+1.8
+1.7
+1.3
+2.4
+2.2
+1.6
+2.4
+MAE
+2.1
+3.5
+2.7
+2.4
+2.6
+3.4
+3.8
+4.0
+4.2
+4.0
+3.8
+4.1
+3.0
+3.4
+MRPE
+0.2
+1.2
+0.6
+0.5
+0.7
+1.1
+1.2
+0.8
+0.7
+0.6
+1.0
+0.9
+0.7
+1.0
+AMRPE
+0.7
+1.3
+1.0
+0.9
+1.0
+1.3
+1.5
+1.5
+1.6
+1.5
+1.4
+1.5
+1.1
+1.3
+Y
+hcp
+363.3
+358.5
+363.8
+363.4
+363.9
+361.6
+361.8
+366.6
+366.7
+366.6
+363.9
+365.7
+365.5
+362.6
+354.8
+Zr
+hcp
+323.6
+318.0
+321.4
+320.2
+321.5
+319.2
+319.1
+324.0
+321.4
+321.5
+320.5
+321.1
+323.1
+320.2
+317.4
+Nb
+bcc
+287.8
+284.1
+286.7
+286.9
+286.7
+285.2
+285.2
+288.2
+285.5
+285.7
+285.6
+286.4
+287.2
+286.1
+285.4
+Mo
+bcc
+272.9
+269.9
+271.9
+272.0
+271.9
+270.3
+270.2
+271.9
+270.2
+270.4
+270.4
+271.1
+271.7
+270.6
+272.1
+Tc
+hcp
+274.4
+271.2
+273.1
+272.4
+272.4
+271.3
+271.2
+272.2
+271.0
+271.2
+271.3
+272.0
+272.8
+271.5
+270.5
+Ru
+hcp
+271.6
+268.1
+270.5
+269.3
+269.3
+268.1
+267.9
+269.0
+266.9
+267.2
+267.7
+267.4
+270.0
+268.3
+264.2
+Rh
+fcc
+270.4
+266.2
+268.9
+264.6
+264.6
+263.6
+263.5
+264.2
+263.0
+263.3
+263.5
+263.8
+264.3
+263.9
+253.2
+Pd
+fcc
+278.6
+273.2
+276.1
+276.3
+276.1
+272.9
+272.8
+277.2
+272.8
+273.2
+273.0
+273.8
+275.9
+273.6
+274.5
+Ag
+fcc
+293.4
+285.7
+289.1
+289.7
+289.2
+285.0
+284.9
+291.4
+285.7
+286.2
+285.3
+286.1
+288.4
+285.6
+287.7
+Cd
+hcp
+302.0
+306.2
+301.3
+302.7
+301.4
+298.4
+298.1
+311.8
+313.9
+298.2
+297.8
+296.3
+299.6
+298.0
+295.9
+ME
+6.2
+2.5
+4.7
+4.2
+4.1
+2.0
+1.9
+6.1
+4.1
+2.8
+2.3
+2.8
+4.3
+2.5
+MAE
+6.2
+3.9
+4.8
+4.2
+4.2
+3.3
+3.2
+6.1
+5.3
+3.7
+3.5
+3.5
+4.4
+3.4
+MPE
+2.2
+0.9
+1.7
+1.5
+1.4
+0.7
+0.7
+2.1
+1.4
+0.9
+0.8
+0.9
+1.5
+0.9
+MAPE
+2.2
+1.4
+1.7
+1.5
+1.4
+1.1
+1.1
+2.1
+1.8
+1.3
+1.2
+1.2
+1.5
+1.2
+Hf
+hcp
+319.5
+315.2
+317.1
+317.3
+316.9
+315.3
+315.3
+320.4
+316.1
+316.5
+315.4
+315.1
+316.6
+315.9
+312.6
+Ta
+bcc
+286.6
+283.3
+284.8
+284.7
+284.5
+283.1
+283.0
+287.2
+282.9
+283.2
+282.9
+282.9
+284.4
+283.7
+285.6
+W
+bcc
+274.7
+272.0
+273.3
+273.0
+272.9
+271.7
+271.6
+273.5
+271.4
+271.7
+271.6
+271.8
+272.8
+272.1
+273.8
+Re
+hcp
+277.2
+274.4
+273.4
+275.5
+273.4
+272.5
+272.4
+273.0
+271.4
+271.8
+272.2
+271.1
+273.2
+272.8
+256.2
+Os
+hcp
+275.4
+272.4
+274.1
+274.0
+274.1
+271.8
+271.7
+272.5
+270.9
+271.2
+271.6
+270.6
+273.2
+271.9
+267.1
+Ir
+fcc
+273.8
+270.5
+272.6
+272.6
+272.6
+270.1
+269.9
+271.4
+268.5
+268.9
+269.6
+267.6
+271.7
+270.2
+271.0
+Pt
+fcc
+280.5
+276.1
+278.9
+278.9
+278.9
+275.6
+275.4
+278.8
+274.3
+274.6
+275.1
+274.8
+278.0
+275.8
+276.6
+Au
+fcc
+293.9
+287.7
+291.1
+291.3
+291.1
+286.9
+286.7
+291.6
+285.8
+286.3
+286.4
+286.8
+290.3
+287.2
+287.0
+ME
+6.5
+2.7
+4.4
+4.7
+4.3
+2.1
+2.0
+4.8
+1.4
+1.8
+1.9
+1.4
+3.8
+2.5
+MAE
+6.5
+4.0
+4.8
+5.1
+4.8
+3.8
+3.9
+4.9
+4.2
+4.1
+4.0
+3.9
+4.3
+3.8
+MPE
+2.4
+1.0
+1.6
+1.7
+1.6
+0.8
+0.8
+1.8
+0.6
+0.7
+0.7
+0.5
+1.4
+0.9
+MAPE
+2.4
+1.5
+1.8
+1.9
+1.8
+1.4
+1.4
+1.8
+1.6
+1.5
+1.5
+1.4
+1.6
+1.4
+Li
+bcc
+297.7
+298.1
+299.2
+299.8
+299.1
+299.2
+297.6
+299.9
+297.2
+298.6
+296.8
+300.1
+294.3
+294.5
+298.9
+Na
+bcc
+362.6
+361.3
+365.6
+366.0
+364.3
+365.6
+364.3
+352.0
+363.3
+365.1
+360.4
+362.0
+356.1
+356.0
+364.5
+K
+bcc
+457.5
+452.5
+463.5
+465.3
+448.8
+459.0
+461.9
+427.8
+463.5
+464.0
+459.2
+459.2
+446.1
+446.0
+451.4
+Rb
+bcc
+490.1
+483.7
+497.1
+501.7
+499.8
+492.6
+494.0
+451.6
+499.6
+502.4
+493.7
+493.7
+483.7
+483.7
+483.0
+Cs
+bcc
+534.8
+520.3
+542.0
+542.7
+542.5
+536.5
+536.9
+482.2
+546.9
+549.3
+538.6
+538.6
+523.5
+523.5
+523.0
+ME
+4.4
+1.0
+9.3
+10.9
+6.7
+6.4
+6.8
+21.5
+9.9
+11.7
+5.6
+6.6
+3.4
+3.4
+MAE
+5.6
+1.7
+9.3
+10.9
+7.9
+6.4
+7.4
+21.9
+11.1
+11.8
+8.1
+7.6
+3.9
+3.9
+MPE
+0.8
+0.3
+1.9
+2.3
+1.3
+1.3
+1.4
+4.5
+2.0
+2.4
+1.0
+1.3
+1.0
+1.0
+MAPE
+1.2
+0.4
+1.9
+2.3
+1.6
+1.3
+1.6
+4.7
+2.3
+2.4
+1.8
+1.6
+1.1
+1.0164703-5
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE I. (Continued.)
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Ca
+fcc
+394.3
+385.8
+391.1
+393.4
+391.1
+390.0
+390.1
+378.7
+394.3
+395.5
+392.7
+392.7
+388.6
+388.1
+392.9
+Sr
+fcc
+426.4
+418.7
+426.6
+425.4
+424.1
+425.1
+424.8
+414.9
+431.2
+433.2
+427.3
+427.3
+424.2
+423.3
+427.1
+Ba
+bcc
+423.7
+423.6
+433.5
+436.6
+431.8
+431.5
+430.5
+430.8
+440.2
+441.6
+435.9
+435.9
+433.5
+431.2
+433.2
+ME
+2.9
+8.4
+0.7
+0.7
+2.1
+2.2
+2.6
+9.6
+4.2
+5.7
+0.9
+0.9
+2.3
+3.5
+MAE
+3.9
+8.4
+0.9
+2.0
+2.0
+2.2
+2.6
+9.6
+4.2
+5.7
+1.0
+1.0
+2.5
+3.5
+MPE
+0.7
+2.0
+0.2
+0.2
+0.5
+0.5
+0.6
+2.3
+1.0
+1.3
+0.2
+0.2
+0.6
+0.9
+MAPE
+0.9
+2.0
+0.2
+0.4
+0.5
+0.5
+0.6
+2.3
+1.0
+1.3
+0.2
+0.2
+0.6
+0.9
+Mn
+c
+230.7
+227.1
+228.4
+228.7
+228.4
+227.7
+227.5
+228.6
+227.4
+227.7
+227.4
+227.6
+228.6
+230.2
+224.0
+La
+h
+376.9
+365.4
+373.3
+374.1
+373.2
+369.2
+368.7
+385.9
+373.9
+374.7
+372.1
+379.5
+376.6
+373.4
+373.9
+Hg
+r
+323.8
+300.6
+308.5
+311.0
+308.8
+299.5
+298.7
+308.9
+297.6
+298.6
+297.6
+300.2
+305.2
+299.5
+301.0
+ME
+10.8
+1.9
+3.8
+5.0
+3.8
+0.8
+1.3
+8.2
+0.0
+0.7
+0.6
+2.8
+3.8
+1.4
+MAE
+10.8
+4.0
+4.2
+5.0
+4.3
+3.3
+3.7
+8.2
+2.3
+2.3
+2.9
+3.3
+3.8
+2.7
+MPE
+3.8
+0.3
+1.4
+1.8
+1.5
+0.0
+0.2
+2.6
+0.1
+0.4
+0.0
+0.9
+1.4
+0.7
+MAPE
+3.8
+1.3
+1.5
+1.8
+1.6
+1.1
+1.2
+2.6
+0.9
+0.9
+1.0
+1.1
+1.4
+1.1
+TME
+4.4
+0.4
+3.3
+3.7
+2.6
+1.0
+0.8
+0.8
+2.6
+2.9
+1.2
+1.7
+1.2
+0.0
+TMAE
+5.4
+3.9
+4.5
+4.7
+4.3
+3.7
+4.0
+7.9
+5.2
+5.0
+4.0
+4.0
+3.8
+3.5
+TMRPE
+1.5
+0.0
+1.0
+1.1
+0.8
+0.2
+0.2
+0.2
+0.6
+0.7
+0.3
+0.4
+0.5
+0.1
+TAMRPE
+1.8
+1.3
+1.4
+1.5
+1.4
+1.2
+1.3
+2.3
+1.6
+1.5
+1.3
+1.3
+1.3
+1.2
+s < 1 region is recognized as an important region for the tran-
+sition metal lattice constants, as explained in Refs. 72 and 73.
+Now, we consider the performance of the two recently pro-
+posed functionals, SCAN and TM (TMTPSS and TM). The
+performance of the SCAN is quite disappointing for 3d transi-
+tion metals. The MAE of the SCAN functional indicates that
+it performs better than MS0 but less accurate than MS1 and
+MS2. Now, concerning TMTPSS and TM functionals, both are
+less accurate than TPSS, modTPSS, and oTPSS in predicting
+the inter-atomic distances of 3d transition metals. Concerning
+the 4d and 5d transition metals, the SCAN and TM function-
+als perform almost equivalently. In all these cases, the better
+FIG. 1. Shown is the percentage deviation in inter-atomic distances obtained using different exchange-correlation functionals presented in Table I. The scale of
+the Y-axis is adjusted for the better view of the errors.164703-6
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+performance of the TM functional than TMTPSS originates
+from the change in the correlation energy functional of the
+TM functional.30
+Now, we discuss the performance of different function-
+als in predicting the inter-atomic distances of the alkali metals
+which includes elements Li, Na, K, Rb, and Cs. We separately
+discuss these metals because different kinds of interactions
+affect the bonding of these metals. Though they are considered
+as prototype metals, a sizable contribution from the semi-core
+p and s states originates van der Waals bonding53,65 which
+affects the lattice constants or equilibrium shortest distances.
+A sizable error in equilibrium shortest distances is observed
+for the PBE functional. Overall, the PBE functional overesti-
+mates the equilibrium shortest distances for the alkali metals.
+The PBEsol improves the performance and yields the least
+MAE for the alkali metals. Regarding the performance of the
+meta-GGA, all functionals overestimate the equilibrium dis-
+tances except the TMTPSS and TM functionals. The reason
+of the improvement of the inter-atomic distances for the alkali
+metals can be understood as the inclusion of the intermedi-
+ate van der Waals interaction originating from the oscillation
+of the exchange hole (or the functional).42 Nevertheless, the
+M06L also includes the intermediate van der Waals interac-
+tion, but the lack of the appropriate slowly varying density
+correction makes the functional not suitable for the solid-state
+physics.
+Unlike alkali metals, a reasonably good performance
+is observed using the PBE functional for the alkaline-earth
+metals. However, the PBEsol underestimates the equilibrium
+shortest distances. Within meta-GGA functionals, TPSS and
+MS2 perform quite well. A sizable underestimation in the equi-
+librium shortest distances is observed using the M06L func-
+tional. MS0 and MS1 overestimate the shortest inter-atomic
+distances, whereas the overestimation percentage is compar-
+atively inadequate for the SCAN functional. The oTPSS and
+modTPSS tend to similar performance as TPSS. The regTPSS
+performs almost equivalently as revTPSS. In this case, both
+the TMTPSS and TM functionals underestimate the short-
+est distances. But, the TMTPSS results are quite close to the
+experimental shortest distances. However, we observe most
+impressive performance with the MS2 and SCAN functionals.
+Both MS2 and SCAN functionals agree quite well with the
+experimental values compared to the most recent TMTPSS
+and TM functionals.
+Due to the complicated structures of Mn, La, and Hg, we
+separate out these elements from others. Regarding the per-
+formance of PBE, it massively overestimates the equilibrium
+shortest distances for all these metals. Reasonably good per-
+formance is observed using PBEsol. For meta-GGA, all per-
+form equivalently to predict the equilibrium shortest distances
+except M06L. M06L overestimates the shortest distances in
+a sizable order, whereas the MS0 and MS1 perform quite
+well compared to other meta-GGAs. The MS2 and SCAN
+also produce the same amount of error in this case. Here,
+we obtain the least MAE with the MS0 and MS1 function-
+als. TM functional is the second best after MS0 and MS1
+with MAE of 2.7 pm. In this case also, the performance of
+the TM functional is better compared to that of the SCAN
+functional.
+B. Bulk moduli
+It is well known that determining the bulk modulus for
+the transition metals49 poses a great challenge. In Table II, we
+list the experimental values along with all the XC functional
+values. The arrangement of Table II is the same as Table I. The
+3d, 4d, and 5d transition metal elements are presented on the
+top of Table II. Following this, alkali metals, alkaline earth,
+and other transition metals (Mn, La, and Hg) are given. In
+Fig. 2, we plot the percentage deviation of all the metals con-
+sidered in our study. It is noteworthy to mention that like lattice
+constants, there are no simple explanations of the functional
+behavior regarding the bulk moduli of the transition metals.
+The general trends that we have observed in the case of the
+inter-atomic distances seem to be unsatisﬁed in the case of bulk
+moduli.
+We start with the performance of the PBE functional for
+the 3d transition metals. The PBE functional works well for
+the 3d transition metals and produces the least MAE. How-
+ever, the PBEsol functional shows more deviation from the
+experimental values. Regarding the meta-GGA, all functionals
+overestimate the bulk moduli and it is more intense as the d ﬁll-
+ing increases. We observe that the modTPSS and oTPSS show
+improved performance over TPSS. This is due to the improve-
+ment in the inter-atomic distances in modTPSS and oTPSS.
+The regTPSS and revTPSS perform quite similarly except for
+few metals. Like inter-atomic distances, the revTPSS follows
+the similar trends of PBEsol. The explanation is the same as
+discussed earlier for the inter-atomic distances. Regarding the
+meta-GGA made simple functionals and advanced meta-GGA
+like SCAN, TMTPSS, and TM functionals, the TM functional
+deviates quite comprehensively from the experimental val-
+ues. The deviation tendency is more enhanced as the d ﬁlling
+increases. However, the modTPSS reports being least MAE
+among the meta-GGA functionals.
+A similar trend in the bulk moduli of 4d and 5d transi-
+tion metals is also observed for all the functionals. The PBE
+and M06L underestimate the bulk moduli for all 4d tran-
+sition metals except Mo for PBE and Y for M06L. Other
+functionals overestimate the bulk moduli for the transition
+metals. For 4d transition metals, the TPSS, oTPSS, modTPSS
+SCAN, TMTPSS, and TM perform better compared to the
+PBE functional, while the oTPSS shows minimum MAE com-
+pared to the other meta-GGA. For 5d transition metals, the
+TPSS reports least MAE, whereas SCAN deviates more from
+experimental values.
+The alkali metals are considered as a “soft-matter” due to
+the smaller extent of their bulk moduli. All functionals perform
+reasonably good in the case of alkali metals. Interestingly, in
+this case, both the TMTPSS and TM functionals improve the
+performance compared to the results of the 3d, 4d, and 5d
+counterpart. The explanation of the improved performance of
+the TM based functionals is the same as given in the case
+of shortest distances. The same accuracy for the TMTPSS
+and TM functionals is also observed for the alkaline earth
+metals.
+The bulk moduli of Mn, La, and Hg are problematic
+within(mostof)thedensityfunctionals.Theexperimentalbulk
+modulus of Mn is 90.4 GaP, whereas all functionals show164703-7
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE II. The bulk moduli (B0) (in GPa) computed for different solid structures using PBE, PBEsol, TPSS, modTPSS, oTPSS, revTPSS, regTPSS, M06L,
+MS0, MS1, MS2, SCAN, TMTPSS, and TM functionals. The experimental values are corrected for the ﬁnite thermal effect.49,52 For elements Mn, La, and
+Hg, the ﬁnite temperature corrected values are not available and we reported only the experimental values from Ref. 48. The abbreviations of different crystal
+structures (CS) considered here are the same as Table I. The best values are in bold, and the most deviating values are in italics.
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Sc
+hcp
+52.6
+55.4
+54.6
+59.8
+59.8
+55.6
+59.4
+62.6
+54.2
+53.6
+56.0
+59.8
+61.8
+57.4
+55.6
+Ti
+hcp
+116.8
+125.6
+123.2
+121.4
+122.6
+125.8
+126.8
+128.6
+124.0
+122.4
+127.6
+125.2
+125.8
+127.0
+108.3
+V
+bcc
+187.8
+204.0
+201.8
+198.8
+200.2
+205.6
+205.6
+198.0
+200.8
+199.6
+207.0
+203.8
+201.8
+181.8
+158.9
+Cr
+bcc
+263.6
+288.2
+283.2
+281.2
+282.5
+291.8
+292.4
+276.8
+284.8
+281.2
+292.0
+280.2
+283.6
+286.8
+174.5
+Fe
+bcc
+161.1
+271.4
+163.6
+161.1
+161.8
+232.5
+174.8
+145.3
+154.3
+150.4
+161.7
+144.7
+267.3
+272.5
+169.8
+Co
+hcp
+287.0
+287.2
+257.2
+224.6
+228.4
+239.7
+242.0
+223.3
+239.7
+230.6
+245.8
+239.4
+239.6
+242.9
+193.0
+Ni
+fcc
+208.6
+231.9
+228.7
+208.6
+218.7
+244.7
+225.6
+262.0
+240.5
+235.3
+243.5
+241.5
+199.9
+238.2
+185.5
+Cu
+fcc
+137.1
+163.3
+156.5
+152.7
+160.8
+170.5
+171.1
+151.9
+158.9
+146.9
+155.9
+152.4
+161.2
+164.2
+140.3
+Zn
+hcp
+74.0
+91.8
+86.0
+84.0
+88.0
+97.8
+100.4
+74.2
+99.4
+82.8
+102.0
+105.2
+96.8
+105.6
+69.7
+ME
+25.9
+51.5
+33.2
+26.3
+29.7
+45.4
+38.1
+29.7
+33.4
+27.5
+37.3
+33.0
+42.5
+46.8
+MAE
+29.2
+51.5
+34.8
+28.2
+31.5
+45.4
+38.1
+35.1
+37.2
+32.2
+39.1
+38.5
+42.5
+46.8
+MPE
+14.6
+32.3
+21.0
+17.7
+20.1
+29.7
+26.3
+19.1
+22.5
+17.2
+25.3
+23.4
+28.9
+31.4
+MAPE
+17.5
+32.4
+22.2
+18.8
+21.2
+29.7
+26.3
+22.3
+25.0
+20.5
+26.3
+26.7
+28.9
+31.4
+Y
+hcp
+39.6
+42.0
+40.2
+39.3
+37.9
+40.2
+37.8
+44.4
+37.4
+37.2
+36.6
+36.4
+38.4
+41.4
+41.7
+Zr
+hcp
+92.8
+98.8
+96.4
+94.7
+95.0
+97.0
+97.4
+95.4
+92.8
+92.2
+95.6
+95.8
+96.2
+97.0
+95.9
+Nb
+bcc
+172.0
+186.8
+183.4
+181.7
+181.7
+187.6
+187.6
+169.0
+181.6
+180.4
+183.4
+180.8
+181.2
+183.2
+172.0
+Mo
+bcc
+266.4
+289.0
+278.6
+277.3
+278.4
+286.2
+290.4
+260.2
+287.0
+285.2
+287.4
+284.0
+278.6
+283.6
+264.7
+Tc
+hcp
+301.4
+330.6
+317.0
+315.6
+317.5
+329.0
+331.2
+292.2
+334.6
+331.2
+331.2
+324.2
+319.0
+325.2
+303.1
+Ru
+hcp
+316.4
+353.8
+334.4
+332.9
+335.2
+350.4
+353.4
+302.0
+365.4
+361.4
+356.8
+342.2
+337.0
+345.8
+317.7
+Rh
+fcc
+254.8
+295.8
+276.7
+274.1
+292.4
+292.4
+295.5
+235.0
+298.4
+294.7
+292.9
+290.3
+275.9
+284.0
+288.7
+Pd
+fcc
+165.3
+201.8
+187.9
+184.0
+186.5
+201.1
+203.1
+148.3
+199.5
+195.3
+200.1
+193.5
+189.5
+195.3
+195.4
+Ag
+fcc
+86.1
+112.3
+102.3
+98.9
+102.5
+113.0
+113.9
+89.1
+103.7
+100.9
+110.7
+105.4
+109.3
+113.0
+103.8
+Cd
+hcp
+40.8
+59.4
+54.4
+51.6
+56.3
+62.2
+63.4
+58.6
+59.6
+56.0
+63.4
+57.4
+64.8
+50.2
+53.8
+ME
+10.1
+13.4
+3.5
+1.3
+4.7
+12.2
+13.7
+14.3
+12.3
+9.8
+12.1
+7.3
+5.3
+8.2
+MAE
+10.5
+13.4
+8.0
+8.7
+7.6
+12.5
+14.5
+15.8
+13.8
+12.0
+13.2
+8.8
+9.7
+9.9
+MPE
+7.7
+6.6
+1.0
+0.7
+1.1
+6.2
+6.5
+5.4
+4.2
+2.4
+5.3
+2.2
+3.3
+3.1
+MAPE
+7.8
+6.6
+3.6
+4.6
+4.3
+6.9
+8.4
+8.5
+6.9
+5.9
+7.8
+5.0
+6.3
+4.9
+Hf
+hcp
+110.0
+116.6
+114.2
+113.0
+114.8
+116.4
+116.6
+114.2
+113.8
+112.8
+117.0
+116.6
+117.4
+118.2
+109.7
+Ta
+bcc
+199.0
+199.0
+207.8
+206.6
+207.4
+213.0
+214.6
+196.8
+210.4
+208.8
+213.4
+212.0
+210.8
+212.6
+193.7
+W
+bcc
+309.6
+309.6
+324.6
+323.8
+309.6
+336.0
+336.8
+310.6
+338.8
+332.2
+336.0
+331.4
+330.2
+334.4
+312.3
+Re
+hcp
+370.6
+399.6
+390.8
+390.3
+396.3
+406.8
+407.8
+392.8
+417.8
+410.2
+408.4
+412.6
+398.8
+404.8
+368.8
+Os
+hcp
+405.6
+443.6
+426.8
+427.1
+434.3
+450.8
+453.4
+409.0
+466.6
+461.0
+455.6
+459.6
+440.6
+449.4
+424.6
+Ir
+fcc
+350.5
+391.0
+369.9
+369.6
+376.9
+394.2
+396.9
+343.8
+416.6
+409.8
+402.0
+415.9
+382.7
+392.8
+365.2
+Pt
+fcc
+245.0
+285.8
+264.6
+262.9
+266.2
+284.1
+287.7
+224.2
+305.9
+298.8
+294.4
+244.1
+271.2
+280.4
+284.2
+Au
+fcc
+131.1
+164.1
+157.6
+147.2
+149.9
+162.7
+165.3
+127.7
+168.2
+172.5
+167.8
+158.2
+153.1
+159.5
+174.8
+ME
+14.0
+9.5
+2.9
+0.9
+2.8
+16.3
+18.2
+14.3
+25.6
+21.6
+20.2
+14.6
+8.9
+14.9
+MAE
+15.8
+12.9
+12.1
+13.1
+14.2
+19.4
+20.6
+22.2
+27.3
+22.2
+21.9
+28.8
+17.6
+19.6
+MPE
+5.6
+2.8
+0.8
+0.3
+0.4
+5.1
+5.8
+5.7
+7.7
+6.6
+6.5
+4.0
+2.7
+4.7
+MAPE
+6.5
+4.6
+5.0
+5.5
+5.8
+6.9
+7.2
+8.8
+8.7
+6.9
+7.5
+9.9
+6.9
+7.2
+Li
+bcc
+14.1
+13.8
+13.6
+13.0
+13.0
+13.6
+13.0
+14.1
+14.1
+13.9
+14.2
+13.3
+14.8
+14.7
+13.1
+Na
+bcc
+8.0
+7.9
+7.4
+7.3
+7.4
+7.5
+7.4
+7.6
+7.9
+7.7
+8.0
+7.9
+8.5
+8.9
+7.9
+K
+bcc
+3.5
+3.5
+3.3
+3.3
+3.3
+3.3
+3.3
+3.2
+3.1
+3.0
+3.2
+3.2
+3.8
+3.8
+3.7
+Rb
+bcc
+2.8
+2.9
+3.7
+3.8
+3.7
+3.5
+3.5
+4.7
+3.6
+2.8
+3.3
+3.1
+3.1
+3.1
+2.9
+Cs
+bcc
+2.0
+2.0
+1.8
+1.9
+1.8
+1.9
+1.8
+4.1
+2.0
+2.0
+2.0
+2.0
+2.1
+2.1
+2.1
+ME
+0.1
+0.1
+0.0
+0.1
+0.1
+0.0
+0.1
+0.8
+0.2
+0.1
+0.2
+0.1
+0.5
+0.6
+MAE
+0.3
+0.2
+0.5
+0.4
+0.4
+0.4
+0.4
+1.1
+0.5
+0.4
+0.4
+0.2
+0.5
+0.6
+MPE
+1.0
+0.9
+0.0
+0.5
+0.9
+0.2
+2.3
+29.5
+2.1
+4.9
+0.9
+2.1
+6.1
+6.8
+MAPE
+4.4
+3.2
+12.7
+11.9
+12.0
+10.0
+10.6
+36.4
+10.7
+7.2
+8.2
+5.4
+6.1
+6.8164703-8
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE II. (Continued.)
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Ca
+fcc
+16.8
+17.2
+16.8
+16.7
+16.8
+17.1
+16.9
+20.9
+18.2
+17.5
+17.7
+17.6
+18.4
+18.5
+18.4
+Sr
+fcc
+11.5
+12.3
+11.4
+11.2
+11.4
+11.7
+11.6
+17.1
+11.8
+11.4
+11.9
+11.1
+12.5
+12.6
+12.4
+Ba
+bcc
+8.7
+9.3
+8.4
+8.1
+8.4
+8.7
+8.6
+11.8
+7.7
+7.6
+8.3
+8.1
+9.2
+9.2
+9.3
+ME
+1.0
+0.4
+1.2
+1.4
+1.2
+0.9
+1.0
+3.2
+0.8
+1.2
+0.7
+1.1
+0.0
+0.1
+MAE
+1.0
+0.4
+1.2
+1.4
+1.2
+0.9
+1.0
+3.2
+0.8
+1.2
+0.7
+1.1
+0.1
+0.1
+MPE
+7.5
+2.4
+8.8
+10.6
+8.8
+6.4
+7.4
+26.1
+7.7
+10.4
+6.2
+9.2
+0.1
+0.4
+MAPE
+7.5
+2.4
+8.8
+10.6
+8.8
+6.4
+7.4
+26.1
+7.7
+10.4
+6.2
+9.2
+0.6
+1.1
+Mn
+c
+183.2
+305.4
+299.4
+145.3
+298.4
+309.1
+311.7
+298.0
+311.0
+306.6
+312.6
+315.3
+302.6
+306.5
+90.4
+La
+h
+24.2
+26.4
+25.8
+25.0
+24.7
+25.4
+25.4
+28.0
+22.8
+22.6
+23.6
+24.2
+25.6
+24.2
+26.6
+Hg
+r
+9.6
+36.0
+22.4
+18.3
+21.1
+32.4
+34.8
+19.6
+24.4
+21.6
+24.0
+21.2
+33.6
+38.8
+28.2
+ME
+23.9
+74.2
+67.5
+14.5
+66.3
+73.9
+75.6
+66.8
+71.0
+68.5
+71.7
+71.8
+72.2
+74.8
+MAE
+37.9
+74.3
+71.9
+22.1
+72.3
+74.7
+76.4
+72.5
+76.1
+75.6
+76.5
+78.1
+72.9
+76.4
+MPE
+9.2
+88.2
+69.2
+6.5
+65.9
+84.1
+87.9
+68.1
+72.1
+66.9
+73.2
+71.6
+83.4
+89.2
+MAPE
+59.2
+88.7
+84.9
+34.0
+87.5
+87.1
+90.9
+88.5
+90.6
+92.5
+90.7
+94.2
+85.9
+95.2
+TME
+2.3
+23.5
+14.6
+7.8
+14.0
+23.2
+22.3
+5.9
+22.1
+18.9
+21.9
+18.4
+19.1
+22.3
+TMAE
+16.1
+24.3
+18.7
+13.6
+18.3
+24.1
+23.3
+23.3
+24.3
+21.6
+23.5
+23.8
+22.1
+23.9
+TMPE
+0.3
+16.7
+10.2
+3.7
+9.5
+15.9
+15.2
+13.2
+13.4
+9.9
+14.2
+11.6
+15.6
+17.2
+TMAPE
+13.4
+18.0
+16.3
+11.9
+16.5
+19.0
+19.1
+23.2
+18.8
+17.0
+18.6
+18.6
+17.6
+18.7
+sizable overestimation. The bulk modulus of La is predicted
+fairlywellwithinallfunctionals,butoverestimationandunder-
+estimation in values are observed for Hg. The bulk modulus
+of Hg obtained from revTPSS, regTPSS, MS0, MS2, and
+TMTPSS shows good agreement with the experimental val-
+ues. The M06L underestimates the bulk modulus of Hg, and
+the same amount of overestimation is observed for the TM
+functional.
+C. Cohesive energies
+Predicting the cohesive energies of transition metals also
+poses a great challenge because of the “strong” correlation
+nature.53 Table III presents the performance of all the function-
+als along with the experimental values. We arrange Table III
+in the same way as is done in the case of inter-atomic dis-
+tances and bulk moduli. The percentage deviation of all the
+FIG. 2. Shown is the percentage deviation in bulk-moduli obtained using different exchange-correlation functionals presented in Table II. Mn, La, and Hg are
+not shown in the ﬁgure. The scale of the Y-axis is adjusted for the better view of the errors.164703-9
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE III. Fixed lattice constant cohesive energies (in eV/atom) are computed for different solid structures using PBE, PBEsol, TPSS, modTPSS, oTPSS,
+revTPSS, regTPSS, M06L, MS0, MS1, MS2, SCAN, TMTPSS, and TM functionals. All the ﬁnite temperature corrected experimental values are collected from
+Refs. 49 and 53. For elements Mn, La, and Hg, the temperature corrected values are not available and we report only the experimental values taken from Ref. 48.
+The abbreviations of different crystal structures (CS) considered here are the same as Table I. The best values are in bold, and the most deviating values are in
+italics.
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Sc
+hcp
+4.20
+4.58
+4.47
+4.41
+4.47
+4.58
+4.61
+5.08
+4.39
+4.31
+4.49
+4.37
+4.69
+4.81
+3.93
+Ti
+hcp
+5.40
+5.87
+5.56
+5.55
+5.62
+5.77
+5.72
+6.22
+5.29
+5.23
+5.48
+5.30
+6.01
+6.04
+4.88
+V
+bcc
+5.25
+5.83
+5.51
+5.43
+5.51
+5.76
+5.62
+6.28
+5.09
+5.01
+5.43
+4.96
+5.89
+5.93
+5.34
+Cr
+bcc
+4.05
+4.71
+4.24
+4.14
+4.24
+4.47
+4.31
+4.50
+3.49
+3.44
+3.96
+3.26
+4.62
+4.66
+4.15
+Fe
+bcc
+4.81
+5.58
+5.29
+5.17
+5.28
+5.55
+5.52
+5.03
+5.08
+5.00
+5.38
+4.88
+5.58
+5.70
+4.32
+Co
+hcp
+5.09
+5.85
+5.74
+5.63
+5.74
+6.09
+5.99
+5.84
+5.88
+5.77
+6.13
+5.92
+6.25
+6.37
+4.47
+Ni
+fcc
+4.67
+5.34
+5.07
+4.96
+5.06
+5.44
+5.41
+5.81
+5.20
+5.09
+5.46
+5.25
+5.61
+5.69
+4.48
+Cu
+fcc
+3.48
+4.03
+3.75
+3.66
+3.75
+4.09
+4.08
+3.06
+3.80
+3.71
+4.09
+3.87
+4.32
+4.38
+3.51
+Zn
+hcp
+1.10
+1.57
+1.34
+1.28
+1.34
+1.61
+1.67
+1.54
+1.55
+1.46
+1.74
+1.52
+1.71
+1.89
+1.38
+ME
+0.20
+0.86
+0.56
+0.47
+0.57
+0.86
+0.81
+0.86
+0.41
+0.32
+0.71
+0.36
+1.03
+1.13
+MAE
+0.32
+0.86
+0.57
+0.50
+0.58
+0.86
+0.81
+0.98
+0.64
+0.58
+0.76
+0.68
+1.03
+1.13
+MPE
+2.7
+20.9
+12.6
+10.1
+12.7
+21.2
+20.4
+19.8
+10.7
+7.90
+18.7
+9.3
+25.7
+29.1
+MAPE
+9.0
+20.9
+13.4
+12.0
+13.5
+21.2
+20.4
+23.0
+15.8
+13.8
+19.9
+16.4
+25.7
+29.1
+Y
+hcp
+4.21
+4.60
+4.43
+4.22
+4.28
+4.57
+4.32
+5.06
+4.36
+4.30
+4.49
+4.42
+4.70
+4.81
+4.42
+Zr
+hcp
+6.27
+6.78
+6.35
+6.31
+6.39
+6.55
+6.28
+6.80
+5.83
+5.83
+6.04
+6.12
+6.82
+6.84
+6.32
+Nb
+bcc
+6.79
+7.47
+7.14
+7.00
+7.09
+7.40
+7.13
+8.63
+6.85
+6.75
+7.07
+6.56
+7.45
+7.49
+7.47
+Mo
+bcc
+6.35
+7.18
+6.63
+6.53
+6.63
+6.95
+6.79
+6.85
+6.34
+6.23
+6.61
+5.81
+6.96
+7.03
+6.84
+Tc
+hcp
+6.90
+7.85
+7.17
+7.03
+7.14
+7.59
+7.50
+6.53
+7.28
+7.16
+7.57
+6.72
+7.61
+7.78
+7.17
+Ru
+hcp
+6.88
+7.87
+7.21
+6.99
+7.10
+7.66
+7.65
+6.78
+7.69
+7.54
+7.79
+7.53
+7.70
+7.85
+6.80
+Rh
+fcc
+5.86
+6.73
+6.00
+6.08
+6.20
+6.40
+6.67
+5.40
+5.90
+5.81
+6.17
+5.58
+6.41
+6.55
+5.76
+Pd
+fcc
+3.74
+4.47
+4.00
+3.88
+4.00
+4.39
+4.39
+4.17
+4.24
+4.13
+4.46
+4.38
+4.61
+4.71
+3.93
+Ag
+fcc
+2.52
+3.08
+2.73
+2.63
+2.73
+3.03
+3.00
+3.24
+2.79
+2.70
+3.10
+2.88
+3.29
+3.35
+2.96
+Cd
+hcp
+0.73
+1.16
+0.95
+0.87
+0.95
+1.20
+1.24
+1.33
+1.08
+1.01
+1.34
+1.03
+1.39
+1.49
+1.18
+ME
+0.26
+0.43
+0.02
+0.13
+0.03
+0.29
+0.21
+0.19
+0.05
+0.14
+0.18
+0.18
+0.41
+0.51
+MAE
+0.30
+0.44
+0.18
+0.23
+0.21
+0.30
+0.32
+0.40
+0.34
+0.34
+0.36
+0.42
+0.41
+0.51
+MPE
+8.1
+7.5
+2.2
+4.8
+2.4
+5.3
+4.3
+5.1
+1.4
+3.6
+4.8
+3.3
+9.3
+11.7
+MAPE
+8.6
+7.8
+4.7
+6.5
+5.4
+5.5
+5.9
+8.2
+6.4
+6.9
+7.4
+7.7
+9.3
+11.7
+Hf
+hcp
+6.48
+7.14
+6.77
+6.70
+6.77
+7.08
+7.09
+7.40
+6.82
+6.73
+7.03
+6.35
+7.05
+7.22
+6.44
+Ta
+bcc
+8.25
+9.00
+8.67
+8.57
+8.67
+9.03
+9.13
+9.00
+9.18
+8.85
+9.15
+8.80
+9.04
+9.23
+8.11
+W
+bcc
+8.47
+9.27
+8.83
+8.72
+8.83
+9.22
+9.01
+9.77
+9.31
+9.12
+9.46
+9.09
+9.41
+9.45
+8.83
+Re
+hcp
+7.79
+8.77
+8.22
+8.09
+8.20
+8.65
+8.67
+7.74
+8.89
+8.68
+8.95
+8.51
+8.71
+8.91
+8.06
+Os
+hcp
+8.30
+9.36
+8.80
+8.62
+8.73
+9.10
+9.37
+8.23
+9.53
+9.34
+9.53
+9.08
+9.26
+9.49
+8.22
+Ir
+fcc
+7.19
+8.27
+7.56
+7.45
+7.56
+8.10
+8.19
+6.97
+8.51
+8.31
+8.43
+8.37
+8.07
+8.27
+6.96
+Pt
+fcc
+5.42
+6.27
+5.74
+5.65
+5.76
+6.18
+6.17
+5.81
+6.31
+6.15
+6.42
+6.17
+6.31
+6.46
+5.87
+Au
+fcc
+3.03
+3.72
+3.27
+3.16
+3.27
+3.60
+3.61
+3.57
+3.59
+3.45
+3.81
+3.55
+3.83
+3.93
+3.83
+ME
+0.17
+0.69
+0.19
+0.08
+0.18
+0.58
+0.62
+0.27
+0.73
+0.54
+0.81
+0.45
+0.67
+0.83
+MAE
+0.30
+0.71
+0.37
+0.33
+0.35
+0.64
+0.67
+0.43
+0.79
+0.63
+0.81
+0.54
+0.67
+0.83
+MPE
+3.7
+9.0
+1.6
+0.1
+1.5
+7.4
+7.9
+3.1
+9.3
+6.6
+10.8
+5.5
+9.0
+11.3
+MAPE
+5.3
+9.8
+5.8
+5.6
+5.6
+8.9
+9.4
+6.1
+10.9
+9.0
+10.9
+7.7
+9.0
+11.3
+Li
+bcc
+1.60
+1.67
+1.63
+1.63
+1.62
+1.64
+1.53
+1.83
+1.54
+1.52
+1.54
+1.56
+1.68
+1.68
+1.67
+Na
+bcc
+1.08
+1.15
+1.14
+1.14
+1.14
+1.16
+1.08
+1.49
+1.07
+1.05
+1.09
+1.10
+1.22
+1.21
+1.12
+K
+bcc
+0.86
+0.92
+0.92
+0.95
+0.91
+0.94
+0.88
+0.66
+0.86
+0.84
+0.88
+0.84
+0.99
+0.99
+0.94
+Rb
+bcc
+0.78
+0.84
+0.81
+0.80
+0.81
+0.83
+0.79
+1.30
+0.78
+0.76
+0.80
+0.76
+0.93
+0.92
+0.86
+Cs
+bcc
+0.72
+0.78
+0.74
+0.73
+0.74
+0.77
+0.74
+1.35
+0.73
+0.71
+0.76
+0.70
+0.88
+0.88
+0.81
+ME
+0.07
+0.01
+0.03
+0.03
+0.04
+0.01
+0.08
+0.25
+0.08
+0.10
+0.07
+0.09
+0.06
+0.06
+MAE
+0.07
+0.02
+0.04
+0.04
+0.04
+0.03
+0.08
+0.36
+0.08
+0.10
+0.07
+0.09
+0.06
+0.06
+MPE
+7.3
+1.1
+3.4
+3.3
+3.8
+1.3
+7.0
+26.1
+8.0
+10.0
+6.0
+8.8
+6.3
+5.9
+MAPE
+7.3
+2.2
+4.2
+4.4
+4.5
+2.8
+7.0
+38.1
+8.0
+10.0
+6.0
+8.8
+6.3
+5.9164703-10
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE III. (Continued.)
+GGA
+meta-GGA
+Solids
+CS
+PBE
+PBEsol
+TPSS
+modTPSS
+oTPSS
+revTPSS
+regTPSS
+M06L
+MS0
+MS1
+MS2
+SCAN
+TMTPSS
+TM
+Expt.
+Ca
+fcc
+1.91
+2.11
+2.02
+1.99
+2.02
+2.08
+2.08
+2.50
+2.00
+1.96
+2.03
+2.08
+2.17
+2.29
+1.86
+Sr
+fcc
+1.61
+1.81
+1.76
+1.72
+1.76
+1.83
+1.85
+2.27
+1.79
+1.74
+1.84
+1.82
+1.96
+2.06
+1.73
+Ba
+bcc
+1.88
+2.12
+2.03
+1.98
+2.03
+2.11
+2.14
+2.51
+2.00
+1.95
+2.10
+2.04
+2.24
+2.34
+1.91
+ME
+0.03
+0.18
+0.10
+0.06
+0.10
+0.17
+0.19
+0.59
+0.10
+0.05
+0.16
+0.15
+0.29
+0.40
+MAE
+0.07
+0.18
+0.10
+0.07
+0.10
+0.17
+0.19
+0.59
+0.10
+0.05
+0.16
+0.15
+0.29
+0.40
+MPE
+1.9
+9.7
+5.5
+3.4
+5.5
+9.4
+10.3
+32.4
+5.2
+2.7
+8.5
+8.0
+15.8
+21.6
+MAPE
+3.7
+9.7
+5.5
+3.7
+5.5
+9.4
+10.3
+32.4
+5.2
+2.7
+8.5
+8.0
+15.8
+21.6
+Mn
+c
+3.80
+4.55
+3.95
+3.82
+3.96
+4.06
+4.03
+2.81
+3.04
+3.01
+3.54
+2.90
+4.13
+4.28
+2.92
+La
+h
+4.30
+4.79
+4.51
+4.31
+4.39
+4.56
+4.40
+5.03
+3.83
+3.82
+4.06
+3.72
+4.58
+4.61
+4.47
+Hg
+r
+0.15
+0.54
+0.22
+0.14
+0.22
+0.43
+0.47
+0.55
+0.43
+0.32
+0.64
+0.39
+0.67
+0.75
+0.62
+ME
+0.08
+0.62
+0.22
+0.09
+0.19
+0.35
+0.30
+0.13
+0.24
+0.29
+0.08
+0.33
+0.46
+0.54
+MAE
+0.51
+0.68
+0.49
+0.51
+0.51
+0.47
+0.44
+0.25
+0.32
+0.35
+0.35
+0.33
+0.46
+0.54
+MPE
+16.5
+16.7
+9.5
+16.7
+10.2
+3.5
+4.1
+0.8
+13.6
+20.0
+5.1
+18.2
+17.3
+23.6
+MAPE
+36.6
+25.3
+33.6
+37.3
+34.0
+23.9
+21.3
+9.2
+16.4
+22.0
+11.2
+18.2
+17.3
+23.6
+TME
+0.07
+0.50
+0.17
+0.09
+0.17
+0.42
+0.38
+0.38
+0.21
+0.11
+0.38
+0.10
+0.53
+0.63
+TMAE
+0.26
+0.52
+0.30
+0.29
+0.31
+0.45
+0.46
+0.51
+0.43
+0.39
+0.47
+0.42
+0.53
+0.63
+TMPE
+4.7
+10.2
+1.7
+0.6
+1.5
+8.3
+7.3
+12.1
+2.1
+0.6
+7.7
+0.3
+13.2
+15.9
+TMAPE
+9.4
+11.6
+8.9
+9.2
+9.2
+10.8
+11.2
+16.6
+10.1
+9.9
+10.8
+10.3
+13.2
+15.9
+functionals is also plotted in Fig. 3. Here, the cohesive energies
+arecalculated at the ﬁxedlattice constantsof thecorresponding
+functional.
+We start by discussing the performance of the PBE func-
+tional. The PBE functional predicts the cohesive energies
+of 3d and 5d transition metals quite comprehensively and
+reports the least MAE. But for 4d transition metals, the
+PBE functional overall underestimates the cohesive energies.
+It has been observed that the overall tendency of the PBE
+functional for the 3d transition metals is different than the
+4d and 5d transition metals. This is due to the fact that PBE
+overbindsthe3d transitionmetals.RegardingthePBEsolfunc-
+tional, it overestimates the cohesive energies compared to the
+PBE. It is obvious because the PBE is a much better functional
+FIG. 3. Shown is the percentage deviation in cohesive energies obtained using different exchange-correlation functionals presented in Table III. The scale of
+the Y-axis is adjusted for the better view of the errors.164703-11
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+compared to PBEsol in predicting the atomization energy.
+Therefore, the overestimation in the atomic energies reﬂects
+in the cohesive energies of the PBEsol functional.
+Concerning the meta-GGA functionals, all functionals
+overestimate the cohesive energies for the 3d transition met-
+als. In this regard, the modTPSS functional predicts the least
+MAE among the meta-GGAs. The modTPSS performs even
+better compared to the TPSS functional for 3d transition met-
+als, while oTPSS performs the same as TPSS for all 3d, 4d,
+and 5d transition metals. Quite reasonably, in this case also,
+the revTPSS performs similarly as PBEsol and shows the
+similar tendency for the cohesive energies of 3d, 4d, and 5d
+transition metals. The TPSS performs better than revTPSS
+because it is proposed on the basis of the PBE functional.
+The M06L overestimates the cohesive energies of all the 3d
+transition metals (except Cu) due to the smaller extent of inter-
+atomic distances. We observe quite similar performance for
+regTPSS and revTPSS functionals in this case. The moderate
+difference in the results of regTPSS and revTPSS arises from
+the difference in the lattice constants of the two function-
+als.26 We obtain almost equivalent performance for MS0,
+MS1, and MS2 functionals. Overall, for 3d and 5d transition
+metals, “MS” functionals overestimate the cohesive energies,
+whereas for 4d transition metals, underestimation is observed.
+Considering the performance of the most recent meta-GGA
+functionals, SCAN, TMTPSS, and TM, the TM based func-
+tionals deviate more than the SCAN functional does. However,
+the SCAN functional performs similarly as “MS” function-
+als. This tendency of overestimating the cohesive energies
+of all the 3d, 4d, and 5d transition metals with the “TM”
+functional is more evident as the d-band ﬁlling increases.
+Physically, this can be understood from the construction point
+of view of the TM functional. The TM functional is pro-
+posed by interpolating between the compact density [density
+matrix expansion (DME) dominates] and slowly varying den-
+sity limit.30 The enhancement factor obtained from the density
+matrix expansion (DME) dominates when the system becomes
+one electron-like. On the other hand, as the d-band ﬁlling
+increases, the overlap of the closed shells increases, which
+implies z ≈0 [where z is the meta-GGA ingredient which is
+deﬁned as the ration of von Weizs¨acker kinetic energy den-
+sity (τW) and KS kinetic energy density (τ) as z =
+τW
+τ ].78
+Therefore, the slowly varying density correction (sc) in the
+TM functional dominates, which affects the atomic energies
+and worsens its performance for the cohesive energies. In the
+TM functional, the DME enhancement factor actually takes
+part in the improvement of atomization energies. This case is
+modiﬁed for the alkali metals, where the outermost orbital is
+one electron-like.
+Regardingthealkalimetals,allfunctionals(exceptM06L)
+perform reasonably well. The deviation of the M06L is due
+to the same reason as discussed earlier in the case of inter-
+atomic distances and bulk moduli. A noticeable improvement
+in the performance of the TM based functionals is observed
+in this case. For alkaline-earth metals also, all perform quite
+well except M06L. PBE, modTPSS, and MS1 perform quite
+remarkably in this regard. The PBE and modTPSS show an
+opposite trend. PBE shows a small degree of underestima-
+tion (except Ca), whereas modTPSS shows a similar extent
+of overestimation. The overestimation tendency of TPSS is
+modiﬁed by modTPSS, while oTPSS shows equivalent per-
+formance as TPSS. In this case, we also observe very similar
+behavior in the performance of PBEsol and revTPSS func-
+tionals. Whereas, the regTPSS and revTPSS deviate slightly
+from each other. Considering the “MS” functionals, the MS1
+performs quite well, while MS2 overestimates the cohesive
+energies. The behavior of MS2 and SCAN is equivalent,
+and both overestimate the cohesive energies by a similar
+amount. The equivalent tendency in the cohesive ener-
+gies in MS2 and SCAN reﬂects from their inter-atomic
+distance performance. However, we observe a noticeable
+amount of overestimation in the performance of TMTPSS
+and TM functionals. In this regard, the performance of the
+SCAN functional is quite better compared to the TM based
+functionals.
+ConcerningthecohesiveenergyofMn,itislargelyoveres-
+timated within all the GGA and meta-GGA functionals except
+MS0, MS1, and SCAN. Overall, the M06L functional predicts
+the best MAE for all other transition metal elements. Like
+most of the transition metals in this case also, the TM func-
+tional enhances the error of TMTPSS. This is because of the
+difference in the atomic energies of TM and TMTPSS func-
+tionals. Unlike other transition metals, in this case, we observe
+that the revTPSS and PBEsol results deviate from each other,
+while the modTPSS, oTPSS, and regTPSS perform similar to
+the base functionals.
+IV. CHALLENGES OF ADVANCED META-GGA
+FUNCTIONALS
+Due to the open-shell systems, the transition metals are
+always difﬁcult cases within Kohn-Sham density functional
+theory, which is a ground state theory.41 Besides, the GGA
+functionals include the spurious self-interaction error. This
+self-interaction error has been removed partially by the higher
+rungs of Jacob’s ladder. The meta-GGA functionals are pro-
+posed by eliminating the one or two electron self-interaction
+in its correlating part. Though the meta-GGA functionals per-
+form quite accurately for the main-group metals but remain
+difﬁcult for the transition metals. Especially, the bulk mod-
+uli and cohesive energies remain a challenge for the meta-
+GGA functionals. To encapsulate the overall performance of
+the functional, we present the overall statistical analysis and
+ranking of each functional in Table IV. In Fig. 4, we also
+present the mean absolute percentage error (MAPE) of the
+individual functional excluding the Mn, La, and Hg results.
+Based on these analyses, it is indicative that simultaneously
+predicting both the structural and energetic properties of the
+transition metals with GGA and meta-GGA functionals poses
+a great challenge. Though the SCAN and TM functionals are
+considered as one of the most advanced functionals, these
+functionals do not show improved performances over the PBE
+functional for the bulk moduli and cohesive energies. Only, in
+the case of alkali metals, the advanced meta-GGA functionals
+show promising performance. It is noteworthy that the SCAN,
+M06L, and TM functionals capture mid-range vdW interac-
+tions, which accounts for improved performance for some
+systems but remains difﬁcult for others. Especially, for alkali164703-12
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+TABLE IV. Statistical analysis and ranking of different functionals based on the performances in the inter-atomic distances, bulk moduli, and cohesive energies.
+Mn, La, and Hg are not considered in ranking. The least errors are marked in bold, and the most errors are given in italics.
+PBE
+PBEsol TPSS modTPSS oTPSS revTPSS regTPSS M06L
+MS0
+MS1
+MS2
+SCAN TMTPSS
+TM
+Inter-atomic distances
+ME
+3.5
+0.6
+3.0
+3.6
+2.5
+0.8
+1.0
+1.9
+2.4
+2.6
+0.9
+1.1
+0.7
+0.1
+MAE
+5.2
+4.2
+4.8
+4.7
+4.3
+4.1
+4.1
+8.0
+5.9
+5.6
+4.5
+4.5
+4.1
+3.6
+MPE
+1.2
+0.2
+0.8
+1.0
+0.8
+0.1
+0.2
+0.2
+0.5
+0.5
+0.1
+0.2
+0.3
+0.0
+MAPE
+1.7
+1.5
+1.6
+1.4
+1.3
+1.4
+1.3
+2.3
+1.8
+1.7
+1.5
+1.5
+1.4
+1.2
+Rank
+6
+4
+5
+3
+2
+3
+2
+8
+7
+6
+4
+4
+3
+1
+Bulk moduli
+ME
+0.5
+19.2
+10.1
+7.2
+9.5
+18.8
+17.8
+0.7
+17.9
+14.7
+17.6
+13.8
+14.6
+17.8
+MAE
+14.2
+20.1
+14.2
+12.9
+13.7
+19.8
+18.8
+19.0
+19.9
+16.9
+19.0
+19.1
+17.8
+19.4
+MPE
+0.5
+10.5
+5.1
+3.4
+4.7
+10.0
+9.0
+8.5
+8.4
+5.0
+9.1
+6.5
+9.8
+11.0
+MAPE
+9.5
+11.9
+10.5
+10.0
+10.4
+13.2
+13.0
+17.6
+12.6
+10.5
+12.4
+12.1
+11.7
+12.2
+Rank
+1
+6
+4
+2
+3
+12
+11
+13
+10
+4
+9
+7
+5
+8
+Cohesive energies
+ME
+0.08
+0.49
+0.17
+0.09
+0.17
+0.43
+0.39
+0.40
+0.24
+0.15
+0.40
+0.13
+0.54
+0.63
+MAE
+0.24
+0.50
+0.28
+0.27
+0.29
+0.45
+0.46
+0.54
+0.44
+0.39
+0.49
+0.42
+0.54
+0.63
+MPE
+3.73
+9.65
+2.61
+0.75
+2.50
+8.67
+7.58
+13.19
+3.47
+1.10
+7.97
+1.86
+12.81
+15.27
+MAPE
+7.12
+10.37
+6.80
+6.80
+7.02
+9.65
+10.38
+17.18
+9.51
+8.84 10.72
+9.67
+12.83
+15.27
+Rank
+3
+8
+1
+1
+2
+6
+9
+13
+5
+4
+10
+7
+11
+12
+Ave Rank
+3.3
+6.0
+3.3
+2.0
+2.3
+7.0
+7.3
+11.3
+7.3
+4.7
+7.7
+6.0
+6.3
+7.0
+metals, the TMTPSS and TM functionals show improvement
+over PBE, M06L, and SCAN functionals. In the present study,
+we do not include any long-range corrected vdW interactions
+in our calculations. The inclusion of the long-range corrected
+vdW interactions may improve the functional performance
+because of the proper account for the long-range electron cor-
+relation effect. The problem with the M06L is that it does not
+recover the uniform density limit. Particularly, M06L is not a
+suitable functional for the alkali and alkaline-earth metals in all
+three considered cases. Recently, an improved version of the
+M06L is proposed to improve the solid-state performances.31
+Concerning the most advanced TM based functionals, it has
+been observed in our present study that the TPSS correlation
+with TM exchange often performs better compared to TM cor-
+relation for cohesive energies. This is because of the fact that
+TPSS correlation with TM exchange is better in predicting
+the atomization energies.42 The TM functional is very accu-
+rate for inter-atomic distances or lattice constants. Considering
+other meta-GGA functionals, the revTPSS shows PBEsol-like
+tendency. The modTPSS and oTPSS improve the accuracy of
+TPSS in several cases, whereas the regTPSS performs moder-
+ately better compared to revTPSS in predicting the overall
+cohesive energies. All the “MS” functionals perform simi-
+larly for all the properties under investigation in the present
+study. Regarding the overall performances of meta-GGA
+functionals, the TM functional is accurate in predicting the
+FIG. 4. Histograms of the mean absolute percentage error (MAPE) associated with the computed inter-atomic distances, bulk moduli, and cohesive energies.
+In the MAPE, we have excluded the Mn, La, and Hg.164703-13
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+inter-atomic distances, whereas for bulk moduli and cohesive
+energies,themodTPSSfunctionalperformsbettercomparedto
+others.
+V. CONCLUSIONS
+In this paper, we assess the performance of the recently
+proposed meta-GGA density functionals along with the pop-
+ularly used GGA based functionals for the lattice constants,
+bulk moduli, and cohesive energies of alkali, alkaline-earth,
+and transition metals. The present work is arranged by
+addressing the performance of the 3d, 4d, 5d transition met-
+als, alkali, alkaline-earth metals, and other transition met-
+als. Due to the complicated structure of Mn, La, and Hg,
+we discuss these three materials separately. Special atten-
+tion has been paid to the performance on the recently pro-
+posed SCAN, TMTPSS, and TM functionals. Based on these
+analyses, benchmark calculations and the level of deﬁcien-
+cies persisting with all the functionals, one can conclude the
+following:
+(i)
+For the equilibrium distances of the 3d transition met-
+als, PBE results are reasonably better compared to all
+other GGA and meta-GGA functionals. For 4d and 5d
+transition metals, alkali, and alkaline-earth metals, the
+PBE results are too large except for few cases. The
+PBEsol and revTPSS follow essentially the identical
+results. The modiﬁed version of TPSS, i.e., oTPSS and
+modTPSS, performs better compared to its TPSS coun-
+terpart, whereas the regTPSS performs almost similarly
+as revTPSS. The largest error is obtained from the
+M06L functional. For alkali and alkaline-earth metals,
+it gives the most error. The performance of MS0 and
+MS1 is identical. Whereas, MS2 and SCAN closely
+follow each other in most of the cases. We obtain
+the best performance with the TM functional. The
+TM functional performs even better than the SCAN
+in most of the cases except alkaline-earth metals. We
+also noticed that the performance of TMTPSS is quite
+close to that of the TM functional for 3d transition
+metals.
+(ii)
+Taking into consideration the bulk moduli, the PBE and
+modTPSSfunctionalsperformbettercomparedtoother
+GGAandmeta-GGAfunctionalsineverycase.Overall,
+PBE underestimates the bulk moduli of 4d transition
+metals, 5d transition metals, alkali metals, and alkaline-
+earth metals. For 3d metals, the PBE functional over-
+estimates the results. The overestimation tendency of
+TPSS is reduced comprehensively by modTPSS due
+to the effect of the exchange enhancement factor. The
+bulk moduli of Mn remain a difﬁcult case for all the
+GGA and meta-GGA functionals. Overall, the revTPSS
+follows very closely the PBEsol results. The perfor-
+mance of all other meta-GGA varies noticeably from
+the PBE results. Like inter-atomic distances of alkali
+and alkaline-earth metals, in this case also, the M06L
+gives the most error. Concerning the performance of
+TMTPSS and TM functional performance, TMTPSS
+is only slightly better than SCAN for the MAE and
+MAPE. Whereas, SCAN performs better than TM.
+(iii)
+In predicting the cohesive energies of all the metals,
+PBE outperforms all other functionals considered here.
+Only for the alkali metals, the PBE results deviate more
+from the experimental values. Within meta-GGA, the
+modTPSS results in the least total mean absolute error.
+The revTPSS closely follows the PBEsol in all the
+cases. In this case also, we observe that the M06L
+gives the most error for the alkali and alkaline-earth
+metals. Overall consideration shows that the TM pre-
+dicts the largest mean absolute error. Though in the case
+of the alkali metals, the TMTPSS and TM function-
+als perform quite well compared to other cases. But,
+overall consideration shows that both the functionals
+overestimate the cohesive energies. Overall, compari-
+son of SCAN, TMTPSS, and TM shows that the SCAN
+functional performs better compared to the TMTPSS
+and TM functional in the estimation of the cohesive
+energies.
+To conclude, both the structural properties and energetic
+performance remain a challenge within the most advanced
+meta-GGA functionals like SCAN and TM. Though the
+recently developed TM functional shows better accuracy for
+the lattice constants or inter-atomic distances, it is not a prefer-
+able candidate for the bulk moduli and cohesive energies of
+the transition metals. The accuracy of the TM functional is due
+to the fact that it correctly recovers the fourth-order gradient
+expansion. It is also shown that the TM functional with TPSS
+and TM correlation performs differently for the all the proper-
+ties. This effect in the correlation energy can be eliminated by
+modifyingthecorrelationfunctionalformasitwasdoneinsev-
+eral modiﬁcations based on the TPSS functional. Interestingly,
+the TM includes some intermediate van der Waals interac-
+tions due to the de-enhancement of the exchange functional
+part which enables it to capture the van der Waals bonding
+nature originating in several transition and alkali metals. In
+our future demonstration, we will consider the long-range van
+der Waals interaction with these functionals to enhance the per-
+formance. It will also be interesting to incorporate the exact
+constraint into the functional form of the TM functional which
+was designed mainly from the exact constraint of the exchange
+hole.
+ACKNOWLEDGMENTS
+S.J. would like to acknowledge and thank Jianwei Sun
+for the regTPSS subroutine. S.J. would also like to acknowl-
+edge the ﬁnancial support from the Department of Atomic
+Energy, Government of India. K.S. would like to acknowl-
+edge the ﬁnancial support from the Department of Science and
+Technology, Government of India, during his summer intern
+in NISER under the supervision of P.S.
+1W. Kohn and L. J. Sham, Phys. Rev. 140, A1133 (1965).
+2J. P. Perdew and A. Zunger, Phys. Rev. B 23, 5048 (1981).
+3J. P. Perdew and Y. Wang, Phys. Rev. B 33, 8800 (1986).
+4A. D. Becke, Phys. Rev. A 38, 3098 (1988).
+5C. Lee, W. Yang, and R. G. Parr, Phys. Rev. B 37, 785 (1988).
+6J. P. Perdew, J. A. Chevary, S. H. Vosko, K. A. Jackson, M. R. Pederson,
+D. J. Singh, and C. Fiolhais, Phys. Rev. B 46, 6671 (1992).
+7A. D. Becke, J. Chem. Phys. 104, 1040 (1996).
+8J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996).164703-14
+Jana, Sharma, and Samal
+J. Chem. Phys. 149, 164703 (2018)
+9R. Armiento and A. E. Mattsson, Phys. Rev. B 72, 085108 (2005).
+10Z. Wu and R. E. Cohen, Phys. Rev. B 73, 235116 (2006).
+11Y. Zhao and D. G. Truhlar, J. Chem. Phys. 128, 184109 (2008).
+12J. P. Perdew, A. Ruzsinszky, G. I. Csonka, O. A. Vydrov, G. E. Scuseria,
+L. A. Constantin, X. Zhou, and K. Burke, Phys. Rev. Lett. 100, 136406
+(2008).
+13L. A. Constantin, J. P. Perdew, and J. M. Pitarke, Phys. Rev. B 79, 075126
+(2009).
+14E. Fabiano, L. A. Constantin, and F. Della Sala, Phys. Rev. B 82, 113104
+(2010).
+15E. Fabiano, L. A. Constantin, and F. Della Sala, J. Chem. Theory Comput.
+7(11), 3548–3559 (2011).
+16L. A. Constantin, A. Terentjevs, F. Della Sala, P. Cortona, and E. Fabiano,
+Phys. Rev. B 93, 045126 (2016).
+17A. D. Becke and M. R. Roussel, Phys. Rev. A 39, 3761 (1989).
+18T. V. Voorhis and G. E. Scuseria, J. Chem. Phys. 109, 400 (1998).
+19Y. Zhao and D. G. Truhlar, J. Chem. Phys. 125, 194101 (2006).
+20J. Tao, J. P. Perdew, V. N. Staroverov, and G. E. Scuseria, Phys. Rev. Lett.
+91, 146401 (2003).
+21J. P. Perdew, A. Ruzsinszky, G. I. Csonka, L. A. Constantin, and J. Sun,
+Phys. Rev. Lett. 103, 026403 (2009).
+22L. A. Constantin, E. Fabiano, and F. Della Sala, J. Chem. Theory Comput.
+9(5), 2256–2263 (2013).
+23J. Sun, B. Xiao, and A. Ruzsinszky, J. Chem. Phys. 137, 051101 (2012).
+24J. Sun, R. Haunschild, B. Xiao, I. W. Bulik, G. E. Scuseria, and J. P. Perdew,
+J. Chem. Phys. 138, 044113 (2013).
+25J. Sun, J. P. Perdew, and A. Ruzsinszky, Proc. Natl. Acad. Sci. U. S. A.
+112(3), 685–689 (2015).
+26A. Ruzsinszky, J. Sun, B. Xiao, and G. I. Csonka, J. Chem. Theory Comput.
+8, 2078–2087 (2012).
+27J. P. Perdew, A. Ruzsinszky, J. Tao, G. I. Csonka, and G. E. Scuseria, Phys.
+Rev. A: At., Mol., Opt. Phys. 76, 042506 (2007).
+28L. Goerigk and S. Grimme, J. Chem. Theory Comput. 6, 107–126 (2010).
+29J. Sun, A. Ruzsinszky, and J. P. Perdew, Phys. Rev. Lett. 115, 036402 (2015).
+30J. Tao and Y. Mo, Phys. Rev. Lett. 117, 073001 (2016).
+31Y. Wang, X. Jin, H. S. Yu, D. G. Truhlar, and X. He, Proc. Natl. Acad. Sci.
+U. S. A. 114(32), 8487–8492 (2017).
+32P. Verma and D. G. Truhlar, J. Phys. Chem. C 121, 7144–7154 (2017).
+33H. S. Yu, X. He, and D. G. Truhlar, J. Chem. Theory Comput. 12(3),
+1280–1293 (2016).
+34N. Mardirossian and M. Head-Gordon, J. Chem. Phys. 142, 074111 (2015).
+35J. Wellendorff, K. T. Lundgaard, K. W. Jacobsen, and J. Thomas Bligaard,
+Chem. Phys. 140, 144107 (2014).
+36R. Peverati and D. G. Truhlar, J. Phys. Chem. Lett. 3(1), 117–124 (2012).
+37J. M. del Campo, J. L. Gazquez, S. B. Trickey, and A. Vela, Chem. Phys.
+Lett. 543, 179–183 (2012).
+38F. Della Sala, E. Fabiano, and L. A. Constantin, Int. J. Quantum Chem. 116,
+1641–1694 (2016).
+39L. A. Constantin, E. Fabiano, and F. Della Sala, Phys. Rev. B 86, 035130
+(2012).
+40L. A. Constantin, E. Fabiano, and F. Della Sala, J. Chem. Phys. 137, 194105
+(2012).
+41C. J. Cramer and D. G. Truhlar, Phys. Chem. Chem. Phys. 11, 10757–10816
+(2009).
+42Y. Mo, G. Tian, R. Car, V. N. Staroverov, G. E. Scuseria, and J. Tao, Phys.
+Rev. B 95, 035118 (2017).
+43Y. Mo, G. Tian, and J. Tao, Chem. Phys. Lett. 628, 38–42 (2017).
+44A. E. Mattsson, R. Armiento, J. Paier, G. Kresse, J. M. Wills, and
+T. R. Mattsson, J. Chem. Phys. 128, 084714 (2008).
+45J. Sun, M. Marsman, A. Ruzsinszky, G. Kresse, and J. P. Perdew, Phys.
+Rev. B 83, 121410(R) (2011).
+46J. Sun, M. Marsman, G. I. Csonka, A. Ruzsinszky, P. Hao, Y. S. Kim,
+G. Kresse, and J. P. Perdew, Phys. Rev. B 84, 035117 (2011).
+47A. Patra, J. E. Bates, J. Sun, and J. P. Perdew, Proc. Natl. Acad. Sci. U. S.
+A. 114(44), E9188–E9196 (2017).
+48P. Janthon, S. M. Kozlov, F. Vines, J. Limtrakul, and F. Illas, J. Chem. Theory
+Comput. 9, 1631–1640 (2013).
+49P. Janthon, S. (Andy) Luo, S. M. Kozlov, F. Vines, J. Limtrakul, D. G.
+Truhlar, and F. Illas, J. Chem. Theory Comput. 10, 3832–3839 (2014).
+50P. Haas, F. Tran, and P. Blaha, Phys. Rev. B 79, 085104 (2009).
+51F. Tran, J. Stelzl, and P. Blaha, J. Chem. Phys. 144, 204120 (2016).
+52G. I. Csonka, J. P. Perdew, A. Ruzsinszky, P. H. T. Philipsen, S. Leb`egue,
+J. Paier, O. A. Vydrov, and J. G. `Angy`an, Phys. Rev. B 79, 155107
+(2009).
+53L. Schimka, R. Gaudoin, J.Klime˘s, M. Marsman, and G. Kresse, Phys.
+Rev. B 87, 214102 (2013).
+54P. Hao, Y. Fang, J. Sun, G. I. Csonka, P. H. T. Philipsen, and J. P. Perdew,
+Phys. Rev. B 85, 014111 (2012).
+55G. Zhang, A. M. Reilly, A. Tkatchenko, and M. Schefﬂer, New J. Phys. 20,
+063020 (2018).
+56H. Peng, Z. Yang, J. P. Perdew, and J. Sun, Phys. Rev X 6, 041005
+(2016).
+57B. E. Isaacs and C. Wolverton, Phys. Rev. Mater. 2, 063801 (2018).
+58S. Jana, A. Patra, and P. Samal, J. Chem. Phys. 149, 044120 (2018).
+59P. E. Bl¨ochl, Phys. Rev. B 50, 17953 (1994).
+60G. Kresse and D. Joubert, Phys. Rev. 59, 1758 (1999).
+61G.
+Kresse
+and
+J.
+Hafner,
+Phys.
+Rev.
+B
+47,
+558
+(1993);
+49, 14251 (1994).
+62G. Kresse and J. Furthm¨uller, Comput. Mater. Sci. 6, 15 (1996).
+63G. Kresse and J. Furthm¨uller, Phys. Rev. B 54, 11169 (1996).
+64G. Kresse and J. Hafner, J. Phys.: Condens. Matter 6, 8245 (1994).
+65J. Tao, J. P. Perdew, and A. Ruzsinszky, Phys. Rev. B 81, 233102
+(2010).
+66F. D. Murnaghan, Proc. Natl. Acad. Sci. U. S. A. 30, 244 (1944).
+67A. B. Alchagirov, J. P. Perdew, J. C. Boettger, R. C. Albers, and C. Fiolhais,
+Phys. Rev. B 63, 224115 (2001).
+68A. B. Alchagirov, J. P. Perdew, J. C. Boettger, R. C. Albers, and C. Fiolhais,
+Phys. Rev. B 67, 026103 (2003).
+69F. Birch, Phys. Rev. 71, 809 (1947).
+70V. Wang, W. Xiao, D.-M. Ma, R.-J. Liu, and C.-M. Yang, J. Appl. Phys.
+115, 043708 (2014).
+71P. S. Svendsen and U. von Barth, Phys. Rev. B 54, 17402 (1996).
+72J. Klimes, D. R. Bowler, and A. Michaelides, Phys. Rev. B 83, 195131
+(2011).
+73P. Haas, F. Tran, P. Blaha, K. Schwarz, and R. Laskowski, Phys. Rev. B 80,
+195109 (2009).
+74J. S`anchez-Barriga, J. Fink, V. Boni, I. Di Marco, J. Braun, J. Min`ar,
+A. Varykhalov, O. Rader, V. Bellini, F. Manghi, H. Ebert, M. I. Katsnelson,
+A. I. Lichtenstein, O. Eriksson, W. Eberhardt, and H. A. D¨urr, Phys. Rev.
+Lett. 103, 267203 (2009).
+75S. Monastra, F. Manghi, C. A. Rozzi, C. Arcangeli, E. Wetli, H.-J. Neff,
+T. Greber, and J. Osterwalder, Phys. Rev. Lett. 88, 236402 (2002).
+76J. Braun, J. Min`ar, H. Ebert, M. I. Katsnelson, and A. I. Lichtenstein, Phys.
+Rev. Lett. 97, 227601 (2006).
+77A. V. Narlikar, Frontiers in Magnetic Materials (Springer, Berlin, 2005),
+p. 117.
+78J. Sun, B. Xiao, Y. Fang, R. Haunschild, P. Hao, A. Ruzsinszky, G. I. Csonka,
+G. E. Scuseria, and J. P. Perdew, Phys. Rev. Lett. 111, 106401 (2013).

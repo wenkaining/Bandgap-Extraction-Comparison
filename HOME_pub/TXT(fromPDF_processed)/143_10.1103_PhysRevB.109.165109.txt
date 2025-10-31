@@ -1,0 +1,245 @@
+PHYSICAL REVIEW B 109, 165109 (2024) Magnetic ﬁeld induced partially polarized chiral spin liquid in a transition metal dichalcogenide moiré system Yixuan Huang ,1,2 D. N. Sheng ,3 and Jian-Xin Zhu 1,2,* 1Theoretical Division, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA 2Center for Integrated Nanotechnologies, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA 3Department of Physics and Astronomy, California State University, Northridge, California 91330, USA (Received 13 July 2023; accepted 14 March 2024; published 2 April 2024) As one of the most intriguing states of matter, the chiral spin liquid (CSL) has attracted much scientiﬁc interest while its existence and mechanism in crystalline strongly correlated systems remain hotly debated.
+On the other hand, strong correlation driven emergent phenomena can be realized in twisted transition metal dichalcogenide bilayers with a tremendously tunable large length scale providing a new platform for the emergence of CSLs.
+We focus on a strongly correlated model relevant to heterobilayer WSe2/MoSe2 and investigate the Mott insulating phase at half ﬁlling under an out-of-plane magnetic ﬁeld.
+Considering both its orbital and spin Zeeman effects we identify three conventionally ordered phases including a 120◦Néel phase, a stripe phase, and an up-up-down phase.
+For intermediate ﬁelds an emergent quantum spin liquid phase is identiﬁed with partial spin polarization.
+We further characterize its topological nature as the ν = 1/2 Laughlin CSL through the topological entanglement spectrum and quantized spin pumping under spin ﬂux insertion.
+In addition, we map out the quantum phase diagram for different twisted angles in an experimentally accessible parameter regime.
+DOI: 10.1103/PhysRevB.109.165109 I. INTRODUCTION Quantum spin liquids [1–4] (QSLs) are exotic states of matter that feature nontrivial topology [5–7] and fraction- alized excitations [8].
+The novel properties of QSLs have attracted numerous studies for several decades which provide potential ways to realize unconventional superconductivity through doping QSLs [9–12], and enable topological quantum computation [13,14].
+Furthermore, it has been proposed that the behaviors of many more exotic correlated electronic sys- tems such as the holon Wigner crystal and strange metal can be understood from the perspective of doping QSLs [15–17].
+However, candidate materials of QSLs are very rare partially because of the lack of deﬁnite evidence to detect QSLs in experiments.
+As a promising example, the chiral spin liquid (CSL) car- ries a quantized chiral edge current that realizes the bosonic version of the fractional quantum Hall effect (FQHE).
+As a result, CSL may be identiﬁed through the quantized ther- mal Hall conductivity [18–20].
+Upon doping, CSL can lead to topological superconductivity [21] that supports Majorana edge excitations, responsible for edge zero-biased peaks in experiments [22].
+Recently, such novel states have been found numerically on realistic triangular lattice models such as the Hubbard model [23,24], and the extended Heisenberg model [25] supplemented by three-spin chiral interactions [26–29] or four-spin ring exchanges [30].
+However, higher-order terms that involve more spins are generally small in perturbation theory and cannot be tuned without considering the inter- play among different effective spin interactions.
+Furthermore, *jxzhu@lanl.gov the range of relative strength between nearest neighbor and further neighbor interactions is not fully accessible for most candidate materials that show spin-liquid-like behaviors [31–38].
+Thus, the numerical identiﬁcation for CSLs based on real material parameters remains inconclusive.
+Recently, it has been proposed that twisted transition metal dichalcogenide (TMD) bilayers can simulate Hubbard model physics with tunable interacting strengths by different twisted angles [39–43].
+In particular, the WSe2/MoSe2 heterobilayer has a single ﬂat band that can be isolated with hole doping, leading to an effective Hubbard model with competing in- teractions on triangular moiré superlattices [39].
+Even more appealingly, owing to the signiﬁcantly larger unit cell, an experimentally accessible magnetic ﬁeld can generate large magnetic ﬂux per unit cell to induce strong effective chi- ral interactions that are impossible in conventional solid state crystalline systems [27,44–47].
+However, considering the Zeeman term, the system energy can be reduced by ﬂip- ping the spins into a partially polarized state, which makes the nonmagnetic CSL, a robust quantum Hall state [28], an excited state.
+Thus, whether the ground state can be a CSL with a quantized Chern number in a ﬁnite magnetization state remains an open question.
+Motivated by the possible ﬁeld induced chiral spin liq- uids in TMD moiré systems, we study the emergent phases of the half-ﬁlled Hubbard model in the presence of an ap- plied out-of-plane magnetic ﬁeld based on the parameters of the WSe2/MoSe2 moiré bilayer.
+Through large-scale density matrix renormalization group (DMRG) simulations [48,49] and considering both orbital and spin Zeeman effects of the magnetic ﬁeld, we identify a CSL with partial spin polarization [50] at intermediate magnetic ﬁelds.
+In partic- ular, the topological nature of the CSL is identiﬁed as the 2469-9950/2024/109(16)/165109(7) 165109-1 ©2024 American Physical SocietyHUANG, SHENG, AND ZHU PHYSICAL REVIEW B 109, 165109 (2024) ν = 1/2 FQHE through spin ﬂux insertion simulations and a topological entanglement spectrum.
+We also show that the Chern number remains almost quantized in the presence of weak disorders.
+Applicable to the WSe2/MoSe2 heterobilayer setting, we map out the global quantum phase diagram using experimentally tunable parameters which are twisted angles and magnetic ﬁelds.
+Besides CSL, we identify stripe and up-up-down (UUD) phases with ﬁnite magnetization at larger magnetic ﬁelds, as well as a 120◦Néel phase at smaller ﬁelds.
+Our results show that the interplay between orbital and spin effects of the applied magnetic ﬁeld gives rise to a partially polarized-CSL (PP-CSL), which is stabilized in an experimentally accessible parameter regime.
+The robust Chern number in ﬁnite magnetization and disorder is relevant to the plateau of quantized thermal Hall conductance [18,20] and can be tested in TMD moiré systems.
+The rest of the paper is organized as follows: In Sec. II, we introduce the effective spin model and numerical methods used in this work. In Sec.
+III, we present our main ﬁndings in the phase diagram including various magnetic phases and an emergent PP-CSL phase. In Sec.
+IV, we further show numer- ical evidence of the magnetic phases.
+In Sec. V, we elucidate the nature of the PP-CSL from the entanglement spectrum and the quantized spin pumping via spin ﬂux insertion, which is robust even under a weak disorder.
+We also discuss the stripelike spin polarization in the CSL phase.
+In Sec. VI, we give a summary and discussion. II.
+MODELS AND METHODS Considering a heterobilayer with similar lattice constants as WSe2/MoSe2, the moiré pattern can be formed with a large moiré lattice constant am and a small twisted angle θm [41]. Following Ref.
+[39], the low-energy bands can be approximated by a single-band Hubbard model with only spin degeneracy, where the Hamiltonian is given as HH =  {i j},σ  −ti jei 2πe ¯h A·(ri−rj )c† iσcjσ + H.c.  +U  i ni↑ni↓+ hz  i (c† i↑ci↑−c† i↓ci↓), (1) where we consider the nearest-neighbor (NN) hopping t1, next-NN hopping t2, and the on-site Coulomb repulsion U. An applied out-of-plane magnetic ﬁeld affects both the orbital as the vector potential ∇× A = B, and the spin as the Zeeman effect hz = 1 2μBgsB, where μB is the Bohr magneton and the spin g factor gs ≈2.
+At half ﬁlling of the moiré bands U is much larger than t1 [39] , thus the charges are localized in the Mott insulat- ing state.
+The effective spin model can be derived from the perturbation expansion of t/U [51] with effective three-spin chiral interactions [45] from the magnetic ﬂux.
+The overall spin Hamiltonian becomes HS = J1  ⟨i j⟩ Si · Sj + J2  ⟨⟨i j⟩⟩ Si · Sj + Jχ  {i jk}∈ /  Si · (Sj × Sk) + 2hz  i Sz i . (2) FIG.
+1. (a) Illustration of a triangular lattice with various effec- tive spin interactions.
+(b) Illustration of ﬂux insertion simulations through the cylinder.
+(c) Global quantum phase diagram of the moiré lattice constant am and the corresponding twisted angle θm vs the magnetic ﬁeld B, obtained on Ly = 6 cylinders.
+We identify 120◦ Néel, UUD, partially polarized-CSL, and stripe phases.
+The details of spin values in real space for these phases are presented in SM [52].
+Here, ⟨i j⟩and ⟨⟨i j⟩⟩refer to the NN and next-NN site pair, and {i jk} in the summation refers to three neighboring sites of every unit triangle taken clockwise [Fig. 1(a)].
+The strengths in the effective spin couplings are J1 = 4t2 1 /U −28t4 1 /U 3, J2 = 4t2 2 /U + 4t4 1/U 3, and Jχ = 24t3 1 sin(eB/¯h)/U 2, where B = 2πB √ 3 4 a2 m is the magnetic ﬂux through each unit trian- gle with am being the lattice constant of the triangular moiré superlattice.
+Other chiral interactions originating from ring geometries beyond the minimal triangular can also slightly enhance the chiral effect, which are not included here for simplicity.
+As a remarkable observation, the enlarged length scale of am signiﬁcantly ampliﬁes the orbital effect of mag- netic ﬁelds, which in turn enhances chiral spin interactions over that in regular solid state crystalline systems by orders of magnitude.
+We adopt the moiré lattice constant am dependence of t1, t2, and U from Ref. [39].
+As such, the coupling parameters in Eq. (2) are ultimately determined by am and B; see more details in the Supplemental Material (SM) [52].
+We explore different phases by tuning am between 5.5 and 7.5 nm, and B from 0 up to 17 T, as explained later.
+The numerical results are obtained by both ﬁnite and inﬁ- nite DMRG methods [53] with U(1) spin symmetry [54,55].
+In ﬂux insertion simulations, a ﬂux θF is adiabatically inserted through the cylinder, as illustrated in Fig. 1(b).
+The system has an open boundary in the ea or x direction and periodic bound- ary conditions in the eb or y direction [Fig. 1(a)], with the number of sites denoted as Lx and Ly, respectively.
+The total number of sites is N = Lx × Ly.
+We use ﬁnite DMRG with rel- atively large system sizes up to N = 360 to access more spin sectors and obtain the B dependence of the magnetization.
+Flux insertion simulations are carried out with inﬁnite DMRG with a smaller unit cell of 144 sites, because ﬂux insertion does not change the magnetization and the spin pumping is 165109- 2MAGNETIC FIELD INDUCED PARTIALLY POLARIZED … PHYSICAL REVIEW B 109, 165109 (2024) more robust with inﬁnite DMRG algorithm.
+We mainly focus on the results on Ly = 6 cylinders and the results show almost no ﬁnite-size effect in the x direction.
+We keep up to bond di- mension M = 6000 to obtain accurate results with numerical truncation error ϵ ≲1 × 10−6; see more details in SM [52]. III.
+PHASE DIAGRAM The ground states of the J1 −J2 −Jχ model have been explored without the Zeeman effect, which results in CSLs with zero magnetization.
+Our numerical results are consistent with previous work in the range of parameters studied in Refs.
+[26,27] with hz = 0; see more details in SM [52].
+By scanning over the parameter space of Eq. (2) we es- tablish a global quantum phase diagram spanned by moiré lattice constants and magnetic ﬁelds [Fig. 1(c)].
+We identify three conventional magnetic phases including the 120◦Néel phase, UUD phase, and stripe phase, as well as a CSL phase.
+The rich quantum phase diagram results from frustrations and competing interactions, as the classical phase diagram only has Néel and UUD phases but no stripe phase.
+The stripe phase may originate purely from the quantum model, where the PP-CSL also exhibits stripelike polarizations; see more details of the classical Monte Carlo results in SM [52].
+In the limit of B = 0 T the 120◦Néel order dominates the whole range of am, where the nearest neighbor J1 takes the leading order, and it smoothly expands to nonzero B regimes.
+For a smaller value of am < 5.6 nm, the 120◦Néel order becomes weak and the ground state might develop into a spin liquid on wider cylinders [56,57] which is beyond the scope of the current work.
+At larger B, we ﬁnd a stripe phase at small am and an UUD phase at larger am before the spins become fully polarized.
+Both phases exhibit a ﬁnite spin polarization in the z direction, which increases as B increases.
+In the inter- mediate B regime at small am, a CSL with partial polarization emerges.
+The topological nature of the CSL is identiﬁed as the ν = 1/2 SU(2)1 Laughlin state through the ﬂux insertion simulations and the entanglement spectrum.
+The CSL extends to smaller am, but we are mainly interested in am > 5.5 nm, which corresponds to θm ≲3.5◦where the moiré band ﬁllings are fully tunable by the electrical gating [39].
+The partially polarized stripe and UUD phases also extend beyond B = 17 T in our model.
+However, the energy scale of Zeeman interactions may interfere with other moiré bands, which goes beyond the scope of present work.
+This is especially true considering the larger g factor for excitons [58]. IV.
+MAGNETIC ORDERS The 120◦Néel phase can be characterized by the static spin structure factor deﬁned as S(k) = 1 Nm  i,j(⟨Si · Sj⟩− ⟨Si⟩⟨S j⟩)eik·(ri−rj ), where we sum over Nm = Ly × Ly middle sites to minimize the boundary effects.
+S(k) has prominent peaks at the K points, suggesting the 120◦spin correlations [Fig. 2(a)].
+Tuning ﬁnite B into the PP-CSL phase, the peaks disperse along the edge of the Brillouin zone with similar intensities and there is no distinctive peak [Fig. 2(b)].
+By further increasing B into the stripe phase, moderate peaks become concentrated at the M points [Fig. 2(c)], indicating stripe correlations. FIG.
+2. Spin structure factor for (a) 120◦Néel phase, (b) partially polarized-CSL, (c) stripe phase, (d) UUD phase, obtained on Ly = 6 systems.
+For larger am in the UUD phase there are mild peaks at the K points [Fig. 2(d)].
+The magnitude of peaks decreases with an increase of B which is consistent with a classical state.
+In order to determine the UUD order, where spins in the three-sublattice component form ↑↑↓, we deﬁne the or- der parameter as MUUD = 1 N  i |⟨Sz i ⟩−1 N  i⟨Sz i ⟩| [59].
+As shown in Fig. 3(a), MUUD increases suddenly around B = 9 T at am = 7.2 nm, indicating a ﬁrst-order phase transition to the UUD phase.
+The inset of Fig. 3(a) shows the ground state energy as well as the entanglement entropy.
+The entanglement entropy exhibits a kink near the phase boundary which is consistent with the ﬁrst-order phase transition.
+Meanwhile, we ﬁnd smooth changes in energy and magnetization near the phase boundary; see SM [52].
+The 120◦Néel order and the UUD order share the same symmetry, therefore we cannot rule out the possibility of phase crossover.
+Figure 3(b) shows the structure factor peak at the K points for various B. Fixing am = 5.6 nm, S(K) has a sudden drop at FIG.
+3. (a) Order parameter of the UUD phase for various B at am = 7.2 nm with ground state energy per site E0 and entanglement entropy in the inset.
+(b) Structure factor peak for various B at am = 5.6 nm.
+The results are obtained on Ly = 6 systems.
+165109-3HUANG, SHENG, AND ZHU PHYSICAL REVIEW B 109, 165109 (2024) FIG. 4.
+Momentum resolved entanglement spectrum at am = 5.6 nm, B = 15 T in PP-CSL on (a) Ly = 6 and (b) Ly = 8.
+Ky is the conserved discrete momentum in the y direction.
+Quasidegenerate eigenvalues are marked by {1, 1, 2, 3, . . .
+} in each Sz sector.
+B = 5 T, indicating the phase transition to CSL.
+Equivalently it could be seen from the peak in the ﬁrst-order derivative of S(K) in the inset of Fig. 3(b).
+The phase transition could also be determined by the characteristic entanglement spectrum, which is discussed next.
+V. CHIRAL SPIN LIQUIDS The entanglement spectrum extracted from the ground state provides an unbiased way to identify topological states through the one-to-one correspondence to the gapless edge excitation spectrum [60].
+In the PP-CSL regime at am = 5.6 nm, B = 15 T, we ﬁnd that the entanglement spectrum shows quasidegenerate patterns with decreasing momentum on both Ly = 6 and 8, as shown in Figs. 4(a) and 4(b), re- spectively.
+The quasidegenerate eigenvalues form patterns of {1, 1, 2, 3, . . .
+} in the lowest two Sz sectors, which agrees with the tower of states of the spinon sector [61,62] by the SU(2)1 Wess-Zumino-Witten theory of the ν = 1/2 Laughlin state.
+Higher degenerate levels are not found because of the limited discrete momentum number in ﬁnite-size lattices.
+For CSL, the spinon sector is found as the ground state in the presence of magnetic ﬁelds, where the vacuum sector has a higher energy.
+Besides the entanglement spectrum, the spin ﬂux inser- tion simulation can also identify the topological nature of the CSL [61,63].
+The spin ﬂux θF is adiabatically inserted through the cylinder which adds a phase factor S+ i S− j → ei θF Ly (ry j−ry i ) S+ i S− j to the spin-ﬂip terms in the y direction.
+We measure the pumped spin using the reduced density matrix as Qs =  α λαSz α where λα is the eigenvalue and Sz α is the corresponding Sz of the α eigenstate.
+Thus, the accumulated spin for different θF is Qs(θF ) = Qs(θF ) −Qs(0).
+As shown in Fig. 5(a), the net spin pumping of Qs(θF = 2π) ≈0.5 and Qs(θF = 4π) ≈1 which corresponds to a spin Chern number C = 0.5 [61], suggesting again the Laughlin-type CSL.
+This is similar to the 1/3 fractional Chern insulator in the Haldane honeycomb lattice model [63].
+Additionally, we ﬁnd a disorder-averaged Qs(θF = 4π) ≈1 in the presence of weak disorder W = 0.01 [Fig. 5(b)] which is deﬁned as Hdisorder =  i wiSz i with |wi| < W being a random effective on-site exchange ﬁeld; see more details in SM [52].
+At larger disorder W > 0.03, it deviates from being quantized [64].
+In the stripe and 120◦Néel phases the spin pumping becomes not quantized [65] but ﬁnite due to a ﬁnite noncoplanar chi- ral order.
+Additionally, the spin pumping for the classical UUD phase is almost 0.
+Thus, phase boundaries between the PP-CSL and the stripe phase can be determined by the ﬂux insertion as well as the entanglement spectrum.
+Previous studies [27] have found a ﬁnite spin gap of the nonmagnetic CSL without the Zeeman term.
+We also obtain the spin-1 gap as s = E0(Stotal z = 1) −E0(Stotal z = 0) in the nonmagnetic CSL, which can be used to determine the spin response to the Zeeman ﬁeld and partial polarization of the state in the thermodynamic limit.
+The spin gap in the bulk is almost the same for different Lx, showing little ﬁnite-size effect.
+In the thermodynamic limit, if the Zeeman energy of ﬂipping one spin is larger than the ﬁnite spin gap, the CSL is 165109 -4MAGNETIC FIELD INDUCED PARTIALLY POLARIZED … PHYSICAL REVIEW B 109, 165109 (2024) FIG.
+5. (a) Flux insertion simulations in various phases on Ly = 6.
+For the PP-CSL phase, at 2π the spin pumping is almost 1 2 fractionally quantized.
+After a 4π ﬂux the total spin pumping is close to 1.
+(b) Flux insertion simulations with various disorder in the PP-CSL phase.
+partially polarized.
+We ﬁnd that the bulk spin gap is smaller in the whole CSL regime, thus the CSL always has partial spin polarization.
+For example, at am = 5.6 nm, B = 15 T a ﬁnite stripelike magnetization in the z direction appears with 1 N  x,y(−1)xSz x,y ≈0.027; see SM [52] for more details on the magnetization.
+The CSL with stripelike polarization and gapless spin excitation is distinctly different from the gapped nonmagnetic CSL identiﬁed in the previous work [27].
+Such a stripe has also been found on the honeycomb [66] and square lattice models [46] that coexist with CSL.
+However, in our results the stripelike spin polarization does not contribute to the transverse spin correlations, and the cor- responding spin structure factor shows no distinctive peak in the PP-CSL. VI.
+SUMMARY AND DISCUSSION We have explored magnetic ﬁeld induced phases in the TMD moiré heterobilayer WSe2/MoSe2 by studying a single- band Hubbard model that can be realized for twisted angles θm ≲3.5 [39].
+Through extensive DMRG simulations on quasi-one-dimensional (1D) cylinders, we map out the global quantum phase diagram spanned by twisted angles and mag- netic ﬁelds.
+In particular, we have identiﬁed a CSL with partial spin polarization for intermediate magnetic ﬁelds, and showed its robust Chern number under weak disorder.
+Furthermore, the partially polarized CSL is surrounded by three magnetic phases including the 120◦Néel phase, UUD phase, and stripe phase.
+The moiré superlattices with a tremendously large unit cell reduce the required B to generate strong enough chiral interactions for stabilizing the CSL.
+The transition from CSL to stripe phase with further increased B can be qualitatively compared to experiments of ﬁeld induced magnetic transi- tions of spin-liquid-like phases [67].
+For small to intermediate on-site Hubbard repulsion U the electron charge degrees of freedom cannot be neglected.
+Future studies may explore the ﬁeld induced phases directly on the Hubbard model, where the CSL may be stabilized for an intermediate U even without B [23,24].
+Besides half ﬁlling, other commensurate ﬁllings of moiré bands also provide a platform to explore CSL, where Wigner crystals are formed with charges localized in triangu- lar and other types of superlattices [68–72].
+Finally, we note that our study might also be relevant to a triangular-based spin- 1 2 metal-organic framework, where the lattice constant can still be much larger than that of typical crystalline solids.
+ACKNOWLEDGMENTS We thank Dr. F. Wu for helpful discussions.
+This work was carried out under the auspices of the U.S. Department of Energy (DOE) National Nuclear Security Administration (NNSA) under Contract No. 89233218CNA000001.
+It was supported by the Center for Integrated Nanotechnologies (Y.H.), a DOE BES user facility, in partnership with the LANL Institutional Computing Program for computational resources, and Quantum Science Center (J.-X.Z.), a U.S. DOE Ofﬁce of Science Quantum Information Science Research Center.
+D.N.S. was supported by U.S. DOE BES under Grant No. DE-FG02-06ER46305.
+[1] L. Balents, Spin liquids in frustrated magnets, Nature (London) 464, 199 (2010).
+[2] L. Savary and L. Balents, Quantum spin liquids: a review, Rep. Prog.
+Phys. 80, 016502 (2017).
+[3] Y. Zhou, K. Kanoda, and T.-K. Ng, Quantum spin liquid states, Rev. Mod.
+Phys. 89, 025003 (2017).
+[4] C. Broholm, R. Cava, S. Kivelson, D. Nocera, M. Norman, and T. Senthil, Quantum spin liquids, Science 367, eaay0668 (2020).
+[5] V. Kalmeyer and R. B. Laughlin, Equivalence of the resonating- valence-bond and fractional quantum Hall states, Phys. Rev. Lett. 59, 2095 (1987).
+165109-5HUANG, SHENG, AND ZHU PHYSICAL REVIEW B 109, 165109 (2024) [6] X.-G. Wen, Mean-ﬁeld theory of spin-liquid states with ﬁnite energy gap and topological orders, Phys.
+Rev. B 44, 2664 (1991).
+[7] X.-G. Wen, Quantum orders and symmetric spin liquids, Phys.
+Rev. B 65, 165113 (2002).
+[8] T. Senthil and O. Motrunich, Microscopic models for fraction- alized phases in strongly correlated systems, Phys.
+Rev. B 66, 205104 (2002).
+[9] P. W. Anderson, The resonating valence bond state in La2CuO4 and superconductivity, Science 235, 1196 (1987).
+[10] R. Laughlin, The relationship between high-temperature super- conductivity and the fractional quantum Hall effect, Science 242, 525 (1988).
+[11] P. A. Lee, N. Nagaosa, and X.-G. Wen, Doping a Mott insula- tor: Physics of high-temperature superconductivity, Rev. Mod. Phys. 78, 17 (2006).
+[12] E. Fradkin, S. A. Kivelson, and J. M. Tranquada, Colloquium: Theory of intertwined orders in high temperature superconductors, Rev. Mod. Phys. 87, 457 (2015).
+[13] A. Y. Kitaev, Fault-tolerant quantum computation by anyons, Ann. Phys. 303, 2 (2003).
+[14] C. Nayak, S. H. Simon, A. Stern, M. Freedman, and S. Das Sarma, Non-Abelian anyons and topological quantum compu- tation, Rev. Mod. Phys. 80, 1083 (2008).
+[15] T. Senthil, S. Sachdev, and M. Vojta, Fractionalized Fermi liq- uids, Phys. Rev. Lett. 90, 216403 (2003).
+[16] A. A. Patel, D. Chowdhury, A. Allais, and S. Sachdev, Con- ﬁnement transition to density wave order in metallic doped spin liquids, Phys.
+Rev. B 93, 165139 (2016).
+[17] H.-C. Jiang, T. Devereaux, and S. A. Kivelson, Holon Wigner crystal in a lightly doped kagome quantum spin liquid, Phys. Rev. Lett. 119, 067002 (2017).
+[18] Y. Kasahara, T. Ohnishi, Y. Mizukami, O. Tanaka, S. Ma, K. Sugii, N. Kurita, H. Tanaka, J. Nasu, Y. Motome etal., Majorana quantization and half-integer thermal quantum Hall effect in a Kitaev spin liquid, Nature (London) 559, 227 (2018).
+[19] M. Ye, G. B. Halász, L. Savary, and L. Balents, Quantization of the thermal Hall conductivity at small Hall angles, Phys. Rev. Lett. 121, 147201 (2018).
+[20] J. Bruin, R. Claus, Y. Matsumoto, N. Kurita, H. Tanaka, and H. Takagi, Robustness of the thermal Hall effect close to half-quantization in α −RuCl3, Nat. Phys. 18, 401 (2022).
+[21] D.-H. Lee and M. P. A. Fisher, Anyon superconductivity and the fractional quantum Hall effect, Phys. Rev. Lett. 63, 903 (1989).
+[22] F. Ming, X. Wu, C. Chen, K. D. Wang, P. Mai, T. A. Maier, J. Strockoz, J. W. F. Venderbos, C. González, J. Ortega, S. Johnston, and H. H. Weitering, Evidence for chiral supercon- ductivity on a silicon surface, Nat. Phys. 19, 500 (2023).
+[23] A. Szasz, J. Motruk, M. P. Zaletel, and J. E. Moore, Chiral spin liquid phase of the triangular lattice Hubbard model: A density matrix renormalization group study, Phys.
+Rev. X 10, 021042 (2020).
+[24] B.-B. Chen, Z. Chen, S.-S. Gong, D. N. Sheng, W. Li, and A. Weichselbaum, Quantum spin liquid with emergent chiral order in the triangular-lattice Hubbard model, Phys.
+Rev. B 106, 094420 (2022).
+[25] S.-S. Gong, W. Zheng, M. Lee, Y.-M. Lu, and D. N. Sheng, Chiral spin liquid with spinon Fermi surfaces in the spin- 1 2 triangular Heisenberg model, Phys.
+Rev. B 100, 241111(R) (2019).
+[26] A. Wietek and A. M. Läuchli, Chiral spin liquid and quantum criticality in extended S = 1 2 Heisenberg models on the triangu- lar lattice, Phys.
+Rev. B 95, 035141 (2017).
+[27] S.-S. Gong, W. Zhu, J.-X. Zhu, D. N. Sheng, and K. Yang, Global phase diagram and quantum spin liquids in a spin- 1 2 triangular antiferromagnet, Phys.
+Rev. B 96, 075116 (2017).
+[28] Y.-H. Zhang, D. N. Sheng, and A. Vishwanath, SU(4) chiral spin liquid, exciton supersolid, and electric detection in moiré bilayers, Phys. Rev. Lett. 127, 247701 (2021).
+[29] C. Kuhlenkamp, W. Kadow, A. Imamoglu, and M. Knap, Tunable topological order of pseudo spins in semiconductor heterostructures, arXiv:2209.05506.
+[30] T. Cookmeyer, J. Motruk, and J. E. Moore, Four-spin terms and the origin of the chiral spin liquid in Mott insulators on the triangular lattice, Phys. Rev. Lett. 127, 087201 (2021).
+[31] Y. Shimizu, K. Miyagawa, K. Kanoda, M. Maesato, and G. Saito, Spin liquid state in an organic Mott insulator with a triangular lattice, Phys. Rev. Lett. 91, 107001 (2003).
+[32] Y. Kurosaki, Y. Shimizu, K. Miyagawa, K. Kanoda, and G. Saito, Mott transition from a spin liquid to a Fermi liquid in the spin-frustrated organic conductor κ-(ET)2Cu2(CN)3, Phys. Rev. Lett. 95, 177001 (2005).
+[33] S. Yamashita, Y. Nakazawa, M. Oguni, Y. Oshima, H. Nojiri, Y. Shimizu, K. Miyagawa, and K. Kanoda, Thermodynamic properties of a spin-1/2 spin-liquid state in a κ-type organic salt, Nat. Phys. 4, 459 (2008).
+[34] T. Itou, A. Oyamada, S. Maegawa, M. Tamura, and R. Kato, Quantum spin liquid in the spin-1/2 triangular antiferromagnet EtMe3Sb[Pd(dmit)2]2, Phys.
+Rev. B 77, 104413 (2008).
+[35] M. Yamashita, N. Nakata, Y. Kasahara, T. Sasaki, N. Yoneyama, N. Kobayashi, S. Fujimoto, T. Shibauchi, and Y. Matsuda, Thermal-transport measurements in a quantum spin-liquid state of the frustrated triangular magnet κ-(BEDT-TTF)2Cu2(CN)3, Nat. Phys. 5, 44 (2009).
+[36] T. Itou, A. Oyamada, S. Maegawa, and R. Kato, Instability of a quantum spin liquid in an organic triangular-lattice antiferro- magnet, Nat. Phys. 6, 673 (2010).
+[37] H. D. Zhou, E. S. Choi, G. Li, L. Balicas, C. R. Wiebe, Y. Qiu, J. R. D. Copley, and J. S. Gardner, Spin liquid state in the S = 1/2 triangular lattice Ba3CuSb2O9, Phys. Rev. Lett. 106, 147204 (2011).
+[38] M. M. Bordelon, E. Kenney, C. Liu, T. Hogan, L. Posthuma, M. Kavand, Y. Lyu, M. Sherwin, N. P. Butch, C. Brown et al., Field-tunable quantum disordered ground state in the triangular- lattice antiferromagnet NaYbO2, Nat. Phys. 15, 1058 (2019).
+[39] F. Wu, T. Lovorn, E. Tutuc, and A. H. MacDonald, Hubbard model physics in transition metal dichalcogenide moiré bands, Phys. Rev. Lett. 121, 026402 (2018).
+[40] F. Wu, T. Lovorn, E. Tutuc, I. Martin, and A. H. MacDonald, Topological insulators in twisted transition metal dichalco- genide homobilayers, Phys. Rev. Lett. 122, 086402 (2019).
+[41] Y. Tang, L. Li, T. Li, Y. Xu, S. Liu, K. Barmak, K. Watanabe, T. Taniguchi, A. H. MacDonald, J. Shan, and K. F. Mak, Simulation of Hubbard model physics in WSe2/WS2 moiré superlattices, Nature (London) 579, 353 (2020).
+[42] L. Wang, E.-M. Shih, A. Ghiotto, L. Xian, D. A. Rhodes, C. Tan, M. Claassen, D. M. Kennes, Y. Bai, B. Kim et al., 165109-6MAGNETIC FIELD INDUCED PARTIALLY POLARIZED … PHYSICAL REVIEW B 109, 165109 (2024) Correlated electronic phases in twisted bilayer transition metal dichalcogenides, Nat. Mater. 19, 861 (2020).
+[43] T. Li, S. Jiang, B. Shen, Y. Zhang, L. Li, Z. Tao, T. Devakul, K. Watanabe, T. Taniguchi, L. Fu et al., Quantum anomalous Hall effect from intertwined moiré bands, Nature (London) 600, 641 (2021).
+[44] R. Haghshenas, S.-S. Gong, and D. N. Sheng, Single-layer tensor network study of the Heisenberg model with chiral interactions on a kagome lattice, Phys.
+Rev. B 99, 174423 (2019).
+[45] C. Hickey, L. Cincio, Z. Papi´c, and A. Paramekanti, Haldane- Hubbard Mott insulator: From tetrahedral spin crystal to chiral spin liquid, Phys. Rev. Lett. 116, 137202 (2016).
+[46] Y. Huang, W. Zhu, S.-S. Gong, H.-C. Jiang, and D. N. Sheng, Coexistence of non-Abelian chiral spin liquid and magnetic order in a spin-1 antiferromagnet, Phys.
+Rev. B 105, 155104 (2022).
+[47] C. Hickey, L. Cincio, Z. Papi´c, and A. Paramekanti, Emergence of chiral spin liquids via quantum melting of noncoplanar mag- netic orders, Phys.
+Rev. B 96, 115115 (2017).
+[48] S. R. White, Density matrix formulation for quantum renormal- ization groups, Phys. Rev. Lett. 69, 2863 (1992).
+[49] S. R. White, Density-matrix algorithms for quantum renormal- ization groups, Phys.
+Rev. B 48, 10345 (1993).
+[50] K. Kumar, H. J. Changlani, B. K. Clark, and E. Fradkin, Numerical evidence for a chiral spin liquid in the XXZ antifer- romagnetic heisenberg model on the kagome lattice at m = 2/3 magnetization, Phys.
+Rev. B 94, 134410 (2016).
+[51] A. H. MacDonald, S. M. Girvin, and D. Yoshioka, t U ex- pansion for the Hubbard model, Phys.
+Rev. B 37, 9753 (1988).
+[52] See Supplemental Material at http://link.aps.org/supplemental/ 10.1103/PhysRevB.109.165109 for more detailed numerical results.
+[53] U. Schollwöck, The density-matrix renormalization group in the age of matrix product states, Ann. Phys. 326, 96 (2011).
+[54] M. Fishman, S. R. White, and E. M. Stoudenmire, The ITensor software library for tensor network calculations, http://itensor. org/, SciPost Phys. Codebases 4 (2022).
+[55] J. Hauschild and F. Pollmann, Efﬁcient numerical simulations with tensor networks: Tensor Network Python (TeNPy), SciPost Phys. Lect.
+Notes 5 (2018), code available from https://github. com/tenpy/tenpy.
+[56] W.-J. Hu, S.-S. Gong, W. Zhu, and D. N. Sheng, Competing spin-liquid states in the spin-1/2 Heisenberg model on the trian- gular lattice, Phys.
+Rev. B 92, 140403 (2015).
+[57] Z. Zhu and S. R. White, Spin liquid phase of the S = 1/2 J1 − J2 Heisenberg model on the triangular lattice, Phys.
+Rev. B 92, 041105 (2015).
+[58] J. Förste, N. V. Tepliakov, S. Y. Kruchinin, J. Lindlau, V. Funk, M. Förg, K. Watanabe, T. Taniguchi, A. S. Baimuratov, and A. Högele, Exciton g-factors in monolayer and bilayer WSe2 from experiment and theory, Nat. Commun. 11, 4539 (2020).
+[59] Y. Li, S. Bachus, H. Deng, W. Schmidt, H. Thoma, V. Hutanu, Y. Tokiwa, A. A. Tsirlin, and P. Gegenwart, Partial up-up- down order with the continuously distributed order parameter in the triangular antiferromagnet TmMgGaO4, Phys. Rev. X 10, 011007 (2020).
+[60] H. Li and F. D. M. Haldane, Entanglement spectrum as a gener- alization of entanglement entropy: Identiﬁcation of topological order in non-Abelian fractional quantum Hall effect states, Phys. Rev. Lett. 101, 010504 (2008).
+[61] S.-S. Gong, W. Zhu, and D. Sheng, Emergent chiral spin liquid: Fractional quantum Hall effect in a kagome Heisenberg model, Sci. Rep. 4, 6317 (2014).
+[62] Y.-C. He, D. N. Sheng, and Y. Chen, Obtaining topological degenerate ground states by the density matrix renormalization group, Phys. Rev. B 89, 075110 (2014).
+[63] A. G. Grushin, J. Motruk, M. P. Zaletel, and F. Pollmann, Characterization and stability of a fermionic ν = 1/3 fractional Chern insulator, Phys.
+Rev. B 91, 035136 (2015).
+[64] W. Zhu and D. N. Sheng, Disorder-driven transition in the ν = 5/2 fractional quantum Hall effect, Phys. Rev. Lett. 123, 056804 (2019).
+[65] Y. Huang and D. N. Sheng, Topological chiral and nematic su- perconductivity by doping Mott insulators on triangular lattice, Phys. Rev. X 12, 031009 (2022).
+[66] T. A. Sedrakyan, L. I. Glazman, and A. Kamenev, Spontaneous formation of a nonuniform chiral spin liquid in a moat-band lattice, Phys. Rev. Lett. 114, 037203 (2015).
+[67] J. Xing, L. D. Sanjeewa, J. Kim, G. R. Stewart, A. Podlesnyak, and A. S. Sefat, Field-induced magnetic transition and spin ﬂuc- tuations in the quantum spin-liquid candidate CsYbSe2, Phys.
+Rev. B 100, 220407(R) (2019).
+[68] E. C. Regan, D. Wang, C. Jin, M. I. Bakti Utama, B. Gao, X. Wei, S. Zhao, W. Zhao, Z. Zhang, K. Yumigeta et al., Mott and generalized Wigner crystal states in WSe2/WS2 moiré superlat- tices, Nature (London) 579, 359 (2020).
+[69] X. Huang, T. Wang, S. Miao, C. Wang, Z. Li, Z. Lian, T. Taniguchi, K. Watanabe, S. Okamoto, D. Xiao et al., Correlated insulating states at fractional ﬁllings of the WSe2/WS2 moiré lattice, Nat. Phys. 17, 715 (2021).
+[70] J. Motruk, D. Rossi, D. A. Abanin, and L. Rademaker, Kagome chiral spin liquid in transition metal dichalcogenide moiré bi- layers, Phys. Rev. Res. 5, L022049 (2023).
+[71] J. Cai, E. Anderson, C. Wang, X. Zhang, X. Liu, W. Holtzmann, Y. Zhang, F. Fan, T. Taniguchi, K. Watanabe et al., Signatures of fractional quantum anomalous Hall states in twisted MoTe2, Nature (London) 622, 63 (2023).
+[72] W.-X. Qiu, B. Li, X.-J. Luo, and F. Wu, Interaction-driven topological phase diagram of twisted bilayer MoTe2, Phys.
+Rev. X 13, 041026 (2023). 165109-7

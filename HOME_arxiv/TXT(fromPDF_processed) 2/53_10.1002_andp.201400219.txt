@@ -1,0 +1,536 @@
+X-ray and neutron scattering on disordered nanosize clusters: a case study of lead-zirconate-titanate solid solutions Johannes Frantti∗and Yukari Fujioka, Finnish Research and Engineering, Jaalaranta 9 B 42, 00180 Helsinki, Finland May 26, 2022 Contents 1 Introduction 2 1.1 X-ray and neutron diﬀraction.
+. . . . . . . . . . . . . . . . . . . . .
+2 1.2 Common Models for Disordered Systems . . . . . . . . . . . . . . .
+4 1.3 Pair distribution function method . . . . . . . . . . . . . . . . . . .
+7 1.4 Solid-solution with correlated substitutional and displacement dis- order: lead-zirconate-titanate . . . . . . . . . . . . . . . . . . . . .
+10 2 Scattering from PZT clusters 12 2.1 Generation of the scattering cluster . . . . . . . . . . . . . . . . . .
+13 2.2 Single domain spherical clusters . . . . . . . . . . . . . . . . . . . .
+16 2.3 Ellipsoid shaped single domain clusters . . . . . . . . . . . . . . . .
+18 2.4 Domains in spherical clusters . . . . . . . . . . . . . . . . . . . . .
+23 3 Instrument speciﬁc corrections 31 4 Line shapes in diﬀraction experiments 31 ∗Email: johannes.frantti@fre.ﬁ 1 arXiv:1410.8280v2 [cond-mat.dis-nn]  11 Mar 20151 INTRODUCTION 2 Abstract Defects and frequently used defect models of solids are reviewed.
+Signa- tures for identifying the disorder from x-ray and neutron scattering data are given.
+To give illustrative examples how technologically important defects contribute to x-ray and neutron scattering numerical method able to treat non-periodical solids possessing several simultaneous defect types is given for simulating scattering in nanosize disordered clusters.
+The approach takes particle size, shape, and defects into account and isolates element speciﬁc signals.
+As a case study a statistical approximation model for lead-zirconate titanate [Pb(ZrxTi1−x)O3, PZT] is introduced.
+PZT is a material possess- ing several defect types, including substitutional, displacement and surface defects.
+Spatial composition variation is taken into account by introducing a model in which the edge lengths of each cell depend on the distribution of Zr and Ti ions in the cluster.
+Spatially varying edge lengths and an- gles is referred to as microstrain.
+The model is applied to compute the scattering from ellipsoid shaped PZT clusters and to simulate the structural changes as a function of average composition.
+Two-phase co-existence range, the so called morphotropic phase boundary composition is given correctly.
+The composition at which the rhombohedral and tetragonal cells are equally abundant was x ≈0.51.
+Selected x-ray and neutron Bragg reﬂection in- tensities and line shapes were simulated.
+Examples of the eﬀect of size and shape of the scattering clusters on diﬀraction patterns are given and the par- ticle dimensions, computed through Scherrer equation, are compared with the exact cluster dimensions.
+Scattering from two types of 180◦domains in spherical particles, one type assigned to Ti-rich PZT and the second to the MPB and Zr-rich PZT, is computed.
+We show how the method can be used for modelling polarization reversal.
+1 Introduction The paper is organized as follows.
+Section 1.1 summarizes the basic concepts of x-ray and neutron scattering, sections 1.2 and 1.3 review the models of dis- ordered materials and summarize the pair distribution function method, respec- tively, and ﬁnally a brief review of the crystal structures of lead-zirconate-titanate [Pb(ZrxTi1−x)O3, PZT] is given in section 1.4.
+PZT was chosen as an example material due to its wide use in applications, which are often based on the controlled use of defects.
+Section 2 describes the numerical method applied in the present study.
+Section 2.1 describes the method after which selected case studies on PZT clusters are given in sections 2.2, 2.3 and 2.4.
+1.1 X-ray and neutron diﬀraction.
+Diﬀraction techniques, notably x-ray diﬀraction, are the most commonly applied materials characterization methods.
+The theory of x-ray scattering and diﬀraction is well established and below key principles (see, e.g., ref. [1]) are given.
+The far-ﬁeld amplitude A(s) is given by Eq. (1) A(s) = N X n fne2πis·xn, (1)1 INTRODUCTION 3 where N is the number of atoms in the scattering volume, fn and xn are the scattering amplitude and the position vector of the atom n, respectively, and s is the scattering vector, depicted in Fig. 1.
+By denoting the unit propagation vectors of the incoming and scattered radiation of wavelength λ by S0 and S respectively, s is (S −S0)/λ.
+In crystals the intensity maxima correspond to the reciprocal lattice points s = ha∗+ kb∗+ lc∗, where a∗, b∗and c∗are the reciprocal lattice vectors and h, k and l are integers.
+Eq. (1) can be generalized by replacing the discrete atomic densities by a continuous electron density ρ(x): A(s) = Z ρ(x)e−2πis·xdvx, (2) so that A(s) is the Fourier transform of ρ(x).
+Inversely, electron density is given by Eq. (3) ρ(x) = Z A(s)e2πis·xdvs.
+(3) The scattered intensity IN(s) is given by Eq. (4) IN(s) = |A(s)|2 (4) and, in terms of the convolution obtained by substituting Eq. (1) to Eq. (4), IN = R R ρ(u)ρ(x + u)e−2πis·xdvudvx which reads that the Fourier-transform of the autocorrelation function (the Patterson function) equals to the intensity.
+In the case of an inﬁnite crystal the electron density can be expressed as a convolu- tion between the function representing the electron density inside a unit cell and a series of Dirac functions representing the crystal lattice.
+Fourier-transform of the convolution results in the structure factor Fhkl and further gives the well-known result according to which the intensity of the reﬂection hkl is |Fhkl|2.
+Section 2 focuses on the nanosize clusters which possess short-range order but lack transla- tional symmetry.
+The nanosize itself does not remove the translational symmetry: we consider cases in which each ’unit cell’ has own ’lattice parameters’ (i.e., the assumption of translational symmetry is abandoned).
+If the absorption, extinction, thermal displacements, angle dependent polar- ization corrections and instrument related factors are not considered, the elastic scattering intensity can readily be computed from Eq. (5) once the atomic scale structure is known: IN(s) = N X n,n′ fnfn′ cos[2πs · (xn −xn′)].
+(5) Neutron diﬀraction intensity is modelled similarly, the scattering amplitudes are replaced by nuclei n speciﬁc neutron scattering lengths b0(n).
+Since x-rays inter- act with electrons and neutrons interact with nuclei the techniques are in many1 INTRODUCTION 4 S0/l  S/l  s = (S-S0)/l  q  q  Figure 1: Geometrical description of the scattering vector s. ways complementary.
+In contrast to x-rays, neutrons frequently scatter strongly from light nuclei, such as oxygen and hydrogen, which is essentially why neutrons suit for the determination of light elements positions.
+The neutron scattering lengths of diﬀerent isotopes are often quite diﬀerent, even possessing diﬀerent signs, which has made isotope substitution a technique for pinpointing structural details.
+Since neutrons possess a magnetic moment they interact with the mag- netic moments of electrons, the cross section being the same order of magnitude as the neutron-nuclear interaction.
+Correspondingly, neutron scattering is the most common method for determining magnetic ordering.
+Magnetic form factors used in the calculations of the cross sections for magnetic scattering of neutrons are given in terms of sums of exponential functions whose coeﬃcients are tabulated in ref. [2].
+The form factors decay with increasing s so that often the minimum d-spacing included in the magnetic scattering model is ≈1˚A.
+The form factors depend on the valence state of the ions and thus it is frequently necessary to complement neu- tron scattering data by alternative measurements to clarify the valence state(s) of the ions.
+Since the scattering power of atoms for neutrons is not Q-dependent (Q = 4π sin θ/λ), in contrast to x-rays where the atomic scattering factors fall away rapidly at high-Q, strong diﬀuse scattering can be observed well beyond the Q-range where Bragg peaks occur [3].
+1.2 Common Models for Disordered Systems Computation of diﬀraction intensities is straightforward once the positions of atoms are given (see, for instance refs. [1] and [4]).
+The most challenging prob- lem is to ﬁnd the atomic scale structure (structural model) corresponding to the measured intensity.
+Numerous recipes to solve the problem have been developed, for instance see refs. [4] and [5].
+Space group symmetry determination from the Laue symmetry and the reﬂection conditions, as obtained from the diﬀraction pat- terns, is given in ref. [6].
+At the ﬁnal stage of the structure solving task one introduces a model which is reﬁned by adjusting model parameters so that the dif- ference between the computed intensity and the measured intensity is minimized.
+A well-known reﬁnement technique for powders is the Rietveld method [7, 8].
+In the case of known average symmetry, equation (5) is not applied directly, but one computes the squared value of the absolute value of the structure factor, |Fhkl|2 of the Bragg reﬂection hkl.
+|Fhkl|2, however, tells nothing about the linewidths or the shape of the proﬁle function of the reﬂection.
+Numerous line shapes were1 INTRODUCTION 5 derived for diﬀerent instruments and sometimes the choice of the proﬁle function for describing the sample and instrument originating line broadening is challeng- ing.
+The broadening parameters are reﬁned as a part of the structural model.
+More recently, instrument related line broadening has also been computed from the known diﬀractometer properties as summarized in ref. [9].
+In principle, direct application of Eq. (5) gives the sample contribution to the lineshape.
+Direct application of equation (5) is a heavy computational task even for rela- tively small atom clusters.
+Generally, the problem is challenging once the material lacks periodicity at least in one dimension as even a straightforward computation of the scattered intensity from a collection of atoms with known positions becomes computationally formidable task (see, however, Model #5 in section 1.2).
+Thus, to make structure solving or even reﬁnement possible approximations are required.
+The most complex structures require tailored solutions as they do not possess the high symmetry required by the commonly available programs. Defects in solids.
+Defects in solids are classiﬁed as zero-dimensional (point de- fects), one-dimensional (line defects) and two-dimensional (surfaces), see Fig.2.
+Point defects introduce a change in the scattering power by interfering the co-   1.
+Point defects  Substitute atoms  Interstitial atoms  Vacancies                3.
+Surfaces  Domain walls  Ferroelectrics Ferromagnetic materials  Grain boundaries  Interfaces between thin film layers  Crystal surfaces              4.
+Combination of defects  V  V  ┴  Volume with an extra  plane of atoms   Volume with a missing  plane of atoms  2.
+Line defects  Dislocations PS  n  d  x  PS(x)  Figure 2: Examples of point, line and two-dimensional crystal defects, which fre- quently occur together.
+Point defects include substitute atoms, vacancies and in- terstitial atoms and are accompanied by a local strain ﬁeld.
+Edge dislocations are common in thin ﬁlm multilayer structures and occur when the mismatch between the thin ﬁlm layer and substrate is so large that strain is energetically unfavourable.
+Domains in ferroelectrics and magnetic materials dictate the materials response to external ﬁeld.
+herence between scattered waves by introducing a disturbance to the scattering amplitudes (or lengths) and scatterer positions.
+In diﬀraction experiments this eﬀect is hardly seen if the defect concentration is small.
+However, once the con- centration increases not only is the scattering power changing via change in av-1 INTRODUCTION 6 erage f (substitutional disorder) but also bond lengths and angles are spatially varying (displacement disorder).
+Mathematical treatment of displacement disor- der correlated with substitutional disorder in solid-solutions is given in ref. [1].
+Phenomenologically the displacement disorder following the substitutional disor- der can be described using the concept of microstrain introduced in ref.
+[10] and it is commonly used to model the hkl-dependent line broadening in Rietveld reﬁne- ment: for instance GSAS [11] Rietveld reﬁnement software has an option to use proﬁle functions with microstrain broadening formulated in ref. [10].
+Table 1 sum- marizes common disorder types observed in solids and the characteristic signatures in x-ray scattering and diﬀraction.
+The models given in Table 1 may appear rather speciﬁc.
+However, the tab- ulated signatures are also found in more general cases.
+For instance, the signal related to the displacement disorder increases with increasing reﬂection index and vanishes for small values of s.
+The signatures can be used for distinguishing dif- ferent structural models.
+For example, both sinusoidal composition modulation and sinusoidal displacement modulation produce satellite reﬂections at the same d-spacing, if the propagation vector is the same.
+The two cases can be identiﬁed by their diﬀerent intensity dependencies.
+Also the case of correlated substitutional and displacement disorder can be distinguished from the plain substitutional and plain displacement disorder by the characteristic asymmetric intensity of the satel- lite peaks of each pair.
+We note that the pure size-related line broadening gives the same particle size estimate, no matter which reﬂection is chosen.
+However, if the broadening is not solely due to the particle size it is important to correctly model the disorder.
+Section 2 considers several cases in which non-periodical dis- placement and substitutional disorder are correlated and the results are found to be consistent with the observations seen in periodically modulated cases.
+Model #1 is a common and straightforward way to describe scattering from a well-mixed solid solution formed by not-too-diﬀerent size constituent elements.
+The success of the Model #1 is essentially due to the fact that diﬀraction tends to emphasize average structure and to suppress deviations from it.
+However, if the composition and atomic scattering factors vary periodically, for instance as a sine wave form with a propagation vector k, then the Bragg peaks (principal nodes) are surrounded by satellites at distances ±k of each Bragg peak.
+In the case of a pure sinusoidal composition variation (in contrast to displace- ment disorder Models #3 and #4 which also exhibit characteristic satellite peaks) the ratio of the intensity of the satellite reﬂections to that of the corresponding Bragg peak intensity is a constant for all the nodes. Following ref.
+[1], if atomic scattering factor varies as a sine wave, fn = f(1+η cos 2πk·xn), then the diﬀracted wave amplitude is P fn exp(−2πis · xn) = P f exp(−2πis · xn) + fη 2 exp[−2πi(s − k) · xn] + fη 2 exp[−2πi(s + k) · xn].
+Thus, diﬀraction pattern exhibits two satellites at distances ±k of each node, with intensities which are η2/4 times that of the principal node.
+Model #2 is a well-known description of the atomic displacement originated diﬀuse scattering implemented in every standard Rietveld reﬁnement software.
+Model #5 is based on the generation of a scattering object from two types of layers A and B with proportions mA and 1 −mA, respectively.
+Layers are added to the lattice one at a time and the probability of the new layer being an A or B type is dependent only on the preceding layer [3].
+The scattering object is constructed using conditional probabilities P(0|0) = 1 −α, P(1|0) = α, P(0|1) = 1 −α −β1 INTRODUCTION 7 and P(1|1) = α + β, where 1 (0) denotes that the site is occupied by an A (B)- type layer.
+In the case of an inﬁnite number of layers rather simple expression is obtained for the diﬀuse intensity, see Model #5 in Table 1.
+Model #5 is an example of a model suitable for describing a layer-by-layer crystal growth.
+Contemporary growth chambers are often equipped with the in situ monitoring facilities, such as Reﬂection High Energy Electron Diﬀraction fa- cility allowing to ensure the growth of correct type of layers [12].
+Optimization of growth parameters includes the adjustment of substrate temperature, gas atmo- sphere (e.g., oxygen gas pressure) and deposition rate related parameters (such as laser beam ﬂuence in pulsed laser ablation deposition or sputtering power).
+During in situ monitoring one observes the diﬀraction pattern and, if required, conducts parameter adjustment until a correct phase is formed.
+In the case of a single layer it is rather straightforward to observe when a correct diﬀraction pattern emerges.
+Model #5 and their extensions are amenable for in situ modelling of multilayer thin ﬁlm structures consisted of stacked thin layers possessing diﬀerent types of layers.
+Dislocations come in many forms as do their structural models.
+Model #6 sum- marizes the angle dependent features for high dislocation densities.
+Dislocations possess technologically interesting problems as they are often strongly responding to external stimulus and thus are time-dependent.
+The atomic scale structure is not only diﬀerent in dislocation core but the atomic positions close to a dislocation are diﬀerent from the surrounding matrix [13, 14], making them visible through scattering techniques.
+In thin ﬁlms edge dislocations have a crucial role as they are favoured over the stressed thin ﬁlm state once the mismatch between the sub- strate and thin ﬁlm exceeds a threshold value [15, 16], see Fig. 3.
+The plasticity of metals is explained in terms of dislocations.
+Dislocation cores also serve as a diﬀusion path in many materials.
+Fig. 4 shows schematically why the models applied to data collected on com- monly used Bragg-Brentano geometry can give misleading information in the case of multilayers.
+First, the net intensity is not a simple superposition of the in- tensities scattered from individual layers and substrate but involves interfacial layers.
+Second, especially in the case of epitaxial thin ﬁlms the scattering should be considered to take place in a large entity formed by diﬀerent layers: in terms of the Eq.(5) the summation involves all the atomic pairs in the multilayer struc- ture.
+In-situ scattering measurements on crystal growth is becoming a routine experimental techniques and thus models for layer-by-layer growth are required.
+Modelling techniques based on the Markov chain and Ising models are described in ref. [3].
+Similarly the structure in the vicinity of the domain wall separating the diﬀerent domains also has an atomic scale structure diﬀerent from either of the domains.
+In 180◦domain boundary the polarization direction is smoothly reversed [18] which is accompanied by a spatial variation of atomic positions.
+The modelling task of multilayer thin ﬁlms and domain structures is similar and is given in section 2.4.
+1.3 Pair distribution function method Even though isotropic disordered materials, such as a glass or an amorphous ma- terial, do not have a long-range order, they nearly always possess short-range order.
+Neutron and x-ray scattering techniques are commonly used for determin- ing the distribution function P(x) giving the statistics of atom pairs.
+Following the1 INTRODUCTION 8 Table 1: Common disorder types and models and characteristic signatures for solids as compiled from refs.
+[1] (#1-#4), [3] (#5), and [17] (#6).
+Type #1: The case of a simple lattice whose nodes are occupied by atoms A, B, ....
+The relative proportions of the atoms are labelled as cA, cB, ... and the corresponding scattering factors as fA, fB, ...
+The average structure factor is ¯F.
+The xm is the vector connecting an atom pair m. Type #2: A model for thermal displacement disorder.
+FWHM, full-width-at-half-maximum, D, Debye-Waller factor.
+Type #3: Periodical modulation.
+Type #4: Structure is modulated by a sinusoidal distortion, propagation vector k, |k| = 1 Λ. Type #5: One-dimensional model for diﬀuse scattering based on the nearest-neighbour Markov chain.
+K is a constant determined by mA and the layer form factors FA and FB.
+Type #6: Dislocations.
+Model Disorder type Mathematical model Signature Examples #1 Substitutional ¯F = cAfA + cBfB + · · · Diﬀraction pattern is similar to the Solid-solutions of similar size I2 = Φ0+ one possessing a translational atoms.
+The most common +2 P∞ 1 +Φm cos(2πs · xm) symmetry: instead of elemental way to model solid-solutions Φ0 = f 2n −( ¯F)2 scattering factors certain sites by the Rietveld reﬁnement.
+Φm = (fn −¯F)(fn+m −¯F) possess an average scatterer ¯F. #2 Displacement, Fn = f exp(−2πis · ∆xn) Part of the diﬀraction line intensity Isotropic thermal motion of Debye-Waller D D = exp( 16π2 sin2 θ λ2 ∆x2n 3 ) is shifted to the background. FWHM an atom.
+value of the peak is unaﬀected.
+#3 Displacement ∆xn = Λε 2π cos( 2πna Λ ) A pair of satellite peaks of equal Nonhomogeneous Cu-Ni-Fe intensity Λ2ε2l2 4a2 are surrounding alloys.
+each reﬂection l. #4 Correlated fn = f(1 + η sin 2πna Λ ), Ratio of the intensities of the satellites Solid solutions of diﬀerent Substitutional and xn = na + ∆xn = na −Λε 2π cos 2πna Λ to the normal node is asymmetric: size atoms.
+Displacement ( Λεs+η 2 )2, s = n a −1 Λ ( Λεs−η 2 )2, s = n a + 1 Λ. #5 Substitutional Probability of the new layer Layer-by-layer crystal growth an A or B depends only on the I(s) = K 1−β2 1+β2−2β cos(2πs·a).
+when only short range immediately preceding layer. forces are important.
+#6 Dislocation At high dislocation densities peak broadening ∝tan θ.1 INTRODUCTION 9  Sharp interface   Between two crystalline materials   Between amorphous and crystalline materials  Crystal A  Crystal B  Amorphous material A  Crystal B  Crystal A  Interdiffusion region  Crystal B  Crystal A  New compound  Crystal B  a  b  Case a ≈ b  b  a  Case a > b   Reactive interface in  which a new compound is  formed   Nonabrupt interface   Instead of the sharp interface  an interdiffusion region in which  the composition is gradually  changing is formed  Figure 3: Diﬀerent interface types formed between material layers.
+Divergence slit  q  2q  Anti-scattering slit  Thin film  Interface layer  Substrate  Figure 4: Schematic picture of a common θ −2θ measurement geometry.
+X- rays penetrate into the substrate and the signal is originating from the thin ﬁlm, interface layer and the substrate.
+Common approximation is to correspondingly divide the signal into three parts, though this is not necessarily justiﬁed.1 INTRODUCTION 10 treatment given in ref.
+[1], the principle of the pair distribution function (PDF) method can be formulated by expressing the interference function S(s) in terms of the scattered intensity IN(s) and structure factor F(s), forming the average over all orientations of the vector x connecting the atoms of the pair with respect to the scattering vector s (the sample is assumed to be isotropic), and expressing the interference function in terms of the pair distribution functions, Eqs.
+(6): S(s) = IN(s) NF 2(s) = 1 + ρ0 Z ∞ 0 4πx2[P(x) −1]sin(2πsx) 2πsx dx, (6) where ρ0 is the number of atoms of all types per unit volume.
+The reverse Fourier transform of the interference function gives ρ0x[P(x)−1] = 2 R ∞ 0 [S(s) −1] sin(2πsx)sds, which thus would require that S(s) is experimentally determined in all of reciprocal space.
+Instead, a common way is to construct a structural model and compute the PDF function, compare it with the experimental data and optimize the model parameters to minimize the diﬀerence between the computed and measured intensity.
+Rather recently, a new method for the calcu- lation of x-ray and neutron powder diﬀraction patterns from the Debye scattering equation was given in ref. [19].
+PDF functions were computed as an intermediate stage for computing the diﬀraction patterns.
+The method is based on the splitting of pairwise atomic interactions into two contributions, the ﬁrst from lattice-pair vectors and the second from cell-pair vectors.
+Illustrative application examples of the PDF method can be found from ref.
+[20], with an emphasis on the neutron scattering studies of silica.
+In order to contrast the method described below and the PDF method we note that the latter suits well for extracting information from homogeneously disordered materials, whereas the present method is aimed to provide information about spatially conﬁned defects, such as domain boundary.
+In the present work we also pinpoint the spatial location of the defect.
+1.4 Solid-solution with correlated substitutional and dis- placement disorder: lead-zirconate-titanate Despite its long-history [21] PZT is still an intensively studied ferroelectric oxide [22] exhibiting exceptionally high piezoelectric properties when the amount of tita- nium and zirconium is roughly equal [21, 23].
+Numerous space group assignments for nominally similar samples can be found in the literature (for reviews, see refs.
+[24, 25]), which is essentially due to the local-scale disorder modelled by diﬀerent low-symmetry structures. Average symmetries.
+PZT has a perovskite ABO3 crystal structure in which the B-cation site is statistically occupied by Ti and Zr ions.
+Metrically, the struc- ture is close to a cube in which Pb cations are approximately at the cube corner, Zr and Ti cations are at the cube centre and oxygen anions are close the cube face centres.
+A well-known summary of the composition and temperature dependent phases of PZT is given by the phase diagram of ref. [21].
+Titanium-rich structure is traditionally modelled by assuming an ideal space group symmetry (P4mm for x ≤0.52), which is achieved by placing a compositionally averaged ’pseudo-atom’ at the B site.
+The anions and cations are displaced from the centrosymmetric1 INTRODUCTION 11 positions along positive and negative c-axis direction, respectively.
+For Zr-rich concentrations the average structure is rhombohedral, the anion and cation dis- placements being along the cube diagonal.
+Notably challenging is the x ≈0.50 composition at which the two phases co-exist [26].
+The two-phase co-existence is typically modelled by reﬁning the total intensity by the superposition of the intensities from the pseudo-tetragonal and pseudo-rhombohedral phases.
+The average crystal structures of PZT as a function of x can be summarized thus: at room temperature the crystal structure remains tetragonal up to x ≈0.52 at which composition (termed the morphotropic phase boundary, MPB) a rather complex set of phases emerges, including a monoclinic Cm phase [27, 28, 29] and co-existing low and high-temperature rhombohedral phases [28, 29] .
+As pointed out in ref.
+[30] there is no real boundary and the phase co-existence region is ex- tended close to the PbZrO3 end of the solid-solution system.
+It is evident that the Cm phase exists as judged by several high-resolution powder diﬀraction studies, but the phase transition mechanism resulting in an average Cm phase, and even the stability of the phase, is still under investigation as it is often linked to the extraordinary piezoelectric properties of PZT at the MPB composition.
+A ther- modynamical study showed that an 8th-order Devonshire theory is required to explain the monoclinic phase [31], suggesting that the transition is quite unusual.
+This was also discussed in ref.
+[32], where a two-order-parameter thermodynamic model was developed for PZT to account for its peculiar features.
+An early report of the Cm phase in a ferroelectric perovskite oxide is about PbNb0.5Fe0.5O3 (PNF) compound [33, 34].
+In the case of PZT the Cm phase has often been claimed to favour polarization rotation and further to be responsible for the good piezoelec- tric properties.
+We note that also in the case of PNF the Fe3+ and Nb5+ cations are disordered.
+The fact that the monoclinic symmetry only tells that the polar- ization vector is within a mirror plane m does not mean that the polarization can rotate within m.
+Nevertheless, it has been proposed that a continuous polarization rotation between the [001] and [111] directions along the plane the two direction vectors span would be energetically preferable [35].
+However, we do not adopt that view as detailed in refs. [25] and [36].
+Instead, to understand the polarization reversal we focus on the domain wall and wall motion, which involve fairly complex time-dependent structural changes [23].
+At higher values of x the dominant phase can, to a good approximation, be described as rhombohedral, there being two variants, with (R3c, at low tempera- tures) and without (R3m, at high temperatures) octahedral tilts.
+More precisely, a recent PDF and Rietveld reﬁnement study has shown that Zr-rich Pb(ZrxTi1−x)O3 powders possess mixed phases, described by R3c/R3m + Cm(MB) model for 0.65 < x < 0.92 and R3c/R3m + Cm(MA) model for 0.52 < x < 0.65, where MA and MB refer to two polarization direction variants of the Cm phase [37].
+Neutron diﬀraction [38] and high-resolution x-ray diﬀraction [39] studies veriﬁed the rhombohedral symmetry and also revealed the presence of the monoclinic phase (assigned to Cm symmetry in ref.
+[38]), providing further support to the idea that the monoclinic phase is not due to the presence of adaptive phases.
+At the highest values of x, an antiferroelectric orthorhombic phase is formed.
+Deviations from average symmetries: Signatures of disorder in PZT.
+Though the crystal structure models are suﬃcient for explaining an average struc- ture, they are insuﬃcient when local scale structure is considered.
+For instance,2 SCATTERING FROM PZT CLUSTERS 12 Raman measurements reveal that the spectra are not consistent with the aver- age crystal structure[40, 41, 42]: the number of Raman active modes is about twice the number corresponding to an ideal structure.
+In diﬀraction experiments disorder aﬀects the intensity distribution: The fraction of inelastically scattered intensity is increased (as discussed below in the context of atomic displacement parameter (ADP)) and the tail regions of the Bragg reﬂection gain intensity.
+The displacement disorder can be divided into Pb displacements (oﬀ-site A-cations) and diﬀerent positions of the B-cations, Zr and Ti [30, 43, 44, 45, 46, 47].
+Large oﬀ-centre Pb displacements are common in perovskite oxides [33, 48, 49, 50, 51].
+Randomly distributed Zr and Ti atoms cause locally varying bond lengths and an- gles, frequently approximated by introducing so called microstrain.
+In contrast to the ADP induced diﬀuse scattering the reﬂection widths are hkl-dependent in mi- crostrained samples.
+A random distribution of Zr and Ti results in corresponding distribution of Pb displacements.
+If the point defect concentration is suﬃciently small (of the order of x = 0.01 or less) so that the long-range order characteristic to the crystal symmetry is not changed, defects mainly contribute to the intensity of the tail areas around the Bragg reﬂections: diﬀuse scattering is increased, whereas elastic scattering is decreased.
+The eﬀect is most clearly seen at small d-spacing area (see, e.g., ref. [17]).
+Correspondingly, point defects are frequently seen as abnormal ADP’s, which are either anomalously large or unphysically small: even diagonal components can be negative.
+This issue is addressed in ref. [5].
+The negative values can be due to the fact that ADP’s try to model two separate types of disorder, dynamic (thermal vibrations) and static (substitutional and/or po- sitional disorder).
+Small substitute atomic concentrations are seldom capable of introducing large changes in x-ray scattering intensities (unless there is a large diﬀerence in the numbers of electrons of the atoms) though they may result in detectable changes in neutron scattering.
+Point defect concentrations of a fraction of at.% may, however, result in observable changes in bond lengths [52].
+At large point defect concentration it is better to abandon the concept of well- ordered host crystal with point defects and to model the system from the beginning.
+Fig. 5 schematically illustrates a binary solid solution and the commonly used approximation in which one does not make a distinction between the two types of atoms, but only considers a pseudoatom taken to possess a scattering amplitude formed as a composition weighted average of the scattering amplitudes of the two atoms.
+Three-dimensional periodicity is commonly introduced in a similar manner.
+Thus, the disorder is averaged away as it is a heavy task to compute the scattering intensity corresponding to a huge unit cell.
+Below we introduce an approximation which keeps the essential features of the solid-solution, namely the inhomogeneous distribution of two types of atoms and the corresponding variation in bond lengths, corresponding to the case illustrated in Fig. 5(c).
+2 Scattering from PZT clusters A method for modelling the local structure under the constraint that the average structure remains intact was recently developed [53] and applied for addressing the cation displacements as a function of hydrostatic pressure [54].
+Central part of the modelling work is the parameterization of the disorder.
+As in the case of crystals with well-deﬁned space group symmetries there is a requirement to ﬁll the space exactly once.
+This sets limits to the cells and their mutual connectivity.2 SCATTERING FROM PZT CLUSTERS 13 a1     a2     a3   a4    a5   a6  b6  b5  b4  b3  b2  b1  b6  b5  b4  b3  b2  b1  a1     a2     a3   a4    a5   a6  b6  b5  b4  b3  b2  b1  a1     a2    a3 a4  a5   a6  (a)  (b)  (c)  Figure 5: (a) Schematic illustration of a solid-solution, (b) typical averaging and (c) an approximation which takes the local disorder into account.
+A straightforward way to do this is given below.
+Focus is on the construction of a model which takes the disorder into account yet is computationally suﬃciently simple.
+We ﬁrst describe how a single scattering cluster is constructed.
+The material to be modelled can entirely be consisted of a single scattering cluster, or as a special case the cluster can be a unit cell in a crystallographical sense.
+Next section introduces the parameters used in this paper after which applica- tion examples are given.
+2.1 Generation of the scattering cluster Below a construction of a model of a combined substitutional and displacement disorder is given.
+The inﬂuence of the crystal size and shape on the peak proﬁles is taken into account.
+Scattering intensity is computed for single clusters.
+The program was written using the C-language and a message passing interface (MPI).
+Computational platform was provided by the CSC (Finnish IT Center for Science Ltd., administered by the Ministry of Education, Science and Culture).
+We ﬁrst generate a scattering cluster in which each ion is placed on a speciﬁc site (described below).
+Ti and Zr are statistically distributed after which the atomic positions are adjusted.
+Speciﬁcally, each cell in the cluster is either tetragonal or rhombohedral and the ion positions are relaxed accordingly.
+The relaxed structural parameters are tabulated in Table 2.
+Atomic positions are adjusted by bond- valence-sum method [55]. Initial parameters.
+Experimental room-temperature structural values of PbTiO3 and PbZrO3 are used for generating the initial values for the scatter- ing cluster.
+In this stage, also alternative methods could be used.
+The lattice parameters for PbTiO3 are: aT = bT = 3.9000 ˚A and cT = 4.1500 ˚A and for PbZrO3 the lattice parameters are aZ = bZ = cZ = 4.138 ˚A.
+Though PbZrO3 is orthorhombic, we average the structure to be cubic (space group Pm¯3m).
+For the computation of the scattering power the positions of the ions are referred to points i, j, k which give the origins of the cells.
+In the special case of a scattering vol- ume possessing translational symmetry the points i, j, k form a crystallographical lattice.
+Here the focus is on the cases lacking translational symmetry.
+The structure of the cells depends on the Zr concentration: at high titanium concentrations the cells are tetragonal, at x ≈0.50 two phases co-exist and at high2 SCATTERING FROM PZT CLUSTERS 14 Zr-concentrations rhombohedral cells are dominant.
+This feature is embedded in the model as described in ﬂow chart 2.1.
+Table 2 lists the sites in tetragonal and rhombohedral cells and Table 3 lists the neutron scattering lengths and coeﬃcients used for the computation of x-ray scattering factors.
+Table 2: Fractional coordinates of the atoms in pseudo-tetragonal and pseudo- rhombohedral structures.
+Structural parameters x(Pb), y(Pb), z(Pb), z(Zr), z(Ti) and z(O) were computed for each cell i, j, k by bond-valence sum method.
+Tetragonal structure Atom x y z Pb x(Pb) y(Pb)= x(Pb) z(Pb)= x(Pb) Zr 1 2 1 2 1 2 + z(Zr) Ti 1 2 1 2 1 2 + z(Ti) 0I 1 2 1 2 z(O) 0II 0 1 2 1 2 + z(O) 0III 1 2 0 1 2 + z(O) Rhombohedral structure Atom x y z Pb x(Pb) y(Pb)= x(Pb) z(Pb) = x(Pb) Zr 1 2 + z(Zr) 1 2 + z(Zr) 1 2 + z(Zr) Ti 1 2 + z(Ti) 1 2 + z(Ti) 1 2 + z(Ti) 0I 1 2 1 2 z(O) 0II 0 1 2 1 2 + z(O) 0III 1 2 0 1 2 + z(O) Table 3: Coeﬃcients for analytical approximation to the x-ray scattering factors f and the neutron scattering lengths b0, taken from ref. [2].
+Scattering factors are computed using the approximation f = z + P i ai exp(−bis2), where s = sin θ/λ.
+Anomalous dispersion coeﬃcients are f1 and f2 (real and imaginary parts, respec- tively), the given values correspond to the Cu Kα-radiation (λ = 1.540562 ˚A).
+The Bragg diﬀraction angle is labelled as θ and λ is the x-ray wavelength.
+Parameter Pb Zr Ti O b0 9.405 7.16 -3.370 5.803 z 13.4118 2.06929 1.28070 0.250800 a1 31.0617 17.8765 9.75950 3.04850 b1 0.690200 1.27618 7.85080 13.2771 a2 13.0637 10.9480 7.35580 2.28680 b2 2.35760 11.9160 0.500000 5.70110 a3 18.4420 5.41732 1.69910 1.54630 b3 8.61800 0.117622 35.6338 0.323900 a4 5.96960 3.65721 1.90210 0.867000 b4 47.2579 87.6627 116.105 32.9089 f1 -4.075 -0.186 0.219 0.049 f2 8.506 2.245 1.807 0.0322 SCATTERING FROM PZT CLUSTERS 15 Flow chart.
+Flowchart describing the steps involved in the scattering cluster construction. 1.
+The size of the scattering cluster is given in terms of parallel epipeds, or cells.
+In the present example a rectangular parallel epiped cluster, consisted of Nx × Ny × Nz cells, is constructed.
+Each cell is referred to by indices i = 0, ..., Nx, j = 0, ..., Ny and k = 0, ..., Nz.
+2. Atoms are placed into the initial sites according to Table 2.
+Either Ti or Zr is inserted into each cell with probabilities 1 −x and x, respectively.
+A random number generator is used for this purpose. 3.
+The disorder to be modelled is correlated substitutional and displacement type caused by the random distribution of Ti and Zr ions.
+For modelling purpose we use three sum functions cx(i), cy(j) and cz(k).
+cx(i) gives the number of Zr atoms in planes i = constant, constant being 1, 2, ..., Nx. Functions cy(j) and cz(k) posses similar meaning.
+4. Cell edges are readjusted so that the compatibility condition is fulﬁlled.
+Fig. 6 illustrates the compatibility in two-dimensional case.
+The cell edges ax(i), ax(i’) ax(i’’) ay(j’’)  ay(j’’’)  i  j  (a)  (b)  ax(i’’’)  ay(j’)  Figure 6: (a) The compatibility between adjacent cells is fulﬁlled with spatially varying cell edge lengths.
+Though the cell edge lengths are spatially varying they are continuously connected and discontinuities, illustrated in (b), are avoided.
+For simplicity, the angles are taken to be orthogonal, which however is not a requirement of the method.
+ay(j), and az(k) are relaxed either to be rhombohedral or tetragonal: if cx(i) ≥NyNz/2.0 and cy(j) ≥NxNz/2.0 and cz(k) ≥NxNy/2.0 ax(i) = (a2 T cT ) 1/3 +Kx(cx(i)+cy(j)+cz(k))/3.0∗(aZ −(a2 T cT )1/3)/(NyNz) ay(j) = (a2 T cT ) 1/3 +Kx(cx(i)+cy(j)+cz(k))/3.0∗(aZ −(a2 T cT )1/3)/(NxNz) az(k) = (a2 T cT ) 1/3 +Kx(cx(i)+cy(j)+cz(k))/3.0∗(aZ −(a2 T cT )1/3)/(NxNy) else ax(i) = aT + Kx(aZ −aT )cx(i)/(NyNz) ay(j) = bT + Kx(bZ −bT )cy(j)/(NzNx) az(k) = cT + Kx(cZ −cT )cz(k)/(NxNy).
+Thus, both rhombohedral and tetragonal cells can co-exists within a same2 SCATTERING FROM PZT CLUSTERS 16 cluster.
+To further simplify the model, the largest rhombohedral cell is de- termined after which all rhombohedral cells are constrained to have this size.
+This also ensures that all cells are continuously connected to adjacent cells.
+A parameter Kx (≈1) is introduced.
+This is related to the fact that average B valence exceeds 4 in Zr-rich PZT (x ≥0.54).
+To obtain nominal valence the cell volume is gradually expanded by increasing the value of Kx till atoms can be positioned so that they possess nominal valences.
+For simplicity, linear relationship between lattice constants and sum func- tions is assumed.
+We also assume that the same composition variation causes the same structural variation in the x and y directions.
+This also implies that for a single phase cluster the average values of ax and ay, respectively denoted as ⟨ax⟩and ⟨ay⟩, are equal.
+This is because Pi=N i=1 cx(i) = Pj=N j=1 cy(j) = NZr, where NZr is the number of Zr atoms in the cluster.
+The relationships are no longer true for clusters possessing co-existing tetragonal and rhombo- hedral cells.
+By giving up these conditions one could approach more complex cases.
+We also assume that x, y and z directions are orthogonal. 5.
+Cation positions are adjusted to fulﬁl the nominal bond-valence sums, de- scribed below.
+6. Parallel epiped shaped particles are hardly seen in real materials, so an el- lipsoidal cut of the cluster is formed.
+The semiaxes of ellipsoids, including spheres, are chosen to be parallel to the cell edge directions.
+Rounded cluster has a feature that the subsidiary maxima are diminished, in contrast to the parallel epiped clusters. 7.
+The scattering power of the cluster is computed by Eq. (5) for selected directions.
+Directions are given in terms of s = ha∗+ kb∗+ lc∗, where a∗= ˆx/⟨ax⟩, b∗= ˆy/⟨ay⟩and c∗= ˆz/⟨az⟩, where ˆx, ˆy, and ˆz are unit vectors parallel to the positive x, y and z-axis directions, respectively.
+The scattering power is multiplied by Lorentz factor (Eq.(8)) in the case of neutrons, and by the Lp factor (Eq.(9)) in the case of x-rays, see Appendix I. Bond-valence-sum based atomic position adjustment.
+Bond-valence-sum (BVS) method [55] is applied to calculate the cation positions with respect to the oxygen polyhedra.
+Alternative computational techniques, such as using empirical potentials for structure optimization, or experimental techniques, could also be used.
+In the model Zr and Ti cations are displaced along the c-axis direction if the cell is tetragonal, otherwise the displacement is along the cell diagonal (the rhom- bohedral cells).
+Lead cations, consistently with the experimental observations, are always displaced along the cell diagonal.
+As the cells are too tight for Zr (there is no position at which the Zr valence would be +4), the Zr positions are ﬁrst adjusted so that Zr valences are minimized, after which the Ti positions are adjusted so that the average valence is 4.
+If the average valence is above 4, the cell size is increased by increasing the parameter Kx, see item 4 in ﬂow chart 2.1.
+2.2 Single domain spherical clusters To address the local structural changes and microstrain spherical clusters with a radius of 18 cell lengths (Nx = Ny = Nz = 36) are generated.2 SCATTERING FROM PZT CLUSTERS 17 Correlated substitutional and displacement disorder.
+PZT is evidently a material in which displacement disorder follows substitutional disorder: volumes with high Zr-concentration have larger cells.
+The distribution of B-cations itself is assumed to be random as described in ﬂow chart 2.1.
+Figures 7 and 8 show the A- and B-cation displacements as a function of x. Model indicates rather 0 20000 0.00 0.09 0.17 0.26 0.35 0.43 0.52 0.61 0.69 0.78 0.87 Frequency Pb-displacement (Å) PbTiO3 x = 0.10 x = 0.20 x = 0.50 x = 0.40 x = 0.30 x = 0.46 x = 0.47 x = 0.48 x = 0.49 x = 0.45 x = 0.51 x = 0.52 x = 0.53 x = 0.54 x = 0.55 Figure 7: Statistical distribution of the Pb-cation displacements as a function of x. Yellow, green and blue colour indicates the single phase tetragonal, two- phase and rhombohedral areas, respectively.
+Worth to note is that the peaks are broadest in the two-phase region.
+In each cell Pb-cations are displaced along the cell diagonal.
+Pb-displacements increase with increasing x. small displacement of Zr and Ti cations from the oxygen octahedra centre at and in the vicinity of the MPB region.
+The model predicts that the ferroelectric polarization is essentially due to the Pb and Ti cation displacements.
+Above x > 0.40 it is essentially the Pb-displacements which are responsible for polarization in PZT.
+The increasing width of the cation displacement distribution with increasing x indicates larger deviation from the average symmetry: In the case of perfect translational symmetry all A- and all B-cation displacements would be peaked at a single value.
+Also the number of displaced B-cations is strongly decreasing with increasing x: The B-cation displacements are centred close to the oxygen octahedron centre when x ≈0.40.
+As Fig. 7 shows, the width of the Pb-cation displacements is largest in the two-phase region (green data).
+It is also evident that the Pb-ion displacements are increasing with increasing x.
+As was discussed in ref.
+[54], the B-cation displacements are probably underestimated: If one gives up the constraint that the average valence of B-cations should be +4 and that the Pb-cation should have a valence of +2 and replaces it with a less severe constraint that the sum of the two types of cations should be +6 then the B-cations can be displaced by a larger amount also at Zr-rich areas.
+This would be compensated by a smaller Pb-displacements.
+However, such a computation would require an energy minimization.
+The BVS values do not necessarily correspond to the energy2 SCATTERING FROM PZT CLUSTERS 18 minimum, though it is reasonable to assume that they are not too far oﬀas the BVS parameters are based on a ﬁt to a vast number of experimental data.
+It is reasonable to assume that most reported structures correspond to the energy minimum.
+Cluster and cell dimensions.
+Fig. 9(a) shows the number of rhombohedral cells as a function of x.
+The model is seen to be consistent with the known MPB composition (green shadows in Fig. 9(a)-(d)), as the strong increase onset at ≈0.47 shows.
+This implies that relatively straightforward statistical approach (given in ﬂow chart 2.1) is capable of explaining the two-phase co-existence.
+The two-phase coexistence within a same cluster aﬀects the line-shapes in the two-phase regions, resulting in less accurate lattice parameter values in the MPB region, see Fig. 9(d).
+Fig. 9(c) plots the cluster dimensions and compares the dimensions to the values obtained through the Scherrer equation: Dp = 4/3(π/6)1/3λ/(θfwhm cos θ) (7) where θ and λ are the Bragg peak centre position and wavelength values and θfwhm is the full-width-at-half-maximum of the Bragg peak.
+All angles are given in radians.
+The constant is characteristic to the spherical shaped particles.
+The maximum dimension of the cluster is slightly larger than the value obtained from the Scherrer equation.
+This is partially due to the fact that the cluster is not exactly a sphere but is consisted of pseudocubic cells so that the maximum dimen- sion, given by blue markers in Fig. 9(c) are slightly larger than the diameter of the spherical surface ﬁt to go as close to the cluster exterior as possible.
+We note that the line broadening due to the particle size eﬀect alone yields an apparent size which is independent of the order of the reﬂection, while it depends on the reﬂection order in correlated substitutional and displacement disorder.
+This is also illustrated in Fig. 10 which plots the particle size, estimated through Eq. (7) for PbTiO3 and x = 0.30 and x = 0.51 PZT compositions from 14 reﬂections.
+The eﬀect of combined substitutional and displacement disorder is most evident in the x = 0.51 sample, seen as a large number of satellite peaks (though there is no sim- ple modulation of a periodic structure, we still use the term satellite to distinguish the subsidiary minima peaks due to the limited cluster size and disorder generated peaks).
+Correlated displacement and substitutional disorder is most clearly seen in the h00 and 00l type reﬂections, whereas the hhh reﬂections possess nearly symmetric distribution of satellite peaks, see Fig. 12.
+The remarks found in the case of periodical composition and displacement disorder (see Table 1) are seen in Figs. 11 and 12: The intensities of the satellite peaks belonging to the same pair centred at each Bragg reﬂection are not identical.
+The signatures are generic to PZT nanoclusters, though the details depend on the cluster statistics.
+2.3 Ellipsoid shaped single domain clusters Figure 13 shows the x-ray scattering proﬁles along three directions for x = 0 and ≈0.52 clusters.
+Table 4 gives the average lattice parameter and cluster size esti- mates, obtained through Bragg and Scherrer equations, respectively.
+The widths correspond to the values estimated from the Scherrer equation, though they are systematically smaller than the cluster dimensions, being about 96 % from the2 SCATTERING FROM PZT CLUSTERS 19 0 50 100 150 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 2000 4000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 5000 10000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 100 200 300 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 1000 2000 3000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 1000 2000 3000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 Frequency  Displacement (Å)  0 50 100 150 0.01 0.04 0.07 0.10 0.12 0.15 0.18 0.21 0.24 0.26 0.29 0.32 0.35 0.37 0 500 1 000 0.01 0.04 0.07 0.10 0.12 0.15 0.18 0.21 0.24 0.26 0.29 0.32 0.35 0.37 0 100 200 300 400 0.01 0.04 0.07 0.10 0.12 0.15 0.18 0.21 0.24 0.26 0.29 0.32 0.35 0.37 0 20 40 60 0.01 0.04 0.07 0.10 0.12 0.15 0.18 0.21 0.24 0.26 0.29 0.32 0.35 0.37 0 1 2 3 4 0.01 0.04 0.07 0.10 0.12 0.15 0.18 0.21 0.24 0.26 0.29 0.32 0.35 0.37 0 1000 2000 3000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 500 1000 1500 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 5000 10000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 0 10000 20000 30000 0.00 0.03 0.06 0.09 0.12 0.14 0.17 0.20 0.23 0.26 0.28 0.31 0.34 0.37 0.40 PbTiO3  x = 0.10  x = 0.20  x = 0.30  x = 0.40  T  x = 0.49  T  x = 0.50  T  x = 0.51  T  x = 0.52  T  x = 0.48  R  x = 0.49  R  x = 0.50  R  x = 0.51  R  x = 0.52  R  x = 0.48  Figure 8: Statistical distribution of the Zr and Ti-cation displacements from oxygen octahedra centre as a function of x. Red and blue colour indicates Ti- and Zr cations positions, respectively.
+The left-hand column gives the displacements in the single phase region, whereas the centre and right-hand columns give the displacements in the two-phase co-existence region.
+Left-hand column shows how the cation distribution broadens with increasing x, in strong contrast with models based on the translational symmetry.
+Worth to note is that not only Zr but also Ti displacements are rather small at Zr-rich compositions (note the scale diﬀerences in Frequency axis).
+This suggests that the Pb-displacements signiﬁcantly contribute to the dipole moment at MPB.
+The role of Zr is to stretch the cells so that Pb ions are forced to be signiﬁcantly displaced from cuboctahedra centres in order to achieve nominal valence.
+See also text.2 SCATTERING FROM PZT CLUSTERS 20 132 134 136 138 140 142 144 146 148 150 152 0 0.1 0.2 0.3 0.4 0.5 0.6 Particle size (Å) x -0.008 -0.006 -0.004 -0.002 0.000 0.002 0.004 0 0.1 0.2 0.3 0.4 0.5 0.6 Da, Db, Dc (Å) x 0.00 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.80 0.90 1.00 0 0.2 0.4 0.6 Fraction of  rhombohedral cells  x T M R (a)  (b) 3.85 3.90 3.95 4.00 4.05 4.10 4.15 4.20 0.0 0.1 0.2 0.3 0.4 0.5 0.6 Axis length (Å) x (b)  (c)  (d)  Figure 9: Composition dependent fraction of the rhombohedral cells, panel (a), average lattice parameter values taken from the known cluster parameters (blue data points) and average lattice parameter values obtained from the Bragg equation (red data points), panel (b), cluster dimensions (cluster values are given by blue markers and values obtained from the Scherrer equation are plotted by red markers), panel (c) and the diﬀerence between the true and lattice parameters obtained through the Bragg equation, panel (d).
+Squares, circles and triangles indicate the a, b and c axes values.
+Red and blue diamonds (panel (c)) correspond to the values extracted from the 222 reﬂection positions and the sphere dimension along the ⟨111⟩direction, respectively.
+Green shadow indicates the two-phase co-existence region, also referred to as the MPB region.
+Letters T, M and R stand for the tetragonal, mixed and rhombohedral region, respectively.2 SCATTERING FROM PZT CLUSTERS 21 137 138 139 140 141 142 143 0 1 2 3 4 Particle size (Å) h,k,l 137 138 139 140 141 142 143 144 0 1 2 3 4 Particle size (Å) h,k,l 134 136 138 140 142 144 146 0 1 2 3 4 Particle size (Å) h,k,l PbTiO3  x = 0.30  x = 0.51  Figure 10: Particle size as estimated from the apparent full-width-at-half- maximum values of the x-ray scattering reﬂections.
+Open squares, ﬁlled diamonds, ﬁlled circles and ﬁlled triangles are values estimated from the h00, 0k0, 00l and hhh reﬂections, respectively.
+Only x = 0.51 cluster shows evident reﬂection in- dice dependent broadening, implying that the broadening is not solely due to the particle size.
+15 35 55 75 95 Intensity Two-theta (Degrees) 10 30 50 70 90 110 Intensity Two-theta (Degrees) 30 50 70 90 Intensity Two-theta (Degrees) 10 30 50 70 90 110 Intensity Two-theta (Degrees) 15 35 55 75 95 Intensity Two-theta (Degrees) 30 50 70 90 Intensity Two-theta (Degrees) h00  h00  00l  00l  hhh  hhh  Figure 11: Neutron scattering intensity of the h00, 00l, and hhh type reﬂections.
+Upper row shows the intensity computed for the PbTiO3 cluster and the lower row the intensity computed for the x = 0.51 cluster.
+The combined substitutional and displacement disorder is evident in x = 0.51 cluster, as is seen from the numerous satellite reﬂections.
+Also notable is the asymmetry of the intensity of the satellite peaks on the larger and smaller 2θ side of the main peak.
+The asymmetry is much larger than the impact of the Lorentz factor.2 SCATTERING FROM PZT CLUSTERS 22 1E+05 1E+06 1E+07 1E+08 1E+09 1E+10 1E+11 35.4 37.4 39.4 Intensity Two-theta (Degrees) Pb-Pb O-O B-B 1E+04 1E+05 1E+06 1E+07 1E+08 1E+09 1E+10 1E+11 93 95 97 99 101103105 Intensity Two-theta (Degrees) Pb-Pb O-O B-B 1E+06 1E+07 1E+08 1E+09 1E+10 1E+11 94 96 98 100 102 Intensity Two-theta (Degrees) Pb-Pb O-O B-B 400  004  111  Figure 12: The contribution of the Pb-, O- and B-sublattices to the neutron scattering intensity of the 400, 004, and 111 reﬂections of the x = 0.51 cluster.
+Logarithmic scale is used in order to show the weak satellite peaks more clearly.
+maximum ellipsoid dimension.
+The error is very similar to the error obtained in the case of spherical clusters for which the Scherrer equation (7) holds.
+As in the case of spherical clusters the Bragg equation values are rather close to the known average values.
+Partially the error is due to the reasons discussed in the context of spherical clusters.
+The impact of the width of the scattering intensity on the average lattice parameter estimation is rather small.
+0 20 40 60 80 100 120 Intensity Two-theta (Degrees) 0 20 40 60 80 100 120 Intensity Two-theta (Degrees) 0 20 40 60 80 100 120 Intensity Two-theta (Degrees) a  b  c  100  200  300  400  010  020 030  040 Sharpest reflections  001  002  003  004  Broadest reflections  b>a>c  Figure 13: Scattering intensities from an ellipsoid shaped PbTiO3 (red line) and a Pb(Zr0.52Ti0.48)O3 (blue line) cluster.
+The ellipsoid axes a, b and c were 24, 108 and 18 cell edges long, respectively (Nx = 24, Ny = 108 and Nz = 18) and were parallel to the ax, ay and az axes.2 SCATTERING FROM PZT CLUSTERS 23 Table 4: Cluster metrics and the values as obtained through Bragg equation (at, bt and ct) and Scherrer equation (a, b and c).
+Values (all in units of ˚A) are given in pairs, the ﬁrst is the cluster (accurate) value, the second one is obtained through the Bragg/Scherrer equation.
+x at bt ct 0 3.900000, 3.900300 3.900000, 3.900015 4.150000, 4.150105 0.514485 4.079813, 4.078121 4.074603, 4.074910 4.090201, 4.092251 a b c 0 93.600000, 89.503502 421.200000, 405.758631 74.700000, 71.396015 0.514485 97.700121, 93.289568 439.059234, 422.897821 73.485345, 70.458609 2.4 Domains in spherical clusters As an example of a complex defect system 180◦domain walls and domains in spherical clusters are modelled.
+Fig. 14 illustrates the structural model.
+The cases treated below possess complex combination of displacement disorder (when the boundary halves the particle, left-hand side domain can be obtained from the right-hand side domain by atomic displacements) and substitutional disorder.
+The n  n  PS,L  PS,R  PS,R  PS,L  Figure 14: 180◦-domain walls (grey) in titanium-rich (left-hand side, termed T-domains) and zirconium-rich PZT (right-hand side, termed R-domains).
+Spon- taneous polarization directions on the left- and right-hand side and the domain wall normal are indicated by PS,L, PS,R and n, respectively.
+cluster for simulations is constructed as explained in section 2.1, except that the cation displacements directions are reversed at diﬀerent domains.
+In each domain the cation positions are relaxed so that the bond-valence sum criteria is fulﬁlled.
+In contrast to many standard models, the two domains are not considered separately; instead the scattering intensity is computed for the entire cluster.
+The purpose of the simulation is to show that (i) domain structure has a signiﬁcant impact on the scattering intensity, (ii) the method suits for in-situ modelling (e.g., polarization reversal studies), (iii) the impact of diﬀerent elements can be isolated and (iv) certain reﬂections can no more be described by a single asymmetric peak, even if they would originally correspond to a single symmetric peak.
+Two domains types, referred to as T- and R-domains, are considered.
+In the T-domain the domain2 SCATTERING FROM PZT CLUSTERS 24 wall is perpendicular to the ⟨100⟩direction and in the case of the R-domain the wall is perpendicular to the ⟨111⟩direction.
+The presence of T- and R-domains is most evidently revealed as a split of the hhh-type reﬂections.
+The split itself depends on the domain wall position in the cluster, as is seen from Figs. 15 and 16.
+In the case of R-domain and 111 reﬂection also the scattering intensity in the tail regions of the Bragg peak is considerable, consistently with the known strong diﬀuse scattering observed in many Pb-perovskites.
+As reﬂection 111 indicates, see Fig. 16, the strong diﬀuse scattering is due to the Pb-Pb scattering and is easily seen when the particle is divided into domains.
+The most signiﬁcant contribution to the split is from Pb-ions, which are displaced from the corners to a cell diagonal direction.
+The parallel epipeds are not identical and thus there is a variation in the Pb-displacement directions within a domain.
+In T-domains the h00 type reﬂections are left intact by the domain wall, whereas the intensity depends strongly on the domain wall position in the case of the 0k0 and 00l reﬂections.
+In R-domains all reﬂections intensities and line shapes strongly depend on the domain wall position. Applications.
+By adjusting domain wall position and orientation and cation displacement direction diﬀerent cases (e.g., 71◦domain walls) can be constructed in a straightforward manner.
+Domain wall motion takes place in polarization (P) switching.
+Also structural changes occurring in the domain wall region can be implemented into the model by constructing a domain wall with a ﬁnite thick- ness.
+T-domain boundary addressed above fulls the electrical boundary condition, ∇· P = 0, so that the boundary is not charged.
+The mechanical compatibility condition is satisﬁed as there is no abrupt change in the average lattice param- eters across the boundary (i.e., the boundary is stress-free).
+Also more complex cases, such as the formation of impurity phase or cases not fulﬁlling the electrical and mechanical boundary conditions (head-to-head R-domain is an example) can be constructed.
+A plausible application would be a modelling of in-situ measure- ments of domain walls in ferroelectric materials.
+Due to the high brightness x-ray synchrotron radiation based experimental techniques are evident methods for ad- dressing time-dependent phenomena.
+As an example, the nonlinear eﬀects in the coupling of polarization with elastic strain and the initial stage of polarization switching were addressed in refs. [56, 57].
+In these studies capacitors contain- ing 35 nm thick epitaxial Pb(Zr0.20Ti0.80)O3 ferroelectric thin ﬁlms were studied by time-resolved x-ray microdiﬀraction technique in which high-electric ﬁeld up to several hundred MV /m pulses were synchronized with the synchrotron x-ray pulses.
+Laboratory scale measurements can also be used to address the in situ structural changes in thin ﬁlms.
+An example is given in ref.
+[58] which reports the changes in lattice parameter (chemical expansivity) and its further use for quan- tifying oxygen reduction reaction processes and vacancy concentration changes in La0.80Sr0.20CoO3−δ thin ﬁlms under chemical and voltage stimuli.
+An example of the use of an laboratory x-ray diﬀractometer to address time- dependent ferroelectric domain reversal is given in ref.
+[59], where the changes in the volume fractions of the 90◦domains parallel to the electric ﬁeld direction were calculated from the intensities of the {002} diﬀraction peaks.
+Also magnetic scattering can be treated in a manner analogous to the nuclei scattering.
+In magnetic materials the domain boundary region often have spatially large extent (e.g., N´eel and Bloch walls) also in a direction perpendicular to the domain wall.
+In multiferroic materials the ferroic properties are not necessarily well2 SCATTERING FROM PZT CLUSTERS 25 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 25/75 Total intensity 100 400 200 300 Single domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 25/75 Total intensity 010 040 020 030 Single domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 25/75 Total intensity 001 004 Single  domain 002 003 94 95 96 97 98 Intensity Two-theta (Degrees) Pb-Pb 10 x B-B 10 x O-O 50/50 25/75 004 Single  domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 25/75 Total intensity 222 111 Single  domain 82 83 84 85 86 Intensity Two-theta (Degrees) Pb-Pb 3 x B-B 10 x O-O 50/50 25/75 222 Single  domain 70 71 72 73 74 75 Intensity Two-theta (Degrees) Pb-Pb 5 xB-B 50 x O-O 50/50 25/75 300 Single domain 70 71 72 73 74 75 Intensity Two-theta (Degrees) Pb-Pb 5 x B-B 50 x O-O 50/50 25/75 030 Single domain Figure 15: Selected x-ray scattering peaks computed for (wavelength 1.540562 ˚A) two T-domain wall positions (volume ratios 50/50 and 25/75) and a single domain PbTiO3 cluster.
+The green curves give the contribution due to the Pb- sublattice, red give the oxygen sublattice contribution, multiplied by a factor of 50 (300 and 030 reﬂections) or 10 (004 and 222 reﬂections), and blue give the B-cation contribution multiplied by a factor of 5 (300 and 030 reﬂections), 10 (004 reﬂection) or 3 (222 reﬂection).
+Total intensities (which include also Pb-O, Pb-B and alike terms) are given in the left-hand column.2 SCATTERING FROM PZT CLUSTERS 26 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 30/70 Total intensity 100 400 200 300 Single domain 66 68 70 72 Intensity Two-theta (Degrees) Pb-Pb B-B 10 x O-O 50/50 30/70 300 Single domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 30/70 Total intensity 111 222 Single  domain 33 38 43 Intensity Two-theta (Degrees) Pb-Pb 3 x B-B 10 x O-O 50/50 30/70 111 Single  domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 30/70 Total intensity 001 004 Single  domain 002 003 95.5 96.5 97.5 98.5 99.5 Intensity Two-theta (Degrees) Pb-Pb 10 x B-B 10 x O-O 50/50 30/70 004 Single  domain 10 30 50 70 90 110 Intensity Two-theta (Degrees) 50/50 30/70 Total intensity 010 040 020 030 Single domain 66 68 70 72 Intensity Two-theta (Degrees) Pb-Pb B-B 10 x O-O 50/50 30/70 030 Single domain Figure 16: Selected x-ray scattering peaks computed for (wavelength 1.540562 ˚A) two R-domain wall positions (volume ratios 50/50 and 30/70) and a single domain Pb(Zr0.52Ti0.48)TiO3 cluster.
+The green curves give the contribution due to the Pb-sublattice, red give the oxygen sublattice contribution and blue give the B-cation contribution.
+To show the features more clearly, the intensities of the oxygen lattice is multiplied by 10 and the and B-cation lattice by a factor of 1 (300 and 030 reﬂections), 3 (111 reﬂection) or 10 (004 reﬂection).
+Total intensities (which include also Pb-O, Pb-B and alike terms) are given in the left-hand column.
+REFERENCES 27 coupled, and thus it is crucial to be able to isolate diﬀerent contributions to the scattering intensity.
+For instance, magnetization reversal may not be accompanied by apparent changes in nuclei arrangements.
+All above disorder cases can be combined to model the often complex structures of multilayer thin ﬁlms.
+Especially in structures formed from very thin layers (say, of the order of few nanometers) the scattering intensity should not be treated as originating from independent layers.
+A better way is to model the entire structure and to impose the required boundary conditions for interfaces.
+Conclusions Applications of x-ray and neutron scattering techniques for analysing defects were reviewed.
+Focus was on the common approaches applied for modelling defects.
+A method for analysing scattering data collected on nanoparticles was described with necessary compatibility conditions.
+The method is capable of isolating dif- ferent contributions to the scattering intensity, such as element speciﬁc scattering, microstrain in solid-solutions, particle size and shape eﬀects and domains: struc- tural disorder is not averaged away.
+Scattering measurements provide information without destructive sample preparation.
+A case study on lead-zirconate-titanate nanoparticles was given.
+Potential applications include nanoparticles, disordered nanoparticles and in-situ studies of structural changes in ferroic materials.
+Acknowledgments CSC - IT Center for Science Ltd. is acknowledged for providing a computing environment.
+References [1] A. Guinier.
+X-ray Diﬀraction in Crystals, Imperfect Crystals, and Amorphous Bodies.
+Dover Publications, Inc., New York (1994).
+[2] International Tables for Crystallography, Volume C: Mathematical, Physical and Chemical Tables.
+E. Prince, (Ed.), Kluwer Academic Publishers, Dor- drecht, The Netherlands (2002). [3] T. R. Welberry.
+Diﬀuse X-Ray Scattering and Models of Disorder.
+Oxford University Press Inc., New York (2010). [4] M. M. Woolfson.
+An introduction to X-ray crystallography.
+Cambridge Uni- versity Press, Cambridge (1997). [5] W. Massa.
+Crystal Structure Determination.
+Springer-Verlag, Berlin (2000).
+[6] International Tables for Crystallography A: Space-group Symmetry.
+Th. Hahn, (Ed.), Kluwer Academic Publishers, Dordrecht (2005). [7] H. M. Rietveld. J. Appl.
+Crystallogr. 65, 2 (1969).
+[8] The Rietveld Method.
+R. A. Young, (Ed.), Oxford University Press Inc., New York (1996).REFERENCES 28 [9] M. Birkholz.
+Thin Film Analysis by X-Ray Scattering.
+Wiley-VCH Verlag GmbH & Co.
+KGaA, Weinheim (2006).
+[10] P. W. Stephens. J. Appl. Crystallogr. 32 281 (1999).
+[11] A. C. Larson and R. B. Von Dreele, General Structure Analysis System (LAN- SCE MS-H805, Los Alamos National Laboratory, Los Alamos, NM, 2000).
+[12] M. D. Biegalski, D. D. Fong, J. A. Eastman, P. H. Fuoss, S. K. Streiﬀer, T. Heeg, J. Schubert, W. Tian, C. T. Nelson, X. Q. Pan, M. E. Hawley, M. Bernhagen, P. Reiche, R. Uecker, S. Trolier-McKinstry, and D. G. Schlom. J. Appl. Phys. 104, 114109 (2008). [13] R. Phillips.
+Crystals, Defects and Microstructures: Modeling Across Scales.
+Cambridge University Press, Cambridge (2001).
+[14] A. Kelly and K. M. Knowles.
+Crystallography and Crystal Defects. Second Edition.
+A John Wiley & Sons, Ltd., Publication, Malaysia (2012) [15] K. W. Kolasinski.
+Surface Science: Foundations of Catalysis and Nanoscience.
+Wiley, Chippenham (2008) [16] H. L¨uth.
+Solid Surfaces, Interfaces and Thin Films.
+Springer-Verlag, Berlin (2001).
+[17] L. S. Zevin and G. Kimmel.
+Quantitative X-ray Diﬀractometry.
+Springer- Verlag, New York (1995).
+[18] B. A. Strukov and A. P. Levanyuk.
+Ferroelectric Phenomena in Crystals: Physical Foundations.
+Springer-Verlag, Berlin (1998). [19] N. W. Thomas. Acta Cryst. A66, 64 (2010). [20] M. T. Dove.
+Structure and Dynamics: An atomic view of materials.
+Oxford University Press, Inc., New York (2003).
+[21] Jaﬀe, B.; Cook, W. R. and Jaﬀe, H. (1971).
+Piezoelectric Ceramics, Academic Press, New York.
+[22] A basic search by a keyword ”lead zirconate titanate” in a topic ﬁeld and timespan from 2012 to 2014 gave 1114 records.
+When the time span was expanded to cover years 1960-2014, the number of records was 6874, indicating that a large number of the research records are recent.
+[23] M. E. Lines and A. M. Glass, Principles and Applications of Ferroelectric and Related Materials (Clarendon Press, Oxford, 2001).
+[24] B. Kocsis, J. M. Perez-Mato, E. S. Tasci, G. de la Flor and M. I. Aroyo. J. Appl. Cryst. 47, 1165 (2014). [25] J. Frantti. J. Phys. Chem.
+B, 112, 6521 (2008).
+[26] W. Cao and L. E. Cross. Phys.
+Rev. B 47, 4825 (1993).
+[27] B. Noheda, D. E. Cox, G. Shirane, J. A. Gonzalo, L. E. Cross, and S.-E. Park, Appl. Phys. Lett.
+74, 2059 (1999).REFERENCES 29 [28] H. Yokota, N. Zhang, A. E. Taylor, P. A. Thomas, and A. M. Glazer, Phys.
+Rev. B 80, 104109 (2009).
+[29] J. Frantti, J. Lappalainen, S. Eriksson, V. Lantto, S. Nishio, M. Kakihana, S. Ivanov, and H. Rund¨of, Jpn. J. Appl.
+Phys., Part 1 39, 5697 (2000); J. Frantti, S. Eriksson, S. Hull, S. Ivanov, V. Lantto, J. Lappalainen, and M. Kakihana, J. Eur. Ceram. Soc.
+24, 1141 (2004); J. Frantti, S. Eriksson, S. Hull, V. Lantto, H. Rund¨of, and M. Kakihana, J. Phys.: Condens.
+Matter 15, 6031 (2003); J. Frantti, Y. Fujioka, J. Zhang, S. Wang, S. C. Vogel, R.M. Nieminen, A. M. Asiri, Y. Zhao, A. Y. Obaid, and I. A. Mkhalid, J. Appl. Phys. 112, 014104 (2012).
+[30] A. M. Glazer, P. A. Thomas, K. Z. Baba-Kishi, G. K. H. Pang, and C. W. Tai, Phys.
+Rev. B 70, 184123 (2004).
+[31] D. Vanderbilt and M. H. Cohen, Phys.
+Rev. B 63, 094108 (2001).
+[32] A. J. Bell and E. Furman, Jpn. J. Appl.
+Phys., Part 1 42, 7418 (2003).
+[33] N. Lampis, P. Sciau and A. Geddo Lehmann. J. Phys.: Condens.
+Matter 11, 3489 (1999).
+[34] V. Bonny and M. Bonin and P. Sciau and K. J. Schenk and G. Chapuis.
+Solid State Communications. 102, 347 (1997).
+[35] H. Fu and R. E. Cohen. Nature. 403, 281 (2000).
+[36] J. Frantti, Y. Fujioka and R. M. Nieminen. J. Phys.: Condens.
+Matter 20, 472203 (2008).
+[37] N. Zhang, H. Yokota, A. M. Glazer, Z. Ren, D. A. Keen, D. S. Keeble, P. A. Thomas and Z.-G- Ye.
+Nature Communications, DOI:10.1038/ncomms6231 [38] D. Phelan, X. Long, Y. Xie, Z.-G. Ye, A. M. Glazer, H. Yokota, P. A. Thomas, and P. M. Gehring, Phys. Rev. Lett. 105, 207601 (2010).
+[39] S. Gorfman, D. S. Keeble, A. M. Glazer, X. Long, Y. Xie, Z.-G. Ye, S. Collins, and P. A. Thomas, Phys.
+Rev. B 84, 020102 (2011).
+[40] J. Frantti, V. Lantto, S. Nishio and M. Kakihana. Phys.
+Rev. 59, 12 (1999) [41] J. Frantti, Y. Fujioka, A. Puretzky, Y. Xie, Z.-G. Ye and A. M. Glazer.
+Journal of Applied Physics, 113, 174104 (2013).
+[42] J. Frantti, Y. Fujioka, A. Puretzky, Y. Xie, Z.-G. Ye., C. Parish and A. M. Glazer. J. Phys.: Condens.
+Matter, 27, 025901 (2015).
+[43] D. L. Corker, A. M. Glazer, R. W. Whatmore, A. Stallard, and F. Fauth, J. Phys.: Condens.
+Matter 10, 6251 (1998).
+[44] J. Ricote, D. L. Corker, R. W. Whatmore, S. A. Impey, A. M. Glazer, J. Dec, and K. Roleder, J. Phys.: Condens.
+Matter 10, 1767 (1998).
+[45] C. Muller, J.-L. Baudour, V. Madigou, F. Bouree, J.-M. Kiat, C. Favotto, and M. Roubin, Acta Crystallogr., Sect. B: Struct.
+Sci. 55, 8 (1999).REFERENCES 30 [46] J. Frantti, S. Ivanov, S. Eriksson H. Rund¨of, V. Lantto, J. Lappalainen, and M. Kakihana, Phys.
+Rev. B 66, 064108 (2002).
+[47] D. J. Goossens, Acc. Chem.
+Res. 46, 2597 (2013).
+[48] N. de Mathant, E. Hussont, S. G. Calvarint, J. R. Gavarris, A. W. Hewat and A. Morel. J. Phys.:Condens.
+Matter 3, 8159 (1991).
+[49] C. Malibert, B. Dkhil, J. M. Kiat, D. Durand, J. F. Brar, and A. Spasojevic-de Bir. J. Phys.: Condens.
+Matter 9, 7485 (1997) .
+[50] B. Dkhil, J. M. Kiat, G. Calvarin, G. Baldinozzi, S. B. Vakhrushev, and E. Suard. Phys.
+Rev. B 65, 024104 (2001).
+[51] M. Pa´sciak, T.R. Welberry, A.P. Heerdegen, V. Laguta, T. Ostapchuk, S. Leonid and J. Hlinka.
+Phase Transitions, DOI: 10.1080/01411594.2014.981266.
+[52] J. Frantti and V. Lantto. Phys.
+Rev. B. 221 56 (1997).
+[53] J. Frantti and Y. Fujioka, Method and system for analysing data obtained using scattering measurements from disordered material, WO2011/018554 - EP2464962 B1 (2014).
+[54] J. Frantti, Y. Fujioka, J. Zhang, J. Zhu, S. C. Vogel, and Y. Zhao. Rev. Sci.
+Instrum. 85, 083901 (2014). [55] I. D. Brown.
+The Chemical Bond in Inorganic Chemistry: The Bond Valence Model.
+Oxford University Press Inc., New York (2009).
+[56] A. Grigoriev, R. Sichel, H. N. Lee, E. C. Landahl, B. Adams, E. M. Dufresne, and P. G. Evans. Phys.
+Rev. Lett., 100, 027604 (2008).
+[57] A. Grigoriev, R. Sichel, J. Y. Jo, S. Choudhury, L-Q. Chen, H. N. Lee, E. C. Landahl, B. Adams, E. M. Dufresne, and P. G. Evans. Phys.
+Rev. B, 80, 014110 (2009).
+[58] M. D. Biegalski, E. Crumlin, A. Belianinov, E. Mutoro, Y. Shao-Horn, and S. V. Kalinin. Appl. Phys. Lett. 104, 161910 (2014).
+[59] A. Pramanick and J.L. Jones.
+IEEE Transactions on Ultrasonics, Ferro- electrics and Frequency Control.
+56, 1546, (2009).Appendix I 31 3 Instrument speciﬁc corrections Scattering geometry and the nature of the incident radiation (for instance, x-rays or polarized or unpolarized neutron beams) aﬀects the observed scattering intensity.
+The simplest correction is the diﬀraction geometry dependent Lorentz factor L, a trigonometric factor due to the fact that diﬀerent reﬂections stay diﬀerent times at the reﬂection position.
+In the case of a constant angular speed and single crystal sample L is 1/ sin 2θ (see, e.g. ref. [5]).
+For powders the prevailing measurement geometry is the Bragg-Brentano, or θ/2θ geometry, in which the sample is rotated at constant speed.
+If one assumes that the incident beam probes large set of randomly oriented crystals a further geometrical factor 1/ sin θ is required as only a fraction of the crystals are in a reﬂection position with respect to the detector.
+The Lorentz factor is the same for x-rays and neutrons.
+Thus, the neutron scattering intensities computed through Eq.(5) were multiplied by a factor 1/(2 sin2 θ cos θ) (8) In the case of x-rays one needs a further correction to take the polarization of x-rays into account.
+Typically x-rays emerging from a x-ray tube are unpolarized, and after reﬂecting from the diﬀracting plane the component of the electric ﬁeld parallel to the plane is not attenuated, whereas the electric ﬁeld component perpendicular to the diﬀracting plane is attenuated by a factor of cos2 θ, so that the total intensity is reduced by a polarization factor p = (1 + cos2 θ)/2.
+Monochromators aﬀect the polarization factor and modiﬁed expressions for p are required: p = (1 + K cos2 θ)/(1 + K) when a monochromator for an incident beam is used [5].
+K is a constant typically close to unity.
+The eﬀect of Lorentz and polarization corrections is typically put together and expressed as the Lp factor, which multiplies the scattering power or, in the case of crystals, |Fhkl|2.
+In this study the x-ray scattering intensities were multiplied by a factor (1 + cos2 2θ)/(sin2 θ cos θ) (9) 4 Line shapes in diﬀraction experiments Instrument also aﬀects the observed lineshape.
+When the scattering power is com- puted by equation (5) as a function of 2θ for a chosen direction of s, the cluster size and shape dictates the linewidths and, if the cluster is small, is almost entirely responsible for the broadening.
+In contrast, when the intensity for a speciﬁc reﬂec- tion is computed as |Fhkl|2, a speciﬁc peak proﬁle must be assumed.
+Typically, one needs to consider the sample size and shape, possible defects causing symmetric and asymmetric broadening, and the instrumental contribution as is done in con- ventional Rietveld reﬁnement.
+The functions describing diﬀerent contributions are convoluted, which is computationally heavy task.
+Correspondingly, a large num- ber of diﬀerent types of proﬁle functions have been introduced to model diﬀerent cases.

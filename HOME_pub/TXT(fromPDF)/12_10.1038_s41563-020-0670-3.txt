@@ -1,0 +1,1063 @@
+Articles
+https://doi.org/10.1038/s41563-020-0670-3
+1Department of Chemistry, Purdue University, West Lafayette, IN, USA. 2Key Laboratory for Micro-Nano Physics and Technology of Hunan Province, State  
+Key Laboratory of Chemo/Biosensing and Chemometrics, College of Materials Science and Engineering, Hunan University, Changsha, People’s Republic of 
+China. 3Theoretical Chemistry, Department of Chemistry and Food Chemistry, TU Dresden, Dresden, Germany. 4Wilhelm-Ostwald-Institute for Physical  
+and Theoretical Chemistry, Leipzig University, Leipzig, Germany. 5Abteilung Ressourcenökologie, Helmholtz-Zentrum Dresden-Rossendorf, Forschungsstelle 
+Leipzig, Leipzig, Germany. 6Department of Physics & Earth Science, Jacobs University Bremen, Bremen, Germany. ✉e-mail: libai-huang@purdue.edu
+V
+an  der Waals (vdW) heterostructures assembled from 
+graphene, hexagonal boron nitride and transition metal 
+dichalcogenides (TMDCs) have emerged as a new class of 
+materials in exploring new quantum phenomena with designed 
+functionalities1–5. Spatially indirect interlayer excitons can be 
+formed with electrons and holes localized in different TMDC  
+layers6–9, with much longer lifetimes than those of direct intra-
+layer excitons, which achieves long-range exciton- and valley-spin 
+transport3,4. Further, lattice mismatch or rotational misalignment 
+in the semiconducting TMDC heterostructures leads to the forma-
+tion of moiré potentials (nanoscale periodic energy potentials for  
+excitons), which provides a configurable solid-state excitonic  
+analogue to ultracold atoms in optical lattices or photons in pho-
+tonic crystals10,11. Scanning tunnelling microscopy measurements 
+and density functional theory (DFT) simulations for MoS2–WSe2 
+(refs. 10,12,13) suggested amplitudes of the moiré potentials as large 
+as hundreds of millielectronvolts. More recently, far-field optical 
+measurements indicated the existence of moiré excitons in semi-
+conducting TMDC heterostructures by observations, such as trap 
+exciton emission, flat exciton bands, spatially varying valley polar-
+ization and resonantly hybridized excitons14–19.
+Although the photoluminescence (PL) and absorption spectros-
+copy measurements from the aforementioned studies14–19 provided 
+indirect evidences for localized excitons, how excitons migrate 
+from one location to another in the energy landscape modulated 
+by moiré patterns remains largely unknown. Specifically, the local-
+ization of excitons by potentials as large as 200 meV is seemingly 
+at odds with the long-range interlayer exciton diffusion over a 
+length scale of micrometres in TMDC heterostructures at both low  
+temperature and room temperature3,20,21. The transport of spatially 
+indirect excitons has been extensively investigated in electrically 
+biased coupled quantum wells, which demonstrates long-range 
+transport and quantum many-body effects22–24, although moiré pat-
+terns do not exist in these systems. In addition, so far the studies 
+on interlayer exciton dynamics have assumed solely K–K excitons; 
+however, recent works showed that interband K–Q transition could 
+be the ground state25,26 and should play a crucial role in dynamics. 
+Here, we report exciton population imaging in the WS2–WSe2 het-
+erobilayers with two different twist angles (0 and 60°) with a tem-
+poral resolution of ~200 fs and a spatial precision of ~50 nm. These 
+measurements directly address the role of moiré potentials in exci-
+ton transport and provide evidence for the K–Q interlayer excitons.
+Moiré superlattice in WS2–WSe2 heterobilayers
+We performed measurements on the WS2–WSe2 heterobilayers, 
+prepared using a modified two-step chemical vapour deposition 
+(CVD) method (Methods and Supplementary Fig. 1) that provides 
+contamination‐free and atomically sharp interfaces27. Figure 1a 
+shows an optical image of two typical WS2–WSe2 heterobilayers, 
+grown on a Si wafer with an oxide of thickness 285 nm. The larger 
+bottom layer is a single-layer WS2 (1L-WS2), whereas the smaller top 
+layers are single-layer WSe2 (1L-WSe2). The presence of the verti-
+cal heterostructures constituted of WS2 and WSe2 monolayers was 
+confirmed using Raman spectroscopy (Supplementary Fig. 2). The 
+heterobilayers have two stacking orientations with twist angles of 0 
+and 60°, which are energetically favourable in the CVD growth27. 
+We confirmed the stacking orientation using second harmonic 
+generation spectroscopy (Supplementary Fig. 3). The moiré pat-
+terns can be directly observed by high-resolution annular dark-field 
+(ADF) scanning transmission electron microscopy (STEM) images 
+(Fig. 1b for 60° and Extended Data Fig. 1 for 0° and a large-scale 
+STEM image of 60°). The lattice mismatch of the monolay-
+ers of the WS2–WSe2 heterobilayers is about 4% (Supplementary  
+Fig. 4), which leads to a moiré periodicity of ~7.6 nm. The moiré 
+Twist-angle-dependent interlayer exciton 
+diffusion in WS2–WSe2 heterobilayers
+Long Yuan   1, Biyuan Zheng2, Jens Kunstmann3, Thomas Brumme4, Agnieszka Beata Kuc   5,6, 
+Chao Ma   2, Shibin Deng   1, Daria Blach1, Anlian Pan2 and Libai Huang   1 ✉
+The nanoscale periodic potentials introduced by moiré patterns in semiconducting van  der Waals heterostructures have 
+emerged as a platform for designing exciton superlattices. However, our understanding of the motion of excitons in moiré 
+potentials is still limited. Here we investigated interlayer exciton dynamics and transport in WS2–WSe2 heterobilayers in time, 
+space and momentum domains using transient absorption microscopy combined with first-principles calculations. We found 
+that the exciton motion is modulated by twist-angle-dependent moiré potentials around 100 meV and deviates from normal 
+diffusion due to the interplay between the moiré potentials and strong exciton–exciton interactions. Our experimental results 
+verified the theoretical prediction of energetically favourable K–Q interlayer excitons and showed exciton-population dynamics 
+that are controlled by the twist-angle-dependent energy difference between the K–Q and K–K excitons. These results form a 
+basis to investigate exciton and spin transport in van der Waals heterostructures, with implications for the design of quantum 
+communication devices.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+supercells are shown in Fig. 1c and Extended Data Fig. 1b; high-
+lighted in colour are different local, high-symmetry stacking con-
+figurations, labelled according to the nomenclature introduced in 
+Yu et al.13, in which Hh
+h; HM
+h ; HX
+h
+I
+ and Rh
+h; RM
+h ; Rx
+h
+I
+ correspond to the 
+atomic registries of 2H (hexagonal) and 3R (rhombohedral) bulk 
+polytypes, respectively.
+The WS2–WSe2 heterobilayers have a type II band alignment28,29, 
+which results in the formation of spatially indirect interlayer exci-
+tons, with electrons and holes that reside in the WS2 and WSe2 lay-
+ers, respectively (Fig. 1d). As shown in Fig. 1e, the PL spectra at 
+78 K display a new emission peak at ~1.45 eV in the WS2–WSe2 het-
+erobilayers with twist angles of 0 and 60°, which is attributed to the  
+emission from the interlayer excitons16. The PL microscopy image 
+(Fig. 1f) shows that the interlayer emission is uniform over the 
+entire heterostructure region, which confirms spatial homogeneity 
+over the micrometre length scale.
+First-principles calculations
+To gain insights on how the energy landscape for the interlayer exci-
+tons is modified by the moiré pattern of the 0 and 60° heterobilayers, 
+we performed first-principles calculations using DFT (see Methods 
+and Supplementary Note 1 for details). We calculated the energy of 
+the four lowest-energy optical transitions between the valence-band 
+maximum in the K valley and the conduction-band minimum in 
+the K and the Q valleys (Fig. 2a and Supplementary Table 1) for 
+different stacking configurations. Notably, the lowest-energy tran-
+sition is always K–Q and, therefore, K–Q interlayer excitons are 
+expected to represent the ground state. The moiré potentials plotted 
+along the main diagonal of the moiré supercells, shown in Fig. 2b  
+(also see Supplementary Table 2), indicate that the spatial varia-
+tions for 0° are much stronger (deep potential) than those for 60° 
+(shallow potential). The moiré potentials are expected to modulate 
+the transport of interlayer excitons, because the excitons encounter 
+twist-angle-dependent energy barriers as they move from one loca-
+tion to another, as illustrated in Figs. 2c,d for the K–K excitons. The 
+grey area in Fig. 2b indicates the spatial variation of the energy dif-
+ference between the K–Q and the K–K transitions, ΔEK–Q. Averaged 
+over the whole moiré pattern, the mean difference ΔEK–Q is larger 
+for 0° than for 60° (88 meV versus 62 meV; Supplementary Table 3). 
+Therefore, the population dynamics of the K–K and K–Q excitons 
+should also be affected by the twist-angle-dependent ΔEK–Q.
+Exciton-transport imaging
+The twist-angle-dependent moiré potentials calculated by DFT 
+suggest the interlayer excitons in the 60° heterobilayers are more 
+mobile. To verify this prediction, we employed transient absorp-
+tion microscopy (TAM; more details in Supplementary Note 
+2 and Supplementary Figs. 5 and 6)30,31 to image the spatial–
+temporal-dependent exciton population and experimentally extract 
+the average potential, encountered as excitons migrate. We used a 
+linearly polarized pump beam at 1.58 eV to create excitons in WSe2 
+and a probe energy of 1.95 eV was used to track the electron pop-
+ulation in the K (or K′) valley of WS2 after the formation of the 
+K–K interlayer excitons (Fig. 3a). Figure 3b shows that transient 
+absorption (TA) signal is spatially homogeneous for both 0 and 
+60° heterobilayers on the same WS2 underlayer (images for other 
+heterobilayers studied are shown in Supplementary Fig. 7). The TA 
+signal appeared to be weaker for the 60° heterobilayer (Fig. 3b) due 
+5 µm
+1 µm
+60°
+0°
+WS2 only
+60°
+1.2
+1.3
+1.4
+1.5
+1.6
+0.0
+0.4
+0.8
+1.2
+1.6
+Energy (eV)
+60°
+0°
+PL intensity (a.u.)
+a
+f
+2 nm
+b
+1L-WS2
+h+
+e–
+1L-WSe2
+d
+e–
+h+
+1L-WSe2
+1L-WS2
+c
+e
+e–
+h+
+Normalized PL intensity
+0
+1
+Hh
+h
+HM
+h
+HX
+h
+HX
+Hh
+HM
+h
+h
+Hh
+h
+h
+Fig. 1 | Moiré superlattice and interlayer exciton emission in WS2–WSe2 heterobilayers. a, Optical image of two CVD-grown WS2–WSe2 heterobilayers 
+with twist angles of 0 and 60° on the same WS2 underlayer indicated by the dashed square. b, High-resolution ADF STEM image of the 60° heterobilayer. 
+The moiré superlattice is marked by white solid lines showing a periodicity of ~7.6 nm. c, Schematic of the moiré pattern of the WS2–WSe2 heterobilayers 
+and their supercells (black lines) for a twist angle of 60°. Brown, yellow and orange circles mark regions with high-symmetry stacking configurations, 
+labelled as Hh
+h, HM
+h  and HX
+h, respectively. d, Schematic of the type II band alignment in the WS2–WSe2 heterobilayers that display interlayer exciton 
+formation. Energy levels are indicated by solid black lines. Interlayer excitons are marked by dashed ovals. Navy, yellow and orange spheres represent W, S 
+and Se atoms respectively. e, PL spectrum of the WS2–WSe2 heterobilayers with twist angles of 0 and 60° at 78 K. The peak at ~1.45 eV corresponds to the 
+interlayer exciton emission. The PL spectra are normalized with respect to the peak intensity of the 1L-WS2. f, PL image of the interlayer exciton emission 
+peak at ~1.45 eV of the 60° heterobilayer taken at 78 K, showing the homogeneous intensity over the heterobilayer. a.u., arbitrary units.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+to the broader WS2 A exciton peak (Supplementary Fig. 8), probably 
+because of a faster charge transfer32.
+The time-dependent exciton population profiles measured by 
+TAM are shown in Fig. 3c for 60° and Supplementary Fig. 9 for 0°. 
+These population profiles were obtained by scanning the pump–
+probe distance x. At zero delay time, the excitons were created by 
+a pump beam of ~500 nm that resulted in a Gaussian distribution 
+with variance σ2
+0
+I
+, n x; 0
+ð
+Þ ¼ N0expð x2
+2σ2
+0Þ
+I
+. A unity conversion from 
+intralayer excitons in WSe2 to interlayer excitons was assumed and 
+the exciton density at time zero N0 ranged between 2.1 × 1012 and 
+6.0 × 1012 cm–2 (Supplementary Note 3). The exciton migration led 
+to a broader Gaussian distribution of n x; t
+ð
+Þ ¼ Ntexpð x2
+2σ2
+tÞ
+I
+ at a 
+later delay time t and σ2
+t  σ2
+0
+I
+ corresponds to the mean squared dis-
+tance travelled by the excitons. Normal diffusion driven purely by 
+population gradient would lead to a linear temporal dependence of 
+σ2
+t  σ2
+0
+I
+ (Supplementary Note 2), which was observed for intralayer 
+excitons in the 1L-WS2 and 1L-WSe2 (Fig. 3d).
+Deviating from a normal diffusion behaviour, anomalous dif-
+fusion of interlayer excitons was observed for both the 0 and 60° 
+heterobilayers with a non-linear temporal dependence of σ2
+t  σ2
+0
+I
+ 
+(Fig. 3d). The interlayer excitons also migrate faster at higher den-
+sities (Fig. 3e, Extended Data Fig. 2 and Supplementary Fig. 10), 
+which could be explained by the net repulsive Coulomb interac-
+tion between the interlayer excitons due to electron–hole separa-
+tion and the aligned electric dipole moments3,21,33 (Supplementary 
+Note 4 and Supplementary Figs. 11 and 12). We also carried out 
+exciton-density-dependent PL measurements (Extended Data Fig. 3),  
+which showed the interlayer exciton emission blueshifts as density 
+increases and confirmed the repulsive exciton interaction8,21,34. In 
+contrast, the Coulomb forces cancelled each other out when averag-
+ing the interactions among many excitons with randomly orientated 
+dipoles in the monolayers (Supplementary Fig. 12) and negligible 
+density dependence was observed for the intralayer exciton diffu-
+sion (Extended Data Fig. 4). The speed of interlayer exciton migra-
+tion was substantially faster than those of intralayer excitons in 
+1L-WS2, 1L-WSe2, 2L-WS2 and 2L-WSe2 (Fig. 3d and Supplementary 
+Fig. 13), which demonstrates the central role of repulsive exciton 
+interaction. Exciton–exciton annihilation could lead to apparent 
+increase in exciton diffusion35; however, we ruled out this effect as 
+exciton dynamics showed no density dependence under our experi-
+mental conditions (Extended Data Fig. 5).
+The twist-angle dependence of the interlayer exciton transport 
+strongly suggests the role of the moiré potentials. Consistent with 
+the prediction from DFT calculations (Fig. 2b), excitons were less 
+mobile in 0° than in 60° at the same exciton density (Fig. 3d). This 
+difference is unlikely to be due to defect density, because these two 
+heterobilayers were grown on the same WS2 layer (Fig. 3b) and 
+under the exact same conditions. Further, we confirmed (Extended 
+Data Fig. 6) that the twist-angle dependence was reproducible in 
+all six of the heterobilayers measured and the variations in exciton 
+migration for the different heterobilayers with the same twist angle 
+were within experimental error. We also ruled out mechanisms 
+such as Seebeck effect and phonon-assisted hopping36 in enhancing 
+exciton migration because these mechanisms would not depend on  
+the twist angle. The effect of moiré potentials on exciton transport 
+is further supported by temperature-dependent measurements  
+1
+2
+3
+1
+2
+3
+M
+K
+Γ
+Q
+WSe2
+WS2
+∆EK–Q
+1 2
+3
+4
+Rh
+h
+RX
+h
+RM
+h
+Rh
+h
+0
+0.1
+0.2
+0.3
+V (eV)
+Hh
+h
+HM
+h
+HX
+h
+Hh
+h
+1
+2
+4
+3
+4
+1
+3
+2
+a
+b
+c
+V (eV)
+Energy
+d
+0.20
+0.10
+0.0
+Fig. 2 | Moiré potentials in WS2-WSe2 heterobilayers calculated with DFT. a, Schematic representation of a typical band structure of a heterobilayer 
+in a (strained) primitive unit cell. The four lowest-energy transitions are indicated by arrows. They are either transitions in the K valley (K–K, indicated 
+by vertical arrows 1 and 2) or transitions between the valence band maximum in the K valley and the conduction band minimum in the Q valley (K–Q, 
+indicated by diagonal arrows 3 and 4). Individual 1L-WS2 and 1L-WSe2 K–K transitions are marked by vertical arrows WS2 and WSe2, respectively.  
+b, Approximate moiré potentials for the twist angles of 0° (left) and 60° (right) plotted along the main diagonal of the moiré supercells (black lines in 
+c), showing that the spatial variations in 0° are much stronger (deep potential) than those in 60° (shallow potential) heterobilayers. The different lines 
+correspond to the four lowest-energy optical transitions marked in a. Circles and triangles for K–K indicate spin-singlet (K–K singlet) and spin-triplet  
+(K–K triplet) excitations, respectively. Squares corresponds to K–Q transition. Vertical arrows show the potential variations of the K–K spin-singlet 
+excitons. The grey area indicates the difference between the lowest-energy K–Q and K–K transitions, ΔEK–Q. Averaged over the whole moiré pattern, the 
+difference ΔEK–Q is larger for 0° than for 60°. c,d, Illustrations of the 2D K–K moiré potentials in both 3D graphs and 2D projections that can trap interlayer 
+excitons (red and black spheres) in the local minima. 1, 2 and 3 indicate Rh
+h, RX
+h and RM
+h  in 0° (c) and Hh
+h, HX
+h and HM
+h  in 60° (d). The theoretical results show 
+that the moiré pattern leads to a twist-angle-dependent modulation of the energy landscape that governs the interlayer exciton transport.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+(Fig. 3f and Extended Data Fig. 2), which show a reduced speed 
+of exciton migration as the temperature decreases. In contrast, the 
+intralayer exciton transport in the 1L-WS2 showed the opposite tem-
+perature dependence (Extended Data Fig. 4), with a faster motion at 
+78 K than at 295 K, attributed to reduced phonon scattering.
+Modelling of exciton transport
+To quantitatively describe the motion of interlayer excitons in the 
+moiré potentials, we employed a thermionic model developed for 
+quantum wells with a fluctuating energy landscape as described in 
+Ivanov et al.37:
+∂n x; t
+ð
+Þ
+∂t
+¼ ∇Jdiff þ Jdrift
+ð
+Þ  n x; t
+ð
+Þ
+τ
+ð1Þ
+where τ is the exciton lifetime, Jdiff describes the normal exciton 
+diffusion, which can be written as Jdiff ¼ D∇nðx; tÞ
+I
+, where D is 
+the diffusion coefficient, Jdrift denotes the drift flux due to repul-
+sive interaction between the interlayer excitons, which is given by 
+Jdrift ¼ nðx; tÞμu0∇nðx; tÞ
+I
+, where μ is the exciton mobility and u0 
+is the exciton interaction energy per unity of density. u0 comes from 
+the Coulomb scattering between two excitons and is the sum of 
+the direct interaction energy (dipole–dipole udd) and the exchange 
+interaction energy (uexch) (refs. 3,10,38), as illustrated in Supplementary 
+Fig. 11 and described in Supplementary Note 4. udd (ref. 3) and uexch 
+(ref. 38) can be approximated by dzE1sR1s and 2:07E1sR2
+1s
+I
+, respectively, 
+where dz is the interlayer separation (~0.7 nm), E1s is the exciton 
+binding energy and R1s is the exciton Bohr radius for the ground 1s 
+interlayer exciton state. Owing to the small interlayer distance, the 
+exchange interaction is significantly larger than the dipole–dipole 
+interaction, uexch
+udd ¼ 2:07R1s
+dz
+¼ 6:8
+I
+. We adopted the values of 0.126 eV 
+(ref. 39) and 2.3 nm (ref. 38) for E1s and R1s, respectively, which led to 
+a u0 of 1.6 × 10–14 eV cm–2. The exciton interaction energy calculated 
+here agrees well with the magnitude of the PL blueshift in Extended 
+Data Fig. 3.
+When the density increases, more excitons occupy higher-energy 
+states due to the repulsive interaction, and they may migrate as if 
+the potentials were lowered. As temperature increases, the in-plane 
+kinetic energy for the excitons increases and the potentials are also 
+effectively screened. Thus, the effective diffusion constant D can be 
+related to the trapping potential U and can be as D0exp½
+U
+kBTþu0nðx;tÞ
+I
+, 
+where D0 is the exciton diffusion constant in the absence of the trap-
+ping potential (U = 0) (ref. 37), where kB is the Boltzmann constant 
+and T is the temperature. However, the exciton mobility is given 
+by the Einstein relation μ ¼
+D
+kBT
+I
+ and, therefore, the drift flux Jdrift is 
+enhanced relative to diffusion at low temperature.
+Therefore, the depth of moiré potentials can be determined by 
+modelling the exciton-density- and temperature-dependent TAM 
+results. As shown in Fig. 3d–f and Extended Data Figs. 2 and 6, solid 
+lines represent the fitted σ2
+t  σ2
+0
+I
+ based on equation (1) with the 
+same set of parameters (three free parameters are U (0°), U (60°) and 
+D0). After averaging from all the samples measured (Supplementary 
+Tables 4 and 5), a moiré potential of U = 0.124 ± 0.003 eV was 
+obtained for the 60° heterobilayers and a deeper potential  
+of U = 0.159 ± 0.005 eV was determined for the 0° heterobilayers. 
+4.1 × 1012 cm–2
+–1
+0
+1
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0 (ns)
+0.2
+0.8
+Pump–probe distance x (µm)
+Normalized ∆R
+Q
+K
+WSe2
+K (K´)
+WS2
+e–
+h+
+e–
+Probe
+1.95 eV
+a
+Pump
+1.58 eV
+0°
+60°
+b
+c
+d
+e
+2 µm
+1
+0
+σt
+2– σ0
+2 (µm2)
+Pump–probe delay (ns)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.00
+0.05
+0.10
+0.15
+0.20
+0°
+60°
+1L-WS2
+1L-WSe2
+2.1 × 1012 cm–2
+Pump–probe delay (ns)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.00
+0.05
+0.10
+0.15
+0.20
+Pump–probe delay (ns)
+0.0
+0.2
+0.4
+0.6
+0.00
+0.04
+0.08
+0.12
+295 K
+150 K
+78 K
+Normalized ∆R
+f
+Energy
+x
+Pump
+Probe
+6.0 × 1012 cm–2
+σt
+2– σ0
+2 (µm2)
+σt
+2– σ0
+2 (µm2)
+Fig. 3 | Interlayer exciton transport modulated by moiré potentials. a, Schematic of probing interlayer exciton transport at the K–K valleys using TAM. 
+The valance and conductions bands are marked by solid and dashed lines, respectively. b, TAM morphology imaging (pump and probe beams are 
+spatially overlapped, x = 0) of the two WS2–WSe2 heterobilayers grown on the same 1L-WS2 underlayer as indicated in Fig. 1a. Data shown in c–f are taken 
+from the samples shown in b. The TA signal ∆R, the pump induced change in probe transmission, is homogeneous over the heterobilayers measured. 
+c, The pump–probe distance x was scanned to obtain the exciton population profiles at different pump–probe delay times in the 60° heterobilayer at 
+295 K, N0 = 6.0 × 1012 cm–2. Solid lines are fits using a Gaussian function to obtain σ2
+t . d, Anomalous diffusion of interlayer excitons due to the interplay 
+between the moiré potentials and strong many-body interactions. Twist-angle-dependent width σ2
+t  σ2
+0 as a function of the pump–probe delay times 
+with N0 = 6.0 × 1012 cm–2 at 295 K, which shows a faster transport in the 60° heterobilayer. The blue and red lines are fits using equation (1). The interlayer 
+exciton transport in the heterobilayers is also compared with the exciton diffusion in 1L-WSe2 and 1L-WS2. The black and grey lines are fits using linear 
+functions. The exciton diffusion in 1L-WS2 and 1L-WSe2 was measured using a pump photon energy of 3.10 eV and probe photon energies of 1.96 and 
+1.60 eV, respectively. e, Interlayer exciton transport at different exciton densities at 295 K for the 60° heterobilayer. f, Temperature-dependent interlayer 
+exciton transport for 60° with N0 = 4.1 × 1012 cm–2. The solid lines in d–f are fits using equation (1).
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+The trapping potentials extracted from the TAM experiments rep-
+resent the averaged potentials experienced by the interlayer K–K 
+excitons, because the pump beam size of ~500 nm is much larger 
+than the moiré periodicity of ~7.6 nm. The measured potential 
+values agree well with the averaged potential heights of 0.08 and 
+0.17 eV for 60 and 0°, respectively, predicted by our DFT calcula-
+tions (Fig. 2b and Supplementary Table 2). D0 of 5.4 ± 0.6 cm2 s–1 
+at room temperature represents the diffusion constant of the free 
+interlayer excitons if there were no moiré potentials.
+We note that temperature-dependent steady-state PL micros-
+copy measurements have shown that interlayer excitons travel 
+longer distances at lower temperatures20,21,33. Yet, steady-state mea-
+surements integrate over the entire exciton lifetime and the lon-
+ger lifetimes at lower temperatures can compensate for the slower 
+exciton migration, and thus lead to an overall larger distance trav-
+elled. We simulated the time-dependent exciton transport at 4 and 
+20 K in the WS2–WSe2 60° heterobilayer (Supplementary Fig. 14).  
+The simulations implied that, although excitons migrate shorter 
+Q
+K
+WSe2
+K (K´)
+WS2
+h+
+e–
+e–
+Probe
+1.95  eV
+0.1
+1
+0.0
+0.5
+1.0
+1.5
+2.0
+100
+150
+200
+250
+300
+102
+103
+Decay time (ps)
+Temperature (K)
+Normalized ∆R
+a
+c
+b
+d
+e
+f
+0.2
+0
+0.4
+0.6
+0.8
+1.0
+Probe @ 1.95 eV 
+Probe @ 1.95 eV
+ΔEK–Q
+78 K
+295 K
+Probe @ 1.95 eV 
+78 K
+295 K
+60°
+0°
+A exciton of 1L-WSe2
+Probe @1.60 eV
+Probe @1.60 eV 
+0.01
+0.1
+1
+0.01
+0.1
+1
+60°
+0°
+A exciton of 1L-WS2
+Pump–probe delay (ns)
+Pump–probe delay (ns)
+Pump–probe delay (ns)
+Probe
+1.60 eV
+0°
+60°
+0.2
+0.4
+0.6
+0.8
+1.0
+0.01
+0.1
+1
+0
+Energy
+Normalized ∆R
+Normalized ∆R
+Normalized ∆R
+Fig. 4 | Twist-angle- and temperature-dependent K–K and K–Q interlayer exciton dynamics. a, Schematic of the probing electron and hole dynamics 
+selectively. The valance and conduction bands are marked by solid and dashed lines, respectively. The hole dynamics was determined by probing the 
+K valley of WSe2 using a probe photon energy of 1.60 eV, indicated by the blue arrow. The hole population corresponds to the sum of the K–K and K–Q 
+exciton populations. The electron dynamics was determined by probing the K valley of WS2 using a probe photon energy of 1.95 eV, indicated by the red 
+arrow. The electron population reflects the K–K exciton population only. ΔEK–Q denotes the energy difference between the lowest-energy K–Q and K–K 
+transitions. b, The hole dynamics is similar for the heterobilayers with twist angles of 0 and 60° (970 ± 180 ps), compared with the A exciton dynamics  
+of 1L-WSe2 (51 ± 6.0 ps) at 295 K. c, The electron dynamics shows a substantial twist-angle dependence at 0° of 359 ± 16 ps and at 60° of 981 ± 34 ps  
+at 295 K. The exciton dynamics of the control 1L-WS2 (35.0 ± 1.4 ps) was measured using pump and probe energies of 3.10 and 1.97 eV, respectively.  
+d, Temperature-dependent hole dynamics in the 0° heterobilayer (4.1 ± 0.9 ns at 78 K). e, Temperature-dependent electron dynamics for the 0° 
+heterobilayer (359 ± 16 ps at 295 K and 101 ± 27 ps at 78 K). f, The fitted decay time of the K–K exciton as a function of temperature. The dashed lines 
+are guides to the eye. The solid lines in b–e are fitted curves using a bi-exponential decay function, convoluted with a Gaussian function. The error bars 
+indicate the standard error of the fit of the exciton population decays. The exciton density for all the measurements was 4.1 × 1012 cm-2.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+distances at 150 and 78 K than at room temperature, the substan-
+tially increased PL lifetimes at 4 and 20 K result in an overall larger 
+distance travelled than at room temperature. Furthermore, because 
+the exciton density is proportional to the PL lifetime under con-
+tinuous wave excitation, the exciton density increases as the tem-
+perature decreases, which will also lead to faster exciton migration. 
+Taken both effects into account, we can reproduce qualitatively 
+the temperature-dependent steady-state PL results of MoSe2–WSe2 
+heterobilayers in Unuchek et al.20,33 and Jauregui et al.21 using our 
+model, as shown in Supplementary Fig. 15.
+Population dynamics of K–K and K–Q excitons
+To probe the population dynamics of K–K and K–Q excitons, we 
+selectively monitored electrons and holes in the K valleys using 
+pump–probe TA spectroscopy, as schematically shown in Fig. 4a. 
+As the holes reside in the K valley of WSe2 for both the K–K and 
+K–Q interlayer excitons, the hole population probed at 1.60 eV 
+corresponds to the sum of the K–K and K–Q exciton populations 
+(NK–K + NK–Q). In contrast, electrons are located in different valleys 
+for the K–K and K–Q interlayer excitons. The dynamics probed at 
+1.95 eV reflects only the K–K interlayer exciton population (NK–K), 
+because only the electrons in the K valley of WS2 contribute the TA 
+signal. Thus, the population dynamics of the K–K and K–Q excitons 
+can be elucidated by comparing the dynamics probed at 1.60 eV 
+with that probed at 1.95 eV.
+As shown in Fig. 4b, the decay time of (NK–K + NK–Q) in the het-
+erostructures is 970 ± 180 ps at 295 K, which is much longer than 
+that of the intralayer excitons in 1L-WSe2 (51 ± 6 ps), due to the 
+spatially indirect nature of the interlayer excitons6. The dynamics 
+of (NK–K + NK–Q) do not exhibit substantial twist-angle dependence 
+on the nanosecond timescale (Fig. 4b for 295 K and Supplementary 
+Fig. 16 for 78 K). In contrast, the NK–K dynamics probed at 1.95 eV 
+and 295 K (Fig. 4c) shows that the decay time for 0° is about  
+three times shorter than that for 60°. The twist-angle-dependent 
+dynamics is reproducible in a total number of 16 samples (Extended 
+Data Fig. 7). The lifetime of (NK–K + NK–Q) increases to 4.1 ± 0.9 ns  
+at 78 K (Fig. 4d), showing a similar temperature dependence  
+to that of the PL decay (Supplementary Fig. 17 and Supplementary 
+Note 5), probably due to the suppressed non-radiative recom-
+bination8. The decay for NK–K in both the 0° (Fig. 4e) and the 60° 
+(Supplementary Fig. 18) heterobilayers becomes substantially 
+shorter at lower temperatures, the opposite to that of (NK–K + NK–Q) 
+shown in Fig. 4d.
+The twist-angle- and temperature-dependent NK–K dynamics 
+can be explained by intraband scattering of the electrons between 
+the K and Q valleys, influenced by ΔEK–Q. Initially, the electrons 
+transferred from WSe2 reside in the K valley of WS2, but they 
+are quickly scattered to the Q valley by the intervalley scattering 
+through phonon emission (ΔEK–Q > 0. However, the back scattering 
+of electrons from the Q to the K valley by phonon absorption is 
+a thermal process and the probability of this process is governed 
+by Bose–Einstein statistics, f E
+ð Þ / 1=ðe
+ΔEKQ
+kBT  1Þ
+I
+. At higher tem-
+peratures, more electrons are back scattered from the Q to the K 
+valley and therefore NK–K increases, which leads to a longer decay 
+time (Fig. 4e). The impact of temperature on the scattering from 
+Q to K can be seen in Fig. 4f, in which the K–K exciton decay time 
+increases as the temperature increases. A higher temperature is 
+required for 0° than for 60° to thermally excite phonons to scatter 
+electrons from Q to K (Fig. 4f). The larger ΔEK–Q for 0° leads to a 
+less efficient Q–K scattering and hence a shorter K–K exciton decay 
+time than that for 60° (Fig. 4c). We ruled out the K–K triplet exciton 
+state as an alternative explanation for the temperature-dependent 
+dynamics. First, as shown in Fig. 2b, the K–K triplet state is lower 
+in energy than the K–K singlet at 0°, but it is the opposite for 60°. 
+If the temperature-dependent dynamics were related to the K–K 
+triplet excitons, the 0 and 60° heterobilayers would exhibit the 
+opposite temperature dependence. Second, the dynamics in the 
+control 1L-WS2 sample, with a low-lying triplet exciton state, shows 
+the opposite temperature dependence to that of the heterobilayers, 
+which displays a slower decay at 78 K compared with that at 295 K 
+(Extended Data Fig. 8).
+Conclusion and outlook
+In summary, the presence of moiré potentials substantially alters the 
+dynamics and transport of interlayer excitons, as demonstrated by 
+the ultrafast exciton population imaging presented here. Interlayer 
+exciton transport strongly depends on the exciton density and  
+the depth of moiré potential, and cannot be described by a single 
+diffusion coefficient or a diffusion length, as has been commonly 
+assumed. At a sufficiently high density (>1013 cm–2), the effect of 
+moiré potentials can be totally screened.40 We have also demon-
+strated that K–Q interlayer excitons are the ground state, not the 
+K–K excitons commonly assumed to be the ground state, and it 
+is necessary to consider them when discussing interlayer exci-
+tons in the WS2–WSe2 systems. These new physical insights could 
+provide a guideline for designing quantum photonics devices 
+using two-dimensional (2D) moiré superlattices and inspire 
+new studies on exploring novel quantum phenomenon, such as 
+high-temperature exciton condensation.
+Online content
+Any methods, additional references, Nature Research reporting 
+summaries, source data, extended data, supplementary informa-
+tion, acknowledgements, peer review information; details of author 
+contributions and competing interests; and statements of data and 
+code availability are available at https://doi.org/10.1038/s41563-
+020-0670-3.
+Received: 27 July 2019; Accepted: 25 March 2020;  
+Published: xx xx xxxx
+References
+	1.	 Geim, A. K. & Grigorieva, I. V. Van der Waals heterostructures. Nature 499, 
+419–425 (2013).
+	2.	 Novoselov, K. S., Mishchenko, A., Carvalho, A. & Castro Neto, A. H. 2D 
+materials and van der Waals heterostructures. Science 353, aac9439 (2016).
+	3.	 Rivera, P. et al. Valley-polarized exciton dynamics in a 2D semiconductor 
+heterostructure. Science 351, 688–691 (2016).
+	4.	 Jin, C. et al. Imaging of pure spin-valley diffusion current in WS2/WSe2 
+heterostructures. Science 360, 893–896 (2018).
+	5.	 Liu, Y. et al. Van der Waals heterostructures and devices. Nat. Rev. Mater. 1, 
+16042 (2016).
+	6.	 Rivera, P. et al. Observation of long-lived interlayer excitons in monolayer 
+MoSe2–WSe2 heterostructures. Nat. Commun. 6, 6242 (2015).
+	7.	 Xu, W. et al. Correlated fluorescence blinking in two-dimensional 
+semiconductor heterostructures. Nature 541, 62–67 (2017).
+	8.	 Nagler, P. et al. Interlayer exciton dynamics in a dichalcogenide monolayer 
+heterostructure. 2D Mater. 4, 025112 (2017).
+	9.	 Kunstmann, J. et al. Momentum-space indirect interlayer excitons in 
+transition-metal dichalcogenide van der Waals heterostructures. Nat. Phys. 
+14, 801–805 (2018).
+	10.	Yu, H., Liu, G.-B., Tang, J., Xu, X. & Yao, W. Moiré excitons: from 
+programmable quantum emitter arrays to spin–orbit-coupled artificial lattices. 
+Sci. Adv. 3, e1701696 (2017).
+	11.	Chien, C. C., Peotta, S. & Di Ventra, M. Quantum transport in ultracold 
+atoms. Nat. Phys. 11, 998–1004 (2015).
+	12.	Zhang, C. et al. Interlayer couplings, moiré patterns, and 2D electronic 
+superlattices in MoS2/WSe2 hetero-bilayers. Sci. Adv. 3, e1601459 (2017).
+	13.	Yu, H., Liu, G.-B. & Yao, W. Brightened spin-triplet interlayer excitons  
+and optical selection rules in van der Waals heterobilayers. 2D Mater. 5, 
+035021 (2018).
+	14.	Tran, K. et al. Evidence for moiré excitons in van der Waals heterostructures. 
+Nature 567, 71–75 (2019).
+	15.	Seyler, K. L. et al. Signatures of moiré-trapped valley excitons in MoSe2/WSe2 
+heterobilayers. Nature 567, 66–70 (2019).
+	16.	Jin, C. et al. Observation of moiré excitons in WSe2/WS2 heterostructure 
+superlattices. Nature 567, 76–80 (2019).
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+	17.	Alexeev, E. M. et al. Resonantly hybridized excitons in moiré superlattices in 
+van der Waals heterostructures. Nature 567, 81–86 (2019).
+	18.	Zhang, N. et al. Moiré intralayer excitons in a MoSe2/MoS2 heterostructure. 
+Nano Lett. 18, 7651–7657 (2018).
+	19.	Ciarrocchi, A. et al. Polarization switching and electrical control of interlayer 
+excitons in two-dimensional van der Waals heterostructures. Nat. Photon. 13, 
+131–136 (2019).
+	20.	Unuchek, D. et al. Room-temperature electrical control of exciton flux in a 
+van der Waals heterostructure. Nature 560, 340–344 (2018).
+	21.	Jauregui, L. A. et al. Electrical control of interlayer exciton dynamics in 
+atomically thin heterostructures. Science 366, 870–875 (2019).
+	22.	Snoke, D., Denev, S., Liu, Y., Pfeiffer, L. & West, K. Long-range  
+transport in excitonic dark states in coupled quantum wells. Nature 418, 
+754–757 (2002).
+	23.	High, A. A., Novitskaya, E. E., Butov, L. V., Hanson, M. & Gossard, A. C. 
+Control of exciton fluxes in an excitonic integrated circuit. Science 321, 
+229–231 (2008).
+	24.	Vögele, X. P., Schuh, D., Wegscheider, W., Kotthaus, J. P. & Holleitner, A. W. 
+Density enhanced diffusion of dipolar excitons within a one-dimensional 
+channel. Phys. Rev. Lett. 103, 126402 (2009).
+	25.	Liu, F., Li, Q. & Zhu, X. Direct determination of momentum resolved 
+electron transfer in the photo-excited MoS2/WS2 van der Waals heterobilayer 
+by TR-ARPES. Preprint at https://arxiv.org/abs/1909.07759 (2019).
+	26.	Gillen, R. & Maultzsch, J. Interlayer excitons in MoSe2/WSe2 heterostructures 
+from first principles. Phys. Rev. B 97, 165306 (2018).
+	27.	Yoo, Y., Degregorio, Z. P. & Johns, J. E. Seed crystal homogeneity controls 
+lateral and vertical heteroepitaxy of monolayer MoS2 and WS2. J. Am. Chem. 
+Soc. 137, 14281–14287 (2015).
+	28.	Kang, J., Tongay, S., Zhou, J., Li, J. & Wu, J. Band offsets and heterostructures 
+of two-dimensional semiconductors. Appl. Phys. Lett. 102, 012111 (2013).
+	29.	Zheng, B. et al. Band alignment engineering in two-dimensional lateral 
+heterostructures. J. Am. Chem. Soc. 140, 11193–11197 (2018).
+	30.	Guo, Z. et al. Long-range hot-carrier transport in hybrid perovskites 
+visualized by ultrafast microscopy. Science 356, 59–62 (2017).
+	31.	Zhu, T. et al. Highly mobile charge-transfer excitons in two-dimensional WS2/
+tetracene heterostructures. Sci. Adv. 4, eaao3104 (2018).
+	32.	Hill, H. M. et al. Exciton broadening in WS2/graphene heterostructures. Phys. 
+Rev. B 96, 205401 (2017).
+	33.	Unuchek, D. et al. Valley-polarized exciton currents in a van der Waals 
+heterostructure. Nat. Nanotechnol. 14, 1104–1109 (2019).
+	34.	Laikhtman, B. & Rapaport, R. Exciton correlations in coupled quantum wells 
+and their luminescence blue shift. Phys. Rev. B 80, 195313 (2009).
+	35.	Kulig, M. et al. Exciton diffusion and halo effects in monolayer 
+semiconductors. Phys. Rev. Lett. 120, 207401 (2018).
+	36.	Glazov, M. M. Phonon wind and drag of excitons in monolayer 
+semiconductors. Phys. Rev. B 100, 193 (2019).
+	37.	Ivanov, A. L. Quantum diffusion of dipole-oriented indirect excitons in 
+coupled quantum wells. Europhys. Lett. 59, 586–591 (2002).
+	38.	Shahnazaryan, V., Iorsh, I., Shelykh, I. A. & Kyriienko, O. Exciton–exciton 
+interaction in transition-metal dichalcogenide monolayers. Phys. Rev. B 96, 
+115409 (2017).
+	39.	Merkl, P. et al. Ultrafast transition between exciton phases in van der Waals 
+heterostructures. Nat. Mater. 18, 691–696 (2019).
+	40.	Wang, J. et al. Excitonic phase transitions in MoSe2/WSe2 heterobilayers. 
+Preprint at https://arxiv.org/abs/2001.03812 (2020).
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in 
+published maps and institutional affiliations.
+© The Author(s), under exclusive licence to Springer Nature Limited 2020
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Methods
+Sample fabrication. The vertically stacked WS2–WSe2 heterostructures were 
+synthesized via a modified two-step CVD method27, schematically shown in 
+Supplementary Fig. 1. Briefly, a quartz boat with tungsten disulfide powder (99.8%, 
+Alfa Aesar) and a piece of Si wafer with a 285-nm-thick oxide (1 cm × 3 cm) were 
+placed at the centre and downstream, respectively, of the furnace for the growth 
+of the WS2 monolayers. The system was first cleaned by a high-purity Ar gas 
+(400 sccm) for 15 min. The furnace was then heated to 1,050 °C and kept at this 
+temperature for 10 min for the growth of the WS2 monolayers. The as-prepared 
+WS2 monolayers were used as the new substrate for the vertical growth of the WSe2 
+monolayers. The tungsten diselenide powder (99.8%, Alfa Aesar) and the substrate 
+with the WS2 monolayers were placed at the centre and downstream, respectively, 
+of the quartz tube. A mixture flow of H2/Ar (with 5% H2) gas was used as the 
+carrier gas and the growth temperature was set at 1,000 °C. After the growth, the 
+furnace was left to naturally cool down to room temperature.
+There are two key advantages of heterobilayers grown by two-step CVD 
+compared to stacked heterobilayers from exfoliation: (1) the heterostructure areas 
+are homogeneous over several micrometres, in contrast to stacked bilayers with a 
+spatial heterogeneity such, as air-bubble formation41, which could lead to random 
+potentials that cofound the effects of the moiré potentials and (2) heterobilayers 
+with two different twist angles were grown under identical conditions and on the 
+same WS2 underlayer, and therefore should have a similar defect density.
+STEM. For STEM measurements, CVD-grown WS2–WSe2 vertical heterostructures 
+were transferred onto a copper grid using a poly(methyl methacrylate)-assisted 
+transfer method. The STEM measurements were carried out on a JEOL ARM200F 
+microscope operated at 200 kV and equipped with a probe-forming aberration 
+corrector. For high-angle ADF-STEM images, the inner and outer collection 
+angles of the ADF detector were 68 and 280 mrad, respectively. The convergence 
+semiangle was about 28 mrad.
+Confocal PL microscopy. PL measurements were performed by employing a 
+homebuilt confocal PL microscope. A picosecond pulsed diode laser (LDH-P-C-
+450B, Pico-Quant) with an excitation energy of 2.8 eV and a repetition rate of 
+40 MHz was used to excite the sample. The laser beam was focused onto the 
+sample using a ×50 (numerical aperture (NA) = 0.95) objective. The PL emission 
+was collected with the same objective, dispersed with a monochromator (Andor 
+Technology) and detected using a charge-coupled device (Andor Technology). 
+PL images were acquired using a galvanometer scanner (GVS012, Thorlabs) to 
+scan the excitation beam. Time-resolved PL was measured using a single-photon 
+avalanche diode (PDM series, PicoQuant) and a single-photon counting module 
+(PicoQuant). For temperature-dependent PL measurements, the sample was 
+mounted on a cold finger of a continuous-flow liquid nitrogen cryostat  
+(ST-500, Janis). A ×40 (NA = 0.60) objective was used to focus the laser beam  
+onto the sample.
+TA microscopy and spectroscopy. TA dynamics and transport measurements 
+were taken using a homebuilt TAM system, performed in the reflection mode 
+(schematically shown in Supplementary Fig. 5). Briefly, a Ti:sapphire oscillator 
+(Coherent Mira 900) pumped by a Verdi diode laser (Verdi V18) was used as the 
+fundamental light source (1.60 eV, 76 MHz and 200 fs). Of the pulse energy, 70% 
+was fed into the optical parametric oscillator (Coherent Mira OPO) to generate 
+the probe beam at 2.00 eV, and the remaining 30% served as the pump beam. 
+The pump beam was modulated at 1 MHz using an acoustic optical modulator 
+(Model R21080-1DM, Gooch & Housego). Both pump and probe beams were 
+spatially filtered. A ×60 (NA = 0.95) objective was used to focus both the pump 
+and probe beams onto the sample, and the reflection light was then collected by 
+the same objective and detected by an avalanche Si photodiode (Hamamatsu). 
+The change in the probe reflection induced by the pump was detected by a lock-in 
+amplifier (HF2LI, Zurich Instruments). For morphological imaging, the pump 
+and probe beams were spatially overlapped and a piezoelectric stage (P-527.3Cl, 
+Physik Instrumente) was used to scan the sample with a step size of 200 nm. For 
+exciton-transport imaging, a galvanometer scanner (GVS012, Thorlabs) was used 
+to scan the probe beam relative to the pump beam in space to obtain the exciton 
+diffusion profiles.
+For the TA dynamics measurements, the pump and probe beams were spatially 
+overlapped and a mechanical translation stage (LTS300, Thorlabs) was used 
+to delay the probe with respect to the pump. For the measurements of the hole 
+dynamics, we used the output of a high-repetition-rate amplifier (400 kHz, Pharos 
+Light Conversion) to pump two independent optical parametric amplifiers, one 
+to provide the pump (1.80 eV) and the other to supply the probe (1.60 eV). Both 
+the pump and probe beams were spatially filtered. An acousto-optic modulator 
+(R23080-1, Gooch & Housego) was used to modulate the pump beam at 100 kHz. 
+The change in the probe reflection induced by the pump was detected by a lock-in 
+amplifier (SR830, Stanford Research).
+For temperature-dependent exciton dynamics and diffusion measurements, the 
+sample was mounted on a cold finger of a continuous-flow liquid nitrogen cryostat 
+(ST-500, Janis). A ×40 (NA = 0.60) objective was used to focus both the pump and 
+probe beams onto the sample.
+DFT calculations. The moiré potentials were calculated by considering different 
+high-symmetry stacking configurations of the heterobilayers. The configurations 
+were structurally optimized using DFT as implemented in the ADF-BAND 
+software42 (BAND2018, SCM, http://www.scm.com). The maximum gradient 
+threshold for geometry optimization was set to 10−3 Hartree Å−1. The Perdew–
+Burke–Ernzerhof43 exchange-correlation functional was used together with the 
+valence triple-zeta polarized basis sets composed of Slater-type and numerical 
+orbitals with a small frozen core. Relativistic effects, such as spin–orbit coupling, 
+were taken into account by employing the zero order regular approximation44. The 
+k-space integration was done with the 2D variant of the regular k-space grid using 
+the quadratic interpolation method, which resulted in nine symmetry-inequivalent 
+k points. The convergence of the k-space grid was checked; a denser grid did not 
+substantially change the transition energies. The vdW interactions were accounted 
+for using the D3 correction together with the Becke–Johnson damping function, as 
+proposed by Grimme et al.45.
+Data availability
+The data represented in Figs. 1–4 and Extended Data Figs. 2–8 are provided with 
+the article as source data. All the other data that support the results in this article 
+are available from the corresponding author upon reasonable request.
+Code availability
+The codes used for exciton diffusion simulation are available from the 
+corresponding author upon reasonable request.
+References
+	41.	Yuan, L. et al. Photocarrier generation from interlayer charge-transfer 
+transitions in WS2-graphene heterostructures. Sci. Adv. 4, e1700324 (2018).
+	42.	te Velde, G. & Baerends, E. J. Precise density-functional method for periodic 
+structures. Phys. Rev. B 44, 7888–7903 (1991).
+	43.	Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient approximation 
+made simple. Phys. Rev. Lett. 77, 3865–3868 (1996).
+	44.	Philipsen, P. H. T., van Lenthe, E., Snijders, J. G. & Baerends, E. J.  
+Relativistic calculations on the adsorption of CO on the (111) surfaces of Ni, 
+Pd, and Pt within the zeroth-order regular approximation. Phys. Rev. B 56, 
+13556–13562 (1997).
+	45.	Grimme, S., Ehrlich, S. & Goerigk, L. Effect of the damping function in 
+dispersion corrected density functional theory. J. Comput. Chem. 32, 
+1456–1465 (2011).
+Acknowledgements
+The optical spectroscopy and microscopy work at Purdue is supported by the US 
+Department of Energy, Office of Basic Energy Sciences, through award DE-SC0016356. L.Y. 
+also acknowledges support from the Purdue University Bilsland Dissertation Fellowship. 
+L.Y. thanks Y. Wan and Z. Guo for their assistance in the instrument development. B.Z. and 
+A.P. acknowledge the National Natural Science Foundation of China (nos 51525202 and 
+U19A2090). A.B.K., J.K. and T.B. acknowledge ZIH Dresden for computational support. 
+A.B.K. thanks the GRK 2247/1 (QM3) for financial support. J.K. acknowledges funding by 
+the German Research Foundation (DFG) under grant no. SE 651/45-1.
+Author contributions
+L.Y. and L.H. designed the experiments, L.Y. carried out the optical measurements, B.Z., 
+A.P. and C.M. grew the samples and performed the electron microscopy characterization, 
+T.B., J.K. and A.B.K. carried out and analysed the DFT calculations, L.Y., L.H., S.D., A.P. 
+and D.B. analysed experimental data and L.Y. and L.H. wrote the manuscript with input 
+from all the authors.
+Competing interests
+The authors declare no competing interests.
+Additional information
+Extended data is available for this paper at https://doi.org/10.1038/s41563-020-0670-3.
+Supplementary information is available for this paper at https://doi.org/10.1038/
+s41563-020-0670-3.
+Correspondence and requests for materials should be addressed to L.H.
+Reprints and permissions information is available at www.nature.com/reprints.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended data Fig. 1 | Scanning transmission electron microscopy (STEM) images. a, STEM image of a 0° heterobilayer. The moiré superlattice is marked 
+by white solid lines showing a periodicity of ~ 7.6 nm. b, Schematic of the moiré pattern of the WS2-WSe2 heterobilayers and their supercells (black) for a 
+twist angle of 0°, respectively. Brown, yellow, and orange circles mark regions with high-symmetry stacking configurations. c, Large-scale STEM image for 
+a 60° heterobilayer.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 2 | Interlayer exciton transport in a 0° heterobilayer. The data shown here are from the 0° heterobilayer imaged in Fig. 3b.  
+a, Exciton-density-dependent diffusion for the 0° heterobilayer. b, Temperature-dependent interlayer exciton diffusion for the 0° heterobilayer with an 
+initial exciton density of 4.1 × 1012 cm−2. Solid lines are fits using equation (1).
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 3 | Exciton-density-dependent PL spectra at 78 K. a, Intralayer A exciton emission of 1L-WS2. b, Interlayer exciton emission of 
+WS2-WSe2 (60°). Blue shifting of emission energy is observed for the interlayer excitons with increased exciton density in the WS2-WSe2 (60°) due to the 
+net repulsive exciton-exciton interaction. In contrast, such blueshift is not observed in the 1L-WS2.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 4 | Exciton-density- and temperature-dependent exciton transport in the WS2 underlayer. The data shown here are from the 
+WS2 underlayer imaged in Fig. 3b. Intralayer exciton shows a normal diffusion with negligible density dependence and become more mobile at lower 
+temperatures. Solid lines are fits using linear functions. The diffusion constants for 295 and 78 K are fitted to be 0.15 ± 0.04 and 0.44 ± 0.03 cm−2 s−1 
+respectively. The pump and probe photon energies are 3.10 eV and 1.96 eV, respectively.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 5 | Exciton-density-dependent interlayer exciton dynamics. a, the 0° heterobilayer b, the 60° heterobilayer. We ruled out 
+exciton-exciton annihilation effects because exciton dynamics did not show significant density dependence under our experimental conditions.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 6 | Interlayer exciton transport in different samples. a,b, Interlayer exciton transport at different exciton densities at 295 K for 0°  
+and 60°, respectively, in Sample #2. c,d, Interlayer exciton transport at different exciton densities at 295 K for 0° and 60°, respectively, in Sample #3.  
+e,f, Comparing interlayer exciton transport in three 0° heterobilayers and three 60° heterobilayers. Solid lines are simulations using equation (1) described 
+in the main text. The results from sample #1 are also shown in Fig. 3 in the main text and in Extended Data Fig. 2.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 7 | Electron dynamics in a total number of 16 heterobilayers at 295 K. We observed reproducible twist-angle dependent dynamics in 
+different samples.
+Nature Materials | www.nature.com/naturematerialsArticles
+Nature Materials
+Extended Data Fig. 8 | Temperature-dependent exciton dynamics in the 1L-WS2. Pump and probe photon energies are 3.1 and 2.0 eV, respectively. Solid 
+lines are fits using a bi-exponential decay function convoluted with a Gaussian function, which gives the decay constants of 122 ± 7 ps at 78 K and 35 ± 1 
+ps at 295 K.
+Nature Materials | www.nature.com/naturematerials

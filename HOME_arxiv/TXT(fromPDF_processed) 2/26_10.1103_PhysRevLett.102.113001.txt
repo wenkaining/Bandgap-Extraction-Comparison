@@ -1,0 +1,97 @@
+arXiv:0812.2296v1  [cond-mat.mtrl-sci]  12 Dec 2008 Exact dynamical exchange-correlation kernel of a weakly inhomogeneous electron gas V. U. Nazarov,1,2 G. Vignale,3 and Y.-C. Chang1 1Research Center for Applied Sciences, Academia Sinica, Taipei 115, Taiwan 2Department of Physical Chemistry, Far-Eastern National Technical University, 10 Pushkinskaya Street, Vladivostok 690950, Russia 3Department of Physics and Astronomy, University of Missouri, Columbia, Missouri 65211, USA The dynamical exchange-correlation kernel fxc of a non-uniform electron gas is an essential in- put for the time-dependent density functional theory of electronic systems.
+The long-wavelength behavior of this kernel is known to be of the form fxc = α/q2 where q is the wave vector and α is a frequency-dependent coeﬃcient.
+We show that in the limit of weak non-uniformity the coeﬃcient α has a simple and exact expression in terms of the ground-state density and the frequency-dependent kernel of a uniform electron gas at the average density.
+We present an approximate evaluation of this expression for Si and discuss its implications for the theory of excitonic eﬀects.
+PACS numbers: 31.15.ee Since its introduction in works of Runge, Gross, and Kohn [1, 2], the time-dependent density-functional the- ory (TDDFT) has evolved into a powerful tool of in- vestigation of systems ranging from isolated atoms to bulk solids.
+In the important linear-response regime, the key quantity of TDDFT is the dynamical exchange- correlation (xc) kernel fxc deﬁned as the functional derivative fxc[n0(r)](r, r′, ω) = δVxc[n](r, ω) δn(r′, ω)  n=n0(r) of the dynamical exchange and correlation potential Vxc with respect to the dynamical electron density n, taken at the ground-state value n0 of the latter.
+With this deﬁni- tion, the density-response function χ can be represented in operator notation as [2] χ(r, r′, ω) =  [1 −χKS(C + fxc)]−1χKS 	 (r, r′, ω) , (1) where χKS is the Kohn-Sham (KS) density-response function of independent electrons, C = e2/|r −r′| is the Coulomb interaction, and e is the absolute value of the electron charge.
+While the density-response function of non-interacting electrons χKS can be straightforwardly calculated in many cases of interest (e.g., for homoge- neous electron gases in three and two dimensions it is given by the analytical Lindhard’s [3] and Stern’s [4] for- mulas, respectively), the construction of fxc, whose role is to account for dynamical many-body correlations, is not straightforward.
+As an instructive speciﬁc case, let us consider the exci- tonic eﬀect [5] in a semiconductor, which would manifest itself as an enhancement of the imaginary part of χ for frequencies close to the fundamental absorption edge.
+We neglect for a moment local-ﬁeld eﬀects and write down the diagonal elements of the density response in momen- tum space as of Eq. (1) χ(q, q, ω) = χKS(q, q, ω) 1 −χKS(q, q, ω)[ 4πe2 q2 + fxc(q, q, ω)] (2) where 4πe2/q2 is the Fourier transform of the Coulomb interaction.
+On the one hand, the excitonic enhance- ment of χ is a many-body eﬀect and, therefore, it needs a nonzero fxc to be accounted for within TDDFT.
+On the other hand, because of the divergent Coulomb part 4πe2/q2 in Eq. (2), any fxc(q, q, ω) that remained ﬁnite at q = 0 would give no contribution in the long-wave limit q →0.
+This simple observation shows that in order to include the exciton, fxc(q, q, ω) must be divergent in the long-wave limit at least as strongly as the Coulomb term.
+And indeed, when the q−2 divergence has been introduced empirically in papers dealing with the opti- cal absorption spectrum of semiconductors [6, 7, 8], it has yielded a good TDDFT description of the excitonic eﬀect.
+Clearly it would be highly desirable to have a ﬁrst- principle theory of the small-q behavior of the xc kernel, rather than relying on empirical parametrizations.
+In this Letter we take a step in this direction.
+We ﬁrst show that the asymptotic relation lim q→0 fxc(q, q, ω) = e2α(ω) q2 (3) (we introduce the e2 so that α is dimensionless) is a rig- orous consequence of exact sum rules for the current den- sity response function.
+Then, in the limit of weak non- uniformity we obtain a simple and exact expression for α(ω) in terms of the ground-state density and the dy- namical xc kernel of a homogeneous electron gas at the average density[20].
+We start by noting that the local density approxima- tion (LDA) to fxc is unable to produce the divergence.
+Indeed, within LDA [2] fxc(r, r′, ω) = f h xc[n(r), ω] δ(r −r′), (4) where f h xc(n, ω) is the long-wave limit of the xc kernel of the homogeneous electron gas of density n.
+The latter is known [2, 9, 10, 11] to be ﬁnite, no divergence arising, therefore, in the Fourier transform of Eq. (4).2 To obtain an accurate non-local fxc, we resort to the recently proposed general method [12] derived from the time-dependent current-density functional theory (TD- CDFT) [13].
+This method is based on the exact relation that holds between the scalar density-response function χ (density response to a scalar potential) and the ten- sor current-density-response function ˆχ (current-density response to a vector potential): χ(q, q′, ω) = c eω2 q · ˆχ(q, q′, ω) · q′. (5) Both response functions are expressed in terms of the cor- responding Kohn-Sham response functions and xc kernels in the following manner: χ−1(q, q′, ω) = χ−1 KS(q, q′, ω) −fxc(q, q′, ω) −4πe2 q2 δqq′ (6) and ˆχ−1(q, q′, ω) = ˆχ−1 KS(q, q′, ω)−ˆfxc(q, q′, ω)−4πec ω2 ˆLqδqq′ , (7) where ˆLq,ij ≡qiqj/q2, i and j are cartesian indices.
+Equations (5-7) establish a connection between fxc and its tensor counterpart ˆfxc.
+The usefulness of this connec- tion stems from the fact that the tensor quantities ˆχKS and ˆfxc satisfy a broader set of exact sum rules than the corresponding scalar quantities.
+These sum rules were derived in Ref. [14].
+Specializing to the case of a peri- odic systems, the two most important sum rules for our purposes are ˆχKS,ij(G, 0, ω) = e mcn0(G)δij − 1 mω2 X G′,k ˆχKS,i,k(G, G′, ω)G′ kG′ jVKS(G′) , (8) and X G′ ˆfxc,ij(G, G′, ω)n0(G′) = c eω2 GiGjVxc(G) , (9) where G are reciprocal lattice vectors.
+These sum rules connect three diﬀerent types of components of, say, χKS(G, G′, ω): the (0, 0) component, the (0, G ̸= 0) and (G ̸= 0, 0) components, and the (G ̸= 0, G′ ̸= 0) compo- nents.
+Let us further restrict our attention to the case of a weakly inhomogeneous system: |n0(G)| ≪n0(0) ≡¯n0, and |VKS(G)| ≪ℏ2G2/2m for G ̸= 0.
+Then it is eas- ily shown that the homogenous electron gas approxima- tion for the (G ̸= 0, G′ ̸= 0) components completely de- termines the (0, G ̸= 0) and (G ̸= 0, 0) components to ﬁrst order in n0(G ̸= 0), which in turn completely deter- mines the (0, 0) component to second order in n0(G ̸= 0).
+Thus, for ˆχKS we obtain ˆχKS,ij(G ̸= 0, G′ ̸= 0, ω) =  eω2 c G2 LG,ij χhL KS(G, ω) + TG,ij χhT KS(G, ω)  δGG′ , ˆχKS,ij(G ̸= 0, 0, ω) = ˆχKS,ij(0, −G, ω) = e mc  n0(G)δij −LG,ijχhL KS(G, ω)VKS(G)  , ˆχKS,ij(0, 0, ω) = e¯n0 mc δij + e m2ω2c X G̸=0 G2LG,ij|VKS(G)|2  χhL KS(G, ω) −χhL KS(G, 0)  .
+(10) to the zero-th, ﬁrst, and second order in VKS(G), respectively.
+Here χhL KS andχhT KS are, respectively, the longitudinal and transverse KS density-response functions of the homogeneous electron gas of density ¯n0, and TG,ij = δij −LG,ij.
+Similarly, for ˆfxc we have ˆfxc,ij(G ̸= 0, G′ ̸= 0, ω) = c eω2 G2 f hL xc (G, ω)LG,ij +f hT xc (G, ω)TG,ij  δGG′ , ˆfxc,ij(G ̸= 0, 0, ω)= ˆfxc,ji(0, −G, ω)=−c G2 eω2¯n0 n0(G)  [f hL xc (G, ω)−f hL xc (G, 0)]LG,ij+f hT xc (G, ω)TG,ij 	 , ˆfxc,ij(0, 0, ω) = c eω2¯n2 0 X G̸=0 G2|n0(G)|2  f hL xc (G, ω) −f hL xc (G, 0)  LG,ij + f hT xc (G, ω)TG,ij 	 , (11) where f hL xc and f hT xc are the longitudinal and transverse, respectively, xc kernels of the homogeneous electron gas of density ¯n0.
+The following steps, which involve repeated inversions of inﬁnite matrices, rely on the mathematical fact that to ﬁnd the (0, 0), (0, G ̸= 0)/(G ̸= 0, 0), and (G ̸= 0, G′ ̸=3 χKS χ ˆ  χ  ˆ  χ KS, ˆ f xc ( ) ˆ  χ KS −1 , ˆ  χ −1 ( ) χKS −1 −χ−1 fxc FIG.
+1: Scheme of the procedure for calculating the xc kernel fxc starting from the expressions (10) and (11) for ˆχKS and ˆfxc, respectively. 0) elements of the inverse matrix to the second, ﬁrst, and zeroth order in the inhomogeneity, respectively, it is suf- ﬁcient to know the corresponding elements of the original matrix to the same accuracy, and then the inversion can be performed in a closed form [15].
+The complete procedure is schematically illustrated in Fig. (1). Starting from Eqs.
+(10) and (11) for ˆχKS and ˆfxc we (i) Invert Eqs.
+(10) to get ˆχ−1 KS; (ii) Combine ˆχ−1 KS and ˆfxc to get ˆχ−1 by virtue of Eq. (7); (iii) Invert ˆχ−1 to get ˆχ ; (iv) Use Eq. (5) and its KS analogue to ﬁnd the scalar response function χ from ˆχ and χKS from ˆχKS; (v) Invert χ and χKS to get χ−1 and χ−1 KS; and, (vi) Apply Eq. (7) to ﬁnd fxc.
+The ﬁnal result of this procedure is lim q→0 fxc(G ̸= 0, G′ ̸= 0, ω) = f h xc,L(G, ω)δGG′, (12) lim q→0 fxc(G ̸= 0, q, ω) = fxc(−q, −G, ω) = −(G · ˆq) ¯n0q  f hL xc (G, ω) −f hL xc (G, 0)  n0(G), (13) lim q→0 fxc(q, q, ω) = 1 ¯n2 0q2 X G̸=0 (G · ˆq)2  f hL xc (G, ω) −f hL xc (G, 0)  |n0(G)|2, (14) where ˆq is the unit vector parallel to q. It should be noted at this point that the above expression for the scalar ker- nel fxc(q, q, ω) diﬀers from what one would get by sim- ply taking the longitudinal component of ˆfxc,ij(q, q, ω), i.e. fxc(q, q, ω) ̸= eω2 cq2 P i,j ˆqi ˆfxc,ij(q, q, ω)ˆqj.
+The im- plication is that the scalar xc potential (Vxc) of time- dependent DFT is not equivalent to the longitudinal com- ponent of the vector potential (Axc) of time-dependent CDFT: rather, it should be constructed through the care- ful inversion procedure described above.
+A recent inter- esting attempt to construct Vxc from Axc [16] should be re-examined in the light of this result.
+From the result of the step (iv) for χ and making use of the relation 1 ǫM(ω) = 1 + lim q→0 4πe2 q2 χ(q, q, ω), (15) we obtain a formula for the macroscopic dielectric func- tion of a crystal ǫM(ω) = 1 −4πe2¯n0 mω2 − e2 m2ω4 × X G̸=0 |V0(G)|2G2(ˆq · G)2  1 ǫhL(G, ω) − 1 ǫhL(G, 0)  ,(16) where V0 is the bare crystalline potential and ǫhL(q, ω) = 1 −4πe2 q2 χhL KS(q, ω) 1 −χhL KS(q, ω)f h xc,L(q, ω) is the longitudinal dielectric function of the homogeneous electron liquid.
+Equation (16) is in agreement with the Hopﬁeld’s formula for optical conductivity [17], while in the RPA [f h xc,L(G, ω) = 0] it coincides with the corre- sponding result of Ref. 15.
+Equations (12-14) are the main result of this paper.
+They replace the grossly inaccurate LDA formula lim q→0 fxc(G + q, G′ + q, ω) = f h xc,L(G, ω)δGG′, (17) which does not contain the singularity in q. Identifying the (0, 0) element of the microscopic matrix of the xc kernel in Eqs.
+(14) as the averaged fxc, we see that fxc diverges for q →0 as described by Eq. (3), wherein α(ω) is given by α(ω)= X G̸=0 (G·ˆq)2 ¯n2 0  f hL xc (G, ω)−f hL xc (G, 0)  |n0(G)|2.
+(18) Notice that α(ω) = 0 in the uniform limit and α(0) = 0 up to second order in n0(G ̸= 0) [21].
+In order to calculate α(ω) from Eq. (18) we need the Fourier amplitudes of the ground-state electron density4 and the wave vector and frequency-dependent f hL xc of the homogeneous electron gas, evaluated at reciprocal lat- tice vectors.
+The ﬁrst ingredient is straightforwardly ob- tained from standard electronic structure calculations.
+Unfortunately, the same cannot be said of the second in- gredient f hL xc (q, ω), for which we do not have reliable ex- pressions.
+The best that can be done, at this time, is ei- ther to disregard the wave vector dependence, or to make use of the interpolation formula proposed in Ref. 18, which however fails to reproduce, at small q, what is presently believed to be the qualitatively correct form of the frequency dependence.
+In spite of these diﬃculties, it must be emphasized that the calculation of f hL xc (q, ω) is still a much simpler problem than the calculation of the dynamical xc kernel of the non-uniform system.
+Thus, our Eq. (18) does not simply express an unknown quan- tity in terms of another unknown quantity, but actually opens the way to systematic calculations of α based on the many-body theory of the homogeneous electron gas.
+Further, Eqs. (12)-(14) for fxc oﬀer a promising alterna- tive to the widespread practice of treating the dynamical exchange and correlations eﬀects in the LDA.
+In Fig. 2 we plot α(ω) from Eq. (18) vs frequency for crystalline silicon.
+The Fourier coeﬃcients of the electron density were calculated with the code FHI98MD [19], and we approximated f hL xc (q, ω) ≃f hL xc (0, ω), taking the lat- ter from Ref. 11.
+In the range 0-22 eV, the real part of α(ω) is negative, changing sign for positive above 22 eV. It reaches its minimum of α ≈-0.1 at ω ≈14 eV. In the range 3-5 eV of the main absorption in silicon, Re α changes from -0.01 to -0.03, which is an order of magni- tude smaller than the empirical value of α ≈-0.2 found as the best ﬁt to the experimental spectrum in Ref. 6.
+This large diﬀerence may simply indicate that the nearly free electron model, while being adequate for simple metals and even for semiconductors in the high-frequency regime [15], is not suﬃciently accurate for semiconductors at fre- quency lower than or comparable to the band gap (see also footnote [21]).
+Another probable source of discrep- ancy is that our approach is a pure TDDFT, whereas the value of α ≈−0.2 was obtained in Refs.
+6 and 7 with the use of self-energies incorporated in the Green’s function via the GW approximation.
+In conclusion, within the nearly free electron ap- proximation, we have constructed the otherwise exact exchange-correlation kernel for time-dependent density- functional theory.
+This kernel is nonlocal in space, exhibiting the q−2 singularity in the reciprocal space.
+The strength of this singularity, which is frequency- dependent, has been directly related to the magnitude of the non-uniformity of the density of valence electrons, and this singularity disappears in the limiting case of the homogeneous electron liquid.
+We are proposing an im- provement over the conventional LDA scheme of includ- ing the dynamical exchange and correlation eﬀects into ab initio calculations of the linear response of crystalline 0 5 10 15 20 25 -0.6 -0.4 -0.2 0.0 -0.1 0.0 0.1 Im    (eV)     Re    Si FIG.
+2: The frequency dependence of the real (upper panel) and image (lower panel) parts of the α coeﬃcient in Eq. (3) for silicon calculated by Eq. (18).
+solids which consistently accounts for the long-wave di- vergence in the exchange-correlation kernel.
+GV acknowledges support from DOE Award No. DE- FG02-05ER46203.
+[1] E. Runge and E. K. U. Gross, Phys. Rev. Lett. 52, 997 (1984).
+[2] E. K. U. Gross and W. Kohn, Phys. Rev. Lett. 55, 2850 (1985).
+[3] J. Lindhard, K. Dan. Vidensk. Selsk. Mat.-Fys. Medd. 28, 1 (1954).
+[4] F. Stern, Phys. Rev. Lett. 18, 546 (1967).
+[5] N. W. Ashcroft and N. D. Mermin, Solid State Physics (Holt, Rinehart and Winston, New-York, 1976).
+[6] L. Reining, V. Olevano, A. Rubio, and G. Onida, Phys. Rev. Lett. 88, 066404 (2002).
+[7] R. Del Sole, G. Adragna, V. Olevano, and L. Reining, Phys.
+Rev. B 67, 045207 (2003).
+[8] S. Botti, F. Sottile, N. Vast, V. Olevano, L. Reining, H.- C. Weissker, A. Rubio, G. Onida, R. Del Sole, and R. W. Godby, Phys.
+Rev. B 69, 155112 (2004).
+[9] R. Nifos`ı, S. Conti, and M. P. Tosi, Phys.
+Rev. B 58, 12758 (1998).
+[10] S. Conti and G. Vignale, Phys.
+Rev. B 60, 7966 (1999).
+[11] Z. Qian and G. Vignale, Phys.
+Rev. B 65, 235121 (2002).
+[12] V. U. Nazarov, J. M. Pitarke, Y. Takada, G. Vignale, and Y.-C. Chang, Phys.
+Rev. B 76, 205103 (2007).
+[13] G. Vignale and W. Kohn, Phys. Rev. Lett. 77, 2037 (1996).
+[14] G. Vignale and W. Kohn, in Electronic Density Func- tional Theory: Recent Progress and New Directions, edited by J. Dobson, M. P. Das, and G. Vignale (Plenum Press, New York, 1998).
+[15] K. Sturm, Adv. Phys. 31, 1 (1982).
+[16] N. T. Maitra and M. van Faassen, J. Chem.
+Phys. 126, 191106 (2007).
+[17] J. J. Hopﬁeld, Phys.
+Rev. 139, A419 (1965).5 [18] B. Dabrowski, Phys.
+Rev. B 34, 4989 (1986).
+[19] M. Bockstedte, A. Kley, J. Neugebauer, and M. Scheﬄer, Comp. Phys. Comm.
+107, 187 (1997) , code FHI98MD is available at http://www.fhi-berlin.mpg.de/th/fhi98md/. [20] The existence of a divergence in the oﬀ-diagonal compo- nents fxc(q, k + q, ω) for q →0 and k ﬁnite was ﬁrst pointed out in Ref. 13.
+[21] This is not to say that fxc(q, q, 0) is always free of the q−2 singularity, but it means that such a singularity, if present, cannot be reached by a perturbative expansion about the homogeneous ground-state.
+Indeed, there is evidence that the fxc(q, q, 0) of band insulators has a q−2 singularity, which is missed in the present approach.

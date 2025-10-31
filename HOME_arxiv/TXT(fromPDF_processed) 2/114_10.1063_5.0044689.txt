@@ -1,0 +1,411 @@
+Eﬃcient implementation of atom-density representations F´elix Musil,1, 2, a) Max Veit,1, 2, b) Alexander Goscinski,1 Guillaume Fraux,1 Michael J. Willatt,1 Markus Stricker,3, 4 Till Junge,3 and Michele Ceriotti1 1)Laboratory of Computational Science and Modeling, Institute of Materials, ´Ecole Polytechnique F´ed´erale de Lausanne, 1015 Lausanne, Switzerland 2)National Center for Computational Design and Discovery of Novel Materials (MARVEL) 3)Laboratory for Multiscale Mechanics Modeling, Institute of Mechanical Engineering, ´Ecole Polytechnique F´ed´erale de Lausanne, 1015 Lausanne, Switzerland 4)Interdisciplinary Centre for Advanced Materials Simulation, Ruhr-University Bochum, Universit¨atsstraße 150, 44801 Bochum, Germany Physically-motivated and mathematically robust atom-centred representations of molecular structures are key to the success of modern atomistic machine learning (ML) methods.
+They lie at the foundation of a wide range of methods to predict the properties of both materials and molecules as well as to explore and visualize the chemical compound and conﬁguration space.
+Recently, it has become clear that many of the most eﬀective representations share a fundamental formal connection: that they can all be expressed as a discretization of n-body correlation functions of the local atom density, suggesting the opportunity of standardizing and, more importantly, optimizing the calculation of such represen- tations.
+We present an implementation, named librascal, whose modular design lends itself both to developing reﬁnements to the density-based formalism and to rapid prototyping for new developments of rotationally equivariant atomistic representations.
+As an example, we discuss SOAP features, per- haps the most widely used member of this family of representations, to show how the expansion of the local density can be optimized for any choice of radial basis set.
+We discuss the representation in the context of a kernel ridge regression model, commonly used with SOAP features, and analyze how the computational eﬀort scales for each of the individual steps of the calculation.
+By applying data reduction techniques in feature space, we show how to further reduce the total computational cost by at up to a factor of 4 or 5 without aﬀecting the model’s symmetry properties and without signiﬁcantly impacting its accuracy.
+I. INTRODUCTION Supervised and unsupervised machine learning (ML) methods are gaining increasing importance in the ﬁeld of atomistic materials modeling.
+Su- pervised ML methods – in particular, those used to construct interatomic potentials (MLIPs)1–8, ﬁnd structure-property mappings across chemical com- pound space9–12, and model the dependence on con- ﬁguration and composition of experimentally rele- vant quantities like the dipole moment13–16, polar- izability17, band structure18,19, and charge distribu- tion20–22 – are useful tools in the quest for predic- tive materials modelling, speciﬁcally the use of large, complex, quantum-accurate simulations to access ex- perimental length and time scales23–31.
+Furthermore, unsupervised ML methods are gaining prominence as a way to interpret simulations of ever-increasing com- plexity32–38.
+All of these methods fundamentally rely on a trans- formation of the system’s atomic coordinates into a form amenable to the construction of eﬃcient and transferable machine-learning models.
+Usually, this implies that the features that represent an atomic con- ﬁguration reﬂect the transformations (invariance or a)These authors contributed equally to this work.
+Corresponding author: felix.musil@epfl.ch b)These authors contributed equally to this work.
+Corresponding author: max.veit@epfl.ch covariance) of the target properties with respect to fundamental symmetry operations, and that the pre- diction of the extensive properties of a structure is decomposed into that of local contributions, written as a function of a description of the neighborhood of individual atoms1,2.
+We will focus, for the majority of this paper, on the problem of regression of a property expressed as a function of these transformed coordinates (hereafter called just “representation”).
+By far the most com- mon application of structure-property regression in the context of atomistic simulations is in the ﬁtting of potential energy surfaces, which are used in molec- ular simulations or to compute thermodynamic av- erages.
+The majority of the considerations we make here applies to the prediction of any scalar property of the system, although the calculation of gradients might be less important than in the case of poten- tials, and we use MLIP and “model” interchangeably in what follows.
+Figure 1 schematically illustrates the typical procedure of a single timestep in an atomistic machine learning molecular dynamics (ML-MD) sim- ulation.
+After the atomic coordinates are read in, and the neighbor list is computed to determine the local environments around each atom, the coordinates are transformed into an intermediate representation.
+It is this representation that is then passed to the machine learning model – be it one based on neural networks (NN)39, Gaussian process regression (GPR)40, or one of several other closely-related methods.
+The accu- racy and the transferability of the regression model are usually greatly improved by the use of represen- arXiv:2101.08814v1 [physics.chem-ph]  21 Jan 20212 Model SOAP, ACSF, … Representation NL LAMMPS, … Figure 1: A scheme showing the diﬀerent components involved in the evaluation of energies and forces for an atomic-scale machine-learning model.
+These steps need to be performed for each new structure in a screening procedure, or each step in a molecular-dynamics simulation.
+tations that fulﬁll the requirements of symmetry and locality,39,41–43 while at the same time being sensitive to all relevant structural changes41,44,45, being smooth functions of the atomic coordinates, and – ideally – being free of degeneracies which map completely dif- ferent structures to the same descriptor46.
+Here we focus on a class of representations that ful- ﬁll these requirements, and that can be constructed starting from a description of a structure in terms of an atom density - which is naturally invariant to permutations of the atom labels - which is made translationally and rotationally invariant by ﬁrst sum- ming over R3, and then averaging ν-points correla- tions of the resultant atom-centered density over the O(3) improper rotation group43.
+The smooth overlap of atomic position (SOAP) power spectrum is per- haps the best-known member of this class of repre- sentations41, but a wealth of other descriptors such as those underlying the spectral neighbor analysis potentials (SNAP)47, the atomic cluster expansion (ACE)8,48, moment tensor potentials (MTP)3, as well as the equivariant extensions λ-SOAP13 and the N- point contractions of equivariants (NICE)49 represen- tation can be recovered as appropriate limits or exten- sions.
+Atom-centred symmetry functions1,39 can also be seen as a projection of these atom-density repre- sentations on a bespoke set of basis functions.
+However, even though these representations are re- lated through a common mathematical formalism8,43, the cost of evaluating them, and the accuracy of the resulting models, can vary greatly.
+In some cases, dif- ferent frameworks have been shown to yield compa- rable errors50, while other studies have suggested a trade-oﬀbetween accuracy and computational cost, with the combination of SOAP features and Gaussian process regression (hereafter termed just SOAP-GAP) emerging as the most accurate, but also the most com- putationally demanding method.29,51 In fact, the evaluation of SOAP features and their gradients can take anywhere from 10 % to 90 % (de- pending on the system and the parameters chosen) of the total computational cost of the energy and force evaluation in a typical molecular dynamics (MD) sim- ulation with the SOAP-GAP method; almost all of the remaining cost is taken up by the evaluation of ker- nel (and its gradients) required to compute the GAP energy and forces.
+We therefore discuss optimization strategies aimed at reducing the computational cost of these two critical components.
+While we focus, at present, on a serial implementation, the modular structure that we introduce to optimize single-core performance is also very well-suited to parallelization, which becomes indispensable when aiming at extend- ing simulation size and timescale.
+We begin in Section II with an overview of density- based representations, and present our benchmarking methodology in Section III.
+We continue in Section IV, showing how the mathematical formulation of density- based representations reveals several opportunities for optimization, which we implement and systematically benchmark.
+We then expand these benchmarks to a variety of realistic simulation scenarios, shown in Sec- tion V, comparing against an existing simulation code and investigating the eﬀect of convergence parame- ters.
+We present further experimental extensions of the code’s capabilities in Section VI.
+Finally, in Sec- tion VII, we summarize the improvements and de- scribing the role of our new, modular, eﬃcient code librascal in the modern atomistic ML ecosystem. II.
+THEORY We begin by giving a brief overview of the con- struction of a symmetrized atom-density representa- tion43, introducing the notation we use in the rest of this paper to indicate the various components that are needed to evaluate the features associated with a given structure.
+The construction operates by a sequence of integrals over symmetry operations, ap- plied to a smooth (or Dirac-δ-like) atom density that is taken to describe the structure.
+After summing over translations, one obtains a description of the atomic environment Ai around the central atom i, that de-3 pends on the neighbor positions rji = rj −ri.
+Each atomic species a is associated with a separate den- sity built as a superimposition of Gaussian functions gσ(x) ≡⟨x|gσ⟩with variance σ2, restricted to a local spherical cutoﬀrcut by a smooth function fcut: ⟨ax|A; ρi⟩= X j∈Ai δaaj ⟨x −rji|gσ⟩fcut(rij).
+(1) We use a notation that mimics the Dirac bra-ket for- malism52, in which the bra indicates the entity being represented (the density ﬁeld ρ centred on atom i of structure A) and the ket the indices that label dif- ferent features (in this case, the chemical species a and the position at which the ﬁeld is evaluated, x, that serves as a continuous index).
+To simplify the notation, when discussing the construction of the fea- tures for an arbitrary conﬁguration we omit the refer- ence to the atomic structure such that ⟨ax|A; ρi⟩→ ⟨ax|ρi⟩. Following Ref.
+43, we introduce the sym- metrized (ν + 1)-body correlation representation ⟨a1x1; . . .
+aνxν|ρ⊗ν i ⟩ = X k=0,1 Z SO3d ˆR ⟨a1x1| ˆRˆik |ρi⟩. . .
+⟨aνxν| ˆRˆik |ρi⟩, (2) where ρ⊗ν i is a tensor product of ν atom centered ﬁelds averaged over all possible improper rotations.
+This object can be understood as a ﬁxed ν-point stencil centered on atom i which is applied continuously to the density ﬁeld, hence accumulating correlations of body order ν + 1.
+To perform the rotational average, it is convenient to expand the atom density on a basis whose expansion coeﬃcients are given by ⟨anlm|ρi⟩= X j∈Ai δaaj Z dx ⟨nl|x⟩⟨lm|ˆx⟩⟨x −rji|gσ⟩, (3) where x = ∥x∥, ˆx = x/x. ⟨x|nl⟩≡Rnl(x) are or- thogonal radial basis functions, which may or may not depend explicitly on l (see e.g. Ref. 53), and ⟨lm|ˆx⟩≡Y m l (ˆx) are spherical harmonics.
+As we dis- cuss in Section IV A, the choice of ⟨x|nl⟩is ﬂexible and can thus be guided by considerations of computational and information eﬃciency.
+The angular dependence, on the other hand, is most naturally expanded using spherical harmonics, which results in compact expres- sions for the density correlation features of Eq. (2) in terms of products and contractions of the expansion coeﬃcients of Eq. (3) (see Ref. 43 for more details).
+For the case of ν = 2, ⟨a1n1; a2n2; l|ρ⊗2 i ⟩= 1 √ 2l + 1 X m (−1)m ⟨a1n1lm|ρi⟩⟨a2n2l(−m)|ρi⟩ (4) which corresponds to the SOAP power spectrum of Ref.
+41 up to some inconsequential factors.
+In the following text we discuss and benchmark the eﬃcient implementation of the density expansion and spheri- cal invariant of order 2, i.e. the power spectrum, in librascal. III.
+METHODS In order to provide a concrete assessment of the impact of the optimizations we describe in this pa- per, and to demonstrate the performance of the op- timized code on a variety of realistic systems, we ap- ply a comprehensive benchmarking strategy that com- pares diﬀerent classes of systems and breaks down the overall computational cost into contributions associ- ated with diﬀerent steps of the evaluation of the ML model.
+We focus on a typical use case of SOAP fea- tures, namely, as the input to a kernel ridge regression (KRR) model for a property and its derivatives (e.g. energy and forces).
+Even though librascal focuses on the evaluation of features, including the model eval- uation step is crucial to assess the computational ef- fort of the evaluation of the features in the context of the overall cost of the model.
+In the same spirit of assessing the computational eﬀort in a way that re- ﬂects the most common use case scenario, we focus on the cost of evaluating a previously-trained model, rather than the cost to train the model itself.
+The training step is almost always limited by memory, not computation time, and must only be performed once per potential.
+When running a simulation, such as an MD trajectory, the representation and model evalua- tion constitute the real limiting factors in what can be achieved with a given potential in terms of statistics, system size, and complexity of the target properties.
+We report and examine the benchmarks separat- ing the logical components of the overall calculation, as summarized in Figure 1 and 2 – namely the con- struction of the neighbour list, the calculation of the local density expansion (that can be further broken down into the evaluation of radial and angular terms) the combination of the density coeﬃcients to obtain an invariant representation, and the evaluation of the model itself.
+Most of these steps can also be broken down into the time required to compute just the repre- sentation (energy) versus the overhead for computing gradients (forces) in addition.
+For the representation stage, it is possible to track the computational cost as a function of a few key pa- rameters, namely the radial and angular expansion limits (nmax and lmax, respectively).
+The benchmarks for this stage are reported not per atom, but per pair, consistent with the overall scaling of this component of the calculation.
+The timings reported in this way are therefore also mostly independent of the system in question, i.e., the variation between systems is usually comparable to the variation between individual timing runs.
+The model stage has less of a detailed depen- dence on the spherical expansion parameters, but the system dependence is more subtle.
+The main inﬂu- ence on the computational cost is the feature space di-4 ... ... ... ...
+(flatten) Spherical Invariants Radial Integration ... ... ... ...
+Spherical Expansion ...
+Spherical Harmonics Neighbors List Angular integration Local density To model Figure 2: Schematic showing the process of expanding the density in a radial and angular basis set, and recombining those to form spherical invariants (or covariants).
+mension nfeat and the number of environments nactive used to parametrize the model.
+As will be discussed in Section IV H, both of these parameters can be reduced signiﬁcantly by the use of dimensionality reduction al- gorithms, with reduced computational cost generally trading oﬀwith the accuracy of predictions (a pattern seen in many other machine learning frameworks51).
+In order to run and organize the large number of in- dividual benchmarks required for this study, we have made extensive use of the signac data management framework54,55, which can be accessed from an open repository56.
+A. Datasets The system dependence of the overall computation is inﬂuenced by two major factors.
+The ﬁrst is the number density, which – together with the cutoﬀra- dius rcut – determines the total number of pairs that must be iterated over to compute the representations, as well as the number of the degrees of freedom needed to fully characterize the local environment, which in turns aﬀect the radial and angular expansion parame- ters necessary to represent it.
+The second is the num- ber of chemical elements that are present, which di- rectly aﬀects the dimensionality of the representation.
+However, several optimizations are possible depending on the model and species composition, as well as the distribution of these species throughout the system, making this a subtle and nontrivial inﬂuence on the total model cost.
+Therefore, we have decided to benchmark the over- all cost (neighbour list, representation, and model to- gether) on a selection of ﬁve realistic datasets that represent both typical and challenging applications of machine learning potentials.
+For a single-species sys- tem, we have chosen the bulk silicon dataset57 from Bart´ok et al. 58; despite its simple species composi- tion, it still represents a large array of structural di- versity.
+The ﬂuid methane dataset59 from Veit et al. 28 has two chemical species, but distributed homoge- neously throughout the cell; the dataset additionally contains a range of diﬀerent cell densities.
+In order to include more challenging multi-species systems, we have selected three additional datasets from diﬀerent application areas.
+The solvation dataset from Rossi et al. 60 consists of structures each containing a single molecule of methanesulfonic acid within a large cell of liquid phenol, where the presence of multiple species and the inhomogeneity of their distribution presents a challenge for both representation and ﬁtting algo- rithms.
+The molecular crystal dataset “CSD1000r” used in Musil et al. 61 contains up to four species, where not all species are present in each separate structure.
+Finally, the widely-used QM9 dataset62 contains isolated molecules of up to 9 heavy (non- hydrogen) atoms each, and composed up to ﬁve chem- ical species – where, again, not every species is repre- sented in every structure. IV.
+IMPLEMENTATION OF INVARIANT REPRESENTATIONS We begin by discussing the librascal implemen- tation of the the power spectrum SOAP features, and by showing how a deeper understanding of the struc- ture of the atom-density correlation features can be exploited to improve substantially the cost of evalua- tion.
+Benchmarks on all the datasets discussed above are included in the SI – here we choose a subset of the diﬀerent test cases, since in most cases the computa-5 tional cost can be normalized in a way that minimizes the dependence on the speciﬁcs of the system at hand.
+A. Density coeﬃcients The exact expression for the density coeﬃcients de- pends on the speciﬁcs of the atom density ﬁeld and on the basis used to expand it.
+To see this, it is advan- tageous to separate the integral in Eq. (3) into radial and angular coordinates.
+The angular integral is most naturally expressed using the spherical harmonics ba- sis, as evidenced e.g. by the particularly simple form of Eq. (2).
+Then, regardless of the choice of the func- tional form of the atom density or the radial basis, the density coeﬃcients can be written as a sum over functions of neighbor distances and orientations ⟨anlm|ρi⟩= X j∈Ai δaajfcut(rji) ⟨nlm; rji|gσ⟩ (5) where ⟨nlm; r|gσ⟩= Z dx ⟨nl|x⟩⟨lm|ˆx⟩⟨x −r|gσ⟩. (6) For a Gaussian atom density, the integral can be fac- torized into ⟨nlm; r|gσ⟩= ⟨ˆr|lm⟩⟨nl; r|gσ⟩, (7) containing a radial integral ⟨nl; r|gσ⟩= 4πe−cr2Z ∞ 0 dx x2 ⟨nl|x⟩e−cx2il(2cxr) , (8) where c = 1/2σ2, and the radial and angular degrees of freedom are explicitly coupled by the l dependence of the modiﬁed Bessel function.
+Thus, the density coeﬃcients can be computed by evaluating spherical harmonics and radial integral functions for each pair of neighbors, and then summing over their products ⟨anlm|ρi⟩= X j∈Ai δaajfcut(rji)⟨ˆrji|lm⟩⟨nl; rij|gσ⟩(9) Alternative atom-centred density formulations such as in ACE8 or TurboSOAP53 lead to similar expressions for the radial function.
+For instance, TurboSOAP chooses a Gaussian atomic density that is symmetric about ri instead of rji, making it possible to factorize the radial term such that ⟨nl; rij|˜g⟩= ⟨n|rij⟩⟨l|rij⟩. Both terms can be eﬃciently computed using recur- rence relations in l and n. In librascal, the density expansion is implemented only for Gaussian atomic densities symmetric about rji, using two types of ra- dial basis sets: The Gaussian type orbital (GTO) basis and the discrete variable representation (DVR) basis.
+B. GTO radial basis The Gaussian type orbital radial basis is deﬁned as ⟨r|n; GTO⟩= Nnrn exp  −dnr2 , (10) Timing / µs / neighbors GTO Analytical integration Spline optimization DVR Figure 3: Computational cost for the evaluation of the radial integral and its derivatives with diﬀerent methods, for structures taken from the QM9 dataset.
+Note that the dataset has very little inﬂuence on this benchmark since the radial integral and its derivative are always evaluated once per neighbor.
+For the splining an accuracy of 10−8 was chosen.
+where dn = 1/2σ2 n, σn = rcut max(√n, 1)/nmax, N 2 n = 2/(σ2n+3 n Γ (n + 3/2)) is a normalization factor, and 0 ≤n < nmax.
+In contrast to the displaced Gaus- sian basis in the original formulation of SOAP,41 this choice of radial basis leads to a radial integral that can be evaluated analytically: ⟨nl|rij; GTO⟩= π3/2 exp  −cr2 ij  Nn Γ   n+l+3 2  Γ  l + 3 2  clrl ij (c + dn)−n+l+3 2 1F1   n + l + 3 2 , l + 3 2, c2r2 ij c + dn ! , (11) where 1F1 is the conﬂuent hypergeometric function of the ﬁrst kind.
+Given that the overlap matrix S between GTOs of the form (10) can be computed an- alytically, it is then easy to obtain an orthogonal basis set ⟨n|o-GTO⟩= X n′ [S−1/2]nn′ ⟨n′|GTO⟩. (12) Thanks to the linear nature of all the operations in- volved in the evaluation of the density expansion co- eﬃcients, the orthogonalization can be applied at any point of the procedure.
+In the case of the analytical6 evaluation of Eq. (11), it is convenient to ﬁrst com- bine the contributions from all the neighbors to the density coeﬃcients Eq. (8), and then orthogonalize just once.
+In section IV D, when computing the coef- ﬁcients numerically, it is instead more convenient to orthogonalize the radial integral Eq. (11) directly.
+The total time required to compute the radial in- tegral, as well as its derivative with respect to rij (needed for gradients of the model), is plotted in the top left panel of Fig. 3 as a function of the expansion parameters nmax and lmax, and scales roughly linearly with respect to the expansion thresholds (see also the SI for a more detailed ﬁgure).
+Despite the use of an eﬃcient and robust algorithm which is discussed in Appendix A, most of the computational cost in the evaluation of Eq. (11) is associated with the conﬂuent hypergeometric function 1F1.
+C. DVR radial basis Another possible choice of basis is inspired by the idea of using a numerical, rather than analytical, eval- uation of the radial integral.
+In fact, the numerical in- tegral can be done exactly and with no discretization overhead if we choose the orthonormal DVR radial ba- sis with Gauss-Legendre quadrature rule.63 This basis has the advantage of vanishing at every quadrature point except for one, i.e. ⟨x|n; DVR⟩= √ωnδ(x−xn), which simpliﬁes the numerical radial integral into ⟨nl|rij; DVR⟩= xn √ωne−cx2 nil (2cxnrij) , (13) where xn are the quadrature points, distributed across the range [0, rcut + 3σ] over which the integrand dif- fers substantially from zero, and the ωn are the corre- sponding quadrature weights.64 The DVR basis is or- thogonal by construction, and only requires evaluating the modiﬁed spherical Bessel function rather than the more demanding 1F1, leading to a reduction by about a factor of 2 of the cost of evaluating radial integrals (top right panel in Fig. 3).
+Unfortunately, this comes at the price of a less-eﬃcient encoding of structural information, particularly in the limit of sharp atomic Gaussians, as recently shown in Ref. 65.
+The computational cost of evaluating the radial in- tegral in the DVR basis is again shown in the upper right-hand panel of Fig. 3.
+The computational cost is reduced by more than half compared to the inte- gral in the GTO basis, although the scaling with the lmax and especially nmax parameters remains approx- imately linear (see plots in the SI).
+D. Spline optimization Rather than devising basis functions that allow for a less demanding analytical evaluation of the radial integrals, one can evaluate inexpensively the full ra- dial integral ⟨nl; r|gσ⟩by pre-computing its value on a grid, and then using a cubic spline interpolator.
+For each combination of radial 0 ≤n < nmax and angular 0 ≤l ≤lmax indices, the integral is tabulated and the spline is computed for the range [0, rc].
+A grid {rk}M k=1 with constant step size ∆is used to achieve a constant time complexity for the search of the closest interval [rk, rk+1] for a distance rij ∈[rk, rk+1].
+Following the implementation of Ref.
+66, the computation of radial terms simpliﬁes to the evaluation of a polynomial of degree 3 in rij with precomputed coeﬃcients ck and dk: ⟨nl; rij|gσ⟩= 1 ∆  (rij −rk+1)ck + (rij −rk+1)3dk −(rij −rk+1)dk + (rij −rk+1)ck+1 + (rij −rk+1)3dk+1 −(rij −rk+1)dk+1  .
+(14) This expression requires only a small number of multi- plications and additions, thus reducing the computa- tional time of the radial integral by avoiding the eval- uation of the complex hypergeometric, exponential or Gamma functions present in the analytical GTO and DVR basis sets.
+Given that the expression is linear in the coeﬃcients, it is straightforward e.g. to evalu- ate the coeﬃcients for ⟨nl|o-GTO⟩by simply applying the orthogonalization matrix to the coeﬃcients of the ⟨nl|GTO⟩. Smooth derivatives ∂⟨nl; rij|gσ⟩/∂rij of this piecewise polynomial function can also be com- puted by taking the derivative of the polyonmial with minimal additional eﬀort.
+As seen in Fig. 3, splining reduces the computational cost of the radial integrals by almost an order of magnitude, and eﬀectively elimi- nates the diﬀerence between the GTO and DVR basis.
+Thus, the choice of ⟨x|nl⟩should not be guided by the cost of evaluation, but by a diﬀerent metric – for instance, the information eﬃciency.
+It has already been shown that GTO encodes linearly regressable in- formation more eﬃciently than DVR65, implying that the splined GTO basis has a clear advantage overall.
+There is evidence that the size of the radial basis set nmax has a larger inﬂuence than the angular expan- sion threshold lmax on the accuracy of a SOAP-based potential67.
+Furthermore, a reduction in nmax redues the cost, not only of the spherical expansion coeﬃ- cients, but also of evaluating invariants.
+Together, these insights all point towards numerical optimiza- tion of the radial basis as a promising future line of investigation.
+E. Spherical Harmonics In contrast to the relatively obscure special func- tions needed for the radial integrals, the spherical harmonics needed for the angular part of the den- sity coeﬃcients (cf.
+Eq. (7)) are much more widely used due to their importance in any problem with spherical symmetry.
+Correspondingly, there has been much research into ﬁnding eﬃcient algorithms to eval- uate spherical harmonics, leading to many good algo- rithms becoming publicly available.
+In librascal, we have chosen to implement the algorithm described in7 1 3 5 7 9 11 13 15 lmax 0 1 2 3 4 timing / µs / neighbors No gradients Gradients Figure 4: Timings for the computation of the spherical harmonics as a function of the angular expansion threshold for the QM9 dataset.
+Limpanuparb and Milthorpe 68, which makes use of eﬃcient recurrence relations optimized for speed and numerical stability and is similar to the algorithm im- plemented in the GNU Scientiﬁc Library69.
+Gradients are computed from analytical expressions.
+As Figure 4 shows, the cost scales linearly with the angular expansion parameter lmax, and including gra- dients consistently increases the cost by a factor of about 4, consistent with the need to compute 3 addi- tional values per spherical harmonic.
+The cost to com- pute the spherical harmonics and gradients is typically comparable to, or larger than, the cost to compute the splined radial integral; this cost is discussed in more detail and in the context of the whole invariants com- putation in the following section.
+F. Spherical Expansion and Invariants Having discussed how to implement an eﬃcient pro- cedure to evaluate the radial and the angular terms contributing to the density expansion, let us now con- sider the cost of the remaining steps to obrain the full SOAP feature vector ⟨a1n1; a2n2; l|ρ⊗2 i ⟩. Figure 5 presents an overview of the timings for all evaluation steps for diﬀerent (nmax, lmax), comparing a dataset of bulk Si conﬁgurations and a database of molecular crystals.
+For a few selected parameter sets, the ﬁgure also shows the breakdown of the evaluation time into the part associated with the evaluation of radial inte- grals and spherical harmonics for each neighbor, the combination of the two into the full density expansion coeﬃcients, and the calculation of the SOAP invari- ants.
+The spline interpolation makes the cost of radial integrals negligible, and even the evaluation of spher- ical harmonics usually requires less than 25% of the total timing.
+For the silicon dataset, which has only one atomic species, the cost is typically dominated by the combination of radial and angular terms.
+Indeed, the computational cost of this step scales roughly as nneighnmax(lmax + 1)2, which can easily dominate the total cost for realistic parameter sets.
+For the molecular materials, on the other hand, the evaluation of the invariants becomes more expen- sive, becoming comparable to the computation the density coeﬃcients.
+The diﬀerence can be explained as follows.
+Given that the coeﬃcients ⟨anlm|ρi⟩are combined to obtain spherically equivariant represen- tations of the atomic environment by averaging over the group symmetries their tensor products, as out- lined in Eq. (2), their evaluation exhibits a very dif- ferent scaling.
+The cost is independent of the number of neighbors and instead depends strongly on the size of the basis used to expand the atom density as well as on the number of chemical species nspecies.
+For the special case of spherical invariants of body order (ν +1) = 3, corresponding to classic SOAP features41, evaluating Eq. (4) essentially amounts to computing an outer product over the (a, n) dimension of expan- sion coeﬃcients that is then summed over m – which requires a number of multiplications of the order of nspecies2nmax2(lmax +1)2.
+In summary, the cost of the diﬀerent steps varies substantially depending on the system, the cutoﬀ, and the expansion parameters, and there is no contribution that dominates consistently in all use cases.
+G. Cost of gradients Evaluating the gradients of the invariant features with respect to the atomic coordinates is a necessary step to compute model derivatives, e.g. forces and stresses for MD simulations – but it also entails a sub- stantial overhead, as the right-hand panels of Fig. 5 shows.
+This overhead is ultimately a consequence of the direct evaluation of the gradients of the features, which requires a separate contraction for each of the ⟨nn′l| components in the SOAP vector, ∂⟨nn′l|ρ⊗2 i ⟩ ∂rj ∝ X m ⟨n′lm|ρi⟩⋆∂⟨nlm; rji|gσ⟩ ∂rj +. . .
+(15) While some speedup could be attained by reordering the summation, the core issue is the need to compute a separate term for each feature and each neighbor of the central atom, which means that the compu- tational eﬀort, for the typical values of (nmax, lmax), is overwhelmingly dominated by the construction of the invariants.
+These issues indicate that the evalua- tion of gradients would beneﬁt from further optimiza- tions – in particular, trading oﬀmodularity for speed by optimizing the expansion coeﬃcients together with the model evaluation.
+This way, it will be possible to avoid the (re)computation of certain intermediate quantities, analogous to the optimization of the order of matrix multiplications involved in the evaluation of the chain rule linking the model target and the input atomic coordinates.8 Splined GTO — no gradients Splined GTO — with gradients Molecular crystals Bulk Silicon 2 4 6 8 10 12 14 n max 15 13 11 9 7 5 3 1 lmax 57.3 µs/atom 189 µs/atom 8.81 µs/atom 14.4 µs/atom 56.7 µs/atom 10 2 10 1 10 0 10 1 timing / ms / atom 2 4 6 8 10 12 14 n max 15 13 11 9 7 5 3 1 lmax 543 µs/atom 6.23 ms/atom 69.8 µs/atom 309 µs/atom 1.15 ms/atom 10 2 10 1 10 0 10 1 timing / ms / atom 2 4 6 8 10 12 14 n max 15 13 11 9 7 5 3 1 lmax radial integral spherical expansion invariant calculation spherical harmonics 105 µs/atom 666 µs/atom 21.2 µs/atom 44.9 ms/atom 156 µs/atom 10 1 10 0 10 1 10 2 timing / ms / atom 2 4 6 8 10 12 14 n max 15 13 11 9 7 5 3 1 lmax 1.62 ms/atom 31.2 ms/atom 419 µs/atom 2.28 ms/atom 5.33 ms/atom 10 1 10 0 10 1 10 2 timing / ms / atom Figure 5: Eﬀect of radial and angular cutoﬀon overall timing of calculating spherical invariants.
+(left) molecular crystals dataset (with, on average, 27 neighbors per center, and 4 elements) (right) bulk silicon dataset (16 neighbors per center and a single element).
+(top) SOAP power spectrum only (bottom) SOAP power spectrum and gradients.
+All calculations use the GTO radial basis with spline optimization.
+For selected points, we also show, as pie charts, the relative time spent in the diﬀerent phases.
+H. Feature dimensionality reduction A more straightforward, and potentially more im- pactful, optimization involves performing a data- driven selection to reduce the number of invariant features to be computed and used as inputs of the model.
+Even though representations based on system- atic orthonormal basis expansions, such as the SOAP power spectrum, provide a complete linear basis to de- scribe 3-body correlations7,48, and even though they do not provide an injective representation of an atomic environment46, one often ﬁnds that for realistic struc- tural datasets diﬀerent entries in the SOAP feature vector exhibit a high degree of correlation.
+This means that they span a much larger space than what is ef- fectively needed for the prediction of typical atomistic properties.
+Therefore, a subset of features – usually a small fraction of the full set – can be selected with little impact on the model error.44,70 Both CUR71 and far- thest point sampling (FPS)70,72,73 selection strategies are available in librascal, and can be performed as a preliminary step in the optimization of a model, us- ing Python utility functions.
+Feature selection can re- duce the time spent both on computing the features, the model parameters and on making predictions (see Section V B).
+For kernel models, and reasonably sim- ple forms of the kernel function, the evaluation of both the features and the kernels scale linearly with nfeat.
+Once a list of selected features has been obtained,9 10 100 1000 10000 number of features 101 102 103 timing / µs / neighbors Bulk Silicon Liquid Methane Solvated CH3SO3H QM9 Molecular Crystals Figure 6: Timing for the calculation of SOAP power spectrum with gradients as function of the requested number of features.
+Horizontal lines represent the time taken by the spherical expansion step for each dataset.
+The grey line is a guide for the eye representing a linear relation between time and number of features.
+The (nmax, lmax) parameters used are the following: bulk Silicon (10,11), liquid methane (8,7), solvated CH3SO3H (8,7), QM9 (12,9), and molecular crystals (10,9).
+their indices {q} ≡{(aqnq; a′ qn′ q; lq)} can be passed to the C++ code.
+The sparse feature computation is simply implemented as a selective computation of the pre-selected invariants ⟨q|ρ⊗2 i ⟩.
+The eﬀect of this op- timization on the overall cost of computing spherical invariants is shown in Figure 6, with realistic nmax and lmax parameters, which are comparable to those used in applications (i.e. (nmax, lmax) equal to (10, 12) for Si58, (8, 6) for methane28, and (9, 9) for molecular crystals61).
+The overall trend is that of a constant contribution (from the spherical expansion) plus a lin- ear term (from the spherical invariants).
+Although most datasets do not reach linear scaling even for the largest number of features, selecting a small nfeat can reduce the computational cost by up to an order of magnitude.
+The impact of feature dimensionality on both the computational cost and accuracy of mod- els trained on realistic data is discussed in Section V; brieﬂy, the features can be sparsiﬁed fairly aggres- sively (up to a factor of about 5–10, depending on the dataset) without any signiﬁcant impact on the predic- tion error.
+V. COMPARATIVE BENCHMARKS Now that we have analyzed separately the diﬀerent components of the calculation of the SOAP features, we turn our attention to the end-to-end benchmarking of a full energy and force evaluation, similar to what one would encounter when running a MD simulation.
+As in the previous Section, we run comprehensive tests on each of the ﬁve datasets described in Section III A, and we report here those that are most telling of the scaling of the diﬀerent terms with the system parame- ters, most notably the neighbor density and the num- ber of chemical elements.
+We include a simple but complete implementation of kernel ridge regression, a framework that is often used together with SOAP fea- tures and that allows us to comment on the interplay between the calculation of the representation and the model.
+Thus, we can compare the computational ef- fort associated with the use of librascal with that of QUIP, an existing, well-established code to train and evaluate Gaussian approximation potentials (GAPs) based on SOAP features, and investigate the eﬀect of the various optimizations described above on the overall model eﬃciency.
+A. Existing implementations Over the past couple of years, several codes have been released that can be used to ﬁt and run ML potentials supporting diﬀerent representations, es- pecially for neural-network type potentials such as n2p274 (which uses Behler-Parrinello ACSF39), ANI- 175, PANNA76, or DeepMD77.
+Here we focus on ker- nel methods, for which there is a smaller number of ac- tively used codes.
+The ﬁrst, and still widely adopted, is the QUIP library, part of the libAtoms framework78, which has been used for almost all published Gaussian approximation potentials (GAPs)2,25,27,28,53,79,80 and continues to be actively maintained.
+Other kernel- learning potential packages of note are GDML, which implements the “gradient-domain machine learning” method of Chmiela et al. 81 (the full-kernel equiva- lent of the sparse kernel model we implement here), and QML82, which notably implements the FHCL- type representations83 and the OQML framework15.
+We ﬁnally note for completeness several codes used for linear high-body-order models, such as the SNAP method47 implemented in LAMMPS84, aPIPs85 and ACE8,48 implemented in JuLIP86, and the NICE de- scriptors49 implemented in a separate code87 inter- faced with librascal (see Section VI).
+Here we focus only on the QUIP code, which is the most mature im- plementation available and matches most closely the application domain of librascal.
+B. Kernel models To benchmark the performances of librascal in the context of the GAP framework typically used to build potentials with SOAP, we implemented the same regression scheme used in QUIP to build a MLIP based on the SOAP power spectrum representation.
+We summarize the key ideas, emphasizing the aspects that are important to achieve optimal performance.
+In a GAP, as in the vast majority of regression models based on atom-centred features, the energy is deﬁned10 as a sum of atomic contributions E(A) ≡⟨E|A⟩= X i∈A E(Ai) ≡ X i∈A ⟨E|Ai⟩ (16) where Ai indicates a local environment centered on atom i.
+An accurate, yet simple and eﬃcient GAP can be built using a “projected process approximation”88 form of kernel ridge regression, that mitigates the un- favorable scaling with train set size ntrain of the cost of ﬁtting (cubic) and predicting (linear) energies using a “full” ridge regression model.
+A small, representative subset M of the atomic environments usually found in the training set – the so-called “active”, “pseudo-” or “sparse” points – is used, together with a positive- deﬁnite kernel function k, as a basis to expand the atomic energy E(Ai) = X I∈M δaiaI ⟨E; aI|MI⟩k(MI, Ai), (17) where MI indicates the I-th sparse point, ⟨E; aI|MI⟩ indicates the regression weights, and a separate energy model is determined for each atomic specie, which also means that the active set is partitioned with respect to the central atom type.
+The sparse model (17) exhibits a much more favorable scaling with training set size, both during ﬁtting (O(ntrainnactive2+nactive3), for the implementation in librascal) and when predicting a new structure (O(nactive)).
+Obviously, the accuracy of the approximation relies on a degree of redundancy being present in the training set, and in practice a suitable size of the active set M scales with the “di- versity” of the training set.
+Usually, however, an ac- curacy close to that of a full model can be reached even with nactive ≪ntrain.
+The gradient of the energy with respect to the coordinates of an atom j can be obtained as a special case of the general form (B1) ∇j ⟨E|A⟩= X I∈M ⟨E; aI|MI⟩ X i∈A δaiaI∇jk(MI, Ai), (18) and the virial (the derivative with respect to deforma- tions η of the periodic cell) as a special case of (B2) ∂ ∂η ⟨E|A⟩= X I∈M ⟨E; aI|MI⟩ X i∈A δaiaI X j∈Ai rji ⊗∇jk(MI, Ai). (19) In both Eqs.
+(18) and (19), the sum over the neigh- bors of atom i extends also over periodic replicas of the system.
+Both equations require the evaluation of kernel gradients, that can in turn be expressed using the chain rule in terms of the derivatives of the ker- nel function with respect to atomic features, and the atomic gradient of such features: ∇jk(MI, Ai) = X q ∇j ⟨q|Ai; rep⟩∂k(MI, Ai) ∂⟨q|Ai⟩ .
+(20) When computing the model derivatives it is important to contract the sums in the optimal order, by ﬁrst summing the derivatives of the kernel over the active set.
+For instance, for the force, ∇j ⟨E|A⟩= X i∈A δaiaI X q ∇j ⟨q|Ai; rep⟩ × " X I∈M ⟨E; aI|MI⟩∂k(MI, Ai) ∂⟨q|Ai⟩ # .
+(21) This form shows that the cost of evaluating forces scales with nfeatnneighnactive, indicating how the re- duction of the number of sparse points and features combine to accelerate the evaluation of energy and forces using a sparse GAP model.
+The ﬁtting procedure that is implemented in librascal has been discussed in Ref.89, and we do not repeat it here.
+It only requires the evaluation of kernels and kernel derivatives between the active set environments, and the environments in the struc- tures that are part of the training set, and is usually limited by memory more than by computational ex- pense.
+In the benchmarks we present here we adopt the polynomial kernel which has been widely used to introduce non-linearity into SOAP-based GAP mod- els2,25,27,28,79: kζ(MI, Ai) = "X q ⟨MI; rep|q⟩⟨q|Ai; rep⟩ #ζ , (22) whose derivative can be simply computed as ∂kζ(MI, Ai) ∂⟨q|Ai⟩ = ζ ⟨MI; rep|q⟩kζ−1(MI, Ai).
+(23) C. Benchmarks of sparse models Having summarized the practical implentation of a sparse GPR model based on SOAP features, we can systematically investigate the eﬀect of the sparsi- ﬁcation parameters – number of sparse environments nactive and number of sparse features nfeat – on the diﬀerent components of an energy and force calcula- tion.
+Figures 7 and 8 show the full cost of evaluating a MLIP for diﬀerent classes of materials, both with and without the evaluation of forces, for diﬀerent lev- els of sparsiﬁcation in terms of both nactive and nfeat.
+The cost is broken down in the contributions from the evaluation of the the neighbour list, the representa- tion, and model evaluation (prediction) steps.
+Figure 7 shows that, when using the full feature vec- tor in the model90, the evaluation of the kernels con- tributes substantially to the cost of predicting ener- gies.
+In QUIP this cost, which scales linearly with the number of active points, matches the cost of evaluat- ing the representations – independent of nactive, since the same number of representations must always be computed for the target structure, at nactive ≈5000 for Si, and nactive ≈500 for the molecular crystals.
+Due to the optimization of the feature evaluation step, in librascal the kernel evaluation dominates down11 SOAP representation gradients overhead energy prediction forces prediction QUIP librascal Figure 7: Prediction timings for GAP models as a function of the number of sparse points, with (right) and without (left) the evaluation of forces, with minimal feature sparsiﬁcation, i.e., just enough to eliminate redundant symmetric terms (these are retained in librascal for simpler bookeeping).
+We used all unique SOAP features for each system in this ﬁgure, meaning 6660 features for the molecular crystals and 715 features for bulk silicon.
+to even smaller nactive.
+Note also the lower cost of the kernel evaluation for the molecular crystals in librascal, which can be explained by the fact that only the features associated with chemical species that are present in each structure are computed, while in QUIP they yield blocks of zeros that are multiplied to compute scalar products.
+Evaluating also forces (right-hand panels of Fig. 7) introduces a very large overhead to feature calculation (up to one order of magnitude, as discussed in the previous Section) and roughly doubles the cost of model prediction.
+Since the cost of feature evaluation is independent on nactive, the active set can be expanded up to thousands of en- vironments before the model evaluation become com- parable to feature evaluation.
+In order to accelerate calculations further, it is then necessary to reduce not only the time needed to com- pute the model, but also the time needed to compute the representation itself.
+In Fig. 6 we showed how re- stricting the evaluation of SOAP features to a smaller subset of the ⟨a1n1; a2n2; l| indices reduces by up to an order of magnitude the cost of evaluating the fea- ture vector and its gradients.
+Figure 8 demonstrates how this speedup combines with the acceleration of the model evaluation step, whose nominal complex- ity also scales linearly with nfeat, for a intermediate size of the active set nactive = 2000.
+For simple, single-component systems such as bulk silicon the cost saturates to that of evaluating the density expansion coeﬃcients, and so the overall speedup that can be achieved by feature sparsiﬁcation is limited to about a factor of two or three with respect to the full SOAP power spectrum.
+For multi-component systems, such as the CSD dataset or the solvated CH3SO3H dataset, a speedup of nearly an order of magnitude is possible.
+D. Accuracy-cost tradeoﬀ While the performance optimization discussed in Section IV can dramatically increase the eﬃciency of a MLIP based on SOAP features and sparse GPR, one should obviously ensure that models with reduced nactive and nfeat still achieve the desired accuracy.
+The data-driven determination of the most representative and diverse set of features and samples is a very active12 neighbor list SOAP representation SOAP gradients energy prediction forces prediction QUIP librascal Figure 8: Prediction timings for GAP models as a function of the number of features, with (right) and without (left) the evaluation of forces.
+All models use 2000 sparse points for the sparse kernel basis.
+The rightmost column in each plot shows the cost with some redundant features, which are computed by default in librascal for simpler bookkeeping.
+In practical applications, though, we recommend these be eliminated automatically through feature sparsiﬁcation.
+area of research, using both unsupervised44,70–72,91 and, very recently, semi-supervised92 criteria to select an optimal subset.
+Here we use the well-established FPS to sort features and environment in decreasing order of importance, starting from the full list of en- vironments for the Si dataset and a pool of 715 fea- tures, corresponding to nmax = 10, lmax = 12.
+We train MLIPs to reproduce energy and forces and re- port the four-fold cross-validation error as well as the cost for evaluating the energy and its gradients in Fig- ure 9, using only the “best” nactive active points and nfeat features.
+We also report the “∆” measure intro- duced in Ref.
+93 as an indication of the ability of the ML model to reproduce properties that are indirectly related to the accuracy of the PES58,94: ∆= sR 1.06 V0 0.95 V0 [EGAP(V ) −EDFT(V )] 2 dV 0.12 V0 (24) where EGAP and EDFT are the GAP and DFT ener- gies relative to the diamond energy minimum, and V0 is the volume of the minimum DFT energy structure for each phase.
+The results clearly indicate that it is possible to considerably reduce the cost of the MLIP with little impact on the accuracy of the model.
+Severe degra-13 Figure 9: Evaluation of the GAP model performance for bulk Silicon.
+We present the evaluation cost and corresponding error as a function of the number of sparse training point and features selected.
+From left to right, top to bottom: time required to evaluate the model, root mean square error for the predicted energies and forces, absolute error in the predicted volume compared in the Diamond phase, and ∆-error — see equation (24) — for the energy/volume curve for Diamond and β-Sn phases.
+For all errors, the reference are the values from DFT calculations58.
+dation of model performance occurs in the regime in which the computational cost is dominated by the calculation of the density expansion coeﬃcients, sug- gesting that further optimization of the evaluation of ⟨anlm|ρi⟩might not be exceedingly beneﬁcial to most practical use cases. VI.
+EXPERIMENTAL FEATURES The spherical expansion coeﬃcients can also be used to compute equivariant features and kernels13,95, as well as higher-body-order invariants8,43.
+This eval- uation is easily and eﬃciently done with an external library, as it is done in the current implementation87 of the N-body iterative contraction of equivariants (NICE) framework49.
+Furthermore, librascal con- tains experimental implementations of other represen- tations based on the SOAP framework, for example the bispectrum41,47 and the ν = 2 equivariants that underlie the λ-SOAP kernels13 (which is also avail- able as an independent implementation96).
+As devel- opment progresses, these libraries will be further inte- grated with librascal, harmonizing and streamlining the user-facing APIs, and achieving the best balance between modularity and evaluation eﬃciency. VII.
+CONCLUSIONS In this paper we have made practical use of recent insights into the relationships between several fam- ilies of representations that are typically applied to the construction of machine-learning models of the atomic-scale properties of molecules and materials.
+We have demonstrated how these insights can be translated into algorithms for more eﬃcient computa- tion of these representations, most notably SOAP, but14 also the atom-density bispectrum and the λ-SOAP equivariants.
+We have shown how the radial basis used to expand the density can be chosen at will and computed quickly using a spline approximation.
+To- gether with a fast gradient evaluation, this reduces the cost of computing the density expansion to the point where it is no longer the rate limiting step of the calcu- lation in typical settings.
+Further optimizations can be obtained by a “lossy” strategy, which trades oﬀ some accuracy for eﬃciency by discarding redundant or highly correlated entries in both the active set of a projected-process regression model and in the in- variant features.
+We have implemented all these opti- mizations in librascal, a modular, user-friendly and eﬃcient open-source library purpose-built for the com- putation of atom-density features (especially SOAP).
+In order to test these optimizations in practice, we have run benchmarks over diﬀerent kinds of datasets spanning elemental materials as well as or- ganic molecules in isolation, in crystalline phases, and in bulk liquid phases.
+Using one of the most widespread codes for the training and evaluation of SOAP-based machine-learning interatomic potentials as a reference, we have found that our implementa- tion of the SOAP representation is much faster, but that the advantage is less dramatic when considering also the calculation of a kernel model, which scales with the number of features, and that of the gradi- ents, which is dominated by a term that scales with the number of neighbors in both codes.
+Feature selec- tion, however, addresses both these additional over- heads, and allows for an acceleration of the end-to- end evaluation time of energy and forces by a factor anywhere between four and ten with minimal increase in the prediction errors.
+Our tests show that in the current implementation, when using realistic values of the parameters, the diﬀerent steps of the calcula- tion contribute similarly to the total cost, indicating that there is no single obvious bottleneck.
+Further improvements, although possible, should consider the model as a whole and especially improve the accu- racy/cost balance of lossy model compression tech- niques.
+Appendix A: Eﬃcient implementation of 1F1 The conﬂuent hypergeometric function of the ﬁrst kind is deﬁned as 1F1 (a, b, z) = ∞ X s=0 (a)s (b)ss!zs, (A1) where (a)s is a Pochhammer’s symbol (Ref. 97, Chap. 5.2(iii)).
+To eﬃciently compute Eq. (11), we imple- ment a restricted version of 1F1 G(a, b, rij) = Γ(a) Γ(b) exp  −cr2 ij  1F1   a, b, c2r2 ij c + dn !
+, (A2) where a = n+l+3 2 and b = l + 3 2.
+We take into account that the arguments of 1F1 are real and positive and we avoid its artiﬁcial overﬂow by using the asymptotic expansion (Eq. 13.2.4 and Eq. 13.7.1 in Ref. 97) lim z→∞1F1 (a, b, z) = ezza−b Γ(b) Γ(a) ∞ X s=0 (b −a)s(1 −a)s s!
+z−s, (A3) since the exponential in Eq. (11) can be factor- ized exp h c2r2 ij c+dn i exp  −cr2 ij  = exp h cr2 ij( c c+dn −1) i and c c+dn −1 < 0.
+Note that G is implemented as a class so that the switching point between the direct series and the asymptotic expansion evaluations is determined at construction for particular values of a and b using the bisection method.
+For each value of n, the function G and its deriva- tives with respect to rij can be eﬃciently evaluated using the two step recurrence downward relation G(a + 1, b + 1, rij) = c2r2 ij c + dn G(a + 2, b + 3, rij) + (b + 1)G(a + 1, b + 2, rij), (A4) G(a, b, rij) = c2r2 ij c + dn a −b a G(a + 1, b + 2, rij) + b aG(a + 1, b + 1, rij), (A5) with ∂G(a, b, rij)/∂rij = 2c2rij c+dn G(a + 1, b + 1, rij) − 2crijG(a, b, rij).
+We found empirically that only the downward recurrence relation was numerically stable for our range of parameters.
+Note that a + 1 corre- sponds eﬀectively to steps of l+2 so computing G and dG drij for all l ∈[0, lmax] and all n ∈[0, nmax[ requires 4nmax evaluations when using this recurrence relation.
+Appendix B: Derivatives of the energy function We have deﬁned an atom centered energy model such that the energy associated with structure A can be written as in Eq. (16), E(A) = P i∈A E(Ai).
+The structure A is determined by the set of atomic coordi- nates and species {ri, ai} and (for periodic structures) unit cell vectors {h1, h2, h3}.
+The atom-centred en- vironment Ai is entirely characterized by the atom centered vectors {rji = rj −ri} with rji < rcut.
+The derivatives of E with respect to the position of atom k (the negative of the force acting on the atom) can be computed using the chain rule ∂E(A) ∂rk = X i∈A ∂E(Ai) ∂rk = X i∈A X j∈Ai ∂E(Ai) ∂rji · ∂rji ∂rk .
+(B1) Here index j runs over the neighbors of atom i, which include periodic images, if the system is periodic.
+The term ∂rji/∂rk is zero unless k = i (in which case it evaluates to −1) or if j = k (in which case it evaluates15 to 1).
+In the periodic case, the derivative with respect to rk has to be interpreted as one in which all peri- odic images of atom k are displaced simultaneously.
+Thus, when the neighbor j is a periodic image of k, ∂rji/∂rk = 1, and if k = i the total contribution of the periodic images of i is zero.
+For the virial, we need to compute the derivative of the energy with respect to inﬁnitesimal strain de- formations of the unit cell η.
+Using the atom-centred decomposition, and applying the chain rule as above one gets ∂E(A) ∂η = X i∈A ∂E(Ai) ∂η = X i∈A X j∈Ai ∂E(Ai) ∂rji ∂rji ∂η = X i∈A X j∈Ai ∂E(Ai) ∂rji ⊗rji (B2) where again j runs over all the neighbors including periodic images.
+It is interesting to note that the pe- riodic images of i will have a non-zero contribution to the virial.
+SUPPLEMENTARY MATERIALS The supplementary materials contain ﬁgures de- scribing the benchmark results for all of the datasets mentioned in this work.
+DATA AVAILABILITY Data supporting the ﬁndings in this paper are available from public repositories as referenced, or upon reasonable request to the authors.
+The source code of librascal is available from an open-source repository98, and workﬂows that can reproduce the benchmarks reported in this paper are available from a separate repository56.
+ACKNOWLEDGMENTS FM, MV, MS and MC support by the NCCR MAR- VEL, funded by the Swiss National Science Founda- tion (SNSF).
+AG and MC acknowledge support from the Swiss National Science Foundation (Project No. 200021-182057).
+GF acknowledges support by the Eu- ropean Center of Excellence MaX, Materials at the Exascale - GA No. 676598.
+REFERENCES 1J. Behler and M. Parrinello, “Generalized Neural-Network Representation of High-Dimensional Potential-Energy Sur- faces,” Phys. Rev. Lett.
+98, 146401 (2007), http://link.aps. org/doi/10.1103/PhysRevLett.98.146401.
+2A. P. Bart´ok, M. C. Payne, R. Kondor, and G. Cs´anyi, “Gaussian Approximation Potentials: The Accuracy of Quantum Mechanics, without the Electrons,” Phys. Rev. Lett. 104, 136403 (2010).
+3A. Shapeev, “Accurate representation of formation energies of crystalline alloys with many components,” Comput. Mater.
+Sci. 139, 26–30 (2017), https://www.sciencedirect.com/ science/article/pii/S0927025617303610.
+4G. Ferr´e, T. Haut, and K. Barros, “Learning molecu- lar energies using localized graph kernels,” J. Chem.
+Phys. 146, 114107 (2017), https://aip.scitation.org/doi/full/ 10.1063/1.4978623.
+5M. Hirn, S. Mallat, and N. Poilvert, “Wavelet Scattering Re- gression of Quantum Chemical Energies,” Multiscale Model. Simul.
+15, 827–863 (2017), https://epubs.siam.org/doi/ abs/10.1137/16m1075454.
+6K. T. Sch¨utt, F. Arbabzadah, S. Chmiela, K. R. M¨uller, and A. Tkatchenko, “Quantum-chemical insights from deep tensor neural networks,” Nat. Commun.
+8, 13890 (2017), http:// www.nature.com/articles/ncomms13890.
+7A. Glielmo, C. Zeni, and A. De Vita, “Eﬃcient nonparamet- ric n -body force ﬁelds from machine learning,” Phys.
+Rev. B 97, 184307 (2018), https://link.aps.org/doi/10.1103/ PhysRevB.97.184307.
+8R. Drautz, “Atomic cluster expansion for accurate and trans- ferable interatomic potentials,” Phys.
+Rev. B 99, 014104 (2019).
+9M. Rupp, A. Tkatchenko, K.-R. M¨uller, and O. A. von Lilienfeld, “Fast and Accurate Modeling of Molecular Atom- ization Energies with Machine Learning,” Phys. Rev. Lett.
+108, 058301 (2012), https://link.aps.org/doi/10.1103/ PhysRevLett.108.058301.
+10G. Montavon, M. Rupp, V. Gobre, A. Vazquez-Mayagoitia, K. Hansen, A. Tkatchenko, K.-R. M¨uller, and O. Anatole von Lilienfeld, “Machine learning of molecular electronic proper- ties in chemical compound space,” New J. Phys. 15, 095003 (2013), http://stacks.iop.org/1367-2630/15/i=9/a= 095003?key=crossref.c7515a05af17cccdbeec1c83340d4405.
+11A. P. Bart´ok, S. De, C. Poelking, N. Bernstein, J. R. Kermode, G. Cs´anyi, M. Ceriotti, A. P. Bartok, S. De, C. Poelking, N. Bernstein, J. R. Kermode, G. Csanyi, and M. Ceriotti, “Machine Learning Uniﬁes the Mod- elling of Materials and Molecules,” Sci. Adv. 3, e1701816 (2017), http://advances.sciencemag.org/lookup/doi/10.
+1126/sciadv.1701816, arXiv:1706.00179.
+12F. Musil, S. De, J. Yang, J. E. Campbell, G. M. Day, and M. Ceriotti, “Machine learning for the struc- ture–energy–property landscapes of molecular crystals,” Chem.
+Sci. 9, 1289–1300 (2018), https://pubs.rsc.org/en/ content/articlelanding/2018/sc/c7sc04665k. 13A. Grisaﬁ, D. M. Wilkins, G. Cs´anyi, and M. Ceriotti, “Symmetry-Adapted Machine Learning for Tensorial Prop- erties of Atomistic Systems,” Phys. Rev. Lett. 120, 036002 (2018).
+14M. Veit, D. M. Wilkins, Y. Yang, R. A. DiStasio, and M. Ceriotti, “Predicting molecular dipole moments by com- bining atomic partial charges and atomic dipoles,” J. Chem.
+Phys. 153, 024113 (2020), https://aip.scitation.org/doi/ 10.1063/5.0009106, arXiv:2003.12437.
+15A. S. Christensen, F. A. Faber, and O. A. von Lilienfeld, “Operators in quantum machine learning: Response proper- ties in chemical space,” J. Chem.
+Phys. 150, 064105 (2019), http://aip.scitation.org/doi/10.1063/1.5053562.
+16O. T. Unke and M. Meuwly, “PhysNet: A Neural Network for Predicting Energies, Forces, Dipole Moments, and Partial Charges,” J. Chem. Theory Comput.
+15, 3678–3693 (2019).
+17D. M. Wilkins, A. Grisaﬁ, Y. Yang, K. U. Lao, R. A. D. Jr., and M. Ceriotti, “Accurate molecular polarizabilities with coupled cluster theory and machine learning,” Proc. Natl. Acad.
+Sci. 116, 3401–3406 (2019), https://www.pnas.org/ content/116/9/3401, arXiv:1809.05337.
+18A. Chandrasekaran, D. Kamal, R. Batra, C. Kim, L. Chen, and R. Ramprasad, “Solving the electronic structure problem with machine learning,” npj Comput Mater 5, 22 (2019).16 19C. Ben Mahmoud, A. Anelli, G. Cs´anyi, and M. Ceriotti, “Learning the electronic density of states in condensed mat- ter,” ArXiv200611803 Cond-Mat Stat (2020), http://arxiv. org/abs/2006.11803, arXiv:2006.11803 [cond-mat, stat].
+20S. A. Ghasemi, A. Hofstetter, S. Saha, and S. Goedecker, “Interatomic potentials for ionic systems with density func- tional accuracy based on charge densities obtained by a neural network,” Phys.
+Rev. B 92, 045131 (2015), http: //link.aps.org/doi/10.1103/PhysRevB.92.045131.
+21J. M. Alred, K. V. Bets, Y. Xie, and B. I. Yakobson, “Ma- chine learning electron density in sulfur crosslinked carbon nanotubes,” Composites Science and Technology 166, 3–9 (2018).
+22A. Grisaﬁ, A. Fabrizio, B. Meyer, D. M. Wilkins, C. Corminboeuf, and M. Ceriotti, “Transferable Machine- Learning Model of the Electron Density,” ACS Cent.
+Sci. 5, 57–64 (2019), https://pubs.acs.org/doi/10.1021/ acscentsci.8b00551, arXiv:1809.05349v1.
+23G. C. Sosso, G. Miceli, S. Caravati, J. Behler, and M. Bernasconi, “Neural network interatomic potential for the phase change material GeTe,” Phys.
+Rev. B 85, 174103 (2012), https://link.aps.org/doi/10.1103/PhysRevB.85. 174103.
+24J. Behler, “First Principles Neural Network Potentials for Reactive Simulations of Large Molecular and Condensed Sys- tems,” Angew. Chem. Int.
+Ed. 56, 12828–12840 (2017), http: //doi.wiley.com/10.1002/anie.201703114.
+25M. A. Caro, V. L. Deringer, J. Koskinen, T. Laurila, and G. Cs´anyi, “Growth Mechanism and Origin of High s p 3 Content in Tetrahedral Amorphous Carbon,” Phys. Rev. Lett.
+120, 166101 (2018), https://link.aps.org/doi/10. 1103/PhysRevLett.120.166101.
+26B. Cheng, E. A. Engel, J. Behler, C. Dellago, and M. Ceriotti, “Ab initio thermodynamics of liquid and solid water.” Proc. Natl. Acad.
+Sci. U. S. A. , 201815117 (2019), http://www. ncbi.nlm.nih.gov/pubmed/30610171.
+27F. C. Mocanu, K. Konstantinou, T. H. Lee, N. Bernstein, V. L. Deringer, G. Cs´anyi, and S. R. Elliott, “Modeling the Phase-Change Memory Material, Ge2Sb2Te5, with a Machine-Learned Interatomic Potential,” J. Phys. Chem.
+B 122, 8998–9006 (2018), http://pubs.acs.org/doi/10.1021/ acs.jpcb.8b06476.
+28M. Veit, S. K. Jain, S. Bonakala, I. Rudra, D. Hohl, and G. Cs´anyi, “Equation of State of Fluid Methane from First Principles with Machine Learning Potentials,” J. Chem. The- ory Comput.
+15, 2574–2586 (2019).
+29C. W. Rosenbrock, K. Gubaev, A. V. Shapeev, L. B. P´artay, N. Bernstein, G. Cs´anyi, and G. L. W. Hart, “Machine- learned Interatomic Potentials for Alloys and Alloy Phase Di- agrams,” ArXiv190607816 Cond-Mat Physicsphysics (2019), http://arxiv.org/abs/1906.07816, arXiv:1906.07816 [cond- mat, physics:physics].
+30V. L. Deringer, M. A. Caro, and G. Cs´anyi, “A general- purpose machine-learning force ﬁeld for bulk and nanostruc- tured phosphorus,” Nat. Commun.
+11, 5461 (2020), https: //www.nature.com/articles/s41467-020-19168-z. 31V. L. Deringer, N. Bernstein, G. Cs´anyi, C. Ben Mahmoud, M. Ceriotti, M. Wilson, D. A. Drabold, and S. R. Elliott, “Origins of structural and electronic transitions in disordered silicon,” Nature 589, 59–64 (2021).
+32M. A. Rohrdanz, W. Zheng, M. Maggioni, and C. Clementi, “Determination of reaction coordinates via locally scaled dif- fusion map,” J. Chem.
+Phys. 134, 124116 (2011), https: //aip.scitation.org/doi/10.1063/1.3569857.
+33G. P´erez-Hern´andez, F. Paul, T. Giorgino, G. De Fabri- tiis, and F. No´e, “Identiﬁcation of slow molecular order pa- rameters for Markov model construction,” J. Chem.
+Phys. 139, 015102 (2013), https://aip.scitation.org/doi/full/ 10.1063/1.4811489.
+34T. D. Huan, A. Mannodi-Kanakkithodi, and R. Ramprasad, “Accelerated materials property predictions and design using motif-based ﬁngerprints,” Phys.
+Rev. B 92, 014106 (2015), https://link.aps.org/doi/10.1103/PhysRevB.92.014106.
+35P. Gasparotto, R. H. Meißner, and M. Ceriotti, “Recognizing Local and Global Structural Motifs at the Atomic Scale,” J. Chem. Theory Comput.
+14, 486–498 (2018), https://doi. org/10.1021/acs.jctc.7b00993.
+36M. Ceriotti, “Unsupervised machine learning in atomistic simulations, between predictions and understanding,” J. Chem.
+Phys. 150, 150901 (2019), https://aip.scitation.
+org/doi/10.1063/1.5091842.
+37J. Rogal, E. Schneider, and M. E. Tuckerman, “Neural- Network-Based Path Collective Variables for Enhanced Sampling of Phase Transformations,” Phys. Rev. Lett.
+123, 245701 (2019), https://link.aps.org/doi/10.1103/ PhysRevLett.123.245701.
+38B. A. Helfrecht, R. K. Cersonsky, G. Fraux, and M. Ce- riotti, “Structure-Property Maps with Kernel Principal Co- variates Regression,” ArXiv200205076 Cond-Mat Physic- sphysics Stat (2020), http://arxiv.org/abs/2002.05076, arXiv:2002.05076 [cond-mat, physics:physics, stat].
+39J. Behler, “Atom-centered symmetry functions for con- structing high-dimensional neural network potentials.” J. Chem.
+Phys. 134, 074106 (2011), http://scitation.aip. org/content/aip/journal/jcp/134/7/10.1063/1.3553717.
+40C. E. Rasmussen and C. K. I. Williams, Gaussian Processes for Machine Learning (MIT Press, Cambridge, MA, 2006).
+41A. P. Bart´ok, R. Kondor, and G. Cs´anyi, “On represent- ing chemical environments,” Phys Rev B 87, 184115 (2013), http://link.aps.org/doi/10.1103/PhysRevB.87.184115.
+42S. Chmiela, H. E. Sauceda, K.-R. M¨uller, and A. Tkatchenko, “Towards exact molecular dynamics simulations with machine-learned force ﬁelds,” Nat Commun 9, 3887 (2018).
+43M. J. Willatt, F. Musil, and M. Ceriotti, “Atom-density representations for machine learning,” J. Chem.
+Phys. 150, 154110 (2019), http://aip.scitation.org/doi/10.1063/1.
+5090481, arXiv:1807.00408.
+44B. Onat, C. Ortner, and J. R. Kermode, “Sensitivity and dimensionality of atomic environment representations used for machine learning interatomic potentials,” J. Chem.
+Phys. 153, 144106 (2020).
+45B. Parsaeifard, D. S. De, A. S. Christensen, F. A. Faber, E. Kocer, S. De, J. Behler, A. von Lilien- feld, and S. Goedecker, “An assessment of the structural resolution of various ﬁngerprints com- monly used in machine learning,” Mach.
+Learn.: Sci. Technol. (2020), 10.1088/2632-2153/abb212, http://iopscience.iop.org/10.1088/2632-2153/abb212.
+46S. N. Pozdnyakov, M. J. Willatt, A. P. Bart´ok, C. Ort- ner, G. Cs´anyi, and M. Ceriotti, “On the Completeness of Atomic Structure Representations,” ArXiv200111696 Cond- Mat Physicsphysics (2020), http://arxiv.org/abs/2001. 11696, arXiv:2001.11696 [cond-mat, physics:physics].
+47A. P. Thompson, L. P. Swiler, C. R. Trott, S. M. Foiles, and G. J. Tucker, “Spectral neighbor analysis method for automated generation of quantum-accurate inter- atomic potentials,” Journal of Computational Physics 285, 316–330 (2015), http://www.sciencedirect.com/science/ article/pii/S0021999114008353.
+48M. Bachmayr, G. Csanyi, R. Drautz, G. Dusson, S. Et- ter, C. van der Oord, and C. Ortner, “Atomic Clus- ter Expansion: Completeness, Eﬃciency and Stability,” ArXiv191103550 Cs Math (2020), http://arxiv.org/abs/ 1911.03550, arXiv:1911.03550 [cs, math].
+49J. Nigam, S. Pozdnyakov, and M. Ceriotti, “Recursive eval- uation and iterative contraction of N-body equivariant fea- tures,” J. Chem.
+Phys. 153, 121101 (2020), https://aip. scitation.org/doi/full/10.1063/5.0021116.
+50T. T. Nguyen, E. Sz´ekely, G. Imbalzano, J. Behler, G. Cs´anyi, M. Ceriotti, A. W. G¨otz, and F. Paesani, “Comparison of permutationally invariant polynomials, neural networks, and Gaussian approximation potentials in representing wa- ter interactions through many-body expansions,” J. Chem.
+Phys. 148, 241725 (2018), http://aip.scitation.org/doi/ 10.1063/1.5024577.17 51Y. Zuo, C. Chen, X. Li, Z. Deng, Y. Chen, J. Behler, G. Cs´anyi, A. V. Shapeev, A. P. Thompson, M. A. Wood, and S. P. Ong, “Performance and Cost Assessment of Ma- chine Learning Interatomic Potentials,” J. Phys. Chem.
+A 124, 731–745 (2020), https://doi.org/10.1021/acs.jpca. 9b08723.
+52M. J. Willatt, F. Musil, and M. Ceriotti, “Feature Op- timization for Atomistic Machine Learning Yields a Data- Driven Construction of the Periodic Table of the Elements,” Phys. Chem. Chem.
+Phys. 20, 29661–29668 (2018), http: //xlink.rsc.org/?DOI =C8CP05921G. 53M. A. Caro, “Optimizing many-body atomic descriptors for enhanced computational performance of machine learning based interatomic potentials,” Phys.
+Rev. B 100, 024112 (2019), https://link.aps.org/doi/10.1103/PhysRevB.100. 024112, arXiv:1905.02142.
+54C. S. Adorf, P. M. Dodd, V. Ramasubramani, and S. C. Glotzer, “Simple data and workﬂow management with the signac framework,” Comput. Mater.
+Sci. 146, 220–229 (2018).
+55C. S. Adorf, V. Ramasubramani, B. D. Dice, M. M. Henry, P. M. Dodd, and S. C. Glotzer, “Glotzerlab/signac,” (2019), 10.5281/zenodo.2581327, https://doi.org/10.5281/ zenodo.2581327.
+56F. Musil, “LIBRASCAL benchmark workﬂows,” https:// github.com/felixmusil/rascal_benchmarks.
+57J. Kermode, “Silicon testing framework,” Zenodo (2018), https://zenodo.org/record/1250555.
+58A. P. Bart´ok, J. Kermode, N. Bernstein, and G. Cs´anyi, “Machine Learning a General-Purpose Interatomic Potential for Silicon,” Phys.
+Rev. X 8, 041048 (2018), https://link.
+aps.org/doi/10.1103/PhysRevX.8.041048.
+59M. Veit, “Bulk methane models and simulation parameters,” https://www.repository.cam.ac.uk/handle/1810/279000 (2018).
+60K. Rossi, V. Jur´askov´a, R. Wischert, L. Garel, C. Cormin- bœuf, and M. Ceriotti, “Simulating Solvation and Acidity in Complex Mixtures with First-Principles Accuracy: The Case of CH3SO3H and H2O2 in Phenol,” J. Chem. Theory Com- put.
+16, 5139–5149 (2020), https://doi.org/10.1021/acs.
+jctc.0c00362, arXiv:2006.12597.
+61F. Musil, M. J. Willatt, M. A. Langovoy, and M. Ceri- otti, “Fast and Accurate Uncertainty Estimation in Chemical Machine Learning,” J. Chem. Theory Comput. 15, 906–915 (2019).
+62R. Ramakrishnan, P. O. Dral, M. Rupp, and O. A. Von Lilienfeld, “Quantum chemistry structures and proper- ties of 134 kilo molecules,” Sci. Data 1, 1–7 (2014).
+63J. C. Light and Tucker Carrington Jr., “Discrete-Variable Representations and their Utilization,” (John Wiley & Sons, Ltd, 2000) pp.
+263–310, https://onlinelibrary.wiley.com/ doi/abs/10.1002/9780470141731.ch4.
+64M. Abramowitz and I. Stegun, Handbook of Mathematical Functions with Formulas, Graphs and Mathematical Tables (Dover Publ., Inc., 1972).
+65A. Goscinski, G. Fraux, G. Imbalzano, and M. Ceriotti, “The role of feature space in atomistic learning,” Mach. Learn.: Sci. Technol. (2021), 10.1088/2632-2153/abdaf7.
+66W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. Flannery, Numerical recipes 3rd edition: The art of scientiﬁc computing (Cambridge university press, 2007).
+67P. Rowe, V. L. Deringer, P. Gasparotto, G. Cs´anyi, and A. Michaelides, “An Accurate and Transferable Machine Learning Potential for Carbon,” ArXiv200613655 Cond-Mat Physicsphysics (2020), http://arxiv.org/abs/2006.13655, arXiv:2006.13655 [cond-mat, physics:physics].
+68T. Limpanuparb and J. Milthorpe, “Associated Legen- dre Polynomials and Spherical Harmonics Computation for Chemistry Applications,” (2014), http://arxiv.org/abs/ 1410.1748, arXiv:1410.1748.
+69M. Galassi and et al., GNU Scientiﬁc Library Reference Man- ual (3rd Ed.) (Network Theory, 2009) p. 573.
+70G. Imbalzano, A. Anelli, D. Giofr´e, S. Klees, J. Behler, and M. Ceriotti, “Automatic selection of atomic ﬁngerprints and reference conﬁgurations for machine-learning potentials,” J. Chem.
+Phys. 148, 241730 (2018).
+71M. W. Mahoney and P. Drineas, “CUR matrix decomposi- tions for improved data analysis,” Proc. Natl. Acad.
+Sci. U. S. A. 106, 697–702 (2009).
+72Y. Eldar, M. Lindenbaum, M. Porat, and Y. Y. Zeevi, “The farthest point strategy for progressive image sampling.” IEEE Trans. Image Process. Publ.
+IEEE Signal Process. Soc. 6, 1305–15 (1997).
+73M. Ceriotti, G. A. Tribello, and M. Parrinello, “Demonstrat- ing the transferability and the descriptive power of sketch- map,” J. Chem. Theory Comput.
+9, 1521–1532 (2013).
+74A. Singraber, “N2P2,” .
+75J. S. Smith, O. Isayev, and A. E. Roitberg, “ANI-1: An ex- tensible neural network potential with DFT accuracy at force ﬁeld computational cost,” Chem.
+Sci. 8, 3192–3203 (2017), http://xlink.rsc.org/?DOI=C6SC05720A. 76R. Lot, F. Pellegrini, Y. Shaidu, and E. K¨u¸c¨ukbenli, “PANNA: Properties from Artiﬁcial Neural Network Archi- tectures,” Computer Physics Communications 256, 107402 (2020), http://www.sciencedirect.com/science/article/ pii/S0010465520301843.
+77H. Wang, L. Zhang, J. Han, and W. E, “DeePMD-kit: A deep learning package for many-body potential energy repre- sentation and molecular dynamics,” Computer Physics Com- munications 228, 178–184 (2018).
+78A. Bart´ok-P´artay, L. Bart´ok-P´artay, F. Bianchini, A. Butenuth, M. Caccin, S. Cereda, G. Cs´anyi, A. Comisso, T. Daﬀ, S. John, C. Gattinoni, G. Moras, J. Kermode, L. Mones, A. Nichol, D. Packwood, L. Pastewka, G. Peralta, I. Solt, O. Strickson, W. Szlachta, C. Var- nai, M. Veit, and S. Winﬁeld, “libAtoms+QUIP,” https://github.com/libatoms/QUIP (2020).
+79V. L. Deringer and G. Cs´anyi, “Machine learning based in- teratomic potential for amorphous carbon,” Phys.
+Rev. B 95, 094203 (2017).
+80Z. Zhang, G. Cs´anyi, and D. Alf`e, “Partitioning of sulfur between solid and liquid iron under Earth’s core conditions: Constraints from atomistic simulations with machine learn- ing potentials,” Geochimica et Cosmochimica Acta (2020), 10.1016/j.gca.2020.03.028, http://www.sciencedirect.com/ science/article/pii/S001670372030199X. 81S. Chmiela, A. Tkatchenko, H. E. Sauceda, I. Poltavsky, K. T. Sch¨utt, and K. R. M¨uller, “Machine learning of accurate energy-conserving molecular force ﬁelds,” Science Advances 3, e1603015 (2017), arXiv:1611.04678.
+82A. S. Christensen, F. A. Faber, B. Huang, L. A. Bratholm, A. Tkatchenko, K.-R. M¨uller, and O. A. von Lilienfeld, “QML,” (2017).
+83F. A. Faber, A. S. Christensen, B. Huang, and O. A. von Lilienfeld, “Alchemical and structural distribution based representation for universal quantum machine learning,” J. Chem.
+Phys. 148, 241717 (2018), http://aip.scitation.
+org/doi/10.1063/1.5020710.
+84S. Plimpton, “Fast parallel algorithms for short-range molec- ular dynamics,” Journal of computational physics 117, 1–19 (1995).
+85C. van der Oord, G. Dusson, G. Cs´anyi, and C. Ortner, “Reg- ularised atomic body-ordered permutation-invariant polyno- mials for the construction of interatomic potentials,” Mach.
+Learn.: Sci. Technol. 1, 015004 (2020), https://iopscience. iop.org/article/10.1088/2632-2153/ab527c/meta.
+86C. Ortner, “JuLIP: Julia Library for Interatomic Potentials,” https://github.com/JuliaMolSim/JuLIP.jl.
+87S. Pozdnyakov, “NICE libraries,” https://github.com/ cosmo-epfl/nice.
+88E. Snelson and Z. Ghahramani, “Sparse gaussian processes using pseudo-inputs,” in Advances in neural information pro- cessing systems (2006) pp. 1257–1264.
+89G. Cs´anyi, M. J. Willatt, and M. Ceriotti, “Machine- Learning of Atomic-Scale Properties Based on Physical Prin- ciples,” in Machine Learning Meets Quantum Physics, Vol. 968, edited by K. T. Sch¨utt, S. Chmiela, O. A. von Lilien-18 feld, A. Tkatchenko, K. Tsuda, and K.-R. M¨uller (Springer International Publishing, Cham, 2020) pp. 99–127.
+90In practice, to match the number of features computed by QUIP, we use a mild feature sparsiﬁcation in librascal that corresponds to the same use of the ⟨an1; an2; l| = ⟨an2; an1; l| symmetry that is implemented in QUIP.
+91A. P. Bart´ok and G. Cs´anyi, “Gaussian approximation poten- tials: A brief tutorial introduction,” Int. J. Quantum Chem.
+115, 1051–1057 (2015).
+92R. K. Cersonsky, B. A. Helfrecht, E. A. Engel, and M. Ceri- otti, “Improving sample and feature selection with principal covariates regression,” arxiv:2012.12253 (2020).
+93K. Lejaeghere, G. Bihlmayer, T. Bjorkman, P. Blaha, S. Blugel, V. Blum, D. Caliste, I. E. Castelli, S. J. Clark, A. Dal Corso, S. de Gironcoli, T. Deutsch, J. K. Dewhurst, I. Di Marco, C. Draxl, M. Du ak, O. Eriksson, J. A. Flores- Livas, K. F. Garrity, L. Genovese, P. Giannozzi, M. Gi- antomassi, S. Goedecker, X. Gonze, O. Granas, E. K. U. Gross, A. Gulans, F. Gygi, D. R. Hamann, P. J. Hasnip, N. A. W. Holzwarth, D. Iu an, D. B. Jochym, F. Jol- let, D. Jones, G. Kresse, K. Koepernik, E. Kucukbenli, Y. O. Kvashnin, I. L. M. Locht, S. Lubeck, M. Marsman, N. Marzari, U. Nitzsche, L. Nordstrom, T. Ozaki, L. Paulatto, C. J. Pickard, W. Poelmans, M. I. J. Probert, K. Ref- son, M. Richter, G.-M. Rignanese, S. Saha, M. Scheﬄer, M. Schlipf, K. Schwarz, S. Sharma, F. Tavazza, P. Thun- strom, A. Tkatchenko, M. Torrent, D. Vanderbilt, M. J. van Setten, V. Van Speybroeck, J. M. Wills, J. R. Yates, G.-X. Zhang, and S. Cottenier, “Reproducibility in density func- tional theory calculations of solids,” Science 351, aad3000– aad3000 (2016).
+94W. J. Szlachta, A. P. Bart´ok, and G. Cs´anyi, “Accuracy and transferability of Gaussian approximation potential models for tungsten,” Phys.
+Rev. B 90, 104108 (2014).
+95A. Glielmo, P. Sollich, and A. De Vita, “Accurate inter- atomic force ﬁelds via machine learning with covariant ker- nels,” Phys.
+Rev. B 95, 214302 (2017), https://link.aps.
+org/doi/10.1103/PhysRevB.95.214302.
+96D. M. Wilkins and A. Grisaﬁ, “TENSOAP repository,” https://github.com/cosmo-epfl/nice.
+97F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain, eds., NIST Digi- tal Library of Mathematical Functions (2020) http://dlmf.
+nist.gov/. 98F. Musil, M. Veit, T. Junge, M. Stricker, A. Goscinki, G. Fraux, and M. Ceriotti, “LIBRASCAL,” https:// github.com/cosmo-epfl/librascal.

@@ -1,0 +1,1505 @@
+This content has been downloaded from IOPscience. Please scroll down to see the full text.
+Download details:
+IP Address: 132.239.1.231
+This content was downloaded on 30/06/2016 at 00:17
+Please note that terms and conditions apply.
+Critical probability of percolation over bounded region in N-dimensional Euclidean space
+View the table of contents for this issue, or go to the journal homepage for more
+J. Stat. Mech. (2016) 033306
+(http://iopscience.iop.org/1742-5468/2016/3/033306)
+Home
+Search
+Collections
+Journals
+About
+Contact us
+My IOPscienceJ. Stat. Mech. (2016) 033306
+Critical probability of percolation 
+over bounded region in N-dimensional 
+Euclidean space
+Emmanuel Roubin1 and Jean-Baptiste Colliat2
+1  Laboratoire 3SR, Université Grenoble Alpes, CNRS, Grenoble INP,  
+Domaine Universitaire, 38000 Grenoble Cedex, France
+2  Laboratoire de Mécanique de Lille, Université Sciences et Technologies 
+Lille 1, CNRS, École Centrale de Lille, Arts et Métiers ParisTech, Cité 
+Scientiﬁque, 59655 Villeneuve d’Ascq Cedex, France
+E-mail: emmanuel.roubin@3sr-grenoble.fr
+Received 28 October 2015   
+Accepted for publication 7 February 2016
+Published 22 March 2016
+Online at stacks.iop.org/JSTAT/2016/033306
+doi:10.1088/1742-5468/2016/03/033306
+Abstract.  Following Tomita and Murakami (Research of Pattern Formation 
+ed R Takaki (Tokyo: KTK Scientiﬁc Publishers) pp 197–203) we propose an 
+analytical model to predict the critical probability of percolation. It is based 
+on the excursion set theory which allows us to consider N-dimensional bounded 
+regions. Details are given for the three-dimensional (3D) case and statistically 
+representative volume elements are calculated. Finally, generalisation to the 
+N-dimensional case is made.
+Keywords: percolation problems (theory)
+Paper: Disordered systems, classical and quantum
+© 2016 IOP Publishing Ltd and SISSA Medialab srl
+ournal of Statistical Mechanics:
+J
+Theory and Experiment
+1742-5468/16/033306+14$33.00Critical probability of percolation over bounded region in N-dimensional Euclidean space
+2
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+1. Introduction
+The mass transfer properties of randomly distributed porous media are of major inter-
+est since they are involved in countless applications. Derived from chemistry [5] but 
+ﬁrst expressed by [3] as a statistical-geometry model, percolation on random stochastic 
+patterns was used to study a ﬂuid ﬂow through a rock assumed to be a network of 
+channels, randomly open or close. These problems are often treated through a lattice 
+discretisation of space and a set of arbitrary rules (often referred to as bond or site 
+percolation) in order to deﬁne an inﬁnite cluster, which are paths for the mass transfer. 
+Here the quantity of interest is the critical (or percolation) probability pc that deﬁnes, 
+according to a statistical point of view, whether an inﬁnite cluster exists or not.
+For materials science, considering inﬁnite size domains as well as inﬁnite clusters 
+is not the most convenient. In percolation theory, classical upscaling procedures use, 
+for example, cluster statistics to overcome this limitation [11]. Following [30] and 
+extending it to bounded regions in space, we propose using excursion sets of correlated 
+Random Fields (hereafter noted RFs) and their underlying predictable properties [2] in 
+order to tackle this problem by means of topology quantiﬁcation via the Euler charac-
+teristic (or Euler number, and hereafter noted EC).
+The concepts of percolation and topological quantiﬁcation are intrinsically dierent. 
+The former raises the question of the existence of a percolating cluster of the size of 
+the system, whereas the latter is a measure of the connectivity. However, without 
+exactly knowing why, it has been observed many times in the continuum case that 
+the topological information carried by the EC is linked to percolation ([14, 15, 18]), 
+the critical behaviour taking place when it changes sign. However, in other kinds of 
+Contents
+1.  Introduction	
+2
+2.  Measures of excursion sets	
+3
+3.  Percolation criterion	
+5
+4.  Possible extensions	
+8
+4.1.  Percolation representative volume elements. . . . . . . . . . . . . . . . . . . .
+8
+4.2.  N-dimensional percolation.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+5.  Concluding remarks	
+11
+Appendix. Gaussian Minkowski functionals	
+12
+A.1.  Taylor expansion of the tube Gaussian volumes. . . . . . . . . . . . . . . . . 12
+A.2.  Application to scalar-valued Gaussian random ﬁelds.. . . . . . . . . . . . . . 12
+References	
+13Critical probability of percolation over bounded region in N-dimensional Euclidean space
+3
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+systems such as lattices, dierences can occur between the critical probability pre-
+dicted with percolation theory and its topological estimation [16, 17]. In addition, the 
+present work investigates ﬁnite systems for which the phenomenon is less understood. 
+Thus, to avoid confusion, it is knowingly assumed by the authors that, in the present 
+context, the topological measure predicts percolation. Analysis of the link between both 
+is beyond the scope of this article, but it is the authors’ point of view that the strong 
+similitudes between their results and known percolation probabilities (namely pc  =  1/2 
+in two dimensions (2D) [27] and p
+0.16
+c ≈
+ in three dimensions (3D) [23]) justify further 
+investigations with, for example, Monte-Carlo numerical simulations.
+Hence, a relation can be made between excursion sets and the percolation probabil-
+ity, using a theoretical framework. In the early 1990s this was highlighted by [30] and 
+[19], and they deduced a critical volume fraction for inﬁnite size problems analytically. 
+We propose following the same path adding some bound corrections introduced by [32], 
+aptly representing ﬁnite size domains. To the authors’ knowledge, no analytical solu-
+tion is known for these problems, leading to an expensive need for numerical resources 
+when trying to evaluate percolation probability.
+The outline of this paper is as follows: section 2 presents the essential ingredients 
+we use in terms of RFs and excursion sets. The attention is drawn to the expectation 
+of the EC. Section  3 then turns to the evaluation of percolation probabilities over 
+bounded regions in three-dimensional (3D) Euclidean space. Section 4 shows how these 
+results may lead to a new deﬁnition of the so-called representative volume element 
+(RVE), which is a major concept dealing with heterogeneous materials. Finally, sec-
+tion 5 extends our result on critical probabilities for N-dimensional space.
+2. Measures of excursion sets
+Excursion sets are the results of a thresholding operation on a correlated RF. In the 
+present three-dimensional case, if g
+M
+:
+3
+⊂
+
+R
+R is such a ﬁeld then, for a given 
+threshold κ ∈R, the excursion set is deﬁned by:
+κ
+=
+∈
+⊂
+|
+>
+x
+x
+E
+M
+g
+.
+s
+3
+R
+{
+    ( )
+}
+
+(1)
+Obviously, the morphology of the excursion strongly depends on the properties of 
+the underlying RF (marginal distribution, covariance function, ) and the value of the 
+threshold (see ﬁgure 1). However, a probabilistic link between these parameters and the 
+morphological characteristics of the excursion is established [1, 2]. Among the dierent 
+measures that can deﬁne a given morphology [13], here attention is drawn to the vol-
+ume fraction Φ, which is a geometrical measure, and the EC χ which is a topological 
+one. Obviously Φ and χ are Random Variables. Thus, the link we invoke is a probabi-
+listic one, giving the expected values ( { }
+•
+E
+) of the two measures as a function of the 
+excursion parameters.
+Two important aspects are worth noting. First, the excursion set theory provides 
+the model with a control of the morphologies through the analytical knowledge of the 
+measure’s probability. Second, by its predictable aspect, this theory avoids the need 
+for any actual realisation of the random morphologies and the numerical resources that 
+it implies.Critical probability of percolation over bounded region in N-dimensional Euclidean space
+4
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+EC is used here to detect percolation when it changes sign (null values) [19]. From 
+[2], its expected values are known (see equation (2)). For a Gaussian RF 
+0,
+2
+N (
+)
+σ  of 
+Gaussian covariance function and correlation length lc and deﬁned over a cube M of 
+size l is given by:
+F
+2
+1
+3
+2
+3
+2
+e
+/
+,
+3
+2
+2
+2
+2
+3/2
+/2
+2
+2
+{ }
+(
+)
+⎡
+⎣
+⎢
+⎛
+⎝⎜
+⎞
+⎠⎟
+⎤
+⎦
+⎥
+χ
+β
+π
+κ
+σ
+β
+π
+κ
+σ
+β
+π
+κ σ
+=
+−
++
++
++
+κ
+σ
+−
+E
+(2)
+where 
+l l/ c
+β =
+ is a length ratio, κ is the threshold of equation  (1), σ the standard 
+deviation of the normal distribution and F
+x
+t
+:
+e
+d ,
+x
+t
+1
+2
+∫
+π
+∞
+−
+
+ its tail probability. Full 
+details of the derivation of equation (2) are given by the authors in [22]. It is worth 
+noting that the asymptotic behaviour 
+→
+β
+∞, which corresponds to inﬁnite domains, 
+lets equation (2) with a single term that remains proportional to the volume times 
+1 e
+2
+2
+(
+)
+κ −
+κ
+− (for unit variance). This term, introduced by Robert Adler in 1976, is the 
+result of dierential topology where excursions could not touch the boundaries. Later, 
+applying the Integral geometry’s Kinematic Fundamental Formula on excursions, 
+Keith Worsley was able to add the three other terms (see [32] for details). These terms 
+are the so-called bound corrections which allow us to consider ﬁnite size problems.
+Volume fraction plays directly the role of the critical volume of percolation c
+Φ and 
+thus the critical probability pc. Indeed, due to the deﬁnition of excursion sets of equa-
+tion (1), it is rather straightforward that its expected value is simply the tail probability:
+F
+/
+.
+{ }
+(
+)
+κ σ
+Φ =
+E
+(3)
+The simple aspect of equation (3) comes from the absence of spatial information 
+in the measure of volume fractions. As a function of the threshold, Φ is monotonically 
+increasing. From 1 for inﬁnity large negative κ to 0 for inﬁnitely large positive ones. 
+However, the behaviour of the EC equation (2) is rather more complicated. The next 
+section explains this along with the link to percolation phenomena. More detail on the 
+excursion set theory is beyond the scope of the article. As mentionned in [1, 2], it has 
+to be kept in mind that this equation still holds for:
+Figure 1.  Excursion sets of a Gaussian RF. From left to right: low threshold and 
+percolated cluster of empty space (black), intermediate threshold, high threshold 
+and percolated cluster (black).Critical probability of percolation over bounded region in N-dimensional Euclidean space
+5
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+	 1.	all Gaussian-related distributions,
+	 2.	all twice dierentiable RFs with constant second spectral moments,
+and with it, the whole framework presented here can easily be adapted. Interested read-
+ers can consult [21, 22].
+The authors would like to emphasise the very similar aspect of equations (2) and (3) 
+with known results on the expected values of Minkowski functionals of Boolean models 
+for inﬁnite [14] and ﬁnite [24] domains.
+3. Percolation criterion
+The link between percolation and the EC is considered when, for variations of the 
+threshold, the EC switches signs [14]. As depicted in ﬁgure (2), where the expected 
+value of the EC of equation (2) is plotted as a function of the threshold value κ for 
+three dierent length ratios β, most of the time it occurs two times and represents two 
+dierent percolation states.
+The two roots of { ( )}
+χ κ
+E
+ equation (2) noted c
+κ+ and c
+κ− correspond to the following 
+situations:
+		
+Percolation of the excursion at 
+0
+c
+{ (
+)}
+χ κ
+=
++
+E
+ By considering a high threshold 
+value, the corresponding excursion set is made of small disconnected components. 
+As the threshold value decreases, these components grow and others appear, making 
+the EC increase to a certain maximum point. It corresponds to the coalescence of 
+the biggest components. The critical point of interest c
+κ+ is for a threshold value 
+just below the latter states, where the χ is null. It is stated that at this stage, the 
+excursion set is percolated.
+		
+Percolation of the voids 
+0
+c
+{ (
+)}
+χ κ
+=
+−
+E
+ The same reasoning can be made in order 
+to define the other percolation point. This time, increasing thresholds starting at 
+a very low value has to be considered. The percolation point c
+κ− is also for the first 
+null value of the EC and corresponds to the percolation of the voids.
+It can be noted in ﬁgure 2 that, for some values of β, percolation cannot be deﬁned 
+(
+2
+β =  for example). Since the EC is always positive, the volumes considered are too 
+small to bring any relevant statistical information in terms of percolation states. This 
+observation can naturally be understood by considering the asymptotic case 
+0
+→
+β
+, 
+where equation (2) simply becomes the tail probability F  of the underlying distribu-
+tion. In this speciﬁc case, correlation is inﬁnite compared to domain size, meaning that 
+the RF is constant leading to excursions without any other topological meaning than 
+being completely full 
+1
+χ =  or completely empty 
+0
+χ = . This explains why the fraction 
+volume and the EC are equivalent. Increasing β brings back the spatial structure of the 
+correlated RF (and with it the dierentiation between the fraction volume and EC) until 
+the volume is representative enough to have critical behaviour, e.g. null values of χ. 
+Attention is now drawn to the corresponding critical volume for percolation:Critical probability of percolation over bounded region in N-dimensional Euclidean space
+6
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+and
+.
+c
+c
+c
+c
+{ (
+)}  
+  
+{ (
+)}
+κ
+κ
+Φ =
+Φ
+Φ =
+Φ
++
++
+−
+−
+E
+E
+
+(4)
+Even if not taken into account in the notation, the critical volumes of equation (4) 
+have to be considered as expected values. Figure (3) shows them both as a function of 
+the length ratio β.
+It can be seen that a frontier is created between two states, one with positive val-
+ues of χ (outside) and the other with negative values (inside). As the topology of an 
+excursion can be determined whether it is inside or outside, this graph can be seen as 
+a ﬁnite size approximation of a phase diagram. The fact that the two curves go away 
+Figure 2.  Expected values of the ECs as a function of the threshold value κ 
+for dierent length ratios β for the Gaussian RF with the Gaussian covariance 
+function. To ﬁt into a single graph, χ is normalised to have a unitary maximal 
+value.
+-1.5
+-1
+-0.5
+0
+0.5
+1
+-4
+-3
+-2
+-1
+0
+1
+2
+3
+4
+Normalised Euler Characteristic
+Threshold κ
+κ+
+c
+κ−
+c
+β = 2
+β = 5
+β = 10
+Figure 3.  Critical volumes of percolation for both excursion set (Φ+
+c ) and voids 
+(Φ−
+c ) of the Gaussian RF with the Gaussian covariance function as a function of 
+the scale ratio β in a three-dimensional cube.
+0
+0.2
+0.4
+0.6
+0.8
+1
+1
+10
+100
+1000
+Critical volume of percolation Φc
+Scale ratio β = l/lc
+χ < 0
+χ > 0
+χ > 0
+0.1587. . .
+0.8413. . .
+Φ+
+c
+Φ−
+cCritical probability of percolation over bounded region in N-dimensional Euclidean space
+7
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+from their asymptotic values and ﬁnally meet is a direct representation of side eects 
+analytically taken into account by the bound corrections present in equation (2) [32]. 
+It is this feature that grants the model the possibility of predicting percolation over 
+bounded regions.
+The asymptotic values in ﬁgure 3 can easily be calculated. Indeed, when →
+β
+∞, the 
+two roots of equation (3) are c
+κ
+σ
+=
++
+ and c
+κ
+σ
+= −
+−
+. Injecting them into equation (3) the 
+two critical volumes:
+F
+lim
+1
+0.1584
+c
+( )
+→
+Φ =
+=
+…
+β
+∞
++
+
+(5)
+and
+F
+lim
+1
+0.8413
+c
+(
+)
+→
+Φ =
+−
+=
+…
+β
+∞
+−
+
+(6)
+Furthermore, from the properties of the tail probability function in this case, the 
+symmetry between the void and excursion percolation is proven by the fact that:
+lim
+1
+lim
+.
+c
+c
+→
+→
+Φ =
+−
+Φ
+β
+β
+∞
++
+∞
+−
+
+(7)
+These results are consistent with some values from the literature obtained ﬁrst by 
+computer simulations of the potential model (0.17
+0.01
+±
+ in [25]) or by speculation on 
+lattice problems (0.16
+0.02
+±
+ in [34]). They are also consistent with the symmetrical 
+assumption 
+1
+c
+c
+Φ + Φ =
++
+−
+. However, based on numerical simulations [6, 20] or analytical 
+approximations [33], three-dimensional continuum models are often based on overlap-
+ping ideal geometrical objects (sphere, ellipsoids, squares,...) leading to a signiﬁcant 
+variation of the results (see [35] for a more in-depth analysis).
+Now, still in ﬁgure 3, as β decreases, the critical volume fraction of the excursion 
+set c
+Φ+ increases. It agrees with remarks made in [20] stating that simulations in larger 
+domains lead to smaller results. This rather unintuitive feature can be interpreted by 
+the fact that, in a ﬁnite size domain, there are fewer possible paths to link two distant 
+points than in an inﬁnite one. Hence, a higher volume fraction is needed. Table 1 shows 
+some approximations of 
+c
+Φ+ and 
+c
+Φ−.
+First, it can be observed that the present prediction model possesses a limitation 
+for small scales (
+lim
+β
+β
+<
+ with 
+2.7766
+lim
+β
+≈
+ see table 1), where no percolation can be 
+deﬁned. As mentioned in the previous section, it corresponds to an absence of root in 
+the EC function. Then, table 1 shows that for ﬁnite size domains we observe the loss of 
+the symmetrical relationship 
+1
+c
+c ⩾
+Φ + Φ
++
+−
+, meaning that the symmetry hypothesis (that 
+exists on inﬁnite size problems) does not apply anymore. Finally, when looking at the 
+Table 1.  Critical volumes of percolation of excursion sets of the Gaussian RF with 
+the Gaussian covariance function for speciﬁc scale ratios.
+β
+2.7766
+5
+10
+100
+1000
+∞
+Φ+
+c
+0.7257
+0.3454
+0.2367
+0.1652
+0.1593
+0.1587
+Φ−
+c
+0.7509
+0.9101
+0.8257
+0.8477
+0.8420
+0.8413
+Φ + Φ
++
+−
+c
+c
+1.4766
+1.2555
+1.0624
+1.0129
+1.0013
+1Critical probability of percolation over bounded region in N-dimensional Euclidean space
+8
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+variation of the critical volumes as a function of the scales, it can be seen that the side 
+eects play a signiﬁcant role for rather small scales. Actually, as a ﬁrst part of the next 
+section, a quantiﬁcation of the contribution of side eects leads to the deﬁnition of the 
+morphological RVE for percolation. Then an extension of the predictive model is made 
+for N-dimensional spaces.
+4. Possible extensions
+4.1. Percolation representative volume elements
+Dealing with heterogeneous media, traditional approaches to deﬁning the RVE are 
+based on a set of realisations and an averaging procedure. Theoretically, if the domain 
+M is an RVE for a given property, the discrepancy of the results must vanish to zero. 
+However, these RVEs are usually too large to be handled numerically. Smaller realisa-
+tions are thus made and from average values over all the realisations, lower and upper 
+bounds can be deﬁned [9, 10]. Herein, this statistical approach is embedded in the 
+theoretical framework that gives the excursion set expected characteristics. Hence, no 
+actual realisation is computed.
+Due to its monotonic shape, the RVE is deﬁned with regard to the critical volumes 
+of percolation of the excursion set (now noted c
+Φ instead of 
+c
+Φ+), the ‘reference’ value 
+being the asymptotic value on inﬁnite domains:
+lim
+.
+c
+c
+→
+Φ
+=
+Φ
+β
+∞
+∞
+
+(8)
+The relative error
+c
+c
+c
+= Φ −Φ
+Φ
+∞
+∞
+ε
+(9)
+gives the RVE precision. Hence, a value of β can be associated with a given error. 
+Table 2 shows that, for a given heterogeneity size lc, a region with a size larger than 80 
+times lc is needed for 
+0.05
+=
+ε
+ and 400 times for 
+0.01
+=
+ε
+.
+As far as the authors can tell, no RVE for percolation can be found in the literature. 
+However, it can be compared to classical mechanical problems linked to percolation 
+issues such as diusivity phenomena or permeation in cement paste. On these matters, 
+the results are rather consistent and tend to deﬁne an RVE corresponding to a scale 
+ratio of 
+100
+β =
+. Among the vast literature on that subject, in [36] the authors deﬁne 
+a cement paste RVE for water diusivity of 100
+100
+100
+×
+×
+ μm3 with heterogeneities 
+Table 2.  Length ratio and corresponding critical volume of =
+ε
+0.01 and =
+ε
+0.05 
+error RVE for percolation of excursion sets of the Gaussian RF with the Gaussian 
+covariance function.
+ε
+0
+0.01
+0.05
+Φc
+15.87
+16.03
+16.67
+β
+∞
+400
+83.33Critical probability of percolation over bounded region in N-dimensional Euclidean space
+9
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+represented by polydisperse spheres from 1 μm to 50 μm. The RVE is then smaller than 
+what we predict. Several considerations can explain this dierence. First, the property 
+of interest diers. When the latter RVE is based on a mechanical property (diusivity), 
+the theoretical approach suggested in this article only takes into consideration the 
+topological aspect of the morphology. Secondly, a size distribution of spheres is com-
+pared to an excursion set with one characteristic length only.
+4.2. N-dimensional percolation
+As presented in the previous sections, equations (2) and (3) link the marginal distribu-
+tion of the RF and its spatial structure to the geometrical and topological character-
+istics of the excursion. These theoretical results come from [28, 29] in a rather more 
+general aspect than presented in the paper. It is especially valid for RF (and thus, 
+excursions) deﬁned over N-dimensional spaces.
+In this space, any morphology can be characterised by N  +  1 independent math-
+ematical measures ([4, 8]). In the present case, the base made of the N  +  1 Lipschitz–
+Killing curvatures 
+j
+L  is used [2]. As a measure of Euclidean spaces and ignoring a 
+factor of scale, they are equivalent to the more commonly used Minkowski functionals, 
+and can be seen as j-dimensional sizes. For example, for an N-dimensional hypercube 
+C
+a
+0
+N
+i
+N
+1[   ]
+= Π =
+, they read 
+C
+N
+j a
+j
+N
+j
+(
+)
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+=
+L
+, for j  =  [0..N ]. In 3D they will represent the 
+volume, half of the surface, twice the calliper diameter and the EC, for j  =  3, 2, 1 and 0, 
+respectively.
+As before, the necessary conditions for the RF is to be twice dierentiable and have 
+a constant second moment. Now, let g
+M
+:
+N
+⊂
+
+R
+R be a Gaussian RF and 2
+λ  be its 
+second spectral moment. If 
+x
+x
+E
+M
+g
+s
+N
+{
+    ( )
+}
+⊂
+κ
+=
+∈
+|
+>
+R
+ is the corresponding excursion 
+set, expectation of the Lipschitz–Killing curvatures can be computed, for j  =  [0..N ], as 
+follows [2]:
+E
+i
+j
+i
+M
+2
+,
+j
+s
+i
+N
+j
+i
+j
+i
+j
+i
+i
+j
+i
+0
+2
+/2
+{
+(
+)}
+(
+)
+( )
+⎜
+⎟
+⎜
+⎟
+⎛
+⎝
+⎞
+⎠
+⎛
+⎝
+⎞
+⎠
+∑
+ω
+ω ω
+λ
+π
+κ
+=
++
+γ
+=
+−
++
++
+L
+L
+M
+E
+(10)
+where 
+N
+/
+1
+/2
+j
+N/2
+(
+)
+ω
+π
+=
+Γ
++
+ are the jth volume of the unit ball and, carrying the infor-
+mation of the RF distribution, 
+i
+γ
+M  are the ith Gaussian Minkowski functionals1. It is 
+worth noting that only the latter functionals depend on the threshold κ (see appendix 
+for their analytical deﬁnitions and [21, 22] for more general cases). The EC is the ‘0th’ 
+topological measure 
+Es
+0(
+)
+χ = L
+, whereas the equivalent of the fraction volume is the 
+speciﬁc Nth measure 
+E
+M
+/
+N
+s
+N
+(
+)
+(
+)
+Φ = L
+L
+.
+With this generalisation of equations (2) and (3), the same methodology as in sec-
+tion 1 can be applied for any N. It is in this spirit that ﬁgure 4 draws the critical vol-
+umes for percolation (for N  =  2, 3, 4, 6, 8 and 10). The critical volumes are now deﬁned 
+for the percolation of the excursion. Thus, c
+c
+{ (
+)}
+κ
+Φ =
+Φ
++
+E
+, with c
+κ+ being the larger root 
+of the expected EC.
+1 Minkowski-like functionals are used here to measure the probabilistic space, whereas usually Minkowski function-
+als are used to measure Euclidean spaces. Herein the Lipschitz–Killing curvatures do this task.Critical probability of percolation over bounded region in N-dimensional Euclidean space
+10
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+According to the literature for inﬁnitely large domains and extended to all 
+scale ratios, the critical volumes decrease along with increasing spatial dimensions. 
+Furthermore, increasing the spatial dimensions leads to a larger RVE (see section 4.1). 
+In other terms, the asymptotic behaviour is obtained for larger domains. However, it 
+has to be kept in mind that ﬁgure 4 draws only the percolation probability corresp­
+onding to the largest root c
+κ+. As noted in [30], in N-dimensional inﬁnite spaces the EC 
+has N  −  1 roots corresponding to N dierent ‘states’ of percolation and N  −  1 trans­
+ition times (the EC roots). In two dimensions there is one transition time between two 
+states, namely when it changes, for increasing thresholds, from a percolated excursion 
+and non-percolated voids to a non-percolated excursion and percolated voids. In three 
+dimensions two transitions occur: ﬁrst from a percolated excursion and non-percolated 
+voids (closed porosity type of morphology) to a percolated excursion and voids (open 
+porosity type of morphology) and second from the latter state to a non-percolated 
+excursion to percolated voids (connected components type of morphology). Since it 
+goes beyond the standard deﬁnitions it is not clear to us what the other states mean in 
+higher dimensions. We think that, as three-dimensional topological entities (handles) 
+allow us to yield additional percolation states compared to the two-dimensional case, 
+higher topological entities can produce the same eect. However, it is because we only 
+consider the higher EC root that we assume it detects the percolation of the excursion.
+Finally, attention is drawn to the asymptotic behaviour of the critical volumes for 
+very large domains. For that matter, ﬁgure 5 shows 
+c
+Φ∞ as deﬁned in equation (8) as a 
+function of N.
+As was already noticeable in ﬁgure 4, it can be seen in ﬁgure 5 that, for N  =  2, the 
+critical percolation probability of bond lattices pc  =  1/2 [12] is retrieved. However, 
+going further in dimensions increases drastically the dierence between the models. A 
+comparison is made here, ﬁrst with the results from [31], where percolation threshold 
+Figure 4.  Critical volume for percolation Φc as a function of the scale ratio β for 
+hypercubes in dierent spatial dimensions in the case of excursion sets of the 
+Gaussian RF with the Gaussian covariance function.
+10−5
+10−4
+10−3
+10−2
+10−1
+100
+101
+1
+10
+100
+1000
+9 10−5
+0.0021
+0.0418
+0.1584
+0.5
+Critical volume of percolation Φc
+Scale ratio β = l/lc
+N = 2
+N = 3
+N = 4
+N = 6
+N = 8
+N = 10Critical probability of percolation over bounded region in N-dimensional Euclidean space
+11
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+cη  represents the total speciﬁc volume of overlapping hyperspheres. For the sake of 
+comparison, the data drawn are the equivalent critical volume 
+1
+e
+c
+c
+Φ =
+−
+η
+−. Then 
+comparison is made with bond percolation probability pc on the lattice from [7]. The 
+dierence between these results comes from the rather dierent physical natures of the 
+models and even the deﬁnition of percolation. However, the tendency of a smaller criti-
+cal percolation probability with a higher dimension seems to be conﬁrmed.
+5. Concluding remarks
+We propose an analytical model that determines the critical probability of percolation 
+over bounded regions in N-dimensional Euclidean space through topological estima-
+tion. It is based on the probabilistic knowledge of the measures of excursion sets based 
+on the correlated RF. First, the EC is used to detect percolation through its null val-
+ues and then, the corresponding N-dimensional volume fraction is the so-called critical 
+volume c
+Φ that links the continuum aspect of excursions and the well-known critical 
+probability pc.
+Analysis has mainly been made through 3D examples. The model is able to retrieve 
+results from the literature such as the critical volume 
+0.16
+c
+Φ ≈
+ for inﬁnite regions. 
+But, more importantly, since the model can predict percolation for bounded regions 
+the percolation probability is considered as a function of a scale ratio (or domain size) 
+and the results stated just above are their asymptotic values. This feature is used in a 
+concrete example where statistically Representative Volume Elements for percolation 
+have been analytically determined. An extension to N-dimensional spaces is proposed, 
+showing the general aspect of this analytical framework. However, in opposition to 
+Figure 5.  Asymptotic critical volume for percolation Φ∞
+c  of inﬁnitely large 
+excursion set ( →
+β
+∞) as a function of the spatial dimension of the hyper-cubical 
+domain deﬁnition N. The equivalent values are also drawn from [31] and [7] for 
+overlapping spheres and lattice bond percolation, respectively.
+10−14
+10−12
+10−10
+10−8
+10−6
+10−4
+10−2
+100
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Critical volume of percolation Φ∞
+c
+Spatial dimension N
+Excursion sets theory
+Overlapping hyperspheres
+Lattice bond percolationCritical probability of percolation over bounded region in N-dimensional Euclidean space
+12
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+other frameworks, this model does not provide information on the subcritical and 
+supercritical behaviour.
+Several lines of investigation can come out from these results. For example, an anal-
+ysis between topological prediction and the critical behaviours in the case of excursion 
+sets can be made with Monte-Carlo simulations in order to see how well the EC pre-
+dicts continuum percolation. Another useful way is to compare the present approach 
+with average concentrations of spanning clusters from ﬁnite-size scaling frameworks 
+(see chapter 4.1 of [26]) where the impact of the size of the observation window can be 
+analysed.
+Appendix. Gaussian Minkowski functionals
+By explaining how the Minkowski functionals are linked to the probability of the Random 
+Field to be greater than the threshold 
+x
+g( )
+κ
+> , or in other words, the probability of 
+the Random Field to be in the so-called hitting set 
+x
+g
+,
+( )
+[
+[
+κ
+∈
+∞, this appendix gives 
+the analytical deﬁnition of the Gaussian Minkowski functionals 
+i
+γ
+M  in equation (10).
+A.1. Taylor expansion of the tube Gaussian volumes
+In contrast to Lipschitz–Killing curvatures, the Minkowski functionals are not intrinsic. 
+Therefore, they depend on the measure associated with it. Herein, the measure of a 
+Gaussian distribution is of concern. Let kγ  be such a measure in the Euclidean space 
+k
+R . 
+If X
+Xi
+{
+}
+=
+ is a standard Gaussian vector of size k in which X
+i
+k
+0,
+,
+1..
+i
+2
+N (
+)  
+[
+]
+σ
+∼
+=
+ 
+are independent and A
+k
+⊂R :
+X
+x
+A
+P
+A
+1
+2
+e
+d .
+x
+k
+k
+k
+A
+/2
+/2
+2
+2
+( )
+{
+}
+(
+)
+∥∥
+∫
+γ
+σ
+π
+=
+∈
+=
+σ
+−
+
+(A.1)
+Associated with this measure, the functionals are now called Gaussian Minkowski func-
+tionals (hereafter GMFs). In a k-dimensional space, k  +  1 GMFs are deﬁned, noted 
+j
+kγ
+M , 
+j  =  [0..N ]. The main results of [28] is to yield the following Taylor expansion of tube 
+probability:
+A
+j
+A
+,
+!
+.
+k
+j
+j
+j
+0
+k
+( (
+))
+( )
+∑
+γ
+ρ
+ρ
+=
+γ
+=
+∞
+K
+M
+
+(A.2)
+for small enough ρ, where 
+A,
+(
+)
+ρ
+K
+ is the tube of A of ray ρ. It can be seen as an exten-
+sion of the Steiner–Weyls formula, in which kγ  represents the volume in the sense of the 
+Gaussian measure (Gaussian volume). By taking 
+0
+ρ = , it can be concluded that the 
+ﬁrst Gaussian Minkowski functional is the Gaussian volume of A itself, 
+A
+A
+k
+0
+k( )
+( )
+γ
+=
+γ
+M
+. 
+Other GMFs can be identiﬁed in speciﬁc cases.
+A.2. Application to scalar-valued Gaussian random ﬁelds
+Even though the presented formulae work for more general cases, it suces in this 
+case to take k  =  1, corresponding to a scalar-valued RF g :
+3 →
+R
+R and excursion sets 
+deﬁned as:Critical probability of percolation over bounded region in N-dimensional Euclidean space
+13
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+R
+R
+{
+    ( )
+}
+{
+    ( )
+}
+κ
+κ
+=
+∈
+⊂
+|
+>
+=
+∈
+⊂
+|
+∈
+∞
+⎡⎣
+⎡⎣
+x
+x
+x
+x
+E
+M
+g
+M
+g
+,
+s
+N
+N
+This leads to several simpliﬁcations. First, the Gaussian volume of the hitting set ,
+[
+[
+κ ∞ 
+is the complementary cumulative density function (or tail distribution, noted F ) of the 
+underlying standard distribution:
+P X
+x
+F
+,
+1
+2
+e
+d
+,
+x
+1
+/
+2
+2
+([
+[)
+{
+⩾}
+( )
+∫
+γ
+κ
+κ
+σ
+π
+κ
+∞
+=
+=
+=
+κ
+σ
+∞
+−
+
+(A.3)
+Furthermore, the tube of 
+,
+[
+[
+κ ∞ can easily be deﬁned and its tail probability linked to 
+the tail distribution as follows:
+F
+,
+,
+,
+and
+,
+.
+1
+([
+[
+)
+[
+[  
+  
+([
+[)
+(
+)
+κ
+ρ
+κ
+ρ
+γ
+κ
+ρ
+κ
+ρ
+∞
+=
+−
+∞
+−
+∞
+=
+−
+K
+(A.4)
+Each GMF of (A.2) can be identiﬁed by the unique standard Taylor expansion of 
+F (
+)
+κ
+ρ
+−
+ for small ρ, leading to:
+j
+F
+for
+0,
+,
+,
+0
+1
+  
+([
+[)
+( )
+κ
+κ
+=
+∞
+=
+γ
+M
+
+(A.5a)
+j
+F
+H
+for
+1,
+,
+1
+d
+d
+e
+2
+/
+,
+j
+j
+j
+j
+j
+j
+/2
+1
+1
+2
+2
+⩾
+  
+([
+[)
+(
+)
+( )
+(
+)
+κ
+κ
+κ
+σ
+π
+κ σ
+∞
+= −
+=
+γ
+κ
+σ
+−
+−
+M
+
+(A.5b)
+where H j,
+0
+j
+⩾ are the jth probabilistic Hermite polynomials:
+H x
+x
+1
+e
+d
+d
+e
+.
+n
+n
+x
+n
+n
+x
+/2
+/2
+2
+2
+( )
+(
+)
+= −
+−
+More general results can be found in [21].
+References
+	 [1]	 Adler R J and Taylor J E 2007 Random Fields and Geometry (Springer Monographs in Mathematics vol 17) 
+(New York: Springer)
+	 [2]	 Adler R J 2008 Some new random ﬁeld tools for spatial analysis Stoch. Environ. Res. Risk Assess. 22 809–22
+	 [3]	 Broadbent S R and Hammersley J M 1957 Percolation process, I and II Proc. Camb. Phil. Soc. 53 629–45
+	 [4]	 Chen B 2004 A simpliﬁed elementary proof of Hadwiger’s volume theorem Geometriae Dedicata 105 107–20
+	 [5]	 Flory P J 1941 Molecular size distribution in three dimensional polymers I. Gelation 1 J. Am. Chem. Soc. 
+63 3083–90
+	 [6]	 Garboczi E J, Snyder K A, Douglas J F and Thorpe M F 1995 Geometrical percolation threshold of 
+­overlapping ellipsoids Phys. Rev. E 52 819–28
+	 [7]	 Grassberger P 2003 Critical percolation in high dimensions Phys. Rev. E 67
+	 [8]	 Hadwiger H 1957 Vorlesungen über Inhalt, Oberﬂäche and Isoperimetrie (Berlin: Springer)
+	 [9]	 Hazanov S and Huet C 1994 Order relationships for boundary conditions eect in heterogeneous bodies 
+smaller than the representative volume J. Mech. Phys. Solids 43 1995–2011
+	[10]	 Huet C 1990 Application of variational concepts to size eects in elastic heterogeneous bodies J. Mech. Phys. 
+Solids 21 813–41
+	[11]	 Hunt A G 1998 Upscaling in subsurface transport using cluster statistics of percolation Transp. Porous 
+Media 30 177–98
+	[12]	 Kesten H 1982 Percolation Theory for Mathematicians (Boston, MA: Birkhäuser Boston)
+	[13]	 Matheron G 1975 Random Sets and Integral Geometry (Wiley Series in Probability and Mathematical Statis-
+tics: Probability and Mathematical Statistics) (New York: Wiley)
+	[14]	 Mecke K 1997 Morphology of spatial patterns—porous media, spinodal decomposition and dissipative struc-
+tures Acta Phys. Pol. B 28 1747–82
+	[15]	 Mecke K R and Wagner H 1991 Euler characteristic and related measures for random geometric sets J. Stat. 
+Phys. 64 843–50Critical probability of percolation over bounded region in N-dimensional Euclidean space
+14
+doi:10.1088/1742-5468/2016/03/033306
+J. Stat. Mech. (2016) 033306
+	[16]	 Nachtrab S, Homann M J F, Kapfer S C, Schröder-Turk G E and Mecke K 2015 Beyond the percolation 
+universality class: the vertex split model for tetravalent lattices New J. Phys. 17 043061
+	[17]	 Neher R A, Mecke K and Wagner H 2008 Topological estimation of percolation thresholds J. Stat. Mech. 
+2008 P01011
+	[18]	 Neuweiler I and Vogel H-J 2007 Upscaling for unsaturated ﬂow for non-Gaussian heterogeneous porous media 
+Water Res. Res. 43
+	[19]	 Okun B L 1990 Euler characteristic in percolation theory J. Stat. Phys. 59 523–7
+	[20]	 Rintoul M D and Torquato S 1997 Precise determination of the critical threshold and exponents in a  
+three-dimensional continuum percolation model J. Phys. A: Math. Gen. 30 L585–92
+	[21]	 Roubin E 2013 Meso-scale FE and morphological modeling of heterogeneous media: application to 
+­cementitious materials PhD Thesis École normal Supérieure de Cachan, LMT-Cachan
+	[22]	 Roubin E, Colliat J-B and Benkemoun N 2015 Meso-scale modeling of concrete: a morphological description 
+based on excursion sets of random ﬁelds Comput. Mater. Sci. 102 183–95
+	[23]	 Scher H and Zallen R 1970 Critical density in percolation process J. Chem. Phys. 53 3759
+	[24]	 Schneider R and Weil W 2008 Stochastic and Integral Geometry (Probability and its Applications)  
+(Berlin: Springer)
+	[25]	 Skal A S, Shklovskii B I and Efros A L 1973 Percolation level in a 3-dimensional random potential JETP 
+Lett. 17 377–9
+	[26]	 Stauer D and Aharony A 1994 Introduction to Percolation Theory (Boca Raton, FL: CRC Press)
+	[27]	 Sykes M F and Essam J W 1964 Exact critical percolation probabilities for site and Bond problems in two 
+dimensions J. Math. Phys. 5 1117
+	[28]	 Taylor J E 2006 A Gaussian kinematic formula Ann. Probab. 34 122–58
+	[29]	 Taylor J E and Adler R J 2003 Euler characteristics for Gaussian ﬁelds on manifolds Ann. Probab. 
+31 533–63
+	[30]	 Tomita H and Murakami C 1994 Percolation pattern in continuous media and its topology Research of 
+­Pattern Formation ed R Takaki (Tokyo: KTK Scientiﬁc) pp 197–203
+	[31]	 Torquato S and Jiao Y 2012 Eect of dimensionality on the continuum percolation of overlapping 
+­hyperspheres and hypercubes. II. Simulation results and analyses J. Chem. Phys. 137 074106
+	[32]	 Worsley K J 1996 The geometry of random images Chance 9 27–40
+	[33]	 Yi Y-B and Sastry A M 2004 Analytical approximation of the percolation threshold for overlapping ellipsoids 
+of revolution Proc. R. Soc. A 460 2353–80
+	[34]	 Zallen R 1983 The Physics of Amorphous Solids (New York: Wiley)
+	[35]	 Zallen R 2001 The sixteen-percent solution: critical volume fraction for percolation Phase Transitions and 
+Self-Organization in Electronic and Molecular Networks (Fundamental Materials Research) ed M F Thorpe 
+and J C Phillips (New York: Springer) pp 37–41
+	[36]	 Zhang M, Ye G and van Breugel K 2011 Microstructure-based modeling of water diusivity in cement paste 
+Constr. Build. Mater. 25 2046–52

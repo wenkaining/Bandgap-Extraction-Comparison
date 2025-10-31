@@ -1,0 +1,470 @@
+PHYSICAL REVIEW B 87, 165406 (2013) Uniﬁed model of droplet epitaxy for compound semiconductor nanostructures: Experiments and theory Kristofer Reyes and Peter Smereka Department of Mathematics, University of Michigan, Ann Arbor, Michigan 48109 Denis Nothern and Joanna Mirecki Millunchick Department of Materials Science and Engineering, University of Michigan, Ann Arbor, Michigan 48109 Sergio Bietti, Claudio Somaschini, and Stefano Sanguinetti L-NESS, Dipartimento di Scienza dei Materiali, Universita di Milano Bicocca, Milan, Italy Cesare Frigeri IMEM-CNR, Parma, Italy (Received 16 October 2012; published 4 April 2013) We present a uniﬁed model of compound semiconductor growth based on kinetic Monte Carlo simulations in tandem with experimental results that can describe and predict the mechanisms for the formation of various types of nanostructures observed during droplet epitaxy.
+The crucial features of the model include the explicit and independent representation of atoms with different species and the ability to treat solid and liquid phases independently.
+Using this model, we examine nanostructural evolution in droplet epitaxy.
+The model faithfully captures several of the experimentally observed structures, including compact islands and nanorings.
+Moreover, simulations show the presence of Ga/GaAs core-shell structures that we validate experimentally.
+A fully analytical model of droplet epitaxy that explains the relationship between growth conditions and the resulting nanostructures is presented, yielding key insight into the mechanisms of droplet epitaxy.
+DOI: 10.1103/PhysRevB.87.165406 PACS number(s): 81.10.Aj, 07.05.Tp, 81.15.Hi, 81.07.Ta I. INTRODUCTION Nanotechnology involves the manipulation of matter at the nanoscale in order to take advantage of the physical properties of materials which arise by a ﬁne tuning of shape and size.
+Due to quantum conﬁnement effects, three-dimensional semiconductor nanostructures can behave as artiﬁcial atoms and, like natural atoms, show a discrete spectrum of energy levels.1 In contrast to actual atoms, the electronic properties of quantum nanostructures can be ﬁnely tuned by adjusting structural parameters such as size, composition, and morphol- ogy.
+The latter parameter is the most relevant for the control of quantum nanostructure electronic properties, as tiny variations in morphology or composition can cause dramatic changes on the band structure.2 One of the most common methods for the fabrica- tion of quantum nanostructures is the growth of lattice- mismatched III-V semiconductor materials via the Stranski- Krastanov (SK) mode.
+SK growth exploits the self-assembly of pyramidal-like quantum dots (QDs), driven by the relaxation of lattice-mismatched strain accumulated in the epilayer.
+Despite the high success of the technique, which led to fundamental physical understanding and a variety of applications, the available design degrees of freedom remain limited.
+The precise engineering of size and shape of QDs via SK self- assembly remains problematic, thus limiting the possibilities for the design of arbitrary electronic and optical properties.
+To overcome the SK growth limitations, a fully kinetic limited growth procedure called droplet epitaxy (DE) was introduced.3,4 Unlike SK self-assembly, DE does not rely on strain for the formation of three-dimensional nanostructures.
+Instead, DE is based on the sequential deposition of III and V column elements at controlled temperatures and ﬂuxes and, as such, is a bottom-up fabrication and patterning technique.
+An initial deposition of metallic group III such as Ga in a group-V free environment leads to the formation of nanometer-size liquid droplets.
+Subsequent exposure of the liquid droplets to the group-V vapor causes them to crystallize into quantum dots, by which we mean compact, three- dimensional nanostructures.5,6 A variety of nanostructures may be obtained using this technique, ranging from compact quantum dots, quantum rings, and core-shell structures.6–11 While experimental observations evoke likely mechanisms, a uniﬁed model for the formation of various nanostructural morphologies via DE is still needed.
+Understanding the precise mechanisms behind their formation is critical to controlling the various properties such as shape, size, and composition, which in turn affect the macroscopic behavior of devices based on such quantum nanostructures.
+Kinetic Monte Carlo (KMC) simulation is a useful tool for developing and testing models of epitaxial growth and have shed light on the important processes for a wide range of scenarios.
+Previous KMC simulations of GaAs systems modeled homoepitaxial growth on a cubic lattice.
+Among the earliest simulations, a single component was used to model epitaxial growth, varying energy parameters to account for the expected effect on diffusivity by different Ga/As deposition ratios.12 Two-component simulations have also been performed13–15 to study aspects of ﬁlm growth such as the transition from two-dimensional island formation to step-ﬂow growth.
+Such simulations, however, are necessarily over small areas and are valid only for limited range growth parameters.
+165406-1 1098-0121/2013/87(16)/165406(14) ©2013 American Physical SocietyKRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) In most cases, these simulations are unable to model growth regimes in which the group-V to group-III ratio in the growing ﬁlm is not unity, as in the case in droplet epitaxy.
+The simulations presented in this paper are designed to capture a wide range of phenomenology in epitaxial growth, with an emphasis on the growth from the liquid phase.
+We chose to examine droplet epitaxy ﬁrst, but the simulation and analytical methodologies presented here are applicable to other growth mechanisms, speciﬁcally nanowire grown by the vapor-liquid-solid (VLS) method.
+In both VLS and DE growth, a liquid metal reacts with vapor, resulting in crystallization at the liquid-solid interface.
+In DE, the metal is consumed during this crystallization process.
+In VLS, the metal is either not consumed or consumed more slowly than in DE, resulting in structures of length scale larger than the original liquid droplet.
+In this paper, we present experimental and simulation results that shed light on the exact mechanisms behind the formation of nanostructures in droplet epitaxy.
+We introduce a KMC model (Sec. II) that is capable of simulating the formation of nanostructures at all stages, from homoepitaxial growth to liquid metal droplet formation and subsequent crystallization.
+The model represents Ga and As atoms explicitly, and treats liquid and solid phases independently.
+Although atomistic, the simulations form large-scale global structure consistent with experimental results in a reasonable amount of time.
+As an initial validation of the model, GaAs homoepitaxy simulations are compared with analogous experiments, accurately reproducing a surface termination phase diagram (Sec. III).
+We then turn our attention to the main thrust of the paper, the nanostructural dependence on growth conditions during droplet epitaxy.
+We present experimental results exhibiting this dependence, along with corresponding simulations (Sec. IV).
+The model can capture the broad range of nanostructures observed in the experiments with the correct qualitative dependence on growth parameters.
+Moreover, simulations predict the presence of Ga/GaAs core- shell structures, which are difﬁcult to observe unambiguously in experiments.
+The existence of both monocrystalline and polycrystalline shells suggest two independent mechanisms of their formation: a morphological instability of the crystal- lization front or nucleation at the vapor-liquid interface.
+We show by simulation that nucleation-induced shell structures may be recrystallized into fully crystallized GaAs islands by annealing at high temperature (Sec. IV B1).
+In the case of the instability-driven shell formation, we provide simulation and experimental evidence to suggest the presence of a Mullins-Sekerka instability (Sec. IV B2).
+Lastly, we develop a fully analytical model (Sec. V) that describes the existence of the structures observed and their dependence on growth conditions.
+The theoretical model agrees well with simulation and experimental results. II.
+KINETIC MONTE CARLO MODEL Prior work in simulating GaAs systems focused on ho- moepitaxial growth and studied associated phenomena such as step density12 and growth modes of GaAs ﬁlms.13 In these simulations, surface diffusion of adatoms played the central role, and because of the stoichiometric nature of epitaxial growth, a simple cubic lattice and the solid-on-solid FIG.
+1. (Color online) KMC events.
+Simulations are run on a 1 + 1 analog of GaAs zinc-blende structure.
+Ga atoms are colored red, As atoms are green.
+The model allows for atom desorption (A), surface diffusion (B), atom-atom exchanges (C), and atom deposition (D).
+The simulations are explicitly multispecies and atomistic, and evolve via events on individual Ga or As atoms.
+constraint sufﬁced in modeling key aspects of this process.
+Droplet epitaxy, however, poses several issues that can not be captured by earlier models.
+During DE, the system is inherently nonstoichiometric in that the relative concentrations of Ga and As atoms on the surface are different from one another and so care must be taken to model liquid droplet formation.
+Processes other than surface diffusion, such as events within liquid and at the liquid-solid interface, play a key role and can not be captured by a simple solid-on-solid model.
+Lastly, DE results in large-scale nanostructures on the order of tens to hundreds of nanometers so that the simulations must be performed efﬁciently within large domains.
+We simulate the homoepitaxial growth and droplet epitaxy experiments with a KMC model that attempts to address the relevant processes in DE.
+In the model, atoms occupy positions on a (1 + 1)-dimensional analog of the zinc-blende lattice illustrated in Fig. 1.
+Each position on the lattice is adjacent to four nearest neighbors and four next-nearest neighbors.
+Lattice sites are vacant or occupied by either a Ga or As atom.
+The (1 + 1)-dimensional approach naturally hinders our model to catch effects that are associated to the three- dimensional crystal structure and to atomic rearrangements driven by nonlocal energetics such as surface reconstruction phase changes.
+Speciﬁcally, surface reconstruction dynamics leads to changes in adatom surface mobility, both in terms of diffusion length and diffusivity anisotropy, and in adatom incorporation into the crystal structure.
+These effects are at the origin, in DE, of the observed dependence on substrate temperatureandpreparationprocedureinthedroplet formation critical coverage during the initial Ga deposition and of the shape and anisotropy of control of the quantum nanostructures that are possible thanks to ﬁne control of surface reconstruction dynamics.16,17 The simplicity of the model implies such effects can not be captured, in line with previous work on KMC modeling.
+We note here that other theoretical models can capture surface reconstructions.18 The processes that are captured and studied in this paper, however, yield ﬁrst-order insight to the growth mechanisms in DE.
+In each Monte Carlo step, one of four local events alters at most two positions on the lattice.
+Atoms may desorb from the surface (A in Fig. 1), diffuse on the surface (B), exchange with neighboring atoms (C), or adsorb onto a vacant position on the surface (D).
+The model does not enforce 165406-2UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) TABLE I. Pairwise nearest- and next-nearest-neighbor bonding energies used throughout the paper.
+γ (eV) Ga As γnn (eV) Ga As Ga 0.3 0.5 Ga 0.3 As 0.5 0.1 As 0.1 a solid-on-solid constraint.
+Instead, atom conﬁgurations are required to be connected, i.e., there must exist a chain of atoms (through nearest-neighbor bonds) between any two atoms in the conﬁguration.
+While connectedness is inherently a global property, the requirement is approximated by enforcing the property on all local neighborhoods.
+Any event resulting in a disconnected conﬁguration is disallowed.
+Event rates are determined by simple nearest- and next- nearest-neighbor bond counting.
+Due to the multispecies nature of the model, several bonding energies must be speciﬁed.
+Speciﬁcally, nearest and next-nearest neighbors are bonded by energies that depend solely on the species of the two connected atoms.
+Nearest-neighbor bonding energies are given by three parameters γ (Ga,Ga), γ (Ga,As), and γ (As,As).
+Next-nearest-neighbor bonds are only assigned between atoms of the same species and are denoted γnn(Ga,Ga) and γnn(As,As).
+In this way, Ga and As only interact through nearest-neighbor bonds, whereas Ga-Ga and As-As interact through nearest- and next-nearest-neighbor bonds.
+The param- eter values used in the simulations are summarized in Table I.
+These energy values imply that the Ga-As bonds are energeti- cally preferred, while weak As-As bonds effectively eliminate excess As by desorption.
+The bonding energies were calibrated from the homoepitaxy (Sec. III) and liquid droplet simulations (Sec. IV) to match qualitative experimental assumptions and observations.
+Within the homoepitaxy simulations, the Ga-As bond strengths were tuned in order to observe a transition from rough island formation in the low-temperature regime to a smooth step-ﬂow growth mechanism in high temperatures.19 In the case of liquid droplet simulations, we tune the Ga-Ga bond strength to match liquid droplet statistics such as droplet width and number density.
+Monte Carlo transition rates r(X,Y) from atom conﬁgura- tion X to conﬁguration Y are taken to be of an Arrhenius form r(X,Y) = R0e−Ea(X,Y)/kBT , where R0 = 1013 s−1 is a constant rate prefactor, T is temperature, and Ea(X,Y) is the activation energy for a particular event.
+For surface diffusion, Ea is simply the sum of the bonding energies about the diffusing atom.
+For the desorption of an As atom, the activation energy is the sum of the bonding energies about the desorbing atom and an additional desorption barrier μAs = 1.1 eV, its value calibrated by homoepitaxial simulations described in Sec. III.
+The desorption of Ga is disallowed.
+In the case of atom-atom exchanges, which occur within a liquid droplet, we use a base energy barrier ϵD for the As diffusion barrier in liquid Ga, described in more detail below.
+To facilitate exchanges occurring at the liquid-solid interface, for which we must take solid bonds into account, we deﬁne an intermediate state in which the exchanging atoms are replaced by an intermediate species H. Bonding FIG.
+2. (Color online) Attachment and detachment events at the liquid-solid interface.
+This ﬁgure illustrates the attachment and detachment of an As atom in liquid Ga onto and from a perfectly ﬂat liquid-solid interface, along with the intermediate state for the transitions.
+The intermediate species H is colored blue.
+The black lines indicate the relevant bonds that contribute to the change in energy between the initial and intermediate states.
+energies between Ga or As atoms and H atoms are obtained by averaging over H = Ga and H = As, e.g. γ (Ga,H) = 1 2 [γ (Ga,Ga) + γ (Ga,As)] .
+The activation energy Ea of an atom-atom exchange at the liquid-solid interface is then taken to be the sum of the base barrier ϵD and the change in bonding energies between the original and the intermediate states.
+For example, we consider the attachment and detachment of an As atom onto the liquid-solid interface, as illustrated in Fig. 2.
+We denote the states before and after the detachment as X,Y, respectively, and the intermediate state as deﬁned above by I(X,Y).
+The change in energy E(X) −E[I(X,Y)] between states X and I(X,Y), describing the additional barrier for attachment can be computed from a small number of relevant bonds, indicated by black lines in the ﬁgure.
+The total activation energy for attachment EA = ϵD + E(X) − E[I(X,Y)] is then given by EA = ϵD + 4γ (Ga,As) + 4γ (Ga,Ga) + 2γnn(Ga,Ga) −8γ (Ga,H) −5γnn(Ga,H) −γnn(As,H) = ϵD −1 2γnn(Ga,Ga) −1 2γnn(As,As) = 0.5 eV. We may calculate the activation energy for detachment ED = ϵD + E(Y) −E[I(X,Y)] in a similar manner: ED = ϵD + 4γ (Ga,As) + 4γ (Ga,Ga) + 3γnn(Ga,Ga) + γnn(As,As) −8γ (Ga,H) −5γnn(Ga,H) −γnn(As,H) = ϵD + 1 2γnn(Ga,Ga) + 1 2γnn(As,As) = 0.9 eV. The forms of the attachment and detachment barriers EA and ED indicate what physically occurs during the transitions, namely, the formation/removal of one next-nearest-neighbor Ga-Ga bond and one next-nearest-neighbor As-As bond.
+A. Liquid barriers Because we wish to simulate liquid droplet epitaxy, our model identiﬁes liquid neighborhoods in which events are 165406-3KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) assigned different energy barriers to account for the salient physics within a liquid droplet.
+The diffusion of As through a liquid droplet occurs atomistically as an exchange event between the diffusing As atom and a Ga atom neighbor.
+Such an atom-atom exchange event is deemed a liquid event if there is at most one As atom total within the neighborhood of the exchanging atoms.
+Further, such exchanges in the liquid are categorized as occurring on either the surface or bulk of a droplet.
+A surface liquid exchange event is one in where there is at least one vacancy within the neighborhoods of the exchanging atoms.
+These events represent the incorporation of an As atom from the surface into the bulk of the droplet or vice versa and are given a constant activation energy barrier ϵI = 1.05 eV. The particular value of ϵI is slightly larger than the 1-eV barrier for the diffusion of an As adatom on the surface of a liquid droplet.
+A liquid event that does not occur on the surface is categorized as a liquid bulk event and is assigned the energy barrier ϵD, which represents the diffusion barrier of an As atom within the bulk of the liquid.
+The value ϵD = 0.7 eV was calibrated by the droplet epitaxy simulations described in Sec. IV.
+Only after this model was completed did we become aware of the experimental work of Gorokhov et al.20 who reported the energy barrier for diffusion As in Ga of approximately 0.7 eV. Because of its ability to handle the liquid phase inde- pendently, along with its multicomponent nature, the model may be minimally adapted to simulate other growth modes in which liquid droplets are used.
+In particular, the model has been applied to simulate nanowire growth by the VLS method.21 Here, identifying liquid neighborhoods is important to prescribe special energy barriers for the conversion of vapor phase to a solid one, mimicking the catalytic effect of the liquid droplet.
+Additionally, without the solid-on-solid (SOS) constraint, the model captures phenomena such as nanowire bending.
+B. Detailed balance In order to discuss detailed balance, we consider the behav- ior of our model in the absence of deposition and desorption.22 Under such conditions, we assume the incorporation of an As atom from the surface of a droplet into the liquid bulk to be a rare event.
+The rates of the remaining events (i.e., surface diffusion and atom-atom exchanges both within the liquid and at the liquid-solid interface) satisfy detailed balance with respect to the Boltzmann distribution π(X) = 1 Z exp  −E(X) kBT  , where E(X) is the energy of the state obtained by bond counting, using bonding energies in Table I.
+For these events X →Y, the activation energies are of the form Ea = E(X) −E[I(X,Y)] + ϵ(X,Y), (1) where I(X,Y) is a transition state between X and Y and ϵ(X,Y) is an additional barrier.
+Detailed balance follows since we have required that I(X,Y) and ϵ(X,Y) be symmetric with respect to their arguments.
+For surface diffusion, I(X,Y) is the state with the diffusing atom removed and ϵ(X,Y) = 0.
+Because the reverse event Y →X is also a surface diffusion event, it follows that I(X,Y) = I(Y,X) and ϵ(X,Y) = 0 = ϵ(Y,X).
+For atom-atom exchanges, I(X,Y) is the state where the exchanging atoms are replaced with intermediate species H, and hence I(X,Y) = I(Y,X), and ϵ(X,Y) = ϵD. Note that it was claimed above that for an As atom diffusing through liquid Ga, an activation barrier ϵD was used without any further contribution to the barrier from bond counting.
+This is consistent with the gener- alized description of the activation energy in Eq. (1), because in this case E(X) = E[I(X,Y)] = E(Y), i.e., no bonds are formed/removed during the diffusion of As in liquid Ga.
+C. Implementation Because of the time and length scales associated to the nanostructures we wish to simulate, an efﬁcient implemen- tation of the KMC algorithm is important.
+A rejection-free sampling of rates is achieved by the standard binary-tree data structure containing partial sums of the rates,23 achieving O(log N) sampling by binary search and O(log N) tree updates, where N is the number of atoms.
+As the algorithm proceeds, event rates for several atoms must be recomputed at every step.
+A rate caching technique is employed to remove repeated rate calculations by taking advantage of the recurrent nature of local neighborhoods within KMC.21 This procedure leads to signiﬁcant performance gains. III.
+HOMOEPITAXY As an initial application and validation of the simulations, we model GaAs substrate growth at various growth conditions.
+It is known that the surface reconstruction of a GaAs substrate depends on both the temperature and the relative deposition rates of Ga and As.24 In 1 + 1 dimensions, simulations can not reproduce surface reconstructions.
+Instead, we measured surface termination and its dependence on temperature and incoming deposition rates.
+The simulation results were then compared to experimental data.
+Experiments on GaAs(001) were carried out using molec- ular beam epitaxy (MBE) equipped with a solid source for Ga and a valved source for As4.
+Substrates were initially heated under As4 overpressure to desorb the native oxide layer.
+A 75-nm GaAs buffer layer was then grown at a substrate tem- perature of 590 ◦C with a Ga deposition rate of 0.4 monolayers per second (ML/s) and an As4 growth rate of at least 2 ML/s, as measured by reﬂection high-energy electron diffraction (RHEED) oscillations.25 After growing the GaAs buffer, the substrate temperature was ﬁxed between 460 ◦C and 610 ◦C. GaAs was then grown with a Ga rate of 0.6 ML/s, while the As rate was slowly reduced from 3.9 to 1.0 ML/s. During the growth, the RHEED pattern was monitored for the change from an As-terminated reconstruction to a Ga-terminated recon- struction.
+Consistent with the expected result, at high substrate temperatures the As rate required to maintain an As-terminated surface increases with temperature.
+At lower temperatures, the necessary As rate becomes invariant with temperature.
+To simulate GaAs substrate growth, both Ga and As were deposited simultaneously on initially ﬂat, As-terminated substrate.
+The Ga deposition rate FGa was ﬁxed at 0.37 ML/s, while the As deposition rate FAs was varied so that the 165406-4UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) 1/727 1/654 1/575 1/509 1/452 10 0 10 1 1/T (°C−1) FAs/FGa     As−Terminated (Simulated) Ga−Terminated ( Simulated) Eq. (2) Experimental FIG.
+3. (Color online) Substrate termination phase diagram as a function of deposition ratio and temperature, obtained from simulations and experiments.
+Those growth conditions resulting in a mostly Ga-terminated substrate are indicated by red squares, while green circles label As-terminated ones.
+The blue points above indicate the conditions where the transition from Ga to As termination occurred experimentally.
+The blue curve indicates the boundary between Ga and As-terminated given by Eq. (2).
+deposition ratio FAs/FGa ranged between 0.5 and 10.
+Rates (reported in ML/s) here and throughout this paper describe the rate at which atoms are added to the system.
+The observed stoichiometric growth of the ﬁlm is an emergent property of the model rather than explicitly enforced through deposition rates.
+This is manifest in the stoichiometry observed over a broad range of deposition ratios.
+The temperature was varied between 427 ◦C and 727 ◦ C. Five monolayers of total material was deposited, and surface Ga concentration was measured at regular intervals during the deposition of the last two monolayers.
+Figure 3 is a surface termination phase diagram as a function of deposition rate and temperature for both experimental and simulation results.
+Red squares indicate the conditions where simulations show a predominantly Ga-terminated surface, while green circles are conditions yielding a predominantly As-terminated surface.
+Experimentally determined transition from the As-terminated 2 × 4 to the Ga-terminated 4 × 2 reconstructions as deter- mined by RHEED are shown as blue diamonds and indicate a good agreement between simulation and experimental data.
+The relevant parameter that controls surface termination is the As desorption barrier μAs.
+Varying this parameter effectively shifts the above phase diagram horizontally.
+The value μAs = 1.1 eV is ﬁtted to experiments.
+This value, combined with the energy values in Table I, yields a total activation energy of 2γ (Ga,As) + γnn(As,As) + μAs = 2.2 eV for the desorption of an As adatom from a Ga-terminated substrate, comparing favorably to experimental results.26,27 Moreover, the speciﬁc parameter value does not signiﬁcantly impact the qualitative shape of the phase diagram.
+That is, independent of μAs, the simulations capture a constant critical deposition ratio in the low-temperature regime and its transition to an increasing critical ratio as temperature increases.
+Due to the simplicity of the model, individual As atoms are deposited on the surface rather than As4 molecules.
+In this ho- moepitaxy study, the adsorption/desorption processes, and in particular the value of μAs, was tuned to match the macroscopic properties’ surface termination and concentration.
+As such, the ﬁtted value of μAs serves as an accurate measure of As growth and incorporation onto the substrate.
+Other surface As kinetic effects, including those determined by surface reconstruction dynamics on the local scale, may not be captured by the model.
+However, in the DE growth procedure, these effects appear to be relevant mostly in determining the extended nanostructure shape control peculiar to DE (Ref. 16) or in the extremely low-temperature and high-As ﬂuxes.
+We therefore believe that such effects should lead to minor modiﬁcations in the description of the DE processes that are studied in this paper.
+An analytical expression for the boundary between Ga- and As-terminated substrates can be determined.
+During homoepitaxial growth, several processes occur, including surface diffusion and As desorption, but to ﬁrst order we may approximate the system in a quasistatic deposition/desorption- limited regime.
+In this regime, the transition between the As and Ga-terminated surface occurs when the amount of Ga on the impinging upon the surface (given by FGa) is equal to the net rate of As growth (given by FAs −Rdesorb), where Rdesorb is the desorption rate of As, taken as the harmonic average of the desorption rates for an As adatom on a Ga-terminated surface (with desorption energy barrier 2.2 eV) and a As atom on a Ga-terminated surface with one nearest or next-nearest neighbor (with desorption barrier 2.3 eV).
+This boundary is given by the equation FAs FGa = 1 + Rdesorb FGa , (2) and agrees well with both simulation and experiments. IV.
+LIQUID DROPLET EPITAXY The main thrust of this work was to accurately capture the processes relevant to liquid droplet formation and crys- tallization.
+The experiment and simulations proceed in two main steps, which are at the basis of the droplet fabrication of GaAs/AlGaAs quantum nanostructures.6 First, Ga is deposited onto the substrate by MBE, forming liquid Ga droplets.
+Next, the droplets are crystallized by the introduction of an As ﬂux.
+Depending on growth conditions such as temperature and As overpressure, the actual morphology upon crystallization can vary.6 The observed nanostructures may range from fully crystallized compact quantum dots to nanorings and even etched holes.7,8,16,28,29 A. Quantum dots and nanorings 1.
+Experimental methodology In order to experimentally assess the exact dependence of droplet epitaxy nanostructures on the growth condition, we prepared a matrix of samples, sampling the typical droplet epitaxy ranges for substrate temperatures and As4 beam 165406-5KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) FIG.
+4. (Color online) Droplet epitaxy experimental results showing typical nanostructures observed over a range of substrate temperatures and As4 BEP.
+equivalent pressure (BEP).
+The samples were prepared follow- ing the standard procedure for droplet epitaxy.6,30,31 After the oxide removal and the GaAs buffer layer growth (1 μm thick at 580 ◦C), to ensure the atomic smoothness of the surface, a 200- nm thick Al0.3Ga0.7As barrier layer is grown at the same tem- perature of 580 ◦C.
+The presence of an AlGaAs barrier permits the use of the fabricated structures, once capped with another AlGaAs layer, as morphology controlled quantum nanostruc- tures.
+We do not expect the Al content of the barrier to inﬂuence the obtained GaAs nanostructure morphology as the AlGaAs barrier is buried under a 1.75-ML GaAs top layer which forms on the surface during the following Ga deposition step.6,32 Prior to the deposition of Ga, the As cell is closed and the background pressure reduced below 10−9 Torr.
+Ga droplets are then formed on the substrate surface by supplying 2.5 ML of Ga at 350 ◦C with a deposition rate of 0.08 ML/s. Many nearly hemispherical Ga droplets form at a density of 8 × 108 cm−2.
+The average droplet diameter and height are 50 and 20 nm, respectively.
+The same Ga droplet preparation procedure is used for each sample in order to assure the same droplet density before the crystallization procedure.
+We then explored the nanostructure fabrication parameter space by varying the substrate temperature and the As4 BEP used for the crystal- lization of Ga droplets.
+Nine different samples are prepared by systematically varying the temperature between 150 ◦C and 350 ◦C and the As4 BEP between 5 × 10−7 and 5 × 10−5 Torr.
+The crystallization time is kept constant (10 min) to ensure the complete reaction of the Ga contained in the droplets with As atoms.
+The morphological dependence of the fabricated nanostructures, measured by atomic force microscopy (AFM) on temperature and As overpressure, is summarized in Fig. 4.
+From these data, it is clear that compact islands form at low temperature, and as the As overpressure is reduced or the temperature is increased, the nanostructures become rings.
+At the highest temperature and lowest As overpressure, only holes remain in the place of the droplet.
+From large area scans (not shown here), the number of GaAs nanostructures per unit area is in excellent agreement with the original droplets’ density.
+Each droplet was thus transformed into a GaAs nanostructure at the end of the crystallization procedure.
+2. Simulations The simulations were performed in a similar manner to the experiments outlined above.
+However, in order to simplify the analysis, the temperature was maintained constant throughout each simulation.
+This is justiﬁed by the observation that the Ga deposition temperature affects droplet density but does not play a relevant role in determining droplet crystallization dynamics.
+Simulations proceed as follows: (1) Ga atoms are deposited on a ﬂat, As-terminated GaAs substrate at a rate of 0.1 ML/s at temperature T until 4.0 monolayers are deposited.
+(2) The system is then annealed for 60 s in the absence of deposition.
+(3) After annealing, an As ﬂux is introduced by the deposition of As at a rate of FAs ML/s until the system attains equilibrium.
+165406- 6UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) (a) (b) (c) FIG.
+5. (Color online) Liquid droplets grown at T = 200 ◦C, 300 ◦C, 350 ◦C and FGa = 0.1 ML/s.
+Here and throughout the paper, Ga and As atoms initially belonging to the substrate are colored red and green, respectively.
+Ga and As atoms deposited throughout the simulation are colored purple and blue, respectively.
+The growth parameters T and FAs were varied in order to study their effect on the resulting morphology.
+The temperature T ranged between 150 ◦C and 350 ◦C, while the As deposition rate FAs ranged between 0.1 and 4 ML/s.
+Within this range of growth parameters, we are able to simulate the formation of a variety of nanostructures similar to those observed experimentally.
+During the ﬁrst phase of the simulation, Ga atoms are deposited on a ﬂat, initially As-terminated GaAs substrate.
+The ﬁrst monolayer of Ga deposited is consumed in creating a layer of Ga, resulting in a Ga-terminated substrate.
+Afterwards, the remaining Ga atoms diffuse along the surface and eventually nucleate hemispherical droplets as the system attempts to minimize the vapor-liquid interface.
+During droplet formation, simulations show that liquid Ga etches into GaAs, and the amount of etching is regulated by temperature, as illustrated in Fig. 5.
+Higher temperatures result in more signiﬁcant etching.
+This is in agreement with experimental observations.28,33 As the droplet etches into the substrate liquid, Ga atoms displace substrate As atoms, which subsequently attach near the triple junction.
+In addition, some of the displaced substrate material is wicked out of the droplet in a step-ﬂow growth mode.
+The relevant model parameter controlling the effect of etching is the additional barrier for atom-atom exchanges ϵD.
+The value ϵD = 0.7 eV was selected to ﬁt qualitative experimental observations on the amount of etching occurring at various temperatures.
+Once the liquid droplet has formed and come to equilibrium, an As ﬂux is introduced to initiate crystallization.
+Arsenic atoms deposited near or on the droplet diffuse through the liquid quickly20 and attach most typically near the triple junction.
+Such crystallization results in a growing GaAs front (a) (b) (d) (c) FIG.
+6. (Color online) Left panel: model snapshots of liquid droplet crystallization at various times for T = 275 ◦C and FAs = 0.06 ML/s resulting in a compact quantum dot.
+Ga and As atoms from the original substrate are colored red and green, respectively.
+Ga atoms deposited to form liquid droplets are colored purple, while As atoms deposited during crystallization are blue.
+Right panel: AFM images of the GaAs growth fronts in partially crystallized droplets after 10 s (top), 40 s (middle), and 90 s (bottom).
+Crystallization was obtained at T = 150 ◦C and 5 × 10−7 Torr As pressure.
+and the droplet is crystallized inward.
+If no nucleation occurs at the vapor-liquid interface and the GaAs fronts coalesce, a fully crystallized quantum dot forms in place of the liquid droplet.
+Such is the case for moderate temperatures and deposition rate.
+Figure 6 is a sequence of simulation snapshots illustrating the crystallization of a liquid droplet resulting in a quantum dot (left panel), along with analogous AFM images of the GaAs fronts obtained experimentally (right panel).
+The simulation images in the ﬁgure illustrate a typical quantum dot grown at T = 275 ◦C and FAs = 0.06 ML/s. The general trend is that a Ga drop forms once enough Ga has been deposited on the surface [Fig. 6(a)], followed by crystallization near the vapor/liquid/solid triple junction upon exposure to As ﬂux [Figs. 6(b) and 6(c)].
+As crystallization progresses, the liquid Ga is consumed, resulting in a fully crystallized quantum dot [Fig. 6(d)].
+Experimental images (Fig. 6, right panel) were obtained from individual samples prepared according to the experimental procedure outlined above, varying As exposure time.
+The unreacted liquid Ga was removed from the samples before imaging by selective wet etching,8 thus showing GaAs fronts at various stages during crystallization.
+The AFM images conﬁrm the growth mechanism observed in the simulations during crystallization.
+Aside from compact quantum dots, other nanostructures are predicted by the simulation by considering a broad range of temperatures and As ﬂuxes.
+For example, if FAs is sufﬁciently low or T is sufﬁciently large, the simulations show the formation of nanorings upon crystallization.
+The exact morphology of the nanorings is sensitive to the growth conditions.
+Figure 7 shows the morphological dependence of the rings on FAs, ﬁxing T = 375 ◦C.
+At low As deposition 165406-7KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) (c) (b) (a) FIG.
+7. (Color online) Nanorings formed at T = 375 ◦C and FAs = 0.10, 0.20, and 0.40 ML/s. rate (FAs = 0.1 ML/s), broad and short nanorings form.
+As FAs is increased, the nanorings become more compact and taller so that at FAs = 0.4 ML/s the resulting structure resembles a “pitted” quantum dot.
+This compares well to the experimental results in Fig. 4, e.g., the transition in structure between Figs. 4(c) and 4(f) as As4 BEP is lowered.
+Figure 4(c) resembles the pitted quantum dot structure of Fig. 7(c).
+If the BEP is lowered, the resulting nanostructure in Fig. 4(f) is a broad and shallow disk surrounding a pit, resembling Fig. 7(a).
+Similar structures and their dependence on both As deposition rate and temperature have been reported in the literature.10,34 B. Core-shell structures In addition to quantum dots and nanorings, simulations show the existence of Ga/GaAs core-shell structures.
+These structures consist of liquid gallium being completely sur- rounded by GaAs.
+In the low-temperature/high-deposition rate regime, the GaAs shells are polycrystalline.
+However, in a higher-temperature/lower-ﬂux regime, the simulations show the formation of a shell in registry with substrate.
+It will be shown in the following that the ﬁrst case is the result of nucleation of GaAs at the vapor-liquid interface, whereas the second case results from a Mullins-Sekerka instability of the crystallization growth front.
+1. Nucleation In the low-temperature and high-As-deposition rate regime, nucleation of GaAs clusters near the vapor-liquid is signiﬁcant.
+This results in the formation of a polycrystalline GaAs shell surrounding a liquid Ga core, as illustrated in Fig. 8.
+In the ﬁgure, a liquid droplet grown at T = 150 ◦C is crystallized by an As ﬂux, deposited at a rate of 0.8 ML/s. Nucleation at the vapor-liquid interface occurs within seconds upon crystal- lization [Fig. 8(b)].
+The liquid core in the ﬁnal conﬁguration [Fig. 8(c)] is completely surrounded by a GaAs shell after 2.4 s, preventing any further crystallization of the liquid.
+The presence of polycrystalline GaAs, with a high number of grain boundaries and stacking faults that this implies, prevents the possibility that such islands could act as efﬁcient emitters and hence are undesirable.
+Annealing at higher tem- perature may remove such defects because grain boundaries and stacking faults provide fast diffusion paths for the liquid Ga trapped within the shell.
+Such paths are accessible at higher temperatures.
+Moreover, thermal ﬂuctuations of the nuclei can (c) (b) (a) FIG.
+8. (Color online) Simulation snapshots at times t = 0, 1.8, 2.4 s after crystallization, T = 150 ◦C, and FAs = 0.8 ML/s. effectively serve to dissolve the shell, which are characteristi- cally thin in this regime.
+Therefore, such conﬁgurations may be annealed at a high temperature to remove defects.
+Indeed, the simulations bear this out.
+Figure 9 shows a quantum dot with polycrystalline shell resulting from the crystallization of a liquid droplet at an As deposition rate of FAs = 0.80 ML/s and temperature T = 150 ◦C. The dot is then annealed at a higher temperature T = 350 ◦C.
+The initial conﬁguration [Fig. 9(a)] shows the droplet prior to recrystallization.
+Temperature is then increased, maintaining the same As ﬂux.
+Ga atoms move along grain boundaries toward the surface, resulting in a broadening of the dot.
+The thin shell dissolves, resulting in liquid Ga exposed to As [Figs. 9(b) and 9(c)].
+Within two seconds, the droplet becomes fully crystallized [Fig. 9(d)] into a shallow GaAs island, absent of any defects.
+These simulations show that liquid cores arising due to nucleation at the vapor-liquid interface, which would be detri- mental to optical and electronic properties of quantum dots, can be eliminated by annealing.
+This expands the parameter space available for the formation of quantum dots formed via droplet epitaxy, allowing the fabrication of optical quality dots even at low temperatures.
+Even if not strictly related to the presence of a liquid core, but rather to a low quality of the crystalline nature of the fabricated nanostructures, post-crystallization in situ annealing temperatures have been experimentally demonstrated to strongly increase the optical quality of droplet epitaxy GaAs/AlGaAs dots, reducing individual dot emission lines,35 allowing single-photon emission up to liquid nitrogen temperatures,36 and increasing the dot emission decay time.
+2. Mullins-Sekerka instability As described above, simulations show that crystallization performed at low temperature and high As ﬂux result in nucleation of polycrystalline GaAs shells surrounding a liquid Ga core, resulting from nucleation of GaAs at the vapor- liquid interface.
+In the high-temperature regime, such surface nucleation does not occur.
+However, for crystallization at 165406-8UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) (a) (b) (d) (c) FIG. 9.
+(Color online) Simulation snapshots of a quantum dot an- nealed at high temperature at time t after temperature was increased.
+(a) The dot after exposure to As deposition at FAs = 0.80 ML/s and temperature T = 150 ◦C.
+This results in a polycrystalline GaAs shell trapping a liquid Ga core.
+(b)–(d) Temperature is increased to T = 350 ◦C and the atoms rearrange in order to fully crystallize the liquid core.
+sufﬁciently high ﬂuxes and high temperature, simulations show the existence of liquid Ga core structures surrounded by GaAs shells in registry with the substrate.
+As a consequence, such shells are monocrystalline and result from a mechanism separate from surface nucleation.
+By examining the formation of such structures in the simulations, we propose that these shells are driven by an instability at the liquid-solid growth front.
+Simulation snapshots in Fig. 10 illustrate the growth mechanism behind this.
+When this phenomenon occurs, no surface nucleation is observed; instead, the growth of the GaAs front undergoes an instability at the liquid-solid interface characterized by unstable undulations of the solid growth front.
+Such insta- bilities grow along the droplet-vapor surface until they have completely surrounded the liquid Ga, subsequently preventing further crystallization.
+This behavior suggests the presence of a Mullins-Sekerka (MS) instability during crystallization, which implies that only perturbations of sufﬁciently large wavelength experience un- stable growth.
+Therefore, droplets must be sufﬁciently large to accommodate perturbations of appropriate wavelength in order for the instability to manifest.
+The effect that temperature, As ﬂux, and droplet radius have on the presence of the MS instability is given in Sec.
+V, but the droplet size dependence (a) (b) (c) FIG. 10.
+(Color online) Snapshots of liquid core formation at times t = 1.4, 1.8, and 2.0 s after crystallization at temperature T = 350 ◦C and deposition rate FAs = 1.0 ML/s. may be utilized in order to conﬁrm the existence of liquid cores by MS instability experimentally.
+It is important to note that simulations suggest that, unlike those formed by surface nucleation, the core-shell structure formed due to the MS instability can not readily be annealed and recrystallized into an epitaxial nanodot.
+In this case, the shell is in registry with respect to the substrate.
+Therefore, there are no defects along which liquid Ga can move so that they may crystallize upon exposure to the As vapor.
+Crystallization of such liquid cores may still occur, however, if the shell is thin enough to dissolve upon annealing, thus exposing the liquid Ga to the As ﬂux; however, instability-induced shells are characteristically thicker than those resulting from surface nucleation according to simulations.
+Experimental validation.
+In order to experimentally validate the presence of the MS instability predicted by simulations, nanoislands were formed via droplet epitaxy by depositing Ga droplets of extremely different sizes (60 and 250 nm diameter) and crystallizing them at high As BEP at 150 ◦C. Simulations predict a size-driven transition from a uniform crystallization for small droplet radii to a Ga-rich core at higher droplet sizes.
+We used Si as the growth substrate.
+This is dictated by the need of differentiation of the nanoisland constituents (Ga and As) from that of the substrate (Si),16 thus allowing the use of standard EDS STEM techniques for the characterization of the As and Ga distribution within the islands.
+The samples were prepared as follows.
+Before the introduction into the MBE system, Si(001) substrates were cleaned by standard RCA treatment and ﬁnally dipped into HF solution to get the H-termination of the surface, conﬁrmed by the (1 × 1) pattern observed with RHEED.
+Subsequently, the substrate temperature was set at 780 ◦C and the hydrogen desorption was carried out until a mixed (2 × 1) (1 × 2) surface reconstruction was clearly obtained.
+After this step, the substrate temperature was decreased to either 200 ◦C (sample A) or 600 ◦C (sample B) for Ga deposition.
+Here, a Ga molecular beam ﬂux was supplied with a deposition rate of 165406-9KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) 0.075 ML/s and a background pressure below 5 × 10−10 Torr for a total of 3.0 ML of Ga.
+Finally, the crystallization of Ga was achieved at 150 ◦C by exposure to an As ﬂux of 5 × 10−5 Torr for 5 min. During the As irradiation, the RHEED pattern turned from halo, indicative of liquid droplets, to spotty, signaling the formation of three-dimensional structures.
+However, a clear spotty pattern was not observed for the larger islands.
+For TEM observations, an FEG (ﬁeld emission gun) TEM/STEM 2200 FS JEOL instrument operated at 200 kV was used.
+It was equipped with an energy dispersive x-ray spectrometer (EDS) and an in-column omega-type energy ﬁlter.
+By the latter, elemental maps of Ga and As can be obtained in the energy ﬁltering operation mode of the TEM (EF-TEM).
+The EF-TEM elemental maps were acquired with a GATAN slow scan CCD camera controlled by the Digital Micrograph software.
+The maps were obtained by recording the intensity of the L3 absorption edge for Ga (at 1116 eV) and As (at 1323 eV).
+One post-edge and two pre-edge images were acquired using a slit of 50 eV for both Ga and As.
+From the two pre-edge images, the background image was evaluated, which was then subtracted from the post-edge image to get the relevant elemental map.
+EDS maps were obtained in the STEM operation mode with a spot size of 1 nm and recording the intensity of the L characteristic x-ray emission lines of Ga (1096 keV) and As (1282 keV).
+The JEOL ultrathin window Si detector and software were employed for acquisition of the maps.
+Dead time during measurements was 5%–6% and counting time of the order of 8–10 min.
+The TEM top views of islands from sample A, obtained with diffraction vector g = [2-20], clearly show Moir´e fringes, due to the interference between the crystal lattice of the island (GaAs) and that the Si substrate (Fig. 11).
+EDS map scans show the same distribution of the Ga and As signals, which mimics the island shape, thus demonstrating the correct stoichiometry of the GaAs all over the island volume, i.e., a fully crystallized island.
+A different scenario is shown by sample B. Here, the nanostructure-generated Moir´e interference fringes are visible only at the island edges with a featureless center.
+EDS map scans show that the distribution of Ga and As is extremely different inside the island (Fig. 12).
+While the Ga signal intensity follows the island proﬁle, As intensity is peaked at the island perimeter with a small, though nonzero, As signal coming from the center.
+Such a distribution is conﬁrmed by EF-TEM (energy-ﬁltered TEM) measurements, and implies a metallic Ga core similar to the one depicted in Fig. 10. (a) (b) (c) FIG. 11.
+(Color online) Sample A. (a) Planar view TEM micro- graph of two (70 nm diameter) GaAs microislands.
+(b), (c) EDS maps of Ga and As, respectively, of the islands in (a).
+(a) (b) (c) (d) (f) (e) FIG. 12.
+(Color online) Sample B. (a) SEM image of a GaAs microisland (250 nm diameter).
+(b) Planar view TEM micrograph of a GaAs microisland.
+(c), (d) EDS maps of Ga and As, respectively, of the island in (b).
+(e), (f) EF-TEM image for Ga and As, respectively, of another GaAs microisland (TEM image not shown).
+The experiment rules out the presence of a liquid Ga core/GaAs shell structure by means of surface nucleation due to the fact that the shell is monocrystalline and appears only for the high droplet radius.
+Nucleation at the liquid-solid interface is predicted to be driven more by the growth temperature and As ﬂux.
+Because both samples were performed at the same growth conditions, if nucleation-driven GaAs shells were to occur, they must occur in both samples.
+Because this is not the case, we may conclude that the liquid cores observed in the experiments are driven by an MS instability.
+V. MODEL ANALYSIS Both simulations and experiments have shown that droplet epitaxy can result in a wide range of morphologies depending on the growth conditions.
+By varying FAs and T , we have established their effect on the resulting nanostructures ob- served in simulations.
+From these data, it is clear that compact islands form at low temperature and, as the As overpressure is reduced or the temperature is increased, the nanostructures become rings.
+In cases of large FAs, core-shell structures are observed.
+The simulation results are summarized in the structural map given in Fig. 13.
+In this section, we will appeal to physical and mathematical arguments to further explain the simulation results.
+In particular, the solid lines in Fig. 13 that delineate the morphological structure will be derived in this section.
+We argue that various morphologies observed both in experiments and simulations can be explained in the context of three key processes active during nanostructure formation.
+In the ﬁrst, Ga atoms in the liquid drop will be “wicked” out of the droplet onto the substrate by capillary-type forces when exposed to an As overpressure.
+These forces arise as it is energetically favorable for As atoms on the surface to become fully coordinated with Ga atoms.
+Next, As atoms deposited near or on the droplet diffuse rapidly20 through the liquid and attach on a growing GaAs front at the liquid-solid interface, crystallizing the droplet epitaxially.
+Finally, As atoms may also nucleate near the vapor-liquid interface.
+These three processes (wicking, crystallization, and nucleation) are illustrated in 165406-10UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) 1/350 1/300 1/250 1/200 1/150 10 −1 10 0 1/T (°C−1) FAs (ML/sec)     Nucleation Liquid Cores Nanorings Compact Structure FIG. 13.
+(Color online) Morphological dependence on growth conditions.
+This nanostructural phase map summarizes simulation results of droplet epitaxy and crystallization at various As deposition rates and temperatures.
+The three boundary curves indicate theoreti- cally derived critical conditions delineating the simulation results and obtained in this section.
+The leftmost, black line is given by Eq. (9).
+The middle, red curve corresponds to Eq. (13).
+The rightmost, blue curve is given by Eq. (12). Fig. 14.
+The relative rates at which these processes occur depend on growth conditions and will determine the resulting morphology.
+A. Nanoring formation The formation of nanorings is a competition between the wicking and crystallization processes.
+The crystallization process results in GaAs fronts that grow until the liquid Ga is consumed.
+If the fronts coalesce before this occurs, the resulting nanostructure is a compact quantum dot.
+If, however, the liquid Ga is consumed before the fronts come together, nanorings result.
+To compare the rates of the two processes, we establish expressions for the velocity of the GaAs front as well as the rate at which Ga atoms are wicked out of the droplet.
+Assuming quasistatic deposition, the velocity vn of the GaAs front under an As deposition rate FAs scales according to that rate: vn = gℓFAs, (3) where ℓis the atomic spacing of the lattice and g is the factor that depends on the shape of the liquid region and possible difference in the As adsorption probability between FIG. 14.
+(Color online) Schematic of kinetic processes that determine nanostructural development.
+the droplet itself and its surroundings.
+For simplicity, g = 1.
+In the wicking process, Ga atoms are driven from the droplet by the deposition of As on the surface away from the droplet.
+The time scale of the wicking process is given by τ = 1 FAs , (4) while the diffusion length scale is given by λ =  D′ Ga FAs , (5) where D′ Ga is the diffusion coefﬁcient of Ga diffusing on a mostly Ga-terminated surface, in the presence of As deposition.
+We have D′ Ga = ℓ2R0 exp  −E′ Ga kBT  , where R0 = 1013 s−1 was deﬁned in Sec.
+II to be a rate prefactor.
+The energy barrier E′ Ga = 1.26 eV describing the diffusion of Ga on surface not purely Ga terminated is obtained from the harmonic average of the diffusion rates of Ga-on-Ga diffusion and Ga-on-As diffusion.
+By prescribing a constant value E′ Ga that describes the effective energetic barrier for diffusion on a mostly Ga-terminated surface, we have assumed that the diffusivity throughout the domain is constant.
+In reality, diffusivity is spatially dependent due to differences in surface reconstruction near and away from the liquid Ga as observed in micro-RHEED experiments by Isu et al.37 This effect is also at the origin of the possibility, offered by droplet epitaxy, to tune ring morphologies.16 In extreme growth regimes when temperature is less than 150 ◦C and As overpressure greater than 5 × 10−5 Torr, the surface reconstruction may change rapidly even in the proximity of the droplet, implying that the spatial dependence on diffusivity is an important effect.
+Away from such growth conditions, however, assuming constant effective diffusivity is a reasonable approximation.
+Equations (4) and (5) yield a velocity vw for the wicking of Ga atom from the liquid droplet: vw = λ τ = ℓ  R0FAs exp  −E′ Ga 2kBT  .
+(6) A fully crystallized quantum dot forms under conditions where the crystallization process is dominant (vn ≫vw).
+However, if the wicking process is sufﬁciently fast (vn ∼vw), then as described above, the fronts may fail to coalesce, resulting in a nanoring.
+The critical conﬁguration separating these two scenarios occurs when the crystallization fronts are tangent to each other.
+To express this critical condition quantitatively, consider the volume of unconsumed liquid Ga at time t: V (t) = V0 −2ℓvwt −2ρ1(vnt)2, (7) where ρ1 = π 4 is a shape constant describing the geometry of the crystallization front (which we model as a quarter-circle) and V0 = ρ2r2 is the initial volume of the liquid droplet of radius r, ρ2 = 3π 4 being the shape constant that describes the geometry of the 165406-11KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) droplet.
+As a ﬁrst-order approximation, the value of ρ2 is selected as the average of the shape constant describing a circular and half-circular droplet.
+The radius of a Ga droplet obtained from the deposition of 4.0 ML of Ga atoms at temperature T and ﬂux FGa was found empirically from independent simulations to follow the power law: r = ℓ1−2αr0 DGa FGa α , (8) where r0 = 11.34 (# atoms) and α = 0.182 are empirically obtained values.
+DGa is the diffusion coefﬁcient for Ga-on-Ga diffusion with corresponding energy barrier EGa = 0.9 eV. The positive root tf of Eq. (7) describes the time when all Ga has been consumed.
+The length of the crystallized front is then given by vntf , and the critical condition may be expressed as vntf = r. Using Eqs.
+(8), (3), and (6), this critical conﬁguration can be written in terms of the growth conditions as F r As =  2F α Ga (ρ2 −2ρ1)gr0 2 R1−2α 0 exp 2αEGa −E′ Ga kBT  .
+(9) If FAs > F r As, then compact structures will result on the other hand if FAs < F r As nanorings will result.
+Figure 7 illustrates the transition from nanorings to compact quantum dots with increasing FAs.
+The black line in Fig. 13 shows a plot of F r As versus 1/T .
+The agreement with the simulation data is quite good: it separates compact structures (black dots in the ﬁgure) from nanorings (black circles).
+A crucial assumption has been made in the argument presented here, namely, that no nucleation takes place within the Ga droplet and the crystallizing front moves in a stable fashion (i.e., no Mullins-Sekerka instability occurs).
+In what follows, we shall examine in what regimes in parameter space these factors play an important role.
+B. Nucleation Here, we will demonstrate that when the As deposition rate is sufﬁciently large and temperature is low enough, the dominant process will be nucleation at the vapor-liquid interface.
+As a consequence, the wicking process makes a negligible contribution to the morphology.
+The rate of the nucleation process at the vapor-liquid interface may be estimated by considering the As concentration cAs(x,y,t) within a domain of liquid Ga in contact with a GaAs substrate and As ﬂux.
+For simplicity, we will consider the domain to be rectangular with periodic boundary conditions in the horizontal direction.
+Assuming quasistatic deposition at a rate FAs ML/s and temperature T , the concentration satisﬁes ∇2cAs = 0, ℓDAs ∂cAs ∂y  y=L = FAs, cAs|y=0 = c0, where c0 is the equilibrium As concentration above a ﬂat liquid-solid interface and the diffusion coefﬁcient DAs = ℓ2R0 exp  −ϵD kBT  describes the diffusion of As through liquid Ga, ϵD = 0.7 eV being the energy barrier for diffusion throughout the liquid droplet deﬁned earlier in Sec. II.
+The equilibrium concentration c0 is of the form c0 = ℓ−2 exp EA −ED kBT  , where ED,EA are the energy barriers for the detachment and attachment of an As atom in the liquid phase from and onto a ﬂat interface, respectively, deﬁned in Sec. II.
+From this diffusion model, the equilibrium concentration csurf at the surface of the droplet is given by csurf = FAsL ℓ3R0 exp  −ϵD kBT  + ℓ−2 exp EA −ED kBT  , (10) where L is the height of the droplet.
+Nucleation is most likely to occur where the As concentra- tion is the largest, near the vapor-liquid interface.
+This means that nucleation will occur when csurf is larger than some critical concentration: csurf ⩾c0 exp Enuc kBT  , (11) where Enuc = 0.01 eV is the nucleation barrier of GaAs in liquid Ga, treated as a ﬁtting parameter.
+Replacing L in Eq. (10) with the droplet radius r, the critical condition (11) for surface nucleation can be expressed in terms of T and FAs as F n As = R1−α 0 F α Ga r0 exp EA −ED −ϵD + αEGa kBT  ×  exp Enuc kBT  −1  .
+(12) If the As deposition rate exceeds F n As, then GaAs crystallites will form at the vapor-liquid interface, as illustrated in Fig. 8.
+The blue line in Fig. 13 is a plot F n As as a function of 1/T .
+It accurately predicts the presence of nucleation in simulation results (blue triangles).
+C. Mullins-Sekerka instability In the case where the rates of both the wicking and nucleation processes are negligible, the crystallization process dominates, resulting in the growth of crystallization fronts at the triple point and in registry with the substrate. As observed in Sec.
+IV B2, this growth can be unstable due to a Mullins-Sekerka instability leading to GaAs shells epitaxial to the substrate surrounding a liquid Ga core.
+Perturbations to the planar growth front of sufﬁciently long wavelength experience this instability, and a standard linear perturbation analysis38,39 yields a critical wavelength c = 2πℓ3/2  R0γ FAskBT exp EA −ED −ϵD 2kBT  , 165406-12UNIFIED MODEL OF DROPLET EPITAXY FOR COMPOUND . . .
+PHYSICAL REVIEW B 87, 165406 (2013) where γ = 0.1 eV per lattice spacing is the liquid/solid interfacial energy per length, obtained directly from the model.
+In order to accommodate perturbations that experience the MS instability, droplets necessarily must have radius on the order of c, i.e., r ⩾CC, for some constant C. This critical condition may be expressed in terms of FAs and T using the above equation along with the model for droplet radius (8): F MS As = ℓC2 2πF α Ga r0 2 γ kBT R1−2α 0 × exp EA −ED −ϵD + 2αEGa kBT  .
+(13) If F MS As < FAs < F n As, then liquid cores will form via a Mullins- Sekerka instability.
+Figure 13 shows a plot of F MS As versus 1/T .
+The scaling constant C = 1 8 was selected to best match simulation results, although its speciﬁc value does not affect the qualitative shape of the boundary curve, and in particular its slope.
+The simulation results when a liquid core was observed are plotted as red triangles.
+We observe that the theoretical curve slightly underestimates the instability within the simulations.
+This underestimation is inherent to our model and can be attributed to discrete effects.
+Such effects on nucleation and hence instabilities of the type outlined above are indeed well studied in the context of diffusion-limited aggregation.40,41 VI.
+CONCLUSION We have presented experimental, simulation, and analytical results detailing the precise relationship between growth conditions and the resulting nanostructures formed in droplet epitaxy and crystallization experiments.
+The KMC model used in conjunction with experiments was presented as an explicitly atomistic, multispecies, multiphase model capable of simulating all the relevant processes involved with GaAs homoepitaxy, droplet epitaxy, and crystallization.
+As an initial validation, the KMC model accurately reproduces surface termination diagram in the case of GaAs homoepitaxy.
+We then presented simulation and experimental results of droplet formation and crystallization, exhibiting a qualitative agreement of the resulting morphological dependence on As ﬂux and temperature.
+Both experiments and simulation suggest a continuum of structures ranging between compact quantum dots to broad nanorings as a function of As ﬂux and temperature.
+Simulations also suggest the existence of Ga/GaAs core-shell structures, as well as elucidating the mechanisms behind their formation.
+The simulations sug- gested that a quantum dot with a liquid core could result due to a Mullins-Sekerka instability during the growth of the GaAs front.
+We presented experiments which validate this hypothesis.
+In the case of nucleation-driven shells, we provide simulation evidence suggesting that under high-temperature annealing, polycrystalline shells may be recrystallized into an epitaxial GaAs island.
+Lastly, we developed a unifying theory identifying three key processes active during crystallization.
+It predicts the existence of all the phenomena observed above and their dependence on growth conditions and compares well with empirical simulation data.
+ACKNOWLEDGMENTS P.S. and K.R. were supported in part by NSF support Grants No. DMS-0854870 and No. DMS-1115252.
+D.N. and J.M.M. acknowledge the ﬁnancial support of the NSF through Grant No. DMR-0906909.
+S.B., C.S., and S.S. acknowledge the CARIPLO Foundation for ﬁnancial support (Project SOQQUADRO, No. 2011-0362). 1M. Kastner, Phys.
+Today 46(1), 24 (1993). 2J.
+Li and Lin-Wang, Nano Lett. 3, 1357 (2003).
+3N. Koguchi, S. Takahashi, and T. Chikyow, J. Cryst.
+Growth 111, 688 (1991).
+4N. Koguchi, K. Ishige, and S. Takahashi, J. Vac. Sci. Technol. B 11, 787 (1993).
+5N. Koguchi and K. Ishige, Jpn. J. Appl.
+Phys. 32, 2052 (1993).
+6K. Watanabe, N. Koguchi, and Y. Gotoh, Jpn. J. Appl.
+Phys. 39, L79 (2000).
+7T. Mano, T. Kuroda, S. Sanguinetti, T. Ochiai, T. Tateno, J. Kim, T. Noda, M. Kawabe, K. Sakoda, G. Kido et al., Nano Lett. 5, 425 (2005).
+8C. Somaschini, S. Bietti, N. Koguchi, and S. Sanguinetti, Nano Lett. 9, 3419 (2009).
+9C. Somaschini, S. Bietti, A. Scaccabarozzi, E. Grilli, and S. Sanguinetti, Cryst.
+Growth Des. 12, 1180 (2012).
+10C. Somaschini, S. Bietti, S. Sanguinetti, N. Koguchi, and A. Fedorov, Nanotechnology 21, 125601 (2010).
+11C. Somaschini, S. Bietti, N. Koguchi, and S. Sanguinetti, Nanotechnology 22, 185602 (2011).
+12T. Shitara, D. D. Vvedensky, M. R. Wilby, J. Zhang, J. H. Neave, and B. A. Joyce, Phys.
+Rev. B 46, 6815 (1992).
+13T. Kawamura and A. Ishii, Surf.
+Sci. 438, 155 (1999).
+14T. Kawamura and A. Ishii, Surf.
+Sci. 493, 438 (2001). 15A.
+Ishii and T. Kawamura, Sur. Sci. 436, 38 (1999).
+16C. Somaschini, S. Bietti, N. Koguchi, and S. Sanguinetti, Appl. Phys. Lett. 97, 203109 (2010).
+17C. Somaschini, S. Bietti, A. Fedorov, N. Koguchi, and S. Sanguinetti, Nanoscale Res. Lett. 5, 1865 (2010).
+18A. Chakrabarti, P. Kratzer, and M. Schefﬂer, Phys.
+Rev. B 74, 245328 (2006).
+19C. Orme, M. D. Johnson, J. L. Sudijono, K. T. Leung, and B. G. Orr, Appl. Phys. Lett. 64, 860 (1994).
+20V. Gorokhov, T. Dedegkaev, Y. Ilyin, V. Moshnikov, A. Petrov, Y. Sosov, and D. Yaskov, Cryst.
+Res. Technol. 19, 1465 (1984).
+21K. Reyes (unpublished).
+22M. Biehl, in Multiscale Modeling in Epitaxial Growth, Vol. 149 of International Series of Numerical Mathematics, edited by A. Voigt (Birkhauser, Berlin, 2005), pp. 3–18.
+23J. L. Blue, I. Beichl, and F. Sullivan, Phys.
+Rev. E 51, R867 (1995).
+165406-13KRISTOFER REYES et al. PHYSICAL REVIEW B 87, 165406 (2013) 24A. Ohtake, Surf.
+Sci. Rep. 63, 295 (2008).
+25I. Ferguson, A. de Oliveira, and B. Joyce, J. Cryst.
+Growth 121, 267 (1992).
+26B. Liang and C. Tu, J. Cryst.
+Growth 128, 538 (1993).
+27H. Yamaguchi and Y. Horikoshi, J. Appl.
+Phys. 71, 1753 (1992).
+28Z. M. Wang, B. L. Liang, K. A. Sablon, and G. J. Salamo, Appl. Phys. Lett. 90, 113120 (2007).
+29T. Kuroda, T. Mano, T. Ochiai, S. Sanguinetti, K. Sakoda, G. Kido, and N. Koguchi, Phys.
+Rev. B 72, 205301 (2005).
+30K. Watanabe, S. Tsukamoto, Y. Gotoh, and N. Koguchi, J. Cryst.
+Growth 227, 1073 (2001).
+31T. Kuroda, S. Sanguinetti, M. Gurioli, K. Watanabe, F. Minami, and N. Koguchi, Phys.
+Rev. B 66, 121302 (2002).
+32S. Sanguinetti, K. Watanabe, T. Tateno, M. Wakaki, N. Koguchi, T. Kuroda, F. Minami, and M. Gurioli, Appl. Phys. Lett. 81, 613 (2002).
+33C. Heyn, A. Stemmann, M. Klingbeil, C. Strelow, T. K¨oppen, S. Mendach, and W. Hansen, J. Cryst.
+Growth 323, 263 (2011).
+34C. Somaschini, S. Bietti, A. Fedorov, N. Koguchi, and S. Sanguinetti, J. Cryst.
+Growth 323, 279 (2011).
+35T. Mano, M. Abbarchi, T. Kuroda, C. A. Mastrandrea, A. Vinattieri, S. Sanguinetti, K. Sakoda, and M. Gurioli, Nanotechnology 20, 395601 (2009).
+36L. Cavigli, S. Bietti, N. Accanto, S. Minari, M. Abbarchi, G. Isella, C. Frigeri, A. Vinattieri, M. Gurioli, and S. Sanguinetti, Appl. Phys.
+Lett. 100, 231112 (2012).
+37T. Isu, M. Hata, and A. Watanabe, J. Cryst.
+Growth 111, 210 (1991).
+38G. S. Bales and A. Zangwill, Phys.
+Rev. B 41, 5500 (1990).
+39B. Caroli, C. Caroli, and B. Roulet, in Solids Far from Equilibrium, edited by C. Godr´eche (Cambridge University Press, Cambridge, UK, 1992), pp. 155–296.
+40G. Russo, L. M. Sander, and P. Smereka, Phys.
+Rev. B 69, 121406 (2004).
+41T. A. Witten and L. M. Sander, Phys. Rev. Lett. 47, 1400 (1981). 165406-14

@@ -1,0 +1,515 @@
+PHYSICAL REVIEW B 104, 075148 (2021)
+Editors’ Suggestion
+Electronic nature of chiral charge order in the kagome superconductor CsV3Sb5
+Zhiwei Wang
+,1,14,* Yu-Xiao Jiang,2,* Jia-Xin Yin
+,2,*,† Yongkai Li,1,14,* Guan-Yong Wang,3 Hai-Li Huang,3 Sen Shao,4,5
+Jinjin Liu,1,14 Peng Zhu,1,14 Nana Shumiya,2 Md Shafayat Hossain,2 Hongxiong Liu,6,7 Youguo Shi,6,7 Junxi Duan
+,1,14
+Xiang Li,1,14 Guoqing Chang
+,8 Pengcheng Dai,9 Zijin Ye,10 Gang Xu,10 Yanchao Wang,4,5 Hao Zheng,3 Jinfeng Jia
+,3
+M. Zahid Hasan,2,11,12,13,‡ and Yugui Yao1,14,§
+1Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and Measurement (MOE),
+School of Physics, Beijing Institute of Technology, Beijing 100081, China
+2Laboratory for Topological Quantum Matter and Advanced Spectroscopy (B7), Department of Physics, Princeton University,
+Princeton, New Jersey 08544, USA
+3School of Physics and Astronomy, Key Laboratory of Artiﬁcial Structures and Quantum Control (Ministry of Education),
+Shenyang National Laboratory for Materials Science, Tsung-Dao Lee Institute, Shanghai Jiao Tong University, Shanghai 200240, China
+4State Key Laboratory of Superhard Materials, College of Physics, Jilin University, Changchun 130012, China
+5International Center for Computational Method and Software, College of Physics, Jilin University, Changchun 130012, China
+6Beijing National Laboratory for Condensed Matter Physics and Institute of Physics, Chinese Academy of Sciences, Beijing 100190, China
+7University of Chinese Academy of Sciences, Beijing 100049, China
+8Division of Physics and Applied Physics, School of Physical and Mathematical Sciences, Nanyang Technological University, Singapore
+9Department of Physics and Astronomy, Rice University, Houston, Texas 77005, USA
+10Wuhan National High Magnetic Field Center, Huazhong University of Science and Technology, Wuhan, Hubei 430074, China
+11Princeton Institute for the Science and Technology of Materials, Princeton University, Princeton, New Jersey 08544, USA
+12Materials Science Division, Lawrence Berkeley National Laboratory, Berkeley, California 94720, USA
+13Quantum Science Center, Oak Ridge, Tennessee 37831, USA
+14Beijing Key Lab of Nanophotonics and Ultraﬁne Optoelectronic Systems, Beijing Institute of Technology, Beijing 100081, China
+(Received 11 May 2021; revised 30 June 2021; accepted 10 August 2021; published 25 August 2021;
+corrected 30 September 2021)
+Kagome superconductors with TC up to 7 K have been discovered for over 40 y. Recently, unconventional
+chiral charge order has been reported in kagome superconductor KV3Sb5, with an ordering temperature of one
+order of magnitude higher than the TC. However, the chirality of the charge order has not been reported in
+the cousin kagome superconductor CsV3Sb5, and the electronic nature of the chirality remains elusive. In this
+paper, we report the observation of electronic chiral charge order in CsV3Sb5 via scanning tunneling microscopy
+(STM). We observe a 2 × 2 charge modulation and a 1 × 4 superlattice in both topographic data and tunneling
+spectroscopy. 2 × 2 charge modulation is highly anticipated as a charge order by fundamental kagome lattice
+models at van Hove ﬁlling, and is shown to exhibit intrinsic chirality. We ﬁnd that the 1 × 4 superlattices form
+various small domain walls, and can be a surface effect as supported by our ﬁrst-principles calculations. Cru-
+cially, we ﬁnd that the amplitude of the energy gap opened by the charge order exhibits real-space modulations,
+and features 2 × 2 wave vectors with chirality, highlighting the electronic nature of the chiral charge order. STM
+study at 0.4 K reveals a superconducting energy gap with a gap size 2 = 0.85 meV, which estimates a moderate
+superconductivity coupling strength with 2/kBTC = 3.9. When further applying a c-axis magnetic ﬁeld, vortex
+core bound states are observed within this gap, indicative of clean-limit superconductivity.
+DOI: 10.1103/PhysRevB.104.075148
+I. INTRODUCTION
+Owing to the unusual lattice geometry, spins on kagome
+lattices can be geometrically frustrated and form a quan-
+tum spin liquid [1,2]. Similarly, a fundamental tight-binding
+model of kagome lattice considering the nearest-neighboring
+hopping will produce an intriguing electronic band structure
+containing Dirac cones, ﬂat band, and van Hove singularities.
+*These authors contributed equally to this work.
+†jiaxiny@princeton.edu
+‡mzhasan@princeton.edu
+§ygyao@bit.edu.cn
+Thus, materials containing kagome lattices are an exciting
+platform to explore the quantum level interplay between
+geometry, correlation, and topology. For instance, certain
+kagome magnets are found to exhibit electronic nematicity,
+giant spin-orbit tunability, and topological Chern quantum
+phases [3–16]. Kagome superconductors with competing or-
+ders have been identiﬁed for over 40 y [17–19], such as
+LaRu3Si2 with TC of 7 K and a fundamental kagome band
+structure [20]. Recently, another layered kagome supercon-
+ductor AV3Sb5 (A = K, Rb, Cs) was discovered with TC up to
+2.5 K for A = Cs [21–23], providing new research avenues,
+particularly for transport and scanning tunneling microscopy
+(STM) studies [21–33].
+2469-9950/2021/104(7)/075148(7)
+075148-1
+©2021 American Physical SocietyZHIWEI WANG et al.
+PHYSICAL REVIEW B 104, 075148 (2021)
+FIG. 1. (a) Crystal structure of CsV3Sb5. (b) X-ray-diffraction pattern of as-grown single crystal, showing sharp (00l) reﬂections. The left
+inset shows the crystal image, and the right inset shows an enlarged view of the (004) peak. (c) Temperature dependence of ρxx for CsV3Sb5.
+The top inset shows dρxx/dT as a function of temperature, and the bottom inset shows the ρxx(T ) behavior near the superconducting transition.
+(d) Temperature dependence of the magnetic susceptibility in CsV3Sb5 under 1 T for zero-ﬁeld cooling measurement with H⊥c, and the inset
+shows diamagnetic behavior under 1 mT with H⊥c near the superconducting transition. (e), (f) Hall resistivity ρyx and magnetization M as a
+function of the magnetic ﬁeld measured at 5 K with H ∥c, respectively. The inset of (e) shows extracted anomalous Hall signal by subtracting
+the local linear ordinary Hall background. The inset of (f) shows the zoom-in magnetization data, indicative of the absence of magnetic
+hysteresis.
+II. EXPERIMENTAL DETAILS
+High-quality single crystals of CsV3Sb5 were grown
+by a self-ﬂux method with Cs-Sb binary eutectic mixture
+(Cs0.4Sb0.6) as the ﬂux [21]. We found that the molar ratio
+of Cs0.4Sb0.6 : CsV3Sb5 = 15 : 1 is the best condition for ob-
+taining large crystals with high quality. In order to obtain
+high-quality crystals, it is necessary to perform surface treat-
+ment of raw materials in a hydrogen atmosphere [34,35]. Our
+crystals have shiny surfaces with a hexagonal shape, and the
+typical size of crystals is about 3 × 4 × 0.5 mm3, as shown in
+the left inset of Fig. 1(b). The crystal structure was analyzed
+via x-ray diffraction using a θ-2θ scan. The magnetic suscepti-
+bility and magnetization were measured in a physical property
+measurement system magnetometer in vibrating-sample mea-
+surement mode. The transport property measurements were
+carried out in a ﬁve-contact conﬁguration so that the lon-
+gitudinal and Hall resistivity can be taken simultaneously.
+STM data were obtained with a Pt/Ir tip at 4.2 and 0.4 K.
+The topographic data were obtained in a constant current
+mode with bias voltage V = 50 mV and current I = 0.05 nA.
+Spectroscopic data were obtained with V = 50 mV and I =
+0.5 nA, V = 50 mV at 4.2 K, and V = 5 mV and I = 0.1 nA
+at 0.4 K.
+III. TRANSPORT AND TUNNELING RESULTS
+CsV3Sb5 crystallizes in the hexagonal P6/mmm space
+group and consists of V-Sb slabs that are intercalated by
+cesium cation, as illustrated in Fig. 1(a). The most notable
+feature in this compound is that the vanadium sublattice forms
+a 2D kagome net. X-ray-diffraction pattern displays sharp
+(00l) reﬂection peaks, as shown in Fig. 1(b). The full width
+at half maximum of (004) peak is only 0.07°, as shown in the
+right inset of Fig. 1(b). Both resistivity data [Fig. 1(c)] and
+susceptibility data [Fig. 1(d)] show two phase transitions. The
+90 K transition corresponds to the development of a charge
+order, and the 2.5 K transition corresponds to the development
+of superconductivity. Below the charge order transition tem-
+perature, previous studies reveal the possibility of anomalous
+Hall effect [24,25]. Similar to these studies, at 5 K, both the
+magnetization data [Fig. 1(f)] and the Hall resistivity data
+[Fig. 1(e)] as a function of the magnetic ﬁeld applied along
+the c axis show a double-kink feature. By further subtracting a
+linear background as the ordinary Hall response, this unusual
+Hall response would resemble an anomalous Hall effect, as
+shown in the inset of Fig. 1(e). Our low-ﬁeld magnetization
+loop data in the inset of Fig. 1(f) also conﬁrm the absence
+of magnetic hysteresis. The observation of anomalous Hall
+075148-2ELECTRONIC NATURE OF CHIRAL CHARGE ORDER IN …
+PHYSICAL REVIEW B 104, 075148 (2021)
+FIG. 2. (a) Topographic image of the Sb surface. The inset shows a zoom-in topography of the Sb honeycomb lattice. (b) The dark blue
+curve is the spatially averaged dI/dV spectrums (light-blue curves) for a 20-nm × 20-nm Sb surface. (c) Fourier transform of an Sb topographic
+image, showing 2 × 2 charge order vector peaks (red shaded area), and 1 × 4 vector peaks along the Q1 direction. (d), (e) A defect-free Sb
+surface and intensity of charge ordering peaks at different bias voltages. The three 2 × 2 charge order vector peaks have different intensities,
+deﬁning an intrinsic chirality. (f), (g) A defect-rich Sb surface and intensity of charge ordering peaks at different bias voltages. This area shows
+almost no chirality, which can be an extrinsic effect.
+effect and increasing magnetization below charge ordering
+temperature with decreasing temperature implies the highly
+unconventional nature of the charge order.
+In this material, the V and Sb layers have a stronger chem-
+ical bonding, and the material tends to cleave between Cs and
+Sb layers. The Sb surface is most interesting, as it is strongly
+bonded to the V kagome lattice. Previous STM studies have
+resolved Sb honeycomb surfaces in AV3Sb5, and studied the
+charge order and surface superlattices [20–26]. We study
+CsV3Sb5 with STM at 4.2 K. Through cryogenic cleaving, we
+have also obtained large Sb surfaces in CsV3Sb5, as shown in
+Fig. 2(a). Similar to KV3Sb5 [28], we observe a soft charge
+order gap opening from −23 to +35 meV [Fig. 2(b)]. The
+Fourier transform of the topography conﬁrms the 2 × 2 charge
+order as marked by the shaded red region in Fig. 2(c), which
+is ubiquitous for all AV3Sb5 compounds. In defect-free areas
+of KV3Sb5 and RbV3Sb5, the 2 × 2 charge order is found to
+display a chirality [28,29], where its three vector peaks have
+different intensities. We thus perform a spectroscopic map in a
+defect-free area [Fig. 1(d)] for CsV3Sb5 to check the existence
+of the chirality. The energy-resolved intensity of three 2 ×
+2 vector peaks is displayed in Fig. 2(e), where we observe
+clear intensity differences. The observed anisotropy can be
+due to a chiral charge order as observed and discussed in
+certain transition-metal dichalcogenides and high-temperature
+superconductors [36,37]. The chirality can be deﬁned as the
+counting direction (clockwise or anticlockwise) from the low-
+est to the highest pair of vector peaks. By contrast, near a
+defect-rich region [Fig. 2(f)], we ﬁnd that there is almost no
+chirality for the charge order [Fig. 2(g)], which suggests the
+existence of extrinsic effects. In both cases, the intensity of
+Q1 is strongest, and along this direction, there are additional
+1 × 4 superlattice vector peaks in the q-space data [Fig. 2(c)].
+This observation suggests an interplay between the 1 × 4
+superlattice and 2 × 2 charge order.
+The 1 × 4 superlattice is not observed on the Sb surface
+in KV3Sb5 [28], certain Sb surface in CsV3Sb5 [30], and the
+K/Cs/Rb surfaces in AV3Sb5. We also ﬁnd many domains of
+the 1 × 4 superlattice, including 120° domains [Fig. 3(a)] and
+phase-shift domains [Fig. 3(b)]. The domain size can be very
+small (less than 10 nm), which will not be energy favorable if
+it is bulk in nature. In addition, bulk x-ray measurements have
+detected the 2 × 2 charge order but have not yet observed
+the 1 × 4 superlattice [ [21],28]. Therefore, these pieces of
+experimental evidence taken together suggest that the 1 × 4
+superlattice effect is likely to be fragile and of surface origin.
+075148-3ZHIWEI WANG et al.
+PHYSICAL REVIEW B 104, 075148 (2021)
+FIG. 3. (a) Topographic (left two) and schematic (right) images showing 120° domains for the 1 × 4 superlattices. On the right is the
+schematic image for the 120° domains. (b) Topographic (left two) and schematic (right) images showing phase-shift domains for the 1 ×
+4 superlattices. (c) First-principles calculation of the Sb surface, indicating the surface origin of the 1 × 4 superlattices. The green atoms
+represent surface V atoms. Arrows show the in-plane movements of surface V atoms. The rhombic cell in the dashed line is the primitive cell.
+The thickness of the slab is 29.719 Å. The enthalpy of the relaxed type-B supercell slab is ∼7 meV/f.u. lower after surface optimizations
+at 0 K, indicating that the surface reconstruction occurs spontaneously. Kinetic cutoff energy of 600 eV and spacing of 2π × 0.03 Å-1 for
+Monkhorst-Pack k-mesh sampling were adopted to give well-converged total energies (∼1 meV/atom).
+For another example, it is known that the 1 × 2 superlattice
+observed by STM in BaFe2As2 is a polar surface effect [38],
+and there can be various small domain walls of the 1 × 2 su-
+perlattices, as similarly observed here. To explore the surface
+origin possibility, we perform ﬁrst-principles calculations.
+The geometry optimizations of surface atoms were performed
+in the framework of density-functional theory with the projec-
+tor augmented wave method and the Perdew-Burke-Ernzerhof
+exchange-correlation functional [39], which are implemented
+in the Vienna Ab initio Simulation Package [40]. We built two
+types of 1 × 4 supercells slabs, repeating the primitive cell in
+two different directions: parallel (type A) and vertical (type
+B) to the a axis. After fully relaxed surface atoms, we found
+only the type-B slab is stabilized into the 1 × 4 supercell,
+which is consistent with our experimental measurements. Our
+calculations show that 1 × 4 supercells are due to the in-plane
+shifting of V atoms relative to surface Sb atoms, as indicated
+by the black arrows in Fig. 3(c).
+Previous ﬁrst-principles calculation [28,41] in AV3Sb5 has
+also conﬁrmed that the 2 × 2 charge order is a bulk effect
+and is consistent with a hexamer and trimer formation [28]
+(or termed as inverse star of David formation [41]) in the
+V kagome lattice. The chirality feature of the charge order,
+however, is beyond the current ﬁrst-principles calculation.
+Prior to any theoretical discussion of the origin of chirality,
+it is crucial to explore whether the chirality is of electronic
+nature. An issue in the differential conductance mapping pre-
+sented in Fig. 2 is that it cannot distinguish the electronic
+contribution from the structural contribution, as the tunnel-
+ing junction setup can often have a dependence on structure
+features. However, it is generally believed that the energy
+gap of the charge order is of electronic origin. We therefore
+systematically measure the energy gap of the charge order at
+each spatial point and map out the spatial distribution of the
+charge order gap value as shown in Fig. 4(a), which reveals
+a striking spatial modulation of the energy gap value. The
+Fourier transform of the gap map in Fig. 4(b) shows the 2 ×
+2 vector peaks with clear anisotropy, thus similarly deﬁning
+a chirality in the electronic charge order. We have further
+checked this phenomenon in the cousin kagome supercon-
+ductor RbV3Sb5 in Figs. 4(c) and 4(d), and observed similar
+chirality of the electronic charge order. In Fig. 4(e), we show
+typical linecut dI/dV spectra along the line drawn in Fig. 4(c),
+further illustrating the charge order gap modulation in real
+space.
+IV. DISCUSSIONS AND CONCLUSIONS
+The observation of electronic chiral charge order is un-
+precedented in the studying of quantum materials, and can
+be highly related to the electronic nature of kagome lattice at
+van Hove ﬁlling as in AV3Sb5 [42–46]. In contrast to the hon-
+eycomb lattice, the kagome lattice has three sublattices, and
+the kagome lattice at van Hove ﬁlling exhibits unequal pre-
+dominant sublattice occupancy [42]. With extended Coulomb
+interactions considered, this sublattice interference mecha-
+nism will produce a chiral charge order with relative angular
+momentum [44]. Phenomenologically, a chiral charge order
+075148-4ELECTRONIC NATURE OF CHIRAL CHARGE ORDER IN …
+PHYSICAL REVIEW B 104, 075148 (2021)
+FIG. 4. (a) Energy gap map in CsV3Sb5 showing the spatial distribution of the amplitude of the energy gap opened by the charge order.
+The inset shows the histogram of the gap distribution. (b) Fourier transform of the gap map in (a). The 2 × 2 vector peaks are marked with
+blue circles, and their intensities are noted, respectively. (c) Gap map for RbV3Sb5. (d) Fourier transform of the gap map in (c). (d) dI/dV data
+along the line marked by the arrow in (c), showing the modulation of the charge order gap. The black dots mark the peaks on both the positive
+and negative sides of the spectrum, between which deﬁnes the gap size.
+parameter has also been proposed to interact with the under-
+lying topological band structure of this material to produce
+a large intrinsic anomalous Hall effect [28,43–45], which is
+consistent with the transport data. Another anomalous fea-
+ture of the chiral charge order is that it can carry orbital
+currents [28,43,44,46], analogous to the fundamental Haldane
+model [47] and Varma model [48]. A tantalizing visualization
+of the orbital magnetism is recently reported by muon spin
+spectroscopy, and a spontaneous internal magnetic ﬁeld is
+observed just below the charge ordering temperature [49].
+Finally, we explore the superconducting tunneling spec-
+trum at 0.4 K, well below the superconducting transition
+temperature. Consistent with previous reports [30,32,33], the
+tunneling spectrums show an energy gap with a gap size 2 =
+0.85 meV determined by the coherence peak-to-peak distance
+[Figs. 5(a) and 5(b)]. Accordingly, we obtain the supercon-
+ductivity coupling strength 2/kBTC = 3.9, which is slightly
+larger than the standard BCS value and suggests the electron
+pairing is close to a moderate coupling. By applying a 50-mT
+magnetic ﬁeld along the c axis, we observe a zero-energy
+vortex core state [Figs. 5(c) and 5(d)]. The formation of a
+clear vortex core bound state implies that the superconducting
+state is in the clean limit, where the electron mean-free path is
+much longer than the superconducting coherent length. One
+notable observation in the superconducting state is that the
+gap is shallow, and the measured gap is ﬁlled with substantial
+states. The origin of the in-gap states deserves future attention
+with lower temperature and higher energy resolution measure-
+ments. If such states are intrinsic and robust, then it is worthy
+of discussing further their relationship with the tantalizing
+broken-symmetry [32,49] of the superconducting state.
+FIG. 5. (a) Intensity plot of line-cut spectrums taken at T =
+0.4 K, showing superconducting gaps. (b) A typical superconducting
+gap spectrum. (c) Vortex core spectrum showing a zero-energy state.
+(d) A vortex core map taken at zero energy.
+075148-5ZHIWEI WANG et al.
+PHYSICAL REVIEW B 104, 075148 (2021)
+ACKNOWLEDGMENTS
+The work at Beijing Institute of Technology was sup-
+ported by the National Key R&D Program of China
+(Grant No. 2020YFA0308800), the Natural Science Foun-
+dation of China (Grants No. 92065109, No. 11734003, and
+No. 12061131002), the Beijing Natural Science Foundation
+(Grant No. Z190006), and the Beijing Institute of Technology
+(BIT) Research Fund Program for Young Scholars (Grant No.
+3180012222011). Z.W. thanks the Analysis & Testing Center
+at BIT for assistance in facility support. Experimental and
+theoretical work at Princeton University was supported by the
+Gordon and Betty Moore Foundation [Grants No. GBMF4547
+and No. GBMF9461 (M.Z.H.)]. Y.S. was supported by the
+National Natural Science Foundation of China (Grant No.
+U2032204), and the K. C. Wong Education Foundation (Grant
+No. GJTD-2018-01). G.C. would like to acknowledge the
+support of the National Research Foundation, Singapore
+under its NRF Fellowship Award No. NRF-NRFF13-2021-
+0010 and the Nanyang Assistant Professorship grant from
+Nanyang Technological University. P.D. is supported the
+U.S. Department of Energy (DOE), Basic Energy Sciences
+(BES), under Contract No. DE-SC0012311. S.S. and Y.W.
+were supported by the National Natural Science Foundation
+of China under Grants No. 11822404 and No. 11774127.
+[1] M. Mekata, Kagome: The story of the basketweave lattice,
+Phys. Today 56(2), 12 (2003).
+[2] Y. Zhou, K. Kanoda, and T. K. Ng, Quantum spin liquid states,
+Rev. Mod. Phys. 89, 025003 (2017).
+[3] J.-X. Yin, S. H. Pan, and M. Z. Hasan, Probing topological
+quantum matter with scanning tunnelling microscopy, Nat. Rev.
+Phys. 3, 249 (2021).
+[4] T. Kida, L. A. Fenner, A. A. Dee, I. Terasaki, M. Hagiwara, and
+A. S. Wills, The giant anomalous Hall effect in the ferromagnet
+Fe3Sn2—a frustrated kagome metal, J. Phys.: Condens. Matter
+23, 112205 (2011).
+[5] S. Nakatsuji, N. Kiyohara, and T. Higo, Large anomalous Hall
+effect in a non-collinear antiferromagnet at room temperature,
+Nature (London) 527, 212 (2015).
+[6] K. Kuroda et al., Evidence for magnetic Weyl fermions in a
+correlated metal, Nat. Mater. 16, 1090 (2017).
+[7] J.-X. Yin, S. S. Zhang, H. Li, K. Jiang, G. Chang, B. Zhang,
+B. Lian, C. Xiang, I. Belopolski, H. Zheng et al., Giant
+and anisotropic spin–orbit tunability in a strongly correlated
+kagome magnet, Nature (London) 562, 91 (2018).
+[8] J.-X. Yin, S. S. Zhang, G. Chang, Q. Wang, S. Tsirkin, Z.
+Guguchia, B. Lian, H. Zhou, K. Jiang, I. Belopolski et al.,
+Negative ﬂat band magnetism in a spin–orbit-coupled correlated
+kagome magnet, Nat. Phys. 15, 443 (2019).
+[9] Y. Li, Q. Wang, L. DeBeer-Schmitt, Z. Guguchia, R. D.
+Desautels, J.-X. Yin, Q. Du, W. Ren, X. Zhao, Z. Zhang, I. A.
+Zaliznyak et al., Magnetic-Field Control of Topological Elec-
+tronic Response near Room Temperature in Correlated Kagome
+Magnets, Phys. Rev. Lett. 123, 196604 (2019).
+[10] J.-X. Yin, W. Ma, T. A. Cochran, X. Xu, S. S. Zhang, H.-J Tien,
+N. Shumiya, G. Cheng, K. Jiang, B. Lian et al., Quantum-limit
+Chern topological magnetism in TbMn6Sn6, Nature (London)
+583, 533 (2020).
+[11] J.-X. Yin, N. Shumiya, Y. Jiang, H. Zhou, G. Macam, H. O. M.
+Sura, S. S. Zhang, Z. Cheng, Z. Guguchia, Y. Li etal., Spin-orbit
+quantum impurity in a topological magnet, Nat. Commun. 11,
+4415 (2020).
+[12] Y. Xing, J. Shen, H. Chen, L. Huang, Y. Gao, Q. Zheng, Y-Y.
+Zhang, G. Li, B. Hu, G. Qian, L. Cao et al., Localized spin-orbit
+polaron in magnetic Weyl semimetal Co3Sn2S2, Nat. Commun.
+11, 5613 (2020).
+[13] S. S. Zhang, J.-X. Yin, M. Ikhlas, H.-J. Tien, R. Wang,
+N. Shumiya, G. Chang, S. S. Tsirkin, Y Shi, C. Yi
+et al., Many-Body Resonance in a Correlated Topologi-
+cal Kagome Antiferromagnet, Phys. Rev. Lett. 125, 046401
+(2020).
+[14] Z. Guguchia, J. A. T. Verezhak, D. J. Gawryluk, S. S. Tsirkin,
+J.-X. Yin, I. Belopolski, H. Zhou, G. Simutis, S.-S. Zhang
+et al., Tunable anomalous Hall conductivity through volume-
+wise magnetic competition in a topological kagome magnet,
+Nat. Commun. 11, 559 (2020).
+[15] J.-X. Yin, N. Shumiya, S. Mardanya, Q. Wang, S. S. Zhang,
+H.-J. Tien, D. Multer, Y. Jiang, G. Cheng, N. Yao et al.,
+Fermion–boson many-body interplay in a frustrated kagome
+paramagnet, Nat. Commun. 11, 4003 (2020).
+[16] W. Ma, X. Xu, J.-X. Yin, H. Yang, H. Zhou, Z.-J. Cheng,
+Y. Huang, Z. Qu, F. Wang, M. Z. Hasan, and S. Jia, Rare
+Earth Engineering in RMn6Sn6 (R = Gd −Tm, Lu) Topolog-
+ical Kagome Magnets, Phys. Rev. Lett. 126, 246602 (2021).
+[17] H. C. Ku, G. P. Meisner, F. Acker, and D. C. Johnston, Su-
+perconducting and magnetic properties of new ternary borides
+with the CeCo3B2-typesStructure, Solid State Commun. 35, 91
+(1980).
+[18] J. M. Vandenberg and H. Barz, The crystal structure of a
+new ternary silicide in the system rare-earth-ruthenium-silicon,
+Mater. Res. Bull. 15, 1493 (1980).
+[19] H. Barz, New ternary superconductors with silicon, Mater. Res.
+Bull. 15, 1489 (1980).
+[20] C. Mielke, III, Y. Qin, J.-X. Yin, H. Nakamura, D. Das, K. Guo,
+R. Khasanov, J. Chang, Z. Q. Wang, S. Jia, S. Nakatsuji et al.,
+Nodeless kagome superconductivity in LaRu3Si2, Phys. Rev.
+Materials 5, 034803 (2021).
+[21] B. R. Ortiz, S. M. L. Teicher, Y. Hu, J. L. Zuo, P. M. Sarte,
+E. C. Schueller, A. M. Milinda Abeykoon, M. J. Krogstad,
+S. Rosenkranz, R. Osborn et al., CsV3Sb5: A Z2 Topological
+Kagome Metal with a Superconducting Ground State, Phys.
+Rev. Lett. 125, 247002 (2020).
+[22] B. R. Ortiz, P. M. Sarte, E. M. Kenney, M. J. Graf, S. M. L.
+Teicher, R. Seshadri, and S. D. Wilson, Superconductivity in
+the Z2 kagome metal KV3Sb5, Phys. Rev. Materials 5, 034801
+(2021).
+[23] Q. Yin, Z. Tu, C. Gong, Y. Fu, S. Yan, and H. Lei, Supercon-
+ductivity and normal-state properties of kagome metal RbV3Sb5
+single crystals, Chin. Phys. Lett. 38, 037403 (2021).
+[24] S.-Y. Yang, Y. Wang, B. R. Ortiz, D. Liu, J. Gayles, E.
+Derunova, R. Gonzalez-Hernandez, L. Šmejkal, Y. Chen, S. S.
+P. Parkin, S. D. Wilson, E. S. Toberer, T. Mcqueen, and M. N.
+Ali, Giant, unconventional anomalous Hall effect in the metallic
+075148-6ELECTRONIC NATURE OF CHIRAL CHARGE ORDER IN …
+PHYSICAL REVIEW B 104, 075148 (2021)
+frustrated magnet candidate KV3Sb5, Sci. Adv. 6, eabb6003
+(2020).
+[25] F. H. Yu, T. Wu, Z. Y. Wang, B. Lei, W. Z. Zhuo, J. J. Ying, and
+X. H. Chen, Concurrence of anomalous Hall effect and charge
+density wave in a superconducting topological kagome metal,
+Phys. Rev. B 104, L041103 (2021).
+[26] S. Ni, S. Ma, Y. Zhang, J. Yuan, H. Yang, Z. Lu, N. Wang, J.
+Sun, Z. Zhao, D. Li, S. Liu et al., Anisotropic superconducting
+properties of Kagome metal CsV3Sb5, Chin. Phys. Lett. 38,
+057403 (2021).
+[27] Y. Xiang, Q. Li, Y. Li, W. Xie, H. Yang, Z. Wang, Y. Yao,
+and H.-H. Wen, Twofold symmetry of c-axis resistivity in topo-
+logical kagome superconductor CsV3Sb5 with in-plane rotating
+magnetic ﬁeld, arXiv:2104.06909 (2021).
+[28] Y-.X. Jiang, J.-X. Yin, M. Michael Denner, N. Shumiya,
+B. R. Ortiz, G. Xu, Z. Guguchia, J. He, M. S. Hossain
+et
+al.,
+Unconventional
+chiral
+charge
+order
+in
+kagome
+superconductor
+KV3Sb5,
+Nat.
+Mater.
+(2021),
+doi:
+10.1038/s41563-021-01034-y.
+[29] N. Shumiya, M. Shafayat Hossain, J.-X. Yin, Y.-X. Jiang, B. R.
+Ortiz, H. Liu, Y. Shi, Q. Yin, H. Lei, S. Zhang et al., Intrinsic
+nature of chiral charge order in the kagome superconductor
+RbV3Sb5, Phys. Rev. B 104, 035131 (2021).
+[30] Z. Liang, X. Hou, F. Zhang, W. Ma, P. Wu, Z. Zhang, F. Yu,
+J.-J. Ying, K. Jiang, L. Shan, Z. Wang, and X.-H. Chen, Three-
+Dimensional Charge Density Wave and Surface-Dependent
+Vortex Core States in a Kagome Superconductor CsV3Sb5,
+Phys. Rev. X 11, 031026 (2021).
+[31] H. Zhao, H. Li, B. R. Ortiz, S. M. L. Teicher, T. Park, M. Ye,
+Z. Wang, L. Balents, S. D. Wilson, and I. Zeljkovic, Cascade of
+correlated electron states in a kagome superconductor CsV3Sb5,
+arXiv:2103.03118 (2021).
+[32] H. Chen, H. Yang, B. Hu, Z. Zhao, J. Yuan, Y. Xing, G. Qian, Z.
+Huang, G. Li, Y. Ye, Q. Yin, C. Gong et al., Roton pair density
+wave and unconventional strong-coupling superconductivity in
+a topological kagome metal, arXiv:2103.09188 (2021).
+[33] H.-S. Xu, Y.-J. Yan, R. Yin, W. Xia, S. Fang, Z. Chen, Y. Li,
+W. Yang, Y. Guo, and D.-L. Feng, Multiband superconductivity
+with sign-preserving order parameter in kagome superconduc-
+tor CsV3Sb5, arXiv:2104.08810 (2021).
+[34] Z. Wang, K. Segawa, S. Sasaki, A. A. Taskin, and Y. Ando,
+Ferromagnetism in Cr-Doped topological insulator TlSbTe2,
+APL Mater. 3, 083302 (2015).
+[35] Z. Wang, A. A. Taskin, T. Frölich, M. Braden, and Y. Ando,
+Superconductivity in Tl0.6Bi2Te3 derived from a topological
+insulator, Chem. Mater. 28, 779 (2016).
+[36] J. Ishioka, Y. H. Liu, K. Shimatake, T. Kurosawa, K. Ichimura,
+Y. Toda, M. Oda, and S. Tanda, Chiral Charge-Density Waves,
+Phys. Rev. Lett. 105, 176401 (2010).
+[37] J. Xia, E. Schemm, G. Deutscher, S. A. Kivelson, D. A.
+Bonn, W. N. Hardy, R. Liang, W. Siemons, G. Koster, M.
+M. Fejer, and A. Kapitulnik, Polar Kerr-effect Measurements
+of the High-Temperature YBa2Cu3O6+x Superconductor: Evi-
+dence for Broken Symmetry near the Pseudogap Temperature,
+Phys. Rev. Lett. 100, 127002 (2008).
+[38] A. Li, J.-X. Yin, J. Wang, Z. Wu, J. Ma, A. S. Sefat, B. C.
+Sales, D. G. Mandrus, M. A. McGuire, R. Jin et al., Surface
+terminations and layer-resolved tunneling spectroscopy of the
+122 iron pnictide superconductors, Phys. Rev. B 99, 134520
+(2019).
+[39] J. P. Perdew, K. Burke, and M. Ernzerhof, Generalized Gra-
+dient Approximation Made Simple, Phys. Rev. Lett. 77, 3865
+(1996).
+[40] G. Kresse and J. Furthmüller, Efﬁcient iterative schemes for
+ab initio total-energy calculations using a plane-wave basis set,
+Phys. Rev. B 54, 11169 (1996).
+[41] H. Tan, Y. Liu, Z. Wang, and B. Yan, Charge Density Waves
+and Electronic Properties of Superconducting Kagome Metals,
+Phys. Rev. Lett. 127, 046401 (2021).
+[42] M. L. Kiesel, C. Platt, and R. Thomale, Unconventional Fermi
+Surface Instabilities in the Kagome Hubbard Model, Phys. Rev.
+Lett. 110, 126405 (2013).
+[43] X. Feng, K. Jiang, Z. Wang, and J. Hu, Chiral ﬂux phase
+in the Kagome superconductor AV3Sb5, Sci. Bull. 66, 1384
+(2021).
+[44] M. M. Denner, R. Thomale, and T. Neupert, Analysis of
+charge order in the kagome metal AV3Sb5 (A = K, Rb, Cs),
+arXiv:2103.14045 (2021).
+[45] Y.-P. Lin and R. M. Nandkishore, Complex charge density
+waves at Van Hove singularity on hexagonal lattices: Haldane-
+model phase diagram and potential realization in kagome
+metals AV3Sb5, Phys. Rev. B 104, 045122 (2021).
+[46] T. Park, M. Ye, and L. Balents, Electronic instabilities of
+kagome metals: Saddle points and Landau theory, Phys. Rev.
+B 104, 035142 (2021).
+[47] F. D. M. Haldane, Model for a Quantum Hall Effect without
+Landau Levels: Condensed-Matter Realization of the “Parity
+Anomaly,” Phys. Rev. Lett. 61, 2015 (1988).
+[48] C. M. Varma, Non-Fermi-liquid states and pairing instability of
+a general model of copper oxide metals, Phys. Rev. B 55, 14554
+(1997).
+[49] C. Mielke, III, D. Das, J.-X. Yin, H. Liu, R. Gupta, C. N. Wang,
+Y.-X. Jiang, M. Medarde, X. Wu, H. C. Lei et al., Time-reversal
+symmetry-breaking charge order in a correlated kagome super-
+conductor, arXiv:2106.13443 (2021).
+Correction: The name of the seventh author contained an error
+and has been ﬁxed.
+075148-7

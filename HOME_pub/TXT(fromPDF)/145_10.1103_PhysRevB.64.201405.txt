@@ -1,0 +1,323 @@
+Dynamic instability in resonant tunneling
+J. Inkoferer,1 G. Obermair,1 and F. Claro2
+1Fakultat Physik, Universita¨t Regensburg, D93040 Regensburg, Germany
+2Facultad de Fı´sica, Pontiﬁcia Universidad Cato´lica de Chile, Casilla 306, Santiago 22, Chile
+~Received 18 June 2001; revised manuscript received 22 August 2001; published 2 November 2001!
+We show that a novel instability may be present in resonant tunneling through a quantum well in one, two,
+and three dimensions, when the resonance lies near the emitter Fermi level. A simple semiclassical model
+which simulates the resonance and the projected density of states by a nonlinear conductor, the Coulomb
+barrier by a capacitance, and the time evolution by an iterated map, is used. The model reproduces the observed
+hysteresis in such devices, and exhibits a series of bifurcations leading to fast chaotic current ﬂuctuations.
+DOI: 10.1103/PhysRevB.64.201405
+PACS number~s!: 73.40.Gk,72.15.Gd
+Resonant tunneling through a double barrier, originally a
+rather elementary academic exercise, has already shown to
+be an extremely rich source of new and surprising physics
+for over three decades.1 One instance is the bistable region in
+the I–V characteristic that some samples exhibit, leading to
+hysteresis as the curve is traced ﬁrst increasing and then
+decreasing the bias.2–8 This effect is currently understood as
+caused by the interaction of the current ﬂowing through the
+device with the charge trapped in the well formed between
+the barriers.3 Calling Q this charge, its effect on the incoming
+electrons may be viewed as an increase in the local potential
+by Q/C, where C is the capacitance, lifting the resonance
+level in the same amount. The latter can thus be somewhat
+above or below the emitter conduction band edge at the
+same bias, depending on whether the well is charged or un-
+charged. Since in the ﬁrst case there is current ﬂow through
+the well and in the second there is none, both cases are
+physically consistent, and in fact, observed experimentally.
+As an application, it has been suggested that in the bistable
+region the device may act as a THz detector and fast
+switch.9,10
+Another instance are the THz oscillations that may arise
+in the presence of a magnetic ﬁeld in the direction of the
+current ﬂow, which become chaotic if the ﬁeld is sufﬁciently
+strong.11–13 In contrast with the hysteresis effect described
+above, these oscillations are associated with passage of the
+resonance across the emitter Fermi level. Assuming the reso-
+nance is initially above the emitter Fermi sea and off reso-
+nance, it will eventually enter the latter as the bias is in-
+creased, allowing electrons to tunnel into the well. Thus,
+with a certain time constant, charge begins to build up be-
+tween the barriers. The Coulomb repulsion between this
+charge layer and the incoming electrons effectively causes an
+upward shift of the bottom of the well, and hence, also of the
+resonance state. This may drive the system off-resonance
+again until the charge, due to the ﬁniteness of the barrier and
+the associated ﬁnite lifetime of the resonance state, has tun-
+neled out again into unoccupied states on both the emitter
+and collector sides. The resonance then is no longer sus-
+tained above the Fermi energy by the decreased charge in the
+well, the resonance falls again and a new cycle begins.
+Whether this oscillation is damped away or not, is deter-
+mined by the strength of the interaction, which in turn de-
+pends on the projected density of states in the emitter at or
+near the Fermi energy. By changing the proﬁle in the density
+of states the magnetic ﬁeld enhances this coupling, and, if
+large enough, induces the system to perform sustained oscil-
+lations. The purpose of this work is to show that, under fa-
+vorable conditions, the oscillations may also be present in
+the absence of a magnetic ﬁeld, as well as in situations of
+lower dimensionality such as tunneling through a quantum
+wire or dot.
+We model the system by a simple circuit that captures the
+essence of the system under discussion, shown in Fig. 1. As
+follows from the discussion below, it includes the following
+features that appear to be essential in the description of the
+device: ~1! the existence of a resonance state with an associ-
+ated lifetime, which results in a time delay between the bias
+voltage and the buildup or decay of the charge in the well
+~‘‘tunneling time’’!; ~2! the existence of a Fermi sea on the
+emitter side, with a density of states depending on the dimen-
+sionality of the device ~bulk, planar, or linear!, and on the
+magnetic ﬁeld, if present; ~3! the existence of the Coulomb
+repulsion between the charge trapped in the well and the
+incoming electrons. The nonlinear element in the circuit rep-
+resents transmission from the emitter side into the well, al-
+lowing a charge
+DQ~t,t1t!5tImaxf~V!
+~1!
+to leave the source U0 in the time interval t. The dimension-
+less nonlinear function f(V), depending on the voltage V
+5U02U between emitter and well, is the convolution of the
+transmissivity of the resonance with the number of occupied
+states in the emitter, available for tunneling. This latter quan-
+tity may be written as
+FIG. 1. Model circuit for a double barrier device. The function
+f(V) represents the response for tunneling into the well formed by
+the barriers.
+RAPID COMMUNICATIONS
+PHYSICAL REVIEW B, VOLUME 64, 201405
+0163-1829/2001/64~20!/201405~4!/$20.00
+©2001 The American Physical Society
+64 201405-1N~V!5u~eV2Er1EF!@12u~eV2Er!#rd~V!,
+~2!
+where u(x) is the Heaviside step function, Er is the energy
+of the resonance level at zero bias, and EF , the Fermi en-
+ergy. All energies and voltages are assumed to be in electron-
+volts and measured with respect to the bottom of the conduc-
+tion band on the emitter side. The quantity rd(V) represents
+the number of states in the emitter side, with the component
+of kinetic energy along the current ﬂow, equal the resonance
+energy shifted by the bias V. It is given by
+rd~V!5ad~eV1EF2Er!d21/2.
+~3!
+Here ad is a constant depending on the dimensionality d
+51,2, or 3 of the emitter ~the well has dimension d21). The
+values are, a152,a252LA2m*/(p\), a35m*L2/(p\2),
+where L is the emitter width and m* the effective mass of the
+carriers.
+The capacitance C represents the Coulomb barrier. As
+charge ﬂows through the nonlinear element, entering the
+well, the voltage drop V5U02U is reduced. At the same
+time charge is allowed to leave the well through the collector
+represented by the load resistor R. These elements deﬁne a
+time constant t05RC characterizing the rate at which the
+well may be emptied. With these deﬁnitions the conservation
+of charge provides an equation of motion for the voltage
+U(t) on the output side of the device,
+C@U~t1t!2U~t!#5DQ2t
+U~t!
+R
+.
+~4!
+Deﬁning Vn5V(t1nt) one obtains from Eqs. ~1! and ~4!
+the following iterated map,
+Vn115~12g!Vn2gRImaxf~Vn!1gU0 ,
+~5!
+where g5t/t0 and we assume that t0.t holds. The map
+has ﬁxed points given by
+V*5U02RImaxf~V*!.
+~6!
+A simple linear analysis in the neighborhood of one of these
+ﬁxed points shows that for it to be stable the condition
+21,RImax
+df
+dV uV*,2/g21
+~7!
+must be satisﬁed. It follows that for either an increasing or
+decreasing function f(V) at the ﬁxed point, an instability
+occurs provided the local derivative is sufﬁciently large in
+absolute value for the above condition to be violated. For a
+sharp resonance the function f(V) will essentially follow the
+proﬁle given by Eq. ~3! within the window Er2EF<V
+<Er , becoming negligibly small elsewhere. The ﬁnite reso-
+nance width smoothens the edges deﬁned by the top and
+bottom of the Fermi sea. Assuming a lorentzian form for the
+transmissivity T(V)5G2/@(E2Er1eV)21G2# one has for
+G!EF ,14
+f~V!'rd~V!S arctgS
+eV2Er1EF
+G
+D 2arctgS
+eV2Er
+G DD .
+~8!
+The expression in parenthesis is a positive deﬁnite funtion of
+V resembling a hat, giving f(V) such shape for d51 since
+then rd(V) is a constant; for d52 and 3, f(V) rather re-
+sembles an asymmetric hat. For convenience we call it the
+‘‘hat function’’ in what follows.
+The ﬁxed points, as determined by Eq. ~6!, may be found
+graphically as the intersection of the straight line through the
+origin, F5V, and the curve representing the right hand side
+of that equation. Because of the inverted hat form of the
+latter one can easily verify that there are either one, or three
+ﬁxed points, as illustrated in Fig. 2, depending on the size of
+the external bias U0. The ﬁgure is for the d53 case, with
+parameters as given below. When there are three solutions,
+the one in the middle ~MFP, square in the ﬁgure! occurs at
+the rather steep fall of the arctg function, yielding a likely
+unstable ﬁxed point according to the criterion given in Eq.
+~7!. The intersection furthest to the right ~RFP, triangle in the
+ﬁgure! occurs in the ﬂat portion of the hat function and is
+therefore stable.
+We are interested in the leftmost ﬁxed point ~LFP, the
+circles in the ﬁgure!, representing the intersection located in
+the left side of the hat function. As U0 varies and the overall
+curve raises, the intersection closely follows the functional
+form of the number of states available for tunneling, Eq. ~3!.
+We ﬁrst consider the d51 case, for which r1(V) ﬁrst rises
+abruptly as a step function, thereafter remaining constant in
+the relevant region. The LFP then traces the contour of the
+arctg function, whose steep variation will generally violate
+the stability condition ~7!. The situation is as in the d53
+case with magnetic ﬁeld, since the latter modiﬁes the spectra
+in the emitter transforming it into a series of quasi-one-
+dimensional dispersion laws, and for which the instability is
+known to exist.11 For d52, there is a square root dependence
+at the LFP intersect, and if the resonance width G is sufﬁ-
+ciently small the diverging local derivative will cause the
+stability condition again to be violated near the edge ~the
+Fermi energy!.
+The d53 case needs closer attention because of the linear
+form of r3(V). Calculating the total emitter current ﬂowing
+FIG. 2. The two sides of Eq. ~6! for two values of the external
+bias: U0535 mV and 65 mV. Symbols mark intersections deter-
+mining positions of the ﬁxed points.
+RAPID COMMUNICATIONS
+J. INKOFERER, G. OBERMAIR, AND F. CLARO
+PHYSICAL REVIEW B 64 201405
+201405-2through the resonance and relating the time constant t with
+the resonance width through t;2p\/G one gets, away from
+the hat edges,
+RImax
+df
+dV uV*;
+e2m*Dz
+ee0\2g
+,
+~9!
+where Dz is the separation between the barriers, and e,e0 are
+the dielectric constants of the enclosed material and the
+vacuum, respectively. Using the values appropriate for GaAs
+(m*50.068 m,e512.5), one gets from ~7! the simple sta-
+bility condition
+1.3Dz~nm!,22g,
+~10!
+where the distance Dz is to be given in nanometers. This
+condition is easily violated in actual samples.
+We have done numerical studies in order to verify the
+presence of the instability, and have found it to occur in all
+three cases discussed above. Figure 3 shows the I–V curves
+for the ~a! d51, ~b! d52 and ~c! d53 cases, in the absence
+of a magnetic ﬁeld. The parameters used in the ﬁgure are g
+50.5, G51 meV, EF520 meV, Er543 meV, and Dz
+513 nm,
+appropriate
+for
+typical
+devices
+based
+on
+AlxGa12xAs. It is also necessary to specify some short cross
+sectional dimensions in cases ~a! and ~b!, chosen as DxDy
+5100 nm2 and Dx510 nm in the ﬁgure, respectively. For
+these values, at low external bias U0 the device is always
+stable. Yet, as the voltage increases and current starts to ﬂow
+due to the entrance of the resonance in the Fermi sea, the
+iteration ~5! does not settle to a ﬁxed point but rather ﬂuctu-
+ates in steps t, ﬁrst regularly ~bifurcations region in Fig. 3!
+and then, at larger bias, in a chaotic fashion. This shows that
+the system becomes unstable. At still larger voltages the bi-
+furcation process unfolds until the system is stable again.
+The data shown are for an increasing bias. If the external
+voltage is then decreased, the system remains in the
+RFP stable state ~triangle in Fig. 2! for as long as
+there are three solutions to Eq. ~6!. The values of the critical
+bias at which these solutions decrease in number from
+three to one for panels ~a!, ~b!, and ~c! of Fig. 2 are 49 mV,60
+mV, and 53 mV, respectively. The case with magnetic ﬁeld
+and d53, not shown, produces a similar ﬁgure for large
+enough
+ﬁeld,
+as
+expected
+from
+results
+reported
+previously.11,12
+In summary, we have shown that an instability induced by
+the interaction of the current with the trapped charge may
+appear in resonant tunneling through constrictions in one,
+two, and three dimensions, when the resonance is close to
+the Fermi level. Instead of integrating the quantum mechani-
+cal equations of motion as done previously for the d53 case
+with magnetic ﬁeld,11 we have used a circuit model with the
+advantage of mathematical simplicity and the possibility of
+an analytical discussion of the stability in all three dimen-
+sions. Experimental accessibility of the instability may re-
+quire testing emission or absorption of THz radiation. Usual
+electronics will normally just register a time average of the
+oscillations because of the small value of their typical period,
+which, for a resonance of 1 meV width in a GaAs quantum
+well would be of the order of 4 ps.
+This research was supported in part by a Ca´tedra Presi-
+dencial en Ciencia and FONDECYT grant 1990425.
+1L.L. Chang, L. Esaki, and R. Tsu, Appl. Phys. Lett. 24, 593
+~1974!.
+2A. Zaslavsky, V.J. Goldman, D.C. Tsui, and J.E. Cunningham,
+Appl. Phys. Lett. 53, 1408 ~1988!.
+3V.J. Goldman, D.C. Tsui, and J.E. Cunningham, Phys. Rev. Lett.
+58, 1256 ~1987!.
+4T.C.L.G. Sollner, Phys. Rev. Lett. 59, 1622 ~1987!.
+5L. Eaves, M.L. Leadbeater, and C.R.H. White, Physica B 175,
+263 ~1991!.
+6S.A. Brown, L.D. Macks, T.A. Fisher, and M. Emeny, Phys. Rev.
+B 56, 1967 ~1997!.
+7S.A. Brown and L.D. Macks, Phys. Rev. B 58, R1758 ~1998!.
+8A.D. Martin, M.L.F. Lerch, P.E. Simmonds, and L. Eaves, Appl.
+Phys. Lett. 64, 1248 ~1994!.
+9P. Orellana and F. Claro, Appl. Phys. Lett. 75, 1643 ~1999!.
+10P. Orellana, F. Claro, and E. Anda, Phys. Rev. B 62, 9959 ~2000!.
+11P. Orellana, E. Anda, and F. Claro, Phys. Rev. Lett. 79, 1118
+~1997!.
+12P. Orellana, F. Claro, E. Anda, and S. Makler, Phys. Rev. B 53,
+12 967 ~1996!.
+FIG. 3. Current-voltage iterates for a quantum well embedded in
+a
+~a!
+one-dimensional,
+~b!
+two-dimensional
+and
+~c!
+three-
+dimensional conductor.
+RAPID COMMUNICATIONS
+DYNAMIC INSTABILITY IN RESONANT TUNNELING
+PHYSICAL REVIEW B 64 201405
+201405-313S.A. Brown and L.D. Macks, Phys. Rev. B 58, R1758 ~1998!.
+14It is well known that the width of the resonance, determined
+by the width and height of the barriers, needs to be narrow
+for the bistable regime to be present. This means a relatively
+long time constant t. See M.L. Leadbeater, E.S. Alves,
+F.W. Sheard, L. Eaves, M. Henini, O.H. Hughes, and G.A.
+Toombs, J. Phys.: Condens. Matter 1, 10 605 ~1989!; and P.
+Orellana, thesis.
+RAPID COMMUNICATIONS
+J. INKOFERER, G. OBERMAIR, AND F. CLARO
+PHYSICAL REVIEW B 64 201405
+201405-4

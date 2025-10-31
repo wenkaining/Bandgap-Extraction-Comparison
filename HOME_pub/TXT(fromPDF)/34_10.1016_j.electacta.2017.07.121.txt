@@ -1,0 +1,821 @@
+Effect of cathode porosity on the Lithium-air cell oxygen reduction
+reaction – A rotating ring-disk electrode investigation
+Jeongwook Seoa,*,1, Shrihari Sankarasubramaniana,*,1,3, Nikhilendra Singhb,
+Fuminori Mizunob,2, Kensuke Takechib, Jai Prakasha,*
+a Center for Electrochemical Science and Engineering, Department of Chemical and Biological Engineering, Illinois Institute of Technology, 10 West 33rd Street,
+Chicago, IL 60616, USA
+b Toyota Research Institute of North America, 1555 Woodridge Avenue, Ann Arbor, Michigan 48105, USA
+A R T I C L E 
+I N F O
+Article history:
+Received 28 December 2016
+Received in revised form 17 July 2017
+Accepted 20 July 2017
+Available online 22 July 2017
+Keywords:
+Oxygen Reduction Reaction
+Lithium-oxygen cell
+electrochemical kinetics
+carbon electrode
+rotating ring-disk electrode
+A B S T R A C T
+The kinetics of the oxygen reduction reaction (ORR) on the practical air cathode in a Lithium-air cell,
+which is conventionally composed of porous carbon with or without catalysts supported on it, was
+investigated. The mechanism and kinetics of the oxygen reduction reaction (ORR) was studied on a
+porous carbon electrode in an oxygen saturated solution of 0.1 M Lithium bis-triﬂuoromethanesulfo-
+nimide (LiTFSI) in Dimethoxyethane (DME) using cyclic voltammetery (CV) and the rotating ring-disk
+electrode (RRDE) technique. The oxygen reduction and evolution reactions were found to occur at similar
+potentials to those observed on a smooth, planar glassy carbon (GC) electrode. The effect of porosity and
+the resultant increase in surface area were readily observed in the increase in the transient time required
+for the intermediates to reach the ring and the much larger disk currents (compared to smooth, planar
+GC) recorded respectively. The RRDE data was analyzed using a kinetic model previously developed by us
+and the rate constants for the elementary reactions were calculated. The rates constant for the
+electrochemical reactions were found to be similar in magnitude to the rate constants calculated for
+smooth GC disks. The porosity of the electrode was found to decrease the rate of desorption of the
+intermediate and the product and delay their diffusion by shifting it from a Fickian regime in the
+electrolyte bulk to the Knudsen regime in the ﬁlm pores. Thus, it is shown that the effect of the electrode
+porosity on the kinetics of the ORR is physical rather than electrochemical.
+© 2017 Elsevier Ltd. All rights reserved.
+1. Introduction
+The mitigation of “range anxiety” hindering the adoption of
+electric vehicles (EVs) requires that EVs on a single charge match
+the range of a gasoline powered car with a full tank. A range of 500
+miles per charge, which would satisfy this requirement, requires
+the commercialization of “beyond Li-ion” battery systems. The Li-
+O2 cell is one of the best candidates due to its high theoretical
+speciﬁc energy of 3505 Wh Kg1 which is signiﬁcantly higher than
+current lithium-ion cells [1,2]. The practical use of this promising
+technology is beset by problems of the high overvoltage leading to
+low columbic efﬁciency [1–3], Li dendrite growth on the anode [4],
+side reactions with N2 and H2O in air [5,6], and unstable
+electrolytes leading to short cycle life [7–10],
+During oxygen reduction reaction (ORR), O2 or O2
+ (formed by
+outer sphere electron transfer) is adsorbed onto the cathode and
+reacts with Li+ to form LiO2 through a net one electron transfer
+reaction. Li2O2 is formed from LiO2 via a subsequent electrochemi-
+cal reaction or by a chemical disproportionation reaction [10,11]. A
+consensus exists in the literature that Li2O2 is the ﬁnal discharge
+product of the Li-O2 cell following extensively studies using in-situ
+[12–14] and ex-situ techniques [15] but the elementary steps
+involved in the ORR are less well understood. The chemical
+disproportionation of LiO2 is considered a major reaction route
+[14–19] with reports of its occurrence in the electrolyte bulk [15–
+17], on the electrode surface [18,19] or as a hybrid surface-
+electrolyte mechanism [14]. It is evident from the literature that
+* Corresponding author.
+E-mail addresses: jseo16@hawk.iit.edu (J. Seo), ssanka11@hawk.iit.edu
+(S. Sankarasubramanian), prakash@iit.edu (J. Prakash).
+1 These authors contributed equally to this work.
+2 Present address: Battery Material Engineering & Research Division, Toyota
+Motor Corporation, Higashifuji Technical Center, 1200, Mishuku, Susono, Shizuoka,
+410-1193 Japan.
+3 Present 
+address: 
+Department 
+of 
+Energy, 
+Environmental 
+and 
+Chemical
+Engineering, Washington University in St. Louis, 1 Brookings Dr, St. Louis, MO
+63130, USA.
+http://dx.doi.org/10.1016/j.electacta.2017.07.121
+0013-4686/© 2017 Elsevier Ltd. All rights reserved.
+Electrochimica Acta 248 (2017) 570–577
+Contents lists available at ScienceDirect
+Electrochimica Acta
+journal homepa ge: www.elsev ier.com/locate/electactaanalyses of data from the same technique such as SERS [12,38,39],
+AFM [34,40] or EQCM [19,34] for example, have led to radically
+different conclusions as to the overall mechanism. Several of these
+studies [12,34,40] also employ unstable [11,41,42] DMSO as the
+electrolyte solvent, necessitating the data obtained to be examined
+in this context. Thus, the elucidation of the Li-O2 ORR mechanism
+is complicated by the interplay of factors such the solvent
+[15,16,21], salt [43,44], applied overpotential [14] and electrolyte
+water content [6,21].
+The applicability of the rotating ring-disk electrode (RRDE)
+technique to elucidate complex reaction mechanisms in non-
+aqueous systems has been reported previously [11,21,22,35]. The
+present study seeks to use the RRDE technique to examine the Li+
+ORR on practical, porous carbon electrodes. Porous carbon
+electrodes have been extensively used as cathodes for Li-rO2 cells
+[3,4,10,22–27]. The inﬂuence of the carbon surface on Li2O2
+deposits on the cathode has been examined by us previously [23]
+and others have examined the corresponding oxygen evolution
+reaction (OER) [25]. In the present study, we combine RRDE
+measurements and a kinetic model to calculate the rate constants
+for each of the elementary steps,the competition between the
+surface and bulk reactions is quantiﬁed and the effects of cathode
+porosity on the elementary reaction rate constants are examined. .
+2. Experimental Methods
+The carbon black mixture was prepared by mixing 10 mg carbon
+black (CB, acetylene, 100% compressed, surface area: 80 m2g1,
+>99.9%, Alfa Aesar) with 10 wt% polytetraﬂuorethylene solution
+(PTFE, 60 wt% dispersion in water, Sigma Aldrich) followed by the
+addition of 3 ml of isopropanol to the CB/PTFE mixture solution to
+dilute the mixture. The mixture was dispersed with a sonicator
+(Qsonica, frequency: 20 KHz) for 10 minutes at room temperature.
+The glassy carbon (GC) disk of the RRDE system was roughened
+using sand paper and recessed  1 mm below the lip of the
+surrounding teﬂon holder. The CB ﬁlm was deposited by dropping
+7 ml of CB/PTFE slurry onto the recessed, roughened GC disk
+electrode (surface area: 0.196 cm2) and dried in an oven at 40  C for
+15 minutes. This CB coating process was repeated three times until
+uniform surface coverage was achieved and the ﬁlm was ﬂush with
+the RRDE assembly surface. Finally, the porous CB disk electrode
+was dried in a vacuum oven at 40  C for 12 hours to remove all
+water and solvent.
+The 0.1 M solution of Lithium bis-triﬂuoromethanesulfonimide
+(LiTFSI) (99.95%, Aldrich) in 1,2-Dimethoxyethane (DME) (Sigma-
+Aldrich, ReagentPlus, 99%) was prepared in a MBraun Ar ﬁlled
+glove box with H2O and O2 levels <0.5 ppm. The LiTFSI salt was
+dried in a vacuum oven for 24 hours at 40 C and the DME was
+distilled, Ar purged and stored in an Ar ﬁlled glove box to ensure
+absence of moisture before use. The water content in the “as-
+received” DME was measured using Karl-Fisher titration (Mettler
+Toledo C30 Coulometric KF Titrator) and the water content was
+found to be 77.6 ppm. Similarly, the water content of the electrolyte
+was measured after preparation and found to be 76.8 ppm.
+The electrochemical experiments were carried out with a
+multi-channel potentiostat (Solartron Analytical) with indepen-
+dent leads for potential and current. A 50-ml ﬂask, ﬁtted with a
+custom designed Teﬂon top with openings for the working,
+referenceand counter electrodes and an inlet for the gas purge line,
+was used for the RRDE measurements. The three-electrode system
+consisted of Pt gauze (Alfa Aesar, 45 mesh, <99.9%) on a Pt wire as
+reference and counter electrodes. The working electrode was a
+Pine instruments RRDE with the CB coated GC disk surrounded by a
+Pt ring with a rated collection efﬁciency (N) of 0.25 and used in
+conjunction with the supplied rotor shaft and gas purged bearing
+assembly. The entire setup was assembled in the glove box and
+sealed. Upon transfer out of the glovebox, the gas inlet was
+immediately connected to an Ar source to maintain the Ar blanket
+over the electrolyte surface. The gas purged bearing assembly was
+connected to a second Ar source to prevent ingress of atmospheric
+air during RRDE shaft rotation. The Pt pseudo-reference was
+calibrated with respect to the Li/Li+ couple using a ferrocene/
+ferrocenium (Fc/Fc+) internal reference as recommended by IUPAC
+[45]. The calibration procedure and resultant graphs are in
+supplementary materials Section 1.
+The background cyclic voltammograms (CVs) were measured in
+the Ar saturated state after a 30 min Ar purge. The CVs were then
+measured using different scan rates in the O2 saturated condition
+after O2 purge for 1 hour. For the RRDE measurements, the working
+electrode rotation rate was controlled by a MSRX speed controller
+(Pine Instruments). The ring potential was held at 3.58 V which was
+chosen to achieve complete oxidation of reduced species produced
+at the disk. The linear sweep voltammograms (LSVs) were
+measured from 2.9 to 1.4 V vs Li/Li+ based on the location of the
+ORR peak identiﬁed from the CV.
+3. Results and discussions
+3.1. Electrochemical measurements
+The oxygen reduction and oxygen evolution current was
+measured on the porous CB coated GC electrode disk. Fig. 1 shows
+CVs measured over the potential range of the ORR and OER with
+different scan rates in O2 saturated 0.1 M LiTFSI in DME electrolyte.
+The background CV was measured in Ar saturated electrolyte and
+parasitic side reactions were not observed in this voltage range. A
+peak seperation of 1300 mV was measured with a 5 mV s1 scan
+rate and hence was found to be higher than the theoretical value
+for a one electron reversible reaction (59 mV). The ORR and OER
+peak shifts were seen to be in agreement with the suggestion of a
+30/a mV shift for a 10 fold increase in scan rate [29].
+The electrochemical kinetic analysis for the ORR was carried out
+by combining the RRDE technique with an electro-kinetic model. A
+detailed discussion of the use of RRDE measurements for non-
+aqueous ORR reactions can be found in our recent works [11,20].
+Fig. 2 shows the RRDE measurements on the porous CB disk and Pt
+ring system carried out with the CB disk being potentiodynami-
+cally scanned at a rate of 2 mV s1and the Pt ring being held at
+3.58 V vs Li/Li+. The LSVs of the porous CB disk showed the typical
+observation that the limiting currents (iL) are directly proportional
+to the square root of rotation rate (v1
+2).
+Fig. 1. Cyclic voltammograms on a 1 mm thick carbon black ﬁlm (10% PTFE)
+deposited on a 0.196 cm2, roughened glassy carbon (GC) disk electrode in Ar and O2
+saturated 0.1 M LiTFSI in DME with varying scan rates.
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577 
+5713.2. Kinetic analysis
+The Koutecky-Levich equation describes the current measured
+by a rotating disk electrode if the ORR kinetics is ﬁrst order with
+respect to dissolved oxygen. The disk current and square root of
+rotation rate have the relation given by Eq. (1):
+1
+i ¼ 1
+ik
+þ 1
+iL
+¼ 1
+ik
+þ
+1
+B
+ﬃﬃﬃﬃv
+p
+ð1Þ
+where ik is the kinetic current. Thus, the slope of a typical
+Koutecky-Levich (K-L) plot (i1 vs. v1
+2) as shown in Fig. 3 would
+equal a constant B given by Eq. (2):
+B ¼ 0:62nFAD
+2
+3y1
+6Cb
+ð2Þ
+Where F is 96,485C mol1, A is the geometric area of disk, D is the
+diffusion coefﬁcient of O2 (2.78  106 cm2 s1 in 0.1 M LITFSI/
+DME) [22], Cb is the bulk concentration of O2 (9.57  10–6 molcm-3)
+[30], and n is the kinematic viscosity (5.22  103 cm s1). The
+presence of the CB ﬁlm potentially complicates the analysis of the
+K-L plot compared to the case of the smooth electrode described
+above. In case the ﬁlm was porous enough to allow for ﬂow inside
+the pores, the current versus rotation rate proﬁle has been shown
+to have a sigmoidal proﬁle with the current being linear below a
+certain critical rotation rate and increasing exponentially above
+this value [33]. On the other hand, for dense porous materials like
+most carbons used in electrodes, the pores would be too small for
+ﬂow to occur inside them [33]. The transport regime in the ﬁlm in
+such cases is expected to be dominated by diffusion, with the
+respective contributions from Fickian and Knudsen diffusion
+depending on the pore size distribution. Apart from the convective
+transport to the disk surface and kinetics on the disk surface that
+can serve as the limiting factor (depending on the potential), in a
+porous electrode system we may also need to consider the diffusive
+transport through the ﬁlm, possible reaction rate limitation at the
+redox centers inside the ﬁlm and partitioning between the ﬁlm
+surface and the ﬁlm bulk (i.e. inside the pores) [29]. The various
+possibilities and the Koutecky-Levich like equations applicable to
+these cases are comprehensively discussed elsewhere [29,36]. It is
+to be noted that the effect of these various possible limiting factors
+Fig. 2. Linear sweep voltammograms on a rotating ring-disk electrode consisting of a 1 mm thick carbon black ﬁlm (10% PTFE) deposited on a 0.196 cm2, roughened glassy
+carbon (GC) disk and a concentric platinum ring in O2 saturated electrolyte. Disk currents were recorded at a scan rate of 2mVs1. Ring currents were recorded with the Pt ring
+held at 3.58 V vs Li/Li+.
+Fig. 3. Koutecky-Levich (-i1 vs v1/2) plot for ORR on a 1 mm thick carbon black
+ﬁlm (10% PTFE) deposited on a 0.196 cm2, roughened glassy carbon (GC) disk
+electrode in 0.1 M LiTFSI/DME electrolyte. The error bars depict 10% standard error.
+572 
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577is typically an additional contribution to the limiting current,
+leading to a non-zero intercept for the 1/i vs. v1
+2 plots at the
+limiting current region. Depending on the ﬁlm and the postulated
+limiting factor in the ﬁlm, this non-zero intercept is treated
+suitably. The slope of the K-L plot and hence kinetic calculations
+such as the number of electrons is unaffected. In the present case,
+for a uniform, conducting carbon ﬁlm the diffusion process in the
+ﬁlm is believed to be the dominant contribution to the ﬁlm current.
+To account for this ﬁlm current, we may re-write the K-L equation
+as follows [29]:
+1
+i ¼ 1
+ik
+þ
+1
+iLevich
+þ 1
+if ilm
+ 
+
+ð3Þ
+The depletion layer at the disk disappears at high enough
+rotation rate and hence we may assume that the reactant
+concentration exposed to the disk would be the same as the bulk
+concentration. Thus, the ﬁlm current maybe represented as [29]:
+if ilm ¼
+nFADf ilmkCO2;bulk
+f
+ð4Þ
+The reaction occurring on the ﬁlm surface vs. the pores can be
+distinguished through the partition coefﬁcient k (assuming the
+same rate expression in both the pores and the surface) and the
+pore diffusion can be characterized by the ﬁlm diffusion coefﬁcient
+Dﬁlm.
+Interestingly, it was observed that while there is a small ﬁlm
+current at the start of the limiting current region (1.8 V), this
+current disappears at higher overpotentials (1.4 V). This may
+indicate that at high enough overpotentials the reactions on the
+ﬁlm surface are so rapid as to consume all reactants reaching the
+surface before they have an opportunity to diffuse into the ﬁlm
+bulk. Nevertheless, calculating the Df ilmk
+f
+term using the ﬁlm current
+at 1.8 V (1.03 mA), a value of 5.7  105 m.s1 was obtained. Since
+the ﬁlm is 1 mm thick, this leads to a ﬁlm diffusion coefﬁcient of
+5.7  108 m2. s1. This is two orders of magnitude lower than the
+bulk diffusion coefﬁcient of oxygen (2.78  106 cm2s1 in 0.1 M
+LITFSI/DME).
+Alternatively, 
+the 
+contribution 
+of 
+ﬁlm 
+diffusion 
+can 
+be
+evaluated using the disk to ring transient time. The transient
+time is related to the reactant diffusion coefﬁcient as follows [37]:
+Ts ¼ K
+n
+DO2;bulk
+  
+!1
+3
+v1
+ð5Þ
+K is a RRDE geometry dependent proportionality factor given by
+K ¼ 43:12 log
+r2
+r1
+ 
+ 
+2
+3. This equation for K is applicable when the
+transient time is measured in seconds and the rotation rate is in
+rpm. In the present case, it is 10.1 rpm.s, leading to a calculated
+value 
+of 
+the 
+transient 
+time 
+at 
+400 rpm 
+of 
+0.3s. 
+Whereas
+experimentally, we observe a transient time of 14s. While there
+may be a contribution from the difference between the calculated
+and actual K values (due to variations in RRDE geometry), these
+would not be sufﬁcient to explain the two orders of magnitude
+variation between the predicted and measured transient times(the
+experimentally determined value of K in reference 37 was 11). But
+since the ﬁlm and bulk diffusion coefﬁcients vary signiﬁcantly, the
+possible reason for this discrepancy is apparent. The slow product
+diffusion through the ﬁlm on the disk slows down its detection at
+the ring. Thus, analysis of both the reaction currents at the disk and
+product oxidation currents at the ring show that transport through
+the ﬁlm plays a major role in determining the reaction site (ﬁlm
+surface vs. ﬁlm pores) and rate of product transport through the
+ﬁlm (Li2O2 precipitation vs. pore clogging). This is a vital ﬁrst step
+in understanding the Li+ ORR in practical electrodes.
+The Koutecky-Levich plots were used to calculate the total
+number of electrons transferred in the reaction and this was found
+to equal 1.07 within 10% error. This calculation was carried out
+using the geometric surface area of the electrode. The actual
+surface area measured by techniques such as N2 adsorption (BET) is
+not applicable herein as the electroactive surface area is not
+necessarily the same as the physical surface area. The variation of
+ORR kinetics by adsorption site has been discussed by us elsewhere
+[20]. Further, the bulk diffusion coefﬁcient of oxygen was used as
+the effective diffusion coefﬁcient.
+The combination of the total number of electrons with the
+information on the rate determining step obtained from a Tafel plot
+allowed us to describe the overall electrochemistry of the present
+system. Semilog plots of kinetic current and the disk potential
+(Tafel plot) are depicted in Fig. 4. The kinetic current and the
+potential are related by the Tafel equation:
+h ¼ a þ b:log ik
+ð Þ 
+ð6Þ
+Where
+a ¼ 2:3RT
+a:F :logi0
+ð7Þ
+b ¼ 2:3RT
+a:F
+ð8Þ
+The kinetic current ik is determined by a rearrangement of the
+Koutecky-Levich equation (ik ¼ i:iL= iL  i
+ð 
+Þ) to obtain a relationship
+between the disk current and the limiting current. The slope of this
+plot indicates the rate determining step. In the present case, a value
+of 390 mV dec1 was obtained which was found to be at odds with
+the theoretical value (118 mV dec1 with transfer coefﬁcient
+(a) = 0.5) for the ﬁrst electron transfer step being rate determining.
+This anomalous value of the Tafel slope points to a deviation in the
+value of the transfer coefﬁcient from the conventional value of 0.5
+due to an asymmetric energy landscape for the anodic and
+cathodic directions of the ORR caused by solvent interactions as
+described by us elsewhere [22].
+To calculate the individual reaction rate constants for the
+elementary steps, multiple possible Li-O2 ORR pathways depicted
+in Fig. 5 were considered. The initial step consists of the adsorption
+of O2 on the cathode surface and subsequent production of LiO2.
+Following the production of LiO2, various possible reduction
+pathways were considered  further electrochemical reduction to
+produce Li2O2, chemical disproportionation reaction on the surface
+between adjacent LiO2 to produce Li2O2 and desorption followed
+by chemical disproportionation to produce Li2O2 in the electrolyte.
+Fig. 4. Tafel (log (ik) vs E (V)) plot for ORR on a 1 mm thick carbon black ﬁlm (10%
+PTFE) deposited on a 0.196 cm2, roughened glassy carbon (GC) disk electrode in
+0.1 M LiTFSI/DME electrolyte.
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577 
+573However, the four-electron reaction to produce Li2O was not
+considered in this reaction scheme due to lack of experimental
+reports of Li2O as the reduction product. The effect of water on the
+reaction was a key consideration. It has been reported that the
+surface or the solution phase reaction dominates depending on the
+water content [46]. The present model considers both surface and
+solution mechanisms and hence this variability is implicitly
+accounted for. Further, the amount of water initially present in
+the electrolyte (76.8 ppm) is in between the limits for transition
+between a largely surface based (<30 ppm) to a largely solution
+based mechanism (>2000 ppm). Hence a model based on
+competitive solution and surface based mechanisms would be
+most representative of the present system. Efforts to explicitly
+incorporate side reactions with water, its possible catalytic activity
+and its effects on the nucleation of Li2O2 are ongoing.
+The reactions were described by typical kinetic equations along
+with equations for the disk and ring currents. The equations are as
+follows:
+k1 O2 a
+ð Þ
+ 
+ ¼ k3 þ k4 þ k5
+ð 
+Þ LiO2 a
+ð Þ
+ 
+
+ð9Þ
+k5 LiO2 a
+ð Þ
+ 
+  k6 LiO2
+½ 
+ ¼ Zv
+1
+2 LiO2
+½ 
+ 
+ð10Þ
+iD ¼ nFA 
+k1 þ 2k2
+ð 
+Þ O2 a
+ð Þ
+ 
+ þ k3 LiO2 a
+ð Þ
+ 
+
+	 
+
+ð11Þ
+iR ¼ nFANZv
+1
+2 LiO2
+½ 
+ 
+ð12Þ
+Where Z is a mass transport relation given by:
+Z ¼ 0:62D
+2
+3n1
+6
+ð13Þ
+RRDE kinetics models from the literature for aqueous ORR
+[31,32] and our prior work [11,21,22] were adapted to the present
+system to obtain the following equation relating the disk and ring
+current:
+N ID
+IR
+ 
+
+¼
+Ak6
+k5
+ 
+
+1
+Zv
+1
+2
+ 
+
+þ
+A
+k5
+ 
+
+ð14Þ
+Where A is a reaction rate constant relation given by:
+A ¼ 1 þ
+2k2 k3 þ k4 þ k5
+ð 
+Þ
+k1
+ 
+
+þ k3
+ð15Þ
+The kinetic relations were simpliﬁed based on our experimental
+observations. The Koutecky-Levich plots indicated that the overall
+reaction involved the transfer of a single electron. Thus, the direct
+two-electron and series based two-electron pathway to produce
+Li2O2 was eliminated (k2 = k3 = 0). The simpliﬁed model was further
+analyzed to obtain individual reaction rate constants.
+Fig. 6 shows the distribution of disk and ring current (N(iD/iR) vs.
+square root of the rotation rate (v1/2). This plot is expected to
+yield straight lines with different slopes (S) and intercepts (J) at
+different potentials based on the simpliﬁed form of Eq. (14) where
+A = 1. The slopes (S) and intercepts (J) at different potentials from
+Fig. 6 were plotted in Fig. 7. The slope and intercept are related by
+the following equation:
+J ¼
+Z
+k6
+ 
+
+S 
+ð16Þ
+Fig. 7 was seen to follow the prediction from the model that the
+intercept is zero and slope of the above plot allowed us to calculate
+the rate constant for the electrolyte bulk disproportionation
+reaction (k6). The rate constant for desorption of LiO2 from the
+surface (k5) was then calculated from the slopes of the N
+iD
+iR
+ 
+plots.
+The value of k5 was found to be smaller by three orders of
+magnitude as compared to the values on a smooth, planar GC disk
+Fig. 5. (a) Reaction scheme for the Oxygen reduction reaction on a Li-O2 cell cathode and the kinetic model used with a Rotating ring-disk electrode (RRDE); (b) Cross-section
+view of the porous carbon black (CB) ﬁlm disk electrode and the reactions therein (the reactions are illustrative and non-stoichiometric).
+Fig. 6. N(iD/iR) vs v1/2 plots for ORR on a 1 mm thick carbon black ﬁlm (10% PTFE)
+deposited on a 0.196 cm2, roughened glassy carbon (GC) disk electrode in 0.1 M
+LiTFSI/DME electrolyte.The error bars depict 10% standard error.
+574 
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577[22]. The rate of desorption was understood to be a function of the
+convective transport from the ﬁlm surface reaction sites and
+diffusive (Fickian and/or Knudsen) transport from the intra-pore
+reaction sites. The material dependent intermediate binding
+energy could also play a role. The carbonaceous nature of the
+electrode in both the smooth and porous cases and the equal rates
+of rotation indicated that the variation in the desorption rates was
+a function of the porosity of the electrode. At the same rotation
+rates (i.e. equal rates of convection), the smooth electrode would
+display purely Fickian diffusion whereas the porous electrodes can
+be expected to display a mixture of Fickian and Knudsen behavior
+(which is typically slower) depending on pore size distribution.
+Further, desorption would also depend on the species concentra-
+tion gradient between the surface and the near surface electrolyte
+environment. This gradient could be non-uniform in highly
+tortuous electrodes and hence result in non-uniform mass
+transport driving forces leading to a net slower rate of desorption.
+This was reﬂected in the large time transient between the
+observation of the mass transport limited current at the disk
+and the appearance of the corresponding current plateau at the
+ring.
+The rate constant for the ﬁrst electron transfer (k1) was
+calculated from the rotation dependent relation between iD, iL
+described by Eq. (17) and depicted in Fig. 8. The close match
+between the theoretical and experimental intercepts served as
+further validation of the present model.
+iL
+iL  id
+¼ 1 þ k1
+Z v1
+2
+ð17Þ
+Having calculated k1, k5 and k6, k4 was calculated by rearranging
+Eqs. (9)–(12) as follows:
+k4 ¼ nFAZO2v
+1
+2
+O2 b
+ð Þ
+h 
+i
+iD
+k1
+1 þ k1
+ 
+
+ k5
+ð18Þ
+The potential dependence of the various rate constants are
+summarized in Fig. 9 and compared with the values for the
+smooth GC disk case from Sankarasubramanian et al. [22]. The
+potential dependent rate constant for the electrochemical one-
+electron transfer reaction (k1) for both porous CB and smooth GC
+disk showed similar values as expected for electrochemically
+similar carbonaceous surfaces. This clearly indicated that any
+observed variation in the Li-O2 cathode reactions with changes in
+electrode porosity is physical in origin and not electrochemical.
+The rate constants for the chemical disproportionation reaction in
+the bulk (k6) was found to be similar for both electrodes since the
+reactions in the electrolyte are independent of the physical or
+chemical properties of the electrode. The non-electrochemical
+steps – chemical disproportionation on the surface and desorption
+of LiO2 and their associated rate constants k4 and k5 were found to
+display no potential dependence as expected. The value of k4 was
+found to slightly increase with potential in the case of the porous
+CB disk. This was understood to occur due to a combination of the
+increasing production of LiO2 at higher potentials and the
+hindered desorption of the LiO2 due to the porous nature of the
+electrode and its associated transport limitations. The surface
+Fig. 7. Slope(S) and intercept (J) plot from N(iD/iR) vs v1/2 plots for ORR on a 
+1 mm thick carbon black ﬁlm (10% PTFE) deposited on a 0.196 cm2, roughened glassy
+carbon (GC) disk electrode in 0.1 M LiTFSI/DME electrolyte. The error bars depict 10%
+standard error.
+Fig. 8. iL/(iL-iD) vs. v1/2 plots at different potentials for ORR on a 1 mm thick
+carbon black ﬁlm (10% PTFE) deposited on a 0.196 cm2, roughened glassy carbon
+(GC) disk electrode in 0.1 M LiTFSI/DME electrolyte. The error bars depict 10%
+standard error.
+Fig. 9. Calculated rate constants on (a)1 mm thick carbon black ﬁlm (10% PTFE)
+deposited on a 0.196 cm2, roughened glassy carbon (GC); (b) smooth, planar glassy
+carbon. Data for (b) is taken from Sankarasubramanian et al. [22].
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577 
+575disproportionation reaction requires the presence of two LiO2
+species in proximity and the occurrence of this increases with
+increasing concentration of the superoxide. While on the smooth
+electrode this increase in concentration can be expected to result
+in a proportionate increase in the rate of desorption, this would
+not be the case on the porous electrode as the effective rate of pore
+transport was found to be two orders pf magnitude lower than the
+rate of bulk transport. Thus, the smooth GC electrode showed a
+slight decrease in the rate of surface disproportionation with
+potential while the porous electrode was found to display the
+opposite behavior.
+Thus, the porous electrode increases the retention of the
+product species on the electrode and hence offers a possible
+avenue towards greater reversibility of Li2O2, with the trade-off
+being the overall slower rate of reaction due to the slowdown in the
+rate of the chemical disproportionation reaction on the surface.
+Further, the chemical disproportionation reaction on the surface is
+expected to dominate due to the transport properties of a porous
+electrode.
+4. Conclusion
+The present study examines the effect of porosity on the
+individual reactions comprising the ORR in Li-O2 systems. Porous
+carbon was chosen as being representative of the typical electrode
+and catalyst support used in practical Li-O2 cells. The porosity of
+the electrode was found to have a signiﬁcant impact on the
+desorption of reaction intermediates and their further reaction on
+the surface while having minimal effect on the electrochemical
+reaction or chemical reactions in the electrolyte bulk. Porous
+electrodes offer a way to increase reversibility of the Li-O2 cell by
+minimizing loss of the Li2O2 product by precipitation but would
+also be hampered by increased passivation. The present study is
+expected to inform the choice of porous materials as non-aqueous
+cathodes and possibly inﬂuence the tailoring of optimum electrode
+porosity and tortuosity.
+Acknowledgements
+This work was supported by the Toyota Research Institute of
+North America (TRINA). J.S and S.S contributed equally to this work.
+Appendix A. Supplementary data
+Supplementary data associated with this article can be found, in
+the online version, at http://dx.doi.org/10.1016/j.electacta.2017.
+07.121.
+References
+[1] P.G. Bruce, S.A. Freunberger, L.J. Hardwick, J.-M. Tarascon, Li–O2 and Li–S
+batteries with high energy storage, Nat. Mater. 11 (2011) 19–29.
+[2] J. Christensen, P. Albertus, R.S. Sanchez-Carrera, T. Lohmann, B. Kozinsky, R.
+Liedtke, J. Ahmed, A. Kojic, A Critical Review of Li/Air Batteries, J. Electrochem.
+Soc. 159 (2) (2012) R1–R30.
+[3] Y.-C. 
+Lu, 
+H.A. 
+Gasteiger, 
+E. 
+Crumlin, 
+R. 
+McGuire 
+Jr., 
+Y. 
+Shao-Horn,
+Electrocatalytic Activity Studies of Select Metal Surfaces and Implications in
+Li-Air Batteries, J. Electrochem. Soc 157 (9) (2010) A1016–A1025.
+[4] H.G. Jung, J. Hassoun, J.B. Park, Y.K. Sun, B. Scrosati, An improved high-
+performance lithium-air battery, Nat. Chem. 4 (2012) 579–585.
+[5] H.-K. Lim, H.D. Lim, K.Y. Park, D.H. Seo, H. Gwon, J. Hong III, K. Kang, Toward a
+Lithium–Air Battery: The Effect of CO2 on the Chemistry of a Lithium–Oxygen
+Cell, J. Am. Chem. Soc. 135 (26) (2013) 9733–9742.
+[6] F. Mizuno, T.S. Arthur, K. Takechi, Water in Ionic Liquid for Electrochemical Li
+Cycling, ACS Energy Lett. 1 (2016) 542–547.
+[7] R.S. Assary, K.C. Lau, K. Amine, Y.K. Sun, L.A. Curtiss, Interactions of Dimethoxy
+Ethane with Li2O2 Clusters and Likely Decomposition Mechanisms for Li–O2
+Batterie, J. Phys. Chem. C 117 (2013) 8041.
+[8] S.A. Freunberger, Y. Chen, Z. Peng, J.M. Grifﬁn, L.J. Hardwick, F. Bardé, P. Novák,
+P.G. Bruce, Reactions in the Rechargeable Lithium–O2 Battery with Alkyl
+Carbonate Electrolytes, J. Am. Chem. Soc. 133 (2011) 8040.
+[9] S.A. Freunberger, Y. Chen, N.E. Drewett, L.J. Hardwick, F. Barde’, P.G. Bruce,
+Oxygen Batteries The Lithium–Oxygen Battery with Ether-Based Electrolytes,
+Angew. Chem., Int. Ed. 50 (2011) 8609–8613.
+[10] F. Mizuno, S. Nakanishi, Y. Kotani, S. Yokoishi, H. Iba, Rechargeable Li-Air
+Batteries with Carbonate-Based Liquid Electrolytes, Electrochemistry 78
+(2010) 403.
+[11] S. Sankarasubramanian, J. Seo, F. Mizuno, N. Singh, J. Prakash, Rotating ring-
+disc electrode investigation of the aprotic superoxide radical electrochemistry
+on multi-crystalline surfaces and correlation with Density functional theory
+modeling implications for Lithium-air cells, J. Electrochem. Soc. 163 (10)
+(2016) A2377–A2384.
+[12] Q. Yu, S. Ye, In Situ Study of Oxygen Reduction in Dimethyl Sulfoxide (DMSO)
+Solution: A Fundamental Study for Development of the Lithium–Oxygen
+Battery, J. Phys. Chem. C 119 (2015) 12236–12250.
+[13] L. Zhong, R.R. Mitchell, Y. Liu, B.M. Gallant, C.V. Thompson, J.Y. Huang, S.X. Mao,
+Y. Shao-Horn, In Situ Transmission Electron Microscopy Observations of
+Electrochemical Oxidation of Li2O2, Nano Lett. 13 (2013) 2209–2214.
+[14] L. Johnson, C. Li, Z. Liu, Y. Chen, S.A. Freunberger, P.C. Ashok, B.B. Praveen, K.
+Dholakia, J.-M. Tarascon, P.G. Bruce, The Role of LiO2 Solubility in O2 Reduction
+in Aprotic Solvents and its Consequences for LiO2 batteries, Nat. Chem. 6
+(2014) 1091–1099.
+[15] C.O. Laoire, S. Mukerjee, K.M. Abraham, E.J. Plichta, M.A. Hendrickson,
+Inﬂuence of Nonaqueous Solvents on the Electrochemistry of Oxygen in the
+Rechargeable Lithium-Air Battery, J. Phys. Chem. C 114 (2010) 9178–9186.
+[16] C.J. Allen, J. Hwang, R. Kautz, S. Mukerjee, E.J. Plichta, M.A. Hendrickson, K.M.
+Abraham, Oxygen Reduction Reactions in Ionic Liquids and the Formulation of
+a General ORR Mechanism for Li–Air Batteries, J. Phys. Chem. C 116 (2012)
+20755–20764.
+[17] M.J. Trahan, S. Mukerjee, E.J. Plichta, M.A. Hendrickson, K.M. Abraham, Studies
+of Li-Air Cells Utilizing Dimethyl Sulfoxide-Based Electrolyte, J. Electrochem.
+Soc 160 (2) (2013) A259–A267.
+[18] V. Viswanathan, J.K. Nørskov, A. Speidel, R. Schefﬂer, S. Gowda, A.C. Luntz, Li-O2
+kinetic Overpotentials: Tafel Plots from Experiment and First- Principles
+Theory, J. Phys. Chem. Lett. 4 (2013) 556–560.
+[19] B.D. McCloskey, R. Schefﬂer, A. Speidel, G. Girishkumar, A.C. Luntz, On the
+mechanism of nonaqueous Li–O2 electrochemistry on C and its kinetic
+overpotentials: some implications for Li–air batteries, J. Phys. Chem. C 116
+(2012) 23897–23905.
+[20] S. Sankarasubramanian, N. Singh, F. Mizuno, J. Prakash, Ab initio investigation
+of the Oxygen Reduction Reaction activity on noble metal (Pt, Au, Pd), Pt3 M
+(M=Fe, Co, Ni, Cu) and Pd3 M (M=Fe, Co, Ni, Cu) alloy surfaces, for Li-O2 cells, J.
+Power Sources 319 (2016) 202–209.
+[21] S. Sankarasubramanian, J. Seo, F. Mizuno, N. Singh, J. Prakash, Enhancement of
+oxygen reduction reaction rate by addition of water to an oxidatively stable
+ionic liquid electrolyte for lithium-air cells, Electrochem. Commun. 73 (2016)
+55–57.
+[22] S. Sankarasubramanian, J. Seo, F. Mizuno, N. Singh, J. Prakash, Elucidating
+the Oxygen reduction reaction kinetics and the origins of the anomalous
+Tafel behavior at the Li-O2 cell cathode, J. Phys. Chem. C 121 (2017) 4789–
+4798.
+[23] S. Nakanishi, F. Mizuno, K. Nobuhara, T. Abe, H. Iba, Inﬂuence of the carbon
+surface on cathode deposits in non-aqueous Li–O2 batteries, Carbon 50 (2012)
+4794–4803.
+[24] Y. Yang, Q. Sun, Y.S. Li, H. Li, Z.W. Fu, Nanostructured diamond like carbon thin
+ﬁlm electrodes for lithium air batteries, J. Electrochem. Soc. 158 (2011) B1211–
+B1216.
+[25] H. Beyer, S. Meini, N. Tsiouvaras, M. Piana, H.A. Gasteiger, Thermal and
+electrochemical decomposition of lithium peroxide in non-catalyzed carbon
+cathodes for Li-air batteries, Phys. Chem. Chem. Phys. 15 (2013) 11025–11037.
+[26] A. Gueguen, P. Novak, E.J. Berg, XPS Study of the Interface Evolution of
+Carbonaceous Electrodes for Li-O2 Batteries during the 1 st Cycle, J.
+Electrochem. Soc. 163 (13) (2016) A2545–A2550.
+[27] M.M. Ottakam Thotiyl, S.A. Freunberger, Z. Peng, P.G. Bruce, The Carbon
+Electrode in Nonaqueous Li-O2 Cells, J. Am. Chem. Soc. 135 (2013) 494–500.
+[29] A.J. Bard, L.R. Faulkner, Electrochemical Methods, Wiley, New York, USA, 2001.
+[30] D.T. Sawyer, G. Chlerlcato Jr., C.T. Angells, E.J. Nannl Jr., T. Tsuchiya, Effects of
+Media and Electrode Materials on the Electrochemical Reduction of Dioxygen,
+Anal. Chem 54 (1982) 1720–1724.
+[31] H.S. Wroblowa, Y.-C. Pan, G. Razumney, Electroreduction of oxygen: a new
+mechanistic criterion, J. Electroanal. Chem. 69 (1976) 195–201.
+[32] K.-L. Hsueh, D.-T. Chin, S. Srinivasan, Electrode kinetics of oxygen reduction: A
+theoretical and experimental analysis of the Rotating ring-disk electrode
+method, J. Electroanal. Chem. 153 (1983) 79–95.
+[33] R.T. Bonnecaze, N. Mano, B. Nam, A. Heller, On the Behavior of the Porous
+Rotating Disk Electrode, J. Electrochem. Soc. 154 (2) (2007) F44–F47.
+[34] M.D. Pozo, W.R. Torres, S.E. Herrera, E.J. Calvo, New Evidence of LiO2
+Dismutation in Lithium–Air Battery Cathodes, ChemElectroChem 3 (2016)
+1–5.
+[35] W. Torres, N. Mozhzhukhina, A.Y. Tesio, E.J. Calvo, A Rotating Ring Disk
+Electrode Study of the Oxygen Reduction Reaction in Lithium Containing
+Dimethyl Sulfoxide Electrolyte: Role of Superoxide, J. Electrochem. Soc. 161
+(14) (2014) A2204–A2209.
+576 
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577[36] J. Leddy, A.J. Bard, J.T. Maloy, J.M. Saveant, Kinetics of ﬁlm-coated electrodes:
+Effect of a ﬁnite mass transfer rate of substrate across the ﬁlm—solution
+interface at steady state, J. Electroanal. Chem. 187 (1985) 205–227.
+[37] J. Herranz, A. Garsuch, H.A. Gasteiger, Using Rotating Ring Disc Electrode
+Voltammetry to Quantify the Superoxide Radical Stability of Aprotic Li-Air
+Battery Electrolytes, J. Phys. Chem. C 116 (2012) 19084–19094.
+[38] D. Zhai, H.-H. Wang, J. Yang, K.C. Lau, K. Li, K. Amine, L.A. Curtiss,
+Disproportionation in Li-O2 Batteries Based on a Large Surface Area Carbon
+Cathode, J. Am. Chem. Soc. 135 (2013) 15364–15372.
+[39] Z. Peng, S.A. Freunberger, L.J. Hardwick, Y. Chen, V. Giordani, F. Barde, P. Novak,
+D. Graham, J.-M. Tarascon, P.G. Bruce, Oxygen Reactions in a Non-Aqueous Li+
+Electrolyte, Angew. Chem. Int. 50 (2011) 6351–6355.
+[40] C. Liu, S. Ye, In Situ Atomic Force Microscopy (AFM) Study of Oxygen Reduction
+Reaction on a Gold Electrode Surface in a Dimethyl Sulfoxide (DMSO)-Based
+Electrolyte Solution, (2017), doi:http://dx.doi.org/10.1021/acs.jpcc.6b08718.
+[41] D. Afri, M. Afri, M. Noked, A. Garsuch, A.A. Frimer, D. Aurbach, Oxidation of
+Dimethyl Sulfoxide Solutions by Electrochemical Reduction of Oxygen, J. Phys.
+Chem. Lett 4 (2013) 3115–3119.
+[42] D.G. Kwabi, T.P. Batcho, C.V. Amanchukwu, N. Ortiz-Vitoriano, P. Hammond, C.
+V. Thompson, Y. Shao-Horn, Chemical Instability of Dimethyl Sulfoxide in
+Lithium-Air Batteries, J. Phys. Chem. Lett 5 (2014) 2850–2856.
+[43] I. Gunasekara, S. Mukerjee, E.J. Plichta, M.A. Hendrickson, K.M. Abrahama, A
+Study of the Inﬂuence of Lithium Salt Anions on Oxygen Reduction Reactions
+in Li-Air Batteries, J. Electrochem. Soc. 162 (2015) A1055–A1066.
+[44] C.M. Burke, V. Pande, A. Khetan, V. Viswanathan, B.D. McCloskey, Enhancing
+electrochemical intermediate solvation through electrolyte anion selection to
+increase nonaqueous Li–O2 battery capacity, Proc. Natl Acad. Sci. USA 112
+(2015) 9293–9298.
+[45] G. Gritzner, J. Kuta, Recommendations on reporting electrode potentials in
+nonaqueous solvents, Pure & Appl. Chem. 56 (4) (1984) 461–466.
+[46] N.B. Aetukuri, B.D. McCloskey, J.M. García, L.E. Krupp, V. Viswanathan, A.C.
+Luntz, Solvating additives drive solution-mediated electrochemistry and
+enhance toroid growth in non-aqueous Li–O2 batteries, Nat. Chem. 7 (2015)
+50–56.
+J. Seo et al. / Electrochimica Acta 248 (2017) 570–577 
+577

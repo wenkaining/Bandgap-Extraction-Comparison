@@ -1,0 +1,1372 @@
+Acta Materialia 200 (2020) 959–970 
+Contents lists available at ScienceDirect 
+Acta Materialia 
+journal homepage: www.elsevier.com/locate/actamat 
+Full length article 
+Spinodal decomposition versus classical γ ′ nucleation in a nickel-base 
+superalloy powder: An in-situ neutron diffraction and atomic-scale 
+analysis 
+David M. Collins a , ∗, Neil D’Souza b , Chinnapat Panwisawas c , Chrysanthi Papadaki d , 
+Geoff D. West e , Aleksander Kostka f , Paraskevas Kontis g , ∗
+a School of Metallurgy and Materials, University of Birmingham, Edgbaston, Birmingham, B15 2TT, UK 
+b Rolls-Royce plc, PO Box 31, Derby DE24 8BJ, UK 
+c NISCO UK Research Centre, School of Engineering, University of Leicester, Leicester LE1 7RH, UK 
+d Department of Engineering Science, University of Oxford, Parks Road, Oxford, OX1 3PJ, UK 
+e Warwick Manufacturing Group, University of Warwick, Coventry, CV4 7AL, UK 
+f Materials Research Department and Centre for Interface Dominated Materials (ZGH), Ruhr-University Bochum, 44801, Bochum, Germany 
+g Max-Planck-Institut für Eisenforschung GmbH, Max-Planck-Strasse 1, Düsseldorf 40237, Germany 
+a r t i c l e 
+i n f o 
+Article history: 
+Received 2 April 2020 
+Revised 16 September 2020 
+Accepted 16 September 2020 
+Available online 22 September 2020 
+Keywords: 
+Superalloys 
+Neutron diffraction 
+Phase transformation 
+Powder metallurgy 
+Precipitation 
+a b s t r a c t 
+Contemporary powder-based polycrystalline nickel-base superalloys inherit microstructures and proper- 
+ties that are heavily determined by their thermo-mechanical treatments during processing. Here, the 
+inﬂuence of a thermal exposure to an alloy powder is studied to elucidate the controlling formation 
+mechanisms of the strengthening precipitates using a combination of atom probe tomography and in- 
+situ neutron diffraction. The initial powder comprised a single-phase supersaturated γ only; from this, 
+the evolution of γ ′ volume fraction and lattice misﬁt was assessed. The initial powder notably possessed 
+elemental segregation of Cr and Co and elemental repulsion between Ni, Al and Ti with Cr; here proposed 
+to be a precursor for subsequent γ to γ ′ phase transformations. Subsolvus heat treatments yielded a uni- 
+modal γ ′ distribution, formed during heating, with evidence supporting its formation to be via spinodal 
+decomposition. A supersolvus heat treatment led to the formation of this same γ ′ population during 
+heating, but dissolves as the temperature increases further. The γ ′ then reprecipitates as a multimodal 
+population during cooling, here forming by classical nucleation and growth. Atom probe characterisation 
+provided intriguing precipitate characteristics, including clear differences in chemistry and microstruc- 
+ture, depending on whether the γ ′ formed during heating or cooling. 
+© 2020 Acta Materialia Inc. Published by Elsevier Ltd. All rights reserved. 
+1. Introduction 
+Understanding formation reactions and evolution behaviour of 
+ordered second phase precipitates is technologically critical for a 
+compendium of applications; these are most pertinent for multi- 
+component alloys used for structural applications. This is acutely 
+important for nickel-base superalloys, the material of choice for the 
+hottest sections of a gas turbine engines. These alloys are designed 
+with judicious elemental selection to confer a balance between 
+high temperature mechanical performance, thermodynamic stabil- 
+ity and corrosion resistance required for long-term use in an ag- 
+gressive in-service environment [1,2] . The chosen multi-component 
+∗Corresponding authors. 
+E-mail addresses: d.m.collins@bham.ac.uk (D.M. Collins), p.kontis@mpie.de (P. 
+Kontis). 
+compositions lead to complex microstructures and phase trans- 
+formation behaviour; understanding the governing mechanisms is 
+most critical for the selection of optimal processing parameters [3] . 
+Modern nickel-base superalloy turbine discs are fabricated from 
+powders, a cost-effective processing route developed to give a 
+step-change improvement in component performance through im- 
+proved alloy homogeneity and a ﬁner grain size over traditional 
+cast and wrought processing methods [4,5] . As there are several 
+stages in the alloy/component manufacture, there is active research 
+in understanding and optimising the microstructure of each pro- 
+cessing method used. This includes hot isostatic pressing (HIP) 
+e.g. [6] , thermomechanical processing e.g. [7] and heat treatments 
+e.g. [8] . It is notable that the majority of our understanding of mi- 
+crostructural control is derived from the ﬁnal heat treatment ﬁnal 
+stage. The approach, however, has a clear weakness as it inhibits 
+https://doi.org/10.1016/j.actamat.2020.09.055 
+1359-6454/© 2020 Acta Materialia Inc. Published by Elsevier Ltd. All rights reserved.960 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+any understanding of γ → γ ′ reaction behaviour during the early 
+stages of processing. 
+In polycrystalline nickel-base superalloy derivatives, the multi- 
+phase microstructure comprises an A1 structure γ matrix and a 
+dispersion of ordered, coherent L1 2 structure γ ′ precipitates with 
+a low lattice misﬁt. The formation of γ ′ precipitates has been stud- 
+ied extensively in systems of varying compositional complexity, fo- 
+cusing on how the precipitates nucleate and grow. This has in- 
+cluded binary Ni-Al [9,10] , ternary Ni-Al-Cr [11] , Ni-Al-Ti [12] and 
+multicomponent systems [13–17] . Model systems have low super- 
+saturation, making it possible to suppress γ ′ formation, then ob- 
+serve γ ′ forming via isothermal heat treatments. These studies in- 
+dicate γ ′ forms by classical nucleation. However, studying γ ′ for- 
+mation behaviour in multicomponent systems, such as those used 
+in a commercial powder metallurgy (PM) nickel-base superalloy, 
+contain higher concentration of γ ′ forming elements, making it 
+impossible to suppress their formation during cooling tests due 
+to the high driving force for γ ′ formation [18] . In this case, in- 
+stead of classical nucleation, some authors have speculated that 
+γ ′ forms via spinodal decomposition during the early stages. Tan 
+et al. [19] showed evidence of interconnected networks of γ ′ with 
+diffuse interfaces and compositions far from equilibrium, observed 
+following fast quenching. These results here were indicative that 
+chemical ordering can occur concurrently to spinodal decomposi- 
+tion. 
+In order to investigate whether the formation of γ ′ occurs by 
+the classical nucleation mechanism or spinodal decomposition, we 
+have studied the microstructural evolution of γ ′ from a highly 
+supersaturated γ phase in a nickel-base superalloy powder. The 
+nature of powder production sees individual particles solidify ex- 
+ceptionally quickly, where they are subjected to cooling rates far 
+greater than would be possible in bulk samples, simply by virtue of 
+the heat transfer limitations from the signiﬁcant volume difference. 
+Hence, the cooling rate during powder production is hypothesised 
+to be suﬃciently rapid to entirely suppress the γ ′ formation, even 
+in a highly alloyed superalloy derivative with high concentrations 
+of γ ′ forming elements. 
+In this study we have exposed a nickel-base superalloy pow- 
+der to thermal cycles that reach temperatures above and below the 
+γ ′ solvus temperature whilst acquiring neutron diffraction data in- 
+situ. Our results reveal that γ ′ not only forms during cooling but 
+also during heating via spinodal decomposition. Furthermore, de- 
+pending on the heat treatment temperature, the distribution and 
+morphology of γ ′ precipitates alters from an interconnected net- 
+work of precipitates, to a unimodal distribution and ﬁnally to a 
+multimodal precipitate distribution. Understanding the precipitate 
+formation sequence is supported by atom probe tomography mea- 
+surements which ascertain characteristic compositional differences 
+as a function of the prescribed subsolvus or supersolvus heat treat- 
+ment. 
+2. Method 
+2.1. Material 
+Powder of the commercial nickel-base superalloy RR10 0 0 
+was produced by gas atomisation with the following nomi- 
+nal composition (wt.%): Ni-15Cr-18.5Co-5Mo-3Al-3.6Ti-2Ta-0.5Hf- 
+0.06Zr-0.027C-0.015B . 
+2.2. Neutron diffraction 
+Diffraction data were collected on the ENGIN-X instrument at 
+the ISIS neutron spallation source, UK. A setup of the experiment 
+is shown schematically in Fig. 1 . The beamline was equipped with 
+Fig. 1. Diagrammatic experimental setup on ENGIN-X instrument, adapted from 
+Collins et al. [25] . 
+a vacuum furnace suitable for in-situ heating experiments. An in- 
+cident neutron beam illuminated a probed volume in the sample 
+measuring approximately 8 × 8 × 8 mm 3 , determined by the cross- 
+section size of the incident mean and the collimators. The diffrac- 
+tion signal was measured from two detectors, both orthogonal to 
+the incident beam, arriving from diffraction vectors parallel to the 
+radial direction of the cylindrical sample (labelled q north and q south 
+in Fig. 1 ). Further instrument details are available elsewhere [20] . 
+Cylindrical alumina crucibles (12 mm outer diameter, 9.5 mm 
+inner diameter ×
+14 mm high) were ﬁlled with alloy pow- 
+der and inserted into vanadium cans before being placed into 
+the beam line furnace. Sample temperatures were monitored us- 
+ing R-type thermocouples, placed in contact with the crucibles. 
+Three thermal cycles were examined, with samples reaching (i) 
+900 ◦C, (ii) 1000 ◦C and (iii) 1150 ◦C. Samples were heated at 
+20 ◦C min −1 , held at the target temperature for 15 min, then 
+cooled at 20 ◦C min −1 . The data acquisition time was 1.5 min per 
+diffraction pattern. 
+2.3. Diffraction data analysis 
+From the set of diffraction patterns acquired from the time- 
+of-ﬂight measurements, γ / γ ′ volume fraction, lattice parameter 
+and lattice misﬁt were calculated. These parameters were obtained 
+from the following analysis procedure, here applied to each indi- 
+vidual diffraction pattern. 
+The γ ′ volume faction was found by summing the inte- 
+grated intensities of several γ ′ superlattice reﬂections, comprising 
+{ 011 } γ ’ , { 012 } γ ’ and { 112 } γ ’ . Numerical integration was conducted 
+via a simple trapezium rule for each reﬂection across a peak width 
+of 0.2 ˚A. As the (01 ¯4 ) α and (116) α reﬂections lie in close proximity 
+to the { 011 } γ ’ and { 012 } γ ’ reﬂections, a contribution of their sig- 
+nals was included in the numerical integration. As it was known 
+that there was no γ ′ present at t = 0 (see APT results later) and 
+no separate superlattice reﬂection contribution could be detected, 
+the intensity associated with the alumina could be subtracted. This 
+provides the temporal integrated γ ′ intensity, I γ ′ 
+hkl (t) for a super- 
+lattice reﬂection hkl . At the end of the experiment, at t = t end , the 
+equilibrium γ ′ volume fraction, φeq , was reached. This temporal 
+volume fraction, φγ ′ (t) , could then be approximated by: 
+φγ ′ (t) = 
+I γ ′ 
+hkl (t) 
+I γ ′ 
+hkl (t = t end ) φγ ′ 
+eq 
+(1) 
+The γ ′ lattice parameter was obtained by ﬁtting the { 112 } γ ’ 
+reﬂection with a Gaussian function to obtain its d -spacing, d 112 . 
+Assuming a powder average, the lattice parameter was given by 
+a γ ′ = d γ ′ 
+112 
+√ 
+N , where N = 6 for the {112} reﬂection. The γ lattice 
+parameter was obtained by ﬁtting a fundamental reﬂection associ- 
+ated with this phase. As the lattice parameters of the γ and γ ′ 
+phases are near identical, their fundamental reﬂections overlap, 
+necessitating separation of their independent intensity contribu- 
+tions. The procedure utilised here is developed from prior studies 
+of nickel-base superalloys [21–25] .D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+961 
+For a fundamental reﬂection, as reﬂections overlap, the ob- 
+served intensity proﬁle as a function of d -spacing, d , denoted as 
+I γ + γ ′ 
+hkl (d) , can be approximated by the sum of two Gaussian func- 
+tions as: 
+I γ + γ ′ 
+hkl (d) = 
+I γ ′ 
+0 
+βγ ′ √ 
+2 π exp 
+
+−(d −d γ ′ 
+0 ) 2 
+2(βγ ′ ) 2 
+
++ 
+I γ
+0 
+βγ √ 
+2 π exp 
+
+−(d −d γ
+0 ) 2 
+2(βγ ) 2 
+
++ I bkg 
+(2) 
+where I γ ′ 
+0 & I γ
+0 are amplitude scaling constants, d γ ′ 
+0 & d γ
+0 are the 
+mean peak positions, corresponding to the planar d -spacing for 
+each respective phase and hkl , βγ ’ & βγ determine proﬁle breadth 
+and I bkg is the uniform background intensity. 
+Due to the high number of free ﬁtting variables in Eq. (2) , ob- 
+taining a numerically stable ﬁtted solution using this formulation 
+is near impossible. This is owing to the near identical d -spacings 
+of the γ and γ ′ phases. Some of the variables can, however, be 
+ﬁxed, using information associated with the γ ′ phase already ob- 
+tained from the superlattice reﬂections. Firstly, d γ ′ 
+0 can be inferred 
+from a γ ’ . In this data analysis, the {200} reﬂection was used, hence 
+d γ ′ 
+0 = a γ ′ / 2 . As the ENGIN-X yields diffraction line proﬁles which 
+are largely dominated by instrumental and geometric factors, it can 
+be assumed that the contribution of line broadening from the sam- 
+ple is small, hence the line proﬁles for the γ and γ ′ phases are 
+assumed equal and so βγ ’ = βγ . The ﬁnal assumption is that the 
+ratio of integrated intensities of the γ and γ ′ reﬂections can be 
+related to the phase volume fractions and structure factors via 
+I γ
+hkl 
+I γ ′ 
+hkl 
+∼= | F γ
+hkl | 2 
+| F γ ′ 
+hkl | 2 
+φγ
+φγ ′ 
+(3) 
+where I γ
+hkl and I γ ′ 
+hkl are the integrated intensities of the γ and γ ′ 
+reﬂection, respectively, with miller indices hkl . | F γ
+hkl | and | F γ ′ 
+hkl | are 
+the γ & γ ′ structure factors and φγ & φγ ’ are the γ & γ ′ vol- 
+ume fractions. Eq. (3) holds for fundamental reﬂections γ & γ ′ 
+reﬂections of equal hkl , where their d -spacings are similar. Using 
+the measured φγ ’ from the ﬁtted superlattice reﬂections, it follows 
+φγ (t) = 1 −φγ ′ (t) , assuming only γ and γ ′ phases are present. 
+Structure factors for the γ and γ ′ phases were calculated for 
+their A1 and L1 2 crystal structures. Composition predictions as 
+a function of temperature were calculated with the Thermo-Calc 
+[26] software using the Thermotech TCNI6 thermodynamic database 
+[27] . All phases other than γ and γ ′ were suspended in these cal- 
+culations. The calculation for the γ and γ ′ structure factors are 
+described in detail elsewhere [24] , as well as site occupancies for 
+alloy RR10 0 0 [28] . These composition predictions were also used 
+to calculate the equilibrium γ ′ volume fraction, φeq , of 0.46 as re- 
+quired for Eq. (1) ; this value is in close agreement to independent 
+measurements of the RR10 0 0 alloy [29] . 
+The use of a Gaussian line proﬁle enables use of its analytical 
+solution for its integrated intensity: 
+I γ
+hkl = 
+ d max 
+d min I γ
+hkl (d) 
+= 1 
+2 I γ
+0 
+
+erf 
+
+d max −d γ
+0 
+βγ
+
+−erf 
+
+d min −d γ
+0 
+βγ
+
+(4) 
+Rearranging for I γ
+0 and substituting Eq. (3) gives the following re- 
+lationship: 
+I 0 γ = 
+ | F γ
+hkl | 2 
+| F γ ′ 
+hkl | 2 
+φγ
+φγ ′ 
+
+2 I γ ′ 
+hkl 
+erf 
+
+d max −d γ
+0 
+βγ
+
+−erf 
+
+d min −d γ
+0 
+βγ
+
+(5) 
+This function was incorporated into the ﬁtting function, Eq. (2) , 
+when ﬁtting a γ / γ ′ fundamental reﬂection. Once d γ
+0 was obtained 
+and a γ was calculated, the lattice misﬁt, δ, was obtained for each 
+diffraction measurement using the expression: 
+δ = 2 a γ ′ −a γ
+a γ ′ + a γ
+(6) 
+2.4. TEM characterisation 
+Powders were mounted in conductive Bakelite and polished us- 
+ing conventional metallographic preparation procedures with an 
+extended ﬁnal colloidal silica stage to minimise preparation in- 
+duced deformation on the surface. Samples for Transmission Elec- 
+tron Microscope (TEM) analysis were prepared using a FEI Versa 
+3D dual beam a system combining Focussed Ion Beam (FIB) and a 
+Field Emission Gun Scanning Electron Microscope (FEG-SEM). Sam- 
+ples were extracted from within a single powder particle using a 
+standard in-situ liftout procedure, however, great care was taken 
+to ensure that the thickness of the samples was homogeneous 
+and similar for all samples. The composition of the phases within 
+a powder particle were measured using a FEI Talos F200X Field 
+Emission Gun (Scanning) Transmission Electron Microscope (FEG- 
+(S)TEM) equipped with a Super X energy dispersive spectroscopy 
+(EDS) system. Chemical distribution spectra maps were collected 
+using EDS in STEM mode and quantiﬁcation was performed from 
+reconstructing areas within the maps from multiple areas where 
+there was no/minimal apparent overlap between the phases using 
+Velox software. 
+Further TEM characterisation was conducted where diffraction 
+contrast microscopy was used to produce electron diffraction and 
+dark-ﬁeld images. Here, a liftout procedure was used to prepare a 
+TEM foil using an FEI Helios G4 CX FIB operated at 30 kV. A low, 
+5 kV, ion beam was used for surface cleaning for a period of 2 min 
+on each side of the TEM samples in order to remove the outer layer 
+of the specimens affected by FIB beam damage. The specimen was 
+observed using a FEI Tecnai F20 operated at 200 kV. 
+2.5. Atom probe tomography 
+To obtain three-dimensional compositional information of the 
+γ and γ ′ microstructure, samples were prepared for atom probe 
+tomography (APT) via a site speciﬁc lift out method (described in 
+[30] ) using an FEI Dual Beam FIB Helios 600i. Samples from the 
+initial powder and from samples heat treated in the beam line ex- 
+periments (these samples had 900 ◦C, 10 0 0 ◦C and 1150 ◦C ther- 
+mal exposures) were characterised. The specimens were extracted 
+from random sites within each sample. The APT measurements 
+were conducted using a Cameca LEAP 30 0 0 HR instrument, oper- 
+ated with a pulsed laser at 200 kHz, with a pulse energy of 0.4 nJ 
+and at a temperature of 60 K. Data reconstruction and subsequent 
+analysis was performed using the software IVAS 3.8.2 . 
+3. Results 
+3.1. Starting powder 
+A secondary electron micrograph of the starting alloy powder 
+is shown in Fig. 2 indicating the spherical morphology of the in- 
+dividual powder particles and a distribution of diameters, approx- 
+imately in the range 2–15 μm. Atom probe tomography measure- 
+ments were made on the starting powder; composition measure- 
+ments from 3 different samples, each taken from the same pow- 
+der particle, are shown in Table 1 . The composition was approxi- 
+mately uniform within each specimen without showing any signif- 
+icant variations. 
+The occurrence of a compositional segregation that can be the 
+precursor of phase separation was investigated in the initial pow- 
+der. An APT reconstruction from the initial powder is shown in 
+Fig. 3 alongside its corresponding frequency distribution analysis.962 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+Fig. 2. Secondary SEM micrograph of RR10 0 0 powder after gas atomisation. 
+Table 1 
+Summary of RR10 0 0 powder composition as collected by 
+APT (at.%). 
+at.% 
+Sample 1 
+Sample 2 
+Sample 3 
+Ni 
+50.10 
+49.65 
+50.17 
+Al 
+6.61 
+6.62 
+6.27 
+Ti 
+3.19 
+3.60 
+3.14 
+Ta 
+0.25 
+0.40 
+0.40 
+Co 
+18.66 
+18.53 
+18.9 
+Cr 
+18.57 
+18.21 
+18.08 
+Mo 
+2.38 
+2.78 
+2.85 
+Hf 
+0.10 
+0.03 
+0.03 
+B 
+0.01 
+0.02 
+0.01 
+C 
+0.02 
+0.02 
+0.02 
+Fig. 3. APT reconstruction from an initial powder particle alongside frequency dis- 
+tribution analysis of Ni, Cr, Al and Ti for the same data. 
+In particular, the corresponding binomial, i.e. random, distribution 
+is plotted to allow for comparison with the experimental distribu- 
+tion of the elements: Ni, Cr, Al and Ti. In the case of Ni, the ex- 
+perimental distribution does not follow the binomial distribution, 
+indicating that Ni is not arranged completely randomly. This was 
+further conﬁrmed by the Pearson coeﬃcient, μ, which is given in 
+Table 2 , that can be used to reveal statistical deviation from ran- 
+domness. The Pearson coeﬃcient is indicated with values between 
+0 and 1, where 0 represents a random distribution and 1 reveals a 
+statistical compositional segregation [31] . From Table 2 , an obvious 
+deviation from a random distribution is observed in the case of Ni 
+and Cr, whereas the distribution of Ti and Al is closer to random. 
+Table 2 
+Pearson coeﬃcients μ for Ni, Al, Cr and Ti 
+as calculated for the APT data shown in 
+Fig. 3 for the initial powder. 
+Element 
+Pearson coeﬃcient μ
+Ni 
+0.4539 
+Cr 
+0.1331 
+Ti 
+0.0478 
+Al 
+0.0191 
+Fig. 4. Experimental bulk normalised concentration radial distribution functions 
+(RDFs) of Cr with Co, Ti, Ni, Cr and Al indicating a compositional segregation in 
+the initial powder. 
+In addition, radial distribution functions (RDF) were calculated 
+from the APT data, in order to conﬁrm a compositional segrega- 
+tion. In this case, each neighbourhood solute surrounding a spe- 
+ciﬁc species is examined and an average composition of each so- 
+lute as a function of the radial distance to this particular species 
+is calculated [32–34] ). Fig. 4 shows the RDF of Cr with Co, Ti, Ni, 
+Cr and Al indicating a compositional segregation. In particular, the 
+Cr-Cr and Cr-Co RDFs exhibit similar behaviour indicating that Cr 
+and Co atoms tend to prefer to segregate together, creating regions 
+of high Cr/Co content. In contrast, Ni, Al and Ti atoms appear re- 
+pelled by the Cr atoms, resulting in regions enriched in γ ′ form- 
+ing elements. In contrast, regions enriched in γ ′ forming elements 
+appear to form, as indicated by the concurrent segregation of Ni, 
+Al and Ti atoms. Similar observations of such compositional sepa- 
+ration were performed before in a Ni-5.2Al-14.2Cr (at.%) alloy [33] , 
+whereas spinodal decomposition based on RDF analysis was shown 
+recently in binary Fe-Cr alloys [35,36] .D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+963 
+Fig. 5. Time resolved thermocouple data and diffraction data for samples heated to 90 0 ◦C (a) & (d), 10 0 0 ◦C (b) & (e) and 1150 ◦C (c) & (f). Labelled reﬂections are given, 
+the α planes are from the alumina crucible and γ / γ ′ are from the matrix & precipitation phase of the powder nickel-base superalloy. 
+3.2. In-situ neutron diffraction 
+The alloy powder was heated in-situ whilst collecting diffrac- 
+tion data. Samples heated to 900 ◦C, 10 0 0 ◦C and 1150 ◦C have 
+their respective thermocouple data shown in Fig. 5 a–c, and the cor- 
+responding temporal diffraction intensity shown in Fig. 5 d–f. The 
+intensity data shows labels of the most intense reﬂections from the 
+alloy ( γ and γ ′ ) and the alumina crucible ( α). 
+The analysed diffraction data results are shown in Fig 6 which 
+contain temporally resolved measurements of γ ′ volume fraction, 
+γ & γ ′ lattice parameter and their corresponding lattice misﬁt. The 
+key features of the differing responses for each sample will be de- 
+scribed here in turn. 
+For the sample heated to 900 ◦C, as the powder temperature 
+increases, the γ ′ volume fraction remains at zero until ∼700 ◦C. 
+The values have been determined by tracking the evolution of γ ′ 
+superlattice reﬂections, giving a measure of phase ordering (and 
+not composition localisation). Evidence of γ ′ forming is clear above 
+this temperature as its volume fraction increases; reaching ∼0.25 
+once 900 ◦C is reached. With the short isothermal hold, the vol- 
+ume fraction continues to increase, reaching approximately the 
+equilibrium volume fraction ( ∼0.46 as calculated by Thermo-Calc ) 
+prior to cooling. The volume fraction does not change during cool- 
+ing. The resulting γ ′ following the thermal cycle had formed dur- 
+ing the heating and isothermal hold period only. No additional γ ′ 
+formed during cooling is evident. 
+During heating to 10 0 0 ◦C, the γ ′ begins to form at ∼700 ◦C 
+(replicating the observation when heated to 900 ◦C). As the tem- 
+perature passes 900 ◦C during heating, the γ ′ volume fraction 
+drops slightly, from ∼0.25 to ∼0.2 and remains at this value un- 
+til the end of the isothermal hold at 10 0 0 ◦C. As the sample cools, 
+the γ ′ volume fraction was seen to increase, reaching an approx- 
+imately equilibrium volume fraction as the temperature drops be- 
+low ∼500 ◦C. It is unambiguously clear that the γ ′ remaining after 
+the thermal cycling comprised γ ′ formed both during heating and 
+cooling. 
+A ﬁnal sample was heated to the 1150 ◦C, which is above the 
+γ ′ solvus temperature. The γ ′ phase forms during heating, as ob- 
+served in the prior heating studies, then dissolves as the temper- 
+ature approaches the solvus temperature. When the solution heat 
+treatment temperature is reached, only the γ phase is present. As 
+the alloy is cooled, the intensity corresponding to the γ ′ refec- 
+tions increases until an equilibrium volume fraction is reached by 
+∼500 ◦C. The γ ′ phase present at room temperature in this sam-964 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+0
+20 40
+60
+80 100
+0
+20
+40
+60
+80 100
+0
+20
+40
+60
+80
+(a)
+(d)
+(g)
+(e)
+(c)
+(f)
+(h)
+(i)
+(j)
+(k)
+(l)
+(b)
+Fig. 6. Analysed diffraction results from samples subjected to the thermal cycles shown in a, b & c, including the corresponding volume fraction: d, e &, f, lattice parameters 
+of the γ and γ ′ phases: g, h & i, and lattice misﬁt: j, k & l. 
+ple evidently all formed during the cooling stage of the thermal 
+cycle. 
+The γ / γ ′ lattice parameters and corresponding lattice misﬁt 
+measurements for the three heat treatment conditions is shown 
+in Fig. 6 (g-l). For all tests, when the volume fraction of γ ′ is low 
+( < 0.1) there is considerable scatter in the lattice misﬁt and γ ′ lat- 
+tice parameter measurements due to uncertainty from ﬁtting the 
+weak { 112 } γ ’ superlattice reﬂection; these values have therefore 
+been eliminated from the results. For precipitates formed during 
+heating, for 900 ◦C and 1000 ◦C samples, as shown in Fig. 6 (j) and 
+(k), the lattice misﬁt was positive, whereas the formation of pre- 
+cipitates during cooling from 1150 ◦C, Fig. 6 (l) possessed a negative 
+lattice misﬁt, which approaches zero at ∼700 ◦C. 
+3.3. Post mortem characterisation 
+3.3.1. Electron microscopy 
+TEM characterisation of the powders exposed to subsolvus γ ′ 
+temperatures were observed post mortem, as shown in Fig. 7 , with 
+a HAADF image after 900 ◦C ( Fig. 7 a) after 10 0 0 ◦C exposure 
+( Fig. 7 b). Neither sample was observed to have primary γ ′ present 
+at the grain boundaries. The dashed box in each HAADF image rep- 
+resents the composition maps for each respective sample in Fig. 7 . 
+Cr and Ti are shown as examples of γ and γ ′ rich elements, re- 
+spectively, to illustrate the size and distribution of these phases. 
+The composition maps after 900 ◦C, show evidence of locally rich 
+Ti regions, depleted of Cr, however, observing the microstructure 
+here is resolution limited with features appearing diffuse. As a re- 
+sult, the morphology of individual γ ′ precipitates is diﬃcult to de- 
+termine using this characterisation method. 
+To ascertain whether the γ ′ precipitates could be better deter- 
+mined using diffraction contrast microscopy, this sample was ob- 
+served using bright and dark ﬁeld imaging modes. A bright ﬁeld 
+(BF) image of the 900 ◦C annealed sample is shown in Fig. 8 a, the 
+region highlighted as ‘DIFF’ corresponds the region where the elec- 
+tron diffraction pattern ( Fig. 8 b) was acquired. Using a [112] zone 
+axis corresponding to a superlattice (112) plane, a high magniﬁ- 
+cation DF image shown in Fig. 8 d and corresponding bright ﬁeldD.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+965 
+Fig. 7. TEM micrographs of samples at 900 ◦C and 10 0 0 ◦C (a) & (b), with Cr maps, 
+(c) & (d), to indicate γ rich regions and Ti maps, (e) & (f), for γ ′ rich regions. 
+Fig. 8. TEM micrographs showing presence of the interconnected ordered L1 2 
+phase. (a) Bright ﬁeld (BF) micrograph with highlighted region where the electron 
+diffraction pattern (b) was acquired. (b) Indexed diffraction pattern with a [112] 
+zone axis and { ¯1 1 0} reﬂection selected for dark ﬁeld (DF) imaging. (c, d) BF and 
+DF micrographs corresponding to the pattern (b). The arrows in (d) denote necked 
+regions between γ ′ precipitates. 
+Fig. 9. SEM micrograph after supersolvus heat treatment reaching 1150 ◦C. 
+Fig. 8 c images were produced to reveal contrast between the γ
+and γ ′ phases. The dark/bright contrast shows clear evidence of 
+regions of different γ and γ ′ crystallographic structures present in 
+this sample. Referring to the DF image, a morphologically complex 
+network of γ ′ precipitates can be seen. This includes evidence of 
+narrow necked regions (identiﬁed with arrows), appearing bright 
+to denote an L1 2 γ ′ crystal structure, that connect neighbouring 
+γ ′ precipitates. Some of the γ ′ features are diﬃcult to distinguish, 
+this is because the signal is integrated through the thickness of 
+the TEM sample of a rather complex 3D interconnected γ ′ net- 
+work and results in several γ ′ features superimposed, that cannot 
+be individually distinguished. Furthermore, the blurring of the γ ′ is 
+partly due to the TEM resolution limit, however, it is also possible 
+that the γ / γ ′ interface does not possess a sharp A1/L1 2 structure 
+transition. 
+Inspection of the sample subjected to the 10 0 0 ◦C anneal shows 
+a population of approximately spherical γ ′ precipitates can be seen 
+(by Cr depleted regions, Fig. 7 d and Ti rich regions, Fig. 7 f), appear- 
+ing as a unimodal size distribution of ∼40 nm diameter. 
+The sample subjected to a thermal cycle up to 1150 ◦C was 
+examined post-mortem with a scanning electron microscope; a 
+backscattered electron (BSE) micrograph reveals a multimodal γ ′ 
+distribution as shown in Fig. 9 . Secondary γ ′ precipitates with an 
+octodentric morphology can be seen with a size of several hundred 
+nanometers. In between the secondary γ ′ precipitates there is a 
+much ﬁner distribution ( < 50 nm) of spherical tertiary γ ′ precipi- 
+tates. There is also evidence of a depleted γ ′ zone in the γ matrix 
+in regions close to the secondary γ ′ interface. These observations 
+are near identical to the microstructure observed in fully processed 
+RR10 0 0 subjected to a supersolvus heat treatment followed by a 
+slow cool (1 ◦C min −1 ) [37] . 
+From HAADF-STEM, STEM-EDS and APT characterisation results 
+presented in the associated manuscript, this sample comprised γ
+and γ ′ phases with interconnected networks of γ ′ precipitates, 
+which was inferred by inspection/reconstruction of the chemical 
+composition spacial distributions. By conducting diffraction con- 
+trast spectroscopy, the observed microstructure can be related to 
+the crystallography of these phases. 
+3.3.2. Atom probe tomography 
+The composition of the γ ′ precipitates formed at 900 ◦C, 
+10 0 0 ◦C and 1150 ◦C was measured by APT. Fig. 10 shows sections 
+from two APT reconstructions from the powder exposed at 900 ◦C 
+for 15 min. For both datasets, clear interfaces between γ ′ precip- 
+itates and γ matrix can be seen. However, the γ ′ precipitates ex- 
+hibit a rather complex morphology. In particular, the γ ′ precipi- 
+tates appear to be interconnected and have irregular shape, corrob- 
+orating the observations made with TEM ( Fig. 8 ). Such morphol-966 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+Fig. 10. a) and b) APT reconstructions from the RR10 0 0 powder exposed at 900 ◦C 
+for 15 min, showing interconnected γ ′ precipitates with an isosurface at 7.30 and 
+9.30 at.% Cr, respectively. 
+Table 3 
+Summary of γ and γ ′ composition of RR10 0 0 powder after heating at 900 ◦C for 
+15 min as collected by APT (at.%). 
+at.% 
+γ
+γ
+γ
+γ
+γ′ 
+γ′ 
+γ′ 
+γ′ 
+Ni 
+34.23 
+32.25 
+33.50 
+32.65 
+62.58 
+63.17 
+63.06 
+62.54 
+Al 
+1.49 
+0.63 
+1.19 
+0.91 
+11.26 
+11.16 
+12.78 
+12.62 
+Ti 
+1.13 
+0.56 
+0.81 
+0.54 
+13.60 
+13.06 
+12.09 
+13.06 
+Ta 
+0.00 
+0.09 
+0.17 
+0.00 
+1.45 
+1.42 
+1.41 
+1.34 
+Co 
+26.94 
+29.12 
+27.82 
+27.83 
+8.34 
+8.48 
+8.06 
+7.91 
+Cr 
+33.00 
+33.83 
+32.62 
+34.39 
+1.47 
+1.47 
+1.45 
+1.36 
+Mo 
+3.16 
+3.52 
+3.65 
+3.64 
+0.82 
+0.74 
+0.92 
+0.90 
+Hf 
+0.00 
+0.00 
+0.02 
+0.00 
+0.41 
+0.37 
+0.14 
+0.26 
+Fig. 11. a) and b) APT reconstructions from the RR10 0 0 powder exposed at 10 0 0 ◦C 
+for 15 min, showing secondary γ ′ precipitates with an isosurface at 8.00 and 9.00 
+at.% Cr, respectively. 
+ogy was observed previously for γ ′ precipitates formed by spin- 
+odal decomposition during cooling [19] . We have presented only 
+sections of the 3D-reconstructions in order to reveal the complex 
+microstructure. The composition of the γ ′ precipitates and the γ
+matrix regions as measured by APT are shown in Table 3 . Although, 
+the composition of the γ ′ particles formed during heating is rela- 
+tively constant, the composition of the γ matrix shows some vari- 
+ations particularly in the case of Al, Ti and Co. 
+Fig. 11 shows two APT reconstructions from the powder ex- 
+posed at 10 0 0 ◦C for 15 min. The morphology of the γ ′ precipitates 
+is different com pared to that after 15 min at 900 ◦C. In particular, 
+the γ ′ precipitates are not interconnected and this is consistent 
+with the TEM observations in Fig. 7 . In Table 4 , the composition 
+of the γ ′ precipitates and the γ matrix is given, as measured by 
+APT. No particular variation across the compositions is observed. 
+However, the composition of the γ ′ precipitates and the γ matrix 
+measured at 10 0 0 ◦C shows some variation when compared to that 
+of 900 ◦C. 
+Fig. 12 shows APT 3D-reconstructions from the powder exposed 
+at 1150 ◦C for 15 min. In particular, in Fig. 12 a the reconstruction 
+contains secondary γ ′ precipitates, γ matrix and tertiary γ ′ pre- 
+cipitates. The tertiary γ ′ precipitates are denoted as γ ′ 
+I (type I). 
+Regions depleted of tertiary γ ′ precipitates in the vicinity of the 
+secondary γ ′ precipitates can also be observed. In Fig. 12 b, the 
+Table 4 
+Summary of γ and γ ′ composition of RR10 0 0 powder after heating at 10 0 0 ◦C for 
+15 min as collected by APT (at.%). 
+at.% 
+γ
+γ
+γ
+γ
+γ′ 
+γ′ 
+γ′ 
+γ′ 
+Ni 
+39.32 
+38.95 
+39.25 
+38.55 
+66.83 
+65.62 
+65.49 
+65.77 
+Al 
+2.10 
+2.01 
+2.14 
+1.87 
+11.27 
+12.61 
+12.95 
+12.31 
+Ti 
+0.64 
+0.66 
+0.58 
+0.49 
+9.29 
+9.90 
+10.35 
+10.08 
+Ta 
+0.05 
+0.06 
+0.01 
+0.07 
+1.31 
+1.33 
+1.02 
+1.32 
+Co 
+24.60 
+24.61 
+25.78 
+25.96 
+8.29 
+7.69 
+7.46 
+7.68 
+Cr 
+28.86 
+29.15 
+28.3 
+28.67 
+1.74 
+1.73 
+1.73 
+1.69 
+Mo 
+4.29 
+4.41 
+3.71 
+4.19 
+0.87 
+0.78 
+0.78 
+0.81 
+Hf 
+0.00 
+0.00 
+0.00 
+0.00 
+0.32 
+0.27 
+0.17 
+0.28 
+Fig. 12. a) and b) APT reconstructions from the RR10 0 0 powder exposed at 1150 ◦C 
+for 15 min, showing secondary and tertiary γ ′ precipitates with an isosurface at 
+18.00 and 19.50 at.% Cr, respectively. 
+APT reconstruction contains a part of a secondary γ ′ precipitate 
+and tertiary γ ′ precipitates. In this case, two different populations 
+of tertiary γ ′ precipitates can be observed based on their size. In 
+particular, γ ′ 
+I tertiary precipitates neighbour a depleted zone of γ ′ 
+precipitates, similar to those seen in Fig. 12 a. At larger distances 
+from the depleted region, the tertiary γ ′ precipitates with rela- 
+tively larger size than those of γ ′ 
+I can be observed. Those tertiary 
+precipitates are denoted as γ ′ 
+II (type II) tertiary precipitates. Pre- 
+cise quantitative information on the size of the tertiary precipi- 
+tates cannot be extracted by the APT reconstructions, because the 
+reconstructions are not based on crystallographic information that 
+would allow that. Thus, the information on the size of the tertiary 
+precipitates is only qualitative. 
+The two different populations of tertiary precipitates have also 
+signiﬁcant variations in terms of chemistry as it is shown in Fig. 13 . 
+The composition of the tertiary γ ′ 
+II precipitates in this graph is the 
+average of the four precipitates shown in Fig. 12 b, whereas the 
+composition of the tertiary γ ′ 
+I is the average of ten precipitates. 
+Substantial differences can be seen for all elements between the 
+two populations. The tertiary γ ′ 
+I have higher amounts of γ former 
+elements, such as Cr, Co and Mo indicating that they were the last 
+precipitates to form during cooling. As a consequence, there was 
+not enough time to reach the equilibrium by rejecting the γ for- 
+mer elements. In addition, a chemical ﬂuctuations were observed 
+in the γ matrix. In particular, the γ composition was extracted 
+from three different locations denoted as #1, #2 and #3 in Fig. 12 b 
+and they are given in Table 5 . It can be seen, that close to the in- 
+terface of matrix with the secondary γ ′ precipitate (area #1) the 
+amount of Cr and Co are relatively higher compared to the regions 
+where tertiary precipitates have formed. This region correspond to 
+the denuded region that observed close to the secondary γ ′ pre- 
+cipitates in the powder exposed at 1150 ◦C for 15 min. By contrast, 
+the amount of Ni is lower in the depleted region compared to the 
+regions where tertiary γ ′ precipitates have formed. It is believed 
+that the local chemical ﬂuctuations are due to coarsening of the 
+secondary γ ′ precipitates, that they reject γ former elements and 
+consume γ ′ former solutes from the surrounding matrix.D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+967 
+Fig. 13. Radar-plot showing the compositional difference of between the two pop- 
+ulations of tertiary γ ′ precipitates formed after exposure at 1150 ◦C for 15 min. 
+Table 5 
+Summary of γ composition of RR10 0 0 powder after heating 
+at 1150 ◦C for 15 min as collected from three different areas 
+of the APT data in Fig. 12 (at.%). 
+at.% 
+γ#1 
+γ#2 
+γ#3 
+Ni 
+37.45 
+40.79 
+41.14 
+Al 
+1.71 
+2.17 
+2.56 
+Ti 
+0.5 
+0.0.75 
+0.68 
+Ta 
+0.00 
+0.08 
+0.10 
+Co 
+26.68 
+22.98 
+24.19 
+Cr 
+29.14 
+27.89 
+26.85 
+Mo 
+4.39 
+5.19 
+4.40 
+4. Discussion 
+This study newly reveals the γ → γ ′ transformation behaviour 
+from a Ni-base superalloy powder, building on knowledge ob- 
+tained from numerous studies that targets the understanding of 
+the equivalent transformation behaviour, but instead using mate- 
+rial that has undergone no prior thermo-mechanical processing. 
+By removing the thermo-mechanical processing aspects, this study 
+aimed to identify how the γ → γ ′ evolution changes, when such 
+inﬂuences are removed. In the following discussion, the mecha- 
+nisms associated with precipitate formation during heating and 
+cooling are discussed, followed by its relevance to practical appli- 
+cation and an assessment of the characterisation methods used in 
+this study. 
+4.1. Precipitate formation during heating 
+A schematic summary of the observed γ ′ formation behaviour 
+is given in Fig. 14 . Notably, the microstructures following each of 
+the heat treatments have signiﬁcantly different characteristics. The 
+samples that were exposed to the subsolvus temperatures are dis- 
+cussed ﬁrst. The 900 ◦C sample leaves an interconnected network 
+of γ ′ precipitates, consistent with precipitates observed in super- 
+alloys [38] and other systems [39] where the formation was pro- 
+posed to be via spinodal decomposition. 
+The starting γ phase will undergo phase separation via spinodal 
+decomposition, in which nm-scale domains within the γ phase 
+possess local chemical enrichment of certain elements such as Al, 
+Ti, Ta and Ni. These are considered to be the γ ′ forming elements, 
+whilst they are lean in the elements such as Co, Cr and Mo. Form- 
+ing domains which become enriched/depleted in these elements is 
+favourable as precursor clustering from the nm-scale segregation is 
+already present in the powder following the gas atomisation. From 
+the chemical ﬂuctuations, an ordering reaction from the A1 → L1 2 
+structure will follow; noting that short range order is easy due to 
+the small atomic displacements needed, leading to a ﬁne scale dis- 
+persion of ordered γ ′ precipitates. 
+This reaction is thermodynamically favourable if, at a low tem- 
+perature, a miscibility gap exists within the γ phase where com- 
+positional partitioning through spinodal decomposition leads to 
+the formation of two disordered A1 structured phases, γ (1) and 
+γ (2) . Subsequent chemical ordering within one of these disordered 
+phases will result in L1 2 structured γ ′ precipitates. [19,38] . The 
+composition of this alloy is proposed to lie within this region 
+where a spontaneous unmixing reaction is favourable. It is pro- 
+posed that as the sample was heated, regions with chemical ﬂuc- 
+tuations were more stable than the γ phase, leading to an en- 
+ergetically favourable phase separation to γ (1) + γ (2) . The ther- 
+mal energy by heating enables a continuous phase separation re- 
+action to proceed, promoting the formation of Al/Ti/Ta/Ni rich do- 
+mains to form. When the enrichment has reached a critical value, 
+a favourable L1 2 chemical ordering reaction will ensue. This mech- 
+anism assumes that the transformation pathway follows spinodal 
+decomposition-based phase separation ﬁrst, followed by structural 
+ordering; this sequence seems probable considering the segrega- 
+tion of Al/Ti/Ni and Co/Cr in the starting condition, and the L1 2 
+γ ′ structure is detected via diffraction only when the compound 
+exceeds ∼700 ◦C, this corresponds to the temperature where dif- 
+fusion is favourable for signiﬁcant solute transport. 
+An alternative transformation pathway known as conditional 
+spinodal [40] is also possible. In this mechanism, a congruent or- 
+dering reaction of the γ phase occurs leading to the formation of 
+a single ordered γ ′ phase. Spinodal decomposition subsequently 
+occurs within the γ ′ phase to form two ordered L1 2 structured 
+phases, γ ′ 
+(1) and γ ′ 
+(2) . Only when either γ ′ 
+(1) or γ ′ 
+(2) undergoes a 
+disordering reaction to form γ , will the ﬁnal microstructure com- 
+prise both γ + γ ′ . It is, however, noted that conﬁrming this mecha- 
+nism is operative during heating would be challenging as the equi- 
+librium γ phase fraction increases with temperature. Distinguish- 
+ing this effect over a γ ′ 
+(1) → γ or γ ′ 
+(2) → γ disordering reaction, 
+via neutron diffraction measurements as performed in this study, 
+would be diﬃcult. 
+Once the γ ′ structure exists, the γ ′ precipitates grow with a 
+concomitant long-range diffusion and structural ordering, as evi- 
+denced by the in-situ measurements of increasing γ ′ volume frac- 
+tion. The γ ′ morphology change and volume fraction increase is 
+now driven by (1) minimising the elastic strain energy from lat- 
+tice misﬁt strains (2) the reduction of the large interfacial energy 
+associated with a ﬁne scale γ ′ and (3) reach the thermodynamic 
+equilibrium composition. 
+Further evidence of spinodal decomposition during heating is 
+observed from the presence of small satellite reﬂections in the 
+neutron diffraction data, close to fundamental reﬂections. The ob- 
+servation of satellite reﬂections are direct measurements of the 
+composition modulation, as has been demonstrated on different 
+systems via XRD [14] and TEM [41] . Evidence of the satellite re- 
+ﬂection is observed in the neutron diffraction data in this study, 
+in the vicinity of the {111} reﬂection, as shown in Fig. 15 . These 
+satellite reﬂections were very weak, however, could be observed 
+when the data was summed. Each pattern in Fig. 15 corresponds 
+to data acquired for 14 min. Whilst the temporal resolution here 
+is not high, it is evident that the composition modulation associ- 
+ated with spinodal is evident during heating, isothermal hold and 
+initial cooling. This satellite peak disappears as the sample cools, 
+indicative that the composition ﬁelds are moving towards equilib-968 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+Fig. 14. Schematic of γ ′ formed via heating or cooling with their associated phase transformation mechanisms. 
+Fig. 15. Identifying satellite reﬂections indicative of spinodal decomposition for the 
+sample heated to 900 ◦C. 
+rium, and the modulation is no longer strong enough to produce 
+this diffraction characteristic. 
+As there is evidence that the sample heated to 10 0 0 ◦C resulted 
+in γ ′ initially forming during heating, the resulting γ ′ must have 
+formed via spinodal decomposition, similar to the 900 ◦C sam- 
+ple. The resulting microstructure comprising an approximately uni- 
+modal distribution, not interconnected γ ′ like the 900 ◦C sam- 
+ple, indicates this evolution is diffusion driven, enabled by the 
+higher temperature heat treatment. During this time, the γ ′ form 
+morphologically stable spherical precipitates, as the interfacial en- 
+ergy of the precipitates reduces via coarsening, as expected from 
+the Cahn-Hilliard model for spinodal decomposition [42] . The uni- 
+modal γ ′ size distribution further indicates all precipitates formed 
+together; initiating upon heating. As the 10 0 0 ◦C sample cools 
+there is evidence of near zero lattice misﬁt, indicating the precip- 
+itates did not have to overcome energetically unfavourable misﬁt 
+strains, which if present, would have promoted non-spherical pre- 
+cipitate morphologies due to the anisotropic stiffness of the cubic 
+γ ′ [43] . 
+4.2. Precipitate formation during cooling 
+When γ ′ has formed during cooling, as is evident from the 
+sample heated to a supersolvus temperature of 1150 ◦C then 
+cooled, there is considerable evidence to indicate the precipitate 
+formation mechanism is dissimilar to γ ′ formed during heating. 
+The multimodal distribution is consistent with observations made 
+by others, who attribute the generation of γ ′ from classical nu- 
+cleation and growth [13,16,44] . Each generation of γ ′ forms dur- 
+ing cooling, where the driving force for γ ′ nucleation occurs from 
+increased undercooling. Growth of a γ ′ distribution will continue 
+whilst the temperature is high, though its driving force for solute 
+diffusion decreases as temperature becomes lower. Growth is in- 
+hibited by soft impingement when solute ﬁelds overlap, however, 
+further cooling results in non-equilibrium γ ′ compositions away 
+from the γ / γ ′ interfaces, which with further undercooling, result 
+in a further nucleation burst [15] . In this study, this mechanism 
+is corroborated by (1) the presence of secondary γ ′ and tertiary 
+γ ′ precipitate distributions, (2) the compositions of the precipitate 
+distributions are dissimilar, indicating their formation at different 
+temperatures as the supersaturated γ composition changes, (3) 
+the dissimilar morphologies of secondary γ ′ (octodendritic) and 
+tertiary γ ′ (spherical) indicates their growth has occurred with 
+precipitates from each distribution subjected to different misﬁt 
+strains. The initial secondary γ ′ to form upon cooling has a lat- 
+tice misﬁt of −0.5%, suﬃcient to favour octodendritic morphology 
+to develop due to the interaction between diffusion driven growth 
+and non-uniform elastic strain ﬁelds around precipitates from the 
+γ ′ elastic anisotropy [43] . This effect diminishes as the tempera- 
+ture is lowered, such that the lattice misﬁt is close to zero whenD.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+969 
+the tertiary γ ′ forms, resulting in spherical precipitates for this dis- 
+tribution. Due to these factors, there was no evidence that the γ ′ 
+precipitates formed by spinodal decomposition during cooling. 
+4.3. Implications 
+The γ ′ that has formed during heating, in the 900 ◦C and 
+10 0 0 ◦C samples, is entirely a diffusion driven process. A classical 
+nucleation is not plausible as there is no undercooling, and there- 
+fore no driving force for this process. Unimodal γ ′ size distribu- 
+tions, similar to the microstructure achieved here from the sample 
+heated to 10 0 0 ◦C, have been achieved by others by cooling sam- 
+ples rapidly [18,45,46] . There remains disagreement in the litera- 
+ture on how such distributions form upon cooling; where the pre- 
+cipitates are nucleation controlled, though undercooling is so high 
+that it outruns diffusion and the condition for soft impingement is 
+not met [13] , whereas Viswanathan et al. [38] indicates phase sep- 
+aration initiates by spinodal decomposition. There is clear scope to 
+widen the study, particularly for different compositions and cool- 
+ing rates to conﬁrm under the precise conditions spinodal decom- 
+position mechanism prevails. 
+Whilst unimodal microstructures created by rapid cooling offer 
+desirable increases in yield strength over slower cooled samples 
+[46] , quenching is impractical for real manufacture of large compo- 
+nents. Problems include the creation of high residual stresses [47] , 
+and transient thermal gradients and inhomogeneous microstruc- 
+tures [48] . The study here creates similarly desirable microstruc- 
+tures (in the 10 0 0 ◦C sample, for example) directly from the pow- 
+der without cooling related issues. Control at this stage could be 
+used to mitigate or change parameters of subsequent thermome- 
+chanical treatments. This work also has enormous implications for 
+the use of nickel-base superalloy powders used in additive man- 
+ufacturing (AM) processes, where the γ → γ ′ transformation be- 
+haviour is largely unknown. Such AM process could exploit mi- 
+crostructural control through γ ′ formation during heating regimes 
+for the ﬁrst time. 
+Finally, in context to the HIP treatment of powders during the 
+commercial fabrication of turbine rotor discs, this study gives in- 
+sight into the microstructural development. The trimodal γ ′ distri- 
+bution comprising primary, secondary and tertiary γ ′ during sub- 
+solvus HIP treatments of RR10 0 0 [49] was not observed here. The 
+absence of pressure in this study prevents primary γ ′ forming. 
+This is to be expected as elevated temperature alone enables γ ′ 
+to form before powder particles are fully consolidated. It is specu- 
+lated that only when an externally applied pressure is suﬃcient to 
+fully consolidate powder particles before γ ′ formation begins, dif- 
+fusional processes at grain boundaries required to nucleate primary 
+γ ′ are possible. Conﬁrming this mechanism is proposed for future 
+work. 
+4.4. Characterisation 
+To quantify the γ → γ ′ reactions in-situ, the ENGIN-X beam- 
+line was selected for its ability to obtain diffraction data from a 
+large sample volume (several mm 3 ), without the signal being sig- 
+niﬁcantly attenuated by an alumina crucible containing the pow- 
+der, a high temperature furnace and a rapid data acquisition rate 
+(1.5 min per pattern). To analyse results from data collected at this 
+rate, however, a new data analysis strategy was employed here, 
+based on constrained Gaussian proﬁles. 
+The diffraction line proﬁle shape used here was Gaussian, 
+deemed to be a suitable approximation to the experimentally ob- 
+tained line proﬁle shape. Whilst the pure instrument proﬁle for 
+reﬂections from ENGIN-X is better ﬁtted with a convolution of a 
+Voigt function with a truncated exponential [50] , no peak asym- 
+metry nor Cauchy character was evident, which is explained by 
+dominant broadening contributions from the specimen geometry 
+and sample size/strain broadening. Using a Gaussian line proﬁle 
+also had the advantage that the intensities of the γ and γ ′ re- 
+ﬂections of a fundamental reﬂection can be easily coupled via the 
+analytical solution of integrated Gaussian intensity (i.e. Eq. (5) ). 
+This signiﬁcantly constrained the problem of ﬁtting 2 superim- 
+posed reﬂections with independent variables for each, which is 
+most diﬃcult when γ
+and γ ′ phases have near identical lat- 
+tice parameters. Fitting the data here with more complex func- 
+tions, such as those with convolutions, was found to be inap- 
+propriate due to increased ﬁtting variables that results in scat- 
+ter in the ﬁtted coeﬃcients, primarily due to numerical insta- 
+bility. The approach adopted here demonstrated that the use of 
+more complex ﬁtting functions to analyse superalloy datasets is 
+suitable only when high signal-to-noise data is available (i.e. syn- 
+chrotron data over time-of-ﬂight data collected here) or when 
+γ / γ ′ differences in lattice parameter make direct peak separation 
+possible. 
+5. Conclusions 
+The phase transformation from γ to γ ′ was investigated in 
+a nickel-base superalloy powder subjected to heat treatments at 
+90 0 ◦C, 10 0 0 ◦C and 1150 ◦C for 15 min with controlled heating 
+and cooling during in-situ neutron diffraction. Insights here were 
+combined with post mortem characterisation using atom probe to- 
+mography and electron microscopy to elucidate composition and 
+microstructure evolution. From this, the following conclusions can 
+be drawn: 
+1. Characterisation of the gas atomised powder, prior to any 
+further processing, shows no evidence of structural ordering, 
+however, near-atomic scale compositional segregation was ob- 
+served. Cr and Co atoms were found to segregate together, 
+whereas Ni, Al and Ti atoms are repelled by Cr atoms result- 
+ing in regions enriched in γ ′ elements. This segregational be- 
+haviour can act as the precursor to phase separation. 
+2. A thermal cycle reaching 900 ◦C leads to the formation of 
+γ ′ precipitates during heating by spinodal decomposition, con- 
+ﬁrmed by neutron diffraction and atom probe tomography. The 
+γ ′ precipitates in this case formed only during heating and pos- 
+sessed an interconnected γ ′ network with an irregular mor- 
+phology. No γ ′ precipitates formed during cooling. Signiﬁcant 
+composition variation was observed in the γ phase in the post 
+mortem analysis. 
+3. A thermal cycle reaching 10 0 0 ◦C similarly formed γ ′ via spin- 
+odal decomposition during heating. The γ ′ volume fraction in- 
+creased during cooling whilst solute diffusion prevailed, as the 
+system approached thermodynamic equilibrium. Observing this 
+material post mortem indicates the system is indeed closer 
+to equilibrium compared to the 900 ◦C sample, comprising a 
+unimodal γ ′ distribution, a homogenous γ & γ ′ composition 
+and coarser spherical precipitate morphology, indicative of a re- 
+duced interfacial energy. 
+4. A multimodal γ ′ distribution was observed after heating above 
+the γ ′ solvus at 1150 ◦C, where γ ′ precipitates formed only 
+during cooling based on classical nucleation and growth mech- 
+anisms; there was no evidence of spinodal decomposition. This 
+mechanism was corroborated by distribution of precipitates 
+sizes, compositional differences between different populations 
+of secondary and tertiary γ ′ precipitates, and morphology dif- 
+ferences between the γ ′ distributions associated with their dif- 
+ferent lattice misﬁt strains during their formation. Chemical 
+ﬂuctuations were also observed in the γ matrix as a function 
+of distance from secondary γ ′ precipitates.970 
+D.M. Collins, N. D’Souza, C. Panwisawas et al. / Acta Materialia 200 (2020) 959–970 
+Declaration of Competing Interest 
+The authors declare that they do not have any ﬁnancial or non- 
+ﬁnancial conﬂict of interests. 
+Acknowledgements 
+The authors would like to gratefully acknowledge Rolls-Royce 
+for the provision of material and the Science and Technology Fa- 
+cilities Council (STFC) for access to neutron beamtime at ISIS, the 
+experimental assistance from Dr Joe Kelleher, and also for the pro- 
+vision of sample preparation at the ENGIN-X facilities. D.C. ac- 
+knowledges ﬁnancial support from his Birmingham Fellowship. C.P. 
+would like to acknowledge the funding from Innovation Fellowship 
+(EP/S0 0 0828/1) funded by Engineering and Physical Science Re- 
+search Council (EPSRC), UK Research and Innovation. P.K. acknowl- 
+edges ﬁnancial support from the DFG SFB TR 103 through project 
+A4. 
+References 
+[1] T. Pollock , Alloy design for aircraft engines, Nat. Mater 15 (2016) 809–815 . 
+[2] R. Reed , The Superalloys: Fundamentals and Applications, Cambridge Univer- 
+sity Press, 2006 . 
+[3] T. Pollock , S. Tin , Nickel-based superalloys for advanced turbine engines: 
+chemistry, microstructure and properties, J. Propul. Power 22 (2006) 361–374 . 
+[4] G.H. Gessinger , M.J. Bomford , Powder metallurgy of superalloys, Int. Metall. 
+Rev. 19 (1974) 51–76 . 
+[5] M. Blackburn , R. Sprague , Production of components by hot isostatic pressing 
+of nickel-base superalloy powders, Metals Tech. 4 (1977) 388–395 . 
+[6] G.A. Rao , D. Satyanarayana , Inﬂuence of HIP processing on microstructure and 
+mechanical properties of superalloy Udimet 720LI, Mater. Sci. Tech. 27 (2011) 
+478–486 . 
+[7] N. Bozzolo , N. Souaï, R. Logé, Evolution of microstructure and twin density 
+during thermomechanical processing in a γ −γ ′ nickel-based superalloy, Acta 
+Mater. 60 (2012) 5056–5066 . 
+[8] X. Wang , Z. Huang , B. Cai , N. Zhou , O. Magdysyuk , Y. Gao , et al. , Formation 
+mechanism of abnormally large grains in a polycrystalline nickel-based super- 
+alloy during heat treatment processing, Acta Mater. 168 (2019) 287–298 . 
+[9] H. Wendt , P. Haasen , Nucleation and growth of γ ′ -precipitates in Ni-14 at.% al, 
+Acta Metall. 31 (1983) 1649–1659 . 
+[10] D. Kirkwood , Precipitate number density in a Ni 3 Al alloy at early stages of 
+ageing, Acta Metall. 18 (1970) 563–570 . 
+[11] C. Schmuck , P. Caron , A. Hauet , D. Blavette , Ordering and precipitation of γ ′ 
+phase in low supersaturated Ni-Cr-Al model alloy: an atomic scale investiga- 
+tion, Phil. Mag. A 76 (1997) 527–542 . 
+[12] F. Vogel , N. Wanderka , S. Matsumura , J. Banhart , Early stages of decomposi- 
+tion within the γ ′ phase of a ni–al–ti model alloy, Intermetallics 22 (2012) 
+226–230 . 
+[13] Y. Wen , J. Simmons , C. Shen , C. Woodward , Y. Wang , Phase-ﬁeld modeling of 
+bimodal particle size distributions during continuous cooling, Acta Mater. 51 
+(2003) 1123–1132 . 
+[14] P.P. Rao , B. Agrawal , A. Rao , Hardening mechanism in spinodal Cu-Ni-Cr alloys, 
+Mater. Sci. Eng. 92 (1987) 199–206 . 
+[15] A. Singh , S. Nag , S. Chattopadhyay , Y. Ren , J. Tiley , G. Viswanathan , et al. , Mech- 
+anisms related to different generations of γ ′ precipitation during continuous 
+cooling of a nickel base superalloy, Acta Mater. 61 (2013) 280–293 . 
+[16] A. Singh , S. Nag , J. Hwang , G. Viswanathan , J. Tiley , R. Srinivasan , et al. , Inﬂu- 
+ence of cooling rate on the development of multiple generations of γ ′ pre- 
+cipitates in a commercial nickel base superalloy, Mater. Charact. 62 (2011) 
+878–886 . 
+[17] Y. Chen , E. Francis , J. Robson , M. Preuss , S. Haigh , Compositional variations for 
+small-scale gamma prime ( γ ′ ) precipitates formed at different cooling rates in 
+an advanced Ni-based superalloy, Acta Mater. 85 (2015) 199–206 . 
+[18] S. Babu , M. Miller , J. Vitek , S. David , Characterization of the microstructure 
+evolution in a nickel base superalloy during continuous cooling conditions, 
+Acta Mater. 49 (2001) 4149–4160 . 
+[19] X. Tan , D. Mangelinck , C. Perrin-Pellegrino , L. Rougier , C.A. Gandin , A. Jacot , 
+et al. , Spinodal decomposition mechanism of γ ′ precipitation in a single crys- 
+tal Ni-based superalloy, Metall. Mater. Trans. A 45 (2014) 4725–4730 . 
+[20] J. Santisteban , M. Daymond , J. James , L. Edwards , ENGIN-x: a third-generation 
+neutron strain scanner, J. Appl. Cryst. 39 (2006) 812–825 . 
+[21] S. Ma , P. Rangaswamy , B. Majumdar , Microstress evolution during in situ load- 
+ing of a superalloy containing high volume fraction of γ ′ phase, Scripta Mater. 
+48 (2003) 525–530 . 
+[22] H. Stone , T. Holden , R. Reed , On the generation of microstrains during the plas- 
+tic deformation of waspaloy, Acta Mater. 47 (1999) 4 435–4 4 48 . 
+[23] J. Coakley , R. Reed , J. Warwick , K. Rahman , D. Dye , Lattice strain evolution dur- 
+ing creep in single-crystal superalloys, Acta Mater. 60 (2012) . 
+[24] D. Collins , D. Crudden , E. Alabort , T. Connolley , R. Reed , Time-resolved syn- 
+chrotron diffractometry of phase transformations in high strength nickel-based 
+superalloys, Acta Mater. 94 (2015) 244–256 . 
+[25] D. Collins , N. D’Souza , C. Panwisawas , In-situ neutron diffraction during stress 
+relaxation of a single crystal nickel-base superalloy, Scripta Mater. 131 (2017) 
+103–107 . 
+[26] J.O. Andersson , T. Helander , L. Höglund , P. Shi , B. Sundman , Thermo-calc & DIC- 
+TRA, computational tools for materials science, Calphad 26 (2002) 273–312 . 
+[27] TCNI6-TCS ni-based superalloys database, v6.0, Accessed May 2019. 
+[28] D. Collins , L. Yan , E. Marquis , L. Connor , J. Ciardiello , A. Evans , et al. , Lattice 
+misﬁt during ageing of a polycrystalline nickel-base superalloy, Acta Mater. 61 
+(2013) 7791–7804 . 
+[29] P. Bagot , O. Silk , J. Douglas , S. Pedrazzini , D. Crudden , T. Martin , et al. , An atom 
+probe tomography study of site preference and partitioning in a nickel-based 
+superalloy, Acta Mater. 125 (2017) 156–165 . 
+[30] K. Thompson , D. Lawrence , D. Larson , J. Olson , T. Kelly , B. Gorman , In 
+situ site-speciﬁc specimen preparation for atom probe tomography, Ultrami- 
+croscopy 107 (2007) 131–139 . 
+[31] M. Moody , L. Stephenson , A. Ceguerra , S. Ringer , Quantitative binomial dis- 
+tribution analyses of nanoscale like-solute atom clustering and segregation in 
+atom probe tomography data, Microsc. Res. Tech. 71 (2008) 542–550 . 
+[32] F.D. Geuser , B. Gault , Metrology of small particles and solute clusters by atom 
+probe tomography, Acta Mater. 188 (2020) 406–415 . 
+[33] C. Sudbrack , R. Noebe , D. Seidman , Direct observations of nucleation in a 
+nondilute multicomponent alloy, Phys. Rev. B 73 (2006) 212101 . 
+[34] H. Zhao , B. Gault , D. Ponge , D. Raabe , F.D. Geuser , Parameter free quantitative 
+analysis of atom probe data by correlation functions: Application to the pre- 
+cipitation in Al-Zn-Mg-Cu, Scripta Mater. 154 (2018) 106–110 . 
+[35] J. Zhou , J. Odqvist , M. Thuvander , P. Hedström , Quantitative evaluation of spin- 
+odal decomposition in Fe-Cr by atom probe tomography and radial distribution 
+function analysis, Microsc. Microanal. 19 (2013) 665?675 . 
+[36] L. Couturier , F.D. Geuser , A. Deschamps , Direct comparison of Fe-Cr unmixing 
+characterization by atom probe tomography and small angle scattering, Mater. 
+Charact. 121 (2016) 61–67 . 
+[37] L. Connor , H. Stone , D. Collins , M. Preuss , M. Hardy , C. Rae , The effect of 
+cooling rate from solution on the lattice misﬁt during isothermal aging of a 
+Ni-base superalloy, Metall. Mater. Trans. A 45 (2014) 2436–24 4 4 . 
+[38] G. Viswanathan , R. Banerjee , A. Singh , S. Nag , J. Tiley , H. Fraser , Precipitation 
+of ordered phases in metallic solid solutions: a synergistic clustering and or- 
+dering process, Scripta Mater. 65 (2011) 4 85–4 88 . 
+[39] J. Cahn , On spinodal decomposition, Acta Metall. 9 (1961) 795–801 . 
+[40] W. Soffa , D. Laughlin , Decomposition and ordering processes involving ther- 
+modynamically ﬁrst-order → disorder transformations, Acta Metall. 37 (1989) 
+3019–3028 . 
+[41] J.C. Zhao , M. Notis , Ordering transformation and spinodal decomposition in 
+au-ni alloys, Metall. Mater. Trans. A 30 (1999) 707–716 . 
+[42] J.W. Cahn , J.E. Hilliard , Free energy of a nonuniform system. I. Interfacial free 
+energy, J. Chem. Phys. 28 (1958) 258–267 . 
+[43] R. Ricks , A. Porter , R. Ecob , The growth of γ ′ precipitates in nickel base super- 
+alloys, Acta Metall. 31 (1983) 43–53 . 
+[44] R. Radis , M. Schaffer , M. Albu , G. Kothleitner , P. Pölt , E. Kozeschnik , Multimodal 
+size distributions of γ ′ precipitates during continuous cooling of UDIMET 720 
+Li, Acta Mater. 57 (2009) 5739–5747 . 
+[45] J. Hwang , R. Banerjee , J. Tiley , R. Srinivasan , G. Viswanathan , H. Fraser , 
+Nanoscale characterization of elemental partitioning between gamma and 
+gamma prime phases in René 88 DT nickel-base superalloy, Metall. Mater. 
+Trans. A 40 (2009) 24–35 . 
+[46] D. Collins , H. Stone , A modelling approach to yield strength optimisation in a 
+nickel-base superalloy, Int. J. Plast. 54 (2014) 96–112 . 
+[47] Z.n. Bi , C. Tang , J.l. Qu , J.h. Du , J. Zhang , Residual stress control for superalloys 
+disk cooling treatments, in: 8th International Symposium on Superalloy 718 
+and Derivatives, 2014, pp. 787–797 . 
+[48] Z. Zhang , Y. Feng , Q. Tan , J. Zou , J. Li , X. Zhou , et al. , Residual stress distribu- 
+tion in Ni-based superalloy turbine discs during fabrication evaluated by neu- 
+tron/x-ray diffraction measurement and thermomechanical simulation, Mater. 
+Des. 166 (2019) 107603 . 
+[49] C. Qiu , M. Attallah , X. Wu , P. Andrews , Inﬂuence of hot isostatic pressing tem- 
+perature on microstructure and tensile properties of a nickel-based superalloy 
+powder, Mater. Sci. Eng. A 564 (2013) 176–185 . 
+[50] J.R. Santisteban , M.R. Daymond , J.A. James , L. Edwards , ENGIN-x: a third-gen- 
+eration neutron strain scanner, J. Appl. Crystall. 39 (2006) 812–825 .

@@ -1,0 +1,2482 @@
+1 
+ 
+Grain boundary effect on nanoindentation: A multiscale 
+discrete dislocation dynamics model 
+Songjiang Lua, Bo Zhanga, Xiangyu Lia, Junwen Zhaob, Michael Zaisera,c 
+ Haidong Fand*, Xu Zhanga* 
+aApplied Mechanics and Structure Safety Key Laboratory of Sichuan Province, School of Mechanics and 
+Engineering, Southwest Jiaotong University, Chengdu 610031, China 
+bSchool of Materials Science and Engineering & Key Lab of Advanced Technologies of Materials 
+(Ministry of Education), Southwest Jiaotong University, Chengdu 610031, China 
+cDepartment of Materials Science and Engineering, Institute of Materials Simulation WW8, FAU 
+University of Erlangen-Nuremberg, Dr.-Mack-Str.77, 90762 Fürth, Germany 
+dDepartment of Mechanics, Sichuan University, Chengdu 610065, China 
+*Correspondent authors E-mails: xzhang@swjtu.edu.cn (XZ), hfan85@scu.edu.cn (HF). 
+Abstract 
+Nanoindentation is a convenient method to investigate the mechanical properties 
+of materials on small scales by utilizing low loads and small indentation depths. 
+However, the effect of grain boundaries (GB) on the nanoindentation response remains 
+unclear and needs to be studied by investigating in detail the interactions between 
+dislocations and GBs during nanoindentation. In the present work, we employ a three-
+dimensional multiscale modeling framework, which couples three-dimensional discrete 
+dislocation dynamics (DDD) with the Finite Element method (FEM) to investigate GB 
+effects on the nanoindentation behavior of an aluminum bicrystal. The interaction 
+between dislocations and GB is physically modeled in terms of a penetrable GB, where 
+piled-up dislocations can penetrate through the GB and dislocation debris at GBs can 
+emit full dislocations into grains. In the simulation, we confirmed two experimentally 
+observed phenomena, namely, pop-in events and the dependence of indentation 
+hardness on the distance from GB. Two pop-in events were observed, of which the 
+initial pop-in event is correlated with the activation and multiplication of dislocations, 
+while the GB pop-in event results from dislocation transmission through the GB. By 
+changing the distance between the indenter and GB, the simulation shows that the2 
+ 
+indentation hardness increases with decreasing GB-indenter distance. A quantitative 
+model has been formulated which relates the dependency of indentation hardness on 
+indentation depth and on GB-indenter distance to the back stress created by piled-up 
+geometrically necessary dislocations in the plastic zone and to the additional constraint 
+imposed by the GB on the plastic zone size. 
+Keywords: Nanoindentation; Discrete dislocation dynamics; Grain boundary; 
+Hardness; Pop-in event; Size effect. 
+ 
+1. Introduction 
+With the rapid development of nano-technology, the mechanical behavior of 
+materials on micro and nano scales has become an important subject of scientific 
+investigation, and differences between micro-scale and macroscopic mechanical 
+properties have received increasing attention [1-3]. Indentation testing is one of the 
+most convenient methods to investigate the mechanical response of materials on micro 
+and nano scales because of its comparative simplicity, the possibility to probe material 
+microstructures in small volumes near the surface of any bulk sample, and its 
+capabilities in testing thin films where tensile experiments are difficult to perform [4]. 
+In polycrystalline metals consisting of many grains that are separated by grain 
+boundaries (GBs), plastic deformation is mainly mediated by dislocation glide. 
+Therefore, dislocation microstructure evolution and the interaction between 
+dislocations and GBs plays a significant role in controlling the strength and deformation 
+properties of metal polycrystals. The GB-dislocation interaction mechanisms are most 
+conveniently investigated by studying bicrystals, where the existence of only one GB 
+simplifies the problem to a significant extent [5-11]. Soer et al. [6,7] conducted 
+nanoindentation experiments on Fe-Si bicrystals and Mo bicrystals, and observed that 
+the load-depth curves were punctuated by two displacement jumps (“pop-in events”) 
+which they interpreted as respective signatures of grain interior yielding and of 
+dislocation transmission through the GB. Theoretically, these authors used a gradient 
+plasticity framework in conjunction with a Hall-Petch approach to analyze the 
+deformation curves and to establish criteria for slip transmission across GBs [7]. Zhang3 
+ 
+et al. [8] carried out nanoindentation on copper bicrystals and found that the hardness 
+first increases and then decreases with increasing indentation depth. They pointed out 
+that this phenomenon is related to the interaction between dislocations and GB. Due to 
+the resistance of the GB to dislocation motion, dislocations accumulating in front of the 
+GB cause a back stress in the grain interior, so that a kinematic hardening effect can be 
+observed. However, as the indentation depth increases, the accumulated dislocations 
+penetrate through the GB once the resolved shear stress acting on the dislocations 
+exceeds a critical value and then expand freely in the adjacent grain, leading to 
+softening. From the aforementioned experimental results, it can be clearly seen that the 
+GB plays a significant role in the mechanical response of bicrystals, and by extension 
+of polycrystalline materials. 
+In nanoindentation experiments, various techniques have been used to characterize 
+the dislocation configuration around the indented area, such as Transmission Electron 
+Microscopy [12, 13] and newly-developed Electron Channeling Contrast Imaging 
+under controlled diffraction conditions [14]. However, it is still difficult to 
+quantitatively analyze the dislocation distribution or to monitor its evolution during 
+deformation in situ. Therefore, numerical simulation remains an excellent tool to 
+investigate those aspects of plasticity during nanoindentation that cannot be directly 
+accessed by experiment, and to interpret easily accessible experimental information 
+(such as load displacement curves) in terms of microstructural mechanisms. Currently, 
+the crystal plasticity finite element method (CPFEM) and molecular dynamics are the 
+main tools used for nanoindentation simulations. Li et al. [15] performed CPFEM 
+simulations to investigate the effects of grain orientation and grain geometry on the 
+indentation response of a polycrystalline 2024 aluminum alloy. The simulation results 
+showed that stress and misorientation distributions are continuous across low angle 
+GBs, while high angle GBs act as strong barriers for plastic slip and lead to stress 
+concentration at the GBs. Liu et al. [9] reported that the indentation responses of copper 
+single crystals and copper bicrystals in CPFEM simulations were almost identical. This 
+illustrates an important limitation of the above-mentioned crystal plasticity models, 
+which only considered the different crystallographic orientations in different grains but4 
+ 
+not the different processes which govern plasticity in the bulk and near GBs on the 
+microstructure level. Thus, the most important effects of GBs on the indentation 
+response of materials could not be captured, and therefore, a different modelling 
+approach, which adequately accounts for the relevant physical processes at and near 
+GBs, is required. Compared with CPFEM simulation, DDD simulation has great 
+advantages in this respect since it provides complete information regarding the 
+evolution of dislocation microstructures and thus can account for differences between 
+dislocation behavior in the bulk and near GBs. Because DDD simulations of 
+nanoindentation need to deal with inherently nonlinear contact problems associated 
+with the evolving substrate-indenter contact, simulation schemes must be used that are 
+capable of dealing with general boundary conditions. Indentation size effects and 
+influences of indenter shape were investigated by two-dimensional DDD simulations 
+on single crystals [16, 17], by using the method introduced by Needleman and Van der 
+Giessen [18] which couples DDD with FEM to evaluate dislocation interactions in 
+terms of surface-corrected infinite-body dislocation stress fields. Two-dimensional 
+DDD simulations on polycrystals also captured the effects of grain size and indentation 
+depth on indentation response [19, 20]. The first three-dimensional (3D) DDD 
+simulation of nanoindentation was conducted by Fivel et al. [12]. They used a DDD 
+model with coarse-grained dislocation cores, which they coupled with FEM in order to 
+handle the contact boundary value problem and study the plastic zone of indentation. 
+Recently, Hu et al. [21] used similar methodology to investigate the correlation of 
+incipient plasticity with dislocation nucleation and multiplication during indentation. 
+Po et al. [22] used a scheme that couples DDD with the boundary element method to 
+simulate nanoindentation of copper single crystals, and studied the effect of indenter 
+shape on indentation hardness and dislocation structure. However, to the best 
+knowledge of the authors, few studies have so far investigated the effect of GB on 
+nanoindentation by using 3D DDD, which requires the introduction of an adequate GB 
+model into the 3D DDD framework. Therefore, our focus is on the simulation of 
+bicrystal nanoindentation, using a framework which couples FEM and 3D DDD with a 
+penetrable GB model. The simulation aims at revealing the characteristics of5 
+ 
+dislocation evolution and the mechanisms of GB-dislocation interaction during 
+nanoindentation, in order to understand better the effects of GB-dislocation interaction 
+on the mechanical response of polycrystalline materials in general. 
+This paper is organized as follows. First, the multiscale discrete dislocation 
+plasticity model and GB model are briefly described. Second, indentation simulations 
+on bicrystal events are performed to analyze the initial pop-in event, GB pop-in event 
+and the variation of hardness versus distance to GB. Then, we use the simulation data 
+to construct a phenomenological model using a Hall-Petch type relation in conjunction 
+with the spatio-temporal evolution of geometrically necessary dislocation density to 
+analyze the GB hardening effect in terms of a pile-up model. In conclusion, the main 
+findings are summarized. 
+ 
+2. Multiscale dislocation dynamics framework and GB model  
+DDD allows to analyze plastic deformation mechanisms during nanoindentation 
+by tracking the evolution of the dislocation microstructure. However, DDD was 
+originally developed as a bulk simulation method and encounters challenges when 
+dealing with complex boundary conditions. This poses particular problems in 
+nanoindentation simulations because of the inherently nonlinear contact problem. On 
+the other hand, FEM is a convenient simulation method to solve complicated boundary 
+conditions. Therefore, a hybrid (multiscale) model that couples DDD with FEM is the 
+method of choice [12, 23, 24]. In this work, the 3D discrete-continuous model (DCM) 
+initially developed by Zbib et al. [25, 26] and improved by Jamond et. al. [27] and 
+Huang et al. [28] is used. This model has several advantages [28]. The elastic-plastic 
+problem is treated in a multiscale framework where the (discontinuous) plastic strain 
+obtained from the DDD simulation is coarse grained to yield smoothly varying stress 
+and plastic strain fields on the FEM scale. At the same time, in the DDD simulation, 
+the thus evaluated coarse-grained FEM stress fields are corrected to account for the 
+high stress fields close to the dislocation lines and thus to correctly represent the 
+interaction of nearby dislocations, which is underestimated in traditional DCM 
+approaches. [25,26,29-31]. In this work, use the DCM famework described in Ref. [29]6 
+ 
+which we generalize, in order to investigate GB effects in the indentation responses of 
+bicrystals, by introducing a 3D penetrable GB model into the DDD calculations. 
+ 
+2.1. Basic idea of multiscale coupling in DCM 
+The basic idea of multiscale DCM as introduced in [27,28] can be summarized as 
+follows: In 3D DDD, the stress field exerted by the dislocation ensemble on a segment 
+n is normally represented as a sum over segment stress fields,  
+ 
+s
+( )
+( , ,
+)
+n
+i
+i
+n
+i
+i n
+
+
+
+
+σ r
+σ b t r
+r ,  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(1) 
+where the segment stress fields 
+s( , ,
+)
+i
+i
+i
+
+σ b t r
+r
+ depend on the segment Burgers 
+vectors 
+ib  and tangent vectors 
+it . The segment stress fields are highly singular: They 
+decay like 
+2
+1/ r . This implies that they exhibit two singularities, one at zero – which 
+renders the time integration of the interactions of nearby dislocations computationally 
+very expensive – and one on the infinite boundary – which makes the summation over 
+the stresses of distant segments computationally expensive since it is not a priori 
+possible to truncate.  
+ 
+Multiscale DCM resolves this problem by introducing a coarse grained stress field 
+( )
+a
+σ r . This represents the stress field of a coarse grained dislocation system where, by 
+means of a coarse graining function 
+( ')
+a
+w r
+, the Burgers vector of each dislocation 
+segment has been distributed isotropically over a region with radius of the order of a 
+around the centerpoint of the segment. (For generalization to anisotropic coarse 
+graining schemes see [28].) The coarse grained stress field correctly captures the 
+structure of the dislocation stress field on scales much larger than a, but due to the 
+coarse graining it misses the high stresses near the dislocation line singularities and 
+therefore cannot correctly describe the interactions of nearby dislocations. The true 
+stress field can, however, be represented without approximation as the sum of the coarse7 
+ 
+grained stress field  
+( )
+a
+σ r  which describes long-range interactions, and the residual 
+stress field  
+SR( ):
+( )
+( )
+a
+
+
+σ
+r
+σ r
+σ r  which accounts for short-range interactions. The 
+point of this decomposition is that the contribution 
+( )
+a
+σ r can be evaluated in two 
+different manners:  
+ 
+(i) In evaluating
+SR( )
+σ
+r , one uses a particular functional form for the coarse graining 
+function proposed by Cai et. al. [32] that allows to compute the stress 
+( )
+a
+n
+σ r
+ on a 
+segment n as a sum of coarse grained segment stress fields 
+s( , , ,
+)
+a
+i
+i
+n
+i
+a
+
+σ b t
+r
+r that can 
+be evaluated analytically (for explicit expressions see Ref. [32]), such that one can write 
+ 
+.    (2) 
+ 
+An important benefit of this procedure is that, as shown by Cai et. al. [32], the difference
+s
+SR( , ,
+)
+i
+i
+n
+i
+
+σ
+b t r
+r   of the singular and the coarse- grained stress field of a segment is 
+a short-ranged function that decreases rapidly for
+n
+i
+a
+
+r
+r
+. Therefore one may 
+restrict, in Eq. (2), the summation to a finite domain. In the present work we take this 
+domain to be a sphere Sn of radius 2a around rn. The situation is depicted schematically 
+in Fig.1, right.  
+ 
+ 
+s
+SR
+SR
+( )
+( , ,
+)
+( , ,
+)
+( , , ,
+)
+s
+s
+k
+i
+i
+n
+i
+i
+i
+n
+i
+a
+i
+i
+n
+i
+i n
+i n
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+σ
+r
+σ
+b t r
+r
+σ b t r
+r
+σ b t
+r
+r8 
+ 
+Fig. 1. Schematic illustration: (left) sphere Sn in which the incremental plastic strain caused by slip 
+of segment n is coarse grained according to
+( )
+a
+w r
+ for use as eigenstrain in the FEM stress 
+calculation; (right) calculation of the stress at the middle point of dislocation segment n by adding 
+the short-ranged stresses of segments within Sn, (blue segments) to the FEM stress, after [28]. 
+ 
+(ii) For evaluating the long range stress interactions which are described by the field 
+( )
+a
+σ r alone, a different procedure is required. Direct summation over segment stress 
+fields would run into the difficulty that 
+( )
+a
+σ r decays slowly like 
+2
+1/ r  (hence, the 
+summation would need to be done over all segments in the simulation) and is 
+furthermore influenced by boundary conditions, such that for general boundary 
+conditions an analytical expression for the long-ranged part is not available. Instead, 
+one uses the fact that the calculation of any dislocation stress field can also be envisaged 
+as the solution of an eigenstrain problem.  The differential Eigenstrain created by a 
+dislocation segment n of Burgers vector bn sweeping an area dA on its slip plane with 
+normal nn is given by 
+ 
+p( )
+(
+) (
+)
+2
+n
+n
+n
+n
+n
+dA
+d
+
+
+
+
+
+
+r
+n
+b
+b
+n
+r
+r
+, 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(3) 
+the overall incremental eigenstrain is obtained by summation over all segments, and the 
+overall eigenstrain is obtained by summation of the incremental eigenstrains over all 
+time steps. We now define a coarse grained eigenstrain where we spread the Burgers 
+vector of the dislocation, using the same coarse graining function 
+( )
+a
+w r  as used for 
+direct evaluation of 
+( )
+a
+σ r . Furthermore, we restrict the evaluation of the coarse 
+grained eigenstrain to the sphere Sn, which ensures both numerical efficiency and 
+conceptual consistency of the coarse graining procedure. Thus we evaluate the coarse 
+grained eigenstrain created by a segment sweeping the area dA as 
+( )
+(
+) (
+)
+(
+)
+2
+n
+p
+a
+n
+n
+n
+n
+n
+S
+n
+dA
+d
+N
+w
+
+
+
+
+
+
+
+
+r
+n
+b
+b
+n
+r
+r
+r
+r
+ 
+ 
+ 
+ 
+ 
+ 
+(4)9 
+ 
+where the function 
+( )
+n
+S
+
+r is one if r is contained within Sn and zero otherwise (Fig 1, 
+left). The normalization factor N where  
+1
+3
+( )
+Sn
+N
+w
+d r
+
+r
+ ensures that the volume 
+integrals of the coarse grained and the original eigenstrain coincide [28]. Again, the 
+overall coarse grained eigenstrain is obtained by summation of the differential 
+eigenstrains over all segments and time steps.  
+Finally, the thus evaluated eigenstrain is used to determine, using standard Finite 
+Element methodology, the coarse grained stress field 
+( )
+a
+σ r  in a manner that accounts 
+naturally for the imposed boundary tractions and/or displacements.  
+ 
+2.2. DDD-FEM coupling: technical aspects 
+The present DCM model contains two modules, i.e. the DDD and FEM. The DDD 
+module handles the dynamical evolution of dislocations and calculates the resulting 
+plastic strain, which is then coarse grained and distributed on the Gauss integration 
+points (GIPs) of the FEM mesh. In the FEM module, we treat the plastic strain 
+p
+aε  
+transferred from the DDD module and the stress 
+0
+σ  induced by initial dislocations as 
+the eigenstrain and pre-stress field, respectively. The stress state of GIPs is described 
+through the constitutive model, 
+ 
+GIP
+p
+0
+(
+)
+a
+a
+
+
+
+σ
+C ε
+ε
+σ , 
+ 
+where C  is the elastic stiffness matrix. The displacement, strain and stress of any 
+given point in the sample are then determined by solving the boundary-value problem 
+in commercial FEM software Ansys®. Finally, the thus evaluated stress field is 
+interpolated back to the segment centerpoints as  
+ 
+
+a
+node
+( )
+n
+n
+i
+i
+n
+N
+
+σ
+r
+σ
+r
+, 
+where 
+node
+iσ
+ are the FEM stresses at the nodes located in the same element as the 
+evaluated dislocation segment midpoint 
+nr , 
+i
+N  is the interpolation function of the10 
+ 
+adopted finite element. For a hexahedral element as used in our nanoindentation 
+simulation, 
+i
+N  is defined as 
+ 
+
+
+
+
+1 1
+1
+1
+8
+i
+i
+i
+i
+N
+
+
+
+
+
+
+
+   
+
+1, 2,
+, 8
+i 
+
+,  
+(1) 
+where 
+,
+,
+i
+i
+i
+ are the local coordinate of the nodes in the element, and 
+, ,
+ are 
+the local coordinates of the dislocation segment midpoint, as shown in Fig. 2. The 
+local coordinate ( , ,
+) is related to the global coordinate (x, y, z) as 
+ 
+
+
+2
+/
+O
+x
+x
+x
+l
+
+
+, 
+
+
+2
+/
+O
+y
+y
+y
+l
+
+
+, 
+
+
+2
+/
+O
+z
+z
+z
+l
+
+
+,    
+(2) 
+where 
+,
+,
+O
+O
+O
+x
+y
+z  are the global coordinate of the element center, and 
+,
+,
+x
+y
+z
+l
+l
+l  are 
+the element sizes in three dirctions, see Fig. 2.   
+ 
+Fig. 2. A hexahedral element in local coordinate system ( , ,
+). 
+ 
+Finally, the total stress which drives dislocation motion is obtained by adding the short-
+range stress  
+ 
+FE
+SR
+(
+)
+(
+)
+n
+n
+n
+n
+i
+n
+i
+i n S
+
+
+
+
+
+
+σ
+σ
+σ
+r
+r ,  
+(3) 
+ 
+Finally, we make a line-tension correction 
+LT
+n
+F
+to correctly represent the 
+interaction of adjacent segmetns of the same line, and thus we obtain the total force on 
+the dislocation as 
+ 
+tot
+PK
+LT
+LT
+( ( )
+)
+n
+n
+n
+n
+n
+n
+n
+
+
+
+
+
+
+F
+F
+F
+σ r
+b
+ξ
+F
+, 
+(4)11 
+ 
+The velocity of the dislocation is determined from this force assuming a linear mobility 
+law: 
+ 
+tot
+v
+B
+
+F
+t , 
+(5) 
+where 𝒕= 𝒏× 𝝃 is the dislocation glide direction and B is the viscous drag coefficient, 
+which is taken to be 
+4
+10
+Pa s
+
+ in this work [28]. 
+ 
+2.3 Computational efficiency of the DCM model 
+DCM as described here is, from the point of view of computational efficiency, superior 
+to standard 3D DDD when it comes to simulating large systems with general boundary 
+conditions. The use of FEM to evaluate the long-range dislocation stress fields makes 
+it not only possible to handle general boundary conditions. It also allows to truncate the 
+summation over segment stress fields, thus reducing the computational cost of 
+evaluating segment-segment interactions to order N while still being able to use simple 
+analytical expressions in the summation. At the same time, the fact that we use coarse 
+grained eigenstrains in the FEM calculations results in a slow spatio-temporal variation 
+of the FEM stress as compared to the interaction stresses of nearby dislocations. 
+Therefore, the FE time step can be increased to up to 40 times the DDD time step (one 
+FE step per 40 DDD steps) without compromising the accuracy of the simulations. The 
+length- and time scale separation between DDD and FEM thus significantly enhances 
+the computational efficiency of DCM: On the one hand, the number time-consuming 
+FE calculations can be restricted, on the other hand, in DDD the time-consuming 
+summation over the interaction stresses of distant dislocation segments is avoided since 
+these interactions are accounted for by the FEM stress field. 
+ 
+2.4. GB model 
+In the present work, we adopt a 3D penetrable tilt GB model proposed by Fan et 
+al. [5] to handle the interactions between dislocations and GBs. In this model, two GB-
+dislocation interaction scenarios were considered, namely, dislocation penetration12 
+ 
+through GBs and dislocation emission from GBs. As shown in Fig. 3, two adjacent 
+grains with misorientation angle  are separated by a symmetric tilt boundary, such that 
+the slip planes I and II have a common line of intersection with the GB. 
+ 
+ 
+ 
+  
+Fig. 3. Schematic diagram showing a dislocation penetrating through a grain boundary (GB).  
+ 
+When approaching the GB, an incoming dislocation segment (colored in blue) with 
+Burgers vector 
+Ib  and length 
+pl  on slip plane I in Grain 1 is initially blocked in front 
+of the GB. However, if the stress acting on the incoming dislocation segment 
+Ib  
+exceeds a critical stress 
+CRSS
+
+, the segment is transmitted through the GB from Grain 
+1 to Grain 2 and becomes a new dislocation segment (marked in red) with  Burgers 
+vector  
+II
+b  and length 
+pl  on slip plane II of Grain 2. In addition, considering the 
+conservation of Burgers vector, a debris dislocation Δ𝒃= 𝒃I −𝒃II (colored in green) 
+with the same length 
+pl  is left on the GB after the transmission event. Fig. 4 shows a 
+two-dimensional schematic of the dislocation transmission process in a plane13 
+ 
+Fig. 4. Two-dimensional schematic of dislocation transmission. 
+perpendicular to the tilt axis of the GB. The direction unit vector of the tilt axis is 
+denoted as t , and the dislocation Burgers vector can be decomposed into a vector 
+parallel and a vector perpendicular to the tilt axis, 
+||
+
+
+
+b
+b
+b , where the parallel vector 
+has the length 
+||
+||
+|
+|
+.
+b
+
+
+b
+b t and the perpendicular vector 
+||b
+
+
+b
+b
+t
+has length b. 
+The magnitude of the dislocation debris Burgers vector can then be easily determined 
+from the figure as 
+ 
+ 
+.   
+ 
+ 
+ 
+ 
+II
+2
+sin 2
+b
+b
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(6) 
+ 
+The critical resolved shear stress 
+CRSS
+
+ can be calculated from the energy conservation 
+law as 
+ 
+2
+2
+CRSS
+I
+gb
+I
+(
+)
+b
+E b
+G
+b
+
+
+
+
+
+, 
+(7) 
+where the first term on the right-hand side represents the energy increase of the grain 
+boundary with 
+gb
+E  being the GB energy density. The term 
+2
+(
+)
+G
+b
+
+
+ represents the 
+elastic energy associated with the GB ledge caused by the dislocation debris left on the 
+grain boundary, with  being a non-dimensional constant accounting for the 
+atomistic configuration of the dislocation debris and G the shear modulus. According 
+to Hasson et al.’s measurements [31], the GB energy density Egb in Eq. (7) is almost a14 
+ 
+constant when 𝜃∈(𝜃1, 𝜃2], while for  close to0° and 90°, Egb changes linearly 
+with . Therefore, Egb can be approximately expressed by the following equation [33]: 
+ 
+ 
+1
+1
+gb
+1
+2
+2
+2
+/
+0
+(90
+) / (90
+)
+90
+k
+E
+k
+k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.  
+(8) 
+where the parameters  kare 600 mJ/m220°70°, respectively, as used in Ref. 
+[33]. In the present paper, the misorientation angle  is set as 5°. Therefore, Egb can be 
+expressed as 
+ 
+gb
+1
+/
+E
+k
+
+.  
+(9) 
+Combining Eqs. (6),(7), (9) and considering that bI = bII = b, the critical resolved shear 
+stress for dislocation penetration can be expressed as 
+ 
+*
+2
+CRSS
+1
+4
+sin ( )
+2
+k
+G
+b
+
+
+
+
+
+
+
+.  
+(10) 
+where 
+* 2
+2
+2
+(
+)
+(1 ( . ) )
+
+
+
+b t
+. With increasing number of dislocation penetration 
+events, the energy of the dislocation debris on the GB also increases and a mechanism 
+to release the corresponding energy is needed. It has been experimentally confirmed 
+that steps and ledges on GBs are important nucleation sites for dislocations [34]. Such 
+a nucleation/emission event is schematically illustrated in Fig. 5: the dislocation debris 
+(colored in green) with total Burgers vector  
+ 
+ 
+Fig. 5. Schematic of dislocation debris decomposition. 
+ 
+Δ𝑩= ∑Δ𝒃 and length 
+el15 
+ 
+emits a perfect lattice dislocation 
+eb (colored in purple) with the same length 
+el  in the 
+slip plane of one of the grains. After the emission event, the Burgers vector of new 
+dislocation debris on GB becomes b  with length el . Similar to the penetration event, 
+the conservation of Burgers vector must be satisfied, i.e.,Δ𝑩= Δ𝒃̃ + 𝒃𝑒. Furthermore, 
+the dislocation emission process must be energetically favorable, 
+ 
+2
+2
+2
+e
+
+
+
+B
+b
+b . 
+(11) 
+Dislocation emission occurs as soon as any Burgers vector 
+eb consistent with Burgers 
+vector conservation fulfills this inequality. Based on these rules, the grain and the slip 
+plane of the emitted dislocation 
+eb  can be determined. 
+ 
+3. Simulation setup 
+The FEM indentation model (generated by Ansys®) is shown in Fig. 6(a). We simulate 
+indentation with a Berkovich-type diamond indenter with a half-angle of 65.3 . Since 
+the elastic modulus of the indenter is much higher than that of the indented material, 
+the indenter is in the simulation modeled as a rigid body. One side of the indenter is 
+assumed to run parallel to the intersection line of GB plane and indented surface, as 
+shown in Fig. 6(a). The dimensions of the indented sample in X, Y and Z directions are 
+lx=1400b, ly=1200b and lz=600b, respectively, where b is the magnitude of Burgers 
+vector and chosen as 0.25 nm in this paper. Furthermore, the height of the indented 
+sample is set to be ten times larger than the maximum indentation depth of 44b, such 
+as to make the indentation response approximately independent of model size [36]. 20-
+node hexahedral elements (SOLID 186 in ANSYS) were used to improve the accuracy 
+of the FE calculation. As the nanoindentation simulation involves a contact problem 
+and the contact area between indenter and indented material is relatively small, the FE 
+mesh underneath the indented region was refined (see Fig. 6(a)). All FE nodes on the 
+bottom surface of the sample are completely constrained, while the four surrounding 
+surfaces are free. The displacement of the indenter along the z direction is increased at 
+fixed rate. Contact between indenter and sample is assumed rigid.16 
+ 
+ 
+ 
+Fig. 6. Indentation model. (a) finite element model (generated by commercial software Ansys), (b) 
+initial configuration of the discrete dislocation dynamics model (generated by software Tecplot).  
+ 
+The GB plane is vertically located in the middle of the model (see Fig. 6(b)), the 
+misorientation between the two grains of the bicrystal is set to 5° The indentation 
+direction is aligned with the [001] direction of the crystal lattice of the indented grain 
+as shown in Fig. 6(b). To model dislocation nucleation underneath the indenter, we 
+create 120 dislocation segments with pinned endpoints (10 segments per slip system), 
+and place them at random locations within a thin layer underneath the specimen surface 
+with 𝑋∈[−500𝑏, 500𝑏], 𝑌∈[−400𝑏, 400𝑏] and 𝑍∈[100𝑏, 300𝑏] as shown 
+in Fig. 6(b). The segment orientations are random with uniform distribution within the 
+respective slip planes. The segment lengths, which determine the critical stresses for 
+dislocation nucleation, are chosen in such a manner that the hardness values obtained 
+from our simulations match those obtained in large scale MD simulations of indentation 
+in absence of bulk dislocation sources [37]. We use a uniform distribution of lengths 
+between 80b and 100b, which results for an indentation depth of 40b in typical hardness 
+values  0.2
+0.25
+H
+
+
+
+
+, in agreement with our reference simulations [37]. 
+The indentation simulation considers displacement-controlled loading with the 
+indenter displacement rate h  chosen such as to impose a constant indentation strain 
+rate 
+/
+h h 1×104 s-1. In the simulations, typical material parameters of aluminum 
+bicrystals are used. These parameters are listed in Table 1.17 
+ 
+Table 1. Parameters of aluminum bicrystal used in simulations. 
+Material parameters 
+Symbol 
+Value 
+Density (kg/m3) 
+ 
+2700 
+Shear modulus (GPa) 
+G 
+26 
+Poisson’s ratio 
+v 
+0.345 
+Burgers vector magnitude (nm) 
+b 
+0.25 
+Viscous drag coefficient (Pa·s) 
+B 
+10-4 
+Grain boundary (GB) parameter 
+ 
+0.5 
+GB parameter (mJ/m2) 
+k 
+600 
+GB parameter ( ° ) 
+1 
+20 
+GB parameter ( ° ) 
+2 
+70 
+ 
+ 
+4. Results 
+4.1. Pop-in event 
+During nanoindentation, discontinuities on the load-depth curves can be observed, 
+which are related to the first activation and multiplication of dislocations under the 
+indenter tip. These events indicate the transition from elastic to elasto-plastic response 
+of the indented material. In the load-controlled loading mode, the load-depth curves 
+display a displacement excursion known as initial “pop-in” phenomenon, whereas an 
+abrupt load drop is observed in the case of displacement-controlled loading  [38, 39]. 
+In order to avoid artefacts due to the stochastic nature of the plastic response in 
+dislocation dynamics simulations and to ensure that observed pop-in like features 
+constitute generic characteristics of indentation behavior rather than mere fluctuations, 
+three simulations with a distance from indenter to GB of 50b were conducted. These 
+three simulations use different initial dislocation configurations but the same initial 
+dislocation density and average dislocation length. Pop-in events were observed in all 
+three cases, as shown in Fig. 7, where it can be seen that the pop-in events on the load-
+depth curves (Figs. 7g, 7h and 7i) all appear at the first dislocation activation (Figs. 7d, 
+7e and 7f). This indicates that the initial pop-in is associated with the activation of 
+dislocation sources and the subsequent dislocation multiplication [13, 40], as observed 
+in previous experiments [40,41]. It should be pointed out that although the indentation18 
+ 
+loading was realized in displacement-controlled mode, the load-depth curves show a 
+pop-in phenomenon rather than a sudden load drop. The absence of a load drop 
+probably results from the low data output frequency. In the simulation framework, the 
+simulation results are exported every 40 steps, thus some significant data points may 
+be neglected. 
+ 
+Fig. 7. Dislocation structure before and after initial pop-in event. (a–c) Initial dislocation 
+arrangements, (d–f) dislocation arrangements after activation of the first dislocation source and (g–
+i) enlarged load-depth curves at the initial pop-in event for the three initial dislocation structures. 
+The indenter-GB distance is 50b. The position of the indenter is schematically marked with a pink 
+dotted triangle. 
+ 
+Besides the initial pop-in event resulting from the first activation of dislocations, 
+a displacement burst known as GB pop-in can also be observed when dislocations 
+penetrate through GBs. Fig. 8 shows the dislocation structure before and after such a 
+penetration event, and the corresponding load-depth curve, again with a GB-indenter 
+distance of 50b. As shown in Fig. 8(a), a large number of dislocations accumulate in 
+front of the GB, which suppresses the further movement of dislocations during loading. 
+However, as the indentation depth and the stress acting on the GB gradually increase,19 
+ 
+the dislocations are transmitted through the GB and leave dislocation debris (red lines 
+in Fig. 8(b)) on the GB once the resolved shear stress acting on a trapped dislocation 
+reaches the critical value for dislocation transmission, Eq. (15). 
+ 
+Fig. 8. Process of dislocation penetration through GB. The position of the indenter tip is 
+schematically marked with a pink dotted triangle. (a) Dislocation structure before penetration, (b) 
+dislocation structure after penetration, (c) load-depth curve around the moment of penetration. 
+ 
+As shown in Fig. 8(c), at the moment of dislocation transmission through the GB, a GB 
+pop-in phenomenon appears on the load-depth curve due to the sudden release of stress 
+underneath the indenter. In nanoindentation experiments, similar pop-in events on the 
+load-depth curves have been observed when a sufficient number of dislocations 
+simultaneously penetrate through a GB [11, 42], which qualitatively agrees with our 
+simulation results. Similar to the initial pop-in event, the GB pop-in events obtained 
+from simulations are not as pronounced as in experiment, since the number of 
+dislocations simultaneously transmitted and the dimension of the simulated model are 
+much smaller than in typical experiments.  
+Besides the pop-in phenomena coming from the transition from elastic deformation 
+to elasto-plastic deformation and from dislocation transmission through GB, the 
+intermittent operation and multiplication of dislocation sources can also induce 
+subsequent pop-in events or fluctuation phenomena on the load-depth curve, as shown 
+in Fig. 9. 
+In summary, from the above analysis it can be inferred that the essence of pop-in 
+phenomena is the motion of a large number of dislocations, which generally occurs at 
+the moment of initial yield (first dislocation source activation) of the material and at the20 
+ 
+moment when dislocations are first transmitted through GB and expand into the 
+adjacent grain.  
+ 
+ 
+Fig. 9. Fluctuation phenomena on a load-depth curve as a result of intermittent operation and 
+multiplication of dislocation sources. (a) Whole load-depth curve, (b) Enlarged part (red dashed 
+circle in (a)) of the load depth curve. 
+ 
+4.2. GB influence on indentation hardness 
+In order to obtain reliable results, five simulations with different initial dislocation 
+structures (initial pinned line segments are randomly distributed underneath the surface, 
+with the segment length statistics and overall dislocation length being the same) were 
+performed and the resulting load-depth curves were then averaged to get the final 
+hardness value. In order to separate the dependence of indentation hardness on 
+indentation depth from the dependence of indentation hardness on the distance to GB, 
+two typical indentation depths of 32b and 42b were chosen to study the GB effect on 
+hardness. Fig. 10 shows the relationship between indentation hardness and the distance 
+from indenter to GB at the indentation depths of 32b and 42b. In this figure, seven 
+different distances d have been evaluated, i.e., d=−150b, d=−100b, d=−50b, d=0 (on 
+the GB), d=50b, d=100b and d=150b. The hardness of the indented material is defined 
+as 𝐻= 𝑃𝐴
+⁄ , where P is the indentation load and A is the contact area between indenter 
+and bicrystal. It can be clearly seen from Fig. 10 that the hardness increases with 
+decreasing GB-indenter distance, showing a significant GB hardening effect. Zhang et21 
+ 
+al. [9] and Soer et al. [7] have performed nanoindentation experiments on a copper 
+bicrystal and a niobium bicrystal. Both of their experimental results show the trend of 
+increasing hardness with decreasing GB-indenter distance, which is in good qualitative 
+agreement with our simulated results. 
+                    
+-150
+-100
+-50
+0
+50
+100
+150
+5.6
+5.8
+6.0
+6.2
+6.4
+6.6
+ Hardness
+ modified Hall-Petch, Eq. (14)
+ 
+Hardness[GPa]
+Distance to GB [b]
+0
+100
+200
+300
+400
+500
+600
+700
+800
+ GND density
+ Pile up model, Eq. (15)
+GND density (b[m
+-2])
+-150
+-100
+-50
+0
+50
+100
+150
+5.6
+5.8
+6.0
+6.2
+6.4
+6.6
+ Hardness
+ modified Hall-Petch, Eq. (14)
+ 
+Hardness[GPa]
+Distance to GB (b)
+0
+100
+200
+300
+400
+500
+600
+700
+800
+ GND density
+ Pile-up model, Eq. (15)
+GND density (b[m
+-2])
+ 
+(a)                                       (b) 
+Fig. 10. Blue squares: Hardness vs. distance d to GB, simulation data; blue line: modified Hall-
+Petch law, Eqs. (13) and (14); red circles: GND density  
+GND
+32
+23
+(
+)
+(1/ 2)
+d
+d
+V
+V
+
+
+
+
+
+, 
+averaged over the volume 
+d
+V comprised between indenter tip and GB, vs. distance d to GB, red 
+line: circular pile-up model, Eqs. (15) and (A12); (a) and (b) represent results at indentation depths 
+of 32b and 42b, respectively; error bars represent standard deviation of five realizations. 
+ 
+ 
+5. Discussion 
+In order to provide a quantitative interpretation of the GB hardening phenomenon 
+observed in our simulations (Fig. 10), we determine the spatial distribution of 
+geometrically necessary dislocations (GND) underneath the indenter. We use this 
+information to establish a mathematical model that allows us not only to evaluate the 
+dependence of hardness on distance to GB and on indentation depth, but also evaluate 
+the GND density between GB and indenter in quantitative terms. 
+ 
+5.1. GND distribution22 
+ 
+One of the most significant advantages of DDD simulation is that it provides in-
+situ information about the evolution of the dislocation structure. From the discrete 
+dislocation arrangement, a coarse-grained GND density tensor can be obtained by using 
+the method proposed by Aifantis at al. [43]. This method has been adopted by Zhang et 
+al. [43] to investigate how the internal length scale in strain gradient theory relates to 
+parameters of the dislocation microstructure. The GND tensor along the x axis 
+(averaged over the sample y and z directions) can be determined from the following 
+equation [43]: 
+ 
+( )
+1
+( )
+( )
+i
+i
+i
+V x
+x
+V x
+
+
+
+
+
+α
+I
+b
+, 
+(12) 
+where 
+( )
+V x
+
+ is the volume of a slice that is centered at x and oriented perpendicular 
+to the x axis (i.e. in our simulations: parallel to the GB). 
+iI  is the line vector of a 
+dislocation segment i located within the volume 
+( )
+V x
+
+, and 
+ib is the Burgers vector 
+of the segment. The symbol “< >” denotes an average over multiple simulations. 
+According to Zhang et al. [44], only two components of the GND tensor, 
+23
+
+ and 
+32
+
+, 
+are related to the normal plastic strain gradient along the x axis which we characterize 
+here in terms of the values of 
+23
+
+ and 
+32
+
+, averaged over thin slices across the 
+sample taken parallen to the GB.  Fig. 11 shows contour plots of this quantity versus 
+the position x and indentation depth h for various GB-indenter distances. 
+ 
+Let us first discuss, for reference, the behavior expected for indentation of a smaple 
+without GB. In that case, the 
+23
+
+and
+32
+
+ components of the GND tensor are expected 
+to be zero directly underneath the indenter tip: Because of symmetry, this is a location 
+of maximum plastic strain, where the strain gradient perpendicular to the indentation 
+direction and accordingly the corresponding GND tensor components must be zero. As 
+we pass underneath the indenter, the strain gradient changes sign and at some distance 
+from the indenter we expect the GND density to reach a maximum, the position of 
+which indicates the characteristic extension of the plastic zone. The GND surrounding23 
+ 
+the indenter tip create a back stress, which decreases with increasing extension of the 
+plastic zone and may be fully or partly responsible for the indentation size effect.  
+ 
+Fig. 11. Plots of geometrically necessary dislocation (GND) density tensor component 
+23
+
+ versus 
+distance x from GB, for varying indentation depths; the plots represent different distances d from 
+indenter to GB; the position of the indenter is additionally marked with a black triangle.  
+ 
+We now look at the GND distribution observed during indentation close to a GB (Fig. 
+11). We still find a GND density maximum on the side of the indenter facing away from 
+the GB, which is little affected by the GB-indenter distance. On the side facing the GB, 
+on the other hand, the motion of dislocations is initially constrained to the region 
+enclosed between indenter and GB, and accordingly the GNDs are shifted closer to the 
+indenter and their density in the region enclosed between indenter and GB increases. 
+The corresponding back stresses delimit dislocation activation underneath the indenter 
+and thereby increase the flow stress required to maintain deformation activity within 
+the plastic zone. At the position of the GB (x=0), the GND density in all cases reaches 
+a pronounced maximum due to dislocation pile-up. The height of this maximum is24 
+ 
+delimited by the effect of dislocation transmission, which occurs once the GND piling 
+up against the GB create a critical forward stress sufficient to induce dislocation 
+transmission. The overall scenario of dislocation pile up, dislocation back stresses 
+controlling plastic flow in the active zone, and dislocation transmission, is very similar 
+to the scenario envisaged in the classical pile-up theory of Hall-Petch hardening. We 
+now proceed to formulate this analogy in quantitative terms. 
+ 
+5.1. Theoretical interpretation: Modified Hall-Petch effect 
+ 
+To capture the observed GB effect on hardness and the associated GND distribution in 
+quantitative terms, we first need to point out one essential difference between the 
+present situation and the situation in a polycrystal. In polycrystals, a single 
+characteristic length (the grain size) controls the slip distance of dislocations. In our 
+simulations, as in real indentation experiments near GB, this role is shared by the 
+distance from the indenter to the GB on the one hand, and from the indenter to the 
+boundary of the plastic zone on the other hand.  
+ 
+We account for this dual dependency by introducing an effective plastic zone radius via  
+ 
+2
+2
+2
+eff
+2
+2
+( )
+( , )
+1
+2
+( )
+A h
+d
+R
+h d
+d
+A h
+
+
+
+
+
+
+
+
+
+
+
+ , 
+(13) 
+where η is a fit parameter and
+2
+( )
+24.5
+A h
+h
+
+ is the projected area underneath the 
+indenter, which we identify with the cross section of the plastic zone in absence of a 
+GB. Eq. (13) is motivated by the following considerations: (i) in the limit d , the 
+GB effect becomes asymptotically irrelevant and Reff is equal to the equivalent radius 
+of the area A; (ii) in the limit d=0, the GB exactly bisects the plastic zone. Hence, the 
+characteristic area over which dislocation loops can expand is reduced exactly by a 
+factor 0.5, from A to A/2; (iii) in the general case, Eq. (13) provides a simple analytic 
+interpolation between these limits where the empirical factor η determines the relative 
+influence of d on the plastic zone size.25 
+ 
+ 
+Taking 
+eff
+R
+ to be the effective radius of a circular slip zone in which disloations are 
+piling up tangential to the GB, we can use standard relations of the theory of dislocation 
+pile-ups to derive a modified Hall-Petch relationship for the indentation hardness, 
+ 
+HP
+0
+*
+eff
+K
+H
+H
+R
+
+
+ . 
+(14) 
+He 
+*
+eff
+eff
+3
+R
+R
+
+ is the projection of the effective slip zone radius, Eq. (13), which is 
+envisaged parallel to the indented [001] surface, onto a slip plane with normal vector 
+(1/
+3)[111]
+
+n
+. The Hall-Petch coefficient KHP can then be derived within the 
+framework of pile-up theory. For the parameters in our simulations we obtain
+HP
+16.19 GPa
+K
+b
+
+ , see the derivation of Eq. (A5) in Appendix A. This leaves us 
+with two fit parameters, namely the ratio  of slip zone area to indented area, and the 
+asymptotic hardness 
+0
+H . An excellent fit to the data for all d and h values considered 
+in our simulations is obtained by using the parameters H0 = 4.43 GPa, and η=1.65. Note 
+that with these parameters, Eqs (13) and (14) account not only for the dependency of 
+hardness on distance between indenter and GB, but also for the dependency on 
+indentation depth. This indicates that, in the regime where indentation is controlled by 
+dislocation nucleation underneath the indenter as envisaged in our simulations, pile-up 
+theories may provide an adequate representation of the associated size effects even if 
+two characteristic length scales (here: d and h) are involved.  
+ 
+While our model provides a good representation of the hardness dependence on 
+distance to GB and indentation depth, one may ask whether the assumptions made in 
+deriving the Hall-Petch constant (circular slip zones, stress concentration due to a 
+classical pile-up) are not too strong. It is obvious by simply looking at the simulations 
+that neither the slip zones are exactly circular, nor do the dislocations exactly follow 
+the arrangement expected for a classical pile-up. On the side facing away from the26 
+ 
+indenter, it would in fact be quite impossible for them to do so, given the absence of a 
+hard boundary.  
+To check whether our model, despite these caveats, possesses predictive power 
+regarding the distribution of dislocations, we focus on the area of interest between GB 
+and indenter. We characterize the GND density in this area in terms of the averaged 
+GND tensor component magnitude 
+GND
+32
+23
+(
+)
+(1/ 2)
+d
+d
+V
+V
+
+
+
+
+
+, evaluated from 
+Eq. (10) over the volume 
+d
+y
+z
+V
+l
+l
+d
+
+
+
+ encompassed between GB (x=0) and indenter 
+(x=d). The corresponding values of 
+GND(
+)
+d
+V
+
+ were evaluated for all d values studied 
+in our simulations (red circles in Fig. 10) .  
+ 
+The pile-up model can now be used to evaluate the same quantity. The derivation of the 
+GND tensor resulting from a pile-up on a single slip zone is given in the Appendix, 
+with the result given by Eqs. (A13) and (A14). The overall GND density tensor derives 
+from this result as 
+ 
+|| (
+) (
+)
+d
+d
+s
+s
+s
+s
+d
+x
+V
+V
+s
+V
+
+
+
+
+
+
+
+
+
+
+α
+α
+n
+e
+b
+  
+(15) 
+where
+|| (
+)
+s
+d
+V
+
+ is the GND line density in slip system s in the direction parallel to the 
+GB, which for the pile-up model used here is for a given slip system calculated 
+according to Eq. (A13). 
+s
+n  and 
+s
+b are the respective slip plane normal and Burgers 
+vectors, and the summation runs over all active slip systems.  
+ 
+From Eq. (15) the GND density magnitude 
+GND
+32
+23
+(
+)
+(1/ 2)
+d
+d
+V
+V
+
+
+
+
+
+corresponding to the pile-up model can be evaluated (red lines in Fig. 10). We find 
+excellent agreement with the simulation data. In particular, the increase of GND density 
+with increasing indentation depth is accurately predicted by the model. In view of the 
+fact that the comparison between model and simulation does not involve any additional 
+fit parameters, it is fair to say the model despite its strong idealization fully captures the27 
+ 
+interplay between GND density accumulation and indentation size effect. It provides 
+accureate predictions of the influences of both GB-indenter distance and of indentation 
+depth on hardness and dislocation microstructure, and of the accumulation of GNDs in 
+front of the GB. These predictions pertain to the regime of very shallow indents where, 
+as implicit in the initial conditions used in our simulations, plastic activity is controlled 
+by nucleation of dislocation loops underneath the indenter but where bulk dislocation 
+activation is irrelevant.  
+ 
+ 
+6. Conclusions 
+In the present work, 3D multiscale DDD has been coupled with a penetrable GB 
+model to simulate nanoindentation of aluminum bicrystals. Initial pop-in and GB pop-
+in events were observed on the load-depth curves and the relationship between hardness 
+and distance to GB was investigated and interpreted. The main findings are summarized 
+as follows:  
+(1) A dimensional multiscale modeling framework has been established which 
+couples three-dimensional discrete dislocation dynamics with the finite element method. 
+By considering the physical interaction mechanisms between dislocations and 
+penetrable GBs this famework provides an efficient tool to investigate GB effects on 
+the nanoindentation of bicrystals and polycrystals. 
+(2) The first pop-in phenomenon in the nanoindentation load-depth occurs at the 
+moment of the first activation or nucleation of dislocations beneath the indenter, 
+indicating the transition from elastic to elasto-plastic response of the indented material. 
+The pop-in events occurring after the initial pop-in are mainly due to dislocation 
+transmission through GB and the intermittent operation of dislocation sources. 
+(3) Due to the GB hardening effect, the indentation hardness of a bicrystal 
+increases with decreasing distance between indenter and GB. This GB effect 
+superimposes on the indentation size effect related to the plastic zone width and thus 
+the indentation depth. The underlying dislocation microstructure shows that the GND28 
+ 
+density between indenter and GB increases with decreasing GB-indenter distance, 
+leading to enhancement of GB hardening. 
+(4) The interplay between GND accumulation and back stresses on the plastic zone 
+can be captured by a pile-up model where the effective radius of a slip zone depends 
+both on indentation depth and on indenter-GB distance. The model leads to a modified 
+Hall-Petch relation which correctly predicts the dependence of hardness on both 
+parameters, and which at the same time allows to quantitatively predict the GND 
+accumulation between GB and indenter. This is particularly remarkable because we 
+observe in this region that increasing indentation depth and decreasing overall hardness 
+go along with increasing GND density, a finding which is difficult to reconcile with 
+Taylor-based theories of indentation size effects but which, in our analysis, can be 
+readily explained in the context of a pile-up theory. 
+(5) The developed model pertains to very shallow nanoindentation, where the 
+volume probed by the indenter is devoid of pre-existing dislocations. In such 
+circumstances, plasticity is controlled by dislocation generation near or at the indenter-
+sample interface and no bulk dislocation sources or pre-existing bulk dislocations are 
+activated. For experiments carried out under such circumstances, the equations we 
+derive based upon a modified Hall-Petch model may provide a useful tool for analyzing 
+the dependency of hardness on indentation depth and indenter-GB distance. 
+ 
+Acknowledgements 
+This work was supported by National Natural Science Foundation of China (Grant 
+No. 11672251, U1730106); the key R&D program of China (Grant No. 
+2016YFB1102600) and the Opening fund of State Key Laboratory for Strength and 
+Vibration of Mechanical Structures (Grant No. SV2018-KF-10). M.Zaiser also 
+acknowledges support by the Chinese State Administration of Foreign Experts Affairs 
+under Grant No. MS2016XNJT044. X. Zhang is grateful for support from the  
+Humboldt Research Foundation and to Dr. Minsheng Huang for fruitful discussions 
+and comments on the manuscript.29 
+ 
+ 
+ 
+Appendix: Some results from the theory of dislocation pile-ups  
+ 
+A. Stress concentration on the slip zone boundary and Hall-Petch coefficient 
+The theory of dislocation pile-ups in circular and elliptic slip zones was developed by 
+Eshelby [45], using the close analogies with the problem of shear cracks and of 
+ellipsoidal inclusions. Here we mainly refer to the very useful compilation of results 
+by Li and Chou [46]. Consider the displacement across a circular slip zone S of 
+normal vector n and radius R, which is populated by dislocations of Burgers vector b.  
+Assume that the dislocations inside the slip zone are in equilibrium under a shear 
+stress, and that the critical flow stress for a dislocation to move is 
+0
+ . The 
+displacement field across the slip zone then has the radially symmetric form 
+ 
+2
+2
+0
+8(
+)(1
+)
+( )
+( ),
+( )
+(2
+)
+r
+u r
+u r
+R
+r
+b
+
+
+
+
+
+
+
+
+
+
+
+b
+u
+  
+(A1) 
+where r is the radial coordinate [46]. The corresponding dislocation lines can be 
+identified with the circular contour lines where the displacement field has the values kb 
+and k is an integer number. The number of dislocations in the pile up is 
+ 
+0
+8(1
+)(
+)
+(2
+)
+R
+n
+G
+b
+
+
+
+
+
+
+
+
+  
+(A2) 
+and the average stress acting on the outermost dislocation (the dislocation located at 
+thhe boundary of the slip zone) is given by 
+ 
+0
+(
+)
+2
+n
+n 
+
+
+
+
+  
+(A3) 
+ 
+To assess the critical shear stress that must act in the slip zone for the outermost 
+dislocation to be transmitted through a GB at the boundary of the slip zone, we equate 
+n
+ to the critical resolved shear stress 
+CRSS
+
+ for grain boundary passing. Using 
+(A2,A3) and resolving with respect to , we obtain the Hall-Petch type relationship30 
+ 
+ 
+1/2
+CRSS
+0
+(2
+)
+4(1
+)
+G
+b
+R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+(A4) 
+With Eq. (10) of the main paper, a GB misorientation angle of 
+5
+
+ and the 
+parameters of Table 1 we find 
+CRSS
+/ 38
+700
+G
+
+
+
+MPa. A Hall-Petch coefficient for 
+indentation is then obtained from Eq. (A4) as follows: First we multiply by an effective 
+Schmid factor which for the near-[100] orientation of the indentation direction used in 
+our simulations we take to be 
+6
+M 
+, to obtain an equivalent relation for an axial 
+yield stress . Next, we multiply with a constraint factor C to convert this yield stress 
+into a hardness value H
+C
+
+.  
+ 
+In applying this procedure a word of caution is appropriate. The constraint factor as 
+introduced by Tabor [47] accounts for the fact that the material within the plastic zone 
+pushes against the surrounding, plastically undeformed material and accordingly 
+experiences a back stress in form of a hydrostatic pressure. This pressure, in turn, 
+reduces the shear stress driving plastic deformation, which therefore can only proceed 
+if an enhanced force is exerted on the indenter. For metals where the bulk axial yield 
+stress is much less than the elastic modulus, a calculation assuming ideally plastic 
+behavior and an isotropic Von Mises type yield surface leads to a constraint factor 
+3
+C  which relates the hardness to the uniaxial yield stress.  
+ 
+However, in the present case the assumptions of ideally plastic behavior and plastic 
+isotropy are surely unwarranted. In fact, the entire model outlined above is built on the 
+assumption that plasticity is confined to platelet-like slip zones which follow 
+crystallographic slip planes, and in which significant back stresses are building up, 
+indicating kinematic hardening. Furthermore, one might argue that the model already 
+accounts for the back stress of dislocations pushing against the boundary of the plastic 
+zone, and that the inclusion of a constraint factor runs into the danger of counting these 
+stresses twice.31 
+ 
+It is therefore fortuitous that an actual evaluation of the constraint factor for the present 
+simulations demonstrate that this factor is irrelevant even if we take it into account. To 
+this end, we evaluate the relationship between hardness and axial yield stress using the 
+results of Johnson [48] who obtains for a conical indenter:   
+ 
+ 
+2
+tan
+1 ln
+3
+3
+H
+E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ . 
+(A5) 
+For a conical indenter that produces for a given indentation depth the same indentation 
+area as a Berkovich indenter, 
+19.7
+
+. The Young’s modulus of Al as assumed in the 
+present simulations is 
+76
+E 
+GPa. In the present simulations, typical asymptotic 
+hardness values amount to 
+4
+H 
+ GPa which then leads, with Eq. (A5), to the typical 
+values 
+4.28 GPa,
+/
+1.17
+C
+H
+
+
+
+
+
+. We thus find that, under the conditions 
+prevailing in the present simulations, the confinement factor is close to unity and indeed 
+very differrent from its bulk value. The reason for this discrepancy with naïve 
+expectation is clear: Here we are indenting a material where bulk dislocation activity is 
+absent and plasticity is almost entirely controlled by dislocation nucleation underneath 
+the indenter. Accordingly, the equivalent axial yield stress is no longer very small as 
+compared to the elastic modulus, and deformation in our simulations is mainly elastic 
+and not plastic. The theoretical calculation of the confinement factor confirms what 
+intuition leads to expect: Back stresses are already accounted for by the pile-up 
+formalism, and the additional consideration of plastic confinement is not actually of 
+major impact on the results.  
+ 
+In the following we use the above calculated confinement factor 
+1.17
+C 
+which 
+corresponds to the asymptotic hardness we expect for indentation distant from a GB, 
+and which is close to the lower limit 
+1.1
+C 
+ below which the calculation of a plastic 
+confinement factor becomes meaningless [48]. We emphasize that our results would 
+change little if this factor were left out altogether.32 
+ 
+The Hall-Petch-coefficient for the GB effect on indentation then follows as 
+  
+1/2
+CRSS
+HP
+0
+HP
+(2
+)
+,
+16.19
+GPa
+4(1
+)
+G
+K
+H
+K
+K
+MC
+b
+b
+R
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ . (A6) 
+ 
+B. GND density in a slip zone segment 
+To derive the spatial distribution of the GND tensor corresponding to a circular slip 
+zone, we start from Eq. (A1) and note that the corresponding plastic distortion has the 
+form  
+ 
+p( )
+(
+( ))
+( )
+S
+
+
+
+β r
+n
+u r
+r   
+(A7) 
+where the integral of the delta-like distribution
+( )
+S
+
+r over an arbitrary volume V gives 
+the area of intersection between the slip zone S and the volume V.  
+ 
+ 
+3
+( )d
+S
+V
+S
+V
+A
+r
+
+
+r
+  
+(A8) 
+We may now evaluate the average over the volume V of GND tensor related to the slip 
+distribution (A1) in S. To this end, we use that the Burgers vector b and hence the 
+displacement u are parallel to S and introduce a slip zone coordinate system 
+, ,
+x y z  , 
+where the slip zone is located in the plane 
+0
+z 
+ (hence, the unit vector 
+z 
+e
+n), the
+y  axis is aligned with the intersection between the slip plane (normal vector n) and 
+the GB (normal vector
+xe ), hence 
+/
+y
+x
+x
+
+
+
+e
+n e
+n e
+, and the unit vector in x  
+direction is 
+/
+x
+x
+x
+
+
+
+
+e
+n e
+n n e
+. In this coordinate system, the non-vanishing 
+components of the dislocation density tensor are  
+ 
+(
+/ )
+( )
+,
+(
+/ )
+( )
+(
+/ )
+( )
+,
+(
+/ )
+( )
+xy
+y
+y
+S
+yx
+x
+x
+S
+xx
+x
+y
+S
+yy
+y
+x
+S
+b
+b
+u
+b
+b
+u
+b
+b
+u
+b
+b
+u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+r
+r
+r
+r  . 
+(A9) 
+We now consider a cuboidal volume 
+d
+V  of extension 
+y
+z
+d l
+l
+
+
+, which intersects the 
+slip plane in such a manner that one of its sides is tangential to the slip zone and the 
+area of intersection 
+S
+V
+A  has the form of a circle segment as shown in Fig. A1.33 
+ 
+ 
+Fig. A1: Intersection of a circular slip zone S with the volume Vd contained between 
+grain boundary and indenter. The coordinate axes represent slip system coordinates 
+that are in general inclined with respect to the system coordinates; d  is the 
+projection of the GB-indenter distance d onto the slip plane. 
+ 
+ 
+We now evaluate the dislocation density tensor averaged over the volume 
+d
+V as 
+ 
+(
+)
+,
+(
+)
+,
+d
+d
+yx
+x
+d
+x
+yy
+x
+d
+y
+V
+V
+V b
+V b
+
+
+
+
+
+
+ . 
+(A10) 
+where  
+ 
+1
+(
+)
+( )d d
+S Vd
+y
+d
+x
+y z A
+V
+u r
+x y
+bdl l
+
+
+
+
+
+  
+(A11) 
+can be understood as the average dislocation line density (line length per unit volume)  
+in y  direction. Note that the two components 
+xy
+
+ and
+xx
+
+, which represent line 
+components aligned with the x  direction and involve integration of the y  derivative 
+of u, vanish upon integration due to symmetry. The integration in (A11) can be 
+performed analytically using Eq. (A1), giving the simple result34 
+ 
+ 
+
+
+2
+0
+4(
+)(1
+)
+1
+(
+)
+2
+(2
+)
+y
+d
+y z
+V
+Rd
+d
+bdl l
+G
+
+
+
+
+
+
+
+
+
+
+ . 
+(A12) 
+For a general slip zone that is not perpendicular to the boundary of Vd, the projected 
+segment width fulfills the relation 
+2
+2
+2
+1/2
+2
+2
+(1 ( . ) )
+x
+d
+d
+d
+
+
+
+
+
+ne
+ which for 
+
+]
+1/
+3 111  slip planes intersecting the plane (x=0) in a fcc structure gives the result 
+3/ 2
+
+. We may now combine Eq. (A12) with (A4) and (A5) to express the 
+averaged GND line density as  
+ 
+HP
+1
+(1
+) 4
+6
+(
+)
+(2
+)
+y
+d
+y z
+K
+R
+d
+b
+V
+l l CG
+b
+R
+
+
+
+
+
+
+
+  
+(A13) 
+From this result, the GND tensor due to the considered slip zone derives as   
+ 
+
+]
+(
+)
+(
+) (
+)
+d
+y
+d
+y
+y
+d
+x
+V
+V
+V
+
+
+
+
+
+
+
+
+
+
+
+α
+e
+b
+n e
+b  . 
+(A14) 
+ 
+References  
+[1] J.R. Greer and J.T.M. De Hosson, Progress in Materials Science, Plasticity in Small-Sized 
+Metallic Systems: Intrinsic versus Extrinsic Size Effect. Progr. Mater. Sci. 56 (2011) 654-724. 
+[2] D. Kiener, R. Pippan, C. Motz, H. Kreuzer, Microstructural evolution of the deformed volume 
+beneath microindents in tungsten and copper, Acta Mater. 54(10) (2006) 2801-2811. 
+[3] F. Javaid, E. Bruder, K. Durst, Indentation size effect and dislocation structure evolution in (001) 
+oriented SrTiO 3 Berkovich indentations: HR-EBSD and etch-pit analysis, Acta Mater. 139 (2017) 
+1-10. 
+[4] W.C. Oliver, G.M. Pharr, Improved technique for determining hardness and elastic modulus 
+using load and displacement sensing indentation experiments, J. Mater. Res. 7(06) (1992) 1564-
+1583. 
+[5] H. Fan, Z. Li, M. Huang, Toward a further understanding of intermittent plastic responses in the 
+compressed single/bicrystalline micropillars, Scripta Mater. 66(10) (2012) 813-816. 
+[6] W.A. Soer, Interactions between dislocations and grain boundaries, Groningen: University of 
+Groningen, 2016. 
+[7] W.A. Soer, K.E. Aifantis, J.T.M.D. Hosson, Incipient plasticity during nanoindentation at grain 
+boundaries in body-centered cubic metals, Acta Mater. 53(17) (2005) 4665-4676. 
+[8] G.Z. Voyiadjis, C. Zhang, The mechanical behavior during nanoindentation near the grain 
+boundary in a bicrystal FCC metal, Mat. Sci. Eng. A 621 (2015) 218-228. 
+[9] C. Zhang, G.Z. Voyiadjis, Rate-dependent size effects and material length scales in 
+nanoindentation near the grain boundary for a bicrystal FCC metal, Mater. Sci. Eng. A 659 (2016) 
+55-62. 
+[10] M. Liu, C. Lu, K.A. Tieu, K. Zhou, Crystal plasticity FEM study of nanoindentation behaviors 
+of Cu bicrystals and Cu–Al bicrystals, J. Mater. Res. 30(16) (2015) 2485-2499.35 
+ 
+[11] C. Kirchlechner, F. Toth, F.G. Rammerstorfer, F.D. Fischer, G. Dehm, Pre- and post-buckling 
+behavior of bi-crystalline micropillars: Origin and consequences, Acta Mater. 124 (2017) 195-203. 
+ [12] M.C. Fivel, C.F. Robertson, G.R. Canova, L. Boulanger, Three-dimensional modeling of 
+indent-induced plastic zone at a mesoscale 1, Acta Mater. 46(17) (1998) 6183-6194. 
+[13] Y.L. Chiu, A.H.W. Ngan, A TEM investigation on indentation plastic zones in Ni 3 Al(Cr,B) 
+single crystals, Acta Mater. 50(10) (2002) 2677-2691. 
+[14] J.L. Zhang, S. Zaefferer, D. Raabe, A study on the geometry of dislocation patterns in the 
+surrounding of nanoindents in a TWIP steel using electron channeling contrast imaging and discrete 
+dislocation dynamics simulations, Mater. Sci. Eng. A 636 (2015) 231-242. 
+[15] L. Li, L. Shen, G. Proust, C.K.S. Moy, G. Ranzi, Three-dimensional crystal plasticity finite 
+element simulation of nanoindentation on aluminium alloy 2024, Mat. Sci. Eng. A 579 (2013) 41-
+49. 
+[16] A. Widjaja, A. Needleman, E. Van der Giessen, The effect of indenter shape on sub-micron 
+indentation according to discrete dislocation plasticity, Model. Simul. Mater. Sc 15(1) (2006) S121-
+S131(11). 
+[17] A. Widjaja, E. Van der Giessen, V.S. Deshpande, A. Needleman, Contact area and size effects 
+in discrete dislocation modeling of wedge indentation, J. Mater. Res. 22(3) (2007) 655-663. 
+[18] A. Needleman and E. Van der Giessen, Discrete dislocation plasticity: a simple planar model. 
+Model. Simul. Mater Sci Eng 3 (1999) 689-735. 
+[19] A. Widjaja, E. Van der Giessen, A. Needleman, Discrete dislocation analysis of the wedge 
+indentation of polycrystals, Acta Mater. 55(19) (2007) 6408-6415. 
+[20] C. Ouyang, Z. Li, M. Huang, C. Hou, Discrete dislocation analyses of circular nanoindentation 
+and its size dependence in polycrystals, Acta Mater. 56(12) (2008) 2706-2717. 
+[21] J. Hu, Z. Liu, Y. Cui, F. Liu, Z. Zhuang, A new view of incipient plastic instability during 
+nanoindentation, Chinese. Phys. Lett. 34 (2017) 64-67. 
+[22] G. Po, M.S. Mohamed, T. Crosby, C. Erel, A. El-Azab, N. Ghoniem, Recent progress in discrete 
+dislocation dynamics and its applications to micro plasticity, J. Min. Met. Mat. S. 66(10) (2014) 
+2108-2120. 
+[23] H.J. Chang, M. Fivel, D. Rodney, M. Verdier, Multiscale modelling of indentation in FCC 
+metals: From atomic to continuum, Cr. Phys. 11(3) (2010) 285-292. 
+[24] J.A. El-Awady, S.B. Biner, N.M. Ghoniem, A self-consistent boundary element, parametric 
+dislocation dynamics formulation of plastic flow in finite volumes, J. Mech. Phys. Solids. 56(5) 
+(2008) 2019-2035. 
+[25] H.M. Zbib, M. Rhee, J.P. Hirth, On plastic deformation and the dynamics of 3D dislocations, 
+Int. J. Mech. Sci. 40(2) (1998) 113-127. 
+[26] H.M. Zbib, T. Diaz de la Rubia, A multiscale model of plasticity, Int. J. Plasticity. 18(9) (2002) 
+1133-1163. 
+[27] O. Jamond, R. Gatti, A. Roos,  B. Devincre, Consistent formulation for the discrete-
+continuous model: improving complex dislocation dynamics simulations, Int. J. Plasticity 80 (2016) 
+19-37. 
+[28] M. Huang, S. Liang, Z. Li, An extended 3D discrete-continuous model and its application on 
+single- and bi-crystal micropillars, Model. Simul. Mater. Sc 25 (2017). 
+[29] C. Lemarchand, B. Devincre, L.P. Kubin, Homogenization method for a discrete-continuum 
+simulation of dislocation dynamics, J. Mech. Phys. Solids. 49(9) (2001) 1969-1982.36 
+ 
+[30] Z.L. Liu, X.M. Liu, Z. Zhuang, X.C. You, A multi-scale computational model of crystal 
+plasticity at submicron-to-nanometer scales, Int. J. Plasticity. 25(8) (2009) 1436-1455. 
+[31] A. Vattré, B. Devincre, F. Feyel, R. Gatti, S. Groh, O. Jamond, A. Roos, Modelling crystal 
+plasticity by 3D dislocation dynamics and the finite element method: The Discrete-Continuous 
+Model revisited, J. Mech. Phys. Solids. 63(2) (2014) 491-505. 
+[32] W. Cai, A. Arsenlis, C.R. Weinberger, V.V. Bulatov, A non-singular continuum theory of 
+dislocations, J. Mech. Phys. Solids. 54(3) (2006) 561-587. 
+[33] G.C. Hasson, C. Goux, Interfacial energies of tilt boundaries in aluminium. Experimental and 
+theoretical determination, Scripta Metallurgica 5(10) (1971) 889-894. 
+[34] Z. Li, C. Hou, M. Huang, C. Ouyang, Strengthening mechanism in micro-polycrystals with 
+penetrable grain boundaries by discrete dislocation dynamics simulation and Hall–Petch effect, 
+Comp. Mater. Sci. 46(4) (2009) 1124-1134. 
+[35] L.E. Murr, Some observations of grain boundary ledges and ledges as dislocation sources in 
+metals and alloys, Metallurgical Transactions A 6(3) (1975) 505-513. 
+[36] G.N. Peggs, I.C. Leigh, Recommended procedure for micro-indentation vickers hardness test, 
+Report MOM 62, UK National Physical Laboratory, 1983. 
+[37] M. Yaghoobi and G.Z. Voyiadjis, Large-scale atomistic simulation of size effects during 
+nanoindentation: Dislocation length and hardniess, Materials Science and Engineering A 634 (2015) 
+20-31. 
+[38] X. Zhang, K.E. Aifantis, Interpreting strain bursts and size effects in micropillars using gradient 
+plasticity, Mater. Sci. Eng. A 528(15) (2011) 5036-5043. 
+[39] X. Zhang, K.E. Aifantis, Accounting for grain boundary thickness in the sub-micron and nano 
+scales, Rev. Adv. Mater. Sci. 26(1) (2010) 74-90. 
+[40] D. Lorenz, A. Zeckzer, U. Hilpert, P. Grau, H. Johansen, H.S. Leipner, Pop-in effect as 
+homogeneous nucleation of dislocations during nanoindentation, Phys. Rev. B 67(17) (2003) 386-
+393. 
+[41] H. Bei, Y.F. Gao, S. Shim, E.P. George, G.M. Pharr, Strength differences arising from 
+homogeneous versus heterogeneous dislocation nucleation, Phys. Rev. B 77(6) (2008) 439-446. 
+[42] M.G.Wang, A.H.W. Ngan, Indentation strain burst phenomenon induced by grain boundaries 
+in niobium, J. Mater. Res. 19(8) (2004) 2478-2486. 
+[43] K.E. Aifantis, J. Senger, D. Weygand, M. Zaiser, Discrete dislocation dynamics simulation and 
+continuum modeling of plastic boundary layers in tricrystal micropillars, IOP Conference Series: 
+Mater. Sci. Eng. 3(1) (2009):012025. 
+[44] X. Zhang, K.E. Aifantis, J. Senger, D. Weygand, M. Zaiser, Internal length scale and grain 
+boundary yield strength in gradient models of polycrystal plasticity: How do they relate to the 
+dislocation microstructure? J. Mater. Res. 29(18) (2014) 2116-2128. 
+[45] J.D. Eshelby, The distribution of dislocations in an elliptical glide zone, physica status solidi 3 
+(1963), 2057-2060. 
+[46] J.C.M. Li and Y.T. Chou, The role of dislocations in the flow stress grain size relationships, 
+Metall. Trans 1 (1970), 1145-1159 
+[47] D. Tabor, Hardness of Metals, Clarendon Press, Oxford 1951. 
+[48] K. L. Johnson, The correlation of indentation experiments, J. Mech. Phys. Solids 18 (1970)  
+115-126.

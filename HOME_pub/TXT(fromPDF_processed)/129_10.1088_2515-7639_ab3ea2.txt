@@ -1,0 +1,267 @@
+ACCEPTED MANUSCRIPT • OPEN ACCESS Spectral and optical properties of Ag<sub>3</sub>Au(Se<sub>2</sub>,Te<sub>2</sub>) and dark matter detection To cite this article before publication: Miguel-Ángel Sánchez-Martínez et al 2019 J. Phys. Mater.
+in press https://doi.org/10.1088/2515- 7639/ab3ea2 Manuscript version: Accepted Manuscript Accepted Manuscript is “the version of the article accepted for publication including all changes made as a result of the peer review process, and which may also include the addition to the article by IOP Publishing of a header, an article ID, a cover sheet and/or an ‘Accepted Manuscript’ watermark, but excluding any other editing, typesetting or other changes made by IOP Publishing and/or its licensors” This Accepted Manuscript is © 2019 The Author(s).
+Published by IOP Publishing Ltd.   As the Version of Record of this article is going to be / has been published on a gold open access basis under a CC BY 3.0 licence, this Accepted Manuscript is available for reuse under a CC BY 3.0 licence immediately.
+Everyone is permitted to use all or part of the original content in this article, provided that they adhere to all the terms of the licence https://creativecommons.org/licences/by/3.0 Although reasonable endeavours have been taken to obtain all necessary permissions from third parties to include their copyrighted content within this article, their full citation and copyright line may not be present in this Accepted Manuscript version.
+Before using any content from this article, please refer to the Version of Record on IOPscience once published for full citation and copyright details, as permissions may be required.
+All third party content is fully copyright protected and is not published on a gold open access basis under a CC BY licence, unless that is specifically stated in the figure caption in the Version of Record.
+View the article online for updates and enhancements.
+This content was downloaded from IP address 192.169.218.103 on 23/10/2019 at 01:19Spectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection M.-´A. S´anchez-Mart´ınez † Univ.
+Grenoble Alpes, CNRS, Grenoble INP, Institut N´eel, 38000 Grenoble, France I. Robredo † Donostia International Physics Center, 20018 Donostia-San Sebastian, Spain Department of Condensed Matter Physics, University of the Basque Country UPV/EHU, Apartado 644, 48080 Bilbao, Spain A. Bidaurrazaga Department of Condensed Matter Physics, University of the Basque Country UPV/EHU, Apartado 644, 48080 Bilbao, Spain A. Bergara Department of Condensed Matter Physics, University of the Basque Country UPV/EHU, Apartado 644, 48080 Bilbao, Spain Donostia International Physics Center, 20018 Donostia-San Sebastian, Spain Centro de Fsica de Materiales CFM, Centro Mixto CSIC-UPV/EHU, 20018 Donostia, Spain.
+F. de Juan Donostia International Physics Center, 20018 Donostia-San Sebastian, Spain IKERBASQUE, Basque Foundation for Science, Maria Diaz de Haro 3, 48013 Bilbao, Spain A. G. Grushin Univ.
+Grenoble Alpes, CNRS, Grenoble INP, Institut N´eel, 38000 Grenoble, France M. G. Vergniory Donostia International Physics Center, 20018 Donostia-San Sebastian, Spain IKERBASQUE, Basque Foundation for Science, Maria Diaz de Haro 3, 48013 Bilbao, Spain Abstract.
+In this work we study the electronic structure of Ag3AuSe2 and Ag3AuTe2, two chiral insulators whose gap can be tuned through small changes in the lattice parameter by applying hydrostatic pressure or choosing diﬀerent growth protocols.
+Based on ﬁrst principles calculations we compute their band structure for diﬀerent values of the lattice parameters and show that while † These authors contributed equally.
+Page 1 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 2 Ag3AuSe2 retains its direct narrow gap at the Γ point, Ag3AuTe2 can turn into a metal.
+Focusing on Ag3AuSe2 we derive a low energy model around Γ using group theory, which we use to calculate the optical conductivity for diﬀerent values of the lattice constant.
+We discuss our results in the context of detection of light dark matter particles, which have masses of the order of a keV, and conclude that Ag3AuSe2 satisﬁes three important requirements for a suitable detector: small Fermi velocities, meV band gap and low photon screening.
+Our work motivates the growth of high-quality and large samples of Ag3AuSe2 to be used as target materials in dark matter detectors.
+Page 2 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 3 1.
+Introduction Narrow gap semiconductors belong to a particular branch of the semiconductor family, those with a narrow forbidden energy window, the gap, between valence and conduction bands.
+They were ﬁrst applied as infrared detectors, with Hg1−xCdxTe [1] as a representative example, due to its largely tunable band gap around infrared frequencies.
+A particularly recent and promising application of narrow gap semiconductors is the direct detection of light dark matter particles [2, 3, 4], an approach that complements those based on superconductors [5, 6, 7] and phonons in polar materials [8].
+GaAs and sapphire are two extensively studied examples of the above [ 9].
+These proposals are tailored to detect dark matter particles with keV masses, which requires materials with gaps in the meV range [3] to match the expected energy deposition.
+To increase their sensitivity, narrow gap semiconductors must satisfy additional requirements, such as small Fermi velocities compared to the maximum dark matter velocities, or practical viability in terms of cost and purity [2, 4].
+They should also have a clean bandstructure around the Fermi level, ideally having a localized narrow gap with a much bigger gap along the rest of the Brillouin Zone.
+In this context, it is possible to achieve a highly tunable gap by changing the lattice parameter, either by applying hydrostatic pressure or by changing the method used to grow the crystal.
+This has the eﬀect of bringing the ions closer (or farther) from each other, translating into small changes in the band structure.
+With ab-initio techniques, it is possible to predict the eﬀect of small changes of the lattice parameter in the bands, in particular the magnitude of the gap.
+Fischesserite (Ag3AuSe2) and petzite (Ag3AuTe2) are both naturally occurring (and easily grown) minerals [10, 11, 12] that have been studied, both theoretically and experimentally [13, 14, 15, 16].
+They both have a narrow, direct gap, centered at Γ, which makes them optically active.
+They have been previously found to have important mechanical applications, as well as interesting thermoelectric properties (large room-temperature Seebeck coeﬃcient), and are also known to possess large magnetoresistance[14, 17].
+In this work we study the eﬀect that small changes in the lattice parameter have on the properties of Ag3AuSe2 and Ag3AuTe2, to ﬁnd that their gap is highly tunable through hydrostatic pressure.
+We perform a theoretical analysis of the band structure for both compounds, which share spectral properties, and we focus on Ag3AuSe2 to calculate its optical conductivity using an eﬀective model for the bands near the Fermi level.
+We conclude by discussing the suitability of this material to detect light dark matter particles. 2.
+Analysis based on Density Functional Theory Ag3AuSe2 and Ag3AuTe2 crystallize in the Sohncke space group I4132 (space group 214, see Fig. 1), and are predicted to hold high order topologically protected nodal points in their band structure [18].
+In the absence of external pressure, both have been diagnosed as trivial insulators in a recent works [19, 20, 21].
+Space group I4132(214) is a chiral non-symmorphic space group; it is not centro-symmetric or mirror-symmetric and some of the symmetry operations contain non-integer translations [22].
+We have used Density Functional Theory (DFT) [25, 26] as implemented in the Vienna Ab initio Simulation Package (VASP) [27, 28] to perform band structure calculations.
+To account for the interaction between ion cores and valence Page 3 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 4 Figure 1.
+Crystalline structure (a) and Brillouin zone [23, 24] (b) of Ag3AuSe2. electrons we used the projector augmented-wave method (PAW) [29].
+We use the generalized gradient approximation (GGA) for the exchange-correlation potential with the Perdew-Burke-Ernkzerhof functional for solids parameterization [30] and consider the spin-orbit coupling (SOC) interaction as implemented within the second variation method [31].
+Although it has a small eﬀect in the width of the gap, SOC is important to extract the eﬀective values of the Fermi velocities.
+We have used a Monkhorst-Pack k-point grid of (7 × 7 × 7) for reciprocal space integration and a 500 eV energy cutoﬀ of the plane-wave expansion.
+We have computed the band structures for both compounds, Ag3AuSe2 and Ag3AuTe2, for diﬀerent values of the lattice parameters along high-symmetry points of the Brillouin zone.
+Fig. 2 shows that the gap of Ag3AuSe2 increases from 13.8 meV to 60 meV for a compression of 2%, and reaches 200 meV for a compression of 4% at Γ, keeping it as a global direct gap.
+This implies that the interband optical conductivity and the suitability as a dark matter detector, both relaying on the interband transitions across the gap [2], will be determined by the bands in the neighborhood of the Γ point for a wide range of frequencies.
+The Te-based compound on the other hand is a semiconductor with small indirect gap originally, and the change in the lattice parameter transforms it into a metal.
+Therefore, among these two, Ag3AuSe2 is the most promising for detector applications, due to its small tunable direct band gap at Γ. In the next section we construct an eﬀective model around this high-symmetry point to further analyze its optical conductivity and potential as a dark matter detector.
+3. Eﬀective model In this section we use group theory to construct the most general low energy Hamiltonian allowed by symmetry for the four last valence and ﬁrst two conduction bands.
+We also allow terms that couple the valence and conduction band sub-spaces, resulting in a six-band model.
+To determine the free parameters of the eﬀective Hamiltonian we ﬁt its spectrum to the ab-initio bands found in the previous section Page 4 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 5 Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuSe2 Bandstructure (0%) Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuTe2 Bandstructure (0%) Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuSe2 Bandstructure (2%) Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuTe2 Bandstructure (2%) Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuSe2 Bandstructure (4%) Γ H N Γ P H|P N -1 0 1 Energy (eV) Ag3AuTe2 Bandstructure (4%) Figure 2.
+Bandstructures of Ag3AuSe2 and Ag3AuTe2 for diﬀerent choices of the parameters.
+By reducing the lattice parameter the gap widens for the Se compound while not changing the overall band dispersion.
+The Te compound, however, becomes metallic.
+for diﬀerent values of the lattice constant. 3.1.
+How to build eﬀective models In general, an eﬀective Hamiltonian, which will describe the crossing of n bands, can be written as H(⃗k) = Ψ∗ i Hi,j(⃗k)Ψj = n  i,j Ψ∗ i ΨjHi,j(⃗k) =  a (Ψ∗Ψ)a Ha, (1) where Ψi are the Bloch states of the Hamiltonian and (Ψ∗Ψ)a are the bilinears, that can be written as (Ψ∗ i Ψj)a = λa ij, (2) where a ∈{0, 1, 2, ..., n2} labels the bilinear and λa are complex Hermitian matrices that form a basis under which the Hamiltonian can be expanded.
+In the following we will develop the low energy Hamiltonian for Ag3AuSe2.
+Diﬀerent values of the model parameters correspond to diﬀerent values of the lattice constant by which we take into account diﬀerent values of the hydrostatic pressure.
+To compute the optical conductivity and asses the absorption of the material due to Page 5 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 6 0.1 -0.1  2fold 4fold 1 1 Figure 3.
+Band structure of Ag3AuSe2 with lattice parameter 2% smaller than the original.
+Inset: the narrow gap at Γ lies between a twofold fermion (Weyl fermion) and a fourfold-fermion.
+The interband transition across the gap is the relevant to our optical conductivity, and is shown schematically with a vertical arrow.
+Each horizontal tick corresponds to 10 meV. transitions across the gap we aim to construct the lowest order model that describes optical transitions across the minimal gap, which occurs at the Γ point.
+We focus on the ﬁrst four valence bands below the Fermi level, forming a 4 dimensional energy crossing topologically protected by symmetry (fourfold fermion), and the ﬁrst two conduction bands above the Fermi level, described by a two-dimensional crossing also topologically protected by symmetry (twofold fermion)[13], as shown in the inset of Fig. 3.
+To construct Hamiltonians invariant under the point group operations, we need to ﬁnd combinations of bilinears and powers of momentum that transform under the trivial representation of the little group at Γ, which is isomorphic to the Point Group O (432).
+Powers of crystal momentum will transform under symmetry operations as a representation ρ.
+In particular, for this group the representation under which momentum transforms reads ρ(⃗k) = T1(kx, ky, kz) ⊕A1(|⃗k|2) ⊕T2(kykz, kzkx, kxky) + O(k3), (3) where T1, A1 and T2 are irreducible representations of the Point Group O.
+Given the representation expansion of the momentum in Eq. 3, we can form invariants from the combination of bilinears that transform under those same representations.
+The twofold band crossing is composed of two quadratic bands, and thus we consider second order terms in the momentum.
+For the fourfold band crossing and the coupling terms between the fourfold and twofold sub-spaces linear order in ⃗k will suﬃce.
+This will give us the lowest possible order Hamiltonian that contributes to the optical conductivity.
+Page 6 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 7 3.2.
+Eﬀective Hamiltonian for conduction bands In this case we need to ﬁnd bilinears that transform under T1, A1 and T2.
+In the basis of Pauli matrices, the bilinears transform as ρ(σμ) = A1(σ0) ⊕T1(⃗σ).
+(4) The absence of T2 in the expansion implies that there is no symmetry-allowed term that can go with T2(kykz, kzkx, kxky).
+Thus, the eﬀective Hamiltonian reads H2band = α|⃗k|2σ0 + vF⃗k · ⃗σ =  α|⃗k|2 + vF kz vF (kx −iky) vF (kx + iky) α|⃗k|2 −vF kz  , (5) where α and vF are the coeﬃcients that will be ﬁtted to our ab-initio results. 3.3.
+Eﬀective Hamiltonian for valence bands For the fourfold band crossing a basis of 4 × 4 Hermitian matrices is required.
+Since there are only two sets of matrices that transform under the T1 representation ( ⃗λ1 and ⃗λ2), there are only two linear terms in momentum allowed in the Hamiltonian H4band = v1 F⃗k · ⃗λ1 + v2 F⃗k · ⃗λ2 (6) = ⎛ ⎜ ⎜ ⎜ ⎝ kzv1 F (kx −iky)v1 F  e−11iπ 12 kx + e−iπ 12 ky 	 v2 F e−3iπ 4 kzv2 F (kx + iky)v1 F −kzv1 F e 3iπ 4 kzv2 F  e 7iπ 12 kx + e 5iπ 12 ky 	 v2 F  e 11iπ 12 kx + e iπ 12 ky 	 v2 F e−3iπ 4 kzv2 F −kzv1 F (ky −ikx)v1 F e 3iπ 4 kzv2 F  e−7iπ 12 kx + e−5iπ 12 ky 	 v2 F (ikx + ky)v1 F kzv1 F ⎞ ⎟ ⎟ ⎟ ⎠. 3.4.
+Coupling Hamiltonian So far we have computed the eﬀective Hamiltonians for the twofold band and fourfold band crossings.
+Since these two Hilbert subspaces are orthogonal to each other, the matrix elements of the interband current operator, relevant to compute the optical conductivity, will vanish.
+To describe transitions accross the gap that connect the fourfold and twofold bands we have to add symmetry allowed terms that mix these two subspaces.
+There is only one allowed term at ﬁrst order in momentum, which reads Hcp = δ  −kx e iπ 3 ky + e−5iπ 6 kz −e 5iπ 12 ky −e 7iπ 12 kz e iπ 4 kx e iπ 3 ky −e−5iπ 6 kz kx −ie iπ 4 kx ie 5iπ 12 ky −ie 7iπ 12 kz  . (7) 3.5.
+Low energy Hamiltonian and parameters Combining the above results the full eﬀective Hamiltonian reads H(⃗k) =   H2band + Δ12×2 Hcp H† cp H4band −Δ14×4  , (8) where we have added the parameter Δ that sets the gap between the twofold and fourfold crossings to be 2Δ. We obtained the values of the parameters in the Hamiltonian Eq. (8) by ﬁtting ab-initio bands for three diﬀerent choices of lattice parameters.
+Labelling the unperturbed lattice parameter as a0 [32], we deﬁne the lattice parameter under pressure as a = pa0 for p = 0.99, 0, 98, 0.97, which amounts to compressions by 1%, 2%, and 3%, respectively.
+We display the ﬁtted values in Table 1, and the corresponding bands are plotted in Fig. 4 (a) and (b) for 1% compression, and Fig. 5 (a) and (b) for 2% and 3% compression, respectively.
+Page 7 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 8 1% 2% 3% vs F 0.164 0.141 0.105 va F 0.228 0.211 0.178 vF 0.390 0.398 0.371 α 55.637 50.891 44.694 δ 0.370 0.587 0.690 Δ 0.009 0.030 0.056 Table 1.
+Fitted values for diﬀerent choices of lattice parameter compression.
+The units are expressed in terms of ¯h = c = 1 with ⃗k in units of 2π/a, where a = pa0, a0 is the unperturbed lattice constant and p = 0.99, 0.98, 0.97 for 1%, 2%, 3% hydrostatic pressure respectively.
+4. Optical conductivity In this section we compute and discuss the interband optical conductivity of the six- band k · p Hamiltonian describing the band structure of Ag3AuSe2 near the Γ point for three diﬀerent hydrostatic pressures: 1%, 2%, and 3% compression of the lattice parameter.
+In all three cases, the band structure exhibits a fourfold node below the Fermi level and a Weyl node above it, separated by a gap whose size will depend on the pressure.
+The interband contribution to the conductivity tensor σμν, where μ, ν = x, y, z, can be calculated using standard linear response theory as the real part of [33] σμν(ω) = ie2 ωV  m̸=n ⟨n| jμ |m⟩⟨m| jν |n⟩ ϵn −ϵm + ¯hω + iδ (nF (ϵn) −nF (ϵm)) , (9) where jμ = 1 ¯h∂kμH is the current operator deﬁned by the Hamiltonian, e is the charge of the electron, V is the volume, |n⟩and En are an eigenstate and the corresponding eigenvalue of the Hamiltonian, respectively, δ is an inﬁnitesimal broadening; ϵn = En−μ, where μ is the chemical potential and nF is the Fermi function, which depends on ϵn, μ, and the inverse temperature β = 1/kBT in units of the Boltzmann constant kB. 4.1.
+Optical conductivity and relevant transitions for a given lattice parameter As discussed in the previous section, for the three values of compression 1%, 2%, and 3%, the bands are separated into a set of four bands, which we refer to as valence bands, that deﬁne the fourfold fermion below the chemical potential, and a set of two bands, which we refer to as the conduction bands, that deﬁne the Weyl fermion above the chemical potential.
+Note that while in in the full ab-initio bands there exists a full gap between the two sets of bands (see e.g. Fig. 3), in the low energy model the gap is not fully open.
+To understand the relevant optical transitions and their contribution to the optical conductivity we ﬁrst ﬁx the lattice constant to a compression of 1% by choosing the corresponding set of parameters (see Table 1).
+The band structure of the resulting k · p Hamiltonian is shown in Fig. 4 (a) and (b) with two diﬀerent scales for better readability, together with the relevant activation frequencies.
+The energies involved in the transitions between the fourfold fermion and the Weyl fermion are smaller than in the other two cases, which allows us to study the behavior of the optical conductivity with all possible activation frequencies in a smaller energy range.
+Page 8 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 9 −0.10 −0.05 0.00 0.05 0.10 [100] ← k → [111] 0 50 100 150 200 250 E/meV Band 3 Band 4 Band 5 Band 6 ω9 ω10 ω11 ω12 (b) −0.2 0.0 0.2 [100] ← k → [111] −50 0 50 100 150 E/meV Band 1 Band 2 Band 3 Band 4 Band 5 Band 6 ω8 ω7 ω1 ω2 ω3 ω4 ω5 ω6 (a) 0 50 100 150 ¯hω/meV 0 200 400 600 σxx(10−4e2/h) Band 2 →Band 3 Band 3 →Band 4 Total (d) d) 0 50 100 150 ¯hω/meV 0 1 2 3 4 5 σxx(10−4e2/h) Total Fourfold →Band 5 Fourfold →Band 6 (c) c) Figure 4.
+Optical conductivity of the low energy k · p model of Ag3AuSe2 under 1% hydrostatic pressure.
+(a) and (b) show the same band structure within two diﬀerent energy windows, together with the relevant frequencies for optical transitions (colored vertical arrows) and the chemical potential (blue horizontal line).
+The bands are labelled with numbers from 1 to 6 from bottom (orange band) to top (pink band).
+Figures (c) and (d) show the optical conductivity corresponding to valence to conduction band transitions (c) and interband transitions between the valence bands (d), with β = 1/kBT = 2 × 103.
+The transitions between the six bands can be divided in two groups: the ones that only concern transitions between the valence bands, with activation frequencies ωi with i ∈[3, 8], and those corresponding to transitions connecting the valence and the conduction bands, with activation frequencies ωi with i = 1, 2 and i ∈[9, 12].
+Since in the real material the transitions between the fourfold valence bands will be Pauli blocked, we separate them from those connecting the valence and conduction bands, which are the only ones allowed in the real material.
+This justiﬁes our choice of chemical potential: it is close to the Weyl node, shifting the activation frequencies between bands of the fourfold to higher frequencies.
+In Fig. 4 (c) and (d) we show the optical conductivity associated to both types of transitions, with the characteristic frequencies represented by vertical lines matching the colors in Fig. 4 (a) and (b).
+The valence to conduction transitions are shown in Fig. 4 (c), which shows a characteristic maximum that falls oﬀas the frequency is increased.
+On the other hand, Fig. 4 (d) shows the transitions between valence bands, which display a linear behaviour σ ∝ω characteristic of an asymmetric fourfold fermion [34].
+In both cases, the changes in the optical conductivity match well the Page 9 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 10 −2 −1 0 1 2 [100] ← k → [111] −300 −200 −100 0 100 200 300 E/meV Band 1 Band 2 Band 3 Band 4 Band 5 Band 6 (b) −2 −1 0 1 2 [100] ← k → [111] −300 −200 −100 0 100 200 300 E/meV Band 1 Band 2 Band 3 Band 4 Band 5 Band 6 (a) 0 50 100 150 200 250 300 ¯hω/meV 0 500 1000 1500 2000 σxx(10−4e2/h) 1% 2% 3% (d) (d) 0 50 100 150 200 250 300 ¯hω/meV 0 1 2 3 4 5 σxx(10−4e2/h) 1% 2% 3% (c) c) Figure 5.
+Optical conductivity of the low energy k·p model of Ag3AuSe2 under diﬀerent hydrostatic pressures (1 −3%).
+(a) and (b) show the band structures for 2% and 3%, respectively, with the same color coding as the bands for the 1% case in Fig. 4. (c) and (d) show the contribution to the optical conductivity arising from interband transitions between valence and conduction bands (c) and between valence bands (d), with β = 1/kBT = 2 × 103.
+activation frequencies expected from the band structure in Fig. 4 (a) and (b).
+The optical conductivity of the six-band k · p Hamiltonian applies strictly to a narrow region in momentum-energy space yet Fig. 4 is enlightening to understand what to expect from the optical conductivity of the real Ag3AuSe2 and, in the next section, its usefulness to detect light dark matter. 4.2.
+Optical conductivity for diﬀerent lattice parameters As we increase the pressure to 2% (Fig. 5 (a)) and 3% (Fig. 5 (b)) the gap becomes larger, and the parameters describing both the fourfold and the Weyl fermion are modiﬁed (see Table 1).
+The Fermi velocity of the bands for each case, an important parameter for light dark matter detection [2], as well as the oﬀ-diagonal matrix elements connecting the fourfold and the Weyl fermions, change.
+Upon doing so, they modify the energy scales involved in the optical transitions, thus shifting the activation frequencies from valence to conduction interband transitions to higher energies with higher separation between them.
+This results in a slower change of slope in the optical conductivity and, as the pressure increases, the optical conductivity arising from valence to conduction interband transitions is closer to a linear behaviour σ ∝ω, Page 10 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 11 1% 2% 3% vs F 0.397 0.339 0.250 va F 0.552 0.507 0.423 vF 0.945 0.956 0.882 δ 0.896 1.409 1.640 Table 2.
+Fermi velocities of Table 1 in units of 105m/s for diﬀerent hydrostatic pressure percentages.
+as shown in Fig. 5 (c).
+Since we have placed the chemical potential close to the Weyl node, the activation frequencies of the interband transitions between the valence bands are shifted as the pressure increases proportionally to the chemical potential.
+This translates into larger regions where the optical conductivity behaves linearly due to the increased separation between activation frequencies (see Fig. 5 (d)).
+5. Feasibility for light dark matter detection For a material with a linear dispersion to be a realistic candidate to detect light dark matter (meV deposition energies) it is necessary to fulﬁll the following main criteria: i) small gap (meV); ii) small Fermi velocity; iii) small photon screening at energies close to the energy deposition range; and iv) scalable material growth.
+As we now explain, our results indicate that Ag3AuSe2 meets the ﬁrst three criteria.
+The extent to which they are met varies with the lattice constant and suggesting that realizing a tunable detector is possible.
+Regarding point i), if one is to detect dark matter with keV mass, it is necessary that the band gap is of the order of the deposition energy ED ∼meV. Additionally the detector should be kept at a temperature lower than this energy scale to reduce undesired thermal noise.
+As we have discussed, Ag3AuSe2 with diﬀerent lattice constants, achieved by diﬀerent growth rates or hydrostatic pressures, can reach the meV range, satisfying point i).
+The scattering between dark matter and the target material is kinematically constrained if the target velocity, the Fermi velocity, is faster than the largest possible dark matter velocity [2], vmax ∼2.6 × 10−3c.
+From Fig. 3 it is already apparent that the valence bands close to the Γ point are relatively ﬂat.
+More precisely, from Table 2 we see that all Fermi velocities are vF ∼10−4c < vmax, hence satisfying point ii).
+The real part of the optical conductivity determines the absorption of the material.
+As described in [2, 9] for the scattering amplitude between the incident dark matter and the target to be large, it is beneﬁcial that the photon is not strongly screened by the medium where it propagates, compared to a metal.
+This requirement is satisﬁed for a narrow gap Dirac material because the real part of the optical conductivity scales linearly with frequency [2, 35] and the imaginary part of the dielectric tensor ϵ = 1+iσ/ω remains small as a function of frequency.
+For Ag3AuSe2 at 3% (see Fig. 5 (c)) the optical conductivity grows linear as well, resulting in a dielectric constant that renders a small in-medium polarization for the photon, a necessary condition for a large scattering rate, as listed in point iii).
+Finally, a dark matter detector must be sensitive to a small number of counts per year, for which the target material must be grown as large and pure as possible.
+Currently we are not aware of whether it is possible to grow Ag3AuSe2 in large crystals Page 11 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 12 and defect free, yet we expect that our results should encourage experimental eﬀorts in this direction.
+The discussion regarding points i)-iii) above indicate that growing Ag3AuSe2 with diﬀerent lattice constants can screen diﬀerent, and possibly overlapping regions of parameter space.
+Although a full analysis of the detection capabilities is out of the scope of this work, the above discussion suggests that a detector that combines diﬀerent samples of Ag3AuSe2 with diﬀerent lattice parameters can be useful to screen diﬀerent ranges of dark matter masses.
+6. Conclusion In this work we have studied the band structure of chiral two narrow gap semiconductors under pressure, Ag3AuSe2 and Ag3AuTe2 as candidates for dark matter detection for the ﬁrst time, as well as the optical conductivity for diﬀerent values of lattice parameters of the most promising candidate, Ag3AuSe2.
+We found that increasing the pressure decreases the Fermi velocity, and results in a larger gap.
+As the pressure increases these band structure features translate into a slower change of slope of the optical conductivity as the frequency increases, into a nearly linear frequency dependence.
+We showed that Ag3AuSe2 satisﬁes three important requirements to be a candidate as a target material for light dark matter detection: a meV gap, shallow Fermi velocities, and small absorption.
+Our work sets the basis for an in depth study of the capabilities of Ag3AuSe2 as a light dark matter detector along the lines of Ref.
+[2], that can consider ﬁnite momentum scattering and map the precise phase space accessible to a detector based on this material.
+Experimentally, the dark matter detector we envision follows similar design principles to earlier detector proposals [2, 36, 5, 9].
+An important requirement is the growth of large and clean single crystals, placed under ground to screen against undesired false positives [37].
+For suﬃciently large cross sections, it may be necessary to take into account scattering with the Earth that can prevent the dark matter particle from reaching the detector [38].
+For further details on the experimental requirements we refer the reader to the recent review [37].
+As a ﬁnal outlook, we note that the absence of mirror symmetries in these materials allows them to present other interesting optical responses that are only allowed in chiral space groups.
+These include the gyrotropic magnetic eﬀect, which is the rotation of the polarization plane of light as it transverses the material, and a quantized circular photogalvanic eﬀect, which is a photocurrent that grows linear in time induced by circularly polarized light set by fundamental constants only [39].
+In conclusion, we expect that our results wil encourage the growth of pure and large Ag3AuSe2 crystals that can serve to study chiral optical phenomena and may help to design scalable and tunable dark matter detectors in the future, based on the changes in the band structure caused by diﬀerent lattice constants.
+7. Acknowledgments We acknowledge support from the European Union’s Horizon 2020 research and in- novation programme under the Marie-Sklodowska-Curie grant agreement No. 754303 and the GreQuE Cofund programme (M. A. S. M).
+A. G. G. is also supported by the ANR under the grant ANR-18-CE30-0001-01 and the European FET-OPEN Page 12 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 13 SCHINES project No. 829044.
+MGV acknowledges the IS2016-75862-P national project of the Spanish MINECO.
+A.B. acknowledges ﬁnancial support from the Span- ish Ministry of Economy and Competitiveness (FIS2016-76617-P) and the Department of Education, Universities and Research of the Basque Government and the University of the Basque Country (IT756-13).
+[1] W.D. Lawson, S. Nielsen, E.H. Putley, and A.S. Young.
+Preparation and properties of hgte and mixed crystals of hgte-cdte.
+Journal of Physics and Chemistry of Solids, 9(3):325 – 329, 1959.
+[2] Yonit Hochberg, Yonatan Kahn, Mariangela Lisanti, Kathryn M. Zurek, Adolfo G. Grushin, Roni Ilan, Sin´ead M. Griﬃn, Zhen-Fei Liu, Sophie F. Weber, and Jeﬀrey B. Neaton.
+Detection of sub-mev dark matter with three-dimensional dirac materials.
+Phys. Rev. D, 97:015004, Jan 2018. [3] Tongyan Lin.
+TASI lectures on dark matter models and direct detection.
+arXiv e-prints, page arXiv:1904.07915, Apr 2019.
+[4] R. Matthias Geilhufe, Bart Olsthoorn, Alfredo D. Ferella, Timo Koski, Felix Kahlhoefer, Jan Conrad, and Alexander V. Balatsky.
+Materials informatics for dark matter detection.
+physica status solidi (RRL) Rapid Research Letters, 12(11):1800293, 2018.
+[5] Yonit Hochberg, Yue Zhao, and Kathryn M. Zurek.
+Superconducting detectors for superlight dark matter. Phys.
+Rev. Lett., 116:011301, Jan 2016.
+[6] Yonit Hochberg, Matt Pyle, Yue Zhao, and Kathryn M. Zurek.
+Detecting superlight dark matter with fermi-degenerate materials.
+Journal of High Energy Physics, 2016(8):57, Aug 2016.
+[7] Yonit Hochberg, Tongyan Lin, and Kathryn M. Zurek.
+Detecting ultralight bosonic dark matter via absorption in superconductors.
+Phys. Rev. D, 94:015019, Jul 2016.
+[8] Simon Knapen, Tongyan Lin, Matt Pyle, and Kathryn M. Zurek.
+Detection of light dark matter with optical phonons in polar materials.
+Physics Letters B, 785:386 – 390, 2018.
+[9] Sinead Griﬃn, Simon Knapen, Tongyan Lin, and Kathryn M. Zurek.
+Directional detection of light dark matter with polar materials.
+Phys. Rev. D, 98:115034, Dec 2018.
+[10] Z. Johan, P. Picot, R. Pierrot, and M. Kvacek.
+La ﬁschesserite, ag8ause2, premier seleniure d’or, isotype de la petzite.
+Bulletin de la Societe francaise de Mineralogie et de Cristallographie, 94:381, Feb 1971.
+[11] Louis J. Cabri.
+Phase relations in the au-ag-te systems and their mineralogical signiﬁcance.
+Economic Geology, 60:1569, 1965.
+[12] S Chamid, E. A. Pobiedenskaya, E. M. Spiridinova, and Belov. N. V. Sov. Phys.
+Cryst., 23:267, 1978.
+[13] Guoqing Chang, Benjamin J Wieder, Frank Schindler, Daniel S Sanchez, Ilya Belopolski, Shin- Ming Huang, Bahadur Singh, Di Wu, Tay-Rong Chang, Titus Neupert, Su-Yang Xu, Hsin Lin, and M Zahid Hasan.
+Topological quantum properties of chiral crystals.
+Nature materials, 17(11):978–985, 2018.
+[14] D. P. Young, C. L. Brown, P. Khalifah, R. J. Cava, and A. P. Ramirez.
+Thermoelectric properties of ag3aute2.
+Journal of Applied Physics, 88(9):5221–5224, 2000.
+[15] M. Faizan, G. Murtaza, Sikander Azam, Saleem Ayaz Khan, Asif Mahmood, and Abdullah Yar.
+Elastic and optoelectronic properties of novel ag3ause2 and ag3aute2 semiconductors.
+Materials Science in Semiconductor Processing, 52:8 – 15, 2016.
+[16] C.M. Fang, R.A. de Groot, and G.A. Wiegers.
+Ab initio band structure calculations of the low-temperature phases of ag2se, ag2te and ag3ause2.
+Journal of Physics and Chemistry of Solids, 63(3):457 – 464, 2002.
+[17] R. Xu, A. Husmann, T. Rosenbaum, M.-L. Saboungi, J. Enderby, and P. Littlewood.
+arge magnetoresistance in non-magnetic silver chalcogenides.
+Nature, 390:57, 1997.
+[18] Barry Bradlyn, Jennifer Cano, Zhijun Wang, M. G. Vergniory, C. Felser, R. J. Cava, and B. Andrei Bernevig.
+Beyond dirac and weyl fermions: Unconventional quasiparticles in conventional crystals.
+Science, 353(6299), 2016.
+[19] Barry Bradlyn, L. Elcoro, Jennifer Cano, M. G. Vergniory, Zhijun Wang, C. Felser, M. I. Aroyo, and B. Andrei Bernevig.
+Topological quantum chemistry.
+Nature, 547:298–305, 2017.
+[20] M. G. Vergniory, L. Elcoro, Claudia Felser, Nicolas Regnault, B. Andrei Bernevig, and Zhijun Wang.
+A complete catalogue of high-quality topological materials.
+Nature, 566:480–485, 2019.
+[21] Topological materials database, www.topologicalquantumchemistry.com.
+[22] C.J. Bradley and A.P. Cracknell.
+The mathematical theory of symmetry in solids: representation theory for point groups and space groups.
+Clarendon Press, 1972.
+Page 13 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted ManuscriptSpectral and optical properties of Ag3Au(Se2,Te2) and dark matter detection 14 [23] M. I. Aroyo, J. M. Perez-Mato, Capillas, E. Kroumova, S. Ivantchev, G. Madariaga, A. Kirov, and H. Wondratschek.
+Bilbao crystallographic server i: Databases and crystallographic computing programs.
+Z. Krist., 221(1):15–27, 2006.
+[24] Mois I. Aroyo, Asen Kirov, Cesar Capillas, J. M. Perez-Mato, and Hans Wondratschek.
+Bilbao Crystallographic Server. II.
+Representations of crystallographic point groups and space groups.
+Acta Crystallographica Section A, 62(2):115–128, Mar 2006.
+[25] P. Hohenberg and W. Kohn.
+Inhomogeneous electron gas.
+Phys. Rev., 136:B864–B871, Nov 1964.
+[26] W. Kohn and L. J. Sham.
+Self-consistent equations including exchange and correlation eﬀects.
+Phys. Rev., 140:A1133–A1138, Nov 1965.
+[27] G. Kresse and J. Furthmller.
+Eﬃciency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set.
+Computational Materials Science, 6(1):15 – 50, 1996.
+[28] G. Kresse and J. Hafner.
+Ab initio molecular dynamics for open-shell transition metals. Phys.
+Rev. B, 48:13115–13118, Nov 1993.
+[29] G. Kresse and D. Joubert.
+From ultrasoft pseudopotentials to the projector augmented-wave method.
+Phys. Rev. B, 59:1758–1775, Jan 1999.
+[30] John P. Perdew, Kieron Burke, and Matthias Ernzerhof.
+Generalized gradient approximation made simple. Phys.
+Rev. Lett., 77:3865–3868, Oct 1996.
+[31] D. Hobbs, G. Kresse, and J. Hafner.
+Fully unconstrained noncollinear magnetism within the projector augmented-wave method.
+Phys. Rev. B, 62:11556–11570, Nov 2000.
+[32] Mariette Hellenbrandt.
+The inorganic crystal structure database (icsd)present and future.
+Crystallography Reviews, 10(1):17–22, 2004. [33] G. D. Mahan.
+Many-Particle Physics.
+Kluwer Academic-Plenum Publishers, 2000.
+[34] Miguel-´Angel S´anchez-Mart´ınez, Fernando de Juan, and Adolfo G. Grushin.
+Linear optical conductivity of chiral multifold fermions.
+Phys. Rev. B, 99:155145, Apr 2019.
+[35] C. J. Tabert and J. P. Carbotte.
+Optical conductivity of weyl semimetals and signatures of the gapped semimetal phase transition.
+Phys. Rev. B, 93:085442, Feb 2016.
+[36] R. Matthias Geilhufe, Bart Olsthoorn, Alfredo D. Ferella, Timo Koski, Felix Kahlhoefer, Jan Conrad, and Alexander V. Balatsky.
+Materials informatics for dark matter detection.
+Physica Status Solidi.
+Rapid Research Letters, 12(11), 2018. [37] Laura Baudis.
+The search for dark matter.
+European Review, 26(1):7081, 2018.
+[38] Timon Emken, Chris Kouvaris, and Ian M. Shoemaker.
+Terrestrial eﬀects on dark matter- electron scattering experiments.
+Phys. Rev. D, 96:015018, Jul 2017.
+[39] Felix Flicker, Fernando de Juan, Barry Bradlyn, Takahiro Morimoto, Maia G. Vergniory, and Adolfo G. Grushin.
+Chiral optical response of multifold fermions.
+Phys. Rev. B, 98:155145, Oct 2018.
+Page 14 of 14 AUTHOR SUBMITTED MANUSCRIPT - JPMATER-100149.R1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 Accepted Manuscript

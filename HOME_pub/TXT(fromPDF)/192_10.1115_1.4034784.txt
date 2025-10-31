@@ -1,0 +1,1985 @@
+Erol Lale
+Department of Civil Engineering,
+Istanbul Technical University,
+Maslak, Istanbul 34469, Turkey
+e-mail: lale@itu.edu.tr
+Xinwei Zhou
+ES3, 550 West C Street,
+San Diego, CA 92101
+e-mail: xinwei.zhou@es3inc.com
+Gianluca Cusatis1
+Associate Professor
+Department of Civil and
+Environmental Engineering,
+Northwestern University,
+2145 Sheridan Road Tech A125,
+Evanston, IL 60208-3109
+e-mail: g-cusatis@northwestern.edu
+Isogeometric Implementation
+of High-Order Microplane Model
+for the Simulation of High-Order
+Elasticity, Softening, and
+Localization
+In this paper, a recently developed higher-order microplane (HOM) model for softening
+and localization is implemented within a isogeometric ﬁnite-element framework. The
+HOM model was derived directly from a three-dimensional discrete particle model, and
+it was shown to be associated with a high-order continuum characterized by independent
+rotation and displacement ﬁelds. Furthermore, the HOM model possesses two character-
+istic lengths: the ﬁrst associated with the spacing of ﬂaws in the material internal struc-
+ture and related to the gradient character of the continuum; the second associated with
+the size of these ﬂaws and related to the micropolar character of the continuum. The
+displacement-based ﬁnite element implementation of this type of continua requires C1
+continuity both within the elements and at the element boundaries. This motivated the
+implementation of the concept of isogeometric analysis which ensures a higher degree of
+smoothness and continuity. Nonuniform rational B-splines (NURBS) based isogeometric
+elements are implemented in a 3D setting, with both displacement and rotational
+degrees-of-freedom at each control point. The performed numerical analyses demonstrate
+the effectiveness of the proposed HOM model implementation to ensure optimal conver-
+gence in both elastic and softening regime. Furthermore, the proposed approach allows
+the natural formulation of a localization limiter able to prevent strain localization and
+spurious mesh sensitivity known to be pathological issues for typical local strain-
+softening constitutive equations. [DOI: 10.1115/1.4034784]
+1
+Introduction
+The nonlinear and fracturing behavior of quasi-brittle, heteroge-
+neous materials such as ﬁber reinforced composites, toughened
+ceramics, and cementitious composites, among many others, is
+governed by weak spots and defects of their internal structures
+which cause initiation of cracks and localization of damage. In
+order to model such behavior, one can use discrete particle models
+or continuum models. Each type of model has its own advantages
+and disadvantages.
+In discrete particle models, the internal structure of materials is
+directly simulated through its geometric approximation and accounts
+for the actual intrinsic randomness speciﬁc of the selected length
+scale. Particles replicate the effect of major heterogeneities, and their
+interaction is formulated by contact algorithms or through interpar-
+ticle lattice struts whose constitutive behavior simulates speciﬁc
+physical mechanisms. As such, discrete models have the advantage
+that many microscopic effects can be accounted for in a straightfor-
+ward manner. However, they often lead to large computational sys-
+tems, especially to simulate real structures, and require a signiﬁcant,
+often overwhelming, amount of computational resources.
+Continuum models are computationally less expensive. But
+most of the continuum models are based on the Cauchy contin-
+uum which cannot take into account features of the internal struc-
+ture and does not possess any internal characteristic length. These
+type of models have some well-known drawbacks. First of all,
+they are not able to produce a mathematically well-posed problem
+in the softening regime causing strong mesh sensitivity in the
+numerical results [1,2]. Second, the dispersive nature of wave
+propagation, typical of many heterogeneous materials, cannot be
+reproduced. Furthermore, conventional continuum formulations
+predict unrealistic stress singularities at the tip of sharp cracks and
+fail to simulate size effect phenomena correctly [3,4].
+In order to overcome these drawbacks, nonlocal continuum the-
+ories have been proposed in the literature. A popular approach
+consists in enriching continua with high-order strain and stresses.
+Cosserat brothers’ study [5] was one of the initial attempt in this
+direction. They considered independent rotational degrees of
+freedom, modeling smaller scale kinematics, in addition to trans-
+lational degrees of freedom. Later, the couple-stress theory was
+developed by Toupin [6]. In this theory, the only independent ﬁeld
+is the displacement ﬁeld that also determines the rotations. Erin-
+gen developed the so-called micropolar continuum theory [7] and
+nonlocal elasticity [8]. Another type of high-order theory incorpo-
+rate higher-order gradients of displacements, mostly second gradi-
+ent (strain gradient) and sometimes higher, into the constitutive
+model [6]. Mindlin [9–11] proposed an enhanced elastic theory
+with microstructural effects by considering the potential energy
+density as a quadratic form of gradient of strain in addition to
+quadratic form of strains. Aifantis and coworkers [12–16] intro-
+duced a simpliﬁed gradient elasticity theory with one internal
+length scale which incorporates Laplacian of strain to enrich the
+continuum. They applied it for investigation of crack tips, localiza-
+tion of shear bands, and to simulate size effect in torsion and bend-
+ing. Various forms of gradient elasticity and their performance in
+static and dynamic applications are discussed by Askes and Aifantis
+[17]. They also provided a procedure for the identiﬁcation of the
+relevant characteristic lengths. In this work, the ﬁnite-element
+implementation of gradient elasticity was also discussed.
+Chang et al. [4] developed a high-order gradient model based
+on a discrete particle structure, which included both high-order
+1Corresponding author.
+Contributed by the Applied Mechanics Division of ASME for publication in the
+JOURNAL
+OF APPLIED MECHANICS. Manuscript received August 20, 2016; ﬁnal
+manuscript received September 16, 2016; published online October 14, 2016. Editor:
+Yonggang Huang.
+Journal of Applied Mechanics
+JANUARY 2017, Vol. 84 / 011005-1
+Copyright V
+C 2017 by ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgstrains and stresses. They investigated the possibility of formulat-
+ing high-order constitutive equations with and without high-order
+stresses. They found that, contrarily to the model with high-order
+stresses, the one without is unstable. Misra and Yang [18] devel-
+oped a model for cohesive materials based on microstructural con-
+cepts. They considered a representative volume of material as a
+collection of grains interacting through intergranular force dis-
+placement relations. Intergranular force displacement relations are
+formulated based on atomistic-level particle interactions. These
+force–displacement relationships are then used to derive the incre-
+mental stress–strain relationship of a representative volume of
+material. Later, Yang et al. [19] applied this type of microstruc-
+tural granular based higher-order continuum theory to model the
+failure behavior of nanophased ceramics. They compared results
+obtained from the ab initio simulations with the result of higher-
+order continuum theory with good agreement.
+Nonlinear nonlocal constitutive equations were also proposed
+without enrichment of the elastic part and by using integral or gra-
+dient approaches to enrich plasticity and damage theories. Integral
+type models are based on replacing a local variable with its
+weighted spatial averaging over a certain volume of material.
+Pijaudier-Cabot and Bazant [20] pioneered research in this area.
+On the contrary, gradient plasticity or gradient damage models are
+based on enriching state variables with high-order terms. A phe-
+nomenological strain gradient plasticity theory was developed by
+Fleck and Hutchinson [21] in the context of couple-stress theory
+where only rotational part of strain gradients is taken into account.
+They extended the classical J2 plasticity to account for strain gra-
+dient effects. Later, they reformulated their model and included
+also stretch gradients in addition to rotational ones [22]. They
+investigated their model performance by applying it to the simula-
+tion of size effect on torsion of wires, sheet bending, indentation,
+and void growth. The so-called mechanism-based theory of strain
+gradient plasticity (MSG) [23,24] was proposed on the basis of a
+multiscale framework linking statistically stored and geometri-
+cally necessary dislocations to plastic strains and strain gradient.
+A reformulation of mechanism-based strain gradient plasticity
+was given by Ref. [25] that involves the third-order tensor of
+higher-order stress to a much simpler version within Fleck and
+Hutchinson’s theoretical framework of strain gradient plasticity
+theory. Huang et al. [26] provided a conventional theory of
+mechanism-based strain gradient plasticity where the plastic strain
+gradient appears only in the constitutive model, and the equilib-
+rium equations and boundary conditions are the same as the con-
+ventional continuum models. Jiang et al. [27] studied on fracture
+employing mechanism-based strain gradient plasticity.
+Finite-element
+implementation
+of
+material
+models
+that
+includes
+second
+gradient
+of
+displacements
+as
+degrees-of-
+freedom, require C1 continuity at the interelement boundaries
+or mixed-element formulation in which both kinematic and
+static variables are deﬁned as degrees-of-freedom. Papanicolo-
+pulos et al. [28] and Zervos et al. [29] developed C1 type
+ﬁnite element for gradient elasticity. Fischear et al. [30] imple-
+mented isogeometric analysis for gradient elasticity in two
+dimensions. On the contrary, in mixed formulations, C0 conti-
+nuity element can be used but in this case ﬁrst derivatives
+should be interpolated in addition to displacements which leads
+to formulations with a large number of degrees-of-freedom.
+These
+types
+of
+elements
+can
+be
+nonconforming
+and
+are
+required to fulﬁll the patch test [31–33]. Furthermore, Ru and
+Aifantis [34] developed a strategy based on operator split
+method for their simpliﬁed strain gradient model, in which the
+fourth-order partial differential equations of gradient elasticity
+are split into two separate second-order partial differential
+equations, and they implement it using C0 ﬁnite element.
+2
+Higher-Order Microplane Model
+Classical microplane model formulations, pioneered by Bazant
+and Oh [35,36], assumed that nonlinear phenomena such as, but
+not limited to, fracture, shearing, and plastic deformations occur
+on speciﬁc orientations within the internal structure of the mate-
+rial. Therefore, microplane models simulate these phenomena
+through vectorial constitutive laws formulated on the so-called
+“microplanes” representing generic orientations in space. The
+strain vector on a generic microplane is obtained by projecting the
+strain tensor onto a local system of reference, and the stress tensor
+is computed from tractions on all possible orientations in space
+through an energetic equivalence.
+The initial formulations of microplane models focused on con-
+crete materials and the most recent one, labeled as M7 [37], has
+demonstrated a remarkable ability to reproduce typical experi-
+mental data relevant to a large variety of loading conditions, from
+tension to conﬁned compression; from quasi-static to highly
+dynamic conditions. Microplane models have also been success-
+fully developed for other materials such as rock [38]; rigid foam
+and shape memory alloys [39,40]; ﬁber reinforced concrete [41];
+as well as composite laminates [41–43].
+The aforementioned microplane formulations are “local” in
+the sense that the stress tensor at a given point is the only
+function of the strain tensor at the same point. Unfortunately,
+such constitutive equations suffer from mesh sensitivity and
+spurious energy dissipation [44] when softening behavior is
+simulated. To overcome this problem, nonlocal microplane mod-
+els were proposed by various authors [45–47] by exploiting inte-
+gral methods, in which the nonlinear behavior at one point
+depends on a weighted average of the strain in the neighbor-
+hood of that point. These approaches while preventing mesh
+sensitivity quite effectively lead to a signiﬁcant increase of the
+computational cost of simulations.
+An alternative to integral microplane models is to adopt strain-
+gradient formulations such as the ones proposed by Kuhl et al.
+[48,49] and, more recently, by Cusatis and Zhou [50]. In the latter,
+starting from a discrete particle model, they derived a high-order
+microplane (HOM) theory which includes Cosserat theory and
+strain gradients elasticity as a special cases. The HOM model pos-
+sess two characteristic lengths: the ﬁrst associated with the spac-
+ing of ﬂaws in the material internal structure and related to the
+gradient character of the continuum; and the second associated
+with the size of these ﬂaws and related to the micropolar character
+of the continuum.
+Following Cusatis and Zhou [50], one can calculate microplane
+strains and curvatures as
+eb ¼ Pb
+ijcij þ r0Pb
+ijkCijk;
+vb ¼ Pb
+ijjij;
+b ¼ N; M; L
+(1)
+where cij ¼ uj;i  eijkuk is the strain tensor, eijk is the Levi-Civita
+permutation symbol jij ¼ uj;i is the curvature tensor; Cijk ¼ cij;k
+is the strain gradient tensor also referred to as high order strain
+tensor; ui, ui are displacement and rotation, respectively, at a
+generic position xi (i ¼ 1, 2, 3) in a 3D continuum. The second
+order tensor Pb
+ij ¼ eN
+i eb
+j and the third order tensor Pb
+ijk ¼ eN
+i eb
+j eN
+k
+denote projection operators for strain and strain gradient, respec-
+tively, in which eb
+i ðb ¼ N; M; LÞ are unit vectors deﬁning a local
+system of reference on each microplane (see Fig 1). The charac-
+teristic length r0, assumed to be a material property, can be inter-
+preted to be the average half spacing of weak spots in the material
+internal structure [50].
+By using appropriate vectorial constitutive equations, the
+microplane stresses and microplane couple stresses can be
+calculated from the microplane strains and microplane curvatures:
+formally,
+one
+can
+write
+rb ¼ F bðeN; …; vN; …Þ
+and
+lb ¼ GbðeN; …; vN; …Þ, which can be used to obtain stress, couple
+stress, and high order stress tensors as
+rij ¼ 3
+4p
+ð
+C1
+rbPb
+ijdS;
+lij ¼ 3
+4p
+ð
+C1
+lbPb
+ijdS;
+Rijk ¼ 3r0
+4p
+ð
+C1
+rbPb
+ijkdS
+(2)
+011005-2 / Vol. 84, JANUARY 2017
+Transactions of the ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgwhere the integrals are calculated over the surface of a unit
+sphere, C1; b ¼ N; M; L ; and summation rule applies over b.
+Furthermore, stress, couple stress, and high order stress tensors
+must satisfy the conservation of linear and angular momenta
+which reads
+pji;j þ bi ¼ 0;
+lji;j þ eijkpjk ¼ 0
+(3)
+where pij ¼ rij  Rijk;k is the so-called effective stress tensor; bi
+denote body forces.
+The weak form of equilibrium that is used for the ﬁnite element
+formulation read
+ð
+X
+ðrijdcij þ RijkdCijk þ lijdjijÞdV ¼
+ð
+X
+biduidV
+þ
+ð
+@X
+ðmidui þ tidui þ hiDduiÞdS þ
+þ
+C
+ciduidL
+(4)
+Finally, the differential boundary value problem presented
+above must be completed with appropriate boundary conditions.
+With reference to Fig. 2, one can write, on the volume boundary,
+pjinj  DjðRijknkÞ þ ðDlnlÞhi ¼ ti
+or
+ui ¼ ui; Rijknjnk ¼ hi
+or
+Dui ¼ Dui; ðlji  epkiRpkjÞnj ¼ mi
+or
+ui ¼ ui,
+and
+½½rinkRpkj ¼ ci, where ni is the unit vector orthogonal to the
+boundary, Di  ðdij  ninjÞ@=@xj is the surface gradient differen-
+tial
+operator,
+dij ¼ Kronecker
+delta,
+ti
+¼ applied
+tractions,
+ui ¼ applied displacements, hi ¼ applied moment energetically
+conjugate to Dui; Dui ¼ ui;jnj is the displacement normal deriva-
+tive, Dui ¼ applied displacement normal derivative, mi ¼ applied
+moments energetically conjugate to rotations, ui ¼ applied rota-
+tions, ci ¼ applied edge traction acting along a sharp edge, ½½ is
+the jump operator deﬁned on a sharp edge, rj ¼ epqjspnq, and si is
+the unit vector tangent to a sharp edge (See Fig. 2). Detailed deri-
+vation of Eq. (3) and boundary conditions can be found in Cusatis
+and Zhou [50].
+3
+Isogeometric Finite-Element Implementation
+3.1
+Isogeometric Description of Geometry. Isogeometric
+analysis (IGA), introduced by Hughes et al. [51], combines
+computer-aided design (CAD) and ﬁnite-element method (FEM)
+technologies. In IGA, the basis functions used in CAD to describe
+exactly the geometry of a certain volume of material are also used
+to discretize ﬁeld variables describing, for example, its deforma-
+tion and mechanical behavior. CAD technologies commonly
+employ non-uniform rational B-splines (NURBS) basis functions
+which are built from B-splines [52]. B-splines are piecewise poly-
+nomials composed of a linear combination of basis functions
+deﬁned recursively as
+Np
+i n
+ð Þ ¼
+n  ni
+niþp  ni
+Np1
+i
+n
+ð Þ þ niþpþ1  n
+niþpþ1  niþ1
+Np1
+iþ1 n
+ð Þ
+(5)
+where i ¼ 1,…, n; n and p are the number and maximum order,
+respectively, of the basis functions. The knots vector, X ¼
+fn1; n2; …; nnþpþ1g is a set of nondecreasing real numbers called
+knots and representing coordinates in the parameter domain. If all
+knots are equally spaced, the knot vector is called uniform, other-
+wise they are nonuniform. For p ¼ 0, N0
+i ðnÞ ¼ 1 if n is contained
+in the interval [ni, niþ1], and N0
+i ðnÞ ¼ 0 otherwise. For p ¼ 1,
+B-spline basis functions are identical to basis function of classical
+constant-strain ﬁnite-element formulations. B-spline basis func-
+tions are linearly independent, have partition of unity property
+and their support is compact. However, they, in general, do not
+satisfy the Kronecker delta property unless coincident knots exists
+in X. A B-spline is said to be open if its ﬁrst and last knots appear
+p þ 1 times. Open knot vectors are interpolatory at the end knots
+which means they satisﬁes the Kronecker delta property at those
+knots [53].
+B-splines cannot represent some common geometrical shapes,
+such as circular and ellipsoidal sections, exactly. This can be
+achieved by using non-uniform rational B-splines (NURBS),
+which can be deﬁned in terms of B-spline basis functions as
+follows:
+Rp
+i n
+ð Þ ¼
+Np
+i n
+ð Þ
+P
+n
+j¼1
+Np
+j n
+ð Þwj
+(6)
+where wj are weighting factors that are selected depending upon
+the type of curve to be represented exactly [51,53].
+A NURBS curve can in general be deﬁned as linear combina-
+tions of the functions deﬁned in Eq. (6). Hence, in 3D, the generic
+position vector x¼[x1 x2 x3]T can be expressed as
+xðn; g; fÞ ¼
+X
+n
+i¼1
+X
+m
+j¼1
+X
+l
+k¼1
+Rpqr
+ijk ðn; g; fÞxijk ¼
+X
+Ncp
+I¼1
+Rpqr
+I
+ðn; g; fÞxI (7)
+where
+Rpqr
+I
+n; g; f
+ð
+Þ ¼ Rpqr
+ijk n; g; f
+ð
+Þ ¼
+Np
+i n
+ð ÞMq
+j g
+ð ÞPr
+k f
+ð Þwijk
+P
+n
+^i¼1
+P
+m
+^j¼1
+P
+l
+^k¼1
+Np
+^i n
+ð ÞMq
+^j g
+ð ÞPr
+^k f
+ð Þw^i^j ^k
+(8)
+Np
+i ; Mq
+j ; Pr
+k are the basis function deﬁned according to Eq. (5) and
+with reference to given knot vectors for each direction X ¼
+fn1; n2; …; nnþpþ1g; Y ¼ fg1; g2; …; gmþqþ1g
+and
+Z ¼
+ff1; f2; …; fkþrþ1g; xI  xijk is the position vector of a control
+Fig. 1
+Global and microplane system of references
+Fig. 2
+Boundary conditions for the high-order microplane
+model
+Journal of Applied Mechanics
+JANUARY 2017, Vol. 84 / 011005-3
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgpoint I (a.k.a. node, per the usual computational mechanics termi-
+nology) deﬁned on a 3D grid (i ¼ 1,…,n, j ¼ 1,…,m, k ¼ 1,…,l)
+associated to the knot vectors X, Y, and Z; Ncp ¼ m  n  l is the
+total number of control points.
+3.2
+Implementation of Isogeometric Element. In this study,
+a isogeometric ﬁnite element is implemented in 3D with interpola-
+tion of displacement and rotational ﬁelds assumed to be independ-
+ent. This element features six degrees of freedom (three
+displacement and three rotations) at each control point. Following
+the isoparametric concept, the displacement ﬁeld u and rotation
+ﬁeld / are formulated using the same NURBS basis functions of
+the geometry and, for a given element, they can be approximated
+in terms of element’s control point displacements and rotations as
+follows:
+u ¼
+X
+Ncp
+I¼1
+RIue
+I
+U ¼
+X
+Ncp
+I¼1
+RIue
+I
+(9)
+where Ncp is the number of control points that are supported by
+one element and ue ¼ ½uxi; uyi; uzi denotes the nodal displacement
+vector and ue ¼ ½uxi; uyi; uzi the nodal rotation vector. It is worth
+nothing that in this study the adopted shape functions in Eq. (9)
+are
+quadratic
+which can be
+obtained from Eq.
+(8) with
+p ¼ q ¼ r ¼ 2 and Ncp ¼ 27 control points per element. In Eq. (9)
+and throughout the rest of the paper, the shape function super-
+scripts are dropped for clarity of notation. Low- and high-order
+strain ﬁelds are obtained computing the spatial derivatives of the
+displacement ﬁeld
+e ¼ Lde ¼ LRde ¼ Bde
+(10)
+where e ¼ ½cij; jij; CijkT is the strain vector collecting all the
+strains, curvature, and high-order strain components (45 in total),
+d is the displacement vector, d ¼ ½ui; /i collecting all degrees of
+freedom of the element (6  Ncp in total), L is a differential opera-
+tor,
+R
+is
+the
+shape
+function
+matrix,
+and
+B
+is
+the
+strain–displacement matrix obtained by applying the differential
+operator L to the shape functions. The B matrix can be subdivided
+into submatrices for low-order and high-order terms and the sepa-
+rate contribution of different nodes
+B ¼ ½ B1
+B2
+…
+BNcp ;
+BI ¼ ½ BIc
+BIj
+BIC T
+(11)
+in which
+BIc ¼
+RI;x
+0
+0
+0
+0
+0
+0
+RI;y
+0
+0
+0
+0
+0
+0
+RI;z
+0
+0
+0
+0
+RI;x
+0
+0
+0
+1
+0
+0
+RI;y
+1
+0
+0
+RI;z
+0
+0
+0
+1
+0
+RI;y
+0
+0
+0
+0
+1
+0
+RI;z
+0
+1
+0
+0
+0
+0
+RI;x
+0
+1
+0
+2
+666666666666666664
+3
+777777777777777775
+;
+BIj ¼
+0
+0
+0
+RI;x
+0
+0
+0
+0
+0
+0
+RI;y
+0
+0
+0
+0
+0
+0
+RI;z
+0
+0
+0
+0
+RI;x
+0
+0
+0
+0
+0
+0
+RI;y
+0
+0
+0
+RI;z
+0
+0
+0
+0
+0
+RI;y
+0
+0
+0
+0
+0
+0
+RI;z
+0
+0
+0
+0
+0
+0
+RI;x
+2
+666666666666666664
+3
+777777777777777775
+(12)
+BIC ¼
+RI;xx
+0
+0
+0
+0
+RI;zx
+RI;yx
+0
+0
+RI;xy
+0
+0
+0
+0
+RI;zy
+RI;yy
+0
+0
+RI;xz
+0
+0
+0
+0
+RI;zz
+RI;yz
+0
+0
+0
+RI;yx
+0
+RI;xx
+0
+0
+0
+RI;zx
+0
+0
+RI;yy
+0
+RI;xy
+0
+0
+0
+RI;zy
+0
+0
+RI;yz
+0
+RI;xz
+0
+0
+0
+RI;zz
+0
+0
+0
+RI;zx
+0
+RI;yx
+0
+0
+0
+RI;xx
+0
+0
+RI;zy
+0
+RI;yy
+0
+0
+0
+RI;xy
+0
+0
+RI;zz
+0
+RI;yz
+0
+0
+0
+RI;xz
+0
+0
+0
+0
+RI;x
+0
+0
+RI;x
+0
+0
+0
+0
+0
+RI;y
+0
+0
+RI;y
+0
+0
+0
+0
+0
+RI;z
+0
+0
+RI;z
+0
+0
+0
+0
+0
+0
+RI;x
+0
+0
+RI;x
+0
+0
+0
+0
+0
+RI;y
+0
+0
+RI;y
+0
+0
+0
+0
+0
+RI;z
+0
+0
+RI;z
+0
+0
+0
+RI;x
+0
+0
+RI;x
+0
+0
+0
+0
+0
+RI;y
+0
+0
+RI;y
+0
+0
+0
+0
+0
+RI;z
+0
+0
+RI;z
+0
+0
+2
+6666664
+3
+7777775
+T
+(13)
+Once the strain displacement matrix, B, is obtained, the element
+stiffness matrix and the internal force vector can be calculated
+easily by employing appropriate quadrature rules
+K ¼
+K11
+K12
+  
+K21
+K22
+
+..
+.
+2
+664
+3
+775;
+fT ¼ ½fT
+1; fT
+2…;
+KIJ ¼
+ð
+X
+BT
+I DBJdX;
+fI ¼
+ð
+X
+BT
+I sdX
+(14)
+where s ¼ ½rij; lij; RijkT is the stress vector collecting all compo-
+nents of the stress tensor, couple stress tensor and high-order
+stress tensor; and D is the stiffness matrix, s ¼ De. Even though
+there are recent studies attempting to derive optimal quadrature
+rules for IGA [54–56], in this study, Gauss quadrature is used and
+number of Gauss points in each direction is assumed to be 1 plus
+the order of basis function in each direction, that is three for quad-
+ratic element which leads to 27 Gauss points per element. Gauss
+quadrature was originally developed for polynomial function, but
+it has been employed successfully for IGA element as well
+[51,53].
+It is important to point out that the proposed element formula-
+tion implicitly assumes that the high order surface moments h
+conjugate to the normal gradient of the displacement ﬁeld (see
+Sec. 2 and Fig. 2) are zero. This is due to the fact that only dis-
+placement and rotation degrees-of-freedom are introduced and no
+kinematic boundary conditions can be imposed on the normal gra-
+dient of displacements.
+4
+Numerical Results
+The performance of the proposed isogeometric implementation
+of the high-order microplane model is demonstrated in this section
+with reference to classical examples for gradient elasticity, Cos-
+serat elasticity, and strain softening.
+4.1
+Strain Gradient Elasticity Solution of Cantilever Beam
+Problems. The exact analytical solution [57] for a cantilever
+beam subjected to a concentrated load at the free end is used here
+011005-4 / Vol. 84, JANUARY 2017
+Transactions of the ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgas a reference for comparison with the strain gradient version of
+the high-order microplane model. To obtain the macroscopic con-
+stitutive equations used to derive the exact solution, the micro-
+plane constitutive equation for gradient elasticity are formulated
+as follows:
+rN ¼ EVeV þ EDeD þ EC
+NeC
+N;
+rM ¼ ETec
+M þ EC
+TeC
+M;
+rL ¼ ETec
+L þ EC
+TeC
+L
+(15)
+and
+lN ¼ lM ¼ lL ¼ 0,
+where
+eb ¼ ec
+b þ eC
+b;
+ec
+b ¼ Pb
+ij
+cij; eC
+b ¼ r0Pb
+ijkCijk ðb ¼ N; M; LÞ; eV ¼ Vijcij; Vij ¼ dij=3, dij is
+the Kronecker delta, ec
+D ¼ ec
+N  eV, and EV, ED, ET are the volu-
+metric, deviatoric, and shear elastic moduli, respectively. As
+already shown by Cusatis and Zhou [50], Eq. (15) lead to classical
+elastic constitutive equations if r0 ¼ 0; EV ¼ E=ð1  2Þ and
+ED ¼ ET ¼ E=ð1 þ Þ
+where
+E ¼ Young’s
+modulus
+and
+ ¼ Poisson’s ratio. With the formulation in Eq. (15), the micro-
+plane integration (see Eq. (2)) can be done analytically and
+explicit form of stress, couple stress, and high-order stress tensor
+can be obtained as follows:
+rij ¼ EVeVVij þ ½EDAijkl þ ETðBijkl þ CijklÞckl; lij ¼ 0
+Rijk ¼ r2
+0½EVDijklmp þ ETðEijklmp þ FijklmpÞClmp
+(16)
+where
+Aijkl ¼3
+Ð
+C1PD
+ij PD
+klds=4p; Bijkl ¼3
+Ð
+C1PM
+ij PM
+klds=4p; Cijkl ¼
+3
+Ð
+C1PL
+ijPL
+klds=4p; PD
+ij ¼PN
+ij Vij; Dijklmp ¼3
+Ð
+C1PN
+ijkPN
+lmpds=4p; Eijklmp
+¼3
+Ð
+C1PM
+ijkPM
+lmpds=4p and Fijklmp ¼3
+Ð
+C1PL
+ijkPL
+lmpds=4p.
+By
+assuming
+ED ¼ ET ¼ E0=ð1 þ Þ; EV ¼ E0=ð1 
+2Þ; EC
+T ¼ 0 and EC
+N ¼ E then the gradient elasticity formulation
+in Beskou et al. [57] is obtained for the components r11 and R111.
+It must be observed, however, that this microplane formulation
+leads to other nonzero high-order stress components which are
+absent in the analytical solution.
+A cantilever beam, 1000 mm long with 100  25 mm cross sec-
+tion, is modeled with quadratic isogeometric solid elements. The
+beam is discretized with four different meshes with 10  1  1,
+20  2  1, 40  4  1 and 80  8  2 elements, respectively.
+Essential boundary conditions are applied at both ends of the
+beam. E ¼ 25000 MPa,  ¼ 0.2, and 2r0 ¼ 0.2L are assumed in the
+calculations. In Fig. 3(a), the relative displacement (normalized
+with displacement value obtained from the Cauchy solution) as a
+function of position along the beam is given for different meshes
+and compared with analytical result given by Beskou et al. [57]. It
+can be seen from the ﬁgure that with mesh reﬁnement the tip dis-
+placement converges to a certain value. The overall calculated
+elastic curve is in general good agreement with the analytical
+solution, to which, however, it does not converge exactly. The
+main reason for this discrepancy is that in the analytical solution,
+they only consider one high-order term Cxxx ¼ cxx,x, but the pro-
+posed HOM model is a 3D model and it features automatically
+other high order terms.
+Figure 3(b) reports the obtained response for different values of
+the internal length scale, r0. As expected, with the increase of the
+internal length scale, the beam response becomes stiffer. Also, for
+the internal length that tends to zero, the response converges to
+the classical Bernoulli beam solution.
+The second beam example is relevant to an experimental study
+carried out by Lam et al. [58] on epoxy beams. Tests were carried
+out in plane strain conditions on end-point loaded cantilever
+beams with 20, 38, 75, and 115 lm depth and length-to-depth ratio
+equal to 10. The elastic properties of the epoxy are reported as
+E ¼ 1.44 GPa and  ¼ 0.38 [58]. The microplane simulations were
+performed with EC
+T ¼ ET and EC
+N ¼ EV, and the material charac-
+teristic length was optimized according to the experimental result
+for the 20 lm beam. The best ﬁt is obtained with 2r0 ¼ 33.2 lm.
+Based on these material parameters, the other beams are simu-
+lated. Three-dimensional quadratic isogeometric elements are
+used, and the beams are discretized with 40  4  1 elements. In
+order to provide plane strain condition, the lateral displacement
+(uz) of nodes on external surfaces (x-y plane) are restricted. Figure
+3(c) illustrates the change of normalized bending stiffness,
+D ¼ PL3=ð3wbh3Þ, predicted by the proposed model and obtained
+in the experiments. In the deﬁnition of D, P is the applied load; w
+is the corresponding displacement; b, h, and L are beam thickness,
+depth, and length, respectively. The model can reproduce very
+well the beam behavior exhibiting size effect: the smaller the
+thickness the larger the normalized bending stiffness [58]. This
+behavior cannot be produced by classical beam, which always
+gives constant value for the bending stiffness.
+4.2
+Cosserat Solution of a Stress Concentration Problem.
+The presented high-order microplane theory reduced to a Cosserat
+continuum when the material characteristic length, r0, is equal to
+zero, and the microplane constitutive equations are formulated as
+follows:
+rN ¼ EVeV þ EDeD; rM ¼ ETeM; rL ¼ ETeL
+(17)
+lN ¼ WVvV þ WDvD; lM ¼ WTvM; vL ¼ WTvL
+(18)
+where
+eV
+is
+the
+volumetric
+strain,
+eD ¼ eN  eV; vV
+¼ Vijvij; vD ¼ vN  vV. Also in this case, the microplane integra-
+tion (Eq. (2)) can be done analytically and explicit form of stress
+and couple stress tensors are obtained as follows:
+Fig. 3
+Numerical results for the cantilever beam problems: (a) elastic curves for various meshes and comparison with beam
+theory solution, (b) calculated response for different internal length values, and (c) change of normalized bending stiffness
+with respect to thickness
+Journal of Applied Mechanics
+JANUARY 2017, Vol. 84 / 011005-5
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgrij ¼ EVeVVij þ ½EDAijkl þ ETðBijkl þ CijklÞckl
+lij ¼ WVvVVij þ ½WDAijkl þ WTðBijkl þ CijklÞjkl
+(19)
+where the tensors Vij, Aijkl, Bijkl, and Cijkl are the same ones intro-
+duced in Sec. 4.1. Cusatis and Zhou [50] derived the relationship
+between the microplane parameters and the ones of Cosserat elas-
+ticity
+as
+EV ¼ 3k þ 2l þ v; ED ¼ 5l þ v; ET ¼ v
+and
+WV ¼ 3p1 þ p2 þ p3; WD ¼ p2 þ 4p3; WT ¼ p2  p3.
+In order to demonstrate the efﬁciency of the isogeometric ele-
+ment for the integration of the Cosserat theory, this section dis-
+cusses a well-known stress concentration problem consisting of an
+inﬁnite plate with a circular hole subjected to a uniaxial far ﬁeld
+tension. The Cosserat continuum has a characteristic length which
+arises from the unit mismatch between stresses and couple
+stresses. This affects the stress concentration factor around the
+hole. Analytical solutions of this problem for classical Cosserat
+continuum were given by Eringen [59] and for Couple Stress
+theory by Mindlin [60] in 2D case. In both references, the stress
+concentration factor is deﬁned as SCF ¼ rxð0; rÞ=r1
+x ¼ ð3 þ FÞ=
+ð1 þ FÞ,
+where
+F ¼ ½8l2
+b=l2
+cð1  Þ=½4 þ ðr=lcÞ2 þ 2ðr=
+lcÞK0ðr=lcÞ=K1ðr=lcÞ,
+r
+is
+the
+radius
+of
+the
+hole,
+lb ¼
+½p3=2ð2l þ vÞ1=2; lc ¼ ½ðp2 þ p3Þ=ð2l þ vÞ1=2 [61] are the mate-
+rial characteristic lengths, and K0 and K1 are the second kind
+modiﬁed Bessel functions of order zero and one, respectively.
+Mindlin gives exactly the same equation for the case of l2
+b=l2
+c ¼ 1.
+Furthermore, it is convenient to deﬁne [61] the coupling factor,
+Nc ¼ ½v=2ðl þ vÞ, which is a nondimensional quantity taking
+values between 0 and 1. For Nc ¼ 1 the couple-stress theory is
+recovered, and for Nc ¼ 0, the Cauchy continuum is obtained [61].
+This example was also simulated by Pothier and Rencis [61]
+and Sachio et al. [62]. In the ﬁnite-element simulations discussed
+in this section, the material parameters are taken from Ref. [61],
+and they are reported in Table 1. Four simulations with different
+coupling factor are performed by assuming plate dimensions of
+300  300  10 mm3 and hole radius of 10 mm. Considering the
+symmetry along the x- and y-axes, only one quarter of the speci-
+men is modeled as shown in Fig. 4. Applied boundary conditions
+are also speciﬁed in Fig. 4. A 3D ﬁnite-element model was setup
+with quadratic isogeometric solid element, and the IGA meshes
+was obtained by using IGAFEM [53]. Two different meshes are
+used with 1024 (32  32) and 4096 (64  64) elements. For both
+meshes, only one element is used along the thickness. The coarser
+mesh is shown in Fig. 4, where a zoom-in highlights the geometry
+of one element and the corresponding control points. Two more
+layers of control points are present through the thickness (for a
+total of 27 control points) but they are not visible in the ﬁgure.
+Table 2 presents the comparison of the obtained stress concentra-
+tion factors with the analytic solution. The results show very good
+agreement with analytical values with error less than 3.7% and
+0.9% for mesh-1 and mesh-2, respectively.
+4.3
+Localization Behavior of a Softening Bar in Tension.
+This section presents the simulation of softening behavior with
+the objective of evaluating the effectiveness of the regularization
+strategy proposed by Cusatis and Zhou within the presented high-
+order isogeometric implementation [50].
+The adopted softening constitutive equation follows the formula-
+tion proposed by Cusatis et al. [63]. The microplane couple stresses
+are assumed to be zero lN ¼ lM ¼ lL ¼ 0. The microplane stresses
+are computed with damage-like constitutive equations as follows:
+rN ¼ r
+e eN
+rM ¼ a r
+e eM
+rL ¼ a r
+e eL
+(20)
+where a is a material parameter, r ¼ ðr2
+N þ r2
+T=aÞ1=2 is the effec-
+tive stress, rT ¼ ðr2
+M þ r2
+LÞ1=2 is the total shear stress, e ¼
+ðe2
+N þ ae2
+TÞ1=2 is the effective strain, and eT ¼ ðe2
+M þ e2
+LÞ1=2 is the
+total shear strain. In the elastic regime, the effective stress is pro-
+portional to the effective strain: r ¼ E0e, in which E0 is the micro-
+plane normal modulus. E0 and a can be related to Young’s
+modulus, E, and Poisson’s ratio, , through the following expres-
+sions: E0 ¼ E=ð1  2Þ and a ¼ ð1  4Þ=ð1 þ Þ. The nonlinear
+behavior is imposed by computing the effective stress incremen-
+tally, _r ¼ E0_e, and satisfying the inequality 0  r  rbtðe; xÞ
+where
+rbt ¼ r0ðxÞexp ½H0ðxÞhe  e0ðxÞi=r0ðxÞ; hxi ¼ max
+fx; 0g; e0ðxÞ ¼ r0ðxÞ=E0, and tanðxÞ ¼ eN=
+ﬃﬃﬃa
+p eT ¼ rN
+ﬃﬃﬃa
+p =rT.
+The
+post
+peak
+softening
+modulus
+is
+deﬁned
+as
+H0ðxÞ ¼ Htð2x=pÞnt, where Ht is the softening modulus in pure
+Table 1
+Material parameters for the stress concentration
+simulations
+Case
+Nc
+E (N/m2)
+(–)
+v (N/m2)
+p1 (N)
+p2 (N)
+p3 (N)
+SIM1 0.00 1.195  108 0.300 0.0
+0
+7.593  108
+0
+SIM2 0.25 1.263  108 0.308 6.895  106
+0
+8.541  109
+0
+SIM3 0.50 1.856  107 0.346 6.895  106
+0
+1.708  109
+0
+SIM4 0.70 1.856  107 0.346 3.448  108
+0
+1.708  109
+0
+Fig. 4
+Plate with a hole under tension: (a) schematic sketch of loading and boundary condi-
+tions, (b) typical ﬁnite-element mesh, and (c) mesh zoom-in with highlighted isogeometric ele-
+ment with corresponding control points
+Table 2
+Calculated and analytical stress concentration factors
+Case
+Analytical
+Ref. [61]
+Ref. [62]
+Mesh-1
+Mesh-2
+SIM1
+3.0
+3.0
+2.99
+2.894
+2.999
+SIM2
+2.839
+2.86
+2.83
+2.735
+2.813
+SIM3
+2.482
+2.58
+2.67
+2.436
+2.474
+SIM4
+2.034
+—
+—
+2.011
+2.034
+011005-6 / Vol. 84, JANUARY 2017
+Transactions of the ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgtension
+(x ¼ p/2)
+expressed
+as
+Ht ¼ 2E0=ð‘t=‘0  1Þ; ‘t
+¼ 2E0Gt=r2
+t ; ‘0 ¼ 2r0; and Gt is the mesoscale fracture energy.
+In the previous equations, the effective strength is formulated in
+such a way to have a smooth transition between pure tension
+(x ¼ p/2) and pure shear (x ¼ 0) with parabolic variation in
+the
+rN
+versus
+rT=
+ﬃﬃﬃa
+p
+plane:
+r0ðxÞ ¼ rtr2
+stðsinðxÞ þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+sin2ðxÞ þ 4a cos2ðxÞ=r2
+st
+q
+Þ= ½2a cos2ðxÞ, where rst ¼ rs/rt is
+the ratio of shear strength to tensile strength.
+By assuming E ¼ 25 GPa,  ¼ 0.2, r0 ¼ 5 mm, rt ¼ 3 MPa,
+rs/rt ¼ 4 MPa, and ‘t ¼ 100 mm, a prismatic bar subject to uniax-
+ial tension is modeled with 3D quadratic isogeometric solid ele-
+ments. The bar is 100 mm long and has 75  75 mm2 rectangular
+cross section. One end of the bar is ﬁxed in all directions, and a
+displacement is prescribed at opposite end in the longitudinal
+direction. Four different meshes are used with 10  1  1,
+20  1  1, 40  1  1 and 80  1  1 elements. The microplane
+stress integration is performed by a Voronoi integration scheme
+(see the Appendix) with 66 microplane over the entire unit sphere.
+In order to control the location of the localization zone, the central
+one tenth of the bar is weakened by reducing the tensile strength
+by 10%.
+For comparison, simulations with r0 ¼ 0 are also performed. As
+one might expect, for r0 ¼ 0 the bar response is mesh dependent.
+The
+load–displacement
+curve
+is
+increasingly
+more
+brittle
+(Fig. 5(a)) as the mesh becomes more reﬁned and damage local-
+izes always in one single element (see in Fig. 5(e)), where the lon-
+gitudinal strain proﬁle is plotted for a bar end displacement of
+0.2 mm. Figures 5(b) and 5(f) show that the mesh sensitivity is
+only partially mitigated for r0 6¼ 0. In this case, the bar response is
+increasingly brittle upon mesh reﬁnement immediately after the
+peak. The solution is less dependent on the mesh in the softening
+branch. The strain proﬁle (Fig. 5(f)) does not show the extreme
+strain localization of the local simulation but still there is not a
+clear convergence upon mesh reﬁnement.
+Cusatis and Zhou [50] conducted a 1D spectral analysis of
+localization and proposed to regularize the solution by computing
+the high-order stresses as
+Rijk ¼ 3r0
+4p
+ð
+C1
+rb þ S0wb
+
+Pb
+ijkdS
+(21)
+where wb ¼ r0Pb
+ijkCijk, and S0 is the localization limiter. For the
+1D case and for linear softening, one can obtain a localization
+band equal to 2r0, if S0¼(1 þ 1/p2)Ht [50]. For exponential soften-
+ing, in which the softening modulus is not constant, the localiza-
+tion limiter must be a function of the current value of strain. In
+this case, and again with reference to a 1D setting, one can write
+S0 ¼ ð1 þ 1=p2ÞHt expðHthe  etiÞ with et ¼ rt/E0. In order to
+use this 1D result in the microplane formulation one can write
+S0ðe; xÞ ¼ ð1 þ 1=p2ÞH0ðxÞexpðH0ðxÞhe  e0ðxÞiÞ
+(22)
+where x accounts for the presence of shear on the microplanes
+(see the adopted constitutive equations above).
+From the physical point of view, this regularization strategy
+corresponds to adding, in parallel with the softening microplane
+stresses, additional nonsoftening microplane stresses which ensure
+that the phase velocity of a propagating uniaxial wave is always real.
+It is worth noting that such parallel coupling of softening and elastic
+components is also intrinsically captured by the microplane model
+by virtue of the kinematic constraint (Eq. 1) and the micro–macro
+stress relation (Eq. 2). This is the reason why partial regularization is
+attained with r06¼ 0 and S0¼ 0 (Figs. 5(b) and 5(f)).
+Figures 5(c) and 5(g) show the obtained response by adopting
+the formulation in Eqs. (21) and (22). As one can see, the initial
+softening branch is very well regularized. However, the rest of the
+softening curve shows an oscillatory behavior, the convergence
+upon mesh reﬁnement is not clear, and a residual load appear even
+for relatively large strains (stress locking). The strain proﬁle does
+Fig. 5
+Load–displacement and strain proﬁle curves for a bar under uniaxial tension: (a) local formulation, (b) high-order for-
+mulation with no regularization, (c) high order formulation with regularization on the total high-order stresses, and (d) high-
+order formulation with regularization on the high-order stress increments
+Journal of Applied Mechanics
+JANUARY 2017, Vol. 84 / 011005-7
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgnot localize in one element but, again, clear convergence cannot
+be demonstrated.
+The stress locking phenomenon is due to the fact that the addi-
+tional elastic high order stresses are added during the entire simula-
+tion, since the beginning when the material has yet to soften. This is
+clearly unnecessary. An alternative regularization scheme which
+avoids this shortcoming can be formulated by introducing the regula-
+rization term on the stress increments as opposed to total stress. In
+this case, Eq. (21) is substituted by the following equations:
+dRijk ¼ 3r0
+4p
+ð
+C1
+drb þ S0dwb
+
+Pb
+ijkds; Rijk ¼
+ð
+dRijk
+(23)
+where S0 ¼ 0 for e < e0(x) and Eq. (22) holds for e  e0(x).
+Figures 5(d) and 5(h) shows the results obtained with this incre-
+mental formulation. As one can see, both the load–displacement
+curve and the strain proﬁle along the bar are fully regularized and
+both show a clear convergence upon mesh reﬁnement. The local-
+ization band is larger than the theoretical 1D value of 2r0. This is
+due to the intrinsic 3D formulation of the microplane model
+which, even under uniaxial tensile macroscopic conditions, fea-
+ture tensile and shear strains and stresses at each microplane ori-
+entation. The correct estimate of the localization band requires a
+fully 3D spectral analysis, which, however, is intractable from the
+analytical point of view (see discussion in Ref. [50]).
+5
+Conclusions
+This paper presents the isogeometric ﬁnite-element implemen-
+tation of a recently developed high-order microplane (HOM)
+model. The HOM model was originally derived based on a dis-
+crete particle model and the resulting theory includes gradient
+elasticity and Cosserat theory as a special cases. In addition, the
+HOM model allows for an effective regularization of softening
+constitutive equations by means of a simple modiﬁcation of the
+high-order stresses. The numerical simulations are carried out
+with an isogometric ﬁnite element characterized by 27 control
+points and six degrees of freedom, three displacement components
+and three rotation components, at each control point. The spatial
+integrals were performed with a gauss quadrature scheme with 27
+gauss points, and the microplane integration was carried out by a
+novel integration scheme based on the Voronoi discretization of
+the unit sphere with 66 microplanes.
+Based on the results presented in the paper the following con-
+clusions can be drawn:
+(1) The implemented ﬁnite element with adoption of the HOM
+model as constitutive equation performs very well in the
+numerical simulations of classical high-order elasticity
+problems. This was veriﬁed by simulating bending of
+strain-gradient elastic cantilever beams and computing the
+stress concentration due to a circular hole in a Cosserat
+elastic plate subject to tension.
+(2) The HOM formulation with softening constitutive laws is
+only partially regularized, and it shows mesh dependence
+in the softening branch close to the peak load.
+(3) The regularization technique previously proposed by Cusa-
+tis and Zhou [50] solves the mesh dependency in the initial
+post peak but leads to stress locking and lack of clear con-
+vergence in the far post peak.
+(4) An optimal regularization of the postpeak response is
+obtained by introducing the regularizing term on the high-
+order stress increments as opposed to the total high-order
+stresses. With this approach a clear convergence can be
+observed for both the load versus displacement curve and
+the strain proﬁle along the bar.
+Acknowledgment
+Financial support from the U.S. National Science Foundation
+(NSF)
+under
+Grant
+No.
+CMMI-1435923
+is
+gratefully
+acknowledged. The work of the ﬁrst author was also partially sup-
+ported by the Scientiﬁc and Technological Research Council of
+Turkey (TUBITAK).
+Appendix: Voronoi Integration Scheme
+For inelastic constitutive equations, Eq. (2) can only be com-
+puted numerically. In the previous microplane model works
+[35,36,64], gaussian optimal integration formulas were developed
+for the integration over the unit hemisphere. However, for the
+high-order microplane model adopted in this paper, integration
+over the entire unit sphere is required. Hence, a new integration
+scheme was developed based on the voronoi tessellation of the
+unit sphere [65,66]. Figure 6 show the discretization of a unit
+sphere with 66 microplanes. The corresponding areas and spheri-
+cal angles are reported in Table 3.
+The local system of reference, attached to each microplane, can
+be calculated as n1 ¼ sin / cos h; n2 ¼ sin / sin h; n3 ¼ cos /;
+m1 ¼ cos / cos h; m2 ¼ cos / sin h; m3 ¼ sin /;
+and
+l1 ¼
+sin h; l2 ¼ cos h; l3 ¼ 0.
+For the discretized sphere, the energetical equivalence, that
+relates microplane stresses, microplane couple stresses, and
+microplane high-order stresses to their macroscopic counterparts,
+can be written as
+X
+np
+s¼1
+ðrijdcij þ lijdjij þ RijkdCijkÞVs ¼
+X
+np
+s¼1
+Rðrs
+bdes
+b þ ls
+bdvs
+bÞAs
+(24)
+where np is the number of microplanes, R ¼ 1, As is the area of the
+generic microplane, and Vs is the volume of a pyramid of unit
+height and base area equal to As. Since the macroscopic quantities
+are uniform inside the unit sphere and by using the kinematic con-
+straint in Eq. (1), one obtains
+rij ¼ 3
+X
+np
+s¼1
+wsrs
+bPs
+ij; Rijk ¼ 3‘0
+X
+np
+s¼1
+wsrs
+bPs
+ijk
+(25)
+where ws ¼ As= Pnp
+s¼1 As is the area ratio of microplane s over the
+total area of all microplanes.
+Fig. 6
+Voronoi tessellation of unit sphere with 66 facets
+011005-8 / Vol. 84, JANUARY 2017
+Transactions of the ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.orgReferences
+[1] Bazant, Z. P., and Pijaudier-Cabot, G., 1988, “Nonlocal Continuum Damage, Local-
+ization Instability and Convergence,” ASME J. Appl. Mech., 55(2), pp. 287–293.
+[2] Bazant, Z. P., Belytschko, T. B., and Chang, T.-P., 1984, “Continuum Theory
+for Strain-Softening,” J. Eng. Mech., 110(12), pp. 1666–1692.
+[3] Rodrıguez-Ferran, A., Bennett, T., Askes, H., and Tamayo-Mas, E., 2011, “A
+General Framework for Softening Regularisation Based on Gradient Elasticity,”
+Int. J. Solids Struct., 48(9), pp. 1382–1394.
+[4] Chang, C., Askes, H., and Sluys, L., 2002, “Higher-Order Strain/Higher-Order
+Stress Gradient Models Derived From a Discrete Microstructure, With Applica-
+tion to Fracture,” Eng. Fract. Mech., 69(17), pp. 1907–1924.
+[5] Cosserat, E., and Cosserat, F., 1909, Theorie des corps Deformables, Scientiﬁc
+Library A. Hermann and Sons, Paris, France.
+[6] Toupin, R. A., 1962, “Elastic Materials With Couple-Stresses,” Arch. Ration.
+Mech. Anal., 11(1), pp. 385–414.
+[7] Eringen, A. C., 1965, “Linear Theory of Micropolar Elasticity,” Ofﬁce of Naval
+Research, Washington, DC, Technical Report No. 29.
+[8] Eringen, A. C., 1992, “Vistas of Nonlocal Continuum Physics,” Int. J. Eng.
+Sci., 30(10), pp. 1551–1565.
+[9] Mindlin, R. D., 1964, “Micro-Structure in Linear Elasticity,” Arch. Ration.
+Mech. Anal., 16(1), pp. 51–78.
+[10] Mindlin, R. D., 1965, “Second Gradient of Strain and Surface-Tension in Linear
+Elasticity,” Int. J. Solids Struct., 1(4), pp. 417–438.
+[11] Mindlin, R., and Eshel, N., 1968, “On First Strain-Gradient Theories in Linear
+Elasticity,” Int. J. Solids Struct., 4(1), pp. 109–124.
+[12] Altan, S., and Aifantis, E., 1992, “On the Structure of the Mode III Crack-Tip
+in Gradient Elasticity,” Scr. Metall. Mater., 26(2), pp. 319–324.
+[13] Aifantis, E. C., 1992, “On the Role of Gradients in the Localization of Defor-
+mation and Fracture,” Int. J. Eng. Sci., 30(10), pp. 1279–1299.
+[14] Altan, B., and Aifantis, E., 1997, “On Some Aspects in the Special Theory of
+Gradient Elasticity,” J. Mech. Behavior Mater., 8(3), pp. 231–282.
+[15] Aifantis, E., 1999, “Strain Gradient Interpretation of Size Effects,” Int. J. Fract.,
+95(1–4), pp. 299–314.
+[16] Aifantis, E., 2003, “Update on a Class of Gradient Theories,” Mech. Mater.,
+35(3), pp. 259–280.
+[17] Askes, H., and Aifantis, E. C., 2011, “Gradient Elasticity in Statics and Dynam-
+ics: An Overview of Formulations, Length Scale Identiﬁcation Procedures,
+Finite Element Implementations and New Results,” Int. J. Solids Struct.,
+48(13), pp. 1962–1990.
+[18] Misra, A., and Yang, Y., 2010, “Micromechanical Model for Cohesive Materi-
+als Based Upon Pseudo-Granular Structure,” Int. J. Solids Struct., 47(21),
+pp. 2970–2981.
+[19] Yang, Y., Ching, W., and Misra, A., 2011, “Higher-Order Continuum Theory
+Applied to Fracture Simulation of Nanoscale Intergranular Glassy Film,”
+J. Nanomech. Micromech., 1(2), pp. 60–71.
+[20] Pijaudier-Cabot, G., and Bazant, Z. P., 1987, “Nonlocal Damage Theory,”
+J. Eng. Mech., 113(10), pp. 1512–1533.
+[21] Fleck, N., and Hutchinson, J., 1997, “Strain Gradient Plasticity,” Adv. Appl.
+Mech., 33, pp. 296–361.
+[22] Fleck, N., and Hutchinson, J., 2001, “A Reformulation of Strain Gradient Plasti-
+city,” J. Mech. Phys. Solids, 49(10), pp. 2245–2271.
+[23] Gao, H., Huang, Y., Nix, W., and Hutchinson, J., 1999, “Mechanism-Based
+Strain
+Gradient
+Plasticity—I:
+Theory,”
+J.
+Mech.
+Phys.
+Solids,
+47(6),
+pp. 1239–1263.
+[24] Huang, Y., Gao, H., Nix, W., and Hutchinson, J., 2000, “Mechanism-Based
+Strain Gradient Plasticity—II: Analysis,” J. Mech. Phys. Solids, 48(1),
+pp. 99–128.
+[25] Yun, G., Hwang, K., Huang, Y., and Wu, P., 2005, “A Reformulation of
+Mechanism-Based
+Strain
+Gradient
+Plasticity,”
+Philos.
+Mag.,
+85(33–35),
+pp. 4011–4029.
+[26] Huang, Y., Qu, S., Hwang, K., Li, M., and Gao, H., 2004, “A Conventional
+Theory of Mechanism-Based Strain Gradient Plasticity,” Int. J. Plast., 20(4–5),
+pp. 753–782.
+[27] Jiang, H., Huang, Y., Zhuang, Z., and Hwang, K., 2001, “Fracture in
+Mechanism-Based Strain Gradient Plasticity,” J. Mech. Phys. Solids, 49(5),
+pp. 979–993.
+[28] Papanicolopulos, S.-A., Zervos, A., and Vardoulakis, I., 2009, “A Three-
+Dimensional C1 Finite Element for Gradient Elasticity,” Int. J. Numer. Methods
+Eng., 77(10), pp. 1396–1415.
+[29] Zervos, A., Papanastasiou, P., and Vardoulakis, I., 2001, “A Finite Element Dis-
+placement Formulation for Gradient Elastoplasticity,” Bifurcation and Local-
+isation Theory in Geomechanics, H. B. M€uhlhaus, A. Dyskin and E. Pasternak,
+eds., Balkema, Perth, Australia, pp. 177–187.
+[30] Fischer, P., Klassen, M., Mergheim, J., Steinmann, P., and M€uller, R., 2011,
+“Isogeometric Analysis of 2D Gradient Elasticity,” Comput. Mech., 47(3),
+pp. 325–334.
+[31] Zervos, A., Papanicolopulos, S.-A., and Vardoulakis, I., 2009, “Two Finite-
+Element Discretizations for Gradient Elasticity,” J. Eng. Mech., 135(3),
+pp. 203–213.
+[32] Amanatidou, E., and Aravas, N., 2002, “Mixed Finite Element Formulations of
+Strain-Gradient Elasticity Problems,” Comput. Methods Appl. Mech. Eng.,
+191(15), pp. 1723–1751.
+[33] Phunpeng, V., and Baiz, P., 2015, “Mixed Finite Element Formulations for
+Strain-Gradient Elasticity Problems Using the Fenics Environment,” Finite
+Elem. Anal. Des., 96, pp. 23–40.
+Table 3
+Spherical angels and weight for the Voronoi integration scheme on the unit sphere with 66 microplanes
+Index
+/ (rad)
+h (rad)
+w
+Index
+/ (rad)
+h (rad)
+w
+1
+1.33030045275
+5.00374576373
+0.01556289035
+34
+2.31088950846
+4.82219824701
+0.015659816774
+2
+1.80674103963
+4.85180287262
+0.015525072181
+35
+1.68356115574
+3.62959310171
+0.012703614433
+3
+1.83428166859
+2.37761582873
+0.015772995694
+36
+1.17908789017
+2.86363192111
+0.015494119892
+4
+0.278016102851
+3.5135300969
+0.016411951508
+37
+2.43326894062
+4.17259028347
+0.01585851993
+5
+1.19867810799
+6.05790630937
+0.015959860033
+38
+0.751991114512
+3.74125121886
+0.015542679034
+6
+2.18666735888
+6.1851151041
+0.015766111972
+39
+1.48174700087
+4.52738749074
+0.016234007126
+7
+2.51505669679
+1.00948941577
+0.015815722278
+40
+1.17797319071
+5.47732574618
+0.015237652047
+8
+1.97044646628
+4.39097031362
+0.01620127622
+41
+2.75538217785
+5.0325964137
+0.015882225302
+9
+2.22482662721
+0.504094970079
+0.015706318065
+42
+1.60511144111
+4.07892986465
+0.016271016825
+10
+0.793517629239
+5.79647595823
+0.015848007878
+43
+0.211433971236
+1.04690369381
+0.01534134374
+11
+1.39809888725
+1.58553021733
+0.015599630829
+44
+1.20096747392
+0.69784980578
+0.01603447883
+12
+0.739067275481
+0.769739813641
+0.015440641966
+45
+1.86276085468
+0.260411929155
+0.012502928389
+13
+0.961985366598
+0.21029809686
+0.016174983693
+46
+2.37643960157
+3.40278966551
+0.016041396391
+14
+0.950437303827
+2.37050395082
+0.015942151322
+47
+1.62207830068
+5.32084284346
+0.015259454437
+15
+0.813625026449
+5.13504832577
+0.01543535868
+48
+2.61760888454
+1.83810114382
+0.01257814012
+16
+2.61145274129
+2.69145782712
+0.015194499446
+49
+2.16892121481
+2.77080563998
+0.015801726157
+17
+2.23497522046
+2.15245254337
+0.015345512032
+50
+2.65416114082
+0.0586808280569
+0.015886144057
+18
+0.514064131767
+2.20184861497
+0.015932392513
+51
+1.52857750031
+5.74473287538
+0.01250742307
+19
+1.94829281362
+3.26134434253
+0.015825043399
+52
+3.01082211471
+1.19566768512
+0.01518447752
+20
+1.4105201288
+0.249853752915
+0.015616800339
+53
+1.39454341264
+2.05400049633
+0.015767805536
+21
+2.05496644773
+5.24902003738
+0.012703348341
+54
+1.96388773167
+5.72848024719
+0.015148298878
+22
+0.520612112758
+0.0922663976576
+0.012851408141
+55
+0.691607842915
+2.95351448068
+0.015670054589
+23
+1.25290443237
+3.73412539672
+0.015226387285
+56
+1.41041577607
+2.47844583949
+0.013231436974
+24
+2.80827281345
+3.67831502457
+0.01274928792
+57
+1.6890059202
+6.14390402236
+0.015532115173
+25
+1.79525012998
+1.40629465268
+0.012691306532
+58
+1.81739120815
+1.87940062947
+0.015805899519
+26
+2.06509258359
+3.86211165764
+0.01559038684
+59
+0.623448397599
+4.42059901363
+0.015983191096
+27
+1.69358920808
+2.84141732452
+0.01567310381
+60
+2.42095409404
+5.59648563043
+0.015886463625
+28
+1.10513075433
+4.17848693448
+0.015600274168
+61
+1.68856577065
+0.663758643732
+0.015895401615
+29
+0.358830558297
+5.2784396103
+0.015929283478
+62
+0.652211552292
+1.43220215503
+0.012532311844
+30
+2.02914773443
+1.00176517068
+0.015817892577
+63
+2.21418943469
+1.54680613956
+0.015534310432
+31
+1.05116632586
+4.65626133789
+0.012697330999
+64
+1.51910545537
+1.07794424578
+0.015511054514
+32
+0.984415156942
+1.80817356035
+0.015699358498
+65
+1.04178071878
+3.32048914291
+0.012279112331
+33
+1.47638971563
+3.24915411931
+0.015478315139
+66
+1.07810787109
+1.22571599163
+0.015416475676
+Journal of Applied Mechanics
+JANUARY 2017, Vol. 84 / 011005-9
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.org[34] Ru, C., and Aifantis, E., 1993, “A Simple Approach to Solve Boundary-Value
+Problems in Gradient Elasticity,” Acta Mech., 101(1–4), pp. 59–68.
+[35] Bazant, Z. P., and Oh, B. H., 1983, “Microplane Model for Fracture Analysis of
+Concrete Structures,” Northwestern University, Evanston, IL, Technical Report
+No. ADP001715.
+[36] Bazant, Z. P., and Oh, B. H., 1985, “Microplane Model for Progressive Fracture
+of Concrete and Rock,” J. Eng. Mech., 111(4), pp. 559–582.
+[37] Caner, F. C., and Bazant, Z. P., 2012, “Microplane Model M7 for Plain Con-
+crete—I: Formulation,” J. Eng. Mech., 139(12), pp. 1714–1723.
+[38] Bazant, Z. P., and Zi, G., 2003, “Microplane Constitutive Model for Porous Iso-
+tropic Rocks,” Int. J. Numer. Anal. Methods Geomech., 27(1), pp. 25–47.
+[39] Brocca, M., Bazant, Z. P., and Daniel, I. M., 2001, “Microplane Model for Stiff
+Foams and Finite Element Analysis of Sandwich Failure by Core Indentation,”
+Int. J. Solids Struct., 38(44), pp. 8111–8132.
+[40] Brocca, M., Brinson, L. C., and Bazant, Z. P., 2002, “Three-Dimensional Con-
+stitutive Model for Shape Memory Alloys Based on Microplane Model,”
+J. Mech. Phys. Solids, 50(5), pp. 1051–1077.
+[41] Beghini, A., Bazant, Z. P., Zhou, Y., Gouirand, O., and Caner, F. C., 2007,
+“Microplane Model M5f for Multiaxial Behavior and Fracture of Fiber-
+Reinforced Concrete,” J. Eng. Mech., 133(1), pp. 66–75.
+[42] Cusatis, G., Beghini, A., and Bazant, Z. P., 2007, “Spectral Stiffness Micro-
+plane Model for Quasibrittle Composite Laminates—I: Theory,” ASME J.
+Appl. Mech., 75(2), p. 021009.
+[43] Salviato, M., Esfahani, S. E. A., and Cusatis, G., 2015, “Spectral Stiffness
+Microplane Model for Quasibrittle Textile Composites,” arXiv:1509.02501.
+[44] Bazant, Z. P., and Oh, B. H., 1983, “Crack Band Theory for Fracture of Con-
+crete,” Mater. Constr., 16(3), pp. 155–177.
+[45] Bazant, Z. P., and Ozbolt, J., 1990, “Nonlocal Microplane Model for Fracture,
+Damage,
+and
+Size
+Effect
+in
+Structures,”
+J.
+Eng.
+Mech.,
+116(11),
+pp. 2485–2505.
+[46] Bazant, Z. P., and Di Luzio, G., 2004, “Nonlocal Microplane Model With
+Strain-Softening Yield Limits,” Int. J. Solids Struct., 41(24), pp. 7209–7240.
+[47] Di Luzio, G., 2007, “A Symmetric Over-Nonlocal Microplane Model M4 for
+Fracture in Concrete,” Int. J. Solids Struct., 44(13), pp. 4418–4441.
+[48] Kuhl, E., and Ramm, E., 1999, “Simulation of Strain Localization With Gradi-
+ent Enhanced Damage Models,” Comput. Mater. Sci., 16(1), pp. 176–185.
+[49] Kuhl, E., Ramm, E., and de Borst, R., 2000, “Anisotropic Gradient Damage
+With the Microplane Model,” Comput. Methods Appl. Mech. Eng., 183(1–2),
+pp. 87–103.
+[50] Cusatis, G., and Zhou, X., 2013, “High-Order Microplane Theory for Quasi-
+Brittle Materials With Multiple Characteristic Lengths,” J. Eng. Mech., 140(7),
+p. 04014046.
+[51] Hughes, T. J., Cottrell, J. A., and Bazilevs, Y., 2005, “Isogeometric Analysis:
+CAD, Finite Elements, Nurbs, Exact Geometry and Mesh Reﬁnement,” Com-
+put. Methods Appl. Mech. Eng., 194(39), pp. 4135–4195.
+[52] Farin, G. E., 1995, NURB Curves and Surfaces: From Projective Geometry to
+Practical Use, AK Peters, Wellesley, MA.
+[53] Nguyen, V. P., Anitescu, C., Bordas, S. P., and Rabczuk, T., 2015,
+“Isogeometric Analysis: An Overview and Computer Implementation Aspects,”
+Math. Comput. Simul., 117, pp. 89–116.
+[54] Auricchio, F., Calabro, F., Hughes, T., Reali, A., and Sangalli, G., 2012, “A Simple
+Algorithm for Obtaining Nearly Optimal Quadrature Rules for NURBS-Based Iso-
+geometric Analysis,” Comput. Methods Appl. Mech. Eng., 249–252, pp. 15–27.
+[55] Schillinger, D., Hossain, S. J., and Hughes, T. J., 2014, “Reduced Bezier Ele-
+ment Quadrature Rules for Quadratic and Cubic Splines in Isogeometric Analy-
+sis,” Comput. Methods Appl. Mech. Eng., 277, pp. 1–45.
+[56] Hiemstra, R., Calabro, F., Schillinger, D., and Hughes, T., 2016, “Optimal and
+Reduced Quadrature Rules for Tensor Product and Hierarchically Reﬁned
+Splines in Isogeometric Analysis,” ICES Rep., 16(11), pp. 1–56.
+[57] Papargyri-Beskou, S., Tsepoura, K., Polyzos, D., and Beskos, D., 2003,
+“Bending and Stability Analysis of Gradient Elastic Beams,” Int. J. Solids
+Struct., 40(2), pp. 385–400.
+[58] Lam, D. C. C., Yang, F., Chong, A., Wang, J., and Tong, P., 2003,
+“Experiments and Theory in Strain Gradient Elasticity,” J. Mech. Phys. Solids,
+51(8), pp. 1477–1508.
+[59] Eringen, A., 1967, “Theory of Micropolar Elasticity,” Ofﬁce of Naval
+Research, Washington, DC, Technical Report No. 1.
+[60] Mindlin, R., 1963, “Inﬂuence of Couple-Stresses on Stress Concentrations,”
+Exp. Mech., 3(1), pp. 1–7.
+[61] Pothier, A., and Rencis, J., 1994, “Three-Dimensional Finite Element Formula-
+tion for Microelastic Solids,” Comput. Struct., 51(1), pp. 1–21.
+[62] Sachio, N., Benedict, R., and Lakes, R., 1984, “Finite Element Method for
+Orthotropic Micropolar Elasticity,” Int. J. Eng. Sci., 22(3), pp. 319–330.
+[63] Cusatis, G., Pelessone, D., and Mencarelli, A., 2011, “Lattice Discrete Particle
+Model (LDPM) for Failure Behavior of Concrete—I: Theory,” Cem. Concr.
+Compos., 33(9), pp. 881–890.
+[64] Caner, F. C., and Bazant, Z. P., 2013, “Microplane Model M7 for Plain Con-
+crete—II:
+Calibration
+and
+Veriﬁcation,”
+J.
+Eng.
+Mech.,
+139(12),
+pp.
+1724–1735.
+[65] O’Rourke, J., and Goodman, J. E., 2004, Handbook of Discrete and Computa-
+tional Geometry, CRC Press, Boca Raton, FL.
+[66] Renka, R. J., 1997, “Algorithm 772: Stripack: Delaunay Triangulation and Vor-
+onoi Diagram on the Surface of a Sphere,” ACM Trans. Math. Software
+(TOMS), 23(3), pp. 416–434.
+011005-10 / Vol. 84, JANUARY 2017
+Transactions of the ASME
+Downloaded From: http://appliedmechanics.asmedigitalcollection.asme.org/pdfaccess.ashx?url=/data/journals/jamcav/935801/ on 02/16/2017 Terms of Use: http://www.asme.org

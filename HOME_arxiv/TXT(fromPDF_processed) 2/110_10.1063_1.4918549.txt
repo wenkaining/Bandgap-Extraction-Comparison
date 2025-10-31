@@ -1,0 +1,401 @@
+arXiv:1502.03659v1 [cond-mat.mes-hall]  12 Feb 2015 Inﬂuence of interface potential on the eﬀective mass in Ge nanostructures E. G. Barbagiovanni,1, a) S. Cosentino,1 D. J. Lockwood,2 R. N. Costa Filho,3 A. Terrasi,1 and S. Mirabella1 1)MATIS IMM-CNR and Dipartimento di Fisica e Astronomia, Universit`a di Catania, via S. Soﬁa 64, 95123 Catania, Italy 2)Measurement Science and Standards, National Research Council, Ottawa, Ontario K1A 0R6, Canada 3)Departamento de F´ısica, Universidade Federal do Cear´a, Caixa Postal 6030, Campus do Pici, 60455-760 Fortaleza, Cear´a, Brazil (Dated: 1 August 2018) The role of the interface potential on the eﬀective mass of charge carriers is elucidated in this work.
+We develop a new theoretical formalism using a spatially dependent eﬀective mass that is related to the magnitude of the interface potential.
+Using this formalism we studied Ge quantum dots (QDs) formed by plasma enhanced chemical vapour deposition (PECVD) and co-sputtering (sputter).
+These samples allowed us to isolate important consequences arising from diﬀerences in the interface potential.
+We found that for a higher interface potential, as in the case of PECVD QDs, there is a larger reduction in the eﬀective mass, which increases the conﬁnement energy with respect to the sputter sample.
+We further understood the action of O interface states by comparing our results with Ge QDs grown by molecular beam epitaxy.
+It is found that the O states can suppress the inﬂuence of the interface potential.
+From our theoretical formalism we determine the length scale over which the interface potential inﬂuences the eﬀective mass.
+PACS numbers: 73.21.La, 78.67.Hc, 68.65.-k, 73.90.+f I. INTRODUCTION Si and Ge nanostructures (NSs) remain amongst the most important materials for photovoltaic and electronic applications1,2.
+Si is extensively used in the microelec- tronics industry partly due to the importance and stabil- ity of its oxide3.
+The Ge oxide states can create compli- cations in NSs.
+Fabrication of Ge NSs in a SiO2 matrix often results in a high concentration of interface defect states4–6, because Ge can easily occupy the Si position within the SiO2 matrix due to its low formation energy.
+Sub-oxide interface states give rise to a defect photolumi- nescence (PL) band that can dominate quantum conﬁne- ment (QC) eﬀects5.
+However, with careful control over the fabrication7 and characterization8 conditions, Ge NSs do clearly demonstrate QC eﬀects.
+Furthermore, because of a larger Bohr radius in Ge compared to Si, Ge has the advantage of greater tunability in the gap energy (EG) due to QC9.
+Moreover, it was recently demonstrated that interface defect states may enhance the eﬃciency of photovoltaic devices due to preferential hole trapping9.
+The nature of its interfacial structure is arguably the deﬁning parameter of a NS.
+Fundamentally, the intro- duction of an interface modiﬁes bulk parameters5 and introduces new phenomena.
+Interface states can break valley degeneracy10.
+Dangling bonds, stress, and de- fect states elicit the degree to which the interface po- tential conﬁnes charge carriers5.
+Hydrogen versus oxy- gen termination at the interface inﬂuences the oscilla- tor strength11 and creates polarization eﬀects at the interface12.
+Nanostructure sensing devices rely on the a)eric.barbagiovanni@ct.infn.it charge conﬁguration at the interface, which ‘communi- cates’ with the environment13 and determines the con- ductivity within the NS14.
+Nonetheless, the role of the in- terface remains largely misunderstood15.
+The exact band energy alignment at the interface remains a topic of in- tense research16, as it is diﬃcult to establish the exact chemical environment at the interface17.
+Defect engineer- ing at the interface can have a complicated eﬀect on the QC of the charge carriers18,19, which can be diﬃcult to model theoretically20,21.
+The crystal potential changes across the interface of a NS and thus the carrier eﬀective mass (EM) changes, which is modelled by invoking the Bastard-type bound- ary conditions22–25.
+There is experimental6,26–28 and theoretical29,30 evidence that the EM should depend on the NS dimension.
+Understanding how the EM varies in low-dimension remains a challenge as experimental mea- surements are model dependent31,32 and it is diﬃcult to theoretically scale the EM to low dimensions6,33.
+Den- sity functional theory (DFT) was used to calculate the EM from the density of states29.
+However, it is not clear how to model the interface nor the excited states within DFT25,34.
+A common pitfall in theoretical modelling is the lack of information regarding the interface atomic potentials, which leads to extensive use of H-terminated surfaces at the expense of the experimental details5.
+Sub-oxide inter- faces are typically modelled using OH termination35,36.
+The local density approximation is used to correct for the local charge environment to obtain agreement with the experimental optical gap5,35.
+However, there are re- cent theoretical results using embedding matrices, such as SiC37. Ref.
+33 embedded Si NSs in a SiO2 matrix by inserting O atoms between Si-Si bonds followed by a randomizing procedure leading to defect and stress free2 structures.
+Therefore, relaxed assumptions are required to obtain agreement with experiment and the defect land- scape cannot be readily included38,39.
+Owing to the rich variety of phenomena that the inter- face can give rise to, understanding the contribution of the individual components can be diﬃcult.
+Indeed, the- oretical studies have suggested5,6,40 EG ∼D−x, where 1 ≤x ≤2 and D is the NS diameter, which has been demonstrated experimentally5,41,42.
+In this work, we elu- cidate the precise role of the interface potential on the EM.
+An analytic formalism for the EM and interface30 was developed and applied to study Ge quantum dots (QDs) grown by molecular beam epitaxy (MBE)43.
+The parameters developed during our study on MBE Ge QDs are transferred to the present study on rf-magnetron co- sputtering (sputtering), and plasma enhanced chemical vapour deposition (PECVD) Ge QDs.
+The PECVD and sputter samples were chosen for this work because they were fabricated under similar experimental conditions, but exhibit a measurable variation in the chemical struc- ture of the interface.
+Both sputtered and PECVD QDs have the same dimensional dependence as the MBE QDs, which allows us to isolate the role of the interface poten- tial on the EM.
+Comparing PECVD and sputter samples, it is found that as the interface potential increases the EM is re- duced thus increasing the conﬁnement energy.
+We deter- mine the length scale at which the EM is modiﬁed due to the interface potential.
+Furthermore, by comparing with MBE Ge QDs we ﬁnd that O interface states can sup- press this mechanism.
+These results are important for solar cell applications, as we recently demonstrated that defects at the interface can be engineered to enhance the light harvesting capabilities in Ge QDs9. II.
+EXPERIMENT In this work, we focus our analysis on experimental results from two fabrication methods for Ge quantum dots (QDs) that produce diﬀerent interface potentials.
+Thin ﬁlms of Ge-rich SiO2 were deposited using either PECVD8 or sputtering9.
+Thermal annealing was car- ried out at 800 oC or 600 oC in N2 for PECVD or sput- tered samples, respectively, to promote Ge QD nucle- ation. In Refs.
+8 and 9, the experimental details of diam- eter control and determination are discussed along with crystallinity measurements.
+Both PECVD and sputtered QDs were determined to be in an amorphous state with a bulk gap energy (EG(∞)) of 0.8 eV. The average diam- eter in the sputter samples varies from 2 to 4 nm, while in PECVD samples it varies from 3.5 to 8.4 nm.
+Optical absorption measurements were performed to assess the variation in EG with QD diameter.
+Ge NSs embedded in an oxide matrix typically demonstrate a PL spectrum dominated by a high concentration of sub-oxide related defects at the interface between the Ge NS and the oxide matrix, thus masking the QC related PL band5. In Refs.
+8 and 9, the absorption spectrum was considered over the PL spectrum, because defects states in the GeO2 in- terface made it diﬃcult to measure the variation of EG with QD diameter from the emission spectrum44, which is more sensitive to mid-gap defects45.
+Finally, it is worth noting that due to NS size distribution and carrier leak- age there is some inherent error in associating the NS experimental EG(D) with the correct experimental D, see Ref. 5 for more details.
+From the absorption spectra, the oscillator strength, and EG(D) was found in Refs.
+8 and 9 for each D using the Tauc method.
+The applicability of the Tauc method to NSs is discussed in detail in Ref. 9.
+The Tauc method is based on a semi-empirical model for amorphous sys- tems, which assumes parabolic band edges and optical inter-band transitions between quasi localized states (i.e. momentum is not conserved)46.
+Indeed, the method as- sumes that the dipole-matrix element (proportional to the oscillator strength) is not k-dependent.
+Breaking of momentum (k-vector) conservation is a fundamental ten- ant of quantum conﬁnement in NSs.
+Furthermore, our NSs are amorphous and thus lack long range order.
+In addition, the parabolic band edge picture can still be ap- plied in a NS as discussed in the next section.
+A devia- tion from linearity happens at low σhν due to Urbach tail regions.
+For this reason, the estimation of EG for amor- phous materials is usually performed for values of σ larger than 2×10−9 cm2 (for our samples) where a clear lin- ear trend in the Tauc plots appears47.
+Furthermore, the EG was calculated from scanning tunnelling spectroscopy measurements on Ge QDs to be ∼1.4 eV48.
+This value agrees with our EG determined via the Tauc method for a similar diameter range.
+Therefore, we ﬁnd that the Tauc method works well for amorphous NSs and has been ex- perimentally demonstrated in the literature27,47. III.
+THEORY The analysis of the experimental data is carried out using a variety of theoretical tools.
+The approach taken in this work considers an interface-related correction to the EMA.
+The validity of the EMA has been widely de- bated in the literature5.
+Generally, it is assumed that the parabolic band approximation breaks down at low- dimension and thus the EMA cannot be applied.
+How- ever, recently it has been shown that a notion of a ‘fuzzy- band-structure’ holds for NSs down to ≈2 nm49, and that the k · p method does produce the correct symme- try of a QD50.
+The EMA is a ﬁrst order approximation of the k · p generalization that considers transitions only at the conduction band minimum (CBM) and valence band maximum (VBM).
+In a NS, transitions mainly oc- cur near the Brillouin zone center (the Γ-point), due to breaking of the momentum selection rules6.
+This type of transition is referred to as pseudodirect51,52.
+From a theoretical perspective, pseudodirect behavior allows one to ignore phonon events in the formalism.
+When3 a 30-band k · p model is considered, spurious solutions are found, which can be removed computationally53.
+A two-conduction-band k·p approach has also been used54 to describe conduction band hybridization, and a two- band approximation6 demonstrates good agreement with experiment25.
+A justiﬁcation of the EMA is given in de- tail in Refs. 5 and 6.
+DFT models including interface corrections have been employed in the literature21,36, and produce a similar dimensional dependence as the method presented here35.
+However, we opt for the present ap- proach because of the clarity in the physics at the inter- face.
+Also, the DFT approaches use a diﬀerent interface passivation from the actual experiment one.
+First, we employ a new theoretical formalism using a spatially dependent eﬀective mass (SPDEM), as detailed in Ref. 30 and formulated in Refs. 55 and 56.
+The important feature here is the introduction of an inverse characteristic length scale: γ2 = 2D−2, where D is the QD diameter in nanometres.
+γ is not tunable, but was derived in Ref.
+30 and modiﬁes the dispersion relation of the charge carriers as described in Sec.
+V. γ acts as a coupling parameter between the momentum of the charge carriers and the conﬁnement potential.
+In this formalism, the conﬁnement potential, VC, was given by: VC, i = −Vo exp  2 D2γ2 i ln2(1 + γiri)  ; (1) where ri is the particle position in the i = x, y, z direc- tion, and Vo is deﬁned as the energy diﬀerence between the QD and the matrix material at the CBM or the VBM for an electron (Vo,e) or hole (Vo,h), respectively.
+Using a point canonical transformation (PCT), we demonstrated that the SPDEM is directly related to the conﬁnement potential.
+This eﬀect is analogous to the relationship be- tween the crystal potential and the bare electron mass30.
+Therefore, the SPDEM formalism is well adapted to de- scribe the eﬀect of VC on the eﬀective mass and yields the dispersion relation: EG(D) = EG(∞) + 3ℏ √ 2D "s Vo,e m∗o,e + s Vo,h m∗ o,h # ; (2) where m∗ o,e, and m∗ o,h are the bulk electron and hole ef- fective mass, respectively.
+The second model used in our analysis is the eﬀec- tive mass approximation (EMA), as detailed in Ref. 6.
+This model describes electron-hole conﬁnement condi- tions within an inﬁnite conﬁnement potential context, according to the relation: EG(D) = EG(∞) + 7.88 D2 eV · nm2.
+(3) We note that EMA presented here is used to describe only the eﬀect of reduced dimension on the electron and hole and includes no additional eﬀects.
+However, we discovered a physically signiﬁcant phenomenologi- cal correction43 to both the SPDEM and EMA models, which was applied to obtain agreement between the two theories, given by: ˜µ(D) = µoeSP DEMD  1 + 1 aD2+bD+c  ; (4) µ(D) = µoeEMA  1 + 1 aD2+bD+c  ; (5) where a=0.047 nm−2, b=0.160 nm−1, and c=-0.035 are identical for both renormalized masses, ˜µ(D) and µ(D), and were determined in Ref. 43.
+The parameters ‘a’, ‘b’, and ‘c’ were determined from PL measurements on MBE Ge QDs43. Ref.
+57 noted that these QDs experience strong exciton localization and thus there is no Stokes shift between the absorption and emission spectrum.
+Ac- cording to the theory of QC, localization in position space breaks the momentum selection rules and thus phonon coupling is not required for indirect gap materials5. In Refs.
+5 and 6 we noted that a measured Stokes shift was a consequence of interfacial phononic modes (e.g. vibrons).
+Strong breaking of the momentum selection rules (or time-reversibility) denoted as ‘strong conﬁne- ment’ is included in both the EMA6 and SPDEM30 mod- els.
+We showed previously6 that amorphous NSs experi- ence strong conﬁnement in the electron and hole states.
+In our model, the interface potential inﬂuences the ef- fective mass, as noted above and discussed in Sec. V.
+The parameters eSP DEM in [nm−1] and eEMA renor- malize the bulk reduced mass, µo, and will be discussed in Sec. IV.
+Therefore, we conclude that the parameters ‘a’, ‘b’, and ‘c’ are valid for both absorption and emission spectrum, while the inﬂuence of the interface is contained in the parameter ‘e’.
+The parameters ‘a’, ‘b’, and ‘c’ are the same for all Ge QD samples and their physical signiﬁcance is discussed further in Sec. V.
+Our aim in this work is to understand the inﬂuence of the interface on the EM.
+This inﬂuence is contained solely in the parameter ‘e’, which is introduced as correction to the EMA and SPDEM models.
+This pa- rameter gives us access to the macroscopic features of the interface that would otherwise be inaccessible within the standard EMA.
+Therefore, when we use Eqs.
+(4) and (5) with Eqs.
+(2) and (3), respectively, we obtain perfect agreement in the dispersion relations43 allowing us to isolate essential diﬀerences in the physics between the two models, as described Sec. V.
+It is important to note that we are presenting a phenomenological analysis and not presenting these models as an alternative to pre- viously existing theoretical models.
+Our intention is to compare the results of two models across diﬀerent fabri- cation methods to extract physically relevant information correlated with the variation in our parameter set.
+A. Methodology For the sputter and PECVD Ge QDs, we use Eqs.
+(4) and (5) in the SPDEM-˜µ(D) and EMA-µ(D) (see Ref. 43) models to determine the relationship between the in- terface potential and EM.
+For all QD samples the term4 FIG.
+1. XPS measurement of the Ge 3d peak from the as- deposited Ge-rich layer (SiGeO) formed by sputtering.
+The relative intensity of the Ge-Ge peak with respect to its oxide states is shown by the respective ﬁts. Color online.
+ 1 +  aD2 + bD + c −1 in Eqs.
+(4) and (5) is the same, thus ensuring that all samples have the same dimensional dependence as found in Ref. 43.
+Therefore, we are left to determine only Vo,e, Vo,h, and the parameter e. First, we consider Vo,e and Vo,h. From x-ray photoe- mission spectroscopy (XPS) in sputtered Ge QDs, a Ge- Ge signal was measured in the as-deposited ﬁlm, see Fig. 1.
+This signal indicated that Ge QDs formed upon initial ﬁlm deposition.
+From the XPS results, no Ge-Si nor Si-Si signal are observed indicating that all of the Ge is either within the QD or in an oxide state, and all of the Si is in the SiO2 state9.
+Therefore, sputter thin ﬁlm depo- sition, under our given experimental conditions, can be modelled approximately by the random mixture model (RMM)44,58.
+This model supposes that the ﬁlm is de- scribed by the formation of a mixture of Ge, GeOx, and GeO2 centres59.
+A representation of the RMM is given in Fig. 2.
+In the top part of Fig. 2, we indicate a region of Ge surrounded by layer of GeOx and a thin layer of GeO2.
+Upon annealing, the Ge QD diameter and the sto- ichiometric oxide concentration increase.
+This is a result of Ge diﬀusing from the Ge-rich GeOx region into the Ge QD region60, which is indicated in the bottom part of Fig. 2.
+Simultaneously, it is possible that O diﬀuses toward the GeO2 region.
+This observation implies that the interface between the Ge QD and the matrix mate- rial is comprised of a large concentration of GeOx states.
+As a ﬁrst approximation, we consider a Ge-GeO interface with a potential of approximately V0,e = 0.6 eV and V0,h = 1.8 eV61.
+In the case of PECVD QDs, a diﬀerent behaviour was observed.
+Here the QDs are more accurately modelled by the random bonding model (RBM), under our given experimental conditions58, see Fig. 3.
+In the RBM all of the Ge is assumed to be in one of its oxide states63.
+Raman measurements (see Ref.
+8) indicate that upon FIG. 2.
+Schematic representation of the ideal random mix- ture model.
+The top ﬁgure depicts the as deposited Ge-rich layer where Ge QDs are seen before annealing.
+Ge QDs are surrounded by a sub-oxide shell and pure GeO2.
+After an- nealing, the Ge QD diameter increases as stoichiometric GeO2 forms and the GeOx layer thickness decreases.
+The diﬀusion process is indicated by the arrows in the middle part of the ﬁgure.
+Molecular structures were generated using VESTA62 and represent only a cross section of the QD structure. Color online.
+deposition the ﬁlm is primarily in a Ge sub-oxide state, i.e. there is no clear observation of a Ge-Ge signal, as represented in the top part of Fig. 3.
+After annealing, GeOx will phase separate into Ge QDs and GeO2 medi- ated by Ge diﬀusion, as represented in the bottom part of Fig. 3.
+As in the case of sputter QDs, it is possi- ble that O undergoes diﬀusion as well.
+This behaviour implies that the interface is mainly composed of GeO2.
+Though there must still exist a small concentration (as compared to sputtered Ge QDs) of GeOx right at the in- terface, which will lower the interface potential slightly from the ideal GeO2 value.
+Therefore, we assume that the interface potential is close to the value of Ge-GeO2, which is V0,e = 1.2 eV and V0,h = 3.6 eV64.
+The ﬁnal step is to determine e for both the SPDEM and EMA models.
+We consider a Tauc plot of the ex- perimental absorption cross section, σ, for PECVD and sputtered Ge QDs from Refs.
+8 and 9, respectively.
+σ is modelled via the relation: σ = B∗ hν (hν −EG(D))2 ; (6) where B∗is proportional to the the oscillator strength and was determined experimentally, and hν is the pho- ton energy.
+EG(D) is given by either SPDEM-˜µ(D) or EMA-µ(D), in Eq. (6).
+EG(D) and D was determined experimentally in Refs.
+8 and 9, see Sec. II.
+In the case of5 FIG. 3.
+Schematic representation of the ideal random bonding model.
+The top ﬁgure depicts the as deposited Ge-rich layer comprised of sub-stoichiometric GeO2, GeOx, where x <1.5.
+After annealing, phase separation occurs and Ge QDs form surrounded by GeO2, with a small concentration of GeOx right at the interface.
+The diﬀusion process is indicated by the arrows in the middle part of the ﬁgure.
+Molecular structures were generated using VESTA62 and represent only a cross section of the QD structure. Color online.
+EMA-µ(D), we ﬁt Eq. (6) via eEMA to the experimental data for each QD D and EG(D).
+For SPDEM-˜µ(D), as we noted above, the interface potential was approximated from our discussion of the RMM, or RBM for the sput- ter, or PECVD samples, respectively.
+Since these models are only a ﬁrst approximation we allowed Vo,e and Vo,h to vary within 25% of their proposed values, and then we ﬁtted Eq. (6) to the data by varying eSP DEM and Vo,e(h) for each experimental QD D and EG(D). IV.
+RESULTS The results obtained from ﬁtting SPDEM-˜µ(D) to the sputtered and PECVD samples are shown in Figs. 4 and 5, respectively.
+The deviation from linearity in the ex- perimental data at low σhν is due to Urbach tail regions, i.e. defect states near the band edge, which are common to amorphous structures as in this work9.
+In PECVD samples (Fig. 5) there is a deviation from linearity at high σhν due to a partial crystalline transition in less than 30% of the QDs after annealing at 800 oC8.
+When the ﬁt was constrained to the linear region, a less than 1 % diﬀerence was found in our ﬁnal ﬁtting parameters compared to ﬁtting over the entire data set.
+The ﬁtted value for eSP DEM is listed for each QD D in Figs. 4 and 0 2 4 6 8 10  1.5  2  2.5  3  3.5  4  4.5  5 σhν1/2(10-9 cm eV1/2) Energy (eV) Sputter: SiO2 Vfit o,e= 0.92 eV, Vfit o,h= 2.80 eV 2 nm eSPDEM= 0.17 2.5 nm eSPDEM= 0.20 3 nm eSPDEM= 0.19 4 nm eSPDEM= 0.16 FIG.
+4. Tauc plot of the absorption cross section with corre- sponding linear ﬁt for sputtered Ge QDs from Ref. 9.
+The diameter for each sample is given in the legend, with the ﬁt- ting parameter e from Eq. (4).
+The ﬁtted interface energy from Eq. (2) is labelled in the plot.
+0 2 4 6 8 10  1  1.5  2  2.5  3  3.5  4  4.5  5 σhν1/2(10-9 cm eV1/2) Energy (eV) PECVD: SiO2 Vfit o,e= 1.09 eV, Vfit o,h= 3.28 eV 3.5 nm eSPDEM= 0.07 4.4 nm eSPDEM= 0.10 8.4 nm eSPDEM= 0.10 FIG.
+5. Tauc plot of the absorption cross section with cor- responding linear ﬁt for PECVD Ge QDs from Ref. 8.
+The diameter for each sample is given in the legend, with the ﬁt- ting parameter e from Eq. (4).
+The ﬁtted interface energy from Eq. (2) is labelled in the plot.
+5, and the resultant interface potential (also shown), was found to be notably identical (within 1%) for each QD D. eSP DEM for each QD D are the same within experi- mental error, therefore, in our formulation of EG(D) we use the average value, ⟨e⟩=0.181, and 0.090 for sputter, and PECVD, respectively.
+Likewise, eEMA varies only within experimental error.
+The results of our analysis are summarized in Table I. Table I also lists the results from the EMA ﬁt and the values for MBE Ge QDs.
+In Fig. 6, we plot the experimental data for PECVD8 and sputter9 Ge QDs along with the SPDEM-˜µ(D) curve.
+The interface potential, eEMA, and EG(∞) are listed in Fig. 6 for reference. In Sec.
+III, we mentioned that the6 TABLE I. Renormalized mass parameter, e, for SPDEM (Eq. (4)) and EMA (Eq. (5)), and interface potential from Eq. (2) for sputter, PECVD, and MBE Ge QDs.
+Sputter 2 nm 2.5 nm 3 nm 4 nm ⟨e⟩ eEMA 0.528 0.597 0.583 0.499 0.552 eSP DEM (nm−1) 0.173 0.195 0.191 0.163 0.181 V fit o,e =0.92 eV V fit o,h =2.80 eV PECVD 3.5 nm 4.4 nm 8.4 nm ⟨e⟩ eEMA 0.203 0.268 0.288 0.253 eSP DEM (nm−1) 0.072 0.095 0.102 0.090 V fit o,e =1.09 eV V fit o,h =3.28 eV MBE eEMA 0.378 eSP DEM (nm−1) 0.059 Vo,e=0.20 eV Vo,h=0.66 eV  0.5  1  1.5  2  2.5  3  2  4  6  8  10  12  14  16 Gap Energy (eV) QD Diameter (nm) MBE: EG(∞)=0.704 PECVD: EG(∞)=0.80 < eEMA>=0.25, Vfit o,e=1.09 eV, Vfit o,h=3.28 eV Sputter: EG(∞)=0.80 <eEMA>=0.55, Vfit o,e=0.93 eV, Vfit o,h=2.80 eV MBE: eEMA=0.38, Vo,e=0.20 eV, Vo,h=0.66 eV FIG.
+6. Variation in the gap energy as a function of QD diameter for PECVD8 and sputter9 Ge QDs.
+The theoretical curves are from Eq. (2) with the correction factor Eq. (4).
+The MBE curve is taken from Ref. 43 for reference.
+The bulk gap energy EG(∞), interface energy, and e is given for each sample from Table I.
+The MBE curve uses the Ge/a-Si interface energy43.
+SPDEM-˜µ(D) and EMA-µ(D) models agree with each other.
+The parameters a, b, and c in Eqs.
+(4) and (5) were found by analysing MBE grown Ge QDs43.
+There is good agreement between the experimental data and our calculation, noting that the error bars in the D of the PECVD samples are on the order of 2 nm8.
+The EG for the PECVD grown samples is higher than the sputter samples.
+The reason for the diﬀerence is un- derstood within our models.
+From the SPDEM-˜µ(D) model, we ﬁnd a larger interface potential in PECVD samples compared to the sputter samples.
+The larger interface potential is correlated with a larger reduction in eEMA, which increases the conﬁnement energy.
+MBE Ge QDs were fabricated with an a-Si matrix, which has a lower interface potential than both PECVD and sput- ter Ge QDs, see Fig. 6.
+However, the EG is compa- rable to the other two samples with a value of eEMA in between the PECVD and sputter values.
+It is diﬃ- cult to make a full comparison between the sputter and PECVD samples versus the MBE samples, because the MBE samples were fabricated under very diﬀerent con- ditions.
+However, we can consider a few essential diﬀer- ences.
+In the case of the MBE QDs there are no O-defect states43,65, because of the unique fabrication method.
+O- defect states at the interface increase the spread of the wave-function, thus lowering the conﬁnement energy12.
+Furthermore, O interface states can pin the charge carri- ers, again lowering the conﬁnement energy5,6.
+The com- bination of these phenomena lowers the conﬁnement en- ergy in PECVD and sputter samples, in agreement with theoretical predictions12, and it becomes comparable to that in MBE samples (see Fig. 6).
+Therefore, we under- stand that the O interface states are the source of the diﬀerence between the sputter and PECVD samples ver- sus the MBE samples.
+Nonetheless, we see that for a higher interface energy a larger reduction in the EM is obtained.
+V. DISCUSSION A closer examination of the results shown in Table I in the context of our models allows us to understand the nature of the conﬁnement mechanism.
+As mentioned in Sec.
+III, the SPDEM theory models a modiﬁcation in the EM due to the interface potential.
+In Ref. 30, we derive the envelope function within the SPDEM formalism: Ψi(ri) =  2 σ2 i π 1/4 exp  − 1 2σ2 i γ2 i ln2(1 + γiri)  ; (7) where σ ∼(Vo)−1/2 is the Gaussian strength.
+In Fig. 7, we plot the probability amplitude of Eq. (7) for a 6 nm QD as a function of the interface potential and particle position.
+As the interface potential increases, the probability amplitude is increasingly localized, which implies increasing de-localization in momentum space.
+A Fourier transformation of Eq. (7) demonstrated that the SPDEM envelope function exhibits an increased spread in momentum space compared to a Gaussian envelope function30.
+The interface potential alters the SPDEM envelope function because of the introduction of γ, which modiﬁed the EM through the relation30: m(ri) = m∗ o (1 + γiri)2 .
+(8) Therefore, from (eSP DEM)−1 we can ﬁnd the length scale at which the EM begins to change, which is 16.95, 11.11, and 5.53 nm in MBE, PECVD, and sputter sam- ples, respectively.
+At the stated dimensions the SPDEM7 Probability Amplitude: 6 nm Quantum Dot -2 -1.5 -1 -0.5  0  0.5  1  1.5  2 Particle Position (nm)  0.5  1  1.5  2  2.5  3  3.5 Interface Potential (eV)  0  0.1  0.2  0.3  0.4  0.5  0.6  0.7  0.8  0.9  1 FIG. 7.
+Probability amplitude of Eq. (7) taken from Ref. 30 for a 6 nm Ge QD as a function of particle position and in- terface potential.
+The ﬁgure depicts increasing localization of the probability amplitude as a function of increasing interface potential. Color online.
+energy begins to deviate from the experimental data and eSP DEM corrects for this behaviour.
+In Fig. 8 we plot ˜µ(D)/µo and µ(D)/µo from Eqs.
+(4) and (5), respec- tively, where the role of eSP DEM can be seen.
+Below di- ameters of around 16 and 11 nm the MBE and PECVD ˜µ(D)/µo curves are less than 1 indicating that ˜µ(D) in- creases EG(D) below these dimensions.
+The diﬀerence between the cross-over dimension depicted in Fig. 8 and the value obtained from (eSP DEM)−1 is because of exper- imental error.
+We note that in Fig. 8 the ˜µ(D)/µo curve for the sputter sample does not fall below 1.
+In Ref. 43, we determined that above 6.2 nm the dispersion relation is dominated by the SPDEM-˜µ(D) relation.
+Therefore, the sputter (eSP DEM)−1 value of 5.53 nm indicates that the SPDEM mechanism is suppressed in these samples.
+The diﬀerent behaviour found for the sputter samples is a consequence of their interface quality (Secs. III A and IV).
+The lower interface potential does not create a strong conﬁnement condition for the charge carriers, see Fig. 7.
+Additionally, the sub-oxide interface states pro- mote de-localization of the wave-function in real space12.
+The values obtained for (eSDP EM)−1 also agree with the results of Fig. 6.
+First, we note that the value ob- tained for the MBE samples of ∼16 nm is on the order of the Bohr radius for Ge.
+This result is what we expect in these samples, because of the high quality interface.
+At 16 nm, the charge carriers in the MBE samples begin to experience the inﬂuence of the conﬁnement potential and thus their energy is modiﬁed, as predicted by QC.
+While in the PECVD and sputter samples, the onset of QC is suppressed from the expected Bohr radius value.
+Therefore, the PECVD and sputter samples experience the eﬀects of QC over a smaller diameter range compared to MBE, and thus their EG shift is not as great.
+The relationship between pure QC eﬀects and a modi- ﬁed EM are understood by comparing the SPDEM-˜µ(D)  0.2  0.4  0.6  0.8  1  1.2  1.4  1.6  1.8  2  2  4  6  8  10  12  14  16  18  20 µ(D)/µo and µ~(D)//µo QD Diameter (nm) SPDEM SPDEM PECVD Sputter MBE FIG. 8. Plot of Eqs.
+(4) and (5) normalized to the bulk reduced eﬀective mass, µo, for the diﬀerent Ge QD samples as a function of QD diameter.
+The SPDEM-˜µ(D) (Eq. (4)) curves are indicated by an arrow.
+The vertical lines indicate the dimension where the behaviour changes from SPDEM to EMA.
+results with respect to the EMA-µ(D) results.
+In a pre- vious work on Ge QDs buried in a-Si43 we found that above ≈6.2 nm the EG ∼D−1, due to a modiﬁcation in the EM, while below ≈4.6 nm the EG ∼D−2, due to pure QC eﬀects.
+These parameters come from the term  1 +  aD2 + bD + c −1 in Eqs.
+(4) and (5), and represent a universal dimensional dependence.
+The pa- rameter e represents a correction to these ideal length scales due to additional eﬀects not included in the the- ory, which in our analysis include the O-interface states.
+If we consider the ratio eEMA/eSP DEM, then we obtain 3.05 and 2.81 nm for sputter and PECVD samples, re- spectively.
+This length scale signiﬁes when the conﬁne- ment behaviour changes from the SPDEM to the EMA model and is depicted in Fig. 8 by the vertical line at 2.9 nm.
+Within experimental error, we thus ﬁnd that pure QC eﬀects dominate at ≈2.9 nm, which is suppressed from the ideal case (between 6.2 and 4.6 nm) due to the interface states.
+On the other hand, the same ratio in MBE samples gives 6.4 nm (see vertical line in Fig. 8), which is in agreement with the ideal value (6.2 nm), be- cause there are no O interface states in this sample.
+Fi- nally, this is in agreement with previous results obtained in Ref.
+43, where the MBE value of 6 nm was found to be the dimension that produces the most eﬃcient lumi- nescence.
+From our work here we understand this result on the basis that this is the dimension at which the be- haviour changes from SPDEM to EMA and thus carriers are strongly conﬁned.
+We illustrate collectively all of the phenomena de- scribed in this manuscript in Fig. 9.
+At the top of the ﬁgure we recall the dimensional dependence of the SPDEM-˜µ(D) and EMA-µ(D) models.
+Fig 9 is divided into two parts.
+In the ‘pink’ region of the ﬁgure above ∼68 nm, the dominant model is SPDEM-˜µ(D), which models a change in EG in conjunction with a change in the EM.
+The ‘grey’ region below ∼4 nm is modelled according to the EMA-µ(D) where pure QC eﬀects dominate.
+The ‘pink’ and ‘grey’ regions were determined from the results of Ref.
+43 and come from the universal dimensional pa- rameters a, and b in the term  1 +  aD2 + bD + c −1 .
+From the parameter (eSP DEM)−1, we determined the onset of the SPDEM behaviour at ∼16, 11, and 5 nm in the MBE, PECVD, and sputter samples, respectively.
+The change in energy due to SPDEM is represented by the solid curved line in Fig. 9 for the three samples (not drawn to scale).
+The MBE sample’s value is in agree- ment with the Bohr radius for Ge and indicates when the charge carriers ﬁrst ‘feel’ the conﬁnement potential.
+In the case of PECVD and sputter samples this value is suppressed due to the O states at the interface, which cause the wave-function to leak into the matrix and thus lowers the conﬁnement energy, as described above.
+The PECVD case has a higher value than the sputter case due to the higher conﬁnement potential and thus experience a larger change in EG, due to an increased reduction in the EM.
+The transition point from SPDEM to EMA is on the order of 5 nm according to the transition from the ‘pink’ to the ‘grey’ region in Fig. 9.
+From the ratio of eEMA to eSP DEM we determined this transition for each sam- ple.
+The change in energy due to EMA is represented by the dashed curved line in Fig. 9 for the three samples (not drawn to scale).
+In the case of MBE sample, the transition is in agreement with the calculated value at 6 nm, because of the lack of O at the interface.
+While in PECVD and sputter samples they both change behaviour at around 3 nm.
+The suppression here again is due to O interface states, as described above. VI.
+CONCLUSION Using a previously developed theoretical formalism as an analytical tool we have been able to understand the relationship between the EM and the interface potential.
+We found that when the interface potential was large there exists a strong reduction in the EM.
+This condition was clearly demonstrated when comparing PECVD and sputter samples, where the PECVD case has a larger interface potential.
+However, if the sample contains O states at the interface, then the conﬁnement energy was reduced due to these states.
+This result was noted by comparing MBE samples with no O interface states to the PECVD and sputter samples.
+We determined the length scale where the samples begin to experience a modiﬁcation in EG due to a change in the EM, which was ∼16, 11, and 5 nm for MBE, PECVD, and sput- ter samples, respectively.
+The lower values in PECVD and sputter samples compared to MBE samples were un- derstood in terms of the O interface states.
+We found the length scale where the QC mechanism changes from SPDEM to EMA, which was 6, and 3 nm in MBE and PECVD/sputter samples, respectively.
+All of these re- sults are summarised graphically in Fig. 9.
+These re- sults indicate an additional carrier conﬁnement mecha- nism in NSs, which can be exploited for device fabrica- tion through interface engineering.
+From this work, we have found a dynamic relationship between the magni- tude of the interface potential and the EM with respect to the chemical composition of the interface.
+ACKNOWLEDGMENTS We would like to thank N. L. Rowell from NRC- Ottawa; I. Berbezier, G. Amiard, L. Favre, and A. Ronda from UMR CNRS-Marseille; and M. Faustini, and D. Grosso from UMR-7574 UPMC-CNRS-Paris for their valuable experimental contributions and insights with re- spect to MBE grown Ge QDs.
+R.N.C.F. acknowledges funding from CNPq (Brazilian agency).
+S.C., A.T., and S.M. acknowledge MIUR projects, and ENERGETIC (PON00355 3391233).
+E.G.B. and S.M. acknowledge PLAST ICs (PON02 00355 3416798).
+1S. K. Ray, S. Maikap, W. Banerjee, and S. Das, J. Phys. D: Appl.
+Phys. 46, 153001 (2013).
+2L. Mangolini, J. Vac. Sci. Technol., B 31, 020801 (2013).
+3F. A. Zwanenburg, A. S. Dzurak, A. Morello, M. Y. Simmons, L. C. L. Hollenberg, G. Klimeck, S. Rogge, S. N. Coppersmith, and M. A. Eriksson, Rev. Mod.
+Phys. 85, 961 (2013).
+4K. S. Min, K. V. Shcheglov, C. M. Yang, H. A. Atwater, M. L. Brongersma, and A. Polman, Appl. Phys.
+Lett. 69, 2033 (1996).
+5E. G. Barbagiovanni, D. J. Lockwood, P. J. Simpson, and L. V. Goncharova, Appl. Phys.
+Rev. 1, 011302 (2014).
+6E. G. Barbagiovanni, D. J. Lockwood, P. J. Simpson, and L. V. Goncharova, J. Appl.
+Phys. 111, 034307 (2012).
+7D. J. Lockwood, N. L. Rowell, E. G. Barbagiovanni, L. V. Goncharova, P. J. Simpson, I. Berbezier, G. Amiard, L. Favre, A. Ronda, M. Faustini, and D. Grosso, ECS Transactions 53, 185 (2013).
+8S. Cosentino, E. Sungur Ozen, R. Raciti, A. M. Mio, G. Nico- tra, F. Simone, I. Crupi, R. Turan, A. Terrasi, A. Aydinli, and S. Mirabella, J. Appl.
+Phys. 115, 043103 (2014). 9S.
+Cosentino, E. G. Barbagiovanni, M. Miritello, G. Nicotra, I. Crupi, D. Paciﬁci, S. Mirabella, and A. Terrasi, Sol. Energy Mater. Sol.
+Cells (2014), 10.1016/j.solmat.2014.09.012.
+10A. Dusko, A. L. Saraiva, and B. Koiller, Phys.
+Rev. B. 89, 205307 (2014).
+11R. Guerra and S. Ossicini, Phys.
+Rev. B. 81, 245307 (2010).
+12R. Guerra, M. Marsili, O. Pulci, and S. Ossicini, Phys.
+Rev. B. 84, 075342 (2011).
+13G. Mattioli, S. B. Dkhil, M. I. Saba, G. Malloci, C. Melis, P. Alippi, F. Filippone, P. Giannozzi, A. K. Thakur, M. Gaceur, O. Margeat, A. K. Diallo, C. Videlot-Ackermann, J. Ackermann, A. A. Bonapasta, and A. Mattoni, Adv. Energy Mater. 1301694 (2014).
+14S. R¨uhle, A. Y. Anderson, H.-N. Barad, B. Kupfer, Y. Bouhadana, E. Rosh-Hodesh, and A. Zaban, J. Phys. Chem. Lett. 3, 3755 (2012).
+15K. Dohnalov´a, T. Gregorkiewicz, and K. K˚usov´a, J. Phys. Con- dens.
+Matter 26, 173201 (2014).
+16G. Seguini, C. Castro, S. Schamm-Chardon, G. BenAssayag, P. Pellegrino, and M. Perego, Appl. Phys.
+Lett. 103, 023103 (2013).9 QD Diameter (nm) EG (eV) ∼6 nm ∼4 nm EG ∼D−2 : µ(D) = µoeEMA  1 + 1 aD2+bD+c  EG ∼D−1 : ˜µ(D) = µoeSP DEMD  1 + 1 aD2+bD+c  a : EG ∼D−2 b : EG ∼D−1 SPDEM: aB ∼(m∗ o)−1 EMA  eMBE SP DEM −1 ∼16 nm  eP ECV D SP DEM −1 ∼11 nm  esputter SP DEM −1 ∼5 nm MBE : eEMA eSP DEM ∼6 nm PECV D eEMA eSP DEM sputter : ∼3 nm EG(∞) ∆ESP DEM G ∆EEMA G FIG. 9.
+Schematic illustration of the conﬁnement mechanism.
+The dimensional behaviour of the SPDEM-˜µ(D) and EMA-µ(D) is noted at the top of the ﬁgure.
+In the ‘pink’ region above ∼6 nm the dominate model is SPDEM, while in the ‘grey’ region below ∼4 nm EMA is the dominant model, see Ref. 43.
+The bulk EG is represented by the straight dashed line.
+At ∼16 , 11, and 5 nm the MBE, PECVD, and sputter samples, respectively, experience a change in the EM and hence EG, according to the SPDEM model.
+The change in energy due to SPDEM is represented by the solid curved line in the three regions for the respective samples (not drawn to scale).
+At ∼6, and 3 nm the MBE, and PECVD/ sputter samples, respectively, change behaviour from SPDEM to EMA.
+The change in energy due to EMA is represented by the dashed curved line in the two regions for the respective samples (not drawn to scale).
+The lower dimensions in PECVD and sputter samples compared to the predicted pink and grey regions is a result of the O interface. Color online.
+17K. Hirose, H. Nohira, K. Azuma, and T. Hattori, Prog. Surf. Sci. 82, 3 (2007).
+18M. Zacharias, D. Hiller, A. Hartel, and S. Gutsch, Phys.
+Status Solidi (a) 209, 2449 (2012).
+19S. Baldovino, a. Molle, and M. Fanciulli, Microelectron.
+Eng. 88, 388 (2011).
+20L. Bagolini, A. Mattoni, G. Fugallo, L. Colombo, E. Poliani, S. Sanguinetti, and E. Grilli, Phys. Rev. Lett. 104, 176803 (2010).
+21M. T. Lusk, R. T. Collins, Z. Nourbakhsh, and H. Akbarzadeh, Phys.
+Rev. B. 89, 075433 (2014). 22G. Bastard, Phys.
+Rev. B. 24, 5693 (1981).
+23L. Chetouani, L. Dekar, and T. F. Hammann, Phys.
+Rev. A. 52, 82 (1995). 24A. Ganguly, S¸..
+Kuru, J. Negro, and L. M. Nieto, Phys. Lett. A 360, 228 (2006).
+25A. S. Moskalenko, J. Berakdar, A. A. Prokoﬁev, and I. N. Yassievich, Phys.
+Rev. B. 76, 085427 (2007).
+26J. M. Shannon and K. J. B. M. Nieuwesteeg, Appl. Phys. Lett. 62, 1815 (1993).
+27S. Cosentino, M. Miritello, I. Crupi, G. Nicotra, F. Simone, C. Spinella, A. Terrasi, and S. Mirabella, Nanoscale Res. Lett. 8, 128 (2013).
+28A. Seas and C. Christodes, Semicond.
+and Semimetals 46, 39 (1997).
+29K. Seino and F. Bechstedt, Semicond.
+Sci. Technol. 26, 014024 (2011).
+30E. G. Barbagiovanni and R. N. C. Filho, Physica E 63, 14 (2014).
+31D. J. Lockwood, Z. H. Lu, and J. M. Baribeau, Phys. Rev. Lett. 76, 539 (1996).
+32B. R¨oßner, G. Isella, and H. von K¨anel, Appl. Phys. Lett. 82, 754 (2003).
+33K. Seino, F. Bechstedt, and P. Kroll, Phys.
+Rev. B. 86, 075312 (2012).
+34E. G. Barbagiovanni, L. V. Goncharova, and P. J. Simpson, Phys.
+Rev. B. 83, 035112 (2011).
+35R. Guerra, F. Cigarini, and S. Ossicini, J. Appl.
+Phys. 113, 143505 (2013).
+36D. K¨onig, J. Rudd, M. Green, and G. Conibeer, Phys.
+Rev. B. 78, 035339 (2008).
+37H. C. Weissker, J. Furthmuller, and F. Bechstedt, Phys.
+Rev. B. 65, 155327 (2002).
+38P. Broqvist, J. F. Binder, and A. Pasquarello, Appl. Phys.
+Lett. 94, 141911 (2009).
+39K. Seino, F. Bechstedt, and P. Kroll, Phys.
+Rev. B. 82, 085320 (2010).
+40Y. M. Niquet, G. Allan, C. Delerue, and M. Lannoo, Appl. Phys. Lett. 77, 1182 (2000).
+41S. Mirabella, S. Cosentino, M. Failla, M. Miritello, G. Nicotra, F. Simone, C. Spinella, G. Franz`o, and A. Terrasi, Appl. Phys. Lett. 102, 193105 (2013).
+42D. Kovalev, H. Heckler, M. Ben-Chorin, G. Polisski, M. Schwartzkopﬀ, and F. Koch, Phys. Rev. Lett. 81, 2803 (1998).
+43E. G. Barbagiovanni, D. J. Lockwood, N. L. Rowell, R. N. Costa Filho, I. Berbezier, G. Amiard, L. Favre, A. Ronda, M. Faustini, and D. Grosso, J. Appl.
+Phys. 115, 044311 (2014).
+44S. Cosentino, S. Mirabella, M. Miritello, G. Nicotra, R. Lo Savio, F. Simone, C. Spinella, and A. Terrasi, Nanoscale Res. Lett.
+6, 135 (2011).10 45M. Zacharias and P. M. Fauchet, Appl. Phys. Lett. 71, 380 (1997).
+46J. Tauc, Amorphous and liquid semiconductors, edited by J. Tauc (Plenum Press, London and New York, 1974).
+47S. Knief and W. von Niessen, Phys.
+Rev. B. 59, 12940 (1999).
+48Y. Nakamura, K. Watanabe, Y. Fukuzawa, and M. Ichikawa, Appl. Phys. Lett. 87, 133119 (2005).
+49P. Hapala, K. K˚usov´a, I. Pelant, and P. Jel´ınek, Phys.
+Rev. B. 87, 195420 (2013).
+50S. Tomi´c and N. Vukmirovi´c, J. Appl.
+Phys. 110, 053710 (2011).
+51B. Averboukh, R. Huber, K. W. Cheah, Y. R. Shen, G. G. Qin, Z. C. Ma, and W. H. Zong, J. Appl.
+Phys. 92, 3564 (2002).
+52D. J. Lockwood, J Mater Sci: Mater Electron 20, 235 (2009).
+53N. A. Cukari`c, M. Z. Tadi`c, B. Partoens, and F. M. Peeters, Phys.
+Rev. B. 88, 205306 (2013).
+54F. Michelini and I. Ouerghi, Appl. Phys. Lett. 99, 221912 (2011).
+55R. N. Costa Filho, M. P. Almeida, G. A. Farias, and J. S. An- drade Jr., Phys.
+Rev. A. 84, 050102 (2011).
+56R. N. Costa Filho, G. Alencar, B. S. Skagerstam, and J. S. Andrade Jr., Europhys.
+Lett. 101, 10009 (2013).
+57N. L. Rowell, D. J. Lockwood, I. Berbezier, P. D. Szkutnik, and A. Ronda, J. Electrochem. Soc. 156, H913 (2009).
+58G. Franz`o, M. Miritello, S. Boninelli, R. Lo Savio, M. G. Grimaldi, F. Priolo, F. Iacona, G. Nicotra, C. Spinella, and S. Coﬀa, J. Appl.
+Phys. 104, 094306 (2008).
+59R. J. Temkin, J. Non-Cryst.
+Solids 17, 215 (1975).
+60S. Cosentino, S. Knebel, S. Mirabella, S. Gibilisco, F. Simone, H. Bracht, G. Wilde, and A. Terrasi, Appl. Phys. A 116, 233 (2013).
+61J. F. Binder, P. Broqvist, and A. Pasquarello, Microelectron.
+Eng. 88, 391 (2011).
+62K. Momma and F. Izumi, J. Appl.
+Crystallogr. 44, 1272 (2011).
+63H. R. Philipp, J. Non-Cryst.
+Solids 8-10, 627 (1972).
+64M. Kobayashi, G. Thareja, M. Ishibashi, Y. Sun, P. Griﬃn, J. McVittie, P. Pianetta, K. Saraswat, and Y. Nishi, J. Appl.
+Phys. 106, 104117 (2009).
+65A. El Hdiy, K. Gacem, M. Troyon, A. Ronda, F. Bassani, and I. Berbezier, J. Appl. Phys. 104, 063716 (2008).

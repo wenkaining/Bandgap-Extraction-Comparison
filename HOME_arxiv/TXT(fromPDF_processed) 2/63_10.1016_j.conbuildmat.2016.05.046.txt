@@ -1,0 +1,302 @@
+Center for Sustainable Engineering of Geological and Infrastructure Materials (SEGIM) Department of Civil and Environmental Engineering McCormick School of Engineering and Applied Science Evanston, Illinois 60208, USA A Novel Material for In Situ Construction on Mars: Experiments and Numerical Simulations Lin Wan, Roman Wendner, Gianluca Cusatis SEGIM INTERNAL REPORT No. 15-12/487A Accepted for publication in Construction and Building Materials May 2016 arXiv:1512.05461v3 [cond-mat.mtrl-sci]  12 Aug 2016A Novel Material for In Situ Construction on Mars: Experiments and Numerical Simulations By Lin Wan 1, Roman Wendner 2, Gianluca Cusatis∗3 A Paper Accepted for Publication in Construction and Building Materials May 4, 2016 Corresponding Author Gianluca Cusatis Associate Professor Department of Civil and Environmental Engineering Tech Building A125 Northwestern University 2145 Sheridan Rd Evanston, IL 60208 Tel: (847) 491-4027 E-mail: g-cusatis@northwestern.edu Website: http://www.cusatis.us 1PhD, Researcher, Department of Civil and Environmental Engineering, Northwestern University, 2145 Sheridan Rd.
+Evanston IL, 60208 USA.
+E-mail: lin.wan@u.northwestern.edu 2Director Christian Doppler Laboratory LiCRoFast, Department of Civil Engineering and Natural Hazards, University of Natural Resources and Life Sciences (BOKU) Vienna.
+E-mail: roman.wendner@boku.ac.at 3Corresponding Author: Associate Professor, Department of Civil and Environmental Engineering, Northwestern Univer- sity, 2145 Sheridan Rd.
+Evanston IL, 60208 USA.
+E-mail: g-cusatis@northwestern.edu, Phone: (847)-491-4027 1Abstract: A signiﬁcant step in space exploration during the 21st century will be human settlement on Mars.
+Instead of transporting all the construction materials from Earth to the red planet with incredibly high cost, using Martian soil to construct a site on Mars is a superior choice.
+Knowing that Mars has long been considered a “sulfur-rich planet”, a new construction material composed of simulated Martian soil and molten sulfur is developed.
+In addition to the raw material availability for producing sulfur concrete and a strength reaching similar or higher levels of conventional cementitious concrete, fast curing, low temperature sustainability, acid and salt environment resistance, 100% recyclability are appealing supe- rior characteristics of the developed Martian Concrete.
+In this study, diﬀerent percentages of sulfur are investigated to obtain the optimal mixing proportions.
+Three point bending, unconﬁned compression and splitting tests were conducted to determine strength development, strength variability, and failure mecha- nisms.
+The test results show that the strength of Martian Concrete doubles that of sulfur concrete utilizing regular sand.
+It is also shown that the particle size distribution plays an important role in the mixture’s ﬁnal strength.
+Furthermore, since Martian soil is metal rich, sulfates and, potentially, polysulfates are also formed during high temperature mixing, which might contribute to the high strength.
+The optimal mix developed as Martian Concrete has an unconﬁned compressive strength of above 50 MPa.
+The formulated Martian Concrete is simulated by the Lattice Discrete Particle Model (LDPM), which exhibits excellent ability in modeling the material response under various loading conditions.
+1 Introduction Sulfur has been used as a molten bonding agent for quite a long time in human history.
+The use of sulfur was mentioned in literature of ancient India, Greece, China and Egypt [7].
+For example, sulfur was one of the raw materials to manufacture gunpowder by ancient Chinese [29]; sulfur was also used to anchor metal in stone during the 17th century [6].
+Starting in the 1920s, sulfur concrete has been reported to be utilized as a construction material [24].
+Various researchers and engineers studied and succeeded in obtaining high-strength and acid-resistant sulfur concretes [1, 2, 3].
+In the late 1960s, Dale and Ludwig pointed out the signiﬁcance of well-graded aggregate in obtaining optimum strength [4, 5].
+2When elemental sulfur and aggregate are hot-mixed, cast, and cooled to prepare sulfur concrete prod- ucts, the sulfur binder, on cooling from the liquid state, ﬁrst crystallizes as monoclinic sulfur (Sβ) at 238 ◦F (114 ◦C).
+On further cooling to below 204 ◦F (96 ◦C), Sβ starts to transform to orthorhombic sulfur (Sα), which is the stable form of sulfur at ambient room temperatures [8].
+This transformation is rapid, generally occurring in less than 24 hours and resulting in a solid construction material.
+However, since Sα is much denser than Sβ, high stress and cavities can be induced by sulfur shrinkage.
+Hence, durability of unmodiﬁed sulfur concrete is a problem when exposed to humid environment or after immersion in water.
+In the 1970s, researchers developed techniques to modify the sulfur by reacting it with oleﬁnic hydrocarbon polymers [9, 16], dicyclopentadiene (DCPD) [10, 12, 11, 15, 17], or other additives and stabi- lizers [13, 14, 18] to improve durability of the product.
+Since then, commercial production and installation of corrosion-resistant sulfur concrete has been increasing, either precast or installed directly in industrial plants where portland cement concrete materials fail from acid and salt corrosion [24].
+For earth applications, well developed sulfur concrete features (1) improved mechanical performance: high compressive & ﬂexural strength, high durability, acid & salt water resistant, excellent surface ﬁnish and pigmentation, superior freeze/thaw performance; (2) cost beneﬁts: faster setting-solid within hours instead of weeks, increased tolerance to aggregate choice; and (3) environmentally friendly proﬁle: reduced CO2 footprint, no water requirements, easily obtainable sulfur as a byproduct of gasoline production, recyclable via re-casting, compatible with ecosystem, e.g. for marine applications.
+Current pre-cast sulfur concrete products include, but are not limited to, ﬂagstones, umbrella stand, counterweights for high voltage lines, and drainage channel [38].
+For example, in January 2009, around 80 meters sewage pipeline in the United Arab Emirates was removed and replaced by sulfur concrete.
+In the same time period, a total of 215 ﬁsh reef blocks made of sulfur concrete (2.2 tons/block) were stacked at a depth of 15 meters, 6 kilometers oﬀthe coast of UAE [35].
+With regular concrete ﬁsh reefs, the growth of algae and shells takes time because concrete is alkaline.
+However, since sulfur concrete is practically neutral in alkalinity, algae and shell growth was observed soon after installation.
+While sulfur concrete found its way into practice as an infrastructure material, it is also a superior choice for space construction considering the very low water availability on the nearby planets and satellites 3[23].
+After mankind stepped on the lunar surface in 1969, space agencies have been planning to go back and build a research center on the moon.
+Since local material is preferred to reduce expenses, starting in the early 1990s, NASA and collaborative researchers studied and developed lunar concrete using molten sulfur.
+Around the year 1993, Omar [20] made lunar concrete by mixing lunar soil simulant with diﬀerent sulfur ratio ranging from 25% up to 70% and found the optimum mix with 35% sulfur to reach a compressive strength of 34 MPa.
+Later he added 2% of steel ﬁbers to the mixes and increased the optimum strength to 43 MPa.
+However, lunar concrete has serious sublimation issues because of the near-vacuum environment on the moon.
+In 2008, Grugel and Toutanji [31, 33, 41] reported experimental results of two lunar concrete mixes: (1) 35% sulfur with 65% lunar soil simulant JSC-1, and (2) 25% sulfur and 20% silica binder mixture with 55% JSC-1.
+The two mixtures, similar in strength (∼35 MPa), revealed a continuous weight loss due to the sublimation of sulfur when placed in a vacuum environment, 5×10−7 torr, at 20 ◦C for 60 days.
+Based on the measurements, it was predicted that sublimation of a 1 cm deep layer from the two sulfur concrete mixes would take 4.4 and 6.5 years respectively.
+The sublimation rate varied from rapid at the high lunar temperatures (<120 ◦C) to essentially nonexistent at the low lunar temperatures (-180 ◦C to -220 ◦C).
+However, the low temperature on the moon is too harsh to maintain intact the mechanical properties of sulfur concrete.
+After cycled 80 times between -191 ◦C (-312 ◦F) and 20 ◦C (68 ◦F), the samples failed at about 7 MPa under compression, which is about 1/5 of the average strength, 35 MPa, of the non-cycled samples.
+While the moon is the closest and only satellite of earth, its near-vacuum environment, broad tem- perature range and long day-night rhythm, about 30 earth days, are not the most adequate for human settlement.
+Venus is the closest planet to Earth, however it is also the hottest planet in the solar system with an average surface temperature over 400 ◦C [45], making it uninhabitable for humans.
+Mars, on the other hand, is not too hot or too cold, and has an atmosphere to protect humans from radiation.
+Its day/night rhythm is very similar to that on Earth: a Mars day is about 24 hours and 37 minutes [25].
+Thus, Mars is the most habitable planet in the solar system after Earth.
+In recent years, many countries, including the U.S., China, and Russia, announced to launch manned Mars missions in the next decades.
+Due to the dry environment on Mars, sulfur concrete concept is a superior choice for building a human village on the red planet.
+Studies of Martian meteorites suggest elevated sulfur concentrations in the inte- 4rior, and Martian surface deposits contain high levels of sulfur (SO3 up to 37 wt%, average 6 wt%), likely in the forms of sulﬁde minerals and sulfate salts [37].
+Except of the easiest option of ﬁnding a sulfur mine on Mars, like the one in Sicily on Earth, elemental sulfur can be extracted from sulﬁdes or sulfates through various chemical and physical processes, for example, by heating up the sulfur compounds [19].
+NASA has advanced programs on In Situ Resources Utilization (ISRU) [30] for this speciﬁc purpose.
+Moreover, the atmospheric pressure (0.636 kPa) [34] as well as temperature range (≤35 ◦C) are highly suitable for the application of sulfur concrete.
+As shown in Fig. 1 [31], the most possible construction site on Mars has environmental conditions in the Rhombic (stable) state of sulfur and is three orders of magnitude in pressure above the solid-vapor interface.
+Thus, sublimation is not an issue and a relatively warm area can be selected as the construction site.
+Furthermore, with the temperature on Mars lower than 35 ◦C, the drawback of sulfur concrete melting at high temperature will not be an issue for initial constructions such as shelters and roads while certainly might be of concern for long term settlements in which ﬁre resistance would be important.
+To let the thoughts become facts, a new construction material using simulated Martian soil and molten sulfur is developed in this study.
+Diﬀerent percentages of sulfur are studied to obtain the optimal mixing proportions.
+Through mechanical tests, it is found that Martian Concrete have much higher strengths than sulfur concrete utilizing regular sand.
+Sieve analysis and chemical analysis provide possible explaination for the higher strength of Martian Concrete: the Martian soil simulant has a better particle size distribution, it is also rich in metal elements, which react with sulfur, forming polysulfates and possibly enhancing strengths.
+Mechanical simulations of Martian Concrete are then carried out using the state-of-art Lattice Discrete Particle Model with excellent simulation of Martian Concrete mechanical properties.
+5Figure 1: Sulfur phase diagram with labeled environmental conditions on Mars and Moon [31] 62 Experimental Study of Martian Concrete Sulfur concrete products are manufactured by hot-mixing sulfur and aggregate.
+The sulfur binder ﬁrst crystalizes as monoclinic sulfur (Sβ), and then the mixture cools down while sulfur transforms to the stable orthorhombic polymorph (Sα), achieving a reliable construction material.
+While sulfur is commercially available, Martian soil simulant JSC Mars-1A [32] was obtained in replacement of Martian soil to develop a feasible Martian Concrete.
+Table 1 lists the major element composition of the simulant.
+As seen, the Martian soil simulant, resembling the actual Martian soil [22], is rich with metal element oxides, especially aluminium oxide and ferric oxide.
+In this study, various percentages of sulfur are mixed with JSC Mars-1A in a heated mixer at above 120 ◦C. Temperature measurements are performed during mixing to ensure sulfur melting.
+Then the mixture is transferred to 25.4×25.4×127 mm (1×1×5 in) aluminum formwork when it reached ﬂowable state or best mixing conditions.
+Afterwards the material was let to cool down at room temperature, about 20 ◦C. Martian soil simulant Mars-1A of maximum 5 mm aggregate size was ﬁrst used for casting, however the specimens showed many voids and uneven surfaces due to the large aggregate, see Fig. 2a.
+Sulfur cannot be ensured to ﬁll the large number of big voids or to surround and bind all large aggregates, especially on the specimen surface.
+Afterwards, only Mars-1A of maximum 1 mm aggregate size was utilized to achieve Martian Concrete (MC) with ﬂat and smooth surfaces, see Fig. 2b.
+Mechanical tests were conducted after 24 hours, and these included unconﬁned compression, notched and unnotched three-point-bending (TPB), and splitting (Brazilian) tests.
+Beams of dimensions 25.4×25.4×127 mm (1×1×5 in) are used for TPB tests, which are then cut to 25.4 mm (1 in) cubes for compression and splitting tests.
+(a) (b) Figure 2: Martian Concrete beams utilizing Martian soil simulant with (a) maximum 5 mm aggregate, and (b) maximum 1mm aggregate 7Table 1: Major Element Composition of Martian Regolith Simulant JSC Mars-1A [32] Major Element Composition % by Wt.
+Silicon Dioxide (SiO2) 34.5-44 Titanium Dioxide (TiO2) 3-4 Aluminum Oxide (Al2O3) 18.5-23.5 Ferric Oxide (Fe2O3) 9-12 Iron Oxide (FeO) 2.5-3.5 Magnesium Oxide (MgO) 2.5-3.5 Calcium Oxide (CaO) 5-6 Sodium Oxide (Na2O) 2-2.5 Potassium Oxide (K2O) 0.5-0.6 Manganese Oxide (MnO) 0.2-0.3 Diphosphorus Pentoxide (P2O5) 0.7-0.9 2.1 Unconﬁned Compression Test Unconﬁned compression tests were performed in a closed loop servo-hydraulic load frame with a maximum capacity of 489 kN (110 kips).
+Stroke/displacement control with a loading rate of 0.003 mm/s was applied.
+In order to ensure consistent and accurate test results, a Standard Operation Procedure (SOP) for testing was created.
+The test protocol was ﬁrst ﬁlled with the relevant details, which include Vernier Caliper measurements of each dimension (average of 2 ∼4 measurements), the initial weight, the label of the specimen, control mode, loading rate, and start time of loading.
+Pictures were taken to document the initial condition of the specimen, during test and post test states.
+A preload of approximately 1-5 % of the expected peak-load was applied before the actual test commenced.
+Specimens used for unconﬁned compression tests were 25.4 mm (1 in) cubes cut from the undamaged parts of 25.4×25.4×127 mm (1×1×5 in) beams, see Fig. 3a.
+The cubes were cut out of the 62 mm (2.5 in) long failed half’s at the center between bending test support point and fracture surface.
+Typical cone type of failure is observed of Martian Concrete under unconﬁned compression, as shown in Fig. 3b.
+The studied sulfur ratio for Martian Concrete under compression tests ranged from 35 wt% to 60 wt%.
+Compressive strength versus percentage of sulfur is shown in Fig. 4 (circles), revealing an optimum percentage around 50% (± 2.5%).
+Furthermore, the test results indicate that recast can further increase strength of the material.
+For 50% sulfur batches, recast made compressive strength go up from 48 MPa to about 58 ∼63 MPa, which is roughly a 20 ∼30% increase, see Fig. 4 labeled as “Mars1A 1mm R.”.
+Furthermore, better mixing and applying pressure while placing the material in formwork facilitates ma- 8(a) (b) Figure 3: Cube specimen (a) before and (b) after unconﬁned compression test terial strength.
+In the experimental campaign of this study, a well distributed pressure was manually added to the mixture in formwork, and thus the pressure was not quantiﬁed.
+Making the mixture compact facilitates formation of sulfur bonds and also reduces the number and size of cavities of the ﬁnal product.
+Average compressive stress-strain curves for MC with sulfur ratio ranging from 40% to 60% are plotted in Fig. 5a.
+Stress is calculated as P/A, where P is load and A is the area of the cross section; strain is calculated as ∆h/h, where h is the height of the specimen.
+The stress-strain curves feature a typical almost-linear behavior up to the peak and a long stable softening post-peak.
+While Martian Concrete has a high strength of over 50 MPa with relatively high percentage of sulfur, sulfur concrete made of regular sand (Sand Concrete, SC) was cast and tested as well for comparison.
+With the same dimension of 25.4 mm (1 in), SC cubes were cast with a sulfur ratio in the range of 15% ∼35%.
+Sand with a maximum aggregate size of 11 mm was ﬁrst utilized.
+Then for comparison purposes, maximum 1 mm sand, sieved from the coarser sand, was used as well.
+Following the same test procedure, SC specimens were tested under unconﬁned compression loads.
+As shown in Fig. 4, the best percentage of sulfur for SC was found to be about 25% for both ﬁne (crosses in Fig. 4) and coarse (squares in Fig. 4) mixes, having 24.5 MPa and 28.3 MPa compressive strength, respectively.
+The results obtained on the SC mixes are consistent with the existing literature on standard sulfur concrete [24].
+When the aggregate size distribution of the ﬁne sand was modiﬁed based upon the particle size distribution of Mars-1A simulant, its SC mix’s stregnth had a 29% jump to 31.5 MPa, see Fig. 4 labeled as “Sand1A 1mm” and marked with a diamond symbol.
+This indicates and conﬁrms the signiﬁcance of the particle size distribution in order to obtain an optimum material strength.
+9Wt% Sulfur 0 20 40 60 80 100 Compressive Strength (MPa) 0 10 20 30 40 50 60 70 Mars1A 1mm Mars1A 1mm R. Sand 11 mm Sand 1 mm Sand1A 1 mm Figure 4: Compression strength variation as a function of percentage of sulfur for Martian Concrete (a) Strain 0 [-] 0 0.02 0.04 0.06 0.08 Stress < [MPa] 0 20 40 60 Compression 40% Sulfur 45% Sulfur 47.5% Sulfur 50% Sulfur 52.5% Sulfur 60% Sulfur (b) Nominal Strain [-] 0 0.005 0.01 0.015 Nominal Stress [MPa] 0 0.5 1 1.5 2 Notched TPB 40% Sulfur 45% Sulfur 47.5% Sulfur 50% Sulfur 52.5% Sulfur 60% Sulfur Figure 5: Comparison of the response for Martian Concrete with various sulfur ratio by (a) compression and (b) 50% notched three point bending tests 10Normalized Sieve Size [-] 0 0.2 0.4 0.6 0.8 1 Passing Percentage [%] 0 20 40 60 80 100 ASTM 9.5mm ASTM 12.5mm ASTM 19mm ASTM 25mm AASHTO 4.75mm Mars1A 1mm Sand 11mm Fuller Figure 6: Particle size distribution (PSD) study of Martian soil simulant and regular sand as well as ASTM and AASHTO recommended PSD for mixing sulfur concrete 2.2 Particle Size Distribution Analysis While 25% of elemental sulfur works the best for both mixes with regular sand, they also both have much lower strength compare to Martian Concrete.
+To study the inﬂuence of aggregates and the corresponding particle size distribution (PSD) on material strength, sieve analyses of Mars-1A (maximum 1 mm aggregate size) as well as regular sand (maximum 11 mm aggregate size) were conducted.
+Also included in the PSD analysis were the recommended PSDs by ASTM and AASHTO standards for mixing sulfur concrete [24].
+In Fig. 6, the normalized distributions of Mars-1A, regular sand, the ASTM D 3515 and AASHTO recommended PSD ranges as well as Fuller’s law with power 1/2 are plotted and compared.
+Overall, the PSD of Mars-1A falls well in the recommended PSD range according to standards and is relatively close to Fuller’s law, while the PSD of regular sand misses the recommended PSD range and also deviates from Fuller’s law.
+While this ﬁnding explains partly the diﬀerence in the measured strength of MC and SC, it cannot justify the more than doubled strength of MC compared to SC.
+2.3 Microscopy Study In addition to the PSD of aggregate, other factors must play a role concerning the ﬁnal strength obtained in MC experiments.
+Fig. 7 & 8 show the microscope study of Martian Concrete (MC) and sulfur concrete with regular sand (SC) with optimal compositions.
+By comparing the particles of MC and SC in the 11(a) (b) Figure 7: Microscopy study of sulfur concrete on 1 mm scale with compositions of (a) 50% sulfur and 50% Martian soil simulant (b) 25% sulfur and 75% regular sand and a maximum particle size of 1 mm mesostructure pictures, a few observations are in order.
+Firstly, the visible average particle size of MC is much smaller than that of SC after hot mixing, although both mixes use aggregate with maximum particle size up to 1 mm.
+After casting and curing, the aggregate particles and their sizes can be well distinguished for SC; on the contrary, the majority of MC particles are below 500 microns.
+Secondly, the MC mix has many red areas, dark spots and almost no voids, while the SC mix shows distinguishably yellow areas of sulfur, opaque orange to dark red spots related to sand particles and a number of voids of around 200 microns.
+These observations, along with preliminary X-ray photoelectron spectroscopy (XPS) tests, suggest that the metal elements in Mars-1A react with sulfur during hot mixing, forming sulfates and polysulfates, and altering the PSD of aggregates to lower ends, which further enhance the MC strength.
+SC does not have such phenomena because silica sand does not react with sulfur at the aforementioned casting conditions.
+In other words, in MC aggregate is chemically active whereas in SC is inert and sulfur only serves as “glue” for the sand particles.
+The existence of sulfates and polysulfates in MC are qualitatively conﬁrmed by XPS by analyzing the chemical state of sulfur and individual metal elements within 900 micron-diameter areas of a thin MC sample.
+Deﬁnitely, further research is needed to clearly identify the chemical products characterizing MC internal structure.
+2.4 Three-point-bending Fracture Test To complete the mechanical characterization of MC , its fracturing behavior is studied in this section and the next.
+Beam specimens with nominal dimensions 25.4×25.4×127 mm (1×1×5 in) were cast to perform 12(a) (b) Figure 8: Microscopy study of sulfur concrete on 400 µm scale with compositions of (a) 50% sulfur and 50% Martian soil simulant (b) 25% sulfur and 75% regular sand and a maximum particle size of 1 mm three-point-bending (TPB) tests.
+The beam specimens featured a half-depth notch at midspan cut with a diamond coated band-saw machine.
+Testing notched samples is customary in fracture mechanics to control the fracture onset and to capture post-peak behavior.
+Dimension and weight measurements were recorded on speciﬁcally optimized TPB protocols.
+Centerline on top of specimen, and support lines at the bottom were pre-marked then aligned within the servo-hydraulic load frame, which had a capacity of 22.2 kN (5 kip).
+The adopted TPB test setup is shown in Fig. 9a.
+The nominal span (distance between bottom supports) was 101.6 mm (4 in).
+An extensometer sensor was glued to the bottom of the specimens with the notch in between its two feet.
+After applying a pre-load of up to 5% of the expected peak, the specimens were loaded in crack mouth opening displacement (CMOD) control with a loading rate of 0.0001 mm/sec, which was increased in the post-peak section to limit the total testing time while ensuring a fully recorded softening behavior.
+Typical crack propagation and fracture surface after failure are presented in Fig. 9b&c.
+The crack starts at the notch tip and develops upward along the ligament.
+Notched (50%) fracture test stress-strain curves of MC with sulfur ratio in the range of 40% ∼60% are plotted in Fig. 5b.
+The nominal tensile ﬂexural stress is calculated as σ = 3PL/2bh2, where P is load, and L, b, and h are span, width, and depth of the specimen respectively; the nominal strain is calculated as ϵ=CMOD/h.
+The optimal percentage of sulfur is found to be 50% (± 2.5%) which gives a nominal ﬂexural strength of approximately 1.65 MPa, and it agrees with the optimal percentage determined from unconﬁned compression tests.
+The highest nominal ﬂexural strength obtained is 2.3 MPa reached by one of the two recast 50% sulfur batches, as shown in Fig. 10a.
+It must be observed that nominal ﬂexural 13(a) (b) (c) Figure 9: (a) Three point bending (TPB) test setup, (b) fracture surface and (c) typical crack propagation after bending test of Martian Concrete strength and ﬂexural nominal stress-strain curves are not material properties, due to the presence of the notch, and they are calculated here only for comparison purposes.
+The typical material property that can be calculated from TPB test is the fracture energy, deﬁned as the energy per unit area needed to create a unit stress-free fracture area.
+By adopting the work-of-fracture method [21] the fracture energy is computed by dividing the area under the load vs. stroke curve by the ligament area.
+The highest average total fracture energy is as well reached by the recast Martian Concrete with 50% sulfur with a value of 67 J/m2, as shown in Fig. 10b.
+When mixed with lower or higher sulfur ratio than 50%, MC has lower fracture energies, see Fig. 5b and Fig. 10b.
+Same as for compressive strength, recast and applying pressure can as well improve material ﬂexural strength thanks to more compact sulfur bonds.
+2.5 Splitting and Modulus of Rupture Tests Splitting tests on 25.4 mm (1 in) cubes were performed by the same load frame as for compression.
+Roughly 1 mm diameter bars were placed on the top and at the bottom of the specimen.
+A loading rate of 0.003 mm/s was applied until failure of the specimen at peak load.
+Only recast Martian Concrete with 47.5%, 50%, and 52.5% were tested, and provided splitting tensile strength of 3.6 MPa ± 30%, 3.9 MPa 14(a) Wt% Sulfur 40 45 50 55 60 Nominal Strength (MPa) 0 0.5 1 1.5 2 2.5 Cast Recast (b) Wt% Sulfur 40 45 50 55 60 Fracture Energy [J/m2] 0 20 40 60 80 100 Cast Recast Figure 10: Best percentage of sulfur for Martian Concrete by TPB test results (a) nominal ﬂexural strength, and (b) fracture energy ± 28%, and 2.72 MPa ± 26% respectively.
+The splitting tensile strength is calculated as σ = 2P/πbh, where P is load, b and h are the depth and height of the cube specimen respectively.
+In agreement with compression and TPB test results, splitting tests again conﬁrm that MC with 50% of sulfur have the highest performance.
+The splitting nominal stress-strain curves, until failure at peak load, of the optimum MC are shown in Fig. 16b, where nominal strain is calculated as vertical displacement divided by the specimen height.
+Modulus of rupture (MOR) tests were carried out for MC with the optimum mix, 50% sulfur and 50% Martian soil simulant.
+Unnotched beams with dimensions 25.4×25.4×127 mm (1×1×5 in) were tested for MOR using the aforementioned machine and setup for notched TPB but by stroke control with loading rate 0.001 mm/s.
+The developed MC has an average MOR value of 7.24 MPa, see Fig. 16a.
+The nominal MOR stress is calculated as σ = 3PL/2bh2, where P is load, L, b, and h are span, width, and depth of the specimen respectively; the nominal strain is calculated as vertical displacement divide by specimen depth.
+3 Lattice discrete Particle Model Simulations For design and analysis purposes it is important to formulate and validate a computational model for the simulation of Martian Concrete.
+This is pursued within the theoretical framework of the Lattice Discrete Particle Model (LDPM).
+In 2011, building on previous work [26, 27, 28], Cusatis and coworkers [39, 40] developed LDPM, a mesoscale discrete model that simulates the mechanical interaction of coarse aggregate pieces embedded 15in a binding matrix.
+The geometrical representation of concrete mesostructure is constructed by randomly introducing and distributing spherical shaped coarse aggregate pieces inside the volume of interest and zero-radius aggregate pieces on the surface.
+Based on the Delaunay tetrahedralization of the generated particle centers, a three-dimensional domain tessellation creates a system of polyhedral cells (see Fig. 11) interacting through triangular facets and a lattice system.
+The full description of LDPM geometry is reported in Cusatis. et. al. [39, 40].
+Figure 11: One LDPM Cell around an aggregate piece.
+In LDPM, rigid body kinematics is used to describe the deformation of the lattice particle system and the displacement jump, JuCK, at the centroid of each facet is used to deﬁne measures of strain as eN = nTJuCK ℓ ; eL = lTJuCK ℓ ; eM = mTJuCK ℓ (1) where ℓ= interparticle distance; and n, l, and m, are unit vectors deﬁning a local system of reference attached to each facet.
+A vectorial constitutive law governing the material behavior is imposed at the centroid of each facet.
+In the elastic regime, the normal and shear stresses are proportional to the corre- sponding strains: tN = ENe∗ N = EN(eN −e0 N); tM = ETe∗ M = ET(eM −e0 M); tL = ETe∗ L = ET(eL −e0 L), where EN = E0, ET = αE0, E0 = eﬀective normal modulus, and α = shear-normal coupling parameter; and e0 N, e0 M, e0 L are mesoscale eigenstrains (if any present).
+For stresses and strains beyond the elastic limit, the LDPM formulation considers the following nonlinear mesoscale phenomena [26, 27, 39]: (1) fracture and cohesion; (2) compaction and pore collapse; and (3) internal friction.
+Fracture and cohesion due to tension and tension-shear.
+For tensile loading (e∗ N > 0), the fracturing behavior is formulated through eﬀective strain, e∗= p e∗2 N + α(e∗2 M + e∗2 L ), and stress, t = p t2 N + (t2 M + t2 L)/α, which deﬁne the normal and shear stresses as tN = e∗ N(t/e∗); tM = αe∗ M(t/e∗); tL = αe∗ L(t/e∗).
+The eﬀective stress t is incrementally elastic (˙t = E0 ˙e) and must satisfy the inequal- 16ity 0 ≤t ≤σbt(e, ω) where σbt = σ0(ω) exp [−H0(ω)⟨e −e0(ω)⟩/σ0(ω)], ⟨x⟩= max{x, 0}, and tan(ω) = e∗ N/√αe∗ T = tN √α/tT, and e∗ T = p e∗2 M + e∗2 L .
+The post peak softening modulus is deﬁned as H0(ω) = Ht(2ω/π)nt, where Ht is the softening modulus in pure tension (ω = π/2).
+LDPM provides a smooth transition between pure tension and pure shear (ω = 0) with parabolic variation for strength given by σ0(ω) = σtr2 st  −sin(ω) + p sin2(ω) + 4α cos2(ω)/r2 st  /[2α cos2(ω)], where rst = σs/σt is the ratio of shear strength to tensile strength.
+Compaction and pore collapse from compression.
+Normal stresses for compressive loading (e∗ N < 0) must satisfy the inequality −σbc(eD, eV ) ≤tN ≤0, where σbc is a strain-dependent boundary depending on the volumetric strain, eV , and the deviatoric strain, eD = eN −eV .
+The volumetric strain is computed by the volume variation of the Delaunay tetrahedra as eV = ∆V/3V0 and is assumed to be the same for all facets belonging to a given tetrahedron.
+Beyond the elastic limit, −σbc models pore collapse as a linear evolution of stress for increasing volumetric strain with stiﬀness Hc for −eV ≤ec1 = κc0ec0: σbc = σc0 + ⟨−eV −ec0⟩Hc(rDV ); Hc(rDV ) = Hc0/(1 + κc2 ⟨rDV −κc1⟩); σc0 is the mesoscale compressive yield stress; rDV = eD/eV and κc1, κc2 are material parameters.
+Compaction and rehardening occur beyond pore collapse (−eV ≥ec1).
+In this case one has σbc = σc1(rDV ) exp [(−eV −ec1)Hc(rDV )/σc1(rDV )] and σc1(rDV ) = σc0 + (ec1 −ec0)Hc(rDV ).
+Friction due to compression-shear.
+For compression dominated loading conditions (e∗ N < 0), the incremental shear stresses are computed as ˙tM = ET(˙e∗ M−˙e∗p M) and ˙tL = ET(˙e∗ L −˙e∗p L ), where ˙e∗p M = ˙ξ∂ϕ/∂tM, ˙e∗p L = ˙ξ∂ϕ/∂tL, and ξ is the plastic multiplier with loading-unloading conditions ϕ ˙ξ ≤0 and ˙ξ ≥0.
+The plastic potential is deﬁned as ϕ = p t2 M + t2 L −σbs(tN), where the nonlinear frictional law for the shear strength is assumed to be σbs = σs +(µ0 −µ∞)σN0[1−exp(tN/σN0)]−µ∞tN; σN0 is the transitional normal stress; µ0 and µ∞are the initial and ﬁnal internal friction coeﬃcients.
+Each meso-level parameter in LDPM governs part of the mechanical material behavior.
+The normal elastic modulus, which refers to the stiﬀness for the normal facet behavior, E0, , along with the coupling parameter α, govern LDPM response in the elastic regime.
+Approximately, the macro scale Young’s modulus E and Poisson’s ratios ν can be calculated as E = E0(2 + 3α)/(4 + α) and ν = (1 −α)/(4 + α).
+Typical concrete Poisson’s ratio of about 0.18 is obtained by setting α = 0.25 [40].
+The tensile strength, σt, and characteristic length, ℓt, govern the strain softening behavior due to fracture in tension of LDPM facets 17[40], with the relation Gt = ℓtσ2 t /2E0, where Gt is the mesoscale fracture energy.
+Calibration of σt and ℓt is typically achieved by ﬁtting experimental data, e.g. the nominal stress-strain curves of TPB tests.
+The yielding compressive stress, σc0, deﬁnes the behavior of the facet normal component under compression.
+The softenig exponent, nt, governs the interaction between shear and tensile behavior during softening at the facet level and it governs the macroscopic compressive behavior at high conﬁnement.
+One obtains more ductile behavior in both compression and tension by increasing nt, however the increase is more pronounced in compression than in tension.
+The initial internal friction, µ0, mainly govern the mechanical response in compression at low conﬁnement and have no inﬂuence on tensile behavior.
+Descriptions of eﬀects and functions of other LDPM mesoscale parameters and further discussions can be found in Cusatis et. al. [40] and Wan et. al. [48].
+LDPM has been utilized successfully to simulate cementitious concrete behavior under various loading conditions [39, 40].
+Furthermore, the framework has been extended to properly account for ﬁber reinforce- ment [42, 43] and has the ability to simulate the mechanical behavior of ultra high performance concrete (UHPC) [44, 46, 48] and long term behavior of concrete with fastening applications [47].
+Although Martian Concrete has sulfur bonds instead of calcium-silicate-hydrate gels, it shares with cementitious concrete the heterogeneous internal structure, which is the basis of the LDPM formulation.
+Thus, LDPM is adopted to simulate the mechanical behavior of the Martian Concrete.
+The numerical sim- ulations presented in this paper were performed with the software MARS, a multi-purpose computational code, which implements LDPM, for the explicit dynamic simulation of structural performance [36].
+As aforementioned, the particle size of aggregate in MC is shifted to lower ends after casting, however, the ex- act distribution cannot be obtained and simulating the smallest particles would result in signiﬁcantly high computation cost.
+Thus, the discrete particles are generated randomly with aggregate piece of 0.5 to 1 mm and Fuller’s law to the power 1/2 for each type of specimen.
+The utilized mesoscale parameters for MC with the best sulfur ratio (50%) are listed in Table 2.
+The TPB experimental data was primarily utilized to calibrate the LDPM parameters governing elastic as well as fracture behavior, which include normal modulus, tensile strength, shear strength ratio, tensile characteristic length, and softening exponent.
+Note that the normal modulus is calibrated by the TPB test data because the nominal strain (CMOD/h) is directly measured on the specimen, while all other tests include the eﬀect of the test machine compliance.
+18Compression experimental data was then used to calibrate the shear strength, the softening exponent and the initial internal friction.
+The other parameters’ values, relevant to conﬁned compressive behavior, are determined based on calibrated sets for typical concrete materials available in the literature [40, 48] and are assumed to work also for Martian Concrete in absence of speciﬁc experimental data.
+The adopted values are densiﬁcation ratio = 1, asymptotic friction = 0, transitional stress = 300 MPa, volumetric devi- atoric coupling coeﬃcient = 0, deviatoric strain threshold ratio = 1, and deviatoric damage parameter = 5.
+After all LDPM parameters had been calibrated and determined, prediction simulations for unnotched TPB tests and splitting tests were carried out and compared to experimental data as validation.
+The LDPM simulation setup, typical failure type and crack propagation of notched TPB, unconﬁned compression, splitting, and unnotched TPB tests are shown in Fig, 12, 13, & 14 respectively.
+Note that in the notched and unnotched TPB simulation setup (Fig. 12 & 14), the specimen is composed of lattice discrete particles at the center and classical elastic ﬁnite elements on the two sides, where only elastic deformation is expected to occur, to save computational time.
+In the unconﬁned compression test simulation, high friction parameters for typical concrete-steel slippage interaction [40] are utilized: µs = 0.13, µd = 0.015, and s0 = 1.3 mm, to simulate friction between the specimen ends and the steel loading platens, assuming a slippage-dependent friction coeﬃcient formulated as µ(s) = µd + (µs −µd)s0/(s0 + s).
+The ﬁtted stress-strain curves can be found in Fig. 15 & 16.
+Fig. 15a shows the nominal stress-strain curves for 50% notched TPB tests and the material has total fracture energy, GF, of 67.0 J/m2.
+The mesoscale initial fracture energy calculated from LDPM parameters, Gt = ℓtσ2 t /2E0 = 37.6 J/m2, is approximately half of GF.
+This is due to the fact that even under macroscopic mode I fracture the mesoscale response is characterized by both shear and tension.
+Fig. 15b presents the experimental and simulated stress-strain curves of unconﬁned compression test.
+Young’s modulus E is back calculated as the aforementioned equation E = E0(2 + 3α)/(4 + α) and has an average value of 6.5 GPa.
+This value is then used to remove the machine compliance in experimental compression test data.
+Brittle failure is observed both in experiments and simulations for unnotched TPB and splitting tests, as shown in Fig. 16 a & b respectively.
+The compliance in splitting and unnotched TPB experimental data is removed according to calibrated simulations.
+As pure predictions, the simulation peaks highly agree with the average strengths of the experiments.
+This indicates the superior ability of LDPM to simulate and 19Figure 12: LDPM simulation of notched TPB test setup and zoomed-in view of crack propagation predict the mechanical behavior of not only cement based concrete but also the novel waterless Martian concrete materials.
+Table 2: Parameters for Martian Concrete LDPM Simulations NormalModulus [GPa] 10 DensiﬁcationRatio [-] 1 TensileStrength [-] [MPa] 3.7 YieldingCompressiveStress [MPa] 300 ShearStrengthRatio [-] 4 TensileCharacteristicLength [mm] 55 SofteningExponent [-] 0.2 InitialHardeningModulusRatio [-] 0.12 TransitionalStrainRatio [-] 4 InitialFriction [-] 0.1 20(a) (b) Figure 13: LDPM simulation of typical crack propagation in (a) unconﬁned compression test and (b) splitting (Brazilian) test Figure 14: LDPM simulation of unnotched TPB test setup and typical crack propagation (a) Nominal Strain [-] 0 0.005 0.01 0.015 Nominal Stress [MPa] 0 0.5 1 1.5 2 <u =1.65MPa'10.1% GF =67.0J/m2'20.6% No. of Specimens: 4 L =101.6mm'0.0% b =25.7mm'0.3% h =25.6mm'0.6% Notched TPB EXP EXP Ave SIM (b) Strain [-] 0 0.02 0.04 0.06 0.08 Stress [MPa] 0 20 40 60 <u =54.4MPa'14.1% No. of Specimens: 4 h =25.5mm'0.3% d =24.9mm'0.4% w =25.6mm'0.9% E= 65.0GPa'35.1% Compression EXP EXP AVE SIM Figure 15: Experimental results and LDPM simulations for calibration and validation: (a) 50% notched three-point-bending tests (b) unconﬁned compression tests 21(a) Nominal Strain [-] 0 0.005 0.01 0.015 Nominal Stress [MPa] 0 2 4 6 8 10 <u =7.24MPa'10.1% No. of Specimens: 6 L =101.6mm'0.0% b =26.2mm'1.0% h =25.7mm'0.6% Unnotched TPB EXP EXP Ave SIM (b) Strain [-] 0 0.005 0.01 0.015 0.02 0.025 Stress [MPa] 0 2 4 6 <u =3.9MPa'27.8% No. of Specimens: 6 b =25.7mm'0.3% h =25.6mm'0.6% Splitting EXP EXP AVE SIM Figure 16: Experimental results and LDPM simulations for validation: (a) unnotched three-point-bending tests (b) splitting tests 4 Summary and Conclusions In conclusion, the developed sulfur based Martian Concrete is feasible for construction on Mars for its easy handling, fast curing, high strength, recyclability, and adaptability in dry and cold environments.
+Sulfur is abundant on Martian surface and Martian regolith simulant is found to have well graded particle size distribution to ensure high strength mix.
+Both the atmospheric pressure and temperature range on Mars are adequate for hosting sulfur concrete structures.
+Based upon the experimental and numerical results presented in this paper, the following conclusions can be drawn: • The best mix for producing Martian Concrete (MC) is 50% sulfur and 50% Martian soil simulant with maximum aggregate size of 1 mm.
+The developed MC can reach compressive strength higher than 50 MPa.
+• The optimum particle size distribution (PSD) of Martian regolith simulant is found to play a role in achieving high strength MC compared to sulfur concrete with regular sand.
+• The rich metal elements in Martian soil simulant are found to be reactive with sulfur during hot mixing, possibly forming sulfates and polysulfates, which further increases MC strength.
+Simultane- ously, the particle size distribution of aggregate is shifted to lower ends, resulting in less voids and higher performance of the ﬁnal mix.
+• With the advantage of recyclability, recast of MC can further increase the material’s overall perfor- 22mance. • Applying pressure during casting can also increase the ﬁnal strength of MC.
+Sulfur shrinks when is cooled down.
+By reducing the mixture’s volume during casting, the number and size of cavities of the ﬁnal product are decreased.
+• Although developed for conventional cementitious concrete, the Lattice Discrete Particle Model (LDPM) shows also excellent ability in simulating the mechanical behavior of MC under various loading conditions.
+Acknowledgement The work was ﬁnancially supported with Northwestern University internal funding.
+The authors would like to thank laboratory coordinator Dave Ventre and undergraduate student Timothy Clark for their contribution to material preparation in the experimental campaign.
+23References [1] R.F. Bacon and H.S. Davis, Recent Advances in the American Sulfur Industry, Chemical and Metal- lurgical Engineering, V. 24, No. 2, 1921, pp. 65-72.
+[2] W.H. Kobbe, New Uses for Sulfur in Industry, Industrial and Engineering Chemistry, V. 16, No. 10,1924, pp. 1026-1028.
+[3] W.W. Duecker, Admixtures Improve Properties of Sulfur Cements, Chemical and Metallurgical Engi- neering, V. 41, No. 11, 1934, pp. 583-586.
+[4] J.M. Dale and A.C. Ludwig Feasibility Study for Using Sulfur-Aggregate Mixtures as a Structural Material, Technical Report No. AFWL-TR-66-57, Southwest Research Institute, San Antonio, Sept. 1966, 40 pp.
+[5] J.M. Dale and A.C. Ludwig Advanced Studies of the Sulfur-Aggregate Mixtures as a Structural Material, Technical Report No. AFWL-TR-68-21, Southwest Research Institute, San Antonio, Oct. 1968, 68 pp.
+[6] W. Rybczynski, A. Ortega and W. Ali, Sulfur Concrete and Very Low Cost Housing, Canadian Sulfur Symposium, Alberta, May 1974. [7] W.L.Jr.
+Sheppard, Sulfur Mortars: A Historical Survey, Sulphur Institute Journal, V. 11, No. 3-4, 1975, pp. 15-17.
+[8] Sulfur Concretes Go Commercial, Sulphur Institute Journal, V. 12, No. 2, Summer 1976.
+[9] A.H. Vroom, Sulfur Cements, Process for Making Same and Sulfur Concretes Made Therefrom, U.S. Patent No. 4058500, Nov. 15, 1977.
+[10] B. Leutner and L. Diehl, Manufacture of Sulfur Concrete, U.S. Patent No. 4025352, May 24, 1977.
+[11] R. Gregor and A. Hackl, A New Approach to Sulfur Concretes, Advances in Chemistry Series No. 165, American Chemical Society, Washington, D.C., 1978, pp. 54-78. 24[12] B.K. Bordoloi and Eli M. Pierce, Plastic SulfurStabilization by Copolymerization of Sulfur with Dicyclopentadiene, Advances in Chemistry Series No. 165, American Chemical Society, Washington, D.C., 1978, pp. 31-53.
+[13] L. Bright, B.R. Currell, B.J. Nash and R.A. Scott, and C. Stillo, Preparation and Properties of Mod- iﬁed Sulfur Systems, Advances in Chemistry Series No. 165, American Chemical Society, Washington, D.C., 1978, pp. 13-30.
+[14] J.E. Gillott, I.J. Jordaan, R.E. Loov, and N.G. Shrive, Sulfur Concretes, Mortars and the Like, U.S. Patent No. 4188230, Feb. 12, 1980.
+[15] R.A. Schneider and M. Simic, Plasticized Sulfur Composition, U.S. Patent No. 4,308,072, Dec. 29, 1981.
+[16] A.H. Vroom, Sulfur Cements, Process for Making Same and Sulfur Concretes Made Therefrom, U.S. Patent No. 4293463, Oct. 6, 1981.
+[17] W.C. McBee and T.A. Sullivan, Modiﬁed Sulfur Cement, U.S. Patent No. 4311826, Jan 19, 1982.
+[18] G.L. Woo, Phosphoric Acid Treated Sulfur Cement-Aggregate Compositions, U.S. Patent No. 4376831, Mar. 15, 1983.
+[19] Y. Zhang, Ancient Chinese Sulfur Manufacturing Processes, Isis 77 (3): 487-497, Sep 1986.
+[20] H.A. Omar, Production of Lunar Concrete using Molten Sulfur, Final Research Report for JoVe NASA Grant NAG8 - 278.
+[21] Z.P. Baˇzant, Analysis of work-of-fracture method for measuring fracture energy of concrete, Journal of Engineering Mechanics, 138, 1996.
+[22] C.C. Allen, R.V. Morris, D.J. Lindstrom, M.M. Lindstrom, and J.P. Lockwood, JSC Mars-1: Martian Regolith Simulant, Lunar and Planetary Science XXVIII, 1997.
+[23] I. Casanova, Feasibility and Applications of Sulfur Concrete for Lunar Base Development: A Prelim- inary Study.
+Lunar and Planetary Science XXVIII, 1997, p. 209.
+25[24] Guide for Mixing and Placing Sulfur Concrete in Construction, ACI 548.2R-93, 1998.
+[25] K. Lodders and B. Fegley, The planetary scientist’s companion, Oxford University Press US.
+ISBN 0-19-511694-1, 1998.
+[26] G. Cusatis, Z.P. Baˇzant, and L. Cedolin, Conﬁnement-shear lattice model for concrete damage in tension and compression.
+I. theory, Journal of Engineering Mechanics, 129(12):1439–1448, 2003.
+[27] G. Cusatis, Z.P. Baˇzant, and L. Cedolin, Conﬁnement-shear lattice model for concrete damage in ten- sion and compression. II.
+computation and validation, Journal of Engineering Mechanics, 129(12):1449- 1458, 2003.
+[28] G. Cusatis, Z.P. Baˇzant, and L. Cedolin, Conﬁnement-shear lattice CSL model for fracture propaga- tion in concrete, Comput. Methods Appl. Mech. Engrg.
+195 (2006) 7154-7171.
+[29] B.J. Buchanan, Gunpowder, explosives and the state: a technological history Ashgate Publishing, Ltd. 2006.
+[30] K.R. Sacksteder, G.B. Sanders, In-situ resource utilization for lunar and mars exploration.
+AIAA Aerospace Sciences Meeting and Exhibit. AIAA 2007-345.
+doi:10.2514/6.2007-345.
+[31] R.N. Grugel, Sulfur ’Concrete’ for Lunar Applications - Environmental Considerations, NASA/TM - 2008 - 215250.
+[32] Material Safety Data Sheet of JSC Mars-1A Martian Regolith Simulant, Orbital Technologies Cor- poration, 2008.
+[33] R.N. Grugel and H. Toutanji, Sulfur “concrete”for lunar applications - Sublimation concerns, Ad- vances in Space Research 41 (2008) 103-112.
+[34] N.G. Barlow, Mars: an introduction to its interior, surface and atmosphere, Cambridge planetary science, Cambridge University Press, ISBN 0-521-85226-9, 2008.
+[35] H. Lida, Completion Ceremony for “Application Study of Sulfur Concrete Technology ”in UAE, JCCP NEWS No. 105, 2009.
+26[36] D. Pelessone MARS: modeling and analysis of the response of structures - user’s manual, ES3, Beach (CA), USA; 2009.
+[37] P. L. King and S. M. Mclennan.
+Sulfur on Mars, Elements, An International Magazine of Mineralogy, Geochemistry, and Petrology, April 2010, v. 6 no. 2 p.107, 2010. [38] D. Britton.
+Shell Thiocrete - Environmental Beneﬁts of Sulphur Concrete, Shell Global Solutions (UK), 2010.
+[39] G. Cusatis, D. Pelessone, and A. Mencarelli.
+Lattice discrete particle model (LDPM) for failure behavior of concrete.
+I: Theory, Cement Concrete Composites, 33(9), 881-890, (2011).
+[40] G. Cusatis, D. Pelessone, and A. Mencarelli.
+Lattice discrete particle model (LDPM) for failure behavior of concrete.
+II: Calibration and validation, Cement Concrete Composites, 33(9), 891-905, (2011).
+[41] R. N. Grugel, Integrity of sulfur concrete subjected to simulated lunar tempearture cycles, Advances in Space Research, 50 (2012) 1294-1299.
+[42] E. A. Schauﬀert, and G. Cusatis.
+Lattice discrete particle model for ﬁber-reinforced concrete.
+I: theory, Journal of Engineering Mechanics, ASCE. July 2012. 826-833.
+[43] E. A. Schauﬀert, G. Cusatis, D. Pelessone, J. L. O’Daniel, and J. T. Baylot.
+Lattice discrete particle model for ﬁber-reinforced concrete.
+II: tensile fracture and multiaxial loading behavior, Journal of Engineering Mechanics, ASCE. July 2012. 834-841.
+[44] J. Smith, G. Cusatis, D. Pelessone, E. Landis, J. O’Daniel, J. Baylot.
+Discrete modelling of ultra- high-performance concrete with application to projectile penetration, International Journal of Impact Engineering 65, 2014, 13-32.
+[45] E.V. Shalygin, W.J. Markiewicz, A.T. Basilevsky, D.V. Titov, N.I. Ignatiev, J.W. Head, Active volcanism on Venus in the Ganiki Chasma rift zone, Geophysical Research Letters 42: 4762-4769.
+(2015-06-17) doi:10.1002/2015GL064088. 27[46] L. Wan, R. Wendner, G. Cusatis, A Hygro-Thermo-Chemo Mechanical Model for the Simulation of Early Age Behavior of Ultra-High-Performance Concrete, CONCREEP 10: pp.
+166-175, Vienna, Austria, Sep 2015, doi: 10.1061/9780784479346.020.
+[47] G. Boumakis, M. Marcon, L. Wan, R. Wendner, Creep and Shrinkage in Fastening Systems, CON- CREEP 10: pp.
+657-666, 2015, doi: 10.1061/9780784479346.079.
+[48] L. Wan, R. Wendner, B. Liang, G. Cusatis.
+Experimental and Computational Analysis of the Behavior of Ultra-High-Performance-Concrete at Early Age, submitted to Cement and Concrete Composites, preprint available on ArXiv, arxiv.org/abs/1509.07801, 2015. 28

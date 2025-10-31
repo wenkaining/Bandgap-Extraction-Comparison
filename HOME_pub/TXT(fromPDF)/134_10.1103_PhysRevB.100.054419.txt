@@ -1,0 +1,1711 @@
+PHYSICAL REVIEW B 100, 054419 (2019)
+Spin-wave dispersion of 3d ferromagnets based on quasiparticle self-consistent GW calculations
+H. Okumura
+*
+Division of Materials and Manufacturing Science, Graduate School of Engineering, Osaka University, Suita, Osaka 565-0871, Japan
+K. Sato
+Division of Materials and Manufacturing Science, Graduate School of Engineering, Osaka University, Suita, Osaka 565-0871, Japan
+and Center for Spintronics Research Network (CSRN), Osaka University, Toyonaka, Osaka 560-8531, Japan
+T. Kotani
+Department of Applied Mathematics and Physics, Tottori University, Tottori 680-8552, Japan
+(Received 16 April 2019; published 14 August 2019)
+We calculate transverse spin susceptibility in the linear response method based on the ground states determined
+in the quasiparticle self-consistent GW (QSGW) method. Then we extract spin-wave (SW) dispersions from the
+susceptibility. We treat bcc Fe, hcp Co, fcc Ni, and B2-type FeCo. Because of the better description of the
+independent-particle picture in QSGW, calculated spin stiffness constants for Fe, Co, and Ni give much better
+agreement with experiments in QSGW than those in the local density approximation (LDA); the stiffness for Ni
+in LDA is two times greater than in experiment. For Co, both acoustic and optical branches of SWs agree with
+experiment. As for FeCo, we have some discrepancy between the spin stiffness in QSGW and that in experiment.
+We may need further theoretical and experimental investigations on the discrepancy.
+DOI: 10.1103/PhysRevB.100.054419
+I. INTRODUCTION
+Spin waves (SWs) are one of the important factors to
+control magnetic properties of material. SWs are excited at
+considerably lower temperatures than room temperature (RT),
+and their energy range typically lies within a few hundred
+meV. When one magnetic moment is tilted from the paral-
+lel spin conﬁguration, the exchange interaction triggers the
+SW propagation throughout the material as collective exci-
+tation. We can observe SWs in bulk materials by inelastic
+neutron scattering experiments, e.g., in bcc Fe [1], fcc Ni
+[2], and even in half metals like perovskite La0.7Sr0.3MnO3
+[3]. In addition to collective excitation, another magnetic
+excitation like spin-ﬂip excitation is called Stoner excitation,
+whose excitation energy is related to the exchange splitting
+Ex. We can experimentally observe Stoner excitation by
+high-energy experiments such as spin-polarized electron en-
+ergy loss spectroscopy (SPEELS) [4]. High-energy SWs are
+strongly damped because of the hybridization with the Stoner
+excitation.
+Let us explain how we determine the spin stiffness D exper-
+imentally. From the macroscopic point of view, the Bloch T
+3
+2
+rule [5] in the temperature dependence of magnetization M(T )
+is derived from the SW theory. For the wave vector q ∼0,
+the SW dispersion ω(q) behaves as ω(q) = Dq2. Since this
+behavior of ω(q) results in the T
+3
+2 rule in low temperature, we
+can determine D by analyzing the temperature dependence of
+magnetization [6].
+*okumura.haruki@mat.eng.osaka-u.ac.jp
+We mainly have three methods to calculate ω(q) in the
+ﬁrst-principles methods. The ﬁrst one is the Lichtenstein for-
+mula (LF) [7]. Assuming the Heisenberg model, we calculate
+exchange interaction Ji j or its Fourier transform J(q) based
+on the magnetic force theorem [8]. Here i, j are for site
+indices. Then ω(q) is calculated from J(q). In Ref. [7], Ji j
+was calculated up to the second nearest neighbors, resulting
+in D, which are in good agreement with experiments for Fe
+and Ni. Later, Pajda et al. investigated the convergence of D
+for a range of neighbors and found that converged D are in
+good agreement with experiments for Fe but overestimated for
+Ni [9].
+The second method is the frozen magnon method (FMM)
+[10], which assumes the Heisenberg model as in LF. In
+FMM, we employ the adiabatic approximation; namely, we
+neglect motions of the magnetic moment compared to electron
+motions. Then we calculate J(q) from the constraint of spin-
+spiral conﬁgurations with the ﬁxed magnitude of the magnetic
+moment. Once we get J(q), we solve the eigenvalue problem
+for deriving ω(q). This method works well for bcc Fe [10,11].
+Note that we cannot describe the decay of collective SWs
+(Stoner damping) in either of these two methods.
+The third method is the linear response (LR) method for
+transverse spin susceptibility R+−(q, ω) [12]. The LR method
+directly gives ω(q) in the reciprocal space. Cooke et al.
+ﬁrst introduced the LR method for calculating R+−(q, ω),
+and they discussed Stoner damping in SWs in bcc Fe and
+fcc Ni [13]. Savrasov treated spin ﬂuctuations based on the
+many-body perturbation theory and reproduced the experi-
+mental ω(q) [14]. Karlsson and Aryasetiawan also calculated
+R+−(q, ω) based on the Green’s function method [15]. From
+a view of computational efﬁciency, ¸Sa¸sıoˇglu et al. proposed
+2469-9950/2019/100(5)/054419(11)
+054419-1
+©2019 American Physical SocietyH. OKUMURA, K. SATO, AND T. KOTANI
+PHYSICAL REVIEW B 100, 054419 (2019)
+←
+Majority
+→
+Minority
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+Γ
+H
+N P
+Γ
+N
+Energy [eV]
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+sp
+te
+sp
+te
+sp
+te
+sp
+te
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+-3 -2 -1  0  1  2  3
+ number of states [/eV]
+EFermi
+-3 -2 -1  0  1  2  3
+ number of states [/eV]
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+←
+Majority
+→
+Minority
+EFermi
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+Energy [eV]
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+Γ
+H
+N P
+Γ
+N
+Γ
+H
+P
+Γ
+N
+N
+(a) Majority
+     (QSGW)
+(b) Minority
+     (QSGW)
+(c) PDOS
+   (QSGW)
+(d) Majority
+      (LDA)
+(e) Minority
+      (LDA)
+(f) PDOS
+     (LDA)
+ste
+ste
+Γ
+H
+N P
+Γ
+N
+FIG. 1. Calculated band structures of Fe in QSGW [(a) majority spin, (b) minority spin] and in LDA [(d) majority spin, (e) minority spin].
+The interpolated bands based on 9 MLWFs are also shown (broken line) with original bands (bold gray line). Size of colored circles on the
+bands shows the weight of MLWF bands. Partial density of states for 4s, t2g, and eg in QSGW and LDA are shown in (c) and (f). Fermi energy
+EFermi is set to 0 eV.
+a LR method with the maximally localized Wannier function
+(MLWF) [16]. In the method, we decrease to the second power
+of the number of a Wannier basis set and we can decrease the
+calculation cost. With this efﬁcient method, we can use ﬁne q
+mesh for calculating R+−(q, ω).
+These three methods mainly have been applied to the
+ground states given in the local density approximation (LDA).
+However, the ground state given in LDA is not necessarily
+good enough. For example, Sponza et al. show that 3d
+bandwidth and Ex in LDA are not good enough to cal-
+culate ω(q) [17]. In antiferromagnetic transition metal ox-
+ides such as NiO and MnO, the calculated ω(q) does not
+agree with the experiment due to too small Ex and too
+small band gap [18]. Serious disagreement is also found
+in the ω(q) in La0.7Sr0.3MnO3, for which LDA fails to
+reproduce the half-metallic electronic structure of that com-
+pound [19]. It is possible to start from the ground states of
+LDA + U; however, we sometimes have difﬁculty in deter-
+mination of U. This may suggest a limitation of LDA + U
+itself.
+To overcome such limitations in LDA, Kotani et al. calcu-
+lated ω(q) for strongly correlated materials in an LR method
+for the ground states determined in the quasiparticle self-
+consistent GW (QSGW) method [18,19]. Then we see reason-
+able agreement with experiments for NiO and MnO because
+QSGW gives good descriptions of the band quantities such
+as Ex and band gaps [20]. We expect such good agreement
+for a wide-range of materials. However, Kotani’s LR method
+used in Refs. [18,19] is too simple to apply to a wide range of
+materials.
+054419-2SPIN-WAVE DISPERSION OF 3d FERROMAGNETS …
+PHYSICAL REVIEW B 100, 054419 (2019)
+TABLE I. t2g level of Fe at  for the minority spin, and that at N
+for the majority spin. These are in LDA and QSGW, in addition to
+the experimental data by ARPES [34]. Energy is relative to EFermi.
+Band Energy (eV)
+LDA
+QSGW
+Expt. [34]
+ (minority)
+−0.32
+−0.11
+−0.19
+N (majority)
+−0.74
+−0.68
+−0.57
+Thus we implemented the efﬁcient LR method to calculate
+R+−(q, ω) based on the MLWF given by ¸Sa¸sıoˇglu et al.
+[16] in the QSGW calculation package ECALJ compiled by
+Kotani et al. [21]. We demonstrate how the method works for
+typical ferromagnets such as bcc Fe, fcc Ni, hcp Co, and B2
+FeCo (CsCl structure), and we discuss the difference between
+LDA and QSGW. Except for FeCo, the SWs in QSGW
+agree with experiments. We ﬁnd some discrepancies for
+FeCo.
+II. COMPUTATIONAL METHODS
+A. Quasiparticle self-consistent GW
+Until now, varieties of GW calculations based on Hedin’s
+GW approximation [22,23] have been performed since it was
+introduced in ﬁrst-principles calculations by Hyberstein and
+Louie [24]. Most of the GW calculations are so-called one-
+shot GW . Starting from G0 for the one-body Hamiltonian
+in LDA HLDA
+0
+, we calculate corrections to the eigenvalues
+of HLDA
+0
+to reproduce quasiparticle energies. In the one-shot
+GW , the self-energy for the corrections is given as (1, 2) =
+iG0(1, 2)W (1+, 2), where we use the notation 1 ≡(r1,t1).
+The screened Coulomb interaction W (1+, 2) is calculated as
+W = (1 −vP)−1v from the bare Coulomb interaction v and
+the polarization function P = −iG0 × G0. The one-shot GW
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+-Im[K+−]  [1/eV]
+ω [eV]
+LDA
+QSGW
+DOS
+Total DOS 
+-5
+-4
+-3
+-2
+-1
+ 0
+ 1
+ 2
+ 3
+ Energy [eV]
+Energy [eV]
+0.5
+1
+1.5
+2
+2.5
+0
+3
+-Im[K +−]  [(Ω·eV)-1]
+-Im[K +−]  [(Ω·eV)-1]
+Energy [eV]
+3.5
+4
+4.5
+0.5
+1
+1.5
+2
+2.5
+0
+3
+3.5
+4
+4.5
+1
+2
+3
+0
+4
+5
+1
+2
+3
+0
+4
+5
+6
+Γ
+P
+N
+H
+N
+Γ
+Γ
+P
+N
+H
+N
+Γ
+Γ
+P
+N
+H
+N
+Γ
+Γ
+P
+N
+H
+N
+Γ
+[ξξξ]
+]ξ
+ξ
+ξ[
+]
+0
+ξ
+ξ[
+]
+0
+0
+ξ[
+[ξ00]
+[ξξ0]
+(a)
+(c)
+(b)
+Fe
+FIG. 2. (a) Calculated −Im[K+−(q = 0, ω)] in Fe in QSGW (red bold line) and in LDA (blue broken line). The inset is the total density of
+states in Fe. Panels (b) and (c) show calculated −Im[K+−(q, ω)] along the BZ symmetry line in LDA and QSGW, respectively.  is the unit
+cell volume.
+054419-3H. OKUMURA, K. SATO, AND T. KOTANI
+PHYSICAL REVIEW B 100, 054419 (2019)
+Liechtenstein formula
+Frozen magnon method
+(a) LDA (2.22 μB)
+Liechtenstein formula
+Frozen magnon method
+Energy [meV]
+100
+200
+300
+400
+600
+0
+500
+Energy [meV]
+100
+200
+300
+400
+600
+0
+500
+Γ
+H
+N
+P
+Γ
+N
+[ξξξ]
+]
+0
+ξ
+ξ[
+]
+0
+0
+ξ[
+Γ
+H
+N
+P
+Γ
+N
+[ξξξ]
+]
+0
+ξ
+ξ[
+]
+0
+0
+ξ[
+(b) QSGW (2.22 μB)
+5
+4
+2
+3
+0
+1
+log[Im[R+−]]
+5
+4
+2
+3
+0
+1
+log[Im[R+−]]
+Fe
+Fe
+FIG. 3. Im[R+−(q, ω)] for Fe (a) in LDA and (b) in QSGW,
+showing the SW dispersion; we see slight discontinuities because of
+the mesh of used k points. Results with LF [9] (solid line) and those
+with FMM [10] (broken line) are superposed. Experimental data by
+neutron scattering are indicated by open squares (Fe (12% Si) at RT
+[1]) and open circles (pure Fe at 10 K [36]).
+has a shortcoming since the one-shot GW is just a perturbation
+on top of HLDA
+0
+.
+To overcome the shortcoming of the one-shot GW , we
+utilize the QSGW method [25–27] implemented in the ECALJ
+package [21]. Let us summarize the QSGW method. First,
+recall the above GW procedure which can be applicable to
+any static one-body Hamiltonian H0(r, r′) as
+H0(r, r′) = −∇2
+2 + Vext + VH + Vxc(r, r′),
+(1)
+where we have the external potential Vext, the Hartree po-
+tential VH, and the nonlocal exchange-correlation potential
+Vxc(r, r′). With (1, 2) = iG0(1, 2)W (1+, 2), where G0 =
+1/(ω −H0), we have the energy-dependent one-body Hamil-
+tonian H(r, r′; ω) as
+H(r, r′; ω) = −∇2
+2 + Vext + VH + (r, r′; ω).
+(2)
+That is, the GW approximation gives a procedure H0 →H.
+QSGW requires “quasiparticle self-consistency,” that is, min-
+imization of the difference between H0 and H. The minimiza-
+tion gives the procedure H →H0, replacing the ω-dependent
+ in Eq. (2) with the static nonlocal exchange-correlation
+potential V xc as
+V xc = 1
+2
+
+i j
+|ψi⟩{Re[(εi)]i j + Re[(εj)]i j} ⟨ψj| ,
+(3)
+where eigenvalues εi and eigenfunctions ψi are those of H0.
+This deﬁnes a procedure to give a new H0, H →H0. Thus
+we ﬁnally have a “quasiparticle self-consistency” cycle H0 →
+H →H0 →H →· · · (or G0 →G →G0 →· · · ) until con-
+verged.
+B. Dynamical magnetic susceptibility
+In LR, we follow the procedure given in Refs. [16,28].
+Here we treat the transverse spin susceptibility R+−(1, 2),
+which describes the response of the expectation value of a
+spin density operator ˆσ +(1) to the the external magnetic ﬁeld
+B−(2) as
+R+−(1, 2) = δ ⟨ˆσ +(1)⟩
+δB+(2) ,
+(4)
+where 1 = (r1,t1). See Eq. (20) in Ref. [28]. Here the expec-
+tation value of ˆσ +(1) is given as
+⟨ˆσ +(1)⟩= −i
+
+α,β
+σ +
+βαGαβ(1, 1+)
+(α, β ∈{↑, ↓}),
+(5)
+where G(1, 1+) is the single-particle Green’s function from 1
+to 1+. For our calculation below, it is convenient to consider
+the four-point representation R(4)
+↑↓(12, 34). The trace of matrix
+R(4)
+↑↓(11, 33) leads to the two-point representation R+−(1, 2).
+In order to obtain R(4)
+↑↓(12, 34), we solve the Bethe-Salpeter
+equation where we use the static screened Coulomb interac-
+tion W (1+, 2) which is ∝δ(t1 −t2). It is
+R(4)
+↑↓(12, 34) = K↑↓(12, 34) +
+ 
+K↑↓(12, 56)
+×W (5+, 6) R↑↓(56, 34) d5d6,
+(6)
+where K↑↓(12, 34) is the noninteracting two-particle (particle-
+hole with opposite spin) propagator given as
+−K↑↓(12, 34) = −iG0
+↑(1, 3)G0
+↓(4, 2+),
+(7)
+where
+we
+consider
+t1 = t2
+and
+t3 = t4,
+i.e.,
+K↑↓(r1, r2; r3, r4;t1 −t3).
+The
+Fourier
+transform
+is
+from t1 −t3 to ω. We symbolically solve Eq. (6) to be
+R = K + KW K + KW KW K + · · · = K(1 −W K)−1, where
+the numerator K describes the Stoner excitations, whereas
+zeros of the denominator (1 −W K) give the collective
+excitation.
+This K↑↓is given as
+−K↑↓(r1, r2; r3, r4; ω)
+=
+occ
+
+k,n
+unocc
+
+k′,n′
+∗
+kn↓(r2)kn↓(r4)k′n′↑(r1)∗
+k′n′↑(r3)
+ω −(εk′n′↑−εkn↓) + iδ
++
+unocc
+
+k,n
+occ
+
+k′,n′
+∗
+kn↓(r2)kn↓(r4)k′n′↑(r1)∗
+k′n′↑(r3)
+−ω −(εkn↓−εk′n′↑) + iδ
+, (8)
+where k, k′ are in the ﬁrst Brillouin zone, n(n′) is the band
+index summed over occupied (unoccupied) states, εkn↑(εkn↓)
+054419-4SPIN-WAVE DISPERSION OF 3d FERROMAGNETS …
+PHYSICAL REVIEW B 100, 054419 (2019)
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 0
+ 0.5
+ 1
+ 1.5
+ 2
+ 2.5
+ 3
+ 3.5
+ 4
+-Im[K+−]  [1/eV]
+ω [eV]
+-5
+-4
+-3
+-2
+-1
+ 0
+ 1
+ 2
+ 3
+ Energy [eV]
+DOS
+Total DOS 
+LDA
+QSGW
+Energy [eV]
+0.5
+1
+1.5
+2
+0
+Energy [eV]
+0.5
+1
+1.5
+2
+0
+-Im[K +−]  [(Ω·eV)-1]
+-Im[K +−]  [(Ω·eV)-1]
+0.5
+1
+1.5
+2
+0
+0.5
+1
+1.5
+2
+0
+2.5
+3
+Γ
+Γ
+L
+W
+Γ
+Γ
+K
+X
+L
+W
+X
+K
+Γ
+Γ
+L
+W
+Γ
+Γ
+K
+X
+L
+W
+X
+K
+[ξξ0]
+[ξ00]
+[ξξξ]
+[ξξ0]
+[ξ00]
+[ξξξ]
+(a)
+(c)
+(b)
+Ni
+FIG. 4. (a) −Im[K+−(q = 0, ω)] in Ni in QSGW (red bold line) and in LDA (blue broken line). The inset is the total density of states in
+Ni. Panels (b) and (c) calculate −Im[K+−(q, ω)] along the BZ symmetry line in LDA and QSGW, respectively.  is the unit cell volume.
+is the nth majority (minority) band energy at k, and  is the
+eigenfunction of H0.
+As mentioned in Ref. [16], in order to satisfy the Goldstone
+theorem ω(q) →0 (q →0), we need to introduce a factor η
+for R = K(1 −ηW K)−1. In principle, the Goldstone theorem
+should be automatically satisﬁed with the LR method since
+we expect that the LR method evaluates the second derivative
+of the total energy of the ground states. However, our LR is
+not formulated to reproduce the second derivative exactly;
+furthermore, QSGW is not formulated to minimize the total
+energy. This simple scaling by introducing η is a quick remedy
+to satisfy the theorem; its deviations from unity show the
+size of vertex corrections, which should be added to the
+interaction W . The calculated η of LDA (QSGW) are 1.15
+(1.19), 1.41 (1.87), 1.26 (1.33), and 1.05 (0.87) for Fe, Ni,
+Co, and FeCo, respectively. These η are in good agreement
+with previous calculations 1.28, 1.5, and 1.33 for Fe [28], Ni
+[16], and FeCo [28]. The deviations are not small enough. We
+may need to treat the vertex correction accurately in order
+to override the ambiguity due to this quick remedy in the
+future.
+C. Wannier representation
+Based on Refs. [29,30], we generate MLWFs from eigen-
+functions of LDA or QSGW. Once we generate MLWFs, we
+can obtain the Wannier representation of R↑↓as follows.
+In the Wannier basis, we expand eigenfunctions as
+kn(r) = 
+Ri akn
+Riwk
+Ri(r),
+(9)
+where akn
+Ri is the expansion coefﬁcient, R is atomic position
+in a primitive cell, and i is the Wannier orbital (e.g., i = 3dxy)
+of each atom on R. wk
+Ri(r) is represented as a complete set of
+orthogonal basis {wRi(r)},
+wk
+Ri(r) =
+1
+√
+N
+
+T
+wRi(r −R −T) exp(ik · T),
+(10)
+054419-5H. OKUMURA, K. SATO, AND T. KOTANI
+PHYSICAL REVIEW B 100, 054419 (2019)
+TABLE II. Calculated stiffness constant D for Fe, Ni, Co, and FeCo. The results by other groups are shown together: the LR [28], with the
+LF [9], and with the time-dependent DFT (TDDFT) [37] (on average). In addition we show inelastic neutron scattering data [1,2,6,40,44,44,46].
+D (meV Å
+2)
+Material
+LR (LDA)
+LR (QSGW)
+Expt.
+LR (GGA) [28]
+LF [9]
+TDDFT [37]
+bcc Fe
+155
+222
+230 (RT) [1]
+248
+250
+189
+280 (4.2 K) [6]
+fcc Ni
+873
+449
+433 [2]
+756
+1097
+555 [40]
+hcp Co [100]
+565
+486
+478 [43]
+hcp Co [001]
+752
+532
+410 [43]
+510 [44]
+B2 FeCo
+407
+307
+450–500 [46]
+where T is the lattice translation vector and N is the nor-
+malization constant satisfying the Born–von Karman bound-
+ary condition. By using the orthogonality, the eigenvalue
+equations Hkn(r) = εknkn(r) can be rewritten with this
+Wannier representation,
+
+R′ j
+Hk
+RiR′ jakn
+R′ j = εknakn
+Ri,
+(11)
+where
+the
+Hamiltonian
+matrix
+with
+Wannier
+ba-
+sis
+Hk
+RiR′ j
+is
+the
+Fourier
+transform
+of
+HT−T′
+RiR′ j ≡
+⟨wRi(r −R −T)| H |wR′ j(r −R′ −T′)⟩.
+Substituting Eqs. (9) and (10) into Eq. (8) and using
+the Fourier transform of real space, we will obtain the
+(b) QSGW (0.80 μB) 
+(a) LDA (0.62 μB) 
+Liechtenstein formula
+Frozen magnon method
+Liechtenstein formula
+Frozen magnon method
+100
+0
+700
+600
+500
+400
+300
+200
+100
+0
+700
+600
+500
+400
+300
+200
+L
+Γ
+X
+W
+K
+Γ
+L
+Γ
+X
+W
+K
+Γ
+]
+0
+ξ
+ξ[
+]
+0
+0
+ξ[
+]ξ
+ξ
+ξ[
+]
+0
+ξ
+ξ[
+]
+0
+0
+ξ[
+]ξ
+ξ
+ξ[
+Energy [meV]
+Energy [meV]
+log[Im[R+−]]
+log[Im[R+−]]
+0.2
+0
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+0
+1.6
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+Ni
+Ni
+FIG. 5. Im[R+−(q, ω)] for Ni in LDA (a) and in QSGW (b),
+showing the SW dispersion. We superpose other results with the
+LF [9] (solid line) and with FMM [10] (broken line). Experimental
+results by neutron scattering [41] are indicated by circles.
+time-ordered linear response function for a noninteracting
+system represented in a restricted Hilbert space,
+−K↑↓
+Ri j,R′kl(q, ω)
+= 1
+N
+BZ
+
+k
+occ
+
+n
+unocc
+
+n′
+akn∗
+R jβ akn
+R′lβ ak+qn′
+Riα
+ak+qn′∗
+R′kα
+ω −(εq+kn′↑−εkn↓) + iδ
++ 1
+N
+BZ
+
+k
+unocc
+
+n
+occ
+
+n′
+akn∗
+R jβ akn
+R′lβ ak+qn′
+Riα
+ak+qn′∗
+R′kα
+−ω −(εkn↓−εq+kn′↑) + iδ .
+(12)
+We calculate the imaginary part of −K↑↓
+Ri j,R′kl(q, ω) by a
+tetrahedron method and obtain its real part by the Hilbert
+transform. The matrix element of R↑↓
+Ri j,R′kl is calculated
+through R = K(1 −ηW K)−1, where W is calculated in the
+random phase approximation (RPA) in the product basis tech-
+nique developed in Ref. [31].
+D. Calculation details
+All of the calculation procedures above are implemented in
+the ﬁrst-principles package ECALJ [20,21]. The ECALJ package
+is based on the linearized augmented plane wave and mufﬁn-
+tin orbital (MTO) method (PMT method), which combines
+augmented plane wave (APW) and MTO basis sets. We also
+generate MLWFs in ECALJ. We perform LDA and QSGW
+calculations for band structures with 20 × 20 × 20 and 16 ×
+16 × 16 k-point meshes, respectively. We consider 9 MLWFs
+(spd) for the 3d elemental materials (Fe and Ni) and 18 ML-
+WFs for hcp Co and binary FeCo. In the calculations of K↑↓,
+we use a 48 × 48 × 48 q-point mesh for the 3d elemental
+material and 24 × 24 × 24 for binary FeCo. We use static and
+on-site W ; i.e., we take Wi jkl(ω) = WRi j,Rkl(ω = 0). We use
+experimental lattice parameters a = 2.867 Å, a = 3.524 Å,
+and a = 2.850 Å for Fe, Ni, and FeCo, respectively. For hcp
+Co, we use a = 2.507 Å and c = 4.070 Å.
+III. RESULTS AND DISCUSSION
+A. bcc Fe
+Figures 1(a)–1(c) show the majority and minority band
+structures and the partial density of states in QSGW for
+Fe, while Figs. 1(d)–1(f) in LDA as well. Calculated total
+magnetic moments in LDA and QSGW are both 2.22 μB for
+Fe, in agreement with the experimental value 2.22 μB [32], in
+054419-6SPIN-WAVE DISPERSION OF 3d FERROMAGNETS …
+PHYSICAL REVIEW B 100, 054419 (2019)
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+ 35
+ 40
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+LDA
+QSGW
+-5
+-4
+-3
+-2
+-1
+ 0
+ 1
+ 2
+ 3
+ Energy [eV]
+-6
+-Im[K+−]  [1/eV]
+ω [eV]
+DOS
+Total DOS 
+Energy [eV]
+Γ
+Γ A
+A
+M K
+L H
+[ξξ0]
+[ξ00]
+[00ξ]
+0.5
+1
+1.5
+2
+2.5
+0
+3
+2
+4
+6
+8
+10
+0
+12
+-Im[K +−]  [(Ω·eV)-1]
+14
+5
+10
+15
+20
+0
+-Im[K +−] [(Ω·eV)-1]
+0.5
+1
+1.5
+2
+2.5
+0
+3
+Energy [eV]
+Γ
+Γ A
+A
+M K
+L H
+Γ
+Γ A
+A
+M K
+L H
+Γ
+Γ A
+A
+M K
+L H
+[ξξ0]
+[ξ00]
+[00ξ]
+(a)
+(c)
+(b)
+Co
+FIG. 6. (a) −Im[K+−(q = 0, ω)] in Co in QSGW (red bold line) and in LDA (blue broken line). The inset is total density of states in Co.
+Panels (b) and (c) show calculated −Im[K+−(q, ω)] along the BZ symmetry line in LDA and QSGW, respectively.  is the unit cell volume.
+contrast to 2.93 μB in the fully self-consistent GW method
+[33]. Our results are consistent with Ref. [17] by Sponza
+et al. The superposed Wannier band structures in Eq. (11)
+by broken lines are entirely on the original band structures
+by bold gray lines. The size of the colored circles shows the
+weights of each MLWF. In Table I, we show the t2g of the
+minority spin at  and that of the majority spin at N in LDA
+and QSGW. QSGW gives better agreement with the angle-
+resolved photoemission spectroscopy (ARPES) data [34]. The
+3d bandwidth in QSGW is a little smaller than that in LDA.
+Except for this difference, the overall shapes of the majority
+and the minority bands are similar in both LDA and QSGW.
+Figure 2(a) shows −Im[K+−(q = 0, ω)] in LDA and in
+QSGW, where K+−(q, ω) means the trace of the matrix
+K↑↓given as K+−(q, ω) = 
+R,i,j K↑↓
+Rii,R j j(q, ω). We use a
+slightly different deﬁnition from Refs. [16,28,35]; thus it is
+not meaningful to compare absolute value of K+−(q, ω) with
+their results. As shown in the ﬁgure, QSGW gives smaller
+Ex and 3d bandwidth, which is consistent with results by
+Sponza et al. Roughly speaking, the shape of −Im[K+−(q =
+0, ω)] agrees with the shape of the density of states (DOS)
+of the majority spin. The peak around 2 eV originates from
+the t↑
+2g-t↓
+2g and e↑
+g-e↓
+g transitions, i.e., vertical transitions to
+the unoccupied minority states above the Fermi energy EFermi
+from the occupied majority states just below the EFermi in
+Fig. 1. The second peak around 4 eV stems from another
+e↑
+g-e↓
+g transition to EFermi + 2 eV in minority states from
+EFermi −2 eV in majority states.
+We see two features in the difference between LDA and
+QSGW in −Im[K+−(q = 0, ω)] shown in Fig. 2(a). One is
+that the width of the peak around 2 eV in QSGW is wider
+than that in LDA. The difference of DOS in LDA and QSGW
+cannot explain this fact; it can be due to the difference of
+eigenfunctions. The peak becomes wider in QSGW, probably
+because of the general tendency of QSGW that it makes a
+more signiﬁcant difference between occupied 3d states and
+unoccupied 3d states. The former is more localized, and the
+latter more extended in comparison with the case in LDA. The
+054419-7H. OKUMURA, K. SATO, AND T. KOTANI
+PHYSICAL REVIEW B 100, 054419 (2019)
+ (a) LDA(3.33 μ B ) 
+Liechtenstein formula
+Frozen magnon method
+Energy [meV]
+Energy [meV]
+A
+A
+Γ
+Γ
+H
+L
+K
+M
+A
+A
+Γ
+Γ
+H
+L
+K
+M
+A
+K
+Γ
+M
+L
+H
+[ξξ0]
+]ξ
+0
+0
+[
+]
+0
+0
+ξ[
+[ξξ0]
+]ξ
+0
+0
+[
+]
+0
+0
+ξ[
+200
+400
+600
+800
+1000
+0
+200
+400
+600
+800
+1000
+0
+log[Im[R+−]]
+ (b) QSGW(3.53 μ B) 
+Liechtenstein formula
+Frozen magnon method
+[
+m
+I[
+g
+ol
+R −
++ ]]
+0
+0.5
+1.0
+1.5
+2.0
+2.5
+0
+0.5
+1.0
+1.5
+2.0
+2.5
+Co
+Co
+FIG. 7. Im[R+−(q, ω)] for Co in LDA (a) and in QSGW (b),
+showing the SW dispersion. The LF [9] (bold line) and the FMM
+calculation [10] (broken line) are also shown. Experimental data by
+neutron scattering [43] are indicated by circles. The inset shows the
+BZ for hcp Co and its symmetry lines.
+other is the width due to the 3d band; corresponding to the
+width of the 3d band shown in the inset of Fig. 2(a), we see a
+narrower width in −Im[K+−(q = 0, ω)] in QSGW.
+Figures 2(b) and 2(c) show the Stoner excitation spectrum
+−Im[K+−(q, ω)] in LDA and QSGW. Our LDA results give
+good agreement with Fig. 6 in Ref. [35]. We see red triangle-
+like strong intensity around , especially in LDA. The center
+of the peak moves up as a function of q. This is because
+the shifted q from  requires a corresponding energy shift to
+trace the peak of −Im[K+−(q, ω)] as a function of ω. This is
+explained in Fig. 7 of Ref. [35].
+Figure 3 shows Im[R+−(q, ω)] in LDA (a) and in QSGW
+(b), where R+−(q, ω) means the trace of the matrix R↑↓given
+as R+−(q, ω) = 
+R,i,j R↑↓
+Rii,R j j(q, ω). We superpose experi-
+mental data [1,36] on it. We also superpose the SW dispersion
+calculated with the LF [9] in LDA, and that with FMM in
+LDA [10]. These are not only in (a) but also in (b) as a
+guide to the eye. As shown in Fig. 3, the peak broadening
+due to the Stoner damping can be seen even below 100 meV
+because bcc Fe is a weak ferromagnet, whose majority and
+minority 3d have relatively large DOS at EFermi as shown
+in the inset of Fig. 2(a). This results in relatively large low-
+energy Stoner excitations. It means that SWs are getting to
+be hybridized well with Stoner excitation immediately after
+departing from . The strong damping around H is also seen
+in the previous calculation combining the the generalized
+gradient approximation (GGA) and the MLWF approach with
+6 MLWFs (sd) [28]. Our LDA calculation indicates Kohn
+anomalies in -H, H-N, and -N, which are also found in
+the other calculations [9–11]. We checked calculations with a
+denser q-point mesh (60 × 60 × 60) and conﬁrmed the strong
+anomaly at 2/3 along -N in LDA, and especially in QSGW.
+Reference [35] explains how such anomalies can be traced
+back to the band structures, although it does not give an
+explicit analysis. Real metals such as Fe can have complicated
+band structures, resulting in too complicated Fermi-surface-
+nesting-like phenomena to be analyzed. Thus, we also have
+not yet done such an analysis. We are somewhat skeptical as
+to whether it is worthwhile to do it or not.
+In Table II, we summarize the calculated results of the
+stiffness constant D, with another LR result based on the GGA
+[28], and with that of the time-dependent density functional
+theory (TDDFT) [37]. To obtain D, we ﬁt the calculated SW
+dispersion by quadratic functions. For the ﬁtting, we just
+take peaks for small q as |q| < 0.20( 2π
+a ) where little Stoner
+damping occurs. Details for Fe and Ni are in the Supplemental
+Material [38]. LDA gives D = 155 meV Å
+2, which is a little
+smaller than experiments D = 230, 280 meV Å
+2 [1,6]. On the
+other hand, QSGW gives D = 222 meV Å
+2 in much better
+agreement with the experimental values. Note that we see
+a contradiction between our LR (LDA) and the other two
+previous calculations, the LR (GGA) and the LF. Our value
+D = 155 meV Å
+2 is too low in comparison with the other data
+248, 250 meV Å
+2, although there is a smaller difference from
+D = 189 meV Å
+2 in TDDFT. However, we currently have no
+deﬁnite idea to resolve the discrepancy from these previous
+works.
+B. fcc Ni
+The calculated magnetic moment for Ni in LDA is in
+agreement with the experiment, 0.62 μB [32]. On the other
+hand, QSGW gives 0.80 μB. Sponza et al. [17] indicate that
+this is reasonable because we have not taken into account
+the longitudinal quantum spin ﬂuctuation. In LDA, we may
+have accidentally had a good agreement because of too small
+exchange splitting canceling the fact that calculations do not
+include the ﬂuctuation.
+Figure 4(a) shows the −Im[K+−(q = 0, ω)] in Ni. Peaks
+at 0.7 eV and 0.8 eV in LDA and QSGW are the Stoner gaps,
+corresponding to the difference of peaks between majority
+and minority spins in DOS shown in the inset. Ex given
+in LDA and QSGW are about two times larger than 0.3 eV,
+which is the value obtained by ARPES at the L3 point [39].
+Sponza et al. [17] indicate that the overestimation is due to
+the missing of spin ﬂuctuations. Figures 4(b) and 4(c) show
+−Im[K+−(q, ω)] in LDA and QSGW. Our LDA results give
+good agreement with Fig. 6 of Ref. [35]. We see that strong
+intensity around  gets broadened as a function of q as in
+the case of the homogeneous electron gas shown in Fig. 5 of
+Ref. [35]. In QSGW, the q dependence of −Im[K+−(q, ω)]
+looks slightly weakened around , probably because of the
+reﬂection of the ﬂattened (weakly q-dependent) 3d band.
+In Fig. 5(a), we show Im[R+−(q, ω)] in LDA. We can
+identify the SW dispersion in the whole Brillouin zone (BZ)
+in contrast to the case of Fe in Fig. 3. Our SW dispersion
+in LDA is consistent with a previous LR calculation by
+054419-8SPIN-WAVE DISPERSION OF 3d FERROMAGNETS …
+PHYSICAL REVIEW B 100, 054419 (2019)
+Energy [eV]
+0.5
+1
+1.5
+2
+2.5
+0
+3
+-Im[K +−]  [(Ω·eV)-1]
+5
+10
+15
+20
+0
+-Im[K +−]  [(Ω·eV)-1]
+Energy [eV]
+3.5
+4
+4.5
+0.5
+1
+1.5
+2
+2.5
+0
+3
+3.5
+4
+4.5
+2
+4
+6
+8
+10
+0
+12
+14
+16
+18
+Γ
+Γ
+M
+X
+X
+R
+R
+M
+Γ
+Γ
+M
+X
+X
+R
+R
+M
+Γ
+Γ
+M
+X
+X
+R
+R
+Γ
+Γ
+M
+M
+X
+X
+R
+R
+M
+[ξξ0]
+]
+0
+ξ
+ξ[
+]ξ
+ξ
+ξ[
+]
+0
+0
+ξ[
+[ξ00]
+[ξξξ]
+(a)
+(b)
+(c)
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+ 30
+ 0
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+LDA
+QSGW
+-10
+-8
+-6
+-4
+-2
+ 0
+ 2
+ 4
+DOS
+ Energy [eV]
+Total DOS 
+LDA
+QSGW
+-Im[K+−]  [1/eV]
+ω [eV]
+FeCo
+FIG. 8. (a) −Im[K+−(q = 0, ω)] of FeCo in QSGW (red bold line) and LDA (blue broken line). The inset is the total density of states in
+FeCo. Panels (b) and (c) show calculated −Im[K+−(q, ω)] along the BZ symmetry line in LDA and in QSGW, respectively.  is the unit cell
+volume.
+Savrasov [14] and a TDDFT calculation by Niesert [37].
+As superposed in Fig. 5, results with FMM [10] and with
+the LF [9] give a little lower ω(q). Let us compare the
+QSGW result shown in Fig. 5(b) with Fig. 5(a), where we
+can use black lines as a guide to the eye. ω(q) curvature
+around  is smaller in QSGW. In fact, Table II shows that
+QSGW gives very smaller D = 449 meV Å
+2 around  than
+D = 873 meV Å
+2 in LDA. This is in agreement with the
+experimental values D = 433, 555 meV Å
+2 [2,40]. This is
+the reﬂection of weak q dependence of −Im[K+−(q, ω)]
+around  in the previous paragraph. Along -L, QSGW
+successfully traces an experiment [41] even up to half of
+the BZ boundary. Although (b) may be taken as a simple
+elongation of (a) at a glance, it is not true if we take the
+behavior around  into account. In Ref. [15], Karlsson and
+Aryasetiawan give good agreement with the SW dispersion
+along [100] by adjusting the Ex of Ni. However, such a
+procedure may give a simple shrinkage. Thus the physical
+mechanism in QSGW is very different from their method
+even though both our QSGW and their method reproduce the
+experimental D.
+C. hcp Co
+Figure 6(a) shows the −Im[K+−(q = 0, ω)] in Co and
+Figs. 6(b) and 6(c) show −Im[K+−(q, ω)] in LDA and
+QSGW. The calculated magnetic moment per Co atom is
+1.67 μB in LDA, 1.76 μB in QSGW. These are a little larger
+than the experiment value 1.58 μB [42]. It is reasonable in
+the sense that the QSGW value relative to experiment is
+1.76 μB/1.58 μB, in between 2.22 μB/2.22 μB (Fe) and
+0.80 μB/0.62 μB (Ni). Let us compare peaks of 3d shown
+in insets with those for Fe and Ni (Figs. 2 and 4). In QSGW,
+3d bands are narrower than LDA in both the majority and
+minority spins in Co and Ni, in contrast to the case of Fe where
+there is little narrowing of DOS in the minority spins. This
+is probably because the bcc structure has more hybridization
+with sp bands than fcc and hcp. In Co, the largest peaks of
+3d are pushed down by QSGW relative to LDA, with keeping
+054419-9H. OKUMURA, K. SATO, AND T. KOTANI
+PHYSICAL REVIEW B 100, 054419 (2019)
+the exchange splitting. Thus changes of −Im[K+−(q = 0, ω)]
+from QSGW to LDA are similar in Fe and Co. As we already
+noted in Sec. III A, we admit several universal tendencies of
+QSGW relative to LDA; however, such changes of DOS and
+−Im[K+−(q = 0, ω)] are hardly predicted without calcula-
+tions in practice.
+In Fig. 7(a), we show Im[R+−(q, ω)] in LDA together
+with plots of the SW dispersion given by the FMM [10]
+(black broken lines) and by the LF [9] (black lines). In
+these plots, two branches appear because of two atoms per
+primitive cell. The LF traces peaks of our Im[R+−(q, ω)] very
+well especially along -A-K-H-A. Around M, the black lines
+are slightly lower than the peak of Im[R+−(q, ω)] seen at
+∼800 meV. Near , Im[R+−(q, ω)] shows no optical branch.
+Experimental data shown by oval circles [43,44] are a little
+lover than the plots and peaks of Im[R+−(q, ω)].
+In contrast, we have an impressive agreement with the
+experiment in QSGW. As seen in Fig. 7(b), oval circles are
+on the peak of Im[R+−(q, ω)] in QSGW. The calculated D
+shown in Table II in QSGW are 486 meV Å
+2 along [100] and
+532 meV Å
+2 along [001]. These give much better agreements
+with experiments, consistent with the agreement in Fig. 7(b).
+This agreement of the SW energy probably originates from
+a narrower 3d band in QSGW, resulting in weaker q depen-
+dence of −Im[K+−(q, ω)], rather than LDA.
+D. B2 FeCo
+We treat B2 FeCo in the CsCl structure. Calculated mag-
+netic moments per cell are 4.44 μB in LDA, 4.80 μB in
+QSGW. The latter is close to experiment 4.70 μB [45]. It is
+consistent with other compounds [18,19] where QSGW gives
+agreement with experiments as for magnetic moments when
+LDA gives underestimation. Alternatively, we may take FeCo
+as a case between Fe and Co. Since QSGW/experiment =
+2.22 μB/2.22 μB for Fe, = 1.76 μB/1.58 μB for Co, we may
+say that slight overestimation 4.80 μB/4.70 μB is reasonable.
+Figure 8(a) shows −Im[K+−(q = 0, ω)] in LDA and
+QSGW. In its inset, Ex is ∼2.8 eV in QSGW while
+∼2.2 eV in LDA. The difference results in the difference of
+peaks in −Im[K+−(q = 0, ω)]. Figures 8(b) and 8(c) show
+−Im[K+−(q, ω)] in LDA and QSGW, although we see no
+speciﬁc features worth mentioning.
+Figure 9 shows Im[R+−(q, ω)] in (a) LDA and (b) QSGW,
+together with the previous SW calculation in the FMM [11].
+Im[R+−(q, ω)] in LDA shows the lower peaks of ω(q) than
+FMM. Im[R+−(q, ω)] in LDA gives D = 407 meV Å
+2 a
+little smaller than 500 meV Å
+2 by Grotheer [11]. The optical
+branch is weakened as in the case of Fe. The weak peak
+around ∼600 meV is close to ω(q) in FMM.
+In QSGW, there is lower ω(q) in the whole BZ as in the
+case of Co. Table II shows that D = 307 meV Å
+2 in QSGW
+is much smaller than the experiment value 450–500 meV Å
+2
+by inelastic neutron scattering [46]. Considering the success
+on Fe, Ni, and Co, this FeCo was the case for which we
+could expect good agreement with experiments. We have not
+yet found a reason why QSGW gives such discrepancy from
+experiment.
+Energy [meV]
+Energy [meV]
+Frozen magnon method
+ (a) LDA (4.44 μ B) 
+ (b) QSGW (4.80 μ B) 
+X
+M
+Γ
+M
+X
+R
+R
+[ξξξ]
+[ξ00]
+[ξξ0]
+X
+M
+Γ
+M
+X
+R
+R
+[ξξξ]
+[ξ00]
+[ξξ0]
+200
+0
+1400
+1200
+1000
+800
+600
+400
+Γ
+200
+0
+1400
+1200
+1000
+800
+600
+400
+Γ
+Frozen magnon method
+log[Im[R+−]]
+0
+-0.5
+2
+1.5
+1
+0.5
+log[Im[R+−]]
+0
+-0.5
+2
+1.5
+1
+0.5
+FeCo
+FeCo
+FIG. 9. Im[R+−(q, ω)] for FeCo (a) in LDA and (b) in QSGW,
+showing the SW dispersion. The black bold line shows the FMM
+result [11] in LDA.
+IV. SUMMARY
+In order to calculate SW dispersion in QSGW, we have
+implemented an effective numerical method for calculating
+R+−(q, ω) with the package ECALJ. This is in the linear re-
+sponse formulation based on the maximally localized Wannier
+functions as given in Ref. [16].
+Then we apply the method to Fe, Ni, Co, and FeCo. We
+compare the peak of Im[R+−(q, ω)] with inelastic neutron
+scattering data and with the spin stiffness D. For Fe, Ni, and
+Co, QSGW gives much better agreements with experiment
+than LDA does. Notably, too large D of Ni in LDA is reduced
+by half, resulting in a good agreement with the experiment.
+We see similar agreement for Co in comparison with the
+neutron scattering data. For FeCo, we have not yet understood
+why D in QSGW disagrees with experiment.
+Such good agreements are owing to the reliable description
+of the electronic structure in QSGW. QSGW gives a good
+description of 3d bandwidth, Ex, and magnetic moments,
+except for the case of Ni, where we have a too large magnetic
+moment. Our method developed here is promising in the sense
+that it covers a wide range of materials from the metals treated
+here to transition metal oxides where LDA can be hardly
+applicable.
+ACKNOWLEDGMENTS
+This work was partly supported by the Building of Con-
+sortia for the Development of Human Resources in Science
+and Technology project, implemented by the Ministry of
+Education, Culture, Sports, Science, and Technology (MEXT)
+of Japan. This work was partly supported by JST CREST
+054419-10SPIN-WAVE DISPERSION OF 3d FERROMAGNETS …
+PHYSICAL REVIEW B 100, 054419 (2019)
+Grant No. JPMJCR1812 and by JSPS KAKENHI Grant No.
+JP18H05212. T.K. acknowledges support by JSPS KAKENHI
+Grant No. 17K05499. We also acknowledge computing time
+provided by the Research Institute for Information Technol-
+ogy (Kyushu University). We want to thank T. Fukazawa for
+giving us useful comments.
+[1] J. W. Lynn, Phys. Rev. B 11, 2624 (1975).
+[2] H. A. Mook, R. M. Nicklow, E. D. Thompson, and M. K.
+Wilkinson, J. Appl. Phys. 40, 1450 (1969).
+[3] F. Ye, P. Dai, J. A. Fernandez-Baca, D. T. Adroja, T. G. Perring,
+Y. Tomioka, and Y. Tokura, Phys. Rev. B 75, 144408 (2007).
+[4] R. Vollmer, M. Etzkorn, P. S. A. Kumar, H. Ibach, and J.
+Kirschner, Thin Solid Films 464-465, 42 (2004).
+[5] C. Kittel, Introduction to Solid State Physics, 8th ed. (John
+Wiley and Sons, 2004), p. 335.
+[6] R. Pauthenet, J. Appl. Phys. 53, 8187 (1982).
+[7] A. I. Lichtenstein, M. I. Katsnelson, V. P. Antropov, and V. A.
+Gubanov, J. Magn. Magn. Mater. 67, 65 (1987).
+[8] A. Oswald, R. Zeller, P. J. Braspenning, and P. H. Dederichs,
+J. Phys. F: Met. Phys. 15, 193 (1985).
+[9] M. Pajda, J. Kudrnovský, I. Turek, V. Drchal, and P. Bruno,
+Phys. Rev. B 64, 174402 (2001).
+[10] S. V. Halilov, H. Eschrig, A. Y. Perlov, and P. M. Oppeneer,
+Phys. Rev. B 58, 293 (1998).
+[11] O. Grotheer, C. Ederer, and M. Fähnle, Phys. Rev. B 63,
+100401(R) (2001).
+[12] E. K. U. Gross and W. Kohn, Phys. Rev. Lett. 55, 2850 (1985).
+[13] J. F. Cooke, J. W. Lynn, and H. L. Davis, Phys. Rev. B 21, 4118
+(1980).
+[14] S. Y. Savrasov, Phys. Rev. Lett. 81, 2570 (1998).
+[15] K. Karlsson and F. Aryasetiawan, Phys. Rev. B 62, 3006 (2000).
+[16] E. ¸Sa¸sıoˇglu, A. Schindlmayr, C. Friedrich, F. Freimuth, and S.
+Blügel, Phys. Rev. B 81, 054434 (2010).
+[17] L. Sponza, P. Pisanti, A. Vishina, D. Pashov, C. Weber, M. van
+Schilfgaarde, S. Acharya, J. Vidal, and G. Kotliar, Phys. Rev. B
+95, 041112(R) (2017).
+[18] T. Kotani and M. van Schilfgaarde, J. Phys.: Condens. Matter
+20, 295214 (2008).
+[19] T. Kotani and H. Kino, J. Phys.: Condens. Matter 21, 266002
+(2009).
+[20] D. Deguchi, K. Sato, H. Kino, and T. Kotani, Jpn. J. Appl. Phys.
+55, 051201 (2016).
+[21] A ﬁrst-principles electronic-structure suite based on the PMT
+method, the ECALJ package, is freely available at https://github.
+com/tkotani/ecalj. Its one-body part is developed based on the
+LMTO part in the LM Suite package. See https://www.nnin.org/
+lm-suite.
+[22] L. Hedin, Phys. Rev. 139, A796 (1965).
+[23] M. S. Hybertsen and S. G. Louie, Phys. Rev. Lett. 55, 1418
+(1985).
+[24] M. S. Hybertsen and S. G. Louie, Phys. Rev. B 34, 5390 (1986).
+[25] M. van Schilfgaarde, T. Kotani, and S. Faleev, Phys. Rev. Lett.
+96, 226402 (2006).
+[26] T. Kotani, J. Phys. Soc. Jpn. 83, 094711 (2014).
+[27] T. Kotani, H. Kino, and H. Akai, J. Phys. Soc. Jpn. 84, 034702
+(2015).
+[28] C. Friedrich, E. ¸Sa¸sıo˘glu, M. Müller, A. Schindlmayr, and S.
+Blügel, Spin excitations in solids from many-body perturbation
+theory, First Principles Approaches to Spectroscopic Properties
+of Complex Materials, edited by C. Di Valentin, S. Botti, and
+M. Cococcioni, Topics in Current Chemistry (Springer, Berlin,
+Heidelberg, 2014), Vol. 347, pp. 259–301.
+[29] N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12847
+(1997).
+[30] I. Souza, N. Marzari, and D. Vanderbilt, Phys. Rev. B 65,
+035109 (2001).
+[31] T. Kotani and M. van Schilfgaarde, Solid State Commun. 121,
+461 (2002).
+[32] H. Danan, A. Herr, and A. J. P. Meyer, J. Appl. Phys. 39, 669
+(1968).
+[33] A. L. Kutepov, J. Phys.: Condens. Matter 29, 465503 (2017).
+[34] J. Schäfer, M. Hoinkis, E. Rotenberg, P. Blaha, and R. Claessen,
+Phys. Rev. B 72, 155115 (2005).
+[35] C. Friedrich, M. C. T. D. Müller, and S. Blügel, Spin excitations
+in solid from many-body perturbation theory, Handbook of Ma-
+terials Modeling, edited by W. Andreoni and S. Yip (Springer,
+Cham, 2018), pp. 1–39.
+[36] C. K. Loong, J. M. Carpenter, J. W. Lynn, R. A. Robinson, and
+H. A. Mook, J. Appl. Phys. 55, 1895 (1984).
+[37] M. Niesert, Ab initio calculations of spin-wave excitation spec-
+tra from time-dependent density-functional theory, Ph.D. thesis,
+RWTH Aachen University, 2011.
+[38] See Supplemental Material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.100.054419 for detailed ﬁtting results of
+SW dispersion.
+[39] D. E. Eastman, F. J. Himpsel, and J. A. Knapp, Phys. Rev. Lett.
+44, 95 (1980).
+[40] H. A. Mook, J. W. Lynn, and R. M. Nicklow, Phys. Rev. Lett.
+30, 556 (1973).
+[41] H. A. Mook and D. M. Paul, Phys. Rev. Lett. 54, 227 (1985).
+[42] H. P. Myers and W. Sucksmith, Proc. R. Soc. London A 207,
+427 (1951).
+[43] T. G. Perring, A. D. Taylor, and G. L. Squires, Phys. B
+(Amsterdam) 213-214, 348 (1995).
+[44] G. Shirane, V. J. Minkiewicz, and R. Nathans, J. Appl. Phys. 39,
+383 (1968).
+[45] J. E. Goldman and R. Smoluchowski, Phys. Rev. 75, 310
+(1949).
+[46] R. D. Lowde, M. Shimizu, M. W. Stringfellow, and B. H. Torrie,
+Phys. Rev. Lett. 14, 698 (1965).
+054419-11

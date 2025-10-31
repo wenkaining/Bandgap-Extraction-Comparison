@@ -1,0 +1,179 @@
+arXiv:2402.06975v1  [cond-mat.mtrl-sci]  10 Feb 2024
+1
+Quantum size eﬀects of Pb overlayers at high coverages
+A. Ayuela (1), E. Ogando (2) and N. Zabala (21*)
+(1) Donostia International Physics Center (DIPC) and Unidad Fıisica de Materiales
+CSIC-UPV/EHU, 20018 San Sebastian, Spain
+(2) Elektrizitatea eta Elektronika Saila, Zientzia eta Teknologia Fakultatea, UPV/EHU,
+644 P.K.,48080 Bilbao, Spain
+We have studied Pb thin ﬁlms as a function of the thickness up to 60 monolayers (MLs)
+using ab initio ﬁrst principles and model calculations. Magic heights corresponding to a
+modulated oscillatory pattern of the energy of Pb(111) ﬁlms have been measured up to
+about 30 MLs. We demonstrate that this behaviour continues even for higher thickness
+due to an extra second modulation pattern in the energetics of the metal ﬁlm as a function
+of the number of atomic layers. The origin of this second modulation is the nesting of
+two close values of the Fermi wavelength in the (111) direction.
+Keywords:Ab initio calculations, quantum wells , thin ﬁlms, quantum size eﬀects
+PACS codes: 73.21.Fg, 71.15.Mb, 68.35,-p
+1. Introduction
+Quantum size eﬀects (QSEs) are a key issue to understand the physical properties of
+nanostructures. They show up in the stability of clusters or nanowires, which is favored
+for some values of their radius, so-called ”magic”[ 1, 2]. This behaviour has been shown
+to aﬀect also the growth of islands or thin ﬁlms over surfaces. In particular these eﬀects
+are very strong for Pb(111) ﬁlms, which can form wide ﬂat ﬁlms of preferred thickness.
+Monitoring the growth of Pb nanoislands over Cu(111) [ 3] or Si(111) [ 4] with diﬀerent
+experimental techniques (such as He atom scattering (HAS) [ 5], Scanning Tunnelling
+Microscopy (STM)[ 3], photoemission and Surface X-ray diﬀraction) has revealed the
+preference of Pb for bi-layer growth [ 6].
+The origin of the ”magic” height selection is easy to understand qualitatively with a sim-
+ple picture of electrons conﬁned in a potential well [ 7]: valence electrons ﬁll paraboloidal
+subbands and, as the thickness of the slab is increased new quantum well states are occu-
+pied, producing oscillations in the energy and related physical properties with periodicity
+λF/2 (λF is the Fermi wavelength of electrons in Pb). When the interlayer spacing (d)
+of Pb in the (111) direction is considered, the approximate relation d ≈3λF/4 gives rise
+to a beat pattern superimposed to the oscillations [ 8, 6] with an even-odd change in the
+magic number of atomic layers at the beats. The energy minima can be related to the
+magic or more stable thicknesses measured in the experiments. A quantitative descrip-
+tion of the measured magic sizes, on the other hand, requires more sophisticated models.
+In some studies the support has been included to provide an accurate description of the
+experiments [ 8, 9, 10]. There are several theoretical works devoted to the study of QSEs2
+in thin ﬁlms within the density functional theory (DFT). In this paper, we explore larger
+sizes (up to 60 MLs) of Pb thin ﬁlms than considered in the literature by using ab ini-
+tio calculations, which include the atomic structure of Pb ﬁlms. We ﬁnd a second extra
+modulation of the oscillations in the energetics of the thin ﬁlms and explore the origin of
+this new modulation and its eﬀect on the stability at higher coverages than measured up
+to now.
+2. Ab initio ﬁrst principles calculations
+We have analized the stability of free-standing Pb(111) ﬁlms as a function of the num-
+ber of monolayers (N), up to N=60 ML, taking into account the atomic structure. As
+the stability is given by the energy of the slabs, we have calculated ﬁrst the total energy
+as a function of N. In this study we are not interested in the quantitative agreement
+with the experiments, but on the amplitude and the general trend of the oscillations for
+thicker ﬁlms than studied up to now (N >30). Previous jellium calculations [ 8] studied
+the eﬀect of the support, but in that approach only one value of the Fermi wave vector is
+involved, i.e., a spherical Fermi surface is assumed. The support can introduce a shift of
+these oscillations but this is not the topic of our work. The key of ab initio calculations
+is that they provide a more realistic description of the Fermi surface.
+Our calculations have been performed with the VASP code [ 11] by using the generalized
+gradient approximation (GGA) [ 12] for the exchange-correlation potential and the projec-
+tor augmented-wave method (PAW) [ 13]. Convergence of the energies versus plane-wave
+cutoﬀ(237 eV), k-mesh (22x22), and vacuum (10 ML) have been chosen to get high accu-
+racy. These values are in agreement with reference [ 14]. Previous ab initio calculations
+for a small number of layers included the lattice relaxation [ 15], but we have considered
+bulk distances between atoms. This relaxation would aﬀect only the position of the ﬁrst
+beat, and it is not so important for the present study.
+To analyse the stability we have calculated the second derivative of the energy versus the
+number of monolayers. The results are shown in Fig. 1 with continuous line. Notice the
+minus sign, so that the minima correspond to stable ﬁlms, as in previous jellium calcula-
+tions. With the aim of comparing with the 1/D2 damping of the oscillations reported by
+jellium calculations [ 16], we have multiplied the second derivative of the energy times the
+square of the slab thickness. First of all we observe modulated oscillations, like ”packets”,
+with a period of about 8 ML. Between these ”packets” there are beats with an even-odd
+slip in the magic thickness. This trend is similar to the jellium results reported in the
+literature. For N <10 ML there are slight diﬀerences, the ﬁrst beat is moved upwards.
+The interface properties with the substrate and the relaxation eﬀects also can aﬀect at
+these coverages, but we are not interested in that region [ 8, 9]. For larger coverages we
+observe a stronger damping in the ab initio result than the inverse square law observed
+for jellium. In addition, the distance between beats changes. This is more evident for
+N >30 ML, and around 40 ML the period decreases to about 6.4 ML.
+3. Comparison with analytical models
+Jellium model calculations assume one value of the Fermi wavelength, close to 7.5 a0 for
+Pb(111). Within that model, the energy oscillations times the square eﬀective thickness3
+(Deff) of the ﬁlm can be ﬁtted to a simple sinusoidal expression which reproduces the
+beat pattern:
+σoscD2
+eff = sin[2kF(dN + δ0)]
+(1)
+where δ0 is a surface shift that accounts for the charge spill-out at the surfaces, d is the
+interlayer spacing, and N is the number of layers.
+Our ab initio results could not be ﬁtted with expression (1), i.e, using one value of kF
+in the whole thickness range, but we succeeded to ﬁt nicely the ab initio values with a
+superposition of two sinusoidal expressions for two very close values of kF. We tried the
+following analytical description of Fig. 1:
+A1 sin[2kF 1(dN + δ0)] + A1 sin[2kF 2(dN + δ0)]
+(2)
+where kF 1 and kF 2 are two close Fermi wave vectors in the (111) direction and A1
+and A2 are their corresponding weights. The ﬁt to such expression using λF 1=7.47a0,
+λF 1=7.54a0, A1=0.72 and A2=1.28 is really good. The result is an extra modulation over
+the ﬁrst modulation, which gives the ”packets” and ﬁrst beats described by one value of
+kF. This second modulation produces an extra second quantum beat, responsible for the
+stability at coverages over 30 MLs. The values of kF used for the ﬁtting to the analytical
+expression (2) are very close to the values reported in the literature. The second Fermi
+wavelength arises because the section of the Fermi surface for Pb is not circular but has
+a butterﬂy shape [ 17, 3], as shown in the inset of Fig. 2. In a diﬀerent context, the devi-
+ation of the Fermi surface from the spherical shape has been found to aﬀect the magnetic
+interlayer coupling in multilayers, being important for distances as long as 100 MLs [ 18].
+The values of the nesting wavelengths underlying the oscillations obtained with ab initio
+calculations are extracted from their Fourier transform, plotted in Fig. 2 with continuous
+line. In the same plot we show the peaks corresponding to the analytical expressions that
+assume one (dotted line) and two (dashed line) Fermi wavevectors given by equations (1)
+and (2) respectively. We notice that both beat frequencies for the analytical model of
+equation (2) have merged into a broad peak in the ab initio calculations. In part this is
+due to the actual window of layer sizes.
+In the inset of Fig. 2, the behaviour of the oscillations with one kF (circular section of
+Fermi surface) is shown as compared to the two kF nesting behaviour, corresponding to
+the butterﬂy like section of the Fermi surface. The one kF case produces a modulated
+oscillating structure, but the two kF plot gives a more rich pattern with a second modu-
+lation. In that sketch, two kF values with the same weight have been considered, so that
+the second quantum beat is clearly distinguished, and it is not accompanied by a slip
+from even to odd at that beat. This sketch explains already the origin and the trend of
+the ab initio results displayed in Fig. 1, but is not exactly the same, due to the diﬀerent
+weights of the wave vectors.
+4. Conclusions
+We have shown that there are new features (a second modulation structure) in the
+quantum oscillations of Pb thin ﬁlms at high coverages (N >30 ML), about the bor-
+derline of the thickness explored by experiments up to now. We have obtained a good4
+description of the energy oscillations obtained with ab initio calculations ( N <60 ML)
+using sinusoidal expressions with two similar nesting Fermi wavelengths. The agreement
+is not good in the whole thickness range studied when only one value of the Fermi wave-
+length is considered. The second modulation of the energy oscillations would account for
+the magic stability of thin ﬁlms at high coverages. Anyway, more experiments would be
+helpful at higher coverages (N >30 ML) in order to check this eﬀect.
+5.
+Acknowledgements
+This work was supported by the ETORTEK( NANOMAT) program of the Basque
+government, Spanish Ministerio de Ciencia y Tecnolog´ıa (MCyT) of Spain( Grant No. Fis
+2004-06490-CO3-00) and the European Network of Excellence NANOQUANTA (NM4-
+CT-2004-500198). The SGI/IZO-SGIker UPV/EHU (supported by the National Program
+for the Promotion of Human Resources within the National Plan of Scientiﬁc Research,
+Development and Innovation - Fondo Social Europeo, MCyT and Basque Government) is
+gratefully acknowledged for allocation of computational resources.
+REFERENCES
+1.
+O. Genzken and M. Brack, Phys. Rev. Lett. 67(1991) 3286.
+2.
+Yanson, and J. van Ruitenbeek, Nature 400 (1999) 144.
+3.
+R. Otero, A. L. Vazquez de Parga, and R. Miranda, Phys. Rev. B 66 (2002) 115401.
+4.
+M. Hupalo and M.C. Tringides, Phys. Rev. B 65 (2002)115406.
+5.
+B.J. Hinch, C. Koziol, J.P. Toennies and G. Zhang, Europhys. Lett. 10 (4) (1989) 341.
+6.
+P. Czoschke, H. Hong, L. Basile, and T.-C. Chiang, Phys. Rev. Lett. 93 (2004) 036103.
+7.
+F.K. Schulte, Surf. Sci. 55 (1976) 427.
+8.
+E. Ogando, N. Zabala, E.V. Chulkov and M.J. Puska, Phys. Rev. B 69 (2004) 153410.
+9.
+E. Ogando, N. Zabala, E.V. Chulkov and M.J. Puska, Phys. Rev. B 71 (2005) 205401.
+10. Y. Jia, B. Wu, H.H. Weitering and Z. Zhang, Phys. Rev. B 74 (2006) 35433.
+11. G. Kresse and J. Furthm¨uller, Comput. Mater. Sci. 6, 15 (1996); Phys. Rev. B 54
+(1996) 11 169.
+12. J. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77 (1996) 3865.
+13. G. Kresse, and D. Joubert, Phys. Rev. B 59 (1999) 1758.
+14. D. Yu and M. Sheﬄer, Phys. Rev. B 70 (2004) 155417.
+15. G. Materzanini, P. Saalfrank, and P.J.D. Lindan, Phys. Rev. B 63 (2001) 235405.
+16. E. Ogando, N. Zabala, E.V. Chulkov and M.J. Puska, Phys. Rev. B, to be submitted.
+17. J.R. Anderson and A. V. Gold, Phys. Rev. 139 (1965) A1459.
+18. P. Bruno, J. Phys.:Condens. Matter. 11 (1999) 9403.5
+Figure 1. Second derivative (minus sign) of the energy per surface atom times the square
+of the Pb slab thickness versus the number of ML’s (continuous line). The dotted line is
+the analytical curve obtained with two values of the Fermi wavelength (see the text) as
+given by equation 2. The dashed line is the envelope function of the analytical curve.6
+Figure 2.
+Fourier transforms of energy oscillations. First-principle calculations are given
+with full line; analytical expressions for one and two wavelengths [equations (1) and (2)]
+are shown with dot and dashed lines respectively. In the plot, the window of the analytical
+transforms is three times the one of ab initio calculations. In the inset the oscillations
+corresponding to one and two Fermi wavevectors are sketched.

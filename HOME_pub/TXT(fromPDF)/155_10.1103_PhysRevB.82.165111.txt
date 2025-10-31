@@ -1,0 +1,2117 @@
+Adiabatic and nonadiabatic phonon dispersion in a Wannier function approach
+Matteo Calandra,1 Gianni Profeta,2 and Francesco Mauri1
+1IMPMC, Université Paris 6, CNRS, 4 Pl. Jussieu, 75015 Paris, France
+2Consiglio Nazionale delle Ricerche-Superconducting and Innovative Devices (CNR-SPIN), 67100 L’Aquila, Italy
+Received 13 July 2010; revised manuscript received 7 September 2010; published 8 October 2010
+We develop a ﬁrst-principles scheme to calculate adiabatic and nonadiabatic phonon frequencies in the full
+Brillouin zone. The method relies on the stationary properties of a force-constant functional with respect to the
+ﬁrst-order perturbation of the electronic charge density and on the localization of the deformation potential in
+the Wannier function basis. This allows for calculation of phonon-dispersion curves free from convergence
+issues related to Brillouin-zone sampling. In addition our approach justiﬁes the use of the static screened
+potential in the calculation of the phonon linewidth due to decay in electron-hole pairs. We apply the method
+to the calculation of the phonon dispersion and electron-phonon coupling in MgB2 and CaC6. In both com-
+pounds we demonstrate the occurrence of several Kohn anomalies, absent in previous calculations, that are
+manifest only after careful electron- and phonon-momentum integration. In MgB2, the presence of Kohn
+anomalies on the E2g branches improves the agreement with measured phonon spectra and affects the position
+of the main peak in the Eliashberg function. In CaC6 we show that the nonadiabatic effects on in-plane carbon
+vibrations are not localized at zone center but are sizable throughout the full Brillouin zone. Our method opens
+perspectives in large-scale ﬁrst-principles calculations of dynamical properties and electron-phonon interaction.
+DOI: 10.1103/PhysRevB.82.165111
+PACS numbers: 63.20.dk, 71.15.m, 63.20.kd
+I. INTRODUCTION
+Electron-phonon EP interaction is responsible of many
+important phenomena in solids. As an example, the tempera-
+ture behavior of the electron relaxation time in metals is to a
+great extent due to the scattering between carriers and atomic
+vibrations1 such that ﬁnite-temperature transport is largely
+ruled by the EP interaction. Similarly, the high-temperature
+heat capacity in metals is enhanced by the increased elec-
+tronic mass due to the interaction with lattice vibrations.2 In
+metals, at low temperatures, EP coupling can generate a su-
+perconducting state in which electrons move with no electri-
+cal resistance.3 It also can increase the effective mass of the
+carriers so much that the system is driven from a metallic to
+an insulating state, as it happens in case of polaronic or
+Peierls instabilities.4 Finally, the electron-phonon scattering
+is often the largest source of phonon damping in phonon-
+mediated superconductors.5
+First-principles theoretical determination of the electron-
+phonon coupling strength in solids requires the calculation of
+the electronic structure, the vibrational properties, and the
+electron-phonon coupling matrix elements. In state-of-the-art
+electronic-structure calculations these quantities are obtained
+using the adiabatic Born-Oppenheimer approximation6 and
+density-functional
+theory
+DFT
+in
+the
+linear-response
+approach.7–9
+More speciﬁcally, within the Born-Oppenheimer approxi-
+mation, the determination of phonon frequencies, that are
+related to the real part of the phonon self-energy, requires the
+calculation, in a self-consistent manner, of the variation in
+the Kohn-Sham potential VSCF with respect to a static ionic
+displacement u,7 namely,
+VSCFr
+u
+. As the displacement of the
+ions is static, the obtained
+VSCFr
+u
+is real. Conversely, the
+phonon linewidth, related to the imaginary part of the pho-
+non self-energy, is obtained in a nonself-consistent procedure
+using the electron charge density and the previously deter-
+mined
+VSCFr
+u
+. The advantage of using a nonself-consistent
+procedure to study phonon linewidth is mainly related to the
+less expensive computational load with respect to a self-
+consistent one. In addition, as recently demonstrated, inter-
+polation schemes10,11 of the electron-phonon matrix elements
+can be used to calculate the imaginary part of the phonon
+self-energy on ultradense k-point grid.
+It is however unclear to what extent this procedure of
+calculating self-consistently the real part of the phonon self-
+energy and nonself-consistently the imaginary part is actu-
+ally correct. Indeed, the proper way of treating phonons
+should be to consider a monochromatic time-dependent dis-
+placement at the phonon frequency  and perform a time-
+dependent self-consistent linear-response scheme. The result-
+ing variation in the self-consistent potential
+VSCFr,
+u
+would
+then be a complex quantity. The real part of the resulting
+phonon self-energy would then determine the phonon fre-
+quencies while its imaginary part would lead to the phonon
+linewidth. In this way, nonadiabatic NA in the sense of
+Ref. 12 dynamical phonon frequencies could be accessed.
+Although feasible, in principle, this procedure would require
+a full rewriting of the linear-response code including time
+dependence and it would also be more expensive then a stan-
+dard static linear-response calculation. Moreover, in the pres-
+ence of Kohn anomalies and long-range force constants,
+where extremely accurate k-point sampling of the Fermi sur-
+face is needed to converge the phonon self-energy, the cal-
+culation would be unfeasible.
+Thus, it would be desirable to have a nonself-consistent
+linear-response formulation to obtain both the real and
+imaginary phonon self-energy, both within the adiabatic/
+static and nonadiabatic/dynamic approximation. In this work
+we develop a scheme to calculate nonself-consistently both
+the real and the imaginary part of the phonon self-energy by
+using a functional13 that is stationary with respect to the
+variation in the self-consistent charge density. Our method
+PHYSICAL REVIEW B 82, 165111 2010
+1098-0121/2010/8216/16511116
+©2010 The American Physical Society
+165111-1opens the way to calculate adiabatic/static and nonadiabatic/
+dynamic phonon frequencies using an ultradense sampling of
+the electron and phonon wave vector in a nonself-consistent
+way, starting from the static self-consistent variation in the
+time-independent Kohn-Sham potential 
+VSCFr
+u
+, obtained
+with a coarse sampling. In this way, the main computational
+load related to phonon frequencies calculation is drastically
+reduced. The efﬁciency of the method is further enhanced by
+using
+the
+interpolation
+of
+the
+electron-phonon
+matrix
+elements14 based on Wannier functions.15
+The method is applied to study the dynamical and super-
+conducting properties of MgB2 and CaC6, two of the most
+studied superconducting materials in the last few years.
+These applications are meaningful and computationally chal-
+lenging. In fact, although many experimental and theoretical
+studies appeared, there are still important open issues and
+debated results.
+For example, conﬂicting results for the calculate MgB2
+electron-phonon coupling  are present in the literature
+mainly due to difﬁculties in Brillouin-zone sampling. This,
+apart its fundamental importance, prevents a full understand-
+ing of the normal and superconducting properties of this ma-
+terial.
+In the case of CaC6, very large nonadiabatic effects were
+predicted12 and measured16 at zone center. It is unclear to
+what extend nonadiabatic effects are sizable far from 
+point. In this last case, the adiabatic effects can be relevant
+for thermodynamic properties resulting from an average of
+the phonon frequencies over the Brillouin zone BZ.
+The paper is organized as follows. In Sec. II we derive a
+functional formulation13 of the force-constant matrix which
+is stationary with respect to the variation in the perturbed
+charge density. This will be done starting from the formal
+deﬁnition of force constants in the case of a monochromatic
+time-dependent ionic displacement Sec. II A. In Sec. II B
+we discuss when nonadiabatic/dynamic effects should be ex-
+pected in the phonon spectra. The linear-response equations
+for the dynamical matrix are introduced Sec. II C in the
+general case and then specialized in the density-functional
+formulation Sec. II D.
+In Sec. II E, we introduce the stationary functional of the
+force constants in the density-functional linear-response
+theory and outline the computational framework of phonon
+and electron-phonon coupling Secs. II F and II G. In Sec.
+II H we show how our approach justify the use of the static
+screened potential in the calculation of the phonon linewidth
+due to decay in electron-hole pairs. Section III will be de-
+voted to the description of the implementation of the theory
+using the Wannier-interpolation scheme.
+In Sec. IV we reports results on dynamical and supercon-
+ducting properties of MgB2 Sec. IV A and CaC6 Sec.
+IV B. Section V summarizes our conclusions.
+II. THEORY
+A. Time-dependent dynamical matrix and phonon damping
+We consider a crystal with N atoms in the unit cell sub-
+mitted to a time-dependent perturbation, in which the posi-
+tion of an atom is identiﬁed by the vector
+RI  RL + s + uIt,
+1
+where RL is the position of the Lth unit cell in the Bravais
+lattice, s is the equilibrium position of the sth atom in the
+unit cell, uIt indicates the deviation from equilibrium of the
+nuclear position, and I=L,s. The force at time t acting on
+the Jth nucleus J=M,r due to the displacement uIt of
+the atom Ith at time t is labeled FJt. The force-constant
+matrix is deﬁned as
+CIJRL −RM;t −t = −FJt
+uIt ,
+2
+where we used the translational invariance of the crystal and
+make evident the dependence of CIJ on the lattice vector
+RL−RM to lighten the notation we omit it in the following
+equations where no confusion may arise. The  transform
+of the force-constant matrix is thus
+CIJ = dteitCIJt
+3
+while the force-constant matrix CIJt is a real quantity, its
+-transform CIJ is not real and has both a real and imagi-
+nary part. The Fourier transform of the force-constant matrix
+is
+Csrq, = 	
+L
+e−iqRLCLs,Mr,
+4
+where, without loss of generality, we have chosen RM=0.
+The Hermitian and anti-Hermitian combination of the force-
+constant matrix in momentum space are
+Dsrq, =
+1
+2
+MsMr
+Csrq, + Crsq,,
+5
+Asrq, =
+1
+2i
+MsMr
+Csrq, −Crsq,,
+6
+where Ms is the mass of the sth atom in the unit cell. These
+quantities are associated to the real and imaginary part of the
+dynamical matrix in coordinate space. If the imaginary part
+of the dynamical matrix is small with respect to its real part,
+namely,
+Asrq,  Dsrq,,
+7
+then the self-consistent condition
+detDsrq,q −q
+2  = 0
+8
+determines nonadiabatic/dynamic phonon frequencies q
+and phonon eigenvectors eq
+s s=1,N and =1,3N indicates the
+phonon branches. The adiabatic/static phonon frequencies
+and eigenvectors are obtained considering a static perturba-
+tion, thus diagonalizing Drsq,q=0.
+On the other hand, the imaginary part of the force-
+constant matrix determines the phonon damping,
+q = 2
+q	
+s,r
+eq
+s Asrq,qeq
+r
+9
+and the phonon linewidth.
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-2B. Adiabatic and nonadiabatic phonons
+In the previous section we have deﬁned the nonadiabatic/
+dynamic phonon frequencies as the eigenvalues of the Her-
+mitian part of the time-dependent dynamical matrix and the
+adiabatic/static phonon frequencies as the eigenvalues of the
+static
+time-independent
+dynamical
+matrix.
+Solid-state
+textbooks1,17 and ﬁrst-principles calculations of the phonon
+dispersion,7,9,18–20 usually treat only the adiabatic/static case,
+since it is commonly assumed that the adiabatic phonon fre-
+quencies coincide with the nonadiabatic ones.
+In insulators, where the fundamental energy gap between
+the electronic ground state and the ﬁrst available excited
+state is much larger than the phonon energy, the adiabatic/
+static approximation is well justiﬁed. In metals the situation
+is more complex.12,21,22
+The crucial parameter in metals is the electron relaxation
+time 	. In absence of electron-defect, electron-electron and
+electron-phonon scattering, 	 is inﬁnite. In a real metallic
+system, the presence of these scattering processes results in a
+ﬁnite relaxation time 	. We can deﬁne three cases: i a clean
+limit, when the electron relaxation time 	 is much larger than
+the phonon period divided by 2
+, ii a dirty limit, when the
+electron relaxation time 	 is much smaller than the phonon
+period divided by 2
+, and iii an intermediate regime, when
+the electron relaxation time 	 is comparable to the phonon
+period divided by 2
+.
+It has been shown12,21,22 that in the dirty limit the nona-
+diabatic phonon frequencies coincide with the adiabatic ones
+also in metals. Instead, in the clean limit and in the interme-
+diate regime, the adiabatic and nonadiabatic frequencies are,
+in general, different.
+The nonadiabatic calculations based on time-dependent
+DFT described in the following sections are performed in
+the perfect clean limit. Indeed, in our time-dependent calcu-
+lations, the electron relaxation time 	 is inﬁnite, since we use
+an instantaneous real in the frequency space exchange-
+correlation XC kernel, and we do not consider a broaden-
+ing of the electronic levels due to defects and electron-
+phonon scattering.
+Thus, our nonadiabatic/dynamic DFT frequencies should
+be used to reproduce the phonon frequencies measured in
+metal in the clean limit. Instead, the adiabatic/static DFT
+frequencies those generally computed with DFT linear-
+response codes should be used to reproduce the phonon fre-
+quencies measured in a metal in the dirty limit. Finally, to
+reproduce the phonon frequencies measured in a metal in the
+intermediate regime, one should explicitly include electron-
+lifetime effects in the linear-response calculation, as it has
+been done for zone center phonon in Refs. 12 and 23.
+By considering a single band and by linearizing the
+electronic-band dispersion near the Fermi energy, it has been
+shown21 that the differences between the adiabatic and nona-
+diabatic phonons are largest at the center of the BZ and van-
+ish for qq/vF, where vF is the Fermi velocity. Such dif-
+ferences, at the BZ center and in the clean limit, have been
+computed within DFT,12 and can be very sizable up to 30%
+of the phonon frequency. However a detailed DFT study of
+nonadiabatic effect away from the BZ center beyond a lin-
+earized one-band approximation21 is still missing.
+C. Time-dependent linear-response theory
+The force-constant matrix can be evaluated in the linear-
+response theory, considering that the atomic displacement
+induces a perturbation in the external potential acting on the
+electrons.
+The Hellmann-Feynmann theorem24–26 states that the
+force on atom J, FJt can be evaluated in terms of the varia-
+tion in the external potential,
+FJt = − drnr,tVextr
+RJ
+,
+10
+where nr,t is the electronic charge density and Vextr is
+the external potential, namely,
+Vextr = −	
+I
+Z
+r −RI + 1
+2	
+IJ
+ZIZJ
+RJ −RI .
+11
+It is worthwhile to recall that Vextr does not depend explic-
+itly on time but only through the dependence on time of the
+phonon displacement uIt. In linear response the force-
+constant matrix CIJ is written as7
+CIJ =
+nr,
+uI
+Vextr
+uJ
+dr + n0r2Vextr
+uJuI
+dr,
+12
+where n0r is the unperturbed charge density, nr, is the
+ transform of the time-dependent charge density nr,t, and
+Vextr
+uJ
+and
+2Vextr
+uIuJ
+are real and time-independent quantities
+evaluated at the equilibrium position of the nuclei. On the
+contrary nr,
+uI
+is complex.
+D. Time-dependent linear response in density-functional
+theory
+In this section, we examine the linear-response calculation
+of the real-space force constants in the framework of density-
+functional theory. The derivations are kept in real space as
+we want to keep the presence of imaginary terms damping
+in the force-constant matrix as manifest.
+In order to compute nr,, we assume a monochromatic
+perturbation of the form
+uIt = uIeit + e−it,
+13
+where uI is real. In density-functional theory the resulting
+monochromatic perturbing potential is the external potential
+Vextr in Eq. 11. The derivative of the  transform of the
+charge density with respect to an ionic displacement is writ-
+ten as7
+nI
+1r,,T = nr,
+uI
+= 2 	
+ki,kj
+NkT
+fkiT −fkjT
+
+kjVSCFr,/uIki
+ki −kj +  + i
+ki
+ rkjr,
+14
+where k,k label the crystal momentum, i, j are band in-
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-3dexes, the T is the electronic temperature or broadening in
+the Fermi function fkiT,  is an arbitrarily small positive
+real number, NkT is the number of k points needed to con-
+verge the sum in Eq. 14 at the electronic temperature T, and
+the factor 2 here and in the following accounts for the spin
+degeneracy. Finally, VSCF is the Kohn-Sham self-consistent
+potential. The quantity VSCFr,/uI is complex and
+given by
+VSCFr,
+uI
+= Vextr
+uI
++ Kr,rnI
+1r,,Tdr, 15
+where Kr,r=
+EHXCn
+nrnr is the kernel of the Hartree and
+exchange and correlation functional, EHXCn. As usual we
+have assumed the Hartree and exchange-correlation kernel to
+be instantaneous real in  space.
+Substitution of Eq. 14 in Eq. 12 leads to
+CIJ,T=2 	
+ki,kj
+NkT
+fkiT −fkjT
+
+kjVSCFr,/uIkikiVextr/uJkj
+ki −kj +  + i
++ n0r2Vextr
+uJuI
+dr,
+16
+where, from now on, we explicitly indicate the dependence
+on the electronic temperature T. This expression of the force-
+constant matrix is normally used in standard implementa-
+tions of linear-response theory.7
+Further substitution of Eq. 15 in Eq. 16 gives the fol-
+lowing alternative but equivalent formulation for the force-
+constant matrix in linear-response theory:
+CIJ,T = 2 	
+ki,kj
+NkT
+fkiT −fkjT
+ki −kj +  + ikjVSCFr,
+uI
+ki
+kiVSCFr,
+uJ
+kj + drn0r2Vextr
+uIuJ
+− nJ
+1r,,TKr,rnI
+1r,,Tdrdr. 17
+In Eq. 17 the term including the second derivative of the
+external potential is real whereas all the other terms are com-
+plex.
+Equations 16 and 17 are two different ways of calcu-
+lating the force constants. At convergence of the self-
+consistent procedure the two expressions lead to the same
+result. It is tempting to deﬁne the phonon self-energy from
+Eq. 16 involving the product between the matrix element of
+the screened VSCF potential and the matrix element of the
+bare Vext potential see the ﬁrst term on the right-hand side
+rhs of Eq. 16. Indeed Eq. 16 does not contain a double-
+counting term of the electron-electron interaction which is on
+the contrary present in Eq. 17 last term on the rhs. How-
+ever such a procedure requires an accurate self-consistent
+determination of the screened potential at ﬁnite frequency .
+On the contrary the advantage of Eq. 17 is that it allows us
+to introduce a stationary formulation of the force-constant
+matrix as it will be shown in the following. That formulation
+permits a deﬁnition of the phonon self-energy where nonself-
+consistent static screening is used with a negligible and con-
+trolled error.
+E. Formulation of the stationary force-constant functional
+We introduce the following force-constant functional FIJ:
+FIJr,r,,T
+= 2 	
+ki,kj
+NkT
+fkiT −fkjT
+ki −kj − + i
+ kjVextr
+uI
++ Kr,rrdrki
+ kiVextr
+uJ
++ Kr,rrdrkj
++ drn0r2Vextr
+uIuJ
+− rKr,rrdrdr.
+18
+With this deﬁnition the force-constant matrix reads as
+CIJ,T = FIJnI
+1r,,T,nJ
+1r,,T,,T.
+19
+It is straightforward to note that the force-constant functional
+is quadratic with respect to , namely,
+
+FIJr,r,,T
+r
+
+r=nI
+1r,,T, r=nJ
+1r,,T
+= 0.
+20
+The same relation holds upon derivation with respect to .
+The consequence of Eq. 20 is that CIJ,T is an ex-
+tremal point and that a given error on nI
+1r,,T or on
+nJ
+1r,,T affects the functional and the phonon frequencies
+only at second order.
+Our functional formulation is related to that used for di-
+electric tensors by Gonze et al. in Ref. 27. The main differ-
+ence is that, while the functional formulation of Ref. 27 is
+variational with respect to the ﬁrst-order perturbation of the
+wave function, our formulation is stationary with respect to
+the ﬁrst-order perturbation of the electronic charge density.
+F. Approximated force-constant functional
+At this point we can exploit the results of the preceding
+section in order to develop a method to accurately calculate
+phonon and electron-phonon properties. Within density-
+functional theory the most precise force-constant matrix
+CIJ,T is obtained when T coincides with the physical
+temperature T0 e.g., room temperature of the system. How-
+ever, in a metal, this temperature is prohibitively small and
+the self-consistent calculation of CIJ,T0 would be compu-
+tationally unfeasible as it requires a large number of k points
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-4in order to properly converge the summation in Eq. 17. In
+addition, the self-consistent calculation of the imaginary part
+of nI
+1r,,T and of nJ
+1r,,T at ﬁnite 0 requires to
+increase further the number of k points with respect to stan-
+dard static linear-response calculations of nI
+1r,0,T.
+A remedy to these problems is to deﬁne an approximated
+force constants matrix, C˜ IJ, as
+C˜ IJ,T0 = FIJnI
+1r,0,Tph,nJ
+1r,0,Tph,,T0,
+21
+that is, i the frequency dependence on nI
+1r,,Tph is ne-
+glected and its static limit =0 is considered and ii nI
+1
+and nJ
+1 are calculated at the temperature Tph instead of T0.
+The quantity Tph is the electronic temperature commonly
+used in a self-consistent linear-response calculation. Usually
+Tph is much larger then the physical temperature T0, e.g.,
+Tph4000 K.28 The main consequence of the stationary
+property of the functional FIJ is that it allows us to compute
+phonon frequencies from an approximate force-constant ma-
+trix C˜ IJ,T0 in a nonself-consistent way and performing an
+error that is quadratic in nI
+1r,,T0−nI
+1r,0,Tph.
+Thus, a time-consuming self-consistent calculation of the
+nonadiabatic force constants CIJ,T0 has been replaced by
+an approximate nonself-consistent one, C˜ IJ,T0, with an
+error that is negligible for the phonon frequencies, as it will
+be demonstrated in the applications considered in this work.
+We now ﬁrst add and subtract CIJ0,Tph the standard
+linear-response adiabatic self-consistent force constants in
+the left member of Eq. 21, and then perform a Fourier
+transform to obtain
+C˜ srq,,T0 = srq,,T0 + Csrq,0,Tph,
+22
+where
+srq,,T0
+=
+2
+NkT0 	
+kij
+NkT0 fkiT0 −fk+qjT0
+ki −k+qj +  + i
+ dij
+s k,k + qdji
+r k + q,k
+−
+2
+NkTph 	
+kij
+NkTph fkiTph −fk+qjTph
+ki −k+qj
+ dij
+s k,k + qdji
+r k + q,k
+23
+with the following deﬁnition of the deformation potential
+matrix element:
+dmn
+s k + q,k = k + qmvSCF
+uqs
+kn
+24
+and where kn is the periodic part of the Bloch wave func-
+tion, i.e., kn=eik·rkn/
+Nk and uqs is the Fourier trans-
+form of the phonon displacement uLs. The integration in Eq.
+24 is understood to be on the unit cell. The quantity vSCF is
+the periodic part of the static self-consistent potential,
+namely, VSCFr=vSCFreiq·r. This static self-consistent po-
+tential is calculated using standard linear response at tem-
+perature Tph.
+The calculation of srq,,T0 requires the knowledge of
+band energies and eigenfunctions on a denser NkT0 k-point
+grid using an electronic temperature T0 only in an energy
+window of width maxTph, around the Fermi level.
+Moreover it does not require to recalculate the derivative of
+the self-consistent potential. As such it is much less time
+consuming then an linear-response self-consistent calculation
+to obtain Crsq,0,T0. The nonadiabatic phonon frequencies
+are calculated in the clean limit nonself-consistently from
+the Hermitian part of C˜ srq,,T0 see Eq. 5.
+The expression of the adiabatic force constants at the
+physical temperature T0 is obtained setting =0 in the
+Eq. 22,
+C˜ srq, = 0,T0 = srq,0,T0 + Csrq,0,Tph.
+25
+In this case the force constants are Hermitian and the error in
+the
+approximated
+force
+constants
+is
+quadratic
+in
+nI
+1r,0,T0−nI
+1r,0,Tph.
+The advantage of the present procedure is that the linear-
+response self-consistent calculation is performed with a
+small number of k
+points NkTph
+whereas the low-
+temperature force constants are obtained with a nonself-
+consistent calculation over much denser NkT0 k-points
+mesh. This approach requires, as in a conventional electron-
+phonon coupling calculation, the knowledge of the wave
+functions in a dense NkT0 k-points grid and in an energy
+window of the order of the maximum between Tph and 
+around the Fermi level, but does not require the self-
+consistent linear-response calculation of the derivative of the
+Kohn-Sham potential with respect to an atomic displace-
+ment. As such the procedure is substantially less time con-
+suming.
+Finally from Eq. 23 it is evident that the largest differ-
+ence between the adiabatic and nonadiabatic phonon fre-
+quencies occurs at zone center q=0. Indeed the intraband
+contribution i= j leads to a zero denominator in the second
+term on the rhs and a nonzero one proportional to  in the
+ﬁrst term on the rhs see also Refs. 12, 13, and 21.
+G. Phonon frequencies interpolation over k points at ﬁxed
+phonon momentum: Practical implementation
+The practical implementation of the above theoretical for-
+mulation for the phonon frequencies proceeds as follows:
+1 Perform a standard linear-response calculation for a
+given phonon momentum q using a NkTph k-points mesh
+and smearing Tph for the electronic integration to obtain
+Csrq,0,Tph.
+2 In order to perform the second summation in
+srq,,T0 Eq. 23, calculate deformation-potential ma-
+trix element of Eq. 24 on the electron-momentum grid
+composed of NkTph k points using a smearing Tph.
+3 Generate wave functions kn and energies kn on the
+denser NkT0 electron-momentum k-points grid.
+4 Perform a second nonself-consistent calculation of the
+deformation-potential matrix element on the more dense
+NkT0 k-points grid using smearing T0 and vSCF obtained on
+the
+NkTph
+grid
+to
+obtain
+the
+ﬁrst
+summation
+in
+srq,,T0.
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-55 Calculate C˜ srq,,T0 or C˜ srq,=0,T0 using Eq.
+22 or Eq. 25.
+6 Diagonalize the dynamical matrix to obtain phonon
+frequencies and phonon eigenvectors.
+The procedure illustrated in this section is used to obtain
+at a ﬁxed phonon momentum q well-converged phonon fre-
+quencies with respect to electronic k points and smearing.
+Then standard Fourier interpolation29 can be performed to
+obtain dynamical matrices throughout the BZ. However, this
+procedure, has still two main computational shortcomings.
+First, the calculations of the wave functions and matrix ele-
+ments points 3 and 4 become cumbersome when very
+dense NkT0 k-points grid for the electron momentum are
+necessary to converge. Second, in presence of phonon
+anomalies and not-too-smooth phonon dispersion a dense k
+sampling of the phonon BZ is required.
+An optimal solution to overcome these problems is repre-
+sented
+by
+the
+use
+of
+maximally
+localized
+Wannier
+functions15,30 as an alternative electron basis function. The
+method and the implementation of the Wannier functions ap-
+proach for the electron-phonon interpolation is presented in
+Sec. III.
+H. Phonon linewidth and of the electron-phonon coupling
+The imaginary part of the force-constant matrix is related
+to phonon damping, namely, the energy-conserving decay of
+a phonon into particle-hole pairs.
+The imaginary part of Eq. 16 is
+ImCIJ,T = 2 	
+ki,kj
+NkT
+fkiT −fkjT
+
+kjRe
+VSCFr,
+uI ki
+kiVextr
+uJ
+kj  ki −kj + 
++ kjIm
+VSCFr,
+uI ki
+kiVextr
+uJ
+kjP
+1
+ki −kj + ,
+26
+where P indicates the principal part. To obtain Eq. 26 we
+have assume that the unperturbed Hamiltonian is time-
+reversal symmetric so that a real set of eigenfunctions exists.
+This expression is exact but it has two disadvantages.
+First it requires the expensive calculation of the derivative of
+the self-consistent potential at ﬁnite frequency both in its real
+and imaginary parts. Second the phonon decay in electron-
+hole pairs is not manifest in the term including the principal
+part. These problems persist if the imaginary part of Eq. 17
+is considered, since, in this functional, both VSCFr,/uI
+and nI
+1r,,T are complex quantities. These two shortcom-
+ings are absent if the approximated force-constant matrix in
+Eq. 21 is used. Indeed the imaginary part of Eq. 21 is
+ImC˜ IJ,T = 2
+ 	
+ki,kj
+NkT
+fkiT −fkjT
+ kjVSCFr,0
+uI
+ki
+kiVSCFr,0
+uJ
+kjki −kj + 
+27
+with an error quadratic in nI
+1r,−nI
+1r,0. Fourier trans-
+forming and replacing Eq. 27 in Eq. 9 gives the well-
+known equation for the phonon linewidth q full width half
+maximum FWHM, that is,
+q
+Fermi =
+4
+NkT 	
+k,m,n
+NkT
+gnm
+ k,k + q2
+ fkn −fk+qmk+qm −kn −q,
+28
+where gnm
+ k,k+q=	seq
+s ·dmn
+s k+q,k/
+2Msq.
+In absence of the electron-electron interaction a similar
+expression involving only the derivative of the bare external
+potential is easily obtained using Fermi golden rule. In the
+presence of electron-electron interaction our formalism jus-
+tify the replacement of the derivative of the bare external
+potential by the derivative of the static screened potential
+VSCFr,0 in the Fermi golden rule with a well-controlled
+error.
+Under certain conditions illustrated in Refs. 31 and 32,
+the phonon linewidth can be reduced to
+˜q = 4
+q
+NkT 	
+k,m,n
+NkT
+gnm
+ k,k + q2
+ knk+qm −kn −q.
+29
+Finally, neglecting q in Eq. 29, we obtain Allen
+formula,31 namely,
+q = 4
+q
+NkT 	
+k,n,m
+NkT
+gnm
+ k,k + q2knk+qm.
+30
+The Allen formula2,31 is widely used, and represents a good
+estimation of the phonon linewidth due to electron-phonon
+effects, in the absence of anharmonic effects and other scat-
+tering processes. In addition, the Allen formula relates the
+phonon linewidth, as measured by inelastic neutron or x-ray
+measurements, to the electron-phonon coupling as
+q =
+q
+2
+q
+2 Ns
+,
+31
+where Ns is the electronic density of states per spin at the
+Fermi energy.
+With this deﬁnition, the isotropic Eliashberg function is
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-62F =
+1
+2Nq	
+q
+qq −q,
+32
+where Nq is the number of phonon wave vectors. We also
+deﬁne the integrated electron-phonon coupling as
+ = 2
+0
+ 2F
+
+d.
+33
+III. WANNIER FUNCTIONS
+A. Wannier interpolation of the electron-phonon matrix
+element
+In this section we explain how to interpolate the electron-
+phonon matrix element throughout the BZ using Wannier
+functions, summarizing what done in Ref. 10.
+Using standard ﬁrst-principles methods a set of Bloch
+functions kn are generated with k belonging to a uniform
+Nk
+w k-points grid centered in . A set of Wannier functions
+centered on site R are deﬁned by the relation
+Rm =
+1
+
+Nk
+w	
+kn
+e−ik·RUnmkkn.
+34
+A suitable transformation matrix, Umnk, must be deter-
+mined in the so-called Wannierization procedure. In this
+work we choose to work with maximally localized Wannier
+functions MLWFs,15,30,33 although other Wannierization
+schemes are possible. In the MLWF case, the matrices
+Unmk are obtained following the prescription of Refs. 15
+and 30, which guarantees the maximal space localization of
+the ﬁnal Wannier functions. This last requirement will be
+essential in the spirit of interpolation of the electron-phonon
+matrix elements.
+Speciﬁcally, if the band structure is formed by a compos-
+ite group of bands and the number of Wannier functions is
+identical to the number of bands of the composite group of
+bands, then the matrix Umnk is a square matrix. On the
+contrary if the desired bands are entangled in a larger mani-
+fold, a preliminary disentanglement procedure from the
+manifold must be performed and then the square matrix
+Umnk is obtained.30
+The deformation-potential matrix elements dmn
+s k+q,k
+see Eq. 24 are calculated using linear-response scheme. In
+this calculation particular care is needed for the deformation
+potential at zone center, namely, dmn
+s k,k, as explained in
+Sec. III B.
+It is crucial to note that the periodic parts kn and k
++qm entering in dmn
+s k+q,k have to be exactly the same
+wave functions used for the Wannierization procedure. If this
+is not the case, spurious unphysical phases appear in the
+kn’s i.e., a phase added by the diagonalization routine or
+other computational reasons and the localization properties
+of the Wannier functions in real space are completely lost. A
+way to enforce this condition is to use a uniform grid cen-
+tered at  so that k+q=k+G with k still belonging to the
+original grid. In this way k+qn can be obtained from kn
+simply multiplying by a phase determined by the G-vector
+translation and no additional phases occur.
+Exploiting
+translational
+invariance,
+the
+deformation-
+potential matrix element in the Wannier function basis is
+obtained by Fourier transform as
+dmn
+s R,RL = 0mVSCF
+us,L
+Rn = 1
+Nk
+w	
+k,q
+Nk
+w
+	
+m,n
+e−ik·R+iq·RL
+ Umm
+
+k + qdmn
+s
+k + q,kUnnk,
+35
+where R and RL belong to a Nk
+w real-space supercell. At this
+point it is important to underline that the grid of Nk
+w k points
+on which the Wannierization process has been carried out has
+to be exactly the same grid for the phonon momentum on
+which the dynamical matrices have been computed. One
+linear-response calculation for each k point in the phonon
+irreducible BZ of the Nk
+w electron k-points grid has to be
+carried out. If this constrain is not respected, the localization
+properties of the electron-phonon matrix element in real
+space is not guaranteed.
+The origin of this constrain can be understood considering
+the two one-dimensional examples illustrated in Fig. 1. In the
+ﬁrst case the real-space periodicity of the Wannier functions
+is the same as that of the derivative of
+VSCF
+us,L and corresponds
+to a supercell composed of four real-space unit cells. In the
+second case the real-space periodicity of the Wannier func-
+tions is a unit cell while that of
+VSCF
+us,L is a supercell composed
+of four real-space unit cells. In the ﬁrst case the real-space
+deformation potential becomes zero at the supercell border,
+the overlap between different supercells can be neglected and
+the Wannier interpolation of the electron-phonon matrix ele-
+ment can be carried out. In the second case the deformation
+potential at the supercell border is nonzero, the overlap be-
+tween different supercells cannot be neglected and the Wan-
+nier interpolation method of the electron-phonon matrix ele-
+ment cannot be carried out. This examples demonstrates that
+in the general case it is necessary to have the same real-space
+periodicity for the electronic Wannier functions and
+VSCF
+us,L . Of
+course, if the localization of
+VSCF
+us,L is actually much less than
+four unit cells, as, for example, the phonon linear-response
+calculation has been carried out on a denser phonon-
+momentum grid then the minimum one required to converge
+VSCF
+us,L , then the constrain that the phonon-momentum grid has
+to be the same grid of Nk
+w k points used for Wannierization
+can be released. Still it remains true that the minimal grid
+necessary to converge
+VSCF
+us,L has to be identical to that used
+for the Wannierization of the electronic band structure, as the
+example above demonstrates.
+Inverting Eq. 34, we obtain
+kn =
+1
+
+Nk
+w	
+R 	
+m
+eikRUnm
+ kRm.
+36
+Noting that dmn
+s k+q,k= 1
+Nkwk+qm
+VSCF
+uqs kn and using Eq.
+36 one obtains,
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-7dmn
+s k + q,k =
+1
+Nk
+w2	
+L 	
+R 	
+mn
+eik·R+iq·RL
+Ummk + qdmn
+s
+R,RLUnn
+ k,
+37
+where R and RL belong to a Nk
+w real-space supercell. Now, if
+dmn
+s R,RL is localized inside the Nk
+w real-space supercell
+then the interaction between different Nk
+w real-space super-
+cells can be neglected and dmn
+s k+q,k can be obtained from
+Eq. 37 via a slow Fourier transform. In practice this means
+that in Eq. 37 now k and q are any k points in the BZ. As
+a result of the interpolation, dmn
+s k+q,k can be used to
+calculate any physical property as in a simple tight-binding
+scheme.
+B. Deformation-potential matrix elements of optical zone-
+center phonons
+In this section we discuss the peculiarities related to the
+calculation of the electron-phonon matrix elements for opti-
+cal zone-center phonons q=0. The periodic part of the self-
+consistent potential, induced by the phonon displacement at
+wavelength q of the atom s can be decomposed in the Cou-
+lomb Cl potential the sum of the bare and Hartree poten-
+tials and XC contributions,
+vSCFr
+uqs
+= vXCr
+uqs
++ vClr
+uqs
+.
+38
+The integral of the Coulomb contribution over the unit-cell
+volume  is
+qs = 1
+ d3rvClr
+uqs
+.
+39
+In
+DFT
+linear-response
+codes,
+such
+as
+QUANTUM-
+ESPRESSO,34 the phonon calculation with q0 and q=0 are
+treated with two different approaches.7,18
+At q0, the calculation is performed within the grand-
+canonical ensemble, with a constant electron chemical-
+potential Fermi level F. In a metal, the limit
+lim
+q→0 qs = 0+s
+40
+is well deﬁned and independent on the direction of q. In
+general one has 0+s0.
+At q=0, the calculation is performed in the canonical en-
+semble with a constant number of electrons. In this calcula-
+tion the variation in the average Coulomb potential is con-
+ventionally set to zero, namely,
+0s = 0.
+41
+To keep constant the number of electrons the derivative of
+the Fermi energy with respect to the phonon displacement
+F/u0s can be different from zero. In particular,7,18 it must
+be
+F
+u0s
+= −0+s.
+42
+In
+the
+QUANTUM-ESPRESSO
+implementation34
+the
+vSCFr/uqs stored on disk is discontinuous at q=0,
+since, in this case, it does not include as it should the con-
+tribution from the average Coulomb potential. As a conse-
+quence the electron-phonon matrix elements computed with
+vSCFr/u0s are incorrect. Moreover such discontinuity de-
+teriorates the localization properties of the electron-phonon
+matrix elements in real space. The problem is easily solved
+by redeﬁning the self-consistent potential to be used in the
+Phonons
+Electrons
+d(1,0)=0
+d(0,0)=0
+d(2,0)=0
+Electrons
+Phonons
+d(1,0)=0
+d(1,0)=d(0,0)=0
+d(2,0)=d(1,0)=d(0,0)=0
+FIG. 1. Color online One-dimensional examples illustrating the need of having the same real-space periodicity for the Wannier
+functions and for the force constants. In the picture the vertical black dashed lines show the borders of the unit cell in real space. The vertical
+red dashed lines are the borders of the four unit cells real-space supercell. The quantity
+VSCF
+us,L labeled “phonons” is considered to be
+localized in the supercell while the square modulus of the electronic Wannier functions, namely, rRm2, labeled “electrons” are
+considered to be localized on a single unit cell. The quantity dR,RL=dmm
+s R,RL=rRm2 VSCF
+us,L dr is the deformation potential as
+deﬁned in Eq. 35. When the periodicity of the phonons and of the electrons is the same left then the deformation potential at the supercell
+boundary is zero d2,0=0, dR,0 is localized and Wannier interpolation can be carried out. On the contrary, if the periodicity in the right
+case where the periodicity is different, dR,0 is always different from zero and the Wannier interpolation of the electron-phonon matrix
+element cannot be carried out.
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-8calculation of the deformation-potential matrix elements for
+q=0 as
+v˜SCFr
+u0s
+= vSCFr
+u0s
+−F
+u0s
+.
+43
+Note that since F/u0s transforms under symmetry opera-
+tion as a force, it is different from zero only for the atoms for
+which the internal coordinates are not ﬁxed by symmetry.
+For this reason, F/u0s is ﬁnite in CaC6, while it vanishes
+in MgB2.
+We remark that the same problem occurs when a frozen-
+phonon calculation of
+vSCFr
+u0s
+is carried out as in all the
+electronic-structure codes the average Coulomb potential is
+conventionally set to zero.
+C. Wannier interpolation of the dynamical matrix at ﬁxed
+phonon momentum
+Steps 4, 5, and 6 of Sec. II G can be repeated using Wan-
+nier functions to interpolate at ﬁxed phonon momentum q
+the quantity srq,,T0 to obtain Eq. 23. The advantage
+of the Wannier-interpolation-based strategy with respect to
+the procedure explained in Sec. II G is that the time needed
+to calculate the matrix element is now negligible as there is
+no need to obtain, from ﬁrst-principles, wave functions and
+energies on the dense NkT0 k-point grid. Still it is necessary
+to perform Fourier interpolation29 to obtain dynamical matri-
+ces throughout the full BZ.
+D. Wannier interpolation of the dynamical matrix
+In what follows we outline a strategy to obtain dynamical
+matrices
+throughout
+the
+BZ
+using
+both
+Fourier
+interpolation29 and Wannier functions. The method solves the
+main problem related to the presence of Kohn anomalies,
+originating from long-range interactions in the dynamical
+matrix. The idea is to separate in the force-constant matrix
+obtained in Eq. 22 in the short- and long-range compo-
+nents. The long-range force constants are associated to Kohn
+anomalies driven by Fermi-surface nesting, and, as such,
+they cannot be easily Fourier interpolated29 and require an
+accurate sampling of the Fermi surface. This last part will be
+treated using the Wannier interpolation scheme explained in
+Sec. III A. On the contrary short-range force constants pro-
+duce smooth phonon dispersions and can be safely Fourier
+interpolated29 and do not require accurate sampling of the
+Fermi surface. Treating separately the two length scales per-
+mits to obtain converged phonon frequencies with respect to
+k-point sampling and electronic temperature, everywhere in
+the Brillouin zone.
+This procedure is similar to the treatment of long-range
+dipolar forces due to the Born effective charges in polar
+semiconductors.7,9 In this case, these long-range forces gen-
+erate a nonanalytical behavior of the dynamical matrix at
+zone center. While Fourier interpolation29 of the dynamical
+matrices including the nonanalytical terms is impossible, it
+becomes possible if the long-range forces are subtracted to
+obtain short-range force constants. The nonanalytical part
+subtracted to perform Fourier interpolation29 is added again
+after Wannier interpolation.
+In this spirit, we rewrite Eq. 22 as
+C˜ srq,,T0 = srq,,T0 −srq,0,T + C˜ srq,0,T,
+44
+where
+C˜ srq,0,T = Csrq,0,Tph + srq,0,T
+45
+and T is an electronic temperature large enough in order to
+have only short-range force constants named C˜ srq,0,T,
+and no Kohn anomalies in the corresponding phonon
+branches. As a consequence, Fourier interpolation can be ap-
+plied to C˜ srq,0,T.
+In practical implementation the procedure is the follow-
+ing:
+1 Obtain Csrq,0,Tph
+from self-consistent linear-
+response phonon calculations. Such force constants are
+evaluated using a Nk
+w k-point grid for the phonon momentum
+and a NkTph k-point grid for the electron momentum.
+2 Calculate srq,0,T using the Wannier functions as
+described in Sec. III C.
+3 Use Eq. 45 to compute C˜ srq,0,T on the Nk
+w
+phonon-momentum grid.
+4 Fourier interpolate29 C˜ srq,0,T to obtain dynamical
+matrices at any desired phonon momentum at temperature
+T.
+5 Obtain C˜ srq,,T0 in Eq. 44 by Wannier interpola-
+tion of srq,,T0−srq,0,T at any desired phonon
+momentum.
+6 Diagonalize the dynamical matrix associated to
+C˜ srq,,T0,Tph to obtain adiabatic, =0, or nonadiabatic
+in the clean limit =q, phonon frequencies. These pho-
+non frequencies include Kohn anomalies as long-range terms
+are properly treated by the Wannier-functions approach.
+IV. APPLICATIONS
+We applied the theoretical and computational framework
+developed in the preceding sections to two well-known su-
+perconductors, namely, magnesium diboride MgB2 and cal-
+cium intercalated graphite CaC6. In these systems phonon,
+electron-phonon, and superconducting properties are exten-
+sively investigated from both theoretical and experimental
+point of view and a detailed comparison can me made. At the
+same time, they represent nontrivial examples, where con-
+vergence problems in ﬁrst-principles approaches are relevant
+for the calculation of phonon and superconducting proper-
+ties.
+A. MgB2
+MgB2 is, without doubts, one of the most studied and
+investigated materials, since 2001. The discovery of super-
+conductivity at intermediate temperatures 40 K,35 in this
+compound, represented an unexpected surprise in the scien-
+tiﬁc community. Easily available, a huge amount of experi-
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-9mental characterizations were immediately possible. On the
+other hand, MgB2 being composed of light elements in an
+hexagonal unit cell with only three atoms, allowed a ﬁrst-
+principles computational approach for the theoretical de-
+scription and understanding of its normal and superconduct-
+ing properties. Density-functional theory and linear-response
+techniques, revealed an extraordinary high electron-phonon
+coupling between sp2 bonding and antibonding boron orbit-
+als, with a particular in-plane mode E2g of the hexagonal
+boron sheet.36–38 Based on model calculations of the
+electron-phonon coupling parameter 1 in Ref. 37, the
+approximate critical temperature was estimated to be around
+40 K. However, a subsequent careful investigation of the
+problem, revealed that the ﬁrst-principles calculated values
+of , were too low to explain this high critical temperature,
+unless unphysical low Coulomb pseudopotentials were
+used.39 The solution of this inconsistency, has come with the
+discovery of two-band superconductivity40 in MgB2. Two
+different gaps develop on the  and 
+ bands of the boron
+sheets.39 This allows to gain new scattering channels to en-
+hance Tc still containing the average value of . At the mo-
+ment, MgB2 is classiﬁed as a two-band electron-phonon
+superconductor.41,42
+This continuous improvement of the theoretical explana-
+tion of the normal and superconducting properties of MgB2
+was in part due to some difﬁculties in the proper calculations
+of the electron-phonon coupling and of the phonon frequen-
+cies. Soon after the discovery of superconductivity in MgB2,
+the ﬁrst theoretical papers based on standard DFT codes
+evidenced a relevant and anomalous difﬁculty to properly
+“converge” the E2g phonon frequency and the electron-
+phonon coupling. The reason is now clear: due to the two-
+dimensional nature almost cylindrical of the  Fermi-
+surfaces electron-phonon coupling calculations require a
+careful integration of the Fermi surface is needed. This trans-
+lates, in practical calculations, with the necessity to use an
+extremely dense k-space integration for electronic and
+phononic degree of freedom.32 Although feasible, in prin-
+ciple, it would require a huge amount of resources and com-
+putational time.
+So, still after about 10 years of calculations, the funda-
+mental question about the value of the electron-phonon cou-
+pling in MgB2, remains unanswered. This information is fun-
+damental in order to validate the electron-phonon origin of
+the superconductivity in MgB2 and at the same time, include
+other, still unexplored pairing interactions.
+The Wannier interpolation scheme, developed in the
+present paper, of phonon frequencies and electron-phonon
+matrix elements, represents the main tool to solve this prob-
+lem. It retains the ﬁrst-principles character but at the same
+time it is affordable from a computational point of view.
+In MgB2 the BZ-center phonon frequency, measured by
+Raman spectroscopy, lies between the adiabatic and clean-
+limit nonadiabatic phonon frequency12 computed by DFT.
+Thus MgB2 is in the intermediate regime see Sec. II B and
+the relaxation time estimated in Ref. 12. Since the experi-
+mental frequency at BZ center is closer to the adiabatic than
+the clean-limit nonadiabatic value,12 in MgB2 we will not
+consider nonadiabatic effects, and we will present only the
+adiabatic dispersion. A proper treatment of nonadiabatic ef-
+fects in this case would require a more complicate procedure
+such that applied in the framework of model Hamiltonian in
+Ref. 23.
+1. Technical details
+Wannier interpolation of the MgB2 band structure is car-
+ried out using a Nk
+w=664 k-points grid centered at 
+using ﬁve Wannier functions starting from random projec-
+tions. The Wannierized band structure is in excellent agree-
+ment with ﬁrst-principles calculation in a 1.5 eV region from
+the Fermi level, as shown in Fig. 2.
+The phonon dispersion and the electron-phonon matrix
+element are calculated using linear response7,34 on the irre-
+ducible part of the Nk
+w k-points grid centered at . The
+vSCF/uqs on the full grid are obtained applying symmetry
+operations of the crystal. In the linear-response calculation
+we perform electronic integration using a Nk=161612
+k-point grid in the Brillouin zone and an Hermite-Gaussian
+smearing Tph=0.025 Ry.
+The interpolation of phonon frequencies is performed
+along the strategy outlined in Sec. III D and using T
+=0.11 Ry to obtain smoothed “high-temperature” phonon
+frequencies.
+2. Adiabatic phonon dispersion
+The Wannier-interpolated adiabatic phonon dispersions on
+different k-point grids and smearings are compared to state-
+of-the-art electronic-structure calculations38,41,43 and experi-
+mental data5,44 in Fig. 3. In the top panel of Fig. 3 we com-
+pare the Wannier-interpolated phonon dispersion with T0
+=0.02 Ry and NkT0=303 with linear-response calculations
+performed on selected points in the Brillouin zone using the
+same mesh and the same electronic temperature. The error in
+the interpolation scheme is always smaller then 0.5 meV. In
+the bottom panel of Fig. 3 we compare Wannier-interpolated
+dispersion curves on NkT0=453 at T0=0.01 Ry with
+Fourier-interpolated29 linear-response calculations from a 6
+64 phonon-momentum grid. As can be seen anomalies
+Γ
+K
+M
+G
+A
+L
+H
+A
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+Energy(eV)
+FIG. 2. Color online Wannier-interpolated red dashed and
+ﬁrst-principles-calculated bands black continuous for MgB2. The
+band energies are plotted with respect to the Fermi level.
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-10are clearly found along A using our new method but are
+completely missed by standard Fourier interpolation.29 The
+main differences with respect to previous calculations38,41,43
+are: 1 a prominent softening Kohn anomaly of the two
+E2g modes at q0.25K is seen. The Kohn anomaly is also
+present along the M high symmetry direction and in a cir-
+cular region around the zone center. Its origin is due to an
+in-plane nesting between the two  cylinders. This Kohn
+anomaly
+could
+be
+probably
+inferred
+from
+previous
+calculations5,38,43 on smaller k-points grids although the soft-
+ening of the E2g modes in these works is weaker.
+2
+A
+second
+Kohn
+anomaly,
+absent
+in
+previous
+calculations,5,38,43 is present on the E2g and B1g modes along
+the kz direction at q0.8A. This Kohn anomaly is due to
+nesting between different cylinders along A. As it can be
+seen by the comparison with previously available experimen-
+tal data in Fig. 3, its presence is conﬁrmed by inelastic x-ray
+scattering measurements of the phonon dispersion.5,44 The
+data at q0.8A are indeed in disagreement with previous
+phonon-dispersion calculation5,38,41,43,44 even if this disagree-
+ment was overlooked in all previous publications.
+3 Overall the Wannier-interpolated phonon dispersion is
+in better agreement against experiments with respect to the
+linear-response calculated one. These differences point out
+the need of having an ultradense k-point sampling of the
+Brillouin zone not only for the electron-phonon coupling but
+also for the phonon dispersion.
+3. Electron-phonon coupling
+Having interpolated the electron-phonon matrix elements
+and the phonon frequencies it is possible to calculate the
+phonon linewidth and the electron-phonon coupling with a
+high degree of precision, eliminating source of errors coming
+from insufﬁcient k-point sampling.
+In Fig. 4 the Wannier-interpolated Eliashberg function is
+compared with previous calculations done with different ap-
+proaches. There are two main improvements due to the better
+k-point sampling.
+Γ
+K
+M
+Γ
+A
+0
+50
+100
+                                       LR (Nk=30
+3, Tph=0.02)
+Wannier (Nk=30
+3, T0=0.02 Ryd)
+Energy (meV)
+Γ
+K
+M
+Γ
+A
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+LR (Nk=16
+2x12, Tph=0.025)
+Experiment
+Wannier (Nk=45
+3, Tph=0.01)
+Energy (meV)
+FIG. 3. Color online Top panel: Wannier-interpolated adiabatic
+phonon dispersion red line compared to standard linear-response
+calculations performed on selected points in the Brillouin zone
+black dots. Bottom panel: comparison between state-of-the-art
+calculated phonon dispersion using Fourier interpolation black
+line and Wannier interpolation red line. Both interpolation
+schemes start from the same linear-response calculation. Experi-
+mental data in the bottom panel are from Ref. 5 blue circles and
+from Ref. 44 black circles. Electronic temperatures are in rydberg.
+The acoustic sum rule is not applied. Interpolated branches are ob-
+tained by connecting the points at which the interpolation has been
+carried out in the order of increasing energy.
+0
+50
+100
+0
+1
+2
+3
+4
+Kong et al. PRB 64, 020501
+Bohnen et al. PRL 86, 5771
+This Work
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100 110
+0
+0.5
+1
+1.5
+2
+Choi et al. PRB 66, 020513
+Eiguren et al. PRB 78, 045124
+This Work
+ω (meV)
+α
+2F(ω)
+α
+2F(ω)
+λ(ω)
+FIG. 4. Color online Comparison of our Wannier-interpolated
+MgB2 Eliashberg function with previous calculations. Kong et al.
+Ref. 38 used ﬁrst-principles calculations and a particular treatment
+for qE2g for q along A. Bohnen et al. Ref. 43 used linear-
+response calculations while Choi et al. Ref. 41 performed frozen-
+phonon calculations. Finally Eiguren et al. Ref. 11 used a different
+implementation of Wannier interpolation on the electron-phonon
+matrix elements with 403 k-points grid for electron momentum and
+403 k-points grid for phonon momentum, but did not interpolate
+phonon frequencies. In this work we Wannier interpolate both
+electron-phonon coupling using 803 k-points grid for electron mo-
+mentum and 203 k-points grid for phonon momentum and phonon
+frequencies using 303 k-points grid for electron momentum and
+203 k-point grid for phonon momentum. The integrated  from
+our work is also shown in the bottom panel.
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-11First, several previous calculations11,38,43 on smaller
+k-point grids generally overestimate the position of the main
+peak in 2F centered around 63 meV in our work
+due to the coupling of  bands with the E2g phonon modes.
+This happens because in previous calculations the Kohn
+anomalies of the E2g branches at q0.25K was underesti-
+mated and because the anomaly along A is missing. This
+crucial dependence of the Eliashberg function on the E2g
+phonon frequency demonstrates the need of having both an
+accurate determination of  and of the phonon frequencies to
+describe superconducting properties.
+Second, in our work there is substantial more weight then
+in previous works11,38 in the 90–100 meV region. This en-
+ergy region is dominated by the coupling of 
+ electrons to
+the E2g vibrations.
+We now compare in more details our work with previous
+calculations. In the work of Bohnen et al.43 all the peaks are
+upshifted not only by the limited k-points sampling but also
+by the choice of using the DFT-minimized crystal structure
+and not the experimental one. Kong et al.38 have calculated
+q and q on a 666 phonon-momentum grid. Then for
+q of this grid belonging to the A direction the correspond-
+ing q values were replaced with some of the 12126
+k-point grid see Ref. 38 for more details. Figure 4 shows
+that this approximation strongly overestimates the energy of
+the peak due to coupling between  electronic states and the
+E2g mode. Indeed the average electron-phonon coupling is
+much larger than the majority of the calculations present in
+literature see Table I. Choi et al.41 used the local-density-
+approximation-minimized lattice structure but surprisingly
+obtained softer E2g phonon frequencies at  then all other
+works using experimental lattice parameters. In Ref. 41 the
+electron-phonon coupling is calculated using an interpolation
+scheme that does not assure the localization properties of the
+electron-phonon matrix element in real space. Nevertheless
+the position of the main peak in 2F is similar to what we
+obtain. On the contrary the secondary peak related to cou-
+pling between 
+ states and the E2g mode is at too low energy.
+Finally, Eiguren et al.11 used a Wannier interpolation scheme
+that requires an explicit calculation of the wave functions for
+any phonon momentum. The interpolation scheme was used
+to calculate the average electron-phonon coupling but not to
+interpolate phonon frequencies as they were obtained by
+Fourier interpolation.29 As a consequence the phonon disper-
+sion does not present the two observed Kohn anomalies and
+the main peak of the 2F is at higher energies respect to
+our work. This difference reﬂects the need of having an ac-
+curate determination of the phonon frequency in order to
+have converged Eliashberg functions. This appears in the
+lower phonon frequency logarithmic average obtained in our
+work with respect to previous calculations as shown in Table
+I.
+B. CaC6
+Graphite intercalated compounds represent a wide class of
+compounds. Due to the particular bonding properties of car-
+bon atoms, with strong and stable sp2 bonds and weak van
+der Walls 
+z bonds, graphite allows incorporation of many
+different atomic species between the hexagonal C sheets. Al-
+kali metals and alkaline-earth metals are the most common,
+but even H, Hg, Tl, Bi, As, O, S, and halogens are reported.45
+The possibility to change the number of electrons in the
+covalent C-C bonds, always stimulated the search of super-
+conductivity in intercalated graphite, but only in 2005 cal-
+cium intercalated graphite CaC6 was found to superconduct
+at temperatures as high as 11.5 K.46
+First-principles
+theoretical
+investigations
+on
+CaC6
+revealed
+that
+the
+superconducting
+critical
+temperature
+can be explained considering only the electron-phonon
+mechanism,47,48 even if other pairing mechanisms were pro-
+posed excitonic and plasmonic.
+The pairing originates from the electron-phonon interac-
+tion between intercalant Fermi surface and the C out-of-
+plane modes and Ca in-plane modes.47 These last modes,
+with very low frequencies 15 meV, account for about
+one half of the total . In this section, we re-examine the
+phonon and electron-phonon properties of CaC6 by means of
+the computational framework based on the Wannier interpo-
+lation. In fact, from a computational point of view, the cal-
+culation of the energy position and q dispersion of the low-
+energy Ca modes requires very high precision, not obtainable
+with the state-of-the-art phonon and electron-phonon calcu-
+lations.
+CaC6 is well described by the clean limit regime. Indeed,
+the CaC6
+zone-center phonon frequency measured by
+Raman,16,49,50 is signiﬁcantly larger than the DFT adiabatic
+one but agrees very well with the DFT clean-limit nonadia-
+batic frequency.12,16,49,50 For this reason we will discuss both
+the adiabatic and the nonadiabatic dispersion.
+1. Technical details
+Wannier interpolation of the CaC6 band structure is car-
+ried out using a Nk
+w=666 k-points grid centered at .
+We use seven Wannier functions starting from an initial con-
+ﬁguration with one s state on calcium and one pz state on
+each carbon. The Wannierized band structure as compared to
+ﬁrst-principles calculations is shown in Fig. 5.
+We perform one linear-response calculation for each point
+of the irreducible Nk
+w k-point grid using NkTph=888
+and Hermitian-Gaussian smearing Tph=0.05 Ry. We then
+obtain vSCF/uqs on the full grid applying the symmetry
+operations of the crystal. At zone center, we added a Fermi-
+level shift to the q=0 component of vSCF/uqs to obtain an
+TABLE I. Comparison between different electron-phonon cou-
+pling calculations in MgB2 using different ﬁrst-principles methods.
+The label Nk Nq indicates the number of k point used for electron
+phonon-momentum integration.
+Reference
+
+log
+meV
+Nk
+Nq
+Kong et al. Ref. 38
+0.87
+62.0
+1226
+63
+Bohnen et al. Ref. 43
+0.73
+60.9
+363
+63
+Choi et al. Ref. 41
+0.73
+62.7
+18212
+18212
+Eiguren et al. Ref. 11
+0.776
+403
+103
+This work
+0.741
+58.8
+803
+203
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-12analytical behavior at q=0 see Sec. III B for more details.
+The interpolation of phonon frequencies is performed
+along the strategy outlined in Sec. III D and using T
+=0.075 Ry to obtain smoothed high-temperature phonon
+frequencies.
+For the calculation of nonadiabatic phonon frequencies
+we use NkT0=503, T0=0.01 Ry, and =0.01 Ry in Eq.
+23. In principle, Eq. 8 should be solved self-consistently
+since the dynamical matrix should be computed at the fre-
+quency obtained from the solution of the determinant equa-
+tion. However we have numerically veriﬁed that solving it-
+eratively Eq. 8 or simply replacing the adiabatic phonon
+frequency of the E2g mode at  in the dynamical matrix of
+Eq. 8 leads to variation in the optical-phonon frequencies
+that are smaller than 1 meV.
+2. Adiabatic phonon dispersion
+The phonon dispersions of CaC6 as obtained from Fourier
+interpolation and from Wannier interpolation are illustrated
+in Fig. 6. The Fourier interpolate phonon dispersion is in
+agreement with previous linear-response calculations.47,51,52
+When compared with the more converged calculations per-
+formed using Wannier interpolation several differences are
+found. The largest deviation concerns the high-energy modes
+at 160–185 meV, in particular, along L. These modes
+involve carbon vibrations parallel to the graphite layers Cxy
+vibrations. There is a substantial hardening of the two high-
+est optical phonon modes approaching zone boundary and a
+somewhat weaker softening close to zone center. The shape
+of the phonon dispersion of the two highest optical modes
+along L recalls the typical behavior of the real part of the
+phonon self-energy due to electron-phonon coupling see, for
+example, for the case of MgB2, Ref. 32, Fig. 3a. The
+electron-phonon coupling to these optical modes comes es-
+sentially
+from
+
+
+states
+and
+mostly
+from
+intraband
+coupling53 small Fermi surface so that a quite accurate BZ
+sampling is necessary to display this behavior. This explains
+the strong k-point dependence of the result.
+Moreover the relevance of having an accurate sampling of
+the Fermi surface is evident from the large number of Kohn
+anomalies arrows in Fig. 6 mark the occurrence of a Kohn
+anomaly present in the Wannier-interpolated branches and
+almost always absent in the Fourier-interpolated ones. At
+high energy 150–180 meV we count a large number of
+anomalies, no one of which is present in Fourier-interpolated
+branches. These anomalies are mostly located close to the X
+and  points. At low energy we count eight more softenings,
+six of which involve points close to the X point although on
+different branches and two occur at the  point. In Fourier-
+interpolated calculations29 only a very broad anomaly is vis-
+ible in the low-energy modes, located exactly at the X point,
+nothing in other energy modes. The facts that close to the X
+point i several anomalies at the same vector occur on dif-
+ferent modes and that ii the phonon frequencies associated
+to the anomaly are strongly dependent on the electronic tem-
+perature suggest an origin dependent from the Fermi-surface
+geometry. Indeed this is the case and the anomaly is illus-
+trated in the nesting vector in Fig. 7.
+L
+Γ
+X
+Γ
+T
+6
+7
+8
+9
+10
+11
+12
+13
+Energy(eV)
+FIG. 5. Color online Wannierized red dashed and ﬁrst-
+principles-calculated bands black continuous for CaC6. The hori-
+zontal dashed line marks the Fermi level.
+L
+Γ
+χ
+X
+Γ
+T
+0
+50
+100
+150
+200
+Energy (meV)
+WANIER INTERPOLATED
+LINEAR RESPONSE
+L
+Γ
+χ
+X
+Γ
+T
+130
+140
+150
+160
+170
+180
+190
+200
+Energy (meV)
+WANIER INTERPOLATED
+LINEAR RESPONSE
+L
+Γ
+χ
+X
+Γ
+T
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+Energy (meV)
+WANIER INTERPOLATED
+LINEAR RESPONSE
+FIG. 6. Color online Wannier-interpolated red continuous and Fourier-interpolated black dashed adiabatic phonon dispersion in
+CaC6. The center and right panels are zooms to the high- and low-energy parts of the phonon dispersion. The Fourier-interpolated phonon
+branches are obtained from the dynamical matrices calculated on a Nk
+w=63 phonon grid, using Nk=83 and Hermite-Gaussian smearing
+Tph=0.05 Ry. The Wannier-interpolated bands are obtained on a Nk˜=403 and Hermitian-Gaussian smearing Tph=0.01 Ry. The Kohn
+anomalies are indicated by arrows.
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-133. Nonadiabatic phonon dispersion
+Nonadiabatic effects occur in CaC6
+close to zone
+center.12,16 However it is unknown how strong are these ef-
+fects far from zone center, namely, what is the degree of
+localization of nonadiabatic effects around the  point. The
+question is meaningful as if nonadiabatic effects extend sub-
+stantially in the Brillouin zone then they can be relevant for
+superconductivity and transport as the average electron-
+phonon coupling and the critical temperature could be af-
+fected.
+In order to test the convergence with respect to the param-
+eter  in Eq. 23, we calculate the nonadiabatic phonon
+dispersion along the symmetry lines L and  using for
+T0=0.01 Ry, NkT0=505050, and various values of .
+As shown in Fig. 8, when the parameter  becomes smaller
+then the phonon frequency 0.013 Ry, then the disper-
+sion are weakly dependent on .
+In Fig. 9 we plot the Wannier-interpolated nonadia-
+batic phonon dispersion. At  we obtain NA=190 meV
+1532 cm−1, in good agreement with what found in Ref.
+12.
+The most interesting result of the nonadiabatic calculation
+in Fig. 9 is that the full E2g branch is shifted to higher ener-
+gies particularly along L, the kz direction by the nonadia-
+batic effects. Even at halfway to the zone border the correc-
+tion is sizable and it can be easily measured with inelastic
+x-ray or neutron-scattering experiments. In the case of CaC6
+as the high-energy modes are weakly coupled to electrons
+the nonadiabatic correction, even if large, probably does not
+affect the critical temperature. The situation can be substan-
+tially different in other superconductors so that nonadiabatic
+effects have to be taken into account to describe the electron-
+phonon interaction in layered superconductors.
+4. Electron-phonon coupling
+The Eliashberg function calculated with the adiabatic pho-
+non frequencies and the integrated electron-phonon coupling
+for CaC6 are illustrated in Fig. 10. The situation is very simi-
+lar to previous works in what concern the average value of
+the electron-phonon coupling, as shown in Table II.
+Previous calculations performed using standard linear-
+response methods report similar values of  and a 13% varia-
+tion is present on log see Table II. Our calculation con-
+ﬁrms the largest value reported in literature.
+V. CONCLUSIONS
+In this work we developed a ﬁrst-principles scheme to
+calculate adiabatic and nonadiabatic phonon frequencies in
+the full Brillouin zone. We demonstrated how the method
+FIG. 7. Color online Fermi surface of CaC6 calculated using
+Wannier functions on a 1003 k-points grid. The green arrows mark
+the nesting vectors responsible for the Kohn anomaly close to X.
+L
+Γ
+χ
+150
+160
+170
+180
+190
+200
+η=0.006 Ryd
+η=0.008 Ryd
+η=0.01 Ryd
+η=0.02 Ryd
+Energy (meV)
+FIG. 8. Color online Wannier-interpolated nonadiabatic pho-
+non dispersion in CaC6 for T0=0.01 Ry, NkT0=505050 and
+various values of .
+L
+Γ
+χ
+X
+Γ
+T
+150
+160
+170
+180
+190
+200
+Energy (meV)
+NON ADIABATIC
+ADIABATIC
+FIG. 9. Color online Wannier-interpolated nonadiabatic red
+continuous and adiabatic black dashed phonon dispersion in
+CaC6.
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-14permits the calculation of phonon-dispersion curves free
+from convergence issues related to Brillouin-zone sampling.
+Our approach also justify the use of the static screened po-
+tential in the calculation of the phonon linewidth due to de-
+cay in electron-hole pairs.
+We apply the method to the calculation of the phonon
+dispersion and electron-phonon coupling in MgB2 and CaC6.
+In both compounds we demonstrate the occurrence of several
+Kohn anomalies, absent in previous works, that are mani-
+fested only after careful electron and phonon-momentum in-
+tegration. In MgB2, the presence of Kohn anomalies on the
+E2g branches improves the agreement with measured phonon
+spectra and affects the position of the main peak in the
+Eliashberg function. In CaC6 we show that the nonadiabatic
+effects on in-plane carbon vibrations are not localized at
+zone center but are sizable throughout the full Brillouin
+zone. Thus NA effects can be relevant for the determination
+of the superconducting properties of layered superconduct-
+ors. In general our work underlines the important of obtain-
+ing accurate well-converged phonon frequencies to deter-
+mine the electron-phonon coupling and superconducting
+properties in a reliable way.
+The large gain in the computational time necessary to
+obtain phonon dispersion provided by our theoretical scheme
+opens perspectives in large-scale ﬁrst-principles calculations
+of dynamical properties and electron-phonon interaction.
+Furthermore, the stationary property of the force constants
+functional with respect to the ﬁrst-order perturbation of the
+electronic charge density is a property that can be general-
+ized to the calculation of other response functions such as
+optical properties and the calculation of Knight shifts as
+measured in nuclear magnetic resonance.54
+ACKNOWLEDGMENTS
+We acknowledge fruitful discussion with J. Yates and sup-
+port from ANR PNANO-ACCATTONE. G.P. acknowledges
+support from CNRS. Calculations were performed at the
+IDRIS supercomputing center and at Cineca Bologna, Italy
+through an INFM-CNR supercomputing.
+1J. M. Ziman, Electron and Phonons Clarendon Press, Oxford,
+2001.
+2G. Grimvall, The Electron-Phonon Interaction in Metals North
+Holland, Amsterdam, 1981.
+3J. R. Schrieffer, Theory of Superconductivity Addison Wesley,
+Reading, MA, 1988.
+4R. E. Peierls, Quantum Theory of Solids Oxford University
+Press, New York, 2001.
+5A. Shukla, M. Calandra, M. d’Astuto, M. Lazzeri, F. Mauri,
+C. Bellin, M. Krisch, J. Karpinski, S. M. Kazakov, J. Jun,
+D. Daghero, and K. Parlinski, Phys. Rev. Lett. 90, 095506
+2003.
+6M. Born and J. R. Oppenheimer, Ann. Phys. 84, 457 1927.
+7S. Baroni, S. de Gironcoli, A. Dal Corso, and P. Giannozzi, Rev.
+Mod. Phys. 73, 515 2001.
+8S. Y. Savrasov and D. Y. Savrasov, Phys. Rev. B 54, 16487
+1996.
+9X. Gonze and C. Lee, Phys. Rev. B 55, 10355 1997.
+10F. Giustino, M. L. Cohen, and S. G. Louie, Phys. Rev. B 76,
+165108 2007.
+11A. Eiguren and C. Ambrosch-Draxl, Phys. Rev. B 78, 045124
+2008.
+12A. M. Saitta, M. Lazzeri, M. Calandra, and F. Mauri, Phys. Rev.
+Lett. 100, 226401 2008.
+13M. Lazzeri and F. Mauri, Phys. Rev. Lett. 97, 266407 2006,
+see Ref. 15 of this paper.
+14F. Giustino, Jonathan R. Yates, I. Souza, M. L. Cohen, and
+G. Louie, Phys. Rev. Lett. 98, 047005 2007.
+15N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12847 1997.
+16M. P. M. Dean, C. A. Howard, S. S. Saxena, and M. Ellerby,
+Phys. Rev. B 81, 045405 2010.
+17See, e.g., N. W. Ashcroft and N. D. Mermin, Solid State Physics
+Holt, Rhinehard and Winston, New York, 1976, Chap. 26,
+p. 529.
+0
+50
+100
+150
+200
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+α
+2F( ω)
+λ( ω)
+ω (meV)
+FIG. 10. Wannier-interpolated Eliashberg function and inte-
+grated Eliashberg functions for CaC6. Note that the wiggles in the
+80–150 meV region are not due to poor convergence but to the
+presence of many well-separated dispersive branches in this energy
+region.
+TABLE II. Comparison between different electron-phonon cou-
+pling calculations for CaC6 using different ﬁrst-principles methods.
+The label Nk Nq indicates the number of k point used for electron
+phonon-momentum integration.
+Reference
+
+log
+meV
+Nk
+Nq
+Calandra et al. Ref. 47
+0.83
+24.7
+666
+444
+Kim et al. Ref. 52
+0.84
+26.28
+888
+444
+Sanna et al. Ref. 48
+0.85
+28.0
+666
+666
+This work
+0.829
+27.9
+593
+203
+ADIABATIC AND NONADIABATIC PHONON DISPERSION…
+PHYSICAL REVIEW B 82, 165111 2010
+165111-1518S. de Gironcoli, Phys. Rev. B 51, 6773 1995.
+19A. A. Quong and B. M. Klein, Phys. Rev. B 46, 10734 1992.
+20S. Y. Savrasov, Phys. Rev. Lett. 69, 2819 1992.
+21E. Maksimov and S. V. Shulga, Solid State Commun. 97, 553
+1996.
+22M. Calandra, M. Lazzeri, and F. Mauri, Physica C 456, 38
+2007.
+23E. Cappelluti, Phys. Rev. B 73, 140505 2006.
+24H. Hellmann, Einführung in die Quantenchemie Deuticke,
+Leipzig, 1937.
+25R. P. Feynman, Phys. Rev. 56, 340 1939.
+26M. Di Ventra and S. T. Pantelides, Phys. Rev. B 61, 16207
+2000.
+27X. Gonze, D. C. Allan, and M. P. Teter, Phys. Rev. Lett. 68,
+3603 1992.
+28In principle, the force-constant matrix depends implicitly on the
+temperature used in the self-consistent calculation of n0r, k,i,
+and k,ir Ref. 17. Moreover, the dependence of force con-
+stants on this last temperature is weak and thus it is usually
+taken as in the present derivation equal to Tph. However, it
+should be set equal to the physical temperature, T0 as a single
+standard self-consistent calculation does not poses relevant
+problems in k-point convergence.
+29D. D. Koelling and J. H. Woodb, J. Comput. Phys. 67, 253
+1986.
+30I. Souza, N. Marzari, and D. Vanderbilt, Phys. Rev. B 65,
+035109 2001.
+31P. B. Allen, Phys. Rev. B 6, 2577 1972; P. B. Allen and
+R. Silberglitt, ibid. 9, 4733 1974.
+32M. Calandra and F. Mauri, Phys. Rev. B 71, 064501 2005.
+33A. A. Mostoﬁ, J. R. Yates, Y.-S. Lee, I. Souza, D. Vanderbilt, and
+N. Marzari, Comput. Phys. Commun. 178, 685 2008.
+34P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car,
+C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococcioni,
+I. Dabo, A. Dal Corso, S. de Gironcoli, S. Fabris, G. Fratesi,
+R.
+Gebauer,
+U.
+Gerstmann,
+C.
+Gougoussis,
+A.
+Kokalj,
+M. Lazzeri, L. Martin-Samos, N. Marzari, F. Mauri, R. Mazza-
+rello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbraccia,
+S. Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov,
+P. Umari, and R. M. Wentzcovitch, J. Phys.: Condens. Matter
+21, 395502 2009.
+35J. Nagamatsu, N. Nakagawa, T. Muranaka, Y. Zenitani, and
+J. Akimitsu, Nature London 410, 63 2001.
+36J. Kortus, I. I. Mazin, K. D. Belashchenko, V. P. Antropov, and
+L. L. Boyer, Phys. Rev. Lett. 86, 4656 2001.
+37J. M. An and W. E. Pickett, Phys. Rev. Lett. 86, 4366 2001.
+38Y. Kong, O. V. Dolgov, O. Jepsen, and O. K. Andersen, Phys.
+Rev. B 64, 020501R 2001.
+39A. Y. Liu, I. I. Mazin, and J. Kortus, Phys. Rev. Lett. 87, 087005
+2001.
+40F. Giubileo, D. Roditchev, W. Sacks, R. Lamy, D. X. Thanh,
+J. Klein, S. Miraglia, D. Fruchart, J. Marcus, and P. Monod,
+Phys. Rev. Lett. 87, 177008 2001.
+41H. J. Choi, D. Roundy, H. Sun, M. L. Cohen, and S. G. Louie,
+Nature London 418, 758 2002; Phys. Rev. B 66, 020513
+2002.
+42A. Floris, G. Profeta, N. N. Lathiotakis, M. Lüders, M. A. L.
+Marques, C. Franchini, E. K. U. Gross, A. Continenza, and
+S. Massidda, Phys. Rev. Lett. 94, 037004 2005.
+43K. P. Bohnen, R. Heid, and B. Renker, Phys. Rev. Lett. 86, 5771
+2001.
+44M. d’Astuto, M. Calandra, S. Reich, A. Shukla, M. Lazzeri,
+F. Mauri, J. Karpinski, N. D. Zhigadlo, Alexei Bossak, and
+Michael Krisch, Phys. Rev. B 75, 174508 2007.
+45N. Emery, C. Hérold, J.-F. Marêché, and P. Lagrange, Sci. Tech-
+nol. Adv. Mater. 9, 044102 2008.
+46T. E. Weller, M. Ellerby, S. S. Saxena, R. P. Smith, and N. T.
+Skipper, Nat. Phys. 1, 39 2005.
+47M. Calandra and F. Mauri, Phys. Rev. Lett. 95, 237002 2005.
+48A. Sanna, G. Profeta, A. Floris, A. Marini, E. K. U. Gross, and
+S. Massidda, Phys. Rev. B 75, 020511 2007.
+49J. Hlinka, I. Gregora, J. Pokorny, C. Hérold, N. Emery, J. F.
+Marêché, and P. Lagrange, Phys. Rev. B 76, 144512 2007.
+50A. Mialitsin, J. S. Kim, R. K. Kremer, and G. Blumberg, Phys.
+Rev. B 79, 064503 2009.
+51M. Calandra and F. Mauri, Phys. Rev. B 74, 094507 2006.
+52J. S. Kim, L. Boeri, R. K. Kremer, and F. S. Razavi, Phys. Rev.
+B 74, 214513 2006.
+53L. Boeri, G. B. Bachelet, M. Giantomassi, and O. K. Andersen,
+Phys. Rev. B 76, 064510 2007.
+54M. d’Avezac, N. Marzari, and F. Mauri, Phys. Rev. B 76,
+165122 2007.
+CALANDRA, PROFETA, AND MAURI
+PHYSICAL REVIEW B 82, 165111 2010
+165111-16

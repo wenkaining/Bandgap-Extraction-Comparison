@@ -1,0 +1,392 @@
+This is an Accepted Manuscript, which has been through the  Royal Society of Chemistry peer review process and has been  accepted for publication.
+Accepted Manuscripts are published online shortly after  acceptance, before technical editing, formatting and proof reading.
+Using this free service, authors can make their results available  to the community, in citable form, before we publish the edited  article.
+We will replace this Accepted Manuscript with the edited  and formatted Advance Article as soon as it is available.
+You can find more information about Accepted Manuscripts in the  Information for Authors.
+Please note that technical editing may introduce minor changes  to the text and/or graphics, which may alter content.
+The journal’s  standard Terms & Conditions and the Ethical guidelines still  apply.
+In no event shall the Royal Society of Chemistry be held  responsible for any errors or omissions in this Accepted Manuscript  or any consequences arising from the use of any information it  contains.
+Accepted Manuscript Nanoscale www.rsc.org/nanoscale View Article Online View Journal This article can be cited before page numbers have been issued, to do this please use:  G. Qin, Z. Qin, W. Fang, L. Zhang, S. Yue, Q. Yan, M. Hu and G. Su, Nanoscale, 2016, DOI: 10.1039/C6NR01349J.Journal Name Diverse anisotropy of phonon transport in two- dimensional group IV-VI compounds: A comparative study Guangzhao Qin,ab Zhenzhen Qin,c Wu-Zhang Fang,d Li-Chuan Zhang,a Sheng- Ying Yue,e Qing-Bo Yan,∗a Ming Hu,∗b,e and Gang Su,∗d New classes two-dimensional (2D) materials beyond graphene, including layered and non- layered, and their heterostructures, are currently attracting increasing interest due to their promis- ing applications in nanoelectronics, optoelectronics and clean energy, where thermal transport property is one of the fundamental physical parameters.
+In this paper, we systematically in- vestigated the phonon transport properties of 2D orthorhombic group IV-VI compounds of GeS, GeSe, SnS and SnSe by solving the Boltzmann transport equation (BTE) based on ﬁrst-principles calculations.
+Despite the similar puckered (hinge-like) structure along the armchair direction as phosphorene, the four monolayer compounds possess diverse anisotropic properties in many as- pects, such as phonon group velocity, Young’s modulus and lattice thermal conductivity (κ), etc.
+Especially, the κ along the zigzag and armchair directions of monolayer GeS shows the strongest anisotropy while monolayer SnS and SnSe shows an almost isotropy in phonon transport.
+The ori- gin of the diverse anisotropy is fully studied and the underlying mechanism is discussed in detail.
+With limited size, the κ could be effectively lowered, and the anisotropy could be effectively mod- ulated by nanostructuring, which would extend the applications in nanoscale thermoelectrics and thermal management.
+Our study offers fundamental understanding of the anisotropic phonon transport properties of 2D materials, and would be of signiﬁcance for further study, modulation and applications in emerging technologies.
+1 Introduction The bulk orthorhombic group IV-VI compounds of GeS, GeSe, SnS and SnSe possessing puckered (hinge-like) layered structure sim- ilar to black phosphorous have become a hot spot of recent re- searches.1–6 The advantages of group IV-VI compounds, such as earth-abundance, environmental compatibility, less toxicity, and chemical stability, make them very attractive for large-scale ap- plications in photovoltaics and thermoelectrics.1,2,6–9 There have been a lot of studies on their optical properties including the pho- toconductivity, refractive index and infrared- and Raman-activity a College of Materials Science and Opto-Electronic Technology, University of Chinese Academy of Sciences, Beijing 100049, China.
+E-mail: yan@ucas.ac.cn b Institute of Mineral Engineering, Division of Materials Science and Engineering, Fac- ulty of Georesources and Materials Engineering, RWTH Aachen University, Aachen 52064, Germany.
+E-mail: hum@ghi.rwth-aachen.de c College of Electronic Information and Optical Engineering, Nankai University, Tianjin 300071, China.
+d School of Physics, University of Chinese Academy of Sciences, Beijing 100049, China.
+E-mail: gsu@ucas.ac.cn e Aachen Institute for Advanced Study in Computational Engineering Science (AICES), RWTH Aachen University, Aachen 52062, Germany.
+from experiments10–13 and ﬁrst-principles calculations.14,15 The large thermopower, high power factors, and low thermal con- ductivities estimated using Cahill’s model16 make these four orthorhombic group IV-VI compounds promising candidates for high-efﬁcient thermoelectric materials.17 Bulk SnSe is especially a robust thermoelectric candidate for energy conversion appli- cations in the low and moderate temperature range due to its anisotropic and low symmetry crystal structure.1,2 The discovery of graphene leads to an upsurge in explor- ing two-dimensional (2D) materials,18–21 such as hexagonal boron nitride (h-BN), germanene, silicene, transition metal dichalcogenides (TMDCs) and phosphorene, which have at- tracted tremendous attention due to their unique dimension- dependent properties.22 In addition to the currently available 2D materials, 2D SnSe has been recently synthesized, which is greatly expected to be potential in the applications as photodetector, pho- tovoltaic, piezoelectric and thermoelectric devices.23–27 Mono- layer SnSe is also reported to be a promising 2D anisotropic semi- conductor for nanomechanics, thermoelectrics, and optoelectron- ics,28 and the quantum spin Hall effect was predicted in (111)- oriented thin ﬁlms of SnSe.29 Beyond the speciﬁc studies on 2D Journal Name, [year], [vol.],1–13 | 1 Page 1 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349JSnSe, there have also been a lot of studies on the optical proper- ties of the four 2D orthorhombic group IV-VI compounds of GeS, GeSe, SnS and SnSe.12–14 Furthermore, they are also reported as ﬂexible, stable, and efﬁcient 2D piezoelectric materials possess- ing enormous, anisotropic piezoelectric effects with the piezoelec- tric coefﬁcients about two orders of magnitude larger than those of other 2D or bulk materials, such as MoS2, GaSe, bulk quartz and AlN, which are widely used in industry.25,30 These novel 2D anisotropic semiconductors, which attracted tremendous in- terest recently, have great potential applications in nanoelectron- ics, optoelectronics and thermoelectrics, calling for fundamental study of the phonon transport properties.
+However, the phonon transport properties of these 2D orthorhombic group IV-VI com- pounds are still less known except monolayer SnSe.26–28 A com- plete and comparative prediction and understanding of the un- derlying phonon transport properties is the key to expand the range of their applications in nanoelectronics, optoelectronics and thermoelectrics.
+In this paper, we conduct comprehensive investigations of the diverse phonon transport properties of 2D orthorhombic group IV-VI compounds of GeS, GeSe, SnS and SnSe by solving the Boltz- mann transport equation (BTE) based on ﬁrst-principles calcula- tions.
+The four monolayer compounds, although possessing simi- lar hinge-like structure along the armchair direction as phospho- rene, show diverse anisotropic properties in many aspects, such as phonon group velocity, Young’s modulus and lattice thermal conductivity (κ), etc.
+The remainder of the paper is organized as follows.
+In Sec. 2, we brieﬂy describe the methodology for the ﬁrst-principles calculations and the Boltzmann transport theory of phonon transport.
+In Sec. 3 and 4, the optimized structures and phonon dispersions for the studied systems are presented, respec- tively.
+In Sec. 5, we study the phonon transport properties of the four monolayer compounds with hinge-like orthorhombic struc- ture.
+Furthermore, a detailed analysis on the diverse anisotropic properties is presented in Sec. 6 from different aspects, including mode level κ and average phonon group velocity, phonon scatter- ing channels and electron localization function (ELF).
+In Sec. 7, the effect of ﬁnite size on κ and the anisotropy is studied.
+In Sec. 8, we present the summary and conclusions.
+2 Methodology All the ﬁrst-principles calculations are performed based on the density functional theory (DFT) using the projector augmented wave (PAW) method31 as implemented in the Vienna ab-initio simulation package (VASP)32.
+The Perdew-Burke-Ernzerhof (PBE)33 of generalized gradient approximation (GGA) is chosen as the exchange-correlation functional.
+The kinetic energy cut- off of wave functions is 650eV for GeS and SnS, and 550eV for GeSe and SnSe, respectively, which are 2.5 times the maximal rec- ommended cutoff in the pseudo-potentials.
+A Monkhorst-Pack34 k-mesh of 11×11×1 is adopted to sample the Brillouin zone (BZ) of all the four monolayer compounds, with the energy conver- gence threshold set as 10−8 eV. In the supercell calculations for obtaining harmonic (second order) interatomic force constants (IFCs) and anharmonic (third order) IFCs, only Γ point in the re- ciprocal space is used for the purpose of saving resources.5 For 2D systems, a large vacuum spacing is necessary to avoid the interactions between layers arising from the employed periodic boundary conditions.
+The vacuum spacing is set as at least 15Å along the out-of-plane direction that is sufﬁciently large.
+Both the cell shape and volume are fully optimized and all atoms are allowed to relax until the maximal Hellmann-Feynman force act- ing on each atom is no larger than 0.001eV/Å. A sufﬁcient large supercell is necessary for the accurate pre- diction of phonon dispersions, which is important for determin- ing the phonon group velocities and phonon-phonon interactions that is critical for predicting thermal properties.
+In principle, the supercell should be constructed to ensure lattice constants to be at least larger than 10Å. To determine the supercell size used in the real-space ﬁnite displacement difference calculations, we per- formed calculations with the supercell size of 2×2×1, 3×3×1, 4 × 4 × 1 and 5 × 5 × 1.
+The corresponding phonon dispersion curves show a convergent tendency as the supercell size increas- ing, such as the coupling among optical and acoustic phonon branches, the smoothness of the phonon dispersion curves, the frequency shift of phonon modes at Γ-point, and the ﬂat disper- sions near the S symmetry point.
+Since there is no difference between the results obtained with the supercell size of 4 × 4 × 1 and 5×5×1, it is doubtless that the supercell size of 5×5×1 is a good choice.
+The force constant Ciα; jβ can be obtained from the force caused by displacement: Ciα; jβ = −Fiα ∆jβ , (1) where Fiα is the force along the α direction acting on atom i resulted from the displacement along the β direction of atom j (∆jβ ).
+The displacement amplitude of atom along the ±x, ±y and ±z directions are 0.01Å.
+The space group symmetry properties are used to reduce the calculation cost and numerical noise of the force constants, and it can also greatly simplify the determination of the dynamical matrix that is constructed based on the force constants.
+The frequency and eigenvector forming the phonon dispersions can be obtained by diagonalizing the dynamical ma- trix.
+Besides the harmonic IFCs obtained above, anharmonic IFCs, which are used for the determination of the scattering properties, are also necessary in the calculation of lattice thermal conductiv- ity (κ).
+A 4×4×1 supercell is constructed to get the anharmonic IFCs, and the ﬁrst-principles based real-space ﬁnite displacement difference approach is employed.
+A cutoff radius (rcutoff) is in- troduced to discard the interactions between atoms with distance larger than a certain value for practical purposes.
+In principle, the rcutoff should exceed the range of physically relevant anharmonic interactions to get satisfactory results.35,36 Here, referring to the converged cutoff radius as examined in the previous work, we choose a cutoff radius of about 6.5Å, which includes up to 15th, 14th, 13th and 11th nearest neighbors for GeS, GeSe, SnS and SnSe, respectively.5 The dielectric tensor and Born effective charges are also obtained to take into account of long-range electrostatic in- teractions.
+We choose the thickness of monolayer as half the length of the lattice constant along the out-of-plane direction of 2 | 1–13 Journal Name, [year], [vol.] , Page 2 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349Jthe layered bulk counterpart, which contains two layers in the conventional cell.37 The speciﬁc values of the thickness of the four monolayer compounds are listed in Table 1.
+The lattice thermal conductivity (κ) is calculated by solv- ing the linearized BTE for phonons.
+At thermal equilibrium, the phonons are distributed obeying the Bose-Einstein function f0(ωλ ) in the absence of temperature gradient or other thermo- dynamical forces.38 The λ is the index of phonon mode compris- ing both phonon polarization p and wave vector qqq.
+The ωλ is the angular frequency.
+In the steady state with a temperature gradi- ent ∇T, the phonon distribution function fλ deviates from f0(ωλ ) and this deviation can be obtained from the BTE: ∂fλ ∂t = ∇T ·vvvλ ∂fλ ∂T , (2) where vvvλ is the phonon group velocity.
+The left side is the scat- tering term that can be determined by taking into account the an- harmonic scattering due to intrinsic phonon-phonon interactions and the harmonic scattering due to defects and impurities such as isotopes.38 The right side is the diffusion term caused by the temperature gradient ∇T.
+Assuming a small enough ∇T in most practical situations, Eq. (2) can be linearized in ∇T and re-written as: fλ −f0(ωλ ) = −FFFλ ·∇T df0 dT , (3) where FFFλ = τ0 λ (vvvλ + ∆∆∆λ ) when only considering the scattering mechanism of three-phonon processes.39–42 Here, τ0 λ is the relax- ation time obtained from perturbation theory, which is commonly used within the relaxation time approximation (RTA), and ∆∆∆λ in the dimension of velocity is a correction of the deviation to the RTA prediction.
+The τ0 λ can be computed as: 1 τ0 λ = 1 N   + ∑ λ ′λ ′′ Γ+ λλ ′λ ′′ + − ∑ λ ′λ ′′ 1 2Γ− λλ ′λ ′′ +∑ λ ′ Γλλ ′ !
+, (4) where N = N1×N2×N3 is the number of discrete qqq sampling in the BZ, which should be tested for the convergence of κ, and Γ+ λλ ′λ ′′ and Γ− λλ ′λ ′′ are three-phonon scattering rates corresponding to absorption and emission processes of phonons, respectively,39–42 and Γλλ ′ is the scattering possibility resulted from the disorder of isotopic impurity.43,44 Eq. (3) is numerically solved by iterating from a zeroth order approximation start of FFFλ = τ0 λ vvvλ .
+If the iteration stops at the ﬁrst step, the procedure is equivalent to the operation in the RTA.
+The iterative procedure has a large impact on the study of materi- als such as diamond in which the normal processes play a signif- icant role in the phonon-phonon scattering.40 In such situations, the RTA treating the normal processes resistive cannot yield rea- sonable results.
+In contrast, in materials such as Si and Ge with strong Umklapp scattering, iterating to convergence only leads to a less than 10% increase of the room temperature κ compared to the RTA result.39 Based on the solution, the heat ﬂux can be calculated and the κ can be obtained in terms of FFFλ : καβ = 1 kBT 2NΩ∑ λ f0(f0 +1)(¯hωλ ) 2vα λ Fβ λ (5) Fig. 1 (Color online) (a) From left to right: side view of the monolayer of black phosphorus, GeS, SnS, GeSe and SnSe.
+(b) Top view of monolayer SnSe.
+The zigzag and armchair directions are indicated with arrows.
+(c) Perspective view of monolayer SnSe.
+The species of atoms are shown on the right.
+where kB is the Boltzmann constant, ¯h is the Planck constant, Ω is the volume of the unit cell, and α and β denote the Cartesian components in the conventional cubic unit cell.
+The approach described above yields predictive parameter free estimate of κ using only basic information of the chemical structure, and has been implemented in the SHENGBTE code36,38 as employed in this work.
+3 Structures The cell shape, volume and atoms are fully relaxed till conver- gence reached.
+Along with the monolayer of black phosphorus that is called phosphorene, the optimized structures of mono- layer GeS, SnS, GeSe and SnSe are shown in Fig. 1(a) from left to right.
+All these monolayer materials belong to the same or- thorhombic crystal system, and possess similar hinge-like struc- ture along the armchair direction, which is a typical feature dis- tinctly different from the ﬂat graphene and buckled silicene.
+As reviewed in previous work, the hinge-like structure will intro- duce strong anisotropic properties.45,46 For example, it is harder along the zigzag direction than that along the armchair direction, which can be veriﬁed by the Young’s modulus.
+The hinge-like or- thorhombic structure generally leads to the lattice constants be- ing larger along armchair direction than along zigzag direction.
+The obtained lattice constants along the two lattice directions are different, as listed in Table 1.
+The difference from large to small is monolayer GeS > GeSe > SnS > SnSe.
+Compared with mono- layer GeS and GeSe, the difference of lattice constants along the two directions for monolayer SnS and SnSe are very small, leading to their symmetric square-like lattice structures.
+This symmetric square-like lattice structure may have signiﬁcant inﬂuence on the atomic bonding along the two directions, and will lead to their less anisotropic properties, as we will see later.
+All the space groups of the four monolayer compounds are the Journal Name, [year], [vol.],1–13 | 3 Page 3 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349JFig. 2 (Color online) The phonon dispersion curves along the path passing through the main high-symmetry k-points in the irreducible Brillouin zone of monolayer (a) GeS, (b) SnS, (c) GeSe and (d) SnSe.
+The phonon dispersion curves of bulk SnSe is shown in the inset of (d) for comparison.
+The Γ-X and Γ-Y correspond to the zigzag and armchair directions, respectively.
+same Pmn21 (No. 31), possessing 4 symmetry operators, which is different from that of phosphorene (Pmna (No. 53), possessing 8 symmetry operators).
+The lower symmetry of the four mono- layer compounds compared with phosphorene lies in the different types of atoms constituting the compounds, in which the two sub- layers are not parallel to each other.
+It is interesting to note from Fig. 1(a) that the metallic atoms Ge interpose between the non- metallic (metalloid) atoms Se along the out-of-plane direction in monolayer GeSe, which is different from that in monolayer GeS, SnS and SnSe where the non-metallic atoms interpose between the metallic atoms along the out-of-plane direction.
+The differ- ence may be due to the same period of Ge and Se in the periodic table resulting in the closest mass of the two atoms and the small- est electronegativity difference in the binary compound.
+4 Phonon dispersions In the calculation of phonon dispersions, a 5×5×1 supercell con- taining 100 atoms is constructed and the ﬁrst-principles based ﬁ- nite displacement difference method is employed.47,48 As shown in Fig. 2, the phonon dispersions of monolayer GeS, SnS, GeSe and SnSe have no imaginary part, indicating the thermodynamic stability of the four monolayer compounds.
+There exist 3 acoustic and 9 optical, that is 12 in total, phonon branches corresponding to the 4 atoms per unit cell.
+The three lowest phonon branches are acoustic phonon branches, i.e. the out-of-plane ﬂexural acous- tic (FA) branch, the in-plane transverse acoustic (TA) branch and the in-plane longitudinal acoustic (LA) branch.
+The TA and LA branches is linear near the Γ point while the FA branch is ﬂexural, which is similar to other 2D materials such as graphene, silicene, and phosphorene.46,49–52 This ﬂexural feature is typically due to the 2D nature of monolayer structure.50 The four monolayer compounds show very similar dispersion curves along the path passing through the main high-symmetry k-points in the irreducible Brillouin zone (IBZ) except: 1) The phonon dispersions of monolayer GeS and GeSe are separated into two regions with each region possessing 6 branches.
+There exists a gap between the two regions.
+The gap is 2.014THz for mono- layer GeS and 0.105THz for monolayer GeSe.
+However, there is no similar gap for monolayer SnS and SnSe.
+2) The phonon dis- persions of SnS and SnSe are characterized by markedly dispersive optical phonon branches, which lead to the disappearance of the gap and result in signiﬁcant group velocities of optical phonon branches.
+3) The frequencies of the four monolayer compounds are different, especially the maximum frequency (ωM) of optical phonon branches at Γ point, and the order of ωM is monolayer GeS > SnS > GeSe > SnSe.
+This may be owing to the different re- duced atomic mass (µ = m1m2/(m1 + m2)) that the larger the µ the lower the maximum frequency.
+The order of µ of the four monolayer compounds is GeS < SnS < GeSe < SnSe that is oppo- site to the order of ωM. 4 | 1–13 Journal Name, [year], [vol.], Page 4 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J9.8 5.9 3.2 3.0 1.8 2.9 4.6 3.0 2.6 0.8 200 300 400 500 600 700 800 0 3 6 9 12 15   298 300 302 2.92 2.94 2.96 2.98                  zigzag  armchair     GeS                     GeSe                 SnS                     SnSe               bulk SnSe          Temperature (K) (Wm -1 K -1 ) 0 2 4 6 8 10 (b)  zigzag  armchair    (Wm -1 K -1 ) GeS GeSe SnS SnSe bulk SnSe T=300K (a) Fig. 3 (Color online) The lattice thermal conductivity (κ) of monolayer GeS, GeSe, SnS and SnSe along zigzag and armchair directions.
+The in-plane κ of bulk SnSe are also plotted for comparison.
+(a) κ as a function of temperature ranging from 200K to 800K.
+The dot lines show the ﬁtting result of κ ∼1/T α.
+The very close κ along the zigzag direction of monolayer SnSe and along the armchair direction of monolayer GeS and SnS are ampliﬁed as clearly shown in the insert.
+(b) Anisotropic κ along zigzag and armchair directions at 300K for the four monolayer compounds and bulk SnSe..
+From the overview of Fig. 2, it is obvious that monolayer SnS and SnSe possess almost symmetric phonon dispersion curves along the Γ-X-S (left) and Γ-Y-S (right) high-symmetry k-paths, while the symmetry for monolayer GeS is most broken, especially for the low-frequency phonon modes.
+As a result, the anisotropy of phonon group velocity along the two different directions of monolayer SnS and SnSe is tiny, and that of monolayer GeS and GeSe is much larger.
+Based on the slope of the LA branch near the Γ point, we could get the group velocities along Γ-X (zigzag) and Γ-Y (armchair) directions, respectively.
+As listed in Table 1, the speciﬁc values of the group velocities of the four monolayer com- pounds show different anisotropy along the zigzag and armchair directions.
+The anisotropy of group velocities along the two direc- tions from large to small is monolayer GeS > GeSe > SnS > SnSe.
+From the lattice constants as listed in Table 1, it is found that the order of anisotropy of group velocities is the same as that of lattice constants.
+It is reviewed in previous work that the hinge- like structure of phosphorene is the key to the strong anisotropy Fig. 4 (Color online) (a) Grüneisen parameter (γ), (b) phonon relaxation time (τ) and (c) volume in phase space (P3) as a function of frequency at 300K of monolayer GeS (black), GeSe (red), SnS (green), SnSe (blue) and bulk SnSe (cyan).
+of its properties.45,46 However, monolayer SnSe shows an almost isotropic behavior despite its similar hinge-like structure as phos- phorene.
+The reason may lie in the symmetric square-like lattice structure28 and the large atomic mass of Sn and Se, which coun- teract the anisotropy introduced by its hinge-like structure.
+5 Phonon transport properties Based on the harmonic and anharmonic IFCs, the lattice ther- mal conductivity (κ) is calculated by solving the linearized BTE for phonons.
+The phonon Q-grid sampling (N × N) in the BZ as shown in Eq. (4) has been fully tested for the convergence of κ.
+The N of 46, 68, 47 and 48 are chosen for getting the conver- gent κ of monolayer GeS, GeSe, SnS and SnSe, respectively.
+The Journal Name, [year], [vol.],1–13 | 5 Page 5 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J0.00 0.01 0.02 0.03 0.04 0.05 0.06 0 1 2 3 4 5 0.0 0.2 0.4 0.6 0.8 1.0 1.2 0.00 0.02 0.04 0.06 0.08 0 1 2 3 4 5 0.0 0.2 0.4 0.6 0.8 1.0 1.2 Frequency (THz) Group Velocity (km s -1 ) SnSe  (Wm -1 K -1 ) bulk SnSe    (Wm -1 K -1 ) V g  (km s -1 ) Frequency (THz) 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0 1 2 3 4 5 6 0.0 0.4 0.8 1.2 1.6 2.0 GeSe  (Wm -1 K -1 ) Group Velocity (km s -1 ) Frequency (THz) 0.00 0.02 0.04 0.06 0.08 0.10 0 1 2 3 4 5 6 7 8 0.0 0.5 1.0 1.5 2.0 2.5 3.0 SnS  (Wm -1 K -1 ) Group Velocity (km s -1 ) Frequency (THz) 0.00 0.02 0.04 0.06 0.08 0.10 0.12 0.14 0.16 0 1 2 3 4 5 6 7 8 9 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6  zigzag  armchair GeS    (Wm -1 K -1 ) Group Velocity (km s -1 ) Frequency (THz) (b) (a) (c) (d) Fig. 5 (Color online) The frequency dependent lattice thermal conductivity (κ) and average phonon group velocity (Vg) of monolayer (a) GeS, (b) SnS, (c) GeSe and (d) SnSe along zigzag and armchair directions.
+The κ and Vg are summed up and averaged for all the phonon modes in each small frequency bins, respectively.
+The corresponding values of bulk SnSe are shown in the inset of (d) for comparison.
+much denser Q-grid needed for getting convergent κ for mono- layer GeSe is directly due to the much slower convergence of the κ along armchair direction.
+The reason might lie in the fact that there are more long-wavelength phonons contributing to the κ along armchair direction in monolayer GeSe, which would require denser Q-grid to capture their behavior near the zone center.
+The phenomenon is consistent with the largest rMFP along armchair direction of monolayer GeSe as shown in Table 1.
+By employing the iterative method, the obtained κ along zigzag and armchair directions of the four monolayer compounds at different temper- atures are collected together for comparison, as shown in Fig. 3.
+The speciﬁc values of κ at 300K are listed in Table 1.
+We also cal- culated the κ by using the RTA method, and found that iterating to convergence will lead to monolayer GeS: (36.5%, 22.3%), GeSe: (13.9%, 8.7%), SnS: (15.8%, 16.5%) and SnSe: (11.6%, 11.3%) in- crease of the room temperature κ compared to the RTA results, which means stronger Umklapp scattering existing in monolayer GeSe, SnS and SnSe than monolayer GeS.
+The two numbers in the parentheses are the ratio of increase for zigzag and armchair directions, respectively.
+The calculated κ at different tempera- tures as shown in Fig. 3(a) decrease with temperature increas- ing.
+By ﬁtting with the relation of κ ∼1/T α, the parameter α are almost equal to 1, as listed in Table 1, which is consistent with the common behavior of κ at medium temperatures for semi- conductors.46,53,54 The average κ along the two directions of the four mono- layer compounds and bulk SnSe are GeS (6.38Wm−1K−1), GeSe (5.23Wm−1K−1), SnS (3.08Wm−1K−1), SnSe (2.77Wm−1K−1) and bulk SnSe (1.31Wm−1K−1), respectively.
+They possess the rather low thermal conductivity compared to a lot of mate- rials, such as h-BN, MoS2, graphene, silicene, phosphorene, etc.46,51,55,56 The κ is strongly affected by the scattering pro- cesses, which can be inﬂuenced by the anharmonic nature of structure and the number of allowed three-phonon scattering pro- 6 | 1–13 Journal Name, [year], [vol.] , Page 6 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349JTable 1 Lattice constants, thickness, Young’s modulus (E), phonon group velocity (vg) at Γ point, lattice thermal conductivity (κ) at 300K, the parameter α in the relation of κ ∼1/T α, the percentage contribution to κ of acoustic phonon branches (FA, TA and LA) and optical phonon branches at 300K and the representative mean free path (rMFP) at 300K.
+The thickness of monolayer is chosen as half the length of the lattice constant along z direction of the bulk counterpart.
+The properties of bulk SnSe are also listed in addition to the four monolayer compounds of GeS, GeSe, SnS and SnSe.
+Structure Direction Lattice constant Thickness E vg κ α Contribution (%) rMFP (Å) (Å) (GPa) (km/s) (Wm−1K−1) FA TA LA optical (nm) GeS zigzag 3.671 5.361 29.74 4.21 9.81 1.019 35.07 24.52 28.01 12.40 24.44 armchair 4.457 7.80 2.66 2.94 0.986 25.90 26.88 26.38 20.84 15.23 GeSe zigzag 3.982 5.561 54.63 3.59 5.89 0.997 29.41 25.18 28.45 16.96 23.30 armchair 4.269 22.10 2.73 4.57 0.996 37.47 26.47 20.61 15.45 72.51 SnS zigzag 4.088 5.714 44.11 3.37 3.21 0.990 27.07 19.79 25.97 27.17 13.07 armchair 4.265 25.30 2.94 2.95 0.984 34.18 17.67 18.84 29.31 13.25 SnSe zigzag 4.294 5.888 45.14 3.13 2.95 0.999 31.39 25.16 14.90 28.55 12.04 armchair 4.370 23.72 2.97 2.59 0.998 30.13 23.21 16.40 30.26 10.44 bulk SnSe zigzag 4.214 11.776 42.21 3.08 1.77 0.971 17.66 10.20 9.21 62.93 6.86 armchair 4.520 21.16 2.51 0.84 0.946 10.96 13.21 8.86 66.97 4.30 cesses, which are quantiﬁed as the Grüneisen parameters (γ) and anharmonic phase space volume (P3), respectively.5 The order of κ is monolayer GeS > GeSe > SnS > SnSe > bulk SnSe, which is consistent with the order of P3 as shown in Fig. 4(c) except monolayer GeS.
+Though monolayer GeS has the largest κ, it does not possess a smallest P3.
+However, its γ at low frequency range is obviously much smaller than the other monolayer compounds.
+The anharmonic nature of monolayer GeS is weak compared to the other monolayer compounds, resulting in its largest κ.
+The largest κ of monolayer GeS could also be understood from its phonon dispersion.
+As compared in Sec. 4, the phonon dispersion of monolayer GeS possess the largest gap of 2.014THz (Fig. 2(a)), which is much larger than that of monolayer GeSe (0.105THz), while monolayer SnS and SnSe have no gap.
+The large phonon energy gap causes that the scattering of acoustic phonon modes due to the optical phonon modes is much weaker57, which leads to the higher κ of monolayer GeS.
+Though there is a big gap in the phonon dispersion of bulk SnSe as well, the κ of bulk SnSe is lower than that of monolayer SnSe.
+The reason might be that the interactions between layers in bulk SnSe leads to smaller phonon group velocity in the in-plane transport and enhanced scatter- ing of phonons due to the giant anharmonicity,58 thus result in the lower in-plane κ.
+Considering the higher κ of monolayer SnSe than bulk SnSe, the thermoelectric performance of mono- layer SnSe might be not as good as bulk SnSe.
+But it is hard to deﬁnitely say how the thermoelectric performance would be, be- cause it is determined by several strongly coupled quantities and the thermal conductivity contributed from phonons is only one of them.45 We also notice that the κ of bulk SnSe from calculations is larger than that from experiment.
+The reason of the discrepancy may lie in two aspects: 1) The samples used for experimental measurements may have defects that would lower the κ. 2) For such a material with giant anharmonicity,58 only considering the third order IFCs for capturing the anharmonicity might be not suf- ﬁcient.
+The κ is anticipated to be further lowered if higher order IFCs are considered.
+To have a clear overview of the constituent of κ, the frequency dependent κ and average phonon group velocity of monolayer GeS, SnS, GeSe, SnSe and bulk SnSe along zigzag and armchair directions are plotted in Fig. 5.
+As shown in Fig. 5(b) and (d), the group velocities of monolayer SnS and SnSe of the optical phonon branches, especially around middle frequency range (where the phonon dispersion can be separated into two regions with each region containing 6 branches), are very large in a wide range.
+This is consistent with the phonon dispersions of monolayer SnS and SnSe as shown in Fig. 2 that are characterized by markedly dispersive optical phonon branches, which lead to their signiﬁ- cant group velocities.
+From the frequency dependent κ as shown in the top panel, it is obvious that the κ at middle frequency range of monolayer SnS and SnSe takes up a relatively larger propor- tion than that of monolayer GeS and GeSe, which is due to their relatively larger group velocities of the optical phonon modes at middle frequency range.
+The relaxation time also have some in- ﬂuence on the contributions to κ of phonon branches.
+For exam- ple, as shown in Fig. 4(b), the relaxation time of monolayer GeS (black color) at high frequency range above the gap are much smaller than that at low frequency range below the gap.
+Al- though monolayer GeS have relatively large phonon group veloc- ity at high frequency range, as shown in Fig. 5(a) , optical phonon branches above the gap contribute little to κ.
+As for bulk SnSe (cyan color), as shown in Fig. 4(b), the relaxation time at high frequency range above the gap of bulk SnSe are comparable to that at low frequency range below the gap, which is due to the valley of P3 as shown in Fig. 4(c).
+Together with its relatively large phonon group velocity at high frequency range, as shown in the insert in Fig. 5(d) , optical phonon branches above the gap contribute a lot to κ.
+The contributions of different phonon branches(FA, TA, LA and optical) to κ at 300K are extracted as listed in Table 1.
+The contri- butions of optical phonon branches increase with the increasing temperature, and at the same time the contributions of acoustic phonon branches decrease.
+The cumulative κ as a function of the phonon mean free path (MFP) at 300K for zigzag and armchair directions are ﬁtted to a single parametric function38,46 κ(l ≤lmax) = κ0 1+l0/lmax , (6) respectively.
+κ0 is the ultimate cumulated κ, lmax is the maximal MFP concerned, and l0 is the parameter to be evaluated by ﬁt- ting.
+The ﬁtted curves reproduce the calculated data quite well and yield the parameter l0 for zigzag and armchair directions, re- spectively, which could be interpreted as the representative MFP Journal Name, [year], [vol.],1–13 | 7 Page 7 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J(rMFP).
+The rMFP, as listed in Table 1, is helpful for the study of the size effect on the ballistic or diffusive phonon transport, which is important for thermal design with nanostructuring.
+The rMFP decrease with the increasing temperature due to the inte- gral decrease of MFP and higher contributions to κ coming from optical phonon branches at higher temperature.
+Generally speaking, acoustic phonon branches possess larger MFP while optical phonon branches possess smaller MFP, and for acoustic phonon branches lower frequency phonon modes pos- sess larger MFP.
+Higher contributions of optical phonon branches to κ will lead to smaller rMFP, and higher contributions of acous- tic phonon branches to κ, especially from FA, will lead to larger rMFP.
+It is noticed from Table 1 that the contributions to κ from optical phonon branches for monolayer SnS and SnSe are much larger than that for monolayer GeS and GeSe, and bulk SnSe has much larger contributions to κ from optical phonon branches compared with the four monolayer compounds.
+Thus bulk SnSe has the smallest rMFP, and monolayer SnS and SnSe have smaller rMFP than monolayer GeS and GeSe.
+Furthermore, for mono- layer GeSe, the rMFP along zigzag direction is much smaller than that along armchair direction, while for monolayer SnS, the rMFP along zigzag direction is slightly smaller than that along arm- chair direction.
+For other monolayer compounds, the rMFP along zigzag direction is larger than that along armchair direction.
+For monolayer GeSe, contributions to κ from FA in zigzag direction is smaller than that in armchair direction while contributions to κ from optical branches in zigzag direction is larger than that in armchair direction.
+Both factors together result in the much smaller rMFP in zigzag direction than that in armchair direction for monolayer GeSe.
+For monolayer SnS, contributions to κ from FA in zigzag direction is smaller than that in armchair direction, and contributions to κ from optical phonon branches in zigzag direction is also smaller than that in armchair direction.
+The two competing factors result in the slightly smaller rMFP in zigzag di- rection than that in armchair direction for monolayer SnS. For monolayer GeS, SnSe and bulk SnSe, contributions to κ from FA in zigzag direction is larger than that in armchair direction while contributions to κ from optical phonon branches in zigzag direc- tion is smaller than that in armchair direction, which is contrary to the case of monolayer GeSe.
+Both factors together result in the larger rMFP in zigzag direction than that in armchair direction.
+6 Analysis of the anisotropy 6.1 Anisotropy of phonon transport A distinct feature in Fig. 3 is that, all the four monolayer com- pounds and bulk SnSe possess anisotropic κ.
+To have a clear comparison of the anisotropy, we plot the κ along zigzag and armchair directions at 300K for the four monolayer compounds and bulk SnSe in Fig. 3(b).
+It is obvious that the κ of mono- layer GeS possesses the strongest anisotropy compared to all the other monolayer compounds, and the κ along the zigzag di- rection of monolayer GeS is much larger than others.
+The κ along zigzag and armchair directions of monolayer SnSe shows less anisotropic behavior than that of bulk SnSe.
+The order of anisotropy of the κ of the four monolayer compounds is mono- layer GeS > GeSe > SnSe > SnS.
+We further calculated the Young’s modulus and found that its order of anisotropy is monolayer GeS > GeSe > SnSe > SnS, which is identical with that of κ.
+The speciﬁc values of the Young’s modulus of the four monolayer com- pounds are listed in Table 1, and the related elastic constants are shown in Table 2.
+Table 2 Elastic constants with unit of kBar.
+GeS GeSe SnS SnSe bulk SnSe C11 725.7 677.6 578.6 577.1 691.4 C22 204.1 296.0 272.7 361.7 355.9 C33 - - - - 523.3 C44 283.2 319.7 269.2 286.3 333.0 C55 - - - - 150.6 C66 - - - - 118.2 C12 310.4 299.9 263.9 311.1 313.8 C13 - - - - 97.6 C23 - - - - 132.7 From Fig. 5, it is clearly shown that the anisotropic behavior of κ is keeping pace with that of phonon group velocity, as phe- nomenologically shown in Eq. (5).
+The anisotropy of thermal con- ductivity is actually dominated by the anisotropy of phonon group velocity.59 A close view of Fig. 5 shows that the frequency depen- dent κ and average phonon group velocity are nearly isotropic for high frequency phonon modes above the separatrix frequency (where the gap locates), which separates the phonon dispersion into two regions containing equal numbers of branches.
+The anisotropy along the two different directions is conspicuous for low frequency phonon modes below the separatrix frequency, which is huge for monolayer GeS, small for monolayer GeSe, while almost disappear for monolayer SnS and SnSe.
+Note that the phonon dispersions of monolayer GeS and GeSe as shown in Fig. 2 are separated into two regions containing equal numbers of branches with a gap of 2.014THz and 0.105THz, respectively, while there is no gap for monolayer SnS and SnSe.
+Thus we ana- lyzed that it is the regions below the separatrix frequency where the gap locates that result in the anisotropy.
+The anisotropy is strong for monolayer GeS and weak for monolayer GeSe due to the big gap in the phonon dispersions of monolayer GeS and the small gap of monolayer GeSe.
+While there is no gap of monolayer SnS and SnSe, their κ and phonon group velocity along the two different directions are almost isotropic.
+Thus the anisotropy is associated with the gap of phonon dispersions that the larger the gap the stronger the anisotropy.
+If we could employ some meth- ods such as strain or doping to modulate the gap, the anisotropy can be effectively modulated, which would be of signiﬁcance in the thermal management applications.
+The inﬂuence of the gap on the anisotropy can be understood in terms of the coupling be- tween the high and low frequency phonon modes at both sides of the separatrix frequency, which is supported by the scatter- ing channels among phonon modes presented in the next section (Sec. 6.2).
+Since the frequency dependent average phonon group velocity of the four monolayer compounds is nearly isotropic for high frequency phonon modes above the separatrix frequency, the coupling will suppress the anisotropy of the low frequency phonon modes below the separatrix frequency when there is no gap.
+When a gap exists, the coupling will be weak, leading to the 8 | 1–13 Journal Name, [year], [vol.], Page 8 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349JSnSe 0.00 0.05 0.10 0.15 0.20 0.25 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0 1 2 3 4 5 6 7 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 Scattering rate (ps -1 ) LA Scattering rate (ps -1 ) TA+A A  TA+A O1  TA+A O2  TA+O1 O1  TA+O1 O2  TA+O2 O2  TA A+A Scattering rate (ps -1 ) q FA SnS 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.0 0.1 0.2 0.3 0.4 0.5 0 1 2 3 4 5 6 7 0.00 0.02 0.04 0.06 0.08 0.10 0.12 0.14 Scattering rate (ps -1 ) LA+A A  LA+A O1  LA+A O2  LA+O1 O1  LA+O1 O2  LA+O2 O2  LA A+A Scattering rate (ps -1 ) TA FA Scattering rate (ps -1 ) q 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 0 1 2 3 4 5 6 7 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 Scattering rate (ps -1 ) LA+A A  LA+A O1  LA+O1 O1  LA+O2 O2  LA A+A Scattering rate (ps -1 ) TA+A A  TA+A O1  TA+O1 O1  TA+O2 O2  TA A+A Scattering rate (ps -1 ) q  FA+A A  FA+A O1  FA+O1 O1  FA+O2 O2  FA A+A GeSe 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 0 1 2 3 4 5 6 7 0.00 0.04 0.08 0.12 0.16 0.20 Scattering rate (ps -1 ) LA Scattering rate (ps -1 ) TA+A A  TA+A O1  TA+A O2  TA+O1 O1  TA+O1 O2  TA+O2 O2  TA A+A   Scattering rate (ps -1 ) q FA (a) (b) (c) (d) GeS Fig. 6 (Color online) Scattering rate of acoustic phonon modes along Γ-Y direction for monolayer (a) GeS, (b) GeSe, (c) SnS and (d) SnSe as labeled on site.
+The top panel is for LA branch, the middle panel is for TA branch, and the bottom panel is for FA branch.
+In the legend, "A" means the acoustic phonon branches (LA, TA and FA), "O1" means the 3 optical phonon branches with low frequency, "O2" means the 6 optical phonon branches with high frequency.
+The legends similar for LA, TA and FA are the same for (b) GeSe, (c) SnS and (d) SnSe, while that for (a) GeS is different.
+The crossover of LA, TA and O1 as shown in Fig. 2 is ﬁxed manually to distinguish them.
+presence of the anisotropy.
+If the gap is very large, the coupling disappears, resulting in the appearance of the strong anisotropy of low frequency phonon modes.
+Based on the analysis demonstrated above, we also would like to present a speciﬁc comparison for monolayer SnSe and bulk SnSe.
+Monolayer SnSe shows less anisotropic properties along zigzag and armchair directions than bulk SnSe.
+There exist some differences between them: 1) The most signiﬁcant difference is that there is no interactions between layers in monolayer SnSe.
+2) The difference of lattice constants along the two directions of monolayer SnSe is much less than that of bulk SnSe, leading to its symmetric square-like lattice structure which determines its al- most isotropic properties.
+3) The Young’s modulus of monolayer SnSe is larger than that of bulk SnSe, which means that monolayer SnSe is more rigid than bulk SnSe, leading to the larger phonon group velocity and κ of monolayer SnSe.
+4) There is no gap in the phonon dispersion of monolayer SnSe, while there is a large gap for bulk SnSe.
+The low and high frequency phonon modes at both sides of the gap are decoupled in bulk SnSe due to the large gap, resulting in the huge anisotropy of the phonon group velocity and contributions to κ of low frequency phonon modes below the gap, as shown in the insert of Fig. 5(d).
+Due to the lack of the gap in the phonon dispersion of monolayer SnSe, the coupling between the phonon modes will be very strong, leading to the suppression of the anisotropy.
+6.2 Scattering channel The phonon scattering channels ruled by the conservation of en- ergy are investigated to quantify the speciﬁc scattering processes due to different phonon branches.
+Since the phonon branches commonly degenerate or cross with each other in the most seg- Journal Name, [year], [vol.],1–13 | 9 Page 9 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349Jments of the path passing through the main high-symmetry k- points in the IBZ as shown in Fig. 2, we only present in Fig. 6 the scattering rate of acoustic phonon modes along Γ-Y direction where the acoustic phonon modes can be easily separated as LA, TA and FA, and the crossover problem is ﬁxed manually.
+Both the scattering rates for absorption and emission processes as shown in Eq. (4) are addressed and the scattering rates for emission pro- cesses are multiplied by 1/2 to avoid counting twice for the same process.
+To focus on the scattering between acoustic and optical phonon modes, the LA, TA and FA phonon branches are collected together as "A", the 3 low frequency optical phonon branches are collected together as "O1", and the 6 optical phonon branches with high frequency are collected together as "O2".
+As discussed above, there exists a gap between O1 and O2 for monolayer GeS and GeSe, while the gap disappears for monolayer SnS and SnSe.
+All the possible phonon scattering channels for the four monolayer compounds are plotted in Fig. 6.
+Note that the phonon scattering channels are similar for GeSe, SnS and SnSe, while that for GeS is different due to the lack of the scat- tering channels of LA/TA/FA+A/O1→O2, which is resulted from the large gap (2.014THz) between O1 and O2 for mono- layer GeS.
+The major scattering channels that have a large contribution to the overall scattering for monolayer GeS are LA/TA/FA+A→A, LA/TA/FA→A+A and LA+A→O1.
+In contrast, the major scattering channels for monolayer GeSe, SnS and SnSe are LA/TA/FA+A→O1.
+The scattering between A and O1 phonon branches, especially for TA and FA, is highly enhanced due to the tiny or disappeared gap for monolayer GeSe, SnS and SnSe.
+Furthermore, besides LA/TA/FA+A→O1, the scattering channels of TA/FA+O1→O1 for monolayer SnS, and the scattering chan- nels of LA/TA/FA+O1→O2, LA+A→O2 and TA/FA+O2→O2 for monolayer SnSe play a major role.
+Along with the characteristics of their phonon dispersions as shown in Fig. 2, it can be concluded that a large gap will result in the decoupling between acoustic and high frequency optical phonon modes, and when the gap is tiny or disappears, the phonon branches becomes close to each other, which will result in their strong couplings and lead to a remark- able scattering channel.
+It is discussed above based on Fig. 5 that the phonon transport properties of the four monolayer compounds are nearly isotropic for high frequency phonon modes above the separatrix frequency (where the gap locates), which separates the phonon dispersion into two regions containing equal numbers of branches, while the anisotropy along the two different directions is conspicuous for low frequency phonon modes below the separatrix frequency.
+It is the phonon modes in the region below the separatrix fre- quency that result in the anisotropy.
+The coupling between the phonon branches will suppress the anisotropy of the low fre- quency phonon modes when there is no gap.
+When a gap ex- ists, the coupling will be weak, leading to the presence of the anisotropy.
+If the gap is very large, the coupling disappears, re- sulting in the appearance of the strong anisotropy of low fre- quency phonon modes.
+Thus the anisotropy is huge for mono- layer GeS, small for monolayer GeSe, while almost disappear for monolayer SnS and SnSe.
+Fig. 7 (Color online) The top view of electron localization functions of monolayer (a) GeS, (b) SnS, (c) GeSe and (d) SnSe.
+The symbols of atoms are marked on site.
+6.3 Electron localization functions The anisotropic behavior can also be understood from a funda- mental view of the atomic bonding.
+To picture the electron pair probability, we plot the ELF for the four monolayer compounds in Fig. 7.
+The ELF contains information on the structure of atomic shells, and also displays the location and size of bonding and lone electron pairs.60 The ELF characterizes the probability of ﬁnding an electron with the same spin in the neighborhood space of the reference electron.
+The smaller the probability the more localized the reference electron.
+The ELF is powerful in interpreting chem- ical bonding patterns, ranging from 0 to 1,61 where 0 means no electron, 0.5 corresponds to electron-gas-like pair probability, and 1 corresponds to perfect localization.
+As revealed in Fig. 7, the ELF along the zigzag direction for the four monolayer compounds are all larger than 0.5 (the value of uniform electron gas), which means that the electrons are lo- calized.
+The bonding makes the rigidity along zigzag direction, while for armchair direction, the ELF are all smaller than 0.5, which means that the electrons are delocalized.
+The ELF along armchair direction is obviously the smallest for monolayer GeS, resulting in its softest nature along the armchair direction re- ﬂected by its smallest Young’s modulus as shown in Table. 1.
+The ELF along the two directions shows a big difference for monolayer GeS and GeSe, especially for monolayer GeS, while shows only a small difference for monolayer SnS and SnSe.
+The anisotropic behavior of the ELF reﬂecting the bonding characteristics is the physical origin of the diverse anisotropic properties for the series of monolayer compounds with hinge-like orthorhombic structure.
+7 Size effect It is well known that, with a larger rMFP, the thermal conduc- tivity could be modulated more effectively by nanostructuring.
+If the rMFP is very small, the effect of nanostructures with a typical size will be not signiﬁcant for the phonon transport.
+As listed in Table 1, bulk SnSe has the smallest rMFP, and the four monolayer 10 | 1–13 Journal Name, [year], [vol.], Page 10 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J0 2 4 6 8 10 10 0 10 1 10 2 10 3 10 4 10 5 1.0 1.5 2.0 2.5 3.0 3.5    (Wm -1 K -1 )                   zigzag  armchair    GeS                     GeSe                   SnS                     SnSe                bulk SnSe          (b) (a)   Anisotropy L (nm)  GeS  GeSe  SnS  SnSe  bulk SnSe Fig. 8 (Color online) (a) The lattice thermal conductivity (κ) and (b) its anisotropy at 300K as a function of the system size for completely rough edges.
+The anisotropy is deﬁned as κzigzag/κarmchair.
+Points are from calculations and lines are just guide to the eye.
+compounds have larger rMFP than bulk SnSe, which means that it would be more effective to modulate the phonon transport in the monolayer compounds by nanostructuring.
+Furthermore, the phonon transport in monolayer GeS and GeSe could be more ef- fectively modulated due to their larger rMFP compared to that in monolayer SnS and SnSe.
+In order to address the size effect on the phonon transport properties, the phonon boundary scattering due to the ﬁnite size should be considered, which can be estimated by the standard equation:62–64 1 τB λ = 1−p 1+ p |vλ | L , (7) where p is the specularity parameter, which means the fraction of specularly scattered phonons depending on the roughness of the edge, ranging from 0 for a completely rough edge to 1 for a per- fectly smooth edge, vλ is the phonon group velocity of the phonon mode λ, and L is the system size usually ranging from nanome- ters to micrometers.
+The temperature gradient is assumed to be along the direction of the ﬁnite sample length.
+Anisotropy due to ﬁnite sample size is ignored because of the relatively large sizes considered.37,65 Then the scattering rate of each phonon mode is calculated by the Matthiessen rule: 1 τλ = 1 τanh λ + 1 τiso λ + 1 τB λ , (8) where 1/τanh λ is the intrinsic anharmonic scattering rates due to phonon-phonon interactions, and 1/τiso λ is the scattering rate due to isotopic impurity.
+By considering a fully diffusive scattering at the boundary, i.e., p = 0, we plot the κ as a function of the system size as shown in Fig. 8(a).
+When the size is up to near 105 nm, the κ for all the monolayer and bulk compounds almost converge to the value of inﬁnite system.
+The κ decreases with the size decreasing, and the κ along armchair direction of monolayer GeSe has the most rapid decrease, which is resulted from its largest rMFP of 72.51nm.
+It is obvious that when the size decreases the κ will decrease faster with a larger rMFP.
+It is also shown that the anisotropy of the κ is affected by the ﬁnite size.
+Generally, the anisotropy will become weak due to the limited size.
+The reason lies in that usually large κ corresponds to large rMFP and small κ corresponds to small rMFP.
+Thus the large κ will have a bigger decrease than small κ with limited size, leading to the anisotropy of the κ becoming weak at short length.
+Based on the κ and rMFP as listed in Ta- ble.
+1, the anisotropy of the κ will become weak for monolayer GeS, SnSe and bulk SnSe with limited size, while the contrary is the case for monolayer GeSe and SnS that the anisotropy of the κ will become strong with limited size.
+The cases are conﬁrmed as shown in Fig. 8(b).
+With limited size, the κ could be effec- tively lowered and the anisotropy could be effectively modulated by nanostructuring such as patterning into nanoribbon or incor- porating pores, which would extend the applications in thermo- electrics and thermal management.
+Note that the size effect stud- ied here is estimated based on diffusive phonon transport by con- sidering additional phonon boundary scattering.
+If the ballistic phonon transport is effectively involved, the thermal conductivity and its anisotropy might be slightly different from current results at very small scales.66 For detailed study on the phonon transport properties of nanostructured systems, more effective simulations should be performed, such as molecular dynamics (MD) simula- tion and kinetic Monte Carlo (KMC).
+8 Summary and conclusions In summary, we have systematically investigated the diverse phonon transport properties of 2D orthorhombic group IV-VI com- pounds of GeS, GeSe, SnS and SnSe by solving the Boltzmann transport equation based on ﬁrst-principles calculations.
+They all possess rather low thermal conductivity compared to lots of other 2D materials.
+The contribution from each phonon branch is studied and its relation with the rMFP is also discussed.
+The four monolayer compounds, although possessing similar hinge- like structure along the armchair direction as phosphorene, show diverse anisotropic properties in many aspects, such as phonon group velocity, Young’s modulus and lattice thermal conductiv- ity (κ), etc.
+Especially, the κ along the zigzag and armchair di- rections of monolayer GeS shows the strongest anisotropy while monolayer SnS and SnSe shows an almost isotropy in phonon Journal Name, [year], [vol.], 1–13 | 11 Page 11 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349Jtransport, despite the similar characteristics of their structures.
+A detailed analysis on the diverse anisotropic properties of the series 2D orthorhombic compounds is presented.
+The anisotropy of thermal conductivity is actually dominated by the anisotropy of phonon group velocity.
+Based on the analysis of the frequency dependent κ and average phonon group velocity, we ﬁnd that the anisotropy is mainly introduced by the region below the gap between the high frequency optical phonon modes and low fre- quency phonon modes in the phonon dispersions.
+The larger the gap, the stronger the anisotropy.
+The inﬂuence of the gap on the anisotropy can be explained from the coupling between the phonon modes at both sides of the gap, which is supported by the phonon scattering channels.
+The diverse anisotropic be- havior can also be understood from a fundamental view of the atomic bonding characterized by the ELF.
+The anisotropic behav- ior of the ELF reﬂecting the bonding characteristics is the phys- ical origin of the anisotropic properties.
+The phonon transport in monolayer GeS and GeSe can be more effectively modulated by nanostructuring due to their larger rMFP compared to that in monolayer SnS and SnSe.
+It is also shown that the anisotropy of the κ is affected by the ﬁnite size.
+With limited size, the κ could be effectively lowered, and the anisotropy could be ef- fectively modulated by nanostructuring, which would extend the applications in nanoscale thermoelectrics and thermal manage- ment.
+This study not only present comprehensive investigations on the phonon transport properties of the new family of 2D or- thorhombic group IV-VI compounds (GeS, GeSe, SnS and SnSe), but also provide discussions and analysis on the origins of the di- verse anisotropy, which enriches the understanding of nanoscale phonon transport in 2D materials, and would be of signiﬁcance for further study and applications in emerging technologies.
+9 Acknowledgments The authors would like to thank Prof. Zhen-Gang Zhu and Prof. Qing-Rong Zheng (University of Chinese Academy of Sciences, China) for helpful discussions.
+G.Z.Q. would like to thank Dr. J. Carrete and Prof. N. Mingo (CEA-Grenoble, France) for providing data of bulk SnSe.
+G.Q. and M.H. acknowledge the support by the Deutsche Forschungsgemeinschaft (DFG) (project number: HU 2269/2-1).
+This work is supported in part by the NSFC (Grant No. 11004239), the MOST (Grant No. 2012CB932901) of China, and the fund from CAS.
+The calculations were performed on Nebulae (DAWN6000) in National Supercomputing Center in Shenzhen and MagicCube (DAWN5000A) in Shanghai Supercomputer Cen- ter, China, and with computing resources granted by the Jülich Aachen Research Alliance-High Performance Computing (JARA- HPC) from RWTH Aachen University under Project No. jara0132.
+References 1 L.-D. Zhao, S.-H. Lo, Y. Zhang, H. Sun, G. Tan, C. Uher, C. Wolverton, V. P. Dravid and M. G. Kanatzidis, Nature, 2014, 508, 373–377. 2 L.-D. Zhao, G. Tan, S. Hao, J. He, Y. Pei, H. Chi, H. Wang, S. Gong, H. Xu and V. P. Dravid, Science, 2016, 351, 141–144. 3 M. Parenteau and C. Carlone, Phys. Rev. B, 1990, 41, 5227– 5234.
+4 R. Guo, X. Wang, Y. Kuang and B. Huang, Phys.
+Rev. B, 2015, 92, 115202.
+5 J. Carrete, N. Mingo and S. Curtarolo, Appl. Phys.
+Lett., 2014, 105, 101907.
+6 G. Shi and E. Kioupakis, J. Appl.
+Phys., 2015, 117, 065103.
+7 C.-L. Chen, H. Wang, Y.-Y. Chen, T. Day and G. J. Snyder, J. Mater. Chem.
+A, 2014, 2, 11171–11176. 8 Q. Tan, L.-D. Zhao, J.-F. Li, C.-F. Wu, T.-R. Wei, Z.-B. Xing and M. G. Kanatzidis, J. Mater. Chem.
+A, 2014, 2, 17302–17306. 9 H. Zhu, W. Sun, R. Armiento, P. Lazic and G. Ceder, Appl. Phys.
+Lett., 2014, 104, 082107.
+10 H. R. Chandrasekhar, R. G. Humphreys, U. Zwick and M. Car- dona, Phys.
+Rev. B, 1977, 15, 2177–2183.
+11 A. A. Reijnders, J. Hamilton, V. Britto, J.-B. Brubach, P. Roy, Q. D. Gibson, R. J. Cava and K. S. Burch, Phys. Rev. B, 2014, 90, 235144.
+12 T. S. Rao and A. K. Chaudhuri, J. Phys. D: Appl.
+Phys., 1985, 18, L35.
+13 W. J. Baumgardner, J. J. Choi, Y.-F. Lim and T. Hanrath, J. Am. Chem.
+Soc., 2010, 132, 9519–9521.
+14 L. C. Gomes and A. Carvalho, Phys.
+Rev. B, 2015, 92, 085406.
+15 J. Vidal, S. Lany, M. d’Avezac, A. Zunger, A. Zakutayev, J. Francis and J. Tate, Appl. Phys.
+Lett., 2012, 100, 032104.
+16 D. G. Cahill, S. K. Watson and R. O. Pohl, Phys.
+Rev. B, 1992, 46, 6131–6140. 17 G. Ding, G. Gao and K. Yao, Sci. Rep., 2015, 5, 9567.
+18 X. Zhang, H. Bao and M. Hu, Nanoscale, 2015, 7, 6014–6022. 19 Y. Gao, X. Zhang, Y. Jing and M. Hu, Nanoscale, 2015, 7, 7143–7150. 20 R. Xu, J. Yang, Y. Zhu, H. Yan, J. Pei, Y. W. Myint, S. Zhang and Y. Lu, Nanoscale, 2016, 8, 129–135. 21 Y. Hong, J. Zhang, X. Huang and X. C. Zeng, Nanoscale, 2015, 7, 18716–18724.
+22 H. O. H. Churchill and P. Jarillo-Herrero, Nature Nanotech., 2014, 9, 330–331. 23 L. Li, Z. Chen, Y. Hu, X. Wang, T. Zhang, W. Chen and Q. Wang, J. Am. Chem.
+Soc., 2013, 135, 1213–1216.
+24 P. D. Antunez, J. J. Buckley and R. L. Brutchey, Nanoscale, 2011, 3, 2399–2411.
+25 R. Fei, W. Li, J. Li and L. Yang, Appl. Phys.
+Lett., 2015, 107, 173104.
+26 F. Q. Wang, S. Zhang, J. Yu and Q. Wang, Nanoscale, 2015, 7, 15962–15970.
+27 G. Ding, G. Gao et al., arXiv preprint arXiv:1509.01759, 2015.
+28 L.-C. Zhang, G. Qin, W.-Z. Fang, H.-J. Cui, Q.-R. Zheng, Q.-B. Yan and G. Su, Sci. Rep., 2016, 6, 19830.
+29 S. Safaei, M. Galicka, P. Kacman and R. Buczko, arXiv preprint arXiv:1508.01364, 2015.
+30 W.-Z. Fang, L.-C. Zhang, G. Qin, Q.-B. Yan, Q.-R. Zheng and G. Su, arXiv preprint arXiv:1603.01791, 2016, 0,.
+31 G. Kresse and D. Joubert, Phys.
+Rev. B, 1999, 59, 1758–1775.
+32 G. Kresse and J. Furthmüller, Phys.
+Rev. B, 1996, 54, 11169– 11186.
+12 | 1–13 Journal Name, [year], [vol.], Page 12 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J33 J. P. Perdew, K. Burke and M. Ernzerhof, Phys.
+Rev. Lett., 1996, 77, 3865–3868.
+34 H. J. Monkhorst and J. D. Pack, Phys. Rev. B, 1976, 13, 5188– 5192.
+35 D. A. Broido, M. Malorny, G. Birner, N. Mingo and D. A. Stew- art, Appl. Phys.
+Lett., 2007, 91, 231922.
+36 W. Li, L. Lindsay, D. A. Broido, D. A. Stewart and N. Mingo, Phys.
+Rev. B, 2012, 86, 174307.
+37 L. Lindsay, W. Li, J. Carrete, N. Mingo, D. A. Broido and T. L. Reinecke, Phys.
+Rev. B, 2014, 89, 155426.
+38 W. Li, J. Carrete, N. A. Katcho and N. Mingo, Comput. Phys.
+Commun., 2014, 185, 1747 – 1758.
+39 A. Ward and D. A. Broido, Phys.
+Rev. B, 2010, 81, 085205.
+40 A. Ward, D. A. Broido, D. A. Stewart and G. Deinzer, Phys.
+Rev. B, 2009, 80, 125203.
+41 M. Omini and A. Sparavigna, Phys.
+Rev. B, 1996, 53, 9064– 9073.
+42 L. Lindsay and D. A. Broido, Journal of Physics: Condensed Matter, 2008, 20, 165209.
+43 A. Kundu, N. Mingo, D. A. Broido and D. A. Stewart, Phys.
+Rev. B, 2011, 84, 125426. 44 S.-i.
+Tamura, Phys. Rev. B, 1983, 27, 858–866. 45 G. Qin, Q.-B. Yan, Z. Qin, S.-Y. Yue, H.-J. Cui, Q.-R. Zheng and G. Su, Sci. Rep., 2014, 4, 6946.
+46 G. Qin, Q.-B. Yan, Z. Qin, S.-Y. Yue, M. Hu and G. Su, Phys. Chem. Chem.
+Phys., 2015, 17, 4854.
+47 M. T. Yin and M. L. Cohen, Phys. Rev. B, 1982, 26, 3259–3272.
+48 A. Togo, F. Oba and I. Tanaka, Phys. Rev. B, 2008, 78, 134106.
+49 L. Lindsay, D. A. Broido and N. Mingo, Phys.
+Rev. B, 2010, 82, 115427.
+50 A. H. Castro Neto, F. Guinea, N. M. R. Peres, K. S. Novoselov and A. K. Geim, Rev. Mod.
+Phys., 2009, 81, 109–162. 51 X. Zhang, H. Xie, M. Hu, H. Bao, S. Yue, G. Qin and G. Su, Phys.
+Rev. B, 2014, 89, 054310.
+52 H. Xie, M. Hu and H. Bao, Appl. Phys.
+Lett., 2014, 104, 131906.
+53 D. Parker and D. J. Singh, Phys.
+Rev. B, 2010, 82, 035204.
+54 J. J. Pulikkotil, D. J. Singh, S. Auluck, M. Saravanan, D. K. Misra, A. Dhar and R. C. Budhani, Phys.
+Rev. B, 2012, 86, 155204.
+55 W. Li, J. Carrete and N. Mingo, Appl. Phys.
+Lett., 2013, 103, 253103.
+56 K. Esfarjani, G. Chen and H. T. Stokes, Phys. Rev. B, 2011, 84, 085204.
+57 L. Lindsay, D. A. Broido and T. L. Reinecke, Phys. Rev. Lett., 2013, 111, 025901.
+58 C. W. Li, J. Hong, A. F. May, D. Bansal, S. Chi, T. Hong, G. Ehlers and O. Delaire, Nat Phys, 2015, 11, 1063–1069.
+59 Z. Guo, A. Verma, X. Wu, F. Sun, A. Hickman, T. Masui, A. Ku- ramata, M. Higashiwaki, D. Jena and T. Luo, Appl. Phys.
+Lett., 2015, 106, 111909.
+60 A. Savin, R. Nesper, S. Wengert and T. F. FÃd’ssler, Angew. Chem. Int. Ed.
+Engl., 1997, 36, 1808–1832.
+61 S. N. Steinmann, Y. Mo and C. Corminboeuf, Phys. Chem. Chem.
+Phys., 2011, 13, 20584–20592. 62 J. Ziman, Electrons and phonons, Oxford University Press, Lon- don, 1961.
+63 G. P. Srivastava, The physics of phonons, CRC Press, 1990.
+64 D. L. Nika, E. P. Pokatilov, A. S. Askerov and A. A. Balandin, Phys. Rev. B, 2009, 79, 155413.
+65 L. Lindsay, D. A. Broido and N. Mingo, Phys.
+Rev. B, 2011, 83, 235428.
+66 Y. Dong, B.-Y. Cao and Z.-Y. Guo, Physica E, 2015, 66, 1–6.
+Journal Name, [year], [vol.], 1–13 | 13 Page 13 of 13 Nanoscale Nanoscale Accepted Manuscript Published on 27 April 2016.
+Downloaded by Boston University on 27/04/2016 15:01:08.
+View Article Online DOI: 10.1039/C6NR01349J

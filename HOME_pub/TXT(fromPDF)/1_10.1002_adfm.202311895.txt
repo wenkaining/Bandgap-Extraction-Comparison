@@ -1,0 +1,740 @@
+RESEARCH ARTICLE
+www.afm-journal.de
+Strain-driven Switching Between Antiferromagnetic States
+in Frustrated Antiferromagnet UO2 Probed by Exchange
+Bias Eﬀect
+Evgenia A. Tereshina-Chitrova,* Leonid V. Pourovskii, Sergii Khmelevskyi, Lukas Horak,
+Zhaohui Bao, Anna Mackova, Petr Malinsky, Thomas Gouder, and Roberto Caciuﬀo
+Frustrated antiferromagnets oﬀer a captivating platform to study the intricate
+relationship of magnetic interactions, geometric constraints, and emergent
+phenomena. By controlling spin orientations, these materials can be tailored
+for applications in spintronics and quantum information processing. The
+research focuses on the interplay of magnetic and exchange anisotropy eﬀects
+in artiﬁcial heterostructures based on a canonical frustrated antiferromagnet,
+UO2. The potential to manipulate the spin directions in this material and
+switch between distinct antiferromagnetic (AFM) states is investigated using
+substrate-induced strain. The phenomenon is probed using exchange bias
+eﬀects in stoichiometric UO2/Fe3O4 bilayers. By employing many-body
+ﬁrst-principles calculations magnetic conﬁgurations in the UO2 layers are
+identiﬁed. Even a minor tetragonal distortion triggers a transition between
+AFM states of diﬀerent symmetries, driven by a robust alteration of single-ion
+anisotropy due to the distortion. Consequently, this change inﬂuences the
+arrangement of magnetic moments at the UO2/Fe3O4 interface, aﬀecting the
+magnitude of exchange bias. The ﬁndings showcase how epitaxial strain can
+eﬀectively manipulate the AFM states in frustrated antiferromagnets by
+controlling single-site anisotropy.
+E. A. Tereshina-Chitrova
+Institute of Physics
+Czech Academy of Sciences
+Prague 18200, Czech Republic
+E-mail: teresh@fzu.cz
+L.V.Pourovskii
+CPHT
+CNRS
+Écolepolytechnique
+Institut PolytechniquedeParis
+Palaiseau 91120, France
+The ORCID identiﬁcation number(s) for the author(s) of this article
+can be found under https://doi.org/10.1002/adfm.202311895
+© 2023 The Authors. Advanced Functional Materials published by
+Wiley-VCH GmbH. This is an open access article under the terms of the
+Creative Commons Attribution-NonCommercial License, which permits
+use, distribution and reproduction in any medium, provided the original
+work is properly cited and is not used for commercial purposes.
+DOI: 10.1002/adfm.202311895
+1. Introduction
+In materials with magnetic atoms sit-
+ting in geometrically frustrated lattices,
+multiple ordered states exhibiting dis-
+tinct symmetries can possess comparable
+energies
+related
+to
+inter-site
+antiferro-
+magnetic (AFM) exchange interactions.
+The concept of geometric frustration fre-
+quently intersects with broader notions
+in condensed matter physics encompass-
+ing
+quantum
+spin
+liquids,
+topological
+states, and critical behavior.[1–3] Over recent
+decades, the deliberate manipulation of
+magnetic states in collinear antiferromag-
+nets has garnered considerable attention,
+primarily driven by advancements in AFM
+spintronics.[4,5]
+Hence,
+research
+eﬀorts
+have been directed toward the controlled
+manipulation
+of
+antiferromagnets
+us-
+ing diverse methods, including electrical
+means,[6–8]
+structural
+alterations,[9–11]
+high magnetic ﬁelds,[12] and interaction
+with neighboring ferromagnetic layers.[13]
+L. V. Pourovskii
+Collège de France
+Université PSL
+11 place Marcelin Berthelot, Paris 75005, France
+S. Khmelevskyi
+Vienna Scientiﬁc Cluster Research Center
+Vienna Technical University
+Wiedner Hauptstrasse 8–10, Vienna 1040, Austria
+L. Horak
+Faculty of Mathematics and Physics
+Charles University
+Prague 12116, Czech Republic
+Z. Bao
+Malvern Panalytical B.V.
+Lelyweg 1 7602 EA, Almelo, Overijssel Netherlands
+A. Mackova, P. Malinsky
+Nuclear Physics Institute CAS
+Department of Neutron Physics
+ˇRež 25068, Czech Republic
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (1 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbHwww.advancedsciencenews.com
+www.afm-journal.de
+Figure 1. (a) Illustration of magnetic conﬁgurations in the fcc crystal structure. Large symbols are magnetic (uranium) atoms, and small symbols are
+oxygen atoms. (b) Typical 𝜃−2𝜃scans for the UO2/Fe3O4/Mg samples on CaF2 (top) and LaAlO3 (bottom) substrates. Only Bragg reﬂections CaF2 00l,
+UO2 00l, Fe3O4 hhh, and Mg 000l are visible revealing the lattice orientation for all layers. (c,d) Epitaxial relationship found in the magnetic bilayers
+(111)Fe3O4||(001)UO2||(001)LAO and (111)Fe3O4||(001)UO2||(001)CaF2, respectively (for details see Figures S4, S5 and S9, Supporting Information).
+Frustrated antiferromagnets, while inherently fascinating,[14]
+have yet to gain practical signiﬁcance. Exploring ways to con-
+trol single-site anisotropy in these materials, possibly through
+strain engineering, could boost their practical applications. To il-
+lustrate the principle of switching between AFM states of diﬀer-
+ent symmetries in frustrated magnets, we utilize uranium diox-
+ide (UO2), a principal nuclear fuel material, as a model system.
+In UO2’s face-centered cubic (fcc) lattice, magnetic frustration
+arises from the energy degeneracy of three AFM states (Figure 1a
+(bottom)), inﬂuenced by relativistic inter-site AFM exchange
+A. Mackova, P. Malinsky
+Department of Physics
+Faculty of Science
+J. E. Purkinje University
+Usti nad Labem 40096, Czech Republic
+T. Gouder, R. Caciuﬀo
+European Commission
+Joint Research Centre (JRC)
+Postfach 2340, DE-76125 Karlsruhe, Germany
+R. Caciuﬀo
+National Institute of Nuclear Physics
+Genoa Section, Genova I-16146, Italy
+interactions.[15] The nature of UO2’s magnetic ground state has
+puzzled scientists for decades.[16] Initial neutron diﬀraction mea-
+surements in the 1960s suggested a collinear 1k AFM[17,18] struc-
+ture (Figure 1a (top)) below the ﬁrst-order transition at the Néel
+temperature TN = 30.8 K. In the 1970s, the occurrence of a dy-
+namical Jahn–Teller (J–T) distortion above the phase transition
+temperature was proposed.[19] Subsequent neutron diﬀraction
+studies unveiled the presence of a static J–T distortion at TN, hint-
+ing at a noncollinear 2k AFM order in UO2.[20,21] Eventually,[22]
+the exotic transverse 3k magnetic ordering, a superposition of
+three individual 1k structures in the cubic unit cell, with ura-
+nium magnetic moments of ≈1.74(2) μB pointing in the <111>
+directions (Figure 1a (bottom)) was revealed. Resonant x-ray scat-
+tering experiments further provided evidence[23] of long-range
+antiferro-ordering of electric-quadrupole moments at the ura-
+nium site.
+The ground state triplet of the U4+ ion in the cubic crystal ﬁeld
+of UO2 is spherically symmetric, resulting in exactly zero single-
+ion anisotropy in the cubic phase.[15] The energy degeneracy be-
+tween the states within the fcc lattice is lifted[24,25] by higher rank
+inter-site exchange interactions of relativistic origin that couple
+quadrupole moments and stabilize[24] the 3k order in cubic UO2.
+Here, we demonstrate that an eﬀective switching between the
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (2 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+AFM states of diﬀerent symmetries can be achieved by stretching
+the lattice of UO2 and inducing strong single-ion anisotropy.
+In UO2 thin ﬁlms strain can induce ferromagnetism by in-
+corporating point defects and generating hypo- (x < 0) or hyper-
+(x > 0) stoichiometric UO2+x.[26] In this study, we apply epitax-
+ial strain through substrate selection and switch between AFM
+structures in stoichiometric UO2 ﬁlms. Determining the exact
+type of AFM ordering in UO2 ﬁlms is challenging, requiring a
+large amount of material[22] and a sophisticated neutron experi-
+ment. Such a determination has not yet been made for any UO2
+thin ﬁlm. Instead, we utilize the exchange-bias (EB)[27] eﬀect’s
+magnitude in UO2/Fe3O4 bilayers to indirectly probe the AFM
+state in UO2. The EB magnitude signiﬁcantly varies depending
+on the substrate used for growing the UO2/Fe3O4 bilayers. Em-
+ploying many-body ﬁrst-principles calculations based on charge
+self-consistent DFT+Hubbard-I (HI) approximation[28–30] and a
+force-theorem-HI (FT-HI) approach[31] for inter-site exchange,
+we predict that tetragonal distortion leads to a transition in UO2
+from transverse 3k magnetic order to transverse 1k magnetic or-
+der. The experimental observation of exchange bias in the bilay-
+ers UO2/Fe3O4 supports the notion that epitaxial strain serves
+as a crucial control parameter in determining the UO2’s AFM
+structure.
+2. Result and Discussion
+2.1. Structural and Magnetic Characterization of Thin Films
+We have previously observed[32] a signiﬁcant exchange bias eﬀect
+in LaAlO3(LAO)-based UO2/Fe3O4 bilayers when they were ﬁeld-
+cooled below the Néel temperature of UO2. The EB arises from
+the interfacial exchange coupling between the AFM UO2 and the
+ferrimagnetic Fe3O4, leading to a shift in the magnetic hystere-
+sis loop. While exchange bias is typically attributed to interface
+phenomena, previous studies have indicated[33] that the mecha-
+nisms behind EB, which are not yet fully understood, can also be
+inﬂuenced by the spin conﬁgurations of the bulk AFM material.
+In our current study, we utilized this property to investigate the
+dependence of EB on the thickness of UO2 while introducing the
+strain in UO2.
+For the sample preparation, we have chosen the substrates due
+to the following considerations. UO2 has a lattice constant a0 of
+5.469 Å at room temperature. CaF2 is isostructural to UO2 with
+lattice parameter a0 = 5.462 Å (lattice mismatch of 0.1%). For
+the (001) LaAlO3 substrates with lattice parameter a0 = 3.821 Å,
+the epitaxial relationship with UO2 would be such that the (110)
+plane of UO2 (d-spacing a0/√2 = 3.867 Å) ﬁts with the LaAlO3
+(100) plane, thus producing a small compression of UO2 of
+−1.2% with respect to the substrate in-plane spacing. Indeed,
+an x-ray diﬀraction (XRD) study conﬁrmed that the UO2 lay-
+ers grow in the [001] direction on both types of substrates, CaF2
+(001) and LaAlO3 (001). Bulk magnetite Fe3O4 (fcc structure with
+space group Fd-3m) has a lattice parameter of 8.39 Å. We ﬁnd
+that Fe3O4 grows on UO2 with an [111]-out-of plane orienta-
+tion (Figure 1b). Figure 1c,d demonstrates the stacking sequence
+for the UO2/Fe3O4 bilayers on substrates (001) CaF2 and (001)
+LaAlO3, respectively (the hexagonal Mg capping layer with basal
+planes parallel to the surface is not shown).
+Magnetic hysteresis loops for both series of samples were mea-
+sured after ﬁeld cooling through the Néel temperature of UO2
+in a 10 kOe magnetic ﬁeld applied in the in-plane direction of
+the bilayers (Figure 2a). We determined the exchange bias ef-
+fect as HEB = |(|HC−| −HC+)|/2, where, HC−(HC+) is the co-
+ercive ﬁeld on the descending (ascending) branch of the hys-
+teresis loop. The exchange bias reaches ˜2000 Oe in the CaF2-
+based system. Surprisingly, we ﬁnd that the LAO-based sam-
+ples demonstrate a twice weaker EB as compared to the CaF2-
+based bilayers at all thicknesses of UO2 (Figure 2b). Given that
+the strength of exchange coupling in the exchange-biased sys-
+tem is inversely proportional to the thickness of the ferro- (or fer-
+rimagnetic in our case) magnetic counterpart of the bilayers as
+HEB∼1/𝜏F,[27] the fact that in both systems the Fe3O4 layers pos-
+sess similar thicknesses and have identical structural character-
+istics (as detailed in Figures S4, S5, and S9, Supporting Informa-
+tion) fails to account for the observed twofold diﬀerence in the EB
+magnitude.
+Another factor that could potentially explain the diﬀerence
+lies in the presence of distinct variations in the stoichiometry
+of the UO2 layer and/or the morphology of the UO2/Fe3O4 in-
+terface. The former was shown[26] to be responsible for ferro-
+magnetism in the UO2+x thin ﬁlms by incorporating point de-
+fects. Hence, the stoichiometry of the UO2 layers was closely
+monitored after depositing each layer. In particular, we controlled
+the position and width of the main U-4f peaks and high-energy
+side satellite line relative to an associated primary U-4f5/2 peak
+(Figure S1, Supporting Information). This approach is indepen-
+dent of the absolute binding energy and is particularly useful
+for distinguishing the oxidation states of uranium.[34] Addition-
+ally, we ensured the absence of any foreign structures in the
+XPS spectra. The observed values for UO2 were in line with the
+literature[34] for both types of substrates. (As a point of compari-
+son: in the case of hyperstoichiometric UO2+x thin ﬁlm samples
+investigated in Ref. [26], the associated photoemission study doc-
+umented in Ref. [35] indicated that the satellite peaks are scarcely
+visible).
+The quality of the interface was assessed using Rutherford
+Backscattering Spectrometry (RBS); the recorded well-separated
+spectra from U and Fe revealed no chemical intermixing between
+the magnetic layers within experimental resolution (Figure S4,
+Supporting Information). The sharpness of the interface be-
+tween the UO2 layer and the substrates was further validated
+by the presence of distinct thickness fringes observed around
+the UO2 peaks in the XRD data (Figure 1b and Figure S7,
+Supporting Information). These observations are entirely con-
+sistent with the ﬁndings from our previous transmission elec-
+tron microscopy (TEM) study of the LAO-based UO2/Fe3O4
+bilayers.[32]
+To provide a more in-depth characterization of the UO2/Fe3O4
+samples’ crystal structure, we recorded Reciprocal Space Maps
+(RSM) in the vicinity of characteristic symmetric and asymmet-
+ric peaks of UO2 on both types of substrates (see Figure 3).
+The simulated lattice parameters of the UO2 layer are given in
+Figure 4. Our results reveal a negligible lateral strain in the UO2
+homogeneous epitaxial layer when deposited on CaF2. The UO2
+layer on the LAO substrate is in-plane compressively strained.
+The substrate-induced tetragonality (with its measure depicted
+in the upper part of Figure 4) or strain in UO2 decreases with the
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (3 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+Figure 2. (a) Comparison of the H-M magnetization loops at 5 K for the UO2/Fe3O4 bilayers on diﬀerent substrates after ﬁeld cooling in the 10 kOe
+ﬁeld. For UO2 and Fe3O4 the thicknesses are 271 and 282 Å (CaF2 substrate) and 285 and 276 Å (LAO substrate), respectively. Data for a single layer of
+Fe3O4 (270 Å) (broken line) is shown for comparison. (b) Dependence of exchange bias ﬁeld on the thickness of the AFM layer UO2 in the UO2/Fe3O4
+bilayers. The thickness of the ferromagnetic counterpart of the bilayer, Fe3O4, is kept constant in both series of the samples deposited on CaF2 and
+LaAlO3 substrates. The broken lines are a guide to the eye.
+Figure 3. Top: Reciprocal space maps in the vicinity of the UO2 002, 004, and 224 Bragg reﬂections. The experimental diﬀraction curve (magenta solid
+line) was extracted as a vertical cut passing through the UO2 Bragg reﬂection and then ﬁtted by a numerical simulation based on the kinematic theory of
+diﬀraction for determination of the out-of-plane lattice parameter and the thicknesses for the CaF2-based UO2/Fe3O4 bilayers capped with Mg. Bottom:
+The same for the LaAlO3-based sample.
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (4 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+Figure 4. UO2-thickness evolution of the out-of-plane, c, and the in-plane,
+a, lattice parameters determined from the RSM measurements. The solid
+line is the lattice parameter of bulk cubic UO2. The upper panel shows
+the strain-induced degree of tetragonality of the ﬁlms determined as
+(c−a)/((c + a)/2).
+increasing layer thickness and approaches a certain residual
+value given by diﬀerent thermal expansions of the substrate and
+the layer during the post-growth cooling. This is consistent with
+data obtained by Bao et al.[36] who employed resonant x-ray scat-
+tering (RXS) to study UO2 thin ﬁlms deposited on the LAO and
+CaF2 substrates and observed strain-induced tetragonal distor-
+tion with a mosaicity of ≈1° in the LAO-based UO2 ﬁlms.
+For the record, in some of the CaF2-based layers, we also ob-
+served a noticeable tetragonal distortion, most likely induced dur-
+ing the cooling process after ﬁlm deposition. The exchange bias
+in these samples immediately decreased to values similar to those
+observed in the LAO-based system (Figure S10, Supporting In-
+formation). On the other hand, in one of the CaF2-based sam-
+ples, we noticed a signiﬁcantly smaller lattice parameter of UO2
+with 𝜏AF = 85 Å (Figure 4), probably due to a slight oxygen de-
+ﬁciency in the sample. However, the UO2 layer in this sample
+remained cubic, and the resulting exchange bias was found to be
+of similar magnitude, ≈2000 Oe, as in the stoichiometric sam-
+ples. This aligns with the general understanding of the robust-
+ness of antiferromagnetism in bulk UO2: bulk oﬀ-stoichiometric
+UO2±x
+remains antiferromagnetic for small deviations of
+x < 0.07.[37,38]
+Below, we show by ﬁrst-principles calculations that even a
+slight tetragonal distortion of the initial fcc structure can induce a
+single-ion anisotropy in strained UO2. Consequently, the altered
+arrangement of moments within the ﬁlm’s bulk and at the inter-
+face could account for the discrepancy in observed exchange bias
+magnitudes between the two systems.
+2.2. Magnetic Structure of the Tetragonally Distorted UO2
+The principal possibility for a magnetic structure switching in
+tetragonally distorted UO2 stems from the frustration between
+various AFM orders in its bulk magnetic structure, as explained
+in the introduction. The resolution of this frustration in cu-
+bic UO2 Figure 1a cannot be ascribed to the single-ion mag-
+netic anisotropy (SIA) since the ground state of the U4+ ion in
+a cubic environment is a completely isotropic triplet.[15] Recent
+ﬁrst-principles calculations[24,25] employing a correlated treat-
+ment of the 5f-electron shell have shown that a small energy
+diﬀerence between 1k, 2k, and 3k ordering is due to high-rank
+quadrupole-quadrupole interactions. In particular, Ref. [24] em-
+ploys the DFT+HI method together with the FT-HI approach to
+derive the full super-exchange Hamiltonian of UO2. This work
+showed that the experimental 3k is stabilized with respect to the
+competing structures by quadrupole-quadrupole super-exchange
+interactions (SEI).
+In the case of tetragonally distorted UO2, the SEI Hamiltonian
+needs to be supplemented by a SIA term:
+H = HSEI + HSIA = HDD + HQQ + HSIA
+(1)
+where HSEI and HSIA are the SEI and SIA contributions, respec-
+tively. The former is split between the dipole-dipole (DD) and
+quadrupole-quadrupole (QQ) terms acting within the ground-
+state (GS) Γ5 triplets of U4+ ion as deﬁned in Ref. [26]. The tetrag-
+onal crystal ﬁeld (CF) splits the GS triplet inducing the SIA. We
+employ ab initio HSEI and HSIA, please see the Method Section
+for details of our theoretical approach.
+For the distortion level of the LAO-based layer (𝜖= c/a–
+1 = 2.5%), we obtained the value of 210 meV for the overall crystal
+ﬁeld (splitting of the U4+ atomic multiplet 3H4. This value is very
+close to our previously obtained value of 207 meV for the cubic
+case [24] and is in good agreement with experimental estimates.[15]
+The Γ5 triplet ground state is split by the tetragonal elongation
+into a doublet ground state and an excited singlet. This splitting
+is linear with 𝜖and reaches 2.78 meV for the LAO-based layer.
+Introducing the pseudo-angular momentum J = 1 to label the Γ5
+eigenstates as speciﬁed in Ref. [24], one may write the SIA term
+at a given U site as HSIA = -D Jz
+2. The anisotropy constant D = C𝜖
+is linear versus the distortion, with the pre-factor C = 113 meV
+extracted from DFT+HI calculations.
+We then solved the calculated ab initio magnetic Hamiltonian
+(1) as a function of the tetragonal elongation 𝜖and tempera-
+ture within the mean-ﬁeld (MF) approximation.[40] The result-
+ing phase diagram is depicted in Figure 5 (left). Cubic UO2 is
+predicted to order into the transverse 3k AFM structure shown
+in Figure 1a at the theoretical TN
+bulk = 56 K, the overestimation
+as compared to the experimental value of 30 K is due to the MF
+approximation.[24] This structure remains stable at small tetrag-
+onal distortions, however, the moment amplitude along the out-
+of-plane z direction increases with 𝜖due to the SIA eﬀect. The or-
+dered moment at U site R is given MR = [M||exp(−ikzR),M||exp(
+−ikxR),M⊥exp( −ikyR)] , where M|| and M⊥are the amplitude
+of the in-plane and out-of-plane components of the moment,
+respectively, M|| < M⊥, and kx,y,z are propagation vectors in the
+corresponding directions. At the transition point between the
+two structures the in-plane amplitude M|| becomes 0, thus the
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (5 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+Figure 5. (Left) Calculated magnetic phase diagram of UO2. The cyan, brown, and white areas display the regions of stability for the transverse 1k,
+transverse 3k, and paramagnetic phases, respectively. The temperature is related to the theoretical mean-ﬁeld bulk TN = 56 K. (Right) Schematic repre-
+sentation of various directions of magnetic moments of UO2 and Fe3O4 and the corresponding angles between the moments. This representation is
+derived based on the epitaxial relationship in Figure 1c,d, combined with general knowledge concerning the easy magnetization direction of Fe3O4 at
+low temperatures. Below the Verwey transition, the magnetic easy axis in Fe3O4 is [100].[39]
+structure collapses into the transverse 1k one (also depicted in
+Figure 1a) with the out-of-plane moment direction.
+The physical origin of this transition is a competition of
+the single-ion anisotropy HSIA induced by the tetragonal distor-
+tion with the super-exchange (SE) intersite term. As shown in
+Ref. [24], small SE couplings between U quadrupolar moments
+favor the non-collinear 3k phase with the magnetic moments on
+U sites pointing along the <111> directions; this explains the oc-
+currence of this order in cubic UO2. However, the stabilization
+energy of 3k structure with respect to the transverse collinear 1k
+one, in which the moment is along the <001> direction, is rather
+weak (below 1 Kelvin/f.u). The SIA activated by the tetragonal
+elongation favors the moment along the out-of-plane [001] mag-
+netic easy axis, since the anisotropy constant D = C𝜖> 0 for 𝜖>
+0, as detailed above. Therefore, already at relatively small distor-
+tions, the SIA overcomes the SE quadrupolar term inducing the
+transition to the 1k structure.
+We note that the actual distortion level for CaF2-based ﬁlms is
+very close to the 1k→3k transition boundary. Provided the sensi-
+tivity of this boundary to the calculational details and experimen-
+tal conditions, the CaF2-based layers can still be considered to be
+in the 3k domain, while the LAO layers are ﬁrmly situated within
+the 1k region.
+2.3. Discussion
+Based on our ﬁrst-principles calculations, one may intuitively ex-
+pect that diﬀerent mutual arrangements of magnetic moments of
+cubic and tetragonally distorted UO2 and Fe3O4 would give dif-
+ferent EB values since the interface exchange interaction creating
+the EB pinning would also essentially change. The situation is il-
+lustrated in a simple cartoon in Figure 5 (right). If the magnetic
+structure of UO2 remains 3k in the CaF2-based thin ﬁlms, the
+magnetic moments of UO2 lying in one of the three equivalent
+<111> directions coupled with the magnetic moment of Fe3O4
+lying along the <100> directions at low temperatures.[39] The an-
+gle between the moment’s directions is 12.24°. In this case, we
+observe the maximum EB eﬀect in the CaF2-based samples. If
+switching to another AFM state occurs upon straining the lattice
+of UO2, then the coupling strength and hence the magnitude of
+EB essentially change. Our calculations predict stabilization of
+a 1k-AFM structure (Figure 5) in the distorted crystal structure,
+hence the orientation of the magnetization of the AFM sublat-
+tices would then lie in the [001] direction. In this case, coupling
+with the moment of Fe3O4 occurs at the angle 54.74°, resulting
+in the drastic reduction of EB for the LAO-based samples.
+In general, it is assumed that the bulk spin conﬁgura-
+tion of a material is maintained even at the interface. How-
+ever, real exchange-biased systems are much more complex
+than simple models. The orientation of interfacial spins can
+be inﬂuenced by various factors, such as structural properties
+like crystallinity and morphology, which often manifest them-
+selves very diﬀerently for various material combinations. As
+a result, the interfacial spin orientations in such systems can
+be more intricate and diﬃcult to predict. For the LAO-based
+samples, in addition to reduced exchange interaction due to
+diﬀerently oriented moments of the bulk UO2 layer, larger
+mosaicity[36] of the strained UO2 layer may also contribute to the
+decreased HEB.
+It is worth noting that tetragonal deformation appearing as the
+result of compression of UO2 deposited on a LAO substrate in
+Ref. [36] was shown to promote a formation of a magnetically
+“dead” layer close to the substrate. The exact nature of the “dead”
+layer was not determined in the RXS experiment, but the evi-
+dence was such that it did not have the AFM structure of bulk
+UO2. It is evident from our combined XRD, XRR, and RBS (Sup-
+porting Information) studies that the interface between the sub-
+strate and the UO2 layer remains well-deﬁned for all UO2 layer
+thicknesses on both types of substrates. In our UO2/Fe3O4 bilay-
+ers, we detect exchange bias in both systems even at the small-
+est UO2 thicknesses. For both types of samples, the EB magni-
+tude and hence, the interfacial interaction and exchange cou-
+pling become less prominent at UO2 thicknesses below 70 Å,
+which is in line with general behavior for various exchange-
+biased systems.[41]
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (6 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+Upon examining the control samples of single Fe3O4 layers
+illustrated in Figure 2a, which share an identical structure and
+similar thicknesses to those of the bilayers, we observe that a cer-
+tain portion of the eﬀect (≈15% at 5 K in the CaF2-based sam-
+ples) originates naturally from magnetite alone. It is crucial to
+highlight that the saturation magnetization in both the single
+Fe3O4 layers and the bilayers is essentially the same. While ex-
+change bias is typically observed in systems featuring two mag-
+netic phases, magnetite, being a ferrimagnet with intricate crys-
+tal structure and structural defects,[42,43] is known for exhibit-
+ing exchange bias on its own in thin ﬁlms deposited on various
+non-magnetic substrates.[44,45] Furthermore, rotational hystere-
+sis, related to EB, has been reported for substituted Fe3O4 sin-
+gle crystals[46] below the Verwey transition temperature, where
+the magnetic easy axes change direction.[39] The exchange bias
+in magnetite ﬁlms, free of foreign magnetic phases, undoubt-
+edly has a very complex origin and is not fully understood
+at present. However, the magnitude of the EB in Fe3O4 ﬁlms
+consistently remains signiﬁcantly smaller than the exchange bias
+in the UO2/Fe3O4 bilayers on both types of substrates, and it does
+not hinder us in drawing our conclusions.
+3. Conclusion
+The exchange bias magnitude in the stoichiometric, homoge-
+neous UO2/Fe3O4 bilayers depends on the type of substrate used.
+In the case of small tetragonal distortion in the LAO-based UO2
+layers, the EB in bilayers is signiﬁcantly reduced as compared to
+the CaF2-based samples. By ﬁrst-principles calculations, we show
+that the reason dwells in the change of AFM structure as a re-
+sult of distortion. UO2 ﬁlms with a cubic CaF2 structure are very
+close to the border of 3k–1k transition and strain imposed by the
+substrate pushes UO2 toward the 1k AFM structure. Our study
+reveals a prospect of switching frustrated magnets for potential
+applications. For instance, by pairing UO2 with a soft ferromag-
+net (permalloy, Py) we were able to induce perpendicular mag-
+netic anisotropy in the Py layer through the canted moments of
+a CaF2-based UO2.[47] The eﬀect might be greater with an LAO-
+based UO2, where the direction of UO2 and Py moments would
+coincide. The inherent ability to manipulate the magnetic align-
+ment in frustrated magnets opens avenues for tailoring device
+functionalities to speciﬁc requirements.
+4. Experimental Section
+Experiment:
+The UO2/Fe3O4 bilayers were synthesized by reactive (-
+gas) dc sputtering realized in a home-built setup, using a miniature U (nat-
+ural uranium, 99.9 wt.% purity) and Fe (99.99% purity) targets and an
+electron-emitting thoriated tungsten ﬁlament stabilizing the plasma.[48]
+Diﬀerent epitaxial strain states in the UO2 layer were realized by employ-
+ing diﬀerent substrates. The thickness of the UO2 layer varied across the
+sample series, with a minimal thickness of 17 Å on the CaF2 substrate
+and a maximum of 340 Å on SiO2. In contrast, the thickness of the Fe3O4
+layer in the bilayers was maintained at ≈270 ± 20 Å. Before the growth,
+the commercially available substrates CaF2 (001), LaAlO3 (001), and fused
+silica SiO2 (MTI Corp.) (the results for the latter are shown in Figures S9
+and S10, Supporting Information) were annealed in dynamic vacuum at
+temperatures used for UO2 deposition as shown below. The UO2 layer
+was always deposited onto the substrates at an elevated temperature of
+350 °C for CaF2 and SiO2 substrates and at 500 °C for the LAO sub-
+strate, using a partial oxygen pressure of 1.2 × 10−6 mbar (Ar pressure
+of 6 × 10−3 mbar). We speciﬁcally restricted the deposition temperature
+for the UO2 layers to 500 °C for LAO substrates to avoid passing through
+the ferroelastic transition that occurs at 560 °C in this substrate. As for
+the CaF2 substrates, we have chosen even lower deposition tempera-
+tures to avoid cracking when cooling from growth temperature to ambient
+conditions.
+The layer of Fe3O4 was deposited on the top of UO2 at room tem-
+perature to avoid interdiﬀusion and at 6–7 × 10−7 mbar oxygen pres-
+sure (Ar pressure of 1–3 × 10−2 mbar). The stoichiometry of each de-
+posited layer was controlled in situ by X-ray Photoelectron Spectroscopy
+(XPS) using a MgK𝛼(photon energy 1253.6 eV) source. After that, a
+magnesium cap was deposited for protection on top of each sample.
+For the sake of comparison of properties, we also prepared 270-Å thick
+single Fe3O4 layers on the same substrates and capped them with
+Mg, too.
+The ﬁlm’s structure was characterized by several methods. We used
+Rutherford Backscattering Spectrometry (RBS) in the channeling mode
+(RBS-C) using a beam of 2-MeV He+ ions to check the single-crystalline
+layer structure and to determine the sharpness of the interface between
+the magnetic layers. RBS-C measurements were carried out on a Tande-
+tron MC 4130 accelerator at the Nuclear Physics Institute of the Czech
+Academy of Sciences in ˇRež near Prague. For RBS-C analysis, the crystal
+target was mounted onto a two-axis goniometer with an angular resolution
+of 0.01°. A surface-barrier Si detector with a circular aperture of 5.4 mm
+in diameter was placed at a distance of 70 mm from the sample holder
+at the scattering angle of 170°. The energy resolution of the detector was
+≈12 keV. The accessible information depth provided by 2-MeV He+ ion
+beam is ≈1.5 μm in this geometry. The spectra were evaluated with the
+software SIMNRA 6.06.[49]
+The x-ray reﬂectometry (XRR) and x-ray diﬀraction (XRD) measure-
+ments were performed with Rigaku SmartLab diﬀractometer equipped
+with a 9 kW rotating Cu anode and 2D single photon counting detector
+HyPix-3000. The primary beam (CuK𝛼, 𝜆= 1.5418 Å) was parallelized by
+a parabolic X-ray mirror. Reﬂectivity curves (Figure S6, Supporting Infor-
+mation) were measured with two receiving slits in front of the detector,
+Low-Resolution XRD reciprocal space maps (RSM) were measured with a
+collimated beam in both directions (0.5 × 0.5 mm2) and open 2D detec-
+tor without secondary optics. XRD Θ−2Θ scans and medium-resolution
+RSMs measurements were performed with a detector in the 1D mode us-
+ing a monochromatized beam by a 2-bounce Ge(220) monochromator (Cu
+K𝛼1, 𝜆= 1.5406 Å). From the XRR data, we determined the thickness of
+individual layers and the roughness of the corresponding interfaces. The
+epitaxial relationship of all layers was determined from the Low-Resolution
+Reciprocal Space Maps (RSMs). Lattice parameters and the relaxation
+state of the UO2 layers were found using RSM measurements, enabling us
+to obtain both out-of-plane and in-plane lattice parameters and the thick-
+ness of the single crystal layers. Precise values were determined through
+simulation based on the kinematic theory of diﬀraction.
+The magnetization studies were conducted using a vibrating sample
+magnetometer on the Quantum Design PPMS9 platform (Quantum De-
+sign). The magnetic ﬁeld was applied along the sample surface. The sus-
+ceptibilities of blank (001) CaF2, (001) LaAlO3, and SiO2 substrates, each
+with a thickness of 0.5 mm, were measured, and their magnetic signals
+were subtracted from the magnetization data.
+Theory:
+We employ the same SEI as calculated in Ref. [24] for cubic
+UO2, thus neglecting the eﬀect of tetragonal distortions on their mag-
+nitude, which is likely unimportant provided the rather small distortion
+magnitude. In order to evaluate the SIA term, we calculate the splitting of
+the GS triplet in UO2 versus the magnitude of tetragonal distortions by
+means of the self-consistent DFT+Hubbard-I (HI) approximation [28–30]
+using the same as in Ref. [24]. Namely, we employ U = 4.5 eV and Hund’s
+rule coupling JH = 0.6 eV to specify a rotationally invariant on-site Coulomb
+repulsion on the U 5f shell, the fully-localized limit double-counting term
+for the nominal atomic occupancy of 2 of the U4+ 5f shell. 3000 k-points
+were employed in the Brillouin zone integration and the LAPW basis
+cutoﬀ[29] RMT⋅KMAX = 7. We adjusted the out-of-plane lattice parameter c
+so as to keep the cell volume ﬁxed at its bulk value.
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (7 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+Supporting Information
+Supporting Information is available from the Wiley Online Library or from
+the author.
+Acknowledgements
+The authors would like to thank Dr. G. H. Lander for valuable discus-
+sions during the course of this work. The authors acknowledge the support
+of the Czech Science Foundation under grant no. 22–19416S. The sam-
+ples were prepared in the framework of the EARL project of the European
+Commission Joint Research Centre, ITU Karlsruhe. RBS measurements
+were carried out at the CANAM infrastructure of the NPI CAS Rez sup-
+ported through MEYS project No. LM2015056. Physical properties mea-
+surements were performed in the Materials Growth and Measurement
+Laboratory (http://mgml.eu/) supported within the program of Czech Re-
+search Infrastructures (project no. LM2023065). L.V.P. acknowledges sup-
+port from European Research Council Grant ERC-319286-“QMAC” and the
+computer team at CPHT.
+Conﬂict of Interest
+The authors declare no conﬂict of interest.
+Data Availability Statement
+The data that support the ﬁndings of this study are available from the cor-
+responding author upon reasonable request.
+Keywords
+epitaxial strain, exchange bias, frustrated antiferromagnetism, thin ﬁlms,
+uranium dioxide
+Received: September 27, 2023
+Revised: November 18, 2023
+Published online: December 22, 2023
+[1] L. Balents, Nature 2010, 464, 199.
+[2] T. Kurumaji, T. Nakajima, M. Hirschberger, A. Kikkawa, Y. Yamasaki,
+H. Sagayama, H. Nakao, Y. Taguchi, T.-H. Arima, Y. Tokura, Science
+2019, 365, 914.
+[3] F. Giustino, J. H. Lee, F. Trier, M. Bibes, S. M. Winter, R. Valentí, Y.-
+W. Son, L. Taillefer, C. Heil, A. I. Figueroa, B. Plaçais, Q. Wu, O. V.
+Yazyev, E. P. A. M. Bakkers, J. Nygård, P. Forn-Díaz, S. De Franceschi,
+J. W. Mciver, L. E. F. F. Torres, T. Low, A. Kumar, R. Galceran, S. O.
+Valenzuela, M. V. Costache, A. Manchon, E.-A. Kim, G. R. Schleder,
+A. Fazzio, S. Roche, J. Phys. Mater. 2020, 3, 042006.
+[4] C. Marrows, Science 2016, 351, 558.
+[5] T. Jungwirth, J. Sinova, A. Manchon, X. Marti, J. Wunderlich, C. Felser,
+Nature Phys 2018, 14, 200.
+[6] P. Wadley, B. Howells, J. Zelezný, C. Andrews, V. Hills, R. P. Campion,
+V. Novák, K. Olejník, F. Maccherozzi, S. S. Dhesi, S. Y. Martin, T.
+Wagner, J. Wunderlich, F. Freimuth, Y. Mokrousov, J. Kunes, J. S.
+Chauhan, M. J. Grzybowski, A. W. Rushforth, K. W. Edmonds, B. L.
+Gallagher, T. Jungwirth, Science 2016, 351, 587.
+[7] J. Shi, V. Lopez-Dominguez, F. Garesci, C. Wang, H. Almasi, M.
+Grayson, G. Finocchio, P. Khalili Amiri, Nat. Electron. 2020, 3, 92.
+[8] X. Chen, X. Zhou, R. Cheng, C. Song, J. Zhang, Y. Wu, Y. Ba, H. Li, Y.
+Sun, Y. You, Y. Zhao, F. Pan, Nat. Mater. 2019, 18, 931.
+[9] D. Kriegner, H. Reichlova, J. Grenzer, W. Schmidt, E. Ressouche, J.
+Godinho, T. Wagner, S. Y. Martin, A. B. Shick, V. V. Volobuev, G.
+Springholz, V. Holý, J. Wunderlich, T. Jungwirth, K. Výborný, Phys. Rev.
+B 2017, 96, 214418.
+[10] H. Yan, Z. Feng, S. Shang, X. Wang, Z. Hu, J. Wang, Z. Zhu, H.
+Wang, Z. Chen, H. Hua, W. Lu, J. Wang, P. Qin, H. Guo, X. Zhou,
+Z. Leng, Z. Liu, C. Jiang, M. Coey, Z. Liu, Nature Nanotech. 2019, 14,
+131.
+[11] C. Feng, Y. Li, L. Wang, Y. Cao, M. Yao, F. Meng, F. Yang, B. Li, K. Wang,
+G. Yu, Adv. Funct. Mater. 2020, 30, 1909708.
+[12] A. A. Sapozhnik, R. Abrudan, Y.. Skourski, M. Jourdan, H. Zabel,
+M. Kläui, H.-J. Elmers, Phys. Status Solidi (RRL). 2017, 11,
+1600438.
+[13] M. Slezak, T. Slezak, P. Dró˙zd˙z, B. Matlak, K. Matlak, A. Koziol-
+Rachwal, M. Zajac, J. Korecki, Sci. Rep. 2019, 9, 889.
+[14] R. Moessner, A. P. Ramirez, Physics Today 2006, 59, 24.
+[15] P. Santini, S. Carretta, G. Amoretti, R. Caciuﬀo, N. Magnani, G. H.
+Lander, Rev. Mod. Phys. 2009, 81, 807.
+[16] G. H. Lander, R. Caciuﬀo, J. Phys.: Condens. Matter 2020, 32, 374001.
+[17] B. T. M. Willis, R. I. Taylor, Phys. Lett. 1965, 17, 188.
+[18] B. C. Frazer, G. Shirane, D. E. Cox, C. E. Olsen, Phys. Rev. 1965, 140,
+A1448.
+[19] K. Sasaki, Y. Obata, J. Phys. Soc. 1970, 28, 1157.
+[20] J. Faber, G. H. Lander, B. R. Cooper, Phys. Rev. Lett. 1975, 35, 1770.
+[21] J. Faber, G. H. Lander, Phys. Rev. B 1976, 14, 1151.
+[22] E. Blackburn, R. Caciuﬀo, N. Magnani, P. Santini, P. J. Brown, M.
+Enderle, G. H. Lander, Phys. Rev. B 2005, 72, 184411.
+[23] S. B. Wilkins, R. Caciuﬀo, C. Detlefs, J. Rebizant, E. Colineau, F.
+Wastin, G. H. Lander, Phys. Rev. B 2006, 73, 60406.
+[24] L. V. Pourovskii, S. Khmelevskyi, Phys. Rev. B 2019, 99, 094439.
+[25] S.-T. Pi, R. Nanguneri, S. Savrasov, Phys. Rev. Lett. 2014, 112, 077203.
+[26] Y. Sharma, B. Paudel, A. Huon, M. M. Schneider, P. Roy, Z. Corey, R.
+Schönemann, A. C. Jones, M. Jaime, D. A. Yarotski, T. Charlton, M. R.
+Fitzsimmons, Q. Jia, M. T. Pettes, P. Yang, A. Chen, Adv. Sci. 2022, 9,
+2203473.
+[27] W. H. Meiklejohn, C. P. Bean, Phys. Rev. B 1956, 102, 1413.
+[28] M. Aichhorn, L. Pourovskii, P. Seth, V. Vildosola, M. Zingl, O. E.
+Peil, X. Deng, J. Mravlje, G. J. Kraberger, C. Martins, M. Ferrero, O.
+Parcollet, Comp. Phys. Commun. 2016, 204, 200.
+[29] P. Blaha, K. Schwarz, G. Madsen, D. Kvasnicka, J. Luitz, R. Laskowski,
+F. Tran, L. D. Marks, WIEN2k, An augmented Plane Wave + Local Or-
+bitals Program for Calculating Crystal Properties, Karlheinz Schwarz,
+Techn. Universität Wien, Austria 2018.
+[30] J. Hubbard, Proc. Roy. Soc. A 1963, 276, 238.
+[31] L. V. Pourovskii, Phys. Rev. B 2016, 94, 115117.
+[32] E. A. Tereshina, Z. Bao, L. Havela, S. Danis, C. Kuebel, T. Gouder, R.
+Caciuﬀo, Appl. Phys. Lett. 2014, 105, 122405.
+[33] I. K. Schuller, R. Morales, X. Batlle, U. Nowak, G. Güntherodt, J. Magn.
+Magn. Mater. 2016, 416, 2.
+[34] E. S. Ilton, P. S. Bagus, 2011, Surf. Interface Anal. 43, 1549.
+[35] E. Enriquez, G. Wang, Y. Sharma, I. Sarpkaya, Q. Wang, D.i Chen, N.
+Winner, X. Guo, J. Dunwoody, J. White, A. Nelson, H. Xu, P. Dowden,
+E. Batista, H. Htoon, P. Yang, Q. Jia, A. Chen, ACS Appl. Mater. Inter-
+faces 2020, 12, 35232.
+[36] Z. Bao, R. Springell, H. C. Walker, H. Leiste, K. Kuebel, R. Prang, G.
+Nisbet, S. Langridge, R. C. C. Ward, T. Gouder, R. Caciuﬀo, G. H.
+Lander, Phys. Rev. B 2013, 88, 134426.
+[37] A. Arrott, J. E. Goldman, Phys. Rev. 1957, 108, 948.
+[38] Y. Hinatsu, T. Fujino, J. Solid State Chem. 1988, 76, 124.
+[39] Ö. Özdemir, D. J. Dunlop, Earth Planet. Sci. Lett. 1999, 165, 229.
+[40] M. Rotter, J. Magn. Magn. Mater. Supplement 2004, E481, 272, http:
+//www.mcphase.de.
+[41] J. Nogués, I. K. Schuller, J. Magn. Magn. Mater. 1999, 192, 203.
+[42] K. P. Mckenna, F. Hofer, D. Gilks, V. K. Lazarov, C. Chen, Z. Wang, Y.
+Ikuhara, Nat. Commun. 2014, 5, 5740.
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (8 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Licensewww.advancedsciencenews.com
+www.afm-journal.de
+[43] C. Chen, H. Li, T. Seki, D. Yin, G. Sanchez-Santolino, K. Inoue, N.
+Shibata, Y. Ikuhara, ACS Nano 2018, 12, 2662.
+[44] S. K. Arora, R. G. S. Soﬁn, A. Nolan, I. V. Shvets, J. Magn. Magn. Mater
+2005, 286, 463.
+[45] X. Liu, H. Lu, M. He, K. Jin, G. Yang, Solid State Comm 2014, 23, 188.
+[46] R. F. Pearson, R. Cooper, Proc. Phys. Soc. 1960, 78, 17.
+[47] E. A. Tereshina, S. Danis, R. Springell, Z. Bao, L. Havela, R. Caciuﬀo,
+Thin Solid Films 2015, 591, 271.
+[48] T. Gouder, J. Electron. Spectrosc. Relat. Phenom. 1999, 101–103,
+419.
+[49] M. Mayer, SIMNRA User’s guide, Max-Planck-Institut fur Plasma-
+physik, Garching, Germany 113, 1997.
+Adv. Funct. Mater. 2024, 34, 2311895
+2311895 (9 of 9)
+© 2023 The Authors. Advanced Functional Materials published by Wiley-VCH GmbH
+ 16163028, 2024, 13, Downloaded from https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202311895 by Shanghai University, Wiley Online Library on [18/06/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

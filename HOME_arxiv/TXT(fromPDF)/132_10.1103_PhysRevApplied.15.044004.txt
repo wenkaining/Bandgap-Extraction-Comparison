@@ -1,0 +1,1274 @@
+Suppression of surface-related loss in a gated semiconductor microcavity
+Daniel Najer,1, a) Natasha Tomm,1 Alisa Javadi,1 Alexander R. Korsch,2 Benjamin Petrak,1 Daniel Riedel,1
+Vincent Dolique,3 Sascha R. Valentin,2 R¨udiger Schott,2 Andreas D. Wieck,2 Arne Ludwig,2 and Richard J.
+Warburton1, b)
+1)Department of Physics, University of Basel, Klingelbergstrasse 82, CH-4056 Basel,
+Switzerland
+2)Lehrstuhl f¨ur Angewandte Festk¨orperphysik, Ruhr-Universit¨at Bochum, D-44780 Bochum,
+Germany
+3)Laboratoire des Mat´eriaux Avanc´es (LMA), IN2P3/CNRS, Universit´e de Lyon, F-69622 Villeurbanne, Lyon,
+France
+(Dated: 18 February 2021)
+We present a surface passivation method that reduces surface-related losses by almost two orders of magnitude
+in a highly miniaturized GaAs open microcavity. The microcavity consists of a curved dielectric distributed
+Bragg reﬂector (DBR) with radius ∼10 µm paired with a GaAs-based heterostructure. The heterostructure
+consists of a semiconductor DBR followed by an n-i-p diode with a layer of quantum dots in the intrinsic
+region. Free-carrier absorption in the highly doped n- and p-layers is minimized by positioning them close to
+a node of the vacuum electromagnetic-ﬁeld. The surface, however, resides at an anti-node of the vacuum ﬁeld
+and results in signiﬁcant loss. These losses are much reduced by surface passivation. The strong dependence
+on wavelength implies that the main eﬀect of the surface passivation is to eliminate the surface electric
+ﬁeld, thereby quenching below-bandgap absorption via a Franz-Keldysh-like eﬀect. An additional beneﬁt is
+that the surface passivation reduces scattering at the GaAs surface. These results are important in other
+nano-photonic devices which rely on a GaAs-vacuum interface to conﬁne the electromagnetic ﬁeld.
+I.
+INTRODUCTION
+Concepts in cavity quantum-electrodynamics (QED)
+can be implemented using semiconductors.
+A semi-
+conductor based microcavity can be created using a
+micropillar1–3, a photonic crystal cavity4,5, a whispering-
+gallery resonator6, and an open microcavity7–9. Quan-
+tum dots within these structures mimic atoms. In the
+limit of a single quantum dot (QD), a single-photon
+source can be realized by exploiting the weak-coupling
+regime of cavity-QED10. The strong-coupling regime of
+cavity-QED has been accessed with three diﬀerent mi-
+crocavity platforms1,4,9.
+In all these semiconductor-based applications of cavity-
+QED, minimizing the absorption and scattering losses
+in the microcavity is very important. For single-photon
+sources operating in the weak-coupling regime, an eﬃ-
+cient photon extraction from the microcavity is essen-
+tial2,3.
+In the strong-coupling regime, a coherent ex-
+change between an exciton in the QD and a photon in
+the micro-cavity is only possible if the exciton-photon
+coupling exceeds the rate of photon loss. Typically, this
+requires the development of low-mode volume, high Q-
+factor microcavities. A recurring theme in the develop-
+ment of such microcavities is the role of the GaAs sur-
+face. At the semiconductor surface, the symmetry of the
+lattice is broken. The GaAs surface is quite complex –
+there are a number of possible surface reconstructions,
+and a thin oxide layer typically forms on exposure to
+a)Daniel Najer and Natasha Tomm contributed equally to this work
+b)Electronic mail: richard.warburton@unibas.ch
+air11. Reducing surface-related absorption is crucial in
+the development of GaAs-based cavity-QED.
+Recently, considerable success in implementing cavity-
+QED was reported with a QD in an open microcav-
+ity7–9,12. The “bottom” mirror is a semiconductor dis-
+tributed Bragg reﬂector (DBR), the “top” mirror a
+curved, dielectric DBR. The position of the bottom mir-
+ror can be tuned in situ with respect to the top mirror,
+allowing a single QD to be brought into resonance with
+the microcavity mode. In the latest developments, the
+QDs are embedded in an n-i-p diode9,12. Both n- and p-
+doped GaAs result in free-carrier absorption13. To min-
+imize the absorption within the microcavity, the n- and
+p-doped layers are made as thin as possible and are po-
+sitioned close to the node of the vacuum electric ﬁeld.
+This technique, positioning an absorbing layer at a vac-
+uum ﬁeld node, can also be used to reduce losses at the
+GaAs surface. But in this case, it involves a serious com-
+promise.
+If there is a node at the surface, the largest
+vacuum electric ﬁeld lies in the vacuum-gap and not in
+the GaAs material on account of interferences in the de-
+vice. This reduces considerably the coupling of a QD to
+the vacuum electric ﬁeld. An acceptably large coupling
+is only possible if there is a vacuum ﬁeld anti-node at the
+surface. Success with the n-i-p devices in an open micro-
+cavity was only possible after passivating the surface9,12.
+The role played by the passivation is elucidated here.
+We probe the surface-related absorption in a GaAs
+open microcavity.
+The main diagnostic tool is a mea-
+surement of the wavelength dependence of the Q-factor.
+With an untreated surface, we ﬁnd that the Q-factor is
+modest, approximately 104 at the stopband center, much
+lower than the value expected from the mirror designs.
+Following surface passivation, we ﬁnd that the Q-factor
+arXiv:2012.05104v3  [physics.optics]  17 Feb 20212
+400
+300
+200
+100
+0
+0
+15
+30
+0
+15
+30
+0
+15
+30
+|Evac| (kV/m)
+z (nm)
++
+AlAs/GaAs
+DBR
+Vg
+InAs QDs
+n+ GaAs
+p++ GaAs
+Al.33Ga.66As
+GaAs capping layer
+XYZ nano-positioner
+laser
+IN
+(a)
+(b)
+SiO2/Ta2O5
+DBR
+photodetector
+passivation layer
+R = 10 µm
+λC = 920 nm
+6.2%
+MCF=
+0.9%
+0.9%
+(c)
+FIG. 1. Ultrahigh Q-factor optical microcavity as sensitive
+probe of surface-related absorption. (a) Schematic of the mi-
+crocavity involving a curved dielectric-DBR and an n-i-p het-
+erostructure with self-assembled InAs QDs on top of a semi-
+conductor DBR (“nip-DBR”). (b) Simulated reﬂectance of the
+nip-DBR with stopband (SB) center λC = 920 nm. (c) Cal-
+culated vacuum-ﬁeld amplitude across the heterostructure for
+three diﬀerent wavelengths (−30, 0, +30) nm with respect to
+the SB center. As the antinodes of the vacuum-ﬁeld shift in
+position with wavelength thereby changing the modal con-
+ﬁnement factor (MCF) in the GaAs capping layer, surface-
+related absorption in the capping layer (10−10–10−8 cm−1)
+can be probed via the microcavity by measuring its Q-factor
+across the SB. Note that at λC, where the coupling to the QDs
+is maximized, free-carrier absorption in the highly doped p-
+and n-gates is minimized by placing them close to a vacuum-
+ﬁeld node. Note also that the highly reduced vacuum-ﬁeld
+at λ −λC = −30 nm arises as at this wavelength, the largest
+vacuum electric-ﬁeld is located in the vacuum gap.
+increases to ≃106 at the stopband center, close to the
+value expected from the mirror designs. This shows that,
+ﬁrst, the dominant loss mechanism in the untreated case
+is related to the GaAs surface, and second, that surface
+passivation remedies this loss. For the untreated surface,
+the Q-factor has a very strong dependence on wavelength,
+increasing rapidly on tuning to lower wavelengths. By
+comparing the Q-factor to the result of model calcula-
+tions, we ﬁnd that we can account quantitatively for the
+Q-factor by ascribing the loss to absorption in the cap-
+ping layer, the ﬁnal 55-nm-thick GaAs layer of the het-
+erostructure. The absorption in the capping layer is an
+exponential function of the photon energy, pointing to
+Franz-Keldysh-like absorption induced by a strong elec-
+tric ﬁeld at the surface14–18. In turn, this demonstrates
+the main role of the surface passivation layer in this de-
+vice: it reduces the surface electric ﬁeld, thereby much
+reducing the Franz-Keldysh (F-K) absorption. The stan-
+dard analytic result for the F-K eﬀect describes the ab-
+sorption at the unpassivated surface but with an electric
+ﬁeld much higher than in the standard picture (mid-gap
+pinning).
+II.
+THE OPEN, TUNABLE MICROCAVITY
+The microcavity7,19 consists of a curved dielectric DBR
+– the template is produced by CO2-laser ablation20 –
+paired with an “nip-DBR” semiconductor heterostruc-
+ture. The InAs QDs are embedded in the intrinsic part of
+the n-i-p diode; the diode resides on top of a semiconduc-
+tor DBR, Fig. 1(a). We employ two dielectric top DBRs.
+The ﬁrst (DBR-I) is composed of 22 pairs of SiO2(λ/4)
+and Ta2O5(λ/4) (where λ depicts the wavelength in each
+material) and is terminated with SiO2.
+The stopband
+(SB) center21 is 973 nm. The second (DBR-II) is com-
+posed of 15 pairs of SiO2(λ/4) and Ta2O5(λ/4), Ta2O5
+terminated, and has its SB center at 930 nm. The semi-
+conductor DBR consists of 46 pairs of AlAs(λ/4) and
+GaAs(λ/4). The heterostructure is a 1.5λ-layer of GaAs
+including doped layers acting as top-gate (p++, 1019
+cm−3) and back-gate (n+, 2 · 1018 cm−3). The QD layer
+is placed at an antinode of the vacuum electric ﬁeld (at
+a distance λ below the surface). The intrinsic region be-
+tween QDs and back-gate acts as tunnel barrier for elec-
+trons and ensures that the QDs operate under Coulomb
+blockade at low temperature22. Using a piezo-based XYZ
+nano-positioner, the microcavity features full in situ tun-
+ability at cryogenic temperatures.
+A measurement of the Q-factor across the SB of the
+nip-DBR (Fig. 1(b)) reveals possible sources of loss in the
+heterostructure due to the fact that the standing wave
+inside the cavity shifts with wavelength (Fig. 1(c)). For
+instance, losses in the capping layer depend on the exact
+wavelength: at a wavelength-detuning of (−30, 0, 30) nm
+with respect to the nip-DBR’s SB center, the calcu-
+lated modal conﬁnement factor (MCF – deﬁned as the
+vacuum electromagnetic-energy conﬁned in the layer-of-
+interest divided by the zero-point energy, ¯hω/2, i.e. the
+total energy of the vacuum-ﬁeld mode.)
+of the cap-
+ping layer is (0.9%, 6.2%, 0.9%), respectively.
+There-
+fore, if the dominant loss mechanism in the microcavity
+takes place within the capping layer then the change in
+MCF will result in a strong dependence of the Q-factor
+across the stopband. Furthermore, by characterizing the
+mirrors carefully and by simulating the entire structure
+with transfer-matrix calculations, measurements of the
+Q-factor not only reveal the location of the dominant
+loss process but can also be used to determine the loss
+quantitatively.
+III.
+GaAs SURFACE PASSIVATION
+Surface passivation of GaAs replaces the native ox-
+ide with a thin Al2O3 layer6,23.
+The surface passiva-
+tion recipe follows in part one of the procedures de-3
+scribed in Ref.24. As a ﬁrst cleaning step, the processed
+semiconductor sample (already containing Au contact
+pads) is successively immersed in acetone, isopropanol
+and ethanol inside an ultrasonic bath at T = 40 ◦C.
+To prevent surface treatment of the contact pads, they
+are covered by a manually applied drop of photoresist
+(AZ1512HS, Microchemicals GmbH) and baked for 10
+min at T = 100 ◦C. At room temperature, the sample is
+dipped into an HCl solution (25%) for 1 min in order to
+remove the native oxide24,25. The sample is then rinsed
+with deionized water for ∼1 s and immediately immersed
+in an (NH4)2S solution (20%) for 10 min. This proce-
+dure passivates the surface with sulfur26,27, preventing
+the native oxide from reforming. The S-layer is however
+not robust. For this reason, it is removed and replaced
+with an Al2O3 layer. To achieve this, on emerging from
+the (NH4)2S solution, the sample is blown dry with ni-
+trogen and immediately transferred into an atomic-layer
+deposition (ALD) chamber (Savannah 100, Cambridge
+NanoTech Inc.).
+The following ALD recipe is chosen to deposit ∼8 nm
+of Al2O3 onto the sample surface: T = 150 ◦C, ﬁrst pulse
+50 ms (water), wait 12 s, second pulse 40 ms (TMA), wait
+10 s; the cycle is repeated 80 times. The Al2O3 layer
+acts as diﬀusion barrier for oxygen29, thus preventing
+reoxidation of the etched GaAs surface.
+After surface passivation, the remaining challenge is
+to remove the photoresist that has been cross-linked due
+to the high temperature, T = 150 ◦C, inside the ALD
+chamber.
+The use of N -methyl-2-pyrrolidone (NMP)
+at elevated temperatures was shown to remove success-
+fully the cross-linked photoresist.
+The sample is im-
+mersed in NMP for 9–20 h (20 h yielded a better result)
+at T = 40 ◦C and then successively cleaned for 5 min in
+NMP, acetone, isopropanol and methanol inside an ultra-
+sonic bath at T ∼56 ◦C. As a ﬁnal step, a polymeric strip
+coating (First Contact, Photonic Cleaning Technologies)
+is used to remove any ﬁnal residues from the sample sur-
+face.
+IV.
+INDIVIDUAL MIRROR CHARACTERIZATION
+Each DBR has a high reﬂectance for wavelengths
+within the stopband (SB). Outside the stopband, there
+are oscillations in the reﬂectivity as a function of wave-
+length. These oscillations are sensitive to the exact layer
+thicknesses in the particular mirror – this dependence is
+exploited to characterize the layers in each DBR.
+As depicted in Fig. 2, the cavity’s top and bottom
+mirrors are characterized at T = 4.2 K by a broadband
+light-source (white light-emitting-diode or halogen lamp)
+and a dark-ﬁeld confocal microscope28. The light from
+the source is coupled into a single-mode optical ﬁber,
+the output of which is collimated and focussed onto the
+sample surface with an objective lens (NA=0.55). Cross-
+polarizing elements are used in the beam path to reject
+all but the light reﬂected from the sample surface. The
+700
+750
+800
+850
+900
+0
+25
+50
+75
+100
+λC = 973 nm
+ 
+Reflectance R (%)
+λ (nm)
+850
+900
+950
+0
+25
+50
+75
+100
+λC = 922 m
+ 
+Reflectance R (%)
+λ (nm)
+(a)
+(b)
+FIG. 2. Mirror characterization via reﬂection measurements.
+Each mirror is investigated by recording the spectrum of
+white light reﬂected oﬀthe sample using a dark-ﬁeld con-
+focal microscope28. Via 1D transfer matrix methods (Essen-
+tial Macleod), the designed layer thicknesses can be reﬁned
+to ﬁt the experimentally observed oscillations. (a) Dielectric
+DBR-I. The reﬂected signal is recorded on a ﬂat surface away
+from the curved part of the mirror and normalized by the
+white-light spectrum. (b) Unpassivated nip-DBR. Here, the
+reﬂectance spectrum is obtained by normalizing the reﬂected
+signal from the mirror by the reﬂected signal from a Au con-
+tact pad (by moving the piezo-nanopositioner laterally by a
+few microns).
+detection ﬁber is connected to a spectrometer28. The re-
+ﬂected light from a metallic mirror, the Au contact pad
+in the case of the nip-DBR, is used to record a refer-
+ence spectrum. The nip-DBR’s reﬂectance spectrum is
+obtained by dividing its reﬂected spectrum by the refer-
+ence spectrum. Due to the absence of a metallic reference
+surface on top of the dielectric DBR-I in Fig. 2(a), an ex-
+ponential ﬁt of the reference spectrum from Fig. 2(b) is
+used instead and the maximum reﬂectance is normalized
+to one.
+Via 1D transfer matrix methods (Essential Macleod,
+Thin Film Center Inc.) the design layer thicknesses can
+be reﬁned in order to ﬁt the reﬂectivity oscillations out-
+side the stopband. The obtained models for each DBR
+(red solid lines in Fig. 2) provide a convincing descrip-
+tion of these oscillations. These mirror descriptions are
+then used to simulate the cavity performance, in par-
+ticular the Q-factors and transmittance values at reso-4
+nance as a function of the vacuum-gap between the mir-
+rors (Sec. IX). The slight discrepancy between experi-
+ment and model arises from the diﬃculty of recording
+precisely a reference spectrum for the white-light source.
+V.
+MICROCAVITY CHARACTERIZATION: Q-FACTORS
+A microcavity is constructed using passivated and
+unpassivated semiconductor-DBRs and a curved dielec-
+tric DBR (radius of curvature ∼7–16 µm) similar to
+the ones characterized in Fig. 2. Via narrowband-laser
+transmission-measurements, each microcavity is charac-
+terized by determining its Q-factor across the SB of the
+semiconductor DBR. The transmission signal is measured
+as a function of laser frequency keeping the cavity length
+ﬁxed (Fig. 3(a)). To change the cavity’s resonance fre-
+quency, the mirror separation is changed by means of the
+Z nano-positioner.
+A Q-factor is obtained for every pair of longitudi-
+nal (TEM00) modes at the minimum mirror separation
+(∼2–4 µm, depending on wavelength and mirror-crater
+depth19) by ﬁtting a double-Lorentzian.
+Fig. 3(a),(b)
+show the results for an electrically-contacted passivated
+sample30 (black dots), an electrically-uncontacted unpas-
+sivated sample (blue triangles) as well as an electrically-
+contacted unpassivated sample (red squares), paired with
+DBR-I as top mirror. Without passivation, the Q-factor
+is around 105 for the electrically-uncontacted unpassi-
+vated sample at the SB center, and too low to measure
+precisely for the electrically-contacted unpassivated sam-
+ple. At a red-shift of 10 nm from the SB center, the Q-
+factor for the electrically-contacted unpassivated sample
+is on average 3.8 · 104, and 1.28 · 105 for the electrically-
+uncontacted unpassivated sample (Fig. 3(a).). These val-
+ues are much smaller than the values expected from the
+DBRs – they signify that there is a signiﬁcant loss mech-
+anism. Around the SB center, where the coupling to the
+QD layer is maximized (λC = 915–925 nm), the Q-factors
+are strongly decreased by this loss mechanism – the loss
+impacts signiﬁcantly the performance of a QD in the mi-
+crocavity.
+As the wavelength approaches the red-end of the SB,
+the Q-factors for the unpassivated samples increase.
+There is a pronounced asymmetry with respect to the
+SB center: the Q-factors fall monotonically as the wave-
+length shifts to the blue with respect to the SB center.
+These results imply that the loss mechanism is a strong
+function of wavelength.
+After passivation, the Q-factor around the SB center
+increases. At a red-shift of 10 nm from the SB center,
+the Q-factor increases to a very large value, 6.34 · 105
+(Fig. 3(a)). Furthermore, the dependence of the Q-factor
+on wavelength is much more symmetric with respect to
+the SB center. In fact, the decrease on the blue-side re-
+ﬂects the decrease in reﬂectivity of the dielectric mirror
+which, for fabrication reasons, has a maximum reﬂectiv-
+ity at a wavelength of 973 nm.
+-0.22
+-0.20
+-0.18
+-0.16
+10-9
+10-8
+470
+α (cm-1)
+320
+E−Eg (eV)
+Fcap  (kV/cm):
+ 
+ DBR-II
+ DBR-I
+-20
+0
+20
+40
+0.2
+0.4
+0.6
+0.8
+Q-factor (106)
+ 
+λ−λC (nm)
+0.0
+1
+2
+Q1=45,000±100
+Q2=31,000±30
+0.0
+0.5
+ 
+                κ/2π
+     = 0.49 GHz
+Q2=612,000±3,000
+Q1=656,000±2,000
+0
+1
+ 
+ 
+Q2=100,000±300
+Q1=155,000±600
+Transmission (V)
+0
+-20
+∆L/2π (GHz)
+20
+0
+-20
+∆L/2π (GHz)
+20
+0
+-20
+∆L/2π (GHz)
+ passivated
+(with contacts)
+ unpassivated
+(no contacts)
+        
+ unpassivated
+(with contacts)
+        
+ 
+ 
+ F-K-like absorption
+         surface roughness
+        
+(a)
+(b)
+(c)
+20
+F    = 200 kV/cm
+cap
+F    = 320 kV/cm
+cap
+F    = 470 kV/cm
+cap
+σ = 0.14 nm 
+σ = 0.5 nm 
+σ = 1.0 nm 
+F    = 0 kV/cm, σ = 0.0 nm 
+cap
+FIG. 3. Microcavity characterization via Q-factor measure-
+ments using: DBR-I paired with passivated nip-DBR with
+contacts (black dots), two unpassivated nip-DBRs without
+contacts (blue triangles); DBR-I (II) paired with ﬁve (one)
+unpassivated DBRs with contacts (red squares).
+(a) Mea-
+sured transmission signal as a function of laser detuning at
+λ −λC ∼10 nm at ﬁxed mirror separation.
+The Q-factor
+is determined by a double-Lorentzian ﬁt (solid lines).
+(b)
+Evaluated Q-factors for several wavelengths.
+Mean values
+and standard deviations originate from data from two cav-
+ity modes, and up to six measurements.
+Two surface-loss
+mechanisms are modeled: absorption and scattering.
+The
+solid lines are calculated Q-factors taking into account free-
+carrier absorption (absorption coeﬃcients from Ref.13) and
+F-K absorption17,18 for electric ﬁelds in the capping layer
+Fcap = (200, 320, 470) kV/cm.
+The dotted lines are calcu-
+lated taking into account surface scattering
+31 only.
+For
+the passivated case, the black dotted line is modelled with
+a roughness at both the GaAs-alumina and alumina-vacuum
+interfaces σ = (σGaAs−Al2O3, σAl2O3−vac), and found to be
+σ = (0.14, 0.14) nm; alternatively σ = (0.0, 0.55) nm yields
+similar results.
+In the unpassivated cases, the blue and
+red dotted lines are modelled with σGaAs−vac = 0.5 nm and
+σGaAs−vac = 1.0 nm at the GaAs-vacuum interface, respec-
+tively. Gray solid line is model without any surface losses.
+(c) By comparing measured and simulated Q-factors, and as-
+suming that the scattering losses are negligible, the absorption
+coeﬃcient α can be deduced as a function of photoenergy. α
+is ﬁtted to the F-K result using Fcap as ﬁtting parameter.5
+The passivation procedure changes the properties of
+the surface but leaves the rest of the microcavity un-
+changed. The drastic increase of the Q-factors after sur-
+face passivation leads therefore to the conclusion that the
+losses limiting the Q-factors of unpassivated microcavi-
+ties are related to the semiconductor surface. Speciﬁcally,
+the loss, either an absorption or scattering mechanism,
+originates at the GaAs surface itself or in the GaAs layer
+immediately below the surface.
+These results were veriﬁed in a second experiment em-
+ploying a diﬀerent piece of wafer material from the nip-
+DBR. The passivation was carried out in a separate run;
+the cavity was constructed with DBR-II as top mirror.
+The results are shown in Fig. 4. The results follow closely
+those of the ﬁrst experiment, with the advantage that the
+Q-factors could be determined also on the blue side of the
+SB center.
+To quantify the loss, the entire microcavity is mod-
+eled (see Sec. IX) using accurate descriptions of the two
+DBRs, including the free-carrier absorption in the doped
+layers in the heterostructure.
+Absorption is added to
+the capping layer (GaAs between the p-doping and the
+surface) and adjusted to match the experimentally de-
+termined Q-factors at each wavelength. This is a robust
+procedure as the surface-related loss dominates other loss
+channels. The extracted absorption coeﬃcients α from
+this procedure are plotted as a function of wavelength in
+Fig. 3(c).
+In both cases shown in Fig. 3(c) the absorption co-
+eﬃcients α are extremely small. From a measurement
+point of view, the microcavity represents a very sensi-
+tive platform for detecting very weak absorption or scat-
+tering events. In a single-pass experiment, these losses
+would be very diﬃcult to detect. Signiﬁcantly, we ﬁnd
+that α depends exponentially on photon energy in the un-
+passivated case, a dependence that rules out scattering
+or broad-band absorption as the main loss mechanism at
+the surface, as these processes would have a much weaker
+dependence on wavelength. Instead, the exponential de-
+pendence points to below-gap absorption in an electric
+ﬁeld.
+VI.
+INVESTIGATION OF LOSS VIA SURFACE
+ROUGHNESS
+In order to conﬁrm that the measured losses on the
+heterostructure with doping are indeed a consequence of
+the doped layers, and to quantify losses via surface scat-
+tering, we compare our results to a microcavity consisting
+of a semiconductor heterostructure without doping. The
+heterostructure in this case is a λ-layer of GaAs (with
+embedded InAs QDs in the center) on top of a 33-pair
+AlAs/GaAs DBR7,8,32 It is a high-quality sample but
+may not match the ultra-high quality of the semiconduc-
+tor heterostructure with doping. Initially, we repeat the
+mirror characterization procedure described above and
+ﬁnd a suitable model for the semiconductor layer thick-
+-20
+-10
+0
+10
+20
+30
+40
+0.2
+0.3
+0.4
+0.5
+0.6
+Q-factor (106)
+λ−λ C (nm)
+0.0
+0.1
+passivated A
+passivated B
+passivated C
+unpassivated
+FIG. 4. Determination of surface-related losses via Q-factor
+measurements using DBR-II with an nip-DBR. We probe the
+double role of surface passivation. Four positions in the con-
+tacted sample are probed: three passivated areas (circles) A,
+B, C and an unpassivated region (red squares). Mean val-
+ues and standard deviation result from the measurements on
+the two cavity modes. We implement a mixed model to ﬁt
+the data: F-K-like absorption and reasonable values of sur-
+face roughness are probed together. For the passivated re-
+gions, surface roughness alone explains the observed data.
+We estimate a roughness σ = (σGaAs−Al2O3, σAl2O3−vac) for
+each region:
+at region A σ = (0.5, 0.5) nm, alternatively
+σ = (0.0, 1.0) nm; at region B σ = (0.25, 0.8) nm, alterna-
+tively σ = (0.0, 1.4) nm; at region C σ = (0.5, 3.0) nm, al-
+ternatively σ = (0.0, 3.75) nm. For the unpassivated region,
+surface roughness alone cannot account for the Q-factor de-
+pendence on wavelength alone: with a surface roughness of
+σGaAs−vac = 0.3 nm, an electric ﬁeld Fcap = 400 kV/cm is
+still needed to ﬁt data.
+nesses (Fig. 5(a)). Subsequently, we pair this mirror with
+the dielectric top mirror DBR-I.
+Figure 5(b) depicts the measured Q-factors as a func-
+tion of wavelength for the semiconductor heterostructure
+without doping.
+The Q-factor reaches approximately
+105 at the stopband center, and remains constant within
+measurement error over a wavelength range of approxi-
+mately 20 nm. This behaviour is quite diﬀerent to that
+of the unpassivated semiconductor heterostructure with
+doping (Fig. 3(b),(c), Fig. 4). The conclusion is that the
+strongly wavelength dependent loss process is related to
+the doping.
+In the absence of losses, the heterostructure-without-
+doping – top mirror combination should yield a Q-factor
+of 2 × 105 in the stopband center, about a factor of two
+higher than that determined experimentally (Fig. 5(b),
+gray solid line). The wavelength-dependence of the Q-
+factor (Fig. 5(b)) is, as before, a useful diagnostic of
+the scattering process. We ﬁnd that in this case, scat-
+tering alone at the GaAs-vacuum interface can account6
+850
+900
+950
+1000
+0
+25
+50
+75
+100
+Reflectance R (%)
+λ (nm)
+λC = 956 nm
+(a)
+(b)
+-40
+-20
+0
+20
+40
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+ 
+ 
+Q-factor (106)
+λ−λC (nm)
+FIG. 5. Undoped semiconductor heterostructure: reﬂectance
+and Q-factor measurements.
+(a) Reﬂectance measurement
+of a semiconductor heterostructure without doping (λC =
+956 nm) at T = 4.2 K. The heterostructure contains a λ-layer
+of GaAs on top of 33 pairs of AlAs(λ/4)/GaAs(λ/4). A layer
+of QDs is included at the center of the GaAs layer. In or-
+der to record a reference spectrum, parts of the sample were
+covered by an Au ﬁlm using electron-beam evaporation. (b)
+Q-factor of a microcavity at T = 4.2 K consisting of this het-
+erostructure without doping paired with a dielectric top mir-
+ror DBR-I, experiment (points) and simulation with a surface
+roughness σGaAs−vac = 0.5 nm (red solid line). The red dot-
+ted line is the expected Q-factor on passivating the surface
+with a 8.0 nm-thick Al2O3 layer. Gray solid line corresponds
+to expected Q-factor without any surface losses.
+for the measured Q-factors, with a surface roughness
+σGaAs−vac = 0.5 nm (Fig. 5(b) red solid line). We simu-
+late as well the possible outcome of passivating the un-
+doped sample, with σ = (σGaAs−Al2O3, σAl2O3−vac) =
+(0.5, 0.5) nm, shown in Fig. 5(b) red dotted line: the ad-
+dition of a thin alumina layer would diminish the eﬀect
+of surface scattering due to surface roughness, increasing
+slightly the expected Q-factor.
+A surface roughness σ translates into a total integrated
+scatter (TIS) of TIS ≈(4πσ/λ)2 (Ref.33) and can be
+modelled by an extinction coeﬃcient k (for the 1D trans-
+fer matrix methods) according to Ref.31,
+k = π(n1 −n2)2(n1 + n2)d
+λ
+p
+8(n2
+1 + n2
+2)
+,
+(1)
+where d = 2σ, n1 and n2 are the refractive indices of
+the two layers surrounding the scatter layer, and λ is the
+free-space wavelength. Including this loss in the simu-
+lations reproduces the measured Q-factors convincingly.
+Furthermore, atomic force microscopy (AFM) measure-
+ments (tapping mode, Bruker Dimension 3100) indicate
+that surface roughness is present in diﬀerent amounts
+across samples, as shown in Fig. 6. The undoped wafer
+presented a root-mean-square (rms) surface roughness
+0.3 ≤σ ≤0.7 nm, the unpassivated bare sample (with-
+out contacts) presented 0.2 ≤σ ≤0.9 nm, the unpas-
+sivated contacted sample 0.4 ≤σ ≤7.3 nm, and the
+passivated sample 0.3 ≤σ ≤1.9 nm. The native sur-
+face roughness at the GaAs-vacuum interface, right after
+growth of the samples, is on the order of 0.15 to 0.30 nm.
+However, increased roughness is caused by processing of
+the samples – e.g. via passivating, cleaning and gluing,
+bonding.
+We speculate that in the unpassivated con-
+tacted samples, presented high values of surface rough-
+ness might be induced by remnant traces of photoresist
+from the processing procedure (which in turn have a low-
+ering scattering power than pure GaAs, due to the re-
+duced refractive index).
+The passivated doped sample also provided an op-
+portunity to test the applicability of the TIS result for
+loss at a rough interface. The Q-factors measured with
+DBR-II at three diﬀerent passivated regions of the sam-
+ple presented a weak dependence on wavelength, in con-
+trast to the results in the unpassivated region.
+The
+model with σ = (0.5, 0.5) nm, σ = (0.25, 0.8) nm and
+σ = (0.5, 3.0) nm respectively for regions A, B and C re-
+produce these Q-factors precisely, with reasonable values
+of roughness at each interface (Fig. 4). Furthermore, the
+model captures the symmetric inﬂuence of roughness on
+the Q-factor with respect to the SB center. This results
+from the reduction in the MCF at the sample’s surface,
+as presented in Fig. 1(c).
+Agreement between the Q-
+factors and the simulation gives us conﬁdence that the
+description of loss via surface scattering is quantitatively
+correct.
+The conclusion from this measurement and analysis is
+that, not only passivating the surface quenches surface-
+related absorption, but also has the beneﬁcial aspect of
+reducing loss via surface scattering. The original GaAs
+surface and the passivated surface have a similar range of
+values of surface roughness. In the passivated case, the
+surface loss via scattering is about 60% with respect to
+that of the unpassivated sample. The passivation proce-
+dure creates a layer with an intermediate refractive index:
+it avoids the large jump in refractive index at a GaAs-
+vacuum interface. This reduces the total scattering loss.
+In the case of the doped unpassivated sample, the
+wavelength dependence of the Q-factors is too strong
+to be accounted for with scattering loss (Fig. 3(b) and
+Fig. 4). A diﬀerent mechanism is clearly at play.7
+(c)
+(a)
+(d)
+(b)
+4 nm
+-4 nm
+z
+100 nm
+σ = 0.47 nm
+σ = 0.52 nm
+σ = 0.89 nm
+σ = 0.49 nm
+FIG. 6. Atomic force microscropy (AFM) images of diﬀerent semiconductor samples. Each image depicts the same scan area of
+0.8 × 0.8 µm2 (obtained in tapping mode) and scale bar from a height of −4 to +4 nm. (a) Piece of passivated wafer. The rms
+surface roughness measured on several similar sample locations lies in the range 0.3 ≤σ ≤1.9 nm. (b) Piece of unpassivated
+bare wafer. Range of surface roughness for similar sample locations is 0.3 ≤σ ≤0.7 nm. (c) Unpassivated sample with contacts.
+Similar samples present 0.4 ≤σ ≤7.3 nm. (d) Piece of unpassivated bare wafer from a semiconductor DBR without n- and
+p-type layers. Diﬀerent sample locations presented surface roughness ranging between 0.2 ≤σ ≤0.9 nm.
+VII.
+MICROSCOPIC EXPLANATION FOR THE
+NIP-DBR LOSSES
+We give a possible microscopic explanation for the
+losses in the investigated nip-DBR structure and why sur-
+face passivation signiﬁcantly reduces them. In Fig. 7(a),
+the calculated valence- and conduction-band edges in the
+heterostructure are shown, a solution to the 1D Poisson
+equation (obtained via the nextnano software). In the
+unpassivated case, we simulate the mid-gap Fermi-level
+pinning at the surface via a Schottky barrier of 0.76 eV.
+This yields an electric ﬁeld in the capping layer (“capping
+ﬁeld”) of Fcap = 140 kV/cm.
+An electric ﬁeld in a semiconductor leads to F-K ab-
+sorption below the bandgap of the material14,15: owing
+to the position-dependence of the band-edges, the elec-
+tron and hole wavefunctions can be described by Airy
+functions (similar to a particle in a triangular well34)
+and acquire an exponential tail at energies within the
+bandgap. The electric ﬁeld therefore creates an absorp-
+tion processes at photon energies Ephoton < Eg.
+The
+situation is schematically depicted in Fig. 7(b).
+According to the standard model16, F-K absorption at
+photon energy E due to the presence of an electric ﬁeld
+F can be described via the absorption coeﬃcient
+α(E, F) = β · F 1/3
+E
+X
+i=lh,hh
+ µi
+m0
+4/3
+· |Mi|2
+|Ai′(xi)|2 −xi|Ai(xi)|2
+,
+(2)
+where
+xi = e · (Eg −E)
+¯hθi
+,
+(3)
+¯hθi =
+(eF¯h)2
+2µi
+1/3
+.
+(4)
+In these equations, β is a constant (arbitrary units), e
+is the elementary charge (in SI units), ¯h the reduced
+Planck’s constant (in SI units), m0 the free electron
+rest mass (in kg), µlh = 0.037m0 (µhh = 0.058m0) the
+reduced mass of an electron–light-hole pair (electron–
+heavy-hole pair), F is given in kV/cm, the energies Eg
+and E in eV and |Mlh|2 (|Mhh|2) the momentum matrix
+elements for the light-hole (heavy-hole). Ai(z) is an Airy
+function35 (with derivative Ai′(z)).
+We make use of the momentum matrix elements de-
+rived in Ref.17 for diﬀerent polarizations of the radiation
+ﬁeld. For light polarized in the (x, y)-plane, the momen-
+tum matrix elements for the light- and heavy-holes read
+|Mlh|2 = P 2/3,
+(5)
+|Mhh|2 = P 2,
+(6)
+where P = 0.692 (arbitrary units) is a typical value for
+GaAs17.
+We use this model for F-K absorption to describe
+previously reported room-temperature experiments on a
+p-i-n double heterostructure18 (Fig. 7(c)), and extract
+the value of constant β in Eq. 2, which is found to be
+β = 2.5 · 104 (arbitrary units).
+These experiments ex-
+tend to photon energies far below the bandgap, the case
+of interest here. There is a compelling overlap between
+theory and experiment.
+In order to estimate F-K absorption coeﬃcients in our
+nip-DBR at 4.2 K (Fig. 3(b),(c) and Fig. 4), we make use
+of Eqs. 2–6, taking the low-temperature GaAs bandgap
+of 1.519 eV and β extracted from ﬁtting the data in
+Fig. 7(c). We compare the results of the model for low-
+temperature F-K absorption to the experimental data
+presented in Fig. 3(b),(c), taking the electric ﬁeld F as
+a ﬁtting parameter. The exponential dependence of the8
+0
+100
+200
+300
+-1
+0
+1
+2
+55 nm
+140 kV/cm 
+EV
+surface
+E
+GaAs
+cap
+p++
+E − EF (eV)
+Distance from sample surface (nm)
+n+
+InAs
+QDs
+C
+cap
+ F      :
+surface
+passivation
+0 kV/cm
+(a)
+(c)
+T = 4.2 K
+T = 300 K
+(b)
+EC
+EV
+Eg
+Ephoton
+z
+FIG. 7. Band structure and Franz-Keldysh eﬀect. (a) Simulation of the conduction and valence bands in the n-i-p diode
+(nextnano) at T = 4.2 K. The surface is modelled via a Schottky barrier of Eg/2 = 0.76 eV reﬂecting the mid-gap Fermi-level
+pinning at the GaAs surface24. The eﬀect of surface passivation is to eliminate the electric ﬁeld at the capping layer. (b)
+Schematic of the F-K eﬀect14,15. An electric ﬁeld applied to a semiconductor allows both electrons and holes to tunnel into the
+forbidden energy, leading to below-gap absorption processes. (c) Room-temperature F-K absorption coeﬃcients for diﬀerent
+electric ﬁelds within a p-i-n double heterostructure (©2020 IEEE. Reprinted, with permission, from Ref.18). The solid lines
+correspond to the calculated absorption coeﬃcients according to Ref.16,17 (Eqs. 2–6).
+absorption on the photon energy is well described with
+F-K absorption. However, in the unpassivated case, the
+capping ﬁeld is Fcap = 470 kV/cm when not accounting
+for any surface roughness (Fig. 3) and Fcap = 400 kV/cm
+when accounting for a realistic value of surface roughness
+(Fig. 4).
+These values are between 3.4 and 2.8 above
+that expected from the 1D Poisson equation (Fig. 7(a))
+respectively. The origin of this discrepancy is not under-
+stood at this point, but we note several points.
+First, to the best of our knowledge, there are no F-K
+absorption experiments reported in the literature at low
+temperature (4.2 K) and at photon energies far below the
+bandgap Eg of GaAs (at E −Eg ∼−0.17 eV correspond-
+ing to λ ∼920 nm).
+Our approach here is to ﬁt the
+theory presented in Ref.16,17 to the room temperature
+experiments of Ref.18 (Fig. 7(c)) and then to extrapolate
+the absorption coeﬃcients to photon energies ∼0.17 eV
+below the bandgap. The change in temperature, from
+room-temperate to low temperature, is accommodated
+by a rigid shift in the absorption spectrum to account for
+the increase in the bandgap. It is conceivable that the
+standard F-K theory is inadequate at photon energies
+far below the bandgap – this point has not been tested
+experimentally.
+Secondly, there are room-temperature experiments on
+F-K oscillations in doped GaAs heterostructures (a 25–
+80 nm thick, undoped GaAs capping layer on top of an
+n+-doped Al.32Ga.68As layer36) that also report surface
+electric ﬁeld values a factor 1.8–3.8 above the expected
+ones37.
+Thirdly, the F-K model describes a bulk semiconduc-
+tor in a uniform electric ﬁeld.
+Obviously, it does not
+take into account the microscopic details of the surface,
+for instance surface reconstructions and oxidation. It is
+possible that the details of the surface layer are impor-
+tant here.
+In the light of this analysis, our proposal is that surface
+passivation quenches surface-related absorption primar-
+ily by reducing the electric ﬁeld in the capping layer,
+thereby eliminating the F-K absorption (within the sen-
+sitivity of the experiment).
+A remaining question is why the bare-wafer sample
+without passivation shows higher Q-factors than the
+electrically contacted sample also without passivation
+(Fig. 3(b),(c)). The contacting process may change the
+surface roughness, as revealed by the AFM measurements
+(Fig. 6). The surface roughness per se does not however
+account for the Q-factors of the various samples. The
+main point is that surface scattering does not account
+for the exponential dependence of the loss process on
+photon energy (Fig. 3(b) and (c)). Instead, we speculate
+that the change in GaAs surface on forming the contacts
+results in a change of surface pinning, thereby increasing
+the capping ﬁeld. One possibility is that the degradation
+of the surface on contacting spreads the available surface
+states to lower energies.9
+VIII.
+MODEL FOR THE CURVED DIELECTRIC
+MIRRORS
+An interpretation of the microcavity Q-factors in terms
+of losses in the semiconductor heterostructure rests on
+an understanding of the top mirror.
+The top mirrors,
+dielectric-DBRs, are of very high quality with very low
+loss. To prove this point, we investigate a microcavity
+formed from DBR-I and a planar version of DBR-I. The
+coatings for the plane mirror and concave mirrors were
+applied to the substrates in the same run and are nomi-
+nally identical. Fig. 8 shows the measured Q-factors. At
+the stopband center of the top mirror (λC = 976 nm),
+the Q-factor is extremely high, 1.5 · 106. To describe the
+dielectric mirror accurately at the stopband center of the
+semiconductor-DBR, we analyze the dependence of the
+dielectric-dielectric Q-factor and transmission as a func-
+tion of wavelength. To describe the high transmission at
+short wavelengths, we are forced to red-shift the stopband
+center of the bottom mirror by 3 nm38. A rough interface
+at the “lower” surface of the ﬁve “lowest” Ta2O5 layers
+shown in Fig. 1 (extinction coeﬃcients corresponding to
+an interface roughness31 of 0.25 nm) together with an in-
+creased absorption within the “lowest” Ta2O5 layer (ex-
+tinction coeﬃcient k = 4kTa2O5, where kTa2O5 is deﬁned
+in Sec. IX) are heuristically introduced in the model in
+order to describe the measured Q-factors. This ﬁt is very
+convincing (Fig. 8). This description of the top dielectric-
+mirror DBR-I is used to interpret the measurements on
+microcavities formed using the semiconductor-DBRs as
+bottom mirror (Fig. 3(b),(c) and Fig. 5(b)).
+IX.
+1D TRANSFER MATRIX CALCULATION OF THE
+MICROCAVITY Q-FACTORS
+We list the relevant parameters used for the Q-
+factor calculations via a one-dimensional transfer-matrix
+method.
+Extinction coeﬃcients in the diﬀerent materials are in-
+troduced as follows. For DBR-I, kSiO2 = 4·10−7 for SiO2
+(Ref.39), kTa2O5 = 4.5 · 10−7 for Ta2O5 (Ref.39), and
+k = 4kTa2O5 is used for the “lowest”, i.e. the last-grown,
+Ta2O5 layer (the layer closest to the vacuum-gap). For
+DBR-II, kSiO2 = 4 · 10−6 for SiO2, kTa2O5 = 4.5 · 10−6
+for Ta2O5 (from ﬁtting data taken with curved DBR-II
+and planar DBR-I microcavity). Finally, for the semi-
+conductor nip-DBR, kp++ = 5.2 · 10−4 for p++-GaAs,
+kp+ = 1.9 · 10−4 for p+-GaAs, and kn+ = 0.7 · 10−4 for
+n+-GaAs13. An extinction coeﬃcient of k = αFKλ/(4π),
+where αFK is a F-K absorption coeﬃcient, is introduced
+in the capping layer; αFK depends on the electric ﬁeld.
+Surface roughness is described by introducing an addi-
+tional layer of thickness d = 2σ, where σ is the rms sur-
+face/interface roughness31.
+In analogy to the experiment, a Q-factor is determined
+for a ﬁxed “vacuum-gap” layer thickness by calculating
+a cavity transmittance spectrum.
+A Lorentzian ﬁt to
+-60
+-40
+-20
+0
+0.0
+0.5
+1.0
+1.5
+2.0
+ 
+λ−λC (nm)
+Q-factor (106)
+0
+20
+40
+60
+80
+100
+Cavity transmittance (%)
+FIG. 8. Measured Q-factors and cavity transmittance of a
+purely dielectric microcavity.
+Dielectric top mirror (λC =
+973 nm) paired with a dielectric bottom mirror (shifted to
+λC = 976 nm, nominally the same coating) at T = 300 K. The
+cavity transmittance is measured by relating the transmitted
+power at the cavity resonance to the laser power before the ob-
+jective lens multiplied by a ﬁtted in-coupling eﬃciency of 59%.
+The black solid (red dashed) line is a calculation of the Q-
+factor (cavity transmittance) taking into account a material
+extinction coeﬃcient of kSiO2 = 4·10−7 and kTa2O5 = 4.5·10−7
+for SiO2 and Ta2O5, respectively39. Additionally, an interface
+roughness of σ = 0.25 nm above each of the ﬁve last grown
+Ta2O5 layers and k = 4kTa2O5 in the last-grown Ta2O5 layer
+are introduced heuristically in order to ﬁt the experimental
+data.
+the calculated spectrum is used to determine the reso-
+nance frequency as well as the Q-factor. This procedure
+is repeated for diﬀerent vacuum-gaps, yielding a plot of
+Q-factor versus wavelength. The resulting Q-factors are
+presented in Fig. 3, Fig. 4, Fig. 5 and Fig. 8.
+X.
+CONCLUSION
+Signiﬁcant surface-related losses in an open microcav-
+ity consisting of an nip-DBR and dielectric DBR are
+much reduced by passivating the GaAs surface.
+The
+passivation works primarily by eliminating the Franz-
+Keldysh-like absorption in the capping layer. Secondary
+beneﬁt of the passivation is to reduce loss by surface scat-
+tering. With passivation, Q-factors close to 106 can be
+achieved.
+ACKNOWLEDGEMENTS
+We thank Ivan Favero for inspiration;
+we thank
+Leonardo Midolo and Peter Lodahl for fruitful discus-
+sions. We thank Monica Sch¨onenberger and the Nano
+Imaging Lab (University of Basel) for support acquiring
+AFM images. This work was funded by Swiss National
+Science
+Foundation
+Project
+200020 175748,
+NCCR
+QSIT and European Union Horizon2020 FET-Open
+Project QLUSTER. A.J. acknowledges support from the
+European Union Horizon 2020 Research and Innovation10
+Programme under the Marie Sk lodowska-Curie grant
+agreement No. 840453 (HiFig). S.R.V., R.S., A.L. and
+A.D.W. acknowledge gratefully support from DFH/UFA
+CDFA05-06, DFG TRR160, DFG project 383065199,
+and BMBF Q.Link.X.
+1J. Reithmaier, G. Sek, A. L¨oﬄer, C. Hofmann, S. Kuhn,
+S. Reitzenstein,
+L. Keldysh,
+V. Kulakovskii,
+T. Reinecke,
+and A. Forchel, “Strong coupling in a single quantum dot-
+semiconductor
+microcavity
+system,”
+Nature
+432,
+197–200
+(2004).
+2N. Somaschi, V. Giesz, L. De Santis, J. C. Loredo, M. P. Almeida,
+G. Hornecker, S. L. Portalupi, T. Grange, C. Anton, J. Demory,
+C. Gomez, I. Sagnes, N. D. Lanzillotti-Kimura, A. Lemaitre,
+A. Auﬀeves, A. G. White, L. Lanco,
+and P. Senellart, “Near-
+optimal single-photon sources in the solid state,” Nat. Photon.
+10, 340–345 (2016).
+3X. Ding, Y. He, Z.-C. Duan, N. Gregersen, M.-C. Chen, S. Un-
+sleber, S. Maier, C. Schneider, M. Kamp, S. H¨oﬂing, C.-Y. Lu,
+and J.-W. Pan, “On-demand single photons with high extrac-
+tion eﬃciency and near-unity indistinguishability from a reso-
+nantly driven quantum dot in a micropillar,” Phys. Rev. Lett.
+116, 020401 (2016).
+4T. Yoshie, A. Scherer, J. Hendrickson, G. Khitrova, H. Gibbs,
+G. Rupper, C. Ell, O. Shchekin, and D. Deppe, “Vacuum Rabi
+splitting with a single quantum dot in a photonic crystal nanocav-
+ity,” Nature 432, 200–203 (2004).
+5K. Kuruma, Y. Ota, M. Kakuda, S. Iwamoto, and Y. Arakawa,
+“Surface-passivated high-q gaas photonic crystal nanocavity with
+quantum dots,” APL Photonics 5, 046106 (2020).
+6B. Guha, F. Marsault, F. Cadiz, L. Morgenroth, V. Ulin,
+V. Berkovitz, A. Lemaitre, C. Gomez, A. Amo, S. Combrie,
+B. Gerard, G. Leo,
+and I. Favero, “Surface-enhanced gallium
+arsenide photonic resonator with quality factor of 6 × 106,” Op-
+tica 4, 218–221 (2017).
+7R. J. Barbour, P. A. Dalgarno, A. Curran, K. M. Nowak, H. J.
+Baker, D. R. Hall, N. G. Stoltz, P. M. Petroﬀ,
+and R. J. War-
+burton, “A tunable microcavity,” J. Appl. Phys. 110, 053107
+(2011).
+8L. Greuter, S. Starosielec, A. V. Kuhlmann, and R. J. Warbur-
+ton, “Towards high-cooperativity strong coupling of a quantum
+dot in a tunable microcavity,” Phys. Rev. B 92, 045302 (2015).
+9D. Najer, I. S¨ollner, P. Sekatski, V. Dolique, M. C. L¨obl,
+D. Riedel, R. Schott, S. Starosielec, S. R. Valentin, A. D. Wieck,
+N. Sangouard, A. Ludwig, and R. J. Warburton, “A gated quan-
+tum dot strongly coupled to an optical microcavity,” Nature 575,
+622–627 (2019).
+10P. Senellart, G. Solomon,
+and A. White, “High-performance
+semiconductor quantum-dot single-photon sources,” Nat. Nan-
+otechnol. 12, 1026–1039 (2017).
+11C. M. Demanet and M. A. Marais, “A multilayer model for GaAs
+oxides formed at room temperature in air as deduced from an
+XPS analysis,” Surf. Interface Anal. 7, 13–16 (1985).
+12N. Tomm, A. Javadi, N. O. Antoniadis, D. Najer, M. C. L¨obl,
+A. R. Korsch, R. Schott, S. R. Valentin, A. D. Wieck, A. Ludwig,
+and R. J. Warburton, “A bright and fast source of coherent single
+photons,” Nat. Nanotechnol. (2021).
+13H. C. Casey, D. D. Sell, and K. W. Wecht, “Concentration de-
+pendence of the absorption coeﬃcient for n- and p-type GaAs
+between 1.3 and 1.6 eV,” J. Appl. Phys. 46, 250–257 (1975).
+14W. Franz, “Einﬂuß eines elektrischen Feldes auf eine optische Ab-
+sorptionskante,” Zeitschrift f¨ur Naturforschung A 13, 484 (1958).
+15V. L. Keldysh, “Behaviour of non-metallic crystals in strong
+electric ﬁelds,” Journal of Experimental and Theoretical Physics
+(USSR) 33, 994 (1957).
+16D. E. Aspnes, “Electric-ﬁeld eﬀects on optical absorption near
+thresholds in solids,” Phys. Rev. 147, 554–566 (1966).
+17J. Hader, N. Linder, and G. H. D¨ohler, “k·p theory of the Franz-
+Keldysh eﬀect,” Phys. Rev. B 55, 6960–6974 (1997).
+18B. Knupfer, P. Kiesel, M. Kneissl, S. Dankowski, N. Lin-
+der, G. Weimann,
+and G. H. Dohler, “Polarization-insensitive
+high-contrast GaAs/AlGaAs waveguide modulator based on the
+Franz-Keldysh eﬀect,” IEEE Photonics Technology Letters 5,
+1386–1388 (1993).
+19L. Greuter, S. Starosielec, D. Najer, A. Ludwig, L. Duempel-
+mann, D. Rohner, and R. J. Warburton, “A small mode volume
+tunable microcavity: Development and characterization,” Appl.
+Phys. Lett. 105, 121105 (2014).
+20D. Hunger, C. Deutsch, R. J. Barbour, R. J. Warburton,
+and
+J. Reichel, “Laser micro-fabrication of concave, low-roughness
+features in silica,” AIP Adv. 2, 012119 (2012).
+21Note that in this work, we deﬁne the SB center as the mean value
+of the two wavelengths at the local minima (with R < 90%) of the
+calculated reﬂectance spectrum that are closest to the maximum
+mirror reﬂectance (Fig. 1(b)).
+22R. J. Warburton, C. Schaﬂein, D. Haft, F. Bickel, A. Lorke,
+K. Karrai, J. M. Garcia, W. Schoenfeld,
+and P. M. Petroﬀ,
+“Optical emission from a charge-tunable quantum ring,” Nature
+405, 926–929 (2000).
+23J. Liu, K. Konthasinghe, M. Davan¸co, J. Lawall, V. Anant,
+V. Verma, R. Mirin, S. W. Nam, J. D. Song, B. Ma, Z. S. Chen,
+H. Q. Ni, Z. C. Niu,
+and K. Srinivasan, “Single self-assembled
+InAs/GaAs quantum dots in photonic nanostructures: The role
+of nanofabrication,” Phys. Rev. Appl. 9, 064019 (2018).
+24Y. Xuan, H. Lin,
+and P. D. Ye, “Simpliﬁed surface prepara-
+tion for GaAs passivation using atomic layer-deposited high-κ
+dielectrics,” IEEE Transactions on Electron Devices 54, 1811–
+1817 (2007).
+25M. Rebaud, M.-C. Roure, V. Loup, P. Rodriguez, E. Martinez,
+and P. Besson, “Chemical treatments for native oxides removal
+of GaAs wafers,” ECS Trans. 69, 243–250 (2015).
+26E. Yablonovitch, C. J. Sandroﬀ, R. Bhat,
+and T. Gmitter,
+“Nearly ideal electronic properties of sulﬁde coated GaAs sur-
+faces,” Appl. Phys. Lett. 51, 439–441 (1987).
+27T. Ohno, “Sulfur passivation of GaAs surfaces,” Phys. Rev. B
+44, 6306–6311 (1991).
+28A. V. Kuhlmann, J. Houel, A. Ludwig, L. Greuter, D. Reuter,
+A. D. Wieck, M. Poggio,
+and R. J. Warburton, “Charge noise
+and spin noise in a semiconductor quantum device,” Nat. Phys.
+9, 570–575 (2013).
+29J.
+Robertson,
+Y.
+Guo,
+and
+L.
+Lin,
+“Defect
+state
+passivation
+at
+III-V
+oxide
+interfaces
+for
+complementary
+metal–oxide–semiconductor devices,” J. Appl. Phys. 117, 112806
+(2015).
+30Note that the measured Q-factors obtained with an electrically-
+contacted passivated sample and with an electrically-uncontacted
+passivated sample were similar. The latter are not shown in
+Fig. 3(b).
+31C. K. Carniglia and D. G. Jensen, “Single-layer model for surface
+roughness,” Appl. Opt. 41, 3167–3171 (2002).
+32We note that the semiconductor heterostructure without doping
+was not grown with the same MBE as the semiconductor het-
+erostructure with doping.
+33J. M. Bennett, “Recent developments in surface roughness char-
+acterization,” Meas. Sci. Technol. 3, 1119–1127 (1992).
+34J. Davies, The Physics of Low-dimensional Semiconductors: An
+Introduction (Cambridge University Press, 1997).
+35The Airy function is deﬁned as Ai(z) =
+1
+2π
+R ∞
+−∞ei(zt+t3/3)dt.
+36L. Zamora Peredo, L. Garc´ıa-Gonz´alez, J. Hernandez Torres,
+I. Cortes-Mestizo, V. Mendez-Garcia,
+and M. L´opez-L´opez,
+“Photoreﬂectance and Raman study of surface electric states on
+AlGaAs/GaAs heterostructures,” J. Spectrosc. 2016, 1–8 (2016).
+37In order to estimate the capping ﬁelds in Ref.36, we assume mid-
+gap pinning, dividing half the bandgap Eg/2 = 0.71 eV of GaAs
+at 300 K by the capping layer thicknesses there reported.
+38We note that reﬂectance spectra (Fig. 2(a)) on diﬀerent samples
+with nominally the same dielectric coating exhibited up to 6 nm11
+shifts in wavelength, most probably due to thickness variations
+across the wafer.
+39F. Beauville and The VIRGO Collaboration, “The VIRGO large
+mirrors: a challenge for low loss coatings,” Class. Quantum Grav-
+ity 21, S935–S945 (2004).

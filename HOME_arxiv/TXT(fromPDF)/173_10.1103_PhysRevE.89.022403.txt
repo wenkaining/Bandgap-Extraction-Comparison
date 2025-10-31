@@ -1,0 +1,827 @@
+arXiv:1310.5263v1  [cond-mat.mtrl-sci]  19 Oct 2013
+Dislocation mutual interactions mediated by mobile impurities and the conditions for
+plastic instabilities
+Fabio Leoni
+School of Mechanical Engineering, Tel-Aviv University, Tel-Aviv 69978, Israel
+Stefano Zapperi
+CNR-IENI, Via R. Cozzi 53, 20125 Milano, Italy
+ISI Foundation, Via Alassio 11C, 10126 Torino, Italy
+Matallic alloys, such as Al or Cu, or mild steel, display plastic instabilities in a well deﬁned range
+of temperatures and deformation rates, a phenomenon known as the Portevin-Le Chatelelier (PLC)
+eﬀect. The stick-slip behavior, or serration, typical of this eﬀect is due to the discontinuous motion
+of dislocations as they interact with solute atoms. Here we study a simple model of interacting
+dislocations and show how the classical Einstein ﬂuctuation-dissipation relation can be used to
+deﬁne the temperature in a range of model parameters and to construct a phase diagram of serration
+that can be compared to experimental results. Furthermore, performing analytical calculations and
+numerically integrating the equations of motion, we clarify the crucial role played by dislocation
+mutual interactions in serration.
+I.
+INTRODUCTION
+Dislocation dynamics is a complex intermittent phenomenon involving the collective motion of many dislocations
+interacting between each other as well with obstacles eventually present in the material, like solute atoms or quenched
+dislocations from other glide planes [1–3]. The long range stress produced by dislocations may lead to jamming and
+avalanche-like phenomena even in the absence of obstacles [4]. The presence of obstacles changes the local properties
+of the host material, resulting in a pinning force on nearby dislocations [5, 6]. Usually, this source of disorder for
+dislocations is taken to be quenched, so that its properties do not change within the relevant timescales of the system
+[7]. However, under speciﬁc conditions, the mobility of solute atoms in metallic alloys [8, 9], or oxygen vacancies in
+superconductors [10], plays an important role in the dynamics of these systems.
+Here we are interested in studying the dynamics of interacting dislocations mediated by mobile impurities. The
+interplay between dislocations mutual interactions and pinning by mobile impurities is believed to be at the origin
+of plastic instabilities observed in metallic alloys under suitable loading conditions and temperature. One of the
+best studied forms of instability propagation is the Portevin-Le Chatelier (PLC) eﬀect [11]. When a specimen of a
+dilute alloy (such as Al or Cu alloy, or mild steel) is strained in uniaxial loading, the mechanical response is often
+discontinuous. In constant applied strain rate tests, the stress versus strain (or time, which is proportional to strain)
+curves exhibit a succession of stress drops and reloading sequences (serration).
+From a dynamical point of view, the jerky or stick-slip behavior of stress is related to the discontinuous motion of
+dislocations, namely, the pinning (stick) and unpinning (slip) of dislocations. The classical explanation of the PLC
+eﬀect is via the dynamic strain aging (DSA) concept [12]. It is based on the interplay between the diﬀusivity of solute
+atoms and dislocations that can be arrested temporarily at obstacles during their waiting time. Thus, the longer the
+dislocations are arrested, the larger will be the stress required to unpin them. As a result, when the contribution from
+aging is large enough, the critical stress to move a dislocation increases with increasing waiting time or decreasing
+imposed strain rate. When these dislocations are unpinned, they move at large speed until they are arrested again.
+At high strain rates (or low temperatures), the time available for solute atoms to diﬀuse towards the dislocations in
+order to age them decreases and hence the stress required to unpin them decreases. Thus, in a range of strain rates
+and temperatures where these two time scales are of the same order of magnitude, the PLC instability manifests. The
+competition between the slow rate of aging and sudden unpinning of the dislocations, translates at the macroscopic
+level, into a negative strain rate sensitivity (SRS) of the ﬂow stress as a function of strain rate. This basic instability
+mechanism, used in most phenomenological models for the PLC eﬀect [13], is based on the behavior of individual
+dislocation and thus does not explain how dislocation motion can synchronize to yield macroscopic strain bursts.
+Current theoretical approaches to models the PLC eﬀect are based on a mesoscopic descriptive level (where coarse
+grained dislocation density is considered) in which phenomenological parameters are needed to construct the relative
+dynamical equations [13]. Modeling plastic deformation phenomena taking into account inhomogeneity at the dislo-
+cation level oﬀers fundamental advantages compared to continuum mechanics approaches. The discrete dislocation
+dynamical (DDD) approaches allow, for example, to account for the intrinsic length scales, such as the grain size,
+the mesh length of a dislocation network or the cross-slip height, which is necessary to understand the formation of
+spatial dislocation structures, as persistent slip bands [14], and plastic instabilities, as L¨uders band and the PLC eﬀect2
+[13]. The problem of spatial and temporal coupling in heterogeneously deforming materials, and the associated length
+and time scales to be included in constitutive laws, is a central issue in current attempts to bridge a gap between
+dislocation based constitutive models and continuum mechanics.
+The general three-dimensional dynamical problem of dislocation lines interacting among each other is a complex
+problem due to the necessity to consider ﬂexible lines conserving their connectivity and line length and take care
+of line interactions [15–21].
+In several instances, however, dislocations are arranged into regular structures that
+are amenable to analytical treatment and more eﬃcient simulation approach.
+Here we analyze the dynamics of
+the eﬀective one-dimensional dislocation array called pileup interacting with mobile impurities.
+A slip band can
+be envisaged as a queue of dislocations, a pileup, pushed through a series of obstacles (solute atoms or immobile
+dislocations from other glide planes). In our case the obstacles perform a diﬀusive motion due to thermal eﬀects,
+and interact with dislocations. This system can be viewed as a coupled one-dimensional channels of particles [22], in
+which particles in one channel (dislocations) are driven by an external force and experience a drag from the undriven
+particles (impurities) in the other channel. In the following we discuss before the single dislocation in a cloud of
+mobile impurities problem, analyzed in Ref.[23], and then we propose a generalization of the equations in the case of
+many interacting dislocations in a landscape of mobile impurities.
+II.
+SINGLE DISLOCATION INTERACTING WITH MOBILE IMPURITIES
+Recently the dynamics of a particle interacting with diﬀusing impurities in one dimension has been investigated by
+Laurson and Alava [23]. Despite the simplicity of the model, that makes it analytically tractable, it exhibits a rich
+dynamics. Here we describe this model as an introduction to the following section in which we will generalize the
+relative equations to the case of many interacting dislocations.
+In the full formulation of the model discussed in Ref.[23], a particle in a cloud composed by a ﬁxed number of Np
+impurities driven by an external force F is considered. The force is given by F = k(V t −x), where V is the driving
+velocity and k is a spring constant characterizing the response of the driving mechanism. The region of the parameter
+space is restricted to that in which the impurities have a vanishingly small probability to escape from the vicinity
+of the particle within the timescale of the simulation. Thus, the particle is dragging an impurity cloud with a ﬁxed
+number of impurity particles without escaping from it. The equations of motion are
+µ∂x
+∂t
+= PNp
+i=1 f(x −xs,i) + F,
+∂xs,i
+∂t
+= −f(x −xs,i) + ηi,
+(1)
+where x and xs are the position of the particle and the impurity particles, respectively. f(z) is the interaction force
+between the particle and the impurity particle, µ deﬁnes the relative mobility of the impurity and the particle and ηi
+are Gaussian white noise with standard deviation δη and zero mean. The only condition imposed on the expression
+of the force f(z) if ∂zf(z)|z=0 = −f0. Here we are interested in particular on the behavior of the external force F,
+that in experiments represents the shear stress acting on dislocations. For z = x −xs close to zero, the following
+expression for the stochastic process ∂tF is derived in Ref. [23]
+∂2
+t F = −k∂2
+t x = −
+k
+µ + f0
+µ (Np + µ)
+
+∂tF + kf0
+µ
+Np
+X
+i=1
+ηi + kf0
+µ [V (Np + µ) −F] .
+(2)
+Now, assuming that in the stationary state the last term in the r.h.s. of Eq.2 has zero mean (⟨V (Np + µ) −F⟩= 0)
+and that ﬂuctuations are small compared to those of the white noise term (δF ≪
+p
+Npδη), the equation 2 reduces to
+the following Ornstein-Uhlenbeck process for ∂tF
+∂2
+t F = −
+k
+µ + f0
+µ (Np + µ)
+
+∂tF + kf0
+µ
+Np
+X
+i=1
+ηi.
+(3)
+The condition of small ﬂuctuations δF ≪
+p
+Npδη is fulﬁlled for most of the relevant parameter values condition; only
+for kf0 ≫1 this is not the case. From Eq. 3 is possible to see that, after an initial transient, the system reaches the
+stationary state in which the external force F ﬂuctuates around a constant average value and these ﬂuctuations are
+uncorrelated in time [23]. Therefore, the system composed by a single dislocation in a cloud of mobile impurities does
+not display a serration type behavior.3
+The Eq. 2 can be solved exactly, without imposing conditions on ﬂuctuations. Indeed is possible to rewrite it as a
+two dimensional (2d) Ornstein-Uhlenbeck process. Introducing the new variable F ∗= F −V (Np +µ) and considering
+F ∗and
+˙F ∗as the components of a 2d vector, the Eq. 2 can be written as a 2d Ornstein-Uhlenbeck process [24] for
+the vector variable (F ∗, ˙F ∗)
+d
+dt
+ F ∗
+˙F ∗
+
+= −
+
+0
+−1
+ω2
+0
+γ
+  F ∗
+˙F ∗
+
++
+
+0
+Γ(t)
+
+(4)
+where
+γ = 1
+µ[k + f0(Np + µ)],
+ω2
+0 = kf0
+µ ,
+Γ(t) = kf0
+µ
+PNp
+i=1 ηi.
+(5)
+The solution for the average ⟨F ∗⟩is
+⟨F ∗⟩= e−γt |11 F ∗(0) + e−γt |12
+˙F ∗(0),
+(6)
+where
+F ∗(0) = F(0) −V (Np + µ) = −V (Np + µ),
+˙F ∗(0) = ˙F(0) = kV,
+(7)
+and the matrix γ is
+γ =
+
+0
+−1
+ω2
+0
+γ
+
+(8)
+Diagonalizing the exponential matrix e−γt, we can write explicitly the expression of the average force ⟨F⟩as
+⟨F⟩= ⟨F ∗⟩+ V (Np + µ) = V (Np + µ) [1 −e−γt |11 ] + kV e−γt |12
+= V (Np + µ)
+
+1 + λ1e−λ2t −λ2e−λ1t
+λ1 −λ2
+
++ kV
+e−λ1t −e−λ2t
+(λ1 −λ2)t
+
+.
+(9)
+where λ1,2 are the eigenvalues of γ. The only case in which we can have ﬂuctuations in the average force is obtained
+for (γ2 −4ω2
+0) < 0, that leads to the following expression
+⟨F⟩= V (Np + µ)
+(
+1 + e−γ
+2 t
+"
+γ
+2
+sin(
+p
+4ω2
+0 −γ2t/2)
+p
+4ω2
+0 −γ2/2
+−cos(
+q
+4ω2
+0 −γ2t/2)
+#)
+−kV e−γ
+2 t sin(
+p
+4ω2
+0 −γ2t/2)
+p
+4ω2
+0 −γ2t/2
+.
+(10)
+In this case oscillations (serration) emerges, but they decays exponentially fast. On the other hand, performing the
+stationary limit, one ﬁnds
+lim
+t→∞⟨F⟩= V (Np + µ).
+(11)
+Therefore, for any parameter values condition, a serration type behavior is not observed in the single dislocation in
+a cloud of mobile impurities model.
+III.
+DISLOCATION PILEUP INTERACTING WITH MOBILE IMPURITIES
+As the PLC eﬀect is widely believed to be due to the dynamic interaction of dislocations with diﬀusing solute atoms,
+a natural formulation of the problem, in the framework of DDD approach, is to consider Eq. 1 for N dislocations4
+in a landscape of Np mobile impurities. To describe the dynamics of dislocations we use, as in [23], an overdamped
+equation, so that the velocity of a dislocation depends linearly on the resolved shear stress exerted on it [25]. Therefore,
+the equations of motion Eq. 1 are generalized as follows
+µdxi
+dt
+= G PN
+j=1
+(j ̸= i)
+bibj
+xi −xj
++ biσl
+i + PNp
+j=1fP (xi −xs,j)
+χdxs,j
+dt
+= −PN
+i=1fP (xi −xs,j) + ηj,
+(12)
+where G is the shear modulus, bi is the Burgers vector of the dislocation i, µ and χ are the damping constant of
+dislocations and impurities respectively. The external force F is now explicitly indicated as the local shear stress σl
+i
+acting on each dislocation i, whose expression is
+σl
+i = k
+
+V t −
+Z t
+0
+bi
+dxi(t′)
+dt′
+dt′
+
+= k[V t −bi(xi(t) −xi(0))],
+(13)
+while for the pinning force fP (z), with z = xi −xs,j, and the noise term ηj we have the expressions
+fP (z) = −f0
+z
+ξP e−(z/ξP )2,
+⟨ηj(t)⟩= 0,
+⟨ηj(t)ηj(t′)⟩= Dδ(t −t′)δij.
+(14)
+To emulate the behavior of a material in the bulk, we consider that N point dislocations and Np impurities move
+along a line of size L where periodic boundary conditions are chosen. In order to correctly take into account the eﬀect
+of periodic boundary conditions, the interactions between dislocations are summed over theirs images [26].
+We are interested in the total average stress exerted on dislocations, σ = 1/N PN
+i=1 σl
+i (i.e. the external stress that
+is needed to apply on the material to obtain a constant strain rate). In view to study the behavior of the stress σ
+in relation with the PLC eﬀect, that is regulated principally by the temperature and strain rate as discussed in the
+introduction, we have imposed the relations bi = b = 1, G = µ = ξP = 1, f0 = 0.01 and k = 0.1 that ﬁxes the time,
+space and force scales. The free parameters of the model are now V, χ, D. In real materials impurities have already
+exerted aging eﬀects over dislocations before the experiments (i. e. before that an external stress is imposed on the
+material). To take into account this eﬀect the system is leaved to evolve without external stress (k = 0) for a waiting
+time tw. The initial conﬁguration of the system (at time t = 0) consists of random distribution of dislocations and
+pinning centers. We choose tw = 106 · dt = 104, where the integration step is dt = 10−2. This value of tw is suﬃcient
+for the system to stabilize its elastic energy during the initial part of the dynamics (for t < tw and k = 0) [1].
+IV.
+THE CONDITIONS FOR SERRATION
+Before integrating numerically Eqs.12, 13, 14, we can obtain a set of necessary conditions for serration. First of all
+we can observe that if dislocations do not interact with any pinning center (fP (z) = 0), the ﬁrst equation of Eq.12
+do not posses normal modes of oscillation. This can be found employing a linear perturbative approach, as made in
+Ref.[27] to study the discrete cosmological N-body problem, or observing that the ﬁrst equation of Eq.12 describes
+the so called Coulomb gas for the variables xi −(V/b)t at zero temperature [28].
+If we now consider that dislocations interact with pinning centers (fP (z) ̸= 0), but with the last ones quenched
+(that means dxs,j/dt = 0), from Eqs.12, 13, 14 we obtain
+µdx
+dt
+= bσ + 1
+N
+N
+X
+i=1
+Np
+X
+j=1
+fP (xi −xs,j)
+xs,j = cj
+=⇒
+∂tσ = kV −kb2
+µ σ + Γ(t, σl
+i, cj)
+(15)
+where cj are constants and the function Γ can be obtained using the relation between xi and σl
+i in Eq. 13. Performing
+the ensemble average and the time integral on the relation to the right in Eq. 15, we obtain that ⟨σ⟩= µV/b2 (so5
+we do not have serration) if ⟨Γ⟩= 0, that is if the constants cj do not correlate the variables σl
+i between them (i.e.
+if the cj do not depend in a speciﬁc way on the position of the variables xi(0)). To ﬁnd this result we employed
+the relation PN
+i=1(i̸=j)
+PN
+j=1 1/(xi −xj) = 0, introduced the variable x = 1/N PN
+i=1 xi and considered the ensemble
+average respect to the {cj} conﬁgurations.
+Another necessary condition to have serration can be found observing that in the range of parameters for which
+the impurities have a vanishingly small probability to escape from dislocations (the same case studied in Ref.[23]
+for the single dislocation problem) we can approximate the expression of the interacting force f(z) for small z as
+fP (z) ≃fP (0) + z∂zfP (z)|z=0 = −f0z.
+Employing this approximation, from Eqs.12, 13, 14, we ﬁnd for σ the
+following 2d Ornstein-Uhlenbeck equation
+∂2
+t σ = −1
+µ
+
+kb2 + f0Np + f0µN
+χ
+
+∂tσ −f0kb2N
+µχ
+σ + f0k
+µ
+
+V (Np + µN
+χ ) + kb3N
+χ
+x(0)
+
+−f0kb
+µχ
+Np
+X
+i=1
+ηi
+(16)
+that do not displays serration as seen above. To obtain the Eq.16, the relations PN
+i=1(i̸=j)
+PN
+j=1 1/(xi −xj) = 0 and
+PN
+i=1(i̸=j)
+PN
+j=1 ∂t(xi −xj)/(xi −xj)2 = 0 has been employed.
+In the end, from Eqs.12, 13, 14 we have found four necessary conditions to have serration: i) ﬁrst of all, the system
+must be composed by more than one dislocation (as found in Ref.[23] in the low noise limit, and as results in the general
+case from Eq.11). In other words, serration in the stress response of the system, when present, comes from a collective
+eﬀect of many interacting dislocations. To verify this, we studied the role of the interaction force between dislocations
+analysing the average stress ⟨σ⟩as a function of time (or strain) for diﬀerent values of the interaction force itself
+(obtained changing the value of the shear modulus G), for parameter values in which serration is observed (µ/χ = 0.5,
+1/T = 104, see the deﬁnition of T below, and V = 0.003). In Fig.1 we displayed the average stress ⟨σ⟩(performed
+on 50 samples) as a function of time obtained integrating numerically Eqs.12,13. From it we can see that serration
+disappears when the strength of the interaction force between dislocations decreases. In particular, for vanishing
+interaction force (G = 0), the stationary average stress is given by the expression: ⟨σ⟩s = V [(Np/N)χ + µ] ≃0.051,
+as discussed in the following analysis of Fig.2; ii) dislocations must interact with pinning centers; iii) pinning centers
+must not be all quenched (see Eq.15); iv) dislocations must not be all pinned by impurities (see Eq.16).
+These
+conditions are all in agreement with the DSA concept.
+FIG. 1: Average stress ⟨σ⟩(performed on 50 samples) as a function of time obtained integrating numerically Eqs.12,13. The
+parameters of the system (µ/χ = 0.5, 1/T = 104, and V = 0.003) are chosen in the range in which serration is observed in
+order to investigate the role of the interaction force between dislocations changing the value of the shear modulus G. From it
+we can see that serration disappear when the strength of the interaction force between dislocations decreases.
+In order to verify the previous four necessary conditions to have serration, and to investigate the behavior of the6
+system in the entire free parameter space (V, χ, D), we integrated numerically Eqs.12,13. We considered N = 32
+dislocations with an average spacing d = 16 and average pinning center spacing dp = L/Np = 2. Because of L = dN,
+is Np = dN/dp = 8N. Instead of using the set of parameters (V, χ, D), we employed this other (V, µ/χ, 1/T ) where
+T is the temperature of the system deﬁned in the following. Although we choose, without less of generality, µ = 1
+we prefer to keep explicitly the ratio µ/χ. From the other hand, the explicit introduction of the temperature variable
+permits to compare the phase diagram of PLC eﬀect (in Fig. 3) with results from literature [29]. The deﬁnition
+of temperature is not something obvious in DDD models. Here we introduce the temperature T of the system as
+obtained from the Einstein ﬂuctuation-dissipation relation: T = 2D/χ. One diﬃculty in deriving a general theory of
+plasticity is due to the presence of thermal as well as athermal dislocation activated processes [13]. For this reason
+is still lacking a clear deﬁnition of temperature in DDD models. The simple one we use here can be considered a
+good deﬁnition for high temperatures and low stresses in which cases diﬀusional deformation mechanisms become
+predominant [1]. In other regimes in which this deﬁnition of T is not a good approximation, we will discuss how it is
+related to the behavior of the system.
+In Fig. 2 the average stress ⟨σ⟩, obtained integrating numerically Eqs. 12,13, as a function of time t −tw is
+graphicated for driving velocity V = 0.001, 0.003, mobility ratio µ/χ = 0, 0.5, 1 and inverse temperature 1/T →∞,
+1/T = 104, 2 · 103, 4 · 102. The average ⟨·⟩is performed on 50 samples. In the analysis of Fig. 2 we distinguish two
+cases, the ﬁrst one for µ/χ = 0 and the second one for µ/χ > 0. The case µ/χ = 0 corresponds to quenched pinning
+centers (dxs,j/dt = 0, see Eq. 15). From Fig. 2a,b we see that for µ/χ = 0, the average stress, after oscillations
+decreasing in time, reach the stationary value ⟨σ⟩s = limt→∞⟨σ⟩= V µ.
+In the case of µ/χ > 0 we expect that at low temperatures and low driving velocity, or at low temperatures and high
+driving velocity, but high values of mobility ratio, dislocations are pinned by impurities. This is conﬁrmed by Fig. 2c,e,f
+from which we can see that the stationary value of the average stress is given by the relation ⟨σ⟩s = V [(Np/N)χ + µ],
+as can be obtained from Eq. 16. To understand the role of dislocation interaction when they are pinned during the
+whole dynamics, we can consider the Eq. 11 obtained for the dynamics of a single dislocation generalized to the case in
+which the damping constant of each impurity is χ. Therefore the expression of the stationary external force becomes:
+limt→∞⟨F⟩= V (Npχ + µ), in which Np is the number of impurities around the only present dislocation. In the case
+of N dislocations pinned by Np impurities during the whole dynamics, we have that on average each dislocation i
+is pinned by Np/N impurities (considering that the initial spatial distribution of dislocations and pinning centers is
+a random ﬂat ones). If we now suppose that in these conditions (obstacles that cannot unpin from dislocations),
+dislocations do not ﬂuctuate too much around theirs equilibrium positions (that is a conﬁguration of equidistant
+dislocations), we can conclude that the average stationary stress can be obtained from the formula for the single
+dislocation pinned by NP /N obstacles case. This means: ⟨σ⟩s = ⟨F(Np →Np/N)⟩s that can be veriﬁed employing
+the previous generalized version of Eq. 11. When T or V increases, the number of impurities that pin dislocations
+decreases, so ⟨σ⟩s decreases.
+From Fig. 2 we can see that stationary ﬂuctuations in the stress (serration) emerge for the values parameter
+V = 0.003, µ/χ = 0.5 and 1/T = 104. In Fig. 2 results for driving velocities higher than V = 0.003 and temperatures
+T smaller than 10−4 are not reported because in these regimes we reach the limit of our model that continue to
+give serration in the stationary average stress, while in real systems we should not have serration [13, 29]. Negative
+values of stress ﬂuctuations at earliest times correspond to a sudden increases in the dislocations average position (see
+Eq. 13) that happens when dislocations escape from many pinning centers. Indeed, when it happens, we can observe
+this eﬀect at earliest times of the dynamics (for t > tw), because the absence of the external stress for 0 < t < tw
+permits to dislocations to accumulate pinning centers.
+In order to summarise the results obtained from the present model and to compare them with experimental [29]
+and others theoretical approache [13], we depicted in Fig. 3, relying on data displayed in Fig. 2 and others data
+not displayed there, a phase diagram for the PLC eﬀect in the parameter space (1/T, V ) for µ/χ = 0.5. In the
+range of parameters inside the grey region, the PLC eﬀect takes place. The dashed red lines indicate where the
+model described by Eqs. 12,13 start to fail in predicting the PLC eﬀect. In particular, for high driving velocities
+new dislocation mechanisms, as dislocation multiplication, climbing and others complex behaviors, must be taken
+into account. Considering these mechanisms, serration must disappear for high driving velocities irrespective of the
+other parameter values. While in the case of small temperatures, non thermal dislocation processes become relevant
+in relation to the thermal ones, and the Einstein ﬂuctuation-dissipation relation do not holds anymore. Also in this
+case, considering the presence of non thermal dislocation processes, serration must disappear for small temperatures
+irrespective of the other parameter values.7
+FIG. 2: Average stress ⟨σ⟩, obtained integrating numerically Eqs. 12,13, as a function of time t −tw, for tw = 106 · dt = 104,
+driving velocity V = 0.001, 0.003, mobility ratio µ/χ = 0, 0.5, 1 and inverse temperature 1/T →∞, 1/T = 104, 2 · 103, 4 · 102.
+FIG. 3: Semi-quantitative phase diagram for the PLC eﬀect in the parameter space (1/T, V ) for µ/χ = 0.5. In the range of
+parameters inside the grey region, the PLC eﬀect take place (i. e. the average stress ⟨σ⟩displays serration). The dashed red
+lines indicate where the model described by Eqs. 12,13 start to fail in predicting the PLC eﬀect.
+V.
+THE RELEVANT TIME SCALES IN SERRATION
+The behavior of the system described by Eqs. 12,13,14 can be analyzed in terms of time scales. The fundamental
+time scales are: i) the capturing time tc that accounts for the average time needed for a dislocation to capture a
+pinning center; ii) the aging time ta that accounts for the average time needed for a dislocation to escape from a
+pinning center. In order to compute these times we consider that a pinning center pins a dislocation if the distance
+between them is smaller then ξc = 3ξP = 3 (otherwise the attraction force between them is considered negligible).
+In Tab. I we report the time ratio ta/tc for the same values of driving velocity V , mobility ratio µ/χ, and inverse8
+TABLE I: Time scales ratio: ta/tc. The computational error is one over the last digit.
+V = 0.001
+V = 0.003
+µ/χ = 0
+{
+0.60
+←for all 1/T
+µ/χ = 0
+{
+0.60
+←for all 1/T
+
+
+
+65.07
+←1/T = 104
+
+
+
+0.75
+←1/T = 104
+µ/χ = 0.5
+66.48
+←1/T = 2 · 103
+µ/χ = 0.5
+0.75
+←1/T = 2 · 103
+4.09
+←1/T = 4 · 102
+0.64
+←1/T = 4 · 102
+
+
+
+78.73
+←1/T = 104
+
+
+
+146.97
+←1/T = 104
+µ/χ = 1
+37.93
+←1/T = 2 · 103
+µ/χ = 1
+2.03
+←1/T = 2 · 103
+1.13
+←1/T = 4 · 102
+0.79
+←1/T = 4 · 102
+temperature 1/T for which the average stress ⟨σ⟩has been computed and displayed in Fig. 2. First of all, we can
+observe that for V →∞or µ/χ →0 or 1/T →0, the time ratio become: ta/tc = (2 · ξc)/(d −2 · ξc) = 0.6 where d
+is the dislocation average interdistance. Indeed, in these conditions we can consider the pinning centers to be ﬁxed
+respect to dislocations (or vice versa) during the dynamics and the ratio ta/tc become nothing more than the ratio
+between the average (in time) length per dislocation and pinning center over which dislocations are considered pinned
+(that is α(tav)·2 ·ξc) and that over which they are not (that is α(tav)·(d−2 ·ξc)) where α(tav) is the same parameter
+for the two lengths and depends only on the time tav over which the average is performed. Looking at the values
+displayed in Tab.I, we can observe that in general the time ratio ta/tc decreases signiﬁcantly as V increases, or as
+µ/χ or 1/T decreases, but only for µ/χ = 0.5 and V = 0.003 we have that ta/tc remains small (bigger than, but near,
+the value 0.6) for changing 1/T . In particular, for µ/χ = 0.5, V = 0.003 and 1/T = 104, 2 · 103, the two times ta and
+tc (which ratio is displayed in bold on Tab.I) are of the same order of magnitude, but the pinning centers, for these
+parameter values, are not ﬁxed respect to dislocations (or vice versa).
+In the end we can conclude that for values of parameters V , µ/χ and 1/T for which serration is observed, we have
+that the two relevant times ta and tc are of the same order of magnitude (remembering that the value 0.6 corresponds
+to a special case in our model). This is in agreement with phenomenological models [13] and represents a link between
+microscopic DDD model parameters (appearing in Eqs. 12,13,14) from which the quantities ta and tc can be computed,
+and macroscopic quantities like V , µ/χ and T .
+VI.
+SPATIO-TEMPORAL DISTRIBUTION OF DISLOCATIONS AND IMPURITIES
+Analysing spatio-temporal distributions of pinning centers and dislocations can help to better understand and
+unify previous considerations and results. First of all, we computed the average pinning centers distribution ρp.c.
+averaging each distribution of pinning centers around every dislocation, and averaging over 50 diﬀerent realizations
+of the dynamics. In the lower part of Fig. 4 we display average pinning center distributions around dislocations for
+diﬀerent times that correspond to diﬀerent value of the average stress (which values are indicated in the upper stress
+vs time graphic of the same ﬁgure). The more interesting case, reported in Fig.4 and corresponding to Fig.2(d), is
+that for which changing temperature causes serration appearance or disappearance (that is for µ/χ = 0.5, V = 0.003).
+The distributions ρp.c. are unnormalized so that the average number of pinning centers that pins dislocations are
+obtained by the integral:
+R ξc
+−ξc ρp.c.(xp.c.)dxp.c. = ⟨Np⟩. To understand what happens when serration in the stress
+appears, we reported in Fig. 4 the distributions in correspondence of stress drop, bump and re-drop. For temperatures
+for which the stress do not develops serration (for 1/T = 4·102, 2·103), the distribution shape of pinning centers around
+dislocations do not change in time and displays a peak more or less wide and narrow depending on the values of V , µ/χ
+and 1/T . For temperatures for which serration develops (for 1/T = 104), the distributions change in a way that when
+pinning centers reach dislocations from the right side (indeed V = 0.003 > 0), Fig. 4(b), and start to pin them, stress
+drops because dislocations are accelerated (see Eq. 13), then after a while dislocation velocities go down because
+they are pinned (when the corresponding distribution has developed a wide narrow peak), Fig. 4(c),(d). Finally,
+when dislocations are able to depin and then their velocities start to increase again, the stress re-drops, Fig. 4(e),(f).
+Above, analysing the stationary value of the stress (Fig. 2), we argued that at low temperatures (in Fig.2(c),(e),(f))
+dislocations are completely pinned, and veriﬁed that by means of the formula ⟨σ⟩s = V [(Np/N)χ + µ] previously
+obtained from the equations of motion imposing the condition of complete pinning. Integrating the distributions of
+pinning centers, ρp.c., for low temperatures, we can obtain the average number of pinning centers around dislocations
+that is ⟨Np⟩= Np/N = 8 which conﬁrms directly that in these cases all pinning centers are pinning dislocations.
+Computing the standard deviation of the average distribution in Fig.4, conﬁrms that when serration emerges, for
+1/T = 104, dislocations depin in a choerent way. Indeed, in this case the standard deviation is big near the peak of the
+distribution, while is quite small away from it. In the cases in which serration is not observed, for 1/T = 104, 4 · 102,9
+39000
+40000
+41000
+42000
+43000
+44000
+t-tw
+0
+0.005
+0.01
+0.015
+<σ>
+1/T = 10
+4
+1/T = 2⋅10
+3
+1/T = 4⋅10
+2
+-5
+0
+5
+xp. c. - xdisl.
+0
+0.5
+1
+ρp.c.
+-5
+0
+5
+0
+0.5
+1
+-5
+0
+5
+0
+0.5
+1
+-5
+0
+5
+0
+0.5
+1
+-5
+0
+5
+0
+0.5
+1
+-5
+0
+5
+0
+0.5
+1
+-5
+0
+5
+0
+0.5
+1
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+(g)
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+(g)
+FIG. 4: Spatio-temporal distribution of pinning centers around dislocations. The distributions are obtained averaging for a
+speciﬁc time the diﬀerent distributions around every dislocation, and averaging over 50 diﬀerent realizations of the dynamics.
+In the lower par of the ﬁgure are indicated with xp.c. the pinning centers position and with xdisl. the dislocation position. The
+vertical dashed blue line indicate the dislocation position and the two vertical dotted blue lines indicate the cutoﬀξc of the
+dislocation-pinning centers interaction. In the upper part of the ﬁgure, the average stress for a speciﬁc time region is indicated.
+The corresponding complete curve is reported in Fig. 2.
+the standard deviation is almost constant in time and space.
+Considering this result and that, in particular for
+1/T = 4 · 102, the time ratio ta/tc (see Tab. I) is the same as for the case 1/T = 104, and that the average curve is
+constant in time, we can conclude that when serration disappear, this means that dislocations depin in a incoherent
+way (at diﬀerent times).
+In Fig. 5 we can see a representative portion of dislocations and pinning centers motion in the case in which serration
+is not present (a), and that in which it appears (b). The dark lines are dislocations. They have a slope equal to
+V = 0.003, unless small deviations in correspondence of pinning centers (the green lines) pinning dislocations. In
+Fig. 5b the vertical dotted and dashed red lines correspond to times for which the average stress has a minimum
+and a maximum respectively. The minimum in the average stress correspond to many dislocations that are pinned,
+while the successive maximum to many dislocations that depin. These processes are also present at intermediate
+times, that cause the appearance of small oscillations in the average stress between a big peak and a big valley (see
+Fig. 1 and Fig. 2(d)). The dashed blu line, y ∼vdriftt, indicates the drift of pinning centers that move with velocity
+vdrift ≃2.5 · 10−4. This drift is caused by the interaction with dislocations.
+In Fig. 6 we can see the entire dynamics of all dislocations in a case in which there is not serration (a), and another
+in which it appears (b). In particular, the term V t is subtracted to dislocation positions, so we have horizontal
+lines, while in Fig. 5 we have lines with a slope equal to V . Moreover, the position of dislocations are rescaled in
+order to have that the average inter-distance between them is 0.5 instead of d = 16. This last rescaling has been
+done to evidence the ﬂuctuations of dislocations position. Like in Fig. 5, the vertical dotted and dashed red lines
+correspond to times for which the average stress has a minimum and a maximum respectively. From Fig. 6b we can
+see essentially two interesting things: minimum and maximum values in the rescaled dislocations position correspond
+to maximum and minimum values in the average stress respectively; and the ﬂuctuation proﬁle of the position of one
+dislocation (in correspondence of serration) can propagate with a velocity of V −vdrift. This last point means that
+when pinning centers start to clustering, they remain usually clustered during the entire dynamics. The dashed blue
+line y ∼−0.5/[d/(V −vdrift)]x = −0.875 · 10−4x in Fig. 6b indicate this behavior of pinning centers.10
+FIG. 5: Representative portion of dislocations and pinning centers motion for a single realization of the dynamics for parameter
+values: V = 0.003, µ/χ = 0.5 and 1/T = 4 · 102 (a), 1/T = 104 (b). The dark lines with a slope equal to V = 0.003 are
+dislocations, and the green lines are pinning centers. (b) The vertical dotted and dashed red lines correspond to times for which
+the average stress has a minimum and a maximum respectively. The dashed blu line y ∼vdriftt indicates the drift of pinning
+centers that move with velocity vdrift ≃2.5 · 10−4.
+0
+2×10
+4
+4×10
+4
+6×10
+4
+8×10
+4
+1×10
+5
+t-tw
+5
+10
+15
+xi* - V(t-tw)
+(a)
+0
+2×10
+4
+4×10
+4
+6×10
+4
+8×10
+4
+1×10
+5
+t-tw
+5
+10
+15
+xi* - V(t-tw)
+(b)
+FIG. 6: Dynamics of all dislocations for a single realization of the dynamics for parameter values: V = 0.003, µ/χ = 0.5 and
+1/T = 4 · 102 (a), 1/T = 104 (b). To evidence ﬂuctuations, dislocations position, at which the term V t has been subtracted,
+are rescaled in a way that the average inter-distance between them is 0.5 instead of d = 16.
+(b) The dashed blue line
+y ∼−0.5/[d/(V −vdrift)]x = −0.875 · 10−4x indicate clustering properties of pinning centers, as discussed in the text.
+In Fig. 7 we display the superposition of ﬂuctuations in the position of all dislocations, ∆xi, in a case in which
+there is no serration (a) and another in which it appears (b).
+These ﬂuctuations has been obtained as: ∆xi =
+(xi −V t) −⟨(xi −V t)⟩t, where the time average is performed on the entire dynamics. We also display the average of
+all ∆xi with the relative standard deviation, and the vertical dotted and dashed lines correspond to times for which
+the average stress has a minimum and a maximum respectively. We can see another time that the minimum and
+maximum values of the average ﬂuctuation position correspond to the maximum and minimum in the average stress
+respectively.
+VII.
+DISCUSSION
+We investigated the dynamics of a dislocation assembly interacting with mobile impurities studying the case of a
+one-dimensional dislocation pileup. In order to connect this model to the PLC eﬀect, we studied the stress response
+of the system under an external constant strain rate. The free parameters of the system have been reduced to the
+driving velocity V , that controls the imposed constant strain rate, the mobility ratio µ/χ between dislocations and
+mobile impurities, and the temperature T . To this end, we have employed an eﬀective deﬁnition of temperature that
+should be valid except for low temperatures and high stresses. Analysing the average stress of the system ⟨σ⟩in the11
+4.0×10
+4
+4.5×10
+4
+5.0×10
+4
+5.5×10
+4
+t-tw
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+∆xdisl.
+(a)
+4.0×10
+4
+4.5×10
+4
+5.0×10
+4
+5.5×10
+4
+t-tw
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+∆xdisl.
+(b)
+FIG. 7: In brown we display the superposition of the position ﬂuctuations of all dislocations, ∆xi = (xi −V t)−< (xi −V t) >t
+where the positions xi are reported in Fig. 6, and the time average is performed on the entire dynamics. In dark we can see
+the average of all ∆xi with the relative standard deviation. (b) The vertical dotted and dashed lines correspond to times for
+which the average stress has a minimum and a maximum respectively.
+parameter space (V, µ/χ, 1/T ), we found a region characterized by stationary ﬂuctuations in the stress (serration)
+(see Fig. 3).
+The interpretation for the onset of serration in the present model agrees with the general concept of DSA but takes
+explicitly into account the role of dislocation mutual interactions. The emergence of serration corresponds to the
+situation in which impurities diﬀuse at a rate that allows them to pin dislocations (i.e. the capturing time tc is not
+too high). At the same time dislocations should be able to escape from pinning centers after an aging time ta which
+implies that ta is not too high, otherwise when dislocations unpin, they would move at large speed until they are
+arrested again and pinning centers will not be able to reach them, but also not too small, because in this case pinning
+centers will not be able to pin dislocations. Serration correspond to the case in which the two characteristic time
+scales, ta and tc, are of the same order of magnitude (see Tab. I).
+From another point of view, the origin of serration, in a speciﬁc range of parameter values (V, µ/χ, T ), is due
+to the localization of impurities in a limited number of clouds under the action of dislocation induced stresses and
+to the possibility for dislocations to escape from their pinning clouds without randomizing excessively the spatial
+distribution of impurities. The spatial localization of pinning centers is only possible due to the coherent action of
+several interacting dislocations. If we randomize the interaction between dislocations, for instance by choosing Burgers
+vectors bi for each dislocation i from a random distribution, serration disappears. Spatial randomization of pinning
+centers results in an incoherent contribution to the total stress ﬂuctuations of each dislocation and in the impossibility
+to form clouds of pinning centers and therefore in the disappearance of serration. Only when the contribution of each
+dislocation to the total stress ﬂuctuations are coherent, serration is observed.
+In order to extend the validity of the deﬁnition of temperature and generalize the present model, the following
+eﬀects could be introduced: i) a viscosity therm for dislocations; ii) pinning centers with diﬀerent mobilities. The last
+modiﬁcation could give diﬀerent type of serration like in experiments in which three types of bands can be identiﬁed
+(type A,B,C) [13].
+Acknowledgments
+SZ is supported by the European Research Council through the Advanced Grant SIZEFFECTS.
+[1] M. Zaiser, Adv. Phys. 55, 185 (2006).
+[2] J. Weiss and J. R. Grasso, J. Phys. Chem. B 101, 6113 (1997).
+[3] M.-C. Miguel, A. Vespignani, S. Zapperi, J. Weiss, and J. R. Grasso, Nature 410, 667 (2001).
+[4] M.-C. Miguel and A. Vespignani and M. Zaiser and S. Zapperi, Phys. Rev. Lett. 89, 165501 (2002).
+[5] M. Z. Butt and P. Feltham, J. Mater. Sci. 28, 2557 (1993).
+[6] H. Neuh¨auser, Phys. Scr., T 49, 412 (1993).12
+[7] F. Leoni and S. Zapperi, Phys. Rev. Lett. 102, 115502 (2009).
+[8] J. W. Cahn, Acta Metall. 10, 789 (1962).
+[9] D. Blavette, E. Cadel, A. Fraczkiewicz, and A. Menand, Science 286, 2317 (1999).
+[10] E. M. Chudnovsky, Europhys. Lett. 43, 445 (1998).
+[11] A. Portevin and F. Le Chatelier, C. R. Acad. Sci. Paris 176, 507 (1923).
+[12] A.H. Cottrell and B.A. Bilby, Proc. R. Soc. London Ser. A 62, 49 (1949); A.H. Cottrell, Philos. Mag. 44, 829 (1953).
+[13] G. Ananthakrishna, Phys. Rep. 440, 113 (2007).
+[14] H. Neuh¨auser, in: Dislocations in Solids (Edited by F. R. N. Nabarro, North-Holland, Amsterdam, 1983).
+[15] V. Mohles, Mater Sci. Eng. 309-310, 265 (2001).
+[16] G. Monnet, Philos. Mag. 86, 5927 (2006).
+[17] F. F. Csikor, C. Motz, D. Weygand, M. Zaiser, and S. Zapperi, Science 318, 251 (2007).
+[18] B. Devincre, T. Hoc, and L. Kubin, Science 320, 1745 (2008).
+[19] J. Senger, D. Weygand, P. Gumbsch, and O. Kraft, Scr. Mater. 58, 587 (2008).
+[20] B. Liu, D. Raabe, P. Eisenlohr, F. Roters, A. Arsenlis, and G. Hommes, Acta Mater. 59, 7125 (2011).
+[21] G. P. Reddy, C. Robertson, C. Depres, and M. Fivel, Acta Mater. 61, 5300 (2013).
+[22] C. Bairnsfather, C. J. Olson Reichhardt and C. Reichhardt, Europhys. Lett. 94, 18001 (2011).
+[23] L. Laurson and M. J. Alava, J. Stat. Mech. P07003 (2008).
+[24] H. Risken, The Fokker-Plank Equation (Springer Verlag, 1984).
+[25] M. F. Kanninen and A. R. Rosenﬁeld, Philos. Mag. 20, 569 (1969).
+[26] J. P. Hirth and J. Lothe, Theory of Dislocations (Wiley & Sons, 1982).
+[27] B. Marcos and T. Baertschinger, M. Joyce, A. Gabrielli, and F. Sylos Labini, Phys. Rev. D 73, 103507 (2006).
+[28] F. J. Dyson, J. of Math. Phys. 3, 1191 (1962).
+[29] M. Lebyodkin, L. Dunin-Barkovskii, Y. Br´echet, Y. Estrin, and L. P. Kubin, Acta Mater. 48, 2529 (2000).

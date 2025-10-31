@@ -1,0 +1,575 @@
+Characterization of oxygen defects in diamond by means of density functional theory calculations Gerg˝o Thiering1, 2 and Adam Gali1, 2 1Wigner Research Center for Physics and Optics, Hungarian Academy of Sciences, P.O. Box 49, H-1525 Budapest, Hungary 2Department of Atomic Physics, Budapest University of Technology and Economics, Budafoki´ut 8., H-1111 Budapest, Hungary (Dated: October 9, 2018) Point defects in diamond are of high interest as candidates for realizing solid state quantum bits, bioimaging agents, or ultrasensitive electric or magnetic ﬁeld sensors.
+Various artiﬁcial diamond synthesis methods should introduce oxygen contamination in diamond, however, the incorporation of oxygen into diamond crystal and the nature of oxygen-related point defects are largely unknown.
+Oxygen may be potentially interesting as a source of quantum bits or it may interact with other point defects which are well established solid state qubits.
+Here we employ plane-wave supercell calcula- tions within density functional theory, in order to characterize the electronic and magneto-optical properties of various oxygen-related defects.
+Beside the trivial single interstitial and substitutional oxygen defects we also consider their complexes with vacancies and hydrogen atoms.
+We ﬁnd that oxygen defects are mostly electrically active and introduce highly correlated orbitals that pose a challenge for density functional theory modeling.
+Nevertheless, we are able to identify the ﬁnger- prints of substitutional oxygen defect, the oxygen-vacancy and oxygen-vacancy-hydrogen complexes in the electron paramagnetic resonance spectrum.
+We demonstrate that ﬁrst principles calculations can predict the motional averaging of the electron paramagnetic resonance spectrum of defects that are subject to Jahn-Teller distortion.
+We show that the high-spin neutral oxygen-vacancy defect exhibits very fast non-radiative decay from its optical excited state that might hinder to apply it as a qubit.
+I. INTRODUCTION Perfect diamond is a transparent and diamagnetic ma- terial.
+Impurities in diamond may form paramagnetic color centers when they introduce defects states in the fundamental band gap.
+These defects are of high in- terest and candidates to realize solid state single pho- ton sources and quantum bits.
+The impurities often enter diamond in the growth process of diamond.
+In this study we focus our attention to oxygen impurity in diamond.
+Previous investigations showed1–4 that addi- tion of oxygen precursors in the diamond chemical va- por deposition (CVD) synthesis process improves the growth speed and the quality of diamond.
+The forma- tion of diamond from carbon and hydrogen precursors in the presence of oxygen occurs when the number of oxygen and carbon atoms is about the same accord- ing to the C, H, O phase diagram5.
+Oxygen may en- ter diamond in this process.
+As oxygen is a light ele- ment and the natural abundance of its spinless 16O iso- tope is close to 100%, it is very challenging to observe the ﬁngerprints of oxygen impurity in diamond by vi- brational or electron spin resonance (ESR) spectroscopy techniques.
+Nevertheless, two ESR centers, labeled as WAR5 and OVH, have been tentatively associated with oxygen-related defects in such CVD samples6,7.
+WAR5 ESR center exhibits S = 1 spin state with C3v symme- try and anisotropic g⊥=2.0026(2) g||=2.0029(2) g-tensor where || and ⊥refer to direction parallel and perpendic- ular to the ⟨111⟩symmetry axis, respectively.
+The mea- sured zero-ﬁeld-splitting D constant6,8,9 and the hyper- ﬁne couplings between the electron spin and proximate 13C nuclear spins (natural abundance of 1.1%)6,10,11 was very similar to those of the negatively charged nitrogen- vacancy color center, NV(−)12,13, in diamond.
+As the electronic structure of NV(−) and OV(0) is isovalent, WAR5 was proposed to originate from OV(0)6.
+We note that the formation of WAR5 center was accompanied by a 543.2-nm photoluminescence (PL) center6.
+How- ever , photoexcitation of the diamond sample contain- ing the WAR5 ESR and 543.2-nm PL centers did not show any spinpolarization of the WAR5 ESR center that does not share the well-known spinpolarization proper- ties of NV(−) center14.
+It has been not yet understood whether these ESR and PL centers have no common origin or they have common origin but the spinpolar- ization eﬀect in OV center is negligible for other rea- sons.
+The other oxygen-related OVH ESR center has S = 1/2 spin state with a characteristic 1H hyperﬁne signal of A||=±13.6(1) MHz, A⊥=∓9.0(1) MHz and g- tensor of g||=2.0034(1), g⊥=2.0029(1)7.
+This ESR center was very analogous with the negatively charged NVH(−) ESR center15, thus it was proposed that the OVH ESR center should originate from the neutral OVH(0) defect because these two defects are isovalent.
+In addition, this OVH ESR center was annealed out at 1800◦C where NVH(−) defect anneals too15 that further strengthens the association of OVH ESR center with the OVH(0) de- fect.
+We emphasize that the association of the WAR5 and OVH ESR centers with OV(0) and OVH(0) defects, respectively, seems plausible but no direct evidence of the presence of oxygen impurity has been demonstrated in these two ESR centers.
+We further note that a se- ries of new cathodoluminescence (CL) lines were found in the region of 455.0 nm and 484.1 nm in CVD dia- monds where 0.1% O2 contamination was used in the arXiv:1606.03859v2 [cond-mat.mtrl-sci]  13 Aug 20162 CVD gas mixture, and they were tentatively associated with oxygen defects16.
+The diﬃculties of identiﬁcation of oxygen-related defects may be represented by the case of the OK117 and N318 ESR centers, where these centers were ﬁrst tentatively assigned to oxygen-related defects in type Ib natural diamonds (see Ref.
+19 and references therein), however, later it has been shown by further ESR and other studies that they are rather related to Ti defects20,21.
+Oxygen may be introduced by other synthesis tech- niques.
+It was reported that oxygen-acetylene ﬂame in ambient atmosphere deposited on various substrates re- sults in diamond22 where the 543.2-nm PL center was reported23,24 that was also found in CVD diamonds with H:C:O chemistry6.
+When CVD and high-pressure high- temperature (HPHT) diamonds were produced in the presence of CrO3 then CL centers at 330 nm and 267 nm were speculatively assigned to oxygen defects25.
+De- fects tentatively associated with oxygen were also re- ported in diamonds synthesized from HPHT treatment of Na2CO3−CO2−C carbonate medium at pressure and temperature of 6.3 GPa and 1673-1773 K.
+In these di- amonds the OX1, OX2, OX3 S = 1/2 ESR centers emerged26 with g factors of g1 = g2 = 2.0032(1), g3 = 2.0038(1); g1 = 2.0098(1), g2 = 1.9991(1), g3 = 2.0113(1) ; g1 = 2.0064(1), g2 = 2.0008(1), g3 = 2.0052(1) respec- tively.
+While the OX2, OX3 did not have any observ- able hyperﬁne features, the OX1 center seems to possess hyperﬁne satellites at A1=914 MHz and A2=729 MHz A3=589 MHz that were associated with 13C nuclear spin.
+Diamonds synthesized in Na2CO3−CO2−H2O−C ﬁla- ment with the same temperature and pressure conditions a new S = 1/2 ESR center was found that was labeled as VOH27.
+This ESR center was ﬁtted with g||=2.0023(1), g⊥=2.0030(1), and A||35(1) MHz, A⊥=32(1) MHz spin- Hamiltonian parameters where the hyperﬁne coupling originates from an I = 1/2 nuclear spin with ≈100% abundance that was associated with a single 1H27.
+This ESR center clearly diﬀers from the one measured in CVD samples which is labeled as OVH7.
+In order not to con- fuse the readers, we use only OVH label in the context exclusively for the ESR center in CVD samples.
+The par- ticipation of oxygen impurity in all of these four point defects in the special HPHT diamonds was proposed be- cause of the relatively large anisotropy of the g-factor of the defects.
+The anisotropy of the g-factor was assumed27 to originate from the large spin-orbit coupling λ of the oxygen atom (λ=151 cm−1) characteristic to this atom type.
+The oxygen may be deﬁnitely introduced into diamond by oxygen ion implantation.
+Oxygen-ion implantation was argued to lead to n-type conduction with activation energy 0.32 eV in type IIa diamond samples,28 however, no independent experimental study has yet conﬁrmed this claim.
+PL centers associated with oxygen impurity were reported29 in natural type IIa and Ia diamond sam- ples at 584.8, 598.3, 845.0 and 836.0 nm after 16O ion- implantation.
+These PL centers appeared after annealing at 1500 ◦C unlike other PL centers formed by the same bombardments29, nevertheless, the assignment is still speculative.
+An unambiguous signal from oxygen-related defect was reported in diamond samples implanted by 17O ions30.
+The 17O isotopes have I = 5/2 nuclear spin, thus its interaction with electron spins is basically ob- servable in the ESR spectrum.
+Indeed, KUL12 ESR cen- ter with S = 1/2 spin and isotropic g=2.0023(1) factor was found in 17O implanted, nitrogen-free CVD diamond ﬁlms where the A⊥=207(3) MHz and A||=238(3) MHz hyperﬁne satellite lines were associated with the presence of 17O isotope.
+This ESR center is stable even after an- nealing at 1400 ◦C. The microscopic origin of the KUL12 ESR center has not yet been identiﬁed.
+The properties of the hyperﬁne and g tensors imply a high symmetry defect.
+The few theoretical studies on oxygen defects in diamond focused on the electronic structure and ioniza- tion energies31–34, thus the origin of this center is still unraveled.
+In summary, the knowledge about the incorporation and the role of oxygen impurities in diamond is scarce despite the fact that oxygen is presumably introduced in various synthesis processes and can be engineered by oxy- gen ion implantation.
+As a ﬁrst step in understanding of oxygen impurities in diamond, we carry out a systematic study on single oxygen related defects and their com- plexes with vacancy and hydrogen impurities by means of plane wave supercell density functional theory calcula- tions.
+Beside electronic structure calculations, we deter- mine the magneto-optical properties of the considered de- fects, and compare the calculated and experimental data for identiﬁcation of oxygen-related spectroscopy centers.
+The paper is organized as follows.
+In the following Sec. II we brieﬂy describe the applied methodology.
+We dis- cuss the results of atomistic simulations on interstitial (Sec.
+III A), substitutional (Sec. III B) oxygen defects, as well as their complexes with vacancy (Sec. III C) and hydrogen impurities (Sec. III D).
+In the neutral substi- tional oxygen defect and the complexes of oxygen and va- cancy highly correlated orbitals appear that is discussed in conjunction with the applied density functional the- ory in Sections III B and III C, respectively.
+We study the presence of motional averaging in the ESR spectrum of defects that exhibit Jahn-Teller distortion in Sec. IV.
+We analyze the optical properties of the neutral oxygen- vacancy complex in a separate section (Sec. V) where we discuss the non-radiative decay process from the op- tically excited state of the defect, and the connection of the 543.2 nm PL center and the WAR5 ESR center.
+Fi- nally, we conclude our paper in Sec. VI. II.
+METHODOLOGY We characterize point defects consisting of single oxy- gen, vacancy and hydrogen atoms in diamond within ab initio spin-polarized density functional theory (DFT) as implemented in the vasp code35,36.
+We determine3 the total energy of the considered defects within Born- Oppenheimer approximation: the ions are treated as classical particles and the potential energy surface (PES) is calculated as a function of the position of the ions in the system.
+The lowest energy in PES belongs to the ground state geometry conﬁguration.
+We embed the defects in a cubic 512-atom supercell which is large enough to sam- ple the Brillouin zone only at the Γ point.
+The elec- tron wave functions are expanded in a plane wave basis set.
+We employ the standard projector augmented-wave (PAW) method37 that allows a relatively low-energy cut- oﬀfor the expansion of plane waves and yet accurately provides the charge and spin density in the interstitial region and regions around the ions.
+The applied DFT functionals and plane-wave cut- oﬀs are optimized for the considered physical quantities and computational capacity.
+We applied the Perdew- Burke-Ernzerhof (PBE) generalized gradient approxi- mated variant of DFT38 to calculate the ground-state charge and spin densities of the system, as well as quasilo- cal vibration (phonon) frequencies of the systems.
+The choice of PBE for calculating the vibrations is moti- vated by two reasons: (i) PBE very accurately reproduces the experimental diamond lattice constant, phonon spec- trum, and the dependence of these properties of pressure or temperature;39 (ii) as we allow all the atoms to vi- brate it would be computationally prohibitive to apply non-local functionals to obtain the results.
+In the vasp implementation within density functional perturbation theory40 the calculated Raman-mode at 1326 cm−1 in our 512-atom supercell is in very good agreement with the experimental data of 1332 cm−1.41 In the defective calculations, we allowed all the atoms to relax until the forces fall below the threshold of 10−4 eV/˚A.
+In this case we use the PBE optimized lattice constant of diamond (3.565 ˚A).
+The plane-wave energy cutoﬀis set to 370 eV for the expansion of plane waves and 740 eV for the ex- pansion of the charge density.
+The atoms are allowed to relax until the forces went below 10−2 eV/˚A.
+We apply this functional to calculate the D-tensor of the system42 and the barrier energy of reorientation of some defects where the application of non-local density functional is computationally too demanding.
+The charge transition levels as well as the intrade- fect level optical transition energies are determined by HSE0643,44 screened hybrid functional because it provides quantitatively good agreement for defects in diamond45–48.
+In this case the optimized lattice constant of diamond is 3.545 ˚A.
+We employ the same threshold for the forces in the geometry optimization procedure like that in PBE calculations.
+We apply the ∆SCF method to calculate the excited states of the system that allows us to calculate the PES in the excited state, thus the zero-phonon-line (ZPL) energies can be determined and compared to the experimental data45,48.
+The applied plane-wave cutoﬀis set to 370 eV except in the calcu- lations of hyperﬁne couplings between the electron and nuclei spins where the cutoﬀis raised up to 600 eV. We calculate the hyperﬁne couplings including the core spin polarization in the Fermi-contact interaction within the frozen valence approximation49 as implemented in the vasp code50.
+We note that the hard PAW-potentials of oxygen and hydrogen are applied in the calculation of hyperﬁne tensors on 17O and 1H, respectively.
+We determine the formation energy [Eq f (EF)] as a function of Fermi-level EF in the fundamental band gap, in charge state q of the defect51, Eq f (EF) = Eq tot − X C,O,H niµi −q(EF −EV) + ∆Eq corr, (1) where µi is the chemical potential of the corresponding atom.
+The µC can be calculated from the perfect dia- mond lattice (-10.56 eV).
+The value of µO is referenced to the CO molecule in vacuum (-7.71 eV) in the carbon rich limit.
+Finally the µH is deduced from a 22-layer slab model of (001)-(2 × 1) reconstructed and hydrogen ter- minated diamond surface (-3.71 eV)47.
+In the context of the rest of paper, the origo of the Fermi-level EF is aligned to the calculated valence band edge EV that we consequently apply in the plots.
+The remaining ∆Eq corr term is a correction in the total energy due of the defec- tive charged supercell.
+Here, we apply a relatively simple formula, 2/3 of the monopole term of the Makov-Payne correction52,53 after average potential correction, which practically yields equivalent results with the Freysoldt correction54,55 and is able to properly reproduce the ex- perimental ionization energies of deep defects in group- IV crystals46 including the defects in diamond47,48 within the accuracy of about 0.1 eV. The adiabatic charge transition levels for a single de- fect E(q|q + 1) can be derived from Eq. 1 and are calcu- lated as E(q|q + 1) = Eq tot −Eq+1 tot + ∆Eq corr −∆Eq+1 corr, (2) which yields the position of the Fermi level where the formation energy of the defect for the two charge states q and q + 1 are equal.
+We calculate the binding energies with the following formula, Ebind = EqA f [A] + EqB f [B] −EqC f [C] + X i=A,B,C qiEF, (3) where the reactant is the defect C created by complex formation of A and B isolated defects.
+In this deﬁnition, positive binding energy means favorable reaction and a larger value of Ebind indicates a larger probability of re- action where this depends on the actual position of EF which sets the stable charge states (qi) of the defects in the reaction. III.
+RESULTS We study the basic oxygen defects, interstitial (OBC) and substitutional (OS) oxygen, the complex of oxygen-4 vacancy (OV) in diamond.
+In addition, we consider the complex formation of OS with one and two hydrogen atoms (OSH and OSH2, respectively) as well as OV with one, two and three hydrogen atoms (OVH, OVH2, and OVH3, respectively).
+The calculated formation energies are summarized in Fig. 1. FIG. 1. (color online).
+Formation energies of the considered oxygen defects and the interstitial hydrogen (HBC) defect.
+The chemical potential of oxygen and hydrogen are taken from CO molecule and a hydrogen terminated diamond surface in vacuum, respectively.
+See text for more details.
+The interstitial oxygen has the highest formation en- ergy and substitutional oxygen is much favorable.
+The oxygen-vacancy complex is less favorable than OS, how- ever, the complex formation from OS and vacancy is pre- ferred by 5.23 eV (Fermi level is at the acceptor level of the vacancy, EV+1.9 eV)47.
+Interstitial hydrogen (HBC bond centered conﬁguration in its mobile positively charged and neutral state) may form complexes with OS or OV defects.
+The calculated binding energy of OS and HBC is 4.37 eV whereas it is 4.27 eV for OSH and HBC to form OSH2 when the Fermi level is set to EV+2.0 eV. Complex formation of OV, OVH, and OVH2 with HBC is favorable by 6.13 eV, 5.88 eV, and 5.47 eV, respectively.
+We note that the formation energies of OV and OVH are similar.
+This implies that when OH-like radicals occur in the growth process of diamond then OVH may form as a unit during diamond growth.
+In the next Sections we will describe the electronic structure and magneto-optical properties of the consid- ered defects in detail.
+A. Interstitial oxygen defect Initially, we placed an interstitial oxygen atom in the bond centered position, labeled as OBC.
+The C-O-C bond is heavily distorted from the [111] symmetry axis, and the oxygen forms a so-called puckered bond centered conﬁg- uration.
+As a consequence, the original D3d symmetry is reduced to Cs or C2 symmetry during the geometric relaxation, see red and blue circles in Fig. 2(b), respec- tively.
+The high D3d symmetry position yields an energy of 0.62 eV higher than that for the puckered bond center conﬁguration.
+No defect state appears in the fundamen- tal band gap of diamond, thus OBC is electrically and optically inactive with a spin singlet ground state.
+Our results indicate a motional averaged structure for OBC defect as depicted in Fig. 2(a): the O atom orbits about the symmetry axis.
+The barrier between the six equiva- lent distortions [Fig. 2(b)] from D3d symmetry is below 8 meV, thus the sombrero shape of PES is axially sym- metric within our accuracy.
+We conclude that the OBC has a motionally averaged D3d symmetry.
+OBC has high formation energy but may be created by oxygen-ion implantation of diamond that can further migrate in the lattice.
+The path of diﬀusion can be de- scribed by the jump between two neighbor OBC conﬁgu- rations as depicted in Fig. 2(c).
+We determine the PES of the diﬀusion of OBC by PBE calculations because of the relatively high cost of hybrid calculations.
+We ﬁnd that the total energy only monotonously increases towards the split interstitial conﬁguration resulting in barrier energy of 2.93 eV. By assuming similar PES within HSE06 func- tional, one can calculate the barrier energy of diﬀusion by a single calculation constrained at the split interstitial conﬁguration.
+The calculated saddle point by HSE06 is 3.13 eV. This large barrier energy implies that interstitial oxygen is not mobile in diamond.
+It is more likely that neutral vacancies47 may diﬀuse to interstitial oxygen and they recombine to OS defect as the energy gain of this reaction is over 9 eV. We note that interstitial oxygen was tentatively pro- posed as a candidate for OX2 ESR center in oxygenated HPHT diamond26.
+Our results exclude the single inter- stitial oxygen as a good candidate for OX2 center as it has very high formation energy and is not a paramagnetic defect. FIG. 2. (color online).
+Geometry sketches the interstitial oxygen defects.
+(a) and (b) describes the bond centered con- ﬁguration OBC, while (c) depicts the split interstitial defect that is the saddle point of the migration of OBC interstitial oxygen.
+The barrier energy for diﬀusion is 3.13 eV. The blue and red circles represent equivalent distortions in (b).5 B. Substitutional oxygen defect Previous (semi)local DFT calculations already showed31,33 that OS introduces defect levels in the band gap.
+According to our HSE06 calculations, OS can appear at various charged states depending on the position of the Fermi level.
+The geometry of the ground state signiﬁcantly depends on the charge state of the defect as shown in Fig. 3.
+The driving force in the variance of the geometries in their corresponding charge states is the combination of pseudo Jahn-Teller eﬀect and the substantial correlation of orbitals.
+The simplest case is the doubly positive charged defect, OS(2+), which is isovalent to the substituted carbon atom.
+Indeed, that defect possessed the highest Td point group symmetry with on-center substitution.
+However, oxygen is much more electronegative than carbon that introduces polarized covalent C-O bonds that are signiﬁcantly longer (by about 0.11 ˚A) than C-C bonds (1.54 ˚A) in perfect diamond lattice.
+The occupied defect levels fall in the valence band but the anti-bonding empty a1 and t2 orbitals’ levels emerge in the band gap (labeled as 1a1 and 2t2 in Fig. 4). FIG. 3. (color online).
+Geometry of the OS defect in various charge states.
+The (2+) state is isovalent with carbon result- ing in Td symmetry.
+By adding electrons to this system those electrons are localized in the dotted elongated bonds in the (+) and (0) states.
+Additional electrons do not signiﬁcantly distort the geometry further.
+By adding one electron to this conﬁguration would oc- cupy an a1 antibonding state in OS(+) defect which is principally Jahn-Teller stable.
+However, distortion from Td to C3v symmetry results in the splitting of t2 state to a1 and e (labeled as 2a1 and 2e in Fig. 4).
+That 2a1 state can interact with the lower 1a1 state with lowering the total energy of the system and drives the system to C3v symmetry.
+By ﬁlling this antibonding orbital with a single electron will break one C-O bond and shortens the remaining three C-O bonds (see Fig. 3).
+This state has S = 1/2 electron spin, i.e., it is paramagnetic that may manifest in the electron spin resonance spectrum with the corresponding hyperﬁne signals.
+We exclude the feasibility of motional averaging of this defect based on our DFT calculations that will be discussed in a sep- arate section (Sec. IV).
+The calculated hyperﬁne tensors FIG. 4. (color online).
+Kohn-Sham (KS) levels of the OS defect in various charge states.
+In the ﬁrst column the charge transition levels are shown.
+The symmetry labels of KS states are depicted.
+The labels aR and aL are explained in the text and visualized in Fig. 7. Yellow area of CB(VB) corresponds to the conduction(valence) band.
+of the 17O nuclear I = 5/2 spin agrees well with the observed hyperﬁne signal of KUL12 ESR center in 17O ion implanted diamond samples30 (see Table I).
+As ex- plained above, the stability of OS(+) over OBC implies that OS indeed form in oxygen implanted diamond.
+We further note that KUL12 ESR center was detected to- gether with KUL1 ESR center that was identiﬁed as the SiV(0) defect48.
+The calculated stability of the neutral SiV, SiV(0), is in the region of EF = 0.27 −1.41 eV that has a common stability window with that of OS(+), i.e., EF = 0.32 −2.19 eV (see Fig. 4).
+All these facts in- dicate that KUL12 ESR center can be identiﬁed as the positively charged substitutional oxygen defect in dia- mond.
+We calculated the hyperﬁne interaction for prox- imate 13C nuclear spins too.
+A large hyperﬁne coupling occurs between the carbon dangling bond and the nuclear spin, although, its intensity is only about 0.5% with re- spect to the main ESR lines, thus it might be challenging to detect.
+However, other 13C detectable hyperﬁne cou- plings with 3 or 6 equivalent 13C nuclear spins with larger intensities can help strengthen the identiﬁcation of this defect.
+The DFT description of the orbitals of neutral OS is very challenging because it leads to a highly correlated ground state.
+In the previous (semi)local DFT stud- ies the highly correlated ground state was not consid- ered for OS(0)31,33.
+We showed for SiV-related defects in diamond56 that spinpolarized hybrid density functional6 TABLE I. Calculated HSE06 hyperﬁne constants of OS(+) defects.
+The experimental data is the proposed KUL12 ESR center taken from Ref. 30.
+Only the oxygen hyperﬁne con- stants are available for KUL12 ESR center.
+The direction of the hyperﬁne constants are given in angles in the parenthesis (ϑ, ϕ).
+ϑ is the angle from [001], and ϕ is the angle from [100] of the projection into the (001) plane.
+If no angle is given then the hyperﬁne interaction is axially symmetric and the high symmetry axis points towards [111].
+The direction of A constants are depicted in Fig. 6 with their correspond- ing labels where the zz, yy and xx components are shown by blue, green and red arrows, respectively.
+The number of sym- metrically equivalent 13C isotopes are indicated in the ﬁrst column preceding their label, and depicted in Fig. 5.
+Azz (MHz) Ayy (MHz) Axx (MHz) KUL12 17O ±238 ±207 ±207 OS(+) 17O -223 -189 -189 1 (x) 314 70 70 3 (a) -29(90,225) -27(29,315) -24(61,135) 3 (c) 48(60,45) 34(150,45) 33(90,315) 6 (d) 13.0(58,294) 9.0(48,170) 8.4(58,6) 3 (l) 13.5(62,225) 9.0(90,315) 9.0(29,45) other < 4 < 4 < 4 theory may be employed to approximate the total energy of highly correlated systems within a 0.2 eV estimated ac- curacy.
+We start the discussion of the neutral OS with the electronic structure of OS(2+) in Td symmetry.
+If two electrons are promoted to the antibonding 1a1 and 2t2 orbitals then the symmetry will reduce to C2v symme- try because of two broken C-O bonds (see Fig. 3) and two short C-O bonds (1.41 ˚A).
+In other words, oxygen will form two covalent bonds.
+This conﬁguration often occurs in molecules or defects in solids consisting of an oxygen atom.
+In this conﬁguration the 2t2 state splits to 2b1, 2b2, and 2a1 where the 2b1 level lies close to the 1a1 level whereas the other levels are resonant with the conduc- tion band edge.
+This reconstruction may be considered as a pseudo Jahn-Teller eﬀect.
+According to the aufbau principle, the two electrons may ﬁll the 1a1 level, 1a2 1, resulting in an 1A1 singlet state.
+However, one should re- alize that 2b2 1 electron conﬁguration has also 1A1 symme- try that can strongly interact with the former state, and they rather form a multideterminant state.
+The total en- ergy of this multideterminant state can be approximated by symmetry-lowered spinpolarized Kohn-Sham states56 where an antiferromagnetic-like state can be formed.
+In that state the spin-up electron is localized only in the ”right” dangling bond [aR state in Fig. 7(a)] whereas the spin-down electron is localized only in the ”left” dangling bond [aL state in Fig. 7(a)].
+These Kohn-Sham wave functions show only Cs symmetry that is lower than the C2v symmetry of the structure.
+This electron conﬁgu- x a c c c a a d d d d d d f f f f f f g g g g g g h h h l l l y y y FIG. 5. (color online).
+Positions of the carbon atoms near the oxygen defect are shown in a perspective view that pos- sess considerable hyperﬁne interaction.
+The red-colored non- labeled atom depicts the oxygen atom.
+Identical colors of balls represent symmetrically equivalent carbon atoms in C3v symmetry.
+The labels are used in Tables I, II and III, and Figures 6, 10 and 13.
+The removal of carbon (x) yields re- sults in OV defect.
+OVH defect may be created by removing carbon (x) and bonding hydrogen to carbon (a). FIG. 6. (color online).
+The direction of hyperﬁne eigenvectors of the OS(+) defect are depicted where zz, yy and xx compo- nents are shown by blue, green and red arrows, respectively.
+The direction of hyperﬁne constants labeled by bold letters are in Table I.
+The yellow ball represents the O atom.
+For the sake of clarity, the (a) and (c) hyperﬁne tensors are shown separately in the two outlying purple boxes.
+The labeling of carbon atoms agrees with that in Figure 5. ration has the lowest energy by HSE06 functional.
+The calculated barrier energy of reorientation between C2v conﬁgurations is over 1 eV, thus motional averaged Td symmetry does not likely occur.
+Since the positively charged substitutional oxygen de- fect can be deﬁnitely generated our theory indicates that the neutral substitutional defect can be found in nitrogen-contaminated diamond.
+The ground state is sin- glet, nevertheless, a metastable triplet state may exist7 FIG. 7. (color online).
+Kohn-Sham (KS) states of and the excitation process of OS(0).
+(a) shows the contour plot of the pseudo-wave functions with isovalues at ±0.006 (opaque) and ±0.003 (transparent).
+The KS energies of the triplet state is shown in (b), whereas (c) corresponds to the symmetry broken singlet KS solution which is lower in total energy by 0.04 eV than that of the high spin case.
+We show the C2v symmetric singlet KS solution in (d) and the excitation of this system in (e) by promoting one electron from the a1 to b1 level.
+Yellow area of CB(VB) corresponds to the conduction(valence) band.
+(f) depicts the many-electron states.
+The straight arrows represent the optical excitation whereas the wavy dotted(bold) arrows the very weak(eﬃcient) intersystem crossings mediated by spin-orbit and electron-phonon couplings.
+The calculated zero-ﬁeld splitting due to electron spin-spin interaction as well as the hyperﬁne coupling to 17O nuclear spin are also shown in the triplet state.
+The hyperﬁne constants of the two equivalent 13C atoms are sohwn.
+All of the remaining 13C atoms possess hyperﬁne coupling parameters less than 30 MHz.
+The spin substates of the triplet is indicated.
+For the sake of clarity, the energy scale is arbitrary.
+and it may be employed as a qubit similar to the ST1 center in diamond57.
+Therefore, we study the shelving and excited states of OS(0) in detail.
+We follow a similar methodology as was explained for SiV2:H(−) defect in diamond56.
+The triplet state can be described as the oc- cupation of a1 and b1 states by parallel spins (3B1 state) whereas the optically allowed 1B1 state was constructed from constrained occupation of symmetric orbitals [see Fig. 7(d,e)].
+By taking the excitation energy between the conﬁguration of Fig. 7(e) and (d), and the total energy diﬀerence between electron conﬁguration of Fig. 7(d) and the ground state singlet of Fig. 7(b) we obtain the zero- phonon-line energy of 1.39 eV. We assume an accuracy of about 0.2 eV of this procedure based on our experience56.
+The shelving triplet state has about 0.04 eV higher en- ergy than that of the ground state singlet.
+However, no low energy second triplet state exists near the optically allowed excited state singlet.
+The spin-orbit coupling be- tween 1B1 and 3B1 states is not allowed in the ﬁrst order, thus the intersystem crossing is presumably very weak.
+On the other hand, if this scattering occurs then there should be an eﬃcient and spin selective decay from the triplet shelving states to the ground state singlet because of the selection rule of C2v symmetry.
+Nevertheless, the optically detected magnetic resonance signal may be too weak to be detected because of the ineﬃcient intersys- tem crossing between the optically excited state and the triplet shelving state.
+The negatively charged oxygen defects may only oc- cur in phosphorus doped diamonds and thus we describe them only brieﬂy.
+In OS(−) the a1 and b1 orbitals are oc- cupied by three electrons.
+HSE06 predicts an additional pseudo Jahn-Teller distortion from the C2v symmetry to Cs symmetry (see Fig. 3).
+However, the energy gain is only 0.01 eV. Motional averaging may result in an eﬀec- tive C2v symmetry in the measurements.
+In this eﬀective symmetry the spin density is equally distributed in the two carbon dangling bonds whereas it results in 25%- 75% distribution in the distorted structure.
+The OS(2−) is a closed shell singlet in C2v symmetry where a1 and b1 states are fully occupied in both spin channels (see Fig. 4).
+We note that our DFT calculations with an advanced functional reveal more complex nature of OS defect than that was reported by a previous local density functional approximation calculation carried out in a small super- cell (Ref. 31), therefore, the conclusions of that previous study might be ambiguous.
+C. The oxygen-vacancy defect The substitutional oxgen may combine with a vacancy forming the oxygen-vacancy (OV) defect.
+The OV defect may be taken as an analog with the famous NV center13 in diamond, except that oxygen brings one additional va- lence electron to the system.
+By following this argument one may imply that the electronic structure of OV(0) may be similar to NV(−) and it might be useful as a qubit but with enhanced T1 time of the electron spin when the natural abundant 16O is involved in the defect with no nuclear spin; or rather 17O isotope is engineered in the OV defect with I = 5/2 nuclear spin for enhanced number of quantum states for qubit operations.
+In this context it is important to note that one ESR center in CVD diamond samples was proposed to originate from8 OV(0) defect but no spinpolarization could be detected in this ESR center upon photoexcitation7.
+Thus, we will particularly study the excitation of OV(0) in a separate section (Sec. V).
+In the rest of this section we analyze the electronic structure and the resulted magnetic properties of the OV defect.
+The undistorted OV defect has C3v symmetry (see Fig. 8).
+In contrast to NV center in diamond possess- ing an a1 and a degenerate e level in the gap, OV defect exhibits three levels in the gap [see Fig. 9(b)]: an 1a1 level, a degenerate e level and an additional 3a1 level.
+In the neutral charge state four electrons occupy these states, thus this system can be principally ionized.
+Ac- cording to our results, the OV can form charge states from (2+) to (2−).
+The 1a1 level of the totally sym- metric 1a1 orbital [see Fig. 9(a)] resides just above the valence band edge when the defect is neutral and it shifts to the valence band in the positive charged states.
+The 2e level comes from the degenerate 2ex (011) and 2ey (211) orbitals that are localized on the carbon dangling bonds near the vacancy.
+The third KS orbital is the antibonding 3a1 orbital of the three O-C bonds as shown in Fig. 9(a).
+If this state gets occupied in the negative charged states then the symmetry gets heavily distorted from C3v.
+One of the three C-O bonds gets elongated (see Fig. 8) where the extra electron will be localized.
+This resembles the fact that oxygen usually forms two covalent bonds.
+Next, we analyze the OV center in diﬀerent charged states. FIG. 8. (color online).
+Geometry of the OV defect in various charge states.
+The dotted circle labeled by V represents the position of the vacant site.
+σh depicts the mirror plane.
+In the (2+) state, only the 1a1 state is fully occupied, and the remaining 2e and 3a1 state are empty.
+This de- fect exhibits C3v symmetry.
+This defect might only occur in B-doped diamond samples.
+The (+) state is a Jahn- Teller unstable system, thus its symmetry reduced to Cs, the 2a′′ is occupied in one spin channel from the former degenerate e level.
+However, we note that this system is presumably a dynamic Jahn-Teller system as the cal- culated barrier energy of reorientation is tiny (10 meV) with showing an eﬀective C3v symmetry.
+This system is analogous to the NV(0): no ESR signal is expected to be observed in the ground state due to the dynamic Jahn-Teller eﬀect.
+The neutral charge state is again a C3v defect with S = 1 spin as the e state is fully occupied in the spin majority channel which results in 3A2 many-electron ground state.
+Thus, the OV(0) system indeed looks similar to the NV(−).
+The similarities for the ground state of these two defects are striking.
+The calculated D-tensors due to electron spin - electron spin interac- tion are DNV(−)=2848 MHz and DOV(0)=2989 MHz.
+The calculated hyperﬁne tensors with proximate 13C nu- clear spins of OV(0) (see Table II) also follows closely those of NV(−) defect in diamond50.
+Indeed, WAR5 ESR center in CVD diamond grown by oxygen chem- istry yielded very similar spin-Hamiltonian parameters to those of NV(−) defect6: Dexp.
+NV(−)=2872(2) MHz8,9 and Dexp.
+WAR5=2888(2) MHz; the hyperﬁne parameters of WAR5 ESR center are shown in Table II and can be found in Refs.
+50, 58, and 59 for NV center.
+Based on these similarities it was proposed that WAR5 ESR cen- ter comes from OV(0), although, there was no direct ev- idence for the presence of oxygen in WAR5 center7 since the diamond was grown in the presence of natural abun- dance of oxygen isotopes.
+We ﬁnd that the calculated hyperﬁne tensors of OV(0) agrees well with the experi- mental data (see Table II).
+The interpretation of the ex- perimental hyperﬁne satellites labeled as 3c/3h may be questioned.
+We believe that the hyperﬁne signals on 3c 13C isotopes may overlap with those of 3l 13C isotopes that makes the interpretation of these signals ambigu- ous.
+Nevertheless, the overall good agreement supports the identiﬁcation of WAR5 ESR center as OV(0).
+Deﬁ- nite experimental veriﬁcation is possible in 17O enriched diamond samples where the hyperﬁne coupling with 17O I = 5/2 spin should be well observed (around 15 MHz).
+We turn now to the negative charged state, OV(−).
+The electron donated to the OV defect is localized in one of the C-O bonds and lowers the C3v symmetry to Cs symmetry.
+As a consequence, the e level will split and some of the corresponding states can strongly interact with each other resulting in highly correlated electron system which is very challenging for DFT modeling.
+We apply group theory analysis on the electronic states to estimate the total energy of the diﬀerent eigenstates of the system.
+We concentrate on the open shell orbitals.
+Three electrons can occupy the 2a′2a′′3a′ orbitals (see Fig. 9) that results in 23 = 8 possible conﬁgurations in total, including the spin degrees of freedom.
+After the reduction of the tensor product of three doublet orbitals, 2a′ |{z} (2ex) ⊗2a′′ |{z} (2ey) ⊗2a′ |{z} (3a1) = 4A′′ ⊕2A′′ ⊕2A′′ (4) where the irreducible representation of the ascendant C3v symmetry is also shown in parenthesis. The resultant9 FIG. 9. (color online).
+Kohn-Sham (KS) orbitals (a) and levels (b) of the OV defect in various charged states.
+The charge transition levels are also given in (b).
+The KS orbitals are taken from the neutral charged state except for the last (3a′) orbital that is taken from the single negative charged state that leads to large distortion with breaking the C3v symmetry.
+The symmetry labels of orbitals in parentheses refer to the descendant orbitals in Cs symmetry.
+The contour plots of the pseudo-wave functions are at the isovalues of ±0.006 (opaque) and ±0.003 (transparent). FIG. 10.
+(color online) The direction of hyperﬁne eigenvec- tors of the OV(0) defect where zz, yy and xx components are shown by blue, green and red arrows, respectively.
+The direction of hyperﬁne constants labeled by bold letters are in Table II.
+The yellow ball represents the O atom.
+For the sake of clarity, the (a) and (c) hyperﬁne tensors are shown separately in the two outlying purple boxes.
+The labeling of carbon atoms agrees with that in Figure 5.
+many-body states are two doublets and a quartet.
+Only the |S = 3/2, Sz = ±3/2⟩states of the 4A′′ can be de- scribed by single Slater determinants; all the other states are multi-determinant in nature.
+In our Kohn-Sham DFT approach the following Sz = 1/2 single determinant wave functions can be calculated: Φ1 = 2a′ ↑2a′′ ↑3a′ ↓, Φ2 = 2a′ ↑2a′′ ↓3a′ ↑, Φ3 = 2a′ ↓2a′′ ↑3a′ ↑.
+The Φ1 assumes triplet coupling between the 2a′ and 2a′′ electrons, whereas the Φ2,3 suggests a singlet coupling.
+While the calculated DFT total energy of Φ1 is higher by 14 meV than that of S = 3/2 state, the calculated diﬀerence between the total energies of Φ2 and Φ3 are even less than that, i.e., 3 meV.
+It is important to notice that Φ1,2,3 states are not the true S eigenstate of the system.
+However, the linear combination of Φ1,2,3 states are true eigenstates of the Sz ± 1/2 substates of the quartet (Eq. 5a) and the doublets (Eqs. 5b, 5c): 4A′′ 1/2 E = 1 √ 3 (Ψ1 + Ψ2 + Ψ3) (5a) 2 aA′′ 1/2 E = 1 √ 2 (Ψ2 −Ψ3) (5b) 2 bA′′ 1/2 E = 1 √ 6 (2Ψ1 −Ψ2 −Ψ3) (5c) The negligible total energy diﬀerence between Φ2,3 sug- gests that the interaction between the 3a′ and (2a′, 2a′′) does not depend on ﬂipping the spin between 2a′ and 2a′′. By neglecting the electron spin - electron spin and spin- orbit interaction energies and assuming that DFT total energies of Φ1,2,3 states are good expectation values one can estimate the total energies of the true eigenstates of the system by using the equations ⟨Ψ1| ˆH |Ψ1⟩= ∆= 1 3E  4A′ + 2 3E  2 bA′′ (6a) ⟨Ψ2,3| ˆH |Ψ2,3⟩= Λ = 1 3E  4A′ + 1 2E  2 aA′ + 1 6E  2 bA′′ (6b) By using HSE06 total energies we obtain Λ=14 meV and ∆=288 meV. After solving Eq. 6, the total energy of 2 aA′′ will be above that of the quartet by 0.57 eV. The 2 bA′′ state is still about 21 meV higher in energy than that of the quartet.
+Taking all the approximations into account this diﬀerence is within our accuracy, thus the ground state of OV(−) can be either 4A′′ or 2A′′. Both states are ESR active.
+The calculated hyperﬁne signals for the 4A′′ are shown in Table II.
+The calculation of hyperﬁne10 TABLE II.
+Hyperﬁne tensors for the WAR5 ESR center (ex- perimental data from Ref. 6) and the OV(0) defect calculated by HSE06 functional in diamond.
+The direction of the hy- perﬁne constants are given in angles in the parenthesis (ϑ, ϕ).
+ϑ is the angle from [001], and ϕ is the angle from [100] of the projection into the (001) plane.
+If no angle is given then the hyperﬁne interaction is axially symmetric and the high symmetry axis points towards [111].
+The direction of A constants for 13C isotopes are depicted in Fig. 10 with their corresponding labels (ﬁrst column) where the zz, yy and xx components are shown by blue, green and red arrows, respec- tively.
+The number of symmetrically equivalent 13C isotopes are indicated in the ﬁrst column preceding their label, and depicted in Fig. 5.
+Azz (MHz) Ayy (MHz) Axx (MHz) WAR5 S = 1 3a 197.4(2) (54,225) 117.3(2) (36,45) 118.2(3) (90,135) 6g 17.5(1) (60,225) 11.7(1) (30,45) 13.0(1) (90,135) 3l 12.6(1) (55,225) 8.5(2) (35,45) 8.5(2) (90,135) 3c/3h 7.4(1) (55,225) 4.3(1) (35,45) 4.3(1) (90,135) OV(0) S = 1 17O 16.5 17.9 17.9 3a 188 (54,225) 102 (36,45) 102 (90,135) 6g 17.6 (53,222) 11.7 (133,176) 11.8 (65,112) 3l 16.3 (57,225) 10.9 (33,45) 10.7 (90,135) 3c -8.2 (85,45) -9.8 (5,225) -10.0 (90,135) 6d -3.4 (49,142) -6.6 (127,93) -7.0 (63,26) other < 5 < 5 < 5 3h < 3 < 3 < 3 OV(−) S = 3/2 17O -72.0 (120,45) -52.2 (150,225) -51.1 (90,315) 2a 130 (56,314) 75.1 (92,43) 74.7 (34,131) 1a 136 (126,45) 74.5 (90,315) 74.4 (144,225) 1y 116 (55,225) 36.7 (35,45) 36.4 (90,315) other < 13 < 13 < 13 tensors of the 2A′′ conﬁguration is not straightforward because of its correlated electronic structure.
+The OV(2−) defect is only marginally stable that might be found in P-doped diamond, thus we only brieﬂy analyze it.
+We ﬁnd that OV(2−) also has multidetermi- nant states, i.e., the 2a′′ ↓and 3a′ ↑holes in Fig. 9(b) form an open-shell singlet.
+The triplet state was favorable over the open-shell singlet by 7 meV which is within the ac- curacy of our method.
+D. Complexes of hydrogen with substitutional oxygen and oxygen-vacancy defect Trapping of mobile interstitial hydrogen60 by var- ious point defects in diamond was already reported, such as the passivation of NV centers by hydro- gen forming NVH complexes61, or vacancy-hydrogen complexes62,63.
+Silicon-hydrogen complexes were also found in diamond56,64.
+Here, we consider complex forma- tion of hydrogen with substitutional oxygen and oxygen- vacancy defects.
+In substitutional oxygen defect some bonds are elongated that may be attacked by an ap- proaching interstitial hydrogen.
+In oxygen-vacancy de- fect the carbon dangling bonds may be naturally satu- rated by hydrogen atoms.
+We study these complexes by our DFT machinery.
+First, we consider the saturation of the elongated C-O bond by a single hydrogen in OS defect with forming the OSH defect.
+We ﬁnd a single defect level occupied with a single electron [see Fig. 11(a)], thus the defect can be positively and negatively charged.
+In the positive charge state this a1 defect level is empty resulting in a high C3v symmetry.
+The a1 state is the antibonding orbital of the C-O bonds.
+When this antibonding orbital is ﬁlled by an electron then it distorts the defect toward Cs symme- try with S = 1/2 paramagnetic state.
+We note that the calculated barrier energy for reorientation of hydrogen among the C-O bonds is 1.04 eV, thus no motional aver- aging is likely.
+The calculated hyperﬁne constants of 1H, Axx=-0.9 MHz, Ayy =-7.4 MHz, Azz =24.0 MHz, are very diﬀerent from either the ESR signal in oxygenated HPHT diamond (A||=35 MHz, A⊥=32 MHz)26 or the ESR signal in CVD samples grown by oxygen chemistry (A||=∓13.6 MHz, A⊥=±9.0 MHz)7.
+We conclude that ESR signal of this defect has not yet been detected.
+For future comparison, we report the hyperﬁne constants of 17O that are Axx=-188 MHz, Ayy=-189 MHz, and Azz=- 224 MHz.
+A characteristic large 13C hyperﬁne coupling of Axx=85 MHz, Ayy=85 MHz, and Azz=331 MHz may be also detected.
+In the negative charge state the defect has a closed shell singlet ground state. FIG. 11. (color online).
+Kohn-Sham levels of the OSH1,2 defects in their various charge states.
+The 1a1 (OSH) and 2a1 (OSH2) state is localized in the symmetric combination of C-O antibonding orbitals with no saturation by hydrogen.
+The 1b1 state is localized in the two C-H-O bonds equally as well as the 1a′ and 1a′′ state in OSH2 defect.
+If two hydrogen atoms bind to OS then the resultant OSH2 defect will have C2v symmetry.
+The fully occupied11 1b1 level lies just above the valence band edge whereas the empty 2a1 level is almost resonant with the conduc- tion band edge.
+This state will be partially occupied in the negatively charged state of the defect with S = 1/2 ground state but it is only marginally stable and may oc- cur in P-doped diamond [see Fig. 11(b)].
+The geometry distorts to Cs symmetry because the unpaired electron resides in the antibonding state of C-O bonds.
+Next, we consider the interaction between hydrogen and OV defect.
+Hydrogen much favors to bind to OV defect.
+OV defect has three carbon dangling bonds in the neutral charge state, thus we consider the complex formation of OV defect with one, two, and three hydrogen atoms.
+The calculated charge transition levels and the corresponding Kohn-Sham defect levels in the gap are depicted in Fig. 12.
+All the defects are electrically active and can be paramagnetic at certain charged states that may be observed in ESR spectrum.
+OVH defect may be positively charged in diamond when the Fermi-level is below EV+2.1 eV. The ground state of OVH(+) is a correlated singlet [see Fig. 12(a)] that is more stable than the triplet coupling between by 0.16 eV within our hybrid DFT level.
+This eﬀect is very similar to that of the OS(0) that was shown in Sec. III B and Fig. 7.
+In this case two 1A′ states correlate with each other (2a′2) and (2a′′2) but are unable to mix either with the ﬁrst excited state 1A′′ nor the triplet 3A′′.
+The calcu- lated ZPL of the optical transition between 1A′ and 1A′′ states is 1.38 eV where the relaxation energy upon opti- cal excitation is 0.04 eV. This is a small value implying that the contribution of the phonons is not signiﬁcant in the PL process.
+We next focus our attention to the paramagnetic neu- tral OVH defect with S = 1/2 ground state.
+The un- paired electron lies on the 2a′′ orbital [see Fig. 12(a)].
+This orbital originates from a degenerate 2e state of OV defect localized in the carbon dangling bonds (Fig. 9).
+This 2e state are ﬁlled by three electrons in OVH(0) de- fect which is Jahn-Teller unstable in C3v symmetry and distorts to Cs symmetry.
+As a consequence, 2e level splits to the fully occupied 2a′ level and the half-occupied 2a′′ level.
+This situation resembles the case of NVH(−) defect with S = 1/2 spin state where the ESR signal of the 1H could be observed as motional averaged C3v symmetry.15 We consider this eﬀect for OVH(0) defect as displayed in Fig. 13: the hydrogen may jump between the three equivalent Cs conﬁgurations very rapidly, therefore ESR measurements will observe an eﬀective C3v symmetry sig- nal.
+This eﬀect is discussed in detail in Sec.
+IV where we show by DFT calculations that the ESR signals of OVH(0) and NVH(−) defects are motional averaged.
+In- deed, an ESR center was observed in CVD samples grown with oxygen chemistry that has S = 1/2 spin state and one 1H hyperﬁne splitting with C3v symmetry that they associated with the OVH(0) defect7, thus this center is labeled as OVH.
+The calculated motional averaged hy- perﬁne signal of 1H is indeed very close to the experi- mental data of OVH ESR center, thus our calculation supports the identiﬁcation of OVH(0) defect in diamond.
+We provide the calculated hyperﬁne tensors of 17O and proximate 13C nuclear spins that may be useful for fu- ture experiments.
+The ESR signal might be accompanied with an optical transition, thus we calculate the lowest possible excitation energy that corresponds to the tran- sition of 2a′ →2a′′.
+The calculated ZPL of the lowest energy optical transition is 1.11 eV where the relaxation energy upon optical excitation is 0.33 eV. The relatively small ZPL energy may imply that the non-radiative de- cay is very competitive and the luminescence is weak.
+The negatively charged OVH defect may be present in N-doped diamond samples.
+The extra electron occupies the 3a′ C-O antibonding orbital, thus the O atom cre- ates two covalent bonds.
+Both the spin state and the symmetry of the neutral defect is ambiguous within the accuracy of our approach.
+The defect may form either Cs or C1 symmetry depending on the relative position of the oxygen and hydrogen impurities in the OVH defect.
+For the sake of simplicity we show the Cs conﬁguration in Fig. 12(b).
+Two electrons may occupy the 2a′′ and 3a′ orbitals either with antiparallel or parallel spins forming S = 0 or S = 1 states, respectively.
+We ﬁnd that the C1 S = 1 conﬁguration has the lowest total energy in our hybrid DFT approach but the total energy of the singlet states and the Cs S = 1 triplet are all within 30 meV that is beyond our accuracy.
+The hyperﬁne constants of the most stable triplet state is shown in Table III.
+We note that motional averaging may occur in this defect that should alter the hyperﬁne constants of 1H and, with much lesser extent, that of 17O, as the reorientation of the geometry occurs between the carbon dangling bonds and the H atom of the defect, whereas the position of the oxygen atom remains almost intact.
+The electronic structure of OVH2 defect is similar to that of OVH.
+Out of three carbon dangling bonds two of them are terminated by H atoms in the OVH2 sys- tem, thus only two defect states appear in the gap (see Fig. 12).
+The ﬁrst defect state is localized on the re- maining carbon dangling bond (2a′).
+The second level 3a′ is the antibonding orbital of the oxygen with its three neighbor carbon atoms.
+When this antibonding orbital gets occupied then one of three C-O bonds breaks and the initial geometry is heavily distorted.
+This occurs in the (0), (−), and (2−) charge states.
+We predict that only the (+) and (−) charge states are ESR active with S = 1/2 spin.
+We show that the calculated hyperﬁne tensors of the positive charge state in Table III.
+Here we assume a motional averaging eﬀect similar to that of the OVH(0) with showing an eﬀective C3v symmetry, but now there are six equivalent conﬁgurations instead of three because the H atoms can be interchanged.
+The neutral charge state is again either an open-shell singlet or a triplet.
+The singlet is preferred over the triplet by 19 meV, thus we cannot decide unambiguously the na- ture of the ground state.
+We suspect that the singlet state is indeed more favorable than the triplet one.
+The (−) state is a doublet, albeit its motional averaged hy-12 VB CB +1 0 −1 −2 FIG. 12. (color online).
+Kohn-Sham (KS) levels of the complexes of hydrogen atoms and OV defect in various charge states.
+The KS orbitals are descendant from those of the OV defect (see Fig. 9), thus we follow the labeling the corresponding orbitals as those of OV defect.
+The labels aL and aR in (a) correspond to symmetry broken KS orbitals similar that of the OS(0) system (see Fig. 7) that leads to a correlated singlet ground state for OVH(+). FIG. 13. (color online).
+The direction of hyperﬁne eigen- vectors of the OVH(0) defect where zz, yy and xx compo- nents are shown by blue, green and red arrows, respectively.
+The actual angles of the bold labels are shown in Table III.
+The pink ball represent the single motional averaged hydrogen atom.
+All hyperﬁne constants are obtained from the average of three equivalent conﬁgurations.
+The labeling of carbon atoms agrees with that in Figure 5.
+perﬁne signal might be complicated.
+The H atoms may rotate among the 3 carbon dangling bonds but the ro- tation of the broken O-C bond may be hindered.
+As a consequence, the resultant hyperﬁne signal may possess only Cs symmetry.
+We show the hyperﬁne parameters in Cs symmetry in Table III.
+In OVH3 defect the three dangling bonds are satu- rated, thus only the antibonding C-O 3a1 state appears in the gap.
+This defect level is occupied by one electron in the neutral charge state with S = 1/2 spin.
+The corre- sponding hyperﬁne parameters are presented in Table III. IV.
+ELECTRON SPIN RESONANCE SPECTRUM OF JAHN-TELLER DISTORTED SYSTEMS Defects that exhibit Jahn-Teller distortion may or may not show a high symmetry signal via motional averaging.
+This depends on the relative timescales of the microwave ﬁeld applied to ﬂip the electron spin in the ESR mea- surements and the tunneling between the symmetrically equivalent statically distorted structures.
+We ﬁrst inves- tigate this eﬀect on OVH(0) defect.
+In C3v symmetry the H sits in the symmetry axis of which total energy is 0.98 eV higher than that of the Cs distorted geome- try.
+This ∆E energy is called Jahn-Teller energy.
+With using the nudge elastic band method65,66 we calculated also the barrier energy for reorientation among the sym- metrically equivalent Cs conﬁgurations that resulted in 0.93 eV. This is very close to the calculated Jahn-Teller energy.
+This Jahn-Teller system may be described as E × e type where e now means e vibration modes that dynamically drive the system out from C3v symmetry.
+In this system the tunneling rate ΓE can be calculated (see section 5.3 in Ref.
+67 and section 4.3.3 in Ref.
+68) as ΓE = 9κ∆E h exp  −6∆E ¯hωA λ 1 + 3λ  (7a) κ =  16λ 3λ2 + 10λ + 3 2 9 + 54λ −6λ3 −λ4 2(9 −λ2)(1 + 3λ)2 (7b) λ = ωB ωA , (7c) where λ is deﬁned by the vibration frequencies of the two modes ωA and ωB (not degenerate anymore) partic- ipating in the Jahn-Teller distortion as obtained in the Cs conﬁguration.
+In this particular system, ωB=0.18 eV is the bending mode of the C-H bond that reorients the system between two equivalent Cs geometries whereas ωA=0.37 eV is the stretching mode of the C-H bond that13 TABLE III.
+Hyperﬁne tensors for the OVH ESR center (ex- perimental data from Ref. 7 labeled as exp.) and our the- oretically predicted values for OVHn defects.
+We show the calculated static (labeled as static) and motional averaged (labeled as motional) values too.
+The direction of the hyper- ﬁne constants are given in angles in the parenthesis (ϑ, ϕ).
+ϑ is the angle from [001], and ϕ is the angle from [100] of the projection into the (001) plane.
+If no angle is given then the hyperﬁne interaction is axially symmetric and the high sym- metry axis points towards [111].
+The direction of A constants for 13C isotopes are depicted in Fig. 13 with their correspond- ing labels (ﬁrst column) where the zz, yy and xx components are shown by blue, green and red arrows, respectively.
+The numbers on 13C isotopes refer to the symmetrically equivalent positions.
+Azz (MHz) Ayy (MHz) Axx (MHz) OVH(0) S = 1/2 exp.
+1H ∓13.6(1) ±9.0(1) ±9.0(1) static 1H -17.1(130,238) 13.7(45,270) 1.6(73,163) 17O 23.0(116,209) 24.0(45,270) 25.2(56,138) motional 1H -16.3 7.2 7.2 17O 23.2 24.5 24.5 3 (a) 13C 89(65,28) 89(135,90) 175(55,136) 6 (g) 13C 12(92,47) 12(148,141) 18(58,135) 3 (l) 13C 11(135,90) 11(68,24) 17(53,132) other 13C < 5 < 5 < 5 OVH(−) S = 1 static 1H 6.7(137,114) -5.8(55,72) -0.6(68,178) 17O -115(128,139) -86(72,64) -85(136.8,-6.1) OVH2(+) S = 1/2 static 1H 26.3(85,135) -25.8(96,45) -23.5(7,11) 17O -3.7(45,88) -1.0(135,90) -1.0(91,-1) motional 1H -24.6 0.9 0.9 17O -2.9 -1.4 -1.4 3 (y) 13C 122(55,136) 40(135,90) 40(65,27) other 13C < 10 < 10 < 10 OVH2(0) S = 1 static 1H -5.3(31, 20) -11.1 (62.1,227) 12.0 (78,131) 17O -76(135,90) -79(70,21) -107(52,128) OVH2(−) S = 1/2 1H 7.0(32, 69) -2.9 (122,72) -2.0 (88,161) 17O -260(54,135) -206(135,90) -205(66,26) 1 (y) 13C 104(135,90) 104(65,27) 343(55,136) other 13C < 15 < 15 < 15 OVH3(0) S = 1/2 2 atoms 1H 9.1(103,242) -4.7 (105,148) -3.2 (20,190) 1 atom 1H 5.0(86,45) -2.6 (90,135) -1.6 (176,45) 17O -229(126,45) -180(36,45) -180(90,135) 1 (y) 13C 341(126,45) 98(35,45) 98(90,135) other 13C < 30 < 30 < 30 drives the system through the C3v high symmetry con- ﬁguration.
+In other words, ωA and ωB can be considered as the rotational and radial modes of the potential en- ergy surface of the Jahn-Teller distorted defect, respec- tively.
+We emphasize here that the values of ωA and ωB are comparable to that of ∆E. As a consequence, the calculated ΓE=25.5 THz tunneling rate is about three orders of magnitude faster than the X band at ≈10 GHz or the Q band at ≈34 GHz employed in ESR absorption measurements.
+We calculated the ∆E and the reorien- tation barrier energy for the NVH(−) defect too, and the calculated values at 0.96 eV and 0.90 eV are very similar to those obtained for OVH(0) defect.
+The ﬁnal result is ΓE=26.6 THz for NVH(−).
+This also demon- strates the similarities of these two defects and justiﬁes our analysis on OVH(0) defect as NVH(−) defect was already proven to show motional averaged ESR signal.15 We note that our model takes the full complexity of the potential energy surface into account in the derivation of the tunneling rate, in contrast to a previous approach ap- plied to NVH(−) defect which only considered the radial modes.69 Based on these results we expect that all the OVH1,2 defects exhibit C3v ESR signals because they also possess high C-H vibration frequencies that are comparable with the Jahn-Teller energy.
+We apply a similar analysis on OS(+) defect too.
+In this case the high symmetry Td is distorted to C3v sym- metry that can be mediated by t2 quasi-local vibration modes.
+The tunneling rate in this T × t system may be calculated67 as ΓT = 2∆T h exp  −1.24 ∆T ¯hωt  , (8) where ∆T is the Jahn-Teller energy and ωt is the corre- sponding vibration frequency.
+The calculated values are 0.76 eV and 0.067 eV, respectively, whereas the reorien- tation barrier energy is 0.51 eV. Despite the calculated Jahn-Teller and reorientation barrier energies are lower for OS(+) than those for OVH(0) defect, the calculated ΓT =0.3 GHz for OS(+) is much slower than ΓE is for OVH(0).
+The reason of this diﬀerence is that the en- ergy of the O-C related t2 quasi-local vibration mode is much lower than ∆T .
+As a consequence, this rate is much slower than the frequency of the Q band (34 GHz) is that was employed in the ESR absorption measurements of KUL12 ESR center, thus the static C3v symmetry was detected.
+By comparing the cases of OVH(0) and OS(+) it can concluded that by taking only the Jahn-Teller energies or the reorientation barrier energies can be misleading in the discussion of static versus motional average ESR signals of Jahn-Teller distorted defects but the ratio between the Jahn-Teller energy and the corresponding vibration en- ergies that lead to the Jahn-Teller distortion should be considered in the analysis.14 V. DISCUSSION OF A LUMINESCENCE CENTER ASSOCIATED WITH OXYGEN AND ITS RELATION TO THE OXYGEN-VACANCY DEFECT In the CVD samples grown with oxygen chemistry a PL center was observed that has a characteristic zero- phonon-line (ZPL) at 543.2 nm7 that corresponds to 2.28 eV. This 543.2-nm PL center and the WAR5 ESR center were detected in the same diamond sample, thus the 543.2-nm PL center was associated with OV(0) defect7.
+As OV(0) is isovalent with NV(−), the opti- cal spinpolarization of WAR5 ESR center was probed by photoexcitation at a wavelength that could excite the 543.2-nm PL center.
+However, no spinpolarization of OV(0) was observed under illumination even at cryogenic conditions.
+We study the excited state of OV(0) in de- tails by means of ab initio calculations, in order to reveal this issue.
+The ground state of OV(0) is indeed similar to NV(−) where the 2e orbital is occupied by two electrons by par- allel spins forming a 3A2 ground state.
+However, the excited state of the two defects may diﬀer as the num- ber of defect levels in the gap are diﬀerent for the two defects.
+In the case of NV(−) the only possible excita- tion is to promote an electron from the 1a1 level to the 2e level in the spin minority channel45.
+In the case of OV(0) one can promote an electron from the 2e level to the 3a1 level in the spin majority channel or from the 1a1 level to the 2e level in the spin minority channel.
+Our calculations predict that the former has lower ZPL excitation energy (2.34 eV) than the latter (2.67 eV) by 0.33 eV. According to the Kasha-rule the electron from the higher excited state should decay to the lowest ex- cited state rapidly by emitting phonons.
+Although, the symmetry of this excited state is 3E but an antibond- ing C-O orbital is involved in it and not dangling bonds.
+Thus, the nature of this excited state signiﬁcantly diﬀers from that of NV(−) defect.
+Obviously, the spin-orbit scattering rates from the excited state triplet to the sin- glet states are not analogous in the two defects.
+This 3E state is Jahn-Teller unstable and the defect distorts to Cs conﬁgurations as depicted in Figs. 14(a) and (b).
+The carbon dangling bonds of the vacancy may distort either to (a) 3A′ state or (b) 3A′′ state.
+The constraint DFT geometry optimization calculations predict 3A′′ state to be more stable than 3A′ state.
+We note here that the antibonding orbital is occupied in the ground state of OV(−) that leads to the break of one C-O bond and a large reconstruction.
+Since this anti- bonding orbital is occupied in the lowest spin conserving excited state of OV(0) we also study the conﬁguration of strong reconstruction of OV(0) in the excited state that leads to two C-O covalent bonds [see Fig. 14(e)] forming an 3A′′ state.
+This conﬁguration is metastable with respect to the ground state of OV(0) [Fig. 14(e)] as the total energy diﬀerence between the two states is only 0.4 eV. The conﬁguration of one C-O covalent bond with breaking two C-O bonds [Fig. 14(c)] does not produce any metastable state. FIG. 14.
+(color online) Potential energy surface of the ground and excited states of OV(0).
+The diﬀerent conﬁgurations of the defect are depicted.
+(d) shows the ground state with C3v symmetry.
+The oxygen atom forms covalent bonds with three carbon atoms and the carbon dangling bonds form an equi- lateral triangle.
+The vertical excitation leads to 3E excited states (vertical arrow).
+In the lowest 3E excited state the C- O antibonding orbital is occupied whereas only the dangling bonds are occupied in the higher 3E excited state.
+(a) 3A′ type and (b) 3A′′ type of distortion of the lowest 3E excited state is depicted.
+The geometry is distorted along with a (Q1) normal coordinate, where the vacancy is distorted.
+The corre- sponding zero-phonon-line (ZPL) excitation energies belong- ing to the 3E excited state conﬁgurations are given (athwart arrows).
+(c) Single C-O covalent bond and (e) two C-O cova- lent bond conﬁgurations are depicted.
+This type of distortion (Q2) can be characterized with the motion of the O atom.
+The latter forms a metastable state when the C-O antibond- ing orbital is occupied which leads to an avoided crossing with the same type of geometry in the ground state electronic con- ﬁguration.
+Our constrained DFT calculations do not lead a spon- taneous decay from the lowest spin conserving excited state conﬁguration Fig. 14(b) to the metastable conﬁg- uration Fig. 14(e).
+Therefore we interpolate geometries between these two conﬁgurations and calculate the total energies.
+The potential energy surface plot is shown in Fig. 15.
+We ﬁnd a virtually no-barrier decay from the ex- cited state to the metastable state which has an avoided crossing with the ground state conﬁguration.
+This result15 implies that the non-radiative decay is a very fast process and OV(0) defect may have a very weak or no lumines- cence.
+We argue that the 543.2-nm PL center may not be associated with the OV(0) defect despite the fact that the calculated ZPL energy (2.34 eV) is close to that of this PL center (2.28 eV).
+In any case, the spin-orbit couplings between triplet and the feasible multiplet singlet states do not follow those of NV(−) defect because of the very diﬀerent nature of the orbitals that build up the many- electron excited state.
+Our conclusion is that no optical spinpolarization of OV(0) defect is expected in diamond which excludes OV(0) from the family of NV-akin solid state qubits. FIG. 15.
+(color online) The calculated potential energy sur- face of the ground and excited state of OV(0) defect.
+The conﬁguration coordinate (∆d) is measured with the formula ∆d = P3N i=1 √mi∆xi where N is the number of atoms, mi is mass of the corresponding atom in atomic mass unit (mu) and ∆xi is the motion of atoms with respect to the ground state geometry that is the chosen to be the reference.
+The ref- erence in the energy is set to the total energy of the ground state.
+The empty circles (Q1 normal coordinate) represent the calculated data points when only the position of the car- bon dangling bonds changes whereas the ﬁlled circles (Q2) show the calculated data points along the path leading to the break of one of the C-O bonds.
+The (d,b,e) letters denote the atomic conﬁgurations shown in Fig. 14.
+The 543.2-nm PL center was observed in CVD dia- mond samples grown by oxygen chemistry where ESR centers associated with OV and OVH defects were ob- served that we support in our study.
+Thus, we consider the diﬀerent charge states of OV defect and hydrogen complexes of OV defects as a candidate for 543.2-nm PL center.
+First, we calculate the excitation of OV(+) de- fect by promoting an electron from the 1a′ level to the 2a′ level in the spin minority channel (see Fig. 9).
+In the excited state, the 1a′ hole orbital hybridizes with the va- lence band yet it has signiﬁcant localized character.
+The calculated ZPL energy is 2.45 eV which is about 0.17 eV larger than that of the experimental value.
+We note that the calculated value is very approximative as the true ex- cited state is multideterminant in nature that cannot be well described by our constraint DFT approach.
+Based on this argument OV(+) is a feasible candidate for the 543.2-nm PL center.
+Next, we consider the complexes of hydrogen and OV defect.
+The OVH(0) exhibits an infrared optical tran- sition.
+In the positive charge state, the lowest energy excitation can be described by promoting one electron from the valence band edge to the lowest energy empty 2a′ level in the gap.
+This energy is estimated by the calculated (+|0) charge transition level at 2.04 eV. This energy is smaller than the experimental value at 2.28 eV. The calculated (+|0) charge transition level of OVH2 at 2.02 eV may be considered but is again smaller than the experimental data.
+We note that this optical transition involves heavy geometry distortion and involvement of phonons in the PL process.
+The intra defect level transi- tion energies of OVH2,3 are too small to be a reasonable candidate.
+Finally, the calculated (+|0) charge transition level of OVH3 (1.95 eV) is also too small.
+In summary, we are not able to unambiguously asso- ciate any oxygen-related defects with the 543.2 nm PL center observed in CVD diamond grown with oxygen chemistry.
+We ﬁnd that the OV(+) is the best candi- date among the considered defects.
+Further studies are needed to clarify this issue.
+VI. CONCLUSION AND SUMMARY We systematically characterized the interstitial and substitutional oxygen impurity and its complexes with a vacancy and hydrogen atoms.
+We identiﬁed the pos- itively charged substitutional oxygen defect as KUL12 ESR center in oxygen implanted diamond.
+Our calcu- lations support the relation of WAR5 and OVH ESR centers to neutral oxygen-vacancy and oxygen-vacancy- hydrogen complexes, respectively.
+Our results indicate the 543.2-nm PL center is not likely associated with the neutral oxygen-vacancy center.
+We rather predict that this defect has a very diﬀerent excited state from that of NV center in diamond, and most probably exhibits a very fast non-radiative decay from the excited state.
+We predict that neutral OV defect will not act as NV-like qubit.
+We characterized the magneto-optical properties of paramagnetic oxygen defects in detail that may as- sist in ﬁnding oxygen defects in diamond for solid state quantum memory and metrology applications.
+ACKNOWLEDGMENTS A.G. acknowledges the support from NIIF Supercom- puter Center Grant No. 1090, EU FP7 Grant No. 611143 (DIADEMS), and the Lend¨ulet program of the Hungar- ian Academy of Sciences.16 1 Y.-S. Han, Y.-K. Kim, and J.-Y. Lee, Thin Solid Films 310, 39 (1997).
+2 J. J. Chang, T. D. Mantei, R. Vuppuladhadium, and H. E. Jackson, Journal of Applied Physics 71, 2918 (1992).
+3 C. A. Wolden, Z. Sitar, R. F. Davis, and J. T. Prater, Applied Physics Letters 69, 2258 (1996).
+4 C. Tang, A. Neves, and A. Fernandes, Diamond and Re- lated Materials 13, 203 (2004).
+5 P. K. Bachmann, D. Leers, and H. Lydtin, Diamond and Related Materials 1, 1 (1991).
+6 B. L. Cann, Magnetic resonance studies of point defects in diamond, Ph.D. thesis, University of Warwick (2009).
+7 C. B. Hartland, A study of point defects in CVD diamond using electron paramagnetic resonance and optical spec- troscopy, Ph.D. thesis, University of Warwick (2014).
+8 V. M. Acosta, E. Bauch, M. P. Ledbetter, A. Waxman, L.-S. Bouchard, and D. Budker, Phys. Rev. Lett. 104, 070801 (2010).
+9 A. Gruber, Science 276, 2012 (1997).
+10 J. H. N. Loubser and J. P. van Wyk, eds., Diamond Re- search (London) (Industrial Diamond Information Bureau, London, 1977) pp. 11–15.
+11 A. Gali, M. Fyta, and E. Kaxiras, Phys.
+Rev. B 77, 155206 (2008).
+12 L. D. Preez, Electron paramagnetic resonance and optical investigations of defect centres in diamond, Ph.D. thesis, University of Witwatersrand (1965).
+13 G. Davies and M. F. Hamer, Proceedings of the Royal So- ciety A: Mathematical, Physical and Engineering Sciences 348, 285 (1976).
+14 M. W. Doherty, N. B. Manson, P. Delaney, F. Jelezko, J. Wrachtrup, and L. C. Hollenberg, Physics Reports 528, 1 (2013).
+15 C. Glover, M. E. Newton, P. Martineau, D. J. Twitchen, and J. M. Baker, Phys. Rev. Lett. 90, 185507 (2003).
+16 J. Ruan, W. J. Choyke, and K. Kobashi, Applied Physics Letters 62, 1379 (1993).
+17 M. E. Newton and J. M. Baker, Journal of Physics: Con- densed Matter 1, 10549 (1989).
+18 J. A. van Wyk, J. H. N. Loubser, M. E. Newton, and J. M. Baker, Journal of Physics: Condensed Matter 4, 2651 (1992).
+19 K. M. Etmimi, J. P. Goss, P. R. Briddon, and A. M. Gsiea, Journal of Physics: Condensed Matter 22, 385502 (2010).
+20 V. A. Nadolinny, O. P. Yuryeva, V. S. Shatsky, A. S. Stepanov, V. V. Golushko, M. I. Rakhmanova, I. N. Kupriyanov, A. A. Kalinin, Y. N. Palyanov, and D. Zed- genizov, Appl Magn Reson 36, 97 (2009).
+21 V. A. Nadolinny, O. P. Yuryeva, M. I. Rakhmanova, V. S. Shatsky, Y. N. Palyanov, I. N. Kupriyanov, D. A. Zedge- nizov, and A. L. Ragozin, Eur.J.Mineral. 24, 645 (2012).
+22 L. Hanssen, W. Carrington, J. Butler, and K. Snail, Ma- terials Letters 7, 289 (1988).
+23 G. Janssen, W. van Enckevort, J. Schamin´ee, W. Vollen- berg, L. Giling, and M. Seal, Journal of Crystal Growth 104, 752 (1990).
+24 G. Janssen, W. Vollenberg, L. Giling, W. van Enckevort, J. Schamin´ee, and M. Seal, Surface and Coatings Tech- nology 47, 113 (1991).
+25 Y. Mori, N. Eimori, H. Kozuka, Y. Yokota, J. Moon, J. S. Ma, T. Ito, and A. Hiraki, Applied Physics Letters 60, 47 (1992).
+26 A. Komarovskikh, V. Nadolinny, Y. Palyanov, and I. Kupriyanov, Phys.
+Status Solidi A 210, 2074 (2013).
+27 A. Komarovskikh, V. Nadolinny, Y. Palyanov, I. Kupriyanov, and A. Sokol, Phys.
+Status Solidi A 211, 2274 (2014).
+28 J. F. Prins, Phys.
+Rev. B 61, 7191 (2000).
+29 A. Gippius, Diamond and Related Materials 2, 640 (1993).
+30 K. Iakoubovskii and A. Stesmans, Phys.
+Rev. B 66, 045406 (2002).
+31 A. Gali, J. E. Lowther, and P. De´ak, Journal of Physics: Condensed Matter 13, 11607 (2001).
+32 J. E. Lowther, Phys.
+Rev. B 67, 115206 (2003).
+33 J. P. Goss, P. R. Briddon, R. Jones, and S. Sque, Diamond and Related Materials 13, 684 (2004).
+34 J. P. Goss, P. R. Briddon, M. J. Rayson, S. J. Sque, and R. Jones, Phys.
+Rev. B 72, 035214 (2005).
+35 G. Kresse and J. Hafner, Phys.
+Rev. B 49, 14251 (1994).
+36 G. Kresse and J. Furthm¨uller, Phys.
+Rev. B 54, 11169 (1996).
+37 P. E. Bl¨ochl, Phys.
+Rev. B 50, 17953 (1994).
+38 J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996).
+39 T. A. Ivanova and B. N. Mavrin, Physics of the Solid State 55, 160 (2013).
+40 S. Baroni, S. de Gironcoli, A. Dal Corso, and P. Giannozzi, Rev. Mod.
+Phys. 73, 515 (2001).
+41 R. J. Nemanich and S. A. Solin, Phys.
+Rev. B 20, 392 (1979).
+42 V. Iv´ady, T. Simon, J. R. Maze, I. A. Abrikosov, and A. Gali, Phys.
+Rev. B 90, 235205 (2014).
+43 J. Heyd, G. E. Scuseria, and M. Ernzerhof, The Journal of Chemical Physics 118, 8207 (2003).
+44 A. V. Krukau, O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria, The Journal of Chemical Physics 125, 224106 (2006).
+45 A. Gali, E. Janz´en, P. De´ak, G. Kresse, and E. Kaxiras, Phys. Rev. Lett. 103, 186404 (2009).
+46 P. De´ak, B. Aradi, T. Frauenheim, E. Janz´en, and A. Gali, Phys.
+Rev. B 81, 153203 (2010).
+47 P. De´ak, B. Aradi, M. Kaviani, T. Frauenheim, and A. Gali, Phys.
+Rev. B 89, 075203 (2014).
+48 A. Gali and J. R. Maze, Phys.
+Rev. B 88, 235205 (2013).
+49 O. V. Yazyev, I. Tavernelli, L. Helm, and U. R¨othlisberger, Phys.
+Rev. B 71, 115110 (2005).
+50 K. Sz´asz, T. Hornos, M. Marsman, and A. Gali, Phys.
+Rev. B 88, 075202 (2013).
+51 S. B. Zhang and J. E. Northrup, Phys. Rev. Lett. 67, 2339 (1991).
+52 G. Makov and M. C. Payne, Phys.
+Rev. B 51, 4014 (1995).
+53 S. Lany and A. Zunger, Phys.
+Rev. B 78, 235104 (2008).
+54 C. Freysoldt, J. Neugebauer, and C. G. Van de Walle, Phys. Rev. Lett. 102, 016402 (2009).
+55 X. T. Trinh, K. Sz´asz, T. Hornos, K. Kawahara, J. Suda, T. Kimoto, A. Gali, E. Janz´en, and N. T. Son, Phys.
+Rev. B 88, 235209 (2013).
+56 G. Thiering and A. Gali, Phys.
+Rev. B 92, 165203 (2015).
+57 S.-Y. Lee, M. Widmann, T. Rendler, M. W. Doherty, T. M. Babinec, S. Yang, M. Eyer, P. Siyushev, B. J. M. Haus- mann, M. Loncar, Z. Bodrog, A. Gali, N. B. Manson, H. Fedder, and J. Wrachtrup, Nature Nanotechnology 8,17 487 (2013).
+58 A. Gali, M. Fyta, and E. Kaxiras, Phys.
+Rev. B 77, 155206 (2008).
+59 S. Felton, A. M. Edmonds, M. E. Newton, P. M. Mar- tineau, D. Fisher, D. J. Twitchen, and J. M. Baker, Phys.
+Rev. B 79, 075203 (2009).
+60 J. P. Goss, R. Jones, M. I. Heggie, C. P. Ewels, P. R. Briddon, and S. ¨Oberg, Phys.
+Rev. B 65, 115207 (2002).
+61 A. Stacey, T. J. Karle, L. P. McGuinness, B. C. Gib- son, K. Ganesan, S. TomljenovicHanic, A. D. Greentree, A. Hoﬀman, R. G. Beausoleil, and S. Prawer, Applied Physics Letters 100, 071902 (2012).
+62 C. Glover, M. E. Newton, P. M. Martineau, S. Quinn, and D. J. Twitchen, Phys. Rev. Lett. 92, 135502 (2004).
+63 M. J. Shaw, P. R. Briddon, J. P. Goss, M. J. Rayson, A. Kerridge, A. H. Harker, and A. M. Stoneham, Phys. Rev. Lett. 95, 105502 (2005).
+64 U. F. S. D’Haenens-Johansson, A. M. Edmonds, M. E. Newton, J. P. Goss, P. R. Briddon, J. M. Baker, P. M. Martineau, R. U. A. Khan, D. J. Twitchen, and S. D. Williams, Phys.
+Rev. B 82, 155205 (2010).
+65 G. Mills, H. J´onsson, and G. K. Schenter, Surface Science 324, 305 (1995).
+66 H. J´onsson, G. Mills, and K. W. Jacobsen, Nudged elastic band method for ﬁnding minimum energy paths of transi- tions (edited by B. J. Berne, G. Ciccotti, and D. F. Coker (World Scientiﬁc, Singapore), 1998).
+67 I. Bersuker, The Jahn-Teller eﬀect (Cambridge University Press, 2006).
+68 I. Bersuker and V. Polinger, Vibronic interactions in molecules and crystals, Vol. 49 (Springer Science & Busi- ness Media, 2012).
+69 A. Kerridge, A. H. Harker, and A. M. Stoneham, Journal of Physics: Condensed Matter 16, 8743 (2004).

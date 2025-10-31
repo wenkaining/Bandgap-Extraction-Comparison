@@ -1,0 +1,1190 @@
+arXiv:cond-mat/0405280v1  [cond-mat.mtrl-sci]  13 May 2004
+What is the real driving force of ion beam mixing?
+P. S¨ule1, M. Menyh´ard1, K. Nordlund2
+1 Research Institute for Technical Physics and Material Science,
+Konkoly Thege u. 29-33, Budapest, Hungary, sule@mfa.kfki.hu/www.mfa.kfki.hu/ sule
+2 Accelerator Lab., Helsinki, Finland
+(November 8, 2018)
+Molecular dynamics simulations have been used to study the driving force of ion irradiation induced
+interfacial mixing in metal bilayers in which the relative mass of the constituents is considerable.
+We ﬁnd no apparent eﬀect of chemical forces, such as heat of mixing or cohesive energy up to 8 keV
+ion energy, although a considerable number of liquid and high energy particles (hot atoms) persist
+up to even 20 ps during the thermal spike. This result is in direct conﬂict with the widely accepted
+theory of thermal spike mixing (chemical interdiﬀusion model). The supersaturation of vacancies
+also occurs and which induces a thermally activated intermixing of the lighter constituent of the
+bilayer. The delay and the decoupling of the intermixing of the light constituent is explained as
+a backscattering eﬀect at the interface: the interface acts as a diﬀusional barrier for high energy
+particles due to the large diﬀerence in atomic masses. The heavier atoms are predominantly ejected
+to the overlayer at the beginning of the thermal spike while the light atoms are injected to the bulk
+at the beginning of the cooling period (in Ti/Pt) or during the thermal spike with some time delay
+(Al/Pt).
+PACS numbers: 79.20.Rf, 61.80.Az 61.80.Jh 61.82.Bg
+61.80.Az Theory and models of radiation eﬀects
+61.80.Jh Ion radiation eﬀects
+61.82.-d Radiation eﬀects on speciﬁc materials
+61.82.Bg Metals and alloys
+66.30.-h Diﬀusion in solids (for surface and interface diﬀusion, see 68.35.Fx)
+79.20.Rf Atomic, molecular, and ion beam impact and interactions with surfaces
+81.40.Wx Radiation treatment (particle and electromagnetic) (see also 61.80.-x Physical radiation
+eﬀects, radiation damage)
+Keywords: Computer simulations, Ion-solid interaction, ion-beam mixing, molecular dynamics, mass
+eﬀect, interfacial mixing, atomic migration, amorphisation
+I. INTRODUCTION
+The rapid growth in the use of ion implantation and ion
+beam processing of materials in the semiconductor indus-
+try and elsewhere, such as ion-beam sputtering, cleaning,
+smoothing, depth proﬁling, etc. [1], or global response of
+solids under irradiation (e.g. phase instability in driven
+alloys) [2,3], makes it important to understand the radia-
+tion eﬀects in materials and the displacement mechanism
+of atoms during particle irradiation. Despite the tremen-
+dous knowledge available in this ﬁeld it is still not well
+understood how to manipulate thin ﬁlms, nanocrystalline
+materials, etc.
+in a proper way under ion irradiation
+driven conditions [4,5].
+Ion-beam assisted processing of materials always leads
+to ion-beam mixing (IM), hence it is a topic of a consider-
+able technological interest. One of the greatest challenges
+is to keep IM in a controllable fashion and to drive sys-
+tems to a desired atomic conﬁguration. IM is oftenly used
+for amorphization, when ion bombardment drives the
+system far from its equilibrium [3,4]. Ion beam bombard-
+ment in mechanically stressed thin ﬁlms and radiation-
+induced viscous ﬂow are also hot topics of the area [6].
+Two types of phenomenological models have been de-
+veloped to describe ion beam mixing. The ballistic model
+assumes only the kinematic properties of the materi-
+als and the elastic collisions of energetic particles (re-
+coils) hence the deposited energy depends on the relative
+masses of the colliding atoms [7]. The eﬀectivity of bal-
+listic mixing (BM) will depend on then the concentration
+of recoils with relatively short mean free path which we
+call hot atoms. BM tends to randomize atomic conﬁgura-
+tions leading to disordering of crystalline ordered phases
+even in precipitating systems [5,8]. The slowing down of
+energetic particles, however, leads to energy deposition
+and to local melting. When a local volume is heated up
+induced by the slowed down incoming ion and by the
+recoils, a thermal spike is created [9].
+The ballistic random diﬀusion process [8] might also
+be active still during the TS and above a threshold en-
+ergy leads to the formation of stable Frenkel pairs. This
+results in a supersaturation of the point defects and the
+enhancement of thermal diﬀusion [8]. The competition
+between thermally activated and ballistic diﬀusional mix-
+ing might be a key ingredient of IM [2,8,10]. In Mar-
+tin’s ballistic diﬀusional theory atomic interdiﬀusion is
+inﬂuenced by atomic collisions and thermodynamic forces
+[10]. The latter is associated with thermally activated
+1jumps of point defects.
+In addition, thermochemical forces could be set in and
+inﬂuence thermally activated atomic transitions [9]. In
+ref. [18] it was explicitly demonstrated by MD simula-
+tions that within an artiﬁcal Cu/Cu bilayer system the
+heat of mixing has a considerable eﬀect on broadening.
+Therefore the coexistence of chemical interdiﬀusion and
+BM could easily be occurred (chemically guided colli-
+sional mixing [12]).
+The inﬂuence of thermodynamic driving forces on IM
+is summarized by Cheng [11] within a series of bilayer
+samples. Although they found a considerable scatter in
+the data the trend seems to be unmistakable: the amount
+of IM depends linearly on ∆Hm as it was proposed by
+Johnson and co-workers [14], and the slope of the mix-
+ing versus heat of mixing (∆Hm) curve is proportional to
+the cascade temperature (∼104 K) [9]. This TS model
+is based on the Vineyard model developed for thermally
+activated atomic transitions [15], and relates IM to the
+thermodynamic quantities, the cohesive energy (Ecohes)
+and ∆Hm. The model sharply distinguish between bal-
+listic and TS mixing. The chemical interdiﬀusion model
+is supported in a number of ways experimentally [9,16],
+however, mostly at high ion energies (several hundreds
+keV or even more). The TS concept assumes that follow-
+ing a short cascade period a stable liquid phase occurs
+which persists up to several ps and no high energy par-
+ticles (recoils) survive the cascade period.
+The mechanism of IM, is, however, less extensively
+studied at lower energies experimentaly [1] and by atom-
+istic simulations [9,13,17–21]. What is more or less ac-
+cepted now that the thermal spike plays an essential role
+in IM above 1 keV ion energy [1]. Although the magni-
+tude of TS IM is uncertain with the increasing ion energy.
+While the TS model assumes that all the atomic trans-
+port occur during the TS, other authors suggest that IM
+takes place afterwards, in the relaxation period, because
+of the motion of radiation-induced defects [12]. In our
+recent communication we studied the eﬀect of ∆Hm on
+IM in Ti/Pt by MD simulations and found no apparent
+eﬀect of chemical forces on intermixing [20]. This is in
+contrast with other low-energy MD studies where the ef-
+fect of ∆Hm was apparent [18,19]. We discuss in detail
+in the Discussion section the possible reason of the dis-
+crepancy.
+Low energy ion mixing (several keV or less) is even
+more complicated because in this case the ion-solid in-
+teraction takes place close to the free surface and the
+structural rearrangements at the surface and the bulk
+are coupled [20,21]. The atomic relocation processes are
+aﬀected by the proximity of the surface leading to a co-
+operative atomic transport as well as to surface cavity
+growth [21].
+In this paper we report on molecular dynamics sim-
+ulations up to 7 keV ion energy in two metal bilayers.
+As in ref. [20] we found no apparent dependence of IM
+on ∆Hm, although we explicitly demonstrate that an ex-
+tended liquid ensemble (TS) is present at the interface.
+Contrary to this a strong inﬂuence of the atomic mass ra-
+tio on interfacial mixing is explored. Hence the role of the
+TS model can be questionized below 7 keV ion energy.
+We have chosen two system for detailed studies of IM:
+the already at low energies well studied Ti/Pt [20] and
+the Al/Pt systems. These bilayers are chosen because of
+the considerable diﬀerence in the atomic masses of the
+constituents and as such are suitable for the study of
+the eﬀect of the mass ratio on IM [21]. We examine the
+relative role of ballistic mixing vs. thermally activated
+vacancy mechanism as it was given in the macroscopic
+continuum model of Martin [2,10]. A diﬀerent picture
+could be emerged if both processes are understood as
+fast diﬀusion processes in an atomistic description which
+act against each other [2,5].
+The structure of this paper is as follows. First we out-
+line the simulation method used and deﬁne certain ex-
+pressions used frequently throughout the paper. In the
+discussion section we focus on the problem of the coex-
+istence of the ballistic mechanism and the thermal spike.
+We also demonstrate the decoupling of the ballistic and
+thermally activated diﬀusional mixing processes. We dis-
+cuss and explain the presence of a backscattering mass
+eﬀect of the light particles at the interface.
+II. THE SETUP OF THE SIMULATION
+Classical molecular dynamics simulations [22] were
+used to simulate the ion-solid interaction using the PAR-
+CAS code developed by Nordlund et al. [23]. Here we
+only shortly summarize the most important aspects. The
+variable timestep and the Berendsen temperature control
+is used [22]. The bottom layers are held ﬁxed and used
+as heat sink (heat bath) to maintain the thermal equi-
+librium of the entire system. The detailed description of
+other technical aspects of the MD simulations are given
+in [23] and details speciﬁc to the current system in recent
+communications [20,21].
+The Ti/Pt sample consists of 328000 atoms for the in-
+terface (IF) system with 16 Ti top layers and a bulk which
+is Pt. The lattice constants for Pt is a ≈3.92 ˚A and for
+Ti a ≈2.95 and c ≈4.68 ˚A. At the interface (111) of
+the fcc crystal is parallel to (0001) of the hcp crystal and
+close packed directions are parallel [25]. The interfacial
+system as a heterophase bicrystal and a composite object
+of two diﬀerent crystals with diﬀerent symmetry are cre-
+ated as follows: the hcp Ti is put by hand on the (111)
+Pt bulk and various structures are probed and are put
+together randomly.
+Finally that one is selected which
+has the smallest misﬁt strain prior to the relaxation run.
+The remaining misﬁt is properly minimized below ∼6%
+during the relaxation process so that the Ti and Pt lay-
+ers keep their original crystal structure and we get an
+atomically sharp interface. The corresponding Ti-Ti and
+Pt-Pt interatomic (ﬁrst neighbour) distances are 2.89 and
+2.73 ˚A at the interface. The Ti (hcp) and Pt (fcc) lay-
+2ers at the interface initially are separated by 2.8 ˚A and
+allowed freely to relax during the simulations. The varia-
+tion of the equilibrium Ti-Pt distance within a reasonable
+2.6 −3.0 ˚A interval in the interatomic potential does not
+aﬀect the ﬁnal results signiﬁcantly. We ﬁnd the average
+value of d ≈2.65 ˚A Ti-Pt distance in the various irradi-
+ation steps and also in the nonirradiated system after a
+careful relaxation process. We believe that the system is
+properly relaxed and equilibrated before the irradiation
+steps.
+Another sample (Al/Pt) consists of 280000 atoms
+(200×200×100˚A for the interface (IF) system with 6 fcc-
+Al top layers and a bulk which is fcc-Pt both with (111)
+orientation. The interface is (111) oriented. We ﬁnd the
+size of the system is large enough to limit the inﬂuence of
+the boundaries on the internal material transport. The
+embedded atomic potential of Cleri and Rosato [27] is
+used and modiﬁed to reproduce the interatomic distance
+for Al-Pt found in the AlPt alloy. The heat of mixing
+for Al-Pt is also ﬁtted to the experimental values [28],
+although we ﬁnd no signiﬁcant dependence on it in ac-
+cordance with earlier ﬁndings in the TiPt system [20].
+This system size is capable of accepting as large as 8 keV
+ion bombardment. In this paper we show results at 6 keV
+ion energy. The entire interfacial system is equilibrated
+prior to the irradiation simulations and the temperature
+scaled softly down towards zero at the outermost three
+atomic layers during the cascade events [23]. We believe
+that the system is properly relaxed and equilibrated be-
+fore the irradiation steps. We found no vacancies at the
+interface or elsewhere in the system after the relaxation
+procedure. We visually checked and found no apparent
+screw dislocations, misorientations or any kind of unde-
+sired distortions (in general stress-generator dislocations)
+at the interface or elsewhere in the system which could
+result in stress induced rearrangements in the crystal dur-
+ing the simulations.
+Collsion cascades were initiated by giving an Ar atom
+a kinetic energy of 1-7 keV at 7 deg impact angle (graz-
+ing angle of incidence) and at randomly chosen impact
+positions in the central region of the free surface. The
+SRIM96 electronic stopping power [26] was used to de-
+scribe energy loss to electrons for all atoms with a kinetic
+energy higher then 10 eV.
+We used a many body potential, the type of an
+embedded-atom-method given by Cleri and Rosato [27],
+to describe interatomic interactions. This type of a po-
+tential gives a very good description of lattice vacancies,
+including migration properties and a reasonable descrip-
+tion of solid surfaces and melting [27]. Since the present
+work is mostly associated with the elastic properties,
+melting behaviors, surface, interface and migration en-
+ergies, we believe the model used should be suitable for
+this study. The Ti-Pt and Al-Pt interatomic potential of
+the Cleri-Rosato [27] type is ﬁtted to the experimental
+heat of mixing of the corresponding alloy system. Fur-
+ther details are also given elsewhere [20,21]. To obtain
+a statistics, several events are generated (∼5 −10), and
+the typical events are analyzed in the paper. Therefore
+no averaging is carried out over the events. The varia-
+tion of mixing as a function of the impact position and
+various events is shown in refs. [20,21].
+Following the simulations we analyse the generated
+structural data base (movie ﬁle) which contains the his-
+tories of the atomic positions using a code written for this
+purpose. The analysis includes the identiﬁcation of va-
+cancies, liquid and mixed atoms, mean free path of recoils
+and the extraction of information on local temperature of
+high energy particles using the results of liquid analysis.
+Those atoms are recognised mixed (intermixed) which
+moved at least 0.5 monolayers (∼1.4 ˚A) across the in-
+terface.
+The recognition of vacancies is done using a Voronoy
+polyhedron analysis together with a Wigner-Seitz occu-
+pation analysis [23,29]. Within this approach we inter-
+pret voids, cavities or craters as vacancy clusters [21].
+Another problem is that in liquids, such as appears dur-
+ing the thermal spike, the deﬁnition of vacancies is rather
+plausible since the empty cells within a liquid are highly
+mobile. Hence during the TS we monitor only formally
+the time evolution of the number of vacancies. This is
+important to indentify the appearance of the supersatu-
+ration of vacancies, which is in fact the monitoring of the
+change of the concentration of the empty cells within a
+liquid zone.
+Liquid analysis is also carried out and we call an en-
+ergetic atom liquid if its and its ﬁrst neighbours kinetic
+energy exceed kTm where Tm is the melting tempera-
+ture. Important requirement for a liquid atom is that
+it should be a member of a real liquid ensemble, hence
+an individual fast moving hot atom or a recoil can not
+be considered as liquid. Though the quench rate of the
+liquid phase is large, it can persist normally up to several
+ps. In certain cases (e.g. Al/Pt at 6 keV) we observe an
+extraordinary long lifespan for the local melt reaching 20
+ps or even more. It turned out that one has to be care-
+ful when deﬁning the liquid atoms. Strictly speaking we
+denote those atoms liquid for which Tm < Tlocal < TT S,
+where Tlocal and TT S are the local temperature and an ar-
+bitrary upper limit for the TS temperature, respectively.
+The time dependent local temperature of the ith high
+energy particle (Ti,local(t)) can be given as follows:
+1
+2miv2
+i (t) = 3
+2kTi,local(t),
+(1)
+where vi and mi are the atomic velocity and mass of the
+ith high energy particle and k is the Boltzmann constant.
+We chose TT S ≈Tm + 1000 K, which seems to be a rea-
+sonable choice, because an atom with Tlocal >> TT S is
+moving through the liquid/solid interface and migrates
+rapidly in the interstitial space (recoil). We also carry
+out recoil and hot atom analysis. For a hot atom we use
+the deﬁnition Tm + 1000 < Tlocal. We ﬁnd a consider-
+able amount of hot atoms both in Ti/Pt and in Al/Pt
+at various ion energies. In Al/Pt under 6 keV bombard-
+ment the high energy particles persist up to 20 ps. We
+3use the notation recoil for those individual high energy
+particles, which can have extraordinarily high local tem-
+perature and very short lifetime (τrecoil < 3 −500 Fs)
+with long mean free path (> 10 ˚A). Hot atoms, how-
+ever, can be taken as highly mobile high energy particles
+with medium mean free path (around several times the
+lattice constant). Therefore the hot atoms might ther-
+malize a given region with a size of which is comparable
+with the mean free path of the hot species. The kinetic
+energy of a hot atom is below the threshold of a sta-
+ble Frenkel pair formation energy therefore the ballistic
+jumps of hot atoms lead to subthreshold events which,
+however, are shown to contribute noticeably to the evo-
+lution of the damaged structure during IM (e.g. close
+Frenkel-pair recombinations, etc.) [30].
+Another basic
+diﬀerence between a recoil and a hot atom is that the
+former is moving ”freely” in the solid while the latter is
+a weakly bounded particle, hence it interacts weakly with
+its neighbourhood. It should also be mentioned that a
+brief deﬁniton of hot atoms has given in ref. [23] where
+those energetic atom are considered hot which have ex-
+perienced less then 3-5 lattice vibrations. In this paper
+we prefer to select the energetic particles on the basis of
+their local temperature regime.
+In order to avoid confusion we deﬁne the expressions
+diﬀusion and migration.
+These phenomena are widely
+used in the literature for diﬀerent processes [24], although
+their meaning often is not clearly deﬁned. Even more dif-
+ﬁcult to deﬁne the precise meaning of radiation enhanced
+diﬀusion (RED). In the present article in general we use
+the expression diﬀusion for any kind of atomic migration
+processes which are taken through a solid. Usually dif-
+fusion is used for slow atomic migration process on a ms
+or longer timescale. Therefore we use the ”fast” or ”ul-
+trafast” diﬀusion expressions if the timescale is shorter
+[3,10,25]. If we do not specify the duration of the pro-
+cess, we prefer to use atomic migration. Also we use the
+notion RED for those atomic transport processes which
+are taken place within tens or hundreds of ps. This is typ-
+ically the timescale of MD simulations. Sometimes the
+RED is used for any kind of atomic transport phenom-
+ena in the literature which appears under irradiation. We
+prefer not to use RED for diﬀusion on a longer timescale
+(ms or longer) which is in our opinion can not be distin-
+guished from diﬀusion under parent conditions [24]. The
+expression ballistic diﬀusion [8] can also be used instead
+of (ultra)fast diﬀusion.
+III. RESULTS AND DISCUSSION
+First we focus on the lack of the dependence of IM
+on chemical forces and then we try to address a ballistic
+scenario for mixing without the usage of the TS concept
+[11].
+Already we have presented in our previous com-
+munication [20] that we ﬁnd no dependence on ∆Hm
+in Ti/Pt, although we found extensive IM at 1 keV ion
+-30
+-20
+-10
+0
+10
+x
+30
+40
+50
+60
+70
+80
+90
+100
+z
+Pt
+Ti
+-40
+-20
+0
+20
+40
+x
+10
+20
+30
+40
+50
+60
+z
+Pt
+Al
+-40
+-20
+0
+20
+40
+x
+20
+30
+40
+50
+60
+70
+z
+FIG. 1. The cross sectional view of the Ti/Pt system after
+a 7 keV irradiation at the end of the relaxation process. The
+overlayer is Ti and the substrate is the Pt. Middle panel: The
+cross sectional view of Al/Pt after 6 keV irradiation and 55
+ps after the ion impact. The thickness of the cross-sectional
+slabs are 10 ˚A in both cases. Lower panel: The cross sectional
+view of Al/Pt after 6 keV at 2.5 ps.
+4energy. The Cleri-Rosato many body potential can be
+ﬁtted to the experimental heat of mixing or can be var-
+ied in order to account for any values of ∆Hm. Hereby
+we do not give the technical details of the variation of
+∆Hm in the interatomic potential and refer to another
+ref. [20]. Furthermore, we explored the decoupling of the
+intermixing of the constituents: ﬁrst the bulk Pt atoms
+are ejected to the top layers and at the end of the TS the
+top layer Ti atoms are injected to the Pt bulk. We had
+no clear cut explanation for this unexpected behavior of
+this system. In this paper we would like to demonstrate
+that basically we ﬁnd the same eﬀects at higher energies.
+In the next subsections we summarize the results ob-
+tained and outline certain possible scenarios which might
+help to understand IM. These are the following: com-
+peting dynamics between ballistic diﬀusion and vacancy
+saturation induced reordering [10]. We explain the asym-
+metric mixing by a backscattering eﬀect of the light
+atoms at the interface which delays their intermixing. We
+try to compare our results with experiments obtained for
+glassy and amorphised metals in order to point out the
+parallels. In any of the outlined mechanisms we discuss
+the essential role of hot atoms in IM.
+A. Intermixing and liquid analysis
+The cross-sectional view of the irradiated Ti/Pt sam-
+ple at 7 keV is shown after 30 ps of the ion impact in
+FIG (1) which clearly demonstrate that the interface is
+damaged and large amount of intermixing occured and
+remained there built-in. A complete animation is avail-
+able on the world wide web [32]. Liquid analysis pro-
+vides us the information that the number of liquid atoms
+is increased heavily with the increasing ion energy (FIG
+(3)). Therefore there should be present a liquid phase
+which behaves as a real TS. Contrary to this we ﬁnd no
+apparent dependence on ∆Hm. Even if ∆Hm ≥0, con-
+siderable mixing occurs instead of segregation. This is
+in direct conﬂict with the results obtained in ref. [18].
+We explain the discrepancy with the following. Gades
+and Urbassek studied the eﬀect of ∆Hm on IM in an ar-
+tiﬁcal system of Cu/Cu bilayer [18]. They varied ∆Hm
+within this system in which the ﬁrst six layers consist
+of natural Cu and the substrate of a modiﬁed Cu which
+has a positive or negative heat of mixing towards Cu.
+They found a strong eﬀect of ∆Hm on broadening. We
+attribute the presence of a chemically guided mixing to
+the 1:1 mass ratio, to the lack of lattice missmatch and
+and to the same cohesive energy in the bulk and in the
+overlayer. Within their computer experiment the only
+variable was ∆Hm, while in a real system this is far not
+the case. In a general bilayer system couple of other pa-
+rameters set in which may suppress the eﬀect of ∆Hm.
+The relocation energy of an atom in a solid is aﬀected
+by a couple of other parameters [31]. E.g. in the case of
+Ti/Pt and Al/Pt there is a considerable mass ratio, dif-
+ference in cohesive energy and in the melting points of the
+constituents not to mention the lattice missmatch. An-
+other problem with chemically guided IM is that ∆Hm
+could only aﬀect atomic transport processes when the
+atoms are moving relatively slowly with ordinary diﬀu-
+sion. Fast moving particles are only weakly inﬂuenced
+by chemical forces and the chemical environment aﬀects
+only those species which are bounded at a lattice site.
+We will show later on that the concentration of ballis-
+tic particles (hot atoms) is suﬃciently high in Ti/Pt and
+in Al/Pt during the TS to supress the eﬀect of ∆Hm.
+Although the chemical interaction between liquid atoms
+is stronger, however, their mobility might still be suﬃ-
+ciently high to be aﬀected only weakly by ∆Hm. This
+is a subject, however, what should be carefully examined
+in the future and which goes beyond the scope of the
+present article.
+We ﬁnd a strong asymmetric behavior in mixing (FIG
+(2)). The decoupling of the mixing of the top layer con-
+stituent from the TS period is also apparent (FIG (2)).
+Asymmetric mixing behavior has also been observed in
+Ni/Ag [17] and in Cu/Ni or in Cu/Co [19]. In our case
+ﬁrst the heavier element Pt mixes and the intermixing of
+the light constituent Al or Ti is initiated at 5 ps. The
+mixing of Ti (Ti/Pt) continues after the TS period hence
+no liquid atom is required for the mixing of Ti. Pt mix-
+ing peaks at around 4 ps. We ﬁnd no intermixing hot or
+liquid Ti atoms.
+The number of vacancies Nvac exhibits a sharp peak at
+4 ps (upper FIG (2)) which corresponds to a highly dif-
+fuse liquid state in the Ti overlayers and approximately
+the number of vacancies is 3 % of the number of the
+liquid atoms which indeed leads to the sudden decrease
+of the atomic density (not shown). The intermixing of
+the Ti atoms might be initiated by the saturation of Pt
+vacancy concentration at around 4 ps. The supersatura-
+tion of point defects results in enhanced atomic mobility
+[2]: a ballistic jumps are increasingly probable in the
+direction of nearby vacancies. Replacement collision se-
+quences might be inititated in this way (via subtreshold
+collisions) which enhances atomic mixing [2].
+The results of the liquid analysis are also shown for
+Ti/Pt and Al/Pt at 7 and 6 keV in FIG (3). The TS per-
+sists up to ∼20 ps in Al/Pt, which is an unusually long
+lifetime. The longest reported lifetime for a TS (τT S) is
+14 ps for Au at a similar ion energy regime in a 5 keV
+cascade event [29]. For pure Al and for Pt a much shorter
+τT S ≈4 ps is obtained [29]. Also, in pure elements one
+can ﬁnd no damage at the end of the simulation hence
+the restoring forces (recrystallization) are strong [21]. As
+already mentioned above, in the bilayer systems, how-
+ever, the damage rate is high, the recovery process is
+uncomplete within the timescale of the MD simulations.
+Moreover the accumulated damage rate is so high that it
+might also be remained built-in on a longer timescale.
+In case of Al/Pt the average local temperature far ex-
+ceeds the melting point of Al (∼Tm ≈982 K) value and
+is stabilized around ∼T ≈1800 K. When the number
+50
+5
+10
+15
+20
+25
+30
+time (ps)
+0
+30
+60
+90
+the number of atoms
+mixed Pt
+vacancies
+mixed Ti
+0
+10
+20
+30
+40
+50
+60
+time (ps)
+0
+100
+200
+300
+400
+500
+600
+700
+the number of atoms
+mixed Pt
+mixed Al
+vacancies
+0
+20
+40
+400
+500
+600
+700
+FIG. 2. The time evolution of mixing and vacancy forma-
+tion in Ti/Pt (upper ﬁgure) at 7 keV ion energy.
+Mixing
+proﬁle in Al /Pt (lower ﬁgure) together with the time evolu-
+tion of vacancies at 6 keV ion energy. The number of adatoms
+are also shown in the inset of the lower ﬁgure as a function of
+the time (ps).
+of liquid atoms is less then a critical value (∼50), the
+local temperature starts to oscillate due to the abrupt
+condensation of the liquid atoms at the end of the TS.
+The TS exhibits in general an ultrarapid quenching rate
+(∼1014 −1015 K/s, ∼100 −1000 K/ps) which is
+much larger then the values are given in the literature
+∼1012 K/s for supercooled metallic glasses [4]), leading
+to a quenched metastable solid solution at the interface
+with compositions lying beyond the equilibrium solubil-
+ity limit. Others also propose that fast quenching, occur-
+ring the estimated rate of about 1014 K/s provides ideal
+conditions to nucleate metastable phases, including the
+amorphous one [36] or to the clustering of vacancies [21].
+We ﬁnd also a broad amorphous interphase as demon-
+strated in the middle FIG (1).
+Glassy metals exihibit a polymorphic melting point
+falls below the ambient temperature and below the glass
+transition temperature of the liquid phase. Under these
+circumstances the oversaturated solution undergoes a
+crystal-to-glass transformation [4]. We ﬁnd also a poly-
+morphic melting point (liquid temperature) which lies be-
+tween the parent melting point of the constiuents. The
+fast ”cool” mixing of Ti might be induced by a glassy
+state saturated by vacancies. The mixing of Ti is fast
+enough not to be uderstood by a simple vacancy mech-
+anism [24]. Therefore we argue that a glassy sate might
+accelerate the diﬀusion of the Ti species. The initializa-
+tion of mixing of Ti coincides with the sudden fall of Nvac.
+Hence the vacancy supersaturation initializes a fast inter-
+mixing which requires no liquid atoms in Ti/Pt. In Al/Pt
+the situation is somewhat diﬀerent. Here the vacancies
+tend to aggregate while in Ti/Pt a diﬀuse vacancy satu-
+ration occurs with little or no vacancy clustering which
+favors the formation of a glassy sate.
+The broad intermixed interface in Al/Pt (seen in FIG
+(1)) is consistent with the ion-induced amorphization ex-
+periment carried out on Al/Pt [34,35], in which a uni-
+form mixing is achieved and conﬁrmed the existence of
+an amorphous phase at the interface over a large compo-
+sition range. In general it is well documented now that
+binary metal systems undergo solid-sate amorphization
+by interdiﬀusion or by other type of mixing [4].
+Another interesting feature of FIG (3) is the time evo-
+lution of recoils/hot atoms. The recoils dissapear at the
+end of the cascade period (∼0.3 ps) [9]. The sharp peak
+at ∼0.3 ps corresponds to the recoils. However, we ﬁnd
+that a large amount of high energy particles (hot atoms)
+survive the cascade cooling.
+This is a rather surpris-
+ing result and it shows that the ballistic period with hot
+atoms coexists with the TS in these bilayers. In the inset
+of lower FIG (3) we show that the average temperature
+of the hot atoms far exceeds Tm. In FIG (4) we show
+the time evolution of hot and liquid atoms separately for
+various atom types. Not surprisingly the various atoms
+exhibit diﬀerent time evolution due to the large melt-
+ing point diﬀerence. The number of Pt hot and liquid
+atoms delays rapidly while the number of Al energetic
+particles show a saturation at 5 ps. It has been found
+60
+1
+2
+3
+4
+5
+time (ps)
+0
+1000
+2000
+3000
+4000
+the number of atoms
+7 keV
+3
+1
+0
+1
+2
+3
+4
+5
+6
+0
+2000
+4000
+6000
+local temperature
+liquid
+hot
+0
+5
+10
+15
+20
+time (ps)
+0
+500
+1000
+1500
+2000
+the number of atoms
+liquid atoms
+recoil / hot 
+0
+5
+10
+15
+20
+25
+0
+2000
+4000
+temperature (K)
+hot 
+liquid
+FIG. 3. Upper panel: The number of liquid atoms in Ti/Pt
+at various ion energies up to 7 keV and the local average
+temperature (K) at 7 keV ion energy (inset). Lower panel:
+The number of liquid, hot atoms and recoils in Al/Pt as a
+function of the time (Fs). inset: the time evolution of the
+local temperature in the liquid phase (K), the number of the
+liquid atoms, recoils and hot particles.
+that the solidiﬁcation time of the cascade together with
+hot and liquid atoms depends on the melting point of
+the material [19,23]. Hence the intermixed Pt particles
+quench out more rapidly from the liquid zone then the
+Al atoms and remained mixed atoms at the liquid zone
+boundary. Nevertheless it should be mentioned that in
+Ti/Pt the number of Pt liquid and hot atoms is consid-
+erably smaller then those of Ti because the displacement
+cascade is localized in the overlayer and the Pt side of
+interface is hit only slightly by recoils. This is because
+a relatively thick Ti overlayer is constructed (with 16
+monolayers). In Al/Pt the Pt atoms exhibit a second hot
+0
+1
+2
+3
+4
+5
+6
+7
+time (ps)
+0
+500
+1000
+1500
+2000
+2500
+3000
+the number of atoms
+hot Pt
+Ti
+0
+1
+2
+3
+4
+5
+6
+7
+0
+200
+400
+600
+800
+Pt
+liquid Ti
+0
+5
+10
+15
+20
+25
+time (ps)
+0
+200
+400
+600
+800
+1000
+the number of atoms
+hot Pt
+Al
+0
+5
+10
+15
+20
+25
+0
+500
+1000
+liquid Pt
+Al
+FIG. 4. Upper panel: The time evolution of the number of
+hot and liquid atoms (inset) in Ti/Pt at 8 keV Ar+ irradia-
+tion. Lower panel: The time evolution of the number of liquid
+(inset) and hot atoms in Al/Pt at 6 keV ion irradiation.
+and liquid atom peak (the ﬁrst one is due to the recoils)
+at 2 ps which coincides with the end of the fast mixing of
+Pt atoms (FIG (2)). Hence the hot atom peak is a mix-
+ing peak due to the ballistically mixing hot Pt particles.
+In Ti/Pt we see only the broadening of the ﬁrst recoil
+peak hence the increasing mass diﬀerence might induce
+the development of a second recoil (hot) peak.
+B. Thermally activated diﬀusion and vacancies
+In Ti/Pt we found that the fast quench of the TS leads
+to extensive vacancy formation [20], and this is what in-
+duces the injection of Ti atoms to the bulk. Hence we
+also support a vacancy mechanism for mixing with a light
+7atom injection to the bulk. The large concentration of va-
+cancies is an indicative of a glassy interface [3]. It should
+be remarked that Pt intermixes to the top layers during
+the TS possibly with a ballistic interdiﬀusion mechanism
+because we ﬁnd a considerable amount of mixing hot Pt
+atoms. The interdiﬀusion of Pt leads to amorphous inter-
+layer growth at the original interface and in this sense
+resemble to an anomalous fast diﬀusion [3,25]. Moreover
+due to the elevated temperature of the TS, a thermally
+activated diﬀusion process might become dominant. Al-
+though at this moment it is diﬃcult to determine whether
+thermally activated or ballistic diﬀusion is the dominant
+atomic migration process during the TS.
+In Al/Pt we see that the number of vacancies peaks
+at 2.5 ps. A more elaborate analysis of the structures at
+that time we see that vacancies are clustering and tem-
+porarily form a cavity (lower FIG (1). Hence in Al/Pt
+the supersaturation of vacancies leads to clustering while
+in Ti/Pt we have still a higly diﬀuse liquid state. The
+most of the vacancies are located in the overlayer. Com-
+paring the heat of formation of a vacancy ∆HV we ﬁnd
+that ∆HV ≈1.31 and 0.74 eV for Pt and for Al [33]. This
+is a marked diﬀerence and explains the large discrepancy
+in the number of vacancies in these metals. The value
+for Al is in the energy regime of the hot atoms hence
+the formation of vacant sites throughtout the TS can be
+expected. In Pt, however, we see that the vacancies dis-
+sappear rapidly (not shown).
+A competition between BM and vacancy saturation
+induced atomic transport (vacancy mixing) might also
+be active in irradiated samples [8].
+The BM tends to
+randomize (disordering) the system leading to thermal-
+ization and vacancy saturation. The thermally activated
+vacancy recombination or net ﬂux through the interface
+induces reordering [8]. In our samples we see the domi-
+nant feature of ballistic mixing in both cases for the Pt
+atoms. In Ti/Pt, however, the Ti atoms intermix with
+a vacancy mechanism afterwards the TS. In Al/Pt both
+species migrate with a ballistic diﬀusion.
+C. Mixing at 1 keV ion energy
+In order to show that the long-lived hot atoms exist
+even at lower ion energies we recall our results presented
+in ref. [20] and give further details at 1 keV energy. We
+ﬁnd the same eﬀect for 1 keV bombardment of Ti/Pt,
+where the intermixing of Ti coexists with the formation
+of vacancies [20] (upper FIG 5). On a longer timescale in
+upper FIG (5) we see the oscillation of Nmix,T i (mixed
+Ti atoms) which is due to a short distance movement
+of these atoms at the interface.
+The vacancies in the
+interface tend to nucleate as it is demonstrated in ref. [21]
+leading to a cavity growth under repeated irradiations.
+Therefore we see a tendency to cavity formation in these
+systems which is coupled to a mixing induced material
+transport [21]. The number of interstitial atoms (inset
+0
+5
+10
+15
+20
+time (ps)
+0
+10
+20
+30
+the number of atoms
+vacancies
+mixed Ti
+mixed Pt
+0
+5
+10
+15
+20
+0
+5
+10
+15
+20
+25
+30
+0
+1
+2
+3
+4
+5
+6
+time (ps)
+0
+50
+100
+150
+200
+the number of atoms
+liquid atoms
+recoil / hot
+0
+1
+2
+3
+4
+5
+0
+2000
+4000
+6000
+liquid
+hot atoms
+0
+1
+2
+3
+4
+time (ps)
+20
+40
+60
+the number of mixed atoms
+liq Pt
+liq Ti
+hot Pt
+hot Ti
+FIG. 5. Upper panel: The number of vacancies, adatoms
+and intermixed atoms in Ti/Pt at 1 keV Ar+ irradiation as
+a function of time.
+The time evolution of the numbers of
+interstitials is also shown in the inset.
+Middle panel: The
+time evolution of the number of liquid and hot atoms. The
+average temperature (K) is shown of the liquid and hot atoms
+as a funtcion of time (ps) Lower panel: The time evolution of
+the number of mixed hot and liquid atoms.
+8upper FIG (5)) exhibits a similar time evolution to that
+of the vacancies which indicates us that the mixing of Ti
+atoms is accomplished by vacancy exchange mechanism
+via interstitial atoms. The vacancy mechanism is well
+established as the dominant mechanism of diﬀusion in
+fcc metals and alloys and has been shown to be operative
+in many hcp metals [24]. However, it must be admitted
+that the mixing of Ti is quite fast.
+More then 20 Ti
+atoms intermix during 2.5 ps at the end of the TS and
+IM survives the quench of the TS.
+Two types of intermixing mechanism can be seen which
+are more or less decoupled in time from each other: First
+the fast ballistic diﬀuser specie intermixes to the over-
+layer during the TS partly to the interstitial positions or
+partly to vacancies left behind by overlayer atoms which
+migrated to the surface (adatoms).
+-15
+-10
+-5
+0
+5
+10
+15
+x
+20
+40
+60
+80
+z
+Al
+Pt
+interface
+mixed hot Al
+free surface
+FIG. 6. A crossectional slab of hot atoms with a slab thick-
+ness of 10 ˚A at 5 ps in Al/Pt after 6 keV irradiation. Note
+that the Al recoils are reﬂected at interface while Pt recoils
+enter the interface hence intermix to the overlayers. Inter-
+mixed hot Al atoms are also shown by light colored crosses
+after 5 ps.
+After cooling of the TS adatoms return from the sur-
+face to the overlayer [20] and push Ti atoms to the bulk.
+It should be remarked that in the case of Al/Pt the in-
+termixing of Al starts still during the TS, however, in
+both cases sets in at around 5 ps in the high ion energy
+cases (FIG (2)). The timescale of this fast atomic mi-
+gration is very short (fractions of ps) in agreement with
+the ﬁndings obtained phenomenologically [36].
+In the lower FIG
+(5) the number of the intermixed
+liquid and hot atoms are shown. One can see that a con-
+siderable amount of energetic particles are mixed time to
+time to the overlayers. Interestingly no or only few hot
+and liquid Ti atoms are mixed to the bulk, although they
+are present during the TS in the overlayers. We explain
+this by the backscattering of the energetic light atoms
+(Ti) at the interface due to the large atomic mass diﬀer-
+ence (see later). This phenomenon is already discussed
+brieﬂy in ref. [18], although they reached the conclusion
+that the eﬀect of mass is small. Probably that is the rea-
+son of the decoupling of the mixing of the constituents
+and the delay of IM of the light atoms. The mean free
+path of the hot atoms is around ∼10 ˚A and the corre-
+sponding velocity of these mixing energetic particles is a
+robust ∼0.5 ˚A/Fs (∼50 m/s).
+D. Backscattering at the interface and mass eﬀect
+The backscattering phenomenon is shown in detail in
+FIG
+(6) in Al/Pt after 6 keV bombardment.
+It can
+clearly be seen that the Al atoms are reﬂected at the
+interface until 5 ps, however, after 5 ps they start to
+move beyond the interface. The reﬂection can be under-
+stood by simple kinematic reasons: the large mass diﬀer-
+ence between Pt and Al results in the scattering of the
+light atoms. Both species are reﬂected at the solid/liquid
+zone boundary. It should also be mentioned that we ﬁnd
+the same scattering phenomenon in Ti/Pt. The treshold
+time for Al or Ti intermixing is still rather puzzling. By
+the moment we attribute it to a vacancy supersatura-
+tion induced mixing which is strong enough driving force
+for moving beyond the interface the light atoms at 5 ps.
+The reﬂecting particles are conﬁned within the thermal-
+ized hot zone leading to superheating of the liquid region
+(Taver ≈4000 K). Superheating eﬀects under pressure
+in encapsulated metal clusters has also been reported
+[37].
+The subject of superheating is, however, beyond
+the scope of the present article and hereby we simple note
+that the local melt of the TS is also under pressure put
+by the surrounding media hence superheating properties
+might also be present. The supersaturation of vacancies
+is also a consequence of the conﬁnement induced ther-
+malization. The treshold time 5 ps for the light atom
+mixing coincides with the saturation of the number of
+hot Al atoms (lower FIG (3)) and with the sudden de-
+crease in the number of vacancies (FIG (2)). One might
+be assumed that at 5 ps the interface becomes suﬃciently
+damaged and saturated by vacancies to be permeable for
+light energetic atoms. The temporal conﬁnement of the
+cascade in the overlayer is also found in ref. [18], although
+they found much smaller mass eﬀect since the smallest
+mass ratio was 0.5. We expect the similar conﬁnement ef-
+fect in the reverse case when the bulk is formed from the
+light atoms and the overlayer is from the heavy atoms. In
+this particular case the light hot atoms are reﬂected from
+the interface from below, hence the superheated region
+has no connection with the surface.
+In FIG (4) the number of Al hot atoms NAl,hot peaks
+at 5 ps which supports the idea of interfacial barrier
+climbing at 5 ps: when NAl,hot peaks Al hot atoms break
+through the interface and deposit their kinetic energy at
+the Pt side.
+Therefore the interface is a ballistic bar-
+rier for interfacial mixing of light atoms even if they
+are hot atoms. Therefore the barrier results in the phe-
+nomenon what we call retarded ballistic mixing due to the
+semipermeable interface. When the overlayers are suﬃ-
+ciently frustrated by vacancy supersaturation, the light
+atoms break through the interface. This process is much
+9slower, however, then the fast ballistic diﬀusion of Pt.
+The backscattering eﬀect is also interesting in that point
+of view that the semipermeable interface divides the TS
+volume into to separated regions. On the permeable side
+(Pt side) the liquid atoms are Pt atoms while on the Ti
+or Al side the local melt is a mixture of the constituents.
+Therefore there can be a concentration gradient towards
+the Pt side which can drive the intermixing of Ti or Al
+according to the Fick’s law [24]. In that case the driving
+force of ballistic mixing would be a concentration and
+a thermal gradient which changes sign during the ther-
+mal spike (Al/Pt) or due to the quench of the local melt
+(Ti/Pt).
+IV. CONCLUSION
+We demonstrated that a bilayer system exhibits en-
+hanced intermixing properties and an increased thermal
+spike lifetime when compared with the values obtained
+in pure elements.
+We attribute this behaviour to the
+suﬃciently large diﬀerence in the atomic masses of the
+constituents (mass ratio).
+It is shown that, in a bilayer system under irradia-
+tion, ion beam mixing is driven by a ballistic mechanism
+due to the unusually long lifetime of hot particles in sys-
+tems such as Al/Pt or Ti/Pt with a large mass ratio.
+The interfacial mixing for the constituents are decou-
+pled in time: predominantly Pt mixes to the overlayer
+by ballistic diﬀusion (cascade mixing) and the light con-
+stituent (Al or Ti) starts to migrate to the bulk with
+some time delay. We ﬁnd that the energetic ligth atoms
+are backscattered from the interface due to the large mass
+diﬀerence. Hence the intermixing of them is delayed sig-
+niﬁcantly.
+We ﬁnd no sign of sensitivity of ion beam mixing
+to thermochemical properties (heat of mixing). Instead
+strong random ballistic diﬀusional features rule the mech-
+anism with a long lifetime of hot particles hence with an
+enhanced cascade mixing properties. A diﬀerent mech-
+anism is active for the light atom mixing in Ti/Pt and
+in Al/Pt. In the former bilayer Ti is injected to the Pt
+bulk afterwards the TS by a vacancy mechanism while
+the Al atoms intermix during the TS via a time delayed
+(retarded) ballistic diﬀusion. Therefore, there is a great
+diﬀerence in the details which should be precisely stud-
+ied case by case. Finally we would like to remark that in
+accordance with the theory of Martin [10] we ﬁnd that
+ballistic diﬀusion and thermally activated vacancy move-
+ments seem to be suitable for understanding ion beam
+mixing.
+V. ACKNOWLEDGMENT
+This work is supported by the OTKA grants F037710,
+T043704 and T30430 from the Hungarian Academy of Sci-
+ences. Computer time at the Center of Scientiﬁc Computing
+(NIIF) in Budapest is gratefully acknowledged.
+[1] H. Gnaser, Low-Energy Ion Irradiation of Solid Surfaces,
+Solid-State Physics, 146 (1999), Springer.
+[2] G. Martin, P. Bellon, Driven Alloys, Solid State Phys.,
+50, 189 (1997).
+[3] P. R. Okamoto, N. Q. Lam, L. E. Rehn, Physics of
+Crystal-to-Glass Transformations, Solid State Phys., 52,
+1 (1999).
+[4] K. Samwer, H. J. Fecht and W. L. Johnson, Amorphiza-
+tion in Metallic Systems, in Glassy Metals III, eds. H.
+Beck, H.-J. Gntherodt, Springer, (1994).
+[5] R. A. Enrique, P. Bellon, Phys. Rev. B60, 14649 (1999).
+[6] S. G. Mayr, R. S. Averback, Phys. Rev. B68, 214105
+(2003).
+[7] P. Sigmund, A. Gras-Marti,
+Nucl Instr. and Meth.
+182/183, 25 (1981).
+[8] J-M. Roussel, P. Bellon, Phys. Rev. B65, 144107-1
+(2001).
+[9] R. S. Averback, T. Diaz de la Rubia, Displacement Dam-
+age in Irradiated Metals and Semiconductors, Solid State
+Pysics, 51, 281 (1998).
+[10] G. Martin, Phys. Rev. B30, 1424 (1984).
+[11] Y.-T. Cheng, Material Science Reports, 5, 45 (1990).
+[12] R. Kelly, A. Miotello, Nucl Instr. and Meth. B122, 374.
+(1997) A. Miotello, R. Kelly, ibid, 458. (1997)
+[13] T. Diaz de la Rubia, R. S. Averback, R. Benedek,W. E.
+King, Phys. Rev. Lett. 59, 1930 (1987).
+[14] W. L. Johnson, Y. T. Cheng, M. Van Rossum, and M.-A.
+Nicolet, Nucl Instr. and Meth. B7/8, 657 (1985).
+[15] G. H. Vineyard, Radiat. Eﬀ. 29, 245 (1976).
+[16] A. Crespo-Sosa, M. Munoz, J.-C. Cheang-Wong, A.
+Oliver, J. M. Saniger, J. G. Banuelos, Mat. Sci. Eng.
+B100, 297 (2003), W. Bolse, Mat. Sci. Eng. A253, 194
+(1998), L. C. Wei, R. S. Averback,J. Appl. Phys. 81,
+613 (1997), T. Weber, K. Lieb, J. Appl. Phys., 73, 3499
+(1993), S.-J. Kim, M-A. Nicolet, R. S. Averback, D.
+Peak, Phys. Rev. B37, 38 (1985), T. A. Workman, Y. T.
+Cheng, W. L. Johnson, and M.-A. Nicolet, Appl. Phys.
+Lett. 50, 1486 (1987).
+[17] T. J. Colla, H. M. Urbassek, Phys. Rev. B63, 104206
+(2001).
+[18] H. Gades, H. M. Urbassek, Phys. Rev. B51, 14559
+(1995), Nucl Instr. and Meth. B115, 485 (1996).
+[19] K. Nordlund, R. S. Averback, Phys. Rev. B 59, 20
+(1999).
+[20] P. S¨ule, M. Menyh´ard, K. Nordlund, Nucl Instr. and
+Meth. B211, 524 (2003), condmat/0302262.
+[21] P. S¨ule, M. Menyh´ard, K. Nordlund, Nucl Instr. and
+Meth. B, accepted for publication, condmat/0310238.
+[22] M. P. Allen, D. J. Tildesley, Comupter Simulation of Liq-
+uids, (Oxford Science Publications, Oxford 1989)
+[23] PARCAS was written by K. Nordlund, see e.g., K. Nord-
+lund, R. S. Averback, Phys. Rev. B56, 2421 (1997), K.
+10Nordlund, M. Ghaly, R. S. Averback, M. Caturla, T. Diaz
+de la Rubia, and J. Tarus, Phys. Rev. B57, 7556 (1998).
+[24] P. G. Shewnon, Diﬀusion in Solids, McGraw-Hill Book,
+London, (1963).
+[25] A. P. Sutton, R. W. Balluﬃ, Interfaces in Crystalline
+Materials, Oxford Science Publications, Clarendon Press,
+Oxford, (1996).
+[26] J. F. Ziegler, 1996, SRIM-96 computer code, J. F. Ziegler,
+J. P. Biersack, U. Littmark, The Stopping and Range of
+Ions in Solids, Pergamon Press, (1985).
+[27] F. Cleri and V. Rosato, Phys. Rev. B48, 22 (1993), M.
+S. Daw, S. M. Foiles, and M. I. Baskes, Mater. Sci. Rep.
+9, 251 (1993).
+[28] A. R. Miedema, Philips Tech. Rev. 36, 217. (1976)
+[29] K. Nordlund, R. S. Averback, Phys. Rev. B56, 2421
+(1997).
+[30] H. Wollenberger, in Vacancies and Interstitials in Metals,
+edited by A. Seeger, D. Schumacer, W. Schilling, and J.
+Diehl (North-Holland, Amsterdam, 1970), p. 215.
+[31] A. R. Allnatt, A. B. Lidiard, Atomic Transport in
+Solids, Cambridge University Press, Cambridge, Eng-
+land, (1993)
+[32] P. S¨ule, http://www.mfa.kfki.hu/∼sule, 2004.
+[33] R. A. Swalin, Thermodynamics of Solids, Wiley, London,
+(1963).
+[34] L. S. Hung, M. Nastasi, J. Gyulai, and J. W. Mayer,
+Appl. Phys. Lett., 42, 672 (1983).
+[35] J. D. R. Buchanan, T. P. A. Hase, B. K. Tanner, P. J.
+Chen, L. Gan, C. J. Powel, W. F. Egelhoﬀ, Jr., Phys.
+Rev. B66, 104427 (2002), P. Gas, J. Labar, G. Clugnet,
+A. Kovacs, C. Bergman, P. Barna, J. Appl. Phys., 90,
+3899 (2001).
+[36] P. M. Ossi, Surf. Sci., 554, 1. (2004).
+[37] F. Banhart, E. Hern´andez, M. Terrones, Phys. Rev. Lett.,
+90, 185502-1, (2003).
+11

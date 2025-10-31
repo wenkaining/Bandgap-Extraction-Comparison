@@ -1,0 +1,512 @@
+Raman tensor calculation for magnesium phthalocyanine
+Jaroslav To´bik a,*, Erio Tosatti a,b
+a International School for Advanced Studies (SISSA) and INFM Democritos National Simulation Center, Via Beirut 2, I-34014 Trieste, Italy
+b The Abdus Salam International Centre for Theoretical Physics (ICTP), Strada Costiera 11, 34100 Trieste, Italy
+Available online 6 May 2006
+Abstract
+We present ab-initio density functional (DFT) calculations of the vibrational spectra of neutral magnesium phthalocyanine (MgPc)
+molecule and of its Raman scattering intensities.
+ 2006 Elsevier B.V. All rights reserved.
+Keywords: Density functional calculations; Magnesium phthalocyanine; Raman scattering spectroscopy
+1. Introduction
+Organic materials are attractive for electronic industry,
+because they promise large versatility based on organic
+chemistry, low price based on very common elements used
+as building blocks and interesting mechanical properties.
+There is quite a vigorous research activity in organic mate-
+rials for electrical applications – from insulators trough
+semiconductors to conductors and even superconductors.
+Here
+we
+are
+concerned
+with
+metal
+phthalocyanines
+(MPc). Electronic structure calculations [1] and recent
+experimental observation of the possibility to dope these
+materials by adding electrons [2] resembles somewhat the
+situation of fullerenes. In our previous paper we speculated
+about possible phase diagrams for electron doped MgPc
+[3]. While these possibilities are under active experimental
+considerations, we noticed that for the commonest experi-
+mental diagnostic, namely Raman scattering there is no
+reference calculation of either modes nor Raman intensities
+(with exception of ZnPc [14]). In this paper we focused our
+interest on the vibrational properties of MgPc, which we
+wish to study ab-initio. While our ﬁnal aim will be to com-
+pute spectra of doped and undoped molecules, this work
+will be restricted to neutral undoped MgPc, which has
+not been studied so far.
+2. Technical details
+All our calculations were done using the PWscf software
+package [4], which is a plane-wave basis set DFT imple-
+mentation. We used the LDA approximation with Slater
+approximation
+for
+exchange
+and
+Perdew–Zunger
+functional for correlations eﬀects. In order to lower the
+plane-wave energy cut-oﬀwe used the non-local RRKJ3 ul-
+tra-soft pseudopotentials [5]. The kinetic energy cut-oﬀwas
+35 Ry for the wave functions basis set and 280 Ry for the
+charge density basis set. The plane-wave basis set assumed
+periodic boundary conditions. The unit cell had dimensions
+21 · 21 · 11 A˚ , therefore including enough vacuum to rep-
+resent the isolated molecule.
+By energy optimization we found the equilibrium molec-
+ular structure with structural parameters as in Table 1. The
+molecule has D4h symmetry group and is planar. The elec-
+tronic structure agrees well with former calculations of
+Liao et al. [1]. Some levels near the HOMO–LUMO gap
+are listed in the Table 2.
+We calculated the vibrational spectra of neutral, un-
+doped MgPc by means of the density functional perturba-
+tion theory [6]. The dynamical matrix was calculated in
+Cartesian coordinates. In the isolated molecule with N
+atoms there are 3N  6 genuine vibrations while 6 modes
+corresponds to translation–rotational degrees of freedom
+with zero frequency. In reality due to periodic images of
+molecules there is a weak virtual interaction which can
+0039-6028/$ - see front matter  2006 Elsevier B.V. All rights reserved.
+doi:10.1016/j.susc.2005.11.066
+* Corresponding author. Tel.: +39 040 3787 448; fax: +39 040 3787 528.
+E-mail address: tobik@sissa.it (J. To´bik).
+www.elsevier.com/locate/susc
+Surface Science 600 (2006) 3995–3998cause ‘libration’ of the molecule at non-zero, even imagi-
+nary frequency. We eliminated these modes by transform-
+ing the dynamical matrix to internal coordinates and
+setting the corresponding dynamical matrix elements to
+zero. We checked that after this procedure we obtained
+eigenvectors of correct symmetry. Assignment of irreduc-
+ible representation to all eigenvectors was done by projec-
+tion on symmetry adapted bases of all linearly independent
+atomic displacement. For N = 57 atoms there are 165
+vibrations
+Cvib ¼ 14A1g þ 13A2g þ 14B1g þ 14B2 g þ 13Eg þ 6A1u
+þ 8A2u þ 7B1u þ 7B2u þ 28Eu
+where Eg and Eu are two–fold degenerated modes. The
+calculated frequencies are summarized in Fig. 2.
+The Raman intensity is related to the change of molec-
+ular polarizability due to the deformation introduced by
+the vibration. We calculated the polarizability derivatives
+with respect to deformations in the static limit.
+With each vibrational mode qi is associated a Raman
+tensor Ti given by
+T i
+lm ¼ dalm
+dqi
+ð1Þ
+Here l, m are Cartesian indices, alm is the polarizability ten-
+sor deﬁned as alm ¼
+o2U
+oEloEm, U is the total energy and ~E an
+external electric ﬁeld. Therefore one has to calculate third
+derivatives of total energy
+o3U
+oEloEmoxl. The energy derivatives
+with respect to atomic displacements are forces acting on
+atomic nuclei, and are calculated via the Hellman–
+Feynman theorem. We extracted the force dependence on
+electric ﬁeld by numerical diﬀerences. Applied ﬁelds were
+±1 · 103, ±2 · 103, ±4 · 103 a.u. Details about appli-
+cation of electric ﬁeld within periodic boundary conditions
+are the same as in [7]. There are alternative methods for the
+Raman tensor calculation using linear response theory
+[8,9]. However numerical derivative method with ﬁnite ﬁeld
+is computationally less demanding for the present case,
+where moreover the implementation is very simple.
+From the Raman tensor Eq. (1) we calculated for each
+mode the gas phase (angle averaged) Raman scattering
+cross section following [10,11] in the form:
+dri
+dX ¼ ð2pm0Þ4
+c4
+hðni þ 1Þ
+8pmi
+45a02
+i þ 7c02
+i
+45
+a0
+i ¼ 1
+3 ðT i
+xx þ T i
+yy þ T i
+zzÞ
+c02
+i ¼ 1
+2 fðT i
+xx  T i
+yyÞ2 þ ðT i
+xx  T i
+zzÞ2 þ ðT i
+yy  T i
+zzÞ2
+þ 6½ðT i
+xyÞ2 þ ðT i
+xzÞ2 þ ðT i
+yzÞ2g
+ni ¼
+exp
+hmi
+kT
+
+
+ 1
+
+1
+ð2Þ
+m0 is frequency of incident light, ni is equilibrium occupa-
+tion number for the initial vibrational state i at the given
+temperature T. The a0 and c02 are isotropic and anisotropic
+parts of the Raman tensor. Both are invariant under
+rotations. Formula (2) is valid for the most common
+experimental setup when incident ray, observed ray, and
+Table 1
+Structure of MgPc. Bond lengths are in A˚ , angles in degrees
+Bond
+DFT [1]
+Experiment [12]
+This work
+Mg–N1
+2.008
+1.990
+1.991
+N1–C1
+1.377
+1.386
+1.359
+N2–C1
+1.335
+1.317
+C1–C2
+1.465
+1.411
+1.445
+C2–C
+0
+2
+1.415
+1.468
+1.400
+C2–C3
+1.395
+1.400
+1.379
+C3–C4
+1.397
+1.399
+1.381
+C4–C
+0
+4
+1.406
+1.412
+1.392
+C–H
+1.090
+1.121
+1.092
+hC1N1C0
+1
+109.7
+109.5
+109.9
+hN2C1N1
+127.5
+125.9
+127.1
+hN1C1C2
+108.6
+108.9
+108.4
+Notations corresponds to labels on Fig. 1.
+Table 2
+Kohn–Sham eigenvalues spectra and irreducible representation of wave–
+functions near the HOMO–LUMO gap
+Level
+KS-eigenvalue [eV]
+Symmetry
+LUMO + 1
+2.241
+b1u
+LUMO
+3.692
+eg
+HOMO
+5.132
+a1u
+HOMO  1
+6.092
+b2g
+HOMO  2
+6.446
+b2u
+HOMO  3,4
+6.526
+eu
+Note that eg and eu orbitals are two-fold degenerated.
+N1
+N2
+C2
+C1
+C1’ C2’
+C3
+C3’
+C4
+C4’
+H1
+H2
+x
+y
+z
+Mg
+Fig. 1. Schematic structure of the MgPc molecule. Orientation of
+coordinate system is important for deﬁnition of the Raman tensors by
+Eq. (3).
+3996
+J. To´bik, E. Tosatti / Surface Science 600 (2006) 3995–3998incident light polarization of electric ﬁeld are perpendicular
+to each other.
+The Raman tensor of a particular mode must belong to
+the same irreducible representation as that vibration mode.
+In a coordinate system connected to the molecule as indi-
+cated on Fig. 1 all symmetric tensors of second rank are di-
+vided according to irreducible representations in the form:
+A1g :
+a
+0
+0
+0
+a
+0
+0
+0
+b
+0
+B
+@
+1
+C
+A;
+B1g :
+c
+0
+0
+0
+c
+0
+0
+0
+0
+0
+B
+@
+1
+C
+A;
+B2g :
+0
+d
+0
+d
+0
+0
+0
+0
+0
+0
+B
+@
+1
+C
+A;
+Eg :
+0
+0
+e
+0
+0
+f
+e
+f
+0
+0
+B
+@
+1
+C
+A
+ð3Þ
+Traceless irreducible representations possess only the
+anisotropic part, while the A1g mode has both parts.
+Weights in front of a0 and c0 in formula 2 (45 and 7, respec-
+tively) can be changed by observation geometry, thus pro-
+viding a way to (partially) assign symmetry to vibration
+eigenmodes (see for example [11]). We note that for the
+Eg representation it is possible to deﬁne a single indepen-
+dent parameter
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+e2 þ f 2
+p
+because of the degeneracy and
+orthogonality of degenerated modes.
+3. Results and discussion
+In Table 1 we give our LDA optimized structure of
+MgPc. In comparison with data in [1,12] we see a reason-
+able agreement. The diﬀerence can be attributed to diﬀer-
+ent density functional (GGA in [1]). LDA is known to
+slightly overbind in covalent bonds. Kohn–Sham orbitals
+energies (Table 2) are given relative to vacuum zero taken
+as the SCF electrostatic potential far from the molecule.
+ 0
+ 250
+ 500
+ 750
+ 1000
+ 1250
+ 1500
+ 1750
+Intensity [arb. a.u.]
+B1g
+A1g
+B1g
+B1g
+A1g
+B1g A1g
+B1g
+B1g
+Fig. 3. Calculated Raman spectrum of MgPc for very low excitation frequency and low temperature.
+ 0
+ 200
+ 400
+ 600
+ 800
+ 1000
+ 1200
+ 1400
+ 1600
+Eu
+B2u
+B1u
+A2u
+A1u
+Eg
+B2g
+B1g
+A2g
+A1g
+3.7
+-18.5
+3.0
+-49.5
+32.9
+2.4
+57.8,5.2
+0.8
+0.1
+24.1
+0.5
+-29.1
+1.3,-1.0
+0.1
+-20.4,3.8
+16.9
+0.3
+-59.0
+2.8
+10.9
+2.9
+-52.9,-8.0
+1.0
+0.4
+0.4
+0.2
+-13.5
+23.9,3.0
+-6.9
+-13.2
+17.8,2.3
+-12.6
+36.4,2.0
+67.8
+-4.9
+-14.3
+-238.9
+200.6,2.1
+29.5
+-29.8,-2.6
+-21.5,-2.2
+-33.2
+-37.9
+27.8
+-74.2,1.9
+-405.2
+40.2
+-19.9,1.9
+6.6
+Fig. 2. Frequencies and independent Raman tensor components of neutral MgPc. Frequencies are in cm1, Raman tensor components in atomic units
+(distance in Bohr radii a0, energy in Rydbergs, and electric ﬁeld units e/a0). Note that A1g has two independent components, the ﬁrst is a, and the second b
+following the notation in Eq. (3).
+J. To´bik, E. Tosatti / Surface Science 600 (2006) 3995–3998
+3997They are also in good agreement with [1] as far as we can
+read oﬀvalues from Fig. 2 of [1].
+Vibrational spectra of various metal phthalocyanines
+were experimentally measured [13] by means of Raman
+spectroscopy. In the case of ZnPc there is also a DFT cal-
+culation of the vibrational and Raman spectra [14]. In gen-
+eral the most intense peak was found to be in the interval
+1500–1550 cm1 depending on the central atom.
+Our calculated vibration spectrum of MgPc is on Fig. 2.
+Above the frequency line for Raman active modes we write
+the corresponding non-zero component of Raman tensor
+as deﬁned by Eq. (3). The simulated Raman spectrum
+according to formula 2 is shown on Fig. 3. To simulate
+spectrum for each intensity and frequency we added Gauss-
+ian with the spread r = 5 cm1. We considered the low
+temperature limit (ni = 0) and low incident light frequency
+limit. Our most intense Raman scattering mode is at
+1587 cm1 with symmetry B1g. This is similar to ZnPc
+which is at 1516 cm1 with symmetry B1.
+The results of the presented calculation should be com-
+pared with Raman data of MgPc, as soon as available. It
+will also serve as a starting point for future work on the
+electron doped molecules [2].
+Acknowledgements
+We are grateful to A. Dal Corso for his help and
+assistance and to A. Morpurgo, M. Craciun, and S.
+Margadonna for correspondence. This work was partly
+supported by MIUR COFIN No. 2003028141-007, MIUR
+COFIN No. 2004023199-003, MIUR COFIN 2004028238-
+002, by FIRB RBAU01LX5H operated by INFM, by
+MIUR FIRB RBAU017S8, and by INFM (Iniziativa tras-
+versale calcolo parallelo).
+References
+[1] M.S. Liao, S. Scheiner, J. Chem. Phys. 114 (2001) 9780.
+[2] M.F. Craciun, S. Rogge, M.J.L. den Boer, S. Margadonna, K.
+Prassides, Y. Iwasa, A.F. Morpurgo, Adv. Mater. 18 (2006) 320;
+M.F. Craciun, S. Rogge, M.J.L. den Boer, S. Margadonna, K.
+Prassides, Y. Iwasa, A.F. Morpurgo, <arXiv:cond-mat/0401036> v2.
+[3] E. Tosatti, M. Fabrizio, J. Tobik, G.E. Santoro, Phys. Rev. Lett. 93
+(2004) 117002.
+[4] S. Baroni, A. Dal Corso, S. de Gironcoli, P. Giannozzi, <http://
+www.pwscf.org>.
+[5] A.M. Rappe, K.M. Rabe, E. Kaxiras, J.D. Joannopoulos, Phys. Rev.
+B 41 (1990) 1227.
+[6] S. Baroni, S. de Gironcoli, A. Dal Corso, P. Giannozzi, Rev. Mod.
+Phys. 73 (2001) 515.
+[7] J. To´bik, A. Dal Corso, J. Chem. Phys. 120 (2004) 9934.
+[8] G. Deinzer, D. Strauch, Phys. Rev. B 66 (2002) 100301.
+[9] M. Lazzeri, F. Mauri, Phys. Rev. Lett. 90, 036401.
+[10] D. Porezag, M.R. Pederson, Phys. Rev. B 54 (1996) 7830.
+[11] D.A. Long, Raman Spectroscopy, McGraw-Hill, London, 1977,
+ISBN 0-07-038675-7.
+[12] C.-Y. Ruan, V. Mastryukov, M. Fink, J. Chem. Phys. 111 (1999)
+3035.
+[13] D.R. Tackley, G. Dent, W.E. Smith, Phys. Chem. Chem. Phys. 3
+(2001) 1419.
+[14] D.R. Tackley, G. Dent, W.E. Smith, Phys. Chem. Chem. Phys. 2
+(2000) 3949.
+3998
+J. To´bik, E. Tosatti / Surface Science 600 (2006) 3995–3998

@@ -1,0 +1,836 @@
+PHYSICAL REVIEW B 105, 115120 (2022)
+Magnetotransport and high-resolution angle-resolved photoelectron spectroscopy studies of
+palladium-doped Bi2Te3
+Shailja Sharma
+,1 Shiv Kumar,2 Girish C. Tewari,3 Gargee Sharma
+,1 Eike F. Schwier,2,* Kenya Shimada
+,2
+A. Taraphder
+,4 and C. S. Yadav1,†
+1School of Basic Sciences, Indian Institute of Technology Mandi, Mandi-175075 (H.P.), India
+2Hiroshima Synchrotron Radiation Center, Hiroshima University, 2-313 Kagamiyama, Higashi-Hiroshima 739-0046, Japan
+3Department of Chemistry and Material Science, Aalto University, FI-00076 Aalto, Finland
+4Department of Physics, Indian Institute of Technology Kharagpur, Kharagpur-721302 (W.B), India
+(Received 8 June 2021; accepted 23 February 2022; published 15 March 2022)
+We have performed magnetotransport and high-resolution angle-resolved photoelectron spectroscopy
+(ARPES) measurements on topological insulator PdxBi2Te3(0 ⩽x ⩽0.20) single crystals. We have observed
+unusually high values of magnetoresistance (∼1500%) and mobility (∼93 000 cm2 V–1 s–1) at low temperatures
+for pristine Bi2Te3 that decrease upon Pd doping. Shubnikov–de Haas (SdH) oscillations were detected for
+x = 0.05, 0.10, conﬁrming the presence of two-dimensional topological surface states (TSSs) for these samples.
+Hall measurement shows the crossover from n-type charge carriers in pristine Bi2Te3 to p-type charge carriers
+upon Pd doping. The ARPES measurements show that the conduction band crosses the Fermi level for pristine
+Bi2Te3, and the Dirac point of the TSSs and bulk-derived valence bands indicated a shift to lower binding energy
+upon Pd doping in a rigid-band-like way up to x ∼0.10. Based on the comparison of the parameters obtained
+from the SdH and ARPES measurements, the reduction in the kF value in the magnetotransport measurements is
+likely due to the band bending induced by the Schottky barrier.
+DOI: 10.1103/PhysRevB.105.115120
+I. INTRODUCTION
+Topological insulators (TIs) are one of the most excit-
+ing and studied systems in contemporary condensed-matter
+physics. TIs are characterized by gapless topological surface
+states (TSSs) that are located inside the bulk band gap. The
+TSSs remain gapless under the perturbation conserving the
+topological number, which is calculated based on the symme-
+try properties of the wave functions in the bulk [1,2]. The TSS
+has a helical spin texture, and its dispersion around the time-
+reversal invariant momenta (TRIM) can be regarded as that of
+a massless Dirac fermion [3]. Electrons in the TSS acquire a π
+Berry phase after adiabatically completing a closed trajectory
+around the Fermi surface [4]. TIs exhibit a variety of exotic
+electronic transport properties such as nonsaturating linear
+magnetoresistance, the low-ﬁeld weak antilocalization (WAL)
+effect, Shubnikov–de Haas (SdH) oscillations, and high car-
+rier mobility [5]. Angle-resolved photoemission spectroscopy
+(ARPES) and scanning tunneling microscopy studies have
+directly revealed a Dirac-cone-like TSS in the bulk band gap
+[6,7].
+Layered Bi2Te3 is one of the typical three-dimensional TIs,
+and its TSS has been studied extensively through transport
+*Present
+address:
+Experimentelle
+Physik
+VII,
+Universität
+Würzburg, Am Hubland, D-97074 Würzburg, Germany, EU,
+and Würzburg-Dresden Cluster of Excellence ct.qmat, Germany,
+EU.
+†shekhar@iitmandi.ac.in
+and spectroscopy experiments [6,8]. Bi2Te3 crystallizes in a
+rhombohedral crystal structure with space group R¯3m (no.
+166) [9]. The unit cell of Bi2Te3 is comprised of three quin-
+tuple layers (QLs) that are bonded by weak van der Waals
+forces, and each QL consists of ﬁve atomic layers arranged
+in a TeI-Bi-TeII-Bi-TeI sequence. This weak binding force
+between Te atoms in adjacent QLs accounts for the easy cleav-
+age along the ab-plane perpendicular to the c-axis, and the
+anisotropic thermal and electronic transport properties arise
+from these structural properties. The spectroscopy studies in-
+dicate that Bi2Te3 is an indirect narrowband-gap (∼150 meV)
+topological insulator with a single Dirac cone at the ¯ point
+[6]. Bi2Te3 has been known for the highest thermoelectric
+ﬁgure of merit (ZT ) around room temperature [10]. Super-
+conductivity has also been observed in Bi2Te3 under high
+pressures between 3 and 6 GPa with a superconducting tran-
+sition temperature of Tc ∼3 K in the rhombohedral phase
+without a structural phase transition [11–13].
+Previously, Hor et al. [14] reported superconductivity
+at Tc ∼5.5 K in PdxBi2Te3 (x = 0.15, 0.3, 0.5, and 1.0)
+compounds through ac susceptibility and resistivity measure-
+ments. Amit et al. [15] discussed the temperature-dependent
+resistivity and magnetic susceptibility at various magnetic
+ﬁelds (H) and pressure (p) to construct the phase diagram for
+the superconducting compound PdBi2Te3. The superconduct-
+ing transition temperature was decreased from Tc ∼5.5 K
+with increasing pressure. Both of the above reports indicated
+a small superconducting volume fraction of ∼1% for the
+compound PdBi2Te3, which is likely due to the difﬁculty
+in Pd intercalation into the van der Waals gap between the
+2469-9950/2022/105(11)/115120(9)
+115120-1
+©2022 American Physical SocietySHAILJA SHARMA et al.
+PHYSICAL REVIEW B 105, 115120 (2022)
+QLs [14]. So far, however, the magnetotransport and high-
+resolution ARPES measurements of Pd-doped Bi2Te3 have
+not been explored yet. These measurements are quite useful
+in understanding the electron dynamics and electronic band
+structure, and they may give useful information about the
+topological surface states. Pd is a higher Z element in compar-
+ison to other dopants viz. Nb, Cu, and Sr, and it is known to
+show exchange-enhanced magnetic susceptibility. It is there-
+fore worth investigating the Pd doping from the viewpoint
+of tailoring the electronic transport, spin-orbit coupling, and
+topological surface states of the Bi2Te3.
+In this study, we present detailed electronic transport prop-
+erties and high-resolution ARPES studies to investigate the
+palladium-doped bismuth telluride (PdxBi2Te3) single crys-
+tals. We have observed a large value of the magnetoresistance
+and ultrahigh mobility at low temperatures in pristine Bi2Te3.
+The evolution of the electronic transport and topological sur-
+face state properties upon Pd doping is discussed in light
+of magnetoresistance, quantum oscillations, WAL, and the
+electronic structure revealed by high-resolution ARPES. By
+combining the results from ARPES and SdH oscillation
+measurements, we are able to discuss the macroscopic mag-
+netotransport properties from the viewpoint of microscopic
+electronic band structure.
+II. EXPERIMENTS
+Single crystals of PdxBi2Te3 (x = 0, 0.05, 0.10, 0.15, 0.20)
+were grown using the ﬂux method in two steps. High-purity
+elemental Bi (99.99%), Te (99.999%), and Pd (99.99%) from
+Sigma-Aldrich Co. were accurately weighed according to
+the stoichiometric ratios and vacuum sealed (>10–5 mbar) in
+quartz tubes. In the ﬁrst step, Bi2Te3 were prepared for all the
+compositions. The compounds were heated at 850 °C for 24 h,
+followed by cooling to 500 °C at the rate 10 °C/h, where they
+were kept for 72 h. Then, the compounds were furnace-off
+cooled to room temperature. Second, for Pd-doped samples,
+the melted Bi2Te3 and Pd were mixed thoroughly using a
+mortar and pestle, pelletized and vacuum-sealed, and kept for
+another heat treatment at 850 °C for 48 h, then slow-cooled
+(3 °C/h) to 400 °C and kept for 12 h. Then, the compounds
+were furnace-off cooled to room temperature. Single crystals
+were obtained from the ingots easily by cleaving perpendicu-
+lar to the (00l) axis.
+The crystal structure and phase purity of the samples were
+determined by x-ray diffraction measurement at room temper-
+ature using Rigaku Smartlab diffractometer with Cu Kα (λ =
+1.5418 Å) radiation. The morphological studies on freshly
+exfoliated samples were studied using energy-dispersive
+spectroscopy (EDS) and a ﬁeld-emission scanning electron
+microscope (FESEM FEI, Nova Nano SEM 450). Figures S1
+and S2 depict the x-ray diffraction patterns, Rietveld reﬁne-
+ment, and layered morphology of studied samples [16]. The
+resistivity and Hall effect measurements were performed in
+a Physical Property Measurement System (PPMS, Quantum
+Design, Inc.) using the standard four-probe contact conﬁg-
+uration in the temperature range 1.8–300 K up to magnetic
+ﬁelds of 8 T. Magnetization measurements were performed
+in a Magnetic Property Measurement System (MPMS, Quan-
+tum Design, Inc.). The magnetic ﬁeld was perpendicular to
+the cleaved plane of crystals and the current direction. The
+samples were exfoliated using scotch tape before performing
+the above measurements.
+The high-resolution ARPES measurements were carried
+out using the μ-Laser ARPES system developed at the Hi-
+roshima Synchrotron Radiation Center, Hiroshima University,
+Japan [17]. The samples were cleaved in situ on the ﬁve-axes
+manipulator at a temperature of 20 K, using the top-post
+method. The base pressure was below 5 × 10–9 Pa. The
+Dirac-cone-like spectrum was measured in the s-polarization
+geometry along the ¯ −¯M high-symmetry line of the surface
+Brillouin zone. Azimuthal sample alignment was performed
+ex situ via measurements of Laue patterns, while the ¯-point
+position was determined by a ﬁne angular map along the
+direction perpendicular to the dispersive direction of the an-
+alyzer slit. The position of the Fermi level was determined
+using the Fermi edge of the reference sample in electrical con-
+tact with the sample. The Laser spot size (on the sample) was
+less than 10 μm, resulting in an intrinsic angular resolution
+of less than 0.05 °. The overall instrumental energy resolution
+was estimated to be better than 2 meV.
+III. RESULTS
+A. Transport measurements
+Figure 1(a) shows the temperature dependence of longi-
+tudinal resistivity (ρxx) of PdxBi2Te3 crystals from 1.8 to
+300 K measured under zero ﬁeld. The ρxx exhibits metal-
+lic behavior throughout the temperature range. The residual
+resistivity ratio (RRR), which is deﬁned as the ratio of
+resistivity at room temperature to that at low temperature
+[RRR = ρ(300 K)/ρ0(1.8 K)], decreased on Pd doping from
+∼57 for Bi2Te3 to ∼4 for Pd0.20Bi2Te3. The high value of
+RRR for Bi2Te3 is further reﬂected in the narrow linewidth
+in the high-resolution ARPES spectrum, which is among
+the best for the 3D TIs [6,18–24]. It has been reported that
+Bi2Te3 shows distinct resistivity behavior with varying values
+of RRR for different pieces of the crystal even if they are
+taken from the same batch grown in the same ampoule [8].
+The electronic properties of these compounds strongly depend
+on the internal defects and inhomogeneity in the material.
+Theoretical studies by Black-Schaffer et al. on the role of
+subsurface impurities and vacancies in the 3D TIs suggested
+that bulk impurities can give rise to gapless bulk conduc-
+tivity and may mask the surface transport properties [25].
+Therefore, we measured ρxx(T ) on the four different pieces
+of the crystal for each composition (see Fig. S3 [16]). Sam-
+ples taken from some portions of the crystal were found to
+exhibit a broad hump shape around 100–150 K, suggesting
+that the transport properties are sensitive to the inhomo-
+geneity of the tellurium and antisite defects present in the
+crystal. At low temperatures, all the ρxx(T ) show saturation
+below 10 K, implying the ﬁnite residual resistivity. We have
+observed a signature of superconductivity in Pd0.20Bi2Te3
+below Tc ∼2.2 K in the magnetization measurements [see
+the M(T ) and M(H) curves in Fig. S4 [16]]. However, we
+could not detect superconductivity in the resistivity measure-
+ments, which is likely due to the low superconducting volume
+fraction.
+115120-2MAGNETOTRANSPORT AND HIGH-RESOLUTION …
+PHYSICAL REVIEW B 105, 115120 (2022)
+FIG. 1. (a) Temperature dependence of zero-ﬁeld longitudinal resistivity (ρxx) for PdxBi2Te3 (x = 0, 0.05, 0.10, 0.15, 0.20) of crystals, and
+(b) and (c) show the variation of carrier density (n) and mobility (μ) with temperature, respectively, calculated from Hall resistivity data.
+Figure 1(b) depicts the variation of charge carrier density
+(n) in the temperature range 1.8–300 K. The bulk carrier den-
+sity was estimated using a single-carrier Drude band model,
+n(T ) = 1/[eRH(T )]. The slope has been calculated from the
+linear part of the magnetic ﬁeld dependence of ρxy (see Fig.
+S5 [16]). It is evident that for all temperatures, ρxy is linear
+and negative for Bi2Te3, implying the presence of n-type bulk
+charge carriers. With an increase in Pd concentration, ρxy
+changes its sign, manifesting the hole-dominant transport in
+such systems. We ﬁnd that the bulk carrier density is in the
+range 1018–1019 cm–3 for PdxBi2Te3 without any appreciable
+temperature dependence except for Pd0.05Bi2Te3. It should
+be noted that there is a sharp change in the carrier con-
+centration of Pd0.05Bi2Te3 above T = 20 K. The transverse
+resistivity ρxy(H) of Pd0.05Bi2Te3 (see Fig. S5 [16]) shows
+a sudden change in the slope between low-temperature and
+high-temperature ρxy(H) values.
+Using Hall coefﬁcient (RH) and longitudinal resistivity
+(ρxx) data, we have estimated the Hall mobility (μ), as shown
+in Fig. 1(c). We found the smallest observed carrier density
+(7.58 × 1017 cm–3) and the lowest residual resistivity (8.8 ×
+10–5  cm) at 1.8 K. These result in ultrahigh-mobility values
+of ∼93 000 cm2 V–1 s–1 for pristine Bi2Te3. The extremely
+large mobility for Bi2Te3 is in accordance with the high RRR
+and large MR value (MR varies quadratically with mobility)
+as discussed below.
+Figure 2(a) shows magnetoresistance (MR% = [ρxx(H) −
+ρxx(0)/ρxx(0)] × 100%) for the PdxBi2Te3 crystals with
+magnetic ﬁeld perpendicular to the sample surface (ab-
+plane) as well as the current direction. The low-temperature
+(T = 1.8 K) MR values for Bi2Te3 at a ﬁeld of 8 T is
+∼1500%, which is larger than the previously reported value
+of MR = 540% at 7 T by Shrestha et al. [26,27], MR =
+400% at 13 T by Wang et al. [28], at 10 T by Singh et al.
+[29], and MR = 267% at 9 T by Barua et al. [30]. With
+the increasing Pd content, the MR value decreases signif-
+icantly from 1500% (x = 0) to 300% (x = 0.20). As seen
+from Fig. 2(a), the MR of PdxBi2Te3 showed a quadratic
+dependence on magnetic ﬁelds. Figure 2(b) shows that the
+MR value remains almost unchanged up to 10 K, then starts
+to decrease upon further increase of temperature. At 200 K,
+the MR curves of all Pd concentrations overlap and have
+similar values at room temperature. The decrease in MR value
+with temperature could also be associated with the increase
+in carrier concentration. The MR curves show a parabolic
+ﬁeld dependence at higher temperatures as well as with the
+increase in Pd content (see Fig. S6 [16]). Generally, high MR
+values are realized in semimetals, where electron and hole
+pockets coexist at the Fermi level [31]. A large value of MR
+and high mobility have been a feature of semimetals such
+as bismuth, graphene, zero-gap semiconductors silver chalco-
+genides (Ag2+δSe, Ag2+δTe), Dirac and Weyl materials, and
+Heusler compounds [31–36]. The linear band dispersion as
+revealed by ARPES may results in high mobility, possibly due
+to high Fermi velocity of massless particles [37]. Moreover, a
+large nonsaturating MR is expected in such systems.
+115120-3SHAILJA SHARMA et al.
+PHYSICAL REVIEW B 105, 115120 (2022)
+(a)
+(b)
+FIG. 2. Magnetic ﬁeld dependence of magnetoresistance (MR)
+at T = 1.8 K (a), and temperature dependence of MR at 8 T (b) for
+PdxBi2Te3 (x = 0–0.20).
+Interestingly,
+the
+MR
+measured
+on
+the
+crystal
+of
+Pd0.05Bi2Te3 with the broad hump shape anomaly around
+100–150 K in ρxx(T ) shows a cusplike feature at low mag-
+netic ﬁeld, which is suggestive of the WAL effect. To further
+examine the WAL effect, we show magnetoconductance of
+Pd0.05Bi2Te3 in Fig. 3. The WAL is a quantum correction to
+conductivity resulting from both the strong spin-orbit cou-
+pling in the bulk as well as the spin-momentum locking in
+the TSSs of TIs [38]. The cusplike positive MR in low ﬁelds
+due to the WAL is observed up to 20 K and reduces at high
+temperature. The WAL effect is derived from the destruc-
+tive interference between two time-reversed electron paths
+around an impurity or scattering point. This destructive inter-
+ference reduces the elastic backscattering, thereby increasing
+the conductivity. We have analyzed the WAL data using the
+Hikami-Larkin-Nagaoka (HLN) model [39]:
+	Gxx(H) = Gxx(H) −Gxx(0),
+	Gxx(H) = −α
+e2
+2π2 ¯h
+
+ln
+¯h
+4Hel2
+φ
+−ψ
+1
+2 +
+¯h
+4Hel2
+φ
+
+,
+where lφ is the phase coherence length and ψ(x) is the
+digamma function.
+FIG. 3. Weak antilocalization (WAL) effect in Pd0.05Bi2Te3: the
+change in magnetoconductance (	Gxx) at low temperatures and HLN
+ﬁt (black line) in the ﬁeld range ±1 T.
+The prefactor α is expected to be −0.5 for the 2D topologi-
+cal surface states of TIs. We have shown the ﬁtting (black line)
+of the magnetoconductance curve in the range ±1 T in Fig. 3.
+The obtained α values (∼−7) at T = 2.5 K are larger than
+the previously reported values in the range −0.4 to −2.5 for
+thin ﬁlm as well as bulk samples of TIs [40–44]. Such large
+values can also be understood by assuming that some of the
+bulk channels also conduct together with the surface states of
+TIs. Additionally, the large value of magnetoconductance in
+this material is also consistent with the large value of α. The
+lφ values (∼97 nm) are comparable to that discussed in the
+literature [26].
+In the ﬁeld-dependent resistivity of Pd0.05Bi2Te3 and
+Pd0.10Bi2Te3, we have observed Shubnikov–de Haas (SdH)
+oscillations. The quantum oscillation is an important probe
+to analyze the shape and sizes of the Fermi surface as well
+as topological properties of carriers. We have observed the
+oscillations at low temperatures (1.8–10 K) and magnetic ﬁeld
+in the range of 4–8 T. The observed quantum oscillations in
+	ρxx for the x = 0.05 and 0.10 samples have been plotted in
+Figs. 4(a) and 4(c) as a function of inverse magnetic ﬁeld at
+different temperatures (	ρxx has been determined by subtract-
+ing the polynomial background from ρxx). The magnitude of
+oscillations in Pd0.10Bi2Te3 is larger than that in Pd0.05Bi2Te3.
+The amplitude of SdH oscillations decreases with an increase
+in temperature due to the thermal damping factor.
+In Figs. 4(b) and 4(d), the fast Fourier transform (FFT)
+amplitudes for the subtracted oscillations are plotted with
+the frequency. The FFT amplitudes of both samples decrease
+on increasing temperature. The x = 0.05 sample shows a
+prominent peak at the oscillation frequency of F = 2.75 T for
+all temperatures, whereas the x = 0.10 sample has a major
+peak at F = 4 T for 1.8 K, which gradually shifts to 7.2 T
+for higher temperatures. The frequencies of these oscilla-
+tions are proportional to the extremal cross section of Fermi
+surface [AF = A(EF )] perpendicular to the applied magnetic
+ﬁeld, based on the Onsager relation F = ¯h/2πe A(EF). The
+115120-4MAGNETOTRANSPORT AND HIGH-RESOLUTION …
+PHYSICAL REVIEW B 105, 115120 (2022)
+(a)
+(b)
+(d)
+(c)
+FIG. 4. (a),(c) Resistivity as a function of 1/H, after subtracting the background contribution; the inset shows the (left) LK formula ﬁt and
+(right) Dingle plot; (b),(d) the fast Fourier transform analysis for x = 0.05 and 0.10 with fundamental frequency at 2.75 and 4 T, respectively.
+The inset [(b),(d)] shows the Landau level fan diagram. The zeroth Landau level n0 is 0.33 and 0.35 for x = 0.05 and 0.10, respectively.
+calculated values of Fermi surface cross-section assuming a
+circular Fermi surface (AF = πk2
+F), Fermi wave vector (kF),
+Fermi velocity vF = ¯hkF/mc, and the electron mean free
+path (lF = vFτ) are presented in Table I. The frequencies
+of 2.75 and 4 T imply a cross section of 2.68 × 1012 and
+3.83 × 1012 cm–2, respectively, for x = 0.05 and 0.10 sam-
+ples. These values are almost two orders less than what is
+measured from Hall resistivity: 4.9 × 1018 cm–3 for x = 0.05
+and 9.5 × 1017 cm–3 for x = 0.10. We assume, therefore,
+signiﬁcant contributions from the bulk valence bands to the
+Hall resistivity measurements.
+The temperature- and ﬁeld-dependent SdH oscillation am-
+plitudes in the resistivity (	ρxx) were analyzed to yield
+transport parameters. According to the Lifshitz-Kosevich
+(LK) expression, the oscillation amplitude in 	ρxx is given
+by 	ρxx = ρT ρD,
+where ρT =
+2π2kBT
+¯hωc sinh 2π2kBT
+¯hωc
+, ρD = e−2π2kBTD
+¯hωc
+.
+TABLE I. Parameters obtained from SdH oscillation and fast Fourier transform (FFT) analysis.
+Obtained parameters
+x = 0.05
+x = 0.10
+Bi2Te3
+Fermi momentum kF (106 cm–1)
+0.93
+1.11
+3.4 (Refs. [27,30,45])
+Fermi cross section AF (1013 cm–2)
+0.27
+0.38
+3.63 (Ref. [45])
+Surface carrier concentration ns (1011 cm–2)
+0.68
+0.97
+9.5 (Refs. [27,45])
+Bulk carrier concentration nb (1016 cm–3)
+2.67
+4.56
+109 (Ref. [29])
+Fermi velocity vF (107 cm s–1)
+1.02
+1.22
+5.16 (Ref. [45])
+Dingle temperature TD (K)
+9.29
+9.9
+16 (Ref. [45])
+Carrier lifetime τ (10–13 s)
+1.31
+1.22
+0.56 (Ref. [45])
+Mean free path lSdH (nm)
+13.3
+14.9
+28 (Ref. [45])
+Mobility μs (cm2 V–1 s–1)
+2191
+2046
+1417 (Ref. [45])
+Cyclotron mass mc
+0.105me
+0.105me
+0.09 (Ref. [45])
+kFl
+1.23
+1.65
+6.5 (Ref. [30])
+115120-5SHAILJA SHARMA et al.
+PHYSICAL REVIEW B 105, 115120 (2022)
+FIG. 5. (a) Surface Brillouin zone (SBZ) with three high-symmetry points, ¯ (black), ¯M (red), and ¯K (blue). The ARPES spectra were
+measured along the green line, i.e., along the ¯ −¯M high-symmetry line in the SBZ. (b)–(f) The ARPES image plots of PdxBi2Te3 showing
+the rigid-band-like shift on Pd doping. (g)–(k) Energy distribution curves (EDCs) at the ¯-point (kx = 0). The EDC peak at the Dirac point can
+be ﬁtted with a single Lorentzian suggesting no energy gap.
+Here, ρT is the thermal damping factor and ρD is the Dingle
+damping factor, ωc = eH/mc is the cyclotron frequency, and
+TD is the Dingle temperature. In the Lifshitz-Kosevich theory,
+the thermal smearing of SdH oscillations is determined by
+the magnitude of cyclotron mass, mc. As the temperature
+increases, the ratio of thermal energy to the cyclotron energy
+increases leading to the decrease in amplitude of oscillations.
+A ﬁtting to the temperature-dependent SdH oscillation am-
+plitude shown in the inset of Figs. 4(a) and 4(c) at a ﬁxed
+magnetic ﬁeld H yields the cyclotron mass mc of ∼0.105 me
+for both x = 0.05 and 0.10. The effective mass obtained here
+is in fair agreement with the reported value ∼0.09me for
+undoped Bi2Te3 [27,29,30,45].
+The Dingle temperature (TD) is calculated from the ﬁeld
+dependence of the SdH oscillation amplitude at a ﬁxed tem-
+perature. It yields the same ﬁeld dependence as does the
+impurity scattering [46]. The Dingle plot is shown in the
+insets of Figs. 4(a) and 4(c), in which ln(	ρxxA sinh αT/H)
+against 1/H is plotted, where α = 2π2kBmc/¯he. A straight
+line ﬁt to this plot generates a slope that contains the Dingle
+temperature, given by −2π2kBmcTD/¯h. From TD, the quantum
+scattering lifetime τ for the carriers is calculated based on
+the relation ¯h
+τ = 2πkBTD. Then, we can further calculate the
+surface carrier mobility (μs = eτ/mc = elSdH/¯hkF ) and the
+mean free path (lSdH) of the surface carrier. The obtained
+lower Dingle temperature value implies weaker impurity scat-
+tering, which results in higher quantum mobility [46]. The
+calculated surface carrier mobility is less than that calculated
+from Hall measurement.
+To further study the topological properties of the surface
+states, we estimated the Berry phase value from the Landau
+level fan diagram, which is given by n = F/2πH + β, where
+n is the nth Landau level, F is the SdH oscillation period,
+and H is the magnetic ﬁeld. The inset of Figs. 4(b) and 4(d)
+shows the Landau level fan diagram plotted as the 1/H po-
+sitions of maxima and minima in the background-subtracted
+SdH oscillations in resistivity as a function of the integer
+values known as Landau indices. The minima in resistivity
+correspond to integer values n and the maxima correspond
+to n + 1/2. The zeroth Landau level can be extracted from
+the linear extrapolation of 1/H = 0, which gives n0 = 0.33
+and 0.35 for x = 0.05 and 0.10, respectively. The Berry phase
+ϕ = 2πβ is 0, β = 0, for the normal fermions, and π, β = 0.5
+for the Dirac fermions with the linear dispersion relation. The
+extracted values of n0 in our results are closer to 0.5, indi-
+cating that the oscillations arise from the topological surface
+states with a ﬁnite contribution from bulk states. Thus, the
+analysis of SdH oscillations provides evidence of the nonzero
+Berry phase for x = 0.05 and 0.10 samples, which indicates
+the existence of the TSSs.
+B. High-resolution ARPES measurements
+Figures 5(b)–5(f) represent the high-resolution ARPES im-
+age plots on PdxBi2Te3(0 ⩽x ⩽0.20) taken along the ¯ −¯M
+high-symmetry direction [Fig. 5(a)]. The energy distribution
+curves (EDCs) taken at the ¯ point are shown in Figs. 5(g)–
+5(k). The EDC peaks at the Dirac point can be ﬁtted by a
+115120-6MAGNETOTRANSPORT AND HIGH-RESOLUTION …
+PHYSICAL REVIEW B 105, 115120 (2022)
+FIG. 6. A set of constant energy contours at different energies
+(a) Bi2Te3, (b) Pd0.05Bi2Te3, and (c) Pd0.10Bi2Te3, respectively. The
+arrow indicates the position of the Dirac point. (d) The electron
+charge carrier density at the surface as a function of Pd doping
+concentration.
+single Lorentzian function suggesting the gapless TSS for
+PdxBi2Te3(0 ⩽x ⩽0.20) samples in agreement with nonzero
+Berry phase. One can see the Dirac conelike TSSs crossing the
+Fermi level as well as signals from the bulk valence-band pro-
+jections. In the case of pristine Bi2Te3, there exist electronlike
+conduction bands inside the TSSs for the upper part of the
+Dirac cone [6,7]. In this study, pristine Bi2Te3 is apparently
+n-type because the Fermi level intersects with the bulk con-
+duction band (Fig. S7 [16]); the electronlike conduction band
+is compatible with the negative Hall coefﬁcient in the bulk.
+It is clearly seen from Figs. 5(b)–5(f) that the initial ad-
+dition of Pd into the crystal leads to hole doping of the
+entire electronic structure, and both the TSSs and bulk derived
+valence states are shifted toward higher energy in a rigid-
+band-like manner. The energy shift continues up to x = 0.1
+and stops for x ⩾0.10. Note that bulk valence bands cross the
+Fermi level for the x ⩾0.1 samples, in agreement with the
+positive Hall coefﬁcient in the bulk. It should be noted that
+the topological surface state of x = 0.05 is well-isolated from
+the bulk band at EF, and the electric transport is governed
+by the surface state. On the other hand, for higher compo-
+sitions, the bulk valence bands go across EF, indicating that
+the contribution of the surface states might be masked by the
+bulk carriers in the transport properties. Note that other doped
+topological insulators AxBi2Se3 (Sr,Nb,Cu) are reported to
+show a downward shift of the Dirac point with an increase
+in dopant concentration [47–50]. The position- and time-
+dependent ARPES results on x = 0.10 and 0.20 are presented
+in the supplemental material (see Figs. S8 and S9 [16]). We
+found that the difference in energy is at most ∼8 meV. In the
+case of the pristine sample (Bi2Te3), the energy deviation was
+below the detection limit. These results indicate the magnitude
+of the homogeneity. After 24 h of cleavage, the DP was shifted
+to lower energy, likely due to the adsorption of residual gas on
+the sample surface.
+In Figs. 6(a)–6(c), on moving toward the lower binding
+energy (i.e., from the EF to the Dirac point), the shape of
+the constant energy contour for Bi2Te3 changes from starlike
+TABLE II. Parameters obtained from ARPES measurements
+along the ¯ −¯M high-symmetry direction.
+Parameters
+x = 0
+x = 0.05
+x = 0.10
+kF (106 cm–1)
+14
+7.2
+4.2
+AF (1013 cm–2)
+62
+16
+5.5
+n2D,TSS (1012 cm–2)
+16
+4.1
+1.4
+vF (107 cm s–1)
+3.1
+4.0
+3.1
+m∗
+0.52me
+0.21me
+0.15me
+ (meV)
+16
+4.1
+τ (10–13 s)
+0.42
+1.5
+MDC linewidth: δk (Å–1)
+0.006
+0.002
+Mean free path l (nm)
+17
+50
+to a circle upon decreasing the cross-section area, whereas
+for Pd-doped samples it is already a rounded hexagon at EF.
+Figure 6(d) shows the surface charge carrier density as a
+function of the Pd concentration. The initial Pd doping leads
+to a rapid reduction of carrier density of the TSS up to a
+value of x = 0.1. After that the TSS density remains es-
+sentially unchanged. The saturation of the doping level of
+the TSSs above x = 0.1 where the valence-band maximum
+(VBM) starts to cross the Fermi level. One can expect a signif-
+icant contribution from the bulk valence band for the x ⩾0.1
+sample.
+To evaluate the kF value, we ﬁt the momentum distribution
+curve (MDC) at the Fermi level using the Voigt function (see
+Fig. S10 [16]) [51]. As a result, we can estimate the charge
+carrier density n2D, TSS =
+πk2
+F
+(2π)2 for the TSSs. The Fermi ve-
+locity (vF) and effective mass (m∗) were determined by using
+the formula vF = 1
+¯h ( ∂E
+∂k )k=kF and m∗= ¯hkF
+vF , respectively. We
+have also evaluated the linewidth Г = (	E) = ( ∂E
+∂k ) × (δk)
+and relaxation time τ = ћ
+Г using the MDC width δk, which
+is a Lorentzian linewidth in the Voigt function (the Gaussian
+linewidth represents the instrumental resolution) [51–53]. It
+should be noted that the ARPES linewidth at EF is sensitive
+to the lattice defects, and the observed linewidths for all our
+compositions are among the narrowest for the reported doped
+topological insulators [6,18–24]. Table II represents the pa-
+rameters obtained for the TSSs only.
+IV. DISCUSSION
+Now, we compare results obtained from the SdH oscillation
+and ARPES measurements. The Fermi wave number obtained
+from the SdH oscillation is almost identical for x = 0.05 and
+0.10 samples, kF ∼1 × 106 cm–1, and the values are smaller
+by a factor of 1/7 (x = 0.05) and 1/4 (x = 0.10) in compar-
+ison to that obtained from ARPES results. The reduction in
+the kF value obtained from magnetotransport is likely due to
+the band bending induced by the Schottky barrier leading to
+the shifting of the Fermi level toward the Dirac point. We
+assume the band bending is saturated if the valence band
+crosses the Fermi level, as shown in Fig. 5. Based on the
+observed Fermi surfaces by ARPES, one can clearly see that
+the Fermi surface area for the Pd-doped samples is reasonably
+115120-7SHAILJA SHARMA et al.
+PHYSICAL REVIEW B 105, 115120 (2022)
+approximated by AF
+= πk2
+F. Since the area and surface
+carrier density are in proportion to k2
+F, the ARPES results yield
+values that are 16 (=42) to 49 (=72) times larger compared
+with the magnetotransport measurements. On the other hand,
+the cyclotron mass, mc ∼0.1me for x = 0.05 and 0.10 sam-
+ples, obtained from the SdH oscillation is close to the effective
+mass m∗∼0.2me evaluated in the ARPES experiments. We
+assume that the effective mass given by SdH and ARPES is
+similar in spite of the difference in the kF value because of
+the linearity of the band dispersion of the TSSs. Furthermore,
+we should note that the mean free path, l = vFτ = 13–15 nm,
+obtained from the SdH oscillation is close to the values
+l = 1/δk = vFτ = 17–50 nm evaluated from ARPES. As the
+Berry phase is closer to π, we assume that the parameters
+obtained by the SdH oscillation derive mainly from the TSSs,
+while the carrier density is likely reduced due to the band
+bending.
+It is important to note the difference in these two measure-
+ments. While the TSSs on the surface are directly observed
+by ARPES, the metal-semiconductor contacts are inevitable
+for the transport measurements. The Schottky barrier induces
+band bending at the interface, which modiﬁes the energy
+position of the Dirac point location in the near surface region
+[18,54]. Therefore, the Fermi wave number may be modiﬁed
+in the SdH oscillation measurements, and hence the sur-
+face carrier density. Furthermore, the SdH oscillation provide
+parameters averaged over the Fermi surface, while ARPES
+results are along the ¯ −¯M high-symmetry direction. We
+should note, however, that the anisotropy of the Fermi surface
+shape is reduced for doped samples (x > 0.05). Furthermore,
+the ARPES signals are obtained from the beam spot size
+of <10 μφ, while SdH oscillation signals are averaged over
+∼1 mm2 samples.
+V. CONCLUSION
+We have presented the effect of Pd doping on the magneto-
+transport and electronic properties of Bi2Te3 crystals. We have
+shown the evolution of various electronic parameters such as
+lifetime and mean free path of carriers at the Fermi level ob-
+tained through the ARPES and SdH oscillations studies. The
+observation of SdH oscillations, weak antilocalization, and the
+nonzero Berry phase in magnetotransport studies clearly in-
+dicated the contribution from topologically nontrivial surface
+states. The Dirac conelike surface states in ARPES conﬁrm
+that PdxBi2Te3 retains its topological properties upon Pd
+doping. Hall measurement shows the crossover from n-type
+charge carriers in undoped Bi2Te3 to p-type charge carriers
+upon Pd doping in the bulk. This is consistent with the ARPES
+results, in which both the Dirac cone and bulk derived valence
+states are pushed toward the Fermi level upon the addition of
+Pd. In addition to the energy shift of the Dirac point, quasi-
+particle properties such as the effective mass and the mean
+free path are consistent with the SdH oscillation and ARPES
+measurements, which are consistent with the linearity of the
+band dispersion of the TSS.
+ACKNOWLEDGMENTS
+S.S. acknowledges IIT Mandi for an HTRA fellowship.
+C.S.Y. acknowledges the experimental facility at AMRC,
+IIT Mandi. G.S. acknowledges funding from SERB Grant
+No. SRG/2020/000134. The ARPES measurements were
+performed with the approval of the Proposal Assessing
+Committee of the Hiroshima Synchrotron Radiation Center
+Hiroshima University, Japan (Proposal No. 19BU009). We
+thank N-BARD, Hiroshima University for supplying the liq-
+uid helium.
+[1] J. E. Moore, Nature (London) 464, 194 (2010).
+[2] Y. Ando, J. Phys. Soc. Jpn. 82, 102001 (2013).
+[3] M. Z. Hasan and C. L. Kane, Rev. Mod. Phys. 82, 3045
+(2010).
+[4] J. G. Analytis, R. D. McDonald, S. C. Riggs, J.-H. Chu, G. S.
+Boebinger, and I. R. Fisher, Nat. Phys. 6, 960 (2010).
+[5] M. Veldhorst, M. Snelder, M. Hoek, C. G. Molenaar, D. P.
+Leusink, A. A. Golubov, H. Hilgenkamp, and A. Brinkman,
+Phys. Status Solidi Rapid Res. Lett. 7, 26 (2013).
+[6] Y. L. Chen, J. G. Analytis, J. H. Chu, Z. K. Liu, S. K. Mo, X. L.
+Qi, H. J. Zhang, D. H. Lu, X. Dai, Z. Fang et al., Science 325,
+178 (2009).
+[7] Z. Alpichshev, J. G. Analytis, J. H. Chu, I. R. Fisher, Y. L. Chen,
+Z. X. Shen, A. Fang, and A. Kapitulnik, Phys. Rev. Lett. 104,
+016401 (2010).
+[8] D.-X. Qu, Y. S. Hor, J. Xiong, R. J. Cava, and N. P. Ong, Science
+329, 821 (2010).
+[9] R. J. Cava, H. Ji, M. K. Fuccillo, Q. D. Gibson, and Y. S. Hor,
+J. Mater. Chem. C 1, 3176 (2013).
+[10] I. T. Witting, T. C. Chasapis, F. Ricci, M. Peters, N. A. Heinz,
+G. Hautier, and G. J. Snyder, Adv. Electron. Mater. 5, 1800904
+(2019).
+[11] J. Zhang, S. Zhang, P. Kong, L. Yang, C. Jin, Q. Liu, X. Wang,
+and J. Yu, J. Appl. Phys. 123, 125901 (2018).
+[12] J. L. Zhang, S. J. Zhang, H. M. Weng, W. Zhang, L. X. Yang,
+Q. Q. Liu, S. M. Feng, X. C. Wang, R. C. Yu, L. Z. Cao et al.,
+Proc. Natl. Acad. Sci. (U.S.A.) 108, 24 (2011).
+[13] C. Zhang, L. Sun, Z. Chen, X. Zhou, Q. Wu, W. Yi, J. Guo, X.
+Dong, and Z. Zhao, Phys. Rev. B 83, 140504(R) (2011).
+[14] Y. S. Hor, J. G. Checkelsky, D. Qu, N. P. Ong, and R. J. Cava,
+J. Phys. Chem. Solids 72, 572 (2011).
+[15] Amit and Y. Singh, J. Supercond, Nov. Magn. 29, 1975 (2016).
+[16] See Supplemental Material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.105.115120 for rietveld analysis, elemental
+analysis, magnetization and transport data, and ARPES analy-
+sis.
+[17] H. Iwasawa, E. F. Schwier, M. Arita, A. Ino, H. Namatame, M.
+Taniguchi, Y. Aiura, and K. Shimada, Ultramicroscopy 182, 85
+(2017).
+[18] C. Chen, S. He, H. Weng, W. Zhang, L. Zhao, H. Liu, X. Jia, D.
+Mou, S. Liu, J. He et al., Proc. Natl. Acad. Sci. (U.S.A.) 109,
+3694 (2012).
+[19] Y. Okada, C. Dhital, W. Zhou, E. D. Huemiller, H. Lin, S.
+Basak, A. Bansil, Y.-B. Huang, H. Ding, Z. Wang et al., Phys.
+Rev. Lett. 106, 206805 (2011).
+[20] W. Jung, Y. Kim, B. Kim, Y. Koh, C. Kim, M. Matsunami, S.-i.
+Kimura, M. Arita, K. Shimada, J. H. Han et al., Phys. Rev. B
+84, 245435 (2011).
+115120-8MAGNETOTRANSPORT AND HIGH-RESOLUTION …
+PHYSICAL REVIEW B 105, 115120 (2022)
+[21] L. Fu, Phys. Rev. Lett. 103, 266801 (2009).
+[22] P.-Y. Chuang, S.-H. Su, C.-W. Chong, Y.-F. Chen, Y.-H. Chou,
+J.-C.-A. Huang, W.-C. Chen, C.-M. Cheng, K.-D. Tsuei, C.-H.
+Wang et al., RSC Adv. 8, 423 (2018).
+[23] M. Michiardi, I. Aguilera, M. Bianchi, V. E. de Carvalho, L. O.
+Ladeira, N. G. Teixeira, E. A. Soares, C. Friedrich, S. Blügel,
+and P. Hofmann, Phys. Rev. B 90, 075105 (2014).
+[24] H.-J. Kim, K.-S. Kim, J.-F. Wang, V. A. Kulbachinskii, K.
+Ogawa, M. Sasaki, A. Ohnishi, M. Kitaura, Y.-Y. Wu, L. Li
+et al., Phys. Rev. Lett. 110, 136601 (2013).
+[25] A. M. Black-Schaffer and A. V. Balatsky, Phys. Rev. B 86,
+115433 (2012).
+[26] K. Shrestha, M. Chou, D. Graf, H. D. Yang, B. Lorenz, and C.
+W. Chu, Phys. Rev. B 95, 195113 (2017).
+[27] K. Shrestha, V. Marinova, B. Lorenz, and C. W. Chu, J. Phys.:
+Condens. Matter 30, 185601 (2018).
+[28] X. Wang, Y. Du, S. Dou, and C. Zhang, Phys. Rev. Lett. 108,
+266806 (2012).
+[29] A. Singh, S. Kumar, M. Singh, P. Singh, R. Singh, V. K.
+Gangwar, A. Lakhani, S. Patil, E. F. Schwier, T. Matsumura
+et al., J. Phys.: Condens. Matter 32, 305602 (2020).
+[30] S. Barua, K. P. Rajeev, and A. K. Gupta, J. Phys.: Condens.
+Matter 27, 015601 (2015).
+[31] C. Shekhar, A. K. Nayak, Y. Sun, M. Schmidt, M. Nicklas, I.
+Leermakers, U. Zeitler, Y. Skourski, J. Wosnitza, Z. Liu et al.,
+Nat. Phys. 11, 645 (2015).
+[32] F. Y. Yang, K. Liu, K. Hong, D. H. Reich, P. C. Searson, and C.
+L. Chien, Science 284, 1335 (1999).
+[33] A. Narayanan, M. D. Watson, S. F. Blake, N. Bruyant, L. Drigo,
+Y. L. Chen, D. Prabhakaran, B. Yan, C. Felser, T. Kong et al.,
+Phys. Rev. Lett. 114, 117201 (2015).
+[34] T. Liang, Q. Gibson, M. N. Ali, M. Liu, R. J. Cava, and N. P.
+Ong, Nat. Mater. 14, 280 (2015).
+[35] R. Xu, A. Husmann, T. F. Rosenbaum, M. L. Saboungi, J.
+E. Enderby, and P. B. Littlewood, Nature (London) 390, 57
+(1997).
+[36] C. Shekhar, S. Ouardi, A. K. Nayak, G. H. Fecher, W. Schnelle,
+and C. Felser, Phys. Rev. B 86, 155314 (2012).
+[37] L. P. He, X. C. Hong, J. K. Dong, J. Pan, Z. Zhang, J. Zhang,
+and S. Y. Li, Phys. Rev. Lett. 113, 246402 (2014).
+[38] W. E. Liu, E. M. Hankiewicz, and D. Culcer, Materials (Basel)
+10, 807 (2017).
+[39] S. Hikami, A. I. Larkin, and Y. Nagaoka, Prog. Theor. Phys. 63,
+707 (1980).
+[40] B. A. Assaf, T. Cardinal, P. Wei, F. Katmis, J. S. Moodera, and
+D. Heiman, Appl. Phys. Lett. 102, 012102 (2013).
+[41] C. Shekhar, C. E. ViolBarbosa, B. Yan, S. Ouardi, W. Schnelle,
+G. H. Fecher, and C. Felser, Phys. Rev. B 90, 165140 (2014).
+[42] Y. S. Kim, M. Brahlek, N. Bansal, E. Edrey, G. A. Kapilevich,
+K. Iida, M. Tanimura, Y. Horibe, S.-W. Cheong, and S. Oh,
+Phys. Rev. B 84, 073109 (2011).
+[43] J. Chen, H. J. Qin, F. Yang, J. Liu, T. Guan, F. M. Qu, G. H.
+Zhang, J. R. Shi, X. C. Xie, C. L. Yang et al., Phys. Rev. Lett.
+105, 176602 (2010).
+[44] H.-T. He, G. Wang, T. Zhang, I.-K. Sou, G. K. L. Wong, J.-N.
+Wang, H.-Z. Lu, S.-Q. Shen, and F.-C. Zhang, Phys. Rev. Lett.
+106, 166805 (2011).
+[45] S.-M. Huang, S.-Y. Lin, J.-F. Chen, C.-K. Lee, S.-H. Yu, M. M.
+C. Chou, C.-M. Cheng, and H.-D. Yang, J. Phys. D 49, 255303
+(2016).
+[46] D. Shoenberg, Magnetic Oscillations in Metals (Cambridge
+University Press, Cambridge, 1984).
+[47] C. Q. Han, H. Li, W. J. Chen, F. Zhu, M.-Y. Yao, Z. J. Li, M.
+Wang, B. F. Gao, D. D. Guan, C. Liu et al., Appl. Phys. Lett.
+107, 171602 (2015).
+[48] K. Kobayashi, T. Ueno, H. Fujiwara, T. Yokoya, and J.
+Akimitsu, Phys. Rev. B 95, 180503(R) (2017).
+[49] L. A. Wray, S. Xu, Y. Xia, D. Qian, A. V. Fedorov, H. Lin,
+A. Bansil, L. Fu, Y. S. Hor, R. J. Cava et al., Phys. Rev. B 83,
+224516 (2011).
+[50] Y. Tanaka, K. Nakayama, S. Souma, T. Sato, N. Xu, P. Zhang,
+P. Richard, H. Ding, Y. Suzuki, P. Das et al., Phys. Rev. B 85,
+125111 (2012).
+[51] J. Jiang, K. Shimada, H. Hayashi, H. Iwasawa, Y. Aiura, H.
+Namatame, and M. Taniguchi, Phys. Rev. B 84, 155124 (2011).
+[52] X. Y. Cui, K. Shimada, Y. Sakisaka, H. Kato, M. Hoesch, T.
+Oguchi, Y. Aiura, H. Namatame, and M. Taniguchi, Phys. Rev.
+B 82, 195132 (2010).
+[53] H. Hayashi, K. Shimada, J. Jiang, H. Iwasawa, Y. Aiura, T.
+Oguchi, H. Namatame, and M. Taniguchi, Phys. Rev. B 87,
+035140 (2013).
+[54] Y.-J. Hao, P. Liu, Y. Feng, X.-M. Ma, E. F. Schwier, M. Arita, S.
+Kumar, C. Hu, R. E. Lu, M. Zeng et al., Phys. Rev. X 9, 041038
+(2019).
+115120-9

@@ -1,0 +1,1108 @@
+PHYSICAL REVIEW B 99, 144309 (2019)
+Editors’ Suggestion
+Phonon dispersion in MoS2
+Hans Tornatzky,1,* Roland Gillen,2 Hiroshi Uchiyama,3 and Janina Maultzsch2,†
+1Institut für Festkörperphysik, Technische Universität Berlin Hardenbergstr. 36, 10623 Berlin, Germany
+2Department Physik, Friedrich-Alexander-Universität Erlangen-Nürnberg, Staudtstr. 7, 91058 Erlangen, Germany
+3Japan Synchrotron Radiation Research Institute (JASRI/SPring-8), 1-1-1 Kouto, Sayo, Hyogo 679-5198 Japan
+(Received 15 November 2018; revised manuscript received 1 April 2019; published 24 April 2019)
+We present the phonon dispersion of bulk MoS2 in the high-symmetry directions of the Brillouin zone,
+determined by inelastic x-ray scattering. Our results underline the two-dimensional nature of MoS2. In
+combination with state-of-the-art ﬁrst-principles calculations, we determine the phonon displacement patterns,
+symmetry properties, and scattering intensities. The results will be the basis for future experimental and
+theoretical work regarding electron-phonon interactions, intervalley scattering, as well as phonons in related
+2D materials.
+DOI: 10.1103/PhysRevB.99.144309
+I. INTRODUCTION
+Lattice dynamics constitute one of the most fundamental
+properties of a crystal, being the basis for mechanical and elas-
+tic properties, thermal transport as well as charge-carrier dy-
+namics, phonon-assisted optical excitations, and many more.
+In this view, it is highly desired to have reliable data about
+the phonon dispersion relation of MoS2, a layered crystal that
+has boosted the new research ﬁeld of two-dimensional (2D)
+materials beyond graphene during recent years [1–5]. This is
+due to its fascinating physical properties in single-layer form,
+which it shares with related transition-metal dichalcogenides
+(TMDCs) like MoSe2, WS2, WSe2, or MoTe2 [6–9].
+Many of their physical processes relevant for new applica-
+tions [10,11], such as carrier and exciton dynamics [12–14],
+decay of so-called valley polarization [15–18] (the selective
+population of one of the two inequivalent K points in the
+Brillouin zone), and relaxation of spins [19,20], crucially
+depend on phonons. For example, phonons with considerably
+large wave vector are required for optical absorption and
+emission from the indirect band gap in few-layer and bulk
+TMDCs. They are the relevant source for electron scattering
+in electron transport [21] and are expected to play a signiﬁcant
+role in the formation of momentum-space indirect interlayer
+excitons in van-der-Waals heterostructures [22,23].
+In MoS2 and other TMDCs, however, experimental data
+on the full phonon dispersion are missing. Only one high-
+symmetry direction of the Brillouin zone in MoS2 has been
+accessed so far by inelastic neutron scattering (INS) [24].
+However, the part most relevant for scattering with large
+phonon wave vectors q or between the inequivalent points
+K and K′ (i.e., between the valleys) is completely missing
+and has been addressed by DFT calculations only so far, e.g.,
+in Refs. [25–27]. This is compounded by the dependence of
+the phonon frequencies on the employed exchange-correlation
+*ht07@physik.tu-berlin.de
+†janina.maultzsch@fau.de
+approximation, raising the question of the accuracy of the-
+oretical predictions for q ̸= 0. The same holds for the other
+TMDCs, which have in common, as an obstacle for INS
+experiments, the in-plane nature of the phonon dispersion and
+the lack of large single crystals.
+Here we present the entire phonon dispersion relation
+of MoS2 in the high-symmetry directions -K, -M, K-M,
+and -A of the Brillouin zone as determined by inelastic
+x-ray scattering (IXS) experiments. We show the existence
+of almost degenerate Davydov pairs throughout the Brillouin
+zone, as well as nearly quadratic dispersion of the out-of-
+plane acoustic modes (ﬂexural modes), underlining the two-
+dimensional nature of MoS2. We further present density-
+functional theory (DFT) calculations with implemented van-
+der-Waals correction and simulations of the structure factor,
+which determines the scattering intensities. They are in ex-
+cellent agreement with the experimental data and reveal the
+mixing of in-plane and out-of-plane phonon displacement
+directions inside the Brillouin zone.
+II. METHODS
+A. Experimental setup
+Our inelastic x-ray spectra were recorded at beamline
+35XU at the SPring-8 (Japan). A beam with a photon energy
+of 17.7935 keV with a spectral width of ≲3 meV (full width
+of half maximum, FWHM) was obtained by using a liquid-
+nitrogen cooled Si (111) high heat load premonochromator,
+reducing the FWHM to ≈1 eV. The ﬁnal width was created
+with a near-backscattering main monochromator of which the
+Si (999) reﬂex was used. The beam was then focused onto
+the sample with a spot size of 75 × 63μm2, enabling us to
+select a single crystalline domain of the bulk MoS2 crystal.
+The scattered photons were analyzed by an array of 3 × 4
+bent Si (111) analyzers, attached to the 10 m monochromator
+arm. A detailed description of the beamline can be found in
+Ref. [28].
+The measurements were performed by keeping the scat-
+tering wave vector Q (and thereby the phonon wave vector
+2469-9950/2019/99(14)/144309(13)
+144309-1
+©2019 American Physical SocietyHANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+q) constant and scan the energy by varying the temperature
+of the backscattering main monochromator. The twelve an-
+alyzers were kept at a ﬁxed energy (i.e., temperature). To
+verify that no signiﬁcant energy shifts of analyzers and main
+monochromator have occurred, Stokes-anti-Stokes pairs of
+inelastically scattered photons were measured between most
+of the energy scans. The measurements were performed in
+reﬂection geometry for A longitudinal and all out-of-plane
+transverse modes and in transmission for M, K, and KM
+longitudinal and in-plane transverse modes. To record signal
+from low-intensity modes, momentum resolution was set to
+0.75 nm−1.
+The sample is a synthesized crystal (HQ graphene, Nether-
+lands) with a thickness of about 150 μm to match the at-
+tenuation length of the used x rays in MoS2, yielding the
+best tradeoff between high absorption and low scattering in a
+transmission setup. All measurements were taken in ambient
+conditions.
+B. Computational approach
+We calculated the theoretical phonon band structure within
+the frame of density functional perturbation theory (DFPT)
+on the level of the generalized gradient approximation in the
+Perdew-Burke-Ernzerhof ﬂavor [29] (GGA-PBE) as imple-
+mented into the QUANTUM ESPRESSO suite [30]. Long-range
+noncovalent interactions were included through the semiem-
+pirical DFT-D3 correction with Becke-Johnson damping [31],
+ED3 = 1
+2
+
+A
+
+B
+
+CAB
+6
+s6
+R6
+AB + f 6 + CAB
+8
+s8
+R8
+AB + f 8
+
+,
+where RAB is the distance between atom A in a central unit
+cell and atom B in the crystal. We included all atoms within a
+cutoff distance of 100 Å from the center of the central unit cell
+in the sum over B. CAB
+n
+is the nth order dispersion coefﬁcient
+for the pair of atoms A and B. f = a1R0
+AB + a2 is a damp-
+ing constant, with a ‘covalent distance’ R0
+AB =
+
+CAB
+8 /CAB
+6
+[31]. Here, we used our own set of parameters (s6 = 1.0,
+s8 = 0.9184, a1 = 0.5484, a2 = 2.156 Å), which was ﬁtted
+to reproduce the experimental lattice constants of a wide
+variety of layered and bulk materials and had been used previ-
+ously [22,32,33] with great success. The Mo(3s, 3p, 3d, 4s)
+and the S(3s, 3p) states were treated as valence electrons
+using multiprojector optimized normconserving Vanderbildt
+(ONCV) pseudopotentials [34,35] with a cutoff of 120 Ry. All
+reciprocal space integrations were performed by a discrete q
+point sampling of 12 × 12 × 4 q points in the Brillouin zone.
+We fully optimized the atomic positions and cell parameters
+until the residual forces between atoms and the cell stress
+were smaller than 0.001 eV/Å and 0.01 GPa, respectively.
+The threshold for the total energy was set to 10−14 Ry,
+which ensured tightly converged interatomic forces for the
+geometry optimization and of the ground state density and
+wave functions for the DFPT calculations. The phonon band
+structure was obtained through Fourier interpolation using
+the explicitly calculated phonon frequencies on a regular grid
+of 12 × 12 × 4 q points. The contributions to the dynamical
+matrix from the D3 corrections were fully included in the
+phonon calculations.
+FIG. 1. (a) Experimental IXS spectra of MoS2 along the -M
+direction (in the vicinity of the (0 0 12) Bragg reﬂection) with vertical
+offsets corresponding to the phonon q vector. The four spectra
+closest to  are scaled by the factor given next to the spectrum.
+(b) Extracted peak positions of the spectra shown in (a). Peaks are
+labeled according to their symmetry and notation at the  point.
+III. RESULTS AND DISCUSSION
+2H-MoS2 forms a hexagonal crystal with space group
+P63/mmc (D4
+6h in Schönﬂieß notation) with six atoms in the
+unit cell, giving rise to 18 phonon branches. At the  point, the
+phonon modes decompose into the irreducible representations
+2H = A1g ⊕2A2u ⊕2B2g ⊕B1u ⊕E1g ⊕2E1u ⊕2E2g ⊕E2u
+for the conventional deﬁnition of a 120◦angle between the in-
+plane lattice vectors [38,39]. Due to the relatively weak non-
+covalent coupling of the MoS2 layers, the phonon branches
+are nearly doubly degenerate at almost all q vectors in the
+Brillouin zone and correspond to the nine phonon branches
+of single-layer MoS2 (three atoms per unit cell, space group
+P¯6m2, D3h).
+In Fig. 1(a), a selection of the measured IXS spectra is plot-
+ted. The displayed spectra were measured along (0 0+q 12),
+with the absolute value of the phonon wave vector |q| = q =
+0 . . . 0.5 in units of the reciprocal lattice vector. Here, (h k l)
+are the Miller indices identifying the scattering vector of the
+elastically scattered light, i.e., a Bragg peak. The extracted
+peak positions thus represent the dispersion of the out-of-
+plane transverse modes from  to M, see Fig. 1(b).
+The IXS measurements allowed us to identify all acoustic
+and almost all optical phonon branches along the A--K-M-
+directions as shown in Fig. 2. IXS data are shown by circles
+together with theoretical values from DFT calculations (lines).
+Phonon energies obtained by Raman spectroscopy of the same
+sample (stars in Fig. 2) complement the IXS results with data
+at the  point. We ﬁnd seamless agreement between the -
+point frequencies and the IXS data.
+In the experiment, we observe nine phonon branches. The
+calculations show that they are almost doubly degenerate,
+144309-2PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+FIG. 2. Inelastic x-ray scattering measurements and density-functional perturbation theory calculations of the phonon dispersion of MoS2
+along the high-symmetry directions A--K-M-. Circles in green/blue/red represent measurements probing phonons with an in-plane
+longitudinal (L)/in-plane transverse (T)/out-of-plane transverse (Z) component. For symbols without an error bar, the error is estimated
+to be smaller than the symbol size. Open symbols depict peaks with small intensities or larger error. Values at the  point are Raman and IR
+spectroscopy data from the literature [36–38] (diamonds) and from Raman measurements on the same sample as used in the IXS experiment
+(stars). Phonon branches are labeled by their symmetry within the D6h at the  point, as well as by their displacement (L, T, Z) and acoustic
+(A) or optical (O) character. For a symmetry labeling at the K and M points, see Table I; for a compilation of the eigenvectors see Appendix B.
+as expected from the weak interlayer forces. The energy
+resolution in the IXS experiment, however, does not allow
+us to distinguish these so-called Davydov pairs: Each pair is
+formed by two phonon modes, where the two layers forming
+the bulk unit cell (i) have both the same displacement pattern
+as the single layer and (ii) the displacement of one of the
+layers is shifted in phase by π. At the  point, one of the bulk
+modes of such a pair is always even with respect to spatial
+inversion and the other one is odd [36,38]. The frequency
+difference of the two phonons in a Davydov pair is very small
+if the interaction between the layers is weak. Only the acoustic
+phonons have fundamentally different behavior: One mode is
+still acoustic (zero frequency), whereas the other one has ﬁnite
+frequency and corresponds to a rigid-layer vibration at the 
+point.
+Near the  point, the phonon modes have well deﬁned dis-
+placement direction, i.e., in-plane longitudinal (L), in-plane
+transverse (T), and out-of-plane transverse (Z). This is seen
+by the color of the symbols representing the IXS data, which
+indicates the displacement direction preferentially detected in
+the given scattering geometry. Towards the K and M points,
+we observe data points with different colors (i.e., different
+preferred displacement directions) on the same branch, see for
+instance the longitudinal acoustic (LA) branch. We interpret
+this by an increased mixing of the displacement directions
+for increasing q. This is supported by our calculations of
+the phonon eigenvectors, see Fig. 3 for the example of the
+transverse E1g branch and Tables II–IV in Appendix B for a
+compilation of all 18 eigenvectors at the , K, and M points.
+Note that the mixing is not limited to the in-plane direction
+but includes the out-of-plane modes as well, in contrast to
+the example of graphite [40]. This mixing also explains why
+some of the phonon branches are only partially observed or
+show weak signal: For instance, the phonon branch with E1g
+symmetry at the  point (in-plane vibration) cannot be ob-
+served in the chosen scattering geometry (see also discussion
+below). However, it gains an out-of-plane component for q >
+0, see Fig. 3, which results in (weak) IXS signal. Furthermore,
+we observe a quadratic dispersion of the ZA branch (also
+called ﬂexural mode) near the  point, which is typical for
+FIG. 3. Transition of the phonon eigenvectors from the  to the
+M point of the branch with E1g (TO) symmetry at the  point.
+Appendix B for a complete overview of the phonon eigenvectors at
+the , K, and M points.
+144309-3HANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+TABLE I. Phonon frequencies (given in cm−1) of MoS2 at the , K, and M high-symmetry points from our DFT calculations and
+experiments (Raman and IR spectroscopy at  and IXS at K, M). n.a. – identiﬁes not active phonon modes in Raman and IR experiments. The
+phonon modes are labeled by their irreducible representations in the factor groups D6h (), D3h (K), and D2h (M). For a group theory analysis
+of phonons in MoS2, see also Ref. [39]. Lines connect phonons that belong to the same phonon branch.
+Γ (space group D4
+6h)
+K (D4
+3h)
+M (D17
+2h)
+Γ
+irr. rep.
+Raman
+IR
+DFT
+irr. rep. IXS
+DFT
+irr. rep. IXS
+DFT
+irr. rep.
+E1u
+TA
+n.a.
+→0
+0.0
+E
+186 183.1
+B1g 161 154.7
+E1u
+TA
+LA
+B2u
+158.7
+LA
+A2u ZA
+E
+189 186.0
+B1u 176 169.7
+A2u ZA
+E2g
+TO
+31 – 32  [37]
+a
+n.a.
+32.2
+B2g
+179.4
+E2g
+TO
+LO
+A2 239 232.5
+Ag 235 231.5
+LO
+B2g
+ZO
+n.a.
+56.6
+A1
+235.8
+B3u
+234.6
+B2g ZO
+E2u
+LO
+280.7
+E
+327 322.3
+B3g
+302.1
+E2u
+LO
+TO
+Au
+305.5
+TO
+E1g
+LO 286 – 289  [36,37]
+b
+283.3
+A2
+334 334.5
+B2g
+328.7
+E1g
+LO
+TO
+E
+334 335.9
+B1u 338 338.1
+TO
+E2g
+LO 383 – 384  [36,37]
+b
+379.2
+Ag 353 354.8
+E2g
+LO
+TO
+A1
+340 339.0
+B3u
+355.6
+TO
+E1u
+LO
+n.a.
+384 [36] 379.4
+E
+373 370.1
+B1g 361 361.4
+E1u
+LO
+TO
+380.4
+B2u 364 362.9
+TO
+B1u ZO
+n.a.
+401.3
+A2 384 376.7
+B1u 392 384.7
+B1u ZO
+A1g ZO 408 – 410  [36,37]
+b
+408.5
+A1
+379.4
+B2g
+386.0
+A1g ZO
+A2u ZO
+n.a.
+470 [36] 462.2
+E
+398 393.0
+Ag 410 406.6
+A2u ZO
+B2g
+ZO
+n.a.
+467.1
+B3u
+407.1
+B2g ZO
+aMeasured with 633 nm excitation.
+bMeasured with 457 nm excitation.
+two-dimensional atomically thin sheets [41] and underlines
+the 2D nature of the MoS2 layers even within the bulk
+crystal.
+One challenge for lattice-dynamics simulations in layered
+materials is the proper description of the effect of noncova-
+lent interactions, which bind the individual layers together.
+This is particularly relevant for the rigid-layer, low-frequency
+shear, and breathinglike modes in the vicinity of the 
+point, where the force constants are small and dominated
+by contributions from the noncovalent interlayer coupling.
+The commonly used local density approximation (LDA) to
+DFT appears to offer a consistently good agreement with
+experimental phonon frequencies for a wide range of lay-
+ered and bulk crystals but largely beneﬁts from its intrin-
+sic overbinding, which causes a hardening of the predicted
+phonons at the cost of signiﬁcantly lower-quality lattice
+constants.
+Therefore, we implemented the contributions from the
+popular DFT-D3 van-der-Waals corrections [31] to the dy-
+namical matrix [42] to the density functional perturbation
+theory code in the QUANTUM ESPRESSO package [30]. These
+semiempirical corrections introduce an additional attractive
+London-like interatomic potential, which compensates for the
+underbinding and intrinsic exponential decay of nonclassical
+interactions in the GGA-PBE exchange-correlation approx-
+imation [29] we used for our computations. The obtained
+lattice constants of a = 3.158 Å and c = 12.229 Å from our
+PBE+D3 calculations are close to the lattice constants of
+our MoS2 sample of aexp = 3.161 Å and cexp = 12.297 Å,
+suggesting a convincing description of both covalent and
+noncovalent interatomic bonding in MoS2, in agreement with
+previous studies [22,32,33].
+The inclusion of noncovalent interactions leads to a notice-
+able improvement for the values of the low-frequency modes
+close to the  point, which are signiﬁcantly underestimated
+in the GGA-PBE approximation without the D3 correction
+(not shown). Our calculated phonon dispersion is in excellent
+quantitative agreement with the IXS measurements for the
+acoustic and low-energy optical modes (Table I) and correctly
+describes the small ‘bumps’ in the dispersion of the Davydov
+pair of the LA-derived branch [E2g (LO, shear mode) and E1u
+(LA) at the  point] along -K-M-, see Fig. 2.
+We ﬁnd a small overestimation of our predicted frequen-
+cies of the out-of-plane acoustic (ZA) mode compared to the
+IXS measurements. While the deviation is within the margin
+of error in our measurements, we note that this mode is
+particularly difﬁcult to converge with the cutoff energy of the
+plane-wave expansion that we use in our calculations, due to
+the weak forces between the rigidly oscillating layers. This
+situation is similar to the ZA modes in graphite and layered
+boron nitride.
+For the higher-frequency modes, our PBE+D3 approach
+appears to perform slightly less well compared to the
+Raman measurements and the local-density approximation
+144309-4PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+results from Ref. [26], and systematically underestimates the
+frequencies of the Raman active modes by a few cm−1, see
+Table I. In general, the predictions from LDA calculations are
+somewhat higher than those from our PBE+D3 calculations,
+hence leading to a slightly better agreement between theory
+and the Raman and IXS measurements for the high-energy
+optical modes compared to PBE+D3 calculations, while the
+agreement for the acoustic and low-energy optical modes is
+worse. The good quality predictions of the optical modes
+appears to be consistent for a wide range of layered crystals
+but is to a certain extent fortuitous due the intrinsic overbind-
+ing of LDA causing a hardening of the predicted phonons at
+the cost of signiﬁcantly lower-quality lattice constants. The
+DFT-D3 method hence simultaneously offers an accurate de-
+scription of both vibronic and structural properties of layered
+MoS2 that goes beyond the capabilities of noncorrected local
+DFT approximations such as LDA, PBE, or PBEsol [43].
+An improved quantitative agreement over the full fre-
+quency range of MoS2 and similar layered materials hence re-
+quires an exchange-correlation approximation that predicts a
+stronger (weaker) in-plane covalent bonding than PBE (LDA)
+and sufﬁciently soft interlayer noncovalent interaction. Due
+to the generally attractive nature of the DFT-D3 corrections,
+a good description of both structural and vibronic properties
+would then require an exchange-correlation functional that
+slightly overestimates both in-plane and out-of-plane lattice
+constants. An alternative to semiempirical dispersion correc-
+tions might be an approach based on nonlocal van-der-Waals
+correlation functionals from the vdW-DF [44,45] or the VV10
+[46] families that are combined with the PBEsol functional
+or similar approximations, which are well suited for the
+description of lattice constants in extended systems.
+While we observed the phonon dispersion of eight of the
+nine Davydov pairs in the experiment, we were unable to
+access the almost degenerate branches derived from the two
+LO modes around 35 meV (E2u and E1g at the  point) in
+the -K and -M directions in our scattering geometries.
+In order to understand this, we simulated the dynamical
+structure factor [47,48] using data from our DFT calculations,
+see Appendix A for details. The simulations suggest that
+destructive interference of the counterphase oscillation of the
+sulfur sublayers in each MoS2 layer cause extinction of the
+structure factor for all q vectors along the -M and -K-M
+directions, if a Bragg peak (h k 0) is used.
+Using a Bragg peak (h k l) with a suitable out-of-plane
+component l ̸= 0 should lead to activation of the LO E1g
+and E2u branches, caused by symmetry breaking of the phase
+factors from the atomic positions, which lifts the destructive
+interference. The intensity can be enhanced through a wise
+choice of the Bragg peak such that it aligns the signs of
+the contributions from the atomic displacements and of the
+phase factors from the atomic positions. This is illustrated
+in Fig. 4(a) for simulated measurements at the Bragg peak
+(−2 4 2) in the direction (q 0 0). Further, our simulations cor-
+rectly reproduce the deactivation of the transverse E2u branch
+and activation of the longitudinal E1g branch in the vicinity
+of the K point that we observed in our IXS experiments near
+the (0 0 12) peak, see Fig. 4(b). This arises from a change
+of atomic displacement patterns of the longitudinal E2u and
+E1g modes from a pure in-plane to a pure out-of-plane nature
+(a)
+(h k l)=(-2 4 2)
+(b)
+(h k l)=(0 0 12)
+250
+300
+350
+400
+450
+Frequency (cm
+-1)
+Γ
+(0,0,0)
+(1/2,0,0)
+M
+(1/2,-1,0)
+M
+K
+(1/3,-2/3,0)
+E1g
+Γ
+(0,0,0)
+E2u
+FIG. 4. (a) Simulated dynamical structure factor illustrating the
+possible observation of the branches associated to the longitudinal
+E1g/E2u modes at the (−2 4 2) Bragg peak. (b) Simulation used for
+the assignment of the measured out-of-plane phonon energies at the
+(0 0 12) Bragg peak, showing the emergence of signiﬁcant scattering
+cross section for the longitudinal E1g/E2u branches around K.
+close to the K point, such that these modes behave similarly
+to the ZO modes. On the other hand, the transverse E2u and
+E1g modes adopt a mixed out-of-plane/in-plane nature in the
+middle of the -K and -M lines [thus coupling to the (0 0 12)
+Bragg peak] but revert back to a pure in-plane character in the
+vicinity of the K point, see Table III in Appendix B.
+An overview of the measured phonon frequencies, com-
+pared to Raman and IR spectroscopy data at the  point and to
+DFT calculation at the , K, and M points, is given in Table I.
+A detailed comparison of our IXS data with measurements
+performed by electron energy loss spectroscopy (EELS) [49]
+and inelastic neutron scattering (INS) [24] are given in the
+Supplemental Material [50].
+IV. CONCLUSIONS
+In conclusion, the complete phonon dispersion relation
+of MoS2 is determined experimentally in the high-symmetry
+directions of the Brillouin zone. In combination with DFT
+calculations, the data clearly show the 2D character of the
+lattice vibrations in this layered crystal. Therefore, the results
+are relevant for the monolayer form of MoS2 and isostructural
+TMDCs as well. In particular, the understanding of scattering
+processes involving phonons, such as in electron transport or
+optical transitions involving the indirect band gap or the two
+K valleys, will in future be based on the knowledge of the
+phonon dispersion relation.
+ACKNOWLEDGMENTS
+We thank Daniela Beiße, Marco Haupt, Andreas Ludewig,
+and Wolfgang Piper (TU Berlin) for the design and construc-
+tion of the sample holder and Johannes Enslin (TU Berlin)
+for preparative XRD measurements. Computational resources
+used for the simulations were provided by the HPC of the
+Regional Computer Centre Erlangen (RRZE). This work was
+supported by the SPring-8 under proposal number 2017B1738
+and by the Deutsche Forschungsgemeinschaft (DFG) within
+the Cluster of Excellence “Engineering of Advanced Materi-
+als” (project EXC 315) (Bridge Funding).
+144309-5HANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+APPENDIX A: SIMULATION OF IXS INTENSITIES
+To supplement our experimental data and obtain more
+insight into the observed relative scattering intensities, we
+simulated the dynamical structure factor of MoS2 for inelastic
+x-ray (and neutron) scattering. Following Ref. [47], we com-
+pute the one-phonon contribution to the dynamical structure
+factor for a reduced phonon wave vector q through
+S(q, ω)hkl ∝
+3Nat
+
+j
+
+
+d
+fd(Ghkl + q)
+√2Md
+e−Wd (Ghkl+q)(Ghkl + q)
+· eq jd ei(Ghkl+q)·xd2F DHO
+q j
+(ω),
+(A1)
+where xd and Md are the position and mass of atom d in the
+unit cell, respectively, eq jd is the displacement of atom d due
+to phonon mode j, and Ghkl is the reciprocal lattice vector
+corresponding to the Bragg peak (h k l). Nat is the number
+of atoms in the unit cell, e2Wd is the Debye-Waller factor of
+atom d, while fd is the wave-vector-dependent form factor
+and readily available in tabulated form.
+We approximate the spectral shape and temperature de-
+pendence of the structure factor due to electron-phonon and
+phonon-phonon scattering by a damped harmonic oscillator
+(DHO) model [48]
+F DHO
+q j
+(ω) =
+4ω
+π(1 −e¯hω/kBT )
+γq j
+
+ω2 −2
+q j
+2 + 4ω2γ 2
+q j
+,
+where ωq j and γq j are the angular frequency and linewidth
+of phonon mode j at wave vector q, respectively. 2
+q j =
+ω2
+q + γ 2
+q j is the effective frequency of the phonon mode. The
+Debye-Waller factor e2Wd is potentially important in our case
+as it might be different for different atoms/species and cause
+further qualitative differences of the phonon modes, e.g.,
+modes with smaller or larger oscillations of the molybdenum
+atoms, in terms of inelastic scattering of x rays. We thus
+explicitly included the Debye-Waller factor, with [47]
+Wd(Ghkl + q) =
+¯h
+4MdNq
+
+q
+3Nat
+
+j
+1
+ωq j
+(Ghkl + q) · eq jd
+2
+· coth
+ ¯hωq j
+2kBT ¯h
+
+,
+(A2)
+which requires a sum over Nq vectors in the ﬁrst Brillouin
+zone of the crystal. We found a negligible qualitative de-
+pendence of our results on Wd. Frequencies and normal-
+ized eigenvectors of the phonon modes for the calcula-
+tion of the dynamical structure factor were obtained from
+Fourier interpolation along the KM and M paths that we
+used in our IXS experiments. The integration over the ﬁrst
+Brillouin zone in Eq. (A2) was performed over a regular grid
+of 30 × 30 × 6 q points. The linewidth γq j could be derived
+ab initio from calculations of the contributions of electron-
+phonon and phonon-phonon coupling to the imaginary part
+of the phonon self-energy, for example using the EPW and
+D3 codes in the QUANTUM ESPRESSO package. However,
+for reasons of simplicity, we opted for using a value of
+0.05 cm−1 in our calculations instead. The simulated dynami-
+cal structure factors for the longitudinal and transverse optical
+modes corresponding to our experimental setups are shown
+in Fig. 5.
+In general, the simulated spectra are in good qualitative
+agreement with our experimental observations and explain the
+observed signals and relative intensities for the 12 included
+optical modes. In particular, our simulations correctly predict
+the branches associated to the longitudinal E2u and E1g modes
+at the  point around 35 meV to be inactive for most of
+the -K and -M directions in our experimental geometries
+[54]. This can be understood from the atomic displacement
+patterns in Tables II–IV. For these two branches, the two
+sulfur sublayers in each MoS2 vibrate in opposite phase,
+causing destructive interference in Eq. (A1). For wave vectors
+with a vanishing out-of-plane component, i.e., q = (qg1 qg2 0),
+the atomic displacements of the sulfur atoms remain perfectly
+in-plane for most of the -K and -M high-symmetry lines,
+and the contributions from the vibrating sulfur layers exactly
+cancel each other out. At the same time, the contributions to
+Eq. (A1) from the equilibrium atomic positions xd are equal
+for all sulfur atoms in a MoS2 layer for the out-of-plane com-
+ponent qz = 0. The dynamical structure factor hence vanishes,
+explaining our observations. As the contributions to the struc-
+ture factor within each MoS2 layer cancel, this result does not
+depend on the relative movement (in-phase or counterphase)
+of the two MoS2 layers that is the difference between the
+E2u and E1g modes at . From our simulations, it also does
+not depend on the Bragg peak used in the measurements
+as long as the z component of the phonon wave vector is
+zero.
+On the other hand, our DFT calculations suggest that the
+dispersion of the optical modes is very weak in the out-of-
+plane, i.e., -A direction. This feature could be exploited in
+order to gain experimental access to the full dispersion of
+the longitudinal E
+2u/E
+1g branches: A signiﬁcant out-of-plane
+component of the wave vector should break the symmetry of
+the vibration of the two sulfur sublayers in each of the MoS2
+layers and lift the destructive interference. Alternatively, one
+could attempt to break the symmetry of the contributions
+ei(Ghkl+q)·xd in Eq. (A1) from the equilibrium positions of the
+sulfur atoms by scattering the x rays off lattice planes (h k l)
+with l ̸= 0. Figure 6 shows the simulated dynamical structure
+factors for a selection of Bragg peaks in -M and “′-M′”
+(with an offset qz = 1
+4) direction. In all cases, breaking of
+the sulfur sublayer symmetry activates the longitudinal E
+1g
+or the longitudinal E
+2u. The similarity of the results for
+qz = 0 and qz = 1
+4 suggest that the activation mainly arises
+from a symmetry breaking of the phase factors from the
+equilibrium atomic positions, while the contribution from
+symmetry breaking of the displacement patterns is compar-
+atively small. Depending on the choice of Bragg peak used
+for IXS, the phase factors ei(Ghkl+q)·xd can cause destructive
+interference between the sulfur sublayers, hence lowering or
+even extinguishing the scattering intensity, or can cause con-
+structive interference. A choice of Bragg peak that properly
+aligns the signs of the phase factors from the equilibrium
+atomic positions with the signs of the corresponding con-
+tributions from the atomic displacement, (Ghkl + q) · eq jd,
+hence should make the longitudinal E2u and E1g branches
+144309-6PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+250
+300
+350
+400
+450
+(1/2,1/2,0)
+(1/3,1/3,0)
+(a)
+Frequency (cm
+-1)
+0
+21500
+Γ-K-M
+(hkl)=(1,1,0)
+(0,0,0)
+M
+K
+Γ
+250
+300
+350
+400
+450
+0
+11300
+M-Γ
+(hkl)=(2,0,0)
+(1/2,0,0)
+(0,0,0)
+Γ
+M
+(b)
+250
+300
+350
+400
+450
+0
+14300
+Γ-K-M
+(hkl)=(2,0,0)
+Frequency (cm
+-1)
+(c)
+(-1/2,1,0)
+M
+K
+(-1/3,2/3,0)
+(0,0,0)
+Γ
+250
+300
+350
+400
+450
+0
+13600
+M-Γ
+(hkl)=(1,1,0)
+(-1/2,1/2,0)
+(0,0,0)
+Γ
+M
+(d)
+250
+300
+350
+400
+450
+(e)
+0
+13550
+Γ-K-M
+(hkl)=(0,0,12)
+(1/2,-1,0)
+M
+K
+(1/3,-2/3,0)
+(0,0,0)
+Γ
+Frequency (cm
+-1)
+250
+300
+350
+400
+450
+0
+13600
+M-Γ
+(hkl)=(0,0,12)
+(0,1/2,0)
+(0,0,0)
+Γ
+M
+(f)
+FIG. 5. Simulated dynamical structure factors for the Bragg peaks and paths in reciprocal space used in our IXS experiments. The phonon
+dispersion of the optical branches from our DFT calculations is shown as an overlay (dashed lines). The intensity is given in arbitrary units and
+is meaningful for comparison of the relative scattering intensity between the different experimental geometries.
+experimentally accessible along the -K and -M paths in
+future experiments.
+This approach is not necessary for the transverse E
+2u and
+E
+1g branches. For these modes, the displacements of the
+sulfur atoms gain a signiﬁcant out-of-plane component for
+wave vectors away from the  point, which causes a natu-
+ral symmetry breaking of the contributions from the atomic
+displacement patterns. The two modes hence behave sim-
+ilarly to the ZO modes and contribute to IXS for a
+Bragg peak with an out-of-plane component, in case of our
+144309-7HANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+250
+300
+350
+400
+450
+(a)
+0
+5760
+M-Γ
+(hkl)=(2,-2,2)
+Frequency (cm
+-1)
+Γ
+(0,0,0)
+(1/2,0,0)
+M
+E1g
+E2u
+250
+300
+350
+400
+450
+(b)
+0
+10350
+M-Γ
+(hkl)=(2,2,2)
+Frequency (cm
+-1)
+Γ
+(0,0,0)
+(1/2,0,0)
+M
+250
+300
+350
+400
+450
+(c)
+0
+13000
+M-Γ
+(hkl)=(-2,4,2)
+Frequency (cm
+-1)
+Γ
+(0,0,0)
+(1/2,0,0)
+M
+250
+300
+350
+400
+450
+(d)
+0
+13000
+M'-Γ'
+(hkl)=(-2,4,2)
+Frequency (cm
+-1)
+(0,0,1/4)
+Γ'
+(1/2,0,1/4)
+M'
+FIG. 6. Dynamical structure factors for a selection of experimental geometries that might yield scattering contributions from the Davydov
+pair of branches associated to the longitudinal E2u and E1g modes at the  point, which we did not observe in our experiments (except near
+the K point). The scattering intensity shows a strong qualitative and quantitative dependence of the chosen Bragg peak, while the effect of
+symmetry breaking through an out-of-plane offset of the phonon wave vectors is small.
+experiments (k k l) = (0 0 12). As our simulations suggest,
+(k k l) = (2 2 2) or similar combinations of qg1 and qg2 suit-
+able for transverse modes might work as well or even better
+along the -K and -M direction. The situation reverses
+in the vicinity of the K point: Here, the transverse E2u
+and E1g modes revert back to completely in-plane displace-
+ment patterns, while the longitudinal modes evolve into pure
+out-of-plane vibrations, see Table III. This causes an ap-
+parent crossing of the transverse and longitudinal E
+2u and
+E
+1g branches close to the K point in both IXS experiments
+and the simulated dynamical structure factor in Fig. 5(e).
+However, the calculated dispersion and the evolution of
+the atomic displacement patterns along the -K path sug-
+gest that this apparent crossing is an actual anticrossing
+and that the scattering intensity is transferred from the
+(pseudo)transverse modes to the (pseudo)longitudinal modes
+in the vicinity of the K point.
+APPENDIX B: DISPLACEMENT PATTERNS AT , K,
+AND M HIGH-SYMMETRY POINTS
+Tables II–IV depict a compilation of displacement patterns
+at the high-symmetry points , K, and M, as derived from our
+DFT calculations. For each phonon the following information
+is given: the symmetry at the high-symmetry point and corre-
+sponding symmetry at the  point of the branch, along with
+its energy (in cm−1 and meV) and projections onto the planes
+depicted in the bottom right panel of Table II.
+144309-8PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+TABLE II. Phonon eigenvectors of MoS2 at the  point. Frames surround Davydov pairs. For each phonon the
+projections onto the planes depicted in the panel on the bottom right are shown.
+144309-9HANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+TABLE III. Eigenvectors of the MoS2 phonons at the K point. Layout according to Table II.
+144309-10PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+TABLE IV. Eigenvectors of the MoS2 phonons at the M point. Layout according to Table II.
+144309-11HANS TORNATZKY et al.
+PHYSICAL REVIEW B 99, 144309 (2019)
+[1] K. F. Mak, C. Lee, J. Hone, J. Shan, and T. F. Heinz, Phys. Rev.
+Lett. 105, 136805 (2010).
+[2] A. Splendiani, L. Sun, Y. Zhang, T. Li, J. Kim, C.-Y. Chim,
+G. Galli, and F. Wang, Nano Lett. 10, 1271 (2010).
+[3] X. Xu, W. Yao, D. Xiao, and T. F. Heinz, Nat. Phys. 10, 343
+(2014).
+[4] K. S. Novoselov, A. Mishchenko, A. Carvalho, and A. H. Castro
+Neto, Science 353, aac9439 (2016).
+[5] A. K. Geim and I. V. Grigorieva, Nature (London) 499, 419
+(2013).
+[6] D. Xiao, G.-B. Liu, W. Feng, X. Xu, and W. Yao, Phys. Rev.
+Lett. 108, 196802 (2012).
+[7] A. Chernikov, T. C. Berkelbach, H. M. Hill, A. Rigosi, Y. Li,
+O. B. Aslan, D. R. Reichman, M. S. Hybertsen, and T. F. Heinz,
+Phys. Rev. Lett. 113, 076802 (2014).
+[8] C. Poellmann, P. Steinleitner, U. Leierseder, P. Nagler, G.
+Plechinger, M. Porer, R. Bratschitsch, C. Schüller, T. Korn, and
+R. Huber, Nat. Mater. 14, 889 (2015).
+[9] A. M. Dubrovkin, B. Qiang, H. N. S. Krishnamoorthy, N. I.
+Zheludev, and Q. J. Wang, Nat. Commun. 9, 1762 (2018).
+[10] C. Liu, X. Yan, X. Song, S. Ding, D. W. Zhang, and P. Zhou,
+Nat. Nanotechnol. 13, 404 (2018).
+[11] J. Liu, A. Goswami, K. Jiang, F. Khan, S. Kim, R. McGee, Z.
+Li, Z. Hu, J. Lee, and T. Thundat, Nat. Nanotechnol. 13, 112
+(2018).
+[12] H. Jang, K. P. Dhakal, K. Joo, W. S. Yun, S. M. Shinde, X.
+Chen, S. M. Jeong, S. W. Lee, Z. Lee, J. Lee et al., Adv. Mater.
+30, 1705190 (2018).
+[13] M. Selig, G. Berghuser, A. Raja, P. Nagler, C. Schller, T. F.
+Heinz, T. Korn, A. Chernikov, E. Malic, and A. Knorr, Nat.
+Commun. 7, 13279 (2016).
+[14] C. Ruppert, A. Chernikov, H. M. Hill, A. F. Rigosi, and T. F.
+Heinz, Nano Lett. 17, 644 (2017).
+[15] R. Schmidt, G. Bergh’auser, R. Schneider, M. Selig, P.
+Tonndorf, E. Mali´c, A. Knorr, S. M. de Vasconcellos„ and R.
+Bratschitsch, Nano Lett. 16, 2945 (2016).
+[16] Y. Miyauchi, S. Konabe, F. Wang, W. Zhang, A. Hwang, Y.
+Hasegawa, L. Zhou, S. Mouri, M. Toh, G. Eda et al., Nat.
+Commun. 9, 2598 (2018).
+[17] H. Tornatzky, A.-M. Kaulitz, and J. Maultzsch, Phys. Rev. Lett.
+121, 167401 (2018).
+[18] K. F. Mak, K. He, J. Shan, and T. F. Heinz, Nat. Nanotechnol.
+7, 494 (2012).
+[19] L. Yang, N. A. Sinitsyn, W. Chen, J. Yuan, J. Zhang, J. Lou, and
+S. A. Crooker, Nat. Phys. 11, 830 (2015).
+[20] L. A. Benítez, J. F. Sierra, W. S. Torres, A. Arrighi, F. Bonell,
+M. V. Costache, and S. O. Valenzuela, Nat. Phys. 14, 303
+(2018).
+[21] X. Cui, G.-H. Lee, Y. D. Kim, G. Arefe, P. Y. Huang, C.-H.
+Lee, D. A. Chenet, X. Zhang, L. Wang, F. Ye et al., Nat.
+Nanotechnol. 10, 534 (2015).
+[22] R. Gillen and J. Maultzsch, Phys. Rev. B 97, 165306 (2018).
+[23] J. Kunstmann, F. Mooshammer, P. Nagler, A. Chaves, F. Stein,
+N. Paradiso, G. Plechinger, C. Strunk, C. Schller, G. Seifert
+et al., Nat. Phys. 14, 801 (2018).
+[24] N. Wakabayashi, H. G. Smith, and R. M. Nicklow, Phys. Rev.
+B 12, 659 (1975).
+[25] T. Wieting and M. Schlüter (eds.), Electrons and Phonons in
+Layered Crystal Structures (D. Reidel Publishing Company,
+Dordrecht, Boston, London, 1979).
+[26] A. Molina-Sánchez and L. Wirtz, Phys. Rev. B 84, 155413
+(2011).
+[27] C. Ataca, H. ¸Sahin, and S. Ciraci, J. Phys. Chem. C 116, 8983
+(2012).
+[28] A. Baron, Y. Tanaka, S. Goto, K. Takeshita, T. Matsushita, and
+T. Ishikawa, J. Phys. Chem. Solids 61, 461 (2000).
+[29] J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77,
+3865 (1996).
+[30] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C.
+Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo
+et al., J. Phys.: Condens. Matter 21, 395502 (2009).
+[31] S. Grimme, S. Ehrlich, and K. Goerigk, J. Comput. Chem. 32,
+1456 (2011).
+[32] R. Gillen and J. Maultzsch, IEEE J. Sel. Top. Quantum
+Electron. 23, 219 (2017).
+[33] C. Tyborski, R. Gillen, A. A. Fokin, T. V. Koso, N. A. Fokina,
+H. Hausmann, V. N. Rodionov, P. R. Schreiner, C. Thomsen,
+and J. Maultzsch, J. Phys. Chem. C 121, 27082 (2017).
+[34] D. R. Hamann, Phys. Rev. B 88, 085117 (2013).
+[35] M. J. van Setten, M. Giantomassi, E. Bousquet, M. J. Verstraete,
+D. R. Hamann, X. Gonze, and G.-M. Rignanese, Comput. Phys.
+Commun. 226, 39 (2018).
+[36] T. Wieting and J. Verble, Phys. Rev. B 3, 4286 (1971).
+[37] J. M. Chen and C. S. Wang, Solid State Commun. 14, 857
+(1974).
+[38] N. Scheuschner, R. Gillen, M. Staiger, and J. Maultzsch, Phys.
+Rev. B 91, 235409 (2015).
+[39] J. Ribeiro-Soares, R. M. Almeida, E. B. Barros, P. T. Araujo,
+M. S. Dresselhaus, L. G. Cançado, and A. Jorio, Phys. Rev. B
+90, 115438 (2014).
+[40] M. Mohr, J. Maultzsch, E. Dobardži´c, S. Reich, I. Miloševi´c,
+M. Damnjanovi´c, A. Bosak, M. Krisch, and C. Thomsen, Phys.
+Rev. B 76, 035439 (2007).
+[41] J. Carrete, W. Li, L. Lindsay, D. A. Broido, L. J. Gallego, and
+N. Mingo, Mat. Res. Lett. 4, 204 (2016).
+[42] B. Van Troeye, M. Torrent, and X. Gonze, Phys. Rev. B 93,
+144304 (2016).
+[43] J. P. Perdew, A. Ruzsinszky, G. I. Csonka, O. A. Vydrov, G. E.
+Scuseria, L. A. Constantin, X. Zhou, and K. Burke, Phys. Rev.
+Lett. 100, 136406 (2008).
+[44] M. Dion, H. Rydberg, E. Schröder, D. C. Langreth, and B. I.
+Lundqvist, Phys. Rev. Lett. 92, 246401 (2004).
+[45] K. Lee, E. D. Murray, L. Kong, B. I. Lundqvist, and D. C.
+Langreth, Phys. Rev. B 82, 081101(R) (2010).
+[46] O. A. Vydrov and T. Van Voorhis, Phys. Rev. Lett. 103, 063004
+(2009).
+[47] A. Q. R. Baron, J. Spectrosc. Soc. Jpn. 58, 205 (2009)(in
+Japanese), arXiv:0910.5764 (in English).
+[48] B. Fåk and B. Dorner, Physica 234–236, 1107 (1997).
+[49] P. A. Bertrand, Phys. Rev. B 44, 5745 (1991).
+[50] See Supplemental Material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.99.144309 for Raman spectroscopy of the
+sample used for IXS, a page-ﬁlling dispersion plot including
+the irreducible representations of all branches at the  (D6h), K
+(D3h), and M (D2h) points and a comparison with the preceding
+experimental data. The discussion in the Supplemental Material
+includes the additional Refs. [51–53].
+[51] H. Guo, Y. Sun, P. Zhai, J. Zeng, S. Zhang, P. Hu, H. Yao, J.
+Duan, M. Hou, and J. Liu, Nucl. Instrum. Methods Phys. Res.
+381, 1 (2016).
+144309-12PHONON DISPERSION IN MoS2
+PHYSICAL REVIEW B 99, 144309 (2019)
+[52] S. Mignuzzi, A. J. Pollard, N. Bonini, B. Brennan, I. S. Gilmore,
+M. A. Pimenta, D. Richards, and D. Roy, Phys. Rev. B 91,
+195411 (2015).
+[53] S. Reich, C. Thomsen, and J. Maultzsch, Carbon nanotubes:
+basic concepts and physical properties (Weinheim-VCH, Wein-
+heim, Germany, 2004).
+[54] For simplicity, we use the irreducible representations at the 
+point for labeling the entire branch inside the Brillouin zone.
+Where this is ambiguous, we add a superscript “” to empha-
+size that this labeling is strictly correct only at the  point. For a
+correct symmetry assignment at the K and M points, see Table
+I in the main text and Tables II, III, and IV in the appendix.
+144309-13

@@ -1,0 +1,596 @@
+PHYSICAL REVIEW B 90, 104412 (2014)
+Successive spin-ﬂop transitions of a N´eel-type antiferromagnet
+Li2MnO3 single crystal with a honeycomb lattice
+K. Balamurugan,1,2 Sang-Hyun Lee,1,3 Jun-Sung Kim,4 Jong-Mok Ok,4 Youn-Jung Jo,5 Young-Mi Song,6 Shin-Ae Kim,7
+E. S. Choi,8 Manh Duc Le,1,2 and Je-Geun Park1,2,*
+1Center for Correlated Electron Systems, Institute for Basic Science (IBS), Seoul 151-747, Korea
+2Department of Physics and Astronomy, Seoul National University, Seoul 151-747, Korea
+3Department of Physics, SungKyunKwan University, Suwon 440-746, Korea
+4Department of Physics, Pohang University of Science and Technology, Pohang 790-784, Korea
+5Department of Physics, Kyungpook National University, Daegu 702-701, Korea
+6National Center for Inter-University Research Facilities, Seoul National University, Seoul 151-747, Korea
+7Neutron Science Division, Korea Atomic Energy Research Institute, Daejeon 305-353, Korea
+8National High Magnetic Field Laboratory, Florida State University, Tallahassee, Florida 32310, USA
+(Received 14 February 2014; revised manuscript received 14 August 2014; published 15 September 2014)
+We have carried out high magnetic ﬁeld studies of single-crystalline Li2MnO3, a honeycomb lattice
+antiferromagnet. Its magnetic phase diagram was mapped out using magnetization measurements at applied
+ﬁelds up to 35 T. Our results show that it undergoes two successive meta-magnetic transitions around 9 T ﬁelds
+applied perpendicular to the ab plane (along the c∗axis). These phase transitions are completely absent in the
+magnetization measured with the ﬁeld applied along the ab plane. In order to understand this magnetic phase
+diagram, we developed a mean-ﬁeld model starting from the correct N´eel-type magnetic structure, consistent
+with our single crystal neutron diffraction data at zero ﬁeld. Our model calculations succeeded in explaining the
+two meta-magnetic transitions that arise when Li2MnO3 enters two different spin-ﬂop phases from the zero ﬁeld
+N´eel phase.
+DOI: 10.1103/PhysRevB.90.104412
+PACS number(s): 75.25.−j, 75.30.Et, 75.30.Kz
+I. INTRODUCTION
+The honeycomb lattice has the smallest number of (three)
+nearest neighbors that are possible for two-dimensional (2D)
+systems. Materials with the honeycomb lattice structure have
+attracted considerable interest over the years in the condensed
+matter community, not least for the discovery of massless
+Dirac fermions in graphene [1,2]. At the same time, a
+honeycomb lattice consisting of magnetic ions are the focus
+of some interesting ideas such as the Kitaev model [3],
+wherein frustrated, directional anisotropic nearest neighbor
+interactions yield a spin liquid ground state from which exotic
+quasiparticles called anyons may emerge. Moreover, these
+may serve as the basis for fault-tolerant quantum computers
+[4]. Another interesting quantum spin liquid phase was also
+reported for the Hubbard model on a honeycomb lattice [5],
+while a topological insulating state has been discussed in cases
+where the spin-orbit coupling (SOC) is sufﬁciently strong, such
+as Na2IrO3 [6,7].
+Honeycomb lattice compounds containing Ir4+ ions (such
+as Li2IrO3 and Na2IrO3), with a large SOC leading to an
+effective total angular momentum Jeff = 1/2 [8–12], have
+drawn both theoretical and experimental interests in recent
+years, as they are seen to be probable test beds for the Kitaev
+model. Nevertheless, these A2IrO3 compounds (with A = Li
+and Na) differ from the ideal Kitaev model in that isotropic
+Heisenberg exchange interactions, arising mainly from direct
+exchange between nearest neighbor Ir ions, compete with the
+directional anisotropic Kitaev interactions. The ground state
+of such a Heisenberg-Kitaev (HK) model may be one of two
+*jgpark10@snu.ac.kr
+spin-liquid or four long-range ordered phases depending on the
+relative strengths of the Kitaev and the Heisenberg interactions
+[13], while the A2IrO3 systems were identiﬁed to be long-range
+ordered zigzag-type antiferromagnets (AFMs) [14,15].
+In order to understand better the physics of the honeycomb
+lattice at a strong SOC limit, it can be a useful and, at the same
+time, an interesting exercise to investigate honeycomb lattice
+materials at a weak SOC limit. This is the approach we adopted
+here by examining thoroughly one such example, Li2MnO3,
+which also belongs to the “213” honeycomb structure family
+of compounds [16] with the general formula A2T MO3 [17].
+It crystallizes in the monoclinic C2/m space group. Due to its
+interesting electrochemical activity [18], Li2MnO3 has been
+widely studied for applications in Li batteries. Below the N´eel
+temperature, TN = 36.5 K, Li2MnO3 exhibits an antiferromag-
+netic ordering of the magnetic moments of Mn4+ ions [19].
+As shown in Fig. 1(a), it has an alternate stacking of a layer of
+Li(1)O6 octahedron occupying the center of a honeycomblike
+structure formed by MnO6 edge sharing octahedrons and
+another layer of Li(2)O6 and Li(3)O6 edge sharing octahe-
+drons. The Mn4+ ions in Li2MnO3 occupying the centers
+of MnO6 octahedrons set up a modiﬁed honeycomb lattice
+network (in the top and bottom ab planes) which fairly mimics
+the 2D-honeycomb lattice structure of graphene. Therefore,
+both Mn-O-Mn superexchange and Mn-Mn Heisenberg direct
+exchange interactions are simultaneously possible in the ab
+plane of Li2MnO3 [see Fig. 1(b)]. Because the MnO6 layers
+are well separated by the LiO6 octahedral layer, Li2MnO3
+exhibits magnetic properties that are quasi-2D in nature. The
+antiferromagnetic ordering of a Li2MnO3 single crystal and
+some of its physical properties have already been reported
+[20]. In this paper we present our experimental investigations
+on the magnetic spin structure and magnetic ﬁeld (H) induced
+1098-0121/2014/90(10)/104412(7)
+104412-1
+©2014 American Physical SocietyK. BALAMURUGAN et al.
+PHYSICAL REVIEW B 90, 104412 (2014)
+FIG. 1. (Color online) (a) A polyhedral view of a Li2MnO3 single
+crystal (viewed perpendicular to the ab plane). (b) The Cxz-type
+antiferromagnetic spin structure (unit cell) of Li2MnO3 with only Mn
+atoms shown for better clarity. The nearest, next-nearest, and next-
+next-nearest neighbor exchange interactions (J1, J2, and J3) between
+Mn atoms in the ab plane are shown by double headed solid, dashed,
+and dotted arrows, respectively. The possible exchange interaction
+along the c axis (Jc) is shown by a double headed dashed-dotted
+arrow.
+spin-ﬂop (SF) phase transition of a Li2MnO3 single crystal. We
+construct a full H-T phase diagram from the ﬁeld, temperature
+(T ) dependent magnetization, and the SF transitions of a
+Li2MnO3 single crystal measured up to 35 T. The experimental
+results are compared with the results of mean-ﬁeld model
+calculations based on a simple Heisenberg Hamiltonian with
+a single ion anisotropy term.
+II. EXPERIMENTAL AND COMPUTATIONAL METHODS
+The Li2MnO3 single crystals were grown by a two-step
+ﬂux method [20]. In the ﬁrst step, polycrystalline Li2MnO3
+powder was prepared from Li2CO3 (99.997%) and MnO2
+(99.99%). The stoichiometrically mixed starting materials
+(with 10 mol % of excess Li2CO3) were pressed into a pellet
+and placed in an alumina crucible for heat treatments. A high
+temperature solid state reaction was carried out by heating the
+pellet to 1027 ◦C at the rate of 100 ◦C/h and dwelling for 48 h.
+Thereafter the polycrystalline Li2MnO3 sample was cooled
+to room temperature at the rate of 60 ◦C/h. The sample was
+examined for phase purity and crystallinity using a table-top
+x-ray diffractometer (Rigaku Miniﬂex II). In the second step,
+polycrystalline Li2MnO3 powder was mixed in a plastic bottle
+with the ﬂux (Li2CO3 premixed with ﬁnely ground B2O3)
+in the molar ratio of 1:(2.76:2.39), respectively. This mixture
+was transferred to a platinum (Pt) crucible and closed using a
+suitable Pt lid. The Li2MnO3 single crystals were grown in the
+Pt crucible using the following heating proﬁle: (i) heating from
+room temperature (RT) to 1092 ◦C at the rate of 100 ◦C/h,
+(ii) dwelling at 1092 ◦C for 10 h, (iii) cooling to 720 ◦C at the
+rate of 2 ◦C/h, (iv) dwelling at 720 ◦C for a short period of
+10 min, and (v) natural cooling to RT (by turning the furnace
+off).
+Single crystal neutron diffraction (ND) data of Li2MnO3 at
+10 K were collected using a four circle diffractometer (FCD)
+having a Ge (3 1 1) monochromator and with neutron beam
+of wavelength λn = 1.8343 ˚A (HANARO reactor, Korea).
+The ND data were ﬁtted using the FullProf program for
+different probable magnetic structure models [21,22]. High
+ﬁeld magnetization at different temperatures was measured
+using the National High Magnetic Field Laboratory (NHMFL),
+Florida (USA), with applied ﬁelds up to 35 T. Additional
+detailed temperature-dependent magnetization measurements
+were carried out up to 14 T using the vibrating sample mag-
+netometer (VSM) option of a physical property measurement
+system (PPMS), Quantum Design. We also performed mean-
+ﬁeld model calculations for the magnetization of a Li2MnO3
+single crystal using the McPhase software suite [23].
+III. RESULTS
+A. Magnetic structure of Li2MnO3
+As stated in the Introduction, the antiferromagnetic struc-
+ture of Li2MnO3 has already been reported by Lee et al.
+[20]. However, following a recent report [24] that presents a
+contradicting Cx-type AFM model structure that is claimed to
+ﬁt the muon-spin rotation and relaxation (μ+SR) experimental
+data, we were prompted to reinvestigate the magnetic structure
+of Li2MnO3 using the single crystal ND data: We measured
+320 magnetic Bragg peaks and used 221 independent peaks
+in our analysis. We attempted to ﬁt the experimental ND
+data (collected at 10 K) using the following magnetic model
+structures: Fx, Fy, Fxz (Fz), Cx, Cy, and Cxz (Cz)-type AFMs.
+Here the symbols F and C denote, respectively, ferromagnetic
+and antiferromagnetic arrangements (interlayer coupling) of
+magnetic moments in the ab plane with AFM interlayer
+coupling between any two successive ab planes along the c
+axis. The direction of the magnetic moments are indicated by
+the symbols x, y, z, and xz corresponding to the crystallographic
+a, b, c axes and the ac plane of Li2MnO3, respectively. The Fy,
+Fxz, Cy, and Cxz magnetic model structures have, respectively,
+the 1g, 3g, 4u, and 2u symmetry [20]. With the Cxz-type
+AFM spin structure, we obtained the best agreement between
+calculated structure factor (F 2
+calc) and observed structure factor
+(F 2
+obs) of Li2MnO3. A schematic drawing of the Cxz-type AFM
+spin structure is shown in Fig. 2 together with our ﬁtting results
+for all other models for reference. Thus, we again conﬁrm that
+the magnetic structure of Li2MnO3 is the Cxz-type AFM with
+the 2u symmetry.
+In Li2MnO3, in addition to the nearest neighbor AFM
+coupling in the ab plane, the magnetic moments have anti-
+ferromagnetic (interlayer) coupling along the c axis which
+doubles the c-axis length of the magnetic unit cell with respect
+to that of the crystallographic (or chemical) unit cell. The
+reﬁned magnetic moment per Mn4+ ion [μord ≈2.29(1)μB]
+has 0.67(3), 0, and 2.43(1) μB as the components along
+the a, b, and c axes of the unit cell, respectively. Since
+the magnetic structure requires a strong nearest neighbor
+(J1) antiferromagnetic interaction and the nearest neighbor
+Mn-Mn distance is close (2.8 ˚A), it is likely that the
+direct exchange interaction dominates over the probable Mn-
+O-Mn superexchange interaction which may be weak and
+ferromagnetic, due to the Mn-O-Mn bond angle (96°) being
+close to 90° [25].
+104412-2SUCCESSIVE SPIN-FLOP TRANSITIONS OF A N´EEL- . . .
+PHYSICAL REVIEW B 90, 104412 (2014)
+FIG. 2. (Color online) Result of magnetic structure reﬁnements using neutron diffraction data of a Li2MnO3 single crystal. The dashed lines
+in each graph are the reference lines of perfect match between the squared observed (F 2
+obs) and calculated (F 2
+calc) structure factors. Schematic
+diagrams are given for each magnetic structures used in the reﬁnement.
+B. High ﬁeld magnetization of Li2MnO3
+The magnetization of a Li2MnO3 single crystal was mea-
+sured at different temperatures with external magnetic ﬁelds
+applied perpendicular and parallel to the ab plane, i.e., parallel
+and perpendicular to the reciprocal lattice vector c∗. Figure 3(a)
+shows the variation of M with H  ab plane (H ∥c∗axis).
+At low temperatures (T < TN), there are two ﬁeld-induced
+magnetic phase transitions where the magnetization shows a
+FIG. 3. (Color online) Variation of high ﬁeld magnetization of a Li2MnO3 single crystal with magnetic ﬁeld applied (a) parallel and (b)
+perpendicular to the c∗axis measured (only for decreasing ﬁeld) at different temperatures. (c) An expanded view of high ﬁeld magnetization
+measured for both increasing and decreasing ﬁeld applied parallel to the c∗axis. The corresponding magnetization calculated using mean-ﬁeld
+models (MFC) having spin S = 3/2 and S = 1 are shown by dashed lines and dashed-symbol lines, respectively.
+104412-3K. BALAMURUGAN et al.
+PHYSICAL REVIEW B 90, 104412 (2014)
+FIG. 4. (Color online) Temperature dependence of magnetiza-
+tion of a Li2MnO3 single crystal measured for different values of
+magnetic ﬁeld applied both parallel and perpendicular to the c∗axis.
+In this ﬁgure, unless speciﬁed otherwise, the direction of the magnetic
+ﬁeld is parallel to the c∗axis. The corresponding magnetization
+calculated using mean-ﬁeld models (MFC) having spin S = 3/2 and
+S = 1 are shown by dashed lines and dashed-symbol lines,
+respectively.
+sharp, nonlinear increase with increasing H. No such features
+were observed with H ∥ab plane (H  c∗) at any temperature,
+as shown in Fig. 3(b), indicative of spin-ﬂop transitions
+[26,27]. Accordingly we call the corresponding transition
+ﬁelds spin-ﬂop ﬁelds, HSF1 and HSF2, respectively. As seen
+from Fig. 3(a), the values of HSF1 and HSF2 increase with T
+up to TN. Figure 3(c) shows an expanded view of M measured
+at different temperatures for both increasing and decreasing
+H  ab plane (H ∥c∗), illustrating the hysteretic behavior
+of the SF transitions between HSF1 and HSF2. Interestingly, M
+measured at 2, 5, and 10 K show two clear hysteresis loops,
+with one that is closer to the HSF2 enclosing a relatively lower
+area than the other that is closer to HSF1. The hysteresis loops
+in the M vs H data indicate ﬁrst-order phase transitions [25].
+Figure 4 shows the temperature dependent magnetization of
+a Li2MnO3 single crystal measured using ﬁeld-cooled warm-
+ing protocol with various constant magnetic ﬁelds applied
+perpendicular and parallel to the ab plane (i.e., parallel and
+perpendicular to the c∗axis). The M vs T curve measured
+at H = 0.03 T shows a broad maximum around 50 K and a
+kink at TN ≈36.5 K, which is more clearly seen for H ∥c∗
+than for H  c∗. As the applied external magnetic ﬁeld is
+increased, TN gradually decreases. Below TN, a minimum is
+observed in the magnetization for H||c∗> 8.5 T and it shifts
+to higher temperatures with increasing ﬁeld until H > 11 T,
+where no clear (or sharp) minimum can be seen. At higher
+ﬁelds, for example H = 14 T, the changes in magnetization
+corresponding to both H ∥c∗and H  c∗appear to be
+very similar. The minima in M are due to the SF transitions
+corresponding to the speciﬁc values of H  ab plane (i.e.,
+H ∥c∗), because these occur only for H applied (nearly)
+parallel/antiparallel to the direction of the magnetic moments
+(μ) of an antiferromagnet with low anisotropy [27] and not for
+H  μ. We note here that, in principle, the SF transitions can
+be either ﬁrst order or second order [28].
+FIG. 5. (Color online) Magnetic phase diagram of a Li2MnO3
+single crystal. The data points are derived from the experimental
+magnetization measured at either ﬁxed temperatures (▲and ▼
+symbols) or ﬁelds (■and ⋆symbols) while sweeping the other
+parameter. (The lines connecting the data points are guides to the
+eyes.) The phase diagram constructed from our mean-ﬁeld model
+calculations (shaded area) is shown as the background for the phase
+diagram of experimental data. The magnetic spin structures of the
+ordered AFM (obtained from the analysis of experimental single
+crystal neutron diffraction data), spin ﬂop (SF), and intermediate SF
+phases (obtained in the mean-ﬁeld analysis) are also shown. The
+inset shows an expanded view of the phase diagrams with a trend
+of merging ﬁrst-order HSF1 and HSF2 boundary lines and joining the
+second-order PM-AFM/SF phase boundary line.
+C. Magnetic phase diagram of Li2MnO3
+As shown in Fig. 5, we construct a magnetic phase diagram
+based on the experimental results: the variation of TN with
+H (
+symbol), and the SF transition ﬁelds (HSF1 and HSF2)
+obtained from M vs H hysteresis measurements (▲and ▼
+symbols) and the M vs T curves at different ﬁxed H ∥c∗(■
+and ⋆symbols). The transition from the paramagnetic (PM)
+phase to the antiferromagnetic (AFM) phase is a second-order
+phase transition whose transition temperature (TN) decreases
+with increasing H. For T ≪TN, the AFM phase is separated
+from the SF phase by two ﬁrst-order phase boundary lines
+(indicated by ▲, ▼, ■, and ⋆symbols). The lines connecting
+those data points are guides to the eyes. The inset of Fig. 5
+(an expanded view of the phase diagram) shows the trend of
+merging ﬁrst-order HSF1 and HSF2 boundary lines and joining
+the second-order PM-AFM/SF phase boundary line. The
+merging point [(10 < Ht < 11 T), T ≈TN(Ht)] is a tricritical
+point in the H-T diagram of Li2MnO3 which connects the
+PM, AFM, and SF phases. While the high ﬁeld SF phase
+should have magnetic moments in the ab plane, the structure of
+the intermediate phase (at HSF1 < H < HSF2) was unclear,
+leading us to perform a mean-ﬁeld analysis.
+D. Mean-ﬁeld analysis and the spin-ﬂop transition of Li2MnO3
+The essential features of the observed SF transitions
+and some other physical properties of Li2MnO3 may be
+described by a spin S = 3/2 Heisenberg model with weak
+easy axis anisotropy (along the c∗axis), using the following
+104412-4SUCCESSIVE SPIN-FLOP TRANSITIONS OF A N´EEL- . . .
+PHYSICAL REVIEW B 90, 104412 (2014)
+Hamiltonian:
+H = −1
+2
+
+J1
+
+n.
+Si · Sj + J2
+
+n.n.
+Si · Sj + J3
+
+n.n.n.
+Si · Sj
++ Jc
+
+n.c.
+Si · Sj
+
+−K
+
+i
+
+Sz
+i
+2,
+(1)
+where the summations run over nearest (n.), next-nearest (n.n.),
+and next-next-nearest (n.n.n.) neighbor (ith and jth) Mn ions
+in the ab plane, and nearest neighbors along the c direction
+(n.c.) with associated exchange parameters J1, J2, J3, and
+Jc, respectively [as shown in Fig. 1(b)], and K is the single
+ion anisotropy parameter. As a ﬁrst step, a single spin-ﬂop
+transition can be produced by a simpliﬁed model with only
+nonzero J1 and K, which may be uniquely deﬁned by the
+N´eel temperature and the critical ﬁeld value. But, the observed
+two spin-ﬂop transitions require an additional, small, nonzero
+Jc. While the interlayer interaction (Jc) is necessary for the
+Cxz-type AFM spin structure it also stabilizes an intermediate
+ﬁeld structure, wherein only moments on the alternate ab
+planes have ﬂopped, as illustrated in Fig. 5. The magnitude of
+Jc determines the difference between the spin-ﬂop ﬁelds (HSF2
+−HSF1), and thus may be ﬁxed by the experimental results.
+Since the next- and next-next-nearest neighbor intralayer
+interactions (J2 and J3) and the interlayer interaction (Jc)
+likely share similar Mn-O-Li-O-Mn superexchange pathways
+that are separated by almost the same distances, they should, a
+priori, be of similar magnitude. Therefore, we have ﬁxed the
+values of J2 and J3 at twice the magnitude of Jc. Unfortunately
+this produces a large change in the magnetization at the
+spin-ﬂop transition that is calculated to be approximately twice
+the measured values. In order to reduce this and to match with
+the experimentally observed change in the magnetization, we
+need unphysically larger values of J2 or J3.
+Given the above constraints, we found that the fol-
+lowing set of exchange and anisotropy constants explains
+our data: J1 = −0.84 meV,J2 = J3 = −0.02 meV,Jc = −
+0.01 meV, and K = −0.067 meV. The calculated magnetiza-
+tion is shown as dashed lines (MFCs) in Figs. 3(a)–3(c) and
+4, and the calculated magnetic phase diagram is given by the
+background in Fig. 5. The spin-ﬂop transitions are calculated
+to be ﬁrst order at low temperatures, which is consistent with
+the experimental observations, and apparently merging at Tࣈ
+16 K. Above this temperature, as a function of increasing ﬁeld,
+the moments rotate smoothly from being perpendicular to the
+ab plane to parallel to the ab plane, reminiscent of a liquid-gas
+critical point. However, although the agreement between
+the theoretical calculations and the experimental results are
+reasonably good, there are clear disagreements too. A most
+noticeable case is that the calculated magnetization is bigger
+than the experimental ﬁeld dependence of the magnetization
+data shown in Fig. 3. We have tested several alternative models
+by varying values of J and K to resolve this discrepancy
+before coming to a conclusion that the magnetic moment
+of Mn ions may as well be effectively smaller in the real
+material than the spin-only ionic value (3 μB). In fact, the
+ordered moment determined by the ND reﬁnements is not
+3 μB but 2.3 μB. This is strong evidence that supports
+our idea. Moreover, short-ranged ﬂuctuations, often present
+in two-dimensional spin systems, can reduce the effective
+spin value too, which, in principle, cannot be accounted for
+mean-ﬁeld calculations. Therefore, we repeated the calcu-
+lations using the following set of parameters for a spin S
+= 1 model: J1 = −1.55 meV, J2 = J3 = −0.02 meV,Jc =
+−0.025 meV, and K = −0.109 meV. The results of the
+MFCs using S = 1 are shown by the dashed-symbol lines
+in Fig. 3, which exhibits signiﬁcant improvement over that
+of MFCs using S = 3/2. [See also calculated M(T ) results
+in Fig. 4.] However, we note that the overall phase diagram
+remains almost unchanged when compared to that for the S =
+3/2 case. The magnetic structures presented in Fig. 5 are the
+results of our mean-ﬁeld calculations, and that corresponding
+to the low-ﬁeld region in the H-T phase diagram is indeed
+consistent with our analysis of the experimental data as shown
+in Figs. 1 and 2.
+IV. DISCUSSIONS
+It is well known that the SF occurs if an external magnetic
+ﬁeld of sufﬁcient strength is applied parallel to one of the
+two sublattice magnetic moments of an antiferromagnet with
+a small easy axis anisotropy [26,27]. The whole process of
+SF is an act of reducing the energy of the system which,
+otherwise, is higher if one of the AFM sublattice’s moments
+point antiparallel to a sufﬁciently strong H. The spin-ﬂop
+transition in a Li2MnO3 single crystal occurs in two steps.
+In ﬁrst step, when an external magnetic ﬁeld of strength
+HSF1 < H < HSF2 is present, only the spins of the alternate
+ab planes ﬂop, because the spin ﬂop occurs against the
+single ion anisotropy (SIA) term (K) which adds additional
+energy if the spins in all the ab planes ﬂop for the same
+strength of H. Eventually, the interlayer antiferromagnetic
+exchange interaction (Jc) is weakened in the presence of a
+strong magnetic ﬁeld. In the second step, when H is increased
+further to H ⩾HSF2(<HFM), the spins of the other alternate
+ab planes also ﬂop because this reduces the total energy of
+the system (even though it would add a little energy due to
+K). Here HFM is a possible (hypothetical) ﬁeld of unknown
+strength, such that for H ⩾HFM ≫HSF2, all the spins in
+all the ab planes ﬂip to align parallel to H and establish a
+ﬁeld-induced ferromagnetic (FM) phase. Inspecting the high
+ﬁeld magnetization data shown in Fig. 3(a), we estimate HFM
+to be in the range of 70–100 T. For concreteness, the transition
+ﬁelds above which a ferromagnetically saturated structure is
+obtained in the mean ﬁeld calculation are 65 T for the S = 3
+2
+model and 90 T for S = 1.
+In fact, it is interesting to note that a FM spin structure in
+a honeycomb lattice system (even though a classical ground
+state) is another possible magnetic phase of the HK model
+[13,29] that is widely studied at present. It may be possible
+to observe a ﬁeld-induced FM phase in a honeycomb lattice
+system (e.g., Li2MnO3 or a similar one) at extremely high
+magnetic ﬁelds. We observe that the search for honeycomb
+lattice systems with such ﬁeld-induced FM phase or FM
+ground state may lead to the emergence of new applications of
+magnetism in a honeycomb lattice. Perhaps this is achievable
+in some new materials with similar structure or materials
+that offer honeycomb lattice for magnetic ions and have
+strong single ion anisotropy. A modiﬁed Kitaev Hamiltonian,
+104412-5K. BALAMURUGAN et al.
+PHYSICAL REVIEW B 90, 104412 (2014)
+introduced by Baskaran et al., has been shown to be exactly
+solvable for all half-odd-integer spins and commented as “it
+is equivalent to an exponentially large number of copies of
+spin-1/2 Kitaev Hamiltonians” [30]. This modiﬁed spin-S
+Kitaev Hamiltonian may be thought to replace the original
+Kitaev interaction terms of the currently considered HK model,
+so that the modiﬁed HK model would be more general and may
+be applicable to any real honeycomb lattice materials with high
+spins (S > 1/2) also, such as Li2MnO3.
+By our high ﬁeld magnetization studies of a Li2MnO3 single
+crystal and the mean-ﬁeld model calculations, we found that
+the nearest neighbor interlayer interaction (Jc) along the c
+axis shows distinguishable features in the magnetization and
+SF transition. This ﬁnding is important since the interlayer
+coupling is mostly neglected in theoretical studies of the mag-
+netic phase diagram of honeycomb lattice systems. Overall, we
+foundthat it is essential tocomprehendtheﬁeld-inducedphase,
+which may well be relevant for other magnetic honeycomb
+lattice systems. Furthermore, besides the fact that the spins of
+Mn4+ ions in Li2MnO3 can be treated effectively as classical
+spins, its N´eel-type AFM spin structure may be thought of as
+one of the classical ground states of the HK model with Kitaev
+interaction of negligible or effectively zero strength relative
+to the strength of isotropic Heisenberg interaction. This is
+justiﬁable because in the HK model reported by Chaloupka
+et al., the N´eel-type AFM phase exists for a wide range of “ϕ”
+(−34◦< ϕ < 88◦), where ϕ is a phase angle determined by
+the relative strength of the Kitaev term (2K) with respect
+to the Heisenberg term (J) : φ = cos−1(
+J
+√
+K2+J2 ) [13]. Our
+analysis suggests that the Kitaev term should be very small
+for Li2MnO3 compared with the Heisenberg term. Thus,
+the phase angle (ϕ) is almost zero for Li2MnO3, which
+produces the N´eel phase according to the theoretical results
+in Refs. [13] and [29], which is in good agreement with our
+experimental results. What is particularly interesting about
+our data regarding the general phase diagram of the HK
+model is the newly discovered ﬁeld-induced spin-ﬂop phases
+and the ferromagnetic (FM) phase. First of all, there is no
+theoretical prediction available at the moment for the HK
+Hamiltonian plus a Zeeman term so we cannot make a direct
+comparison with our data. However, it is intriguing that in
+all theoretical phase diagrams of Refs. [13] and [29] the
+magnetic structure we found for the spin-ﬂop phase is not
+found to be stable. Second, our high ﬁeld data demonstrate
+that one can adiabatically move from the N´eel phase to the FM
+phase. Therefore, it will be highly interesting to examine the
+thermodynamics of the HK Hamiltonian plus a Zeeman term
+as a function of magnetic ﬁeld. Thus far we believe that our
+experimental works demonstrated that there is more for future
+developments, which could offer much better understandings
+on the magnetism of honeycomb lattice systems with any
+spin S.
+V. SUMMARY AND CONCLUSION
+In summary, we have investigated a Li2MnO3 single crystal
+as a test bed for the physics of magnetism in honeycomb
+lattice at the weak SOC limit as it offers a honeycomb lattice
+for Mn4+ ions with spin S = 3/2. Li2MnO3 has a classical
+N´eel ordered Cxz-type antiferromagnetic spin structure (2u
+symmetry). The reﬁned resultant magnetic moment per Mn4+
+ion is μordࣈ2.29(1) μB, reduced from the spin-only ionic
+value (3 μB) probably because of the two-dimensional nature
+of the honeycomb lattice. Furthermore, we have studied high
+ﬁeld magnetization of a Li2MnO3 single crystal for magnetic
+ﬁelds up to 35 T applied both parallel and perpendicular to
+the ab planes. Li2MnO3 is seen to exhibit two successive
+magnetic ﬁeld induced spin-ﬂop phase transitions at T < TN.
+A magnetic phase diagram of a Li2MnO3 single crystal
+has been constructed using the high ﬁeld- and temperature-
+dependent magnetization data. The spin-ﬂop phase transition
+and the other magnetization properties of a Li2MnO3 single
+crystal can be well described by a honeycomb lattice system
+with an effective spin S = 1 model based on a simple
+Heisenberg exchange interaction Hamiltonian with a single
+ion anisotropy term. In the mean-ﬁeld analysis, the spin-ﬂop
+transition has been found to occur in two successive ﬁrst-
+order phase transitions at lower temperatures; surprisingly,
+the interlayer coupling plays an essential role in the spin-ﬂop
+transition. This agrees with the two hysteresis loops observed
+in our M vs H data.
+ACKNOWLEDGMENTS
+We acknowledge Jiyeon Kim, Choongjae Won, and
+Namjung Hur for their contribution at the beginning of the
+project, and Gun Sang Jeon for helpful discussion. This work
+was supported by the Institute for Basic Science (IBS) in Korea
+(Grant No. EM1203).
+[1] K. S. Novoselov, A. K. Geim, S. V. Morozov, D. Jiang, M. I.
+Katsnelson, I. V. Grigorieva, S. V. Dubonos, and A. A. Firsov,
+Nature (London) 438, 197 (2005).
+[2] Y. Zhang, Y.-W. Tan, H. L. Stormer, and P. Kim,Nature (London)
+438, 201 (2005).
+[3] A. Kitaev, Ann. Phys. 321, 2 (2006).
+[4] A. Y. Kitaev, Ann. Phys. 303, 2 (2003).
+[5] Z. Y. Meng, T. C. Lang, S. Wessel, F. F. Assaad, and
+A. Muramatsu, Nature (London) 464, 847 (2010).
+[6] A. Shitade, H. Katsura, J. Kuneˇs, X.-L. Qi, S.-C. Zhang, and
+N. Nagaosa, Phys. Rev. Lett. 102, 256403 (2009).
+[7] C. H. Kim, H. S. Kim, H. Jeong, H. Jin, and J. Yu, Phys. Rev.
+Lett. 108, 106401 (2012).
+[8] B. J. Kim, H. Ohsumi, T. Komesu, S. Sakai, T. Morita, H. Takagi,
+and T. Arima, Science 323, 1329 (2009).
+[9] J. Chaloupka, G. Jackeli, and G. Khaliullin, Phys. Rev. Lett.
+105, 027204 (2010).
+[10] J. Reuther, R. Thomale, and S. Trebst, Phys. Rev. B 84,
+100406(R) (2011).
+[11] Y. Singh, S. Manni, J. Reuther, T. Berlijn, R. Thomale,
+W. Ku, S. Trebst, and P. Gegenwart, Phys. Rev. Lett. 108, 127203
+(2012).
+104412-6SUCCESSIVE SPIN-FLOP TRANSITIONS OF A N´EEL- . . .
+PHYSICAL REVIEW B 90, 104412 (2014)
+[12] H. Gretarsson, J. P. Clancy, X. Liu, J. P. Hill, E. Bozin, Y. Singh,
+S. Manni, P. Gegenwart, J. Kim, A. H. Said, D. Casa, T. Gog,
+M. H. Upton, H.-S. Kim, J. Yu, Vamshi M. Katukuri, L. Hozoi,
+J. van den Brink, and Y.-J. Kim, Phys. Rev. Lett. 110, 076402
+(2013).
+[13] J. Chaloupka, G. Jackeli, and G. Khaliullin, Phys. Rev. Lett.
+110, 097204 (2013).
+[14] X. Liu, T. Berlijn, W.-G. Yin, W. Ku, A. Tsvelik, Y.-J. Kim,
+H. Gretarsson, Y. Singh, P. Gegenwart, and J. P. Hill, Phys. Rev.
+B 83, 220403(R) (2011).
+[15] F. Ye, S. Chi, H. Cao, B. C. Chakoumakos, J. A. Fernandez-Baca,
+R. Custelcean, T. F. Qi, O. B. Korneta, and G. Cao, Phys. Rev.
+B 85, 180403(R) (2012).
+[16] I. I. Mazin, S. Manni, K. Foyevtsova, H. O. Jeschke,
+P. Gegenwart, and R. Valent´ı, Phys. Rev. B 88, 035115 (2013).
+[17] The TM site is occupied by any 3d, 4d, or 5d elements that
+exhibit stable +4 oxidation states.
+[18] D. Y. W. Yu, K. Yanagida, Y. Kato, and H. Nakamura,
+J. Electrochem. Soc. 156, A417 (2009).
+[19] P. Strobel and B. Lambert-Andron, J. Solid State Chem. 75, 90
+(1988).
+[20] S. Lee, S. Choi, J. Kim, H. Sim, C. Won, S. Lee, S. A. Kim,
+N. Hur, and J.-G. Park, J. Phys.: Condens. Matter 24, 456004
+(2012).
+[21] J. Rodr´ıguez-Carvajal, Physica B 192, 55 (1993).
+[22] T. Roisnel and J. Rodriguez-Carvajal, in Proceedings of Seventh
+European Powder Diffraction Conference (EPDIC 7), edited by
+R. Delhez and E. J. Mittenmeijer (Trans Tech Publications Ltd.,
+Switzerland, 2000), p. 118.
+[23] M. Rotter, J. Magn. Magn. Mater. 272–276, e481 (2004).
+[24] J. Sugiyama, K. Mukai, H. Nozaki, M. Harada, M. M˚ansson,
+K. Kamazawa, D. Andreica, A. Amato, and A. D. Hillier, Phys.
+Rev. B 87, 024409 (2013).
+[25] P. W. Anderson, Phys. Rev. 79, 350 (1950).
+[26] B. R. Morrison, Phys. Status Solidi (B) 59, 581 (1973).
+[27] H. J. M. de Groo and L. J. de Jongh, Physica B 141, 1
+(1986).
+[28] I. S. Jacobs and P. E. Lawrence, Phys. Rev. 164, 866 (1967).
+[29] J. G. Rau, E. K.-H. Lee, and H. Y. Kee, Phys. Rev. Lett. 112,
+077204 (2014).
+[30] G. Baskaran, D. Sen, and R. Shankar, Phys. Rev. B 78, 115116
+(2008).
+104412-7

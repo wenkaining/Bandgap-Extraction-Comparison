@@ -1,0 +1,531 @@
+8868 | J. Mater. Chem. C, 2019, 7, 8868--8873
+This journal is ©The Royal Society of Chemistry 2019
+Cite this: J. Mater. Chem. C, 2019,
+7, 8868
+Tungsten boride: a 2D multiple Dirac semimetal
+for the hydrogen evolution reaction†
+Aizhu Wang,ab Lei Shen,c Mingwen Zhao,
+*d Junru Wang,d Weijia Zhou,a
+Weifeng Li,d Yuanping Feng*e and Hong Liu
+*af
+Development of a non-noble-metal hydrogen-producing catalyst plays a central role in clean energy
+conversion, enabling a number of sustainable processes for future technologies. Here we propose
+a two-dimensional (2D) tungsten boride (WB4) lattice, with the Gibbs free energy for the adsorption
+of atomic hydrogen (DGH) tending to the ideal value (0 eV) at the 3% strained state, leading to better
+hydrogen evolution reaction (HER) activity. Based on first-principles calculations, we present a
+systematic theoretical study for the WB4 lattice with special emphasis on the configuration design
+and electronic structure, and find that the WB4 lattice has multiple Dirac cones around the Fermi
+level with considerable Fermi velocities to transfer electrons in all directions throughout its structure.
+Importantly, together with the d-orbital of W, the p-orbitals of borophene subunits in the WB4 lattice
+can modulate the d band centre to achieve good HER performance. Our research provides a guiding
+principle for designing and regulating 2D catalysts from the emerging field of noble-metal-free
+lattices.
+Introduction
+When powered by renewable energy sources, the generation of
+hydrogen from the electrolysis of water is a means to produce a
+high-energy density, mobile energy carrier without any asso-
+ciated carbon dioxide emissions.1 At low temperatures, this
+process can take place in a series of electrochemical devices,
+ranging from high-current-density polymer electrolyte membrane
+electrolyzers2–4 to low-current-density, solar-driven photoelectro-
+chemical cells.5–7 For all these water-splitting applications, the
+choice of the hydrogen evolution reaction (HER) catalyst employed
+at the cathode can have a profound influence on the cost, lifetime,
+and efficiency of the device. Pt is a very active and commonly used
+HER catalyst, but its high price and limited world-wide supply1,8
+make its use a barrier to mass production of H2 by water
+electrolysis.
+The eﬀective approach to overcome the challenges associated
+with Pt HER catalysts is to increase the surface to bulk atomic
+ratio of Pt, thus allowing for a lower metal loading to be used
+without compromising electrolysis eﬃciency.1 In the past few
+years, both experimental and theoretical researchers have made
+their great eﬀorts to solve the challenges. The common method is
+chemical treatment,9–11 including surface modification, alloying,
+heteroatom doping and so on. Another approach that works is
+completely replacing Pt with alternative non-Pt catalysts, such as
+transition metal alloys, sulfides, carbides, nitrides, borides, etc.12–16
+Hence, a prerequisite is gaining detailed knowledge of structure–
+activity correlations for electrode materials to better understand the
+activity trends and then rapidly discovering new advanced catalysts
+for the HER.
+Positioned next to carbon in the periodic table, boron is a
+special element in the sense that it not only can bond both
+covalently and ionically,17 but it is capable of forming a great
+variety of pure allotropes ranging from zero-dimensional clusters
+to three-dimensional (3D) bulk materials,18–21 suggesting that
+boron shares many of the characteristics of carbon. Advanced
+research demonstrated that several 3D boride compounds
+consisting of two-dimensional (2D) boron layers as subunits
+(known as borophene subunits) have recently emerged as a
+potential new frontier for searching better HER catalysts,22–24
+which can be contributed as the strongly bound effect of
+a Institute for Advanced Interdisciplinary Research, University of Jinan, Jinan,
+250022, Shandong, China
+b Department of Electrical and Computer Engineering & Department of Physics,
+National University of Singapore, Singapore, 117579, Singapore
+c Department of Mechanical Engineering, Engineering Science Programme, Faculty of
+Engineering, National University of Singapore, Singapore, 117575, Singapore
+d School of Physics and State Key Laboratory of Crystal Materials, Shandong
+University, Jinan 250100, Shandong, China. E-mail: zmw@sdu.edu.cn
+e Department of Physics & Centre for Advanced Two-dimensional Materials,
+National University of Singapore, Singapore, 117542, Singapore.
+E-mail: phyfyp@nus.edu.sg
+f State Key Laboratory of Crystal Materials, Shandong University, Jinan, 250100,
+Shandong, China. E-mail: hongliu@sdu.edu.cn
+† Electronic supplementary information (ESI) available: The band structures of
+tungsten boride, the thermodynamic stability and electronic properties of WB4
+and the hydrogen evolution reaction calculations. See DOI: 10.1039/c9tc01862j
+Received 6th April 2019,
+Accepted 26th May 2019
+DOI: 10.1039/c9tc01862j
+rsc.li/materials-c
+Journal of
+Materials Chemistry C
+PAPER
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article Online
+View Journal | View IssueThis journal is ©The Royal Society of Chemistry 2019
+J. Mater. Chem. C, 2019, 7, 8868--8873 | 8869
+borophene subunits within the solid in contrast to the weakly
+bound graphene layer in graphite. However, the research on the
+HER activity of 2D borophene subunits is still blank.
+Here, a 2D tungsten boride (WB4) lattice (Fig. 1A) is
+proposed, in which a triangular tungsten layer is sandwiched
+by two borophene subunits, forming a ‘‘sandwich’’ layer. Based
+on first-principles calculations, we find that the WB4 lattice has
+superior stability and multiple Dirac cones due to the d–p–p
+and d–p–s conjugations. Moreover, our study demonstrates a
+different principle to spur HER activity that can go beyond local
+site optimization by manipulating the d band centre within a
+certain strain range, as evidenced by an optimum Gibbs free
+energy of the 2  2 WB4 nanosheet. Our results, here, not only
+provide a versatile platform for hosting multiple Dirac semi-
+metal states with a ‘‘sandwich’’ configuration, but also offer a
+guiding principle for discovering the relationship between the
+intrinsic properties of the active centre and the catalytic activity
+of the metal layer from the emerging field of noble-metal-free
+lattices.
+Computational details
+DFT calculations
+First-principles calculations within density-functional theory
+(DFT) were implemented by the Vienna ab initio Simulation
+Package (VASP).37 A generalized gradient approximation (GGA)
+in the form of Perdew–Burke–Ernzerhof (PBE)38 was adopted to
+describe the electron–electron interactions. The energy cut-off
+employed for plane-wave expansion of electron wavefunctions
+was set to 520 eV and the electron–ion interactions were treated
+using projector-augmented-wave (PAW) potentials.39 The DFT-D3
+method was applied to include the long-range van der Waals
+interaction for the adsorption on the WB4 lattice.40 The system
+was modelled by unit cells repeated periodically on the x–y plane,
+while a vacuum region of 15 Å was applied along the z-direction
+to avoid mirror interaction between neighbouring images. The
+Brillouin zone (BZ) integration was sampled on a grid of 13 
+13  1 k-points for the unit cell and 7  7  1 k-points for the
+2  2  1 supercell. Structure optimization was carried out using a
+conjugate gradient (CG) method until the remaining force on each
+atom is less than 0.05 eV Å1.
+Gibbs free energy of hydrogen adsorption
+The Gibbs free-energy of hydrogen adsorption, DGH, is a good
+descriptor for hydrogen evolution,41,42 which is defined as
+DGH = DEH  EZPE  TDSH, where DEH is the hydrogen adsorp-
+tion energy, which can be obtained as follows: DEH = EH 
+E(n1)H*  1/2EH2, where * denotes the catalyst activity site. EnH*,
+E(n1)H* and EH2 are the total energies of the catalyst with n
+adsorbed hydrogen atoms and the total energies of the catalyst
+with n  1 adsorbed hydrogen atoms and gas H2, respectively.
+DEZPE and DSH stand for the change in the zero-point energy
+(ZPE) and the change in the entropy of hydrogen between the
+adsorbed state and the gas state. We found that DEZPE does not
+vary significantly with respect to hydrogen coverage because of
+the smaller entropy of hydrogen in the adsorbed state. TDSH E
+TS0
+H = 0.202 eV at T = 298 K, where S0
+H is the entropy in the gas
+phase.43 The standard hydrogen electrode (USHE) was theoreti-
+cally defined in solution [pH = 0, p(H2) = 1 bar]. The optimal
+HER activity can be achieved as DGH goes to zero, where both
+hydrogen adsorption and the subsequent desorption can be
+facilitated.
+Results and discussion
+Characterization of WB4
+Experimentally, bulk WB2 is found in the hexagonal phase
+within the P6/mmm space group with an intercalated geometric
+configuration
+comprising
+W
+frameworks
+and
+borophene
+subunits.25 Only on this alone, our proposed structure – WB4
+monolayer – can be naturally produced through exfoliation of
+the WB2 nanosheet (ESI†). Fig. 1A presents the top view and
+side view, respectively, of the optimized configuration, where
+the triangle lattice W atoms are located above the centre of the
+honeycomb graphene-like boron lattice from the top view,
+forming a ‘‘sandwich’’. The electron localization function (ELF)
+indicates that B atoms are chemically bonded to the triangle W
+lattice, while the covalent like B–B bonds are preserved, as shown
+in Fig. S3 (ESI†). The lengths are 1.706 Å, 2.371 Å and 2.955 Å for
+covalent B–B, ionic W–B and metallic W–W bonds, respectively,
+and the optimized lattice constant is found to be 2.955 Å,
+matching with the trigonal W lattice in WB2.
+Then, the thermodynamic stability of the WB4 framework is
+confirmed by the phonon spectrum and the molecular dynamics
+(MD) simulation. Clearly, the phonon spectrum of the WB4 lattice
+is free from imaginary frequencies (Fig. S4, ESI†), while, the
+geometry of WB4 remains unchanged but with small fluctua-
+tions of the total energy with the passage of time (Fig. S5, ESI†),
+implying the thermodynamic stability of the WB4 lattice.
+By comparing the cleavage energy, it is verified that the WB4
+monolayer is robustly stable compared to WB2 in the process of
+synthesizing a 2D tungsten boride lattice. So, it can be regarded
+as a WB4 multilayer, and a single layer of large dimensions is
+plausible in the near future thanks to the well-developed
+preparative technique (ESI†). To oﬀer more reference informa-
+tion for the experimental observation, the simulated STM
+image of the WB4 monolayer is also displayed (Fig. 1B).
+Fig. 1
+(A) Schematic representation of the 2D honeycomb tungsten
+boride (WB4). The unit cell is indicated by a yellow shaded area with two
+basis vectors of a1 and a2. (B) Simulated STM image for monolayer WB4.
+Paper
+Journal of Materials Chemistry C
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article Online8870 | J. Mater. Chem. C, 2019, 7, 8868--8873
+This journal is ©The Royal Society of Chemistry 2019
+Excellent electronic transport properties
+The electronic properties including the band structure and
+the corresponding projected electronic density of states are
+presented (Fig. 2A). Based on density-functional theory (DFT)
+calculations, two Dirac cones exist close to the Fermi level (Ef),
+exhibiting the characteristic of semimetal. By plotting the
+orbital-resolved band structures as well as the charge density
+distributions, it is clearly seen that the Dirac bands are
+composed mainly of the p states of B atoms and the d states
+of W atoms. More specifically, bands I and II are derived from
+the coupling of the px/y/z orbitals of B atoms and the dz2/dx2y2/
+dxy orbitals of W atoms, meanwhile, bands III and IV are mainly
+derived from the coupling of the pz orbital of B and W atoms,
+together with the dxz/dyz orbitals of W atoms (Fig. S6 and S7,
+ESI†). Here, the hybrid functional (HSE06) was adopted to
+double check the above electronic band structure, and the
+results suggest that the semimetal feature and orbital origin
+of the WB4 lattice remain intact (Fig. S9, ESI†).
+Apart from the equilibrium state, we also investigate the
+robustness of semimetal states at finite biaxial strain. Fig. 3
+shows that the semimetal feature is robust against stretching
+along the xy-direction, but gradually converts into metal states
+with abundant states around Ef under the compressional
+conditions, suggesting a diﬀerent strain response of WB4. The
+Fermi velocity (nf) of the WB4 lattice was calculated by fitting
+these Dirac bands and extreme values at the equilibrium state,
+0.72  106 m s1 for band I, 0.54  106 m s1 for band II and
+0.61  106 m s1 for bands III and IV (ESI†), were achieved.
+The multiple Dirac states (diﬀerent locations, origins and aniso-
+tropies/isotropies),
+together
+with
+their
+considerable
+Fermi
+velocities, should enable the WB4 monolayer to transfer electrons
+in all directions throughout its structure, suggesting its excellent
+electronic transport property.
+Hydrogen evolution reaction activity
+The metallic property is favourable for the electron injection
+from a cathode to the catalyst surface, where intermediate
+protons induced by water dissociation in alkaline solutions
+are reduced and adsorbed on the catalyst-covered cathode.26
+Hence, we study electrocatalysis applications of the Dirac semi-
+metal lattice with high carrier mobility. Both experimentally
+and theoretically, the Volmer step is recognized as the rate-
+determining step for the HER,27–29 so, the Gibbs free energy of
+atomic hydrogen adsorption (DGH) is the key operator to
+describe the HER activity.30 Here, we adopt a (2  2) supercell
+of the WB4 lattice to study its catalytic activity and find that the
+bridge site is the most stable adsorption site (Fig. 4A and ESI†).
+Therefore, we will only focus on the bridge site hereafter.
+In order to elucidate the adsorption mechanism, we further
+analyse the charge transfer between with and without the
+atomic hydrogen adsorption, which is defined as DQ =
+Q(sub + H)  Q(sub)  Q(H), where Q(sub + H), Q(sub) and
+Q(H) are the charge densities of the corresponding WB4
+systems with adsorbed hydrogen, the corresponding clean
+WB4 systems and a single hydrogen atom, respectively. As
+shown in Fig. 4B, charges can transfer between B and H atoms
+as well as the nearest W atoms, providing a possible platform
+for catalytic reactions. Formally, the charges are mainly con-
+tributed by the p-orbitals of B and the d-orbitals of W (Fig. S10
+and S11, ESI†). Quantitatively, the Bader charge analysis reveals
+that the hydrogen atom has a net gain of 2.32e from the
+surrounding B and W atoms, exhibiting an excellent potential
+performance for HER activity.
+Based on the PBE functional, we obtained the Gibbs free
+energy DGH = 0.06 eV for the above WB4 nanosheet, indicating
+that the surface bridge site is catalytically active for the HER.
+Inspired by the experimental stress eﬀect on catalytic activity,31,32
+Fig. 2
+(A) Electronic band lines and the corresponding electronic density
+of states of WB4 in proximity of the Fermi level (set to zero). (B) The
+isosurfaces of the Kohn–Sham wave functions of degenerate points listed
+in (A). Different colours represent different bands in diff.
+Fig. 3
+Electronic band structure evolution of the 2D WB4 lattice with external strain along the xy-direction. The energy at the Fermi level was set to zero.
+Here, ‘‘’’ represents the condition of compressional strain.
+Journal of Materials Chemistry C
+Paper
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article OnlineThis journal is ©The Royal Society of Chemistry 2019
+J. Mater. Chem. C, 2019, 7, 8868--8873 | 8871
+we investigated the biaxial strain eﬀect on the HER catalytic
+activity of the WB4 lattice, and the related Gibbs free energies
+are calculated (Fig. 4C). Interestingly, the DGH of the WB4
+nanosheet responds diﬀerently to the above-mentioned Dirac
+semimetal states. For example, stretching makes the WB4
+nanosheet approach the ideal catalytic state (DGH B 0.00 eV)
+firstly, and then with further increased stretching it moves far
+away from the state, suggesting that the WB4 nanosheet has a
+good HER performance within a certain tensile strain range.
+Controlled d band mechanisms
+To analyse the origin of the catalytic activity evolution, we
+examined how the d-band centre can be modulated with the
+change of strain in the WB4 nanosheet. Considering the orbital
+hybridization between W atoms (the distance ranges from 2.955 Å
+to 3.132 Å), the d-orbitals of four W atoms are plotted (Fig. 5) and
+their d-band centres are marked with black arrows. According
+to the d-band theory, a lower d-band centre results in weaker
+bonding between the catalyst and the adsorbate.33 Taking the
+zero-point energy (ZPE) and entropy into account, the relative
+catalytic activity of WB4 (DGH) has a similar evolutionary
+relationship with the d band centre (Fig. 4C, 5 and Fig. S15,
+ESI†). The results can be attributed to the existence of the B
+intermediate, modulating the combination of W with H to
+enable a mild catalytic reaction to proceed by changing the
+coupling interactions between the d-orbitals of W and the
+p-orbitals of B. The coupling interactions make the d-orbital
+centre of W shift to a moderate value, resulting in a better
+catalytic activity. Interestingly, the desorption barrier of the 5%
+strained state (with DGH B 0.06 eV) equals the adsorption
+barrier of the 0% equilibrium state (with DGH B 0.06 eV), so we
+can get the maximum adsorption and desorption by mani-
+pulating a small external stress to get an ideal catalytic state.
+Additionally, it was demonstrated that both the DGH and
+d-band centre have the same evolution trends in the presence
+of spin orbital coupling eﬀects (Fig. S16, ESI†), suggesting the
+nature of the HER performance of the WB4 lattice.
+Except the modulated d-band centre, the excellent conduc-
+tivity and Fermi velocity, induced by the eﬀect of Dirac cones
+with d–p–p and d–p–s conjugations, can also guarantee fast
+electron transfer in the electrochemical reactions. Therefore,
+our results not only provide a guiding principle for the discovery
+of Dirac semimetal catalysts with noble-metal-free ‘‘sandwich’’
+configurations, but also offer a universal description of
+the relationship between the intrinsic properties of the active
+Fig. 4
+Schematic representation of the (2  2) WB4 2D supercell with
+adsorbed hydrogen (A) and the corresponding charge density diﬀerence
+before and after the adsorption (B). The unit cell is indicated by a yellow
+shaded area. Blue and yellow represent charge loss and charge accumulation,
+respectively. The isosurface value is set to 0.002 Å3. (C) Gibbs free energy
+diagram of the HER in strained states. (D) Surface Pourbaix diagrams. The
+most thermodynamically stable states of the surface at relevant USHE and pH
+values are labelled by the terminations. The optimized structures of hydroxyl-
+terminated WB4 and oxygen-terminated WB4 are listed in the inset figure.
+Oxygen is represented by a red ball.
+Fig. 5
+The projected density of states for the d-orbitals of W in the
+strained states. The vertical black lines correspond to the location of 3%
+strained states which has the highest catalytic activity. The energy at the
+Fermi level was set to zero.
+Paper
+Journal of Materials Chemistry C
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article Online8872 | J. Mater. Chem. C, 2019, 7, 8868--8873
+This journal is ©The Royal Society of Chemistry 2019
+centre and the catalytic activity of the metal layer, which are in line
+with a new research frontier in single-atom electrocatalysts.34–36
+High thermal stability
+The surface Pourbaix diagrams of the equilibrium (0%) and
+strained (3%) states are constructed by plotting the thermo-
+dynamically most stable surface state at relevant USHE and pH
+values (Fig. 4D). In an acidic solution (pH = 0), negative USHE
+values (reducing environment) as low as 2.14 and 2.43 V are
+required to protect the equilibrium state and strained state,
+respectively, from oxidation by H2O. A more negative potential
+is necessary to protect the bare WB4 lattice at high pH values
+with a slope of 0.059 V pH1. When the potential is above the
+cathodic protection potential of 2D WB4, water starts to oxidize
+and WB4 is covered with one hydroxyl (OH*). As the potential
+increases, the hydroxyls on WB4 will be oxidized, and the most
+stable O*-terminated WB4 will be formed. The lowest USHE
+values for 2D WB4 with one O* termination are 0.03 V (0%)
+and 0.03 V (3%) in an acidic solution. Therefore, under
+standard conditions, the strained state prefers to be terminated
+by O*, exhibiting a better HER performance fitting with the
+DGH descriptor (ESI†).
+Hydrogen coverage eﬀect in WB4
+Finally, we explore the hydrogen coverage eﬀect on the HER
+catalytic performance of the 0% and 3% states. We define the
+coverage of hydrogen as a fraction of a monolayer with respect
+to the number of available B–B bridge sites (12 sites) in the
+basal plane. Here, we consider one (s = 1/12), two (s = 1/6),
+three (s = 1/4) and four (s = 1/3) atomic hydrogen adsorption in
+the 2  2 WB4 supercell and calculate Gibbs free energies as
+summarized in Fig. 6 and the ESI.† As a benchmark, we firstly
+calculate the HER performance of Pt with DGH = 0.05 eV,
+fitting well with other previous works.30,34 Interestingly, the
+variation of the Gibbs free energy is obvious with the increase
+of H coverage, indicating that DGH is sensitive to the hydrogen
+coverage. Typically, the 3% strained state at s = 1/3 has a free
+energy of 0.02 eV, whose catalytic performance even exceeds
+that of Pt. Hence, considering the Pt-like activity for the HER of
+WB4, a series of 2D noble-metal-free ‘‘sandwich’’ lattices should
+be promising materials to replace Pt or Pt-based compounds in
+other electrochemical and photoelectrochemical applications.
+Conclusions
+Here, we propose a 2D tungsten boride (WB4) lattice, with a Gibbs
+free energy for the adsorption of atomic hydrogen (DGH) tending
+to the ideal value (0 eV) at the 3% strained state, leading to better
+hydrogen evolution reaction activity. Based on first-principles
+calculations, it was demonstrated that the WB4 lattice has
+superior stability and multiple Dirac cones due to the d–p–p
+and d–p–s conjugations. Interestingly, coupling with the
+d-orbital of W, the p-orbitals of borophene subunits in the
+WB4 lattice can modulate the d band center to achieve good
+HER performance. Our results, here, not only provide a versa-
+tile platform for hosting multiple Dirac semimetal states with a
+‘‘sandwich’’ configuration, but also offer a guiding principle for
+discovering the relationship between the intrinsic properties of
+the active center and the catalytic activity of the metal layer
+from the emerging field of 2D noble-metal-free lattices.
+Conflicts of interest
+There are no conflicts to declare.
+Acknowledgements
+A. Z. W. greatly appreciates the Natural Science Foundation of
+Shandong Province (No. ZR2019BA006). M. W. Z. acknowledges
+the support from the National Natural Science Foundation of
+China (No. 21433006 and 11774201). Y. P. F. acknowledges
+funding support from the A*STAR’s Pharos Programme on
+Topological Insulators (Grant No. 1527400026). The computa-
+tional resources were provided by the Centre for Advanced 2D
+Materials of the National University of Singapore in Singapore
+and the National Super Computing Centre in Jinan.
+References
+1 D. V. Esposito, S. T. Hunt, A. L. Stottlemyer, K. D. Dobson,
+B. E. McCandless, R. W. Birkmire and J. G. Chen, Angew.
+Chem., Int. Ed., 2010, 49, 9859–9862.
+2 S.-E. Jang and H. Kim, J. Am. Chem. Soc., 2010, 132,
+14700–14701.
+3 Y.-J. Wang, N. Zhao, B. Fang, H. Li, X. T. Bi and H. Wang,
+Chem. Rev., 2015, 115, 3433–3467.
+4 X. Wu and K. Scott, Int. J. Hydrogen Energy, 2011, 36,
+5806–5810.
+5 Y. Li, T. Takata, D. Cha, K. Takanabe, T. Minegishi,
+J. Kubota and K. Domen, Adv. Mater., 2013, 25, 125–131.
+6 J. W. Ager, M. R. Shaner, K. A. Walczak, I. D. Sharp and
+S. Ardo, Energy Environ. Sci., 2015, 8, 2811–2824.
+7 W. J. Youngblood, S.-H. A. Lee, Y. Kobayashi, E. A.
+Hernandez-Pagan, P. G. Hoertz, T. A. Moore, A. L. Moore,
+D. Gust and T. E. Mallouk, J. Am. Chem. Soc., 2009, 131,
+926–927.
+8 C.-J. Yang, Energy Policy, 2009, 37, 1805–1808.
+Fig. 6
+Gibbs free energy diagram of the HER at diﬀerent coverages at
+equilibrium potential. As a benchmark, the Gibbs free energy for Pt was
+calculated by the same strategy and is listed here.
+Journal of Materials Chemistry C
+Paper
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article OnlineThis journal is ©The Royal Society of Chemistry 2019
+J. Mater. Chem. C, 2019, 7, 8868--8873 | 8873
+9 R. Subbaraman, D. Tripkovic, D. Strmcnik, K. C. Chang,
+M. Uchimura, A. P. Paulikas, V. Stamenkovic and N. M.
+Markovic, Science, 2011, 334, 1256–1260.
+10 P. Wang, K. Jiang, G. Wang, J. Yao and X. Huang, Angew.
+Chem., Int. Ed., 2016, 55, 12859–12863.
+11 P. Wang, X. Zhang, J. Zhang, S. Wan, S. Guo, G. Lu, J. Yao
+and X. Huang, Nat. Commun., 2017, 8, 14580.
+12 Z. W. Seh, J. Kibsgaard, C. F. Dickens, I. Chorkendorﬀ, J. K.
+Norskov and T. F. Jaramillo, Science, 2017, 355, eaad4998.
+13 J. X. Feng, J. Q. Wu, Y. X. Tong and G. R. Li, J. Am. Chem.
+Soc., 2018, 140, 610–617.
+14 J. X. Feng, S. Y. Tong, Y. X. Tong and G. R. Li, J. Am. Chem.
+Soc., 2018, 140, 5118–5126.
+15 X. Zhang, Z. Luo, P. Yu, Y. Cai, Y. Du, D. Wu, S. Gao, C. Tan,
+Z. Li, M. Ren, T. Osipowicz, S. Chen, Z. Jiang, J. Li, Y. Huang,
+J. Yang, Y. Chen, C. Y. Ang, Y. Zhao, P. Wang, L. Song, X. Wu,
+Z. Liu, A. Borgna and H. Zhang, Nat. Chem., 2018, 1, 460–468.
+16 S. Nong, W. Dong, J. Yin, B. Dong, Y. Lu, X. Yuan, X. Wang,
+K. Bu, M. Chen, S. Jiang, L. Liu, M. Sui and F. Huang,
+Well-Dispersed Ruthenium in Mesoporous Crystal TiO2 as
+an Advanced Electrocatalyst for Hydrogen Evolution Reac-
+tion, J. Am. Chem. Soc., 2018, 140, 5719–5727.
+17 A. R. Oganov, J. Chen, C. Gatti, Y. Ma, Y. Ma, C. W. Glass,
+Z. Liu, T. Yu, O. O. Kurakevych and V. L. Solozhenko,
+Nature, 2009, 457, 863.
+18 W. Huang, A. P. Sergeeva, H.-J. Zhai, B. B. Averkiev, L.-S.
+Wang and A. I. Boldyrev, Nat. Chem., 2010, 2, 202.
+19 V.
+Bezugly,
+J.
+Kunstmann,
+B.
+Grundko¨tter-Stock,
+T. Frauenheim, T. Niehaus and G. Cuniberti, ACS Nano,
+2011, 5, 4997–5005.
+20 Z. Zhang, E. S. Penev and B. I. Yakobson, Nat. Chem., 2016,
+8, 525.
+21 B. Decker and J. Kasper, Acta Crystallogr., 1959, 12, 503–506.
+22 Y. Chen, G. Yu, W. Chen, Y. Liu, G. D. Li, P. Zhu, Q. Tao,
+Q. Li, J. Liu, X. Shen, H. Li, X. Huang, D. Wang, T. Asefa and
+X. Zou, J. Am. Chem. Soc., 2017, 139, 12370–12373.
+23 H. Park, A. Encinas, J. P. Scheifers, Y. Zhang and B. P. T.
+Fokwa, Angew. Chem., Int. Ed., 2017, 56, 5575–5578.
+24 Q. Li, X. Zou, X. Ai, H. Chen, L. Sun and X. Zou, Adv. Energy
+Mater., 2018, 1803369, DOI: 10.1002/aenm.201803369.
+25 H. Woods, F. Wawner and B. G. Fox, Science, 1966, 151,
+75.
+26 X. Zou and Y. Zhang, Chem. Soc. Rev., 2015, 44, 5148–5180.
+27 M.-R. Gao, J.-X. Liang, Y.-R. Zheng, Y.-F. Xu, J. Jiang, Q. Gao,
+J. Li and S.-H. Yu, Nat. Commun., 2015, 6, 5982.
+28 G. Gao, A. P. O’Mullane and A. Du, ACS Catal., 2016, 7,
+494–500.
+29 G. Gao, Y. Jiao, F. Ma, Y. Jiao, E. Waclawik and A. Du,
+J. Catal., 2015, 332, 149–155.
+30 J. K. Nørskov, T. Bligaard, A. Logadottir, J. Kitchin, J. G. Chen,
+S. Pandelov and U. Stimming, J. Electrochem. Soc., 2005, 152,
+J23–J26.
+31 D. Voiry, H. Yamaguchi, J. Li, R. Silva, D. C. Alves, T. Fujita,
+M. Chen, T. Asefa, V. B. Shenoy and G. Eda, Nat. Mater.,
+2013, 12, 850.
+32 H. Li, C. Tsai, A. L. Koh, L. Cai, A. W. Contryman, A. H.
+Fragapane, J. Zhao, H. S. Han, H. C. Manoharan and
+F. Abild-Pedersen, Nat. Mater., 2016, 15, 48.
+33 Q. Gong, Y. Wang, Q. Hu, J. Zhou, R. Feng, P. N. Duchesne,
+P. Zhang, F. Chen, N. Han and Y. Li, Nat. Commun., 2016,
+7, 13216.
+34 H. Xu, D. Cheng, D. Cao and X. C. Zeng, Nat. Catal., 2018, 1,
+339–348.
+35 X.-F. Yang, A. Wang, B. Qiao, J. Li, J. Liu and T. Zhang, Acc.
+Chem. Res., 2013, 46, 1740–1748.
+36 B. Qiao, A. Wang, X. Yang, L. F. Allard, Z. Jiang, Y. Cui,
+J. Liu, J. Li and T. Zhang, Nat. Chem., 2011, 3, 634.
+37 G. Kresse and J. Hafner, J. Phys.: Condens. Matter, 1994, 6,
+8245.
+38 J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett.,
+1996, 77, 3865.
+39 G. Kresse and D. Joubert, Phys. Rev. B: Condens. Matter
+Mater. Phys., 1999, 59, 1758.
+40 S. Grimme, S. Ehrlich and L. Goerigk, J. Comput. Chem.,
+2011, 32, 1456–1465.
+41 B. Conway and J. O. M. Bockris, J. Chem. Phys., 1957, 26,
+532–541.
+42 R. Parsons, Trans. Faraday Soc., 1958, 54, 1053–1063.
+43 P. Atkins and J. De Paula, Elements of physical chemistry,
+Oxford University Press, USA, 10th edn, 2013, pp. 1–1008.
+Paper
+Journal of Materials Chemistry C
+Published on 03 June 2019. Downloaded by KEAN UNIVERSITY on 7/25/2019 1:33:01 PM. 
+View Article Online

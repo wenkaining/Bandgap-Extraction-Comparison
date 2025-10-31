@@ -1,0 +1,1377 @@
+Nuclear Quantum Eﬀects on Autoionization of Water Isotopologues Studied by Ab
+Initio Path Integral Molecular Dynamics
+Bo Thomsen1, a) and Motoyuki Shiga1, b)
+CCSE, Japan Atomic Energy Agency, 178-4-4, Wakashiba, Kashiwa, Chiba,
+277-0871, Japan
+(Dated: 1 February 2021)
+In this study we investigate the nuclear quantum eﬀects (NQEs) on the acidity con-
+stant (pKA) of liquid water isotopologues at the ambient condition by path inte-
+gral molecular dynamics (PIMD) simulations.
+We compared simulations using a
+fully explicit solvent model with a classical polarizable force ﬁeld, density functional
+tight binding, and ab initio density functional theory, which correspond to empirical,
+semiempirical, and ab initio PIMD simulations, respectively. The centroid variable
+with respect to the proton coordination number of a water molecule was restrained
+to compute the gradient of the free energy, which measures the reversible work of
+the proton abstraction for the quantum mechanical system. The free energy curve
+obtained by thermodynamic integration was used to compute the pKA value based
+on probabilistic determination. This technique not only reproduces the pKA value of
+liquid D2O experimentally measured (14.86) but also allows for a theoretical predic-
+tion of the pKA values of liquid T2O, aqueous HDO and HTO which are unknown
+due to its scarcity. It is also shown that the NQEs on the free energy curve can result
+in a downshift of 4.5±0.9 pKA units in the case of liquid water, which indicates that
+the NQEs plays an indispensable role in the absolute determination of pKA. The
+results of this study can help to inform further extensions into the calculation of the
+acidity constants of isotope substituted species with high accuracy.
+a)Electronic mail: thomsen.bo@jaea.go.jp
+b)Electronic mail: shiga.motoyuki@jaea.go.jp
+1
+arXiv:2101.12500v1  [physics.chem-ph]  29 Jan 2021I.
+INTRODUCTION
+The acidity constant, pKA, plays a fundamental role in acid-base chemistry. There is no
+doubt about the importance of quantitatively estimating pKA for a given functional group
+in a molecular species. Computational chemistry rooted in molecular theory has the merit
+that it is possible to evaluate pKA independent of experiments.1–3 However, computational
+evaluation of pKA has yet to reach the quantitative level of accuracy, even for the most basic
+case of liquid water, i.e., the water autoionization constant, pKW.
+Previous computational evaluations of pKA have been based on either an implicit solvent
+model, in which a solute molecule is embedded in a solvent described by polarizable con-
+tinuum medium,4–13 or an explicit solvent model, in which both the solute and the solvent
+are described explicitly as molecules.14–22 In general, the implicit solvent model is able to
+provide pKA values with small computational eﬀort but limited accuracy. The intrinsic error
+of the implicit solvent model arises from the lack of complexity to describe solute-solvent
+interactions.
+The inclusion of explicit solvent molecules23–27 and extended conformational sampling28
+have recently been shown to partially solve these issues. Both methods, however, require
+careful (re)-parametrization of the implicit solvent model and selection of the conformers to
+be considered in the calculation. It is therefore preferable to deal with the solvent molecules
+explicitly for quantitatively estimating pKA, where solute-solvent interactions are taken
+into account properly. In this case pKA is estimated directly from the free energy change
+upon the protonation of a solute molecule by molecular dynamics (MD) techniques, such as
+coordination-constrained MD (often to referred to as the blue-moon ensemble method).29,30
+pKA is known to have a strong dependence on thermodynamic conditions such as the
+temperature and pressure. For liquid water under a pressure of 15 MPa, the pKW value of
+14 at the ambient temperature decreases to about 11 in subcritical conditions at 300 ◦C,
+and then increases to about 20 in supercritical conditions at 400 ◦C.31 It is also known that
+pKA clearly diﬀers between the hydrogen isotopologues,32 e.g., pKW of D2O under ambient
+conditions is 14.86, which is larger than that of H2O, 14.00.33 Constrained MD simulations
+allow the estimation of pKA under diﬀerent thermodynamic conditions. However, they will
+produce identical results for the hydrogen isotopologues, because the free energy change
+calculated by classical MD does not depend on the nuclear masses. The isotope eﬀect on
+2the free energy can be traced back to the quantum nature whereby the kinetic and potential
+energy operators in the Boltzmann density do not commute. Therefore, it follows that the
+nuclear quantum eﬀects (NQEs) should not be ignored for the quantitative estimation of
+pKA . In fact, hydrogen is generally known to exhibit quantum behaviors such as zero-point
+vibration and tunneling because of its light mass.
+The pKW of water has been a long-standing interest for theoretical studies, since the long
+time-scale on which the autodissociation takes place makes it diﬃcult to sample eﬃciently.
+Furthermore the strong solvation eﬀects of the produced OH−and H+ ions make it important
+to consider the solvation structure explicitly.
+The computation of pKW of liquid water has been done with explicit solvent in several
+studies.34–37 The reaction mechanism and kinetics of the autoionization of liquid water have
+been the subject in extensive studies.38–40 However, none of these studies have explored the
+NQEs on the pKW of water in ab initio simulations based on ﬁrst principles.
+In this paper we introduce a coordination-restrained path integral molecular dynamics
+(PIMD) method based on an explicit solvent model to study the pKW of liquid water and its
+isotopologues. PIMD is a rigorous approach that takes account of both nuclear quantum and
+temperature eﬀects based on the imaginary-time path integral theory for quantum statistical
+mechanics41–45. PIMD has been used to study the NQEs on several properties of water as
+summarized in a recent review.46
+In this review the NQEs on the pKW of water is estimated by extrapolating the eﬀect on
+the water isotopologues to the case of inﬁnite mass nuclei, which corresponds to the result
+of a classical MD simulation. The change from classical to quantum nuclei was found to
+cause a downshift of around 3 pKA units. This empirical shift was subsequently used in the
+study by Wang et al. to correct the pKW calculated from classical MD.37
+Two important references in the context of this paper are the study on the solvated proton
+and hydroxide ion by Marx et al.47 and the recent study on the NQEs in proton transport
+in water under an electrical ﬁeld by Cassone.48 Here we will extend the PIMD method
+for pKW/pKA estimations, allowing the computations of quantum free energies upon the
+protonation of the solute, by restraining the centroid variable of the coordination number
+(CN).
+In Section II we will outline the theory of coordination-restrained PIMD and the cal-
+culation of pKW in terms of probabilistic and absolute methods. Section III contains the
+3computational details for the simulations conducted in this study. The results of MD and
+PIMD will then be discussed in Section IV. Furthermore we will investigate the isotope
+eﬀects in pure D2O and T2O, and the solvated HDO and HTO isotope substituted water
+like molecules. Finally in Section V we will summarize our ﬁndings.
+II.
+THEORY
+A.
+Coordination Number Restrained Path Integral Molecular Dynamics
+Consider the quantum Hamiltonian for an N atom system within the Born Oppenheimer
+approximation
+ˆH =
+N
+X
+I=1
+ˆP2
+I
+2MI
++ V ( ˆR1, . . . , ˆRN),
+(1)
+where MI is the mass of the Ith particle, ˆP2
+I is the momentum operator
+
+ˆPI,x, ˆPI,y, ˆPI,z
+
+,
+ˆRI is the position operator
+
+ˆRI,x, ˆRI,y, ˆRI,z
+
+and V is the potential. The quantum partition
+function for this system is given as
+Z =
+Z
+dR1 · · ·
+Z
+dRN
+D
+R1 · · · RN
+exp
+
+−β ˆH
+ R1 · · · RN
+E
+= Tr exp
+
+−β ˆH
+
+.
+(2)
+Here β =
+1
+kbT , where kb is the Boltzmann constant and T is the temperature. It is assumed
+that the thermal de Broglie wavelength is smaller than the separation of two identical atoms,
+thereby allowing us to ignore the possibility for exchange of fermion/boson positions.
+By dividing the Boltzmann operator in Equation (2) into P terms, inserting closure
+relations in coordinate spaces between each term of the Boltzmann operator, and applying
+the second-order Suzuki-Trotter expansion one can derive the following expression for the
+partition function,
+Z = lim
+P→∞ZP
+(3)
+where
+ZP =
+N
+Y
+I=1
+" MIP
+2πβℏ2
+ 3P
+2 Z
+dR(1)
+I
+Z
+dR(2)
+I
+· · ·
+Z
+dR(P)
+I
+#
+× exp
+"
+−β
+( P
+X
+s=1
+N
+X
+I=1
+MI
+2 ω2
+P
+
+R(s)
+I
+−R(s−1)
+I
+2
++
+P
+X
+s=1
+1
+P V
+
+R(s)
+1 , . . . , R(s)
+N
+)#
+. (4)
+4The constant ωP is given as
+√
+P
+βℏ. The factor QN
+I=1
+
+MIP
+2πβℏ2
+ 3P
+2 is a constant and will be omitted
+in the following, as it does not alter the relative free energy diﬀerences. Rearranging the
+exponent in the above equation we arrive at the following,
+ZP ∝
+N
+Y
+I=1
+Z
+dR(1)
+I
+Z
+dR(2)
+I
+· · ·
+Z
+dR(P)
+I
+
+exp (−βVeﬀ({R})) ,
+(5)
+where
+Veﬀ({R}) =
+P
+X
+s=1
+( N
+X
+I=1
+MI
+2 ω2
+P
+
+R(s)
+I
+−R(s−1)
+I
+2
++ 1
+P V
+
+R(s)
+1 , . . . , R(s)
+N
+)
+.
+(6)
+These two equations show that the quantum behaviour of an N particle system can be
+mimicked by considering an NP particle system.
+The individual terms in P are often
+referred to as beads on a chain, where each bead corresponds to a single copy of the classical
+system. This system is evolved according to its classical forces and its coupling to a polymer
+chain.
+The cost of this method thus scales steeply with the number of beads, and by
+extension accuracy desired. Convergence with respect to number of beads does however
+scale inversely with temperature, i.e. a few tens of beads can be suﬃcient to accurately
+describe quantum eﬀects for systems under standard conditions.
+The blue-moon sampling approach29,30 is here used to compute the free energy curve of
+water autoionization. Following a study by Sprik34, the CN of an oxygen atom (labeled as
+“O∗”) is used for studying this reaction. We introduce a rational function for the CN as
+nO∗({R}) =
+X
+j∈H
+1 −
+
+rO∗j
+dOH
+6
+1 −
+
+rO∗j
+dOH
+12,
+(7)
+where {R} is the set of atomic coordinates of the system, rij are the distances to all hydrogen
+atoms in the system, and dOH is a constant set to 1.35 ˚A.
+The CN is in this study is restrained to vary the coordination of hydrogen in a single
+OH−moiety from one to zero. These conditions correspond to the moiety forming a H2O
+molecule and a solvated OH−ion respectively. In practice, for a random oxygen atom, one
+of its attached hydrogens is chosen to remain bound, while the other attached hydrogen and
+all other hydrogens are subject to the CN restraint. The same method is used in the case
+of D2O and T2O for the deuterium and tritium atoms in the simulation, respectively. For
+HDO and HTO in solution all hydrogens are restrained, while the core OD−or OT−is kept
+unrestrained.
+5To derive the free energy diﬀerence in the blue-moon ensemble one has to consider the
+free energy of a system restrained to a ﬁxed coordination number ¯nO∗,
+A(¯nO∗) = −β−1 log ρ(¯nO∗) + A0.
+(8)
+A0 is a constant term taking care of the constants dropped in Equation (5). This term is
+only necessary to consider when calculating the absolute value of the free energy, as it will
+cancel for relative free energy diﬀerences. The distribution ρ(¯nO∗) is the scaled probability
+for ﬁnding the system with the given coordination number ¯nO∗, which is expressed as
+ρ(¯nO∗) =
+*
+δ
+ 
+¯nO∗−1
+P
+P
+X
+s=1
+nO∗ R(s)
+!+
+= lim
+P→∞Z−1
+P
+N
+Y
+I=1
+Z
+dR(1)
+I
+· · ·
+Z
+dR(P)
+I
+
+δ
+ 
+¯nO∗−1
+P
+P
+X
+s=1
+nO∗ R(s)
+!
+exp (−βVeﬀ({R}))
+(9)
+in the PIMD formalism. The brackets indicate the ensemble average of the contained func-
+tion, which is equal to its time average assuming ergodicity. To further simplify the ex-
+pression a narrow peaked Gaussian function, with an inverse variance given as κ
+2, is used to
+approximate the delta function, giving
+ρ(¯nO∗) ≈lim
+P→∞Z−1
+P
+r
+βκ
+2π
+N
+Y
+I=1
+Z
+dR(1)
+I
+· · ·
+Z
+dR(P)
+I
+
+exp (−βV cons
+eﬀ
+({R} , ¯nO∗))
+(10)
+where
+V cons
+eﬀ
+({R} , ¯nO∗) = Veﬀ({R}) + κ
+2
+ 
+¯nO∗−1
+P
+P
+X
+s=1
+nO∗ R(s)
+!2
+.
+(11)
+It is exceedingly diﬃcult to calculate the free energy value itself through the above equations.
+Calculating the derivative of the free energy with respect to the restrained value is, however,
+less of a challenge. This derivative is given as
+f(¯nO∗) = ∂A(¯nO∗)
+∂¯nO∗
+=
+*
+κ
+ 
+¯nO∗−1
+P
+P
+X
+s=1
+nO∗ R(s)
+!+
+eﬀ
+,
+(12)
+where the subscript “eﬀ” stands for the sampling by a PIMD simulation with the restraint.
+This derivative corresponds to the time-averaged force which will be used in the following
+to calculate the free energy surface as a function of the CN.
+6B.
+Methodology for Calculating the Autoionization Constant of Water
+Using the time-averaged forces, f(¯nO∗i), from Equation (12) and the time-averaged CNs,
+nO∗i, obtained from a number of CN restrained simulations it is possible to estimate the free
+energy diﬀerence through thermodynamic integration,
+∆A(¯nO∗i) =
+Z ¯nO∗i
+¯nO∗1
+f(¯n)d¯n.
+(13)
+The numerical integral is evaluated by spline interpolation between each of the simulated
+restrained CNs (¯nO∗1, . . . , ¯nO∗M). The numerical integral is here calculated using a third
+order B-spline which passes through all the calculated points.
+Using the free energy surface one can employ a probabilistic (PROB) method to calculate
+the pKW of water and pKA of an acid, as suggested by Davies et al.,17 based on the work of
+Chandler.49 This method relies on the relative probability of ﬁnding the system in a bound
+state. For this purpose we deﬁne a cutoﬀbond distance, Rc, at which the O-H bond breaks
+and the OH−and H3O+ ions are formed. The probability ratio between the bound and
+dissociated states is given by
+γ(Rc) =
+R Rc
+0
+exp(−β∆A(¯nO∗(r)))4πr2dr
+R Rmax
+0
+exp(−β∆A(¯nO∗(r)))4πr2dr
+,
+(14)
+where the factor 4πr2 arises from the Jacobian of polar coodinates. The mapping ¯nO∗(r) is
+carried out by assigning the time averaged closest distance between the central oxygen and
+the restrained hydrogens, ri, for the given restraint ¯nO∗i. The assigned free energy diﬀerence
+calculated in Equation (13), ∆A(¯nO∗(r)), can then be linearly interpolated to numerically
+evaluate the probability. Rmax is the time averaged distance when the CN restraint is set to
+the lowest coordination number, ¯nO∗M.
+The value of Rc is determined so that it gives pKW = 14.00 for liquid H2O. For water
+autoionization
+H2O(l) ⇌OH−(aq) + H+(aq),
+(15)
+the autoionization constant is
+pKW = −log
+ [OH−(aq)][H+(aq)]
+
+.
+(16)
+Rewriting this using the probabilities of water dissociation (γW(Rc)) from Equation (14)
+leads to
+pKW(Rc) = −2 log
+
+(1 −γW(Rc)) NW
+c0V
+
+,
+(17)
+7where NW and V are the number of water molecules and the volume of the simulation box,
+respectively, and c0 is the standard concentration (1 M). To calculate Rc, the reference value
+at standard conditions is used, resulting in
+γW (Rc) = 1 −10−7
+cW
+(18)
+where cW = NW
+c0V (which is about 55.6 in ambient conditions). This can then be used to ﬁnd
+Rc for Equation (14). It is then commonly assumed that this distance is also applicable to
+breaking the A-H bond to form A−and H3O+ for a common acid A.
+The pKA of an acid, or acid group of a molecule, (A) in water can be found by considering
+AH(aq) ⇌A−(aq) + H+(aq),
+(19)
+and the following expression for the acidity constant (pKA),
+pKA = −log
+[A−][H+]
+[AH]
+
+.
+(20)
+Here we have assumed a dilute aqueous solution, where the activities of all species are deter-
+mined by their concentration in the solution. The solvated protons, H+, can in principle stem
+from both water autoionization and the dissociation from A leaving us with the following
+expression for their concentration
+[H+] = [H+]acid + [H+]water = (1 −γA(Rc))cA + (1 −γW(Rc))c′
+W,
+(21)
+where c′
+W =
+N′
+W
+c0V and cA = NA
+c0V . N ′
+W = NW −NA, and NA is the number of acid molecules
+replacing water molecules in the box. It is implicitly assumed that the pKW of water is
+unchanged in the solution of AH, a reasonable assumption given that the solution is dilute.
+Using the probabilities of dissociation for the acid and water we can rewrite Equation (20)
+as
+pKA(PROB) = −log
+(1 −γA(Rc))cA ((1 −γA(Rc))cA + (1 −γW(Rc))c′
+W)
+cAγA
+
+= −log
+(1 −γA)
+γA
+(1 −γA)NA
+c0V
++ 10−7NW −NA
+NW
+
+.
+(22)
+Generally one would ﬁnd that (1−γA(Rc)) ≫(1−γW(Rc)), so the above equation can then
+be reasonably approximated as
+pKA(PROB) ≈−log
+(1 −γ(Rc))2
+(γ(Rc))
+NA
+c0V
+
+.
+(23)
+8Equation (23) was used in previous studies to predict the pKA of acidic substances where
+the proton concentration are mainly from the solute dissociation.14–18 In this study we will
+resort to using Equation (22), since the pKA of HDO and HTO in aqueous solution is
+expected to be close to that of the solvent H2O itself. This approach is however general to
+all very weak acids, with pKA values around their solvent. These types of acids have not
+previously been studied in this context, which is why most studies have relied on Equation
+(23) for calculating pKA values.
+Another way of calculating the probabilities used in the equations above is to employ
+a basic two state model. That is, we assume that the minimum of the free energy surface
+corresponds to the free energy of the bound state of water and the free energy of the lowest
+CN restraint corresponds to the dissociated state. From this model we can formulate the
+probability of ﬁnding a water molecule in a dissociated state as
+1 −γ =
+exp (−β∆A)
+1 + exp (−β∆A),
+(24)
+where ∆A is taken as the diﬀerence between the maximum (dissociated state) value and
+the minimum (bound state) value of ∆A(¯nO∗i) in Equation (13). For the autoionization of
+water and its isotopologues we can approximate this probability as exp (−β∆A), as the free
+energy diﬀerence is very large. Inserting this into Equation (17) results in
+pKW(ABS) = −2 log
+
+exp (−β∆A) NW
+c0V
+
+= 2β∆A
+ln(10) −2 log
+NW
+c0V
+
+.
+(25)
+This method allows us to compare the calculated pKW of H2O to that of D2O and T2O, as
+opposed to the probabilistic method, in which the H2O simulation is used as a reference. In
+the following this method will be referred to as the absolute (ABS) method, as it depends
+on the absolute free energy diﬀerence between two states.
+III.
+COMPUTATIONAL DETAILS
+MD and PIMD simulations of liquid H2O and its isotopologues were undertaken in the
+canonical ensemble at temperature 300 K. The interatomic potential and the associated
+force were computed on the ﬂy by ab initio DFT, semiempirical DFTB, or empirical OSS2
+methods. The simulation conditions are listed in Table I. Systems of 32−64 water molecules
+were contained in cubic boxes with periodic boundary conditions. The box size was set
+9such that the number density was 29.86 molecules/˚A3, which amounts to 1.00 g/cm3 for
+H2O. An example structure is depicted in Figure 1 along with snapshots of the constrained
+water molecule and its surroundings under diﬀerent CN restraints recorded from the DFT
+trajectories.
+The numerical integration schemes for MD and PIMD were based on the reversible refer-
+ence system propagation algorithm (RESPA) as implemented in the PIMD software package.50
+The temperature was strongly controlled by attaching massive Nos´e-Hoover chain (MNHC)
+thermostats51–53 to each degree of freedom in the MD simulations. The MNHC thermostats
+were also attached to each normal mode representing the ring polymer in the PIMD simu-
+lations. The ﬁfth-order Suzuki-Yoshida factorization was used for the numerical integration
+of the MNHC thermostats. The simulations were run for 12.5 −25.0 ps with the step size of
+0.25 −0.43 fs depending on the system and the interatomic potential. The restraints with
+a force constant κ = 4 −10 hartree were applied at 15 points in the range 0.16 ≤ni ≤0.98.
+This resulted in a ﬂuctuation of CN within the order of 0.01. To deal with the fast oscillation
+caused by the restraints, the restraint force was updated 5 times per MD/PIMD step in the
+RESPA technique.
+The ab initio DFT energy calculations were carried out using the Vienna ab initio sim-
+ulation package (VASP).54–56 We employed the Perdew-Burke-Ernzerhof (PBE)57 exchange
+correlation functional and Grimme’s D3 van der Waals correction.58 The core electrons were
+taken into account using the projector augmented wave (PAW) method. The valence elec-
+trons are expressed in terms of a linear combination of plane wave basis functions with a
+cutoﬀat 400 eV. Only the Γ-point of the Brillouin zone was computed.
+The semiempirical DFTB energy calculations were carried out using DFTB+.59 We em-
+ployed the third-order self-consistent-charge density-functional tight-binding (SCC-DFTB)60
+method with the 3ob Slater-Koster parameter set.61
+The empirical energy calculations based on the OSS262 potential were implemented in
+an in-house version of the PIMD software package. The OSS2 potential can be categorized
+as a polarizable force ﬁeld composed of short-range intramolecular bonds and long-range
+interactions between point charges and induced point dipoles with damping. The parameters
+in the OSS2 potential are ﬁtted so as to reproduce the ab initio energies of neutral and
+protonated water clusters at the level of second-order Møller-Plesset perturbation theory
+(MP2). The OSS2 potential was originally developed for small water clusters in the free
+10boundary condition, but it can be applied to bulk water by adaption for periodic boundary
+conditions. We used the Ewald sum of point charges and induced point dipoles for this,
+where the point dipoles in the electrostatic ﬁeld were determined by the matrix inversion
+method.63
+The resulting restraints, forces and trajectories were analysed using a locally developed
+python script, where the MDAnalysis library64,65 was used for calculating the O-H dis-
+tances. The errors reported here were calculated by the method outlined by Flyvbjerg and
+Petersen.66 The errors of the cut oﬀdistance Rc and the probabilistic pKA or pKW are not
+considered to be correlated, i.e., the errors in pKW or pKA are calculated using a ﬁxed value
+of Rc. All ﬁgures depicting the molecular systems were visualized using the VMD software.67
+The numerical integrals needed for the calculations outlined in the theory section were all
+carried out using linear interpolation and a step size of 1·10−4 in both CN and O-H distance
+space.
+IV.
+RESULTS
+The free energy curves, A(n(r)), obtained from ab initio MD and PIMD simulations are
+displayed in Figure 2(a). These represent in our opinion the most reliable results in the
+present study. The following features become clear when comparing the results presented
+in Figure 2(a). The ab initio PIMD results in a much lower free energy for the dissociation
+process when compared to that of ab initio MD. This eﬀect can be explained by the NQEs,
+which is expected to lead to lower free energies of dissociation due to the delocalization of
+the proton.46 Comparing the results for the isotopologues H2O and T2O we ﬁnd that the free
+energy curves are diﬀerent in the ab initio PIMD. The calculation of these two species using
+ab initio MD would result in the same curves due to the absence of NQEs in classical MD .
+An important consequence of this diﬀerence is that the cut oﬀdistance Rc determined by ab
+initio MD (1.30 ± 0.03 ˚A) must be adapted to that by ab initio PIMD (1.50 ± 0.02 ˚A(H2O)
+1.53 ± 0.04 ˚A(D2O), see Table II or SI, respectively) in order to reproduce the reference
+pKW value of liquid water. We note in passing that the result obtained from ab initio MD is
+consistent with values used in previous studies of 1.22 −1.3 ˚A.14–17 One way of interpreting
+the increase in cut oﬀdistance in the PIMD simulations is that the proton stays bonded to
+the restrained oxygen longer due to NQEs.
+11In Figures 2(b) and 2(c) we display the results obtained from semiempirical MD/PIMD
+and empirical MD/PIMD, respectively. Comparing Figures 2(b) and 2(c) with Figure 2(a),
+the free energy curves of semiempirical MD and PIMD look very diﬀerent from that of ab
+initio MD and PIMD in the absolute values. Accordingly, the cutoﬀdistances Rc are quite
+diﬀerent from one another. On the other hand, the reduction of the free energy curves
+behaves similarly with respect to the NQEs. Therefore, we speculate that the isotope eﬀects
+predicted by empirical and semiempirical PIMD can be as reliable as those from ab initio
+PIMD.
+The free energy curves of the classical simulation show an anharmonic behavior since
+the mean force upon proton dissociation is a nonlinear function of r.
+In addition, the
+diﬀerence between the free energy curves of the classical and quantum simulations vary along
+r, which implies the inﬂuence of anharmonicity on the NQEs. In general, the magnitude of
+the NQEs tends to be large where the potential curvature ω is larger than 1/βℏ, which can
+be understood from the formula of the quantum harmonic correction to the free energy,
+Aqhc = −β−1 log
+n
+βℏω/2
+sinh(βℏω/2)
+o
+.68
+The computational eﬀort needed to obtain the free energy curve increases proportionally
+with respect to the number of restraints. We therefore setup the ab initio MD and PIMD
+simulations with a smaller system and number of beads (N = 32 and P = 12) compared to
+our previous work on the same system without restraints (N = 64 and P = 16).69 To verify
+this setup, we checked the size- and bead-dependence of the MD and PIMD simulations
+using the semiempirical DFTB potential. Figure 3(a) shows the free energy curves obtained
+from semiempirical PIMD simulation for a larger number of beads with P = 32, while Figure
+3(b) shows the free energy curves obtained from semiempirical MD and PIMD simulation
+for a larger system size with 64 water molecules. It can be clearly seen that Figures 3(a)
+and (b) follow the same trend as Figures 2(b), in the sense that the free energy is reduced
+by the NQEs within the semiempirical simulations. We can therefore expect that the results
+obtained from ab initio MD and PIMD simulations shown in Figure 2(a) are reasonable with
+respect to the nuclear quantum and isotope eﬀects on the free energy curves.
+In Table II, we display the autoionization constants, pKW, of liquid D2O and T2O cal-
+culated using Equation (17) and the free energy curves obtained from PIMD simulations.
+The cutoﬀparameter Rc was determined for a particular setup of PIMD simulations such
+that the pKW of liquid H2O is 14.00. We see the trend that the pKW value of liquid T2O
+12is higher than 14.00, which is consistent with experimental expectations.46 However, the
+diﬀerence between the pKW values of liquid H2O and D2O in the ab initio PIMD simula-
+tions lies within the error bars. All the PIMD simulations were able to predict that the
+pKW value of liquid T2O is larger than that of liquid H2O with statistical signiﬁcance. We
+also tried calculating pKW using the D2O pKW as a reference, results given in Table SI of
+the supplementary information (SI), and we found that the results agree well with the ones
+presented in Table II.
+The autoionization constants calculated using the absolute method outlined around Equa-
+tion (25) are given in Table III. This method makes it possible to compare the pKW cal-
+culated using MD and PIMD simulations directly, as no reference value is required for this
+method. Comparing the ab initio MD and PIMD results for H2O reveals that the NQEs play
+an important role in determining the correct pKW value. We note that the values predicted
+from the semi empirical MD and PIMD simulations are far from the correct value of pKW,
+see Table SII in the SI, as can be expected from their free energy proﬁles. The results using
+the empirical OSS force ﬁeld are, however, comparable with those of the ab initio method,
+with a slightly smaller diﬀerence between MD and PIMD results. As shown above, the
+absolute method of ab initio PIMD simulation can correct for the large overestimation of
+the unbinding energy of a proton from water of ab initio MD simulation. Additionally, the
+absolute method produces a reasonable result for the isotope eﬀect for all pure isotopologues
+studied here.
+In Table IV, we display the acidity constants, pKA, associated with the reaction,
+HXO(aq) ⇌OX−(aq) + H+(aq),
+(26)
+where X = D or T. The values were calculated using Equation (22) and the free energy
+curves obtained from PIMD simulations.
+Experimental values do not exist for the pKA of HDO and HTO. However, the “ratio-
+nal” pKA of H2O, which is 15.74 = pKW+ log (cW), would be a reference. The rational
+pKA is obtained by using an activity for the H2O molecules when the dissociating water
+molecule is assumed misleadingly to be distinguishable from the rest of the water molecules
+in solution.70,71
+It can however serve well as a reference in this case where the HDO and
+HTO molecules are in fact distinguishable from the solvent molecules.
+It is expected that the pKA of HDO and HTO in water are either similar to or larger
+13than the “rational” pKA of H2O, assuming that the isotope eﬀect follows the same trend as
+the case of the pKW of H2O, D2O and T2O.
+Here it turned out that the
+pKA value of HDO predicted from empirical PIMD is close to the “rational” pKA of H2O,
+while the predicted pKA value of HTO is larger than that of H2O with statistical signiﬁcance.
+For the semiempirical calculations we ﬁnd that both the pKA of HDO and HTO are larger
+than the “rational” pKA of H2O. We note that these pKA values are diﬃcult to measure
+experimentally, but they are important in determining the concentration of OD−and OT−
+ions in liquid water.
+V.
+CONCLUSION
+In this study we established a ﬁrst-principles approach to compute the autoionization
+and acidity constants of water taking account of NQEs by PIMD with CN restraints. The
+simulations were carried out using diﬀerent potential energy surfaces, i.e., ab initio DFT,
+semiempirical DFTB and empirical OSS2 methods.
+The ﬁndings presented here are in line with previous empirical results.46 The current
+study does diﬀerentiate itself from previous studies, by targeting the autoionization process
+directly, without any empirical factors to estimate its free energy curves.
+It was found that the free energy curve in the proton dissociation obtained from the
+quantum PIMD simulation is downshifted signiﬁcantly compared with that obtained from
+the classical MD simulation, thus showing the importance of the NQEs on the autoionization
+and acidity constants. The pKW values of water isotopologues, liquid D2O and T2O, were
+estimated based on a probabilistic method using shifts in the free energy curves of D2O and
+T2O with respect to that of H2O. The results agree well with experimental values, accounting
+for the statistical uncertainties of our simulations.
+We went on to compute the pKA values of aqueous HDO and HTO molecules which are
+diﬃcult to measure experimentally. The results predict that pKA of aqueous HTO (HDO)
+is larger than (close to) that of H2O.
+The work presented here opens the possibility for accurate calculations of pKA for more
+complex systems, such as small organic molecules in solution.
+It furthermore makes it
+possible to to predict the isotope eﬀect on these system by direct calculation. These goals
+14and calculating the temperature and pressure dependence of the autoionization constant of
+water will be a subject of future studies.
+We ﬁnally note that the probabilistic method requires the reference pKW value of H2O
+(14.00) while the absolute method does not. For the latter, however, an accurate estimation
+of absolute pKA values remains a diﬃcult challenge. In fact the pKW estimated using the
+absolute method with the present simulations have very diﬀerent values to those from the
+probablistic method, see Tables II and III. This is because the standard free energy curve
+is strongly dependent on the potential models and the system sizes. These issues should be
+studied more carefully in the future. It is however clear that the inclusion of the NQEs is
+important for determining autoionization and acidity constants.
+In fact, we do ﬁnd a diﬀerence of 4.5±0.9 pKA units between the ab initio MD and PIMD
+results, where the PIMD result is clearly closer to the true value of the pKW of water. This
+diﬀerence does seem to be in line, to some extent, with the experimental extrapolation of 3
+pKA units which was suggested earlier.46
+VI.
+SUPPLEMENTARY MATERIAL
+See the supplementary material for Tables showing the autoionization constants of water
+isotopologues calculated by the probabilistic method using the experimental pKW of D2O
+to calculate Rc, and the autoionization constants of water isotopologues calculated by the
+absolute method using the semiempirical DFTB method.
+VII.
+ACKNOWLEDGEMENTS
+This work was completed under the project “Hydrogenomics” in Grant-in-Aid for Scien-
+tiﬁc Research on Innovative Areas, MEXT, Japan. The computations were mostly run on the
+supercomputer facilities at Japan Atomic Energy Agency and the Institute for Solid State
+Physics, The University of Tokyo. M.S. thanks JSPS KAKENHI (18H05519, 18H01693,
+18K05208) and MEXT Program for Promoting Research on the Supercomputer Fugaku
+(Fugaku Battery & Fuel Cell Project) for ﬁnancial support. We thank Prof. Nikos Doltsinis
+in Universit¨at M¨unster for his advice on the coordination number constraints. We thank
+Dr. Alex Malins in JAEA for proofreading the text.
+15VIII.
+DATA AVAILABILITY
+The data that support the ﬁndings of this study are available within the article and its
+supplementary material.
+REFERENCES
+1K. S. Alongi and G. C. Shields, “Chapter 8 - Theoretical Calculations of Acid Dissociation
+Constants: A Review Article,” in Annual Reports in Computational Chemistry (R. A.
+Wheeler, ed.), vol. 6, pp. 113–138, Elsevier, Jan. 2010.
+2E. Alexov, E. L. Mehler, N. Baker, A. M. Baptista, Y. Huang, F. Milletti, J. E. Nielsen,
+D. Farrell, T. Carstensen, M. H. M. Olsson, J. K. Shen, J. Warwicker, S. Williams, and
+J. M. Word, “Progress in the prediction of pKa values in proteins,” Proteins, vol. 79,
+pp. 3260–3275, Dec. 2011.
+3J. Ho and M. Coote, “A universal approach for continuum solvent pK a calculations: are
+we there yet?,” Theor. Chem. Acc., 2010.
+4J. Tomasi, B. Mennucci, and R. Cammi, “Quantum Mechanical Continuum Solvation
+Models,” Chem. Rev., vol. 105, pp. 2999–3094, Aug. 2005.
+5S. Miertuˇs, E. Scrocco, and J. Tomasi, “Electrostatic interaction of a solute with a con-
+tinuum. A direct utilizaion of AB initio molecular potentials for the prevision of solvent
+eﬀects,” Chem. Phys., vol. 55, pp. 117–129, Feb. 1981.
+6J. B. Foresman, T. A. Keith, K. B. Wiberg, J. Snoonian, and M. J. Frisch, “Solvent Eﬀects.
+5. Inﬂuence of Cavity Shape, Truncation of Electrostatics, and Electron Correlation on ab
+Initio Reaction Field Calculations,” J. Phys. Chem., vol. 100, pp. 16098–16104, Jan. 1996.
+7J. L. Pascual-ahuir, E. Silla, and I. Tu˜non, “GEPOL: An improved description of molecular
+surfaces. III. A new algorithm for the computation of a solvent-excluding surface,” J.
+Comput. Chem., vol. 15, no. 10, pp. 1127–1138, 1994.
+8S. Miertuˇs and J. Tomasi, “Approximate evaluations of the electrostatic free energy and
+internal energy changes in solution processes,” Chem. Phys., vol. 65, pp. 239–245, Mar.
+1982.
+9M. Cossi, N. Rega, G. Scalmani, and V. Barone, “Energies, structures, and electronic
+properties of molecules in solution with the C-PCM solvation model,” J. Comput. Chem.,
+16vol. 24, no. 6, pp. 669–681, 2003.
+10A. Klamt and G. Sch¨u¨urmann, “COSMO: a new approach to dielectric screening in solvents
+with explicit expressions for the screening energy and its gradient,” J. Chem. Soc., Perkin
+Trans. 2, pp. 799–805, Jan. 1993.
+11A. Klamt, “Conductor-like Screening Model for Real Solvents: A New Approach to the
+Quantitative Calculation of Solvation Phenomena,” J. Phys. Chem., vol. 99, pp. 2224–
+2235, Feb. 1995.
+12A. V. Marenich, C. J. Cramer, and D. G. Truhlar, “Universal Solvation Model Based on
+Solute Electron Density and on a Continuum Model of the Solvent Deﬁned by the Bulk
+Dielectric Constant and Atomic Surface Tensions,” J. Phys. Chem. B, vol. 113, pp. 6378–
+6396, May 2009.
+13I. Soteras, C. Curutchet, A. Bidon-Chanal, M. Orozco, and F. J. Luque, “Extension of
+the MST model to the IEF formalism: HF and B3lyp parametrizations,” J. Mol. Struct.
+(Theochem), vol. 727, pp. 29–40, Aug. 2005.
+14N. L. Doltsinis and M. Sprik, “Theoretical pKa estimates for solvated P(OH)5 from co-
+ordination constrained Car–Parrinello molecular dynamics,” Phys. Chem. Chem. Phys.,
+vol. 5, pp. 2612–2618, June 2003.
+15M. Schilling and S. Luber, “Determination of pKa Values via ab initio Molecular Dynamics
+and its Application to Transition Metal-Based Water Oxidation Catalysts,” Inorganics,
+vol. 7, p. 73, June 2019.
+16Y.-L. Chen, N. L. Doltsinis, R. C. Hider, and D. J. Barlow, “Prediction of Absolute
+Hydroxyl pKa Values for 3-Hydroxypyridin-4-ones,” J. Phys. Chem. Lett., vol. 3, pp. 2980–
+2985, Oct. 2012.
+17J. E. Davies, N. L. Doltsinis, A. J. Kirby, C. D. Roussev, and M. Sprik, “Estimating pKa
+Values for Pentaoxyphosphoranes,” J. Am. Chem. Soc., vol. 124, pp. 6594–6599, June
+2002.
+18N. Sandmann, J. Bachmann, A. Hepp, N. L. Doltsinis, and J. M¨uller, “Copper(II)-
+mediated base pairing involving the artiﬁcial nucleobase 3h-imidazo[4,5-f]quinolin-5-ol,”
+Dalton Trans., vol. 48, pp. 10505–10515, July 2019.
+19A. K. Tummanapelli and S. Vasudevan, “Dissociation Constants of Weak Acids from ab
+Initio Molecular Dynamics Using Metadynamics: Inﬂuence of the Inductive Eﬀect and
+Hydrogen Bonding on pKa Values,” J. Phys. Chem. B, vol. 118, pp. 13651–13657, Nov.
+172014.
+20A. K. Tummanapelli and S. Vasudevan, “Ab Initio MD Simulations of the Brønsted Acidity
+of Glutathione in Aqueous Solutions: Predicting pKa Shifts of the Cysteine Residue,” J.
+Phys. Chem. B, vol. 119, pp. 15353–15358, Dec. 2015.
+21A. K. Tummanapelli and S. Vasudevan, “Ab Initio Molecular Dynamics Simulations of
+Amino Acids in Aqueous Solutions: Estimating pKa Values from Metadynamics Sam-
+pling,” J. Phys. Chem. B, vol. 119, pp. 12249–12255, Sept. 2015.
+22C. D. Daub and L. Halonen, “Ab Initio Molecular Dynamics Simulations of the Inﬂuence
+of Lithium Bromide Salt on the Deprotonation of Formic Acid in Aqueous Solution,” J.
+Phys. Chem. B, vol. 123, pp. 6823–6829, Aug. 2019.
+23L. Xu and M. L. Coote, “Methods To Improve the Calculations of Solvation Model Den-
+sity Solvation Free Energies and Associated Aqueous pKa Values: Comparison between
+Choosing an Optimal Theoretical Level, Solute Cavity Scaling, and Using Explicit Solvent
+Molecules,” J. Phys. Chem. A, vol. 123, pp. 7430–7438, Aug. 2019.
+24C. C. R. Sutton, G. V. Franks, and G. da Silva, “First Principles pKa Calculations on
+Carboxylic Acids Using the SMD Solvation Model: Eﬀect of Thermodynamic Cycle, Model
+Chemistry, and Explicit Solvent Molecules,” J. Phys. Chem. B, vol. 116, pp. 11999–12006,
+Oct. 2012.
+25S. Zhang, “A reliable and eﬃcient ﬁrst principles-based method for predicting pKa values.
+III. Adding explicit water molecules: Can the theoretical slope be reproduced and pKa
+values predicted more accurately?,” J. Comput. Chem., vol. 33, no. 5, pp. 517–526, 2012.
+26B. Thapa and H. B. Schlegel, “Calculations of pKa’s and Redox Potentials of Nucleobases
+with Explicit Waters and Polarizable Continuum Solvation,” J. Phys. Chem. A, vol. 119,
+pp. 5134–5144, May 2015.
+27B. Thapa and H. B. Schlegel, “Density Functional Theory Calculation of pKa’s of Thiols in
+Aqueous Solution Using Explicit Water Molecules and the Polarizable Continuum Model,”
+J. Phys. Chem. A, vol. 120, pp. 5726–5735, July 2016.
+28N. L. Haworth, Q. Wang, and M. L. Coote, “Modeling Flexible Molecules in Solution: A
+pKa Case Study,” J. Phys. Chem. A, vol. 121, pp. 5217–5225, July 2017.
+29E. A. Carter, G. Ciccotti, J. T. Hynes, and R. Kapral, “Constrained reaction coordinate
+dynamics for the simulation of rare events,” Chem. Phys. Lett., vol. 156, pp. 472–477, Apr.
+1989.
+1830M. Sprik and G. Ciccotti, “Free energy from constrained molecular dynamics,” J. Chem.
+Phys., vol. 109, pp. 7737–7744, Nov. 1998.
+31A. V. Bandura and S. N. Lvov, “The Ionization Constant of Water over Wide Ranges of
+Temperature and Density,” J. Phys. Chem. Ref. Data, vol. 35, pp. 15–30, Dec. 2005.
+32N. Mora-Diez, Y. Egorova, H. Plommer, and P. R. Tremaine, “Theoretical study of deu-
+terium isotope eﬀects on acid–base equilibria under ambient and hydrothermal conditions,”
+RSC Adv., vol. 5, pp. 9097–9109, Jan. 2015.
+33D. W. Shoesmith and W. Lee, “The ionization constant of heavy water (D2o) in the
+temperature range 298 to 523 K,” Can. J. Chem., vol. 54, pp. 3553–3558, Nov. 1976.
+34M. Sprik, “Computation of the pK of liquid water using coordination constraints,” Chem-
+ical Physics, vol. 258, pp. 139–150, Aug. 2000.
+35E. Perlt, M. v. Domaros, B. Kirchner, R. Ludwig, and F. Weinhold, “Predicting the Ionic
+Product of Water,” Sci Rep, vol. 7, pp. 1–10, Aug. 2017.
+36M. ˇStrajbl, G. Hong, and A. Warshel, “Ab Initio QM/MM Simulation with Proper Sam-
+pling: “First Principle” Calculations of the Free Energy of the Autodissociation of Water
+in Aqueous Solution,” J. Phys. Chem. B, vol. 106, pp. 13333–13343, Dec. 2002.
+37R. Wang, V. Carnevale, M. L. Klein, and E. Borguet, “First-Principles Calculation of
+Water pKa Using the Newly Developed SCAN Functional,” J. Phys. Chem. Lett., vol. 11,
+pp. 54–59, Jan. 2020.
+38M. Moqadam, A. Lervik, E. Riccardi, V. Venkatraman, B. K. Alsberg, and T. S. v. Erp,
+“Local initiation conditions for water autoionization,” PNAS, vol. 115, pp. E4569–E4576,
+May 2018.
+39P. L. Geissler, C. Dellago, D. Chandler, J. Hutter, and M. Parrinello, “Autoionization in
+Liquid Water,” Science, vol. 291, pp. 2121–2124, Mar. 2001.
+40B. L. Trout and M. Parrinello, “Analysis of the Dissociation of H2o in Water Using First-
+Principles Molecular Dynamics,” J. Phys. Chem. B, vol. 103, pp. 7340–7345, Aug. 1999.
+41M. Shiga, “Path Integral Simulations,” in Reference Module in Chemistry, Molecular Sci-
+ences and Chemical Engineering, Elsevier, Jan. 2018.
+42M. Parrinello and A. Rahman, “Study of an F center in molten KCl,” J. Chem. Phys.,
+vol. 80, pp. 860–867, Jan. 1984.
+43R. W. Hall and B. J. Berne, “Nonergodicity in path integral molecular dynamics,” J.
+Chem. Phys., vol. 81, pp. 3641–3643, Oct. 1984.
+1944M. Ceriotti, M. Parrinello, T. E. Markland, and D. E. Manolopoulos, “Eﬃcient stochastic
+thermostatting of path integral molecular dynamics,” J. Chem. Phys., vol. 133, p. 124104,
+Sept. 2010.
+45M. E. Tuckerman, B. J. Berne, G. J. Martyna, and M. L. Klein, “Eﬃcient molecular
+dynamics and hybrid Monte Carlo algorithms for path integrals,” J. Chem. Phys., vol. 99,
+pp. 2796–2808, Aug. 1993.
+46M. Ceriotti, W. Fang, P. G. Kusalik, R. H. McKenzie, A. Michaelides, M. A. Morales, and
+T. E. Markland, “Nuclear Quantum Eﬀects in Water and Aqueous Systems: Experiment,
+Theory, and Current Challenges,” Chem. Rev., vol. 116, pp. 7529–7550, July 2016.
+47D. Marx, M. E. Tuckerman, J. Hutter, and M. Parrinello, “The nature of the hydrated
+excess proton in water,” Nature, vol. 397, pp. 601–604, Feb. 1999.
+48G. Cassone, “Nuclear Quantum Eﬀects Largely Inﬂuence Molecular Dissociation and Pro-
+ton Transfer in Liquid Water under an Electric Field,” J. Phys. Chem. Lett., vol. 11,
+pp. 8983–8988, Nov. 2020.
+49D. Chandler, Introduction to Modern Statistical Mechanics. Oxford: Oxford University
+Press, 1987.
+50M. Shiga, “PIMD,” 2020.
+51S. Nos´e, “A uniﬁed formulation of the constant temperature molecular dynamics methods,”
+J. Chem. Phys., vol. 81, pp. 511–519, July 1984.
+52W. G. Hoover, “Canonical dynamics: Equilibrium phase-space distributions,” Phys. Rev.
+A, vol. 31, pp. 1695–1697, Mar. 1985.
+53G. J. Martyna, M. L. Klein, and M. Tuckerman, “Nos´e–Hoover chains: The canonical
+ensemble via continuous dynamics,” J. Chem. Phys., vol. 97, pp. 2635–2643, Aug. 1992.
+54G. Kresse and J. Hafner, “Ab initio molecular dynamics for liquid metals,” Phys. Rev. B,
+vol. 47, pp. 558–561, Jan. 1993.
+55G. Kresse and J. Hafner, “Ab initio molecular-dynamics simulation of the liquid-metal–
+amorphous-semiconductor transition in germanium,” Phys. Rev. B, vol. 49, pp. 14251–
+14269, May 1994.
+56G. Kresse and J. Furthm¨uller, “Eﬃciency of ab-initio total energy calculations for metals
+and semiconductors using a plane-wave basis set,” Comput. Mater. Sci., vol. 6, pp. 15–50,
+July 1996.
+2057J. P. Perdew, K. Burke, and M. Ernzerhof, “Generalized Gradient Approximation Made
+Simple,” Phys. Rev. Lett., vol. 77, pp. 3865–3868, Oct. 1996.
+58S. Grimme, J. Antony, S. Ehrlich, and H. Krieg, “A consistent and accurate ab initio
+parametrization of density functional dispersion correction (DFT-D) for the 94 elements
+H-Pu,” J. Chem. Phys., vol. 132, p. 154104, Apr. 2010.
+59B. Hourahine, B. Aradi, V. Blum, F. Bonaf´e, A. Buccheri, C. Camacho, C. Cevallos,
+M. Y. Deshaye, T. Dumitric˘a, A. Dominguez, S. Ehlert, M. Elstner, T. van der Heide,
+J. Hermann, S. Irle, J. J. Kranz, C. K¨ohler, T. Kowalczyk, T. Kubaˇr, I. S. Lee, V. Lutsker,
+R. J. Maurer, S. K. Min, I. Mitchell, C. Negre, T. A. Niehaus, A. M. N. Niklasson, A. J.
+Page, A. Pecchia, G. Penazzi, M. P. Persson, J. ˇRez´aˇc, C. G. S´anchez, M. Sternberg,
+M. St¨ohr, F. Stuckenberg, A. Tkatchenko, V. W.-z. Yu, and T. Frauenheim, “DFTB+,
+a software package for eﬃcient approximate density functional theory based atomistic
+simulations,” J. Chem. Phys., vol. 152, p. 124101, Mar. 2020.
+60M. Elstner, D. Porezag, G. Jungnickel, J. Elsner, M. Haugk, T. Frauenheim, S. Suhai, and
+G. Seifert, “Self-consistent-charge density-functional tight-binding method for simulations
+of complex materials properties,” Phys. Rev. B, vol. 58, pp. 7260–7268, Sept. 1998.
+61M. Gaus, A. Goez, and M. Elstner, “Parametrization and Benchmark of DFTB3 for Or-
+ganic Molecules,” J. Chem. Theory Comput., vol. 9, pp. 338–354, Jan. 2013.
+62L. Ojam¨ae, I. Shavitt, and S. J. Singer, “Potential models for simulations of the solvated
+proton in water,” J. Chem. Phys., vol. 109, pp. 5547–5564, Sept. 1998.
+63J. Sala, E. Gu`ardia, and M. Masia, “The polarizable point dipoles method with electro-
+static damping: Implementation on a model system,” J. Chem. Phys., vol. 133, p. 234101,
+Dec. 2010.
+64N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein, “MDAnalysis: A
+toolkit for the analysis of molecular dynamics simulations,” J. Comput. Chem., vol. 32,
+no. 10, pp. 2319–2327, 2011.
+65R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, J. Doma´nski,
+D. L. Dotson, S. Buchoux, I. M. Kenney, and O. Beckstein, “MDAnalysis: A Python
+Package for the Rapid Analysis of Molecular Dynamics Simulations,” Proceedings of the
+15th Python in Science Conference, pp. 98–105, 2016.
+66H. Flyvbjerg and H. G. Petersen, “Error estimates on averages of correlated data,” J.
+Chem. Phys., vol. 91, pp. 461–466, July 1989.
+2167W. Humphrey, A. Dalke, and K. Schulten, “VMD: Visual molecular dynamics,” J. Mol.
+Graph., vol. 14, pp. 33–38, Feb. 1996.
+68M. Shiga and H. Fujisaki, “A quantum generalization of intrinsic reaction coordinate using
+path integral centroid coordinates,” J. Chem. Phys., vol. 136, p. 184103, May 2012.
+69M. Machida, K. Kato, and M. Shiga, “Nuclear quantum eﬀects of light and heavy water
+studied by all-electron ﬁrst principles path integral simulations,” J. Chem. Phys., vol. 148,
+p. 102324, Dec. 2017.
+70T. P. Silverstein and S. T. Heller, “pKa Values in the Undergraduate Curriculum: What
+Is the Real pKa of Water?,” J. Chem. Educ., vol. 94, pp. 690–695, June 2017.
+71E. C. Meister, M. Willeke, W. Angst, A. Togni, and P. Walde, “Confusing Quantitative
+Descriptions of Brønsted-Lowry Acid-Base Equilibria in Chemistry Textbooks – A Critical
+Review and Clariﬁcations for Chemical Educators,” Helv. Chim. Acta, vol. 97, no. 1, pp. 1–
+31, 2014.
+22Figure Captions
+Figure 1: (A) Initial structure containing 32 water molcules.
+The four inserts on the
+right show the water molecules within 4 ˚A of the central oxygen molecule during the simu-
+lation with a coordination number restraint of (B) 0.98, (C) 0.80, (D) 0.60, (E) 0.31. The
+distance from the central oxygen to the nearest constrained hydrogen is (B) 1.00 ˚A, (C) 1.16
+˚A, (D) 1.29 ˚A, (E) 1.47 ˚A. The O-H bonds are for all ﬁgures drawn if the O-H distance is
+less than 1.3 ˚A, with the exception of the O∗-H bond in which case the bonds are drawn for
+distances up to 1.5 ˚A. The central oxygen is in (B-E) marked with orange, and the teal hy-
+drogen atom is the only hydrogen atom not subject to any constraints during the simulation.
+Figure 2: The free energy curves, A(n(r)), for H2O using MD (black), H2O using PIMD
+(orange) and T2O using PIMD (green). (a) was calcultated using the ab initio potential,
+while (b) uses the semiempirical potential and (c) uses the empirical potential. For the MD
+simulations using OSS2, DFTB and DFT we found the values of Rc to be 1.39 ± 0.02 ˚A,
+1.13 ± 0.00 ˚A, 1.27 ± 0.01 ˚A, respectively. See Table II for the corresponding values for the
+PIMD simulations. The Rc values are shown in this ﬁgure as vertical lines for H2O using
+MD (black) and PIMD (orange).
+Figure 3:
+The free energy curves of semiempirical simulations for H2O and T2O in a
+box containing (a) 32 and (b) 64 molecules.
+In both ﬁgures the black curve represents
+classical MD on H2O, and the corresponding black vertical line is the calculated Rc distance
+for this simulation, (a) 1.13 ± 0.00 ˚A and (b) 1.15 ± 0.00 ˚A, respectively. The orange and
+green curves represent H2O and T2O respectively in a PIMD simulation with (a) P = 32
+or (b) P = 12. The orange vertical lines represent the calculated Rc of the two H2O PIMD
+simulations, (a) 1.16 ± 0.00 ˚A and (b) 1.17 ± 0.00 ˚A, respectively.
+23(A)
+(B)
+(D)
+(C)
+(E)
+FIG. 1.
+240
+5
+10
+15
+(a) Ab initio
+(a) Ab initio
+(a) Ab initio
+0
+10
+20
+30
+Free Energy (kcal/mol)
+(b) Semiemperical
+(b) Semiemperical
+(b) Semiemperical
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+R (Aangstrom)
+0
+5
+10
+(c) Emperical
+(c) Emperical
+(c) Emperical
+FIG. 2.
+250
+10
+20
+30
+(a) Semiempirical - 32 Molecules
+(a) Semiempirical - 32 Molecules
+(a) Semiempirical - 32 Molecules
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+R (Aangstrom)
+0
+10
+20
+30
+(b) Semiempirical - 64 Molecules
+(b) Semiempirical - 64 Molecules
+(b) Semiempirical - 64 Molecules
+Free Energy (kcal/mol)
+FIG. 3.
+26Table I. Simulation setup of water isotopologues.
+Method
+System
+Molecules
+P
+∆t [ps]
+Length [ps]
+Restraints
+DFTa
+liq. H2O
+32
+1
+0.25
+24.0
+15
+DFTb
+liq. H2O
+32
+12
+0.25
+25.0
+15
+DFTb
+liq. D2O
+32
+12
+0.25
+25.0
+15
+DFTb
+liq. T2O
+32
+12
+0.25
+25.0
+15
+DFTBc
+liq. H2O
+32
+1
+0.25
+25.0
+15
+DFTBd
+liq. H2O
+32
+12
+0.25
+25.0
+15
+DFTBd
+liq. H2O
+32
+32
+0.25
+25.0
+15
+DFTBd
+liq. D2O
+32
+12
+0.25
+25.0
+15
+DFTBd
+liq. T2O
+32
+12
+0.25
+25.0
+15
+DFTBd
+liq. T2O
+32
+32
+0.25
+25.0
+15
+DFTBd aq. HDO
+32
+12
+0.25
+25.0
+15
+DFTBd
+aq. HTO
+32
+12
+0.25
+25.0
+15
+DFTBc
+liq. H2O
+64
+1
+0.25
+25.0
+15
+DFTBd
+liq. H2O
+64
+12
+0.25
+25.0
+15
+DFTBd
+liq. T2O
+64
+12
+0.25
+25.0
+15
+OSS2e
+liq. H2O
+64
+1
+0.25
+12.5
+15
+OSS2f
+liq. H2O
+64
+12
+0.25
+12.5
+15
+OSS2f
+liq. D2O
+64
+12
+0.35
+17.5
+15
+OSS2f
+liq. T2O
+64
+12
+0.43
+21.5
+15
+OSS2f
+aq. HDO
+64
+12
+0.25
+12.5
+15
+OSS2f
+aq. HTO
+64
+12
+0.25
+12.5
+15
+aAb initio MD.
+bAb initio PIMD.
+cSemiempirical MD.
+dSemiempirical PIMD.
+eEmpirical MD.
+fEmpirical PIMD.
+27Table II. Autoionization constants of water isotopologues calculated by
+the probabilistic method.
+Method
+System
+Molecules
+P
+pKW (PROB)
+Rc [˚A]
+DFTa
+liq. H2O
+32
+12
+14.0e
+1.50±0.02
+DFTa
+liq. D2O
+32
+12
+13.5 ± 1.2
+1.50±0.02
+DFTa
+liq. T2O
+32
+12
+15.4 ± 0.9
+1.50±0.02
+DFTBb
+liq. H2O
+32
+12
+14.0e
+1.16±0.00
+DFTBb
+liq. D2O
+32
+12
+15.0 ± 0.3
+1.16±0.00
+DFTBb
+liq. T2O
+32
+12
+15.0 ± 0.2
+1.16±0.00
+DFTBb
+liq. H2O
+32
+32
+14.0e
+1.17±0.00
+DFTBb
+liq. T2O
+32
+32
+15.9 ± 0.3
+1.17±0.00
+DFTBb
+liq. H2O
+64
+12
+14.0e
+1.16±0.00
+DFTBb
+liq. T2O
+64
+12
+14.4 ± 0.2
+1.16±0.00
+OSS2c
+liq. H2O
+64
+12
+14.0e
+1.51±0.01
+OSS2c
+liq. D2O
+64
+12
+15.3 ± 0.5
+1.51±0.01
+OSS2c
+liq. T2O
+64
+12
+15.6 ± 0.5
+1.51±0.01
+Exptld
+liq. H2O
+14.00
+Exptld
+liq. D2O
+14.8633
+Exptld
+liq. T2O
+15.246
+aAb initio PIMD.
+bSemiempirical PIMD.
+cEmpirical PIMD.
+dExperimental values.
+eReference value to determine Rc.
+28Table III. Autoionization constants of water isotopologues calculated by
+the absolute method.
+Method
+System
+Molecules
+P
+pKW (ABS)
+DFTa
+liq. H2O
+32
+1
+19.7 ± 0.3
+DFTb
+liq. H2O
+32
+12
+15.2 ± 0.9
+DFTb
+liq. D2O
+32
+12
+14.8 ± 0.7
+DFTb
+liq. T2O
+32
+12
+16.0 ± 0.8
+OSS2c
+liq. H2O
+64
+1
+15.0 ± 0.5
+OSS2d
+liq. H2O
+64
+12
+13.5 ± 0.5
+OSS2d
+liq. D2O
+64
+12
+14.9 ± 0.7
+OSS2d
+liq. T2O
+64
+12
+14.6 ± 0.6
+aAb initio MD.
+bAb initio PIMD.
+cEmpirical MD.
+dEmpirical PIMD.
+29Table IV. Acidity constants of water isotopologues, calculated using Equation (23).
+Method
+System
+pKA (PROP)
+Rc [˚A]
+DFTBa
+aq. HDO
+16.1 ± 0.1
+1.16±0.00
+DFTBa
+aq. HTO
+16.3 ± 0.1
+1.16±0.00
+OSS2b
+aq. HDO
+15.6 ± 0.3
+1.51±0.01
+OSS2b
+aq. HTO
+17.1 ± 0.4
+1.51±0.01
+aSemiempirical PIMD of 32 water molecules with P = 12.
+bEmpirical PIMD of 64 water molecules with P = 12.
+30

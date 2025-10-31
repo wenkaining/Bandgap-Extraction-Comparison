@@ -1,0 +1,788 @@
+PHYSICAL REVIEW B 105, 174304 (2022)
+Terahertz Kerr effect in a methylammonium lead bromide perovskite crystal
+A. A. Melnikov,1,* V. E. Anikeeva
+,1,2 O. I. Semenova
+,3 and S. V. Chekalin1
+1Institute for Spectroscopy RAS, Fizicheskaya 5, Troitsk, Moscow 108840, Russia
+2HSE University, Myasnitskaya ul. 20, Moscow 101000, Russia
+3A.V. Rzhanov Institute of Semiconductor Physics RAS, Novosibirsk 630090, Russia
+(Received 2 November 2021; revised 25 February 2022; accepted 25 April 2022; published 6 May 2022)
+We have observed short-lived optical birefringence in a CH3NH3PbBr3 single crystal induced by a powerful
+nearly single-cycle terahertz pulse. Apart from the instantaneous contribution that follows the proﬁle of the
+squared pump electric ﬁeld, the recorded anisotropy signal contains an exponential component decaying in
+∼350 fs, underdamped oscillations at the frequency of ∼0.16 THz and an intermediate picosecond relaxation
+process with a Gaussian tail. We associate these three nontrivial features with, respectively, Kerr effect in the
+inorganic lattice, terahertz-induced transient alignment of CH3NH+
+3 cations, and their coherent rotation excited
+by the terahertz pulse in a Raman process.
+DOI: 10.1103/PhysRevB.105.174304
+I. INTRODUCTION
+Lead-halide perovskites (LHPs) have the chemical formula
+ABX 3 common to all perovskite compounds. Inorganic atoms
+B = Pb and X = Cl, Br, or I form a framework of BX 6 octahe-
+dra, while A cations are located at the centers of cages formed
+by the octahedra [1,2]. The key distinction of hybrid LHPs is
+that their A cations are organic molecules, such as CH3NH+
+3 .
+In contrast to single-atom cations of fully inorganic LHPs,
+CH3NH+
+3 has rotational degrees of freedom inside the cage
+and possesses a permanent dipole moment. Via their dipole
+moments, organic cations can interact with the inorganic lat-
+tice, with neighboring cations, and with free charge carriers
+introduced, e.g., via light absorption or electrical doping. Due
+to coexistence of the polarizable inorganic framework with
+the sublattice of polar rotating cations, a hybrid LHP crystal
+represents a rather exotic system, which is of great interest
+from the fundamental point of view. In order to describe
+and interpret the resulting complex physics, the concepts that
+are rather unusual for semiconductors are often employed by
+drawing analogies with polar liquids [3–5], glasses [6,7], and
+plastic crystals [8].
+Interactions between the cations and the charge carriers
+cause favorable transport properties of hybrid LHPs that trig-
+gered their fast rise as unique materials for photovoltaics
+[9]. Carriers in the conduction and valence bands are be-
+lieved to be stabilized as large polarons formed through the
+coupling with the ensemble of polar cations [10]. Thereby
+their interaction with charged defects is screened, promot-
+ing moderate carrier mobility and large diffusion lengths in
+inherently defect-rich hybrid LHPs [11]. The electron-hole
+recombination is rather slow in hybrid LHPs [2], which is
+also interpreted as the effect of cation dynamics. A possi-
+ble reason is that the local orientational ordering of cations
+*melnikov@isan.troitsk.ru
+distorts the inorganic lattice, which makes the band gap
+indirect, decreasing carrier recombination rate [12]. The con-
+comitant dipole ordering creates macroscopic electric ﬁelds
+that induce separation of charge carriers.
+Since rotational dynamics of organic cations is of crucial
+importance for the physics of hybrid LHPs, it has been stud-
+ied by various theoretical and experimental methods. Among
+them are calorimetry [6], neutron scattering [13–15], and var-
+ious types of spectroscopy (NMR [16,17], microwave [18],
+infrared [19,20], Raman [21], and ultrafast [5,22]). As a re-
+sult, a general picture has emerged, according to which at
+low temperatures the rotational motion is limited to librations
+around speciﬁc directions inside the cage with occasional
+reorientational jumps, while at higher temperatures in the
+cubic phase it can be treated as quasifree rotation [14]. The
+relative timescales of the motion were also roughly deter-
+mined allowing to distinguish subpicosecond wobbling and
+slower reorientation [22]. However, the characteristic values
+obtained for the same LHP compounds can vary by almost two
+orders of magnitude. There is still no clear uniﬁed picture of
+organic cation dynamics and its relation to other fundamental
+processes in LHPs remains not fully understood.
+One of the ultrafast spectroscopic methods that were used
+to study cation dynamics in LHPs is the observation of the
+transient optical Kerr effect. This is a well-established tool for
+the investigation of molecular orientational dynamics [23,24].
+Ultrashort laser pulses are used to exert a torque on molecules
+in a medium under study via their hyperpolarizability. The
+result of this action is a small average molecular alignment
+that reveals itself as transient optical birefringence of the sam-
+ple, provided the molecules are nonspherically symmetric.
+This birefringence can be measured with a temporally delayed
+probe laser pulse in the standard polarization-resolved pump-
+probe experiment. The recorded decay of the Kerr signal
+contains valuable information on the orientational relaxation
+since it is approximately proportional to the correlation func-
+tion of collective polarizability, while the latter is deﬁned
+2469-9950/2022/105(17)/174304(8)
+174304-1
+©2022 American Physical SocietyA. A. MELNIKOV et al.
+PHYSICAL REVIEW B 105, 174304 (2022)
+mainly by single-molecule and pair orientational correlation
+functions [25]. Femtosecond optical Kerr effect in both hybrid
+and inorganic LHP crystals was studied in Refs. [5,26] where
+an evidence of the liquidlike response was obtained in the
+form of a picosecond nonexponential relaxation. However, in
+a recent publication [27] it was claimed to be an experimental
+artifact due to propagation effects experienced by femtosec-
+ond near-resonant pulses.
+In this work we study the optical Kerr effect induced
+in a CH3NH3PbBr3 single crystal by a powerful terahertz
+pulse and ﬁnd signatures of collective rotational dynamics of
+methylammonium cations. Unlike femtosecond laser pulses,
+single-cycle terahertz pulses act directly on the permanent
+electric dipole of a polar molecule, thereby exerting a torque
+on the latter. As a result, both the alignment and the ori-
+entation of the molecules occur, though only the former is
+accessible if the birefringence of the sample is probed. One
+more key difference is that the characteristic timescale of
+variation of the electric ﬁeld of the terahertz pulse is ∼1 ps
+compared to ∼1 fs for femtosecond laser pulses. In combina-
+tion with the high strength of the electric ﬁeld, this leads to a
+relatively high amplitude of induced molecular rotation during
+the pulse. Therefore, the detected Kerr signal can be consider-
+ably stronger in the case of terahertz excitation [28].
+II. EXPERIMENTAL DETAILS
+In
+our
+experiments
+we
+studied
+a
+1.8-mm-thick
+CH3NH3PbBr3 single crystal grown from solution using
+the technique described in Refs. [29,30]. The original
+method was developed for CH3NH3PbI3, and the following
+modiﬁcations were made in order to adapt it for bromide
+crystal growth. CH3NH3Br precursor was synthesized by
+adding dropwise 28 ml of aqueous (40%) methylamine
+solution to 44 ml of aqueous (48%) HBr solution without
+preliminary H3PO2 stabilization. The synthesis proceeded
+for 2 h during the reaction with continuous stirring at 0 ◦C.
+A precipitate of yellowish color obtained by evaporation
+of the reaction mixture at 60 ◦C–70 ◦C was then washed
+with acetone to produce snow-white crystals. PbBr2 was
+synthesized dissolving 28 g of crystalline lead acetate
+hydrate in 78.5 ml of an aqueous (48%) HBr solution. At
+the ﬁnal stage 18.45 g of CH3NH3Br were added to the
+ﬂask with the synthesized PbBr2, resulting in an orange
+precipitate of perovskite CH3NH3PbBr3. CH3NH3PbBr3
+single crystals were grown from the obtained powder in the
+same way as CH3NH3PbI3 single crystals. The crystal that
+was investigated in our experiments had a polyhedral shape
+somewhat similar to a rhombic dodecahedron. Therefore, we
+tentatively identiﬁed the studied surface as (110).
+Although CH3NH3PbBr3 crystals are relatively stable un-
+der ambient conditions, one can expect certain modiﬁcation
+of the crystal surface and adjacent layers as a result of regular
+exposure to air during long repeated measurements. Several
+months after the experiments reported in this work were per-
+formed, we have repeated measurements with fresh samples
+and observed generally similar transient signals with a certain
+difference that was caused naturally by a variation of the pump
+terahertz waveform.
+In order to detect the Kerr response of the crystal we used
+the standard pump-probe layout, in which a pump terahertz
+pulse excites the sample, while a temporally delayed probe
+pulse is used to measure the induced birefringence. All exper-
+iments were performed at room temperature and in ambient
+air. Nearly single-cycle terahertz pulses with a duration of ∼1
+ps and peak electric ﬁeld strength of up to ∼500 kV/cm were
+generated using the technique of optical rectiﬁcation of fem-
+tosecond pulses with tilted fronts. The details of the method
+can be found elsewhere [31,32]. The direction of the pump ter-
+ahertz pulse polarization vector relative to the sample crystal
+axes was arbitrary. Weak femtosecond laser pulses of ∼50-fs
+duration at 800 nm were used for probing. Before passing
+through the sample the probe pulse was polarized at 45◦
+relative to the vertical polarization direction of the terahertz
+electric ﬁeld. After the sample, the polarization of the probe
+pulse was rotated by ∼20◦with a half-wave plate. Then the
+probe beam was transmitted through a Wollaston prism in or-
+der to split it into vertically and horizontally polarized beams.
+The latter were guided to the ampliﬁed photodiodes, peak
+amplitudes of the signals from which were proportional to the
+intensities of the orthogonally polarized components Ix and Iy.
+The result of each individual measurement was a dependence
+of the quantity F = (1 −Ix/Iy)pump on ÷ (1 −Ix/Iy)pump off on
+the delay time between the terahertz and the probe pulses.
+If nx and ny are the refractive indices of the sample experi-
+enced by horizontally and vertically polarized probe pulses,
+respectively, and n = nx −ny, then F ∝n in the limit of
+low n. We note here that without the additional rotation
+of polarization after the sample by the half-wave plate the
+detected signal would be close to zero since the appearance
+of a small n induces ellipticity of the probe beam, while the
+major axis of that ellipse remains directed at 45◦to the pump
+electric ﬁeld.
+III. RESULTS AND DISCUSSION
+The optical anisotropy signal F(t) detected using pump
+terahertz pulses with the highest available peak electric ﬁeld
+strength of ∼500 kV/cm is shown in Fig. 1. The inset illus-
+trates time dependence of the pump electric ﬁeld ETHz(t). This
+temporal proﬁle was measured via electro-optic detection of
+an attenuated terahertz pulse in a ZnTe crystal. The attenua-
+tion was necessary since such strong terahertz ﬁelds cannot
+be measured correctly by this method because of pronounced
+nonlinear effects in ZnTe. It was performed by a 1-mm-thick
+fused silica plate covered by a thin metal ﬁlm (total opti-
+cal density of ∼4 in the visible range). The plate caused
+a certain effective lengthening of the terahertz pulse due to
+high-frequency absorption and dispersion of fused silica in
+the terahertz range. Although this effect was visible in the
+experimental data (see below), it was rather small, so that
+it was possible to treat the measured waveform as a good
+approximation of the real pump terahertz pulse. Weak electric
+ﬁeld oscillations after ∼1 ps were caused by the absorption
+of the terahertz radiation in air and were neglected since the
+studied effect was quadratic in electric ﬁeld.
+Speciﬁc relaxation components that comprise the F(t) sig-
+nal are relatively well separated in the time domain, which
+makes them easier to disentangle. It is possible to select three
+174304-2TERAHERTZ KERR EFFECT IN A METHYLAMMONIUM …
+PHYSICAL REVIEW B 105, 174304 (2022)
+FIG. 1. Transient optical anisotropy of the sample induced by the
+pump terahertz pulse. The inset shows a typical time dependence of
+the electric ﬁeld strength of the pulse.
+characteristic time windows. In the ﬁrst one, roughly from
+−1.0 to 0.5 ps, the probe pulse overlaps with the pump ter-
+ahertz pulse and the induced anisotropy is determined mainly
+by the electric ﬁeld of the latter. The second window spans
+from ∼0.5 ps to ∼3 ps and contains a monotonically decaying
+component of the signal. The third window from ∼3 ps to
+∼12 ps is occupied by weak low-frequency underdamped
+oscillations. Below we extract parameters of these temporal
+components and relate them to speciﬁc physical processes
+initiated in the CH3NH3PbBr3 crystal by the pump terahertz
+pulse.
+In Fig. 2 we compare the starting part of the optical
+anisotropy signal F(t) with the squared electric ﬁeld E2
+THz(t).
+It can be seen that the positions of ﬁrst three peaks of E2
+THz(t)
+are slightly wider spaced than those of F(t). This temporal
+spreading was introduced by the electric ﬁeld measurement
+procedure and was a result of the attenuation of terahertz
+radiation, as discussed above. Here this effect can be neglected
+and the corresponding peaks of E2
+THz(t) and F(t) treated as
+synchronous. As follows from Fig. 2, the relative amplitudes
+of the peaks are very similar for both transients and F(t)
+almost “follows” the E2
+THz(t) waveform in the region of the
+pump and probe pulse temporal overlap. Therefore, we as-
+sociate the initial part of the optical anisotropy signal from
+−1.0 to 0.5 ps with the instantaneous Kerr effect of electronic
+origin. It is hardly possible to ascribe it exclusively to the
+inorganic lattice of the CH3NH3PbBr3 crystal or to its sublat-
+tice of organic cations since both subsystems can in principle
+contribute to the Kerr signal of this type.
+We have additionally measured the dependence of the peak
+F(t) value on the peak strength of the pump electric ﬁeld. The
+result is presented in the inset to Fig. 2. The obtained set of
+experimental points can be rather well ﬁtted by a parabola
+y = ax2 conﬁrming the quadratic dependence. The interme-
+diate picosecond relaxation in the time window from ∼0.5 to
+∼3 ps also demonstrated quadratic variation with the electric
+ﬁeld strength. However, it was practically impossible in our
+FIG. 2. Comparison of the initial evolution of the optical
+anisotropy signal (solid line) with the squared electric ﬁeld of the
+pump terahertz pulse (dashed line with ﬁlled area below it). The inset
+demonstrates the dependence of the peak amplitude of the F(t) signal
+(circles) on the peak electric ﬁeld and its parabolic ﬁt by the y = ax2
+function (solid line).
+experiments to measure properly the ﬁeld dependence of the
+amplitude of oscillations because of its very small value.
+The observed similarity of the initial part of the F(t) signal
+and the squared electric ﬁeld waveform E2
+THz(t) implies that in
+our experiment the temporal resolution is maintained despite
+possible propagation effects. Indeed, it is reasonable to expect
+that group refractive indices for the pump terahertz and the
+800-nm probe pulses will differ considerably. It is particu-
+larly true for solids with a rich spectrum of dipole-active
+phonons, like LHPs. This difference implies a corresponding
+large difference of group velocities of the pulses. As a result,
+in a sufﬁciently thick transparent sample the probe pulse
+will “scan” the pump-induced response during propagation
+through the former and despite the ﬁxed pump-probe delay
+time the signal from a wide time window will be integrated. In
+this case, the temporal resolution decreases, while the signal
+becomes distorted. This effect can be approximately visual-
+ized by performing the convolution of a well-resolved signal
+with a “pulse” of a rectangular shape, the duration of which
+depends on the values of the group refractive indices. We
+have performed such calculations for the measured E2
+THz(t)
+proﬁle and found that for F(t) to have the observed speciﬁc
+shape in the interval −1.0 ps < t < 0.5 ps, the total time lag
+between the pump and the probe pulses should not exceed
+δτ ∼300 fs after traveling through the sample. This time
+can be estimated also as δτ ∼L(nTHz −ngr
+pr)/c, where L is
+the sample thickness, nTHz and ngr
+pr are the refractive index
+at pump wavelength and the group refractive index at probe
+wavelength, respectively.
+While npr can be readily found in literature [33], the avail-
+able data on the optical properties of CH3NH3PbBr3 in the
+terahertz range are scarce. Here we rely on the values of nTHz
+provided in Ref. [34] for thin ﬁlms of CH3NH3PbBr3. We take
+nTHz = 8 at 1 THz and ngr
+pr ≈npr = 2 at 800 nm. Using the
+174304-3A. A. MELNIKOV et al.
+PHYSICAL REVIEW B 105, 174304 (2022)
+FIG. 3. (a) Magniﬁed view of the oscillatory part of the signal
+(solid line) and its ﬁt (dotted line). (b) The residual monotonic
+component of the signal. The inset shows it in the logarithmic scale
+along the y axis.
+value and the formula for δτ mentioned above we obtain as a
+rough estimate that the sample thickness should be not larger
+than 15 μm, which is much less than the actual thickness of
+the CH3NH3PbBr3 crystal (1.8 mm). The values of extinction
+(κTHz ≈5) and absorption (α ≈200 cm−1) coefﬁcients from
+Refs. [34] and [35] imply that the absorption length for the
+radiation at 1 THz in CH3NH3PbBr3 is ∼5 and ∼50 μm,
+respectively. Therefore, we can conclude that the observed
+signal originates from a sufﬁciently thin layer of the crystal
+(on the order of ∼10 μm) and the propagation effects can be
+neglected.
+Next, we proceed to the analysis of the oscillations
+that dominate the F(t) signal from ∼3 to ∼12 ps. The
+magniﬁed view of this region is shown in Fig. 3(a). We
+have found that they can be well ﬁtted by the function
+A1 exp(−t/τosc) sin[(2π/T )t + φ], where the lifetime and
+the period of the oscillations are τosc = 2.1 ± 0.3 ps and
+T = 6.1 ± 0.2 ps. The latter corresponds to a frequency of
+164 ± 5 GHz (5.5 ± 0.2 cm−1 or 0.68 ± 0.02 meV). Such
+a low frequency can hardly be associated with the vibra-
+tions of inorganic framework of CH3NH3PbBr3. Indeed, the
+lowest-frequency phonons of LHP crystals that are due to
+collective dynamics of PbX6 octahedra (tilting, rotation) or pe-
+riodic translational motions of cations inside inorganic cages
+(rattling modes) have energies of several meVs and higher
+[13,36–40]. Probably the lowest energy of a phonon mode
+in a LHP crystal reported to date was measured for coopera-
+tive two-dimensional rotations of PbBr6 octahedra in a fully
+inorganic CsPbBr3 crystal (∼1 meV) [40]. However, these
+are zone-boundary phonons, which cannot be accessed by
+optical probing. Besides, such low-frequency modes in hybrid
+LHPs are typically overdamped at room temperature and no
+long-lived coherence can be generated via their impulsive
+excitation.
+It is thus natural to suppose that the observed oscilla-
+tions are caused by coherent rotational dynamics of organic
+CH3NH+
+3 cations (here by ”rotational dynamics” we mean
+rotation around the axis that is perpendicular to the C-N axis).
+This mechanism is essentially the impulsive stimulated rota-
+tional Raman scattering and implies that the pump terahertz
+pulse creates a coherent superposition of wave functions of
+rotational levels of CH3NH+
+3 coupled via allowed Raman
+transitions. For the simplest case of linear molecules the
+radiation couples rotational levels, the angular momenta of
+which differ by J = 2, which is a necessary condition for
+the observation of periodically modulated optical anisotropy
+of the excited molecular ensemble. Then, the frequency of
+the observed oscillations of pump-induced birefringence is
+ν = E/h = 2B(2J + 3), where J is the angular momentum
+of the lower-lying of the two rotational states, and B is the
+rotational constant in cm−1. Similar rules can be written for
+rigid symmetric top molecules, but for more complex rotors
+the information on exact positions of rotational levels should
+be obtained from experiments or theoretical calculations. In-
+terestingly, in a recent study of terahertz Kerr effect in water,
+coherent oscillations were observed in the optical anisotropy
+response of the gaseous phase at elevated temperatures [41].
+The frequency of those oscillations was ≈37 cm−1, which
+is close to the lowest-frequency line in the rotational Raman
+spectrum of water vapor [42,43].
+Unfortunately, the rotational Raman spectrum of the
+CH3NH+
+3 molecular cation is not known. However, if we
+applied the simple linear molecule model, we could predict
+coherent oscillations of terahertz-induced birefringence rather
+similar to those observed in our experiment. Taking B ≈
+0.7 cm−1 (with a reference to the somewhat similar CH3NH2
+molecule [44]) we obtain the following possible oscillation
+frequencies νJ (in cm−1): 4.2, 7, 9.8, 12.6, ... for J = 0, 1, 2,
+3,... . However, two factors favor excitation of only a few low-
+est frequencies from this series. First, the terahertz waves at
+frequencies νTHz
+i
+and νTHz
+k
+, which take part in the elementary
+Raman scattering process, necessarily belong to the spectrum
+of the pump pulse. Therefore, since νJ = νTHz
+i
+−νTHz
+k
+, and the
+amplitude of coherent rotations is proportional to the product
+of amplitudes of the waves, the efﬁciency of scattering will
+decrease fast for higher νJ. In addition, this effect will be
+further enhanced by the (νTHz
+i
+−νJ)4 frequency dependence
+of the Raman cross section.
+In the framework of this model the measured frequency of
+5.5 cm−1 turns out to be very close to the mean frequency of
+the ν0 and ν1 model Raman lines and, therefore, the observed
+oscillations can be the result of beating of these harmonics.
+Due to the strong damping of oscillations it is possible in
+principle to achieve a decent reproduction of the observed
+oscillatory kinetics by constructing a linear combination of the
+174304-4TERAHERTZ KERR EFFECT IN A METHYLAMMONIUM …
+PHYSICAL REVIEW B 105, 174304 (2022)
+ν0 and ν1 modes with a certain adjustments of their phases and
+even with an additional smaller contribution of the next two or
+three modes. Associating the coherent rotational motion with
+a limited set of impulsively excited rotational transitions, the
+frequencies of which depend only on the inertial properties of
+the CH3NH+
+3 molecule, allows an assumption that the decay
+of observed oscillations reﬂects the population relaxation.
+Then, the extracted decay time τosc = 2.1 ± 0.3 ps can be
+ascribed to the damping of rotations of individual CH3NH+
+3
+cations caused by their interaction with host inorganic cages.
+There are of course a number of important potential cor-
+rections, which can affect this simpliﬁed model considerably.
+Among them are a more precise deﬁnition of the rotational
+constant, calculation of the rotational spectrum taking into
+account nonzero values of the angular momentum around
+the molecule axis and possible rotations of the CH3 and
+NH3 groups, as well as a proper treatment of the stimulated
+scattering of the terahertz pulse with a broad spectrum of
+frequencies in the vicinity of rotational transitions. However,
+these reﬁnements complicate the problem considerably and
+require a separate study that is beyond the scope of this work.
+The part of the signal that remains after subtraction of the
+ﬁtted oscillatory component is shown in Fig. 3(b) starting
+from the delay time of 0.5 ps. This monotonic relaxation has a
+clearly nonexponential character, which is emphasized in the
+inset to Fig. 3(b), where this curve is plotted in the logarithmic
+scale. Here it can be seen that the initial fast subpicosecond
+decay is followed by a slower relaxation with a Gaussian-type
+tail.
+This speciﬁc form of the Kerr effect decay curve (fast
+decrease with an adjacent “shoulder”) is rather common for
+liquids in the case of excitation by a short femtosecond laser
+pulse [25,45,46]. The nonexponential part of the observed
+relaxation is often interpreted as laser-induced overdamped
+coherent librations of molecules in “cages” formed by their
+momentary neighbors. This process is modeled as a super-
+position of sine oscillators, the frequencies of which have
+a Gaussian distribution. However, characteristic periods of
+these librations are on the order of several hundreds of fem-
+toseconds. The librations of organic cations in hybrid LHPs
+are believed to have similar typical characteristic times of
+∼300 fs. This timescale is one order of magnitude shorter than
+the characteristic duration of the Gaussian “shoulder” in the
+Kerr response of CH3NH3PbBr3 observed in our experiment.
+Moreover, this type of motion is likely to be irrelevant for
+the room-temperature cubic phase of CH3NH3PbBr3, when
+organic cation rotation is not restricted around a speciﬁc di-
+rection inside the inorganic cage.
+One more process that may appear in the ultrafast optical
+Kerr response of a molecular ensemble as a Gaussian-type
+decay is the relaxation of initially aligned molecules via iner-
+tial rotation. The characteristic timescale of this process can
+be estimated as √I/kT , where I is the moment of inertia
+of the molecules [47]. For CH3NH+
+3 this value is ∼0.3 ps,
+which is also much faster than the observed picosecond decay.
+Moreover, the inertial decay of orientational correlations can
+be demonstrated in pure form only by free rotors, which is not
+the case of organic cations located in the inorganic cages.
+For molecules in liquids the timescale of several picosec-
+onds is typical for the diffusive rotational motion. This regime
+FIG. 4. (a) The residual component of the monotonic signal after
+subtracting the function that ﬁts the Gaussian-type tail [shown in (b)].
+supersedes the inertial relaxation for hindered rotors that inter-
+act with their environment and as a result experience frequent
+changes of the phase of rotation [48]. It should be noted that
+the diffusive decay of orientational correlations usually has
+exponential character and for liquids composed of symmetric
+top molecules it is even single exponential. For certain more
+complex systems, such as ensembles of molecules embedded
+in a solid medium, the decay can be described by a stretched
+exponential function or by a power law [49–51]. On the con-
+trary, compressed exponential relaxation and its special case,
+Gaussian decay, are rather uncommon.
+However, we have found that a rather good model of the
+monotonic part of the observed Kerr signal can be constructed
+if we assume that the transient alignment of the CH3NH+
+3
+molecules created by the pump terahertz pulse demonstrates
+Gaussian relaxation. In this case, temporal evolution of the
+orientational correlation function of the organic cations is
+deﬁned by the factor e−(t/τ )2 assuming impulsive character
+of the terahertz excitation. Through the anisotropic polar-
+izability of the molecules this behavior will be transferred
+to the correlation function of molecular polarizability C(t)
+with the corresponding contribution to the Kerr signal in the
+form of −dC(t)/dt ∝te−(t/τ )2 [25]. We have found that the
+latter function can serve as a rather good ﬁt of the mono-
+tonic component of the detected signal starting from ∼1.5
+ps, which is illustrated by Fig. 4(b). The ﬁtting procedure
+provided the value τ = 1.65 ± 0.05 ps. The residual shown in
+Fig. 4(a) represents a fast single-exponential relaxation with
+a characteristic time of 350 ± 10 fs, which can be associ-
+ated with the Kerr response of the inorganic lattice of the
+CH3NH3PbBr3 crystal in accordance with the interpretation
+proposed in Ref. [5].
+Gaussian decay observed here can be an evidence of co-
+operative effects during orientational relaxation of CH3NH+
+3
+cations. Here it is possible to draw an analogy with glassy
+materials, and in particular with metal glasses, for which
+a compressed exponential decay of the density correla-
+tion function was observed [52]. It was suggested that
+relaxation of a local density ﬂuctuation induces a long-
+range elastic deformation ﬁeld, which stimulates structural
+174304-5A. A. MELNIKOV et al.
+PHYSICAL REVIEW B 105, 174304 (2022)
+relaxation at neighboring sites of the medium. In this way
+an “avalanche” of relaxation events is launched, resulting in
+the ensemble-averaged decay that is faster than exponential.
+In our case we study ﬂuctuations of orientation of molecules
+and the timescales are orders of magnitude shorter. However,
+CH3NH+
+3 cations rotating in the inorganic cages interact with
+each other via their permanent dipoles or via local lattice
+distortions that they create upon rotation. Thereby collective
+relaxational effects and Gaussian decay of terahertz-induced
+cation alignment may become possible.
+IV. CONCLUSION
+In conclusion, we observed the optical Kerr response of
+a CH3NH3PbBr3 single crystal to an intense terahertz pulse.
+We decomposed the signal into several distinct decay com-
+ponents and suggested an assignment of each component to
+a certain relaxation process taking into account the hybrid
+structure of the perovskite. The initial fast subpicosecond
+decay was interpreted as the Kerr effect in the inorganic lattice
+of the crystal. The slower relaxation on the timescale of sev-
+eral picoseconds was ascribed to the rotational dynamics of
+organic CH3NH+
+3 cations. It comprises a Gaussian-type de-
+cay and weak underdamped low-frequency oscillations. The
+former can be associated with diffusive relaxation of cation
+alignment created by the pump electric ﬁeld, while the fact
+that it follows the compressed exponential law can be a signa-
+ture of collective glasslike dynamics. Oscillations are due to
+coherent rotations of individual cations induced in the process
+of impulsive stimulated rotational Raman scattering of the
+terahertz pulse. The characteristic relaxation times determined
+in the framework of the suggested interpretation can be used
+to model interactions of organic cations with inorganic lattice
+and with each other. Observation of the strong-ﬁeld terahertz
+Kerr effect in CH3NH3PbBr3 and other hybrid lead-halide
+perovskites at lower temperatures is also of great interest
+since it implies studies of nonlinear dynamics of organic
+cations, the motion of which is initially restricted along certain
+directions inside inorganic cages. Since the applied method
+allows visualization of rotational dynamics in real time, it can
+be effectively combined with dynamic or quasistatic stimuli
+like excitation of electrons, application of external ﬁelds, or
+heating in order to study interaction of organic cations with
+charge carriers and their dynamics at phase transitions.
+ACKNOWLEDGMENT
+The reported study was partially supported by the Aca-
+demic Fund Program at the HSE University (Grant No.
+21-04-016).
+[1] T. Baikie, Y. Fang, J. M. Kadro, M. Schreyer, F. Wei, S. G.
+Mhaisalkar, M. Graetzeld, and T. J. White, Synthesis and crystal
+chemistry of the hybrid perovskite CH3NH3PbI3 for solid-state
+sensitised solar cell applications, J. Mater. Chem. A 1, 5628
+(2013).
+[2] T. M. Brenner, D. A. Egger, L. Kronik, G. Hodes, and D.
+Cahen, Hybrid organic-inorganic perovskites: Low-cost semi-
+conductors with intriguing charge-transport properties, Nat.
+Rev. Mater. 1, 15007 (2016).
+[3] N. Onoda-Yamamuro, T. Matsuo, and H. Suga, Dielectric study
+of CH3NH3PbX3 (X = Cl, Br, I), J. Phys. Chem. Solids 53, 935
+(1992).
+[4] J. M. Frost and A. Walsh, What is moving in hybrid halide
+perovskite solar cells? Acc. Chem. Res. 49, 528 (2016).
+[5] H. Zhu, K. Miyata, Y. Fu, J. Wang, P. P. Joshi, D. Niesner, K. W.
+Williams, S. Jin, and X.-Y. Zhu, Screening in crystalline liquids
+protects energetic carriers in hybrid perovskites, Science 353,
+1409 (2016).
+[6] D. H. Fabini, T. Hogan, H. A. Evans, C. C. Stoumpos, M. G.
+Kanatzidis, and R. Seshadri, Dielectric and thermodynamic
+signatures of low-temperature glassy dynamics in the hybrid
+perovskites CH3NH3PbI3 and HC(NH2)2PbI3, J. Phys. Chem.
+Lett. 7, 376 (2016).
+[7] M. Simenas, S. Balciunas, J. N. Wilson, S. Svirskas, M. Kinka,
+A. Garbaras, V. Kalendra, A. Gagor, D. Szewczyk, A. Sieradzki,
+M. Maczka, V. Samulionis, A. Walsh, R. Grigalaitis, and J.
+Banys, Suppression of phase transitions and glass phase sig-
+natures in mixed cation halide perovskites, Nat. Commun. 11,
+5103 (2020).
+[8] J. Even, M. Carignano, and C. Katan, Molecular disorder and
+translation/rotation coupling in the plastic crystal phase of hy-
+brid perovskites, Nanoscale 8, 6222 (2016).
+[9] A. K. Jena, A. Kulkarni, and T. Miyasaka, Halide perovskite
+photovoltaics: Background, status, and future prospects, Chem.
+Rev. 119, 3036 (2019).
+[10] X.-Y. Zhu and V. Podzorov, Charge carriers in hybrid organic-
+inorganic lead halide perovskites might be protected as large
+polarons, J. Phys. Chem. Lett. 6, 4758 (2015).
+[11] S. D. Stranks, G. E. Eperon, G. Grancini, C. Menelaou, M.
+Alcocer, T. Leijtens, L. M. Herz, A. Petrozza, and H. J. Snaith,
+Electron-hole diffusion lengths exceeding 1 micrometer in an
+organometal trihalide perovskite absorber, Science 342, 341
+(2013).
+[12] C. Motta, F. El-Mellouhi, S. Kais, N. Tabet, F. Alharbi,
+and S. Sanvito, Revealing the role of organic cations in hy-
+brid halide perovskite CH3NH3PbI3, Nat. Commun. 6, 7026
+(2015).
+[13] I. P. Swainson, C. Stock, S. F. Parker, L. Van Eijck, M.
+Russina, and J. W. Taylor, From soft harmonic phonons to
+fast relaxational dynamics in CH3NH3PbBr3, Phys. Rev. B 92,
+100303(R) (2015).
+[14] A. M. A. Leguy, J. M. Frost, A. P. McMahon, V. G. Sakai,
+W. Kochelmann, C. Law, X. Li, F. Foglia, A. Walsh, B. C.
+O’Regan, J. Nelson, J. T. Cabral, and P. R. F. Barnes, The
+dynamics of methylammonium ions in hybrid organic-inorganic
+perovskite solar cells, Nat. Commun. 6, 7124 (2015).
+[15] B. Li, Y. Kawakita, Y. Liu, M. Wang, M. Matsuura, K. Shibata,
+S. Ohira-Kawamura, T. Yamada, S. Lin, K. Nakajima, and S. F.
+Liu, Polar rotor scattering as atomic-level origin of low mobil-
+ity and thermal conductivity of perovskite CH3NH3PbI3, Nat.
+Commun. 8, 16086 (2017).
+[16] R. E. Wasylishen, O. Knop, and J. B. Macdonald, Cation ro-
+tation in methylammonium lead halides, Solid State Commun.
+56, 581 (1985).
+174304-6TERAHERTZ KERR EFFECT IN A METHYLAMMONIUM …
+PHYSICAL REVIEW B 105, 174304 (2022)
+[17] W.-C. Qiao, J. Wu, R. Zhang, W. Ou-Yang, X. Chen, G. Yang,
+Q. Chen, X. L. Wang, H. F. Wang, and Y.-F. Yao, In situ NMR
+investigation of the photoresponse of perovskite crystal, Matter
+3, 2042 (2020).
+[18] A. Poglitsch and D. Weber, Dynamic disorder in methylam-
+moniumtrihalogenoplumbates (II) observed by millimeter-wave
+spectroscopy, J. Chem. Phys. 87, 6373 (1987).
+[19] N. Onoda-Yamamuro, T. Matsuo, and H. Suga, Calorimetric
+and IR spectroscopic studies of phase transitions in methylam-
+monium trihalogenoplumbates (II), J. Phys. Chem. Solids 51,
+1383 (1990).
+[20] K. N. Boldyrev, V. E. Anikeeva, O. I. Semenova, and M. N.
+Popova, Infrared spectra of the CH3NH3PbI3 hybrid perovskite:
+Signatures of phase transitions and of organic cation dynamics,
+J. Phys. Chem. C 124, 23307 (2020).
+[21] Y. Guo, O. Yaffe, D. W. Paley, A. N. Beecher, T. D. Hull, G.
+Szpak, J. S. Owen, L. E. Brus, and M. A. Pimenta, Interplay
+between organic cations and inorganic framework and incom-
+mensurability in hybrid lead-halide perovskite CH3NH3PbBr3,
+Phys. Rev. Materials 1, 042401(R) (2017).
+[22] A. A. Bakulin, O. Selig, H. J. Bakker, Y. L. A. Rezus, C. Muller,
+T. Glaser, R. Lovrincic, Z. Sun, Z. Chen, A. Walsh, J. M. Frost,
+and T. L. C. Jansen, Real-time observation of organic cation
+reorientation in methylammonium lead iodide perovskites,
+J. Phys. Chem. Lett. 6, 3663 (2015).
+[23] R. Righini, Ultrafast optical kerr effect in liquids and solids,
+Science 262, 1386 (1993).
+[24] D. McMorrow, W. T. Lotshaw, and G. A. Kenney-Wallace,
+Femtosecond optical Kerr studies on the origin of the nonlinear
+responses in simple liquids, IEEE J. Quantum Electron. 24, 443
+(1988).
+[25] B. Kohler and K. A. Nelson, Femtosecond impulsive stimulated
+light scattering from liquid carbon at high pressure: Experiment
+and computer simulation, J. Phys. Chem. 96, 6532 (1992).
+[26] K. Miyata, D. Meggiolaro, M. Tuan Trinh, P. P. Joshi, E.
+Mosconi, S. C. Jones, F. De Angelis, and X.-Y. Zhu, Large po-
+larons in lead halide perovskites, Sci. Adv. 3, e1701217 (2017).
+[27] S. F. Maehrlein, P. P. Joshia, L. Huber, F. Wang, M. Cherasse,
+Y. Liu, D. M. Juraschek, E. Mosconi, D. Meggiolaro, F. De
+Angelis, and X.-Y. Zhu, Decoding ultrafast polarization re-
+sponses in lead halide perovskites by the two-dimensional opti-
+cal Kerr effect, Proc. Natl. Acad. Sci. U.S.A. 118, e2022268118
+(2021).
+[28] M. Sajadi, M. Wolf, and T. Kampfrath, Transient birefringence
+of liquids induced by terahertz electric-ﬁeld torque on perma-
+nent molecular dipoles, Nat. Commun. 8, 14963 (2017).
+[29] O. I. Semenova, E. S. Yudanova, N. A. Yeryukov, Y. A.
+Zhivodkov, T. S. Shamirzaev, E. A. Maximovskiy, S. A.
+Gromilov, and I. B. Troitskaia, Perovskite CH3NH3PbI3 crys-
+tals and ﬁlms. Synthesis and characterization, J. Cryst. Growth
+462, 45 (2017).
+[30] E. S. Yudanova, T. A. Duda, O. E. Tereshchenko, and O. I.
+Semenova, Properties of methylammonium lead iodide per-
+ovskite single crystals, J. Struct. Chem. 58, 1567 (2017).
+[31] A. G. Stepanov, J. Hebling, and J. Kuhl, Efﬁcient generation
+of subpicosecond terahertz radiation by phase-matched optical
+rectiﬁcation using ultrashort laser pulses with tilted pulse fronts,
+Appl. Phys. Lett. 83, 3000 (2003).
+[32] A. A. Melnikov, K. N. Boldyrev, Yu. G. Selivanov, V. P.
+Martovitskii, S. V. Chekalin, and E. A. Ryabov, Coherent
+phonons in a Bi2Se3 ﬁlm generated by an intense single-cycle
+THz pulse, Phys. Rev. B 97, 214304 (2018).
+[33] M. S. Alias, I. Dursun, M. I. Saidaminov, E. M. Diallo, P.
+Mishra, T. K. Ng, O. M. Bakr, and B. S. Ooi, Optical constants
+of CH3NH3PbBr3 perovskite thin ﬁlms measured by spectro-
+scopic ellipsometry, Opt. Express 24, 16586 (2016).
+[34] A. V. Andrianov, A. N. Aleshin, A. O. Zakhar’in, and L. B.
+Matyushkin, Terahertz optical characteristics of organometal-
+lic lead-iodide (bromide) perovskites and cesium lead halide
+nanocrystals, in 43rd International Conference on Infrared,
+Millimeter, and Terahertz Waves (IRMMW-THz), 2018 (IEEE,
+Piscataway, NJ, 2018), pp. 1–2.
+[35] I. Maeng, S. Lee, H. Tanaka, J.-H. Yun, S. Wang, M. Nakamura,
+Y.-K. Kwon, and M.-C. Jung, Unique phonon modes of a
+CH3NH3PbBr3 hybrid perovskite ﬁlm without the inﬂuence of
+defect structures: An attempt toward a novel THz-based appli-
+cation, NPG Asia Mater. 12, 53 (2020).
+[36] A. C. Ferreira, S. Paofai, A. Létoublon, J. Ollivier, S. Raymond,
+B. Hehlen, B. Rufﬂé, S. Cordier, C. Katan, J. Even, and P.
+Bourges, Direct evidence of weakly dispersed and strongly
+anharmonic optical phonons in hybrid perovskites, Commun.
+Phys. 3, 48 (2020).
+[37] D. Zhao, J. M. Skelton, H. Hu, C. La-o-vorakiat, J.-X. Zhu,
+R. A. Marcus, M.-E. Michel-Beyerle, Y. M. Lam, A. Walsh, and
+E. E. M. Chia, Low-frequency optical phonon modes and carrier
+mobility in the halide perovskite CH3NH3PbBr3 using tera-
+hertz time-domain spectroscopy, Appl. Phys. Lett. 111, 201903
+(2017).
+[38] S. Poncé, M. Schlipf, and F. Giustino, Origin of low carrier mo-
+bilities in halide perovskites, ACS Energy Lett. 4, 456 (2019).
+[39] F. Song, C. Qian, Y. Wang, F. Zhang, K. Peng, S. Wu, X.
+Xie, J. Yang, S. Sun, Y. Yu, J. Dang, S. Xiao, L. Yang,
+K. Jin, H. Zhong, and X. Xu, Hot polarons with trapped
+excitons and octahedra-twist phonons in CH3NH3PbBr3 hy-
+brid perovskite nanowires, Laser Photonics Rev. 14, 1900267
+(2020).
+[40] T. Lanigan-Atkins, X. He, M. J. Krogstad, D. M. Pajerowski,
+D. L. Abernathy, Guangyong N. M. N. Xu, Zhijun Xu,
+D.-Y. Chung, M. G. Kanatzidis, S. Rosenkranz, R. Osborn,
+and O. Delaire, Two-dimensional overdamped ﬂuctuations of
+the soft perovskite lattice in CsPbBr3, Nat. Mater. 20, 977
+(2021).
+[41] H. Elgabarty, T. Kampfrath, D. J. Bonthuis, V. Balos, N. K.
+Kaliannan, P. Loche, R. R. Netz, M. Wolf, T. D. Kühne, and M.
+Sajadi, Energy transfer within the hydrogen bonding network
+of water following resonant terahertz excitation, Sci. Adv. 6,
+eaay7074 (2020).
+[42] E. Nordström, A. Bohlin, and P.-E. Bengtsson, Pure rotational
+Coherent anti-Stokes Raman spectroscopy of water vapor and
+its relevance for combustion diagnostics, J. Raman Spectrosc.
+44, 1322 (2013).
+[43] G. Avila, G. Tejeda, J. M. Fernandez, and S. Montero, The
+rotational Raman spectra and cross sections of H2O, D2O, and
+HDO, J. Mol. Spectrosc. 220, 259 (2003).
+[44] G. Herzberg, Molecular Spectra and Molecular Structure III.
+Electronic Spectra and Electronic Structure of Polyatomic
+Molecules (Van Nostrand, New York, 1966).
+[45] E. L. Quitevis and M. Neelakandan, Femtosecond optical Kerr
+effect studies of liquid methyl iodide, J. Phys. Chem. 100,
+10005 (1996).
+174304-7A. A. MELNIKOV et al.
+PHYSICAL REVIEW B 105, 174304 (2022)
+[46] Y. J. Chang and E. W. Castner, Jr., Intermolecular dynamics of
+substituted benzene and cyclohexane liquids, studied by fem-
+tosecond nonlinear-optical polarization spectroscopy, J. Phys.
+Chem. 100, 3330 (1996).
+[47] W. A. Steele, Molecular reorientation in liquids. II. Angular
+autocorrelation functions, J. Chem. Phys. 38, 2411 (1963).
+[48] M. Tim, T. A. Jackson, and P. A. Anﬁnrud, in Ultrafast In-
+frared and Raman Spectroscopy, edited by M. D. Fayer (Marcel
+Dekker, New York, 2001).
+[49] J.-M. Zanotti, M.-C. Bellissent-Funel, and S.-H. Chen, Relax-
+ational dynamics of supercooled water in porous glass, Phys.
+Rev. E 59, 3084 (1999).
+[50] D. Laage and W. H. Thompson, Reorientation dynamics of
+nanoconﬁned water: Power-law decay, hydrogen-bond jumps,
+and test of a two-state model, J. Chem. Phys. 136, 044513
+(2012).
+[51] S. Romero-Vargas Castrillón, N. Giovambattista, I. A. Aksay,
+and P. G. Debenedetti, Effect of surface polarity on the struc-
+ture and dynamics of water in nanoscale conﬁnement, J. Phys.
+Chem. B 113, 1438 (2009).
+[52] K. Trachenko and A. Zaccone, Slow stretched-exponential
+and
+fast
+compressed-exponential
+relaxation
+from
+local
+event dynamics, J. Phys.: Condens. Matter 33, 315101
+(2021).
+174304-8

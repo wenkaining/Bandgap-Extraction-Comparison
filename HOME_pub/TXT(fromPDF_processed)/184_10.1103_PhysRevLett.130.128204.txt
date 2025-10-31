@@ -1,0 +1,200 @@
+Modeling the Transition between Localized and Extended Deposition in Flow Networks through Packings of Glass Beads Gess Kelly,1 Navid Bizmark,3,4 Bulbul Chakraborty,1 Sujit S. Datta ,3 and Thomas G. Fai 2,* 1Martin A. Fisher School of Physics, Brandeis University, Waltham, Massachusetts 02453, USA 2Mathematics Department and Volen Center for Complex Systems, Brandeis University, Waltham, Massachusetts 02453, USA 3Department of Chemical and Biological Engineering, Princeton University, Princeton, New Jersey 08544, USA 4Princeton Materials Institute, Princeton University, Princeton, New Jersey 08540, USA (Received 4 October 2022; accepted 28 February 2023; published 24 March 2023) We use a theoretical model to explore how fluid dynamics, in particular, the pressure gradient and wall shear stress in a channel, affect the deposition of particles flowing in a microfluidic network.
+Experiments on transport of colloidal particles in pressure-driven systems of packed beads have shown that at lower pressure drop, particles deposit locally at the inlet, while at higher pressure drop, they deposit uniformly along the direction of flow.
+We develop a mathematical model and use agent-based simulations to capture these essential qualitative features observed in experiments.
+We explore the deposition profile over a two- dimensional phase diagram defined in terms of the pressure and shear stress threshold, and show that two distinct phases exist.
+We explain this apparent phase transition by drawing an analogy to simple one- dimensional mass-aggregation models in which the phase transition is calculated analytically.
+DOI: 10.1103/PhysRevLett.130.128204 Introduction.—Deposition and aggregation of fine par- ticles in microfluidic networks and porous media play an important role in various natural and industrial processes such as water purification, geotextile filtration, applications in precision drug delivery and similar biomedical tasks, transport of microplastics, environmental cleanups, groundwater pollutant removal, oil recovery, and transport of nanomaterials for groundwater aquifer remediation [1–11].
+For example, in filtration processes, understanding of the deposition dynamics of colloidal particles plays a significant role in improving filter efficiency via reducing filter fouling [12–14].
+Observations from [15] indicate that, regardless of the charge of the colloidal particles flowing in the bead network, applying lower pressures across the system leads to localized deposition under various con- ditions.
+This may suggest that irrespective of the exact local clogging mechanism (e.g., bridging versus aggregation [16]), the interplay of hydrodynamical variables in these systems controls the resulting deposition profile.
+We focus on the role of applied pressure difference ΔP as one of the key variables motivated by the experimental design in [15] and the wall shear stress τw, which has been shown in past studies to play an important role in erosion [17–19].
+Here, the shear stress at the wall τw refers to the shear stress experienced by colloidal particles deposited on the walls of the packing.
+We follow the approach of [19] to capture the role of the shear stress threshold τ, a material parameter that describes the threshold shear stress at the wall above which fluid flow erodes the deposited particles from the walls.
+Table S1 in the Supplemental Material [20] contains representative parameter values.
+Throughout the text, we use a hat notation, e.g., Δ ˆP, to denote the corresponding variables, e.g., ΔP, that are normalized by a set value relevant to the experimental system.
+Table S2 in the Supplemental Material [20] contains additional details.
+Our specific system of interest is motivated by recent experiments from [15], in which a constant pressure difference ΔP applied to a packing of disordered glass beads of length L drives a fluid flow containing a suspension of colloidal particles.
+These experiments show that at larger pressure differences, the profile of particles deposited on the solid matrix extends uniformly along the length of the packing, while at lower pressures, the particles deposit locally at the inlet where they are injected into the system.
+Here, we develop a mathematical model to explain how the pressure difference influences the deposition profile.
+Past studies of simple mass-aggregation models [14,21] motivate us to explore the phase space of shear stress threshold ˆτ and pressure difference Δ ˆP. In particular, Majumdar et al. [21] consider minimal systems and lattice models in which discrete masses diffuse at a constant unit rate, which normalizes the overall timescale.
+Multiple masses may aggregate at lattice sites after diffusion, and units of masses erode (chip away) from blocks at a constant chipping rate w. Physically, chipping corresponds to single- particle dissociation in processes such as polymerization and competes with coalescence.
+In this simplest case, they work with two independent variables, the chipping rate w and mass density ρ, that remain constant and determine the behavior of the system at steady state.
+They explore the phase space consisting of the mass density ρ and chipping PHYSICAL REVIEW LETTERS 130, 128204 (2023) 0031-9007=23=130(12)=128204(6) 128204-1 © 2023 American Physical Societyrate w and show that these finite systems exhibit two distinct phases at steady state, only one of which involves an infinite aggregate.
+One important difference between the simple mass-aggregation model and our study is the fixed density or constant total mass with periodic boundary conditions in contrast to our model where there is a flux of particles into and out of the system.
+We formulate the fluid flow through the packings by applying the hydraulic analogy to the network of channels extracted from the bead packing images.
+Using our network model and deposition and erosion laws, we demonstrate a similar transition in the normalized shear stress threshold ˆτ and pressure Δ ˆP phase space.
+Motivated by these simple models of aggregation and fragmentation explored in previous studies [21,22], we explore the model phase space spanned by two dimensionless parameters, and identify a transition between extended and localized dep- osition regimes in terms of the key parameters of pressure difference and shear stress threshold [23].
+Methods.—We use a graph- or network-based approach [24,25] to model the porous network created by the beads as shown in Fig. 1(a).
+The idea of modeling a porous system as a network has been studied previously [26–28].
+For instance, past studies have demonstrated the effective- ness of a network-based approach by highlighting the role of disorder on the flow distribution in porous media [29].
+We use images of two-dimensional (2D) slices of the three- dimensional (3D) packing.
+We then generate the model network based on these images.
+Because of the expected differences between the flow in two and three dimensions, we do not expect to quantitatively recover all aspects of the experiments.
+In such network models, each pore or channel is typically represented by an edge in a network represent- ing the entire porous system [see Fig. 1(a)].
+Each edge may be weighted in terms of its conductance and the nodes of the network represent junctions between the edges.
+Assuming we have an incompressible fluid, the inflow and outflow of particles and fluid must be equal to respect mass conservation.
+In our system of interest, boundary junctions at the inlet and outlet are subject to two pressures held constant for the duration of the experiment.
+To solve for the resulting channel flow rates, as shown in Figs. 1(b) and 1(c), we apply Kirchhoff’s circuit laws.
+For each channel, we estimate the channel length l and diameter d from the image of the network to calculate the channel conductance g, which is defined as the proportionality constant between the volumetric flow rate through a given channel and the pressure difference across the channel given by the Hagen-Poiseuille law [30]: g ¼ πd4 128ηl ; ð1Þ where η is the dynamic viscosity.
+The resolution of the image in Fig. 1 tends to be lower along the boundaries and our image processing does not accurately identify a significant portion of the channels.
+We use the largest connected component of the model network, which is in the interior of the packing.
+For this reason we neglect the upper and lower boundaries.
+More details regarding channel flow rate calculations can be found in the Supplemental Material [20].
+The total flow rate is of order 10−10 m3=s once we account for the depth of the three-dimensional system.
+To capture the stochastic effects, we use agent-based modeling to model the particles as they deposit and erode within the network.
+This distinguishes our study from a closely related previous model of erosion in networks in which differential equations are used to predict how erosion changes the width of the channels in the network [28].
+Another difference is our assumption that the glass beads that form the network remain fixed over the course of the simulation.
+Consequently, while the deposited particles may erode in our simulation, the channels themselves do not erode.
+Because initially the channel does not contain any deposited particles, and since erosion only occurs through removal of particles, the channel width cannot grow beyond its initial value.
+Particles enter the system from the inlet at constant time intervals.
+This is a discrete approximation to the experi- ments, in which the particles are injected continuously at a constant volume fraction.
+This is also different from the conserved-mass aggregation models of [21] where the density is constant.
+As particles deposit in the network during the simulations, they cause a decrease in the width of the channels, which may eventually lead to topological FIG. 1.
+We use a network approach to model the bead packing here shown in the absence of particles.
+(a) We skeletonize the image of the packing, and then generate a network.
+The edges of the network represent the channels through which fluid may flow in the packing and the nodes represent the junctions where these channels meet.
+(b) We obtain the flow rates in the channels by applying Kirchhoff’s laws [30].
+(c) Zoomed-out view showing the network as a whole.
+The color in (b) and (c) shows the magnitude of the channel flow rates in SI units (m3=s).
+(a) and (b) have the same scale bar.
+The gray background shows the experimental micrograph of the beads.
+PHYSICAL REVIEW LETTERS 130, 128204 (2023) 128204-2changes when the number of deposited particles surpasses the channel capacity, i.e., clogging.
+We assume that each time a particle is deposited (eroded), it causes a uniform reduction (increase) in the channel width.
+This assumption is motivated by the separation of length scales in the experiments, in which the glass bead diameter is approxi- mately 40 μm so that the particle-to-bead size ratio is approximately 0.03.
+We follow the suggested model of [19] in defining the deposition rate λd and erosion rate λe of particles using shear stress thresholds: the deposition threshold τd and erosion threshold τe, and shear stress at the channel wall τw.
+Since we are interested in cases in which both deposition and erosion occur, to reduce the number of independent parameters, here, we assume that the wall shear stress thresholds for deposition and erosion are equal, i.e., τd ¼ τe ¼ τ, so that the deposition rate and erosion rate equations are λdðτÞ ¼  κdðτ −τwÞ; if τw < τ 0; otherwise; ð2Þ and λeðτÞ ¼  κeðτw −τÞ; if τw > τ 0; otherwise: ð3Þ Here, κd and κe are deposition and erosion coefficients that depend on solid properties, respectively [19].
+We note that τw depends on the imposed fluid flow conditions, whereas τd and τe reflect the material properties of the deposited particles independent of flow.
+In particular, a larger τ requires a larger wall shear stress for particle erosion.
+We run the simulation for multiple values of Δ ˆP and ˆτ, keeping all other parameters, including the length of the medium ˆL, constant.
+Results.—In both experiments and simulations, the cumulative distribution function FðxÞ of deposited parti- cle positions varies significantly between the localized and extended deposition regimes.
+We approximate this function as FðxÞ ≈NðX ≤xÞ=N; ð4Þ where NðX ≤xÞ is the number of deposited particles at position less than or equal to x, and N is the total number of deposited particles.
+The position along the direction of the flow x is normalized by the full length of the medium.
+As shown in Fig. 2, when the deposition is localized, FðxÞ attains a value near 1 for x < 0.5, showing that most of the deposited particles are close to the inlet.
+In contrast, in the extended deposition case, FðxÞ has a more linear form with FðxÞ ≈0.5 when x ¼ 0.5.
+More information regarding the normalization constants is included in Table S2 in the Supplemental Material [20].
+Our simulations reveal that for each wall shear stress threshold ˆτ, there exists a critical pressure Δ ˆPc that separates the localized and extended regimes (Fig. 3).
+For a specific value of ˆτ, choosing Δ ˆP larger (smaller) than the critical value leads to extended (localized) dep- osition.
+To find the critical pressure Δ ˆPc for a given ˆτ, we vary Δ ˆP in the simulation while keeping all other para- meters constant.
+As we decrease Δ ˆP, the percentage of the deposited particles in the first half of the system increases.
+We mark Δ ˆPc as the smallest Δ ˆP when the deposition is localized.
+Figure 4 visualizes Δ ˆPc for various values of ˆτ and how the two regimes of localized and extended deposition are separated in the normalized shear stress threshold and pressure phase space.
+This behavior is similar to the phase transitions observed in simple mass- aggregation models on lattice sites, with shear stress and pressure appearing on the corresponding axes of the phase diagram as the chipping rate and density in the chipping and aggregation model [21,31].
+The solid curve in Fig. 4 is the best power law fit motivated by the power law relation between the model parameters in [21].
+In particular, we fit to a function of the form axb þ c. Majumdar et al. use the steady-state mass distribution to study the behavior and dynamical phase transition of their model, in which the distribution transitions from an exponential to a power law with an aggregate [21].
+Our numerical investigation of the mass distribution has revealed signs of a similar behavior when transitioning between the extended and localized phases.
+However, an accurate classification of the transition seen in our model requires a more rigorous study of the critical point. FIG. 2.
+The cumulative probability distribution function FðxÞ of positions of particles deposited along the flow direction for the localized and the extended case obtained by simulation and experiment show a similar qualitative behavior.
+Darker colors indicate later times.
+The position along the direction of the flow x is normalized by the total length of the medium.
+The labels indicate the normalized pressure gradient.
+PHYSICAL REVIEW LETTERS 130, 128204 (2023) 128204-3Identifying the transition point in complex nonequilibrium systems such as ours where a free energy description of the system does not exist is a difficult task, and as a first step, one may simplify some of the complexities of the system to map it to other solvable models.
+In the experiments, one of the tunable parameters is Δ ˆP.
+We further assume that ˆτ is an independent parameter that depends on fluid, particle, and pore network properties.
+Given a system with a fixed ˆτ, we expect localized deposition at lower Δ ˆP, and extended deposition at higher Δ ˆP for the same network as seen in experiments [15] and simulations.
+Figure 3 supports this reasoning.
+For par- ticles with a given shear stress threshold ˆτ, as we increase Δ ˆP, a smaller percentage of deposition occurs near the inlet of the medium, consistent with the experimental findings.
+In the figure, the red borders indicate localized deposition, as defined by comparison to a representative experiment, and the green borders indicate extended deposition.
+More details on categorizing localized and extended deposition are found in the Supplemental Material [20].
+In the Supplemental Material, we also demonstrate that this transition occurs over a range of sizes.
+The hat notation used here denotes normalization by a set value.
+The programming scripts used in generating the simulations discussed in this section are accessible on GitHub [32].
+Discussion.—Capturing the dynamics of deposition in porous media and microfluidic systems has wide implica- tions in filtration studies.
+Understanding what leads to localized deposition helps in improving filter efficiency [26].
+Experiments such as [15] provide more insight into the influence of global system hydrodynamics on uniform- ity of deposition profiles.
+Our theoretical model success- fully captures the behavior observed in the experiments in [15].
+Our network-based approach and model of shear- based deposition and erosion reveal a transition from the localized to extended regime in the phase space of shear stress threshold and pressure in colloidal transport within packings of beads.
+Given a system of beads, there exists a critical pressure above which the deposition profile becomes increasingly more uniform (see Fig. 4).
+This transition from the localized to extended regime is similar to what has been observed in previous studies of simple mass-aggregation models of [21].
+The observation in similarities between these models of aggregation and our current model leads us to believe such analogies may be present in other systems, as well, where the key variables may be different.
+Future applications to other systems including filtration may examine and identify what varia- bles control the phase transition in the system.
+1.0 0.9 0.8 0.7 0.6 0.5 0.4 0.3  ΔP  0.2632  0.5263 0.7895 1.0526 1.3158 1.5789 FIG. 3.
+The final frames of the simulation over a range of values of shear stress threshold ˆτ and applied pressure Δ ˆP show a clear separation between the localized and extended deposition regimes similar to experimental observations in [15].
+The dashed line serves to guide the eye. FIG. 4.
+In the parameter space of normalized pressure Δ ˆP and shear stress threshold ˆτ, a boundary separates the two regimes of localized and extended deposition, reminiscent of the phases in [21].
+The solid circles show the critical values of pressure Pc at which the transition to the localized phase occurs in simulations.
+The solid line corresponds to the best fit Δ ˆP ¼ 1.04ˆτ0.71 −0.04.
+The hat notation used here denotes normalization by the maximum value.
+PHYSICAL REVIEW LETTERS 130, 128204 (2023) 128204-4Our model may be thought of as a two-dimensional inhomogeneous asymmetric expansion of the simple mass- aggregation model in [21].
+Uncovering the limitations to this analogy requires a careful analysis.
+One important distinction between the two models concerns the boundary conditions.
+In the simple mass-aggregation model, the total mass is constant, whereas in our model, there is a regular influx of particles into the system and particles may exit at the outlet boundary.
+Some other relevant models that allow an influx of particles include the aggregation-chipping model with open boundary conditions [33] and totally asymmetric simple exclusion (or inclusion) processes on networks [34,35].
+In our case, the direction of flow makes the model asymmetric, and although the simple mass- aggregation model also shows a phase transition in two dimensions, it belongs to a different universality class [31,36].
+Moreover, Rajesh et al. have shown that subtle changes such as making the deposition rate mass dependent lead to different models with no phase transitions [37].
+In our case, we assume identical particles with the same laws for deposition and erosion that do not explicitly depend on mass of individual particles; however, the flow, deposition, and erosion rates may change with time and differ for each channel.
+These differences lead to spatial bias and signs of channelization [19,28,38] where particles frequent a few paths rather than all paths in the system.
+Studies suggest in real-world applications of the model, the rate of erosion and shear threshold for erosion may depend on particle-particle interactions and spatial distribution of particles [38], similar to a mass-dependent law.
+Past studies considering the role of particle interactions in deposition report that strong particle interactions lead to a decrease in the transient flow rate [8].
+We hypothesize that this decrease would lead to a lower effective local shear stress at the channel walls and hence a more localized deposition profile.
+Since particles act as agents in the model and simulations, adding interactions would be a possible expansion of the model in the future.
+We note that although the model is successful in capturing the essential behavior of the system, some details regarding the clogging mechanism are lost due to coarse graining.
+This is most apparent in Fig. 2 in which the deposition appears to become more localized over time in experiments in contrast to simulations.
+It would be inter- esting to explore what leads to this difference in experiment and simulation observations by expanding the model to three dimensions.
+Additionally, one may expand (2) and (3) to consider an overlap region such that τe < τd where for some values of wall shear stress, both deposition and erosion occur, or a gap region τd < τe where for some values of wall shear stress, neither deposition nor erosion occur similar to the generalizations in [19].
+References [39–46] appear in the Supplemental Material.
+We acknowledge funding from NSF Grant No. DMS- 1913093 to G. K. and T. G. F.
+We also acknowledge computational support from the Brandeis HPCC which is partially supported by the NSF through DMR-MRSEC 2011846 and OAC-1920147.
+S. S. D. acknowledges fund- ing from NSF DMR-2011750.
+N. B. acknowledges support from a postdoctoral fellowship of the Princeton Center for Complex Materials (PCCM).
+B. C. acknowledges the sup- port of NSF-CBET 1916877.
+*tfai@brandeis.edu [1] J. Linkhorst, T. Beckmann, D. Go, A. J. C. Kuehne, and M. Wessling, Microfluidic colloid filtration, Sci. Rep. 6, 22376 (2016).
+[2] Y. Faure, A. Baudoin, P. Pierson, and O. Pl´e, A contribution for predicting geotextile clogging during filtration of sus- pended solids, Geotextiles Geomembr. 24, 11 (2006).
+[3] C. Kleinstreuer, J. Li, and J. Koo, Microfluidics of nano- drug delivery, Int.
+J. Heat Mass Transfer 51, 5590 (2008).
+[4] A. Al Harraq and B. Bharti, Microplastics through the lens of colloid science, ACS Environ. Au 2, 3 (2022).
+[5] X. Zhao, W. Liu, Z. Cai, B. Han, T. Qian, and D. Zhao, An overview of preparation and applications of stabilized zero-valent iron nanoparticles for soil and groundwater remediation, Water Res. 100, 245 (2016).
+[6] S. R. Kanel, J.-M. Gren`eche, and H. Choi, Arsenic(V) re- moval from groundwater using nano scale zero-valent iron as a colloidal reactive barrier material, Environ.
+Sci. Technol. 40, 2045 (2006).
+[7] T. Phenrat, H.-J. Kim, F. Fagerlund, T. Illangasekare, R. D. Tilton, and G. V. Lowry, Particle size distribution, concen- tration, and magnetic attraction affect transport of polymer- modified Fe0 nanoparticles in sand columns, Environ.
+Sci. Technol. 43, 5079 (2009).
+[8] E. S. Boek, H. K. Ladva, J. P. Crawshaw, and J. T. Padding, Deposition of colloidal asphaltene in capillary flow: Experiments and mesoscopic simulation, Energy Fuels 22, 805 (2008).
+[9] E. S. Boek, T. F. Headen, and J. T. Padding, Multi-scale simulation of asphaltene aggregation and deposition in capillary flow, Faraday Discuss. 144, 271 (2010).
+[10] E. S. Boek, A. D. Wilson, J. T. Padding, T. F. Headen, and J. P. Crawshaw, Multi-scale simulation and experimental studies of asphaltene aggregation and deposition in capillary flow, Energy Fuels 24, 2361 (2010).
+[11] K. A. Lawal, J. P. Crawshaw, E. S. Boek, and V. Vesovic, Experimental investigation of asphaltene deposition in capillary flow, Energy Fuels 26, 2145 (2012).
+[12] N. Delouche, A. B. Schofield, and H. Tabuteau, Dynamics of progressive pore clogging by colloidal aggregates, Soft Matter 16, 9899 (2020).
+[13] A. Cirillo, G. Tomaiuolo, and S. Guido, Membrane fouling phenomena in microfluidic systems: From technical chal- lenges to scientific opportunities, Micromachines 12, 820 (2021).
+[14] M. P. Dalwadi, I. M. Griffiths, and M. Bruna, Understanding how porosity gradients can make a better filter using homogenization theory, Proc. R. Soc. A 471, 1 (2015).
+PHYSICAL REVIEW LETTERS 130, 128204 (2023) 128204-5[15] N. Bizmark, J. Schneider, R. D. Priestley, and S. S. Datta, Multiscale dynamics of colloidal deposition and erosion in porous media, Sci. Adv. 6, eabc2530 (2020).
+[16] E. Dressaire and A. Sauret, Clogging of microfluidic systems, Soft Matter 13, 37 (2016).
+[17] L. Ristroph, M. N. J. Moore, S. Childress, M. J. Shelley, and J. Zhang, Sculpting of an erodible body by flowing water, Proc. Natl. Acad. Sci.
+U.S.A. 109, 19606 (2012).
+[18] N. Schorghofer, B. Jensen, A. Kudrolli, and D. H. Rothman, Spontaneous channelization in permeable ground: Theory, experiment, and observation, J. Fluid Mech. 503, 357 (2004).
+[19] R. Jäger, M. Mendoza, and H. J. Herrmann, Channelization in porous media driven by erosion and deposition, Phys.
+Rev. E 95, 013110 (2017).
+[20] See Supplemental Material at http://link.aps.org/ supplemental/10.1103/PhysRevLett.130.128204 for tables with simulation parameter values, a detailed description of the simulation, and additional results for different network sizes.
+[21] S. N. Majumdar, S. Krishnamurthy, and M. Barma, Non- equilibrium Phase Transitions in Models of Aggregation, Adsorption, and Dissociation, Phys. Rev. Lett. 81, 3691 (1998).
+[22] R. Rajesh and S. N. Majumdar, Exact phase diagram of a model with aggregation and chipping, Phys.
+Rev. E 63, 361141 (2001).
+[23] There are different combinations of parameters (such as flow rate and pressure) that one could potentially choose, but as long as there is a way to map from one to the other, they are expected to be equivalent.
+[24] B. Bollobás, Modern Graph Theory, Graduate Texts in Mathematics Vol. 184 (Springer, New York, 1998).
+[25] A. Barrat, M. Barth´elemy, and A. Vespignani, Dynamical Processes on Complex Networks (Cambridge University Press, Cambridge, England, 2008).
+[26] I. Griffiths, A. Kumar, and P. Stewart, A combined network model for membrane fouling, J. Colloid Interface Sci. 432, 10 (2014).
+[27] S. Redner, Fractal and multifractal scaling of electrical conduction in random resistor networks, in Mathematics of Complexity and Dynamical Systems, edited by R. A. Meyers (Springer, New York, New York, NY, 2011), pp. 446–462.
+[28] A. Zareei, D. Pan, and A. Amir, Temporal Evolution of Erosion in Pore Networks: From Homogenization to In- stability, Phys. Rev. Lett. 128, 234501 (2022).
+[29] K. Alim, S. Parsa, D. A. Weitz, and M. P. Brenner, Local Pore Size Correlations Determine Flow Distributions in Porous Media, Phys. Rev. Lett. 119, 144501 (2017).
+[30] H. Bruus, Theoretical Microfluidics, Oxford Master Series in Physics Vol. 18 (Oxford University Press, Oxford, 2007).
+[31] S. N. Majumdar, S. Krishnamurthy, and M. Barma, Nonequilibrium phase transition in a model of diffusion, aggregation, and fragmentation, J. Stat. Phys. 99, 1 (2000).
+[32] Modeling the transition between localized and extended deposition in flow networks through packings of glass beads, https://github.com/gsiraji/particleDeposition.
+[33] H. Sachdeva, M. Barma, and M. Rao, Condensation and Intermittency in an Open-Boundary Aggregation- Fragmentation Model, Phys. Rev. Lett. 110, 150601 (2013).
+[34] I. Neri, N. Kern, and A. Parmeggiani, Totally Asymmetric Simple Exclusion Process on Networks, Phys. Rev. Lett. 107, 068702 (2011).
+[35] S. Reuveni, O. Hirschberg, I. Eliazar, and U. Yechiali, Occupation probabilities and fluctuations in the asymmetric simple inclusion process, Phys.
+Rev. E 89, 042109 (2014).
+[36] R. Rajesh and S. Krishnamurthy, Effect of spatial bias on the nonequilibrium phase transition in a system of coagulating and fragmenting particles, Phys.
+Rev. E 66, 046132 (2002).
+[37] R. Rajesh, D. Das, B. Chakraborty, and M. Barma, Aggregate formation in a system of coagulating and fragmenting particles with mass-dependent diffusion rates, Phys.
+Rev. E 66, 056104 (2002).
+[38] A. Kudrolli and X. Clotet, Evolution of Porosity and Channelization of an Erosive Medium Driven by Fluid Flow, Phys. Rev. Lett. 117, 028001 (2016).
+[39] J. Rommes and W. H. A. Schilders, Efficient methods for large resistor networks, IEEE Trans. Comput.-Aided Des. Integr.
+Circuits Syst. 29, 28 (2010).
+[40] D. Zhang and G. Lu, Review of shape representation and description techniques, Pattern Recognit. 37, 1 (2004).
+[41] H. Chatbri, K. Kameyama, and P. Kwan, A comparative study using contours and skeletons as shape representations for binary image matching, Pattern Recogn. Lett.
+76, 59 (2016), special Issue on Skeletonization and its Application.
+[42] Z. Jiang, K. Wu, G. Couples, M. I. J. van Dijke, K. S. Sorbie, and J. Ma, Efficient extraction of networks from three-dimensional porous media, Water Resour.
+Res. 43, W12S03 (2007).
+[43] MATLAB, version 7.10.0 (R2022b) (The MathWorks Inc., Natick, Massachusetts, 2022).
+[44] P. Kollmannsberger, M. Kerschnitzki, F. Repp, W. Wagermaier, R. Weinkamer, and P. Fratzl, The small world of osteocytes: Connectomics of the lacuno-canalicular net- work in bone, New J. Phys. 19, 073019 (2017).
+[45] C. Tien, B. Ramarao, and R. Yasarla, A blocking model of membrane filtration, Chem.
+Eng. Sci. 111, 421 (2014).
+[46] K.-J. Hwang and H.-C. Liu, Cross-flow microfiltration of aggregated submicron particles, J. Membr.
+Sci. 201, 137 (2002).
+PHYSICAL REVIEW LETTERS 130, 128204 (2023) 128204-6

@@ -1,0 +1,307 @@
+Network-Forming Units, Energy Landscapes, and Conductivity Activation Energies in Alkali Borophosphate Glasses: Analytical Approaches Published as part of The Journal of Physical Chemistry virtual special issue “Hellmut Eckert Festschrift”.
+Marco Bosi, Julian Fischer, and Philipp Maass* Cite This: J. Phys. Chem.
+C 2021, 125, 6260−6268 Read Online ACCESS Metrics & More Article Recommendations ABSTRACT: A major challenge in the modeling of ionically conducting glasses is to understand how the large variety of possible chemical compositions and speciﬁc features of their structure inﬂuence ionic transport quantities.
+Here we revisit and extend a theoretical approach for alkali borophosphate glasses, where changes of conductivity activation energies with the borate to phosphate mixing ratio are related to modiﬁcations of the ionic site energy landscape.
+The landscape modiﬁcations are caused by varying amounts of diﬀerent units forming the glassy network, which lead to spatial redistributions of the counter-charges of the mobile alkali ions.
+Theoretical approaches are presented to calculate variations of both network former unit concentrations and activation energies with the glass composition.
+Applications to several alkali borophosphate glasses show good agreement with experimental data. 1.
+INTRODUCTION High ionic conductivities are desired when optimizing glassy electrolytes for most applications.1 To guide this optimization process, it is important to improve our theoretical under- standing of ion motion in glasses.2 Strong enhancements of ionic conductivities can be achieved by utilizing various eﬀects, which we term the “ionic concentration eﬀect”, “halide doping eﬀect”, and “mixed glass former eﬀect”.
+For the ionic concentration eﬀect, a strong (superlinear) increase of ionic conductivity results from an increase of the molar content of mobile ions,3 and for the halide doping eﬀect, from an addition of alkali halides.4 In the case of the “mixed glass former eﬀect”,5,6 a mixing of diﬀerent types of glass formers, such as silicates, borates, phosphates, etc., can lead to a conductivity increase at intermediate mixing ratios.
+Diﬀerent theoretical approaches were developed to understand underlying physical mechanisms causing the ionic concentration,7−10 the halide doping,11 and the mixed glass former eﬀect (MGFE).12−14 The MGFE received particular attention in the past decade.13,15 Upon mixing of two or more glass formers, the ionic conductivity can increase (positive MGFE)16 or decrease (negative MGFE).17,18 Many studies in particular were conducted for alkali borophosphate glasses.14,19−22 In a former study, our research group developed a theoretical approach to explain the MGFE in sodium borophosphate glasses with compositions of 0.4Na2O − 0.6[xB2O3 −(1 −x)P2O5] in the whole range of borate to phosphate mixing 0 ≤x ≤1.14 In this approach, a thermodynamical model was ﬁrst introduced to describe how relative amounts of diﬀerent types of network forming units (NFUs) change with x. Excellent agreement with experimental results from magic angle spinning nuclear magnetic resonance (MAS NMR) was obtained.
+Based on the NFU concentrations, energy landscapes for the sodium ion migration were constructed and the ionic transport studied by extensive kinetic Monte Carlo (KMC) simulations.
+These simulations allowed the extraction of activation energies from Arrhenius plots of long-time sodium diﬀusion coeﬃcients.
+The variation of the activation energies with x showed good agreement with experimental results for conductivity activation energies obtained from impedance spectroscopy.
+Only one disorder parameter was ﬁtted in the theory when assuming a given concentration of vacant ionic sites in the glass network.
+This Received: November 4, 2020 Revised: February 5, 2021 Published: March 16, 2021 Article pubs.acs.org/JPCC © 2021 The Authors.
+Published by American Chemical Society 6260 https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 Downloaded via UNIV OF CONNECTICUT on May 15, 2021 at 14:27:10 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.parameter speciﬁes additional ﬂuctuations in the energetics of individual ion jumps.
+Here we revisit the theoretical approach and give explicit expressions for the NFU concentrations, including additional results in the case of low alkali concentrations.
+Thereafter, we show that it is possible to calculate conductivity activation energies analytically from the landscape construction, which compare well with the KMC results and experimental data.
+We ﬁrst discuss that evaluating diﬀerences between percolation and Fermi energies, as suggested earlier,10,23,24 yields approximate results only.
+An accurate theory is provided by an eﬀective mapping to a disordered conductance network25,26 or, equivalently, to a single-particle hopping model in a landscape with spatially varying jump barriers.
+This means that a purely analytical approach, with just a numerical determination of Fermi energies and critical percolation barriers, is able to connect information on the structure (NFU concentrations) with transport properties (activation energies) in very good agreement with experiments.
+We ﬁnd it surprising that this is possible in a complex disordered system such as the sodium borophosphate glasses.
+The analytical treatment allows avoiding extensive computer simulations and for checking the robustness of the theoretical approach against variations of parameters within reasonably limits, in particular the concentration of vacant ionic sites.
+Moreover, one can quickly apply the approach now to other borophosphate glasses.
+We demonstrate this for lithium borophosphate glasses with compositions of 0.33Li2O − 0.67[xB2O3 −(1 −x)P2O5], where experimental results for NFU concentrations and activation energies were reported in ref 27. 2.
+NETWORK FORMER UNIT CONCENTRATIONS MAS NMR studies for borophosphate glasses20,28 with compositions of yM2O −(1 −y)[xB2O3 −(1 −x)P2O5] (M, alkali ion; y, molar fraction of alkali oxide) have shown the occurrence of eight diﬀerent NFU types (see Figure 1): neutral trigonal B(3) units with three bridging oxygens (bOs), trigonal B(2) units with two bOs and one negatively charged nonbridging oxygen (nbO), negatively charged tetrahedral B(4) units with four bOs, and tetrahedral phosphate units P(n), n = 0, ..., 4, with n bOs, (4 −n) nbOs, and charges (n −3) (in units of the elementary charge).
+The concentration of these diﬀerent NFU types depends on the overall glass composition.
+We denote by {X} (X = B(n), n = 2, 3, 4, or P(n), n = 0, ..., 4) the fraction of NFUs with respect to the network forming cations, i.e., { } = [ ] [ ] + [ ] X X B P (1) The molar fractions are [X] = ([B] + [P]){X} = (1 −y){X}.
+The total boron content, the total phosphorus content, and the charge neutrality give the following constraints ∑{ } = = x B n n 2 4 ( ) (2a) ∑{ } = − = x P (1 ) n n 0 4 ( ) (2b) { } + { } + { } + { } + { } = { } + { } M B B P 2 P 3 P P (4) (2) (2) (1) (0) (4) (2c) where { } = − M y y 1 (3) Equations 2a−2c are three determining equations for the eight unknown NFU fractions.
+To obtain a complete set of determining equations, a thermodynamic model was developed,14 which is based on diﬀerent formation enthalpies GX of the NFUs X.
+The diﬀerences between these formation enthalpies can be related to the charge delocalization in the NFUs, with lower formation enthalpies for higher delocalization.
+If diﬀerences ΔGX are signiﬁcantly larger than the thermal energy kBTg at the glass transition (Tg: glass transition temperature), a hierarchy results with respect to the preference of the negatively charged NFUs to compensate for the alkali ion charges.
+In the absence of P(4) units, which were not considered in ref 14, the hierarchy corresponds to an ordering of < < < < G G G G G B P P P B (4) (2) (1) (0) (2) of the charged NFU types.
+The hierarchy implies that NFU types with higher formation enthalpy do not occur unless they must form to satisfy all constraints.
+In addition to the constraints given by eqs 2a−2c, an important further one is that of forbidden linkages between B(4) units.30 This can be attributed to the homogeneously delocalized charge of the B(4) units, which impedes the formation of an oxygen bridge between them.
+For small ΔGX, which are less than about 4kBTg, it is possible to reﬁne the treatment by introducing disproportionation reactions between the respective NFU types.
+In Table 1, we give the fractions {X} of the various NFU types predicted by the theory14 without consideration of disproportionation reactions, and for alkali ion fractions {M} larger than a critical value {M}★= 3/7 ≅0.43.
+In this regime of high alkali content, we predict no P(4) units to occur (see below).
+Using the equations in Table 1, we ﬁnd good agreement with MAS NMR results for various series of alkali borophosphate glasses with compositions of 0.4Na2O − 0.6[xB2O3 −(1 −x)P2O5], yNa2O −2(1 −y)[BPO4], and 0.33Li2O −0.67[xB2O3 −(1 −x)P2O5]; see Figure 2.
+If {M} is smaller than {M}★= 3/7 (or y = {M}/(1 + {M}) < 0.3), one needs to consider the P(4) units also.
+This NFU type Figure 1.
+Sketches of the diﬀerent NFUs forming a network in borophosphate glasses.
+The upper and lower rows show the B(n) and P(n) units with n bridging oxygens, respectively.
+The numbers indicate the charges of the species (in units of the elementary charge), and the red circles illustrate how the total charge can be viewed as (partially) distributed among nonbridging oxygens or among all oxygens in the absence of nonbridging ones.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6261has not been considered in ref 14, but experimental observations give strong evidence of its occurrence.28,31 At low alkali content, it becomes energetically favorable to form more negatively charged B(4) units than are needed for compensating all charges of alkali ions.
+The additional negative charges of B(4) units are compensated by the positive charges of P(4) units.
+The P(4) units should have small formation enthalpies also due to their high charge delocalization and their large number of four bOs.
+One can imagine mutually linked B(4) and P(4) units to form small crystalline-type cluster conﬁgurations, as sketched in Figure 12 of ref 28.
+The theoretical modeling in ref 14 is thus extended by the following additional requirement: The number of B(4) units is maximal under consideration of positively charged P(4) units and the constraints given by the stoichiometry, charge neutrality, and forbidden B(4)−B(4) linkages.
+For the same reasons as for the B(4) units, we expect also that P(4) units do not link to themselves.
+On can check that this further constraint can always be fulﬁlled with the NFU fractions calculated below.
+The requirement of forbidden B(4)−B(4) linkages implies { } ≤ { } + { } + { } + { } + { } + { } 4 B 3 B 2 B 4 P 3 P 2 P P (4) (3) (2) (4) (3) (2) (1) (4) Using this relation, the hierarchy of formation enthalpies, and the principle of the maximal possible number of B(4) units, we predict four diﬀerent regimes 1−4 to occur for {M} ≤{M}★, where certain NFU types are replaced by certain other types.
+Reﬁnements are possible by considering disproportionation reactions, but we are not including them in the following analysis.
+The four regimes are as follows: Regime 1 (0 ≤x ≤x1): Replacement of P(2) by B(4) units.
+In the phosphate glass (x = 0), the charges of the alkali ions are compensated by the P(2) units, {P(2)} = {M}, and the rest of the network is formed by the neutral P(3) units, {P(3)} = 1 − {M}.
+When x is increased, P(2) are ﬁrst replaced by B(4) units, because B(4) is the most favorable NFU type for charge compensation (smallest formation enthalpy of the negatively charged NFU types).
+The fraction of P(3) units does not change.
+Equations 2a−2c then yield { } = x B(4) (5a) { } = { } − M x P(2) (5b) { } = −{ } M P 1 (3) (5c) The regime terminates when all P(2) units are substituted at = { } x M 1 (6) One can easily check that the constraint in eq 4 is always fulﬁlled for the fractions in eqs 5a−5c if {M} ≤{M}★.
+Regime 2 (x1 ≤x ≤x2): Replacement of P(3) by P(4) and B(4) units.
+According to the discussion above, more negatively charged B(4) units can form than are needed for compensating the alkali ion charges.
+This holds true as long as B(4)−B(4) linkages can be avoided.
+The additional negative charges of B(4) units are compensated by the positive charges of P(4) units.
+The network is now formed by B(4), P(3), and P(4) units, and eqs 2a−2c yield { } = x B(4) (7a) { } = + { } − M x P 1 2 (3) (7b) { } = −{ } x M P(4) (7c) This regime terminates if condition 4 becomes violated at = −{ } x M 1 2 6 2 (8) i.e., when B(4)−B(4) linkages can no longer be avoided.
+For {M} = {M}★= 3/7 in particular, it holds that x2 = x1 and regime 2 disappears.
+This explains why we expect P(4) units to be absent for {M} ≥{M}★.
+Regime 3 (x2 ≤x ≤x3): Replacement of P(3) by B(3) units.
+As the fraction of B(4) units has saturated, B(3) units are replacing P(3) units now.
+The network is formed by B(3), B(4), P(3), and Table 1.
+Theoretically Predicted Fractions of the Number of NFUs of Diﬀerent Types Relative to the Total Number of NFUs in Alkali Borophosphate Glasses of Compositions yM2O −(1 −y)[xB2O3 −(1 −x)P2O5] with y ≥3/10 ({M} = y/(1 −y) ≥ 3/7)a NFU 0 ≤x ≤x1 x1 ≤x ≤x2 I x2 I ≤x ≤x2 II x2 II ≤x ≤x2 x2 ≤x ≤1 B(2) 0 0 0 0 − + { } + M x 21 7 6 3 B(3) 0 − −{ } + M x 9 20 − + { } + M x 13 5 16 5 4 − −{ } + M x 3 6 3 −{M} −2x B(4) x −{ } M 9 20 − { } − M x 13 5 16 1 4 −{ } M 3 6 −{ } M 3 6 P(0) 0 0 0 − + { } + M x 15 7 6 2 1 −x P(1) 0 0 − + { } + M x 29 21 16 5 4 − { } − M x 21 7 6 3 0 P(2) {M} −x − + { } M 9 21 20 − { } − M x 45 21 16 9 4 0 0 P(3) 1 −{M} − { } − M x 29 21 20 0 0 0 aThe NFU fractions exhibit diﬀerent dependencies on the alkali ion fraction {M} = y/(1 −y) in various regimes of the borate to phosphate mixing ratio x.
+The borders of the diﬀerent regimes are given by x1 = (9 −{M})/20, x2 I = (29 −21{M})/20, x2 II = (45 −21{M})/36, and x2 = 7/6 − 7{M}/18.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6262P(4) units.
+Equations 2a−2c together with condition 4 (as equation) yield { } = − + { } + M x B 1 2 1 6 (3) (9a) { } = − { } M B 1 2 1 6 (4) (9b) { } = + { } − M x P 1 2 7 6 (3) (9c) { } = − { } M P 1 2 7 6 (4) (9d) The regime terminates when all P(3) units are replaced at = + { } x M 1 2 7 6 3 (10) Regime 4 (x3 ≤x ≤x4): Replacement of P(4) by B(3) units.
+Eventually B(3) units replace P(4) units and the number of B(4) units decreases to keep the overall charge neutrality.
+The network is formed by B(3), P(4), and B(4) units, and eqs 2a−2c yield { } = − −{ } + M x B 1 2 (3) (11a) { } = + { } − M x B 1 (4) (11b) { } = −x P 1 (4) (11c) This behavior continues until at x = 1 the network is built by charged B(4) units with fraction {B(4)} = {M} and neutral B(3) units with fraction {B(3)} = 1 −{M}.
+The predicted variations of the fractions of NFU types in the four regimes 1−4 are summarized in Table 2.
+A few experimental results for NFU fractions when {M} < {M}★= 3/7, or y < 0.3, are shown in Figure 2b.
+They are in good agreement with the theoretical predictions.
+3. SITE ENERGY LANDSCAPES FOR CHARGE TRANSPORT The negatively charged NFUs form counter-charges for the mobile alkali ions.
+If the relative concentrations of NFU types change, the spatial distribution of the counter-charge becomes modiﬁed and hence the energy landscape for the ion migration.
+To describe changes of conductivity activation energies Ea with the glass composition in alkali borophosphate glasses, we base our modeling on the hypothesis that the modiﬁcation of site energies, i.e., the energies of the mobile ions at their residence sites in the glass network, plays the decisive role.
+In general, when considering a jump of a mobile ion from a site i to a vacant neighboring site j, the energies ϵ̃i and ϵ̃j of the ion at the initial and target sites matter, as well as the saddle point energy to be surmounted (the notation with the tilde is used because we analyze the charge transport ﬁnally in a vacancy picture, where the vacancies have site energies ϵi = −ϵ̃i; see below).
+All of these energies are aﬀected by the NFUs in the environment of the sites i, j and by the Coulomb interaction with the other mobile ions.
+To assume that the NFU contribution to the site energies is decisive requires the spatial variation of the ϵ̃i caused by the Coulomb contribution to be weak compared to that caused by the NFUs.
+In addition, the saddle point energies should vary weakly in comparison to the site energies.
+As for the Coulomb interaction, molecular dynamics simulations suggest that the assumption of a weakly ﬂuctuating contribution to the energetics of ion jumps is better justiﬁed in Figure 2.
+Predicted NFU fractions from Table 1 (solid lines) in comparison with experimental MAS NMR data (ﬁlled squares) for various borophosphate glasses: (a) Glasses with compositions 0.4Na2O −0.6[xB2O3 −(1 −x)P2O5] with experimental data from ref 20 for 0 ≤x ≤0.9 and from ref 29 for x = 1.
+(b) Glasses with compositions yNa2O −2(1 −y)[BPO4] with experimental data from ref 28.
+For x = 0.25, the theoretical values with consideration of P(4) units were used (see text).
+(c) Glasses with compositions 0.33Li2O − 0.67[xB2O3 −(1 −x)P2O5] with experimental data from ref 27.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6263a “vacancy picture”.32−34 In this picture, one considers the vacancies, i.e., the vacant ion sites, as charge carriers with a negative charge (analogous to hole conduction in energy bands of semiconductors).
+Only a small fraction f 0 of the ion sites is found to be vacant in molecular dynamics simulations, with f 0 typical in the range of 3−10%.35−38 Small vacancy concen- trations can be expected on thermodynamic reasons because “defect concentrations” should be small in melt-grown glasses.39 It was furthermore shown that f 0 ≪1 is required to understand the peculiar behavior seen in the internal friction behavior of mixed alkali glasses.40,41 To construct site energy landscapes in alkali borophosphate glasses, we follow the approach in ref 14 and consider the two simple-cubic sublattices of a body-centered cubic lattice.
+A two-dimensional sketch of these sublattices is shown in Figure 3.
+One of the sublattices is the “NFU lattice”.
+Its “NFU sites” are randomly occupied by NFUs of diﬀerent types, where each type occurs with its respective concentration.
+On the other sublattice, termed the “M lattice”, we consider the ionic motion to take place.
+A site in this M lattice can be occupied by at most one mobile ion, and ionic motion proceeds by jumps of ions to a vacant nearest neighbor site (as long as these are accessible; see below).
+As the amount of mobile ions relative to the total number of NFUs is {M} = y/ (1 −y) (see section 2), a fraction y/(1 −y) of all sites in the M lattice is occupied.
+This requires {M} = y/(1 −y) < 1, meaning that the applicability of the method is restricted to glass compositions with y < 1/2.
+It is possible to introduce other types of interwoven sublattices to lift this restriction.
+As we consider compositions with y = 0.33 and y = 0.4 in section 4 below, corresponding reﬁnements of the approach are not necessary here.
+As for the remaining fraction of unoccupied sites in the M lattice, not all of these sites are considered to be accessible for the mobile ions.
+This is because the corresponding fraction of vacant sites would be too high (51% for y = 0.33 and 33% for y = 0.4).
+In the modeling, we ﬁx the fraction f 0, i.e., the number of vacant sites relative to the number of accessible residence sites.
+All remaining unoccupied sites in the M lattice are blocked.
+The fraction of blocked sites (relative to all sites in the M lattice) is then given by = − − − f f y y 1 1 1 1 bl 0 (14) To summarize, for a given f 0 in the range 3−10%, we block a fraction f bl of sites in the M lattice according to eq 14.
+The other sites are the accessible residence sites, which we refer to as “ion sites” in the following.
+(It is possible that ﬁnite clusters of ion sites arise due to the blocking, which are not connected to the percolating cluster of ion sites.) To the ion sites are assigned partial charges in dependence of the surrounding neighboring NFUs in the NFU lattice, where we take into account how charge is localized in the diﬀerent NFU types (see the red circles in Figure 1).
+The procedure is illustrated by the arrows in Figure 3.
+Consider an NFU of type α with charge qα and kα nbOs that occupies an NFU site, which has z ion sites in its immediate surroundings.
+This means that z of its 8 nearest neighbor sites in the M lattice are accessible for the mobile ions.
+Among these z ion sites, we select kα randomly and add a partial charge qα/ kα to them (in the rare case z < kα, the NFU is interchanged with a charge-neutral one at another site; all charges of the NFUs can then be distributed as described).
+For a negatively charged B(4) unit without nbO, where the charge = − q 1 B(4) can be viewed as delocalized over all four oxygens, we add a charge (−1/z) uniformly to all surrounding ion sites.
+A P(4) unit with = + q 1 P(4) would be treated analogously, but for y = 0.33 and y = 0.4, we have {M} > 3/7 and P(4) units do not appear (see section 2).
+All partial charges at an ion site i are summed up to the total charge ∑ = Q q i j i j ( ) (15) Table 2.
+Theoretically Predicted NFU Fractions as in Table 1 for y ≤3/10 ({M} = y/(1 −y) ≤3/7)a NFU 0 ≤x ≤x1 x1 ≤x ≤x2 x2 ≤x ≤x3 x3 ≤x ≤1 B(3) 0 0 − −{ } + M x 3 6 −1 −{M} + 2x B(4) x x −{ } M 3 6 1 + {M} −x P(2) {M} −x 0 0 0 P(3) 1 −{M} 1 + {M} −2x + { } − M x 3 7 6 0 P(4) 0 −{M} + x − { } M 3 7 6 1 −x aThe borders of the diﬀerent regimes are given by x1 = {M}, x2 = (3 −{M})/6, and x3 = (3 + 7{M})/6; see eqs 6, 8, and 10. Figure 3.
+Two-dimensional sketch illustrating the M sublattice with accessible ion sites (open circles) and blocked sites (crosses) and the NFU sublattice with sites randomly occupied by diﬀerent NFUs (with the diﬀerent species occurring with their respective concentrations).
+The arrows indicate how the charge of the NFUs (see also Figure 1) is distributed among the neighboring ion sites.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6264where the sum over j = j(i) runs over all eight NFU sites j surrounding the ion site i and qj is the partial charge contribution of the NFU at site j (qj = 0 if the NFU at site j is charge-neutral).
+The total charge Qi gives rise to a site energy ϵ̃ = V Q i i (0) 0 (16) where V0 is an energy scale.
+This scale can be roughly estimated by the Coulomb interaction between an alkali ion with positive charge and an oxygen with negative charge at a distance of about 2 Å. The precise value V0, however, is not relevant, when we consider relative changes of activation energies with the glass composition in section 4.
+To account for additional structural and energetic disorder, we add ﬂuctuations V0ηi to the site energies, where the ηi are uncorrelated Gaussian random numbers with zero mean and standard deviation σϵ ϵ ϵ η η ̃ = ̃ + = + V V Q ( ) i i i i i (0) 0 0 (17) The ﬂuctuations have several sources.
+In particular, they should take into consideration that sites in a glass are not located on a simple cubic lattice and that there is an additional contribution from the Coulomb interaction between mobile ions (see the discussion above).
+Moreover, for ion jump rates, whose variation depends only on the site energies, we can think of the ﬂuctuations to take into account also spatial variations of the saddle point energies.
+As the structure of the glass changes with the borate to phosphate mixing ratio, the standard deviation or “disorder parameter” σϵ should depend on x also.
+However, according to our hypothesis, the redistribution of counter-charges and associated modiﬁcations of the site energies should be the main cause of changes in long-range ion transport properties.
+Hence, σϵ should vary only weakly with x. More precisely, its variation with x should be small compared to the variations of ϵ̃i (0) in eq 16.
+In order to see whether the dependence of conductivity activation energies Ea on x can be captured without adjusting σϵ for each x, we deliberately constrain σϵ to a ﬁxed value.
+It is the only ﬁt parameter then, when we calculate normalized values Ea(x)/Ea(0) for diﬀerent mixing ratios x in the next section.
+4. CONDUCTIVITY ACTIVATION ENERGIES In a former study,14 it was shown that the change of Ea(x)/ Ea(0) with x in the glasses 0.4Na2O −0.6[xB2O3 −(1 − x)P2O5] could be successfully modeled based on the energy landscape construction presented in section 3, despite its simplicity.
+The activation energies in the respective study were obtained by extensive kinetic Monte Carlo (KMC) simulations with a Metropolis form of the jump rates of the mobile ions for f 0 = 0.1.
+Using a disorder parameter σϵ = 0.3V0, good agreement with measured values was obtained; see the ﬁlled (experiment) and open (KMC simulations) symbols in Figure 4.
+The energy scale V0 in real units can be estimated by requiring the measured value Ea(0) to agree with the simulated one.
+This yields V0 ≃1.29 eV. Here we will present two analytical approaches I and II to determine the activation energy and compare the results to those obtained earlier by the KMC simulations.
+Approach II will be applied also to lithium borophosphate glasses with compositions of 0.33Li2O −0.67[xB2O3 −(1 −x)P2O5].
+For both analytical approaches, we use the vacancy picture, for which the site energies ϵi have opposite sign, ϵi = −ϵ̃i.
+Method I is based on a simple picture that has been used in former works.24,42 It is illlustrated in Figure 5, where we show the distribution of site energies resulting from our landscape construction for the glass 0.4Na2O −0.6[xB2O3 −(1 − x)P2O5] with x = 0.25.
+In the low-temperature limit T →0, the vacancies ﬁll up all sites with energies ϵi < ϵf, where ϵf is the Fermi energy.
+(Note that a site can be occupied by at most one vacancy; i.e., the Fermi statistics applies to the vacancies as Figure 4.
+Normalized activation energy Ea(x)/Ea(0) as a function of the network former mixing ratio x in sodium borophosphate glasses with compositions 0.4Na2O −0.6[xB2O3 −(1 −x)P2O5].
+The ﬁlled symbols are experimental data taken from ref 20, and the open symbols are results from KMC simulations reported in ref 14; the value at x = 1 obtained from the KMC simulations has been recalculated.
+The lines correspond to the analytically calculated activation energies from approaches I (red line) and II (blue line). Figure 5.
+Distribution of site energies for vacancies according to the energy landscape construction described in section 3 for the glass 0.4Na2O −0.6[xB2O3 −(1 −x)P2O5] with x = 0.25.
+The fraction of vacancies relative to all accessible sites is f 0 = 0.1.
+The Fermi energy ϵf indicates the highest energy of vacant sites in thermal equilibrium in the low-temperature limit T →0.
+The critical energy ϵc is the minimal site energy required for all sites with ϵi ≤ϵc to form a percolating path.
+The diﬀerence (ϵc −ϵf) gives the activation energy Ea in model I.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6265well.) Due to thermal ﬂuctuations, vacancies can move through the “whole system” (long-range diﬀusion corresponding to dc conductivity), where at low temperatures the respective diﬀusion path should consist of all sites with energies ϵi below a critical value ϵc.
+This critical value is the lowest one, where a connected path of sites with energies below a given threshold ϵth can form, i.e., ϵ = ϵ min c th (the set of sites with ϵi ≤ϵth is percolating).
+The conductivity activation energy is then given by ϵ ϵ = − Ea c f (18) We have determined both the Fermi energy ϵf and the critical energy ϵc by generating site energy landscapes in systems (M lattices) with 1003 sites.
+The determination of ϵf is straightforward, and for determining the critical energy ϵc, we used the Hoshen−Kopelman algorithm of percolation theory.43 Once the algorithm is implemented, the calculation of one value of Ea takes just a few minutes on a standard personal computer.
+The normalized Ea(x)/Ea(0) calculated for the glasses 0.4Na2O −0.6[xB2O3 −(1 −x)P2O5] with approach I is shown in Figure 4 (red line) for the ﬁxed value f 0 = 0.1 formerly used in the KMC simulations.
+The agreement with the KMC results (open symbols) is good for x ≲0.3, but for larger mixing ratios, the activation energy is overestimated.
+At x ≅0.9, the predicted Ea(x) exhibits a local maximum, while the KMC results indicate a local minimum.
+Hence, model I does not give a satisfactory prediction of Ea(x) for all x.
+In approach II, we make use of the fact that the hopping transport in a Fermionic lattice gas with site energy disorder can be mapped onto an eﬀective single-particle hopping model in a landscape, where all site energies are equal, and the energetic disorder is completely transferred to the jump barriers (this model corresponds also to a random conductance network).25 The barrier Δij for a jump from site i to a nearest- neighbor site j is given by ϵ ϵ ϵ ϵ ϵ ϵ Δ = | − | + | − | + | − | ij i j i j f f (19) Note that the barriers are symmetric, Δij = Δji, and that the vacancy concentration enters via the Fermi energy ϵf.
+Bonds in the M lattice connected to blocked sites are assigned inﬁnite barriers.
+The activation energy follows by considering all bonds (ij) with Δij below a threshold value Δth.
+It holds that = Δ Ea c (20) where Δc is the critical smallest value of the thresholds, where the bonds with Δij ≤Δth still form a percolating path, i.e., Δ = Δ min c th (the set of bonds (ij) with Δij ≤Δth is percolating).
+Figure 6 shows as an example the distribution of barriers calculated from eq 19 for the same energy landscape used in Figure 5.
+The critical barrier Δc indicated by the red vertical line was determined again by using the Hoshen−Kopelman algorithm, where this time the bond percolation was evaluated.
+The activation energies from approach II are shown in Figure 4 as a blue line and agree well with the KMC results for all mixing ratios x.
+Small deviations can be attributed to uncertainties in the Ea values calculated from the KMC simulations.
+Hence, conductivity activation energies can now be calculated very quickly without the need to perform extensive KMC simulations for various temperatures and subsequently extracting Ea from Arrhenius plots.
+Let us apply the procedure to another series of alkali borophosphate glasses, namely, the lithium conducting ones with compositions of 0.33Li2O −0.67[xB2O3 −(1 −x)P2O5].
+Experimental results for NFU concentrations (see Figure 2) and conductivity activation energies for these glasses were reported in ref 27.
+To construct site energy landscapes for them, we take two ﬁxed values f 0 = 0.05 and f 0 = 0.1 of the vacancy fraction in order to see whether the speciﬁc value of f 0 is important.
+To determine the disorder parameter σϵ, we require Ea(1)/Ea(0) to match the experimental value for each of the two considered f 0 values.
+This means that σϵ is solely determined by the phosphate (x = 0) and borate (x = 1) glass.
+The variation of Ea(x)/Ea(0) with the network former mixing ratio is then a prediction of the theoretical modeling, i.e., not aﬀected by any parameter ﬁtting.
+We ﬁnd σϵ = 0.44V0 for f 0 = 0.05 and a slightly larger value σϵ = 0.49V0 for f 0 = 0.1.
+The predicted behavior for Ea(x)/ Ea(0) as a function of x (red line for f 0 = 0.05, blue line for f 0 = 0.1) is shown in Figure 7 and compares very well with the measured data (symbols).
+When calculating V0 in real units by requiring the measured value Ea(0) to agree with the simulated one, we obtain the estimates V0 ≃0.69 eV for f 0 = 0.05 and V0 ≃0.80 eV for f 0 = 0.1.
+Let us note that we checked also the robustness against changes of f 0 in our modeling of the sodium borophosphate glasses considered in Figure 4. 5.
+SUMMARY AND CONCLUSIONS For alkali borophosphate glasses, we derived analytical results for NFU concentrations, constructed site energy landscapes based on the concentrations and charges of the NFUs, and calculated conductivity activation energies from these land- scapes by applying a method, which requires only a simple and quick determination of Fermi and critical percolation energies.
+The results for the predicted NFU concentrations and activation energies compare well with experimental data.
+We thus regard our theoretical approach as a promising step forward toward relating structure to transport properties in ionically conducting glasses and toward developing a Figure 6.
+Distribution of energy barriers calculated from the site energies according to eq 19 for the same energy landscape as considered in Figure 5.
+The critical barrier Δc is the minimal barrier energy required for all bonds with Δij ≤Δc to form a percolating path.
+It equals the activation energy Ea.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6266theoretical understanding of ion transport in glasses with quantitive predictive power.
+There is plenty of room for further developments of the approach.
+One important reﬁnement will be to incorporate spatial correlations between the NFUs of the various types in the energy landscape construction.
+These spatial correlations can be measured, for example, by applying dipolar recoupling methods in rotational-echo double-resonance (REDOR) measurements of advanced solid state NMR27,28,44,45 (for a recent review of solid state NMR studies on borophophate glasses, see ref 46).
+Another point is to evaluate aspects of the constructed energy landscapes more directly with respect to experimental observations, as, for example, those obtained from the recently developed method of charge attachment induced transport (CAIT).47,48 Further improvements concern a more detailed modeling of the local jump dynamics with explicit consideration of saddle point energies and disorder in the spatial arrangements of ion sites.
+The mapping of the (many-body) jump model with varying site energies to a single-particle model with varying jump barriers moreover provides insights for why the random barrier model49,50 is successful to capture the quasi-universal scaling behavior of conductivity spectra in glasses with one type of mobile ion.51−53 A corresponding mapping is not possible if more than one type of mobile ion is present, as, e.g., in mixed alkali glasses.
+One may thus expect that conductivity scaling in such glasses is not observed, which is indeed the case.54 Calculations of conductivity spectra and preexponential factors of dc conductivities will be presented in upcoming work.
+■AUTHOR INFORMATION Corresponding Author Philipp Maass −Universität Osnabrück, Fachbereich Physik, D-49076 Osnabrück, Germany; orcid.org/0000-0002- 1268-8688; Email: maass@uni-osnabrueck.de Authors Marco Bosi −Universität Osnabrück, Fachbereich Physik, D- 49076 Osnabrück, Germany Julian Fischer −Universität Osnabrück, Fachbereich Physik, D-49076 Osnabrück, Germany Complete contact information is available at: https://pubs.acs.org/10.1021/acs.jpcc.0c09960 Notes The authors declare no competing ﬁnancial interest.
+■ACKNOWLEDGMENTS P.M. thanks H. Eckert and S. W. Martin for very valuable discussions.
+This work has been funded by the Deutsche Forschungsgemeinschaft (DFG, Project No. 428906592).
+We sincerely thank the members of the DFG Research Unit FOR 5065 for fruitful discussions.
+■REFERENCES (1) Ingram, M. D. Ionic conductivity in glass. Phys. Chem.
+Glasses 1987, 28, 215−234.
+(2) Dyre, J. C.; Maass, P.; Roling, B.; Sidebottom, D. L. Fundamental questions relating to ion conduction in disordered solids.
+Rep. Prog. Phys. 2009, 72, 046501.
+(3) Hakim, R. M.; Uhlmann, D. R. Electrical conductivity of alkali silicate glasses. Phys. Chem.
+Glasses 1971, 12, 132−138.
+(4) Kawamura, J.; Shimoji, M. Glass transition and ac conductivity of Ag+ conducting glasses. Mater. Chem.
+Phys. 1989, 23, 99−120.
+(5) Deshpande, V. K.; Pradel, A.; Ribes, M.
+The mixed glass former effect in the Li2S: SiS2: GeS2 system. Mater.
+Res. Bull. 1988, 23, 379− 384.
+(6) Jayasinghe, G.; Bandaranayake, P.; Souquet, J. Mixed former effect in sodium phospho tellurate glasses.
+Solid State Ionics 1996, 86− 88, 447−451.
+(7) Anderson, O. L.; Stuart, D. A. Calculation of activation energy of ionic conductivity in silica glasses by classical methods. J. Am. Ceram. Soc. 1954, 37, 573−580.
+(8) Maass, P.; Bunde, A.; Ingram, M. D. Ion transport anomalies in glasses.
+Phys. Rev. Lett. 1992, 68, 3064−3067.
+(9) Hunt, A. New developments in the theory of the hopping conductivity of spatiallly random systems. J. Phys.: Condens.
+Matter 1994, 6, 1239−1252.
+(10) Maass, P. Towards a theory for the mixed alkali effect in glasses. J. Non-Cryst.
+Solids 1999, 255, 35−46.
+(11) Adams, S.; Swenson, J. Determining ionic conductivity from structural models of fast ionic conductors. Phys. Rev. Lett.
+2000, 84, 4144−4147.
+(12) Pradel, A.; Kuwata, N.; Ribes, M. Ion transport and structure in chalcogenide glasses. J. Phys.: Condens.
+Matter 2003, 15, S1561− S1571.
+(13) Schuch, M.; Müller, C. R.; Maass, P.; Martin, S. W. Mixed barrier model for the mixed glass former effect in ion conducting glasses. Phys. Rev. Lett. 2009, 102, 145902.
+(14) Schuch, M.; Trott, C.; Maass, P. Network forming units in alkali borate and borophosphate glasses and the mixed glass former effect.
+RSC Adv. 2011, 1, 1370−1382.
+(15) Wang, W.; Christensen, R.; Curtis, B.; Martin, S. W.; Kieffer, J. A new model linking elastic properties and ionic conductivity of mixed network former glasses. Phys. Chem. Chem.
+Phys. 2018, 20, 1629−1641.
+(16) Haynes, M. J.; Bischoff, C.; Kaufmann, T.; Martin, S. W. The mixed glass former effect on the thermal and volume properties of Na2S-B2S3-P2S5 glasses. Phys. Chem. Glasses: Eur. J. Glass Sci.
+Technol., Part B 2009, 50, 144−148.
+(17) Martin, S. W.; Bischoff, C.; Schuller, K. Composition dependence of the Na+ ion conductivity in 0.5Na2S+0.5xGeS2+(1 − x)PS5/2 mixed glass former glasses: A structural interpretation of a Figure 7.
+Normalized activation energy Ea(x)/Ea(0) as a function of the network former mixing ratio x in lithium borophosphate glasses with compositions 0.33Li2O −0.67[xB2O3 −(1 −x)P2O5].
+The ﬁlled symbols are experimental data taken from ref 27 and the lines analytically calculated activation energies with approach II based on the energy landscape construction described in section 3 for f 0 = 0.05 (red line) and f 0 = 0.1 (blue line).
+The disorder parameter (standard deviation) σϵ for the Gaussian ﬂuctuations in eq 17 was chosen to match the experimental value Ea(1)/Ea(0) (σϵ = 0.44V0 for f 0 = 0.05 and σϵ = 0.49V0 for f 0 = 0.1).
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6267negative mixed glass former effect. J. Phys. Chem.
+B 2015, 119, 15738−15751.
+(18) Martin, S. W.; Christensen, R.; Olson, G.; Kieffer, J.; Wang, W. New interpretation of Na+-ion conduction in and the structures and properties of sodium borosilicate mixed glass former glasses. J. Phys. Chem.
+C 2019, 123, 5853−5870.
+(19) Anantha, P. S.; Hariharan, K. Structure and ionic transport studies of sodium borophosphate glassy system. Mater. Chem.
+Phys. 2005, 89, 428−437.
+(20) Zielniok, D.; Cramer, C.; Eckert, H. Structure property correlations in ion-conducting mixed-network former glasses: Solid- state NMR studies of the system Na2O-B2O3-P2O5. Chem. Mater.
+2007, 19, 3162−3170.
+(21) Schuch, M.; Christensen, R.; Trott, C.; Maass, P.; Martin, S. W. Investigation of the structures of sodium borophosphate glasses by reverse Monte Carlo modeling to examine the origins of the mixed glass former effect. J. Phys. Chem.
+C 2012, 116, 1503−1511.
+(22) Karlsson, M.; Schuch, M.; Christensen, R.; Maass, P.; Martin, S. W.; Imberti, S.; Matic, A. Structural origin of the mixed glass former effect in sodium borophosphate glasses investigated with neutron diffraction and reverse Monte Carlo modeling. J. Phys. Chem.
+C 2015, 119, 27275−27284.
+(23) Maass, P.; Meyer, M.; Bunde, A.; Dieterich, W. Microscopic explanation of the non-Arrhenius conductivity in glassy fast ionic conductors. Phys. Rev. Lett.
+1996, 77, 1528−1531.
+(24) Kirchheim, R. The mixed alkali effect as a consequence of network density and site energy distribution. J. Non-Cryst.
+Solids 2000, 272, 85−102. (25) Ambegaokar, V.; Halperin, B. I.; Langer, J. S. Hopping conductivity in disordered systems. Phys.
+Rev. B 1971, 4, 2612−2620.
+(26) Tyč, S.; Halperin, B. I. Random resistor network with an exponentially wide distribution of bond conductances. Phys. Rev. B: Condens. Matter Mater.
+Phys. 1989, 39, 877−880. (27) Larink, D.; Eckert, H.; Reichert, M.; Martin, S. W. Mixed network former effect in ion-conducting alkali borophosphate glasses: S t r u c t u r e / p r o p e r t y c o r r e l a t i o n s i n t h e s y s t e m [M2O]1/3[(B2O3)x(P2O5)1−x]2/3 (M = Li, K, Cs). J. Phys. Chem.
+C 2012, 116, 26162−26176.
+(28) Rinke, M. T.; Eckert, H. The mixed network former effect in glasses: solid state NMR and XPS structural studies of the glass system (Na2O)x(BPO4)1−x. Phys. Chem. Chem.
+Phys. 2011, 13, 6552− 6565.
+(29) Michaelis, V. K.; Aguiar, P. M.; Kroeker, S. Probing alkali coordination environments in alkali borate glasses by multinuclear magnetic resonance. J. Non-Cryst.
+Solids 2007, 353, 2582−2590. (30) Beekenkamp, P.
+The inﬂuence of the coordination number of boron on the properties of alkali borate glasses.
+In Physics of Non- Crystalline Solids; Prins, J. A., Ed.; North-Holland: Amsterdam, The Netherlands, 1965; p 512.
+(31) Michaelis, V.; Kachhadia, P.; Kroeker, S. Clustering in borate- rich alkali borophosphate glasses: a 11B and 31P MAS NMR study. Phys. Chem. Glasses: Eur. J. Glass Sci.
+Technol., Part B 2013, 54, 20−26.
+(32) Vogel, M. Identification of lithium sites in a model of LiPO3 glass: Effects of the local structure and energy landscape on ionic jump dynamics. Phys. Rev. B: Condens. Matter Mater.
+Phys. 2004, 70, 094302.
+(33) Lammert, H.; Banhatti, R. D.; Heuer, A.
+The cationic energy landscape in alkali silicate glasses: Properties and relevance. J. Chem.
+Phys. 2009, 131, 224708.
+(34) Lammert, H.; Heuer, A. Simplified interpretation of transport in disordered inorganic ion conductors from vacancy dynamics. Phys. Rev. Lett. 2010, 104, 125901.
+(35) Cormack, A. N.; Du, J.; Zeitler, T. R. Alkali ion migration mechanisms in silicate glasses probed by molecular dynamics simulations. Phys. Chem. Chem.
+Phys. 2002, 4, 3193−3197.
+(36) Lammert, H.; Kunow, M.; Heuer, A. Complete identification of alkali sites in ion conducting lithium silicate glasses: A computer study of ion dynamics. Phys. Rev. Lett. 2003, 90, 215901.
+(37) Habasaki, J.; Hiwatari, Y. Molecular dynamics study of the mechanism of ion transport in lithium silicate glasses: Characteristics of the potential energy surface and structures. Phys. Rev. B: Condens. Matter Mater.
+Phys. 2004, 69, 144207.
+(38) Müller, C.; Zienicke, E.; Adams, S.; Habasaki, J.; Maass, P. Comparison of ion sites and diffusion paths in glasses obtained by molecular dynamics simulations and bond valence analysis. Phys.
+Rev. B 2007, 75, 014203.
+(39) Dyre, J. C. Is there a ‘native’ band gap in ion conducting glasses? J. Non-Cryst.
+Solids 2003, 324, 192−195. (40) Peibst, R.; Schott, S.; Maass, P. Internal friction and vulnerability of mixed alkali glasses. Phys. Rev. Lett. 2005, 95, 115901.
+(41) Maass, P.; Peibst, R. Ion diffusion and mechanical losses in mixed alkali glasses. J. Non-Cryst.
+Solids 2006, 352, 5178−5187.
+(42) Porto, M.; Maass, P.; Meyer, M.; Bunde, A.; Dieterich, W. Hopping transport in the presence of site-energy disorder: Temper- ature and concentration scaling of conductivity spectra. Phys. Rev. B: Condens. Matter Mater.
+Phys. 2000, 61, 6057−6062.
+(43) Hoshen, J.; Kopelman, R. Percolation and cluster distribution.
+I. Cluster multiple labeling technique and critical concentration algorithm. Phys.
+Rev. B 1976, 14, 3438−3445.
+(44) Zhang, L.; Eckert, H. Short- and medium-range order in sodium aluminophosphate glasses: New insights from high-resolution dipolar solid-state NMR spectroscopy. J. Phys. Chem.
+B 2006, 110, 8946−8958.
+(45) Eckert, H. Spying with spins on messy materials: 60 years of glass structure elucidation by NMR spectroscopy. Int. J. Appl.
+Glass Sci. 2018, 9, 167−187. (46) Tricot, G.; Alpysbay, L.; Doumert, B. Solid state NMR: A powerful tool for the characterization of borophosphate glasses.
+Molecules 2020, 25, 428.
+(47) Schäfer, M.; Weitzel, K.-M. Site energy distribution of ions in the potential energy landscape of amorphous solids. Mater.
+Today Phys. 2018, 5, 12−19.
+(48) Schäfer, M.; Budina, D.; Weitzel, K.-M. Site energy distribution of sodium ions in a sodium rubidium borate glass. Phys. Chem. Chem.
+Phys. 2019, 21, 26251−26261. (49) Dyre, J. C.
+The random free-energy barrier model for ac conduction in disordered solids. J. Appl.
+Phys. 1988, 64, 2456−2468.
+(50) Dyre, J. C.; Schrøder, T. B. Universality of ac conduction in disordered solids. Rev. Mod.
+Phys. 2000, 72, 873−892.
+(51) Roling, B.; Happe, A.; Funke, K.; Ingram, M. D. Carrier concentrations and relaxation spectroscopy: New Information from scaling properties of conductivity spectra in ionically conducting glasses. Phys. Rev. Lett.
+1997, 78, 2160−2163.
+(52) Sidebottom, D. L. Universal approach for scaling the ac conductivity in ionic glasses.
+Phys. Rev. Lett. 1999, 82, 3653−3656.
+(53) Ghosh, A.; Pan, A. Scaling of the conductivity spectra in ionic glasses: Dependence on the structure. Phys. Rev. Lett.
+2000, 84, 2188− 2190.
+(54) Cramer, C.; Brückner, S.; Gao, Y.; Funke, K. Ion dynamics in mixed alkali glasses. Phys. Chem. Chem.
+Phys. 2002, 4, 3214−3218.
+The Journal of Physical Chemistry C pubs.acs.org/JPCC Article https://doi.org/10.1021/acs.jpcc.0c09960 J. Phys. Chem.
+C 2021, 125, 6260−6268 6268

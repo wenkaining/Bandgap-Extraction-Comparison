@@ -1,0 +1,1191 @@
+FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES IN
+A DEFORMED MOONEY–RIVLIN MATERIAL
+by M. DESTRADE
+(Department of Mathematical Physics, University College Dublin, Belﬁeld, Dublin 4, Ireland)
+[Received 27 April 1999. Revise 23 November 1999]
+Summary
+The propagation of ﬁnite-amplitude linearly-polarized inhomogeneous transverse plane waves
+is considered for a Mooney–Rivlin material maintained in a state of ﬁnite static homogeneous
+deformation.
+It is shown that such waves are possible provided that the directions of the
+normal to the planes of constant phase and of the normal to the planes of constant amplitude
+are orthogonal and conjugate with respect to the B-ellipsoid, where B is the left Cauchy–
+Green strain tensor corresponding to the initial deformation.
+For these waves, it is found
+that even though the system is nonlinear, results on energy ﬂux are nevertheless identical with
+corresponding results in the classical linearized elasticity theory. Byproducts of the results are
+new exact static solutions for the Mooney–Rivlin material.
+1. Introduction
+An isotropic homogeneous elastic material maintained in a state of arbitrary ﬁnite static
+homogeneous deformation exhibits three privileged orthogonal directions, namely those of the
+principal axes of strain. For a general material held in such a state, Green (1) showed that transverse
+ﬁnite-amplitude homogeneous plane waves can travel in a principal direction and Carroll (2) showed
+that homogeneous transverse plane waves of ﬁnite amplitude, linearly-polarized in a principal
+direction, may propagate in a principal plane.
+John (3) considered the possibility of having ﬁnite-amplitude plane waves propagating in any
+direction in a prestressed material; he showed that the so-called Hadamard material was the most
+general compressible one in which it may happen. Then Currie and Hayes (4) extended his result to
+incompressible bodies and the corresponding material was found to be of the Mooney–Rivlin type,
+a model used to describe the mechanical behaviour of rubber (5). Later, Boulanger and Hayes (6, 7)
+gave a detailed study of ﬁnite-amplitude waves propagating in a deformed Mooney–Rivlin material.
+For these waves, the displacement is of the form g(n · x −vt)a, where g is a function of arbitrary
+magnitude, n is a unit vector in the direction of propagation (which may be any direction), v is the
+speed at which the wave travels and a is a unit vector in the direction of polarization.
+In contrast to this type of wave, inhomogeneous plane waves have distinct planes of constant
+amplitude and of constant phase. The purpose of this paper is to consider the superposition of
+an inhomogeneous motion upon an arbitrary static homogeneous deformation in a Mooney–Rivlin
+material. We show that waves with displacement of the form f (b · x)g(n · x −vt)a, where f and
+g are certain functions of ﬁnite magnitude and the vectors n and b satisfy a geometric relationship,
+may propagate in the deformed Mooney–Rivlin material, for any orientation of the plane of b and
+n.
+The plan of the paper is as follows. In section 2, we recall the basic equations describing the
+Mooney–Rivlin incompressible material. In section 3, we assume that this material is subjected
+Q. Jl Mech. appl. Math. (2000) 53 (3), 343–361
+c⃝Oxford University Press 2000344
+M. DESTRADE
+to a ﬁnite homogeneous static deformation, upon which a ﬁnite-amplitude linearly-polarized
+inhomogeneous plane wave is superposed.
+The equations of motion are derived in section 4 and solved for the functions f and g, the speed v
+and the pressure. Two types of solutions arise. When the directions of a, b, and n are along principal
+axes of the initial strain ellipsoid, the solutions are called ‘special principal motions’ (section 5);
+when the orientation of the plane containing b and n is arbitrary, we show that these directions must
+be conjugate with respect to the elliptical section of the strain ellipsoid corresponding to the initial
+static deformation by the plane orthogonal to the direction of polarization (section 6).
+In section 7, we study a class of solutions which are of interest in some physical contexts
+(gravity waves, surface waves, waves in layered media, interfacial waves, etc.). For these solutions,
+the amplitude decays exponentionally in one direction while it varies sinusoidally with time in
+another. We show how the possible directions of polarization, propagation and attenuation may be
+constructed geometrically, and give bounds for the values of the phase speed. For these waves, the
+propagation of energy is also considered. Although the theory is nonlinear, well-known aspects
+of the linearized theory of wave propagation in conservative media are recovered. In particular,
+it is shown that the direction of the mean energy ﬂux vector is parallel to the planes of constant
+amplitude, and that the component of this vector in the direction of propagation is equal to the
+phase speed times the total energy density.
+Finally, in section 8, we investigate the case where the time dependency of the superposed
+deformation is removed. The corresponding solutions provide examples of inhomogeneous ﬁnite
+static deformations possible in a Mooney–Rivlin material, in the absence of body forces.
+2. Basic equations
+Here we recall the basic equations governing the deformation of Mooney–Rivlin rubberlike
+materials.
+The constitutive equation for a Mooney–Rivlin material is
+T = −p1 + (C + DI)B −DB2 = −(p −DII)1 + CB −DB−1.
+(2.1)
+Here T is the Cauchy stress, C and D are constants, B is the left Cauchy-Green strain tensor deﬁned
+by B = FFT, where F = ∂x/∂X is the deformation gradient, and the deformation is x = x(X, t).
+Also, I and II are invariants of B, given by I = tr B and II = tr B−1.
+In the constitutive equation (2.1), p(x, t) corresponds to an arbitrary pressure.
+Because the
+material is incompressible, we must have
+det F = 1.
+(2.2)
+For this material, the strain energy density 	, measured per unit volume in the current state of
+deformation, has the form (5)
+2	 = C(I −3) + D(II −3).
+(2.3)
+It is assumed that
+C ⩾0, D > 0,
+or
+C > 0, D ⩾0,
+(2.4)
+in order that the strong ellipticity condition be satisﬁed (see (7) for a short proof). If D = 0, theFINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+345
+material is said to be neo-Hookean which case is being examined elsewhere. Here we exclude this
+possibility, that is we assume that (2.4)1 holds.
+The equations of motion in the absence of body forces are
+div T = ρ ∂2x
+∂t2 ,
+∂Ti j
+∂x j
+= ρ ∂2xi
+∂t2 ,
+(2.5)
+where ρ is the mass density of the material, measured per unit volume in any conﬁguration (because
+of the incompressibility constraint).
+The energy ﬂux vector R is deﬁned by
+R = −T · ˙x,
+Ri = −Ti j ˙x j,
+(2.6)
+where ˙x is the particle velocity. We write Rα for the rate at which the mechanical energy crosses, at
+time t, a material element which is normal to the xα-axis at time t, in the ﬁnal state of deformation,
+measured per unit area of surface in this conﬁguration.
+Also, the kinetic energy density K measured per unit volume is given by
+K = 1
+2ρ(˙x · ˙x).
+(2.7)
+3. Motion superposed on static homogeneous deformation
+Here we consider the propagation of a linearly-polarized inhomogeneous plane wave of ﬁnite
+amplitude in the material, when it is held in a state of ﬁnite static homogeneous deformation. We
+determine the corresponding stresses and energy ﬂux for the motion.
+We assume that the material is held in the state of ﬁnite static homogeneous deformation given
+by
+xα = λα Xα,
+α = 1, 2, 3,
+(3.1)
+in which the particle initially at position X is displaced to x. The constants λ1, λ2, λ3 are such that
+λ1 > λ2 > λ3 > 0 and satisfy λ1λ2λ3 = 1, due to (2.2).
+In this case, the principal stresses tα, necessary to support the deformation are given by
+tα = −p0 + (C + DI)λ2
+α −Dλ4
+α,
+α = 1, 2, 3,
+(3.2)
+where now I = λ2
+1 + λ2
+2 + λ2
+3 and p0 is a constant.
+Let a linearly-polarized inhomogeneous plane wave of ﬁnite amplitude propagate in the deformed
+body, so that the ﬁnal position of the particle, which is initially at X, and at x in the state of ﬁnite
+static homogeneous deformation, is at x where
+x = x + f (b · x)g(n · x −vt)a.
+(3.3)
+Here, (n, a, b) form an orthonormal triad. The planes deﬁned by n · x = const. are the planes of
+constant phase and those deﬁned by b · x = const. are the planes of constant amplitude. Also, v is
+the real speed of propagation and ( f, g) are two real functions to be determined.
+We use bars, for example W, to denote quantities in the ﬁnal state of deformation.
+The
+deformation gradient F associated with the deformation (3.3) is given by
+F = ∂x
+∂X = [1 + f ′g a ⊗b + f g′ a ⊗n]F,
+(3.4)346
+M. DESTRADE
+where a prime denotes the derivative of a function with respect to its argument.
+The corresponding left Cauchy–Green tensor B = F F
+T and its inverse B
+−1 = F
+−1T F
+−1 are
+B = [1 + f ′g a ⊗b + f g′ a ⊗n]B[1 + f ′g b ⊗a + f g′ n ⊗a],
+B
+−1 = [1 −f ′g b ⊗a −f g′ n ⊗a]B−1[1 −f ′g a ⊗b −f g′ a ⊗n].
+(3.5)
+Also, the invariants of B are given by
+I = tr B = I + 2[ f ′g(a · Bb) + f g′(a · Bn)]
++ ( f ′g)2(b · Bb) + 2 f f ′gg′(n · Bb) + ( f g′)2(n · Bn),
+II = tr B
+−1 = II −2[ f ′g(a · B−1b) + f g′(a · B−1n)] + [( f ′g)2 + ( f g′)2](a · B−1a).
+(3.6)
+We introduce the coordinates (η, ξ, ζ), given by
+η = n · x,
+ξ = a · x,
+ζ = b · x,
+(3.7)
+and the coordinates (η, ξ, ζ), given by
+η = n · x = η,
+ξ = a · x = ξ + f (ζ)g(η −vt),
+ζ = b · x = ζ.
+(3.8)
+Now we write the Cauchy stress tensor T in (n, a, b). For a Mooney–Rivlin material, the stress–
+strain relation is given by equation (2.1) or, in the present context, by
+T = −(p −DII)1 + CB −DB
+−1,
+(3.9)
+where the arbitrary pressure p may be decomposed into the pressure p0 corresponding to the
+primary homogeneous deformation and an incremental pressure p∗(say) corresponding to the
+superposed dynamic deformation: p = p0 + p∗. We assume p∗to be of a form similar to the
+superposed motion (3.3); that is, p∗= p∗(n · x, b · x, t) = p∗(η, ζ, t).
+Using (3.5), (3.6), (3.9), and the notation: Tηη = n · Tn, Tηξ = n · Ta, etc., the components of
+T are found to be
+Tηη = Tηη −p∗−2Df ′g(a · B−1b) + D( f ′g)2(a · B−1a),
+Tηξ = Tηξ + C[ f g′(n · Bn) + f ′g(n · Bb)] + D( f g′)2(a · B−1a),
+Tηζ = Tηζ + D[ f ′g(a · B−1n) + f g′(a · B−1b)] −Df f ′gg′(a · B−1a),
+Tξξ = Tξξ −p∗+ 2C[ f ′g(a · Bb) + f g′(a · Bn)]
+(3.10)
++ C[( f ′g)2(b · Bb) + 2 f f ′gg′(n · Bb) + ( f g′)2(n · Bn)],
+Tξζ =Tξζ + C[ f ′g(b · Bb) + f g′(n · Bb)] + Df ′g(a · B−1a),
+Tζζ =Tζζ −p∗−2Df g′(a · B−1n) + D( f g′)2(a · B−1a).
+In passing, we introduce some quantities associated with the energy carried by the distur-
+bance (3.3). First, from (2.7) and (3.3), the kinetic energy density K per unit volume is given
+by
+K = 1
+2ρv2( f g′)2.
+(3.11)FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+347
+Next, the stored-energy density W per unit volume associated with the wave is deﬁned, in the
+absence of body forces, by
+W = 	 −	 = 1
+2C(I −I) + 1
+2 D(II −II),
+(3.12)
+where I and II are given by (3.6) in our context.
+Finally, we introduce the energy ﬂux vector R associated with the motion (3.3). From (2.6) it is
+given here by R = −T · ˙x. It is related to the energy ﬂux vector R measured in the intermediate
+static state of deformation through (8)
+R =
+∂x
+∂x
+−1
+R = −
+∂x
+∂x
+−1
+T · ˙x.
+(3.13)
+Using (3.3) we have ∂x/∂x = 1 + f ′ga ⊗b + f g′a ⊗n, so that
+R = v( f g′)[1 −f ′ga ⊗b −f g′a ⊗n]T · a.
+(3.14)
+4. Equations of motion
+The equations of motion (2.5) are written as
+div T = ρ ∂2x
+∂t2 ,
+∂Ti j
+∂x j
+= ρ ∂2xi
+∂t2 .
+(4.1)
+Here div represents the divergence operator with respect to position x, that is, with respect to the
+coordinates (η, ξ, ζ) = (η, ξ, ζ). However, by inspection of equations (3.10), we see that T depends
+on η, ζ and t only, so that div T computed with respect to x is equal to div T computed with respect
+to x. Hence the equations of motion reduce to
+Tηη,η + Tηζ,ζ = 0,
+Tξη,η + Tξζ,ζ = ρv2 f g′′,
+(4.2)
+Tζη,η + Tζζ,ζ = 0,
+or
+−p∗
+,η + D[ f ′′g(a · B−1n) −f ′g′(a · B−1b)] + D( f ′2 −f f ′′)gg′(a · B−1a) = 0,
+C[ f ′′g(b · Bb) + 2 f ′g′(n · Bb) + f g′′(n · Bn)]
++ D( f ′′g + f g′′)(a · B−1a) = ρv2 f g′′,
+−p∗
+,ζ + D[ f g′′(a · B−1b) −f ′g′(a · B−1n)] + D(g′2 −gg′′) f f ′(a · B−1a) = 0,
+(4.3)
+where commas denote differentiation with respect to the coordinates (η, ξ, ζ); thus, for example,
+Tζξ,ξ = ∂Tζξ/∂ξ.
+Now, equation (4.3)2 is equivalent to
+[C(b · Bb) + D(a · B−1a)] f ′′g + 2C(n · Bb) f ′g′ + [C(n · Bn) + D(a · B−1a) −ρv2] f g′′ = 0.
+(4.4)348
+M. DESTRADE
+Also, the second derivatives of p∗must be compatible, that is p∗
+,ηζ = p∗
+,ζη, or, from (4.3)1,3,
+f ′′′g(a · B−1n) −f ′′g′(a · B−1b) + ( f ′ f ′′ −f f ′′′)gg′(a · B−1a)
+= f g′′′(a · B−1b) −f ′g′′(a · B−1n) + (g′g′′ −gg′′′) f f ′(a · B−1a).
+(4.5)
+Equations (4.4) and (4.5) are the two equations to be solved for f and g in order that the
+inhomogeneous motion (3.3) may propagate in the deformed Mooney–Rivlin material.
+The
+solutions are established in Appendix A, and a distinction needs be made, according as to whether
+or not the orthogonal vectors n, a and b are along the principal axes of the B-ellipsoid.
+5. Special principal motions
+Here we present solutions valid when n, a, and b are in the principal directions of the initial strain
+ellipsoid.
+For small-amplitude homogeneous plane waves propagating in a homogeneously deformed body,
+the term ‘principal wave’ (9) is used to describe a wave travelling along a principal axis of the strain
+ellipsoid corresponding to the initial static deformation. This terminology can readily be extended
+to the case of inhomogeneous motions for which the planes of constant phase are orthogonal to such
+an axis.
+We introduce the term ‘special principal motion’ to describe an inhomogeneous motion for which
+the normal to the planes of constant phase, the normal to the planes of constant amplitude, and the
+linear polarization are in the directions of the principal axes of strain. With our notation, a special
+principal motion is of the form f (b · x)g(n · x −vt)a where n, a, and b are the vectors i, j, and k.
+The most general functions f and g, solutions to the equations of motion (4.4) and (4.5), where,
+without loss of generality, n = i, a = j, and b = k, are such that one is of exponential type while
+the other is of sinusoidal type (see proof in Appendix A). For these motions, the quantity v may be
+arbitrarily prescribed (within an interval).
+Explicitly, the possible inhomogeneous special principal motions of the Mooney–Rivlin material
+are written as
+x = λ1X,
+y = λ2Y + f (λ3Z)g(λ1X −vt),
+z = λ3Z,
+(5.1)
+where either
+f (λ3Z) = f (z) = a1ekσz + a2e−kσz,
+g(λ1X −vt) = g(x −vt) = d1 cos k(x −vt) + d2 sin k(x −vt),
+
+(5.2)
+or
+f (λ3Z) = f (z) = a1 cos kσz + a2 sin kσz,
+g(λ1X −vt) = g(x −vt) = d1ek(x−vt) + d2e−k(x−vt).
+
+(5.3)
+Here, a1, a2, d1, d2 are constants, σ is deﬁned by
+σ =
+
+(Cλ2
+1 + Dλ−2
+2
+−v2)/(Cλ2
+3 + Dλ−2
+2 ),
+(5.4)
+and k and v are arbitrary (0 ⩽v2 < Cλ2
+1 + Dλ−2
+2 ).FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+349
+6. General solutions
+Here, we seek the most general solutions f and g of equation (4.4) satisfying (4.5) such that
+f (b · x)g(n · x −vt)a is an inhomogeneous motion in the deformed Mooney–Rivlin material,
+(a, n, b) form an orthonormal triad, and the plane of n and b is arbitrary. It is shown in Appendix A
+that f and g are the functions deﬁned by either
+f (ζ) = a1ekζ + a2e−kζ,
+g(η −vt) = d1 cos k(η −vt) + d2 sin k(η −vt),
+
+(6.1)
+or
+f (ζ) = a1 cos kζ + a2 sin kζ,
+g(η −vt) = d1ek(η−vt) + d2e−k(η−vt).
+
+(6.2)
+Here a1, a2, d1, d2 and k are arbitrary constants, v is such that
+ρv2 = C[(n · Bn) −(b · Bb)],
+(6.3)
+and the condition
+b · Bn = 0,
+(6.4)
+must be satisﬁed.
+The condition (6.4) means that the unit vectors n and b are conjugate with respect to the B-
+ellipsoid, deﬁned by x · Bx = 1. Because they are orthogonal, they must lie along the principal axes
+of the elliptical section of the B-ellipsoid by the plane orthogonal to a. We note that the speed v
+given by (6.3) is real when ˆm and ˆn are in the directions of the minor and major axes of the elliptical
+section, respectively.
+Also note that
+ρv2 = n · Tn −b · Tb −
+b · Tn
+b · B−1n
+(n · B−1n −b · B−1b),
+(6.5)
+so that the speed may be written in terms of the basic strain B and the corresponding basic stress T.
+Finally, using the compatibility equations, the incremental pressure p∗is determined. To within
+an arbitrary constant, it is found to be either
+p∗= −D[ f g′(a · B−1n) + f ′g(a · B−1b)] + 1
+2 Dk2[(d2
+1 + d2
+2) f 2 −4a1a2g2](a · B−1a),
+(6.6)
+when f and g are given by (6.1), or
+p∗= −D[ f g′(a · B−1n) + f ′g(a · B−1b)] + 1
+2 Dk2[4d2
+1d2
+2 f 2 −(a2
+1 + a2
+2)g2](a · B−1a),
+(6.7)
+when f and g are given by (6.2). Thus, a ﬁnite displacement of the form f (b · x)g(n · x −vt)a,
+where (a, b, n) is an orthonormal basis, f and g are given by (6.1) or (6.2), v is given by (6.3),
+and b, n satisfy (6.4), is an exact solution to the equations of motion in a homogeneously deformed
+Mooney–Rivlin material, for any orientation of the plane of b and n.350
+M. DESTRADE
+7. Sinusoidal evanescent waves
+In this section, we restrict our attention to the propagation of a linearly-polarized ﬁnite-amplitude
+inhomogeneous plane wave in a homogeneously deformed Mooney–Rivlin material. The phase
+of the wave ﬂuctuates sinusoidally in the direction of a unit vector n, its amplitude decreases
+exponentionally in the direction of b, orthogonal to n, and its polarization is in the direction of
+a, orthogonal to both n and b. These waves are a subclass of the general solutions to the equations
+of motion found in the previous section, and arise in a variety of contexts such as Rayleigh waves,
+Love waves, Stoneley waves, etc.
+We give a geometrical construction for the triads (n, a, b) such that the wave may propagate, and
+present expressions for the phase speed and the pressure. Then we examine the propagation of the
+energy carried by the wave.
+7.1 Construction
+Henceforth, we consider the motion
+x = x + αe−kb·xa cos k(n · x −vt),
+(7.1)
+where α and k are real arbitrary constants, and v is assumed to be real.
+Recall that in (7.1),
+x corresponds to the static homogeneous predeformation x = diag(λ1, λ2, λ3)X. As proved in
+section 6, this motion is possible as long as n and b are along the minor and major axes of the
+elliptical section of the B-ellipsoid by the plane orthogonal to a, respectively.
+Boulanger and Hayes (6) considered the propagation of ﬁnite-amplitude homogeneous plane
+waves in a deformed Mooney–Rivlin material and found that it was possible in any direction of
+propagation along n. Here, we deal with ﬁnite amplitude inhomogeneous plane waves and it is the
+plane of n and b (propagation and attenuation directions) that may be arbitrarily prescribed.
+Thus we construct a sinusoidal evanescent inhomogeneous plane wave as follows. First, consider
+any plane passing through the origin. Let n and b be unit vectors along the respective major and
+minor axes of the elliptical section of the B-ellipsoid by the chosen plane. Then the motion (7.1)
+is possible in the deformed Mooney–Rivlin material, with a linear polarization in the direction of
+a = b ∧n, an amplitude exponentially attenuated by factor k in the direction of b, and a velocity
+vn, where ρv2 = C[(n · Bn) −(b · Bb)].
+In order to write explicit expressions for the directions of n and b, and for the value of ρv2,
+we use a method developed by Boulanger and Hayes (10, section 5.7). First we prescribe a plane
+cutting the B-ellipsoid in a central elliptical section. We denote by a the unit vector normal to this
+plane. Then we write the Hamiltonian cyclic decomposition of the tensor B as (10, section 3.4)
+B = λ2
+1 i ⊗i + λ2
+2 j ⊗j + λ2
+3 k ⊗k
+(7.2)
+= λ2
+2 1 + 1
+2(λ2
+1 −λ2
+3)(m+ ⊗m−+ m−⊗m+),
+where the unit vectors m± are in the directions of the ‘optic axes’ of the B-ellipsoid and are deﬁned
+by
+
+λ2
+1 −λ2
+3 m± =
+
+λ2
+1 −λ2
+2 i ±
+
+λ2
+2 −λ2
+3 k.
+(7.3)
+We now seek n and b, unit vectors in the directions of the principal axes of the elliptical section of
+the B-ellipsoid by the plane a · x = 0. Hence, n and b are eigenvectors of the tensor B whereFINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+351
+, the orthogonal projection upon the plane a · x = 0, is deﬁned by  = 1 −a ⊗a. With the aid
+of (7.2), and because 2 = , we have
+B = λ2
+2  + 1
+2(λ2
+1 −λ2
+3)(m+ ⊗m−+ m−⊗m+).
+(7.4)
+Calling ψ± the angles between the polarization direction a and the optic axes m± (0 ⩽ψ± ⩽π),
+and noting that the vectors m±/ sin ψ± are of unit length, we ﬁnd from (7.4) that m+/ sin ψ+±
+m−/ sin ψ−are eigenvectors of B with eigenvalues γ ± given by (10, section 5.7)
+γ ± = λ2
+2 + 1
+2(λ2
+1 −λ2
+3)(m+ · m−± sin ψ+ sin ψ−).
+(7.5)
+Recall that the phase speed v, which is given by equation (6.3),
+ρv2 = C(n · Bn −b · Bb) = C(n · Bn −b · Bb),
+(7.6)
+was assumed to be real. Therefore, n is the eigenvector of B with the greater eigenvalue, which
+is γ + according to (7.5), and b is the eigenvector of B with the lesser eigenvalue γ −. Hence,
+we obtain the propagation and attenuation directions as
+n = m+/ sin ψ+ + m−/ sin ψ−,
+n · Bn = γ +,
+b = m+/ sin ψ+ −m−/ sin ψ−,
+b · Bb = γ −.
+(7.7)
+7.2 Phase speed and pressure
+We now write the phase speed in terms of the initial stretches and the angles ψ±. Upon using (7.5)
+and (7.7), we have
+ρv2 = C(λ2
+1 −λ2
+3) sin ψ+ sin ψ−.
+(7.8)
+In this connection, it may be noted that for ﬁnite-amplitude homogeneous plane waves propagating
+in a homogeneously deformed Mooney–Rivlin material, two linearly-polarized waves exist for
+each direction of propagation, and the difference between the two corresponding squared speeds is
+proportional to (λ2
+1 −λ2
+3) sin φ+ sin φ−, where φ± are the angles between the propagation direction
+and the optic axes of the B−1-ellipsoid (also called the ‘acoustic axes’) (6).
+From (7.8), it follows that the minimum value of v is vmin given by
+v2
+min = 0,
+(7.9)
+and is attained only when a = m±. In this case, n · Bn = b · Bb = λ2
+2, and the plane orthogonal to
+a is a plane of central circular section of the B-ellipsoid. In other words, when the plane of n and b
+is prescribed to be orthogonal to an optic axis of the B-ellipsoid, the superposed deformation must
+be static. We treat this case in section 8.
+The maximum value for the phase speed is vmax given by
+ρv2
+max = C(λ2
+1 −λ2
+3),
+(7.10)
+which is attained when a = j. In that case, n = i and b = k. In other words, the fastest wave occurs
+for propagation in the direction of the greatest initial stretch. A similar result was established by
+Ericksen (11) for acceleration waves in a homogeneously deformed neo-Hookean material and also352
+M. DESTRADE
+by Boulanger and Hayes (7) for ﬁnite-amplitude homogeneous waves in a homogeneously deformed
+Mooney–Rivlin material.
+We may also write the phase speed in terms of the polarization direction a alone. Because
+n · Bb = 0 and det B = 1, we have
+a · B−1a = (n ∧b) · B−1(n ∧b) = (n ∧b) · (Bn ∧Bb)
+(7.11)
+= (n · Bn)(b · Bb).
+Writing the trace of B in the (a, n, b) basis yields
+tr B = a · Ba + n · Bn + b · Bb.
+(7.12)
+Combining (7.11) and (7.12), we see that n · Bn and b · Bb are the two roots of the following
+quadratic in r (say),
+r2 + [tr B −a · Ba]r + a · B−1a = 0,
+(7.13)
+so that, using (6.3), v is alternatively given by
+ρv2 = C
+
+[tr B −(a · Ba)]2 −4(a · B−1a).
+(7.14)
+Finally, the pressure p∗is given by
+p∗= αkDe−b·x[(a · B−1n) sin k(n · x −vt) + (a · B−1b) cos k(n · x −vt)]
++ 1
+2α2k2De−2kb·x(a · B−1a).
+(7.15)
+7.3 Energy propagation
+Here we consider the energy carried by the wave (7.1). First we compute the total energy density,
+which is the sum of the kinetic and stored-energy densities, and then the energy ﬂux vector. Our
+aim is to ﬁnd a relationship between these two quantities, or more relevantly (as the frequencies of
+the sinusoidal vibrations may be very high), between the temporal mean values of these quantities.
+To this effect, we introduce the following notation to designate temporal mean values: if D(x, t) is
+a periodic ﬁeld quantity with frequency ω, then its mean value is ˇD, deﬁned by
+ˇD = ω
+2π
+ ω/(2π)
+0
+D(x, t) dt.
+(7.16)
+We begin with the kinetic energy density per unit volume K given by equation (3.11). Using (7.1),
+its mean value ˇK is found to be
+ˇK = 1
+4α2k2e−2kb·xρv2 = 1
+4α2k2e−2kb·xC[(n · Bn) −(b · Bb)].
+(7.17)
+The stored-energy density W per unit volume associated with the wave is given by (3.12), where
+I and II are given, for the motion (7.1), by
+I = I −2αke−kξ[cos k(n · x −vt)(a · Bb) + sin k(n · x −vt)(a · Bn)]
++ α2k2e−2kξ[cos2 k(n · x −vt)(b · Bb) + sin2 k(n · x −vt)(n · Bn)],
+II = II + 2αke−kξ[cos k(n · x −vt)(a · B−1b)
++ sin k(n · x −vt)(a · B−1n)] + α2k2e−2kξ(a · B−1a).
+(7.18)FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+353
+Note that because the material is incompressible, the stored-energy density W is the same whether
+it is measured in the reference conﬁguration, in the state of static homogeneous deformation, or in
+the current conﬁguration. The mean value of this quantity is ˇW, given by
+ˇW = 1
+4α2k2e−2kb·x[C(n · Bn + b · Bb) + 2D(a · B−1a)].
+(7.19)
+We can now compute the total energy density E, which is by deﬁnition the sum of the kinetic and
+stored-energy densities: E = K + W. Using (7.17) and (7.19), we write directly the mean value ˇE
+of the total energy density E as
+ˇE = 1
+2α2k2e−2kb·x[C(n · Bn) + D(a · B−1a)].
+(7.20)
+Now we turn our attention to the energy ﬂux vector, deﬁned in equation (3.14), and ﬁnd that here,
+R is given by
+R = −αvke−kb·x sin k(n · x −vt){Ta −1
+2α2k2De−2kb·x(a · B−1a)a
+−αk[CBb + D(a · B−1a)n]e−kb·x cos k(n · x −vt)
+−αk[CBn + D(a · B−1a)n]e−kb·x sin k(n · x −vt)}.
+(7.21)
+The mean value of R is ˇR, given by
+ˇR = 1
+2α2k2ve−2kb·x[CBn + D(a · B−1a)n].
+(7.22)
+Hence, using equation (6.4), we see that
+ˇR · b = 0,
+(7.23)
+which means that the direction of the mean energy ﬂux vector is parallel to the planes of constant
+amplitude. We also have, using (7.20),
+ˇR · (v−1n) = ˇE,
+(7.24)
+which means that the component of the mean energy ﬂux vector in the direction of propagation is
+equal to the phase speed times the total energy density.
+These results may be compared with results established previously.
+First, Schouten (12,
+section VII.7) introduced the notion of an energy ﬂux vector for the propagation of elastic waves
+in anisotropic elastic media. For small homogeneous displacements (that is for displacements of
+the form a cos(kx −vt), where the real vector a is of inﬁnitesimal magnitude), he proved that the
+temporal mean values of the energy ﬂux vector and energy densities are related through the same
+equation as (7.24).
+Then Synge (13) looked for solutions to the equations of motion in an anisotropic medium in the
+form {Aeiω(S·x−t) + c.c.} where A = A+ + iA−and S = S+ + iS−are complex vectors, ω is the
+real frequency and c.c. denotes the complex conjugate. He proved that ˇR · S−= 0 and ˇR · S+ ⩾0,
+where ˇR is the time-averaged energy ﬂux vector.
+Then Hayes (14) showed for any linear conservative system, using the same notation as above,
+that ˇR · S−= 0 and ˇR · S+ = ˇE, where ˇE is the mean energy density carried by the wave. In354
+M. DESTRADE
+that paper, no assumption is made as to whether or not the medium is anisotropic or subject to an
+internal constraint such as incompressibility or inextensibility.
+Later, Chadwick et al. (15) and Borejko (16) described the dynamics of small amplitude
+plane waves superposed upon a large homogeneous deformation of a constrained material, be
+they homogeneous (15) or inhomogeneous (16).
+In order to remain consistent with results of
+linear elastodynamics, these authors (following Lighthill (17)) separated energy quantities into
+‘interaction’ and ‘incremental’ parts.
+The former terms refer to the interconnection between
+the primary static stretch and the superposed waves, whereas the latter refer to the waves only,
+and would not disappear in the absence of prestress.
+This distinction made, they proved that
+ˇRincr · S−= 0 and ˇRincr · S+ = ˇEincr, where the superscript ‘incr’ is short for ‘incremental’.
+These results are all similar to those given by (7.23) and (7.24) because, in our context, the
+displacement x −x may also be written in the form {Aeiω(S·x−t) + c.c.}, with A = αa/2, ω = vk
+and S = v−1(n + ib). With this notation, (7.23) and (7.24) are rewritten as ˇR · S−= 0 and
+ˇR · S+ = ˇE respectively.
+However, the above mentioned studies are situated within the framework of linearized theory and
+it is remarkable that results such as (7.23) and (7.24) may be found in the nonlinear case of a ﬁnite-
+amplitude wave propagating in a ﬁnitely deformed Mooney–Rivlin material. Note that in the same
+context, Boulanger and Hayes (7) found (7.24) for ﬁnite-amplitude homogeneous plane waves.
+8. Superposed static deformation
+An interesting feature of inhomogeneous plane motions is that for certain orientations of the planes
+of constant phase and constant amplitude, the speed v may be equal to zero (10, section 6.3). In this
+situation, no perturbation propagates, but the static deformation f (b · x)g(n · x)a may nevertheless
+be superposed upon the primary homogeneous one. This possibility provides new exact solutions
+to the equations of equilibrium in a Mooney–Rivlin material.
+Here, we consider in turn the case of special and non-special principal inhomogeneous
+deformations.
+8.1 Superposed displacements along principal axes of the B-ellipsoid
+For special principal motions, we saw in section 5 that the quantity v can be prescribed within the
+interval 0 ⩽v2 < (Cλ2
+1 + Dλ−2
+2 )/ρ. When we choose v to be zero, we obtain from (5.1) a possible
+static deformation of a Mooney–Rivlin material. It is written as
+x = λ1X,
+y = λ2Y + f (λ3Z)g(λ1X),
+z = λ3Z,
+(8.1)
+where either
+f (λ3Z) = a1 exp k
+
+
+
+	Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+λ3Z + a2 exp −k
+
+
+
+	Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+λ3Z,
+g(λ1X) = d1 cos k(λ1X) + d2 sin k(λ1X),
+
+
+
+(8.2)
+or
+f (λ3Z) = a1 cos k
+
+
+
+	Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+λ3Z + a2 sin k
+
+
+
+	Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+λ3Z,
+g(λ1X) = d1 exp k(λ1X) + d2 exp −k(λ1X).
+
+
+
+(8.3)FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+355
+Here, a1, a2, d1, d2 and k are arbitrary constants.
+The components of the Cauchy stress corresponding to these deformations are as follows:
+T11 = −p + Cλ2
+1 −D[λ−2
+1
++ λ−2
+2 ( f g′)2],
+T12 = (Cλ2
+1 + Dλ−2
+2 ) f g′,
+T13 = −Dλ−2
+2
+f f ′gg′,
+T22 = −p + C[λ2
+1( f g′)2 + λ2
+2 + λ2
+3( f ′g)2] −Dλ−2
+2 ,
+(8.4)
+T23 = (Cλ2
+3 + Dλ−2
+2 ) f ′g,
+T33 = −p + Cλ2
+3 −D[λ−2
+3
++ λ−2
+2 ( f ′g)2],
+where the pressure p is given either by
+p = 1
+2 Dk2λ−2
+2
+
+(d2
+1 + d2
+2) f 2 −4
+Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+
+a1a2g2
+
+,
+(8.5)
+when f and g are given by (8.2), or by
+p = −1
+2 Dk2λ−2
+2
+
+4d2
+1d2
+2 f 2 −
+Cλ2
+1 + Dλ−2
+2
+Cλ2
+3 + Dλ−2
+2
+
+(a2
+1 + a2
+2)g2
+
+,
+(8.6)
+when f and g are given by (8.3).
+8.2 Superposed displacements in the planes of central circular section of the B-ellipsoid
+From section 6, we see that for certain choices of the orthogonal unit vectors n and b, the quantity v
+is equal to zero. This is the case when the plane of the conjugate vectors n and b is a plane of central
+circular section of the B-ellipsoid because then, n · Bn = b · Bb = λ2
+2 (see (10, section 5.7.1) for
+instance) and then, from equation (6.3), v = 0. The vector a is one of the unit vectors m±, which
+are in the directions of the optic axes of the B-ellipsoid and are deﬁned by (7.3). Also, (n, b) is any
+pair of orthogonal unit vectors in a plane of central circular section a · x = m± · x = 0.
+To provide an illustrative example, we choose n = m± ∧j, b = j, and f (b · x)g(n · x) =
+αe−kb·x cos kn · x, where α is a constant.
+Hence, two possible ﬁnite static deformations of a
+Mooney–Rivlin material are
+x = λ1X + α
+
+λ2
+1 −λ2
+2
+λ2
+1 −λ2
+3
+e−kλ2Y cos k
+
+λ1
+
+λ2
+2 −λ2
+3
+λ2
+1 −λ2
+3
+X ∓λ3
+
+λ2
+1 −λ2
+2
+λ2
+1 −λ2
+3
+Z
+
+,
+y = λ2Y,
+z = λ3Z ± α
+
+λ2
+2 −λ2
+3
+λ2
+1 −λ2
+3
+e−kλ2Y cos k
+
+λ1
+
+λ2
+2 −λ2
+3
+λ2
+1 −λ2
+3
+X ∓λ3
+
+λ2
+1 −λ2
+2
+λ2
+1 −λ2
+3
+Z
+
+.
+
+
+
+(8.7)
+The stress tensor T components for these deformations can be written in the basis (n, a, b) =356
+M. DESTRADE
+(m± ∧j, m±, j) as
+n · Tn = n · Tn −p∗+ α2k2Dλ4
+2e−2kζ cos2 kη,
+n · Ta = n · Ta −αk(C + Dλ2
+2)λ2
+2e−kζ sin kη,
+n · Tb = ∓αkDλ2
+2
+
+(λ2
+1 −λ2
+2)(λ2
+2 −λ2
+3)e−kζ cos kη −α2k2Dλ4
+2e−2kζ sin kη cos kη,
+a · Ta = a · Ta −p∗± 2αkC
+
+(λ2
+1 −λ2
+2)(λ2
+2 −λ2
+3)e−kζ sin kη + α2k2Cλ2
+2e−2kζ,
+a · Tb = −αk(C + Dλ2
+2)λ2
+2e−kζ cos kη,
+b · Tb = b · Tb −p∗± 2αkDλ2
+2
+
+(λ2
+1 −λ2
+2)(λ2
+2 −λ2
+3)e−kζ sin kη + α2k2Dλ4
+2e−2kζ sin2 kη,
+(8.8)
+where T is the constant Cauchy stress tensor deﬁned by (2.1) and the pressure p∗is given by
+p∗= ±αkDλ2
+2
+
+(λ2
+1 −λ2
+2)(λ2
+2 −λ2
+3)e−kζ sin kη + 1
+2α2k2Dλ4
+2e−2kζ.
+(8.9)
+9. Concluding remarks
+New solutions to the equations of motion and equilibrium in a deformed Mooney–Rivlin material
+have been obtained. In the case of a ﬁnite exponential sinusoidal wave, the propagation of energy
+was examined and results formerly established within the framework of linearized elasticity were
+recovered, although the case of a ﬁnite motion is nonlinear.
+The waves considered here are linearly-polarized and it ought to be noted that this is the
+only possibility of having ﬁnite-amplitude inhomogeneous plane waves propagating in a material
+(deformed or not) subjected to the constraint of incompressibility. This is shown elsewhere (18).
+Also, the planes of constant phase (orthogonal to n) were assumed to be at right angles with the
+planes of constant amplitude (orthogonal to b). We show in Appendix B that for ﬁnite-amplitude
+inhomogeneous plane waves of complex exponential type, this condition must be satisﬁed.
+Acknowledgements
+This work was supported by a grant from the European Commission under the TMR Programme,
+contract FMBICT983468. I thank Professor M. Hayes for his continuous encouragement. I am very
+grateful to the referees for their helpful suggestions which led, inter alia, to the inclusion of the result
+established in Appendix B and also to a more elegant proof, using the method of Birkhoff (19), for
+the result in Appendix A.
+References
+1. A. E. Green, J. Mech. Phys. Solids 11 (1963) 119–126.
+2. M. M. Carroll, Acta Mech. 3 (1967) 167–181.
+3. F. John, Communs. pure appl. Math. 19 (1966) 309–341.
+4. P. Currie and M. Hayes, J. Inst. Maths Applics 5 (1969) 140–161.
+5. M. Mooney, J. appl. Phys. 11 (1940) 582–592.
+6. Ph. Boulanger and M. Hayes, Q. Jl Mech. appl. Math. 45 (1992) 575–593.
+7.
+and
+, ibid. 48 (1995) 427–464.
+8. M. A. Hayes and R. S. Rivlin, Arch. ration. Mech. Anal. 45 (1972) 54–62.FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+357
+9. T. Manacorda, Riv. Mat. Univ. Parma 10 (1959) 19–33.
+10. Ph. Boulanger and M. Hayes, Bivectors and Waves in Mechanics and Optics (Chapman & Hall,
+London 1993).
+11. J. L. Ericksen, J. ration. Mech. Anal. 2 (1953) 329–337.
+12. J. Schouten, Tensor Analysis for Physicists (Clarendon Press, Oxford 1951).
+13. J. L. Synge, Proc. R. Ir. Acad. A 58 (1956) 13–21.
+14. M. Hayes, Q. Jl Mech. appl. Math. 28 (1975) 329–332.
+15. P. Chadwick, A. M. Whitworth and P. Borejko, Arch. ration. Mech. Anal. 87 (1985) 339–354.
+16. P. Borejko, Q. Jl Mech. appl. Math. 40 (1987) 71–87.
+17. J. Lighthill, Waves in Fluids (University Press, Cambridge 1978).
+18. M. Destrade, J. Elast. 55 (1999) 163–166.
+19. G. Birkhoff, Hydrodynamics. A Study in Logic, Fact and Similitude. (Princeton University
+Press, Princeton 1950).
+APPENDIX A
+Solutions for a system of two linear differential equations involving two functions of independent variables
+Here, our aim is to ﬁnd the real functions f (ζ) and g(η −vt) satisfying (4.4) and (4.5), viz
+ρv2
+b g f ′′ + 2C(n · Bb) g′ f ′ + ρ(v2
+n −v2) g′′ f = 0,
+f ′′′g(a · B−1n) −f ′′g′(a · B−1b) + ( f ′ f ′′ −f f ′′′)gg′(a · B−1a)
+= f g′′′(a · B−1b) −f ′g′′(a · B−1n) + (g′g′′ −gg′′′) f f ′(a · B−1a),
+
+
+
+(A.1)
+where
+ρv2
+b = C(b · Bb) + D(a · B−1a),
+ρv2
+n = C(n · Bn) + D(a · B−1a),
+(A.2)
+and B is the left Cauchy–Green strain tensor associated with an arbitrary triaxial stretch. Also, f and g are
+required to be such that f (b · x)g(n · x −vt)a (where (a, n, b) is an orthonormal triad) is an inhomogeneous
+deformation.
+A referee very kindly suggested that the use of a technique by Birkhoff (19) would lead to a simplier
+derivation of the results. Accordingly, this approach is adopted here.
+Assuming n · Bb ̸= 0, we can, following Birkhoff (19, p. 137), express (A.1)1 in the separated form
+3
+
+j=1
+Fj(ζ)G j(χ) = 0,
+χ = η −vt,
+(A.3)
+where F1 = f ′′, F2 = f ′, F3 = f , and G1 = ρv2
+b g, G2 = 2C(n · Bb) g′, G3 = ρ(v2n −v2) g′′.
+The condition (A.3) is equivalent to the requirement that the vectors F = (F1, F2, F3) and G =
+(G1, G2, G3) be conﬁned to orthogonal subspaces. Calling dim F and dim G the respective dimensions of
+the subspaces spanned by the F and G, we may have three possible cases:
+case (i). dim F = dim G = 1;
+case (ii). dim F = 1, dim G = 2;
+case (iii). dim F = 2, dim G = 1.
+We treat these cases in turn.
+Case (i). The dimension of the subspace spanned by the F is 1 when F1, F2, F3, or equivalently f , f ′,
+f ′′ are proportional. This is possible only when f (ζ) = Aeδζ , where A and δ are real constants. Similarly,
+dim G = 1 yields g(η −vt) = Beϵχ for some real scalars B and ϵ.358
+M. DESTRADE
+However, we now have f ga = AB exp[(ϵn+δb)·x−ϵvt)]a. Hence, case (i) corresponds to a homogeneous
+motion and must be discarded in our context.
+Case (ii). The condition dim F = 1 yields
+f (ζ) = Aeδζ ,
+(A.4)
+where A and δ are real constants. Then equation (A.1)1 reduces to
+ρ(v2
+n −v2) g′′ + 2C(n · Bb)δ g′ + ρv2
+bδ2 g = 0,
+(A.5)
+This is a linear homogeneous second order differential equation for g, with the following characteristic equation
+in r (say),
+ρ(v2
+n −v2)r2 + 2C(n · Bb)δ r + ρv2
+bδ2 = 0.
+(A.6)
+If (A.6) has two distinct roots r1,r2 (say), then g is of the form
+g(χ) = Ber1χ + Cer2χ,
+(A.7)
+where B and C are constants ((B, C) ̸= (0, 0)).
+Upon using (A.4) and (A.7), equation (A.1)2 yields a linear combination for the independent functions er1χ,
+er2χ, e2r1χ, e2r2χ, and e(r1+r2)χ. Nullity for the coefﬁcient of e(r1+r2)χ yields r1 = −r2. However, in that
+case we have g′′ −r2
+1 g = 0, which, together with (A.5), implies that dim G = 1.
+If (A.6) has a double root r (say), then g is of the form
+g(χ) = (B + Cχ)erχ,
+(A.8)
+where B and C are constants ((B, C) ̸= (0, 0)).
+Substituting (A.4) and (A.8) into (A.1)2 yields a linear combination for the independent functions erχ,
+χerχ, e2rχ, and χe2rχ. Nullity for the coefﬁcient of e2rχ yields C2r = 0, which is not possible in our
+context.
+Case (iii). This case is similar to case (ii), where f , g, v2n −v2 and v2
+b are replaced by g, f , v2
+b and v2n −v2
+respectively.
+We conclude that when n · Bb ̸= 0, no f and g can be found such that f g a is an inhomogeneous
+deformation. We must therefore assume that
+b · Bn = 0,
+(A.9)
+which means that the orthogonal unit vectors n and b are conjugate with respect to the B-ellipsoid.
+Then, equation (A.1)1 reduces to
+v2
+b
+v2n −v2
+f ′′(ζ)
+f (ζ) = −g′′(η −vt)
+g(η −vt) = const. = ±k2
+(say).
+(A.10)
+Clearly, from (A.2) and the strong ellipticity condition (2.4)1, we have v2
+b > 0 and v2n > 0. Now, if v2 > v2n,
+then by (A.10), f ′′/f and g′′/g are constants of the same sign. In this case, f and g would be of the same type
+(either both hyperbolic or both sinusoidal functions), and again this would lead to a homogeneous motion. We
+assume therefore that 0 ⩽v2 < v2n.
+Upon using (A.10), the remaining equation to be satisﬁed, (A.1)2, reduces to
+(v2
+n −v2
+b −v2)[ f ′g(a · B−1n) −f g′(a · B−1b)] = 0.
+(A.11)
+Hence, there are two cases: (i) v2 ̸= v2n −v2
+b and (ii) v2 = v2n −v2
+b.FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+359
+Case (i). if v2 ̸= v2n −v2
+b, then by (A.11), we have
+f ′(ζ)
+f (ζ) (a · B−1n) = g′(η −vt)
+g(η −vt) (a · B−1b) = const. = µ
+(say).
+(A.12)
+Assuming µ ̸= 0, (A.12) yields (a · B−1n) ̸= 0, (a · B−1b) ̸= 0 and also (a · B−1n)2( f ′′/f ) =
+(a · B−1b)2(g′′/g) = µ2. However, as noted above, f ′′/f and g′′/g must be constants of opposite signs
+for an inhomogeneous motion.
+Hence, µ = 0. Then, by (A.12), (a · B−1n) = (a · B−1b) = 0, which, together with (A.9), implies that n,
+a and b are along principal directions. In this case, the solutions are either exponential in space and sinusoidal
+in time,
+f (ζ) = a1 exp k
+
+
+
+	v2n −v2
+v2
+b
+ζ + a2 exp −k
+
+
+
+	v2n −v2
+v2
+b
+ζ,
+g(η −vt) = d1 cos k(η −vt) + d2 sin k(η −vt),
+
+
+
+(A.13)
+or sinusoidal in space and exponential in time,
+f (ζ) = a1 cos k
+
+
+
+	v2n −v2
+v2
+b
+ζ + a2 sin k
+
+
+
+	v2n −v2
+v2
+b
+ζ,
+g(η −vt) = d1 exp k(η −vt) + d2 exp −k(η −vt).
+
+
+
+(A.14)
+Here, a1, a2, d1, d2 are constants, and k and v are arbitrary (0 ⩽v2 < v2n).
+These solutions are valid only when n, a and b are along the principal axes of the primary static deformation.
+Case (ii). if v2 = v2n −v2
+b, then the solutions are either exponential in space and sinusoidal in time,
+f (ζ) = a1ekζ + a2e−kζ ,
+g(η −vt) = d1 cos k(η −vt) + d2 sin k(η −vt),
+
+(A.15)
+or sinusoidal in space and exponential in time,
+f (ζ) = a1 cos kζ + a2 sin kζ,
+g(η −vt) = d1ek(η−vt) + d2e−k(η−vt).
+
+(A.16)
+Here, a1, a2, d1, d2 are constants, k is arbitrary and v is given by
+ρv2 = C[(n · Bn) −(b · Bb)].
+(A.17)
+These solutions are valid for any orientation of the plane of n and b.
+APPENDIX B
+Finite-amplitude inhomogeneous plane waves of complex exponential type in deformed Mooney–Rivlin
+materials
+Here, we prove that ﬁnite-amplitude inhomogeneous plane waves of complex exponential type may
+propagate in a homogeneously deformed Mooney–Rivlin material only when the planes of constant phase
+are at right angles with the planes of constant amplitude.
+The material is ﬁrst subjected to a pure homogeneous static deformation, with corresponding deformation
+gradient F and left Cauchy–Green strain tensor B given by
+F = diag (λ1, λ2, λ3),
+B = diag (λ2
+1, λ2
+2, λ2
+3),
+with
+J = det F = λ1λ2λ3.
+(B.1)360
+M. DESTRADE
+Then a linearly-polarized inhomogeneous plane wave of ﬁnite amplitude is superposed upon the large static
+deformation. The motion is given by
+x = x + β{eiω(S·x−t) + c.c.}a = x + 2βe−ωS−·x cos ω(S+ · x −t)a.
+(B.2)
+Here, β is a ﬁnite real scalar, S = S+ + iS−is a complex vector and ω is the real frequency.
+The deformation gradient F associated with the motion (B.2) is given by
+F = ∂x/∂X = ˇFF,
+where
+ˇF = 1 + βωa ⊗{ieiω(S·x−t)S + c.c.}.
+(B.3)
+The left Cauchy–Green tensor is B given by B = F FT = ˇFBˇFT.
+The incompressibility constraint demands that
+det F = [1 + βω{i(a · S)eiω(S·x−t) + c.c.}](λ1λ2λ3) = 1,
+(B.4)
+at all times. Therefore we must have
+a · S = 0,
+λ1λ2λ3 = 1.
+(B.5)
+Also, ˇJ = det ˇF and J = det F are given by
+ˇJ = 1,
+and
+J = ˇJ J = J = λ1λ2λ3 = 1.
+(B.6)
+In the absence of body forces, the equations of motion, written in the intermediate conﬁguration, read
+divx ( ˇJ TˇF−1T) = ρ ˇJ ∂2x
+∂t2 ,
+∂( ˇJ TˇF−1T)i j
+∂x j
+= ρ ˇJ ∂2xi
+∂t2 ,
+(B.7)
+where T is the Cauchy stress tensor associated with motion (B.2). For a Mooney–Rivlin material, T is related
+to the deformation gradient through
+T = −p1 + CB −DB−1,
+(B.8)
+where p is the pressure.
+Upon using (B.8), we have
+ˇJ TˇF−1T = −p ˇJ ˇF−1T + C ˇJ ˇFB −D ˇJ B−1 ˇF−1T.
+(B.9)
+Hence, with equation (B.6) and ∂( ˇJ ˇF−1T
+i j
+)/∂x j = 0, the Euler–Jacobi–Piola identity, the equations of
+motion (B.7) reduce to
+ˇF−1Tgradx p = Cdivx(ˇFB) −Ddivx(B−1 ˇF−1T) −ρ(∂2x/∂t2).
+(B.10)
+Now we compute in turn the three terms of the right-hand side of this equation. For the ﬁrst term, we have
+Cdivx(ˇFB) = Cβωdivx[a ⊗{ieiω(S·x−t)BS + c.c.}]
+= −Cβω2{(S · BS)eiω(S·x−t) + c.c.}a.
+(B.11)
+Using (B.5), the second term is found as
+Ddivx(B−1 ˇF−1T) = Dβω2{[(S · S)B−1a + (a · B−1S)S]eiω(S·x−t) + c.c.}
++ Dβ2ω3(a · B−1a){i(S · S)e2iω(S·x−t)S + c.c.}
++ Dβ2ω3(a · B−1a)eiω(S−S)·x{i[(S −S) ·S]S + c.c.}.
+(B.12)FINITE-AMPLITUDE INHOMOGENEOUS PLANE WAVES
+361
+Finally, the third term is given by
+−ρ(∂2x/∂t2) = ρβω2a{eiω(S·x−t) + c.c.}.
+(B.13)
+In view of (B.11), (B.12), and (B.13), we must take p (to within a constant term) of the form
+p = βω{ip1eiω(S·x−t) + c.c.} + β2ω2{p2e2iω(S·x−t) + c.c.} + β2ω2 p3eiω(S−S)·x,
+(B.14)
+where p1, p2, p3 are scalars (p3 is real). With this decomposition, we compute the right-hand side of (B.10)
+as
+−ˇF−1Tgradx p
+=
+βω2{p1eiω(S·x−t)S + c.c.} −β2ω3{ip2e2iω(S·x−t)S + c.c.}
+−β2ω3 p3i(S −S)eiω(S−S)·x.
+(B.15)
+Now, using (B.11), (B.12), (B.13) and (B.15), we write the equations of motion (B.10), separating the
+respective coefﬁcients of eiω(S·x−t), e2iω(S·x−t), and eiω(S−S)·x, as
+−p1S + C(S · BS)a + D[(S · S)B−1a + (a · B−1S)S] = ρa,
+−p2S −D(a · B−1a)(S · S)S = 0,
+−p3(S −S) + D(a · B−1a){[(S −S) ·S)]S + [(S −S) · S)]S} = 0.
+(B.16)
+Writing S as S = S+ + iS−, equation (B.16)3 is equivalent to
+[p3 −2D(a · B−1a)(S−· S−)]S−= [2D(a · B−1a)(S−· S+)]S+.
+(B.17)
+Now, because the motion is inhomogeneous, S−is not parallel to S+ and therefore, we must have p3 −
+2D(a · B−1a)(S−· S−) = 0 and also
+S−· S+ = 0,
+(B.18)
+which means that the planes of constant phase are orthogonal to the planes of constant amplitude.

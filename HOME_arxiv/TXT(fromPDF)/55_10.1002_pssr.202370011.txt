@@ -1,0 +1,549 @@
+1 
+Room temperature charge-to-spin conversion from q-2DEG at SrTiO3-based interfaces  
+ 
+Utkarsh Shashank1#, Angshuman Deka1,2,#, Chen Ye3, Surbhi Gupta4, Rohit Medwal5 , Rajdeep 
+Singh Rawat4, Hironori Asada6, X. Renshaw Wang3,7*, and Yasuhiro Fukuma1,8** 
+ 
+#Equal contribution  
+* E-mail: renshaw@ntu.edu.sg 
+**E-mail: fukuma@phys.kyutech.ac.jp 
+ 
+Mr. Utkarsh Shashank, Dr. Angshuman Deka, Prof. Yasuhiro Fukuma  
+1Department of Physics and Information Technology, Faculty of Computer Science and System 
+Engineering, Kyushu Institute of Technology, 680-4 Kawazu, Iizuka 820-8502, Japan. 
+ 
+Dr. Angshuman Deka 
+2Birck Nanotechnology Center, School of Electrical and Computer Engineering, Purdue 
+University, West Lafayette, Indiana 47907, USA  
+ 
+Prof. Y. Fukuma 
+8Research Center for Neuromorphic AI hardware, Kyushu Institute of Technology, 
+Kitakyushu 808-0196, Japan 
+ 
+Dr. Chen Ye 
+3School of Physical and Mathematical Sciences, Nanyang Technological University 637616, 
+Singapore. 
+ 
+Prof. X. Renshaw Wang 
+3School of Physical and Mathematical Sciences, Nanyang Technological University 637616, 
+Singapore. 
+7School of Electrical and Electronic Engineering, Nanyang Technological University, 
+639798, Singapore 
+ 
+Dr. Surbhi Gupta, Prof. Rajdeep Singh Rawat 
+4Natural Science and Science Education, National Institute of Education, Nanyang 
+Technological University 637616, Singapore.2 
+Prof. Rohit Medwal,  
+5Department of Physics, Indian Institute of Technology Kanpur, Kanpur 208016, India. 
+ 
+ 
+Prof. Hironori Asada,  
+6Graduate School of Sciences and Technology for Innovation, Yamaguchi University, 2-16-1 
+Tokiwadai, Ube 755-8611, Japan 
+ 
+ 
+Keywords: q-2DEG, Spin torque ferromagnetic resonance, charge-to-spin conversion, STO-
+AlN interface, STO-AlO interface, oxide spintronics. 
+ 
+ 
+ 
+Abstract 
+Interfacial two-dimensional electron gas (2DEG), especially the SrTiO3-based ones at the 
+unexpected interface of insulators, have emerged to be a promising candidate for efficient 
+charge-spin current interconversion. In this article, to gain insight into the mechanism of the 
+charge-spin current interconversion at the oxide-based 2DEG, we focused on conducting 
+interfaces between insulating SrTiO3 and two types of aluminium-based amorphous insulators, 
+namely SrTiO3/AlN and SrTiO3/Al2O3, and estimated their charge-spin conversion efficiency, 
+𝜃ୡୱ. The two types of amorphous insulators were selected to explicitly probe the overlooked 
+contribution of oxygen vacancy to the 𝜃௖௦. We proposed a mechanism to explain results of spin-
+torque ferromagnetic resonance (ST-FMR) measurements and developed an analysis protocol 
+to reliably estimate the 𝜃ୡୱ of the oxide based 2DEG. The resultant 𝜃ୡୱ/𝑡, where 𝑡 is the 
+thickness of the 2DEG, were estimated to be 0.244 nm-1 and 0.101 nm-1 for the SrTiO3/AlN and 
+SrTiO3/Al2O3, respectively, and they are strikingly comparable to their crystalline counterparts. 
+Furthermore, we also observe a large direct current modulation of resonance linewidth in 
+SrTiO3/AlN samples, confirming its high 𝜃ୡୱ and attesting an oxygen-vacancy-enabled charge-3 
+spin conversion. Our findings emphasize the defects' contribution to the charge-spin 
+interconversion, especially in the oxide-based low dimensional systems, and provide a way to 
+create and enhance charge-spin interconversion via defect engineering.4 
+1. Introduction 
+The formation of 2-dimensional electron gas (2DEG) at oxide interfaces has attracted 
+significant research interest owing to the presence of conduction electrons at the interfaces of 
+two insulators and its interesting phenomena, such as superconductivity and magnetism 1-3. In 
+addition to the observation of interfacial conductivity, the ability to achieve high carrier 
+mobility > 105 cm V-1s-1 in 2DEG is particularly interesting in the development of all-oxide 
+devices 4-5. Theoretical reports 6-8 predicted that, due to the presence of an inversion asymmetry 
+at the interface, a 2DEG electron with momentum 𝑝⃗ in the presence of an electric field 𝐸ሬ⃗ can 
+experience a Rashba-like field ∝𝑝⃗ൈ𝐸ሬ⃗ in its rest frame because of spin-orbit coupling (SOC)9. 
+The possibility of achieving a strong Rashba SOC at these 2DEG allows compatibility with 
+spintronic devices, and, therefore, has given rise to a series of experiments to understand 
+magnetotransport in the 2DEG 10-20. A large number of these investigations have been focused 
+on spin-charge interconversion in 2DEG formed at interfaces of epitaxial LaAlO3 (LAO) and 
+LaTiO3 (LTO) films grown on single-crystalline SrTiO3 (STO) substrates 15-20. Recently, 
+reports on giant room temperature charge to spin conversion efficiency, 𝜃ୡୱ as high as 6.3 in 
+epitaxial LAO/STO-based 2DEG 15, implying that they are significantly more efficient than 
+most heavy metals (HM) 21, topological insulators 22-23 and engineered HM 24-26 towards spin 
+current generation. Such properties position the 2DEG as an interesting candidate for 
+applications in future spintronic devices, such as power-efficient spin-charge current 
+interconversion. 
+Recent reports on high mobility in these 2DEG/amorphous oxides formed in systems 
+like STO/Al2O3 interfaces have brought back attention towards 2DEG formed in such materials 
+owing to their relative ease of deposition compared to their crystalline counterparts 4,27. These 
+2DEG originate from oxygen vacancies in the STO side and are confined to a few nanometers 
+(nm) inside the substrate surface. Broadly speaking, when a metal-based oxide/nitride, 
+especially the Al-based materials, is deposited on an STO substrate, a layer of oxygen vacancies5 
+is created at the surface of STO due to the redox reactions between Al-based oxide/nitride and 
+STO 28- 30. Such oxygen vacancies lead to mobile electrons, producing interfacial quasi-2DEG 
+(hereafter, q-2DEG) inside STO. This leads to the creation of a conductive channel inside the 
+STO substrate, as schematically shown in Fig. 1(a). Such q-2DEG induced by oxygen vacancy 
+have often been overlooked in earlier studies and therefore we focus on potential higher charge-
+spin interconversion in these systems. Furthermore, although spin-charge current 
+interconversion in 2DEG was reported at cryogenic temperatures27, a systematic analysis of 
+such a phenomenon at room temperature is lacking. Previous studies have indicated that 
+angular-dependent measurement of magnetization dynamics is crucial towards an accurate 
+estimation of magnetic anisotropies and torques 26, 31-34. Therefore, we use such an approach to 
+systematically investigate the charge-to-spin conversion efficiency of q-2DEG. 
+In this study, using spin torque ferromagnetic resonance (ST-FMR) measurements in 
+STO/AlN/NiFe and STO/Al2O3/NiFe systems, we show that the 𝜃ୡୱ in the q-2DEG can be as 
+high as their crystalline counterparts at room temperature. Our experiments clearly show the 
+presence of a symmetric component in the ST-FMR lineshape, which has an odd parity with 
+the direction of the magnetic field, confirming the presence of spin-torque in the devices. In 
+addition to the expected sin2𝜙cos𝜙 dependence of the symmetric and antisymmetric 
+amplitudes of the ST-FMR spectra, we also detect contributions from a sin2𝜙sin𝜙-like and 
+sin2𝜙-like behaviour. By filtering out the sin2𝜙cos𝜙 contributions of the ST-FMR spectra, we 
+estimate 𝜃ୡୱ/𝑡= 0.244 nm-1 and 0.101 nm-1 for the STO/AlN/NiFe and STO/Al2O3/NiFe 
+systems, respectively. Additionally, using DC-biased ST-FMR measurements, we show that 
+modulation of resonant linewidth in the STO/AlN/NiFe samples is ~3 times higher than 
+conventional heavy metals, i.e. Pt, directly affirming the presence of a high in-plane damping-
+like spin torque arising from the q-2DEG.6 
+2. Experimental details 
+ 
+A pattern of dimension 80×20 µm2 was created on TiO2-terminated STO (100) 
+substrates using photolithography, wherein 10 nm AlN or Al2O3 was deposited using pulsed 
+laser deposition (PLD) at room temperature at a pressure of 10-4 Pa. The sheet resistance, Rs of 
+the STO/AlN and STO/Al2O3 samples are ~90 kΩ/□. and ~103 kΩ/□, respectively. Subsequently, 
+5 nm NiFe was deposited using DC sputtering on the same pattern. Finally, using aligned 
+photolithography and DC sputtering, Ti (10 nm)/Al (200 nm) electrodes were deposited on 
+either side of the 80×20 µm2 pattern to create the device, as shown in Fig. 1(b). See the 
+supplementary information S1 for details of device fabrication. ST-FMR spectra in the devices 
+were recorded using a lockin-detection technique (see Fig. 1(b)). A microwave current Irf of 
+frequency f was applied in the device using a signal generator while an external magnetic field 
+Hext was swept in the in-plane direction. The Hext could be rotated in-plane with respect to the 
+Irf, as depicted in the right panel of Fig. 1(a) by varying the angle 𝜙 with the Irf. All 
+measurements were performed at room temperature. 
+ 
+3. Results and discussion   
+Due to the SOC at the q-2DEG, a spin current is generated in q-2DEG, which flows to 
+the adjacent NiFe layer and exerts a torque on its magnetization. This can lead to FMR in the 
+NiFe layer. A combined effect of an alternating anisotropic magnetoresistance (AMR) of NiFe 
+and the microwave current Irf (proportional to spin current), gives the rectified DC voltage Vmix, 
+which is recorded using a lock-in amplifier (Fig. 1(b)). A typical spectrum obtained from this 
+measurement at a frequency of 4.0 GHz is shown in Fig. 1(c). This spectrum is then fitted with 
+the sum of a symmetric Lorentzian and an antisymmetric component using the following 
+equation 35. 
+𝑉௠௜௫ൌ𝑆𝐹௦௬௠ሺ𝐻௘௫௧ሻ൅𝐴𝐹௔௦௬௠ሺ𝐻௘௫௧ሻ,
+ሺ1ሻ7 
+where  𝐹௦௬௠ሺ𝐻௘௫௧ሻൌ
+ሺ௱ுሻమ
+ሺு೐ೣ೟ିு೚ሻమାሺ௱ுሻమ,  is the symmetric component with weight S, 
+𝐹௔௦௬௠ሺ𝐻௘௫௧ሻൌ
+∆ுሺு೐ೣ೟ିு೚ሻ
+ሺு೐ೣ೟ିு೚ሻమାሺ௱ுሻమ,  is the antisymmetric component with weight A, and ΔH and 
+H଴ are the half-width-at-half-maximum and resonance field of the FMR spectra 25,35.  From the 
+fit, we obtain µoΔ𝐻= 4.34 mT for STO/AlN/NiFe and µoΔ𝐻= 1.71 mT for the STO/Al2O3/NiFe 
+sample at f = 5 GHz, which indicates lower damping for the latter sample. (also see 
+supplementary information S2). Meanwhile, we obtained µo𝐻଴= 38.54 mT for STO/AlN/NiFe 
+and µo𝐻଴= 33.59 mT for the STO/Al2O3/NiFe sample at f= 5 GHz. Because the NiFe layers 
+were deposited on both samples simultaneously, the difference in resonance field may be due 
+to different effective demagnetizing fields, Meff, in the two samples (Also see the 
+Supplementary information S2) 33. 
+In addition, we also observed that, while the symmetric component magnitude is almost 
+similar with an opposite sign with the Hext reversed, the antisymmetric component is different 
+upon Hext reversal. The odd parity of the symmetric component with respect to the direction of 
+the magnetic field indicates that it originates from the spin-torque generated by the q-2DEG. 
+Due to the SOC at the q-2DEG, a spin current is generated transverse to the flow of microwave 
+current Irf. This spin current flows from the q-2DEG to the NiFe layer and exerts a torque on 
+the magnetization of NiFe, resulting in the symmetric component of the ST-FMR spectra. 
+Additionally, the Irf also generates an Oersted field, hrf which can exert a field-torque on the 
+magnetization of NiFe layer and give rise to the antisymmetric component of the ST-FMR 
+spectra 25. In order to avoid any contributions to the rectified voltage lineshape that can arise 
+from non-linear excitation of magnetization dynamics, we ensured that all our measurements 
+were performed in the linear regime by checking the input power Papp dependence of the spectra 
+33, 34. As power increases from 0 to 13 dBm, Δ𝐻 and 𝐻଴ remains invariant with power, as shown 
+in Supplementary information S3. This confirms that the Vmix is due to the excitation of uniform8 
+FMR mode in this input power range. We performed our measurements at Papp = 10 dBm (10 
+mW) in order to ensure that the measurements are in the linear regime. 
+ Frequency-dependent measurements of the ST-FMR spectra in the range of 3.5 - 5 GHz 
+for the STO/AlN/NiFe and STO/Al2O3/NiFe samples were performed (see Fig. 2). Throughout 
+the frequency range, we observed a similar behaviour of the symmetric and antisymmetric 
+components of the ST-FMR spectra for both samples as described in the previous paragraph. 
+The amplitude of the spectra decreases at a higher frequency. The resonance field, Ho increases 
+increasing frequency, which in turn leads to a lower precession cone angle at higher Hext. 
+Additionally, the Ho increases with the frequency, which agrees well with the Kittel equation. 
+Upon fitting to the Kittel equation 34, we obtained µoMeff = 698 mT and 814 mT for the 
+STO/AlN/NiFe and the STO/ Al2O3/NiFe samples, respectively (see Supplementary 
+information S2). This confirms that the difference in resonance fields in STO/AlN/NiFe and 
+STO/Al2O3/NiFe samples arises from the different effective demagnetizing fields 34. 
+When the symmetric component of the ST-FMR spectra is attributed to a y-polarized 
+spin current, 𝜎ො௬ travelling in the z-direction, the angular dependence of the symmetric 
+amplitude follows a sin2𝜙cos𝜙 dependence. Simultaneously, due to the flow of an x-axial 
+microwave current in the device, an antisymmetric component is also produced by the 
+corresponding Oersted field, which follows a sin2𝜙cos𝜙 dependence. In this scenario, the 𝜃ୡୱ 
+can be estimated using 35: 
+𝜃ୡୱൌ
+ௌ
+஺
+௘ఓ೚ெೞௗ௧
+ℏ
+ට1 ൅
+ெ೐೑೑
+ு೚,            (2) 
+where t is the q-2DEG thickness, e is the elementary charge, μ୭ is the permeability of free space, 
+𝑀ୗ is the saturation magnetization of NiFe, d is NiFe thickness, ħ is the reduced Planck constant 
+and Meff is effective magnetization obtained from the Kittel fitting. The corresponding angular 
+dependent components of voltages in the STO/AlN/NiFe and STO/Al2O3/NiFe samples are9 
+plotted in Fig. 3(a) and 3(c), respectively. The symmetric component is fitted to the following 
+equation (see Supplementary information S4 for details): 
+Vୱൌa sin2𝜙cos𝜙൅b sin𝜙sin2𝜙,     (3) 
+where a  is the weightage of the sin2𝜙cos𝜙 component and b  is the weightage of the 
+sin𝜙sin2𝜙 component. Meanwhile, the antisymmetric component is fitted to: 
+V୅ൌc sin2𝜙𝑐𝑜𝑠𝜙൅d sinϕ𝑠𝑖𝑛2𝜙 ൅é sin2𝜙,     (4) 
+where c, d and é are the weights of the sin2𝜙cos𝜙, sin𝜙sin2𝜙 and sin2𝜙 components, 
+respectively. We note that, in our devices, the angular dependence of symmetric and 
+antisymmetric components is not purely sin2𝜙cos𝜙. Figures 3(b) and 3(d) show the weightage 
+of the different symmetric and antisymmetric parts of the spectra for f = 3.5-5 GHz in the case 
+of the STO/AlN/NiFe and STO/Al2O3/NiFe samples, respectively. For STO/AlN/NiFe, the 
+symmetric component has a 95.3% sin2𝜙cos𝜙 dependence, with the rest 4.7% arising from a 
+sin2𝜙sin𝜙 dependence when averaged over the entire frequency range. Meanwhile, its 
+antisymmetric component has an average of 49.5%, 22.5% and 28.0% contributions from a 
+sin2𝜙cos𝜙, sin2𝜙sin𝜙 and sin2𝜙dependence, respectively. In the case of the 
+STO/Al2O3/NiFe, we find that the symmetric component has 75.5% sin2𝜙cos𝜙 dependence 
+and 24.5% sin2𝜙sin𝜙 dependence averaged over the entire frequency range. On the other hand, 
+its antisymmetric component has an average of 55.7%, 16.4% and 27.9% contributions from 
+sin2𝜙cos𝜙, sin2𝜙sin𝜙 and sin2𝜙 dependences, respectively. This indicates breaking of the 
+twofold (180°+𝜙) and mirror (180°-𝜙ሻ symmetries of torques for both the q-2DEG-NiFe 
+samples. Therefore the lineshape analysis method, i.e., Eq. (2), which uses a spectrum obtained 
+at a single azimuthal angle 𝜙, may not reveal the comprehensive picture of torques, leading to 
+inaccurate quantification of SOTs 36.  
+Although an investigation into the exact origins of these additional components in the 
+ST-FMR spectra is beyond the scope of this article, we would like to emphasize that we 
+reproducibly observed this behaviour in multiple devices over a wide range of frequencies. This10 
+may be a consequence of non-uniform microwave current flow in devices.  In order to rule out 
+the possibility that it is caused by our device design, we further verified the same experiments 
+in a Pt/NiFe device fabricated under similar conditions and found 100% sin2𝜙cos𝜙  
+dependence for both symmetric and antisymmetric components of the ST-FMR spectra (see 
+Supplementary information S5). NiFe has a much lower resistivity compared to the q-2DEG 
+created at the STO/AlN interface. This may lead to non-uniform current flow in the q-2DEG-
+NiFe device, giving rise to the additional angular-dependent components in the ST-FMR 
+spectra for the STO/AlN/NiFe sample. It is noteworthy that the sin2𝜙cos𝜙 contribution 
+reduces for both the symmetric and antisymmetric components in the case of STO/Al2O3/NiFe 
+samples, whose 2DEG has ~10 times higher sheet resistance compared to that of 
+STO/AlN/NiFe samples. 
+ Before we proceed to the estimation of 𝜃ୡୱ, it should be noted that 𝜃ୡୱ is directly 
+proportional to the thickness of the q-2DEG. Therefore, without a direct measurement of the 
+2DEG thickness, we may end up with overestimated values of 𝜃ୡୱ. In order to avoid such a 
+discrepancy in our study, we estimate the q-2DEG thickness normalized conversion efficiency 
+as seen from Eq. (5) below. Additionally, to estimate the 𝜃ୡୱ corresponding to the dominant y-
+polarized spin current, 𝜎ො௬ in the samples, we introduce a ratio a/c, where a and c are weight 
+percentages of the sin2𝜙cos𝜙 component of the symmetric and antisymmetric parts at a 
+specific frequency mentioned earlier. This allows us to rewrite Eq. (2) as follows: 
+                                          
+ఏౙ౩
+௧ൌቀ
+௔
+௖ቁ
+ ௌ
+ ஺
+௘ఓ೚ெೞௗ
+ℏ
+ට1 ൅
+ெ೐೑೑
+ு೚ .                         (5) 
+Using Eq. (5), we estimated the median 𝜃௖௦/𝑡 to be 0.244 nm-1 for the STO/AlN sample and 
+0.101 nm-1 for the STO/Al2O3 sample. The frequency dependence of 𝜃௖௦/𝑡 is shown in Fig. 4. 
+The values of 𝜃௖௦/𝑡 estimated using Eq. (2) are also plotted in the same figure to show the 
+discrepancy between the two methods. Note that such a discrepancy is not seen for the Pt/NiFe 
+devices (see Supplementary information S5).11 
+As mentioned earlier, the calculated values in our case are normalized by the 2DEG 
+thickness. Typically, in previous reports, the 2DEG thickness is assumed to be 10 nm, and a 𝜃ୡୱ 
+~ 1.8 at room temperature has been reported for STO/LaAlO3/NiFe 20, 𝜃ୡୱ ~ 2.4 for quasi-2DEG 
+in an STO/LaTiO3/NiFe system 18 and 𝜃ୡୱ ~ 6.3 for STO/LaAlO3/CoFeB 15. In our case, if we 
+assume the 2DEG thickness, t = 10 nm, the 𝜃ୡୱ comes out to be 2.44 for the STO/AlN/NiFe and 
+1.01 for STO/Al2O3/NiFe samples. These values are comparable to previous reports on 2DEG 
+formed in epitaxial oxides grown on STO substrates. Note that the AlN and Al2O3 layers are 
+amorphous in our case. Hence, the 𝜃ୡୱ created at the q-2DEG in our STO/amorphous oxide 
+interfaces are shown to be comparable in terms of charge-to-spin conversion efficiencies with 
+the 2DEG reported for the epitaxial oxides on STO. Moreover, the 𝜃ୡୱ in our sample is 1 or 2 
+orders of magnitude higher than that of HM, such as Pt 37, Ta 21, W 38, and also than engineered 
+HM 24-26. As seen from the sheet resistance values, the q-2DEG in STO/AlN has 1 order smaller 
+resistance values compared to STO/Al2O3. This indicates that when AlN is deposited over STO 
+substrates, higher number of O2- diffuse outward from the substrate to oxidize AlN compared 
+to when Al2O3 is deposited. This in turn creates a larger number of oxygen defects inside the 
+STO substrate. As demonstrated by Chen et al., this difference in diffusion may have to do with 
+the difference in chemical reactivity of AlN and Al2O3 with TiO2-terminated STO28. Our 
+observation of a higher charge-to-spin conversion in the STO/AlN samples indicates that the 
+higher oxygen vacancies not only play a role in enhancing the electronic transport, but may also 
+lead to a higher charge-to-spin conversion efficiency in the q-2DEG. 
+The modulation of damping of FMR can also be an additional tool to overcome the 
+issues with 𝜃ୡୱ estimation mentioned in this paper as it provides a direct insight into the strength 
+of damping-like spin torques. This is free from problems arising from impedance mismatch, 
+unconventional spin current polarized in different directions, and Nernst heating 35. In this 
+method, an additional direct current (DC) Idc is applied along with Irf. The spin current at the 
+Rashba interface, which is proportional to Idc, modulates the ferromagnetic resonance linewidth12 
+(or the Gilbert damping) 35 of NiFe via damping-like torque which has an odd polarity with Idc. 
+By measuring the change in linewidth as a function of Idc, the 𝜃ୡୱ  can be evaluated if the 
+thickness of the q-2DEG is known. Therefore, we performed the Idc-biased ST-FMR 
+measurement on the STO/AlN/NiFe and STO/Al2O3/NiFe samples by applying an Idc ~ േ 7mA 
+along with Irf. The data at f = 5 GHz is shown in Fig. 5 (a) and 5(b). For the STO/AlN/NiFe, we 
+observe a linear modulation of Δ𝐻 with Idc. Upon changing the polarity of Idc, we observe a 
+reversed slope of Δ𝐻 vs Idc (see Fig. 5(a) and Supplementary information S6). This confirms 
+the presence of dominant damping-like torque in STO/AlN/NiFe. The slope of linewidth 
+modulation for STO/AlN/NiFe is ~3 times higher than the modulation seen for the Pt/NiFe 
+samples as seen in Fig. 5(a) and 5(c). Due to a much lower resistivity of Pt, it implies that 𝜃ୡୱ  
+for STO/AlN/NiFe will be ~1-2 orders higher compared to Pt/NiFe. However, we are unable to 
+quantify 𝜃ୡୱ beyond its qualitative discussion since an accurate measure of q-2DEG resistivity 
+is paramount for quantifying 𝜃ୡୱ  from this measurement, and we do not know the exact 
+thickness of q-2DEG. Furthermore, as seen in Fig. 5(b), we are unable to detect any linear 
+modulation in linewidth for STO/Al2O3/NiFe. This is due to a significantly higher sheet 
+resistance of the q-2DEG in STO/Al2O3, which results in very little current through its q-2DEG 
+and difficulty in detecting any linear modulation of Δ𝐻 by Idc. Instead, we obtain the 
+dependence of Δ𝐻 vs Idc shown in Fig. 5(b), which can be attributed to the dominance of the 
+heating effect over modulation of damping in the sample. An increase of Ho with increasing Idc 
+magnitude in STO/Al2O3/NiFe samples confirms the heating effect 22. Notably, the Ho does not 
+change with Idc in either STO/AlN/NiFe or Pt/NiFe (see Supplementary information S7). 
+In summary, we report a large charge to spin conversion efficiency 𝜃ୡୱ at room 
+temperature in 2DEG formed at the interface of amorphous AlN and Al2O3 with SrTiO3 
+substrate. Previous reports on spin-charge interconversion have been reported for 2DEG formed 
+in epitaxial thin films at room temperature 15-20 and amorphous oxide/STO substrates in 2DEG 
+at cryogenic temperatures 27, which arises from the spin-momentum locking at Rashba13 
+interfaces lacking inversion symmetry. From angular-dependent ST-FMR measurements in our 
+q-2DEG-NiFe samples, we observe the breaking of two-fold and mirror symmetry of spin-
+torques which may be due to non-uniform microwave current flow in the high impedance q-
+2DEG. Our estimation of 𝜃ୡୱ/t ~ 0.244 nm-1 in STO/AlN and ~ 0.101 nm-1 in STO/Al2O3, 
+comparable to that of epitaxial films is important because of the relative ease with which 
+amorphous films can provide added functionalities in 2DEG applications 4,28-30. Moreover, a 
+large direct current modulation of linewidth for STO/AlN provides direct confirmation of high 
+𝜃ୡୱ in our q-2DEG.  The similarity between our amorphous and crystalline oxide interfaces in 
+terms of charge density and conductivity along with the charge-to-spin conversion may provide 
+insight into the microscopic mechanisms and further optimization of the conversion efficiencies. 
+An ability to efficiently generate spin current from q-2DEG, while simultaneously 
+understanding their angular dependent properties that shed light on the directionality of spin 
+torques, is crucial for their implementation in spintronic device applications.14 
+Supporting Information  
+Supporting Information is available from the Wiley Online Library or from the author. 
+ 
+Acknowledgements 
+Y.F. and H.A. would like to acknowledge JSPS Grant-in-Aid (KAKENHI No. 22K04198), 
+KIOXIA Corporation and Iketani Science and Technology Foundation. X.R.W. acknowledges 
+support from Academic Research Fund Tier 2 (Grant No. MOE-T2EP50220-0005) and Tier 3 
+(Grant No. MOE2018-T3-1-002) from Singapore Ministry of Education.  R. M., S. G. and R. 
+S. R. would like to acknowledge the support from the Ministry of Education, Singapore grant 
+no MOE2019-T2-1-058 (ARC 1/19 RSR). R. M., S. G., R. S. R. and X.R.W. acknowledges 
+support from the National Research Foundation (NRF), Singapore under its 21st Competitive 
+Research Programs (CRP Grant No. NRF-CRP21-2018-0003). 
+ 
+ 
+ 
+Received: ((will be filled in by the editorial staff)) 
+Revised: ((will be filled in by the editorial staff)) 
+Published online: ((will be filled in by the editorial staff))15 
+REFERENCES 
+1. A. Ohtomo and H. Y. Hwang, Nature 427, 423 (2004).   
+https://doi.org/10.1038/nature02308 
+2. K. Han, K. Hu, X. Li, K. Huang, Z. Huang, S. Zeng, D. Qi, C. Ye, J. Yang, H. Xu, A. 
+Ariando, J. Yi, W. Lü, S. Yan. and X. R. Wang, Sci. Adv. 5, eaaw7286 (2019).  
+https://doi.org/10.1126/sciadv.aaw7286 
+3. H. Y. Hwang, Y. Iwasa, M. Kawasaki, B. Keimer, N. Nagaosa, and Y. Tokura, Nat. 
+Mater. 11, 103 (2012). https://doi.org/10.1038/nmat3223 
+4. Y. Z. Chen, F. Trier, T. Wijnands, R. J. Green, N. Gauquelin, N. Egoavil, D. V. 
+Christensen, G. Koster, M. Hujiben, N. Bovet, S. Macke, F. He, R. Sutarto, N. H. 
+Andersen, J. A. Sulpizio, M. Honig, G. E. D. K. Prawiroatmodjo, T. S. Jespersen, S. 
+Linderoth, S. Ilani, J. Verbeeck, G. Van Tendeloo, G. Rijnders, G. A. Sawatzky, and N. 
+Pryds, Nat. Mater. 14, 801 (2012). https://doi.org/10.1038/nmat4303 
+5. W. Niu, Y. Gan, Y. Zhang, D. V. Christensen, M. V. Soosten, X. Wang, Y. Xu, R. 
+Zhang, N. Pryds, and Y. Chen, Appl. Phys. Lett. 111, 021602 (2017).  
+https://doi.org/10.1063/1.4993165 
+6. A. D. Caviglia, M. Gabay, S. Gariglio, N. Reyren, C. Cancellieri, and J. –M. Triscone, 
+Phys. Rev. Lett. 104, 126803 (2010).  https://doi.org/10.1103/PhysRevLett.104.126803 
+7. A. Soumyanarayanan, N. Reyren, A. Fert, and C. Panagopoulos, Nature, 539, 509 
+(2016).  https://doi.org/10.1038/nature19820 
+8. Z. Zhong, A. Toth, and K. Held, Phys. Rev. B 87, 161102(R) (2013). 
+https://doi.org/10.1103/PhysRevB.87.161102 
+9. A. Manchon, H. C. Koo, J. Nitta, S. M. Frolov, and R. A. Duine, Nat. Mater. 14, 871 
+(2015).  https://doi.org/10.1038/nmat4360 
+10. K. Narayanapillai, K. Gopinadhan, X. Qiu, A. Annadi, Ariando, T. Venkatesan, and H. 
+Yang, Appl. Phys. Lett. 105, 162405 (2014). https://doi.org/10.1063/1.489912216 
+11. H. R. Zhang, Y. Zhang, H. Zhang, J. Zhang, X. Shen, X. X. Guan, Y. Z. Chen, R. C. 
+Yu, N. Pryds, Y. S. Chen, B. G. Shen, and J. R. Sun, Phys. Rev. B 96, 195167 (2017). 
+https://doi.org/10.1103/PhysRevB.96.195167 
+12. M. J. Jin, S. Y. Moon, J. Park, V. Modepalli, J. Jo, S. I. Kim, H. C. Koo, B. C. Min, H. 
+W. Lee, S. H. Baek, and J. W. Yoo, Nano Lett. 17, 36 (2017). 
+https://doi.org/10.1021/acs.nanolett.6b03050 
+13. E. Lesne, Y. Fu, S. Oyarzun, J. C. Rojas Sánchez, D. C. Vaz, H. Naganuma, G. Sicoli, 
+J. –P. Attané, M. Jamet, E. Jacquet, J. –M. George, A. Barthélémy, H. Jaffrès, A. Fert, 
+M. Bibes, and L. Vila, Nat. Mater. 15, 1261 (2016). https://doi.org/10.1038/nmat4726 
+14. J. –Y. Chauleau, M. Boselli, S. Gariglio, R. Weil, G. de Loubens, J. –M. Triscone, and 
+M. Viret, Europhys. Lett. 116, 17006 (2016).  https://doi.org/10.1209/0295-
+5075/116/17006 
+15. Y. Wang, R. Ramaswamy, M. Motapothula, K. Narayanapillai, D. Zhu, J. Yu, T. 
+Venkatesan, 
+and 
+H. 
+Yang, 
+Nano 
+Lett. 
+17, 
+7659 
+(2017).   
+https://doi.org/10.1021/acs.nanolett.7b03714 
+16. Q. Song, H. Zhang, T. Su, W. Yuan, Y. Chen, W. Xing, J. Shi, J. Sun, and W. Han, Sci. 
+Adv. 3, e1602312 (2017).  https://doi.org/10.1126/sciadv.1602312 
+17. H. Nakayama, T. Yamamoto, H. An, K. Tsuda, Y. Einaga, and K. Ando, Sci. Adv. 4, 
+eaar3899 (2018). https://doi.org/10.1126/sciadv.aar3899 
+18. J. Zhang, J. Zhang, X. Chi, R. Hao, W. Chen, H. Yang, D. Zhu, Q. Zhang. W.Zhao, H. 
+Zhang, 
+and 
+J. 
+Sun, 
+Phys. 
+Rev 
+B, 
+105, 
+195110 
+(2022).  
+https://doi.org/10.1103/PhysRevB.105.195110 
+19. N. Soya, T. Katase, and K. Ando, Adv. Elec. Mater. 8, 2200232 (2022). 
+https://doi.org/10.1002/aelm.202200232 
+20. H. Yang, B. Zhang, X. Zhang, X. Yan, W. Cai, Y. Zhao, J. Sun, K.L. Wang, D. Zhu, 
+and W. Zhao, Phys. Rev. Appl. 12, 034004 (2019).17 
+https://doi.org/10.1103/PhysRevApplied.12.034004 
+21. L. Liu, C. –F. Pai, Y. Li, H. W. Tseng, D. C. Ralph, and R. A. Burhman, Science 336, 
+555 (2012).  https://doi.org/10.1126/science.1218197 
+22. K. Kondou, R. Yoshimi, A. Tsukazaki, Y. Fukuma, J. Matsuno, K. S. Takahashi, M. 
+Kawasaki, 
+Y. 
+Tokura, 
+and 
+Y. 
+Otani, 
+Nat. 
+Phys. 
+12, 
+1027 
+(2016). 
+https://doi.org/10.1038/nphys3833 
+23. A. R. Mellnik, J. S. Lee, A. Richardella, J. L. Grab, P. J. Mintun, M. H. Fischer, A. 
+Vaezi, A. Manchon, E. –A. Kim, N. Samarth, and D. C. Ralph, Nature 511, 449 (2014).   
+https://doi.org/10.1038/nature13534 
+24.  K. W. Demasius, T. Phung, W. Zhang, B.P. Hughes, S. -H. Yang, A. Kellock, W. Han, 
+A. 
+Pushp, 
+S. 
+S. 
+P. 
+Parkin, 
+Nat. 
+Commun. 
+7, 
+10644 
+(2016). 
+https://doi.org/10.1038/ncomms10644 
+25. U. Shashank, R. Medwal, T. Shibata, R. Nongjai, J. V. Vas, M. Duchamp, K. Asokan, 
+R. S. Rawat, H. Asada, S. Gupta, and Y. Fukuma, Adv. Quantum Technol. 4, 2000112 
+(2021). https://doi.org/10.1002/qute.202000112 
+26. U. Shashank, R. Medwal, Y. Nakamura, J. R. Mohan, R. Nongjai, A.  Kandasami, R. S. 
+Rawat, H. Asada, S. Gupta, and Y. Fukuma, Appl. Phys. Lett. 118, 252406 (2021). 
+https://doi.org/10.1063/5.0054779 
+27. P. Noël, F. Trier, L. M. V. Arche, J. Bréhin, D. C. Vaz, V. Garcia, S. Fusil, A. 
+Barthélémy, L. Vila, M. Bibes, and J. –P. Attané, Nature 580, 483 (2020). 
+https://doi.org/10.1038/s41586-020-2197-9 
+28. Y. Chen, N. Pryds, J. E. Kleibeuker, G. Koster, J. Sun, E. Stamate, B. Shen, G. Rijnders, 
+and S. Linderoth, Nano Lett. 11, 3774 (2011). https://doi.org/10.1021/nl201821j 
+29. Z. Q. Liu, C. J. Li, W. M. Lü, X. H. Huang, Z. Huang, S.W. Zeng, X. P. Qiu, L. S. 
+Huang, A. Annadi, J. S. Chen, J. M. D. Coey, T. Venkatesan, and Ariando, Phys. Rev. 
+X 3, 0210210 (2013), https://doi.org/10.1103/PhysRevX.3.02101018 
+30. A. Annadi, Q. Zhang, X. R. Wang, N. Tuzla, K. Gopinadhan, W. M. Lü, A. R. 
+Barman, Z. Q. Liu, A. Srivastava, S. Saha, Y. L. Zhao, S. W. Zeng, S. Dhar, E. 
+Olsson, B. Gu, S. Yunoki, S. Maekawa, H. Hilgenkamp, T. Venkatesan, and Ariando, 
+Nat. Commun. 4, 1838 (2013). https://doi.org/10.1038/ncomms2804 
+31. J. Sklenar, W. Zhang, M. B. Jungfleisch, H. Saglam, S. Grudichak, W. Jiang, J. E. 
+Pearson, J. B. Ketterson, and A. Hoffman, Phys. Rev. B 95, 224431 (2017). 
+https://doi.org/10.1103/PhysRevB.95.224431 
+32. M. 
+Harder, 
+Y. 
+Gui, 
+and 
+C-M. 
+Hu, 
+Phys. 
+Rep. 
+661, 
+1 
+(2016).  
+https://doi.org/10.1016/j.physrep.2016.10.002 
+33. R. Medwal, A. Deka, J.V. Vas, M. Duchamp, H. Asada, S. Gupta, Y. Fukuma, and R.S. 
+Rawat, Appl. Phys. Lett. 119, 162403 (2021). https://doi.org/10.1063/5.0064653 
+34. A. Deka, B. Rana, R. Anami, K. Miura, H. Takahashi, Y. Otani, and Y. Fukuma. Phys. 
+Rev. Res. 4, 023139, (2022). https://doi.org/10.1103/PhysRevResearch.4.023139 
+35. L. Liu, T. Moriyama, D. C. Ralph, and R. A. Burhman, Phys. Rev. Lett. 106, 036601 
+(2011). https://doi.org/10.1103/PhysRevLett.106.036601 
+36. D. MacNeill, G. M. Stiehl, M. H. D. Guimaraes, R. A. Burhman, J. Park, and D. C. 
+Ralph, Nat. Phys. 13, 300 (2017). https://doi.org/10.1038/nphys3933  
+37. S. Gupta, R. Medwal, D. Kodama, K. Kondou, Y. Otani, and Y. Fukuma, Appl. Phys. 
+Lett. 110, 022404 (2017). https://doi.org/10.1063/1.4973704 
+38. R. Bansal, G. Nirala, A. Kumar, S. Chaudhary, and P. K. Muduli, SPIN 8, 1850018 
+(2018). https://doi.org/10.1142/S201032471850018219 
+Figure Captions: 
+Figure  1. (a) Schematic of q-2DEG formed inside the STO substrate at the interface with AlN 
+or Al2O3. Upon deposition of AlN or Al2O3, the O2- diffuses outwards from the TiO2-terminated 
+STO, resulting in formation of a oxygen-vacancy induced quasi-2DEG (q-2DEG) near the 
+surface of STO.The right panel additionally shows the multilayer structures and different 
+parameters used in the measurement. (b) Schematic of ST-FMR set-up along with an optical 
+image of the device. (c) ST-FMR spectra Vmix, together with fitted symmetric and antisymmetric 
+components, which were obtained at f = 4 GHz for STO/AlN/NiFe and STO/Al2O3/NiFe. 
+ 
+Figure  2. Frequency-dependent ST-FMR spectra, for f = 3.5-5 GHz, as a function of Hext, for 
+(a) STO/AlN/NiFe and (b) STO/Al2O3/NiFe.  
+ 
+Figure 3. Angular dependence of symmetric (Sym) and antisymmetric (Asym) components in 
+ST-FMR spectra obtained as a function of 𝜙 for (a) STO/AlN/NiFe, and (c) STO/Al2O3/NiFe 
+for f = 4.0 GHz with solid lines (black and red) fit by Eq. (3) and Eq. (4), respectively. Weight 
+(in %) of sin2𝜙cos𝜙 and sin2𝜙sin𝜙 for Symmetric (Sym) and  sin2𝜙cos𝜙, sin2𝜙sin𝜙,  sin2𝜙 
+for Antisymmetric (Asym) components are obtained as a function of f for (b) STO/AlN/NiFe 
+and (d) STO/Al2O3/NiFe. 
+ 
+Figure  4. Thickness normalized charge to spin conversion efficiency 𝜃ୡୱ/𝑡 obtained from Eq. 
+(2) and Eq. (5) as a function of f for STO/AlN/NiFe and STO/Al2O3/NiFe. 
+ 
+Figure 5. DC-biased ST-FMR measurements for (a) STO/AlN/NiFe (b) STO/Al2O3/NiFe, and 
+(c) Pt/NiFe showing  μ୭𝛥𝐻 as a function of Idc. The red and black lines depict the linear fitting 
+in (a), (c) and non-linear curve in (b).20 
+  
+ 
+ 
+ 
+Figure  1. U. Shashank, A. Deka et. al.21 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure  2. U. Shashank, A. Deka et. al.22 
+ 
+ 
+ 
+ 
+ 
+Figure  3. U. Shashank, A. Deka et. al.23 
+ 
+ 
+ 
+Figure  4. U. Shashank, A. Deka et. al.24 
+ 
+ 
+ 
+ 
+Figure  5. U. Shashank, A. Deka et. al.

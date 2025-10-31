@@ -1,0 +1,1121 @@
+Quantum valence bond ice theory for proton-driven quantum spin-dipole liquids
+Masahiko G. Yamada1, 2, 3, ∗and Yasuhiro Tada2, †
+1Department of Materials Engineering Science, Osaka University, Toyonaka 560-8531, Japan
+2Institute for Solid State Physics, University of Tokyo, Kashiwa 277-8581, Japan
+3Department of Physics, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139, USA
+(Dated: October 21, 2021)
+We present a theory of a hybrid quantum liquid state, quantum spin-dipole liquid (QSDL),
+in a hydrogen-bonded electron system, by combining a quantum proton ice and Anderson’s
+resonating valence bond spin liquid theory, motivated by the recent experimental discovery
+of a quantum spin liquid with proton ﬂuctuations in κ-H3(Cat-EDT-TTF)2 (a.k.a.
+H-Cat).
+In our theory, an electron spin liquid and a proton dipole liquid are realized simultaneously
+in the ground state called quantum valence bond ice.
+In this state, neither of them can be
+established independently of the other.
+Analytical and numerical calculations reveal that this
+state has a large entanglement entropy between spins and dipoles, which is far beyond the
+(crude) Born-Oppenheimer approximation. We also examine the stability of QSDL with respect
+to perturbations and discuss implications for experiments in H-Cat and its deuterated analog D-Cat.
+PhySH: Frustrated magnetism, Spin ice, Spin liquid, Quantum spin liquid, Organic compounds
+I.
+INTRODUCTION
+Hydrogen bonds occupy a unique position in con-
+densed matter physics, where we can expect a huge
+quantum paraelectricity due to its lightness.
+Most
+hydrogen-bonded systems so far were treated within the
+(crude) Born-Oppenheimer approximation, where we ig-
+nore quantum entanglement between atomic motion and
+electronic states.
+However, recently it was recognized
+that in many hydrogen-bonded materials quantum na-
+ture of protons plays an essential role and even aﬀects
+basic properties of the system1–6. Indeed, protons can
+tunnel quantum mechanically between two stable posi-
+tions of the O–H· · · O bonding and furthermore the hy-
+drogen bonds are subject to the ice rule due to the frus-
+tration in a wide range of systems, including ferroelectric
+KH2PO44,7, hexagonal water ice5,8, and molecular crys-
+tals6,9,10.
+Recently, a new member of hydrogen-bonded mate-
+rials, purely organic κ-H3(Cat-EDT-TTF)2 (called H-
+Cat), was synthesized11–19.
+H-Cat has a quasi-two-
+dimensional (2D) triangular lattice structure of dimers
+with moderate interlayer coupling, and each layer is con-
+nected by hydrogen bonds which also form a triangular
+lattice. Experimentally, protons are unfrozen down to the
+lowest temperature and the observed quantum paraelec-
+tricity can be attributed to proton tunneling16. In stark
+contrast to the other hydrogen-bonded materials, H-Cat
+is shown to be a dimer Mott insulator, where we can
+expect strong electron correlation. Moreover, in H-Cat,
+spins delocalized over the π-conjugated orbital are also
+ﬂuctuating without any magnetic order below a temper-
+ature scale close to that of the quantum proton motion.
+This implies that a quantum liquid state of unknown type
+is realized in H-Cat, where both protons and electrons are
+quantum mechanically disordered simultaneously and are
+strongly entangled with each other, which makes this ma-
+terial far beyond the (crude) Born-Oppenheimer approx-
+imation. On the other hand, the deuterated counterpart
+D-Cat exhibits a charge density wave (CDW) state below
+185 K, where protons and electrons together show a cou-
+pled charge order, indicating strong Coulomb interaction
+between them11,13,16. Thus, such a large isotope eﬀect
+strongly suggests that the proton tunneling is responsi-
+ble for the possible hybrid quantum liquid state in H-Cat.
+However, it is unclear why proton and spin ﬂuctuations
+can coexist in a quantum liquid state.
+The triangular lattice of H-Cat is a prototypical ex-
+ample of frustrated lattices and such a frustrated lattice
+can impose constraints on proton and spin conﬁgurations,
+leading to macroscopic degeneracy at a classical level.
+Quantum ﬂuctuations could potentially realize a quan-
+tum liquid state out of the degenerate classical states as
+originally proposed in Anderson’s theory of the resonat-
+ing valence bond (RVB) state20–22. The basic mechanism
+of realizing a quantum liquid was later employed in the
+theory of quantum spin/water ice where the RVB state is
+exactly realized by tuning a system into the exactly solv-
+able Rokhsar-Kivelson (RK) point21–26. This observation
+would imply that both the electron spin liquid and the
+proton dipole liquid can be treated in a uniﬁed manner
+to describe a spin-dipole coupled quantum liquid.
+In this paper, motivated by the experimental discovery
+of H-Cat, we present a theory of a hybrid quantum liquid
+state, quantum spin-dipole liquid (QSDL), in hydrogen-
+bonded electron systems by combining the concepts of
+Anderson’s RVB state of electron spins and a quantum
+ice of protons. Although a hybrid quantum spin liquid
+itself is discussed in the literature27–33, including spin-
+charge coupled purely electron systems without hydrogen
+bonds34–38, its entangled nature has never been discussed
+in detail. In our theory, the RVB state is extended to de-
+scribe the entanglement between spins and dipoles. We
+give a simple concrete description of the QSDL based on
+a minimal model which incorporates three key features of
+the QSDL, i.e. macroscopic classical degeneracy, quan-
+arXiv:1903.03567v5  [cond-mat.str-el]  18 Sep 20202
+tum proton tunneling, and electron correlations.
+The
+resulting QSDL is named quantum valence bond ice, and
+the property of this state will be discussed in detail from
+analytical and numerical perspectives. Though this uni-
+ﬁed theory does not explain everything observed in H-
+Cat, especially the absence of a spin gap16, we can un-
+derstand some basic diﬀerence between H-Cat and D-Cat
+based on a universal nature of a quantum liquid. Thus,
+while the model itself is idealized to some extent, it can
+give a clear physical picture of the state of the state ob-
+served in H-Cat.
+II.
+MODEL
+Since the primary purpose of the present study is to
+present a ﬁrm basis for hybrid spin liquids, it is desirable
+to introduce an appropriate model which is inspired by
+the candidate material H/D-Cat. First, we focus on the
+electron sector of H/D-Cat where there are two inequiva-
+lent dimers (four sites) in the unit cell, and thus consider
+an idealized model where tetramers are introduced as a
+fundamental unit of the system.
+The tetramer would
+be regarded as a pair of dimers, and therefore the model
+can describe not only QSDL relevant to an H-bonded sys-
+tem but also a CDW state corresponding to a D-bonded
+system on an equal footing, as seen in H/D-Cat. Our
+Hamiltonian contains both holes and protons, and is de-
+ﬁned by
+H = Hel + Hpro + Hel–pro,
+(1)
+Hel = tel
+X
+⊠
+X
+i,j∈⊠
+c†
+iscjs + Jel
+X
+⊠
+X
+i,j∈⊠
+Si · Sj,
+(2)
+Hpro = tpro
+X
+⟨ij⟩
+σx
+ij + Jpro
+X
+⟨⟨ij⟩,⟨kl⟩⟩
+σz
+ijσz
+kl,
+(3)
+Hel–pro = g
+X
+⟨ij⟩
+(nj −ni)σz
+ij.
+(4)
+The holes are described by the t–J model where dou-
+ble occupancy is prohibited by the strong onsite inter-
+action39: a real tel is a hole hopping parameter inside a
+tetrahedron denoted by ⊠, and Jel > 0 is a spin-spin ex-
+change interaction between nearest-neighbor (NN) holes
+[see Fig. 1]. cjs is an annihilation operator of a hole at
+the jth site with a spin s, and Sj are spin-1/2 opera-
+tors deﬁned for this hole. The summation over s =↑, ↓
+is implied. σij are Pauli matrices deﬁned on each hy-
+drogen bond ⟨ij⟩connecting the NN tetrahedra, and two
+eigenstates with eigenvalues ±1 of the σz
+ij operator corre-
+spond to the stable positions of a proton on the hydrogen
+bond ⟨ij⟩16,19. The tetrahedra sit on vertices of a dia-
+mond lattice and σz
+ij is deﬁned such that σz
+ij = +1 for
+the sites i(j) belonging to the A(B)-sublattice of the dia-
+mond lattice corresponds to a proton position away from
+the A-sublattice site i. A real tpro represents quantum
+tunneling between the two positions, and Jpro > 0 is a
+Coulomb repulsion between the protons on a NN pair of
+(a)
+(b)
+FIG. 1. (a) Tetrahedron of electron sites. (b) Diamond lattice
+network of proton bonds. Blue dashed lines represent proton
+sites and white circles represent electron sites.
+In the fol-
+lowing, yellow ellipses represent valence bonds of holes. Blue
+solid lines represent proton interactions and orange dotted
+lines represent electron/hole hoppings. A red circle represent
+the electron-proton interaction. For later purposes, an addi-
+tional proton-proton interaction J′
+pro and an intertetrahedron
+hole hopping t′
+el are also shown.
+bonds ⟨⟨ij⟩, ⟨kl⟩⟩. g > 0 is a Coulomb repulsion between
+the hole and the proton. We will later extend the model
+Eq. (1) and discuss eﬀects of an additional proton-proton
+interaction and intertetrahedron hole hopping.
+To be concrete, we consider a range of model parame-
+ters by referring to H/D-Cat. Since the dimer Mott in-
+sulator H-Cat is a one-hole-ﬁlled system11,13,16,18,19, we
+consider two-hole ﬁlling for each tetrahedron which is a
+counterpart with the same ﬁlling in our model. Essen-
+tially the same argument can also be applied for a two-
+electron ﬁlling system. While Hel has a form of the t–J
+model, Hpro is a transverse-ﬁeld Ising model on the frus-
+trated pyrochlore lattice, and related models have been
+investigated as a model for quantum spin liquids21–26. g
+is supposed to be very large, i.e. g ∼O(103–4) K, because
+it comes from strong Coulomb repulsion.
+Jpro is also
+large enough, i.e. Jpro ∼O(100) K, which is taken from
+the antiferroelectric transition temperature in D-Cat. In
+addition, we suppose |tpro| ≪Jpro and |tel| ≪g by re-
+ferring to the parameters in H-Cat where tpro ∼1–10 K
+and tel ∼10–100 K11,16,18,19,40, which allows a perturba-
+tion theory with respect to tpro. The magnetic coupling
+is assumed to be Jel ∼10–100 K taken from the value for
+H-Cat, and one can focus only on the singlet sector of a
+tetrahedron when the temperature is well below Jel. This
+means that we consider a spin gapped state for simplic-
+ity, but our theory is applicable even to the triplet sector
+just by replacing singlets by triplets, and thus our theory
+can be extended to the case where a spin gap is zero. In
+addition, a gauge mean-ﬁeld theory is known to describe
+a fermionic excitation from an ice state41, which would
+potentially describe the observed exotic excitations16.3
+III.
+ANALYSIS OF GROUND STATE
+A.
+QSDL as a U(1) quantum liquid
+In this section, the ground state of the Hamiltonian
+Eq. (1) is discussed by mapping it to a quantum ver-
+tex model based on a perturbation theory. In the case
+of tpro = 0, the Hamiltonian is exactly solvable and the
+ground states are degenerate for all proton conﬁgurations
+obeying the ice rule. In the limit of tel/g →0, the proton
+conﬁguration completely couples to the valence bonds of
+hole pairs, and the position of the valence bond is ﬁxed
+inside each tetrahedron in the ground states. Since the
+valence bonds also form an ice conﬁguration, this state
+may be called classical valence bond ice. This basically
+holds true even for a nonzero tel where one can diagonal-
+ize the electron Hamiltonian of each tetrahedron in the
+valence bond basis and the ground state of a tetrahedron
+will be a dressed valence bond state with a ﬁnite excita-
+tion gap ∼g. Thus, every degenerate ground state of the
+total system at tel ̸= 0 is adiabatically connected from
+that at tel = 0.
+We now introduce a quantum tunneling of protons
+tpro ̸= 0, which will lift the macroscopic degeneracy of the
+classical ground states in the same way as in the quan-
+tum spin ice21–26. We can treat the eﬀects of tpro when
+|tpro|/Jpro ≪1 by using the degenerate perturbation the-
+ory. Though essentially the same argument is true for a
+moderate tel, we assume the condition |tel|/g ≪1, which
+makes a physical picture clear. Then, if a proton moves
+from its ground state position to break the ice rule, a
+hole in the nearby tetrahedron will be pushed away from
+the proton because of the repulsive interaction g between
+them. In this way, the proton motion is always accom-
+panied by the hole hopping inside a tetrahedron and vice
+versa.
+We note that such a charge-correlated hopping
+leads to eﬀective coupling between spins and protons de-
+spite the absence of an explicit spin-orbit interaction. In
+this sense, spin ﬂuctuations and proton ﬂuctuations are
+tightly connected with each other, which will eventually
+lead to the QSDL state. A nontrivial contribution ap-
+pears from the 6th-order perturbation in tpro/Jpro. This
+process results in the following eﬀective Hamiltonian in
+addition to a constant energy shift of the degenerate
+ground states,
+Heﬀ= −K
+X
+plaquette
+[|⟲⟩⟨⟳| + |⟳⟩⟨⟲|],
+(5)
+where the ﬂipping operator is given by the prod-
+uct of the hole and proton operators along a hexag-
+onal plaquette loop as shown in Fig. 2:
+|⟲⟩⟨⟳| =
+c†
+1σ+
+12c2c†
+3σ−
+34c4 · · · c†
+11σ−
+11,12c12 with σ± = (σx ± iσy)/2
+in the lowest order approximation for tel/g [see Fig. 2 for
+the deﬁnition of the site numbers]. The sum runs over
+the hexagonal plaquettes of the diamond lattice, and the
+coeﬃcient K > 0 is estimated to be O(t6
+pro/J5
+pro) with a
+prefactor O(t6
+el/g6) when |tel| is small (see Appendix A
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+1
+FIG. 2. The 6th-order perturbation process in tpro between
+the ﬂippable ice states. Blue dashed arrows represent proton
+conﬁguration and the corresponding valence bond conﬁgura-
+tions are also shown. All arrows obey the ice rule.
+for details).
+The eﬀective Hamiltonian Eq. (5) is formally equiv-
+alent to the quantum ice model, which has been exten-
+sively studied in the context of the quantum spin ice21–26.
+We stress, however, that the physical constituents of the
+low energy degrees of freedom |⟲⟩, |⟳⟩are very diﬀer-
+ent from those in the quantum spin ice; they are spin-
+dipole coupled degrees of freedom in the former, while
+solely spins in the latter.
+The ground state of the ef-
+fective Hamiltonian is known to be the quantum liquid
+state, which is described by an emergent compact U(1)
+electromagnetic ﬁeld which is deconﬁned in 3 + 1 di-
+mensions. Thus, we have theoretically established that
+the quantum proton motion can indeed drive the system
+into a QSDL, namely the quantum valence bond ice, and
+form a stable three-dimensional (3D) phase. It is stressed
+that both spins and protons are unfrozen simultaneously,
+forming a hybrid liquid state.
+The coupled spins and
+dipoles behave as gapless “photons” of the emergent U(1)
+gauge theory, while local proton excitations which break
+the ice rule with an energy gap ∼Jpro are regarded as
+“monopoles”21–26.
+One of the most characteristic features of the QSDL
+is a large entanglement between protons and holes. The
+corresponding entanglement entropy deﬁned by SEE =
+−Trel ρel log ρel with ρel = Trpro |Ψ⟩⟨Ψ| for the ground
+state |Ψ⟩can provide essential information of its entan-
+glement structure. Now one can estimate that SEE ∼
+log(the number of ﬂippable ice states) = O(Ntot), where
+Ntot = Npro +Nel and Npro/el is the total number of pro-
+ton bonds/electron sites. This is easily understood for
+example based on the explicit calculation of SEE for the
+Rokhsar-Kivelson state42 (see Appendix B). Therefore,
+the QSDL has an entanglement entropy with a volume
+law in contrast to the area law for a real space bipar-
+tition43,44. Such a large entanglement between protons
+and holes is an intrinsic nature of the QSDL, which is far
+beyond the (crude) Born-Oppenheimer approximation.4
+AFE/VBS
+QSDL
+𝑱′𝒑𝒓𝒐
+𝒕𝒑𝒓𝒐
+0
+AFE/VBS
+QSDL
+small 𝑆𝐸𝐸
+large 𝑆𝐸𝐸
+𝑡𝑝𝑟𝑜/𝐽𝑝𝑟𝑜
+𝐽′𝑝𝑟𝑜/10−3𝐽𝑝𝑟𝑜
+(a)
+(b)
+polarized proton
+FIG. 3. (a) Schematic phase diagram for the 3D thermody-
+namic system in the tpro–J′
+pro plane. The entanglement en-
+tropy SEE is small in the AFE/VBS phase, while it is large ex-
+hibiting the clear volume law SEE = O(volume) in the QSDL
+phase. “Polarized proton” in the large tpro region means that
+protons are aligning in the direction of the “transverse ﬁeld”
+tpro. (b) Entanglement entropy for the ﬁnite size 2D system
+Eq. (10) calculated by the exact diagonalization. The param-
+eters used are (tel, g, t′
+el) = (0.3, 2.0, 0.0) in units of Jpro = 1.0.
+B.
+Stability of QSDL
+Up to here, we have been based on the idealized model
+Eq. (1) where a minimal number of terms are included
+to describe the QSDL. However, we can consider addi-
+tional terms in general, and considerations on such terms
+are important to discuss the relevance of our model to
+real materials. Here, we try to study the stability of the
+QSDL by introducing two types of perturbations into the
+model Eq. (1); (i) an additional interaction between pro-
+tons which favors a classical order by lifting the macro-
+scopic degeneracy of protons, and (ii) an intertetrahe-
+dron hole hopping which may also lift the macroscopic
+degeneracy of electrons. The following discussions will
+be supplemented with numerical calculations later.
+First, we examine eﬀects of additional proton inter-
+actions such as J′
+pro
+P σz
+ijσz
+kl shown in Fig. 1(b), and
+discuss implications for the qualitative diﬀerence in X-
+Cat (X = H, D). The additional interaction lifts the
+macroscopic degeneracy of the classical ground states,
+and an inﬁnitesimal J′
+pro will lead to an ordered state
+when tpro = 0 by the order-by-disorder mechanism. In-
+deed, classical (tpro = 0) spin ice models with additional
+interactions have been extensively studied, where several
+ordered states are stabilized depending on types of the
+additional interactions45,46.
+In the present system, we
+consider J′
+pro interaction which favors an antiferroelec-
+tric (AFE) state of protons, but it competes with the
+quantum tunneling tpro9,22,41. Based on these observa-
+tions, one can draw a schematic phase diagram of the
+perturbed model with both J′
+pro and tpro as shown in
+Fig. 3(a), where the QSDL with a large entanglement
+entropy remains stable for J′
+pro ≪K, while the AFE
+state with a small entanglement is favored for J′
+pro ≫K.
+Note that, because g ≫|tel|, holes simultaneously show
+a valence bond solid (VBS) state corresponding to the
+proton AFE state when J′
+pro ≫K. Experimentally, an H
+bond will have a larger tpro and hence a larger K than
+a D bond. Therefore, an H-bonded system can exhibits
+a QSDL, while a D-bonded system shows a classically
+ordered AFE/VBS state.
+This is a generic feature of
+proton-driven quantum liquids and therefore may be rel-
+evant to the experimentally observed isotope eﬀect in X-
+Cat, where H-Cat is a QSDL while D-Cat exhibits an
+AFE CDW order11,13,16. The observed isotope eﬀect can
+be attributed to this competition. Note that, according
+to the previous studies of the pyrochlore spin liquids47,48,
+a suﬃciently large tpro will lead to the trivial polarized
+state of protons where they are simply aligned in the
+direction of the “transverse ﬁeld”, which is nothing but
+the proton tunneling tpro. In this state, the proton sector
+will be decoupled from the electron sector, resulting in
+vanishing entanglement between them. This state is not
+a quantum liquid state, although the protons are ﬂuc-
+tuating in the σz basis. We observed reduction of the
+entanglement entropy for tpro/Jpro ≳1 in our numerical
+calculations of the ﬁnite size system (not shown). How-
+ever, the polarized proton state seems irrelevant to H-Cat
+since tpro is estimated to be 1-10 K and tpro ≪Jpro is
+easily satisﬁed16.
+Next, we consider the intertetrahedron hole hopping
+along the hydrogen bonds, t′
+el
+P
+⟨ij⟩c†
+iσcjσ as shown in
+Fig. 1(b), within a perturbative regime |t′
+el| ≪|tel|. The
+intertetrahedron hole hopping will induce several possible
+interactions between the valence bonds on neighboring
+tetrahedra. To see this, we consider an extended Hub-
+bard model of holes from which the t–J model in Eq. (1)
+is derived. The Hubbard Hamiltonian for holes is
+˜Hel = Ht + HU,
+(6)
+Ht = tel
+X
+⊠
+X
+i,j∈⊠
+c†
+iscjs + t′
+el
+X
+⟨ij⟩
+c†
+iscjs,
+(7)
+HU = U
+X
+i
+ni↑ni↓+ V
+X
+⊠
+X
+i,j∈⊠
+ninj,
+(8)
+where t′
+el is an intertetrahedron hopping along a hydrogen
+bond ⟨ij⟩. U > 0 is an onsite interaction and V (< U) is
+an intersite interaction within each tetrahedron.
+The 2nd order perturbation in Ht gives rise to several
+terms,
+Jel[Si · Sj −ninj/4]
+with
+Jel = 2t2
+el/(U −V ),
+J′
+el[Si · Sj −ninj/4]
+with
+J′
+el = 2t′2
+el/U,
+and
+J′′
+el[ni(nj −1) + (ni −1)nj]
+with
+J′′
+el = t′2
+el/V .
+The
+ﬁrst term is an exchange interaction inside each tetrahe-
+dron, which is included in Eq. (1), while the other two
+terms are new intertetrahedron interactions. Suﬃciently
+large U ≫|tel| and V ≫|t′
+el| lead to constraints on
+possible hole ﬁlling so that ni ≤1 for all sites i, and
+P
+i∈⊠ni = 2 for each tetrahedron assuming quarter
+ﬁlling of holes. The resulting state can be considered as
+a “tetramer Mott insulator”, as expected.5
+The perturbed Hamiltonian is now reduced to
+˜Hel ≃tel
+X
+⊠
+X
+i,j∈⊠
+c†
+iscjs + Jel
+X
+⊠
+X
+i,j∈⊠
+[Si · Sj −ninj/4]
++ J′
+el
+X
+⟨ij⟩
+[Si · Sj −ninj/4]
++ J′′
+el
+X
+⟨ij⟩
+[ni(nj −1) + (ni −1)nj].
+(9)
+In the following, we only consider a singlet-pair state of
+holes on each tetrahedron since there is an energy gap
+∼Jel ≫J′
+el, J′′
+el between singlet and triplet states. We
+note that −(Jel/4) P
+i,j∈⊠ninj terms do not matter in
+the present system where the total fermion number inside
+a tetrahedron ⊠is ﬁxed.
+The J′
+el term is nonzero only when both of the two sites
+connected by the hydrogen bond ⟨i, j⟩are occupied, and
+similarly the J′′
+el term is nonzero only when one of the two
+sites connected by the hydrogen bond is occupied. Eﬀects
+of the J′
+el term will be strongly suppressed by a large in-
+teraction g ≫J′
+el between holes and protons included in
+the original model, because of the energy cost due to g
+for a conﬁguration favored by J′
+el. On the other hand, the
+J′′
+el term eﬀectively adds to the interaction g, because the
+J′′
+el-term also favors common local charge conﬁgurations
+as the g term does. Therefore, these two potential in-
+teractions between singlet pairs on the nearest-neighbor
+tetrahedra could eﬀectively be absorbed into the interac-
+tion g, or equivalently the intratetrahedron hopping tel.
+Then, it is concluded that thanks to the stability of the
+QSDL for a wide range of tel/g, the QSDL is also stable
+with respect to the intertetrahedron hopping t′
+el. This be-
+havior is numerically conﬁrmed by exact diagonalization
+in the next section.
+C.
+Numerical calculations
+The above discussions on the stability can be supple-
+mented by numerical calculations using exact diagonal-
+ization for a ﬁnite-size system with perturbations, such
+as the J′
+pro term. To this end, we consider a 2D version of
+our model Eq. (1) which consists of 8 proton bonds and
+16 electron sites (8 holes) with a periodic boundary con-
+dition. Although the system size is very small, this model
+can reproduce much of the main results in the previous
+sections and thus supports the above discussions. The
+Hamiltonian used in the numerical exact diagonalization
+is written as
+Htot = H + Hpert,
+(10)
+where H is a two-dimensional (2D) version of Eq. (1),
+in which tetrahedra are located on vertices of a square
+lattice as shown in Fig. 4. Hpert describes perturbations,
+Hpert = J′
+pro
+X
+⟨ij⟩,⟨kl⟩
+ηij
+klσz
+ijσz
+kl + J′
+el
+X
+⟨ij⟩
+[Si · Sj −ninj/4]
++ J′′
+el
+X
+⟨ij⟩
+[ni(nj −1) + (ni −1)nj].
+(11)
+The J′
+pro term represents an additional interaction be-
+tween protons with properly chosen ηij
+kl = ±1 which fa-
+vors an antiferroelectric state, and the J′
+el, J′′
+el terms are
+intertetrahedron interactions between holes taken from
+Eq. (9). Note that for a large g, holes simultaneously
+exhibit the valence bond solid state out of the classical
+valence bond ice manifold corresponding to the proton
+AFE state. In the present ﬁnite size system, there are
+(a)
+(b)
+FIG. 4. (a) 2D lattice model used for the exact diagonaliza-
+tion. Blue dashed lines represent hydrogen bonds and white
+circles are electron sites. The interaction Jpro (blue) leads to
+the 2 in 2 out ice rule, while an additional interaction J′
+pro
+(green) favors an AFE state.
+(b) Proton AFE state (blue
+dashed arrows) and corresponding hole VBS state (yellow el-
+lipses) stabilized by J′
+pro.
+18 ice states at tpro = J′
+pro = J′
+el = J′′
+el = 0, and 16 are
+connected by the 2nd order perturbation in tpro. The 2nd
+order tunneling is possible because the linear system size
+for one direction is 2 and the periodic boundary condi-
+tion has been imposed. Furthermore, the conservation
+of the total spin for each tetrahedron, [H, S⊠] = 0 for
+S⊠= P
+i∈⊠Si, greatly reduces the computational cost
+for the unperturbed Hamiltonian H. Taking this advan-
+tage, we focus only on the subspace where S⊠= 0 for ev-
+ery tetrahedron also for the perturbed Hamiltonian Htot,
+since there is an energy gap ∼Jel between the S⊠≡0
+sector and other sectors in H. From now on, we omit Jel
+because the triplet sectors of the original Hilbert space
+are all projected out.
+When J′
+pro is moderately strong, the 2D model shows
+an AFE state of the protons and the holes simultane-
+ously form a VBS state for a large g. This state will have
+a corresponding long range order in the thermodynamic
+limit. On the other hand, for a small J′
+pro, it can exhibit
+a QSDL-like state which is a superposition of many ﬂip-
+pable ice states. Indeed, we ﬁnd that out of the total
+N = 18 ice states there are Nﬂip = 16 ice states, which6
+are connected by the lowest order perturbation in tpro.
+The QSDL-like state is essentially given by a superposi-
+tion of these 16 reduced ice states. The AFE/VBS state
+is clearly distinguished from the QSDL-like state even
+in the present ﬁnite-size system, which is well-captured
+by the entanglement entropy SEE(tpro, J′
+pro) between pro-
+tons and holes. The entanglement entropy is given by
+SEE = −Trel ρel log ρel
+= −
+X
+n
+λn log λn,
+(12)
+where {λn} are the squared singular values of the
+Schmidt decomposition of the ground state wavefunction
+|Ψ⟩into the proton and electron subspaces,
+|Ψ⟩=
+X
+n
+p
+λn |pron⟩⊗|eln⟩.
+(13)
+The results are shown in Fig. 3(b) where the two ground
+states, AFE/VBS and QSDL states, are well character-
+ized by SEE. The saturated value SEE ≃log 16 for a large
+tpro means that the ground state is essentially given by
+the superposition of 16 ﬂippable ice states with a nearly
+equal weight, and the ground state can be considered as
+a QSDL in this sense.
+Note that the QSDL is a sta-
+ble phase extended in the parameter space, although it
+is parametrically small as expected from other quantum
+ice systems. In the limit of tpro →0, the ground state
+is given by a superposition of simple AFE/VBS states
+with fourfold degeneracy due to the translational and ro-
+tational symmetries. Therefore, SEE(tpro →0) →log 4
+for such a state, while SEE →log Nﬂip = log 16 deeply in-
+side the QSDL region with a moderately large tpro. This
+qualitatively reproduces the phase diagram in Fig. 3(a)
+proposed to describe the diﬀerence between H-Cat and
+D-Cat.
+In the 3D thermodynamic system, Nﬂip, N ∼eNtot
+and the present QSDL-like state will be replaced by a
+true quantum liquid state where a macroscopic number
+of ice states are involved, resulting in a large entangle-
+ment entropy, SEE ∼Ntot. Note that similar crossover
+behaviors in the ﬁnite size system can also be seen in cor-
+relation functions, and those quantities will characterize
+the corresponding phase transition in the thermodynamic
+limit. We can also discuss the eﬀects of an intertetra-
+hedron hopping t′
+el, and numerical results suggest that
+induced intertetrahedron valence bond interactions have
+only small eﬀects on QSDL if |t′
+el| ≪|tel|, and QSDL is
+parametrically stable. Detailed studies on the stability of
+QSDL would require more elaborate investigations, such
+as cluster-based calculations49, and are left for a future
+study.
+Similar characterization is also possible by correlation
+functions corresponding to the long-range order of the
+AFE and VBS. We consider the following two order pa-
+rameters,
+OAFE =
+1
+Npro
+X
+⟨ij⟩
+ηijσz
+ij,
+(14)
+OVBS =
+4
+Nel
+X
+⊠
+|VBS⊠⟩⟨VBS⊠| ,
+(15)
+where ηij = ±1 characterizes the proton AFE conﬁgura-
+tion and |VBS⊠⟩is the VBS conﬁguration of the holes on
+a tetrahedron corresponding to the proton AFE shown
+in 4(b).
+The calculation results are shown in Fig. 5.
+Note that the AFE correlation function can be eval-
+𝑡𝑝𝑟𝑜/𝐽𝑝𝑟𝑜
+𝐽′𝑝𝑟𝑜/10−3𝐽𝑝𝑟𝑜
+proton 
+AFE
+QSDL
+electron 
+VBS
+QSDL
+𝑡𝑝𝑟𝑜/𝐽𝑝𝑟𝑜
+(a)
+(b)
+FIG. 5. Correlation functions (a) ⟨O2
+AFE⟩for protons and (b)
+⟨O2
+VBS⟩for holes. The parameters are same as used in Fig. 3,
+(tel, g, t′
+el) = (0.3, 2.0, 0.0) in units of Jpro = 1.0.
+uated explicitly for an extreme AFE state of protons,
+|AFE⟩= (1/
+√
+4) P4
+k=1 ⊗⟨ij⟩|σz
+ij = η(k)
+ij ⟩with {η(k)
+ij }4
+k=1
+being 4 degenerate AFE conﬁgurations, and it is given
+by ⟨AFE| O2
+AFE |AFE⟩= 1/2. Similarly, for an extreme
+QSDL state |QSDL⟩= (1/
+p
+Nﬂip) P
+C∈ﬂip |proC⟩⊗|elC⟩
+which is the equal-weight superposition of Nﬂip = 16
+ﬂippable ice states, the AFE correlation is given by
+⟨QSDL| O2
+AFE |QSDL⟩= 1/4. These behaviors are re-
+produced in the numerical calculations.
+Note that
+⟨QSDL| O2
+AFE |QSDL⟩→0 in the thermodynamic limit.
+The same thing happens for ⟨O2
+VBS⟩.
+Next, we discuss the eﬀect of the intertetrahedron in-
+teractions J′
+el, J′′
+el arising from the hole hopping |t′
+el| ≪
+|tel|. Fig. 6 shows entanglement entropies SEE for diﬀer-
+ent values of (g, J′
+el) at J′′
+el = 0 and (g, J′′
+el) at J′
+el = 0.
+The other parameters used are tpro = 0.2Jpro, J′
+pro = 0.
+SEE(g, J′
+el) is only slightly decreased by the introduction
+of J′
+el, because it competes with g, but is negligible for a
+large g. SEE(g, J′′
+el) is a little enhanced by J′′
+el, since it fa-
+vors valence bond conﬁgurations including the ﬂippable
+ice states. These behaviors are consistent with the qual-
+itative discussion in the previous section. Therefore, the
+QSDL is parametrically stable for a small intertetrahe-
+dron hole hopping t′
+el.
+IV.
+SUMMARY AND DISCUSSIONS
+We have developed a theory of a hybrid quantum liq-
+uid, QSDL, by combining the quantum proton ice and
+Anderson’s RVB state, motivated by the recent experi-
+mental discovery of the quantum spin liquid with pro-
+ton ﬂuctuations in H-Cat.
+We proposed an idealized7
+𝑔/𝐽𝑝𝑟𝑜
+𝐽𝑒𝑙
+′ /4𝐽𝑝𝑟𝑜
+proton 
+AFE
+𝑔/𝐽𝑝𝑟𝑜
+(a)
+(b)
+𝐽𝑒𝑙
+′′/𝐽𝑝𝑟𝑜
+FIG. 6. Entanglement entropies (a) SEE(g, J′
+el) at J′′
+el = 0 and
+(b) SEE(g, J′′
+el) at J′
+el = 0. The other parameters are tpro =
+0.2Jpro, J′
+pro = 0.
+model and demonstrated that proton tunneling drives
+the system into the quantum valence bond ice, a QSDL
+described by an emergent U(1) gauge theory. Our theory
+sheds light on the essential roles of protons in the realiza-
+tion of QSDLs by proposing a coherent understanding of
+spin-dipole coupled systems, and thus can provide a ba-
+sis for future developments not only for X-Cat but also
+for other QSDL candidate systems31,50. For example, a
+hydrogen-assisted Kitaev spin liquid material H3LiIr2O6
+was recently discovered31, and proton tunneling is sug-
+gested to be important to stabilize the quantum spin liq-
+uid51–54. In addition, although we have been based on
+the idealized model Eq.(1) to elucidate the impacts of
+H-bonds, such a model itself could be designed in metal-
+organic frameworks (MOF). Indeed, there are a variety
+of H-bonded MOFs and nature of the H-bonds have been
+discussed extensively55,56. Realization of an ideal system
+for a hybrid quantum liquid by utilizing the ﬂexibility of
+MOFs would be an interesting future direction.
+The large entanglement predicted by our theory char-
+acterizes a QSDL in general, and it would lead to spin-
+dipole coupled dynamics such as a magnetoelectric ef-
+fect, which could provide an experimental signature of
+the entangled spins and protons. Other experimentally
+observable quantities characterizing a QSDL are dynam-
+ical ones, which can be captured by neutron scattering or
+nuclear magnetic resonance. Further investigation is nec-
+essary to discover a smoking gun signature for the strong
+entanglement between the two degrees of freedom.
+ACKNOWLEDGMENTS
+We thank M. P. A. Fisher, Y. Fuji, H. Katsura,
+G. Misguich, M. Naka, M. Oshikawa, H. C. Po, F. Poll-
+mann, T. Senthil, H. Seo, N. Shannon, M. Shimozawa,
+T. Tsumuraya, S. Tsuneyuki, and M. Udagawa for valu-
+able discussions.
+M.G.Y. is supported by the Mate-
+rials Education program for the future leaders in Re-
+search, Industry, and Technology (MERIT), and by
+JSPS. This work was supported by JST CREST Grant
+Number JPMJCR19T5, Japan, JSPS KAKENHI Grant
+No. JP17J05736, No. JP17K14333, KAKENHI on In-
+novative Areas “J-Physics” [No.
+JP18H04318], and in
+part by the National Science Foundation under Grant
+No. NSF PHY-1748958.
+Appendix A: Derivation of a quantum ice model
+Here we derive the eﬀective low-energy Hamiltonian
+Eq. (5) from the original Hamiltonian Eq. (1), based on
+the degenerate perturbation theory with respect to tpro.
+The 6th order perturbation in tpro gives
+Heﬀ= PVt
+1 −P
+E0 −H0
+Vt · · · Vt
+1 −P
+E0 −H0
+VtP,
+(A1)
+where we decompose the original Hamiltonian H(tpro)
+given by Eq. (1) into H(tpro) = H0 + Vt, and H0 =
+H(tpro = 0). P is a projection operator onto the degen-
+erate ice state manifold with an energy E0.
+Though an intratetrahedron hole hopping tel has been
+included in H0 and the perturbation itself is done for
+a small tpro/Jpro, we concentrate on a principal con-
+tribution coming from the lowest order of tel/g. To do
+this, we take a basis set consisting of product states of
+hole and proton sectors {|pro⟩⊗|el⟩}. Each hole state
+|el⟩can be explicitly obtained by diagonalizing the hole
+Hamiltonian of each tetrahedron for a given proton con-
+ﬁguration |pro⟩. By inserting an identity operator, 11 =
+P |pro⟩⊗|el⟩⟨pro| ⊗⟨el| , we ﬁnd for two ﬂippable ice
+states |a⟩, |b⟩,
+hab ≃−12t6
+pro(21J3 + 118GJ2 + 214G2J + 120G3)
+(J + G)3(J + 2G)2(J + 3G)(J + 4G)(J + 5G)
+× ⟨ela|elb⟩
+(A2)
+where hab
+= ⟨a|Heﬀ|b⟩, J
+= 4Jpro, and G = 2g.
+|ela(b)⟩is the hole wavefunction in the ice state a(b).
+The overlap matrix element can be calculated numer-
+ically and is O(t6
+el/g6) for a small |tel| as shown in
+Fig. 7. Amplitude of the overlap takes the same value
+for any pair of electron states connected by the 6th or-
+der perturbation of tpro, and therefore we simply de-
+note K ≡−hab to obtain Eq. (5) in the main text as
+Heﬀ= −K P |a⟩⟨b| . The eﬀective Hamiltonian can ex-
+plicitly be expressed in terms of hole operators c(†)
+is , and
+|ela⟩⟨elb| = Q
+plaquette c†
+iscjs
+(i, j ∈⊠) is simply a ring-
+hopping operator for each hexagonal plaquette loop in
+the leading order of the perturbation in tel/g.
+𝑒𝑙𝑎𝑒𝑙𝑏
+1/6
+FIG. 7. Overlap matrix element | ⟨ela|elb⟩|1/6 as a function
+of tel and g. For large values of g, the overlap is linear in tel.8
+Appendix B: Entanglement entropy for the
+Rokhsar-Kivelson state
+The entanglement entropy between protons and elec-
+trons can be calculated explicitly for an extreme limit
+of a quantum spin-dipole liquid (QSDL), the Rokhsar-
+Kivelson (RK) state. The RK state is the exact ground
+state of the ice model Eq. (5) in the main text with an
+additional potential µ P[|⟲⟩⟨⟲| + |⟳⟩⟨⟳|] ﬁne-tuned to
+µ = K. The RK state is a superposition of all possi-
+ble ice states, |RK⟩= (1/
+√
+N) P
+C |proC⟩⊗|elC⟩, where
+C represents an ice conﬁguration and N is the dimen-
+sion of the ice manifold.
+|proC⟩and |elC⟩are proton
+and electron wavefunctions for a ﬁxed ice conﬁguration
+C. The entanglement entropy between protons and holes
+is given by SEE = log N and it obeys a clear volume law
+SEE = O(Ntot).
+∗myamada@mp.es.osaka-u.ac.jp
+† tada@issp.u-tokyo.ac.jp
+1 J. A. Morrone, L. Lin, and R. Car, J. Chem. Phys. 130,
+204511 (2009).
+2 X.-Z. Li, B. Walker, and A. Michaelides, Proc. Natl. Acad.
+Sci. 108, 6369 (2011).
+3 T. E. Markland and M. Ceriotti, Nat. Rev. Chem. 2, 0109
+(2018).
+4 G. F. Reiter, J. Mayers, and P. Platzman, Phys. Rev. Lett.
+89, 135505 (2002).
+5 L. E. Bove, S. Klotz, A. Paciaroni, and F. Sacchetti, Phys.
+Rev. Lett. 103, 165901 (2009).
+6 Y. Moritomo, Y. Tokura, H. Takahashi,
+and N. M¯ori,
+Phys. Rev. Lett. 67, 2041 (1991).
+7 S. Koval, J. Kohanoﬀ, J. Lasave, G. Colizzi,
+and R. L.
+Migoni, Phys. Rev. B 71, 184102 (2005).
+8 O. Benton, O. Sikora, and N. Shannon, Phys. Rev. B 93,
+125143 (2016).
+9 H. Ishizuka, Y. Motome, N. Furukawa,
+and S. Suzuki,
+Phys. Rev. B 84, 064120 (2011).
+10 C.-H. Chern and N. Nagaosa, Phys. Rev. Lett. 112, 247602
+(2014).
+11 T. Isono, H. Kamo, A. Ueda, K. Takahashi, A. Nakao,
+R. Kumai, H. Nakao, K. Kobayashi, Y. Murakami,
+and
+H. Mori, Nat. Commun. 4, 1344 (2013).
+12 T. Isono, H. Kamo, A. Ueda, K. Takahashi, M. Kimata,
+H. Tajima, S. Tsuchiya, T. Terashima, S. Uji, and H. Mori,
+Phys. Rev. Lett. 112, 177201 (2014).
+13 A. Ueda, S. Yamada, T. Isono, H. Kamo, A. Nakao, R. Ku-
+mai, H. Nakao, Y. Murakami, K. Yamamoto, Y. Nishio,
+and H. Mori, J. Am. Chem. Soc. 136, 12184 (2014).
+14 A. Ueda, A. Hatakeyama, M. Enomoto, R. Kumai, Y. Mu-
+rakami, and H. Mori, Chem. Eur. J. 21, 15020 (2015).
+15 S. Yamashita, Y. Nakazawa, A. Ueda, and H. Mori, Phys.
+Rev. B 95, 184425 (2017).
+16 M. Shimozawa,
+K. Hashimoto,
+A. Ueda,
+Y. Suzuki,
+K. Sugii, S. Yamada, Y. Imai, R. Kobayashi, K. Itoh,
+S. Iguchi, M. Naka, S. Ishihara, H. Mori, T. Sasaki, and
+M. Yamashita, Nat. Commun. 8, 1821 (2017).
+17 K. Yamamoto, Y. Kanematsu, U. Nagashima, A. Ueda,
+H. Mori,
+and M. Tachikawa, Phys. Chem. Chem. Phys.
+18, 29673 (2016).
+18 T. Tsumuraya, H. Seo, R. Kato, and T. Miyazaki, Phys.
+Rev. B 92, 035102 (2015).
+19 M. Naka and S. Ishihara, Phys. Rev. B 97, 245110 (2018).
+20 P. Anderson, Mater. Res. Bull. 8, 153 (1973).
+21 L. Balents, Nature (London) 464, 199 (2010).
+22 L. Savary and L. Balents, Rep. Prog. Phys. 80, 016502
+(2016).
+23 R. Moessner and S. L. Sondhi, Phys. Rev. B 68, 184512
+(2003).
+24 M. Hermele, M. P. A. Fisher, and L. Balents, Phys. Rev.
+B 69, 064404 (2004).
+25 A. H. Castro Neto, P. Pujol, and E. Fradkin, Phys. Rev.
+B 74, 024302 (2006).
+26 N. Shannon, O. Sikora, F. Pollmann, K. Penc,
+and
+P. Fulde, Phys. Rev. Lett. 108, 067204 (2012).
+27 S.
+Nakatsuji,
+K.
+Kuga,
+K.
+Kimura,
+R.
+Satake,
+N. Katayama, E. Nishibori, H. Sawa, R. Ishii, M. Hagi-
+wara, F. Bridges, T. U. Ito, W. Higemoto, Y. Karaki,
+M. Halim, A. A. Nugroho, J. A. Rodriguez-Rivera, M. A.
+Green, and C. Broholm, Science 336, 559 (2012).
+28 P. Corboz, M. Lajk´o, A. M. L¨auchli, K. Penc, and F. Mila,
+Phys. Rev. X 2, 041013 (2012).
+29 M. G. Yamada, M. Oshikawa, and G. Jackeli, Phys. Rev.
+Lett. 121, 097201 (2018).
+30 A. Kitaev, Ann. Phys. 321, 2 (2006), january Special Issue.
+31 K. Kitagawa, T. Takayama, Y. Matsumoto, A. Kato,
+R. Takano, Y. Kishimoto, S. Bette, R. Dinnebier, G. Jack-
+eli, and H. Takagi, Nature (London) 554, 341 (2018).
+32 A. Smerald and G. Jackeli, Phys. Rev. Lett. 122, 227202
+(2019).
+33 Y. Zhou, K. Kanoda, and T.-K. Ng, Rev. Mod. Phys. 89,
+025003 (2017).
+34 C. Hotta, Phys. Rev. B 82, 241104 (2010).
+35 M. Naka and S. Ishihara, J. Phys. Soc. Jpn. 79, 063707
+(2010).
+36 M. Naka and S. Ishihara, Phys. Rev. B 93, 195114 (2016).
+37 K. Yakushi, K. Yamamoto, T. Yamamoto, Y. Saito, and
+A. Kawamoto, J. Phys. Soc. Jpn. 84, 084711 (2015).
+38 K. Sedlmeier, S. Els¨asser, D. Neubauer, R. Beyer, D. Wu,
+T. Ivek, S. Tomi´c, J. A. Schlueter, and M. Dressel, Phys.
+Rev. B 86, 245103 (2012).
+39 Mathematically speaking, this condition is unnecessary for
+the following discussion.
+40 The value tpro =1-10K is estimated from the experimental
+measurement of the dielectric constant in H-Cat 16.
+41 L. Savary and L. Balents, Phys. Rev. Lett. 108, 037202
+(2012).
+42 D. S. Rokhsar and S. A. Kivelson, Phys. Rev. Lett. 61,
+2376 (1988).
+43 J.-M.
+St´ephan,
+S.
+Furukawa,
+G.
+Misguich,
+and
+V. Pasquier, Phys. Rev. B 80, 184421 (2009).
+44 J. Eisert, M. Cramer, and M. B. Plenio, Rev. Mod. Phys.
+82, 277 (2010).
+45 R. G. Melko, B. C. den Hertog,
+and M. J. P. Gingras,
+Phys. Rev. Lett. 87, 067203 (2001).
+46 G.-W. Chern, R. Moessner, and O. Tchernyshyov, Phys.
+Rev. B 78, 144418 (2008).9
+47 J. R¨ochner, L. Balents, and K. P. Schmidt, Phys. Rev. B
+94, 201111 (2016).
+48 L. Savary and L. Balents, Phys. Rev. Lett. 118, 087203
+(2017).
+49 O. Benton, L. D. C. Jaubert, R. R. P. Singh, J. Oitmaa,
+and N. Shannon, Phys. Rev. Lett. 121, 067201 (2018).
+50 N. Hassan, S. Cunningham, M. Mourigal, E. I. Zhilyaeva,
+S. A. Torunova, R. N. Lyubovskaya, J. A. Schlueter, and
+N. Drichko, Science 360, 1101 (2018).
+51 R. Yadav, R. Ray, M. S. Eldeeb, S. Nishimoto, L. Hozoi,
+and J. van den Brink, Phys. Rev. Lett. 121, 197203 (2018).
+52 Y. Li, S. M. Winter, and R. Valent´ı, Phys. Rev. Lett. 121,
+247202 (2018).
+53 J. Knolle, R. Moessner,
+and N. B. Perkins, Phys. Rev.
+Lett. 122, 047202 (2019).
+54 S. Wang, L. Zhang, and F. Wang, Sci. China Phys. Mech.
+Astron. 63, 117411 (2020).
+55 P. Jain, N. S. Dalal, B. H. Toby, H. W. Kroto, and A. K.
+Cheetham, Journal of the American Chemical Society 130,
+10450 (2008).
+56 Y. Ma, Y. Wang, J. Cong, and Y. Sun, Phys. Rev. Lett.
+122, 255701 (2019).

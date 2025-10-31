@@ -1,0 +1,632 @@
+arXiv:1003.1237v2  [cond-mat.mtrl-sci]  4 May 2010
+Anomalous molecular orbital variation upon adsorption on wide band gap
+insulator
+Wei Chen,1 Christoph Tegenkamp,1 Herbert Pfn¨ur,1, a) and Thomas Bredow2
+1)Institut f¨ur Festk¨orperphysik, Leibniz Universit¨at Hannover, 30167 Hannover,
+Germany
+2)Institut f¨ur Physikalische und Theoretische Chemie, Universit¨at Bonn, 53115 Bonn,
+Germany
+(Dated: 18 November 2018)
+It is commonly believed that organic molecules are physisorbed on the ideal non-polar surfaces of wide band
+gap insulators with limited variation of the electronic properties of the adsorbate molecule. On the basis of
+ﬁrst principles calculations within density functional theory (DFT) and GW approximation, we show that
+this is not generally true. We ﬁnd that the molecular frontier orbitals undergo signiﬁcant changes when
+a hydroxy acid (here we chose gluconic acid) is adsorbed on MgSO4·H2O(100) surface due to the complex
+interaction between the molecule and the insulating surface. The predicted trend of the adsorption eﬀect on
+the energy gap obtained by DFT is reversed when the surface polarization eﬀect is taken into account via the
+many-body corrections.
+PACS numbers: 71.15.Mb, 68.43.Bc, 73.20.Hb
+Organic-insulator systems are regaining increasing in-
+terest in recent years stimulated by the rapid develop-
+ment of novel molecular-scale devices1. The performance
+of these molecular electronics relies intimately on the
+properties of the frontier orbitals of the organic molecule2
+and the coupling of the orbitals to the surface elec-
+tronic states. From this point of view, an accurate con-
+trol of the electrical characteristics requires unambiguous
+knowledge of the interaction between the molecular ad-
+sorbate and insulating surface.
+The perfect non-polar surface of a wide band gap in-
+sulator, e.g.
+alkali halides is chemically inert with re-
+spect to organic molecules, and the features of the molec-
+ular orbitals are usually preserved upon adsorption as
+resolved by scanning tunneling spectroscopy3 and ﬁrst
+principles calculations4.
+The ability to decouple ad-
+sorbed molecules electrically from the insulating surface
+also facilitates the use of alkali halides as supporting tem-
+plates for a wide range of applications5–7. However, as
+we will show in this study, this scenario does not neces-
+sarily hold for all organic-insulator systems. In contrast,
+we ﬁnd that, using density functional theory (DFT), the
+frontier orbitals of an adsorbate can vary signiﬁcantly
+upon adsorption on the surface of a wide band gap in-
+sulator.
+Here we choose gluconic acid (GA) as a rep-
+resentative for the chemical class of hydroxy acids ad-
+sorbed on MgSO4·H2O(100) as the subject of investiga-
+tion.
+Apart from the general relevance of the adsorp-
+tion properties of this wide spread class of molecules, our
+study is motivated also by the ability of this molecule
+to act as a conditioner for the electrostatic separation of
+mineral5. We show that the strong variations of the fron-
+tier orbitals arise from the complex interactions between
+the adsorbate and the underlying surface. Further, the
+a)Electronic mail: pfnuer@fkp.uni-hannover.de
+polarization eﬀect, which is induced by changes in the
+charge state of the molecule, produces a prominent re-
+duction of the molecular energy gap upon adsorption.
+The description of the polarization invokes the use of
+GW approximation8 since this nonlocal correlation ef-
+fect is not captured by Kohn-Sham (KS) DFT eigenval-
+ues with standard exchange-correlation (XC) approxima-
+tions. We stress that the results, although based on the
+GA-MgSO4·H2O system, provide a general insight into
+the interaction of a wide class of organic molecules (e.g.
+carboxylic and phenylic acids) on insulating surfaces.
+We
+start
+with
+a
+brief
+description
+of
+the
+bulk
+MgSO4·H2O. MgSO4·H2O has a monoclinic structure
+(space group C6
+2h), and is chemically formed from MgSO4
+by incorporating one water molecule per unit. The crys-
+tal structure parameters were calculated with the PBE
+XC potential9 within the generalized gradient approxi-
+mation (GGA) as implemented in vasp10. The electron-
+ion interaction was described within the projector aug-
+mented wave method11. A kinetic energy cutoﬀof 500
+eV and a 5 × 5 × 5 k-point mesh in the Brillouin zone
+were used. The convergence criterion of lattice parame-
+ter and atomic position relaxation was set to 0.02 eV/˚A.
+The resultant lattice constants (a = 6.79 ˚A, b = 7.79 ˚A,
+c = 7.69 ˚A) and β = 117.7◦are in good agreement with
+experiment and previous theoretical values12. The direct
+band gap at the Γ point is severely underestimated by
+the GGA-PBE (5.53 eV) and the local density approxi-
+mation (LDA) (5.26 eV) compared to a surface sensitive
+experimental value (7.4 eV)13. A much more realistic gap
+of 7.41 eV is obtained with the screened hybrid functional
+HSE0614,15 owing to the alleviation of the self-interaction
+error and derivative discontinuity problem by the non-
+local exact exchange.
+As resolved from the projected
+density of states (PDOS) (not shown), the valence band
+maximum (VBM) is of O-2p character and the conduc-
+tion band minimum consists of Mg-3s and S-3s states. In2
+(I)
+[100]
+[010]
+∆ρ=ρ(mol/surf)-ρ(mol)-ρ(surf)
+H
+w
+(II)
+∆( ) (e/Å)
+ρ z
+z (Å)
+∆( ) (D)
+μ z
++
+-
++
+-
+FIG. 1. Top: Two representative conﬁgurations of GA ad-
+sorbed on MgSO4·H2O(100).
+Color code:
+Mg blue (large
+gray), S yellow (light gray), O red (black), C small gray, H
+white.
+Bottom: Adsorbate induced electron density diﬀer-
+ence ∆ρ for Conf. II obtained from HSE06 calculations along
+with the planar integrated ∆ρ(z) and accumulated induced
+dipole ∆µ(z).
+The red (dark gray) and green (light gray)
+regions correspond to electron accumulation and depletion,
+respectively. The isosurface value is ±0.03 e/˚A3.
+TABLE I. Adsorption (Eads) and interaction energy (Eint) (in
+eV) for the two adsorption conﬁgurations optimized by PBE-
+D as shown in Fig. 1. The GGA-PBE contributions to the
+Eads (Eint) are explicitly listed. The deformation energy of
+the molecule is denoted by ∆Ed.
+Conf.
+EPBE-D
+ads
+EPBE
+ads
+EPBE-D
+int
+EPBE
+int
+∆Ed
+I
+-2.47
+-1.63
+-4.26
+-3.42
+0.77
+II
+-2.49
+-1.53
+-4.04
+-3.09
+0.53
+particular, a pronounced broadening can be seen in the
+water 1b1 orbital as a consequence of the bonding to the
+neighboring Mg atoms.
+For the adsorption of GA, a (1×2) MgSO4·H2O(100)
+surface supercell with 14 atomic layers (72 atoms) was
+adopted.
+Test calculations using larger unit cells con-
+ﬁrmed that the (1×2) supercell is adequate for various
+adsorption conﬁgurations while keeping the intermolec-
+ular interaction minimized. By construction, the (100)
+surface is cleaved in a way that the electrostatic dipoles
+between the Mg2+ and SO2−
+4
+are nearly within the sur-
+face plane. Hence, the macroscopic dipole moment is neg-
+ligible along the surface normal, making this surface ther-
+modynamically more favorable than other surface planes.
+The non-polar nature of the surface is also evidenced by
+the small displacements of the surface atoms during re-
+laxations. For detailed description of the (100) surface
+the reader is referred to Ref. 13.
+A vacuum thickness
+of 14 ˚A was used to separate the adsorbate system from
+its periodic image. The calculations have been checked
+to converge well with respect to the slab thickness, k-
+point mesh (2 × 4 × 1) and kinetic energy cutoﬀ(400
+eV). For geometrical relaxations, we employed the PBE-
+D scheme4,16 to take into account the long-range van
+der Waals (vdW) force where it is important7,17,18. In
+PBE-D, the dispersion (D) is constructed by an empiri-
+cal C6R−6 potential, which allows for a transparent and
+fast assessment of the vdW interactions in standard DFT
+approximations. The electronic properties of the adsor-
+bate system were then computed with the HSE06 hybrid
+functional.
+It is evident from the rotational ﬂexibility of the GA
+molecule that the geometry optimizations of the adsor-
+bate system will lead to numerous stable or meta-stable
+conﬁgurations and it is computationally prohibitive to lo-
+cate all the local minima. In the present study, we used a
+scanning scheme in which the GA molecule was initially
+placed at several diﬀerent positions on the (1×2) sur-
+face supercell with an orientation parallel to the surface
+plane. The whole adsorbate system was then allowed to
+fully relax until the equilibrium structure is reached, and
+the adsorption and interaction energy can be calculated
+as
+Eads = Erelaxed
+system −Erelaxed
+surface −Erelaxed
+molecule
+(1)
+and
+Eint = Erelaxed
+system −Eads
+surface −Eads
+molecule,
+(2)
+where Erelaxed denotes the energy of the corresponding
+unit in its equilibrium geometry, and Eads is the energy
+of the unit in the adsorbate geometry.
+The diﬀerence
+between Eads and Eint is the deformation energy of the
+molecule and surface upon interaction. Dissociative ad-
+sorption via deprotonation has been found energetically
+unfavorable and is not included in this study. We ﬁnd
+that the PBE-D method yields a nearly identical adsorp-
+tion geometry as the PBE except that the dispersion force
+pulls the molecule 0.1 ˚A closer to the surface. This sug-
+gests that the adsorption conﬁguration is largely driven
+by the short-range interactions. In Fig. 1, the two conﬁg-
+urations with the lowest Eads (see Table I) are presented,
+both of which depict the ﬁxture of the molecule via mul-
+tiple localized Mg-O and O-H bonds. Such bonding type
+implies that an ordered structure can be achieved on
+MgSO4·H2O(100) where the GA molecule is prone to lie
+ﬂat on the surface along the [010] direction. Speciﬁcally,
+in Conf. I the molecule is stabilized via three Mg-O bonds
+from the carboxylic and hydroxylic O atoms with bond
+lengths ranging from 2.10 to 2.16 ˚A. The incorporated
+water molecule at the surface is not interacting with the
+adsorbate. In the second conﬁguration, we see a domi-
+nating Mg-O bond from the hydroxylic O (2.06 ˚A), ac-
+companied by two weaker Mg-O bonds with larger bond
+lengths (2.22 and 2.55 ˚A). Besides, one of the hydroxylic
+O atom binds to the hydrogen of the water molecule at
+the surface (Hw). The diﬀerence in adsorption conﬁgu-
+rations has a direct inﬂuence on the binding energy as
+shown in Table I, where Eint calculated with GGA-PBE
+is 0.33 eV higher for Conf. I. While the vdW interac-
+tion (EPBE-D
+int
+−EPBE
+int ) has been found substantial for3
+both conﬁgurations (0.84 and 0.95 eV), it accounts for a
+relatively small portion (20-25%) of the total Eint com-
+pared to the short-range molecule-surface interactions.
+Hence, we conclude that the long-range vdW force does
+not play a predominant role in the adsorption of GA on
+MgSO4·H2O(100).
+Inspecting the charge density diﬀerence (Fig. 1), one
+ﬁnds electron accumulations in between the bond region
+upon adsorption, as expected for covalent interactions.
+Note that the electron redistribution at the molecule-
+surface interface induces a change in the surface dipole by
+-2.3 D. The covalent character is also seen in Fig. 2, where
+the molecular orbitals of the adsorbate exhibit broaden-
+ing and splitting due to rehybridizations. This can be ra-
+tionalized as a dative covalent bond through the donation
+from the lone-pair electrons of the O atoms. However,
+the covalent bonds do not contribute to the large inter-
+action energy from the GGA-PBE part. In contrast, they
+act as a repulsive Pauli barrier because both the bond-
+ing and antibonding states are fully occupied. Therefore,
+we ascribe the strong interaction energy to the attractive
+electrostatic interaction arising from the Coulomb terms.
+The covalent character, on the other hand, accounts for
+the electronic structure of the adsorbate as we will show
+in a moment. Furthermore, the charge transfer is found
+to be small. For instance, a Bader analysis19 predicts
+that 0.01 e are transferred to the molecule for Conf. II.
+This is expected as the energy gaps of both the surface
+and molecule are rather large.
+An interesting indication of the large ∆Ed in Table I is
+the pronounced intramolecular distortion from its equi-
+librium geometry upon adsorption. This feature stems
+partially from the intrinsic molecular structure of GA,
+and is not observed for some other organic molecules,
+e.g. hydroxybenzoic acid on MgSO4·H2O(100)12. The
+sp3 hybridization in the carbon chain makes the struc-
+ture versatile through the rotation along the C-C bond
+with a small energy barrier, which can be easily over-
+come by the energy gain through the subsequent GA-
+surface interactions. An immediate consequence of this
+structural change can be manifested by the reduced gap
+of the adsorbate with respect to that of the gas phase
+molecule (Table II).
+In addition, our calculation on
+KCl(001) shows a minor deformation of the GA molecule
+with a much weaker Eads (-0.4 eV excluding the vdW
+force), an indication that the intramolecular distortion
+is also related to the surface. The higher reactivity of
+MgSO4·H2O(100) is associated with its lower Madelung
+potential as the ions at the surface are more exposed to
+the environment.
+We now turn to the surface and adsorbate induced ef-
+fect on the molecular orbital of the GA molecule.
+It
+is surprising to see from Fig. 2 that, in Conf. II, the
+highest occupied molecular orbital (HOMO) experiences
+dramatic changes upon adsorption, even with the in-
+tramolecular structure kept intact. A detailed analysis
+reveals that the order of the HOMO and HOMO-1 is
+reversed after the molecule is attached to the surface.
+PDOS (states/eV)
+E-E
+(eV)
+VBM
+adsorbed
+isolated
+adsorbed
+isolated
+(I)
+(II)
+HOMO
+HOMO
+FIG. 2.
+Density of states projected onto the GA molecule
+(adsorbed and isolated) (solid line) and surface (gray dashed
+line) calculated with the HSE06 functional for Conf. I and
+II. A Gaussian smearing of 0.05 eV has been applied. The
+HOMO of the isolated molecule is aligned to that of the ad-
+sorbate. The electron density distributions of HOMO for the
+adsorbed and isolated molecules are also illustrated.
+TABLE II. Calculated energy gaps (in eV) of the GA molecule
+by DFT and GW approximation.
+The adsorbed molecule
+refers to the GA molecule adsorbed on MgSO4·H2O(100) as
+in Conf. II, whereas the isolated molecule refers to the GA
+molecule detached from the surface while its geometry is kept
+ﬁxed as that of the adsorbed molecule. The GA molecule in
+its equilibrium geometry is denoted by the gas phase molecule.
+The energy gaps of the SA adsorbed on MgSO4·H2O(100) are
+given in parentheses for comparison.
+PBE
+HSE06
+LDA
+G0W LDA
+0
+adsorbed
+4.84 (3.21)
+6.73 (4.30)
+4.81
+10.01
+isolated
+4.10 (3.37)
+5.97 (4.49)
+4.06
+10.59
+gas phase
+4.46 (3.17)
+6.39 (4.22)
+4.43
+10.94
+Consider the HOMO and HOMO-1 of GA in the gas
+phase are by no means degenerate, such reordering of
+the molecular orbitals is rather unusual on wide band
+gap insulators. This sends a signal that the adsorption
+can strongly modify the molecular orbitals even on pris-
+tine insulating surfaces. The interchange of HOMO and
+HOMO-1 subsequently increases the energy gap of the
+adsorbate by about 0.75 eV with respect to the isolated
+molecule (see Table II).
+We note that such gap vari-
+ation shows no dependence of the XC functional used.
+The drastic modiﬁcation of the HOMO, however, is ab-
+sent for Conf. I where the electron density redistribution
+is considerably smaller.
+In Fig. 3 two distinct behav-
+iors of the frontier orbitals are perceivable when the GA
+molecule is lifted away from the surface while the in-
+tramolecular structure is ﬁxed at its adsorbate state. In
+Conf. I, the gap between the HOMO and the lowest un-
+occupied molecular orbital (LUMO) experiences a small
+decrease relative to the isolated molecule. As the molec-4
+εLUMO-εHOMO (eV)
+εHOMO (eV)
+d-dopt (Å)
+(Å)
+d-dopt
+Surface VBM
+II
+I
+FIG. 3. The evolution of the HOMO-LUMO gap (left) and the
+HOMO energy (right) (within HSE06) of the GA adsorbate
+with respect to the distance to the surface d.
+dopt is the
+separation between the molecule and surface at the optimized
+geometry.
+ular HOMO in Conf. I lies within the surface band gap,
+there is no coupling between the HOMO and the sur-
+face valence band. Hence, the small gap reduction arises
+from the electrostatic potential of surface dipoles. This
+also holds true for the hydroxybenzoic acid (SA) adsor-
+bate on MgSO4·H2O(100) as well as the GA on alkali
+halide (001) surface. On the other hand, for Conf. II,
+the HOMO of the adsorbate is pinned below the surface
+VBM as a result of the resonance between the hydroxylic
+oxygen and Hw of the surface. Since the hydrogen bond
+weakens rapidly as the molecule is gradually detached
+from the surface, one can see the accelerated upshift of
+the HOMO against the VBM as well as the declining of
+the molecular energy gap in Fig. 3. It is thus clear that
+the strong variations of the frontier orbitals upon molec-
+ular adsorption stem from the rehybridizations. The wa-
+ter molecule, which was usually thought to be inactive
+in MgSO4·H2O, however plays an important role in the
+electronic properties of the adsorbate.
+We have seen up to this point that the frontier or-
+bitals of the adsorbate can be eﬀectively inﬂuenced by the
+molecule-surface interactions based on the interpretation
+from the mean ﬁeld KS equation within the single particle
+Hamiltonian. Recently it has been found that dynamic
+polarization eﬀect has a strong impact on the energy
+level position of the frontier orbital by photoemission20
+and electron transport measurements3,21. The polariza-
+tion in the surface, which is induced by the added elec-
+tron (hole) in the aﬃnity (ionization) level, acts back
+to the molecule and gives rise to a renormalization of
+the molecular levels. Apparently such nonlocal correla-
+tion is beyond the scope of KS-DFT and is not prop-
+erly represented by KS eigenvalues, while it is accessible
+from the self-energy Σ = iGW within many-body cor-
+rections, where G and W are the Green’s function and
+the screened Coulomb interaction, respectively22–24. To
+illustrate to what extent the aﬃnity and ionization levels
+of the GA adsorbate are shifted due to the polarization,
+G0W0 calculations8,25 on top of LDA are performed for
+Conf. II. We note that the polarization eﬀect should be
+similar for Conf. I. The G0W0 approach is a ﬁrst-order
+perturbation to the KS eigenvalues, and the quasiparti-
+cle (QP) correction to the energy level can be written as
+the diﬀerence between the self-energy and the XC poten-
+tial VXC. We used quantum-espresso26 for the LDA,
+followed by G0W0 calculations with yambo27.
+Norm-
+conserving pseudopotentials, a cutoﬀenergy of 816 eV
+(60 Ry) and a 2 × 4 × 1 k-point mesh were used. We
+included 200 and 400 empty bands for the isolated GA
+and adsorbate system in the evaluation of self-energy Σ,
+respectively.28 For the dielectric matrix 3400 reciprocal
+lattice vectors were used. The random phase approxima-
+tion (RPA) and the plasmon-pole approximation with a
+plasmon frequency of 27.2 eV were applied for the re-
+sponse function. The slowly decaying Coulomb potential
+in the repeated-slab approach is corrected with a boxlike
+cutoﬀ. The QP gap was converged within 0.1 eV with
+these parameters.
+The resulting QP gap from the G0W LDA
+0
+for the gas
+phase GA exhibits a much larger opening than the HSE06
+HOMO-LUMO gap (see Table II). When the molecule
+is brought into contact with the surface, a pronounced
+gap reduction (0.58 eV) is obtained from the G0W LDA
+0
+calculation.
+This is clearly opposed to what has been
+found by DFT calculations.
+As the charge transfer is
+very small, the gap reduction upon adsorption from the
+GW approximation arises from the surface polarization
+eﬀect, which can be described by the classical image
+charge theory22,23,29.
+The aﬃnity (ionization) level of
+the molecular adsorbate moves down (up) by the image
+charge potential Vim = 1
+4
+ǫ−1
+ǫ+1
+e2
+z−z0 , where ǫ is the dielec-
+tric constant of the medium, z and z0 the position of the
+point charge and image plane, respectively. This implies
+that relative to the isolated molecule, the changes in the
+QP correction to the HOMO and LUMO should be anti-
+symmetric. In fact, we ﬁnd that ∆EQP
+HOMO = 0.6 eV and
+∆EQP
+LUMO = −0.7 eV, corresponding to a gap reduction
+of 1.3 eV due to surface polarization. Note that apart
+from the polarization eﬀect, the change in the energy gap
+upon adsorption given by G0W0 (∆EG0W0
+g
+) in Table II
+also includes the contribution from the local interactions
+∆EG0W0
+g
+= ∆Epol
+g
++ ∆Elocal
+g
+,
+(3)
+where ∆Epol
+g
+is the polarization-induced change in the
+energy gap, and ∆Elocal
+g
+refers to the energy gap variation
+due to short-ranged eﬀects such as electrostatic interac-
+tions and rehybridizations, which should be in principle
+accurately described at the DFT level. Indeed, we ﬁnd
+that ∆Elocal
+g
+= (−0.58) −(−1.3) = 0.72 eV, in excellent
+agreement with the HOMO-LUMO gap change upon ad-
+sorption from the DFT calculations (see Table II).
+In summary, we have demonstrated that upon adsorp-
+tion to the surface of a wide band gap insulator, the
+molecular orbitals of the adsorbate can experience sub-
+stantial changes as a result of the complex interplay of
+the sizeable electrostatic interaction and rehybridization.
+Further, the polarization eﬀect as described by the GW
+approximation, yields a prominent molecular energy gap
+reduction on the wide band gap insulator. As the elec-
+tronic properties are dictated by the energetic positions5
+and characteristics of frontier orbitals of the adsorbate,
+one has to carefully assess the molecule-insulator inter-
+face when interpreting the transport and spectroscopic
+measurements.
+ACKNOWLEDGMENTS
+We
+thank
+H¨ochstleistungsrechenzentrum
+Nord
+(HLRN) for the generous grants of computation time.
+This work is supported by K+S AG.
+1T. Dienel, C. Loppacher, S. Mannsfeld, R. Forker, and T. Fritz,
+Adv. Mat. 20, 959 (2008).
+2H. Song, Y. Kim, Y. H. Jang, H. Jeong, M. A. Reed, and T. Lee,
+Nature 462, 1039 (2009).
+3J. Repp, G. Meyer, S. M. Stojkovi´c, A. Gourdon, and C. Joachim,
+Phys. Rev. Lett. 94, 026803 (2005).
+4W. Chen, C. Tegenkamp, H. Pfn¨ur, and T. Bredow, J. Phys.
+Chem. C 114, 460 (2010).
+5C. Tegenkamp and H. Pfn¨ur, Phys. Chem. Chem. Phys. 4, 2653
+(2002).
+6J. Mativetsky, S. Burke, S. Fostner, and P. Grutter, Small 3, 818
+(2007).
+7O. H. Pakarinen, J. M. Mativetsky, A. Gulans, M. J. Puska, A. S.
+Foster, and P. Grutter, Phys. Rev. B 80, 085401 (2009).
+8L. Hedin, Phys. Rev. 139, A796 (1965).
+9J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77,
+3865 (1996).
+10G. Kresse and J. Furthm¨uller, Phys. Rev. B 54, 11169 (1996).
+11G. Kresse and D. Joubert, Phys. Rev. B 59, 1758 (1999).
+12V.
+Maslyuk,
+C.
+Tegenkamp,
+H.
+Pfn¨ur,
+and
+T.
+Bredow,
+ChemPhysChem 7, 1055 (2006).
+13V. V. Maslyuk, C. Tegenkamp, H. Pfn¨ur, and T. Bredow, J. Phys.
+Chem. A 109, 4118 (2005).
+14J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. 118,
+8207 (2003).
+15A. V. Krukau, O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria,
+J. Chem. Phys. 125, 224106 (2006).
+16S. Grimme, J. Comp. Chem. 27, 1787 (2006).
+17S. D. Chakarova-K¨ack,
+O. Borck,
+E. Schr¨oder, and B. I.
+Lundqvist, Phys. Rev. B 74, 155402 (2006).
+18W. Chen, C. Tegenkamp, H. Pfn¨ur, and T. Bredow, Phys. Chem.
+Chem. Phys. 11, 9337 (2009).
+19W. Tang, E. Sanville, and G. Henkelman, J. Phys. Condens.
+Matt. 21, 084204 (2009).
+20P. D. Johnson and S. L. Hulbert, Phys. Rev. B 35, 9427 (1987).
+21S. Kubatkin, A. Danilov, M. Hjort, J. Cornil, J.-L. Bredas,
+N. Stuhr-Hansen, P. Hedegard, and T. Bjornholm, Nature 425,
+698 (2003).
+22J. B. Neaton, M. S. Hybertsen, and S. G. Louie, Phys. Rev. Lett.
+97, 216405 (2006).
+23J. M. Garcia-Lastra, C. Rostgaard, A. Rubio, and K. S. Thyge-
+sen, Phys. Rev. B 80, 245427 (2009).
+24C. Freysoldt, P. Rinke, and M. Scheﬄer, Phys. Rev. Lett. 103,
+056803 (2009).
+25F. Aryasetiawan and O. Gunnarsson, Rep. Prog. Phys. 61, 237
+(1998).
+26P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car,
+C.
+Cavazzoni,
+D.
+Ceresoli,
+G.
+L.
+Chiarotti,
+M.
+Cococ-
+cioni,
+I. Dabo,
+A. Dal Corso,
+S. de Gironcoli,
+S. Fabris,
+G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj,
+M. Lazzeri, L. Martin-Samos, N. Marzari, F. Mauri, R. Maz-
+zarello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbraccia,
+S. Scandolo,
+G. Sclauzero, A. P. Seitsonen, A. Smogunov,
+P. Umari, and R. M. Wentzcovitch, J. Phys. Condens. Matt. 21,
+395502 (2009).
+27A. Marini, C. Hogan, M. Gr¨uning, and D. Varsano, Comp. Phys.
+Comm. 180, 1392 (2009).
+28The choice of empty band is justiﬁed as the convergence test
+showed that the QP energy gaps changed by 0.02 eV when 400
+and 800 empty bands were used for the GA molecule and adsor-
+bate system, respectively.
+29M.
+Rohlﬁng,
+N.-P.
+Wang,
+P.
+Kr¨uger,
+and
+J.
+Pollmann,
+Phys. Rev. Lett. 91, 256802 (2003).

@@ -1,0 +1,534 @@
+Acta Materialia 244 (2023) 118511 Available online 17 November 2022 1359-6454/© 2022 Acta Materialia Inc.
+Published by Elsevier Ltd.
+All rights reserved.
+Electronic effects on the radiation damage in high-entropy alloys  Okan K. Orhan, Mohamed Hendy, Mauricio Ponga *  Department of Mechanical Engineering, University of British Columbia, 2054 - 6250 Applied Science Lane, Vancouver, BC, V6T 1Z4, Canada    A R T I C L E  I N F O    Keywords:  High-entropy alloys  Radiation-damage resistance  Density-functional theory  Molecular dynamics  A B S T R A C T    High-entropy alloys (HEAs) are exceptional candidates for radiation-resistant materials due to their complex  local chemical environment and slow defect migration.
+Despite commonly overlooked, electronic effects on  defects evolution in radiation environments also play a crucial role by dissipating excess energy through  electron-phonon coupling and electronic heat conduction during cascade events.
+We present a systematic study  on electronic properties in random-solid solutions (RSS) in four and five principal elements HEAs and their effect  on defect formation, clustering, and recombination.
+Electronic properties, including electron-phonon coupling  factor (Ge−ph), the electronic specific heat (Ce), and the electronic thermal conductivity (κe), are computed within  first-principles calculations.
+Using the two-temperature molecular dynamics simulations, we show that the  electron-phonon coupling factor and electronic specific heat play a critical role in Frenkel pairs formation.
+Specifically, the electron-phonon coupling factor quickly dissipates the kinetic energy during primary knock-on  atom events via plasmon excitations and is subsequently dissipated via the free-electrons conduction.
+We show  that these effects are more critical than the elastic distortion effects produced by the atomic mismatch.
+Of  tremendous interest, we show that including lighter elements helps to increase Ge−ph suggesting the possibility to  improve radiation resistance in HEA through optimal composition.
+1. Introduction  High-entropy alloys (HEA) are mostly single-phased multi-principal-  elements (MPE) alloys, often produced by nearly equimolar mixing of  four, or more elements [1–3].
+HEAs have been shown to exhibit  exceptional thermal stability [4], hardness and strength [5–10], wear  resistance [11,12], and oxidation resistance [11,13].
+In particular, the  equimolar chromium-cobalt-iron-nickel HEA (CrFeCoNi) has attracted  considerable interest as it can serve as a base template to exploring  non-equimolar compositions, or adding other elements such as manga­ nese (Mn), copper (Cu), aluminum (Al), titanium (Ti), niobium (Nb),  molybdenum (Mo) and many more to achieve exceptional materials  properties [14–21].
+In high-radiation environments, highly energetic particle beams  excite primary knock-on atoms (PKAs) out when they travel through  solids, which in turn create self-interstitial atoms (SIA) and vacancies,  called Frenkel pairs (FPs).
+Formation and clustering of FPs locally distort  lattices, resulting in dislocation loops and void growth.
+As these FPs  recombine and migrate through the lattice, they generate significant  microstructural changes over time, critically affecting the mechanical  properties of materials subjected to radiation environments.
+Clustering  of defected atoms commonly reduces the structural integrity of materials  by causing swelling, creep, and irradiation-induced stress corrosion  cracking [22].
+In the case of HEA, the complex local chemical environment and  atomic-size mismatch create well-known elastic lattice distortions and  core effects such as sluggish diffusion kinetics [3].
+These effects help to  reduce defect formation, slow down defect diffusion and accumulation,  and promote vacancy-interstitial recombination, leading to lower radi­ ation damage compared to pure metals and traditional alloys [23,24].
+For instance, CrMnFeCoNi preserves its majority face-centered cubic  phase even over 40 DPA irradiation throughout the temperature range  of ∼298 − 773 K [25].
+Thus, HEAs are promising candidates for  structural materials exposed to high-radiation environments [18,26]  such as in nuclear reactors [18,27] and other environments such as  space applications [26].
+Due to the many challenges that appear during the testing of mate­ rials under radiation environments, experimental studies are difficult to  perform and time-consuming.
+At the same time, since the formation,  migration, clustering, as well as recombination of defects occur within a  few femtoseconds (fs) to nanoseconds (ns) of the primary cascade event,  it is pretty challenging to in-situ unravel mechanisms behind the defect  * Corresponding author.
+E-mail address: mponga@mech.ubc.ca (M. Ponga).
+Contents lists available at ScienceDirect  Acta Materialia  journal homepage: www.elsevier.com/locate/actamat  https://doi.org/10.1016/j.actamat.2022.118511  Received 19 May 2022; Received in revised form 16 September 2022; Accepted 9 November 2022Acta Materialia 244 (2023) 118511 2 evolution.
+Thus, the community heavily relies on numerical simulations  to understand and predict radiation damage under radiation, especially  for novel materials.
+In that sense, atomistic simulations based on either  molecular dynamics (MD) or ab-initio molecular dynamics provide a  framework to study materials under radiation environments systemati­ cally [18,28].
+Being an atomistic technique, MD fully resolves the time  and atomic environment and naturally describes the interactions be­ tween PKA and lattice, generating defects as the PKA losses its energy.
+These insights can then be incorporated in Monte-Carlo codes to predict  damage in macroscopic specimens such as those used in engineering  applications [29].
+However, a drawback of classical MD is that it ne­ glects electronic effects in materials.
+In metallic materials such as HEA, the excess energy due to high-  radiation exposure is deposited into phonons and electrons, resulting  in defect formation and microstructural changes.
+Remarkably, the pri­ mary heat carriers in metallic materials are free electrons, which result  in thermal conductivities that are much higher than the lattice contri­ bution [30].
+However, in MPE alloys, these contributions have to be  carefully analyzed since they might change depending on the compo­ sition and defect population [31,32].
+Therefore, incorporating elec­ tronic effects in radiation damage is paramount for metallic materials to  accurately understand and predict the damage.
+Due to the potential applications of MPE alloys as radiation-resistant  materials, several studies have recently investigated their performance  using a combination of experiments and numerical simulations,  providing a fundamental understanding of the damage mechanisms  during radiation in MPE alloys [28,33–36].
+Remarkably, while the nu­ merical simulations carried out in these studies include phonon effects in  MPE alloys, electronic effects have been almost completely ignored in  these works, making these results applicable -but also essentially  limited- to small PKA energies.
+In particular, electronic effects become  more predominant at moderate to high PKA energies since they trigger  extremely high electronic temperatures, as locally observed on irradiated  surfaces [37].
+However, MD lacks quantum-mechanical effects required  to capture electronic and electron-phonon (e − ph) coupling effects.
+Even though MD is a classical technique, is it possible to partially  incorporate electronic effects within semi-empirical approaches such as  the so-called two-temperature model [38–48].
+However, these models  require several temperature-dependent material parameters that are  challenging to compute and, in many cases, remain unavailable.
+This  lack of parameters is more accentuated in novel materials where prop­ erties are unavailable to the scientific community.
+First-principles simulations provide valuable insights into the elec­ tronic properties of materials, especially in novel compositions.
+Typi­ cally, such simulations are heavily constrained by system size and  spatial complexity [49,50].
+In particular, it is challenging to accurately  represent statistical representation of configurational disorderliness as  in HEA cases as the number of simulation cells increases quickly with  number of atoms and species.
+Indeed, if we let Ne be the number of  atomic species (or elements), Ns be the number of sites in a  multi-principal element metallic alloy, and Ni be the number of atoms of  the i − th element, and using the combination notation, the number of  possible representations (Ncells) becomes Ncells = ∏ Ne i=1 ( Ri Ni ) 1 Ri is the  remaining number of sites defined as Ri = Ns when i=1; else Ri = Ns − ∑i−1 j=1Nj−1.
+Noteworthy, the number of possible representations in­ creases quickly with the number of sites and elements, and therefore,  several realizations using large supercells are needed to obtain statisti­ cally meaningful results.
+The most computationally intensive way of  tacking this issue is to use a large number of supercells, albeit there is not  robust way to a priori ensure that the number and size of supercells are  sufficient to achieve accurate statistical representation.
+A more refined  approach is so called special quasi-random structures (SQS) [51,52],  which has been used for studying properties of HEAs [53].
+Despite its  more systematic conceptualization, SQS still requires to appropriate  choice of supercell size and clustering size, which increases with the  number of principal elements.
+The coherent-potential approximation  (CPA) [54,55], in particular in its most-common practical implementa­ tions such as within the Korringa-Kohn-Rostoker (KKR) methods [56,  57], or the exact muffin-tin orbitals (EMTO) [58], has been also  frequently used approach to study HEAs [59].
+Recently, it has been  applied in an automated high-throughput framework to study a large  compositional space of HEAs [60].
+While CPA-based methods are highly  promising to approximate a large number of materials properties, it is  still a challenging task to obtain the large number of electronic and  phonon  properties  required  to  consistently  obtain  the  temperature-dependent electron-phonon (e − ph) coupling factor  (Ge−ph), electronic specific heat (Ce) and electronic thermal conductivity  (κe) for a given compositional space.
+For instance, it is quite computa­ tionally heavy to obtain phonon dispersion within CPA-based ap­ proaches for a large compositional space [61].
+Thus, Samolyuk et al. have used a linear mixing scheme of the con­ stant e-ph mass enhancement parameter (λ) of Ni, Cr, and Fe for that of  their equi-molar binary alloys [62].
+A less robust, yet extremely expe­ dient approach is the virtual-crystal approximation (VCA) [63], which is  conventionally applied a linear mixing scheme to atomic pseudo-po­ tentials [64].
+It offers a disordered mean-field limit approximation for  configurational disorderliness as in HEAs.
+By construction, VCA is  missing any short-ranged ordering, or details of local chemical envi­ ronment.
+However, it is highly suitable when approximating average  materials properties of disordered system such as Ge−ph, Ce and κe, which  are commonly approximated by averaging over microscopic quantities.
+Despite its crude oversimplification, it has been shown that VCA is  relative accurate when calculating elastic constant, simple-phase  transformation, and thermodynamic functions of HEAs [65].
+In partic­ ular, it can provide suitable tools when trend analysis throughout a  composition space due to equally present systematic errors within it.
+The VCA approximation is used in this work to compute average elec­ tronic properties of HEAs including several elements in a wide range of  compositions.
+This work presents a first-principles investigation of electronic  properties in MPE alloys at several molar compositions.
+The  temperature-dependent Ge−ph, Ce and κe are calculated within fully first-  principles approaches.
+There has been previous works [62,66–68] on  elemental metals and binary alloys, partially carrying the electronic  temperature effects.
+In this work, the underlying quantities such as λ, the  Eliashberg function, the Fermi velocity, the plasmon lifetime and the  electronic thermal conductivity are directly calculated for each elec­ tronic temperature point between 100 −30000 K for each composition.
+Additionally, the influence of the electronic effects in an equimolar  CoCrFeNi HEA is investigated under radiation environments within MD  simulations incorporating the electronic effects using the local  two-temperature molecular dynamics (ℓ2T-MD) method [46,69].
+For  the first time, our work provides accurate first-principles electronic data  for MPE alloys and shows the importance of these effects in radiation  damage.
+Remarkably, we have found that neglecting these effects could  lead to large overestimations of the FP population (up to ∼20 − 25%)  even at low PKA energies of 50 keV. An expedient model is developed to  predict vacancy formation for the compositional space of Cr-Fe-Co-Ni.
+Temperature-dependent first-principles electronic, and phonon proper­ ties database, and MD defect-evolution database are made available in  the repository at Ref. [70].
+1 Using the combination notation defined as  ( Ns N1 ) = Ns! N1!(Ns−N1)!.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 3 2.
+Theoretical and computational methodology  2.1.
+Calculating first-principles electronic, and phonon properties  Let us now describe the relevant parameters of interest needed to  quantify the electronic effects in multi-PE alloys.
+The temperature-  dependent e −ph coupling factor Ge−ph is given by [71,72] Ge−ph = −πℏkBλ〈ω2〉 g(EF) ∫∞ −∞ dϵ ∂f ( ϵ, μ, Te I ) ∂ϵ g2(ϵ), (1)   where kB is the Boltzmann constant, g(E), EF, and μ are the electronic  density of states (EDOS), the Fermi energy, and the chemical potential,  respectively; f(ϵ, μ, Te) is the Fermi-Dirac distribution function.
+The  product of λ and the mean square phonon frequency, λ〈ω2〉, is given by  λ 〈ω2〉 = 2 ∫∞ 0 dω ωα2F(ω), (2)   with α2F(ω) is the Eliashberg spectral function.
+The temperature-  dependent electronic specific heat, Ce, is given by [72] Ce = ∫∞ −∞ dϵ (ϵ −EF) ∂f(ϵ, μ, Te) ∂Te g(ϵ).
+(3)   The final component to describe the electronic properties of materials  related to heat conduction, is the temperature-dependent thermal con­ ductivity, κe, given by [37],  κe = v2 F τp Ce, (4)   where vF, and τp are the Fermi velocity, and the plasmon lifetime,  respectively, which are also implicitly dependent on the electronic  temperature.
+The three central quantities in Eqs.
+(1), (3), and (4) require accurate  estimation of g(E), EF, λ and α2F(ω), vF and τp.
+Kohn-Sham density-  functional theory (KS-DFT) [73–77] is almost-ubiquitous first-principles  approach to calculate electronic structures of solids.
+Its perturbative  extension, called the density-functional perturbation theory (DFPT) [78,  79],  also  provides  an  expedient  approach  for  obtaining  zero-temperature phonon properties.
+Despite rapid advancements in  underlying algorithms, and computational resources, the KS-DFT-based  implementations are severely limited in terms of system size and spatial  complexity, in particular for metallic systems [49,50].
+It is particularly  challenging in the cases of HEAs, since it requires a large number of  supercell simulations to achieve an accurate statistical representation  configurational disorderliness.
+Virtual-crystal approximation (VCA) is  an expedient approach to study multi-principles elements solids at the  disordered mean-field limit [80].
+Within VCA, the atomic pseudo-po­ tentials [64] of constituent elements are linearly mixed to a single  pseudopotential, representing a virtual atom [63].
+In principle, DFT is an absolute-zero-temperature theory.
+However, it  is worth to mention that there has been considerable work on extending  it to capture thermal equilibrium at finite temperatures [81].
+In the  context of this work, the extreme electronic temperature are highly  localized as it is generated by high-energy particles.
+Thus, the finite  electronic temperature effects can be expediently included within a  simple conceptual way through the smearing parameter around the  Fermi level, representing Te, in the case of metallic systems.
+With that in  mind, g(E) is expected to have a negligible Te-dependence as it only  affects occupancies of the electronic states at around the Fermi level as  the practical DFT assign occupancies after optimizing the KS states.
+It is  more suitable to include the possible effects of Te through EF as it does  not require a large number of electronic band-structure simulations.
+The  Te-dependent EF can be easily obtained using the zero-temperature  electronic structure with little additional computational cost.
+We refer  the reader to Refs.
+[82] and [83] for details on how to obtain λ and  α2F(ω), using DFPT.
+The Te-dependence can be partially introduced by  setting the smearing parameter used for the double-delta integral during  the e-ph coupling simulations.
+Consistently, the averaged Fermi-velocity square, 〈v2 F〉, can approxi­ mately given by [84]  〈 v2 F 〉 = (∑ m ∫ SFm dk ⃒⃒⃒ ∂Em,k ∂k ⃒⃒⃒ 2) (∑ n ∫ SFn dk ′ ) , (5)   assuming that the electronic bands have parabolic dispersions normal  the Fermi surface.
+SFm, and Em,k are the partial Fermi surface, and the KS  energy of the m −th metallic band, respectively.
+In practice, 〈v2 F〉is  calculated on a slab with a thickness of ΔEFermi using the in-house post-  processing tool [85], available in Ref. [86].
+It requires a well-converged  electronic band structure on an extremely dense Brillouin-zone sam­ pling.
+The Te-dependence can be consistently included by setting  dFermi = kBTe [87].
+We point out that Eq. (5) does not include the e −ph  coupling effects, which can be introduced as the electron mass  renormalization such as vF→vF/(1 + λ) [88].
+Ignoring any impurity, the plasmon lifetime of a metallic solid can be  expressed as the sum of the electron-electron (e − e) and the electron-  phonon (e − ph) scatterings terms within Matthiessen’s rule such as  1 τp = 1 τe−e + 1 τe−ph .
+(6)   The e −e term (in the Hz unit) can be estimated using the Fermi liquid  theory at the absolute-zero temperature by [89–91]  1 τe−e = me4(E −EF)2 64π3ℏ3ϵ0E3/2 s E1/2 F ( 2 ̅̅̅̅̅̅̅̅̅̅ EsEF √ 4EF + Es + arctan ̅̅̅̅̅̅̅̅ 4EF Es √ ) , (7)   where m, e, ℏ, and ϵ0 are the electronic mass, the unit charge, the  reduced Plank’s constant and the vacuum permittivity, respectively.
+The  kinetic energy due to the Thomas-Fermi screening length qs = e ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ g(EF)/ϵ0 √ given by Es = ℏ2q2 s /(2m).
+By setting (E − EF) = kBTe, the  Te-dependence can be consistently introduced alongside the Te-depen­ dent EF.
+The second term in Eq.  (10) is approximately given by [82,92]  1 τe−ph = 2πkBλTe 3 . (8)   2.1.1.
+Computational details of first-principles simulations  First-principles simulations were performed using the Quantum  ESPRESSO (QE) software [93,94] with the external thermodynamics  thermo_pw package [95].
+Fermi velocities were calculated using an  in-house code available in Ref. [86].
+The SG15 optimized  norm-conserving Vanderbilt (ONCV) scalar-relativistic pseudo-poten­ tials [96,97] (version 1.2) using the Perdew-Burke-Ernzerhof (PBE)  exchange-correlation functional [98–100] were used for the four base  elements (Cr, Fe, Co and Ni), as well as the additional elements (Al, Mn  and Cu).
+Atomic pseudo-potential were used to obtain the virtual atoms  representing MPEs alloys within VCA.
+The spin-polarization has been  ignored to be consistent as the spin-polarization has not been yet  implemented within the quasi-harmonic approximation [101] in the  thermo_pw package.
+However, the relevant electronic and phonon  properties are needed to approximate macroscopic quantities by aver­ aging over the first Brillouin zone.
+Thus, while the local magnetic  ordering may play a crucial role in phonon dispersions, it is expected to  become less significant after averaging, in particular for HEAs [102–104].
+The initial crystallographic information for the thermodynamically  most-stable phases of the base elements was extracted from Ref. [105].
+Cr and Fe have body-centered cubic (BCC) structures, while Co and Ni  have hexagonal closed-packed (HCP) and face-centered cubic (FCC)  structures.
+The FCC Ni structure was used as a template for the initial  crystal structures for the HEAs.
+Variable-cell relaxation was performed  O.K. Orhan et al.Acta Materialia 244 (2023) 118511 4 using a common high kinetic energy cutoff of 150 Ry on a 12 ×12 ×12  Monkhorst-Pack-equivalent Brillouin zone sampling (MP-grid) [106],  and the convergence for the total energies, the total forces, and the  self-consistency were set to 10−7 Ry, 10−6 Ry⋅a−3 0  and 10−10,  respectively.
+To practically mimic the extreme electronic temperatures of ∼ 30000 K on irradiated surfaces, the temperature grid was divided into  two parts such as a low temperature grid of 100 −1000 K with a step size  of 100 K, and a high temperature grid of 3000 −30000 K with a step size  of 3000 K.
+The electronic temperatures were consistently introduced a  smearing parameters around the Fermi levels in all simulations.
+The first  set of simulations were performed to obtain anharmonic thermodynamic  properties were calculated for the low-Te using the quasi-harmonic  approximation [101] within the thermo_pw package on a shifted 12 × 12 × 12 MP-grid for electronic structure simulations, and a 4 ×4 ×4  MP-grid for phonon simulations.
+The e −ph mass enhancement pa­ rameters were calculated by following the procedure in Refs.
+[82] and  [83] with a dense 36 × 36 × 36 MP-grid for interpolation, and a  converged 12 × 12 × 12 MP-grid for electronic structure simulations, 4  ×4 × 4 MP-grid for phonon simulations.
+Finally, the Fermi velocities  were calculated using the in-house code starting from the band struc­ tures, calculated on a 36 × 36 × 36 MP-grid.
+Temperature-dependent  electronic, and phonon properties upto 3 × 104 K have been made  publicly available in the repository at Ref. [70]. 2.2.
+ℓ2T-MD Methodology The ℓ2T-MD method, developed by Ullah and Ponga [46], provides  computationally feasible and seamless approach to simulate the elec­ tronic effects in MD simulations within the two-temperature model.
+Considering a system with Na atoms, each atom is provided with an  electronic temperature variable.
+Let (Te i ) denote the electronic temper­ ature associated with the i − th atom in the system which can fluctuate  locally depending on the local environments during a cascade even2 At  the same time, let us introduce a maximum electronic temperature Te max  representing an arbitrary upper bound to the electronic temperature of  the system.
+On the basis of this maximum temperature, we can map the  temperature field using the transformation θi = Te i Temax which maps θi ∈ [0, 1] interval.
+According to Ullah and Ponga [46], the ℓ2T-MD model electronic  temperature evolution using the following master equation.
+∂Te i ∂t = Ge−ph Ce Te max ( θlat i −θe i ) ⏟̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅⏞⏞̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅⏟ e−ph +Te max ∑ NA j∕=i Kij [ θe j ( 1 −θe i ) eθe i −θe j −θe i ( 1 −θe j ) eθe J−θe i ] ⏟̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅⏞⏞̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅⏟ e−e   In Eq. () the time-evolution of Te i for each atom is influenced by the  energy exchange energy between electrons surrounding the i −th atom  (and denoted by (e −e)), and a coupling between electron and phonons  (e − ph).
+Kij is a material property that quantifies the rate of electronic  energy exchange between electrons near two adjacent atomic sites.
+Interestingly, Kij can be linked to well-defined properties obtained either  from ab-initio simulations or experimental data and is going to be  described below.
+The term Ge−ph measures the e −ph scattering between electrons  close to the Fermi level and phonons and determines how effectively the  energy exchange between e −ph occurs.
+On the other hand, the term Ce  determines how much excess energy electrons can absorb.
+By definition,  both of these terms are always positive for metals.
+A higher Ge−ph leads  to more rapid energy exchange between e −ph, while a higher Ce allows  to store more excess energy in the free electrons.
+When a sudden amount  of energy is introduced in the system, there is a rapid rise in the lattice  temperature (Tlat i ), which electrons around the Fermi level can partially  absorb until the electronic and lattice temperatures reach equilibrium.
+We notice that θlat i = Tlat i /Te max in Eq.  () denotes a mapped local lattice  temperature that is classically defined by  Tlat i = 2 3kBNc ∑ Nc j=1, j∕=i 1 2mjv2 j , (9) Nc is the number of atoms in a small cluster surrounding the i −th atom.
+The small cluster is defined within a cut-off radius, rc, which is equal to  the interatomic potential’s cut-off used in MD [46].
+mj, and vj are the  atomic mass and the velocity vector of the j − th atom.
+The pair-wise exchange-rate thermal coefficient Kij for the electronic  temperature can be determined by a long-wave analysis to well defined  thermodynamics properties [46,69,107] and is given by  Kij = 2dκe CeZb2 = 2 dv2 Fτp Zb2 , (10)   where d = 3 is the system dimension, Z is the coordination number of  the lattice without distortion, and b is the Burgers vector. 2.2.1.
+Computational details of classical molecular dynamics simulations  MD and ℓ2T-MD simulations were performed using the Large-scale  Atomic/Molecular Massively Parallel Simulator (LAMMPS) software  [108], into which the ℓ2T-MD have been implemented by Ullah and  Ponga [46].
+The ℓ2T-MD routine was modified to allow Ge−ph, Ce, and κe  to be updated with Te i .
+A binary search algorithm on a hook-up table was  used to find the correct parameters range corresponding to Te i , while  linear interpolation was used to interpolate the values corresponding to  the exact Te i .
+The embedded atom model (EAM) potential by Farkas and  Caro [109] was used as the interatomic potential as it can model HEA of  Co, Cr, Fe and Ni and was used previously in literature for modeling  radiation damage for HEA [28,110].
+The electronic stopping was  incorporated in the model through electron stopping fix in LAMMPS [111,112].
+The stopping-power values were calculated using the Stop­ ping and Range of Ions in Matter (SRIM) software [113] with a mini­ mum cut-off energy of 10 eV. For the sake of completeness and  robustness, the minimum cut-off energies of 1, 5 and 10 eV were tested  for CrFeCoNi within the ℓ2T-MD.
+The short-range interactions were  modified using a ZBL potential [114] to prevent atoms from getting too  close during the displacement cascades.
+The ZBL potential was smoothly  linked to the EAM pair potential for distances between 0.05 nm and 0.18  nm.
+This procedure does not affect the equilibrium properties.
+An initial cubic simulation cell with a dimension of L = 34 nm was  used to fill using a generic crystal with a lattice parameter of a = 0.363  nm with a total number of atoms of 3,538,944.
+This cell size ensured that  the radiation-induced damage was contained within the simulation  cells’ boundaries.
+Periodic boundary conditions were employed in all  three directions for all simulation cells.
+The initial simulation cells of  CoCrFeNi were obtained by randomly placing Co, Cr, Fe and Ni on the  atomic sites.
+We performed the following test to validate the random  generation to ensure the correct statistical sampling.
+First, 512 random  generations were performed in smaller samples containing ∼500 atoms.
+These samples were relaxed using molecular statics and subjecting them  to zero pressure.
+Then, the energy per atom (∼−4.1232 eV/atom) and  its standard deviation (∼4 meV/atom) were measured.
+These samples  indicated a distribution close to a Gaussian of energies after minimiza­ tion, as shown in the Supplementary Materials (SM) Fig. S1.
+2 We point out that the subindexes i and j are used in the ℓ2T-MD method to  denote different atomic sites and should not be confused with traditional no­ tation within the DFT formulations for different orbitals.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 5 Subsequently, nine large cells involving 3,538,944 atoms were relaxed  under the same conditions, and their average energy (∼−4.1229 eV/  atom) and standard deviation were also obtained.
+The difference be­ tween average energies was less than 1 meV/atom, indicating a large  number of chemical environments are simulated in the large sample.
+The energy levels correspond to the average values of the 512 different  realizations suggesting proper sampling of the chemical environments.
+Then the simulation cells were subjected to energy minimization at T  = 0 K using the Polak-Ribi`ere conjugate gradient algorithm [115].
+Subsequently, an initial temperature of T = 300 K was given to the  atoms, and the system was relaxed for 30 ps using the Nos´e - Hoover  thermostat to relax the hydrostatic pressure to zero.
+The same energy  minimization and relaxation procedures were used for the Ni simulation  cells.
+Cascade events were initiated by randomly choosing a primary  knock-on-atom (PKA) located at the center of the simulation cells.
+The  PKA was given a random velocity vector corresponding to recoil energy  of 50 keV in an NVE ensemble.
+For the ℓ2T-MD simulation, the average  lattice and the average electronic temperatures (Tlat, and Te, respec­ tively) were initially set at T = 300 K before energizing the PKA.
+A  variable time step was used with a maximum time step of ≤0.01 fs for  the cascade simulations to limit the maximum distance for every time-  step moved by the PKA atom to 0.005 Å. At each MD step, between 10  to 15 Te integration time-steps of Eq.  () were performed.
+The total time  of the cascade simulations was about 32 ps, which was sufficient for the  FPs to reach steady states.
+Each cascade simulation was repeated ∼20  times with different random PKA directions and HEA structures to  ensure sufficient statistical representation.
+To ensure this, the mean  values of the total numbers of defected atoms (Ndef) and Frenkel pairs  (NFP) was analyzed for the randomly selected subsets of the cascade  simulations with respect to the number of simulations, shown in Fig. S13  and Fig. S14, respectively.
+Our analysis indicates that the total number  of cascade simulations for each case reaches to convergence within ±5%  accuracy of the overall mean value of all available simulations for each  case.
+The common-neighbor analysis (CNA) [116] was used to identify  formations of defect clusters.
+The Ovito software was used for visuali­ zation of the defect structures [117], and the DXA algorithm was used  for dislocation loops analysis [118].
+Finally, the Wigner-Seitz defect  analysis was performed to determine the vacancies and the  self-interstitial atoms (SIA) using the Ovito software.
+The related database of defect evolutions in Ni, and CrFeCoNi within  the conventional MD, and the ℓ2T-MD has been made publicly available  in the repository at Ref. [70]. 3.
+Results and discussion  We start with thermodynamic and mechanical stability assessments  of our base HEA (CrFeCoNi) and its PEs.
+The mixing Gibbs free energy  (Gmix) is an ubiquitous indicator for thermodynamic stability [119].
+In  Fig. 1, the mixing Gibbs free energy (Gmix) and the individual contri­ butions to it are shown up to 1000 K.
+The configurational-entropy  contribution is the predominant term, leading to thermal stability at a  low temperature.
+At the same time, the mixing electronic and the mixing  vibrational Helmholtz free energies (Fmix el , and Fmix vib , respectively) are  negligible (see the SM for the details to calculate the free energies, and  the configurational entropy).
+Addition to the thermodynamic stability,  the elastic and dynamic stability is crucial to assess the mechanical  stability.
+The elastic stability is assessed using the Born-Huang-stability  criteria [120,121] (see the SM for the necessary and sufficient condition  for cubic symmetry).
+The dynamic stability is assessed by analyzing  phonon dispersions [122].
+CrFeCoNi is both elastically stable according  to the Born-Huang-stability criteria and dynamically stable as it has  neither negative nor soft phonon modes [122].
+In Fig. 2, Ge−ph, Ce, and κe are depicted for the four pure elements,  and their equimolar FCC RSS.
+Ge−ph exhibits quite similar trends for  CrFeCoNi and the pure elements, exponentially vanishing with the  increasing temperature.
+The integral term in Eq.  (1) predominantly sets  this trend when the individual terms are further analyzed as shown in  Figs. S2 and S3.
+However, the non-integral terms for each system  roughly average to the same order and determine magnitudes of Ge−ph.
+It  becomes in order of 1 at around 500 K, indicating that electrons become  too fast for e −ph scattering.
+On the other hand, Ce almost-linearly in­ creases with the increasing Te.
+This results to a rapid Ge−ph/Ce→0 for Te  above 500 K. This indicates that there will be very little energy transfer  from electrons to lattice when Te i >> Tlat j .
+On the other hand, despite  also decreasing κe/Ce ratio, there will still be energy dissipation, medi­ ated solely by electrons.
+This scenario is desirable to keep FPs formation  by dissipating excess energy among electrons while avoiding further  energizing the lattice.
+Comparing Ce of CrFeCoNi with the pure elements, we observed that  CrFeCoNi has a higher Ce, hinting that electrons have a better capacity to  absorb energy compared to the pure metals.
+This effect could be  important in radiation environments as the plasmons take on more  thermal energy, which is removed from the lattice and thus could result  in less FP formation.
+At lower temperatures, Cr exhibits higher κe  compared to other PEs and CrFeCoNi, while CrFeCoNi, Co, and Ni per­ forms better at higher electronic temperatures (i.e., Te≳6000 K).
+The  trends in κe are predominantly determined by vF, portrayed in Figs. S2  and S3, as well as λ as it renormalize vF by including e −ph coupling  effects.
+This effect leads to remarkable poor performance for Fe as it has  the slowest vF with the largest λ.
+Despite its not-so-superior κe when  compared to those of the PEs, CrFeCoNi has a much higher Ce.
+It leads to  a much smaller Kij∝= v2 Fτp, indicating that while its electrons could  hold more energy for the same electronic temperature, they are less  effective in dissipating it compared to the PEs.
+In summary, CrFeCoNi is  expected to absorb excess lattice energy more effectively via e −ph  coupling compared to the PEs, while less effective to dissipate it via e −e  coupling except for Fe.  3.1.
+Compositional space of non-equimolar Cr-Fe-Co-Ni random solid  solutions  Higher Ge−ph and Ce are the key factors for a superior radiation-  damage resistance in HEA.
+Thus, a potential strategy to improve radia­ tion damage properties is to tune molar fractions of PEs to further  improve these properties.
+We investigate the compositional space of the  Cr-Fe-Co-Ni RSS.
+For a systematic yet feasible investigation, we vary  each PE at a time on a molar-fraction grid of x = [0, 0.05, 0.10, 0.15] while keeping the remaining three elements equimolar among them­ selves.
+The x = 0 cases are the equimolar 3-PEs cases; however, the non-  CrFeCoNi cases are called the non-equimolar cases for simplicity.
+By  varying each PE one by one, the individual effect of each PE can be  Fig. 1. Temperate dependent mixing Gibbs free energy (Gmix) for CrFeCoNi in  RSS.
+Mixing electronic, and vibrational Helmholtz free energies (Fmix el  and Fmix vib ,  respectively), and the configurational-entropy contribution ( − TΔSconf) also  shown in the plot.
+See SM for calculations details.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 6 partially assessed, although reducing a single PE automatically increases  the molar fraction of the remaining three.
+The first step is to assess the relative stability of the non-equimolar  RSS.
+In Fig. 3, the Gibbs free energy differences (ΔG) of the RSS  compared to the CoCrFeNi are illustrated up to 1000 K. Reducing Cr or  Fe leads to thermally less stable compositions by increasing G while  reducing Ni has an opposite effect.
+Reducing the molar-fraction of Co  has a less significant effect on the thermal stability, and this is consistent  with previous studies carried out in five PE alloys [21].
+At room tem­ perature (300 K), a reduction up to 20% of Cr or Fe, or a reduction of Co  only leads to ΔG in the order of 1 meV, which is in the order of the  accuracy of the practical DFT simulations.
+Reduction of Ni already leads  to better thermal stability; thus, it is thermally more favorable in any  case.
+The non-equimolar RSS are also elastically stable according to the  Born-Huang-stability criteria.
+They are also dynamically stable except  for CoCrFe (Nix(CoCrFe)1−x for x = 0) as it has negative phonon modes  at around the X high-symmetry point in the first Brillouin zone of the  primitive FCC unit cell.
+In Fig. 4, dimensionless ratios G x e−ph, C x e and κx e for non-equimolar  compositions are shown to assess their relative performance in dissi­ pating excess energy.
+The dimensionless ratios are computed as the ratio  of Ge−ph, Ce and κe of the non-equimolar RSS to those of CoCrFeNi.
+Reducing Cr concentration (first column in Fig. 4) quickly worsen Ge−ph  and Ce starting at around the room temperature.
+It indicates that the  lower Cr concentration can lead to less effective energy exchange be­ tween e − ph, shown to play a crucial role in promoting defect recom­ bination and reducing defect clustering.
+Reducing Fe or Co  concentrations (central columns in Fig. 4) have subtle effects on Ge−ph,  Ce and κe.
+On the other hand, a 25 −50% reduction of Cr significantly  improves purely electronic heat dissipation, hinted by much higher κe.
+However, the comparative analysis carried out later on in Section 3.3 for  Ni and CrFeCoNi indicates that the e −e term in Eq.  () has a lesser effect  on the defect evolution.
+At the lower temperatures (T < 1000 K) (the  inset figures in Fig. 4), lower Ni concentrations improve Ge−ph with a less  significant loss in Ce.
+Unlike Cr, lower Ni concentrations drastically  worsen κe (∼50%) at lower temperatures.
+The composition-dependent  relative changes in Ge−ph are determined mainly by ratios of the  electron-phonon mass enhancement parameters (λ), while the ratios of  the Fermi velocities primarily determine the general trends in κe (vF),  shown in Figs. S4-S7.  3.2.
+Equimolar additions of Al, Mn, or Cu  Another strategy to tailor the electronic and phonon parameters is to  add other elements rather than exploring non-equimolar compositions.
+In Fig. 5, the relative thermal stabilities of equimolar AlCrFeCoNi,  CrMnFeCoNi (also known as Cantor alloy), and CrFeCoNiCu are shown  with respect to CrFeCoNi.
+While introducing Al or Mn leads to better  thermal stability, CrFeCoNiCu becomes less thermally stable.
+However,  it is still thermally stable in its own merit as indicated its mixing Gibbs  free energy, shown in Fig. S11 using the thermal data for the elemental  Cu from Ref.
+[87] While all three RSS are elastically stable according to  the Born-Huang-stability criteria, only CrMnFeCoNi and CrFeCoNiCu  are dynamically stable as AlCrFeCoNi has negative phonon modes at  around L high-symmetry point in the first Brillouin zone of the primitive  FCC unit cell.
+In Fig. 6, the relative performance of the electronic (G Al/Mn/Cu e−ph ,  C Al/Mn/Cu e  and κAl/Mn/Cu e ) properties compared to CrFeCoNi are shown.
+The very first observation is that the addition of Al drastically increases  Ge−ph  3, as well as substantially increases Ce and κe by more or less ∼2  times compared to those of CrFeCoNi.
+On the other hand, the addition of  Mn has almost-no effect on Ge−ph, Ce, or κe.
+Finally, the addition of Cu  worsens Ge−ph and improves κe ∼1.5 times while almost no effect on Ce.  Fig. 2.
+Temperature dependence of the e −ph coupling factor (Ge−ph), the electronic specific heat (Ce), and the electronic thermal conductivity (κe) of the base PEs,  and the FCC CrFeCoNi.
+3 Note that the scale for Al is represented at the left of the plot and is several  times higher than for the other two elements.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 7 The drastic increase in Ge−ph of AlCrFeCoNi is mostly due to the in­ tegral term in Eq. (1), as well as higher λ〈ω2〉and lower g(EF), as dis­ played in Figs. S8 and S9.
+The higher λ values can be mainly attributed to  lower averaged mass as phonon modes are normalized with the average  mass of the unit cell.
+On the other hand, introducing Mn, which is most-  alike to CrFeCoNi in terms of its averaged atomic mass and VEC, has the  most negligible effects on the EDOS and phonon DOS (PDOS); thus,  Ge−ph is almost identical except at the very low temperatures.
+In the case  of CrFeCoNiCu, the lower λ alongside negligible increment in other  significant terms in Eq.  (1), shown in Fig. S12, leads to a lower Ge−ph.
+In the case of Ce, the EDOS is the principal figure of merit, as imposed  by Eq. (3) (in particular, due to μ ≈EF) When comparing the EDOS of  the four systems in the top-right panel of  Fig. S8, the EDOS of CrFeCoNi,  CrMnFeCoNi, and CrFeCoNiCu are pretty similar.
+On the other hand,  AlCrFeCoNi has lower yet more spread-out EDOS, leading to higher Ce.
+With that in mind, the higher κe of AlCrFeCoNi is due to its higher Ce, as  Fig. 3.
+Temperature dependent Gibbs free energy differences (ΔG) for non-equimolar compositions compared to the CrFeCoNi random solid solution. Fig. 4.
+Temperature dependence the electronic property ratios for non-equimolar compositions compared to CrFeCoNi.
+The e −ph coupling factor ratio (G x e−ph), the  fractional electronic specific heat (C x e), and the fractional electronic thermal conductivity (κx e) fractions for non-equimolar random-solid solutions compared  to CrFeCoNi. Fig. 5.
+Temperature dependent Gibbs free energy differences (ΔG) for equi­ molar AlCrFeCoNi, CrMnFeCoNi, and CrFeCoNiCu compared to the CrFeCoNi.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 8 well as its faster free electrons despite shorter-living, shown in Fig. S9.
+Without any contribution from Ce, the almost-identical κe of CrMnFe­ CoNi is due to counter-balancing of changes in vF and τp.
+On the other  hand, CrFeCoNiCu has faster as well as longer living plasmons, leading  to slightly higher κe.
+As τp is inversely proportional to λ via Eq.  (8),  which is the predominant term in Eq.  (10), a higher λ leads to a lower τp.
+Similarly, vF is renormalized by (1 + λ), a higher λ lower it.
+However, a  steeper band dispersion can compensate for this reduction, as in the case  of AlCrFeCoNi.
+When introducing additive elements, the relative changes in Ge−ph  and κe are determined by both electronic and phonon properties, while  Ce is purely electronic.
+In the case of κe, it is also dependent on fine  details of electronic band dispersion and Fermi surface. 3.3.
+Benchmark: Defect evolution in Ni and CrFeCoNi  Despite its relatively well-scalability, accurate MD simulations are  still computationally challenging, particularly to achieve a reasonable  statistical representation of HEAs.
+Thus, the elemental Ni and CrFeCoNi  are chosen as the benchmark cases to simulate the defect evolution.
+We start by analyzing the time evolution of the average temperatures  depicted in Fig. 7.
+For both materials, the initial average Tlat spike to ∼ 408 K from the initial 300 K due to the additional kinetic energy of PKA.
+We also notice that for the ℓ2T-MD simulations, the average electronic  temperature also shown in Fig. 7 remains at 300 K at t = 0 ps.
+For classic  MD and ℓ2T-MD simulations, the lattice temperature showed a quick dip  at around ∼0.25 ps in Tlat (listed in  Table S2) as the PKA transfer energy  to the surrounding atoms and rapidly generated defects.
+After that, the  lattice temperature quickly stabilizes near a steady-state value that is  very similar for MD simulations (355 K and 356 K for Ni and CoCrFeNi,  respectively).
+On the other hand, examining the ℓ2T-MD simulations, we observed  a much different behavior.
+For those simulations incorporating the  electronic effects, the lattice temperature continuously reduced its value  as time went by, whereas the electronic temperature monotonically  increased.
+These two temperatures eventually reached equilibrium (at  334 K and 332 K for Ni and CoCrFeNi, respectively) at around t = 32 ps.
+We also observed that the standard deviation of these values was around  ±2 K, illustrating a very robust statistical response of the multiple rep­ licas used in the study.
+The analysis of the average temperature of the  system with time suggests subtle differences between Ni and CoCrFeNi,  and thus, it is beneficial to investigate the evolution of the maximum  temperatures during the simulations.
+Fig. 8 compares the maximum local lattice and electronic  temperatures during the cascade simulations within ℓ2T-MD simula­ tions.
+At first glance, we observed that the peak of lattice temperature  was the same for both materials, whereas the peak for the electronic  temperature was different (see insets in Fig. 8).
+The time to reach the  maximum electronic temperature (∼0.05 ps) is comparable with plas­ mon lifetime τp and could hint at ballistic electronic heat conduction  near the PKA for both materials.
+While ballistic heat conduction is  neglected in the electronic subsystem, it is considered through the  explicit integration of the equation of motion in the lattice.
+We point out  that the ℓ2T-MD implementation allows for second sound simulations,  and a computational implementation is provided in Refs[69,107].
+We  also observed for CoCrFeNi several oscillations in the maximum elec­ tronic temperature, hinting at local plasmon excitations during the PKA  trajectory.
+As a result, and considering that the width of the peak was  much longer for the CoCrFeNi compared to Ni, the lattice temperature  dropped faster for CoCrFeNi than Ni.
+These facts hint at a better energy  Fig. 6.
+Temperature dependence of the electron-phonon coupling factor (Ge−ph), electronic specific heat (Ce), and electronic thermal conductivity (κe) fractions of  AlCrFeCoNi, CrMnFeCoNi, and CrFeCoNiCu compared to CrFeCoNi.
+Note that GAl e−ph scale is shown at the left of the plot. Fig. 7.
+Time evolution of the average lattice (Tlat) and electronic (Te) tem­ peratures for Ni and CrFeCoNi within the conventional MD and ℓ2T-MD for a  50 keV PKA.
+The mean values of the repeated eight simulations are shown with  dashed lines.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 9 exchange between e −ph for CoCrFeNi compared with the pure metal.
+Indeed, the energy exchange between electrons and phonon is more  significant in the case of CrFeCoNi as indicated more prolonged survival  of Te before reaching steady temperatures (at around 30 ps) compared to  those of Ni, reaching steady temperatures at around 15 ps.
+To better understand this energy exchange, Fig. 9 shows a graphical  comparison of the local electronic properties between CrFeCoNi and Ni  for the first t = 2 ps using the maximum electronic temperature.
+Remarkably, the ratio between Ge−ph for CrFeCoNi and Ni is much  greater than one below t = 0.5 ps, and eventually converged to two;  suggesting a much faster exchange of thermal energy from the lattice to  the electrons.
+Moreover, Ce is about 20% greater for CrFeCoNi compared  to Ni although some variations are observed below t = 0.5 ps.
+Only the  thermal conductivity of the high entropy alloy is less than Ni (about 70%  of Ni), but it seems to have a much less critical impact on the thermo­ dynamics behavior of the two subsystems. 3.3.1.
+Electronic effects in defect formation and recombination  Having analyzed the evolution of the electronic and lattice temper­ atures during the simulations, we now investigate the impact on defect  formation when electronic effects are included.
+Fig. 10 depicts the time  evolution of the defected atoms and FP in the simulations.
+Defected  atoms are defined as those atoms that do not belong to the FCC lattice.
+Qualitatively, the trends are very similar for defected atoms and FPs.
+An  initial high-peak was observed at the earlier stages of the simulations, i.  e., τmax def = 0.31 ps (listed in Table 1).
+A monotonic decay of defected  atoms and FP followed until the number stabilized after τsteady = 8 −10  ps.
+The number of defected atoms and FP was higher for all MD simu­ lations compared to the ℓ2T-MD simulations, and also for Ni compared  to CoCrFeNi (cf.
+Nsteady def  and Nsteady FP  in Table 1 columns one and two, and  three and four).
+At the initial stages of the cascade events, the steep  decrease in Tlat leads to a rapid defected-atom generation as indicated by  the sharp increase in the total number of defected atoms (Ndef) in Fig. 10.
+The reduced number of FP compared to defected atoms indicates that  during the early stages of the PKA, some defects form FP while some are  only partially defected due to lattice distortions or recombine quickly  due to the high local thermal energy.
+Nevertheless, besides reducing  significantly after a few ps, FPs reached steady-state for all simulations  after ∼10 ps.
+As shown in Table 1 the trends are analogous as the number of  defected atoms with more FP for MD compared to ℓ2T-MD and for Ni to  CoCrFeNi.
+Interestingly, comparing the FP at the end of the simulations,  a difference of ∼26% was observed for Ni, and this is comparable with  previous studies for pure metals [43–46].
+Difference can be attributed to  the temperature dependence implemented in our work compared to  previous ones, where usually Ce and κe are modeled as a linearly  dependent on Te.
+However, as shown in Fig. 2, this is only true for  moderate temperature ranges and both quantities saturate at high  temperatures.
+Comparing the FP for CoCrFeNi, the incorporation of  electronic effects resulted in 105 ± 4 FPs, whereas classical MD showed  126 ± 8, or a difference of 20% between the two approaches.
+The  significantly higher Ge−ph of CrFeCoNi compared to that of Ni, shown in  Fig. 9, significantly promote higher defect recombination, leading to  lower FPs at steady-state.
+It is evident from Fig. 10 that the electronic effects shorten the time  scale to reach the steady states FPs.
+Thus, we conclude that the elec­ tronic effects play a more critical role in determining the final number of  FPs after the PKA, and these effects are more critical than those made by  the elastic distortions present in high-entropy alloys.
+To better explain  this finding, we computed the SIA (s1 f ) and vacancy formation (v1 f ) en­ ergies in the HEA and compared to Ni and these results are shown in  Fig. S15 and Fig S16.
+and listed in Table S3.
+For instance, the vacancy  formation energy in CoCrFeNi has a Gaussian distribution owing to the  elastic distortions.
+However, when analyzed on average, we observed  that the formation energy v1 f ≈1.64 eV which is very close to one in Ni,  v1 f = 1.56 eV. These small differences suggest that the energetic cost of  generating a vacancy is not strongly affected by the elastic distortions  and thus, cannot drastically reduce FPs formation during the PKA event.
+These findings are in line with previous results obtained by Deluigi  et al. [28] where the effect of the elastic distortions was investigated and  Fig. 8.
+Time evolution of the maximum local lattice temperatures (TI lat), elec­ tronic temperatures (TI e) of Ni and CrFeCoNi within the ℓ2T-MD for a 50 keV  PKA.
+The mean values of the repeated simulations are shown with dashed lines. Fig. 9.
+Time evolution of the e −ph coupling factor (Ge−ph), the electronic specific heat (Ce), and the electronic thermal conductivity (κe) ratios between Ni  and CrFeCoNi.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 10 compared to an equivalent mean-field discrete sample.
+Noteworthy,  Deluigi et al. [28] concluded that the elastic distortion plays a minor role  in the generation of FP during low energy PKA events.
+Even though these  authors did not include electronic thermal effects, we observe similar  trends here.
+These results illustrate the importance of the electronic  effects in MD and justify their inclusion besides increasing the simula­ tions’ computational cost.
+For the sake of gaining further insight, the cascade simulations for  CrFeCoNi within the ℓ2T-MD were repeated for the minimum cut-off  energy for the electronic stopping, listed in Table S1.
+The minimum  cut-off energies (1, 5, and 10 eV) do not have any significant effects on  the numbers of the defected atoms and/or Frenkel pairs. 3.3.2.
+Electronic effects in defect clustering  Another important factor in comparing the classical MD and ℓ2T-MD  simulations is the size of the defected cluster resulting after the cascade  simulations.
+To this end, we graphically represented the cluster size (as  denoted by the defected atoms in different defect clusters in the simu­ lations) for twenty clusters as shown in Fig. 11 and also visualized in  Fig. S17.
+Again, results for MD and ℓ2T-MD for Ni and CoCrFeNi are  compared.
+Ni generates larger defect clusters without the electronic effects, as  much as ∼1.5 times larger ones than those of CrFeCoNi.
+When the  electronic effects are included, this ratio rises to ∼2.
+Smaller Scluster in  CoCrFeNi compared to Ni can be attributed to better energy exchange  between e −ph (Ge−ph) and heat capacity (Ce−ph).
+Remarkably, the  lower values of thermal conductivity (κCrFeCoNi e , displayed in Fig. 9) of the  high entropy alloy compared to Ni play a much more modest role in  determining the FPs and cluster size.
+Despite different lattice distortion,  the electronic effects reduce Smax cluster by ∼34% in CrFeCoNi compared a  reduction of ∼30% in Ni.  Fig. 12 exhibits the steady-state fractions of FPs per principal ele­ ments are shown for CrFeCoNi.
+Even though at the initial stages of the  cascade simulation, the FPs are equally distributed in all elements (not  shown in the figure), the distribution quickly shifts and reaches the  distribution as illustrated in Fig. 12.
+As clearly portrayed in the graphical  Fig. 10.
+Time evolution of the total numbers of defected atoms (Ndef) and Frenkel pairs (NFP) in Ni, and CrFeCoNi within the conventional MD and the ℓ2T-MD  simulations for a 50 keV PKA.
+Each simulation was repeated eight times to ensure sufficient statistical representation of cascade events.
+Table 1 The mean values and standard error (in parenthesis) of the maximum number of  defected atoms at the peak of the thermal spike (Nmax def ), at steady state (Nsteady def ),  their corresponding times (in Picoseconds units) (τmax, and τsteady, respectively),  and the number of Frenkel pairs (Nsteady FP ), obtained within the conventional MD  and the ℓ2T-MD simulations for a 50 keV PKA.
+Ni   CrFeCoNi   MD  ℓ2T-MD   MD  ℓ2T-MD  Nmax def  40,587 (402)  37,105 (397)   42,066 (345)  37,441 (412)  τmax def  0.31 (0.01)  0.31 (0.01)   0.31 (0.02)  0.30 (0.01) Nsteady def  2877 (102)  2467 (83)   2754 (80)  2483 (82)  τsteady def  12.53 (0.54)  11.70 (0.56)   15.13 (0.61)  14.65 (0.74) Nsteady FP  165 (15)  131 (11)   126 (8)  105 (4)  τsteady FP  9.64 (0.50)  9.43 (1.10)   9.19 (0.31)  9.72 (0.64)   Fig. 11.
+Comparison of the defect cluster size (Scluster) for each cluster in  descending order of size (Ci) in Ni, and CrFeCoNi within the conventional MD  and the ℓ2T-MD simulations for a 50 keV PKA.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 11 representation, Cr disproportionately forms more FPs while Fe and Co  contribute less to the total FPs population.
+This disparity in the FPs  proportion is simply due to lower vacancy and SIA-formation energies of  Cr compared to other PEs, as shown in Fig. S15 and Fig. S16.
+The  different FPs fractions open up the question of exploring the composi­ tional space of CrFeCoNi for tuning the electronic and phonon properties  to improve the radiation-damage resistance.
+To better explain the distribution of FPs in a steady-state, let us use  the available information and a simple mechanistic model to predict  these fractions.
+This prediction is insightful because it can help guide  non-equimolar HEAs’ design for radiation resistance.
+First, let us define  the average vacancy and SIA formation energy denoted as vf = ∑Ne i xivf i  and sf = ∑Ne i xisf i , respectively, with xi the atomic molar fraction of the  HEA.
+At the same time, let us now assume that the di-vacancy and di-SIA  formation energies can be computed.
+Next, the probably that a FP for­ mation of a given element is given by the following biased probability, ρi  = exp( − Δvf i /vf − Δsf i /sf − Δv2f i /v2f − Δs2f i /s2f).
+In the biased prob­ ability function, the arguments Δ are taking with respect to the average  value, i.e., Δvf i = vf −vf i .
+The relative changes in formation energies shift  the probabilities to generate more FPs of those elements with lower than  the average values.
+Next, the fraction of FPs can be obtained by using the  atomic molar fraction of the HEA considered, i.e., xFP i  = xiρi.
+Using the  values provided above and the described model, we obtained for an  equimolar HEA the following concentration of FP defects by elements,  CoFP = 0.185, CrFP = 0.436, FeFP = 0.124, and NiFP = 0.255, which is  pretty approximate to the values found by MD while some discrepancy  for Co and Cr is seen for ℓ2T-MD.
+Thus, while the number of defects can  be estimated well with the available models [123], the proposed pro­ cedure can be used to estimate the FPs distribution per element.
+4. Conclusion  This work presented a systematic study of temperature-dependent  electronic and phonon properties crucial during defect formation in  HEAs in radiation environments.
+The FCC-phased CrFeCoNi RSS was  chosen as the central HEA due to its frequent template material to  develop other compositions.
+It was shown that CrFeCoNi has higher  Ge−ph and Ce throughout the studied electronic temperate range (up to 3  × 104 K) compared to its constituent elements.
+Using ℓ2T-MD, we  demonstrated that CrFeCoNi was more effective in dissipating excess  energy during cascade events via local plasmons, leading to lesser defect  formation and higher defect recombination than the elemental Ni.
+Moreover, this work demonstrated the crucial roles of electronic and  phonon effects during cascade events.
+Analysis of individual affinity for defect formation of the PEs in  CrFeCoNi showed that the elements such as Cr and partially Ni tend to  form more FPs due to their relatively lower v1 f energies than with the  remaining elements.
+It motivated us to explore the non-equimolar RSS to  improve the radiation-damage resistance further.
+A set of representative  non-equimolar RSS compositions were investigated to understand  electronic and phonon properties.
+Lower Cr or Ni concentration (keep­ ing the remaining three PEs equimolar among themselves) lead to  slightly lower Ge−ph and higher κe.
+Reduction of Fe or Co had negligible  effects on Ge−ph.
+Moving away from the non-equimolar case led to  relatively poorer performance in e − ph − assisted heat dissipation,  while it improved energy exchange among electrons of neighboring  atoms.
+The addition of Al, Mn and Cu to CrFeCoNi was investigated as  another strategy.
+We demonstrated that the equimolar addition of Al  substantially increased Ge−ph, which is a critical factor for plasmon ex­ citations and to reduce defect formation.
+While the equimolar addition  of Mn slightly improved Ge−ph, the equimolar addition of Cu worsens it.
+On the other hand, adding any of these elements substantially improved  κe.
+These general trends indicated that the addition of lighter elements  compared to the averaged atomic mass improves Ge−ph, considering that  atomic mass is used when normalizing phonon modes.
+On the other  hand, the addition of atoms with more differing VEC led to higher κe due  to higher vF, despite shorter-living plasmons when adding lighter ele­ ments.
+Electronic properties were then integrated into the ℓ2T-MD model to  investigate their effect in FPs formation.
+We found that the electronic  properties play a critical role in determining the steady-state FPs number  after the PKA event.
+Neglecting these effects lead to errors of about ∼ 20 −25% between classical MD and ℓ2T-MD at 50 keV PKA energy.
+We  also investigated the fraction of FPs per principal element in the HEA.
+We found that elements with smaller vacancy formation energies (i.e.,  Cr and Ni) resulted in more FPs, whereas elements with higher forma­ tion energy (i.e., Fe and Co) showed fewer FPs.
+This finding suggests the  possibility of exploring non-equimolar HEA compositions to obtain  optimal radiation resistance combining optimal electronic and lattice  properties.
+Declaration of Competing Interest The authors declare that they have no known competing financial  interests or personal relationships that could have appeared to influence  the work reported in this paper.
+Acknowledgment  We acknowledge the support of New Frontiers in Research Fund  (NFRFE-2019-01095) and from the Natural Sciences and Engineering  Research Council of Canada (NSERC) through the Discovery Grant under  Award Application Number 2016–06114.
+M.H. gratefully acknowledges  the financial support from the Department of Mechanical Engineering at  UBC through the Four Years Fellowship.
+This research partially was  supported through computational resources and services provided by  Advanced Research Computing at the University of British Columbia.
+Supplementary material  Supplementary material associated with this article can be found, in  the online version, at doi:10.1016/j.actamat.2022.118511.
+References  [1] B. Cantor, I. Chang, P. Knight, A. Vincent, Microstructural development in  equiatomic multicomponent alloys, Materials Science and Engineering: A  375–377 (2004) 213–218, https://doi.org/10.1016/j.msea.2003.10.257.http://  www.sciencedirect.com/science/article/pii/S0921509303009936 [2] J.-W. Yeh, S.-K. Chen, S.-J. Lin, J.-Y. Gan, T.-S. Chin, T.-T. Shun, C.-H. Tsau, S.-  Y. Chang, Nanostructured high-entropy alloys with multiple principal elements:  Fig. 12.
+Fractional FPs of the principal elements in CrFeCoNi after a 50 keV  PKA obtained with MD (purple), the ℓ2T-MD (blue).
+A simplistic mechanistic  model results are also included (green).
+(For interpretation of the references to  colour in this figure legend, the reader is referred to the web version of  this article.) O.K. Orhan et al.Acta Materialia 244 (2023) 118511 12 novel alloy design concepts and outcomes, Adv Eng Mater 6 (5) (2004) 299–303,  https://doi.org/10.1002/adem.200300567.
+[3] J.W. Yeh, Recent progress in high-entropy alloys, Annales de Chimie.
+Science des  Materiaux 31 (6) (2006) 633–648.http://www.inis.iaea.org/search/search.aspx?
+orig_q=RN:38042167  [4] O.N. Senkov, J.M. Scott, S.V. Senkova, F. Meisenkothen, D.B. Miracle, C.  F. Woodward, Microstructure and elevated temperature properties of a refractory  tanbhfzrti alloy, J Mater Sci 47 (9) (2012) 4062–4074, https://doi.org/10.1007/  s10853-012-6260-2.
+[5] K.-H. Cheng, C.-H. Lai, S.-J. Lin, J.-W. Yeh, Structural and mechanical properties  of multi-element (alcrmotatizr)nx coatings by reactive magnetron sputtering,  Thin Solid Films 519 (10) (2011) 3185–3190, https://doi.org/10.1016/j.
+tsf.2010.11.034.http://www.sciencedirect.com/science/article/pii/S0040609  010015701 [6] A. Gali, E. George, Tensile properties of high- and medium-entropy alloys,  Intermetallics 39 (2013) 74–78, https://doi.org/10.1016/j.
+intermet.2013.03.018.http://www.sciencedirect.com/science/article/pii/S09  66979513000903 [7] J. Chen, P. Niu, Y. Liu, Y. Lu, X. Wang, Y. Peng, J. Liu, Effect of zr content on  microstructure and mechanical properties of alcocrfeni high entropy alloy,  Materials & Design 94 (2016) 39–44, https://doi.org/10.1016/j.
+matdes.2016.01.033.http://www.sciencedirect.com/science/article/pii/  S026412751630034X [8] X. Xian, Z. Zhong, B. Zhang, K. Song, C. Chen, S. Wang, J. Cheng, Y. Wu, A high-  entropy v35ti35fe15cr10zr5 alloy with excellent high-temperature strength,  Materials & Design 121 (2017) 229–236, https://doi.org/10.1016/j.
+matdes.2017.02.029.http://www.sciencedirect.com/science/article/pii/  S0264127517301570 [9] J. Li, Q. Fang, B. Liu, Y. Liu, Transformation induced softening and plasticity in  high entropy alloys, Acta Mater 147 (2018) 35–41, https://doi.org/10.1016/j.
+actamat.2018.01.002.http://www.sciencedirect.com/science/article/pii/S135  9645418300338 [10] Y. Cai, G. Wang, Y. Ma, Z. Cao, X. Meng, High hardness dual-phase high entropy  alloy thin films produced by interface alloying, Scr Mater 162 (2019) 281–285,  https://doi.org/10.1016/j.scriptamat.2018.11.004.http://www.sciencedirect.co  m/science/article/pii/S1359646218306857 [11] P.-K. Huang, J.-W. Yeh, T.-T. Shun, S.-K. Chen, Multi-principal-element alloys  with improved oxidation and wear resistance for thermal spray coating, Adv Eng  Mater 6 (1) (2004) 74–78.https://www.scopus.com/inward/record.uri?eid=2-s2  .0-1642324318&partnerID=40&md5=3cd7f0900c67f4654c958e7c949372ae [12] C.-Y. Hsu, J.-W. Yeh, S.-K. Chen, T.-T. Shun, Wear resistance and high-  temperature compression strength of fcc cuconicral0.5fe alloy with boron  addition, Metallurgical and Materials Transactions A 35 (5) (2004) 1465–1469,  https://doi.org/10.1007/s11661-004-0254-x.
+[13] N. Kumar, M. Fusco, M. Komarasamy, R. Mishra, M. Bourham, K. Murty,  Understanding effect of 3.5 wt. corrosion of al0.1cocrfeni high-entropy alloy,  J. Nucl.
+Mater. 495 (2017) 154–163, https://doi.org/10.1016/j.
+jnucmat.2017.08.015.http://www.sciencedirect.com/science/article/pii/  S0022311517307754 [14] Z. Wu, H. Bei, G. Pharr, E. George, Temperature dependence of the mechanical  properties of equiatomic solid solution alloys with face-centered cubic crystal  structures, Acta Mater 81 (2014) 428–441, https://doi.org/10.1016/j.
+actamat.2014.08.026.https://www.sciencedirect.com/science/article/pii/S135  9645414006272 [15] B. Gludovatz, A. Hohenwarter, D. Catoor, E.H. Chang, E.P. George, R.O. Ritchie,  A fracture-resistant high-entropy alloy for cryogenic applications, Science 345  (6201) (2014) 1153–1158, https://doi.org/10.1126/science.1254581.https://  science.sciencemag.org/content/345/6201/1153  [16] Z. Wu, H. Bei, F. Otto, G. Pharr, E. George, Recovery, recrystallization, grain  growth and phase stability of a family of fcc-structured multi-component  equiatomic solid solution alloys, Intermetallics 46 (2014) 131–140, https://doi.  org/10.1016/j.intermet.2013.10.024.https://www.sciencedirect.com/science/  article/pii/S0966979513002872 [17] M.-H. Chuang, M.-H. Tsai, W.-R. Wang, S.-J. Lin, J.-W. Yeh, Microstructure and  wear behavior of alxco1.5crfeni1.5tiy high-entropy alloys, Acta Mater 59 (16)  (2011) 6308–6317, https://doi.org/10.1016/j.actamat.2011.06.041.http://  www.sciencedirect.com/science/article/pii/S1359645411004551 [18] M.W. Ullah, D.S. Aidhy, Y. Zhang, W.J. Weber, Damage accumulation in ion-  irradiated ni-based concentrated solid-solution alloys, Acta Mater 109 (2016)  17–22, https://doi.org/10.1016/j.actamat.2016.02.048.https://www.sciencedi  rect.com/science/article/pii/S1359645416301227 [19] C.-J. Tong, Y.-L. Chen, J.-W. Yeh, S.-J. Lin, S.-K. Chen, T.-T. Shun, C.-H. Tsau, S.-  Y. Chang, Microstructure characterization of alxcocrcufeni high-entropy alloy  system with multiprincipal elements, Metallurgical and Materials Transactions A  36 (4) (2005) 881–893, https://doi.org/10.1007/s11661-005-0283-0.
+[20] D.F. Rojas, H. Li, O.K. Orhan, C. Shao, J.D. Hogan, M. Ponga, Mechanical and  microstructural properties of a cocrfe0.75nimo0.3nb0.125 high-entropy alloy  additively manufactured via cold-spray, J Alloys Compd 893 (2022) 162309,  https://doi.org/10.1016/j.jallcom.2021.162309.https://www.sciencedirect.co  m/science/article/pii/S0925838821037191 [21] O.K. Orhan, M. Isiet, L. Caparini, M. Ponga, Exploring the compositional space of  high-entropy alloys for cost-effective high-temperature applications, Front.
+Mater  8 (2022), https://doi.org/10.3389/fmats.2021.816610.https://www.frontiersin.
+org/article/10.3389/fmats.2021.816610 [22] G. Was, R. Averback, 1.07 - Radiation Damage Using Ion Beams, in: R.J. Konings  (Ed.), Comprehensive Nuclear Materials, Elsevier, Oxford, 2012, pp.
+195–221,  https://doi.org/10.1016/B978-0-08-056033-5.00007-0.https://www.sciencedi  rect.com/science/article/pii/B9780080560335000070 [23] K.-Y. Tsai, M.-H. Tsai, J.-W. Yeh, Sluggish diffusion in co-cr-fe-mn-ni high-  entropy alloys, Acta Mater 61 (13) (2013) 4887–4897, https://doi.org/10.1016/  j.actamat.2013.04.058.https://www.sciencedirect.com/science/article/pii/S135  9645413003431 [24] X. Zhang, Gold nanoparticles: recent advances in the biomedical applications,  Cell Biochem.
+Biophys 72 (3) (2015) 771–775, https://doi.org/10.1007/s12013-  015-0529-4.
+[25] T. Nagase, P.D. Rack, J.H. Noh, T. Egami, In-situ tem observation of structural  changes in nano-crystalline cocrcufeni multicomponent high-entropy alloy (hea)  under fast electron irradiation by high voltage electron microscopy (hvem),  Intermetallics 59 (2015) 32–42, https://doi.org/10.1016/j.
+intermet.2014.12.007.https://www.sciencedirect.com/science/article/pii/S09  66979514003112 [26] M. Dada, P. Popoola, S. Adeosun, N.R. Mathe, High Entropy Alloys for Aerospace  Applications, IntechOpen, 2019. [27] S.-q. Xia, Z. Wang, T.-f.
+Yang, Y. Zhang, Irradiation behavior in high entropy  alloys, J. Iron. Steel Res.
+Int 22 (10) (2015) 879–884, https://doi.org/10.1016/  S1006-706X(15)30084-4.
+[28] O. Deluigi, R. Pasianot, F. Valencia, A. Caro, D. Farkas, E. Bringa, Simulations of  primary damage in a high entropy alloy: probing enhanced radiation resistance,  Acta Mater 213 (2021) 116951, https://doi.org/10.1016/j.
+actamat.2021.116951.https://www.sciencedirect.com/science/article/pii/S135  9645421003311 [29] G. Battistoni, T. Boehlen, F. Cerutti, P.W. Chin, L.S. Esposito, A. Fass´o, A. Ferrari,  A. Lechner, A. Empl, A. Mairani, A. Mereghetti, P.G. Ortega, J. Ranft, S. Roesler,  P.R. Sala, V. Vlachoudis, G. Smirnov, Overview of the fluka code, Ann Nucl  Energy 82 (2015) 10–18, https://doi.org/10.1016/j.anucene.2014.11.007.Joint  International Conference on Supercomputing in Nuclear Applications and Monte  Carlo 2013, SNA + MC 2013.
+Pluri- and Trans-disciplinarity, Towards New  Modeling and Numerical Simulation Paradigms [30] P.G. Klemens, R.K. Williams, Thermal conductivity of metals and alloys,  International Metals Reviews 31 (1) (1986) 197–215, https://doi.org/10.1179/  imtr.1986.31.1.197.
+[31] J.M. Ziman, Principles of the theory of solids, 2, Cambridge University Press,  1972, https://doi.org/10.1017/CBO9781139644075.
+[32] R.E.B. Makinson, The thermal conductivity of metals.
+Mathematical Proceedings  of the Cambridge Philosophical Society volume 34 (3), Cambridge University  Press, 1938, pp. 474–497.
+[33] N.K. Kumar, C. Li, K. Leonard, H. Bei, S. Zinkle, Microstructural stability and  mechanical behavior of fenimncr high entropy alloy under ion irradiation, Acta  Mater 113 (2016) 230–244, https://doi.org/10.1016/j.actamat.2016.05.007.
+https://www.sciencedirect.com/science/article/pii/S1359645416303342 [34] F. Granberg, K. Nordlund, M.W. Ullah, K. Jin, C. Lu, H. Bei, L.M. Wang,  F. Djurabekova, W.J. Weber, Y. Zhang, Mechanism of radiation damage reduction  in equiatomic multicomponent single phase alloys, Phys. Rev. Lett.
+116 (2016)  135504, https://doi.org/10.1103/PhysRevLett.116.135504.https://link.aps.
+org/doi/10.1103/PhysRevLett.116.135504 [35] C. Lu, L. Niu, N. Chen, K. Jin, T. Yang, P. Xiu, Y. Zhang, F. Gao, H. Bei, S. Shi, M.-  R. He, I.M. Robertson, W.J. Weber, L. Wang, Enhancing radiation tolerance by  controlling defect mobility and migration pathways in multicomponent single-  phase alloys, Nat Commun 7 (1) (2016) 13564, https://doi.org/10.1038/  ncomms13564.
+[36] C.M. Barr, J.E. Nathaniel, K.A. Unocic, J. Liu, Y. Zhang, Y. Wang, M.L. Taheri,  Exploring radiation induced segregation mechanisms at grain boundaries in  equiatomic cocrfenimn high entropy alloy under heavy ion irradiation, Scr Mater  156 (2018) 80–84, https://doi.org/10.1016/j.scriptamat.2018.06.041.https://  www.sciencedirect.com/science/article/pii/S1359646218304068 [37] Z. Lin, L.V. Zhigilei, Temperature dependences of the electron-phonon coupling,  electron heat capacity and thermal conductivity in ni under femtosecond laser  irradiation, Appl Surf Sci 253 (15) (2007) 6295–6300, https://doi.org/10.1016/j.
+apsusc.2007.01.032.Proceedings of the Fifth International Conference on Photo-  Excited Processes and Applications  [38] D. Duffy, A. Rutherford, Including the effects of electronic stopping and  electron–ion interactions in radiation damage simulations, J. Phys.: Condens.
+Matter 19 (1) (2006) 016207.
+[39] A. Tamm, G. Samolyuk, A.A. Correa, M. Klintenberg, A. Aabloo, A. Caro,  Electron-phonon interaction within classical molecular dynamics, Phys.
+Rev. B 94  (2016) 024305, https://doi.org/10.1103/PhysRevB.94.024305.https://link.aps.  org/doi/10.1103/PhysRevB.94.024305 [40] A. Tamm, M. Caro, A. Caro, G. Samolyuk, M. Klintenberg, A.A. Correa, Langevin  dynamics with spatial correlations as a model for electron-phonon coupling, Phys.  Rev. Lett.
+120 (2018) 185501, https://doi.org/10.1103/  PhysRevLett.120.185501.
+[41] A. Tamm, M. Caro, A. Caro, A.A. Correa, Role of electrons in collision cascades in  solids. ii.
+molecular dynamics, Phys.
+Rev. B 99 (2019) 174302, https://doi.org/  10.1103/PhysRevB.99.174302.
+[42] E. Zarkadoula, G. Samolyuk, W.J. Weber, Effects of electron–phonon coupling on  damage accumulation in molecular dynamics simulations of irradiated nickel,  Materials Research Letters 7 (12) (2019) 490–495, https://doi.org/10.1080/  21663831.2019.1659435.
+[43] E. Zarkadoula, S.L. Daraszewicz, D.M. Duffy, M.A. Seaton, I.T. Todorov,  K. Nordlund, M.T. Dove, K. Trachenko, Electronic effects in high-energy radiation  damage in iron, J. Phys.: Condens.
+Matter 26 (8) (2014) 085401, https://doi.org/  10.1088/0953-8984/26/8/085401.
+O.K. Orhan et al.Acta Materialia 244 (2023) 118511 13 [44] E. Zarkadoula, D.M. Duffy, K. Nordlund, M.A. Seaton, I.T. Todorov, W.J. Weber,  K. Trachenko, Electronic effects in high-energy radiation damage in tungsten,  J. Phys.: Condens.
+Matter 27 (13) (2015) 135401, https://doi.org/10.1088/0953-  8984/27/13/135401.
+[45] E. Zarkadoula, G. Samolyuk, W.J. Weber, Two-temperature model in molecular  dynamics simulations of cascades in ni-based alloys, J Alloys Compd 700 (2017)  106–112, https://doi.org/10.1016/j.jallcom.2016.12.441.https://www.sciencedi  rect.com/science/article/pii/S0925838816343705 [46] M.W. Ullah, M. Ponga, A new approach for electronic heat conduction in  molecular dynamics simulations, Modell. Simul. Mater. Sci.
+Eng 27 (7) (2019)  075008, https://doi.org/10.1088/1361-651x/ab309f.
+[47] M.W. Ullah, N. Sellami, A. Leino, H. Bei, Y. Zhang, W.J. Weber, Electron-phonon  coupling induced defect recovery and strain relaxation in ni and equiatomic nife  alloy, Comput. Mater.
+Sci 173 (2020) 109394, https://doi.org/10.1016/j.
+commatsci.2019.109394.https://www.sciencedirect.com/science/article/pii/  S0927025619306937 [48] J. Grossi, J. Kohanoff, E.M. Bringa, MeV Irradiation of tungsten nanowires:  structural modifications, Mater. Res.
+Express 7 (5) (2020) 055015, https://doi.  org/10.1088/2053-1591/ab9254.
+[49] M. Ponga, K. Bhattacharya, M. Ortiz, A sublinear-scaling approach to density-  functional-theory analysis of crystal defects, J Mech Phys Solids 95 (2016) 530–556, https://doi.org/10.1016/j.jmps.2016.05.029.https://www.sciencedi  rect.com/science/article/pii/S0022509616303489 [50] M. Ponga, K. Bhattacharya, M. Ortiz, Large scale ab-initio simulations of  dislocations, J Comput Phys 407 (2020) 109249, https://doi.org/10.1016/j.
+jcp.2020.109249.https://www.sciencedirect.com/science/article/pii/S0021999  120300231 [51] A. Zunger, S.-H. Wei, L.G. Ferreira, J.E. Bernard, Special quasirandom structures,  Phys. Rev. Lett.
+65 (1990) 353–356, https://doi.org/10.1103/  PhysRevLett.65.353.
+[52] S.-H. Wei, L.G. Ferreira, J.E. Bernard, A. Zunger, Electronic properties of random  alloys: special quasirandom structures, Phys.
+Rev. B 42 (1990) 9622–9649,  https://doi.org/10.1103/PhysRevB.42.9622.
+[53] M.C. Gao, C. Niu, C. Jiang, D.L. Irving, Applications of Special Quasi-random  Structures to High-Entropy Alloys, Springer International Publishing, Cham,  2016, pp. 333–368.
+[54] P. Soven, Coherent-potential model of substitutional disordered alloys, Phys. Rev.  156 (1967) 809–813, https://doi.org/10.1103/PhysRev.156.809.
+[55] D.W. Taylor, Vibrational properties of imperfect crystals with large defect  concentrations, Phys.
+Rev. 156 (1967) 1017–1029, https://doi.org/10.1103/  PhysRev.156.1017.
+[56] J. Korringa, On the calculation of the energy of a bloch wave in a metal, Physica  13 (6) (1947) 392–400, https://doi.org/10.1016/0031-8914(47)90013-X.http  s://www.sciencedirect.com/science/article/pii/003189144790013X [57] W. Kohn, N. Rostoker, Solution of the schr¨odinger equation in periodic lattices  with an application to metallic lithium, Phys. Rev. 94 (1954) 1111–1120, https://  doi.org/10.1103/PhysRev.94.1111.
+[58] L. Vitos, Total-energy method based on the exact muffin-tin orbitals theory, Phys.  Rev. B 64 (2001) 014107, https://doi.org/10.1103/PhysRevB.64.014107.
+[59] F. Tian, Y. Wang, D.L. Irving, L. Vitos, Applications of Coherent Potential  Approximation to HEAs, Springer International Publishing, Cham, 2016,  pp. 299–332.
+[60] T. Fukushima, H. Akai, T. Chikyow, H. Kino, Automatic exhaustive calculations of  large material space by korringa-kohn-rostoker coherent potential approximation  method applied to equiatomic quaternary high entropy alloys, Phys.
+Rev.  Materials 6 (2022) 023802, https://doi.org/10.1103/  PhysRevMaterials.6.023802.
+[61] J. Zhai, R. Xue, Z. Cheng, Y. Ke, Direct comparison of auxiliary and itinerant  coherent potential approximations for disordered lattice vibration: phonon  spectral and transport properties, Phys.
+Rev. B 104 (2021) 024205, https://doi.  org/10.1103/PhysRevB.104.024205.
+[62] G.D. Samolyuk, L.K. B´eland, G.M. Stocks, R.E. Stoller, Electron–phonon coupling  in ni-based binary alloys with application to displacement cascade modeling,  J. Phys.: Condens.
+Matter 28 (17) (2016) 175501, https://doi.org/10.1088/0953-  8984/28/17/175501.
+[63] L. Bellaiche, D. Vanderbilt, Virtual crystal approximation revisited: application to  dielectric and piezoelectric properties of perovskites, Phys.
+Rev. B 61 (2000)  7877–7882, https://doi.org/10.1103/PhysRevB.61.7877.
+[64] V. Heine, The Pseudopotential Concept, in: Solid State Physics, volume 24,  Academic Press, 1970, pp.
+1–36, https://doi.org/10.1016/S0081-1947(08) 60069-7.https://www.sciencedirect.com/science/article/pii/S0081194  708600697 [65] F. Tian, A review of solid-solution models of high-entropy alloys based on ab  initio calculations, Front.
+Mater 4 (2017) 36, https://doi.org/10.3389/  fmats.2017.00036.https://www.frontiersin.org/article/10.3389/fmats  .2017.00036 [66] A. Caro, A.A. Correa, A. Tamm, G.D. Samolyuk, G.M. Stocks, Adequacy of damped  dynamics to represent the electron-phonon interaction in solids, Phys.
+Rev. B 92  (2015) 144309, https://doi.org/10.1103/PhysRevB.92.144309.
+[67] E. Zarkadoula, G. Samolyuk, H. Xue, H. Bei, W.J. Weber, Effects of two-  temperature model on cascade evolution in ni and nife, Scr Mater 124 (2016) 6–10, https://doi.org/10.1016/j.scriptamat.2016.06.028.https://www.sciencedi  rect.com/science/article/pii/S1359646216302822 [68] E. Zarkadoula, G. Samolyuk, W.J. Weber, Effects of electronic excitation on  cascade dynamics in nickel-iron and nickel-palladium systems, Scr Mater 138  (2017) 124–129, https://doi.org/10.1016/j.scriptamat.2017.05.041.https://  www.sciencedirect.com/science/article/pii/S1359646217302932  [69] M. Ponga, D. Sun, A unified framework for heat and mass transport at the atomic  scale, Modell. Simul. Mater. Sci.
+Eng 26 (3) (2018) 035014, https://doi.org/  10.1088/1361-651x/aaaf94.
+[70] O.K. Orhan, M. Hendy, M. Ponga, Temperature-dependent first-principles  electronic, and phonon properties, and molecular dyanmics of defect evolution,  2022, (https://github.com/Mponga/Radiation-Damage-in-High-Entropy-Alloys).
+[71] P.B. Allen, Theory of thermal relaxation of electrons in metals, Phys. Rev. Lett.
+59  (1987) 1460–1463, https://doi.org/10.1103/PhysRevLett.59.1460.
+[72] Z. Li, C. Wang, W. Kang, C. Li, P. Zhang, Temperature and compression effects on  electron heat capacity and electron-phonon coupling in aluminum and beryllium:  insights from ab initio simulations, Phys Plasmas 22 (11) (2015) 112705, https://  doi.org/10.1063/1.4935843.
+[73] P. Hohenberg, W. Kohn, Inhomogeneous electron gas, Phys.
+Rev. 136 (1964) B864–B871, https://doi.org/10.1103/PhysRev.136.B864.
+[74] W. Kohn, L.J. Sham, Self-consistent equations including exchange and correlation  effects, Phys.
+Rev. 140 (1965) A1133–A1138, https://doi.org/10.1103/  PhysRev.140.A1133.
+[75] D.C. Langreth, J.P. Perdew, Theory of nonuniform electronic systems.
+i. analysis  of the gradient approximation and a generalization that works, Phys.
+Rev. B 21  (1980) 5469–5493, https://doi.org/10.1103/PhysRevB.21.5469.
+[76] J.P. Perdew, Density-functional approximation for the correlation energy of the  inhomogeneous electron gas, Phys. Rev. B 33 (1986) 8822–8824, https://doi.org/  10.1103/ PhysRevB.33.8822.
+[77] J.P. Perdew, J.A. Chevary, S.H. Vosko, K.A. Jackson, M.R. Pederson, D.J. Singh,  C. Fiolhais, Atoms, molecules, solids, and surfaces: applications of the generalized  gradient approximation for exchange and correlation, Phys.
+Rev. B 46 (1992)  6671–6687, https://doi.org/10.1103/PhysRevB.46.6671.
+[78] X. Gonze, First-principles responses of solids to atomic displacements and  homogeneous electric fields: implementation of a conjugate-gradient algorithm,  Phys.
+Rev. B 55 (1997) 10337–10354, https://doi.org/10.1103/  PhysRevB.55.10337.
+[79] X. Gonze, C. Lee, Dynamical matrices, born effective charges, dielectric  permittivity tensors, and interatomic force constants from density-functional  perturbation theory, Phys.
+Rev. B 55 (1997) 10355–10368, https://doi.org/  10.1103/ PhysRevB.55.10355.
+[80] L. Nordheim, Zur elektronentheorie der metalle.
+i, Ann Phys 401 (5) (1900)  607–640, https://doi.org/10.1002/andp.19314010507.https://www.onlineli  brary.wiley.com/doi/abs/10.1002/andp.19314010507 [81] A. Pribram-Jones, S. Pittalis, E.K.U. Gross, K. Burke, Thermal density functional  theory in context, in: F. Graziani, M.P. Desjarlais, R. Redmer, S.B. Trickey (Eds.),  Frontiers and Challenges in Warm Dense Matter, Springer International  Publishing, Cham, 2014, pp. 25–60.
+[82] P. Hofmann, I.Y. Sklyadneva, E.D.L. Rienks, E.V. Chulkov, Electron–phonon  coupling at surfaces and interfaces, New J Phys 11 (12) (2009) 125005, https://  doi.org/10.1088/1367-2630/11/12/125005.
+[83] S. Ponc, E. Margine, C. Verdi, F. Giustino, Epw: electron-phonon coupling,  transport and superconducting properties using maximally localized wannier  functions, Comput Phys Commun 209 (2016) 116–133, https://doi.org/10.1016/  j.cpc.2016.07.028.http://www.sciencedirect.com/science/article/pii/  S0010465516302260 [84] M.H. Cohen, Optical constants, heat capacity and the fermi surface, Philos.
+Mag 3  (31) (1958) 762–775, https://doi.org/10.1080/14786435808237011.
+[85] O.K. Orhan, D.D. O’Regan, Plasmonic performance of auxagycu1−x−y alloys from  many-body perturbation theory, J. Phys.: Condens. Matter 31 (31) (2019)  315901, https://doi.org/10.1088/1361-648x/ab1c30.
+[86] O.K. Orhan, Quantum espresso post-processing tool to calculate the drude  plasmon energy, 2020, (https://github.com/okorhan/Drude-plasmon-energy).
+[87] O.K. Orhan, M. Ponga, Surface-plasmon properties of noble metals with exotic  phases, The Journal of Physical Chemistry C 125 (39) (2021) 21521–21532,  https://doi.org/10.1021/acs.jpcc.1c06110.
+[88] G. Grimvall, The electron-phonon interaction in normal metals, Phys.
+Scr 14  (1–2) (1976) 63–78, https://doi.org/10.1088/0031-8949/14/1-2/013.
+[89] V. Gasparov, R. Huguenin, Electron-phonon, electron-electron and electron-  surface scattering in metals from ballistic effects, Adv Phys 42 (4) (1993) 393–521, https://doi.org/10.1080/00018739300101514.
+[90] S. Ogawa, H. Nagano, H. Petek, Hot-electron dynamics at cu(100), cu(110), and  cu(111) surfaces:mcomparison of experiment with fermi-liquid theory, Phys.
+Rev.  B 55 (1997) 10869–10877, https://doi.org/10.1103/PhysRevB.55.10869.
+[91] S. Dal Forno, L. Ranno, J. Lischner, Material, size, and environment dependence  of plasmon-induced hot carriers in metallic nanoparticles, The Journal of Physical  Chemistry C 122 (15) (2018) 8517–8527, https://doi.org/10.1021/acs. jpcc.8b00651.
+[92] I.Y. Sklyadneva, E.V. Chulkov, W.-D. Sch¨one, V.M. Silkin, R. Keyling, P.  M. Echenique, Role of electron-phonon interactions versus electron-electron  interactions in the broadening mechanism of the electron and hole linewidths in  bulk be, Phys.
+Rev. B 71 (2005) 174302, https://doi.org/10.1103/  PhysRevB.71.174302.
+[93] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C. Cavazzoni, D. Ceresoli,  G.L. Chiarotti, M. Cococcioni, I. Dabo, A.D. Corso, S. de Gironcoli, S. Fabris,  G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj, M. Lazzeri,  L. Martin-Samos, N. Marzari, F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello,  L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A.P. Seitsonen, A. Smogunov,  P. Umari, R.M. Wentzcovitch, Quantum espresso: a modular and open-source  O.K. Orhan et al.Acta Materialia 244 (2023) 118511 14 software project for quantum simulations of materials, J. Phys.: Condens.
+Matter  21 (39) (2009) 395502.http://stacks.iop.org/0953-8984/21/i=39/a=395502 [94] P. Giannozzi, O. Andreussi, T. Brumme, O. Bunau, M.B. Nardelli, M. Calandra,  R. Car, C. Cavazzoni, D. Ceresoli, M. Cococcioni, N. Colonna, I. Carnimeo, A.  D. Corso, S. de Gironcoli, P. Delugas, R.A.D. Jr, A. Ferretti, A. Floris, G. Fratesi,  G. Fugallo, R. Gebauer, U. Gerstmann, F. Giustino, T. Gorni, J. Jia, M. Kawamura,  H.-Y. Ko, A. Kokalj, E. Küçükbenli, M. Lazzeri, M. Marsili, N. Marzari, F. Mauri, N.  L. Nguyen, H.-V. Nguyen, A.O. de-la Roza, L. Paulatto, S. Ponc, D. Rocca,  R. Sabatini, B. Santra, M. Schlipf, A.P. Seitsonen, A. Smogunov, I. Timrov,  T. Thonhauser, P. Umari, N. Vast, X. Wu, S. Baroni, Advanced capabilities for  materials modelling with q uantum espresso, J. Phys.: Condens.
+Matter 29 (46)  (2017) 465901.http://stacks.iop.org/0953-8984/29/i=46/a=465901 [95] Thermo_pw:Ab-initio computation of material properties, (https://www.  dalcorso.github.io/thermo_pw/). Accessed: 18.09.
+[96] D.R. Hamann, Optimized norm-conserving vanderbilt pseudopotentials, Phys.  Rev. B 88 (2013) 085117, https://doi.org/10.1103/PhysRevB.88.085117.
+[97] M. Schlipf, F. Gygi, Optimization algorithm for the generation of oncv  pseudopotentials, Comput Phys Commun 196 (2015) 36–44, https://doi.org/  10.1016/j.cpc.2015.05.011.http://www.sciencedirect.com/science/article/pii/  S0010465515001897 [98] D.R. Hamann, M. Schlüter, C. Chiang, Norm-conserving pseudopotentials, Phys.  Rev. Lett.
+43 (1979) 1494–1497, https://doi.org/10.1103/PhysRevLett.43.1494.
+[99] G.P. Kerker, Non-singular atomic pseudopotentials for solid state applications,  J. Phys.
+C: Solid State Phys 13 (9) (1980) L189–L194, https://doi.org/10.1088/  0022-3719/13/9/004.
+[100] D.R. Hamann, Generalized norm-conserving pseudopotentials, Phys.
+Rev. B 40  (1989) 2980–2987, https://doi.org/10.1103/PhysRevB.40.2980.
+[101] M. Palumbo, A.D. Corso, Lattice dynamics and thermophysical properties of h.c.p.  os and ru from the quasi-harmonic approximation, J. Phys.: Condens.
+Matter 29  (39) (2017) 395401, https://doi.org/10.1088/1361-648x/aa7dca.
+[102] F. Tian, L.K. Varga, N. Chen, L. Delczeg, L. Vitos, Ab initio investigation of high-  entropy alloys of 3d elements, Phys.
+Rev. B 87 (2013) 075144, https://doi.org/  10.1103/ PhysRevB.87.075144. [103] O.c.v.
+Schneeweiss, M. Fri´ak, M. Dudov´a, D. Holec, M. ˇSob, D. Kriegner, V. Holý,  P.c.v. Beran, E.P. George, J. Neugebauer, A. Dlouhý, Magnetic properties of the  crmnfeconi high-entropy alloy, Phys.
+Rev. B 96 (2017) 014437, https://doi.org/  10.1103/PhysRevB.96.014437.
+[104] J. ˇSebesta, K. Carva, D. Legut, Role of magnetism in the stability of the high-  entropy alloy cocrfemnni and its derivatives, Phys.
+Rev. Materials 3 (2019)  124410, https://doi.org/10.1103/PhysRevMaterials.3.124410.
+[105] J. Zemann, Crystal structures, 2nd edition. vol.
+1 by r. w. g. wyckoff, Acta  Crystallogr 18 (1) (1965), https://doi.org/10.1107/  S0365110X65000361.139–139 [106] H.J. Monkhorst, J.D. Pack, Special points for brillouin-zone integrations, Phys.  Rev. B 13 (1976) 5188–5192, https://doi.org/10.1103/PhysRevB.13.5188.
+[107] J.P. Mendez, M. Ponga, Mxe: a package for simulating long-term diffusive mass  transport phenomena in nanoscale systems, Comput Phys Commun 260 (2021)  107315, https://doi.org/10.1016/j.cpc.2020.107315.https://www.sciencedirect.  com/science/article/pii/S0010465520301211 [108] S. Plimpton, Fast parallel algorithms for short-range molecular dynamics,  J Comput Phys 117 (1) (1995) 1–19, https://doi.org/10.1006/jcph.1995.1039.
+https://www.sciencedirect.com/science/article/pii/S002199918571039X [109] D. Farkas, A. Caro, Model interatomic potentials and lattice strain in a high-  entropy alloy, J Mater Res 33 (19) (2018) 3218–3225, https://doi.org/10.1557/  jmr.2018.245.
+[110] L. Qian, H. Bao, R. Li, Q. Peng, Atomistic insights of a chemical complexity effect  on the irradiation resistance of high entropy alloys, Materials Advances (2021).
+[111] J.A. Stewart, G. Brookman, P. Price, M. Franco, W. Ji, K. Hattar, R. Dingreville,  Characterizing single isolated radiation-damage events from molecular dynamics  via virtual diffraction methods, J Appl Phys 123 (16) (2018) 165902.
+[112] C.-W. Lee, J.A. Stewart, R. Dingreville, S.M. Foiles, A. Schleife, Multiscale  simulations of electron and ion dynamics in self-irradiated silicon, Phys. Rev. B  102 (2020) 024107, https://doi.org/10.1103/PhysRevB.102.024107.
+[113] J.F. Ziegler, M. Ziegler, J. Biersack, Srim - the stopping and range of ions in matter  (2010), Nucl. Instrum. Methods Phys. Res., Sect.
+B 268 (11) (2010) 1818–1823,  https://doi.org/10.1016/j.nimb.2010.02.091.19th International Conference on  Ion Beam Analysis [114] J.P. Biersack, J.F. Ziegler, The stopping and range of ions in solids, in: H. Ryssel,  H. Glawischnig (Eds.), Ion Implantation Techniques, Springer Berlin Heidelberg,  Berlin, Heidelberg, 1982, pp. 122–156.
+[115] M.J.D. Powell, Nonconvex minimization calculations and the conjugate gradient  method, in: D.F. Griffiths (Ed.), Numerical Analysis, Springer Berlin Heidelberg,  Berlin, Heidelberg, 1984, pp. 122–141.
+[116] H. Tsuzuki, P.S. Branicio, J.P. Rino, Structural characterization of deformed  crystals by analysis of common atomic neighborhood, Comput Phys Commun 177  (6) (2007) 518–523, https://doi.org/10.1016/j.cpc.2007.05.018.https://www.  sciencedirect.com/science/article/pii/S0010465507002536  [117] A. Stukowski, Visualization and analysis of atomistic simulation data with  OVITO–the open visualization tool, Modell. Simul. Mater. Sci.
+Eng 18 (1) (2009)  015012, https://doi.org/10.1088/0965-0393/18/1/015012.
+[118] A. Stukowski, V.V. Bulatov, A. Arsenlis, Automated identification and indexing of  dislocations in crystal interfaces, Modell. Simul. Mater. Sci.
+Eng 20 (8) (2012)  085007, https://doi.org/10.1088/0965-0393/20/8/085007.
+[119] A. Fern´andez-Caballero, M. Fedorov, J.S. Wr´obel, P.M. Mummery, D. Nguyen-  Manh, Configurational entropy in multicomponent alloys: matrix formulation  from ab initio based hamiltonian and application to the fcc cr-fe-mn-ni system,  Entropy 21 (1) (2019), https://doi.org/10.3390/e21010068.https://www.mdpi.
+com/1099-4300/21/1/68 [120] M. Born, K. Huang, Dynamical theory of crystal lattices, in: Oxford classic texts in  the physical sciences, Clarendon Press, Oxford, 1954.https://www.cds.cern.ch/re  cord/224197 [121] F. Mouhat, F.m.c.-X. Coudert, Necessary and sufficient elastic stability conditions  in various crystal systems, Phys.
+Rev. B 90 (2014) 224104, https://doi.org/  10.1103/PhysRevB.90.224104.
+[122] S.P. Rudin, Generalization of soft phonon modes, Phys.
+Rev. B 97 (2018) 134114,  https://doi.org/10.1103/PhysRevB.97.134114.
+[123] K. Nordlund, S.J. Zinkle, A.E. Sand, F. Granberg, R.S. Averback, R. Stoller,  T. Suzudo, L. Malerba, F. Banhart, W.J. Weber, F. Willaime, S.L. Dudarev,  D. Simeone, Improving atomic displacement and replacement calculations with  physically realistic damage models, Nat Commun 9 (1) (2018) 1084, https://doi.  org/10.1038/s41467-018-03415-5.  O.K. Orhan et al.

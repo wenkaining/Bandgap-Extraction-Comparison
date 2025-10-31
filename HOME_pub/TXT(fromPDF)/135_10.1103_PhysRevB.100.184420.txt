@@ -1,0 +1,746 @@
+PHYSICAL REVIEW B 100, 184420 (2019)
+Common universal behavior of magnetic domain walls driven by
+spin-polarized electrical current and magnetic ﬁeld
+R. Díaz Pardo,1 N. Moisan,1 L. J. Albornoz,1,2,3 A. Lemaître,4 J. Curiale,2,3 and V. Jeudy
+1,*
+1Laboratoire de Physique des Solides, Université Paris-Sud, Université Paris-Saclay, CNRS, UMR8502, 91405 Orsay, France
+2Instituto de Nanociencia y Nanotecnología CNEA-CONICET, Centro Atómico Bariloche, Av. Bustillo 9500,
+R8402AGP, San Carlos de Bariloche, Argentina
+3Instituto Balseiro, Universidad Nacional de Cuyo - CNEA, Av. Bustillo 9500, R8402AGP, S. C. de Bariloche, Rio Negro, Argentina
+4Centre de Nanosciences et de Nanotechnologies (C2N), CNRS, Université Paris-Sud, Université Paris-Saclay, 91120 Palaiseau, France
+(Received 25 April 2019; revised manuscript received 25 October 2019; published 25 November 2019)
+We explore the universal behaviors of a magnetic domain wall driven by the spin-transfer torque of an
+electrical current, in a ferromagnetic (Ga,Mn)(As,P) thin ﬁlm with perpendicular magnetic anisotropy. For
+a current transverse to the domain wall, the dynamics of the thermally activated creep regime and the
+depinning transition are found to be compatible with a self-consistent universal description of magnetic-ﬁeld-
+induced domain-wall dynamics. This common universal behavior, characteristic of the so-called quenched
+Edwards-Wilkinson universality class, is conﬁrmed by an independent analysis of domain-wall roughness.
+Complementary investigations reveal the directional properties of interaction between current and domain walls
+which result in the instability of their transverse orientation.
+DOI: 10.1103/PhysRevB.100.184420
+I. INTRODUCTION
+The displacement of small spin textures such as magnetic
+domain walls (DWs) thanks to spin torque effects is at the
+basis of potential applications of magnetic data storage [1].
+An important effort is ongoing to ﬁnd magnetic materials
+[2,3] with large and well-controlled DW velocities. However,
+DWs are very sensitive to weak pinning defects [4,5], which
+strongly reduce their mobility and produce roughening and
+stochastic avalanchelike motion [6,7]. Therefore, it is par-
+ticularly interesting to better understand the contribution of
+pinning to current-induced DW dynamics.
+Magnetic domain walls [4–12] present surprising universal
+critical behaviors, shared with a wide variety of moving
+interfaces such as the reaction front propagation in disordered
+ﬂows [13], growing bacterial colonies [14], wetting [15], and
+motion of ferroelectric domain walls [16], to name a few.
+The interfaces are rough with self-afﬁne width growing as Lζ,
+where L the distance between two points of the interface and
+ζ the roughness exponent. Moreover, a depinning threshold
+force fd separates the so-called creep ( f < fd) and depinning
+( f ≳fd) regimes. In the creep regime, the velocity varies
+as an Arrhenius law v ∼e−E/kBT [4,11,17], where kBT is
+the thermal ﬂuctuation energy. E is the effective pinning
+energy barrier height, which follows a universal power-law
+variation with the driving force E ∼f −μ, where μ is the
+creep exponent. In the depinning regime [12,18,19], the ef-
+fective pinning barriers are collapsed. The velocity presents
+power-law variations with drive f and temperature T : v ∼
+( f −fd)β and v( fd) ∼T ψ, where β and ψ are the depinning
+and thermal rounding exponents, respectively.
+*vincent.jeudy@u-psud.fr
+Universal behaviors have been extensively investigated for
+DWs driven by magnetic ﬁeld ( f ∝H) in ferromagnetic ultra-
+thin ﬁlms. For a large variety of materials, the measured values
+of the creep (μ = 1/4) [4,9–11] and roughness (ζ ≈0.66
+[4,5,9] and ζ ≈1.25 [7]) exponents are compatible with the
+prediction for the motion of an elastic one-dimensional (1D)
+line in a short-range weak pinning disorder, described by the
+quenched Edwards-Wilkinson (qEW) universality class, with
+[20] and without [17,21] anharmonic contributions. Moreover,
+it was recently shown [12] that the depinning transition is
+compatible with the predictions for the qEW universality class
+(β = 0.25 [18] and ψ = 0.15 [19]).
+In contrast, the universal behaviors of DW motion induced
+by spin-polarized electric current are more contentious. To the
+best of our knowledge, the universal behavior of the depinning
+transition has not yet been explored. For the creep motion,
+a compatibility with μ = 1/4 is suggested for DW driven
+by the conventional spin-transfer torque (STT) in Pt/Co/Pt
+nanowires [22] and by spin-orbit torque (SOT) in ferrimagnets
+[2]. However, rather intriguing differences between current-
+and magnetic-ﬁeld-driven motion are also reported in the
+literature. Different values of the creep exponent were re-
+ported for other materials (μ = 0.33 ± 0.06 for (Ga,Mn)As
+[8] and μ = 0.39 ± 0.06 for Ta/CoFeB/MgO [10]), which
+are difﬁcult to interpret. The tilting and faceting [5,23] of
+DWs, produced by the current, could suggest a compatibility
+with the quenched Kardar-Parisi-Zhang (qKPZ) universality
+class [5]. However, in the direction perpendicular to DW, the
+roughness is characterized by an exponent (ζj = 0.69 ± 0.04)
+independent of DW tilting angle and compatible with the
+measurement obtained for ﬁeld-driven DW motion (ζH =
+0.68 ± 0.04), while a different value (ζj = 0.99 ± 0.01) is
+obtained in the direction of current. Therefore, whether dis-
+tinct or common universality classes describe the motion of
+2469-9950/2019/100(18)/184420(9)
+184420-1
+©2019 American Physical SocietyR. DÍAZ PARDO et al.
+PHYSICAL REVIEW B 100, 184420 (2019)
+DWs produced by current and magnetic ﬁeld remains an open
+question. Moreover, the origin of STT-induced DW tilting and
+its contribution to DW dynamics and universal behaviors are
+not well understood.
+In this paper, we propose an extensive and comparative
+study on DW motion driven by STT and magnetic ﬁeld.
+Investigations were conducted with the ferromagnetic semi-
+conductor (Ga,Mn)As, which presents a sufﬁciently low de-
+pinning threshold [24] to cover the creep, depinning, and ﬂow
+dynamical regimes [25], and to discuss, in particular, DW
+tilting without pinning. Our stringent test of universality relies
+on the veriﬁcation that magnetic-ﬁeld-driven DW motion in
+our sample shares the common universal (material and tem-
+perature independent) behaviors encountered in a variety of
+other magnetic materials [4,5,9–11] and on the independent
+analysis of DW dynamics and roughness, which are both
+consistent with the conclusion of common universal behaviors
+for STT and ﬁeld-driven DW motion.
+The paper is organized as follows. After a description
+of the experimental techniques (Sec. II), we compare the
+shape evolution of DWs driven by STT and magnetic ﬁeld
+and analyze their roughness (Sec. III). Section IV details a
+comparative study of DW dynamics. In Sec. V, we discuss the
+origin of DW faceting produced by STT and its implications
+for DW dynamics.
+II. EXPERIMENTAL TECHNIQUES
+The experiments were performed with rectangles of a
+4-nm-thick (Ga,Mn)(As,P)/(Ga,Mn)As bilayer ﬁlm patterned
+by lithography. The ﬁlm was grown on a (001) GaAs/AlAs
+buffer [26]. It has an effective perpendicular anisotropy and a
+Curie temperature (Tc) of 65 K. The sizes of rectangles were
+133 × 210, 228 × 302, and 323 × 399 μm2 (see Appendix A
+for the details). Two 40-μm-wide gold electrodes (separated
+by 110, 204, and 300 μm, respectively) were deposited by
+evaporation parallel to the narrow sides of rectangles. They
+were used to generate a homogeneous current density driving
+DW motion by STT. The pulse amplitude varied between
+0 and 11 GA/m2. We veriﬁed that the Joule effect had a
+negligible contribution on DW dynamics (see Appendix B).
+Perpendicular magnetic ﬁeld pulses of adjustable amplitude
+(0–65 mT) were produced by a 75-turn small coil (diameter
+∼1 mm) mounted on the sample. The DW displacement is
+observed using a magneto-optical Kerr microscope (resolution
+∼1 μm). The DW velocity is deﬁned as the ratio between the
+average displacement ⟨u⟩and the pulse duration t, which
+varies between 1 μs and 120 s. The setup was placed against
+the cold ﬁnger of an optical He-ﬂow cryostat, which allowed
+the temperature to be stabilized to between 5.7 K and Tc.
+III. DOMAIN-WALL DISPLACEMENT AND ROUGHNESS
+IN THE CREEP REGIME
+The time evolution of an initially almost ﬂat DW driven
+by magnetic ﬁeld and STT is compared in Fig. 1. For ﬁeld-
+driven DW motion, the average successive displacements are
+relatively similar. The initial DW shape is almost conserved
+during the motion. The DWs become sometimes strongly
+pinned and curved [see Fig. 1(a)] but are ﬂattened again when
+FIG. 1. Time evolution of DW shape. Successive positions of a
+DW, at T = 28 K, driven by (a) magnetic ﬁeld (H = 0.16 mT, delay
+between images t = 0.5 s, total duration 60 s) and (b) current
+(j ≈0.5 GA/m2, t = 0.5 s, total duration 16 s) observed at the
+same sample location. The DW move in the direction opposite to
+the current density, which is indicated by the arrow. The initial DW
+position is underlined by a thick dashed line. The triangles indicate
+the strongest DW pinning positions.
+depinned due to the combined effects of DW elasticity and
+driving force, which acts as a pressure ( f ∝H). In contrast,
+the initial DW shape is signiﬁcantly altered by the current
+[see Fig. 1(b)]. DWs are tilted and form faceted structures.
+The faceting process seems to start close to “strong” pinning
+centers [5] and to produce a reduction of DW displacements
+with increasing tilting angle θ until DWs stop (on the ex-
+periment timescale), as already observed in Pt/Co/Pt ﬁlms
+[5]. In Sec. V, we will show that the faceting results from
+an instability of the transverse alignment between current and
+the DW, which can be triggered even without any contribution
+from pinning.
+Let us start with investigations of universal behaviors
+with a study on DW self-afﬁnity using the displacement-
+displacement correlation function [4]:
+w(L) =
+
+x
+[u(x + L) −u(x)]2,
+(1)
+where u(x) is the DW displacement measured parallel to the
+current and L the length of DW segment along the x axis trans-
+verse to the current [see Fig. 2(a)]. For a self-afﬁne interface,
+the function w(L) is expected to follow a power-law variation
+w(L) ∼L2ζ, where ζ is the roughness exponent. Typical
+variations of w vs L obtained for ﬁeld- and current-induced
+motion are compared in Fig. 2(b) in log-log scale. As it can be
+observed, both curves present a linear variation with similar
+slopes (= 2ζ), between the microscope resolution (≈1 μm)
+and L = 10 μm. In order to get more statistics, the slopes were
+systematically determined for successions of DW positions
+and a temperature varying over one decade (T = 4.5–59 K,
+see Appendix C for the statistical study). The mean and stan-
+dard deviation of the roughness exponent for current (ζj)- and
+ﬁeld (ζH)-driven DW motion is reported in Fig. 2 as a function
+of temperature. As expected for universal critical exponents,
+the values of ζj and ζH do not vary signiﬁcantly. Their mean
+values (ζj = 0.60 ± 0.05 and ζH = 0.61 ± 0.04), calculated
+from all measurements, agree well within experimental error,
+which is a signature of common universal behavior.
+Here, it is important to discuss differences and sim-
+ilarities with the results reported for Pt/Co/Pt in Ref.
+[5]. For (Ga,Mn)(As,P), ζj presents no signiﬁcant variation
+184420-2COMMON UNIVERSAL BEHAVIOR OF MAGNETIC DOMAIN …
+PHYSICAL REVIEW B 100, 184420 (2019)
+FIG. 2. Analysis of domain-wall roughness. Roughness expo-
+nents ζj and ζH as a function of temperature, measured for j < jd
+and H < Hd, respectively. Inset (a): Deﬁnition of the domain-wall
+displacements u(x) and u(x + L) used to calculate the displacement-
+displacement correlation function [see Eq. (1)]. Inset (b): Typical
+correlation functions w vs DW segment length L in log-log scale
+for current-driven (diamonds) and ﬁeld-driven (triangles) DWs (T =
+14.2 K). The dashed lines are a ﬁt of w ∼L2ζ used to determine the
+roughness exponents ζj and ζH.
+with DW tilting and remains signiﬁcantly smaller than the
+value (ζj = 0.99 ± 0.01) reported for DW displacements
+measured in the direction of current. A value ζj ≈1 most
+probably reﬂects the large linear tilting trend of DWs [27]
+[inserting a linear variation of u(x) in Eq. (1) leads to ζ = 1]
+and not a universal behavior of their roughness. In contrast,
+the value ζj = 0.60 ± 0.05 is compatible with the results
+(ζj = 0.68 ± 0.04) of Ref. [5] for a DW roughness analyzed
+in the direction (⃗n) normal to DW.
+Therefore, the compatibility of results obtained for
+(Ga,Mn)(As,P) and Pt/Co/Pt ﬁlms [5] strongly suggests that
+the common universal behaviors for current- and ﬁeld-driven
+DW motion should be observed in a variety of other materials.
+Interestingly, as the equilibrium roughness ζ (≈2/3) and the
+creep exponents are linked by the scaling relation [4,17]
+μ = (2ζ −1)/(2 −ζ ), it is natural to infer that the creep
+motion of DW driven by STT should be characterized by
+the same universal exponent (μ = 1/4) as the magnetic-ﬁeld-
+driven DW motion, in agreement with the results obtained for
+Pt/Co/Pt nanowires [22]. Moreover, the depinning transition
+should also be described by the values of universal exponents
+β (= 0.25) and ψ (= 0.15) expected for the qEW universality
+class.
+IV. DOMAIN-WALL DYNAMICS
+In order to discuss those assertions, we have investigated
+the DW dynamics. The velocity measurements were all per-
+formed with almost ﬂat DWs transverse to the current (θ ≈0)
+(see Fig. 1) in order to circumvent the variation of driving
+FIG. 3. STT-induced domain-wall dynamics. DW velocity vs
+current density j for different temperatures. The solid, dashed,
+and dotted lines are predictions for the creep, depinning, and ﬂow
+regimes, respectively, obtained from simultaneous ﬁts of Eqs. (2).
+The lower and upper stars correspond to the velocities at the de-
+pinning threshold v( jd ) and vT ( jd ), respectively. A sliding average
+over ﬁve points is used to smooth the curves. The unexpected large
+velocities measured for T = 54 K and j > 7.5 GA/m2 were not used
+for the ﬁt. Inset: Semilog plot of the same velocity curves vs j−1/4
+highlighting the thermally activated creep regime and its ﬁt.
+force with DW tilt. The velocity curves are reported in Fig. 3
+as well as their analysis using a self-consistent description of
+the universal behaviors developed for ﬁeld-driven DW motion
+[12,24,28–30]:
+v( j) =
+⎧
+⎪⎪⎨
+⎪⎪⎩
+v( jd) exp
+
+−E
+kBT
+
+creep : j < jd
+vT ( jd )
+x0
+ j−jd
+jd
+β
+depinning : j ≳jd
+vT ( jd) j
+jd
+linear f low : j ≫jd,
+(2)
+where jd is the depinning threshold and v( jd) the veloc-
+ity at the depinning threshold. For the thermally activated
+creep regime, the energy barrier height is given by E =
+kBTd[( j/jd)−μ −1], where kBTd is the characteristic height
+of the effective pinning barrier. For the linear ﬂow regime,
+vT ( jd) = v( jd)(Td/T )ψ is the velocity that DW would reach
+at j = jd without pinning. The description of the depinning
+regime in Eqs. (2) is only valid over a limited range: it does
+not account for the effect of thermal ﬂuctuations occurring at
+and just above the depinning threshold nor for the crossover
+to the linear ﬂow regime [12]. Note that the critical exponents
+μ (= 1/4), β (= 0.25), and ψ (= 0.15), and the parame-
+ter x0 (= 0.65) in Eqs. (2) characterize the universal (i.e.,
+temperature and material independent) behaviors of ﬁeld-
+driven DW motion, which are described by the qEW minimal
+model [12,17–19]. Therefore, the comparison between the
+velocity curves (Fig. 3) and Eqs. (2) relies only on three
+adjustable temperature- and material-dependent parameters
+[ jd(T ), v( jd(T )), and Td(T )], whose values are related to the
+micromagnetic and microscopic pinning parameters [24].
+To evidence the depinning threshold, we performed ﬁts of
+the creep law for increasing values of jd(T ) and v( jd, T ) on
+the velocity curves [Td(T ) is the free parameter]. As it can be
+184420-3R. DÍAZ PARDO et al.
+PHYSICAL REVIEW B 100, 184420 (2019)
+TABLE I. Pinning parameters of DW dynamics and ﬁtting pa-
+rameters of Eqs. (2). Units: T and Td are in Kelvin, v( jd ) and v(Hd )
+in m/s, jd in GA/m2, and Hd in mT. The numbers in parenthesis
+indicate the error bars.
+Current
+Magnetic ﬁeld
+T
+jd
+v( jd )
+Td
+Hd
+v(Hd )
+Td
+49
+7.9 (0.6)
+4.1 (0.5)
+465 (35)
+28.4 (0.4)
+7.5 (0.4)
+320 (15)
+54
+4.9 (0.4)
+3.0 (0.4)
+375 (25)
+15.5 (0.4)
+4.0 (0.2)
+420 (20)
+59
+3.5 (0.3)
+2.3 (0.2)
+315 (30)
+16.1 (0.5)
+4.2 (0.4)
+410 (20)
+observed in Fig. 3 and its inset, the creep law describes well
+the experimental data from the lowest velocity (v ≈10−7m/s)
+up to limits ( j ≈8, 5, and 3.5 GA/m2 for T = 49, 54, and
+59 K, respectively) above which a systematic disagreement is
+observed. In order to verify that those limits are effectively
+signatures of the depinning threshold, we performed simulta-
+neous ﬁts of the predictions of Eq. (1) for the depinning and
+ﬂow regime using a ﬁne tuning of point [ jd(T ), v( jd, T )] on
+the creep law.
+The coordinates of optimum points (indicated by stars with
+half ﬁlled down in Fig. 3) and the values of Td(T ), obtained
+at different temperatures, are reported in Table I. The good
+agreement between the velocity curves and the predictions of
+Eqs. (2) evidences the depinning threshold and demonstrates
+that the observed DW dynamics covers the creep, depinning,
+and ﬂow regimes. Note that the investigation of DW motion
+above the depinning threshold was not accessible in experi-
+ments with CoFeB [10] and even less with Pt/Co/Pt [5,22]
+due to the too low efﬁciency of STT.
+The compatibility of DW dynamics with Eqs. (2) is a
+strong evidence that DW motion induced by transverse current
+through the STT mechanism shares the common universal
+behavior of DW driven by a magnetic ﬁeld observed in thin
+magnetic ﬁlms made of different materials [4,9–12,24]. Our
+analysis of DW dynamics and roughness is compatible with
+the conclusions reported for the creep motion in Pt/Co/Pt
+ﬁlms [5,22]. In contrast, while a similar material is investi-
+gated, the results obtained for (Ga,Mn)As nanowires [8] are
+not conﬁrmed (see also the Supplemental Material of Ref.
+[11] for ﬁeld-driven DW motion over a large velocity range).
+The different values of creep exponent reported in Refs. [8]
+and [10] could originate from a pinning of DWs by the edges
+of nanowires [28] or from the tilting of DW, which is not
+controlled.
+Beyond the analysis of universal behavior, it is also partic-
+ularly interesting to compare the material-dependent pinning
+properties of DWs driven by STT and magnetic ﬁeld. To
+achieve this objective, we have performed the analysis of
+magnetic-ﬁeld-driven DW dynamics close to the depinning
+transition (see Fig. 4). For the ﬁt of velocity curves we
+used the procedure described above [ jd(T ) was replaced by
+Hd(T )]. The pinning parameters are reported in Table I. Fol-
+lowing Ref. [22], we can deﬁne the ﬁeldlike effect of the STT
+by Hd = ϵJd. The obtained value (ϵ ≈4 × 10−12 T m2/A) is
+more than 2 orders of magnitude larger than for Pt/Co/Pt
+ﬁlms (= 1.6 × 10−14 T m2/A) [22], reﬂecting the much larger
+efﬁciency of STT in (Ga,Mn)(As,P). In addition, the simi-
+lar values of Td obtained for ﬁeld- and current-driven DW
+FIG. 4. Magnetic-ﬁeld-induced domain-wall dynamics. DW ve-
+locity vs magnetic ﬁeld H for different temperatures and their ﬁt
+with Eqs. (2). The solid, dashed, and dotted lines are predictions
+for the creep [H < Hd(T )], depinning [H ≳Hd(T )], and ﬂow [H ≫
+Hd(T )] regime, respectively. The lower and upper stars correspond
+to the velocities v(Hd ) and vT (Hd ) at the depinning threshold Hd,
+respectively. The slightly nonlinear variations observed for T = 59 K
+and H > 33 mT were not used for the ﬁt of ﬂow regime.
+dynamics [Td(H)/Td( j) = 1.0 ± 0.3] indicate that a similar
+random disorder controls DW pinning. Finally, the ratio Td/T
+(≈5–10) is rather small compared to other materials [12,24],
+which explains why the depinning threshold is not straightfor-
+ward to observe in the velocity curves (Figs. 3 and 4) without
+a comparison with the ﬁt of Eqs. (2).
+V. ORIGIN OF DOMAIN-WALL FACETING
+Let us now discuss the tilting and faceting of DWs, which
+is observed only for current-driven motion (see Fig. 1 and
+Ref. [5]). First, we analyze the evolution of an initially
+almost rectangular domain subjected to a current density
+( j = 11 GA/m2), sufﬁciently large to move untilted DWs
+(θ = 0, i.e., ⃗j ∥⃗n, where ⃗n is the direction normal to DW)
+in the ﬂow regime. As it can be observed in Fig. 5, the
+edges of the domain aligned along the current (i.e., ⃗j ⊥⃗n)
+remain almost motionless. In contrast, the back and front
+DWs perpendicular to the current (i.e., ⃗j ∥⃗n) are signiﬁcantly
+displaced. Surprisingly, the back DW moves faster than the
+front DW, which causes the collapse of the domain [see
+Figs. 5(e)–5(f)]. Another interesting feature is the increasingly
+pointed shape of the front DW (not observed for the back
+DW). Here, the faceting of the front DW develops without any
+contribution of “strong” pinning sites, which suggests that the
+transverse orientation between DW and current is unstable.
+Consequently, the different shape evolutions of the front and
+back DWs observed in Figs. 5(a)–5(f) can be interpreted as a
+result of opposite contributions of DW elasticity. The two side
+DWs pull the extremities of the back (front) DW in the −⃗j (⃗j)
+direction, which tends to stabilize (destabilize) the transverse
+DW orientation.
+To explore more quantitatively the directionality of inter-
+action between DW and current, we have measured the DW
+184420-4COMMON UNIVERSAL BEHAVIOR OF MAGNETIC DOMAIN …
+PHYSICAL REVIEW B 100, 184420 (2019)
+FIG. 5. Current-driven domain-wall motion. (a–f) Evolution of
+an almost rectangular magnetic domain submitted to pulses of cur-
+rent (duration t = 6 μs and amplitude j = 11 GA/m2) for T =
+45 K. The gray levels correspond to opposite directions of magne-
+tization ⃗M perpendicular to the sample. The back DW conserves
+its shape and velocity while the front DW becomes pointed, which
+reduces its velocity and leads to the collapse of the domain (see
+images e and f). (g, h) Two successive images of domains (t = 1 μs
+and j = 11.1 GA/m2) showing, for T = 55 K, the displacement xn
+of a tilted DW (see the dashed and solid segments) along its normal
+direction ⃗n. θ is the tilting angle between ⃗n and −⃗j. (i) Curve of
+the velocity vn along ⃗n vs |j| cos θ obtained for a constant value of
+j (= 11.1 GA/m2) for T = 55 K, and t = 1 μs, and comparison
+with the velocity curves vs current density (θ = 0) taken from
+Fig. 3. The error bars reﬂect the uncertainties of tilting angle and
+displacement.
+displacements xn along direction ⃗n as a function of the angle
+θ between ⃗n and −⃗j for a ﬁxed magnitude of current density
+and pulse duration t = 1 μs [see Figs. 5(g) and 5(h)]. We
+have then deduced the variation of velocity vn = xn/t as a
+function of | j| cos θ, which is reported Fig. 5(i). As expected,
+the DW velocity decreases as the tilting angle increases
+(i.e.,| j| cos θ decreases). For | j| cos θ < 2.25 GA/m2, the dis-
+placement xn becomes lower than the spatial resolution so
+that the estimation for vn is zero. The dispersion of data
+most probably results from the contributions of DW elasticity,
+which tends to reduce DW velocity. Therefore, the velocity
+DW without contribution of elasticity should correspond to
+the upper measured values. Interestingly, those values present
+a rather good overlap with the velocity curves of Fig. 3, which
+were obtained as a function of the current density and for
+θ = 0. This indicates that DW tilting reduces the driving force
+in the direction normal ⃗n to the DW and suggests that the DW
+faceting originates from the directionality of the driving force
+f ∝⃗j · ⃗n.
+Let us now discuss the consequence of the variation of
+the driving force with DW tilting (∝j cos θ) on univer-
+sal behaviors. The second-order expansion of cos θ [≈1 −
+(1/2)(∂u/∂x)2] introduces a so-called KPZ term [λ(∂u/∂x)2
+with λ = −j/2] in the equation of motion [31], which is
+usually used to describe interface tilting. However, at large
+tilting angle, the relation f ∝⃗j · ⃗n should not be compatible
+with the KPZ minimal model. In contrast, in the direction ⃗n
+perpendicular to DW, for a ﬁxed DW tilting, the driving force
+due to spin-transfer torque is simply proportional to j cos θ
+and acts as a magnetic ﬁeld ( f ∝H). This could explain the
+compatibility of current-induced DW motion with the qEW
+universality class, which is observed experimentally.
+VI. CONCLUSION
+In conclusion, we have shown that the roughness and
+dynamics of DWs driven by spin-transfer torque and magnetic
+ﬁeld present common universal behaviors compatible with a
+short-range weak pinning disorder described by the quenched
+Edwards-Wilkinson universality class. The agreement with
+the self-consistent description of creep and depinning
+regimes should help to better understand spin-transfer-torque–
+induced DW motion experiments [2], since it allows clear
+identiﬁcation of dynamical regimes and discrimination be-
+tween universal and material-dependent behaviors [24]. In this
+frame, it would be also very interesting to study the universal
+behaviors of DWs driven by spin-orbit torque [32] and of DWs
+in antiferromagnets [33].
+Moreover, we evidence the instability of transverse align-
+ment between DW and current in the creep and ﬂow regimes.
+The latter originates from the decrease of driving force and
+consequently of DW velocity with DW tilting. Our results also
+strongly suggest that for sufﬁciently large tilting angle, the
+motion of DWs is not compatible with the quenched Kardar-
+Parisi-Zhang minimal model [31]. The contribution of DW
+tilting to their dynamics should also have direct implications
+for potential applications based on the controlled-motion DWs
+[1] in nanowires. Indeed, the spin-transfer torque tends to
+stabilize DW alignment in the direction of current.
+ACKNOWLEDGMENTS
+We wish to thank S. Bustingorry, A. Kolton, and K. Wiese
+for fruitful discussion, and J. Miltat and J. Sampaio for careful
+reading of the manuscript. This work was partly supported
+by the projects DIM CNano IdF (Region Ile-de-France) and
+the Labex NanoSaclay (ANR-10-LABX-0035). R.D.P. thanks
+the Mexican council CONACyT for the Ph.D. fellowship (No.
+449563).
+APPENDIX A: SAMPLE DETAILS
+The devices used for our study are shown in Fig. 6(a). They
+consist of a 4-nm-thick (Ga,Mn)As/(Ga,Mn)(As,P) bilayer
+grown on a (001) GaAs/AlAs buffer and covered by a GaAs
+cap. The bilayer and the GaAs cap were grown at ∼220 ◦C,
+and the rest of the structure at ∼500 ◦C [26]. A postgrowth
+annealing was performed so as to remove interstitial Mn
+ions. The stack was then patterned by lithography in a set
+of rectangles with three different sizes: 133 × 210, 228 ×
+184420-5R. DÍAZ PARDO et al.
+PHYSICAL REVIEW B 100, 184420 (2019)
+FIG. 6. Samples
+and
+velocity
+measurements.
+(a)
+Optical image of a set of devices showing the rectangular
+(Ga,Mn)As/(Ga,Mn)(As,P) bilayer of three different sizes, the
+connecting Ti/Au electrodes (in yellow) used to generate current
+pulses, and an example of the location where domain-wall motion
+is observed. (b) Schematic of the stack. The direction of red arrow
+is the same as in (a). The DW motion is observed through the
+SiO2 and the thinnest part of the Au/Ti electrode deposited above.
+The latter is not connected for the presented experiments. (c, d)
+Differential polar Kerr images showing two successive positions of a
+DW, which separates regions with opposite magnetization directions
+perpendicular to the bilayer. The displacement of the DW was
+produced by 0.45 GA/m2 current-density pulse of 10-s duration. (e)
+Subtraction of images (d) and (c) highlighting the DW displacement
+u(x).
+302, and 323 × 399 μm2 [see Fig. 6(a)]. A 55-nm-thick SiO2
+gate-oxide layer was deposited by plasma-enhanced chemical
+vapor deposition at 200 ◦C and then covered by an evaporated
+ﬁlm of Ti/Au serving as the gate [26] [see Fig. 6(b)]. For the
+experiments presented here, this gate was not connected. The
+motion of domain walls (DWs) in the bilayer was observed
+through the square part of the Ti/Au gate [see the bottom left
+of Fig. 6(a)].
+Finally, Ti (20 nm)/Au (200 nm) electrode bars of
+width 40 μm were deposited onto the GaAs cap on
+both sides of the rectangle to connect the ferromagnetic
+(Ga,Mn)As/(Ga,Mn)(As,P) bilayer. Those electrodes were
+used to generate a homogeneous current density in the direc-
+tion of the largest length of rectangles. The current ﬂows only
+within the (Ga,Mn)As/(Ga,Mn)(As,P) bilayer, since the em-
+bedding media are undoped GaAs layers with a much larger
+resistivity. Therefore, the motion of DW produced by the cur-
+rent is due to the spin-transfer torque (STT). The measurement
+of velocity was always performed from an initially almost ﬂat
+magnetic domain wall aligned in the direction parallel to the
+Ti/Au electrodes (i.e., perpendicular to direction of electric
+current), as shown in Figs. 6(a) and 6(c). The displacement
+of DW to a new position [see Fig. 6(d)] was produced by
+FIG. 7. Temperature rise produced by Joule heating. (a) Tem-
+perature rise vs time for different current densities. (b) Normal-
+ized temperature rise for a 1 GA/m2 pulse for the device (228 ×
+302 μm2) connected to the current source (solid diamonds) and for
+a device with the same dimensions placed ∼1 mm away (empty
+diamonds). The solid line corresponds to the best ﬁt of the function
+T (t, 1GA/m2) = aTb for t < 50 s.
+magnetic ﬁeld pulses (amplitude from 0 to 65 mT and duration
+t = 1 μs up to 100 s) or current pulses (amplitude from 0.02
+to 9.70 GA/m2 and t = 1 μs to 60 s). The displacement of
+DW u(x) was measured in the direction of current and could
+vary along the DW line x (as observed in Figs. 6(e) and 2).
+The velocity is deﬁned as the ratio between the average DW
+displacement and the pulse duration [⟨u⟩/t].
+APPENDIX B: CONTRIBUTION OF JOULE HEATING TO
+DW DYNAMICS
+In order to determine the temperature rise produced by
+current pulses and to conﬁrm a negligible contribution of
+Joule heating to DW dynamics we have followed a similar
+analysis as that proposed in Ref. [34].
+For each measurement, we prepare an initial mag-
+netic state consisting in a closed magnetic domain sur-
+rounded by a homogeneous reversed magnetization. First,
+we determine the critical (Curie) temperature at which the
+184420-6COMMON UNIVERSAL BEHAVIOR OF MAGNETIC DOMAIN …
+PHYSICAL REVIEW B 100, 184420 (2019)
+FIG. 8. Roughness exponent vs time for ﬁeld-induced DW motion. (a)–(l) Temporal evolution of the roughness exponent at different
+temperatures and constant magnetic ﬁeld amplitude within the creep regime. In every case
+H
+Hd < 1. The average ζH is indicated for each
+temperature.
+contrast of the polar magneto-optical Kerr effect vanishes
+(Tc = 65 K) by progressively increasing the temperature.
+Then, the experimental protocol used for measuring the tem-
+perature rise T produced by current pulses is as follows:
+Step 1. We set an initial sample temperature Ti. This ﬁxes
+the temperature rise (Tc = Tc −Ti) required to reach the
+temperature Tc.
+Step 2. We choose a value for the current density j. We
+then apply a pulse of duration t which produces a tem-
+perature rise T ( j, t). If T ( j, t) < Tc, the magnetic
+domain is still visible after the pulse; the sample has remained
+in the ferromagnetic state during the pulse. In contrast, if
+T ( j, t) > Tc, the Joule heating has produced a transi-
+tion to the paramagnetic state and the domain is no longer
+observed after the current pulse. In order to estimate the value
+of the critical pulse duration tc for which T ( j, tc) =
+Tc, we progressively increase the pulse duration until the
+vanishing of the magnetic domain.
+Step 3. Step 2 is repeated for different values of the current
+density j and the same temperature rise Tc.
+Step 4. Steps 1–3 are repeated for different values of Tc.
+For each value of current density, this procedure enables
+one to associate a temperature rise T ( j, tc) to a pulse
+duration tc as shown in Fig. 7(a). In order to verify that the
+obtained curves reﬂect the contribution of Joule heating, the
+temperature rises were divided by j2. As it can be observed
+in Fig. 7(b), all the data points collapse onto a single master
+curve, which conﬁrms our assumption. The master curve
+corresponds to the time variation of the temperature rise T
+produced by a current pulse of amplitude j = 1GA/m2.
+Moreover, the same type of measurement was performed
+for a device separated by ∼1 mm from the heating source.
+184420-7R. DÍAZ PARDO et al.
+PHYSICAL REVIEW B 100, 184420 (2019)
+FIG. 9. Roughness exponent vs time for current-induced DW motion. (a)–(l) Temporal evolution of the roughness exponent at different
+temperatures and constant current density within the creep regime. In every case
+j
+jd < 1. The average ζJ is indicated for each temperature.
+In this case, the heat is transferred through the substrate of
+bilayer devices. Therefore, the vanishing of the domain is
+assigned exclusively to temperature rise and cannot be asso-
+ciated to current-induced DW motion. As shown in Fig. 7(b),
+the obtained curve has a similar shape. The temperature rise
+presents a strong variation for the shortest duration (t < 50 s).
+For t > 50 s, the temperature rise tends to saturate, which
+probably reﬂects a quasithermal equilibrium controlled by
+the power produced by Joule heating, the cooling power of
+the cryostat, and the thermal impedance of the sample and
+substrate.
+Let us now discuss the contribution of Joule heating to
+DW dynamics. We ﬁrst seek for a continuous function de-
+scribing the temperature rise for t < 50 s. Arbitrarily, we
+have chosen a power-law variation T ( j = 1GA/m2, t) =
+a(t)b with a = 0.78 ± 0.13 and b = 0.69 ± 0.05, which ﬁts
+the data [see Fig. 7(b)] rather accurately. Then, we have
+calculated the temperature rise for each pulse amplitude and
+duration used for the velocity measurements. The obtained
+maximum temperature rise is T ⩽0.3 K. The correspond-
+ing maximum velocity variation is v( j,T )−v( j,T +0.3 K)
+v( j,T )
+≈3%. A
+comparison with the log-log scale velocity curves presented
+in the main text for different temperatures directly shows that
+Joule heating produces an insigniﬁcant contribution to DW
+dynamics.
+APPENDIX C: STATISTICAL STUDY OF ROUGHNESS
+EXPONENT
+The roughness exponents for the magnetic ﬁeld (ζH)- and
+current (ζj)-driven DW wall were determined systematically
+from time sequences of DW displacement, similar to those
+shown in the Fig. 1 of the main text. Figures 8 and 9 show
+the time evolution of ζH and ζj, respectively, for different
+184420-8COMMON UNIVERSAL BEHAVIOR OF MAGNETIC DOMAIN …
+PHYSICAL REVIEW B 100, 184420 (2019)
+temperatures in the range 5.7 K < T < 59.0 K. As it can
+be observed, ζH is found to be globally independent of time,
+except for some experiments [see Figs. 8(e), 8(i), and 8(j)] for
+which a variation is observed close to t = 0 s. Similarly, ζj
+remains constant with time, which indicates that the faceting
+(tilting) of DWs observed in Fig. 1(b) produces no signiﬁcant
+change of the measured value of ζj [see Fig. 9(f)]. The rough-
+ness exponent values ζH = 0.61 ± 0.03 and ζj = 0.60 ± 0.05
+discussed in the paper are both averages over more than 350
+measurements.
+[1] S. S. P. Parkin and S.-H. Yang, Nat. Nanotechnol. 10, 195
+(2015).
+[2] L. Caretta, M. Mann, F. Büttner, K. Ueda, B. Pfau, C. M.
+Günther, P. Hessing, A. Churikova, C. Klose, M. Schneider,
+D. Engel, C. Marcus, D. Bono, K. Bagschik, S. Eisebitt, and
+G. S. D. Beach, Nat. Nanotechnol. 13, 1154 (2018).
+[3] A. Hrabec, K. Shahbazi, T. A. Moore, E. Martinez, and C. H.
+Marrows, Nanotechnology 30, 234003 (2019).
+[4] S. Lemerle, J. Ferré, C. Chappert, V. Mathet, T. Giamarchi, and
+P. Le Doussal, Phys. Rev. Lett. 80, 849 (1998).
+[5] K.-W. Moon, D.-H. Kim, S.-C. Yoo, C.-G. Cho, S. Hwang, B.
+Kahng, B.-C. Min, K.-H. Shin, and S.-B. Choe, Phys. Rev. Lett.
+110, 107203 (2013).
+[6] E. E. Ferrero, L. Foini, T. Giamarchi, A. B. Kolton, and A.
+Rosso, Phys. Rev. Lett. 118, 147208 (2017).
+[7] M. P. Grassi, A. B. Kolton, V. Jeudy, A. Mougin, S. Bustingorry,
+and J. Curiale, Phys. Rev. B 98, 224201 (2018).
+[8] M. Yamanouchi, J. Ieda, F. Matsukura, S. E. Barnes, S.
+Maekawa, and H. Ohno, Science 317, 1726 (2007).
+[9] P. J. Metaxas, J. P. Jamet, A. Mougin, M. Cormier, J. Ferré,
+V. Baltz, B. Rodmacq, B. Dieny, and R. L. Stamps, Phys. Rev.
+Lett. 99, 217208 (2007).
+[10] S. DuttaGupta, S. Fukami, C. Zhang, H. Sato, M. Yamanouchi,
+F. Matsukura, and H. Ohno, Nat. Phys. 12, 333 (2016).
+[11] V. Jeudy, A. Mougin, S. Bustingorry, W. Savero Torres, J.
+Gorchon, A. B. Kolton, A. Lemaître, and J.-P. Jamet, Phys. Rev.
+Lett. 117, 057201 (2016).
+[12] R. Diaz Pardo, W. Savero Torres, A. B. Kolton, S. Bustingorry,
+and V. Jeudy, Phys. Rev. B 95, 184434 (2017).
+[13] S. Atis, A. K. Dubey, D. Salin, L. Talon, P. Le Doussal, and
+K. J. Wiese, Phys. Rev. Lett. 114, 234502 (2015).
+[14] J. A. Bonachela, C. D. Nadell, J. B. Xavier, and S. A. Levin, J.
+Stat. Phys. 144, 303 (2011).
+[15] S. Moulinet, C. Guthmann, and E. Rolley, Eur. Phys. J. E 8, 437
+(2002).
+[16] T. Tybell, P. Paruch, T. Giamarchi, and J.-M. Triscone, Phys.
+Rev. Lett. 89, 097601 (2002).
+[17] P. Chauve, T. Giamarchi, and P. Le Doussal, Phys. Rev. B 62,
+6241 (2000).
+[18] P. Le Doussal and K. J. Wiese, Phys. Rev. E 79, 051105
+(2009).
+[19] S. Bustingorry, A. B. Kolton, and T. Giamarchi, Phys. Rev. E
+85, 021144 (2012).
+[20] A. Rosso and W. Krauth, Phys. Rev. Lett. 87, 187002 (2001).
+[21] A. B. Kolton, A. Rosso, T. Giamarchi, and W. Krauth, Phys.
+Rev. B 79, 184207 (2009).
+[22] J.-C. Lee, K.-J. Kim, J. Ryu, K.-W. Moon, S.-J. Yun, G.-H. Gim,
+K.-S. Lee, K.-H. Shin, H.-W. Lee, and S.-B. Choe, Phys. Rev.
+Lett. 107, 067201 (2011).
+[23] K.-W. Moon, C. Kim, J. Yoon, J. W. Choi, D.-O. Kim, K. M.
+Song, D. Kim, B. S. Chun, and C. Hwang, Nat. Commun. 9,
+3788 (2018).
+[24] V. Jeudy, R. Díaz Pardo, W. Savero Torres, S. Bustingorry, and
+A. B. Kolton, Phys. Rev. B 98, 054406 (2018).
+[25] J. Curiale, A. Lemaître, C. Ulysse, G. Faini, and V. Jeudy, Phys.
+Rev. Lett. 108, 076604 (2012).
+[26] T. Niazi, M. Cormier, D. Lucot, L. Largeau, V. Jeudy, J. Cibert,
+and A. Lemaître, Appl. Phys. Lett. 102, 122403 (2013).
+[27] M. Höll, K. Kiyono, and H. Kantz, Phys. Rev. E 99, 033305
+(2019).
+[28] L. Herrera Diez, V. Jeudy, G. Durin, A. Casiraghi, Y. T. Liu,
+M. Voto, G. Agnus, D. Bouville, L. Vila, J. Langer, B. Ocker,
+L. Lopez-Diaz, and D. Ravelosona, Phys. Rev. B 98, 054417
+(2018).
+[29] K. Shahbazi, A. Hrabec, S. Moretti, M. B. Ward, T. A. Moore,
+V. Jeudy, E. Martinez, and C. H. Marrows, Phys. Rev. B 98,
+214413 (2018).
+[30] K. Shahbazi, J.-V. Kim, H. T. Nembach, J. M. Shaw, A. Bischof,
+M. D. Rossell, V. Jeudy, T. A. Moore, and C. H. Marrows, Phys.
+Rev. B 99, 094409 (2019).
+[31] M. Kardar, G. Parisi, and Y.-C. Zhang, Phys. Rev. Lett. 56, 889
+(1986).
+[32] E. Martinez, S. Emori, and G. S. D. Beach, Appl. Phys. Lett.
+103, 072406 (2013).
+[33] S.-H. Yang, K.-S. Ryu, and S. Parkin, Nat. Nanotechnol. 10,
+221 (2015).
+[34] J. Curiale, A. Lemaître, G. Faini, and V. Jeudy, Appl. Phys. Lett.
+97, 243505 (2010).
+184420-9

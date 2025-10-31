@@ -1,0 +1,119 @@
+A Microscopic Perspective on Photovoltaic Reciprocity in Ultrathin Solar Cells Urs Aeberhard∗and Uwe Rau IEK-5 Photovoltaik, Forschungszentrum J¨ulich, D-52425 J¨ulich, Germany (Dated: November 6, 2018) The photovoltaic reciprocity theory relates the electroluminescence spectrum of a solar cell under applied bias to the external photovoltaic quantum eﬃciency of the device as measured at short circuit conditions.
+Its derivation is based on detailed balance relations between local absorption and emission rates in optically isotropic media with non-degenerate quasi-equilibrium carrier distribu- tions.
+In many cases, the dependence of density and spatial variation of electronic and optical device states on the point of operation is modest and the reciprocity relation holds.
+In nanostructure-based photovoltaic devices exploiting conﬁned modes, however, the underlying assumptions are no longer justiﬁable.
+In the case of ultrathin absorber solar cells, the modiﬁcation of the electronic struc- ture with applied bias is signiﬁcant due to the large variation of the built-in ﬁeld.
+Straightforward use of the external quantum eﬃciency as measured at short circuit conditions in the photovoltaic reciprocity theory thus fails to reproduce the electroluminescence spectrum at large forward bias voltage.
+This failure is demonstrated here by numerical simulation of both spectral quantities at normal incidence and emission for an ultrathin GaAs p-i-n solar cell using an advanced quantum kinetic formalism based on non-equilibrium Green’s functions of coupled photons and charge car- riers.
+While coinciding with the semiclassical relations under the conditions of their validity, the theory provides a consistent microscopic relationship between absorption, emission and charge car- rier transport in photovoltaic devices at arbitrary operating conditions and for any shape of optical and electronic density of states.
+Absorption and emission of light by a semiconductor material are two physical processes that are related by the fundamental laws of light-matter coupling.
+For a given set of electronic states connected by an optical tran- sition, the two processes are described in terms of iden- tical optical matrix elements and joint density of elec- tronic states participating in the transition.
+In thermal equilibrium, the principle of detailed balance dictates a vanishing net transition rate.
+On these grounds, the ab- sorption coeﬃcient has been related to the radiative life- time of charge carriers under non-equilibrium conditions [1], and to the local emission spectrum at ﬁnite splitting of quasi-Fermi levels [2].
+In the ﬁrst case, the absorption coeﬃcient α determines the prefactor B of the local rate of radiative recombination R(r) = B(r)ρn(r)ρp(r)/n2 i via B(r) = Z dEγ α(r, Eγ)n2 r(r)¯φbb(Eγ), (1) where Eγ = ℏω is the photon energy, ρn(p) and ni de- note the electron (hole) and intrinsic carrier densities, respectively, nr is the local refractive index – approx- imated as independent of energy – and ¯φbb ≡4πφbb is the angular integration of the vacuum black-body radiation ﬂux φbb(Eγ) = E2 γ/(4π3ℏ3c2 0)fBE(Eγ), with fBE(Eγ) = {exp[βEγ] −1}−1 (β ≡{kBT}−1) the Bose- Einstein distribution function at emitter temperature T.
+In the second case, a generalization of the Planck emis- sion law is given by the following rate (per unit volume): RGP(r, Eγ, ∆µ) = α(r, Eγ) ¯Dγ 0(r, Eγ) c0 nr(r)fBE(Eγ −∆µ), (2) where ¯Dγ 0 is the angle-integrated density of photon states and ∆µ denotes the quasi-Fermi level splitting (QFLS).
+In Ref. 2, this result was derived under the assumption of unrestricted optical transitions (no momentum selection rule), of quasi-equilibrium occupation described by Fermi statistics with distinct and constant (bulk) quasi-Fermi levels for electrons and holes, and of an optically homo- geneous medium exhibiting a photon density of states for free ﬁeld modes, ¯Dγ 0(r, Eγ) = (E2 γn3 r)/(π2ℏ3c3 0).
+The two cases coincide if Boltzmann statistics are used for the carrier densities in Ref. 1 and substituted for the Bose factor in (2), which is often found in literature, though strictly valid only at high temperature and far from de- generacy.
+Expression (2) constitutes one of the main in- gredients of the photovoltaic reciprocity theory as formu- lated in Ref. 3, which relates the luminescent emission of a solar cell under applied bias voltage to the external quantum eﬃciency QPV of the same device under illumi- nation, and which has found widespread application in luminescence-based characterization of photovoltaic ma- terials, cells and modules [4–7].
+For the case of an applied electrical bias V and a QPV that is determined at nor- mal incidence and short circuit conditions (V = 0), this reciprocity relation reads [3] φ⊥ em(Eγ, V ) = Q⊥ PV(Eγ)φbb(Eγ)  exp  qV kBT  −1  .
+(3) The limits for the applicability of the photovoltaic reci- procity relation as encoded in Expr.
+(3) have been inves- tigated for diﬀerent situations where some of the basic assumptions - such as, the superposition principle or the Donolato theorem [8] - do not hold [9–12].
+For instance, in Ref. 11, numerical device simulations were used to show the failure of the reciprocity relation in the case of non-identical band diagrams in the dark and under illu- arXiv:1702.02344v2 [cond-mat.mes-hall]  14 Apr 20172 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1 1.2 1.4 0 20 40 60 80 100 EC EV energy (eV) depth (nm) FIG.
+1. (color online) Band proﬁle - conduction band edge EC and valence band edge EV - and quasi-Fermi levels for electrons (µn) and holes (µp) in a 100 nm thin GaAs p-i-n - diode at applied bias voltage of V = 1.1 V.
+Both quantities are obtained from the solution of the full NEGF-Poisson problem. mination.
+However, these numerical experiments are lim- ited by the validity of the underlying description of the photovoltaic device operation, which has thus far been restricted to semiclassical bulk physics.
+On the other hand, there is a range of photovoltaic device architec- tures under active development where this conventional bulk picture is no longer appropriate as it fails to reﬂect the dependence of the microscopic electronic structure on the operating point of the device, such as nanostructure- based and ultra-thin solar cells [13, 14].
+In this Letter, we therefore assess the validity of Eqs.
+(2) and (3) if applied to ultra-thin solar cells by comparison with the quantum-kinetic picture of radiative charge carrier gener- ation, transport and recombination as formulated within the non-equilibrium Green’s function (NEGF) formalism [15–17].
+To this end, the coupled NEGF problems of in- teracting electrons and photons are solved - for the ﬁrst time - for a realistic solar cell device exhibiting a com- plex potential proﬁle, such as the ultra-thin GaAs p-i-n structure displayed in Fig. 1.
+In the case of a planar absorber, the local NEGF ex- pressions for the spectral radiative rates (per unit vol- ume, z: depth) read [18, 19] Rabs/em(z, Eγ) = X µ Z d2q∥ (2π)2 rµ abs/em(q∥, z, Eγ), (4) with the modal components for net absorption rabs,net ≡ rabs −rem,stim, accounting for stimulated emission, and spontaneous emission rem,spont ≡rem −rem,stim given by rµ abs,net(q∥, z, Eγ) = X ν Z dz′ h D< µν(q∥, z, z′, Eγ) × ˆΠνµ(q∥, z′, z, Eγ) i /(2πℏ), (5) rµ em,spont(q∥, z, Eγ) = X ν Z dz′ ˆDµν(q∥, z, z′, Eγ) × Π< νµ(q∥, z′, z, Eγ) i /(2πℏ).
+(6) In the above equations, q∥is the transverse – i.e., in-plane – component of the photon wave vector, D denotes the transverse photon Green’s function and Π is the trans- verse photon self-energy tensor related to the polariza- tion of the electronic system [20].
+These expressions pro- vide a general microscopic relation between local absorp- tion and emission rates in terms of occupied photon and electron-hole pair states (D<, Π<) and the correspond- ing ﬁnal state spectral functions (ˆΠ ≡Π> −Π<, ˆD ≡ D> −D<).
+The expressions are valid for arbitrary shape of the density of states and nonequilibrium occupation corresponding to the actual operating point of the struc- ture under optical or electronic excitation.
+For the comparison with the semiclassical quasi- equilibrium result (2), several approximations corre- sponding to the restricted regime of validity of the latter are applied to (5) and (6).
+In the case of the absorption, coupling to a coherent radiation ﬁeld permits to replace the photon GF by the electromagnetic vector potential A of the incident radiation ﬁeld, rµ abs,net(q∥, z, Eγ) = i ℏµ0 Aµ(q∥, z, Eγ) Z dz′h A∗ µ(q∥, z′, Eγ) × ˆΠµµ(q∥, z′, z, Eγ)  (7) ≡Φµ(q∥, z, Eγ)αµ(q∥, z, Eγ).
+(8) Equation (8) formally deﬁnes the local and modal ab- sorption coeﬃcient α via the local generation rate and the local value of the photon ﬂux Φ. For slow variation of the transverse electromagnetic ﬁeld in the absorber, the absorption coeﬃcient can be expressed solely in terms of the electronic properties of the absorber using the modal form [19] αµ(q∥, z, Eγ) ≈ ℏc0 2nrEγ Z dz′ iˆΠµµ(q∥, z′, z, Eγ).
+(9) To account for the isotropy of the media assumed in the derivation of (2) and (3), the average local absorption coeﬃcient for an isotropic medium is considered via ¯α(z, Eγ) ≈ ℏc0 2nrEγ Z dz′iˆ¯Π(0, z′, z, Eγ), (10) where ¯Π = P µ Πµµ/3.
+Use of the zero photon momen- tum component is justiﬁed by the weak q∥-dependence of3 0 1 2 3 4 5 6 7 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 0 1 2 3 4 5 × 0.55 spectral emission rate ¯Rem (1026 m−3s−1eV−1) absorption coefﬁcient α (103 cm−1) photon energy Eγ (eV) αNEGF(1V) ¯RNEGF em (1V) ¯RGP em[α(1V)] αNEGF(0V) ¯RGP em[α(0V)] FIG.
+2. (color online) Local absorption coeﬃcient α and spec- tral volume emission rate in the center of the intrinsic region of a 100 nm thick GaAs p-i-n solar cell.
+Dark lines represent the NEGF absorption coeﬃcients at V = 0 V (dashed) and V = 1 V (solid), respectively.
+The corresponding generalized Planck (GP) spectra for QFLS of ∆µ = 1 V are given by light solid and dotted lines, respectively.
+The isotropic NEGF re- sult ¯RNEGF em for the emission at V = 1 V (open symbols) is in excellent agreement with the GP spectrum ¯RGP em obtained from the isotropic NEGF absorption coeﬃcient at this bias voltage, but strongly broadened and red-shifted as compared to the GP spectrum obtained from the absorption coeﬃcient at short circuit conditions (V = 0 V, dotted line).
+the polarization function in the relevant range of photon wave vectors, since the latter are small as compared to the charge carrier quasi-momenta.
+In analogy to the treatment of the absorption co- eﬃcient in (10), the average emission for an isotropic medium is found as ¯Rem(z, Eγ) ≈nrEγ 2π2ℏ2c0 Z dz′ i¯Π<(0, z′, z, Eγ), (11) where for the last step, the momentum integration of the bare photon Green’s function was used [18], Z d2q∥ (2π)2 ˆDµν,0(q∥, z, z′, Eγ) = −inrEγ 3πℏc0 δµν.
+(12) At global quasi-equilibrium conditions - i.e., con- stant QFLS - the Kubo-Martin-Schwinger relation [21] Π<(Eγ) = e−β(Eγ−∆µ)Π>(Eγ) yields Π<(Eγ) = ˆΠ(Eγ)fBE(Eγ −∆µ), which, inserted in (11), reproduces Expr. (2).
+At this point, however, it needs to be empha- sized that the two polarization function components en- tering expressions (10) and (11) are computed on the ba- sis of the same electronic GF, which in turn may depend strongly on the point of operation.
+As shown in Fig. 2 displaying the absorption coeﬃcient and spectral emis- sion rate in the center of the intrinsic region of a 100 nm GaAs p-i-n photodiode, this is indeed the case for ultra- thin absorber solar cells: due to the strong impact of the built-in ﬁeld on the local absorption coeﬃcient [13], the emission spectrum at V = 1 V based on the generalized Planck (GP) law (2) – ¯RGP em – does only coincide with the one obtained from the isotropic NEGF expression (11) – ¯RNEGF em – if the absorption coeﬃcient at V = 1 V is used.
+In contrast, the GP emission spectrum based on the ab- sorption coeﬃcient at short circuit conditions (V = 0 V) shows a strong ﬁeld-induced red-shift and broadening as compared to the NEGF spectrum.
+Since the validity of the GP law is an essential req- uisite for the photovoltaic reciprocity relation to hold, the above ﬁnding has severe consequences for the appli- cability of Expr.
+(3) to the case of the ultrathin solar cells under consideration, as QPV is conventionally de- ﬁned at zero applied bias voltage where it provides the short circuit current Jsc under the action of the external illumination spectrum.
+However, for a proper assessment of Expr.
+(3), the local relation (2) between absorption and emission ﬁrst needs to be propagated to the global relation between QPV and the emitted photon ﬂux φem at the surface of the device.
+To this end, in addition to the local dynamics, knowledge of the propagation of light inside the cell is required.
+This information is encoded in the NEGF version of the Poynting vector component Sz(z) = R dEγ Sz(z, Eγ) for the energy ﬂux normal to the slab surface, which in terms of the photon GF is given by [22] Sz(z, Eγ) = Eγ 2πℏ Z d2q∥ (2π)2 sz(q∥, z, Eγ), (13) sz(q∥, z, Eγ) = −lim z′→z ∂z′Re X µ=x,y h D> µµ(q∥, z, z′, Eγ) + D< µµ(q∥, z, z′, Eγ) i .
+(14) In Ref. 22, Poynting’s theorem for slab geometry ∂zSz(z) = −W(z), with W denoting the energy dissi- pation, was used to relate the (modal) absorptance of a homogeneous slab to the (modal) photon ﬂux at the slab surface via Sz(zd) −Sz(z0) = − Z zd z0 dz W(z) (15) ≡− Z dEγ 2πℏEγ Z d2q∥ (2π)2 w(q∥, Eγ) (16) where zd −z0 = d is the absorber thickness, and the modal dissipation can be written as follows w(q∥, Eγ) = −2 X µ,ν  bµν(q∥, Eγ) −nµν(q∥, Eγ)  × aµν(q∥, Eγ).
+(17) In the above expression, b characterizes the global non-equilibrium distribution function of medium-induced4 ﬂuctuations and n is the distribution function of incident external photons [22].
+The microscopic expression for the absorptance of the slab in the general non-equilibrium state is given by aµν(q∥, Eγ) = − Z dz Z dz′ h ˆDv,µν(q∥, z, z′, Eγ) × ˆΠνµ(q∥, z′, z, Eγ) i , (18) with ˆDv the spectral function of vacuum-induced inci- dent ﬂuctuations [23].
+Under the assumption of com- plete isotropy, the absorptance obeys aµν(q∥, Eγ) ≡ ¯a(Eγ)δµν cos θ/2 for q∥= q0 sin θ with q0 = Eγ/(ℏc0).
+In the case of global quasi-equilibrium characterized by a QFLS ∆µ = µn−µp, the distribution of medium-induced excitations amounts to the corresponding Bose-Einstein function, bµν(q∥, Eγ) ≡fBE(Eγ −∆µ), and the integra- tion in (17) is restricted to the absorptance.
+Hence, us- ing Expr.
+(17) for vanishing incident radiation ﬁeld – i.e., n ≡0 – Expr.
+(16) for emission into air becomes φem(Eγ) = Sz(zd, Eγ)/Eγ = −Sz(z0, Eγ)/Eγ (19) = −1 2 Z d2q∥ (2π)3ℏw(q∥, Eγ) (20) = ¯a(Eγ) E2 γ 4π2ℏ3c0 fBE(Eγ −∆µ), (21) which is exactly the result found by W¨urfel in Ref.
+[2] for identical assumptions.
+For the ultra-thin solar cell considered here, the global quasi-equilibrium conditions – corresponding to practi- cally constant QFLS throughout the absorber – are well met, as can be inferred from Fig. 1.
+The quasi-Fermi levels (QFL) µn(p) for electrons (holes) shown there are obtained from the NEGF carrier densities ρ and spec- tral functions ˆG ≡i(G> −G<) via the local ﬂuctuation- dissipation theorem [24], by solving numerically the non- linear equation ρn(p)[G≶ n(p)](z) = Z dE 2π Z d2k∥ (2π)2 ˆGn(p)(k∥, z, z, E) ×{1/2 ∓1/2 + fFD[µn(p)(z), E]} (22) where fFD(µ, E) = {exp[β(E −µ)] + 1}−1 is the Fermi- Dirac distribution function at lattice temperature T and the upper (lower) sign is for electrons (holes).
+The tiny gradient in the QFL reﬂects the high charge carrier mo- bility and the absence of fast recombination processes, and leads to the equivalence QPV ≡a, as shown in Ref.
+19, where the short circuit current under monochro- matic illumination is compared to the photocurrent ob- tained from the absorptance.
+The spectral rate of photon emission normal to the left surface into modes coupling to normally incident light as provided by R⊥,Poynt em (Eγ) = −sz(0, z0, Eγ)/(2πℏ) (23) 0.0 1.0 2.0 3.0 4.0 5.0 1.2 1.3 1.4 1.5 1.6 0.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 spectral emission rate R⊥ em (106 s−1eV−1) absorptance a (%) photon energy Eγ (eV) R⊥,Poynt em (1.1V) R⊥,GK em [a(1.1V)] aNEGF(1.1V) aTMM(1.1V) aTMM(0V) R⊥,GK em [a(0V)] FIG.
+3. (color online) Total absorptance aNEGF (open squares) and spectral emission rate R⊥,Poynt em (open circles) of light with propagation direction normal to the left slab sur- face, for a bias voltage of V = 1.1 V applied at the contacts, as given by Eqs. (18) and (23).
+The results coincide with the values obtained directly from the TMM and the general- ized Kirchhoﬀ(GK) law [Eq. (24)], if the actual absorptance of the biased system is used.
+For the absorptance at short circuit conditions (V = 0 V, dashed line), the GK emission spectrum (dotted line) deviates signiﬁcantly from the actual NEGF emission spectrum, exhibiting again a strong red-shift and broadening attributed to the ﬁeld-induced tailing of the joint density of states.
+with the modal Poynting vector computed directly from the photon GF via (14) is therefore compared to the cor- responding generalized Kirchhoﬀlaw R⊥,GK em (Eγ) = a(0, Eγ)/(2πℏ)fBE(Eγ −∆µ), (24) where the absorptance is given by (18).
+Figure 3 dis- plays the close agreement of R⊥,Poynt em and R⊥,GK em for ∆µ set to the applied bias voltage of V = 1.1 V. Also shown is the perfect match of the NEGF absorptance aNEGF used in R⊥,GK em with the absorptance aTMM ob- tained from a transfer matrix method approach (TMM) using the absorption coeﬃcient at V = 1.1 V, validating the photon component of the coupled NEGF approach.
+In analogy to the local relation between absorption coef- ﬁcient and emission rate, the global emission spectra pro- vided by the full NEGF solution are compared to those obtained from the generalized Kirchhoﬀ(GK) law using the absorptance determined at short circuit conditions (V = 0 V), which corresponds to the standard deﬁnition of the external quantum eﬃciency QPV for perfect car- rier transport.
+Again, a large discrepancy in the form of a strong red-shift and broadening of R⊥,GK em [α(0 V)] as compared to R⊥,Poynt em is observed, conﬁrming the inva- lidity of Expr.
+(3) in the regime of ultra-thin absorbers subject to large variation of built-in ﬁelds with applied5 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 1.2 1.3 1.4 1.5 1.6 0.0 0.5 1.0 1.5 2.0 2.5 × 0.58 spectral emission rate R⊥ em (106 s−1eV−1) absorptance a (%) photon energy Eγ (eV) R⊥,Poynt em (1.1V) R⊥,GK em [a(1.1V)] aNEGF(1.1V) aTMM(1.1V) aTMM(0V) R⊥,GK em [a(0V)] R⊥,glob em (1.1V) FIG.
+4. (color online) Same as Fig. 3, but now for a system with a gold back reﬂector attached at the right side.
+Addi- tionally, the global emission rate R⊥,glob em obtained from the z-integration of the local rate for normal emission is shown (dash-dotted line), revealing the eﬀect of reabsorption on the spectral shape and intensity of the emission at the surface. bias voltage.
+This analysis holds also for the optically more complex situation of a device with a gold back re- ﬂector attached a the right side, as shown in Fig. 4.
+At this point, it is interesting to note that while the global emission rate resulting from spatial integration of the lo- cal rate (4) gives the radiative dark current upon inte- gration over photon energies, it does not coincide with the photon ﬂux at the surface of the cell, as the propa- gation through the absorbing material is not accounted for.
+The resulting impact of reabsorption on the spectral shape and magnitude of the emission at the surface can be inferred from the diﬀerence of the curves for the emis- sion rate given by the Poynting vector – i.e., R⊥,Poynt em – and that obtained from the z-integrated modal emis- sion rate (6), i.e., R⊥,glob em (Eγ) = R dz rem,spont(0, z, Eγ) (dash-dotted line).
+In conclusion, we presented a critical assessment of the photovoltaic reciprocity relation between external quan- tum eﬃciency and electroluminescent emission in ultra- thin solar cells, by application of a comprehensive non- equilibrium quantum theory of photovoltaic device op- eration which considers both electronic and optical de- grees of freedom on equal footing.
+The explicit rela- tion of the macroscopic device properties to the micro- scopic nonequilibrium charge carrier states reveals the approximate nature of the semiclassical reciprocity the- orem and provides at the same time a more generally valid picture of local (GP) and global (GK) connections between radiative processes in mesoscopic solar cell de- vices.
+This is of high practical relevance for photovoltaic devices whose characteristics are no longer determined by the equilibrium bulk properties of the constituent mate- rials, but by the actual nonequilibrium device state at the operating point, as in the case of the ultrathin solar cell architectures considered here and in a wide range of nanostructure-based implementations of third-generation solar cell concepts.
+The authors acknowledge helpful discussions with Bart Pieters and Thomas Kirchartz.
+∗u.aeberhard@fz-juelich.de [1] W. Van Roosbroeck and W. Shockley, Phys.
+Rev. 94, 1558 (1954).
+[2] P. W¨urfel, J. Phys.
+C: Solid State Phys. 15, 3967 (1982). [3] U. Rau, Phys.
+Rev. B 76, 085303 (2007).
+[4] T. Kirchartz and U. Rau, J. Appl.
+Phys. 102, 104510 (2007).
+[5] T. Kirchartz, U. Rau, M. Hermle, A. W. Bett, A. Helbig, and J. H. Werner, Appl. Phys. Lett. 92, 123502 (2008).
+[6] T. Kirchartz, A. Helbig, W. Reetz, M. Reuter, J. H. Werner, and U. Rau, Prog. Photovolt: Res. Appl. 17, 394 (2009).
+[7] U. Hoyer, M. Wagner, T. Swonke, J. Bachmann, R. Auer, A. Osvet, and C. J. Brabec, Appl. Phys. Lett. 97, 233303 (2010).
+[8] C. Donolato, Applied Physics Letters 46, 270 (1985).
+[9] T. Kirchartz and U. Rau, physica status solidi (a) 205, 2737 (2008).
+[10] T. Kirchartz, J. Mattheis, and U. Rau, Phys.
+Rev. B 78, 235320 (2008).
+[11] X. Wang and M. S. Lundstrom, IEEE Journal of Photo- voltaics 3, 1348 (2013).
+[12] T. Kirchartz, J. Nelson, and U. Rau, Phys.
+Rev. Applied 5, 054003 (2016).
+[13] U. Aeberhard, IEEE J. Photovolt. 6, 654 (2016).
+[14] U. Aeberhard, Appl. Phys. Lett. 109, 033906 (2016).
+[15] U. Aeberhard and R. H. Morf, Phys.
+Rev. B 77, 125343 (2008).
+[16] U. Aeberhard, J. Comput.
+Electron. 10, 394 (2011).
+[17] U. Aeberhard, Opt. Quantum. Electron. 46, 791 (2014).
+[18] U. Aeberhard, J. Photon.
+Energy 4, 042099 (2014).
+[19] U. Aeberhard, Phys. Rev. B 89, 115303 (2014).
+[20] See Supplemental Material for relation to charge carrier GF and transport properties.
+[21] M. F. Pereira and K. Henneberger, Phys.
+Rev. B 53, 16485 (1996).
+[22] F. Richter, M. Florian, and K. Henneberger, Phys.
+Rev. B 78, 205114 (2008).
+[23] K. Henneberger and F. Richter, Phys.
+Rev. A 80, 013807 (2009).
+[24] A. Berbezier and U. Aeberhard, Phys. Rev. Applied 4, 044008 (2015).

@@ -1,0 +1,94 @@
+A Hybrid Approach to Fermi Operator Expansion Michele Ceriotti, Thomas D. Kühne, and Michele Parrinello Citation: AIP Conference Proceedings 1148, 658 (2009); doi: 10.1063/1.3225396 View online: https://doi.org/10.1063/1.3225396 View Table of Contents: http://aip.scitation.org/toc/apc/1148/1 Published by the American Institute of Physics Articles you may be interested in An efficient and accurate decomposition of the Fermi operator The Journal of Chemical Physics 129, 024707 (2008); 10.1063/1.2949515 Perspective: Methods for large-scale density functional calculations on metallic systems The Journal of Chemical Physics 145, 220901 (2016); 10.1063/1.4972007 Daubechies wavelets for linear scaling density functional theory The Journal of Chemical Physics 140, 204110 (2014); 10.1063/1.4871876 Comparison of two genres for linear scaling in density functional theory: Purification and density matrix minimization methods The Journal of Chemical Physics 122, 084114 (2005); 10.1063/1.1853378 Improved Fermi operator expansion methods for fast electronic structure calculations The Journal of Chemical Physics 119, 4117 (2003); 10.1063/1.1590632A Hybrid Approach to Fermi Operator Expansion  Michele Ceriotti, Thomas D. Kiihne and Michele Parrinello  Computational Science, Department of Chemistry and Applied Biosciences, ETH Zurich, USI Campus, Via  Giuseppe Buffi 13, CH-6900 Lugano, Switzerland  Abstract.
+In a recent paper we have suggested that the finite temperature density matrix can be computed efficiently  by a combination of polynomial expansion and iterative inversion techniques.
+We present here significant improvements  over this scheme.
+The original complex-valued formalism is turned into a purely real one.
+In addition, we use Chebyshev  polynomials expansion and fast summation techniques.
+This drastically reduces the scaling of the algorithm with the width  of the Hamiltonian spectrum, which is now of the order of the cubic root of such parameter.
+This makes our method very  competitive for applications to ab-initio simulations, when high energy resolution is required.
+Keywords: linear scaling, Fermi operator expansion, fast polynomial summation  PACS: 71.15.-m, 31.15.-p  INTRODUCTION  Several fields of computational science (nanotechnology, materials science or biochemistry just to name a few) would  greatly benefit from the possibihty of performing simulations of large systems, containing hundreds of thousands  of atoms.
+Conventional electronic structure calculations require the diagonahzation of matrices whose size A^ is of  the order of the number of electrons in the system.
+The iff (A^^)-scaling cost of this step greatly limits the range of  systems which can be tackled by ab-initio techniques, despite the fast-paced progress in the computational power  of modem processors.
+Based on the theoretical foundations of the nearsightedness principle of electronic matter[l],  several techniques have been developed in the last years to avoid the diagonalization step, by directly computing the  density matrix of the system using linear scaling algorithms[2, 3, 4, 5, 6, 7].
+One of the earhest approaches have  been to compute the finite temperature density matrix, i.e. the Fermi function of the system's Hamiltonian, H, by  decomposing it into easier-to-compute functions of the Hamiltonian[8, 9], for instance Chebyshev polynomials or  rational functions.
+In a recent paper[10] we have discussed an exact decomposition of the Fermi operator which can  be efficiently computed by a combination of polynomial expansion and iterative inversion techniques.
+In this way, we  achieved an efficient scaling with Ae, the width of the spectrum of the Hamiltonian in units of ICBT.
+This makes the  method attractive for applications to metals or low-band gap semiconductors at low electronic temperature.
+In this  short paper we discuss a number of improvements to this scheme, which further lower the operation count, leading  to a scaling oc v^Ae, which is, to the best of our knowledge, the lowest so far reported in hterature.
+We will follow  closely the scheme of our previous work[10], obtaining analytical estimates for the operation count of the different  steps which compose our algorithm, so as to optimize them in order to achieve optimal performance.
+DETAILS OF THE DECOMPOSITION Our decomposition scheme is based on an exact expansion of the Fermi operator, which can be elegantly derived using  the grand-canonical formahsm[ll].
+Here we only report the final result, namely the fact that the finite-temperature  density matrix p can be written in terms of a sum of complex-valued matrices M/ [ 12]: P = | g = Y ^ = | i : i - R e M r \  M, = l - e ' P ' - i W 2 V H / 2 ^  (1)  Equation (1) is exact for any value of P, but large values should be chosen so as to allow for simple and economical  evaluation of the matrix exponential e^^/^^. Here and in the rest of the paper, with no loss of generality, we use a  shifted and scaled Hamiltonian, i.e. we set the zero of energies at jj., and measure energy in units of ICBT.  CP1148, Vol. 2, Computational Methods in Science and Engineering, Advances in Computational Science  edited by T. E. Simos and G. Maroulis  ©2009 American Institute of Physics 978-0-7354-0685-8/09/$25.00 658The expensive step in applying Eq. (1) is the inversion of the M/ matrices.
+In Ref.[10] we have shown that, for  large values of P, a / exists such that all of the matrices with / > / are almost optimally conditioned, and can be easily  inverted by a polynomial expansion.
+We have also shown how their overall contribution to the Fermi operator can  be computed at once, at the same cost of computing a single term, making the computational burden of the method  virtually independent of P.
+We will exploit this property and take often the large P limit to derive analytical results.
+The remaining, low-/ matrices are more efficiently treated with an iterative Newton inversion scheme[13].
+Overall,  the scaling in terms of matrix-matrix multiphcations count, which is ^ Ae for standard Chebyshev polynomials  expansion[14], reduces to ^ %/Ai, and is even lower when fast polynomial summation methods[15, 16] are used.
+A first improvement over the initial formulation of our scheme can be seeked by noting that only the real part of  Mr^ enters the expression for the Fermi operator, so that it can be more efficient to write  ReMr^ = 1 1+ e ,H/P. •i]nf  , where  N/ = 1 + e^l'' - le^l^'' cos n 2 / - 1  2P  (2) Only real matrices are involved in Eq. (2), leading to substantial savings in memory requirements and computation  time.
+The inversion of the N/s is the computationally demanding part of this approach; in fact, if one performs an  analysis similar to the one we have carried out in Ref.[10], the condition number of N/ is found to be approximately  K: (N/) « 1 + A£2;r"^ (2/ - 1)"^.
+This is higher than K (M/) « 1 +h.e%^^ (2/ - 1)"\ but decreases more rapidly with /.
+The low-/ inverse matrices, which are worse conditioned, can be computed by Newton inversion, whose performances  are only weakly affected by high condition numbers.
+Moreover, we take profit of the form of Eq. (2) to improve the evaluation of the contribution of the high-/ matrices,  which in our previous work[10] had a computational cost scaling as Ae^/F. Since we also want to set up an expansion  in Chebyshev polynomials for N;^\ we rewrite N/ it in terms of an auxihary matrix X whose spectrum hes between  - l a n d l :  N/ = C X - 2 n c o s ; r 2 / - 1  2P zo X- -4- •2zo cos n 2 / - 1  2P '' X  ,H/2P _ ZO /C- (3) Here we have introduced the shifting and scaling parameters zo = {e'^+^^^ + e'^-l^'') /2 and C, = (e^+/^^ - e^-/^^) /2,  computed in terms of the extremal values of the Hamiltonian spectrum, e and e+.
+These parameters can be estimated  with a Lanczos procedure.
+Alternatively, since only a rough estimate is required, one can also perform a test calculation  on a smaller, similar system, or use a matrix norm as an upper bound to the spectral radius of H.
+The inverse N;^^ can be therefore approximated as a sum of Chebyshev polynomials of X, N;^^ « TJILo'^'Ti (X),  where Ti is the i-th Chebyshev polynomial, and the coefficients c,- can be computed, by straightforward if tedious  algebra, and take the values  l^^lmb Im  sgnRe/7 /,  r-:—7 b — V o - 1 sgnReo A / F ^  , where  b  •zo)/C.  (4) An upper bound to the error due to truncation of the Chebyshev expansion can be estimated from YT=m+i kd- This  estimate leads to a complex expression, which simplifies considerably if we assume -e  = e+ = Ae.
+In this case, by  taking the large P limit, that the number of terms to be included in order do reach 10^^ relative accuracy on N^^^ reads  mc'  1  AeDlnlO  2  ; T ( 2 / - 1 )  (5)  this can be used as a first guess, to be refined by explicitly summing up the |c,| as computed from Eq. (4).
+At variance with the polynomial expansion of Ref.[10], the operation count is linear with Ae.
+This is the same  scaling observed when the Fermi operator is directly expanded in Chebyshev polynomials [14].
+This analogy is not  surprising, since the matrix powers Ti (X) entering the expansion are all independent of /, and one could in principle  obtain the whole density matrix from a single Chebyshev polynomial evaluation, computing the expansion coefficients  by summing over all the c;S.  However, it is more convenient to stop the summation at / > 1, so as to reduce mc, and tackle the remaining terms by  iterative inversion.
+The practical recipe is therefore to compute the coefficients c,- (/) and di = T^^^fCi (/), using them  to obtain N^^^ and the contribution to the Fermi operator from the "tail" of matrices with / > /, respectively.
+The next  step is to compute the terms up to / = 1 by iterative inversion, a task which becomes much more efficient when a good  6595-10  5-10  FIGURE 1.
+Estimated number of required matrix-matrix multiplications needed in order to obtain 10 ^ relative accuracy on  the finite temperature density matrix, as a function of the Hamiltonian spectum range Ae.
+The grid lines correspond to a scaling  <x \/Ae.
+We also plot the operation count expected when applying the fast summation methods of Ref.
+[ 16] to the standard Chebyshev  polynomial expansion[14] (mtot = 2^/| (D — l)Ae).
+Data points correspond to a test performed on the ab-initio Hamiltonian for  a LiAl alloy.
+Details can be found in Ref.[10]: Ae for the system is 3.00 a.u., and we have performed density matrix calculations  at different temperatures, setting the target accuracy to 10^^.
+Next to each point, we also report the relative error on the band  structure energy, as computed with our algorithm, taking as reference the value obtained by diagonalization at the same electronic  temperature.
+initial guess for the inverse matrix is available.
+Such a guess can be obtained by using a finite number of terms in the  extrapolation  N7  '/  i=o'-  ^  ^ '•  . ,  7t5l  .
+n5l  ni2l-\)  , with  r] = cos  h sm  tan  p  p  2p  (6) The simplest approximation N; ^ /r\ is already sufficient to guarantee convergence, which is fast and almost indepen- dent of the condition number of the N/ 's.
+The number of multiphcations needed to obtain a relative accuracy of 10^^  on N;^^ starting from K^^^/r\ is in fact, in the large P limit.
+niN In 2  -X)-D\nm Inz  where  % '•  8/  {i+iiY  (7)  One can use N^- ^ /r\, which has been computed with the Chebyshev expansion of the tail contribution, as the initial  guess for the Newton iteration which gives N^^^. The converged N^^^ is in turn used to evaluate N^^2' ^^'^ so on.
+The total number of matrix multiplications involved is easily obtained by combining Eq. (5) and (7), nitot =  tnc (l) + L/=i w^Af (0• By minimizing this quantity the optimal value of / is readily found.
+The Chebyshev polynomials  can be computed with fast summation techniques, in which case the operation count for that part becomes m^ = 3I/OTC.
+In Fig. 1 we report our theoretical estimate for nitot as a function of Ae.
+The scaling is °^ v^Ai, and the crossover point  with fast-summed Chebyshev expansion is around Ae « 10^, which is easily reached if electronic temperatures of a  few hundred K are necessary.
+In the same figure we also report the results from some test calculations performed for  the Hamiltonian of a semimetalhc LiAl alloy, together with the measured relative error on the total energy, which is  always one order of magnitude smaller than the target value enforced when choosing a particular Chebyshev expansion  length and convergence threshold for the matrix inversion.
+In order to keep the scheme as simple as possible, we have  not considered the option of fine-tuning the procedure, which could further reduce the operation count.
+First, the  operations count for Newton inversion (7) turns out to be often overestimated, so that hand-tuning / can save several  multiplications.
+Higher-order extrapolations are easily obtained (see Appendix B of Ref.[10]), which provide a better  660starting point for iterative inversion.
+Some preliminary results we obtained performing molecular dynamics with forces  computed on the fly with this scheme show that the number of multiplies needed for iterative inversion can be halved  if one uses the inverse saved from the previous timestep as the initial guess.
+CONCLUSIONS In this short paper we have introduced significant improvements to an algorithm that tackles the problem of Fermi  operator expansion by an hybrid approach based on a combination of polynomial expansion and iterative matrix  inversion, which we have presented in a recent paper.
+With this improved implementation, only real-valued matrices  are involved, leading to significant savings with respect to the previous, complex-valued formalism.
+Even more  important, the scaling of the operation count with the Hamiltonian spectrum width is lowered from i/Ae to v^Ai,  which is extremely appealing for broad-spectrum or low electronic temperature problems.
+Work in the direction of a  practical, linear-scaling implementation of these ideas is in progress[17].
+Beside the use of an efficient sparse-matrix  algebra library, subtle issues regarding matrix truncation must be addressed, and several optimizations, such as the  extrapolation of M^^^ from previous timesteps discussed above, can be used to improve the performances of the  algorithm.
+ACKNOWLEDGEMENTS  We would like to thank Clotilde Cucinotta and Giacomo Miceh for discussion on LiAl system, and Luca Ferraro and  Simone Meloni for helping us in a preliminary implementation of our method in a tight binding molecular dynamics  code.
+REFERENCES  \.  W. Kohn, Phys. Rev. Lett.
+76, 3168-3171 (1996).
+2.  S. Goedecker, Rev Mod.
+Phys. 71, 1085-1123 (1999). 3. W. Yang, Phys. Rev Lett.
+66, 1438-1441 (1991).
+4.  G. Galli, and M. Parrinello, Phys.
+Rev Lett 69, 3547-3550 (1992).
+5. X. P. Li, R. W. Nunes, and D. Vanderbilt, Phys.
+Rev B 47, 10891-10894 (1993).
+6.  S. Baroni, and P. Giannozzi, Europhys. Lett. 17, 547 (1992).
+7.  A. H. R. Palser, and D. E. Manolopoulos, Phys.
+Rev B 58, 12704-12711 (1998).
+8.  S. Goedecker, and L. Colombo, Phys.
+Rev Lett 13>, 122-125 (1994).
+9.  S. Goedecker, and M. Teter, Phys.
+Rev B 51, 9455-9464 (1995).
+10. M. Ceriotti, T. D. Kuhne, and M. Parrinello, /. Chem.
+Phys. 129, 024707 (2008).
+11. A. Alavi, J. Kohanoff, M. Parrinello, and D. Frenkel, Phys. Rev Lett. 73, 2599 (1994). 12.
+R R. Krajewski, and M. Parrinello, Phys.
+Rev B 71, 233105 (2005). 13.
+V. Pan, and J. Reif, "Efficient parallel solution of linear systems," in STOC '85: Proceedings of the seventeenth annual ACM  symposium on Theory of computing, ACM Press, New York, NY, USA, 1985, p. 143, ISBN 0-89791-151-2.  14.
+R. Baer, and M. Head-Gordon, /. Chem.
+Phys. 107, 10003-10013 (1997).
+15. C. Van Loan, IEEE Trans, on Automatic Control 24, 320-321 (1979). 16.
+W. Z. Liang, C. Saravanan, Y Shao, R. Baer, A. L Bell, and M. Head-Gordon, /. Chem.
+Phys. 119, 4117 (2003). 17.
+S. Meloni, M. Rosati, A. Federico, L. Ferraro, A. Mattoni, and L. Colombo, Comp. Phys.
+Comm. 169, 462-466 (2005). 661

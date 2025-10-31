@@ -1,0 +1,517 @@
+arXiv:1312.2609v2  [cond-mat.stat-mech]  16 May 2014
+1
+The length and time scales of water’s glass transitions
+David T. Limmer1, a)
+Princeton Center for Theoretical Science, Princeton University, Princeton NJ 08540
+(Dated: 21 September 2018)
+Using a general model for the equilibrium dynamics of supercooled liquids, I compute from molecular proper-
+ties the emergent length and time scales that govern the nonequilibrium relaxation behavior of amorphous ice
+prepared by rapid cooling. Upon cooling, the liquid water falls out of equilibrium whereby the temperature
+dependence of its relaxation time is predicted to change from super-Arrhenius to Arrhenius. A consequence
+of this crossover is that the location of the apparent glass transition temperature depends logarithmically
+on cooling rate. Accompanying vitriﬁcation is the emergence of a dynamical length-scale, the size of which
+depends on the cooling rate and varies between angstroms and 10s of nanometers. While this protocol depen-
+dence clariﬁes a number of previous experimental observations for amorphous ice, the arguments are general
+and can be extended to other glass forming liquids.
+Glasses of water, or amorphous ices, are nonequilib-
+rium, nonergodic states of matter and as such their prop-
+erties depend intimately on how they are prepared.1 As
+with other substances, glassy phases of water can be pre-
+pared by cooling the liquid, however due to the ease
+at which water crystallizes cooling rates required to vit-
+rify water are much larger than those typically employed
+in other glassy-forming materials.2 Understanding how
+large cooling rates aﬀect the properties of amorphous ice
+is of considerable interest because experimentally water
+must be cooled at rates greater than 108 K/min, which
+is up to 8 orders of magnitude greater then those rates
+utilized when crystallization can be suppressed, such as
+in aqueous solutions and conﬁned water.3–6 Recently it
+has been shown that the reversible relaxation kinetics of
+supercooled water are well described by dynamic facilita-
+tion theory.7,8 By adopting recent extensions of this the-
+ory to systems arrested by cooling,9 the emergent length
+and time scales that result when liquid water is driven
+out-of-equilibrium can be computed. With these scales,
+the location of the water’s glass transition temperature is
+shown to depend logarithmically on cooling rate, which
+is proposed to explain the broad range of previous exper-
+imental estimates.4,6,10,11
+Dynamic facilitation theory posits that below an on-
+set temperature, To, reorganization in a supercooled
+ﬂuid is the result of localized excitations that exhibit
+no static correlations in equilibrium, but whose dynam-
+ics are highly correlated.12 At low temperatures where
+mobility is sparse, T < To, the concentration of these
+excitations, c, is proportional to the Boltzmann factor,
+c ∝exp [−(1/T −1/To)Jσ] ,
+(1)
+where Jσ is the free energy for creating an excitation in
+the liquid with surrounding displacement σ.
+The mo-
+tion of these excitations through the ﬂuid is constrained,
+such that mobility is more likely to occur near regions
+that are already mobile and the direction of that mo-
+bility is preserved over a length scale greater than the
+a)Electronic mail: dlimmer@princeton.edu
+size of the excitation.
+These kinetic constraints mani-
+fest themselves in dynamic heterogeneity, stretched ex-
+ponential decay of time correlation functions and trans-
+port decoupling.13 The dynamics that result from these
+constraints are hierarchical,14 with a logarithmic energy
+scaling relation for excitations accompanying diﬀerent
+displacement lengths,
+Ja′ −Ja = γJσ ln a′/a ,
+(2)
+where γ is a non-universal exponent of order unity that
+relates the likelihood of two excitations of diﬀerent sizes
+meeting.
+The constituent relations in Eqs. 1 and 2 come from
+solvable lattice models such as the East15 and Arrow
+models,16 but these basic behaviors also emerge in molec-
+ular dynamics simulations.17 By coarse-graining short
+trajectories, in eﬀect mapping molecular dynamics to
+these lattice models, the microscopic material proper-
+ties To, Jσ and γ can be determined.
+For water and
+water-like models at ambient pressure, these properties
+obey a principle of corresponding states such that the
+onset temperature is approximately given by the temper-
+ature of maximum density, experimentally correspond-
+ing to To ≈277 K, while in units of this temperature,
+Jσ/To = 23 and γ = 0.63.7 This microscopic procedure
+has so far only been applied to a few systems,7,17 how-
+ever the macroscopic consequences of adopting this per-
+spective have been more systematically studied. Among
+other things, the existence of localized excitations obey-
+ing these speciﬁed propagation rules determines the tem-
+perature dependence of the mean structural relaxation
+time. This form, known as the parabolic law, has been
+used to collapse experimental data on a wide variety of
+structural glass formers,18,19 including molecular dynam-
+ics models of water7 and nanoconﬁned water20 where
+complications to crystallization can be mitigated.
+Below To, the temperature dependence of the mean
+structural relaxation time is,
+ln τ(T )/τMF = (1/T −1/To) Jσ ln[ℓ(T )/σ]γ ,
+(3)
+where at equilibrium the length ℓ(T ) is given by,
+ℓ(T )/σ = e(1/T −1/To)Jσ/df .
+(4)2
+This length is simply the mean free path between uncor-
+related excitations, whose concentration is determined by
+the Boltzmann factor in Eq. 1, and df is the fractal di-
+mensionality of these paths, which has been determined
+numerically for three spatial dimensions to be df = 2.6.17
+Substituting Eq. 4 into Eq. 3 gives the more familiar form
+of the parabolic law. Below To, the super-Arrhenius tem-
+perature dependence observed for supercooled liquids can
+be seen as a consequence of the temperature dependence
+of this length that increases exponentially with decreas-
+ing temperature following the decreasing number density
+of excitations. The proportionality constant τMF in Eq.
+3 is the average time for attempting displacements above
+To. While this time may have a temperature dependence
+itself, it is typically weak and for simplicity is assumed
+to be a constant, τMF ≈2.5 × 10−12 s.20
+In order to extend this picture to irreversible relax-
+ation, the protocol that drives the system out of equilib-
+rium must be deﬁned. In this work, only protocols that
+begin with the system in equilibrium and are cooled at
+constant rate with magnitude, ν = |∆T/∆t|, to a tem-
+perature far below the glass transition are considered.
+The condition of beginning in equilibrium is critical, as it
+allows for the application of the theory for the reversible
+dynamics described above. The constant cooling rate and
+quench depth are chosen here for simplicity and can be re-
+laxed to accommodate behaviors associated with anneal-
+ing and aging. Accordingly, only the mean relaxation, or
+aging time, within the amorphous ice immediately follow-
+ing the cooling protocol is considered. Its temperature
+dependence therefore implies the timescale for relaxation
+upon reheating the quenched material.
+Under a constant cooling rate, the condition for main-
+taining an equilibrium state is that the rate of change
+of the external temperature is slow relative to the cor-
+responding change in the relaxation time of the system.
+This condition, or rather where it breaks down, deﬁnes
+the glass transition temperature, Tg, where the system
+falls out-of-equilibrium.
+The identiﬁcation of a single
+temperature is well deﬁned only in-so-far as relaxation
+occurs in stages with well separated timescales.
+For
+the hierarchical dynamics considered here, this is exactly
+what happens. Speciﬁcally, as has been pointed out pre-
+viously by Solich and Evans for the East model,21 in the
+limit of vanishing concentration of excitations, relaxation
+of diﬀerent domains occur in stages separated by O[ℓ(T )].
+Therefore, on a timescale less than τ(Tg), only domains
+less than ℓ(Tg) are likely to relax, leaving excitations sep-
+arated by distances greater than this length arrested for
+T < Tg and times less than τ(Tg).
+Given this time scale separation for the model dynam-
+ics considered here, Tg can be deﬁned implicitly by the
+diﬀerential relationship,
+dτ
+dT
+
+Tg = ν−1 .
+(5)
+Assuming that Tg is on the order of To, Eq. 5 can be
+evaluated and substituted into Eq. 4 to give the mean
+FIG. 1. Mean structural relaxation time, predicted for wa-
+ter as a function of temperature for diﬀerent cooling rates:
+1 K/min (black), 104 K/min (red) and 107 K/min (blue).
+Following Eq. 5. the location of the crossover to Arrhenius
+temperature dependence of τ indicates the glass transition
+temperature, Tg.
+Following Eq. 7, locations where dashed
+lines increase to log τ/ps = 14 deﬁne the apparent glass tran-
+sition temperature, Tag as a function of cooling rate. While
+only the limiting behaviors at high and low temperature are
+directly observable for water, the implications of these mean
+timescales are pronounced, as discussed in the text.
+nonequilibrium distance between excitations,
+ℓ(T < Tg) ≈ℓne ≈σ exp
+hp
+−ln(˜ν)/γdf
+i
+,
+(6)
+where ˜ν = 2ντoJ2
+σγ/dfT 3
+o is a dimensionless cooling rate.
+Following the arguments above, this length scale in the
+glassy phase is indicative of correlations generated in the
+material out-of-equilibrium that exist until the material
+is warmed. Unlike in equilibrium where the mean dis-
+tance becomes increasingly large upon cooling, in the ar-
+rested state the length is frozen into the structure of the
+material and thus no longer changes appreciably with
+temperature. Correspondingly, below Tg the timescale of
+relaxation no longer has an additional temperature de-
+pendence from ℓ(T ). Therefore in the amorphous ice, the
+relaxation changes from the parabolic form to an Arrhe-
+nius form.
+Figure 1 shows the predicted relaxation time as a func-
+tion of temperature for diﬀerent cooling rates. As with
+all of the results presented in this paper, the parameters
+have been independently computed from microscopic cal-
+culations. The reversible liquid relaxation is predicted
+to be a smooth, monotonically increasing function given
+by Eq. 3 and ℓ(T ) in Eq. 4. The irreversible glassy re-
+laxation is given by Eq. 3 and ℓne in Eq. 6 with τMF
+determined by equating both curves at T = Tg. These
+equations predict that for systems prepared by cooling
+rates that are slower than 1 K/min, follow the reversible
+curve over the timescales considered. Cooling rates that
+exceed 1 K/min however, exhibit a crossover to an Ar-3
+rhenius temperature dependence. For faster rates, this
+crossover occurs at higher temperatures, corresponding
+to the system falling out of equilibrium from perturba-
+tions with shorter characteristic timescales.
+For bulk water, fast cooling rates are required due to
+the rapid rate of crystallization, therefore only indirect
+evidence of this crossover is observable. Nevertheless, a
+testable prediction of this theory follows from Eqs. 3, 4
+and 6 from which the change in slope at this crossover
+point can be evaluated. By construction, ℓ(Tg) = ℓne,
+so the change in slope of the relaxation time evaluated
+at Tg, is invariant to cooling rate. Though indirect for
+water, this crossover is observable for other glass forming
+liquids and for example is illustrated in Ref. 22 complete
+with a change in slope of approximately 1/2 as predicted
+from the above equations. While the abruptness of the
+crossover is a product of assuming the relaxation time is
+given by a single length scale, corrections to this approx-
+imation will certainly smooth the crossover. However, to
+the extent that the distribution of lengths after the cool-
+ing protocol is sharply peaked around its mean value, as
+has been shown in Ref. 9, then for T < Tg, τ(T ) will be
+well determined by this mean ﬁeld approximation. For
+water, while the crossover itself is not observable, both
+the higher temperature behavior of the liquid and the
+low temperature behavior of the amorphous ice can be
+observed and be used to verify this prediction.
+The changing temperature dependence in τ(T ) is a
+consequence of falling out of equilibrium, arresting the
+liquid and forming a glass. As such it is expected to be a
+general feature of supercooled liquids driven from equi-
+librium and thus distinct from observations of crossovers
+noted previously for water under nano-conﬁnement.23
+Observations in conﬁned water are made from nominally
+equilibrium measurements in pores whose disordered sur-
+faces and sizes frustrate crystallization.20 The speciﬁc
+origin of this behavior is the subject of debate,23 how-
+ever previous work suggests that it is due to freezing in
+conﬁnement.20 The behavior detailed here is, however,
+related to previously inferred transitions that have been
+invoked to either explain the weak thermal response upon
+heating hyper-quenched amorphous ice24 or the variabil-
+ity in temperature dependence of the relaxation time at
+the glass transition.25 Indeed, crossovers of this sort have
+been previously postulated to reconcile the location of
+water’s Tg with ﬁts to the equilibrium liquid relaxation
+time,26 however in this work the crossoever is explicitly
+considered a nonequilubrium eﬀect, not predicted to oc-
+cur in the reversible behavior of liquid water.
+Because of the crossover in temperature dependence
+of the mean relaxation time, there exists a temperature
+below Tg where the system will begin to relax on labo-
+ratory timescales. This transition to a softening glassy
+state, is denoted the apparent glass transition tempera-
+ture, Tag. In water this transition is often followed by
+abrupt crystallization, which does not allow for the com-
+plete recovery of the liquid.
+The apparent glass tran-
+sition temperature is deﬁned by, τ(Tag) = 100 s, or for
+FIG. 2. Apparent glass transition temperature of water upon
+heating, as a function of cooling rate, deﬁned in Eq. 7. The
+crossover near cooling rates of 1K/min occurs as the Tag be-
+comes equal to Tg as deﬁned in Eq. 5. Note that experimen-
+tally only ν > 107K/min result in direct vitriﬁcation of water.
+ν > 1 K/min,
+T −1
+ag = T −1
+o
++ ln(100s/τMF)/Jσ
+p
+−ln(˜ν)γ/df ,
+(7)
+otherwise Tag equals the temperature where the extrapo-
+lated liquid relaxation time reaches 100s, which for water
+is about 180 K.7 While, Eq. 7 refers explicitly to where
+relaxation takes place on timescales of 100s this can be
+generalized.8 Figure 2 plots the apparent glass transi-
+tion temperature which is shown to depend logarithmi-
+cally on cooling rate. This dependence is irrelevant to
+many experiments on glass forming liquids, as cooling
+rates usually range between 1-10 K/min. However, for
+water, this dependence is crucial because cooling rates
+greater than 108K/min are used in order to bypass crys-
+tallization. Cooling rates that are less than 1 K/min do
+not change Tag, as these perturbations would cause the
+system to fall out of equilibrium at larger characteris-
+tic timescales than 100s. However, cooling rates greater
+than 1 K/min are expected to aﬀect the observed Tag
+systematically, with changes of over 50 K expected for
+cooling rates that vary between 10 −108K/min. Similar
+logarithmic cooling rate dependences has been noted ex-
+perimentally for other network-forming liquids,27,28 and
+in simulations,29 however this work seems to be the ﬁrst
+to derive such a dependence from microscopic proper-
+ties. This distinction between Tg and Tag has been noted
+previously by Angell, who called this softening and its
+associated thermal response a “shadow glass transition,”
+however this work is the ﬁrst to give a quantiﬁable mech-
+anistic explanation.30
+The logarithmic dependence of Tag for water on cool-
+ing rate explains the apparent contradiction between4
+dielectric measurements and extrapolated calorimetry
+measurements.4 Dielectric measurements directly probe
+the timescale for molecular reorganization and designate
+the location of the glass transition temperature accord-
+ing to the deﬁnition in Eq. 7. Accordingly, estimates for
+the location of the glass transition with samples cooled at
+rates between 107−108K/min yield values near 130-140K
+in agreement with the results for Tag presented here.3 Al-
+ternatively, calorimetry measurements probe the recov-
+ery of the liquid upon heating from the glass and desig-
+nate the temperature where the system falls out of equi-
+librium as the location of the glass transition, correspond-
+ing to the deﬁnition of Tg in Eq. 5. While these measure-
+ments are not directly possible in bulk water as crystal-
+lization interferes, extrapolations using data for aqueous
+solutions11 and measurements of water in conﬁnement6
+both yield values for Tg between 160-180K. While extrap-
+olation from bulk water behavior to water in conﬁnement
+or concentrated solution is not straightforward, previous
+work has shown that in many instances eﬀects from these
+perturbations result in small corrections to Jσ, To and
+τMF.20 Figures 1 and 2, show that it is only when cooling
+rates are on the order of 1 K/min are expected to yield
+Tg ≈Tag.
+This argument against a value of Tg for water near 140
+K presumes that observations of a weak thermal response
+for hyper-quenched or otherwise prepared amorphous ice
+near that temperature is not indicative of a recovering
+liquid state, but rather is a nonequilibrium response to
+impending crystallization. The smallness of the observed
+heat capacity relative to the known equilibrium liquid
+value31 suggests that this is a reasonable perspective,
+nevertheless it stands as an implicit assumption to the
+interpretation of this theory as applied to water. Note
+however that the deﬁnition of Tg employed here is where
+the liquid falls out of equilibrium, which in order to by-
+pass crystallization must occur at temperatures greater
+the the limit of homogeneous nucleation, 220 K.5
+The nonequilibrium length deﬁned in Eq. 6 is plotted
+in Fig. 3 with σ = 2.5˚A. While generated by a intrin-
+sically dynamic process, this length is a static measure
+of correlations in the arrested phase and as such similar
+to other lengths previously discovered in arrested amor-
+phous matter.32 Apart from determining the mean relax-
+ation time, the magnitude of this length gives a geomet-
+rical explanation on the stability of a glass.9 For a given
+temperature, glasses produced with slower cooling rates
+relax on exponentially longer times as their excitations
+must overcome ever-increasing distances in order to re-
+lax. The weak thermal response upon heating through
+Tag that hyperquenched water exhibits31 is a manifes-
+tation of the weak correlations between excitations that
+result under such rapid cooling protocols, which when
+overcome in hyper-quenched water result in crystalliza-
+tion. Such a dependence of the thermal response on this
+correlation length and the corresponding scaling of this
+correlation length with cooling rate should be observable
+by small angle x-ray scattering experiments in amorphous
+FIG. 3. Mean distance between excitations locked into the
+structure of amorphous ice prepared at diﬀerent cooling rates.
+The nonequiliubrium correlation length determines the free
+energy barrier to relaxation in the glass. Note experimentally
+only ν > 107 K/min result in direct vitriﬁcation of water.
+ice at low temperatures, prepared with diﬀerent cooling
+rates.
+These correlations, which likely result in addi-
+tional scattering intensity at wave vectors inversely pro-
+portional to ℓne, are left as a veriﬁable prediction of the
+microscopic theory applied here. Cooling rates in excess
+of 106 K/min must be used to directly vitrify water, thus
+other protocols must be used in order to generator amor-
+phous ices with larger nonequiliubrium lengths. While
+a limited range of cooling rates for water are practically
+available experimentally, in principle this dependence of
+length scale on cooling rate is generic to glass forming
+systems and could be realized directly in aqueous solu-
+tions, albeit with diﬀerent Jσ, To.γ and τMF.
+In this work, the distribution of excitations is treated
+in a mean ﬁeld way with one dominate length scale de-
+termining relaxation. More complicated nonequilibrium
+protocols such as pressure amorphization, annealing and
+polyamorphic transitions, likely generate distributions of
+excitations characterized by signiﬁcantly diﬀerent corre-
+lations. By preparing a material with a more complex
+protocol it is therefore possible that multiple length scales
+might be required for an adequate description of relax-
+ation. For instance, the signiﬁcant pressure dependence
+of Jσ8 dictates that amorphous ice produced at high pres-
+sure is characterized by a nonequilibrium length that is
+diﬀerent from a corresponding sample of amorphous ice
+produced at low pressure.
+Depending on the relative
+ordering of these lengths, and if they are signiﬁcantly
+separated, relaxation of a high pressure amorphous ice
+heated at low pressure could require a description of re-
+laxation that incorporates both length scales as typical
+thermal ﬂuctuations could relax regions characterized by5
+the shorter of these two length at lower temperatures
+than required to relax the entire system. Such a con-
+struction can potentially explain observations by Amann-
+Winkel, et al33 of multi-step relaxation behavior.34
+This work presents expressions describing the nonlin-
+ear response for the simplest nonequilibrium protocol ap-
+plied to a supercooled liquid: cooling with a speciﬁed
+constant rate. As alluded to above, many of the simpliﬁ-
+cations made for algebraic convenience are not necessary
+for numerical computations.
+Indeed, the consequences
+of annealing and aging can be taken into account with
+simple numerical calculations.35 By combining these ex-
+pressions with the theory for thermal response provided
+in Ref. 9, the consequences of hyper-quenching rate on
+the response observed by calorimetry can be analyzed.
+That speciﬁc study is left for future work.
+Though the focus of this work is on the relaxation
+behavior of water, where the parameters entering that
+theory have been determined independently from micro-
+scopic principles without adjustment, the general phe-
+nomena accompanying driving a liquid into an amor-
+phous arrested state are generic.
+Supercooled liquids
+relax with an ever decreasing rate as the temperature
+is lowered, with dynamics that are hierarchical. When
+their structure is arrested any conﬁgurationally rare re-
+gion that allows for relaxation becomes frozen in. There-
+fore, it must be that irreversible relaxation in such an
+otherwise non-reorganizing material be governed by a
+temperature independent energy scale.
+ACKNOWLEDGMENTS
+We would like to thank Aaron Keys and David Chan-
+dler for helpful discussions. This research was supported
+by the Princeton Center for Theoretical Science.
+1K. Binder and W. Kob, Glassy Materials and Disordered Solids:
+An Introduction to Their Statistical Mechanics (Revised Edition)
+(World Scientiﬁc, 2011).
+2P. Br¨uggeller and E. Mayer, Nature 288, 569–571 (1980).
+3G. Johari, A. Hallbrucker, and E. Mayer, Nature 330, 552–553
+(1987).
+4S. Capaccioli and K. Ngai, The Journal of chemical physics 135,
+104504 (2011).
+5P. G. Debenedetti, Journal of Physics: Condensed Matter 15,
+R1669 (2003).
+6M. Oguni, Y. Kanke, A. Nagoe, and S. Namba, The Journal of
+Physical Chemistry B 115, 14023–14029 (2011).
+7D. T. Limmer and D. Chandler, Faraday Discussions 167, 485–
+498 (2013).
+8D. T. Limmer and D. Chandler, Proceedings of the National
+Academy of Sciences, in press (2014).
+9A. S. Keys, J. P. Garrahan,
+and D. Chandler, Proceedings of
+the National Academy of Sciences 110, 4482–4487 (2013).
+10C. A. Angell, Annual Review Physical Chemistry 55, 559–583
+(2004).
+11V. Velikov, S. Borick, and C. A. Angell, Science 294, 2335–2338
+(2001).
+12D. Chandler and J. P. Garrahan, Annual review of physical chem-
+istry 61, 191 (2010).
+13G. Biroli and J. P. Garrahan, The Journal of chemical physics
+138, 12A301 (2013).
+14R. G. Palmer, D. L. Stein, E. Abrahams, and P. W. Anderson,
+Physical Review Letters 53, 958 (1984).
+15J. J¨ackle and S. Eisinger, Zeitschrift f¨ur Physik B Condensed
+Matter 84, 115–124 (1991).
+16J. P. Garrahan and D. Chandler, Proceedings of the National
+Academy of Sciences 100, 9710–9714 (2003).
+17A. S. Keys, L. O. Hedges, J. P. Garrahan, S. C. Glotzer,
+and
+D. Chandler, Physical Review X 1, 021013 (2011).
+18Y. S. Elmatad, D. Chandler, and J. P. Garrahan, The Journal
+of Physical Chemistry B 113, 5563–5567 (2009).
+19Y. S. Elmatad, D. Chandler, and J. P. Garrahan, The Journal
+of Physical Chemistry B 114, 17113–17119 (2010).
+20D. T. Limmer and D. Chandler, The Journal of Chemical Physics
+137, 044509 (2012).
+21P. Sollich and M. R. Evans, Physical review letters 83, 3238
+(1999).
+22Z. Wojnarowska, K. Ngai, and M. Paluch, The Journal of Chem-
+ical Physics 140, 174502 (2014).
+23C. E. Bertrand, Y. Zhang, and S.-H. Chen, Physical Chemistry
+Chemical Physics 15, 721–745 (2013).
+24C. A. Angell, Science 319, 582–587 (2008).
+25D. Kivelson and G. Tarjus, The Journal of Physical Chemistry
+B 105, 6620–6627 (2001).
+26R. S. Smith and B. D. Kay, Nature 398, 788–791 (1999).
+27C. T. Moynihan, A. J. Easteal, J. Wilder,
+and J. Tucker, The
+Journal of Physical Chemistry 78, 2673–2677 (1974).
+28R. Br¨uning and K. Samwer, Physical Review B 46, 11318 (1992).
+29K. Vollmayr, W. Kob,
+and K. Binder, Physical Review B 54,
+15808 (1996).
+30Y. Yue and C. A. Angell, Nature 427, 717–720 (2004).
+31I. Kohl, L. Bachmann, E. Mayer, A. Hallbrucker, and T. Loert-
+ing, Nature 435, E1–E1 (2005).
+32 ´E. Marcotte, F. H. Stillinger, and S. Torquato, The Journal of
+chemical physics 138, 12A508 (2013).
+33K. Amann-Winkel, C. Gainaru, P. H. Handle, M. Seidl, H. Nel-
+son, R. B¨ohmer,
+and T. Loerting, Proceedings of the National
+Academy of Sciences 110, 17720–17725 (2013).
+34While this work was under review, Ref. 8 demonstrated that this
+suggestion yields accurate results, as demonstrated with direct
+simulation and compared with experiment.
+35A. S. Keys, D. Chandler,
+and J. P. Garrahan, arXiv preprint
+arXiv:1401.7206 (2014).

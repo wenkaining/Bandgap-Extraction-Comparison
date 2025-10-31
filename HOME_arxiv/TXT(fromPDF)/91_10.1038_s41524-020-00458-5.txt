@@ -1,0 +1,882 @@
+arXiv:2006.02604v1  [cond-mat.mtrl-sci]  4 Jun 2020
+Prediction of the Curie temperature considering the dependence of the phonon free
+energy on magnetic states
+Tomonori Tanaka∗and Yoshihiro Gohda†
+Department of Materials Science and Engineering,
+Tokyo Institute of Technology, Yokohama 226-8502, Japan
+(Dated: June 5, 2020)
+Prediction of the Curie temperature is of signiﬁcant importance for the design of ferromagnetic
+materials. Even though the Curie temperature has been estimated using the Heisenberg model,
+magnetic exchange coupling parameters widely used is thus far based on ﬁrst-principles calculations
+at zero temperature. In the explicit consideration of temperature eﬀects, it is important to minimise
+the total free energy, because the magnetic and phonon free energies correlate with each other. Here,
+we propose a ﬁrst-principles thermodynamic approach to minimise the total free energy considering
+both the inﬂuences of magnetism on phonons and the feedback eﬀect from phonons to magnetism.
+By applying our scheme to bcc Fe, we ﬁnd a signiﬁcant reduction of the Curie temperature due to
+the feedback eﬀect. This result inevitably enforces us to change our convention as follows: we should
+use exchange coupling constants for the disordered local moment state, not for the ferromagnetic
+state, in the prediction of the Curie temperature. Our results not only change the fundamental
+understanding of ﬁnite-temperature magnetism but also provide a general framework to predict the
+Curie temperature more accurately.
+The Curie temperature (TC) is one of the essential
+properties of ferromagnetic materials because it char-
+acterises their applicability and performance1,2.
+The
+method of predicting TC is, therefore, important not only
+for a fundamental understanding of ferromagnetic mate-
+rials but also for the material design for applications.
+A typical technique for predicting TC is a downfolding
+method from ﬁrst-principles calculations to an eﬀective
+lattice model as below: Firstly, one derives exchange cou-
+pling constants (Jij) by applying Green’s function-based
+methods3,4 or a frozen magnon approach5,6. Secondly,
+one builds an eﬀective lattice model such as the Heisen-
+berg model and assign Jij to the model.
+Finally, one
+solves the model analytically or numerically and esti-
+mates TC. This technique is applied to a broad range
+of materials, such as 3d transition metals4,7–11 and rare-
+earth magnets12–17.
+Such many studies demonstrated
+that the prediction technique has some predictive accu-
+racy.
+Such a technique usually does not include temperature
+eﬀects on magnetic interactions. Moreover, temperature-
+induced interactions between magnetism and other exci-
+tations such as phonons sometimes make the accurate
+prediction of TC diﬃcult. At a high-temperature range
+around TC, there are two kinds of interaction between
+magnetism and phonons.
+One is the eﬀect of thermal
+atomic displacements on Jij18–20. The change in Jij ob-
+viously modiﬁes TC. The other interaction is the eﬀect of
+magnetic disordering on phonon frequencies. Some fer-
+romagnetic materials such as bcc Fe and Pd3Fe shows
+phonon softening at elevated temperatures near TC21–23.
+Some research groups approached this phenomenon by
+diﬀerent theoretical methods23–30 and achieved the same
+conclusion: The phonon softening is due to magnetic dis-
+ordering near TC. Regarding the predictive accuracy of
+TC, the importance of the former interaction is easily
+understandable, whereas the latter interaction does not
+apparently seem to be related to TC. However, we will
+recognise the phonon softening due to magnetic disorder-
+ing is closely related to TC by standing a thermodynamic
+viewpoint.
+Thermal equilibrium states at ﬁnite temperature cor-
+respond to the minimum of the total free energy at
+given conditions.
+This is usually called as the mini-
+mum principle for the free energy.
+Usual procedures
+to study ﬁnite-temperature magnetism is constructing
+a magnetic Hamiltonian and deriving thermodynamic
+quantities such as the magnetic energy and the magneti-
+sation. This series of procedures is equal to interpret that
+equilibrium magnetic quantities are determined through
+the magnetic free energy only. This interpretation, how-
+ever, collapses in the systems that exhibit the phonon
+softening due to magnetic disordering. The phonon fre-
+quencies are directly related to the phonon free energy.
+Thus the phonon softening due to magnetic disordering
+means that magnetic states aﬀect the phonon free energy
+as well as the magnetic free energy. As a result, equi-
+librium magnetic states should be determined through
+not only the magnetic free energy but also the phonon
+free energy, according to the minimum principle for the
+free energy. We call this eﬀect of phonons on equilib-
+rium magnetic states through the change of the phonon
+free energy as a thermodynamic feedback eﬀect.
+This
+feedback eﬀect surely aﬀects TC as a consequence of the
+change of equilibrium magnetic states. However, the sig-
+niﬁcance of the feedback eﬀect on TC is unclear because
+the existence of the eﬀect has been overlooked.
+In this article, we propose a thermodynamic formula-
+tion to treat the feedback eﬀect from phonons to mag-
+netism.
+The formulation results in a simple optimisa-
+tion problem for the total free energy. The ingredients
+to solve the problem are evaluated by ﬁrst-principles
+phonon calculations and Monte Carlo simulations based
+on the Heisenberg model. By applying the formulation to2
+bcc Fe, we demonstrate that TC of bcc Fe signiﬁcantly de-
+creases by nearly 580 K. This result proves the feedback
+eﬀect is crucial for accurate prediction of TC. We also dis-
+cuss the relationship between the predictive accuracy of
+TC and reference magnetic states in the derivation of Jij.
+Remarkably, we ﬁnd a signiﬁcant overestimation of TC
+in a paramagnetic disordered local moment (DLM) state
+is rather a correct tendency. Quantitative description of
+ﬁnite-temperature magnetism plays an important role in
+both basic and applied materials science. Therefore, our
+results have an impact on the fundamental understand-
+ing of magnetism and materials design for ferromagnetic
+materials.
+We organise the following part of this paper as below.
+Firstly, we introduce a new thermodynamic formulation
+to treat the thermodynamic feedback eﬀect. Our formu-
+lation based on the minimum principle for the free energy
+is justiﬁed through the Legendre transformation and re-
+sults in a simple optimisation problem. Next, we evaluate
+the magnetic entropy and the phonon free energy of bcc
+Fe as functions of the magnetic energy. These functions
+are needed to solve the optimisation problem. Finally,
+we evaluate the equilibrium magnetic energy around TC
+by solving the optimisation problem. The shift of TC of
+bcc Fe is estimated from the results of the equilibrium
+magnetic energy.
+THERMODYNAMIC FORMULATION FOR
+MAGNETIC MATERIALS
+In conventional thermodynamic approaches for mag-
+netic materials, the phonon and magnetic contributions
+are assessed independently. We start from this typical
+case for comparison with our formulation. The funda-
+mental relation is written as
+Etot(Sph, Smag) ≈Eph(Sph) + Emag(Smag),
+(1)
+where E is the energy and S is the entropy. The sub-
+scripts tot, ph and mag represent total, phonon and mag-
+netic, respectively. Here, we consider the Gibbs free en-
+ergy,
+G(T, p, H) = E −T S + pV −µ0MH,
+(2)
+where T represents the temperature, p the pressure, V
+the volume, M the magnetisation, H the external mag-
+netic ﬁeld and µ0 the vacuum permeability. In the fol-
+lowing, we derive the formalism for p = 0 and H = 0,
+but the discussion remains unchanged for the case with
+ﬁnite external ﬁelds p and H. The Gibbs free energy G
+T = T0
+equilibrium Emag
+by the Heisenberg model
+equilibrium Emag
+by the minimisation of the total free energy
+Gph(T0, Emag)+Gmag(T0, Emag)
+Free energy
+Emag
+Gmag(T0, Emag)
+FIG. 1. Schematic image of the free energy minimisation at
+a temperature T0. Within a common framework using the
+Heisenberg model, the equilibrium magnetic energy (Emag) is
+corresponding to the minimum of the magnetic free energy,
+Gmag (blue line). On the other hand, the equilibrium mag-
+netic energy in our scheme is corresponding to the minimum
+of the total free energy, Gph + Gmag (orange line).
+is derived by applying the Legendre transformation.
+Gtot(T ) =
+min
+Sph,Smag{Eph(Sph) −T Sph
++ Emag(Smag) −T Smag}
+(3)
+=
+min
+Eph,Emag{Eph −T Sph(Eph)
++ Emag −T Smag(Emag)}
+(4)
+=
+min
+Eph,Emag{Gph(T, Eph) + Gmag(T, Emag)}
+(5)
+= Gph(T ) + Gmag(T ).
+(6)
+Here we used the one-to-one correspondence between en-
+ergy and entropy for ﬁxed other thermodynamic param-
+eters such as V and M.
+The independent assessment
+in conventional approaches is based on this trivial for-
+mulation.
+Next, we incorporate the dependence of the
+phonon free energy on magnetic states. We assume that
+the magnitude of the interaction between magnetic disor-
+dering and phonon frequencies can be written as thermo-
+dynamic quantities of the magnetic part. K¨ormann et al.
+proposed a solid treatment with this assumption27. They
+treated the forces on each atom as a function of the mag-
+netic energy. As a result, the phonon frequencies, conse-
+quently the phonon free energy, have the dependence on
+the magnetic energy (see Methods). Thermodynamically
+speaking, their treatment means the phonon energy de-
+pends not only on the phonon entropy but also on the
+magnetic entropy. The fundamental relation thus can be
+written as
+Etot(Sph, Smag) ≈Eph(Sph, Smag) + Emag(Smag).
+(7)
+In principle, Emag also has a dependence on Sph. This de-
+pendence can be regarded as inﬂuences of thermal atomic
+displacements on Jij20. If we want to incorporate this
+eﬀect into the thermodynamic formulation, we have to3
+−20
+−40
+−60
+−80
+−100
+−120
+−140
+−160
+Emag (meV/atom)
+0
+500
+1000
+1500
+2000
+2500
+0
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+Temperature (K)
+0
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+−160
+−20
+−40
+−60
+−80
+−100
+−120
+−140
+Emag (meV/atom)
+0
+Smag (Emag)
+Smag (meV/K/atom)
+Smag (meV/K/atom)
+Smag (T)
+Emag (T)
+Tc by Monte Carlo
+1522 K
+a
+b
+~
+~
+FIG. 2. Thermodynamic quantities of bcc Fe obtained by the rescaled Monte Carlo method. (a) Energy and entropy vs.
+temperature. (b) Entropy vs. energy. The theoretical Curie temperature TC was identiﬁed from the peak of the speciﬁc heat.
+express the magnitude of the eﬀect as a thermodynamic
+quantity such as Sph. However, the correspondence be-
+tween the thermal displacements and Sph is not obvious.
+We thus focus only the dependence of Eph on Smag.
+We apply the Legendre transformation as before.
+Gtot(T ) =
+min
+Sph,Smag{Eph(Sph, Smag) −T Sph
++ Emag(Smag) −T Smag}
+(8)
+= min
+Smag{Gph(T, Smag) + Emag(Smag) −T Smag}
+(9)
+= min
+Emag{Gph(T, Emag) + Emag −T Smag(Emag)} (10)
+= min
+Emag{Gph(T, Emag) + Gmag(T, Emag)}.
+(11)
+Note that the entropy (or energy) and the tempera-
+ture can be treated as independent variables during the
+minimisation procedure. The thermodynamic relation-
+ship between the entropy and the temperature, such as
+∂G/∂T = −S, holds after the minimisation, i.e. after
+the Legendre transformation. The last expression is very
+intuitive from a thermodynamic viewpoint: The equilib-
+rium magnetic energy at a temperature T0 is determined
+to minimise the total free energy (Fig. 1) as
+argmin
+Emag
+[Gph(T0, Emag) + Emag −T0Smag(Emag)]
+(12)
+= argmin
+Emag
+[Gph(T0, Emag) + Gmag(T0, Emag)] .
+(13)
+EVALUATIONS OF THE MAGNETIC ENTROPY
+AND THE PHONON FREE ENERGY
+We demonstrate the signiﬁcance of the dependence of
+the phonon free energy on magnetic states for bcc Fe as
+an example. As a starting point, we evaluate the mag-
+netic entropy and the phonon free energy depending on
+the magnetic energy (Smag(Emag) and Gph(T, Emag)), in
+order to solve the minimisation problem in equation (12).
+To obtain Smag(Emag), we carried out the rescaled
+Monte Carlo method31 based on the Heisenberg model.
+This method brings thermodynamic quantities derived
+from classical Monte Carlo simulations closer to those
+from quantum Monte Carlo simulations. The exchange
+coupling constants (Jij) in the Heisenberg model are de-
+rived from the paramagnetic disordered local moment
+(DLM) state3,32 (see Methods).
+The magnetic energy
+and entropy as functions of lattice-model temperature
+eT are shown in Fig.
+2 (a).
+The theoretical TC (1522
+K) is higher than the experimental value (1043 K).
+Such overestimation has also been reported in previous
+studies3,20,33 using the DLM state. The overestimation
+has been recognised as a disadvantage of the DLM state,
+and it will be discussed later associated with our results.
+Since this magnetic system does not show the ﬁrst-order
+phase transition, the one-to-one correspondence holds be-
+tween not only Emag and Smag but also eT,
+Emag ↔eT ↔Smag.
+(14)
+We constructed the function Smag(Emag) (Fig. 2 (b)) by
+using this relationship.
+Phonon frequencies depending on the magnetic energy
+(Gph(T, Emag)) can be calculated by using ﬁrst-principles
+phonon calculations and Monte Carlo simulations follow-
+ing the previous research27 (see Methods). The phonon
+dispersions and the phonon density of states of bcc Fe de-
+pending on the magnetic energy are shown in Fig. 3. The
+dependence of the frequencies on the magnetic energy
+is represented through the parameter α (see Methods).
+The calculated phonon dispersions in the ferromagnetic
+(FM, α = 1) and paramagnetic DLM (PM, α = 0) lim-
+its are consistent with the previous research27. Once the4
+Frequency (meV)
+40
+35
+30
+25
+20
+15
+10
+5
+0
+Γ
+Γ
+Ν
+Η
+P
+Γ
+α = 1.0 (FM)
+α = 0.8 
+α = 0.6
+α = 0.4
+α = 0.2
+α = 0.0 (PM)
+Phonon density of states
+FIG. 3. The phonon dispersions and the phonon density of
+states of bcc Fe from the ferromagnetic state (FM, α = 1) to
+the paramagnetic state (PM, α = 0). The deﬁnition of α is
+written in Methods.
+phonon frequencies at various magnetic energies (i.e. at
+various α) are calculated, the phonon free energy can be
+evaluated from the analytical form,
+Gph(T, Emag) = kBT
+Nq
+X
+q,j
+log
+
+2 sinh
+ℏωqj(Emag)
+2kBT
+
+,
+(15)
+where kB represents the Boltzmann constant, ωqj(Emag)
+the phonon frequency of the j-th branch at the wave num-
+ber q as a function of Emag and Nq the total number of
+q points. Note that the more disordered the magnetic
+state is, the lower the phonon frequencies are. This ten-
+dency means the phonon free energies of paramagnetic
+states are smaller than that of the ferromagnetic state
+because of the monotonicity of the phonon free energy
+for the phonon frequency. Consequently, paramagnetic
+states are thermodynamically stabilised by the phonon
+softening eﬀect.
+TOTAL FREE ENERGY MINIMISATION
+We are now able to proceed to the total free en-
+ergy minimisation in equation (12) by using the func-
+tions Gph(T, Emag) and Smag(Emag). The minimisation
+procedures are simple. Firstly, we ﬁx the temperature
+at T0.
+Secondly, we calculate the total free energy
+(Gph(T0, Emag)+Emag−T0Smag(Emag)) for various Emag
+values.
+The variable range of Emag is from the ferro-
+magnetic limit to the paramagnetic limit. Thirdly, we
+ﬁnd Emag corresponding to the minimum total free en-
+ergy. The orange line in Fig. 1 is a visualisation of these
+steps. Finally, repeat these steps for a temperature range
+around TC.
+The equilibrium magnetic energies of bcc Fe obtained
+by two diﬀerence methods are shown in Fig. 4: One is
+the minimisation of the total free energy Gmag + Gph;
+the other is the Monte Carlo simulations based on the
+Heisenberg model (the result is the same as the blue
+line in Fig. 2 (a)). Note that the result from the lat-
+ter method is corresponding to that of considering only
+Gmag in the minimisation of the free energy. The equi-
+librium magnetic energies obtained by the minimisation
+of the total free energy are larger than those of consid-
+ering only Gmag. This is, as mentioned before, due to
+the stabilisation of paramagnetic states by the phonon
+softening eﬀect, and the magnitude of the stabilisation
+indicates that the phonon contribution is not negligible
+at all in the determination of equilibrium magnetic states
+around TC
+The stabilisation of paramagnetic states leads to a de-
+crease in TC.
+As shown in Fig.
+4, TC in the results
+of the minimisation of the total free energy (946 K) is
+lower than that of considering only Gmag (1522 K), and
+the magnitude of the decrease reached nearly 580 K. No-
+tably, TC of considering both Gmag and Gph is dramati-
+cally closer to experimental value (1043 K) than that of
+considering only Gmag, i.e. TC in the Heisenberg model.
+Although TC = 946 K is still underestimated the ex-
+perimental value to some extent, the anharmonicity of
+phonons probably compensates for the deviation. Heine,
+Hellman and Broido29 investigated the phonon soften-
+ing phenomenon in bcc Fe with including anharmonic ef-
+fects. They show that at 1043 K, where the anharmonic-
+ity is eﬀective, the diﬀerences between the frequencies of
+the ferromagnetic and paramagnetic states are reduced
+compared with those at 300 K. Thus the diﬀerence of
+the phonon free energies between the ferromagnetic and
+paramagnetic states is also reduced. This consequently
+makes the degree of the decrease in TC smaller than our
+result. The underestimation in our result is, therefore,
+ Emag (meV/atom)
+−20
+−40
+−60
+−80
+−100
+−120
+−160
+−140
+0
+250 500 750 1000 1250
+Temperature (K)
+1500 1750 2000
+argmin[Gmag + Gph]
+argmin[Gmag]
+Tc
+1522 K
+Tc
+946 K
+576 K
+FIG. 4. The equilibrium magnetic energy of bcc Fe as a func-
+tion of temperature. Orange line represents the equilibrium
+magnetic energies obtained by the minimisation of the total
+free energy. Blue line represents the equilibrium magnetic en-
+ergies by the minimisation of the magnetic free energy (the
+same as the blue line in Fig. 2 (a)). The Curie temperature
+TC in the minimisation of the total free energy is deﬁned as
+the temperature with the same magnetic energy as the Heisen-
+berg model. This deﬁnition is reasonable because the same
+magnetic energy gives the same magnetic ordering as long as
+Jij values do not vary.5
+qualitatively correct.
+The substantial decrease in TC gives a doubt on the
+usual recognition of the accuracy in prediction techniques
+for TC. Roughly speaking, there are three reference mag-
+netic states in the derivation of Jij: ferromagnetic state,
+paramagnetic DLM state and conical spin-spiral states.
+The former two are used within Green’s function-based
+methods3,4, whereas conical spin-spiral states are used
+within the frozen magnon approach5,6.
+We can sum-
+marise the relationship between the reference states and
+predictive accuracy of TC in bcc Fe: The ferromagnetic
+state and spin-spiral states give TC near the experimental
+value4–6,8,11,34,35, whereas the paramagnetic DLM state
+overestimates TC signiﬁcantly3,20,33. Therefore, the fer-
+romagnetic state and spin-spiral states have been recog-
+nised to have an enough predictive accuracy of TC re-
+garding bcc Fe. However, our study clearly shows that
+this recognition is questionable because the contribution
+of the phonon free energy decreases TC of bcc Fe sig-
+niﬁcantly. The substantial decrease in TC suggests the
+DLM state shows correct tendency regarding TC predic-
+tion, rather than the ferromagnetic state and spin-spiral
+states. Note that this suggestion is of great importance
+for theory of ﬁnite-temperature magnetism as follows. In
+the development of the theory, TC of bcc Fe has been
+recognised as a touchstone: Whether the predicted TC of
+bcc Fe agrees with the experimental value or not has been
+an element to examine the validity of a new theory. Our
+result, however, indicates such an examination way is in-
+appropriate. Instead, an appropriate judgment criterion
+is as follows: Without considering the phonon soften-
+ing, a theory that accurately describes ﬁnite-temperature
+magnetism must overestimate TC of bcc Fe.
+Our thermodynamic formulation becomes complete if
+we incorporate the dependence of Emag on Sph. This de-
+pendence may be related to the eﬀect of thermal atomic
+displacements on Jij. Ruban and Peil20 studied this ef-
+fect by combining Jij calculations and molecular dynam-
+ics. They clearly showed Jij values of bcc Fe were reduced
+by atomic displacements, and consequently, TC was also
+largely decreased compared with the case of excluding
+thermal atomic displacements. The dependence of Emag
+on Sph is thus important and intriguing from a thermo-
+dynamic viewpoint. However, a concrete expression of
+this dependence is yet to be obtained.
+CONCLUSIONS
+We have quantitatively evaluated the thermodynamic
+feedback eﬀect from phonons to magnetism on TC regard-
+ing bcc Fe. The phonon softening due to magnetic dis-
+ordering lead to the stabilisation of paramagnetic states.
+As a result, TC of bcc Fe was decreased by nearly 580 K
+from the value in the case of ignoring the feedback eﬀect,
+i.e. the value for the Heisenberg model. This deviation
+in bcc Fe is of great importance because bcc Fe is recog-
+nised as a touchstone for the study of ﬁnite-temperature
+magnetism. We stress two important knowledge regard-
+ing the prediction of TC: (i) An appropriate theory of
+magnetism without considering the contribution of the
+phonon free energy must overestimate TC in bcc Fe, con-
+trary to conventional understanding. (ii) We should use
+Jij for the DLM state rather than for the ferromagnetic
+state in the accurate description of TC.
+Finally, we mention the applicability of our thermody-
+namic formulation. We focused on bcc Fe in this study,
+but our formulation is not restricted to it. It is intrigu-
+ing to apply the formulation to other magnetic materials
+such as permanent magnets in which TC is critically im-
+portant. In addition, the core concept of the formulation
+can be applied to other interacting excitation phenom-
+ena, not only the interaction between phonons and mag-
+netism: If a contribution (X) aﬀects other contribution
+(Y) and changes the free energy of Y, the thermal equi-
+librium state of X is also aﬀected through the minimum
+principle for the free energy.
+In our study, X is mag-
+netic states, and Y is phonons. Therefore, the concept of
+our thermodynamic formulation can be applied to other
+interacting excitations if one can express the magnitude
+of the interaction as thermodynamic quantities (Emag in
+our study). The formulation will be helpful for a quanti-
+tative description of the ﬁnite-temperature properties of
+materials.6
+METHODS
+First-principles phonon calculations.
+All of the phonon calculations were carried out within
+the harmonic approximation.
+To evaluate the phonon
+frequencies at an intermediate magnetic ordering, we em-
+ployed a force-averaging method27. In this method, the
+atomic forces at an intermediate magnetic ordering are
+determined by mixing the forces at the ferromagnetic
+(FM) and paramagnetic (PM) DLM states.
+Following
+the reference27, the atomic forces at an intermediate mag-
+netic ordering can be written as
+Fi ≈αFFM
+i
++ (1 −α)FPM
+i
+,
+(16)
+where Fi is the atomic force vector on i-th atom and
+α is a mixing parameter.
+They also proposed a solid
+expression of α by using the magnetic energy (Emag) as
+below:
+α = Emag −EPM
+mag
+EFM
+mag −EPM
+mag
+,
+(17)
+where EPM
+mag (EFM
+mag) is the magnetic energy at high (low)
+temperature limit in the Heisenberg model. In the orig-
+inal paper27, they assumed the temperature dependence
+of Emag is determined by the Monte Carlo results only.
+Therefore, α was treated as a function of temperature
+(α = α( eT)). This is equivalent to that the equilibrium
+magnetic energy at a temperature is determined to min-
+imise the magnetic free energy, not total free energy. On
+the other hand, in our study, α is not regarded as a func-
+tion of temperature but is interpreted as a function of
+energy (α = α(E)). This interpretation allows that the
+phonon free energy Gph can be regarded as a function
+of the magnetic energy (Gph = Gph(T, Emag)). The tem-
+perature dependence of Emag is determined after the min-
+imisation of the total free energy in equation (12). This
+interpretation is the most important key for solving the
+minimisation problem in the minimum principle for the
+free energy.
+The paramagnetic DLM state in the phonon calcula-
+tions was mimicked by a special quasirandom structure36
+on the spin conﬁguration (up and down) as obtained from
+the ATAT package37. The atomic forces were calculated
+by the direct method24,38. We used the 3×3×3 cubic su-
+percell (54 atoms) for the force calculations in both fer-
+romagnetic and paramagnetic conditions. The employed
+lattice constant a = 2.86 ˚A was derived by combining
+the relaxed lattice constant and experimental lattice ex-
+pansion ratio at T = 1043 K39. Although such determi-
+nation procedure of lattice constant probably gives some
+pressure even in the framework of the quasiharmonic ap-
+proximation, we assume its eﬀect is minor and ﬁxed the
+volume. First-principles calculations were based on den-
+sity functional theory within the projector augmented
+wave method40, as implemented in the VASP code41,42.
+For the exchange-correlation functional, the generalised
+gradient approximation parametrised by Perdew, Burke
+and Ernzerhof43 was used. The cutoﬀenergy 400 eV and
+9×9×9 k-point grid for the supercell were used for the
+force calculations. The derivation of force constants and
+the calculations of the phonon free energy were performed
+by using the ALAMODE code44.
+Calculations of exchange coupling constants.
+Exchange coupling constants Jij in the Monte Carlo
+simulations were derived with magnetic force theorem4
+and the Korringa-Kohn-Rostoker (KKR) Green’s func-
+tion method along with the coherent potential ap-
+proximation (CPA)45,46, implemented in the AkaiKKR
+code46,47.
+The exchange-correlation functional was
+treated within the local density approximation48. The
+lattice constant was set to be the same one as in the
+phonon calculations. Paramagnetic DLM state3,32 was
+employed as a reference magnetic state in the derivation
+of Jij. Calculated Jij values are listed in Table I.
+Monte Carlo simulations.
+To evaluate the magnetic entropy as a function of the
+magnetic energy, we carried out the classical Monte Carlo
+simulations based on the Heisenberg model
+H = −2
+X
+(i,j)
+Jijei · ej,
+(18)
+where Jij denotes the exchange coupling constant and
+ei is the unit vector on site i. We included up to the
+third nearest neighbour pairs as interacting shells. The
+classical Monte Carlo simulations were performed by us-
+ing the ALPS code49. To obtain more accurate results,
+we employed the rescaled Monte Carlo method31 which
+reproduces the quantum speciﬁc heat from the classical
+speciﬁc heat.
+The magnetic energy and entropy were
+derived by integrating the speciﬁc heat. The spin quan-
+tum number S = 1.07 for the DLM condition as cal-
+culated by KKR-CPA was used in the rescaled Monte
+Carlo method. The Monte Carlo simulations were car-
+ried out using a 16×16×16 sites and involve 300,000 steps
+for equilibration and 2,700,000 steps for averaging. Tem-
+perature grids of 0.1 and 0.2 mRy were used in the range
+TABLE I. Calculated exchange coupling constants Jij of bcc
+Fe for the paramagnetic DLM state.
+nearest neighbour
+Jij (meV)
+First
+27.18
+Second
+2.62
+Third
+1.33
+Fourth
+0.21
+Fifth
+−1.377
+of near TC and other ranges, respectively. Note that the
+entropy in the rescaled Monte Carlo method does not go
+to zero at T →0. Thus this method is not suitable to
+describe thermodynamic quantities at a low-temperature
+range. Our thermodynamic formulation, however, needs
+only the result at a temperature range around TC. Thus
+the shortcoming does not matter in this study.
+Author contributions
+The formulation was established by T.T and Y.G. All
+of the calculations were conducted by T.T. The project
+was supervised by Y.G. All authors discussed the results
+and contributed to writing the paper.
+Competing interests
+The authors declare no competing interests.
+ACKNOWLEDGMENTS
+This work was supported in part by MEXT as Fugaku
+project and the Elements Strategy Initiative Project as
+well as KAKENHI Grant No. 17K04978. We are grate-
+ful to H. Akai for oﬀering the unreleased version of the
+AkaiKKR code.
+The calculations were partly carried
+out by using supercomputers at ISSP, The University of
+Tokyo, and TSUBAME, Tokyo Institute of Technology as
+well as the K computer, RIKEN (Project No. hp190169).
+∗tanaka.t.bj@m.titech.ac.jp
+† gohda.y.ab@m.titech.ac.jp
+1 Spaldin, N. A. Magnetic Materials: Fundamentals and Ap-
+plications (Cambridge University Press, Cambridge, 2010).
+2 Coey, J. M. D. Magnetism and magnetic materials (Cam-
+bridge University Press, Cambridge, 2010).
+3 Oguchi, T., Terakura, K. & Hamada, N. Magnetism of
+iron above the Curie temperature. J. Phys. F: Met. Phys.
+13, 145–160 (1983).
+4 Liechtenstein, A. I., Katsnelson, M. I., Antropov, V. P. &
+Gubanov, V. A. Local spin density functional approach to
+the theory of exchange interactions in ferromagnetic metals
+and alloys. J. Magn. Magn. Mater. 67, 65–74 (1987).
+5 Halilov, S. V., Perlov, A. Y., Oppeneer, P. M. & Eschrig, H.
+Magnon spectrum and related ﬁnite-temperature magnetic
+properties: A ﬁrst-principle approach. EPL 39, 91 (1997).
+6 Halilov, S. V., Eschrig, H., Perlov, A. Y. & Oppeneer, P. M.
+Adiabatic spin dynamics from spin-density-functional the-
+ory: Application to Fe, Co, and Ni.
+Phys. Rev. B 58,
+293–302 (1998).
+7 Sakuma, A. First Principles Study on the Exchange Con-
+stants of the 3d Transition Metals. J. Phys. Soc. Jpn. 68,
+620–624 (1999).
+8 Pajda, M., Kudrnovsk´y, J., Turek, I., Drchal, V. & Bruno,
+P.
+Ab initio calculations of exchange interactions, spin-
+wave stiﬀness constants, and Curie temperatures of Fe,
+Co, and Ni. Phys. Rev. B 64, 174402 (2001).
+9 Takahashi, C., Ogura, M. & Akai, H. First-principles cal-
+culation of the Curie temperature Slater–Pauling curve. J.
+Phys.: Condens. Matter 19, 365233 (2007).
+10 Matyunina, M., Zagrebin, M., Sokolovskiy, V. & Buchel-
+nikov, V. Ab initio study of magnetic and structural prop-
+erties of Fe-Ga alloys. EPJ Web Conf. 185, 04013 (2018).
+11 Bergqvist, L. & Bergman, A. Realistic ﬁnite temperature
+simulations of magnetic systems using quantum statistics.
+Phys. Rev. Materials 2, 013802 (2018).
+12 Sabiryanov, R. F. & Jaswal, S. S. Ab Initio Calculations
+of the Curie Temperature of Complex Permanent-Magnet
+Materials. Phys. Rev. Lett. 79, 155–158 (1997).
+13 Kashyap, A., Skomski, R., Sabiryanov, R., Jaswal, S. &
+Sellmyer, D. Exchange interactions and Curie temperature
+of Y-Co compounds. IEEE Transactions on Magnetics 39,
+2908–2910 (2003).
+14 Turek, I., Rusz, J. & Diviˇs, M. Electronic structure and
+volume magnetostriction of rare-earth metals and com-
+pounds. J. Magn. Magn. Mater. 290-291, 357–363 (2005).
+15 Khmelevskyi, S., Khmelevska, T., Ruban, A. V. & Mohn,
+P.
+Magnetic exchange interactions in the paramagnetic
+state of hcp Gd. J. Phys.: Condens. Matter 19, 326218
+(2007).
+16 Toga, Y. et al. Monte Carlo analysis for ﬁnite-temperature
+magnetism of Nd2Fe14B permanent magnet. Phys. Rev. B
+94, 174433 (2016).
+17 Gong, Q., Yi, M., Evans, R. F. L., Xu, B.-X. & Gut-
+ﬂeisch, O. Calculating temperature-dependent properties
+of Nd2Fe14B permanent magnets by atomistic spin model
+simulations. Phys. Rev. B 99, 214409 (2019).
+18 Sabiryanov, R. F. & Jaswal, S. S. Magnons and Magnon-
+Phonon Interactions in Iron. Phys. Rev. Lett. 83, 2062–
+2064 (1999).
+19 Yin, J., Eisenbach, M., Nicholson, D. M. & Rusanu, A.
+Eﬀect of lattice vibrations on magnetic phase transition in
+bcc iron. Phys. Rev. B 86, 214423 (2012).
+20 Ruban, A. V. & Peil, O. E.
+Impact of thermal atomic
+displacements on the Curie temperature of 3d transition
+metals. Phys. Rev. B 97, 174426 (2018).
+21 Neuhaus, J., Petry, W. & Krimmel, A. Phonon softening
+and martensitic transformation in -Fe. Physica B 234-236,
+897–899 (1997).
+22 Mauger, L. et al. Nonharmonic phonons in α-iron at high
+temperatures. Phys. Rev. B 90, 064303 (2014).
+23 Yang, F. C. et al. Temperature dependence of phonons in
+Pd3Fe through the Curie temperature. Phys. Rev. B 98,
+024301 (2018).
+24 K¨ormann, F., Dick, A., Grabowski, B., Hickel, T. & Neuge-
+bauer, J. Atomic forces at ﬁnite magnetic temperatures:
+Phonons in paramagnetic iron. Phys. Rev. B 85, 125104
+(2012).
+25 Leonov, I., Poteryaev, A. I., Anisimov, V. I. & Vollhardt,
+D. Calculated phonon spectra of paramagnetic iron at the
+α-γ phase transition. Phys. Rev. B 85, 020401 (2012).
+26 Leonov, I. et al.
+Electronic correlations determine the
+phase stability of iron up to the melting temperature. Sci.
+Rep. 4, 1–4 (2014).
+27 K¨ormann, F. et al.
+Temperature Dependent Magnon-
+Phonon Coupling in bcc Fe from Theory and Experiment.8
+Phys. Rev. Lett. 113, 165503 (2014).
+28 Han, Q., Birol, T. & Haule, K.
+Phonon Softening due
+to Melting of the Ferromagnetic Order in Elemental Iron.
+Phys. Rev. Lett. 120, 187203 (2018).
+29 Heine, M., Hellman, O. & Broido, D. Eﬀect of thermal
+lattice and magnetic disorder on phonons in bcc Fe: A
+ﬁrst-principles study. Phys. Rev. B 100, 104304 (2019).
+30 Dutta, B. et al. Phonons in magnetically disordered ma-
+terials: Magnetic versus phononic time scales. Phys. Rev.
+B 101, 094201 (2020).
+31 K¨ormann, F., Dick, A., Hickel, T. & Neugebauer, J.
+Rescaled Monte Carlo approach for magnetic systems: Ab
+initio thermodynamics of bcc iron.
+Phys. Rev. B 81,
+134425 (2010).
+32 Gyorﬀy, B. L., Pindor, A. J., Staunton, J., Stocks, G. M.
+& Winter, H.
+A ﬁrst-principles theory of ferromagnetic
+phase transitions in metals. J. Phys. F: Met. Phys. 15,
+1337–1386 (1985).
+33 Chana, K. S., Samson, J. H., Luchini, M. U. & Heine, V.
+Magnetic short-range order in iron above Tc? Statistical
+mechanics with many-atom interactions. J. Phys.: Con-
+dens. Matter 3, 6455–6471 (1991).
+34 Rosengaard, N. M. & Johansson, B. Finite-temperature
+study of itinerant ferromagnetism in Fe, Co, and Ni. Phys.
+Rev. B 55, 14975–14986 (1997).
+35 Leˇzai´c, M., Mavropoulos, P. & Bl¨ugel, S. First-principles
+prediction of high Curie temperature for ferromagnetic
+bcc-Co and bcc-FeCo alloys and its relevance to tunneling
+magnetoresistance. Appl. Phys. Lett. 90, 082504 (2007).
+36 Zunger, A., Wei, S.-H., Ferreira, L. G. & Bernard, J. E.
+Special quasirandom structures. Phys. Rev. Lett. 65, 353–
+356 (1990).
+37 van de Walle, A. et al. Eﬃcient stochastic generation of
+special quasirandom structures. Calphad 42, 13–18 (2013).
+38 Ikeda, Y., Seko, A., Togo, A. & Tanaka, I.
+Phonon
+softening in paramagnetic bcc Fe and its relationship to
+the pressure-induced phase transition. Phys. Rev. B 90,
+134106 (2014).
+39 Touloukian, Y. S., Kirby, R. K., Taylor, R. E. & Desai,
+P. D. Thermal Expansion: Thermophysical Properties of
+Matter, vol. 12 (Plenum Press, New York, 1975).
+40 Bl¨ochl, P. E. Projector augmented-wave method. Phys.
+Rev. B 50, 17953–17979 (1994).
+41 Kresse, G. & Furthm¨uller, J. Eﬃcient iterative schemes
+for ab initio total-energy calculations using a plane-wave
+basis set. Phys. Rev. B 54, 11169–11186 (1996).
+42 Kresse, G. & Joubert, D. From ultrasoft pseudopotentials
+to the projector augmented-wave method. Phys. Rev. B
+59, 1758–1775 (1999).
+43 Perdew, J. P., Burke, K. & Ernzerhof, M.
+Generalized
+Gradient Approximation Made Simple. Phys. Rev. Lett.
+77, 3865–3868 (1996).
+44 Tadano, T., Gohda, Y. & Tsuneyuki, S. Anharmonic force
+constants extracted from ﬁrst-principles molecular dynam-
+ics: applications to heat transfer simulations.
+J. Phys.:
+Condens. Matter 26, 225402 (2014).
+45 Shiba, H. A Reformulation of the Coherent Potential Ap-
+proximation and Its Applications. Prog. Theor. Phys. 46,
+77–94 (1971).
+46 Akai, H. Fast Korringa-Kohn-Rostoker coherent potential
+approximation and its application to FCC Ni-Fe systems.
+J. Phys.: Condens. Matter 1, 8045–8064 (1989).
+47 http://kkr.issp.u-tokyo.ac.jp/jp/. Note that the function
+to calculate exchange coupling constants is only incorpo-
+rated in an unreleased version.
+48 Moruzzi, V. L., Janak, J. F. & Williams, A. R.
+Cal-
+culated Electronic Properties of Metals (Pergamon, New
+York, 1978).
+49 Bauer, B. et al. The ALPS project release 2.0: open source
+software for strongly correlated systems.
+J. Stat. Mech.
+2011, P05001 (2011).

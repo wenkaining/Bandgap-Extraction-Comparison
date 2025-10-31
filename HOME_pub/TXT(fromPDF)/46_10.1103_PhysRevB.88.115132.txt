@@ -1,0 +1,1041 @@
+PHYSICAL REVIEW B 88, 115132 (2013)
+Exact spectral function for hole-magnon coupling in a ferromagnetic CuO3-like chain
+Krzysztof Bieniasz1,* and Andrzej M. Ole´s1,2
+1Marian Smoluchowski Institute of Physics, Jagellonian University, Reymonta 4, PL-30059 Krak´ow, Poland
+2Max-Planck-Institut f¨ur Festk¨orperforschung, Heisenbergstrasse 1, D-70569 Stuttgart, Germany
+(Received 18 July 2013; published 18 September 2013)
+We present the exact spectral function for a single oxygen hole with spin opposite to ferromagnetic order
+within a one-dimensional CuO3-like spin chain. We ﬁnd that local Kondo-like exchange interaction generates
+ﬁve different states in the strong-coupling regime. It stabilizes a spin polaron which is a bound state of a moving
+charge dressed by magnon excitations, with essentially the same dispersion as predicted by mean-ﬁeld theory.
+We then examine in detail the evolution of the spectral function for increasing strength of the hole-magnon
+interaction. We also demonstrate that the s and p symmetries of orbital states in the conduction band are
+essentially equivalent to each other and ﬁnd that the simpliﬁed models do not sufﬁce to reproduce subtle aspects
+of hole-magnon coupling in the charge-transfer model.
+DOI: 10.1103/PhysRevB.88.115132
+PACS number(s): 72.10.Di, 75.10.Pq, 75.50.Dd, 79.60.−i
+I. INTRODUCTION
+The theoretical analysis of transition-metal oxides, includ-
+ing cuprates, manganites, and iron pnictides, requires a faithful
+description of strongly correlated electrons which localize due
+to Coulomb interactions in partly ﬁlled 3d orbitals.1 These
+interactions lead to Mott insulators in undoped compounds,
+with spin and orbital degrees of freedom which interact
+with charge defects arising under doping2—then the magnetic
+order and transport properties change due to subtle interplay
+between charge and magnetic/orbital degrees of freedom.
+Good examples are high-temperature superconductivity in
+cuprates,3–5 and colossal magnetoresistance in manganites.6–8
+In these systems, the interaction between charge carriers and
+localized spins is of crucial importance and drives the observed
+evolution of magnetic order and transport properties, captured
+in the double-exchange mechanism.9–12 These changes may
+also depend on subtle quantum effects in systems with coupled
+spin-orbital-charge degrees of freedom.13
+A well-known problem is the dynamics of one hole added
+to oxygen orbitals, which interacts with S = 1/2 spins at Cu
+ions in CuO2 planes of high-temperature superconductors.
+The spins form an antiferromagnetic (AF) order due to
+the superexchange interaction. A complete treatment of this
+problem involves a three-band model,14 with Cu x2-y2 orbitals
+occupied by one hole each and O 2p orbitals along the bonds.
+Instead, theoretical studies focus frequently on simpliﬁed
+treatments which do not include all quantum effects related
+to charge carriers interacting with spin excitations in phases
+with magnetic order. For example, following the idea of Zhang
+and Rice,15 a simpliﬁed single-band model has been derived
+for CuO2 planes from the charge-transfer model,16 and next is
+used to study the evolution of magnetic order with increasing
+hole doping. However, such effective models do not accurately
+describe the electronic states in lightly doped materials. For
+instance, even low doping of less than 5% charge carriers is
+sufﬁcient to change the magnetic order in vanadates17 or in
+manganites.18
+Electronic states change radically when electrons or holes
+propagate in a background with magnetic order. The well-
+known example is a single hole which is classically conﬁned in
+an antiferromagnet19 but develops a quasiparticle propagating
+on the scale of superexchange by its coupling to quantum
+spin ﬂuctuations.20 In contrast, a conduction electron in the
+ferromagnetic (FM) background propagates as a free particle,
+as known in FM semiconductors such as EuO or EuS.21 Here
+the electron spin oriented in the opposite way to the FM
+background scatters on magnon excitations which leads to
+a rather complex many-body problem22 and to changes of
+the electronic structure with increasing temperature.23 It was
+pointed out24 that a repeated emission and reabsorption of
+a magnon by the conduction electron results in an effective
+attraction between magnon and electron. This gives rise to
+a polaronlike quasiparticle, the magnetic polaron. Another
+excitation is due to a direct magnon emission or absorption
+by the electron, thereby ﬂipping its own spin, leading to
+scattering states. Modiﬁcations of electronic structure due to
+polarons were also discussed in manganites,25 cobaltates,26
+and vanadates.27
+The purpose of this paper is to analyze the formation of
+polaronlike features and scattering states in a tight-binding
+model motivated by the physical properties known from
+cuprates. Due to strong local Coulomb repulsion U at x2-y2
+orbitals of Cu ions, the model including holes in these
+orbitals and in the surrounding oxygen orbitals, also called
+a three-band model, reduces to a spin-fermion model.28,29 The
+latter describes an oxygen hole coupled to the neighboring
+spins by a Kondo-like AF exchange interaction. This local AF
+coupling frustrates the AF superexchange in CuO2 planes and
+is responsible for a rapid decay of AF order under increasing
+doping. The main difﬁculty in treating the dynamics of a doped
+hole is the AF quantum ﬂuctuations of the spin background,
+which must be treated in an approximate way.3–5
+Only very few many-body problems are exactly solvable.
+Exact solutions are typically limited to one-dimensional (1D)
+models or to a very special choice of interaction parameters.
+However, an exact solution (i) provides always important
+physical insights into the nature of quantum states involved,
+(ii) could serve to test approximate treatments, and (iii) may
+be used to draw useful conclusions for experimental studies.
+Recently, it was pointed out that a hole in a FM system with
+a single magnon excitation provides valuable insights into the
+spectral properties of a doped hole moving in a spin-polarized
+115132-1
+1098-0121/2013/88(11)/115132(8)
+©2013 American Physical SocietyKRZYSZTOF BIENIASZ AND ANDRZEJ M. OLE´S
+PHYSICAL REVIEW B 88, 115132 (2013)
+system.30 Here we introduce a CuO3-like spin-chain model,
+as studied for YBa2Cu3O7 high-temperature superconductors.
+Recently, excited states were investigated in AF CuO3 chains31
+in Sr2CuO3 and an interesting interplay due to spin-orbital
+entanglement13 was pointed out.32 Here we analyze exactly
+the spectral properties in a FM chain. As we show below, they
+include the polaronlike and scattering states when the moving
+carrier interacts with magnons.
+The paper is organized as follows. In Sec. II we introduce
+a 1D model for a CuO3 spin chain. The spectral function
+of a single charge added to the oxygen orbital with the spin
+opposite to the FM order is obtained exactly using the Green’s
+function method in Sec. III A. In Sec. III B we present an
+approximate perturbative solution for the same problem of a
+charge carrier coupled to the FM background in the strong-
+coupling regime, while the mean-ﬁeld solution is given in
+Sec. III C. The numerical results are presented in Sec. IV and
+the exact results are compared with the approximate ones.
+Summary and conclusions are given in Sec. V, while certain
+details of the derivation outlined in Sec. III A are presented in
+the Appendix.
+II. THE MODEL
+We consider a 1D model presented in Fig. 1, with the same
+structure as a CuO3 1D chain in YBa2Cu3O7, and assume
+that spins with a general value S occupy the transition-metal
+sites. In the case of copper oxides, holes localize at Cu ions
+and S = 1/2. Spins {Si} are coupled here by FM Heisenberg
+exchange interactions as in the case of simpler 1D models
+considered before,30 while holes in oxygen orbitals represent
+charge degrees of freedom which couple to spins by a local
+AF exchange, similar to a hole added to a CuO2 plane.28 We
+label the oxygen orbitals as follows: (i) ai±ξ is located in
+between the magnetic sites, where ξ is a vector pointing from
+the Cu site towards the a site on its right, and (ii) bi±ζ is
+located above and below the magnetic sites, where ζ is a vector
+pointing from the Cu site towards the b site above it. Taking
+the charge-transfer model for a charged Cu2+O2−
+3
+chain as a
+reference (physical vacuum) state, these orbitals are ﬁlled with
+electrons and contain no hole.
+The 1D model Hamiltonian,
+H = T + HS + HK,
+(1)
+FIG. 1. (Color online) Graphic depiction of the CuO3-like FM
+chain with localized spins indicated by arrows and oxygen ions
+indicated by solid circles. A hole added to an oxygen orbital (either
+ai±ξ or bi±ζ) interacts with the neighboring spin Si by the Kondo-like
+AF exchange J0 while the localized spins interact by the FM exchange
+J. The hole hops between neighboring oxygen orbitals by the
+hopping t.
+includes the kinetic (hopping) part T , the FM exchange
+between localized spins, HS, as well as Kondo-like AF
+exchange interactions between a charge carrier (hole) in
+different orbitals and neighboring localized spins, HK. The
+hopping couples the a and b orbitals; see Fig. 1. Depending
+on the orbital symmetry, only one of the local combinations
+of b orbitals contributes to T and HS, so it is convenient to
+introduce their symmetric (+, for s orbitals) or antisymmetric
+(−, for p orbitals) combinations, b±
+i = (bi+ζ ± bi−ζ)/
+√
+2.
+The various terms in the Hamiltonian (1) are
+T = −t
+
+iσ
+[(a†
+i+ξ,σ ± a†
+i−ξ,σ)b±
+iσ + H.c.],
+(2a)
+HK = J0
+
+i
+
+sa
+i+ξ + sa
+i−ξ + sb
+i
+
+· Si,
+(2b)
+HS = −J
+
+i
+(Si · Si+1 −S2),
+(2c)
+where Si is a spin operator for the magnetic ion at site i, sm
+is a spin operator for the respective oxygen hole in orbital
+m = a,b, and S is the magnitude of a single localized spin on
+the magnetic sublattice. All the energy constants are positive
+(t > 0, J0 > 0, J > 0) and therefore HS provides FM coupling
+between the localized spins, while HK describes an AF
+Kondo-like coupling between localized spins and conduction
+electrons.28
+We study below the dynamics of a single hole injected into
+either of the conduction bands arising after T is diagonalized;
+one considers then two orbitals per unit cell and the Cu-Cu
+distance a = 1. We use the fermion representation for spin
+operators in the conduction band, sm. By transforming all
+the fermion operators to the reciprocal space by means of
+discrete Fourier transformation one arrives at the following
+representation of the Hamiltonian:
+T =
+
+kσ
+(ϵka†
+kσbkσ + H.c.),
+(3a)
+HK = J0
+
+kq
+
+2 cos(q/2) sa
+kq + sb
+kq
+
+· Sq,
+(3b)
+where ϵk follows from the Fourier transformation and is
+given by
+ϵk =
+
+−2t cos(k/2)
+for
+s symmetry,
++2it sin(k/2)
+for
+p symmetry.
+(4)
+This leads to two bands εk = ±|ϵk| for each value of
+k ∈[−π,π). The reciprocal-space spin operators are given
+by
+Sq = 1
+N
+
+i
+e−iqRi Si,
+(5)
+sμ
+kq =
+⎛
+⎜⎜⎝
+1
+2(μ†
+k↑μk+q↑−μ†
+k↓μk+q↓)
+μ†
+k↑μk+q↓
+μ†
+k↓μk+q↑
+⎞
+⎟⎟⎠=
+⎛
+⎜⎝
+sz
+kq
+s+
+kq
+s−
+kq
+⎞
+⎟⎠,
+(6)
+where μ is an index labeling the states {a,b}. It should be
+emphasized that, strictly speaking, the operators sμ
+kq are just a
+shorthand notation for the respective fermionic operators and
+should not be confused with regular spin operators. However,
+their effect in the spin subspace is similar.
+115132-2EXACT SPECTRAL FUNCTION FOR HOLE-MAGNON . . .
+PHYSICAL REVIEW B 88, 115132 (2013)
+As for HS, its following eigenstates are easily identiﬁed:
+HS|FM⟩= 0|FM⟩,
+(7)
+HSS−
+q |FM⟩= qS−
+q |FM⟩,
+(8)
+where |FM⟩is the physical vacuum state, and S−
+q |FM⟩, deﬁned
+by Eq. (5), is a magnetic excited state with one magnon (spin
+wave) created in the FM background and its energy dispersion
+q = 4JS sin2(q/2).
+(9)
+Since the Hamiltonian under consideration conserves the total
+spin, these magnon states are the only attainable in the problem
+of a single hole with spin s = 1/2 coupled to the FM spin
+background.
+III. SPIN POLARON AND SCATTERING STATES
+A. Exact solution by Green’s functions
+To obtain the hole spectral function we calculate ﬁrst the
+Green’s function, deﬁned by the expectation value of the
+resolvent,
+G(ω) = [ω −H + iη]−1,
+(10)
+for the ↓-spin states of an added hole. Therefore, the Green’s
+function has a 2 × 2 matrix structure:
+Gμν(k,ω) = ⟨FM|μk↓G(ω)ν†
+k↓|FM⟩,
+(11)
+where μ,ν are again indices going over the states {a,b}.
+Following a method similar to the one described by Berciu
+and Sawatzky,33 we divide the Hamiltonian into the free part,
+H0 = T + HS, corresponding to G0, and the term V = HK
+which couples the two subsystems by the AF interaction ∝J0.
+It is convenient to represent the Hamiltonian (3a) in terms
+of the following matrices:
+T(k) =
+
+0
+ϵk
+ϵ∗
+k
+0
+
+,
+(12a)
+V(q) =
+cos(q/2)
+0
+0
+1
+2
+
+,
+(12b)
+while the form of T leads us to the matrix representation of
+G0(ω),
+G0(k,ω) =
+
+ω + iη
+−ϵk
+−ϵ∗
+k
+ω + iη
+−1
+,
+(13)
+and in the case of the single-magnon state (8), the magnon en-
+ergy q (9) is taken into account by substituting ω →ω −q.
+The inverse could also be calculated explicitly; however, it is
+not necessary for the present derivation.
+We then proceed by utilizing the Dyson equation,
+G(ω) = G0(ω) + G(ω)VG0(ω),
+(14)
+which, after separating G(k,ω), leads to the following matrix
+equation:
+G(k,ω) = [I + J0F(k,ω)]G0(k,ω)QG(k,ω),
+(15)
+where the various auxiliary matrices are given by
+F(k,ω) =
+
+q
+˜F(k,q,ω)V(q),
+(16)
+˜Fμν(k,q,ω) = ⟨FM|μk↓G(ω)ν†
+k−q,↑S−
+q |FM⟩.
+(17)
+Here ˜F(k,q,ω) is the anomalous Green’s function, calculated
+between different magnon states, resulting from the S−terms
+in V, and
+QG(k,ω) = [I + J0SV0G0(k,ω)]−1,
+(18)
+V0 =
+
+q
+V(q)δq0 =
+1
+0
+0
+1
+2
+
+,
+(19)
+where QG(k,ω) is a transformation of G0(k,ω), performing
+a constant shift by J0S. However, this cannot be written
+shortly as G0(k,ω + J0S) because of the matrix V0 present
+in QG(k,ω), which causes a different shift of J0S/2 in the
+Gbb
+0 (k,ω) sector.
+The next step is to eliminate F(k,ω) from Eq. (15). In order
+to do this, one needs to express ˜F(k,ω) explicitly in terms of
+G(k,ω) by applying the Dyson equation (14) once again and
+next solving for F(k,ω). After inserting it back into Eq. (15)
+and solving for G(k,ω), one arrives at the ﬁnal result,
+G(k,ω) = G0(k,ω)QG(k,ω)[I −2J0S(I −M−1(k,ω))G0(k,ω)QG(k,ω)]−1,
+(20)
+where M is a complicated matrix expressed solely in terms of
+various sums of G0(k −q,ω −q) over q. More details are
+presented in the Appendix. We note that this solution is almost
+identical to the one obtained by Berciu in Ref. 33, only here
+we arrive at a more general expression for the transformation
+of G0(k,ω). Finally, having calculated the Green’s function,
+one ﬁnds the spectral function,
+A(k,ω) = −1
+π Im[G(k,ω)],
+(21)
+which is closely related to the density of states as well as to the
+photoemission spectra, and can be directly measured in angle-
+resolved photoemission spectroscopy experiments. The main
+physical problem is its structure and possible quasiparticle
+(QP) states.
+The Green’s function G(k,ω), as calculated from Eq. (20),
+is generally not diagonal. This is usually not a problem,
+since both diagonal components of the spectral function are
+measured at once in experiment, which corresponds to the
+trace of the corresponding matrix (21),
+A(k,ω) = Tr A(k,ω),
+(22)
+a quantity invariant under the change of basis. Thus, we also
+present here the traced spectral function A(k,ω). In order to get
+more physical insight into the exact solution, we now derive
+the approximate solutions of the problem in two opposite
+parameter regimes, strong and weak hole-magnon coupling.
+115132-3KRZYSZTOF BIENIASZ AND ANDRZEJ M. OLE´S
+PHYSICAL REVIEW B 88, 115132 (2013)
+B. Perturbative solution at strong coupling
+The ﬁrst approach is the perturbation expansion, with the
+problem treated in the eigenbasis of V. This solution is valid in
+the strong-coupling limit J0 ≫t and J0 ≫J, since we treat
+T and HS as small perturbations to HK.
+Given the conjectured states of the form μ†
+k↓|FM⟩,
+
+q b†
+k−q,↑S−
+q |FM⟩, and 
+q e±iqξa†
+k−q,↑S−
+q |FM⟩, a straight-
+forward calculation shows that the eigenstates of V are
+|¯a⟩k =
+
+4S
+4S + 1
+
+a†
+k↓−1
+2S
+
+q
+cos
+q
+2
+
+a†
+k−q,↑S−
+q
+
+|FM⟩,
+(23a)
+|¯b⟩k =
+
+2S
+2S + 1
+
+b†
+k↓−1
+2S
+
+q
+b†
+k−q,↑S−
+q
+
+|FM⟩,
+(23b)
+|m⟩k =
+1
+√
+S
+
+q
+sin
+q
+2
+
+a†
+k−q,↑S−
+q |FM⟩,
+(23c)
+|b⟩k =
+1
+√
+2S + 1
+
+b†
+k↓+
+
+q
+b†
+k−q,↑S−
+q
+
+|FM⟩,
+(23d)
+|a⟩k =
+1
+√
+4S + 1
+
+a†
+k↓+ 2
+
+q
+cos
+q
+2
+
+a†
+k−q,↑S−
+q
+
+|FM⟩.
+(23e)
+The ﬁrst two are bound polaronic states, and the last two are
+the respective excited states. The remaining state |m⟩k is dom-
+inated by magnons which dress an ↑-spin hole that propagates
+over a orbitals. These deﬁnitions allow us to infer something
+about the approximate nature of different bands calculated
+from the Green’s function. Further, because V does not involve
+any three-site interaction terms but only self-renormalizing
+exchange interaction, there is no distinction between s and
+p orbitals, and therefore in both cases the states derived in
+perturbation theory (23) are the same. Using them, one can
+calculate the perturbation corrections to their energy coming
+from HS and T . Owing to the speciﬁc orbital symmetries in the
+latter, in order to get a nontrivial contribution (i.e., dispersion)
+one needs to conduct the perturbation expansion at least up
+to second order. The resulting energies for the states (23) are,
+respectively,
+E¯a(k) = −J0
+(2S + 1)
+2
++ J
+2S
+4S + 1
+−ϵ2
+k
+J0
+1
+(2S + 1)
+(4S + 1)
+S
++
+2S
+(4S + 1)(3S + 1)
+
+,
+(24a)
+E¯b(k) = −J0
+S + 1
+2
++ J
+2S
+2S + 1 + ϵ2
+k
+J0
+4S + 1
+S(2S + 1)
+−ϵ2
+k−π
+J0
+1
+3S(2S + 1) ,
+(24b)
+Em(k) = J0
+2S −1
+2
++ J2S + ϵ2
+k−π
+J0
+1
+2S + 1
+ 1
+3S −
+2S
+1 −S
+
+,
+(24c)
+Eb(k) = J0
+S
+2 + J
+4S2
+2S + 1 + ϵ2
+k−π
+J0
+2S
+(2S + 1)(1 −S)
++ ϵ2
+k
+J0
+2
+4S + 1
+
+S
+(2S + 1)(3S + 1) −2S + 1
+S
+
+,
+(24d)
+Ea(k) = J0S + J
+8S2
+4S + 1 + ϵ2
+k
+J0
+2(2S + 1)
+S(4S + 1) .
+(24e)
+C. Mean-ﬁeld approximation
+Another approximate approach to the problem is the mean-
+ﬁeld (MF) approximation for V. In this case the principle is to
+neglect the quantum spin ﬂuctuations in HK, effectively setting
+sm · Si ≈sz
+mSz
+i , where sm stands for a spin in itinerant orbital,
+a or b, in the neighborhood of site i. This assumption is valid
+provided the whole HK brings only a minor contribution to the
+overall energy, therefore implying J0 ≪t and J0 ≪J. From
+Eq. (17) it follows that neglecting spin ﬂuctuations implies
+˜F(k,q,ω) = 0, and thus Eq. (15) reduces to the MF solution
+of the Green’s function,
+GMF(k,ω) = G0(k,ω)QG(k,ω).
+(25)
+This equation depends only on G0(k,ω) and can be solved
+analytically, yielding the mean-ﬁeld energy dispersion,
+E±
+MF(k) = −3J0S
+4
+±
+J0S
+4
+2
++ ϵ2
+k.
+(26)
+This is also an exact solution of the model (1) with Ising
+interactions in HK, and the deviation from it, reported in
+Sec. IV, is due to quantum spin ﬂuctuations.
+FIG. 2. (Color online) Spectral function A(k,ω) density map
+for s-orbital symmetry (shaded areas) compared with the analytic
+solutions (24) obtained in perturbation theory in the strong-coupling
+regime, shown by dashed (blue) lines. The dash-dotted (red) lines
+represent the MF states (26). Parameters: J0 = 10t, J = 0.05t,
+η = 0.02t, and S = 1/2.
+115132-4EXACT SPECTRAL FUNCTION FOR HOLE-MAGNON . . .
+PHYSICAL REVIEW B 88, 115132 (2013)
+FIG. 3. (Color online) Spectral function A(k,ω) density maps obtained for a hole with ↓-spin added to a FM chain (1) for s-orbital
+symmetry. The dash-dotted (red) lines represent the MF states (26). Note the strongly nonlinear scale of the map, employed in order to bring
+out the low-amplitude incoherent spectra. Parameters: J = 0.05t, η = 0.02t, and S = 1/2.
+Furthermore, as already stated, Eq. (25) really corresponds
+to G0(k,ω) shifted by J0S in the case of the a band, and by
+J0S/2 in the case of b states. Therefore, we expect the MF
+solution (26) to resemble the free hole dispersion, shifted to
+the lower energy range by the appropriate value, and with
+an energy gap of J0S/2. Indeed this is the case, as we show
+in a broad range of parameters in Sec. IV. We analyze there
+whether this prediction of the MF approximation holds beyond
+the regime of weak coupling, J0 ≪t.
+On the one hand, the two approximations described
+above are expected to coincide with the exact solution in
+their respective parameter ranges. Being among the most
+established approximate methods for quantum many-body
+systems, they serve as benchmarks of the method used here.
+On the other hand, comparing their predictions with the exact
+solution in the intermediate parameter range, i.e., J0 ∼t and
+J0 ∼J, can give us a better understanding of how biased
+exactly those methods are. This is especially the case for the
+MF approach, which is often employed as a ﬁrst attempt at
+tackling a complicated problem.
+IV. NUMERICAL RESULTS
+The obtained result for the Green’s function Eq. (20) is
+exact (i.e., it follows from a rigorous derivation with no
+approximations employed), but unfortunately it does not allow
+one to calculate G(k,ω) analytically. In particular, its central
+part, the matrix M(k,ω), has to be obtained numerically. Below
+we present the numerical results obtained for the spectral
+function A(k,ω) using this exact scheme. In the numerical
+calculations we take t = 1 as the energy unit and set J = 0.05t,
+η = 0.02t. We consider the case of S = 1/2, where quantum
+spin ﬂuctuations are the most important. We then explore the
+dependence of the spectra on the value of the coupling constant
+J0 which controls the strength of the interaction between
+localized spins and a hole in V.
+Let us consider ﬁrst the strong-coupling limit of J0 = 10t;
+see Fig. 2. In this regime one expects that the spectral function
+A(k,ω) consists of ﬁve features which correspond to the
+perturbative states (23), with distinct energies and rather weak
+dispersion. This analytic result is conﬁrmed by a numerical
+115132-5KRZYSZTOF BIENIASZ AND ANDRZEJ M. OLE´S
+PHYSICAL REVIEW B 88, 115132 (2013)
+FIG. 4. Comparison of the exact solutions for the spectral
+function A(k,ω), Eq. (22), obtained for s-symmetry orbitals in Fig. 1
+(left) and for oxygen orbitals of p symmetry (right). Parameters:
+J0 = 5t, J = 0.05t, η = 0.02t, and S = 1/2.
+solution, with the largest intensities obtained for the two states
+with the lowest energies. We remark that the states obtained
+in the perturbative regime have the same splitting of J0S/2 at
+k = π as in the MF theory, but they appear at a much lower
+energy due to formation of polaron states. This demonstrates
+the importance of quantum spin ﬂuctuations in the binding
+energies of these polaronic states, which are neglected in the
+MF approximation. Quantum spin ﬂuctuations enhance the
+binding energy roughly by J0/2.
+Consider next the systematic changes of the spectral
+functions with increasing exchange coupling J0. Figure 3
+shows the spectral function density maps for the s-orbital
+symmetry for a wide range of J0 values. For intermediate
+values of J0 it consists of distinct QP states and shaded
+areas of scattering states. A nonlinear map scale has been
+applied in order to amplify the low-amplitude incoherent part
+of the spectrum, which in reality is negligibly small. The
+diversiﬁcation of QP states caused by the interaction V can
+clearly be seen.
+Starting from J0 = 0 two branches are seen, corresponding
+to the free hole propagation of a ↓-spin hole, and they exactly
+replicate the MF solution. Since in this situation there is no
+interaction whatsoever, the added charge (hole) propagates
+without coupling to the magnetic background.
+Next, for J0 = 0.5t the two branches are seen to have
+widened considerably and two new distinct features can
+be identiﬁed: (i) one directly below the lower band and
+corresponding to the ﬁrst polaronic state |¯a⟩, as shown by
+solutions obtained within perturbation theory and compared
+to the exact solution for large J0 = 10t (see Fig. 2), and (ii)
+the other one located slightly above ω = 0 and extending into
+the whole Brillouin zone for higher values of J0. This latter
+feature fades away considerably and gradually develops into
+the upper bound of the lower incoherent region, corresponding
+to |b⟩in the high-coupling regime. At J0 = t the original two
+branches have all but disappeared, and the lowest polaron state
+has almost fully developed.
+FIG. 5. The spectral function A(k,ω) for selected values of
+k = 0,0.25π,0.5π,0.25π,π, shown also in Fig. 3(f). Parameters:
+J0 = 5t, J = 0.05t, η = 0.02t, and S = 1/2.
+Increasing the interaction further to J0 = 2t we see that
+another state begins to emerge just slightly above the lowest
+polaronic state, starting from k = π. This state, corresponding
+to |¯b⟩in the strong-coupling regime, then slowly develops
+while lowering further below the incoherent continuum from
+which it emerged. Around this point the incoherent part of the
+spectrum develops a gap and divides into two distinct parts,
+the ﬁrst of which has already been mentioned. The other one,
+situated at a higher energy, develops later into the |a⟩state.
+Finally, at J0 = 5t yet another state can be seen situated close
+to ω = 0, seemingly with no dispersion. This state can be
+identiﬁed as |m⟩and is purely magnonic, while the hole has
+the reversed ↑-spin.
+While it is clear that MF gives good approximations for
+the weak-coupling regime, a curious observation can be made
+about the strong coupling. Looking at the MF solutions plotted
+against the exact results for large values of J0, one notices
+a surprising resemblance to the two lowest-lying states |¯a⟩
+and |¯b⟩, save for some constant energy shift. This indicates
+that MF approximation can give relatively good qualitative
+results, predicting correct dispersion for polaronic states, but
+introduces a systematic error as it neglects the binding energy
+coming from hole-magnon interaction. This explains the huge
+discrepancy between MF energies and the exact energies found
+for the polaron states.
+It is also interesting to note that, while MF predicts the
+gap to develop monotonically, the real solution develops a
+gap shortly after the |¯a⟩state emerges from the incoherent
+region of the spectrum. This gap then closes again at around
+J0 = 2t and only after that does it reappear and start to
+widen monotonically. For more details on the evolution of
+the QP spectra with increasing parameter J0/t, please refer
+to Ref. 34.
+Apart from calculations made for a wide range of J0
+values for s symmetry, we have also done calculations for p
+orbitals. However, because V in our model does not distinguish
+between the two, the only difference will come from their
+difference in dispersion. Taking into account the identity
+115132-6EXACT SPECTRAL FUNCTION FOR HOLE-MAGNON . . .
+PHYSICAL REVIEW B 88, 115132 (2013)
+sin(k/2) = cos[(π −k)/2], we expect the solution for p or-
+bitals to be a “mirror image” of the s-symmetry solutions with
+respect to momentum k = π/2. Figure 4 clearly demonstrates
+that this indeed is the case.
+While the spectral maps are very useful in presenting all
+the spectra obtained for the present exact solution, they do not
+give one a good sense of detail. For this reason, in Fig. 5 we
+present an example of the spectra obtained for J0 = 5t for a
+few selected points k ∈[0,π] of the Brillouin zone. All the ﬁve
+spectral features corresponding to the states |¯a⟩k, |¯b⟩k, |m⟩k,
+|b⟩k, and |a⟩k can be well distinguished from one another. The
+two lowest states clearly have the largest spectral weights.
+V. DISCUSSION AND SUMMARY
+We have used the method developed by M¨oller, Sawatzky,
+and Berciu30 to calculate the exact Green’s function and the
+spectral function for a simple model of a single hole moving
+in a CuO3-like FM chain. Five distinct spectral features are
+identiﬁed: three arise from the hole propagating over the
+a orbitals along the chain, and the other two follow from
+the hole within apical b orbitals in a CuO3-like chain. By
+introducing a realistic orbital structure for a multiband model,
+we addressed the problem of hole dynamics within p orbitals
+in the charge-transfer model for a CuO3 chain. We then
+benchmarked this solution against the perturbation theory
+at strong-coupling and mean-ﬁeld approximations. We have
+found that both of these approaches coincide quite well with
+the Green’s function solution in their respective regimes of
+applicability; i.e., the mean-ﬁeld approximation gives realistic
+predictions for weak interactions, while the perturbation theory
+reproduces all the states reasonably well in the strong-coupling
+regime. The quantum states which develop beyond the
+mean-ﬁeld approximation will decrease their spectral weight
+with increasing value of spin S. In addition, the mean-ﬁeld
+approach seems to recreate the shapes of the polaronic bands
+at the strong coupling, but highly underrates the binding
+energy.
+The perturbation solution allows us to identify ﬁve distinct
+states: two well-deﬁned binding polaronic bands and one
+nearly dispersionless purely magnonic band, accompanied by
+two distinct excited polaronic states, coupled by a broad con-
+tinuum. These latter excited states are much broader and have
+smaller spectral weights, even for very strong coupling J0 ≫t,
+which can be understood as following from the continuum
+of magnon excitations. Furthermore, the |b⟩k,|a⟩k, and |m⟩k
+states which develop beyond the mean-ﬁeld approximation
+will decrease their spectral weight with increasing value of
+spin S in the ferromagnetic chain. Indeed, the modiﬁcations of
+the spectra arising from quantum spin ﬂuctuations are largest
+for S = 1/2 and decrease with increasing S.
+We also note that there is no essential difference between s-
+and p-orbital symmetries for the injected hole in the model
+of Eq. (1), which is a result of taking into account only
+the exchange terms (second-order two-site p-d-p hopping).
+Therefore, such a simple model cannot properly describe
+a system with O-based conductance, reminiscent of doped
+cuprates. The simplest generalization of the present model
+is to include the three-site p-d-p terms,28 which distinguish
+orbital symmetry. This is an interesting problem for future
+studies.
+ACKNOWLEDGMENT
+WethankMonaBerciufor insightful discussions. Wekindly
+acknowledge ﬁnancial support by the Polish National Science
+Center (NCN) under Project No. 2012/04/A/ST3/00331.
+APPENDIX: DETAILS OF THE EXACT
+SOLUTION OF EQ. (20)
+Here we present the details of the calculation of the anoma-
+lous Green’s function ˜F(k,q,ω). After applying the Dyson
+equation (14) to the Green’s function appearing in the
+deﬁnition given in Eq. (17), one obtains
+˜Fμν(k,q,ω) = ⟨FM|μk↓G(ω)Vν†
+k−q,↑S−
+q |FM⟩
+× G0(k −q,ω −q),
+(A1)
+where the freestanding G0(ω) disappears due to the anomalous
+average.
+Since the total spin of the system is conserved, only one
+spin ﬂip is allowed in the FM background interacting with the
+hole. Therefore, in the present case V can only leave the same
+defected state (which causes a renormalization of ˜F(k,q,ω)) or
+may reproduce the initial FM state by means of a deexcitation
+of a magnon by a term ∝S+s−. This leads directly to the
+following equation:
+˜F(k,q,ω) =
+
+−J0
+N
+
+p
+˜F(k,p,ω)V(q −p)
++ 2J0S
+N
+G(k,ω)V(q)
+
+× G0(k −q,ω −q)QF(k,q,ω),
+(A2)
+QF(k,q,ω) = [I −J0SV0G0(k −q,ω −q)]−1.
+(A3)
+One has as well,
+V(q −p) =
+cos q−p
+2
+0
+0
+1
+2
+
+=
+cos q
+2
+0
+0
+1
+2
+ cos p
+2
+0
+0
+1
+2
+
++
+ sin q
+2
+0
+0
+1
+2
+sin p
+2
+0
+0
+1
+2
+
+= V(q)V(p) + ¯V(q) ¯V(p),
+(A4)
+and one ﬁnds
+˜F(k,q,ω) =
+
+−J0
+N [F(k,ω)V(q) + ¯F(k,ω) ¯V(q)]
++ 2J0S
+N
+G(k,ω)V(q)
+
+× G0(k −q,ω −q)QF(k,q,ω),
+(A5)
+115132-7KRZYSZTOF BIENIASZ AND ANDRZEJ M. OLE´S
+PHYSICAL REVIEW B 88, 115132 (2013)
+where
+¯F(k,ω) =
+
+p
+˜F(k,p,ω) ¯V(p).
+(A6)
+F(k,ω) used here is deﬁned in Eq. (16). Multiplying now
+Eq. (A5) either by V(q) or by ¯V(q) and summing over q, one
+can ﬁnd explicit equations for F(k,ω) and ¯F(k,ω) in terms of
+G(k,ω). Since ¯F(k,ω) serves only as an auxiliary function, we
+only present F(k,ω) here:
+F(k,ω) = 2SG(k,ω)[I −M−1(k,ω)],
+(A7)
+where we have already introduced the matrix M(k,ω), deﬁned
+as follows:
+M(k,ω) = I + J0Gcc(k,ω)
+−J 2
+0 Gcs(k,ω)(I + J0Gss(k,ω))−1Gsc(k,ω), (A8)
+which is closely related to the self-energy. The auxiliary
+matrices introduced in Eq. (A8) are
+Gcc = 1
+N
+
+q
+V(q)G0(k −q,ω −q)V(q),
+(A9a)
+Gcs = 1
+N
+
+q
+V(q)G0(k −q,ω −q) ¯V(q),
+(A9b)
+Gsc = 1
+N
+
+q
+¯V(q)G0(k −q,ω −q)V(q),
+(A9c)
+Gss = 1
+N
+
+q
+¯V(q)G0(k −q,ω −q) ¯V(q).
+(A9d)
+After plugging the solution Eq. (A7) into Eq. (15) and solving
+for G(k,ω), one obtains the ﬁnal result, Eq. (20) of Sec. III A.
+*krzysztof.bieniasz@uj.edu.pl
+1M. Imada, A. Fujimori, and Y. Tokura, Rev. Mod. Phys. 70, 1039
+(1998).
+2J. Zaanen and A. M. Ole´s, Phys. Rev. B 48, 7197 (1993).
+3E. Dagotto, Rev. Mod. Phys. 66, 763 (1994).
+4P. A. Lee, N. Nagaosa, and X. G. Wen, Rev. Mod. Phys. 78, 17
+(2006).
+5M. Ogata and H. Fukuyama, Rep. Prog. Phys. 71, 036501 (2008).
+6E. Dagotto, T. Hotta, and A. Moreo, Phys. Rep. 344, 1 (2001);
+E. Dagotto, New J. Phys. 7, 67 (2005).
+7A. Weiße and H. Fehske, New J. Phys. 6, 158 (2004).
+8Y. Tokura, Rep. Prog. Phys. 69, 797 (2006).
+9P. G. de Gennes, Phys. Rev. 118, 141 (1960).
+10J. van den Brink and D. Khomskii, Phys. Rev. Lett. 82, 1016
+(1999).
+11K. Takenaka, R. Shiozaki, and S. Sugai, Phys. Rev. B 65, 184436
+(2002).
+12A. M. Ole´s and L. F. Feiner, Phys. Rev. B 65, 052414 (2002);
+L. F. Feiner and A. M. Ole´s, ibid. 71, 144422 (2005).
+13A. M. Ole´s, J. Phys.: Condens. Matter 24, 313201 (2012).
+14V. J. Emery, Phys. Rev. Lett. 58, 2794 (1987); C. M. Varma,
+S. S. Schmitt-Rink, and E. E. Abrahams, Solid State Commun.
+62, 681 (1987); A. M. Ole´s, J. Zaanen, and P. Fulde, Physica B + C
+(Amsterdam) 148, 260 (1987).
+15F. C. Zhang and T. M. Rice, Phys. Rev. B 37, 3759 (1988).
+16J. H. Jefferson, H. Eskes, and L. F. Feiner, Phys. Rev. B 45, 7959
+(1992); L. F. Feiner, J. H. Jefferson, and R. Raimondi, ibid. 53,
+8751 (1996); R. Raimondi, J. H. Jefferson, and L. F. Feiner, ibid.
+53, 8774 (1996).
+17J. Fujioka, S. Miyasaka, and Y. Tokura, Phys. Rev. B 77, 144402
+(2008); P. Horsch and A. M. Ole´s, ibid. 84, 064429 (2011).
+18H. Sakai, S. Ishiwata, D. Okuyama, A. Nakao, H. Nakao,
+Y. Murakami, Y. Taguchi, and Y. Tokura, Phys. Rev. B 82, 180409
+(2010); A. M. Ole´s and G. Khaliullin, ibid. 84, 214414 (2011).
+19S. A. Trugman, Phys. Rev. B 37, 1597 (1988).
+20G. Mart´ınez and P. Horsch, Phys. Rev. B 44, 317 (1991).
+21W. Nolting, Phys. Status Solidi B 96, 11 (1979).
+22W. Nolting and A. M. Ole´s, Phys. Rev. B 22, 6184 (1980); 23, 4122
+(1981).
+23T. Wegner, M. Potthoff, and W. Nolting, Phys. Rev. B 57, 6211
+(1998).
+24W. Nolting, S. M. Jaya, and S. Rex, Phys. Rev. B 54, 14455
+(1996).
+25M. Daghofer, A. M. Ole´s, and W. von der Linden, Phys. Rev. B 70,
+184430 (2004).
+26M. Daghofer, P. Horsch, and G. Khaliullin, Phys. Rev. Lett. 96,
+216404 (2006).
+27A. Avella, P. Horsch, and A. M. Ole´s, Phys. Rev. B 87, 045132
+(2013).
+28J. Zaanen and A. M. Ole´s, Phys. Rev. B 37, 9423 (1988).
+29P. Prelovˇsek, Phys. Lett. A 126, 287 (1988).
+30M. M¨oller, G. A. Sawatzky, and M. Berciu, Phys. Rev. Lett. 108,
+216403 (2012); Phys. Rev. B 86, 075128 (2012).
+31J. Schlappa et al., Nature (London) 485, 82 (2011).
+32K. Wohlfeld, M. Daghofer, S. Nishimoto, G. Khaliullin, and J. van
+den Brink, Phys. Rev. Lett. 107, 147201 (2011).
+33M. Berciu and G. A. Sawatzky, Phys. Rev. B 79, 195116
+(2009).
+34See Supplemental Material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.88.115132 for an animated GIF, visualizing the
+evolution of the spectra with increasing value of the Kondo-like
+exchange J0.
+115132-8

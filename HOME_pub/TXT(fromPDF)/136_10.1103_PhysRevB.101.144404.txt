@@ -1,0 +1,662 @@
+PHYSICAL REVIEW B 101, 144404 (2020)
+Interface-driven giant tunnel magnetoresistance in (111)-oriented junctions
+Keisuke Masuda
+,1 Hiroyoshi Itoh
+,2,3 and Yoshio Miura
+1,3,4
+1Research Center for Magnetic and Spintronic Materials, National Institute for Materials Science (NIMS), Tsukuba 305-0047, Japan
+2Department of Pure and Applied Physics, Kansai University, Suita 564-8680, Japan
+3Center for Spintronics Research Network, Osaka University, Toyonaka 560-8531, Japan
+4Center for Materials Research by Information Integration, National Institute for Materials Science (NIMS), Tsukuba 305-0047, Japan
+(Received 2 December 2019; revised manuscript received 27 February 2020; accepted 28 February 2020;
+published 6 April 2020)
+We
+theoretically
+study
+the
+tunnel
+magnetoresistance
+(TMR)
+effect
+in
+(111)-oriented
+junctions
+Co/MgO/Co(111) and Ni/MgO/Ni(111). The Co-based junction is shown to have a TMR ratio over 2000%,
+which is one order higher than that of the Ni-based one. The high TMR ratio is attributed to the interfacial
+resonance effect: The interfacial d-p antibonding states are formed close to the Fermi level in the majority-spin
+channel and these states in both interfaces resonate with each other. This differs essentially from the conventional
+coherent tunneling mechanism of high TMR ratios in Fe(Co)/MgO/Fe(Co)(001).
+DOI: 10.1103/PhysRevB.101.144404
+I. INTRODUCTION
+Since the observation of the giant tunnel magnetoresis-
+tance (TMR) effect in Fe(Co)/MgO/Fe(Co)(001) magnetic
+tunnel junctions (MTJs) [1,2], the TMR effect has long been
+explained by the coherent tunneling mechanism [3,4]: Bulk
+wave functions of the ferromagnetic electrode are selectively
+ﬁltered by the MgO barrier and only the 1 wave function
+with half metallicity at the Fermi level passes through the
+barrier, leading to the high TMR ratio [Fig. 1(a)]. However,
+there is a signiﬁcant discrepancy in the TMR ratio between the
+theory and experiments; the highest TMR ratio observed so
+far is around 500% at low temperature [5], but is about half of
+the theoretically predicted value over 1000% [3,4]. A possible
+key to understand this gap is interfacial effects. Several studies
+[6,7] have indicated the importance of interfacial states for
+explaining temperature dependencies of TMR ratios [8]. In
+the (001)-oriented MTJs, the interfacial states are formed in
+the minority-spin state [3,9] and tend to decrease the TMR
+ratio [10].
+These
+motivate
+us
+to
+speculate
+that
+interfacial
+states provide signiﬁcant contribution to TMR effects
+in real experiments and decrease the TMR ratios in
+Fe(Co)/MgO/Fe(Co)(001)
+MTJs.
+In
+contrast,
+we
+can
+utilize such interfacial states for enhancing the TMR effect
+signiﬁcantly; this study proposes a quite high TMR ratio
+driven by the interfacial resonance effect in an unconventional
+(111)-oriented MTJ.
+In the present work, we theoretically examine the TMR
+effect in two basic (111)-oriented MTJs, Co/MgO/Co(111)
+[Fig. 1(b)] and Ni/MgO/Ni(111), where (111) directions of
+the MgO barrier and ferromagnetic electrodes (fcc Co or fcc
+Ni) are parallel to the stacking direction of the MTJ. It is
+natural to consider such (111)-oriented MTJs for fcc ferro-
+magnetic electrodes because the close-packed (111) plane has
+the lowest surface energy in the fcc lattice [11]. However,
+TMR effects in these MTJs have not been understood well,
+since most previous studies have focused on (001)-oriented
+MTJs with bcc ferromagnetic electrodes. We calculate con-
+ductances and TMR ratios of the (111)-oriented MTJs by
+means of the ﬁrst-principles approach combining the density-
+functional theory (DFT) and the Landauer formula. It is shown
+that the obtained TMR ratio of the Co-based MTJ is quite
+high (∼2100%) while that of the Ni-based one is relatively
+low (∼250%). From the in-plane wave-vector dependencies
+of the conductances, we ﬁnd that the TMR effect in the
+(111)-oriented MTJs cannot be understood from the bulk band
+structures of the barrier and electrodes, which is essentially
+different from the case of the (001)-oriented MTJs. Detailed
+analyses of the local electronic structure and the transmittance
+clarify that the resonance of the interfacial d-p antibonding
+states in the majority-spin channel is the origin of the high
+TMR ratio in the Co-based (111)-oriented MTJ.
+II. CALCULATION METHOD
+We
+prepared
+supercells
+of
+Co/MgO/Co(111)
+and
+Ni/MgO/Ni(111) as shown in Fig. 1(b). The a- and b-axis
+lengths were ﬁxed to a = afcc/
+√
+2 and b =
+√
+3 afcc/
+√
+2,
+where we used afcc = 3.52 Å for both the supercells. In
+the Co-based (Ni-based) supercell, we chose the Co-O
+(Ni-O) interface, which is energetically favored compared
+to the Co-Mg (Ni-Mg) one. The atomic positions along
+the c direction in the supercells were relaxed using the
+ﬁrst-principles DFT calculation implemented in the Vienna
+ab initio simulation program (VASP) [12]. Here, we adopted
+the spin-polarized generalized gradient approximation (GGA)
+[13] for the exchange-correlation energy and used the
+projector augmented wave pseudopotential [14,15] to treat
+the effect of core electrons properly. A cutoff energy of
+500 eV was employed and the Brillouin-zone integration was
+performed with the 23 × 13 × 1 Monkhorst-Pack k-point
+grid. The convergence criteria for energy and force were set
+to 10−5 eV and 10−3 eV/Å, respectively. More details of our
+structure optimization are given in our previous work [16].
+2469-9950/2020/101(14)/144404(5)
+144404-1
+©2020 American Physical SocietyMASUDA, ITOH, AND MIURA
+PHYSICAL REVIEW B 101, 144404 (2020)
+z
+x
+y
+Co O
+Mg
+x
+z
+y
+Fe or FeCo
+O
+Mg
+(a) Fe(Co)/MgO/Fe(Co)(001)
+(b) Co/MgO/Co(111)
+FIG. 1. Supercells
+of
+(a)
+Fe(Co)/MgO/Fe(Co)(001)
+and
+(b) Co/MgO/Co(111). Schematics for the TMR effects in these
+MTJs are also shown.
+Using the optimized supercell, we constructed quantum
+open systems by attaching the left and right semi-inﬁnite
+electrodes of Co (Ni) to the Co-based (Ni-based) supercell.
+In each quantum open system, we calculated conductances
+for both parallel and antiparallel conﬁgurations of magne-
+tization in the electrodes using the PWCOND code [17] in
+the QUANTUM ESPRESSO package [18]. First, we obtained
+the self-consistent potential of the quantum open system,
+where the GGA and the ultrasoft pseudopotentials were used
+for the DFT calculation. The cutoff energies for the wave
+functions and the charge density were ﬁxed to 45 and 450
+Ry, respectively. The 23 × 13 × 1 k points were used for the
+Brillouin-zone integration and the convergence criterion was
+set to 10−6 Ry. Since our systems are repeated periodically in
+the xy plane, the scattering states can be classiﬁed by an in-
+plane wave vector k∥= (kx, ky). For each k∥and spin index,
+we solved the scattering equation derived under the condition
+that the wave function and its derivative of the supercell are
+connected to those of the electrodes [17,19]. These calcula-
+tions and the Landauer formula give the wave-vector-resolved
+conductances GP,↑(k∥), GP,↓(k∥), GAP,↑(k∥), and GAP,↓(k∥),
+which are the majority- and minority-spin conductances in
+the parallel and antiparallel conﬁgurations of magnetizations,
+respectively. The averaged conductances are obtained as, e.g.,
+GP,↑= 
+k∥GP,↑(k∥)/N, where N is the sampling number of
+k∥points. In the present study, N was set to 2500 ensuring
+good convergence for the conductances. Using the averaged
+conductances, we calculated TMR ratio (%) = 100 × (GP −
+GAP)/GAP, where GP(AP) = GP(AP),↑+ GP(AP),↓.
+III. RESULTS AND DISCUSSION
+Table I shows conductances and TMR ratios obtained
+in our calculations. In the Co-based MTJ, the parallel
+conductance GP is much larger than the antiparallel one GAP,
+leading to a quite high TMR ratio of more than 2000%.
+On the other hand, the Ni-based MTJ has a smaller TMR
+TABLE I. Calculated conductances and TMR ratios. The units
+are in e2/h and %, respectively.
+Co/MgO/Co(111)
+Ni/MgO/Ni(111)
+GP,↑
+2.48 × 10−3
+5.71 × 10−5
+GP,↓
+1.42 × 10−3
+1.23 × 10−3
+GAP,↑
+8.73 × 10−5
+1.84 × 10−4
+GAP,↓
+8.75 × 10−5
+1.84 × 10−4
+GP
+3.90 × 10−3
+1.29 × 10−3
+GAP
+1.75 × 10−4
+3.68 × 10−4
+TMR ratio
+2130
+250
+ratio of 250% since the difference between GP and GAP is
+smaller compared to the Co-based case. One may think that
+the mechanism of such TMR effects is similar to that in
+the (001)-oriented MTJs. Previous theoretical studies [3,4]
+have shown that the TMR effect in Fe/MgO/Fe(001) is
+dominated by the bulk band structures of Fe and MgO
+along the  line corresponding to the (001) direction;
+in their results, GP,↑(k∥) mainly contributing to the high
+TMR ratio has a sharp peak at k∥= (0, 0) = . If the
+similar mechanism holds for the (111)-oriented MTJs, the
+TMR effect should be explained by the band structures
+along the  line corresponding to the (111) direction. In
+this case, GP,↑(k∥) or GP,↓(k∥) or both of them should
+have a large value at k∥= , since the  line is equiv-
+alent to the kz line at k∥=  in the present supercells
+[Fig. 1(b)].
+To see whether or not this scenario is valid, we analyzed
+the in-plane wave vector k∥= (kx, ky) dependencies of the
+conductances as shown in Fig. 2. Figure 2(a) shows the
+majority-spin conductance GP,↑(k∥) in the Co-based MTJ
+playing the key role for the obtained high TMR ratio. We
+see that the conductance at k∥=  is much smaller than that
+around k∥= , which is clearly different from the features
+expected from the above-mentioned mechanism. Figures 2(b)
+and 2(c) show the minority-spin and antiparallel conductances
+[GP,↓(k∥) and GAP,↑(k∥)] in the Co-based MTJ [20], which
+also do not have a signiﬁcant value at k∥=  and their
+values spread more widely in the k∥Brillouin zone than
+GP,↑(k∥). In Figs. 2(d)–2(f), we show the k∥dependencies
+of the conductances in the Ni-based MTJ. Although detailed
+features are different from those in the Co-based MTJ, the
+conductances also do not have a signiﬁcant value at k∥= .
+All these results indicate that the TMR effect in the (111)-
+oriented MTJs cannot be explained by the bulk band structures
+of the barrier and electrodes along the  line, in sharp contrast
+to the previous results on the (001)-oriented MTJs [3,4]. We
+also analyzed bulk band structures of fcc Co, Ni, and MgO
+along the  line, which revealed that, although the complex
+band of MgO(111) consists of the 1 state, both Co and
+Ni do not have a half metallicity in the 1 state. This also
+suggests the inapplicability of the explanation based on bulk
+band structures.
+To obtain further insight into the role of the MgO
+barrier,
+we
+additionally
+analyzed
+the
+TMR
+effect
+in
+Co/vacuum/Co(111), where the distance between the left and
+right interfaces and all the positions of Co atoms were set
+to be the same as those of Co/MgO/Co(111). We obtained
+144404-2INTERFACE-DRIVEN GIANT TUNNEL MAGNETORESISTANCE …
+PHYSICAL REVIEW B 101, 144404 (2020)
+-1.0
+-0.5
+ 0
+0.5
+1.0
+ 0
+ 0.5
+ 1.0
+ 1.5
+ 2.0
+ 2.5
+ 3.0
+ 3.5×10-1
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+ 0
+ 0.2
+ 0.4
+ 0.6
+ 0.8
+ 1.0
+ 1.2
+ 1.4×10-1
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+ 0
+ 0.2
+ 0.4
+ 0.6
+ 0.8
+ 1.0
+ 1.2×10-3
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+ 0
+ 0.5
+ 1.0
+ 1.5
+ 2.0
+ 2.5
+ 3.0
+ 3.5
+ 4.0×10-4
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+ 0
+ 0.5
+ 1.0
+ 1.5
+ 2.0
+ 2.5
+ 3.0×10-2
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+-1.0
+-0.5
+ 0
+ 0.5
+ 1.0
+ 0
+ 0.5
+ 1.0
+ 1.5
+ 2.0
+ 2.5×10-3
+Co/MgO/Co(111)
+Ni/MgO/Ni(111)
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+FIG. 2. The
+k∥
+dependencies
+of
+conductances
+in
+Co/MgO/Co(111)
+[(a)–(c)]
+and
+Ni/MgO/Ni(111)
+[(d)–(f)].
+(a),(d)
+Majority-spin
+conductances
+GP,↑(k∥)
+and
+(b),(e)
+minority-spin conductances GP,↓(k∥) in the parallel magnetization
+conﬁgurations. (c),(f) Majority-spin conductances GAP,↑(k∥) in the
+antiparallel magnetization conﬁgurations.
+a TMR ratio of 320%, which is one order lower than that
+of Co/MgO/Co(111). This clearly indicates the necessity of
+MgO to achieve a high TMR ratio. From the comparison
+of the k∥-resolved conductances between the vacuum and
+MgO cases, we found that MgO particularly damps the wave
+functions that are distributed away from k∥= .
+Interfacial effects are the key to understand the present
+TMR effect. As shown in Figs. 2(a)–2(f), the conductances
+have signiﬁcant values in a set of k∥points surrounding
+k∥= . This reminds us of the existence of the inter-
+facial resonance effect. Examples showing this effect are
+Fe/MgO/Fe(001) [3,21–23], Co/MgO/Co(001) [24], and
+FeCo/MgO/FeCo(001) [24], which have interfacial states
+close to the Fermi level in the minority-spin channel. Such
+states in the left and right interfaces resonate with each other
+and provide non-negligible values of GP,↓(k∥) in the k∥points
+surrounding . Furthermore, additional transport between the
+interfacial minority-spin states and the bulk majority-spin 1
+state enhance GAP,↑(k∥) and GAP,↓(k∥). Thus, the interfacial
+states itself tend to decrease the TMR ratio in the (001)-
+oriented MTJ. However, since GP,↑(k∥) has a quite large value
+at k∥=  based on the coherent tunneling mechanism [3,4],
+the interfacial effect provides a small contribution to the TMR
+ratio. Note that these are the previous theoretical results; the
+interfacial effect is sensitive to the interfacial conditions in
+real experiments [21].
+To conﬁrm the existence of interfacial states in the present
+MTJs, we show in Figs. 3(a) and 3(b) the projected LDOSs
+-0.4
+-0.2
+ 0
+ 0.2
+ 0.4
+-0.4
+-0.2
+ 0
+ 0.2
+ 0.4
+-0.4
+-0.2
+ 0
+ 0.2
+ 0.4
+-0.4
+-0.2
+ 0
+ 0.2
+ 0.4
+-0.4
+-0.2
+ 0
+ 0.2
+ 0.4
+(a)
+(b)
+(c)
+(d)
+E-E  [eV]
+LDOS [states/eV/orbital]
+LDOS [states/eV/orbital]
+LDOS [states/eV/orbital]
+LDOS [states/eV/orbital]
+Co in Co/MgO/Co(111)
+O in Co/MgO/Co(111)
+Ni in Ni/MgO/Ni(111)
+O in Ni/MgO/Ni(111)
+FIG. 3. (a),(b) Projected LDOSs at interfacial Co and O atoms in
+Co/MgO/Co(111). (c),(d) The same as (a) and (b) but at interfacial
+Ni and O atoms in Ni/MgO/Ni(111). In each panel, positive and
+negative values indicate the majority- and minority-spin projected
+LDOSs.
+of interfacial Co and O atoms in the Co/MgO/Co(111)
+MTJ. In Fig. 3(b), we see that the interfacial O atoms have
+peaks of the majority-spin LDOSs in the px and py orbitals
+close to the Fermi level (EF), which originates from the
+antibonding between Co dzx (dyz) and O px (py) states at the
+interface. As mentioned below, such interfacial antibonding
+states mainly contribute to the high TMR ratio through the
+interfacial resonance effect. It should be emphasized that these
+majority-spin interfacial states enhance GP,↑(k∥) but hardly
+enhance GAP,↑(k∥) and GAP,↓(k∥), which is because the bulk
+minority-spin state is not signiﬁcant in the (111)-oriented
+MTJ. This is clearly different from the (001)-oriented case
+and the reason why we obtained the large TMR ratio in this
+MTJ. In the case of the Ni/MgO/Ni(111) MTJ [Figs. 3(c)
+and 3(d)], on the other hand, the interfacial antibonding state
+between Ni dzx (dyz) and O px (py) states is formed at a lower
+energy compared to the Co-based case, which is owing to the
+difference in the valence electron number between Co and Ni.
+Thus, the interfacial O atoms have small majority-spin LDOSs
+in the px and py orbitals at E = EF.
+Conclusive information on the mechanism for the present
+TMR
+effect
+is
+given
+by
+the
+k∥-resolved
+LDOSs
+of
+interfacial atoms in Co/MgO/Co(111) [Figs. 4(a)–4(h)] and
+Ni/MgO/Ni(111) [Figs. 4(i)–4(p)]. Here, we only showed
+the LDOSs at E = EF in the Co (Ni) dzx, Co (Ni) dyz, O
+px, and O py orbitals providing essential contributions to the
+conductances. It is seen that the LDOS in the Co (Ni) dzx
+144404-3MASUDA, ITOH, AND MIURA
+PHYSICAL REVIEW B 101, 144404 (2020)
+Co d
+Co d
+O p
+O p
+Majority-spin (↑)
+Minority-spin (↓)
+Ni d
+Ni d
+O p
+O p
+Majority-spin (↑)
+Minority-spin (↓)
+Co/MgO/Co(111)
+Ni/MgO/Ni(111)
+FIG. 4. The k∥-resolved LDOSs at E = EF of interfacial atoms
+in (a)–(h) Co/MgO/Co(111) and (i)–(p) Ni/MgO/Ni(111). (a)–
+(d) Contributions from Co dzx, Co dyz, O px, and O py orbitals in
+the majority-spin state, respectively. (e)–(h) The same as (a)–(d) but
+in the minority-spin state. (i)–(l) Contributions from Ni dzx, Ni dyz, O
+px, and O py orbitals in the majority-spin state, respectively. (m)–(p)
+The same as (i)–(l) but in the minority-spin state. In each panel,
+k∥-resolved LDOSs are normalized by its maximum value.
+orbital has an almost the same k∥dependence as that in the
+O px orbital in each spin state [e.g., Figs. 4(a) and 4(c)],
+since these orbitals make an antibonding state around E = EF
+as mentioned above. The same relation holds between the
+LDOSs of Co (Ni) dyz and O py orbitals [e.g., Figs. 4(b) and
+4(d)]. Of particular importance is that the k∥dependencies
+of the conductances in Fig. 2 can be understood by those
+of the LDOSs in Fig. 4. In fact, GP,↑(k∥) in the Co-based
+MTJ [Fig. 2(a)] can be almost reproduced by mixing the k∥
+dependencies of majority-spin LDOSs in the O px (Co dzx)
+and O py (Co dyz) states [Figs. 4(a)–4(d)]. The minority-
+spin conductance GP,↓(k∥) [Fig. 2(b)] also reﬂects minority-
+spin LDOSs in the O px (Co dzx) and O py (Co dyz) states
+[Figs. 4(e)–4(h)]. In a similar way, we can explain the k∥
+dependencies of the conductances [Figs. 2(d)–2(f)] by those of
+the LDOSs [Figs. 4(i)–4(p)] in the case of Ni/MgO/Ni(111);
+e.g., GP,↓(k∥) [Fig. 2(e)] has a similar k∥dependence to the
+minority-spin LDOSs in the Ni dzx and O px states [Figs. 4(m)
+and 4(o)]. All these results clearly suggest that the interfacial
+antibonding states at E ≈EF provide the TMR effect in the
+(111)-oriented MTJs through the interfacial resonance effect.
+Further evidence for the interfacial resonance effect is
+obtained from the energy dependence of the transmittance.
+Figure 5 shows the majority-spin transmittance TP,↑(E) of the
+Co/MgO/Co(111) MTJ at (kxa/π, kyb/π) = (0.04, 0.32),
+where the conductance GP,↑(k∥) has the maximum value
+[Fig. 2(a)]. Note that the transmittance is converted to the
+conductance
+simply
+by
+multiplying
+e2/h
+[GP,↑(k∥) =
+(e2/h) × TP,↑(k∥)] and we showed in Fig. 2 the conductances
+ -4
+ -3
+ -2
+ -1
+ 0
+-0.4
+-0.3
+-0.2
+-0.1
+ 0
+ 0.1
+ 0.2
+ 0.3
+ 0.4
+E-EF [eV]
+FIG. 5. The energy dependence of the majority-spin transmit-
+tance at (kxa/π, kyb/π) = (0.04, 0.32) in the Co/MgO/Co(111)
+MTJ with the parallel conﬁguration of magnetizations.
+at E = EF. In Fig. 5, we can see sharp peaks close to EF,
+which are similar to those previously obtained in the minority-
+spin transmittance in the Fe/MgO/Fe(001) MTJ exhibiting
+the interfacial resonance effect [21–23]. Since the resonance
+effect usually occurs in a narrow energy range, such a charac-
+teristic energy dependence of the transmittance is concluded
+to originate from the interfacial resonance effect. On the other
+hand, when a ﬁnite bias voltage (∼0.05 V) is applied to the
+MTJ, the interfacial resonance could be removed owing to its
+small energy width [21,25], leading to the reduction of the
+TMR ratio. However, we have many other interfacial states
+around EF as shown in Figs. 3(a) and 3(b). Thus, if we increase
+the bias voltage further, these interfacial states may form a
+new resonance and enhance the TMR ratio [21].
+Some previous studies have provided partial informa-
+tion on (111)-oriented MTJs. Hauch et al. [26] fabricated
+an Fe(110)/MgO(111)/Fe(110) MTJ with the (111)-oriented
+MgO barrier and observed a low TMR ratio of 54% at
+low temperature. They attributed the low TMR ratio to
+the imperfect spin ﬁltering in the 1 state. Belashchenko
+et al. [27] theoretically analyzed Co/Al2O3/Co(111) MTJs.
+Although they revealed the sensitivity of the current spin
+polarization to the interfacial atomic conﬁguration, the ob-
+tained TMR ratios were quite low (∼60%). In the present
+work, by focusing on simpler (111)-oriented MTJs and car-
+rying out detailed analyses on local electronic structures, we
+found a quite high TMR ratio and clariﬁed its underlying
+mechanism.
+IV. SUMMARY
+We theoretically investigated the TMR effect in un-
+conventional (111)-oriented MTJs, Co/MgO/Co(111) and
+Ni/MgO/Ni(111). By estimating their transport properties
+using the ﬁrst-principles-based approach, we found that the
+Co-based MTJ has a TMR ratio over 2000%, which is much
+higher than that of the Ni-based one of 250%. The anal-
+yses of the LDOSs and the transmittance showed that the
+obtained high TMR ratio comes from the resonance of the
+interfacial d-p antibonding states in the majority-spin chan-
+nel. This mechanism is essentially different from that in the
+Fe(Co)/MgO/Fe(Co)(001) MTJ and suggests a novel way to
+achieve a giant TMR ratio.
+144404-4INTERFACE-DRIVEN GIANT TUNNEL MAGNETORESISTANCE …
+PHYSICAL REVIEW B 101, 144404 (2020)
+ACKNOWLEDGMENTS
+The authors are grateful to Y. Sonobe, S. Mitani,
+H. Sukegawa, Y. Kozuka, and K. Nawa for useful dis-
+cussions and helpful comments. This work was partly
+supported by Grants-in-Aid for Scientiﬁc Research (S)
+(Grant No. 16H06332) from the Ministry of Education,
+Culture, Sports, Science and Technology, Japan and by
+NIMS MI2I. The crystal structures were visualized using
+VESTA [28].
+[1] S. Yuasa, T. Nagahama, A. Fukushima, Y. Suzuki, and K. Ando,
+Nat. Mater. 3, 868 (2004).
+[2] S. S. P. Parkin, C. Kaiser, A. Panchula, P. M. Rice, B. Hughes,
+M. Samant, and S.-H. Yang, Nat. Mater. 3, 862 (2004).
+[3] W. H. Butler, X.-G. Zhang, T. C. Schulthess, and J. M.
+MacLaren, Phys. Rev. B 63, 054416 (2001).
+[4] J. Mathon and A. Umerski, Phys. Rev. B 63, 220403(R) (2001).
+[5] S. Yuasa, A. Fukushima, H. Kubota, Y. Suzuki, and K. Ando,
+Appl. Phys. Lett. 89, 042505 (2006).
+[6] Y. Miura, K. Abe, and M. Shirai, Phys. Rev. B 83, 214411
+(2011).
+[7] A. Sakuma, Y. Toga, and H. Tsuchiura, J. Appl. Phys. 105,
+07C910 (2009).
+[8] S. Tsunegi, Y. Sakuraba, M. Oogane, K. Takanashi, and Y.
+Ando, Appl. Phys. Lett. 93, 112506 (2008).
+[9] C. Kim and Y.-C. Chung, J. Appl. Phys. 103, 054309 (2008).
+[10] M. Jullière, Phys. Lett. A 54, 225 (1975).
+[11] N. Ting, Y. Qingliang, and Y. Yiying, Surf. Sci. 206, L857
+(1988).
+[12] G. Kresse and J. Furthmüller, Phys. Rev. B 54, 11169 (1996).
+[13] J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77,
+3865 (1996).
+[14] P. E. Blöchl, Phys. Rev. B 50, 17953 (1994).
+[15] G. Kresse and D. Joubert, Phys. Rev. B 59, 1758 (1999).
+[16] K. Masuda and Y. Miura, Phys. Rev. B 96, 054428 (2017).
+[17] A. Smogunov, A. Dal Corso, and E. Tosatti, Phys. Rev. B 70,
+045417 (2004).
+[18] S. Baroni, A. Dal Corso, S. de Gironcoli, and P. Giannozzi, http:
+//www.pwscf.org.
+[19] H. J. Choi and J. Ihm, Phys. Rev. B 59, 2267 (1999).
+[20] In Fig. 2, we only showed GAP,↑(k∥) as the conductance in the
+antiparallel magnetization case, because GAP,↓(k∥) has almost
+the same k∥dependence as GAP,↑(k∥).
+[21] D. Waldron, V. Timoshevskii, Y. Hu, K. Xia, and H. Guo, Phys.
+Rev. Lett. 97, 226802 (2006).
+[22] I. Rungger, A. R. Rocha, O. Mryasov, O. Heinonen, and S.
+Sanvito, J. Magn. Magn. Mater. 316, 481 (2007).
+[23] I. Rungger, O. Mryasov, and S. Sanvito, Phys. Rev. B 79,
+094414 (2009).
+[24] X.-G. Zhang and W. H. Butler, Phys. Rev. B 70, 172407
+(2004).
+[25] O. Wunnicke, N. Papanikolaou, R. Zeller, P. H. Dederichs, V.
+Drchal, and J. Kudrnovský, Phys. Rev. B 65, 064425 (2002).
+[26] J. O. Hauch, M. Fonin, M. Fraune, P. Turban, R. Guerrero, F. G.
+Aliev, J. Mayer, U. Rüdiger, and G. Güntherodt, Appl. Phys.
+Lett. 93, 083512 (2008).
+[27] K. D. Belashchenko, E. Y. Tsymbal, I. I. Oleynik, and M. van
+Schilfgaarde, Phys. Rev. B 71, 224422 (2005).
+[28] K. Momma and F. Izumi, J. Appl. Crystallogr. 44, 1272
+(2011).
+144404-5

@@ -1,0 +1,1424 @@
+Predicting the Early Stages of Solid-State Precipitation in Al-rich 
+Al-Pt Alloys 
+Shenghan Su a, Laure Bourgeois a, b, *, Nikhil V. Medhekar a, * 
+ 
+a Department of Materials Science and Engineering, Monash University, VIC, 3800, 
+Australia. 
+b Monash Centre for Electron Microscopy, Monash University, VIC, 3800, Australia. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+* Corresponding authors.  
+E-mail: nikhil.medhekar@monash.edu; laure.bourgeois@monash.edu1 
+Abstract 
+The high strength of structural aluminium alloys depends strongly on the controlled 
+precipitation of specific intermetallic phases, whose identity and crystal structure can be 
+difficult to predict. Here, we investigate the Al-Pt system, which shows some similarity 
+to the Al-Cu system as one of their main intermetallic phases, Al2Pt, is nearly isostructural 
+with θ′(Al2Cu), the metastable phase responsible for the high-strength of Al-Cu alloys. 
+However, phases in Al-Pt alloys are complex and have not been studied in detail. Using 
+a combination of density-functional theory (DFT) calculations and classical nucleation 
+theory (CNT) applied to the Al-Pt system, we design a workflow to predict the 
+thermodynamics of solid solution, intermediate phases such as GP zones, stable and 
+metastable precipitates, and their precipitation sequence. This workflow can be applied 
+to an arbitrary binary alloying system. We confirm the known stable phases Al4Pt, Al21Pt8, 
+Al2Pt, Al3Pt2, AlPt (α & β ), Al3Pt5, AlPt2 (α & β ) and AlPt3 (α & β ). We also reveal the 
+possible existence of two phases of chemical formulae Al5Pt and Al3Pt. This large number 
+of intermetallic phases is due to the strong bonding between Al and Pt, which also leads 
+to significant favourable Pt solute formation energy in the Al matrix. Our findings are 
+compared with the known precipitation characteristics of the binary Al-Cu and Al-Au 
+systems. We find that the θ′-like Al2Pt precipitate phase has a lower coherent interfacial 
+energy than θ′. Our calculations strongly suggest that Al2Pt will precipitate first in Al-
+rich Al-Pt alloys and will form bulk-like interfaces similar to η (Al2Au) rather than like 
+θ′ (Al2Cu).  
+Keywords: Al alloys, Platinum, Interface, Precipitation, DFT2 
+1 
+Introduction 
+Controlled solid-state precipitation is commonly used for achieving significant 
+strengthening in light structural alloys. This is because precipitates of appropriate shape, 
+distribution, number density and crystallography can constitute effective barriers to the 
+movement of dislocations. In general, high-strength alloys require uniformly and densely 
+distributed precipitates with high aspect ratios and a rational crystallographic orientation 
+[1]. A well-known alloy system containing such precipitates is the Al-Cu system, which 
+forms the basis of an important class of engineering alloys for aircraft and aerospace 
+applications [2]. In Al-Cu alloys, a fine and uniform precipitation of θ′′ (Al3Cu) and θ′ 
+(Al2Cu) precipitates with aspect ratios greater than 50:1 can lead to tensile strength of up 
+to 500 MPa [2]. The θ′  phase is metastable and its crystal structure bears little 
+resemblance to known bulk phases in the Al-Cu system [3].  More generally, precipitates 
+forming in the early stages of precipitation are commonly metastable phases not expected 
+to form based on the bulk phase diagram (e.g., η′ (AlCu) in Al-Cu alloys [4]) or they 
+exhibit distorted structures of known bulk phases (e.g. Ω phase in Al-Cu alloys [5]). 
+Consequently, predicting the early stages of precipitation in a given alloy system through 
+atomic-scale modelling rather than in ad-hoc and empirical way, is a very challenging 
+task. Yet this endeavour is of great importance for discovering and enhancing the 
+properties of structural Al alloys. This challenge has motivated us to investigate the solid-
+state precipitation in the Al-rich part of the Al-Pt alloy system using advanced atomistic 
+simulation methods. 
+In the periodic table, Pt sits next to the column of Cu and Au, and shares their 
+cubic close-packed structure. The Al-Pt system exhibits several features that should make3 
+it interesting to compare with better known Al-Cu and Al-Au binary alloys containing 
+plate-shaped precipitates. Firstly, among all Al binary alloys, the Al2Pt phase is the only 
+stable θ′-like intermetallic phase besides η  (Al2Au) [6]. Secondly, several gaps remain 
+in our knowledge of the precipitation characteristics of Pt-containing aluminium alloys. 
+The latest research on the Al-Pt system indicates the following phases to be stable: Al4Pt, 
+Al21Pt8, Al2Pt, Al3Pt2, AlPt (α & β ), Al3Pt5, AlPt2 (α & β ) and AlPt3 (α & β ) [7-9]. Here, 
+α is the low-temperature polymorph and β is the high-temperature one—see Table 1 for 
+details. Al2Pt has a cubic CaF2-type structure with 𝑎𝐴𝑙2𝑃𝑡= 5.91 Å [10], which is similar 
+to the crystal structure of  θ′ (Al2Cu) [3] when viewed along <110> as shown in Figure 
+1. There remain many unknowns regarding the Al-Pt alloy system: recent experimental 
+and computational studies have focused on the determination of bulk intermetallic phases 
+[7, 8, 11-13] and their applications [14, 15], but have not addressed the thermodynamics 
+of solid solution, precipitate interfacial structures and precipitation sequences. One 
+particularly intriguing feature of the Al-Pt binary system is the existence of several stable 
+and metastable phases of lower Pt concentration than Al2Pt [9], which is contrary to the 
+Al-Cu [16] and Al-Au [17] systems where no stable Al-rich phases exist before the θ′ and 
+η phases. However, there is hitherto no consensus on the precipitation sequences in the 
+Al-Pt system. For instance, it remains unclear as to which phase will form after quenching 
+an Al-Pt alloy, and which one will precipitate first [18-20].  
+In this work, we used first-principles calculations based on density-functional 
+theory (DFT) combined with classical nucleation theory (CNT) to determine the 
+thermodynamical stabilities of different phases, precipitate interfacial energies, and 
+precipitation sequences in the Al-Pt binary system. We reveal the possible existence of 
+two new phases, Al5Pt and Al3Pt[7-9]. Among all phases, only θ′-like Al2Pt is predicted4 
+to form thermodynamically stable coherent interfaces along the {001}𝐴𝑙 planes and is 
+likely to precipitate first directly from the supersaturated solid solution, thereby bypassing 
+phases with higher Al content which could be expected to form first based on chemical 
+potential alone. We illustrate that solute clusters, GP zones, and non-bulk like interfaces 
+are unlikely to form due to the significant low solute formation energy of Pt in the Al 
+matrix. Our study thus fills knowledge gaps in the Al-Pt alloy system and more generally, 
+provides a workflow to determine precipitate phases and precipitation in an arbitrary 
+binary alloying system. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1. Experimentally determined crystal structure of (a) cubic Al2Pt and (b) when it 
+is viewed along <110>. (c) Tetragonal θ′ (Al2Cu) viewed along <100>.5 
+2 
+Methods 
+We first calculate the relaxed lattice parameters, thermodynamic characteristics, elastic 
+properties, and interfacial energies of phases in the binary Al-Pt system using density-
+functional theory (DFT). These DFT results are then adopted as input parameters for the 
+classical nucleation theory (CNT) calculations to examine the precipitation sequences. 
+All DFT calculations were carried out using Vienna ab initio simulation package 
+(VASP) [21-24]. The plane-wave basis set was described by the projector augmented 
+wave method (PAW) [25, 26]. The Perdew-Burke-Ernzerhof (PBE) exchange-correlation 
+functional for the generalized-gradient approximation (GGA) were used [27]. For Al, Pt, 
+Cu, Au and Ag, 3s23p1, 5d96s1, 3d104s1, 5d106s1, and 4d105s1 were treated as valence 
+electrons respectively. The cut-off energy of 500 eV and the grid spacing of 0.08 /Å were 
+used to generate a gamma-centred Monkhorst-Pack grid for sampling the Brillouin-zone 
+to achieve sufficient accuracy for all calculations. To achieve a sufficient accuracy, 
+energies and forces were converged within  1 × 10−6 eV and f 0.01 eV/Å t, respectively.  
+For calculations of phonons, we used a tighter energy tolerance criterion of 1 × 10−8 eV. 
+We applied the CNT formalism to calculate the thermodynamics of precipitate 
+nucleation: 
+∆𝐺𝑡𝑜𝑡= 𝑉∆𝐺𝑐ℎ𝑒𝑚+ 𝑉∆𝐺𝑒𝑙+ 𝐴𝛾,                                                                                      ( 1 ) 
+where 𝑉 is the volume of the nucleus, ∆𝐺𝑐ℎ𝑒𝑚 is the chemical energy, ∆𝐺𝑒𝑙 is the elastic 
+strain energy, 𝛾 is the average interfacial energy, and 𝐴 is the area of the interfaces 
+between the precipitated phases and matrix. Further details of CNT calculations are 
+presented in the Supplementary Information 1.6 
+3 
+Results  
+We first present the thermodynamic characteristics of various phases in Al-Pt binary 
+system as calculated by DFT methods (see Sec. 3.1, 3.2, and 3.3).  Based on the obtained 
+thermodynamic characteristics, we propose phases that can possibly precipitate from the 
+supersaturated solid solution of Pt in Al matrix. Next we investigate interfacial structure, 
+interfacial energies and elastic properties of possible precipitated phases in Sec. 3.4, 3.5, 
+and 3.6 respectively. Finally, we estimate the critical nucleation radii and nucleation 
+barriers based on computed energies via CNT (see Sec. 3.7). 
+ 
+3.1 
+Stable and Metastable Phases 
+We first investigate intermetallic phases between Al and Pt to provide a preliminary 
+understanding of the binary Al-Pt system. Here we investigated the crystal structure and 
+stability of the well accepted as well as controversial phases in this alloy system. Our 
+results and data reported in literature are summarised in Table 1. A challenge in 
+determining thermodynamic characteristics of Al-rich Al-Pt alloy system is that the full 
+crystal structures of some reported phases, such as Al5Pt [18] and Al3Pt [7, 19, 20], are 
+still unknown. We thus modelled these phases based on known intermetallic phases of 
+the same chemical formula in binary systems with elements in the same group of Al and 
+Pt. Among all possible crystal structures, those with the lowest formation energy are 
+selected. Al5Pt is modelled from Ga5Pd and Al3Pt is modelled from Tl3Pt. Further details 
+for these calculations are provided in Supplementary Information 2. We assess the 
+stability or metastability of different Al-Pt phases by the formation energy per atom (𝐸𝑓
+𝑎𝑡.), 
+calculated as7 
+𝐸𝑓
+𝑎𝑡. =
+𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦−𝑥𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙
+−𝑦𝐸𝑏𝑢𝑙𝑘
+𝑃𝑡
+𝑥+𝑦
+,                                                                                                   ( 2 ) 
+where 𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦 is the total energy of a bulk phase containing x Al and y Pt atoms, 𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙 
+and 𝐸𝑏𝑢𝑙𝑘
+𝑃𝑡 are the per atom energies of bulk Al and Pt, respectively. A more negative 
+formation energy represents a higher stability of the concerned phase. Since the 
+precipitation in binary Al alloys occurs at temperatures in the range of 100-300 °C, we 
+have also calculated the Helmholtz free energy of formation per atom (𝐹𝑓
+𝑎𝑡.), similarly to  
+LLorca et al.’s definition [28]  
+𝐹𝑓
+𝑎𝑡. =
+𝐹𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦−𝑥𝐹𝑏𝑢𝑙𝑘
+𝐴𝑙
+−𝑦𝐹𝑏𝑢𝑙𝑘
+𝑃𝑡
+𝑥+𝑦
+,                                                                                                          ( 3 ) 
+The corresponding Helmholtz free energy (𝐹) for each case is calculated as 
+𝐹= 𝐸−𝑇𝑆,                                                                                                                       ( 4 ) 
+where 𝐸 is the energy calculated at 0 K and 𝑆 is the vibrational entropy contribution as a 
+function of temperature. Again, a more negative free energy of formation represents 
+greater stability. Here we have only considered vibrational contributions to the total 
+entropy, since the configurational entropy can be neglected due to the low content of Pt, 
+and the electronic entropy is small compared to vibrational entropy even for transition 
+metals [29].  
+Figure 2 shows the calculated formation energies of intermetallic phases in the 
+binary Al-Pt alloy system. These agree well with experimental measurements [9], except 
+for an outlier at a concentration of 74.7 at. % Pt. The Al5Pt phase possesses a formation 
+energy close to the convex hull, which is in agreement with a previous DFT calculation 
+[11]. Therefore, Al5Pt is a possible stable phase. Figure 3 shows changes in the Helmholtz8 
+free energy of formation per atom from 0 K to 1000 K of selected Al-rich phases in the 
+Al-Pt binary system. Whereas most phases become less stable at high temperatures, Al3Pt 
+shows the opposite behaviour because it is stabilised by entropy at high temperatures. 
+Therefore, Al3Pt is a possible stable phase at high temperatures. The Al5Pt phase has a 
+small energy increment with temperature, supporting the previous argument about its 
+stability. 
+Formula 
+Space group 
+Lattice parameters (Å) 
+𝐸𝑓
+𝑎𝑡. 
+(eV/atom) 
+𝑎 
+𝑏 
+𝑐 
+Al5Pt 
+I4/mcm 
+6.40 
+6.40 
+10.03 
+-0.43 
+Al4Pt 
+P3c1 
+13.14  
+13.14 
+9.72 
+-0.54 
+13.08 a 
+13.08 a 
+9.63 a 
+Al3Pt 
+Pm3̅n 
+4.98 
+4.98 
+4.98 
+-0.51 
+Al21Pt8 
+I41/a 
+13.05 
+13.05 
+10.76 
+-0.76 
+12.95 b 
+12.95 b 
+10.66 b 
+Al2Pt 
+Fm3̅m 
+ 
+5.94 
+5.94 
+5.94 
+-0.89 
+5.91b 
+5.91b 
+5.91b 
+Al3Pt2 
+P3̅m1 
+ 
+4.21 
+4.21 
+5.17 
+-0.97 
+4.21 b 
+4.21 b 
+5.17 b 
+α-AlPt  
+P213 
+ 
+4.91 
+4.91 
+4.91 
+-1.04 
+4.87 b 
+4.87 b 
+4.87 b 
+β-AlPt  
+Pm3̅m 
+3.09 
+3.09 
+3.09 
+-0.93 
+3.13 b 
+3.13 b 
+3.13 b 
+Al3Pt5 
+Pbam 
+5.47 
+5.41 b 
+10.87 
+10.73 b 
+4.00 
+3.95 b 
+-0.91 
+α-AlPt2  
+Pmma 
+5.50 
+5.43 b 
+3.95 
+3.92 b 
+16.48 
+16.31 b 
+-0.86 
+β-AlPt2 
+ 
+Pnma 
+5.46 
+5.40 b 
+4.11 
+4.05 b 
+7.99 
+7.90 b 
+-0.85 
+α-AlPt3  
+P4/mbm 
+5.51 
+5.51 
+7.94 
+-0.70 
+5.45 c 
+5.45 c 
+7.82 c 
+β-AlPt3 
+Pm3̅m 
+3.92 
+3.92 
+3.92 
+-0.68 
+3.88 b 
+3.88 b 
+3.88 b 
+a, b, c Experimental values reported in [8], [10], and [30] respectively. 
+Table 1. Crystal structures and formation energies of selected phases in the binary Al-Pt 
+system as calculated by DFT methods in the present work. The values with superscripts 
+are the experimental values reported in previous studies.9 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2. Formation energies of intermetallic phases in the binary Al-Pt system as 
+calculated by DFT (blue circles) and compared to experimental measurements (red 
+squares. There is a good agreement between experiments from previous studies and 
+our calculations. The solid line represents a convex hull plotted based on DFT 
+calculations.  
+Figure 3. Change in the Helmholtz free energy of formation from 0 K to 1000 K of selected 
+Al-rich phases in the Al-Pt binary system. Whereas most phases become less stable at high 
+temperatures as expected, Al3Pt shows the opposite behaviour.10 
+3.2 
+The Pt Solid Solution 
+Since we are interested in predicting precipitation behaviour of Al-rich precipitate phases 
+from a supersaturated solid solution of Pt in Al matrix, the natural starting point is the 
+determination of Pt solute formation energies and its solubility. To interpret the results, 
+we also examine the nature of the electronic interactions between solute and matrix. The 
+solute formation energy per solute (𝐸𝑓
+𝑠.) can be calculated by  
+𝐸𝑓
+𝑠.  𝑋 = 𝐸𝑏𝑢𝑙𝑘 
+𝐴𝑙N−1𝑋−
+N−1
+N 𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙𝑁−𝐸𝑏𝑢𝑙𝑘
+𝑋
+.                                                                                                    ( 5 ) 
+Here, a more negative value indicates a more stable state of solute X in Al matrix. We 
+use a 4 × 4 × 4 supercell to avoid any interactions between solute atoms, and N is the 
+number of atoms in the supercell. Because Pt shows certain similarities to Cu and Au in 
+the Al matrix as mentioned, we compare the solute formation energy of Pt to that of group 
+11 elements including Cu, Ag and Au (see Table 2). To our knowledge, no previous work 
+exists for Pt. Our calculated results for other elements compare well with previous DFT 
+calculations [31], and the minor discrepancies may be due to the smaller supercell size 
+used in previous work.  
+We find that Pt has the most negative formation energy among all selected solutes, 
+indicating Pt solute should be stable in Al matrix. However, the solute formation energy 
+is not directly correlated to the experimental solubility limit (see Table 2). This is because 
+ordered phases will form beyond the solubility limit, and these phases are easier to form 
+when two elements bind strongly according to the Hume-Rothery rules [32]. In addition, 
+the formation energy is calculated at 0K and misses the contribution from the entropy at 
+finite temperatures. Therefore, to evaluate the solubility of Pt in Al matrix, we calculate 
+its solubility limit (𝑐𝑠) as [33]11 
+𝑐𝑠= exp (
+−∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+𝑘𝐵𝑇
+),                                                                                                                                         ( 6 ) 
+∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+=
+𝐹𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦−𝑥𝐹𝑏𝑢𝑙𝑘
+𝐴𝑙
+−𝑦(𝐹𝑏𝑢𝑙𝑘
+𝑃𝑡
++𝐹𝑓
+𝑠.  𝑃𝑡 )
+𝑦
+,                                                                                                ( 7 ) 
+where 𝑐𝑠 is the solubility limit of Pt in Al in at. % as a function of temperature T.   ∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ 
+is the excess free energy per solute atom, 𝐹𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦 is the Helmholtz free energy of the first 
+ordered phase, and 𝑘𝐵 is the Boltzmann constant. Since the solubility limit depends on 
+the first ordered phase, we have chosen both Al4Pt and Al5Pt as they are the 2 possible 
+first ordered phases in the phase diagram as discussed in the previous section. 
+Figure 4 shows the calculated solubility limit for Pt in Al matrix, with and without 
+the entropy contribution. It can be observed that the calculated solubility limit is close to 
+the experimental value at the temperature slightly higher than the eutectic temperature 
+when considering Al5Pt as the first stable Al-rich phase (see Figure 4) [9]. This also 
+suggests that Al5Pt could be the first ordered phase in the Al-Pt system as indicated in the 
+previous section. 
+To quantitatively analyse the solute formation energies and the electronic 
+interactions between Pt and Al, we calculate the bonding electron density as 
+∆𝜌= 𝜌−𝜌𝐼𝐴𝑀,                                                                                                            ( 8 ) 
+where 𝜌 is the electron density determined by a self-consistent calculation after full 
+relaxation, and 𝜌𝐼𝐴𝑀 is the electron density based on the independent atom model. Figure 
+5 presents the bonding electron density in the (110) plane since the bonding electrons are 
+located in the tetrahedral holes in Al [34]. We also compare electron densities along 3 
+directions with largest magnitude of bonding electron densities (see Figure 5 (b)). It is 
+evident that Pt forms the strongest and Ag forms the weakest bond to Al among all 412 
+alloying elements, in the same order as their solute formation energies:  𝐸𝑓.
+𝑠.  𝑃𝑡 < 𝐸𝑓.
+𝑠.  𝐴𝑢 < 
+𝐸𝑓.
+𝑠.  𝐶𝑢< 𝐸𝑓.
+𝑠.  𝐴𝑔. 
+Elements 
+𝐸𝑓.
+𝑠.(𝑒𝑉) 
+𝑐𝑠
+𝑒𝑢𝑡𝑐𝑡𝑖𝑐 (at. %) 
+Pt 
+       - 1.90 
+0.44 b 
+Cu 
+- 0.15 
+  - 0.08 a 
+2.48 c 
+Au 
+- 0.57 
+  - 0.58 a 
+0.06 d 
+Ag 
+  0.07 
+         0.02 a 
+23.5 e 
+a DFT calculations reported in reference [31], b, c, d, e obtained from the experimental phase 
+diagrams from  [9], [16], [17], [35] respectively. 
+ 
+ 
+ 
+ 
+ 
+Table 2. Solute formation energy (𝐸𝑓
+𝑠.) and solubility at eutectic temperatures (𝑐𝑠
+𝑒𝑢𝑡𝑐𝑡𝑖𝑐) 
+of Pt, Cu, Au and Ag in the Al matrix. The eutectic temperatures are 930K, 830K, 923K, 
+and 840K for Pt, Cu, Au, and Ag respectively. For Cu, Au, Ag solutes, our results agree 
+well with previous work. These elements have much higher solute formation energy than 
+Pt in Al matrix. 
+Figure 4.  Calculated solubility limit of Pt in Al when considering Al5Pt or Al4Pt as the 
+first ordered phase. Dashed lines are solubility limit calculated without the entropy 
+contribution. The star marks the experimentally measured solubility (0.44 at%) of Pt at 
+the eutectic point.13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5. Bonding electron density in Al matrix with substitutional solute atoms. In each 
+case, the bonding electron density is plotted on (110) plane passing through the solute atom. 
+The bonding electron density in pure Al matrix is also shown for reference.   (b) The 
+distribution of the bonding electron density along 3 directions with largest magnitude of 
+bonding electron densities. Colours for curves are associated with the colours of the titles in 
+(a). The highest bonding electron density is observed for Pt solute.14 
+3.3 
+Pt Clusters and GP Zone like Structures in Al Matrix 
+Having investigated the thermodynamics of Pt solute in Al matrix, the next step is to 
+determine whether clusters or GP zones will form in the early stages of precipitation, as 
+these will affect the subsequent formation of precipitate phases [2]. To this aim, we model 
+various cluster configurations by considering 3 substitutional Pt/Cu atoms in a large 
+4 × 4 × 4 Al supercell. In the Al-Cu system, a GP zone is a single Cu layer in Al matrix 
+and θ′′ (GP-II zone) is formed by two Cu layers separated by 3 Al layers in Al matrix. 
+Given the similarity between the Al2X phases in Al-Pt and Al-Cu systems, GP zone like 
+structures in the Al-Pt system are modelled as one or two infinitely large and 
+monoatomically thin Pt layers on the {002} planes and separated by several {002}𝐴𝑙 
+layers. The supercell is sufficiently large to represent both GP zone-like structures and 
+θ′′ like structures. For all configurations, we calculate the excess energy per solute atom 
+relative to Pt solute as 
+𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+=
+𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙𝑥𝑃𝑡𝑦−𝑥𝐸𝑏𝑢𝑙𝑘
+𝐴𝑙
+−𝑦(𝐸𝑏𝑢𝑙𝑘
+𝑃𝑡
++𝐸𝑓.
+𝑠.  𝑃𝑡)
+𝑦
+.                                                                                                   ( 9 ) 
+We also include the data for Cu solute atoms for a comparison with Pt solute atoms. The 
+calculated excess energies for all configurations are shown in Figure 6. We find that the 
+energetically most favourable cluster configurations consist of three nearest neighbour Pt 
+atoms located on (001) or (111) planes (see Figure 6 (a)). These planes are the most 
+common precipitate habit planes in Al alloys [2]. Whereas three coplanar Pt atoms can 
+exhibit a negative excess energy, a single Pt layer in Al matrix shows positive excess 
+energies both on (001) and (111) planes (0.07 eV and 0.36 eV, respectively). The excess 
+energies are positive for all configurations of GP zone like structure for Pt (see Figure 6 
+(b)). Two Pt layers on (001) planes separated by 7 layers of Al is more favourable than15 
+other configurations. In contrast, two Cu layers on (001) separated by 3 layers of Al is 
+more favourable than other configurations (i.e., identical to θ′′ phase). When compared 
+with Pt, Cu has negative excess energies in all configurations of clusters (Figure 6 (a)), 
+GP zones, and θ′′ [36].  
+Based on these results, we conclude that coherent precipitates such as GP zones 
+and θ′′ are unlikely form in the Al-Pt binary alloy system. Large solute clusters of Pt are 
+also unlikely to form since only a limited number of stable configurations exist. It should 
+be noted that although entropy is not considered here, the overall conclusion about 
+clusters, GP zones and θ′′ in Al-Pt systems will not change as the entropy have a positive 
+contribution to the excess energy for all configurations. 
+ 
+ 
+Figure 6. Calculated 𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ (eV) for (a) Cu and Pt clusters, Pt layers on (b) (001)𝐴𝑙 
+planes and (c) on a (111)𝐴𝑙 plane. Al and Pt atoms are shown as blue and grey spheres, 
+respectively. In (a), the position of Cu or Pt atoms are marked in yellow. In (b), the 
+position of the second one or two infinitely large Pt layers is marked as dashed rectangles. 
+The excess energy remains positive regardless of the distances between Pt layers, 
+indicating GP zones are unlikely to form in Al-Pt alloys.16 
+3.4 
+Precipitate Shape and Crystallographic Relationship with Matrix 
+Precipitate shape and their crystallographic orientation in the matrix have a strong 
+influence on mechanical properties of the binary alloy—high-aspect-ratio precipitates on 
+low-index planes such as {001} or {111} tend to be most efficient at blocking stress-
+induced dislocations and thus imparting high strength to the alloy [2]. Such precipitates 
+are usually coherent with the matrix in one or two dimensions [2], which means some of 
+their interfaces or edges match well with the matrix. It is therefore critical to determine 
+the possible crystallographic relationship(s) between precipitates and matrix, which will 
+determine the precipitate shape and interfaces. To do so, we adopt Kelly et al.’s method 
+[37, 38] whereby low-index crystallographic planes in Al and precipitate structures are 
+compared. The search was limited to the three most densely packed planes for each crystal 
+structure, as they are more likely to result in a good match and hence low-energy 
+interfaces. More specifically, we looked for cases where both interplanar and interatomic 
+spacings have less than 10% misfit [37], and consequently, a greater likelihood for the 
+formation of a coherent interface.  Only Al2Pt, Al3Pt and Al5Pt were found to satisfy these 
+matching conditions. Figure 7 shows the matched planes and corresponding interfaces 
+between Al2Pt and Al matrix. The best match for Al2Pt in Al is for the following 
+crystallographic relationship: (002)𝐴𝑙2𝑃𝑡||(002)𝐴𝑙 and (220)𝐴𝑙2𝑃𝑡||(200)𝐴𝑙, leading to 
+a coherent interface, (002)𝐴𝑙2𝑃𝑡||(002)𝐴𝑙, and 2 sets of semicoherent interfaces, 
+perpendicular to the coherent interface. The coherent interface is likely to be much larger 
+than the semicoherent interfaces. This is analogous to the case of θ′ (Al2Cu) and η (Al2Au) 
+precipitates in Al [3, 39].  
+Based on the orientation relationship determined above, we constructed supercells 
+representing an Al2Pt precipitate embedded in Al matrix to examine the stability of17 
+different interfaces using DFT calculations. When lattice parameters 𝑎 and 𝑏 of Al2Pt 
+embedded in Al matrix are fixed to 𝑎𝐴𝑙= 4.04 Å to model the coherent interface, the 
+lattice parameter 𝑐𝐴𝑙2𝑃𝑡/𝐴𝑙 is found to increase from 5.94 Å in bulk to 6.27 Å in the Al 
+matrix. As shown in Table 3, the formation energy per atom and excess energy per solute 
+are both negative, suggesting a supersaturated solid solution of Pt in Al can be expected 
+to decompose into stable Al2Pt precipitates in the above orientation relationships. Because 
+non-bulk like interfaces have been observed within the θ′ (Al2Cu) structure as a result of 
+Cu solute segregation, the segregation of Pt into the interfaces of Al2Pt is considered [40]. 
+Segregation of a Pt atom increases the formation energy by 0.70 eV, indicating the Al2Pt 
+will displays a bulk like interface similar to η (Al2Au) rather than θ′ [40, 41]. This is 
+mainly due to the significantly lower solute formation energy of Pt in Al compared to that 
+of Cu. The entropy is not considered when examining interfaces as the embedded 
+precipitate in our model is small compared to the Al matrix. 
+Figure 7. DFT relaxed crystal structures of (a) cubic Al2Pt with the marked matched 
+planes, (b) matched planes of (002)𝐴𝑙2𝑃𝑡||(002)𝐴𝑙 (c) matched planes of 
+(220)𝐴𝑙2𝑃𝑡||(200)𝐴𝑙.Two stable interfaces are found between Al2Pt precipitates and 
+Al matrix: (d) a coherent interface and (e) a semicoherent interface. Interfaces are 
+marked by red rectangle.18 
+ 
+Thickness 
+𝐸𝑓
+𝑎𝑡. (𝑒𝑉/𝑎𝑡𝑜𝑚) 
+𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ (𝑒𝑉/𝑎𝑡𝑜𝑚) 
+1 𝑐𝐴𝑙2𝑃𝑡 
+-0.20 
+-0.05 
+2 𝑐𝐴𝑙2𝑃𝑡 
+-0.30 
+-0.07 
+ 
+The matching of Al3Pt and Al5Pt crystal structures with the Al matrix was 
+analysed with the same method. We found that Al3Pt and Al5Pt precipitates are unlikely 
+to form coherent interfaces because of the positive excess energies (see Supplementary 
+Information 3). In summary, Al2Pt precipitates are likely to have a plate shape because of 
+its 2-dimensional matching to the Al matrix. This is structurally analogous to η (as 
+already mentioned) and to the θ′ phase [3]. Al3Pt and Al5Pt are likely to have equiaxed 
+shapes since no low-energy interface is found, which is also the case for Al4Pt and Al21Pt8 
+[42]. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table 3. Formation energy (𝐸𝑓
+𝑎𝑡.) and excess energy (𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+) for Al2Pt precipitates in 
+the Al matrix as calculated by DFT. The negative energy values indicate that Al2Pt 
+precipitates are thermodynamically stable in the orientation relationship indicated in 
+Figure 7.19 
+3.5 
+Interfacial Energies for Al2Pt Precipitate in Al Matrix 
+Interfacial energy is a key parameter controlling the shape and thermodynamics of 
+precipitation. To calculate the interfacial energy, we first calculate the formation energies 
+of Al2Pt precipitate supercells with different size (see Figure 8). Then, the interfacial 
+energies between a Al2Pt precipitate and the Al matrix can be obtained from the slope of 
+the change in formation energy as a function of  supercell size [43, 44]. We use the bulk-
+like interfaces for θ′ (Al2Cu) analogous to that of Al2Pt for an equivalent comparison. It 
+can be seen that Al2Pt has a significantly smaller interfacial energy of 129 mJ/m2 of the 
+coherent interfaces, but a similar interfacial energy of the semicoherent interfaces when 
+compared to θ′ precipitate in Al matrix. Therefore, Al2Pt precipitates may have a higher 
+equilibrium aspect ratio than θ′ precipitate in Al matrix. 
+ 
+ 
+ 
+Figure 8. Interfacial energy of coherent (𝛾𝑐) and semi-coherent (𝛾𝑠𝑐) interfaces of θ′ 
+(Al2Cu) and Al2Pt in Al matrix. N is the total number of atoms of the precipitate supercell 
+and 𝛾 is calculated from the slope of the fitted line. The coherent interfacial energy of Al2Pt 
+is only a half of that of θ′.20 
+3.6 
+Elastic Properties 
+The strain energy associated with the misfit of all precipitate phases with Al matrix is the 
+last parameter required as input into our CNT calculations. The elastic properties for all 
+Al-Pt binary phases considered here are calculated based on DFT [45].  Strains within the 
+range of ±1.5% with an increment of 0.5% were applied in all effective directions 
+according to the crystal symmetry of the binary phase. Our results, presented in Table 4, 
+are in good agreement with published values [46], but display appreciable differences 
+with calculations reported in [11], especially for the shear modulus and Young’s modulus 
+of Al4Pt and Al2Pt. The validity of our results is supported by the fact that elastic 
+properties calculated for pure Al are closer to the experimental measurements in our work 
+than in [9]. 
+ 
+ 
+ 
+Al 
+Al5Pt 
+Al4Pt 
+Al3Pt 
+Al21Pt8 
+Al2Pt 
+𝜇 (𝐺𝑃𝑎) 
+25 
+24a 
+35b 
+26c 
+59 
+76b 
+78 
+34b 
+43 
+62 
+62a 
+64b 
+39 
+39a 
+64b 
+𝜈 
+0.35 
+0.37a 
+0.30b 
+0.35c 
+0.26 
+0.21b 
+0.23 
+0.36b 
+0.35 
+0.30 
+0.30a 
+0.29b 
+0.36 
+0.36a 
+0.27b 
+𝐸 (𝐺𝑃𝑎) 
+68 
+66a 
+91b 
+70c 
+148 
+182b 
+192 
+93b 
+116 
+162 
+162a 
+165b 
+107 
+106a 
+182b 
+𝐾 (𝐺𝑃𝑎) 
+77 
+83a 
+74b 
+76c 
+103 
+104b 
+117 
+112b 
+127 
+133 
+133a 
+133b 
+130 
+129a 
+130b 
+a  DFT values reported in [46] and [11] respectively, c experimental values reported in [47] 
+ 
+Table 4. Elastic properties including shear modulus (𝜇), Poisson’s ratio  
+(𝜈), Young’s modulus (𝐸) and bulk modulus (𝐾) of selected phases as calculated by 
+DFT, and compared to reported values. Our results are in good agreement with the 
+reported values.21 
+3.7 
+Thermodynamics of Precipitate Nucleation 
+Having calculated the interfacial energies and strain energies, we can now predict the 
+energy change during nucleation, which measures the likelihood of precipitation of 
+various phases in the Al-Pt binary system. We have assumed a plate-like shape for the 
+Al2Pt precipitate and a spherical shape for the remaining binary phases with incoherent 
+interfaces. By assuming homogeneous nucleation directly from a supersaturated solid 
+solution, and 𝛾= 𝛾𝑠𝑒𝑚𝑖
+𝐴𝑙2𝑃𝑡 for all incoherent spherical phases, we calculate the 
+thermodynamics of precipitate nucleation based on the CNT formalism.  
+Figure 9 shows the change in Gibb’s free energy for nucleation of phases in Al-
+Pt binary system. Among all phases considered here, Al2Pt has the lowest nucleation 
+energy barrier and critical radius, indicating it will be the first phase to precipitate, in 
+agreement with the experimental observation [19]. Among the three smallest thicknesses 
+of Al2Pt nuclei that we considered,  1 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑 is the most favoured thickness according 
+to our calculations. This is because the large, favourable chemical potential for Al2Pt to 
+nucleate outweighs the unfavourable contribution of misfit strain energy due to a greater 
+thickness (see Supplementary Information 4). Also worth noting is the much smaller 
+critical radius and barrier to nucleation for Al2Pt compared to θ′  (Al2Cu) (see 
+Supplementary Information 4). Again, this is mainly due to the significantly larger 
+chemical potential for Al2Pt to nucleate compare with that of  θ′. As displayed in Table 
+5, the nucleation temperature has a negligible effect on the ranking of the nucleation 
+related parameters. Based on these calculations, the phases can be ranked in terms of ease 
+of nucleation as: Al2Pt > Al21Pt8 > Al4Pt > Al5Pt > Al3Pt, with Al2Pt being the easiest 
+phase to nucleate from the solid solution.22 
+ 
+Nucleus 
+∆𝐸𝑛 (× 10−18𝐽) 
+𝑅𝑐 (Å) 
+𝑛𝑐𝑟𝑖𝑡
+𝑃𝑡 
+300K 
+500K 
+300K 
+500K 
+300K 500K 
+Al5Pt 
+2.02 
+2.32 
+10 
+11 
+4 
+5 
+Al4Pt 
+1.01 
+1.14 
+7 
+7 
+3 
+3 
+Al3Pt 
+10.6 
+8.48 
+23 
+20 
+35 
+28 
+Al21Pt8 
+0.503 
+0.566 
+5 
+5 
+2 
+2 
+Al2Pt – 2c 
+0.479 
+0.506 
+2 
+3 
+4 
+4 
+Al2Pt – 1.5c 
+0.327 
+0.394 
+3 
+3 
+3 
+3 
+Al2Pt – 1c 
+0.266 
+0.283 
+3 
+3 
+2 
+3 
+ 
+Figure 9. Change in Gibbs free energy for the nuclei of various phases in Al-Pt binary 
+system at 500K, as calculated by CNT. Al2Pt with different thickness are plotted in 
+solid line (1c), dashed line (1.5c), and dash-dotted line (2c) respectively. The 
+nucleation energy barrier (∆𝐸𝑛) and critical radius (𝑅𝑐) of Al2Pt with the smallest 
+thickness (1c) are marked. 
+Table 5. Nucleation energy barrier (∆𝐸𝑛), critical radius (𝑅𝑐), and critical number of 
+Pt atoms (𝑛𝑟𝑒𝑞
+𝑃𝑡) for nucleation at 300K and 500K.23 
+4 
+Discussion 
+4.1 
+Phases in the binary Al-Pt System 
+Intermetallic phases with higher Al content than the precipitate phase (i.e., Al2Pt) are also 
+of interest here because they may form in Al-rich Al-Pt alloys. As reflected by studies 
+published to date [7-9, 12, 13, 18, 19, 48], it hitherto remains unclear which Al-Pt phases 
+are stable or metastable. The full crystal structure of these phases is also not known. For 
+example, the stable phase with the highest Al concentration is believed to be Al21Pt5  [9, 
+12, 13], even though its full crystal structure is yet to be determined. In disagreement 
+with this report, a recent experimental work claimed that the equilibrium phase with the 
+highest Al content might be Al4Pt [7, 8]. Our work supports this view—Al4Pt is found to 
+have a more negative formation energy per atom (-0.54 eV) compared to Al21Pt5 (-0.36 
+eV), and sits close to the convex hull (see Figure 2). Therefore, our work strongly suggest 
+Al4Pt is the most likely equilibrium phase with highest Al content.  
+When exploring the Al-rich part of the Al-Pt phase diagram, we considered the 
+possible phase Al5Pt (see Section 3.1), as it may compete with Al4Pt for precipitation. A 
+metastable phase 𝜖 with a composition of Al5Pt was reported to precipitate first in rapidly 
+quenched Al-Pt alloys. This phase (𝜖) was determined to have an atomic volume of 17.05 
+Å3 [18]. As shown in Section 3.1, we proposed a crystal structure for Al5Pt (I4/mcm) 
+and calculated its formation energy, which was found to be negative and to be slightly 
+above the convex hull similar to previous calculation [11]. Our proposed crystal structure 
+results in an atomic volume of 17.09 Å3, which is very close to the experimental value 
+[18]. Therefore, Al5Pt can be considered a plausible candidate for precipitation.24 
+A metastable phase of composition Al3Pt has also been suggested as a possible 
+precipitate phase at room temperature [19, 20]. More recently, a high-temperature stable 
+phase denoted 𝜉 and of the same composition Al3Pt was reported to be stable [7]. Based 
+on DFT calculations for several possible archetypal structures, we proposed a crystal 
+structure for Al3Pt with space group Pm3̅n (see Section 3.1). For Al3Pt in our work, we 
+used the most stable structure (i.e. Pm3̅n) because the full crystal structure of 𝜉 is still 
+unknown [7]. However, the calculated XRD powder pattern for Al3Pt (Pm3̅n) (see 
+Supplementary Information 1) does not match the XRD pattern of 𝜉, indicating that the 
+phase characterised in Ref. [7] does not have our proposed structure. Metastable Al6Pt 
+was also reported in quenched Al-Pt samples [19]. The only crystallographic information 
+available is that Al6Pt is isostructural with the Ga6Pt structure with lattice parameters 
+𝑎𝐴𝑙6𝑃𝑡= 15.762 Å,𝑏𝐴𝑙6𝑃𝑡= 12.103 Å  and 𝑐𝐴𝑙6𝑃𝑡= 8.318 Å  [19], but their detailed 
+atomic positions remain unknown [48]. In summary, our work confirms the equilibrium 
+phase is Al4Pt rather than Al21Pt5. We also suggest possible crystal structures for Al5Pt 
+and Al3Pt. 
+ 
+4.2 
+Precipitation Sequence in Al-Pt 
+Several studies have examined precipitation in Al-Pt alloys [7, 8, 18-20]; however, all but 
+one [19] deal with precipitation from the melt rather than solid solution. In this section, 
+we focus on solid-state precipitation, which is important for high-strength properties. First, 
+no GP zones have been reported to form in Al-Pt alloys, and our DFT results presented 
+in Section 3.3 also suggests that large clusters and GP zones of Pt are thermodynamically 
+unstable in Al.25 
+We predict the Al2Pt precipitate phase to adopt an orientation relationship similar 
+to that of θ′ and η phase in Al-Cu and Al-Au binary systems respectively. This is different 
+from what was proposed in [19] based on electron diffraction methods. We found that the 
+orientation relationship in [19] provides poor matching between DFT relaxed Al2Pt and 
+Al matrix, in contrast to our proposed orientation relationship. As shown in Section 3.7, 
+Al2Pt appears to be the strongest candidate to precipitate first from the solute solution. 
+This agrees with early studies of solid-state precipitation in Al-Pt alloys by 
+Chattopadhyay et al. [19, 49]. This may seem surprising at first, because Al2Pt is in 
+competition with as many as four phases with much greater Al content, namely: Al6Pt, 
+Al5Pt, Al4Pt and Al3Pt. These phases have been observed after rapidly quenching Al-(2-
+3)at.% Pt alloys from the melt [18-20]. Indeed, the Al6Pt phase was reported to precipitate 
+from the solute solution, but after Al2Pt [19]. Given the full crystal structure of Al6Pt is 
+still not known, it is difficult to accurately calculate the thermodynamic parameters for 
+its nucleation such as nucleation energy barrier and critical radius.  Nevertheless, using 
+crude approximations, we find that Al6Pt is likely not to precipitate prior to Al2Pt (see 
+Supplementary Information 5). This is in agreement with Ref. [19]. 
+Regarding the Al5Pt and Al3Pt phases, they contain lattice planes that match Al 
+matrix planes well. However, the interfaces that were considered based on matching these 
+planes were found to be unstable by DFT. Although no thermodynamically stable 
+interfaces were found in this work, a more systematic search may reveal low energy 
+interfaces. In this case, Al5Pt and Al3Pt may form prior to Al2Pt (see details in 
+Supplementary Information 6). However, this situation would contradict the experimental 
+evidence available to date [18, 20].26 
+4.3 
+Effect of Bonding Electron Density on Solute Formation Energy 
+Our DFT calculation indicated that Pt has a significant negative solute formation energy 
+in Al. The large bonding electron density between Al and Pt as shown in Figure 5 may 
+explain the unfavourable segregation of Pt into the interfaces of Al2Pt precipitates 
+compared to that of Cu, and the low coherent interfacial energy of Al2Pt compared to θ′ 
+(Al2Cu). Compared to Pt and Cu, the bonding between Al and Ag is weaker than that 
+between Al atoms, which is consistent with the positive solute formation energy of Ag in 
+the Al matrix. The distribution of bonding electron density is different for different solute 
+atoms (Cu, Au, Pt, Ag) — in the case of Pt and Au, bonding is stronger in the <110> 
+directions compared with Cu and Ag. This can be correlated with the solute formation 
+energy which is most negative for Pt and Au. 
+ 
+4.4 
+Workflow to predict solid-state precipitation in an arbitrary binary alloy 
+system 
+Finally, to predict solid-state precipitation in an arbitrary binary alloy system M-X, where 
+M is the matrix element and X is the solute, we propose the following systematic 
+workflow. The first step is to identify all stable and metastable intermetallic phases known 
+between two chemical elements based on the equilibrium phase diagram and databases 
+of crystal structures [6]. A precipitate phase is likely to be structurally related to known 
+bulk intermetallic phases, but not always, as is the case for θ′ (Al2Cu). The full crystal 
+structure of each phase must be known in order to carry out thermodynamics calculations 
+using DFT methods. Because some phases are only stable in a certain temperature range, 
+we need to consider the temperature effect on their stability by estimating the entropy27 
+contribution. A major challenge here is that some intermetallic phases are either unknown 
+or have not had their crystal structure solved. In this case, one approach is to adopt crystal 
+structures of phases in similar systems, such as systems between elements in the same 
+group on the periodic table. 
+The second step is to determine the solute behaviour of X in M. This allows us to 
+determine properties such as solubility, segregation energy and chemical potential. These 
+properties are required in the subsequent steps. 
+The third step is investigating the interaction of solute atoms, including the 
+possible formation of clusters and GP zone-like structures. The main challenge here is to 
+consider all possible configurations of solute aggregates. Currently, accurate DFT 
+calculations are limited to hundreds of atoms, and therefore only up to a handful of solute 
+atoms. Nevertheless, these methods allow one to explore whether fully coherent 
+precipitates might exist. 
+The fourth step is predicting the shape and interfacial structure of precipitate 
+phases, which is a great challenge. This requires the orientation relationship(s) between a 
+given precipitate phase and matrix to be determined. One approach is to match the crystal 
+structure of the precipitate phase with the matrix [37, 38]. Based on the matched planes, 
+we can then propose possible low energy interfaces, calculate their interfacial energies 
+and misfit strain energies, and suggest the possible shape of each precipitate phase.  
+Finally, the last step is to predict the nucleation barrier and critical size of each 
+precipitate phase, thus allowing the precipitation sequence to be proposed. One approach, 
+as used here, involves CNT calculations using DFT calculated quantities. Our CNT 
+calculations are rather crude with many assumptions especially for the interfacial energies28 
+of incoherent precipitates. However, it allows a qualitatively convincing investigation of 
+precipitation in the unexplored Al-Pt alloy system. 
+ 
+ 
+5 
+Conclusion 
+In this work, we propose a workflow to predict the solid-state precipitation behaviour in 
+the binary Al-Pt system, based on a combination of atomistic first principles methods 
+using density-functional theory and classical nucleation theory calculations. The bulk 
+intermetallic phases Al4Pt, Al21Pt8, Al2Pt, Al3Pt2, AlPt (α & β), Al3Pt5, AlPt2 (α & β) and 
+AlPt3 (α & β) are confirmed to be thermodynamically stable. Our calculations also support 
+the possible existence of Al5Pt and Al3Pt. A significantly low formation energy of Pt in 
+Al is found. This results in a high energy barrier for Pt to form clusters, GP zones, and 
+non-bulk interfaces. When considering precipitate phases, our calculations strongly 
+suggest that Al2Pt will adopt a similar orientation relationship and shape to the θ′ (Al2Cu) 
+phase, and will precipitate first. Similarly to θ′, Al2Pt precipitates are expected to exhibit 
+plate-like shapes with high aspect ratios. Our results are in partial agreement with 
+previous inconclusive experimental work [19, 49], and motivate further experimental 
+validation through a detailed microscopic characterisation of solid-state precipitation in 
+Al-Pt alloys. Our work constitutes an initial step towards predicting solid-state 
+precipitation in an arbitrary Al alloy system, and ultimately, towards the discovery of 
+high-performance Al alloys.29 
+6 
+Acknowledgement 
+This research was funded by the Australian Government through an Australian Research 
+Council Discovery Project grant (DP210101451). Computational work was undertaken 
+with the assistance of resources and services from the National Computational 
+Infrastructure (NCI), Pawsey Supercomputing Centre, and from the MonARCH HPC 
+cluster. 
+ 
+References 
+[1] B. Muddle, S. Ringer, I. Polmear, High strength microalloyed aluminium alloys, 
+Superconductors, Surfaces and Superlattices, Elsevier1994, pp. 999-1023. 
+[2] I. Polmear, D. StJohn, J.-F. Nie, M. Qian, Light alloys: metallurgy of the light metals, 
+Oxford: Elsevier Science & Technology, Oxford, 2017. 
+[3] J. Silcock, T. Heal, H. Hardy, Structural ageing characteristics of binary aluminium-
+copper alloys, J. Inst. Metals 82 (1954). 
+[4] L. Bourgeois, Y. Zhang, Z. Zhang, Y. Chen, N.V. Medhekar, Transforming solid-state 
+precipitates via excess vacancies, Nature communications 11(1) (2020) 1-10. 
+[5] T.J. Bastow, C. Hutchinson, A. Hill, Strong interaction of an Al2Cu intermetallic 
+precipitate with its boundary, Philosophical Magazine 92(16) (2012) 2022-2031. 
+[6] A. Jain, S.P. Ong, G. Hautier, W. Chen, W.D. Richards, S. Dacek, S. Cholia, D. Gunter, 
+D. Skinner, G. Ceder, Commentary: The Materials Project: A materials genome approach 
+to accelerating materials innovation, APL materials 1(1) (2013) 011002. 
+[7] B. Grushko, D. Kapush, J. Su, W. Wan, S. Hovmöller, Al-rich region of Al-Pt, Journal 
+of alloys and compounds 580 (2013) 618-625. 
+[8] M. Woerle, F. Krumeich, T. Chatterji, S. Kek, R. Nesper, On the structure and 
+twinning of PtAl4, Journal of alloys and compounds 455(1-2) (2008) 130-136. 
+[9] A. McAlister, D. Kahan, The Al-Pt (aluminum-platinum) system, Bulletin of Alloy 
+Phase Diagrams 7(1) (1986) 47-51. 
+[10] P. Villars, L. Calvert, Pearson's handbook of crystallographic data for intermediate 
+phases, American Society of Metals, Cleveland, OH, 1985. 
+[11] Y. Zhao, J. Yu, L. Wu, B. Wan, Y. Zhang, R. Gao, J. Zhang, H. Gou, Mechanical 
+properties and electronic structures of diverse PtAl intermetallics: first-principles 
+calculations, Computational Materials Science 124 (2016) 273-281. 
+[12] D. Kim, V. Manga, S. Prins, Z.-K. Liu, First-principles calculations and 
+thermodynamic modeling of the Al–Pt binary system, Calphad 35(1) (2011) 20-29. 
+[13] J. Feng, B. Xiao, J. Chen, Y. Du, J. Yu, R. Zhou, Stability, thermal and mechanical 
+properties of PtxAly compounds, Materials & Design 32(6) (2011) 3231-3239. 
+[14] I. Antonyshyn, A.M. Barrios Jimenez, O. Sichevych, U. Burkhardt, I. Veremchuk, 
+M. Schmidt, A. Ormeci, I. Spanos, A. Tarasov, D. Teschner, Al2Pt for Oxygen Evolution30 
+in Water Splitting: A Strategy for Creating Multifunctionality in Electrocatalysis, 
+Angewandte Chemie International Edition 59(38) (2020) 16770-16776. 
+[15] Y. Pan, J. Guo, Y. Lin, W. Liu, S.L. Wang, K. Deng, First-principles investigation 
+on hydrogen doping of PtAl2 alloy, Journal of Alloys and Compounds 621 (2015) 201-
+205. 
+[16] J.L. Murray, The aluminium-copper system, International metals reviews 30(1) 
+(1985) 211-234. 
+[17] J. Murray, H. Okamoto, T. Massalski, The Al-Au system, Journal of Phase Equilibria 
+8(2) (1987) 102-102. 
+[18] A. Tonejc, A. Bonefačić, Non-equilibrium phases in Al-rich Al-Pt alloys, Journal of 
+Materials Science 9(4) (1974) 523-526. 
+[19] K. Chattopadhyay, P. Ramachandrarao, Metastable phase formation and 
+decomposition in a rapidly solidified aluminium-platinum alloy, Materials Science and 
+Engineering 38(1) (1979) 7-17. 
+[20] M. Ellner, U. Kattner, B. Predel, Konstitutionelle und strukturelle untersuchungen 
+im aluminiumreichen teil der systeme Ni-Al und Pt-Al, Journal of the Less Common 
+Metals 87(2) (1982) 305-325. 
+[21] G. Kresse, J. Hafner, Ab initio molecular dynamics for liquid metals, Physical review 
+B 47(1) (1993) 558. 
+[22] G. Kresse, J. Hafner, Ab initio molecular-dynamics simulation of the liquid-metal–
+amorphous-semiconductor transition in germanium, Physical Review B 49(20) (1994) 
+14251. 
+[23] G. Kresse, J. Furthmüller, Efficiency of ab-initio total energy calculations for metals 
+and semiconductors using a plane-wave basis set, Computational materials science 6(1) 
+(1996) 15-50. 
+[24] G. Kresse, J. Furthmüller, Efficient iterative schemes for ab initio total-energy 
+calculations using a plane-wave basis set, Physical review B 54(16) (1996) 11169. 
+[25] P.E. Blöchl, Projector augmented-wave method, Physical review B 50(24) (1994) 
+17953. 
+[26] G. Kresse, D. Joubert, From ultrasoft pseudopotentials to the projector augmented-
+wave method, Physical review B 59(3) (1999) 1758. 
+[27] J.P. Perdew, K. Burke, M. Ernzerhof, Generalized gradient approximation made 
+simple, Physical review letters 77(18) (1996) 3865. 
+[28] H. Liu, I. Papadimitriou, F.X. Lin, J. Llorca, Precipitation during high temperature 
+aging of Al−Cu alloys: A multiscale analysis based on first principles calculations, Acta 
+Materialia 167 (2019) 121-135. 
+[29] X. Zhang, B. Grabowski, F. Körmann, C. Freysoldt, J. Neugebauer, Accurate 
+electronic free energies of the 3d, 4d, and 5d transition metals at high temperatures, 
+Physical Review B 95(16) (2017) 165126. 
+[30] W. Bronger, P. Müller, Zur Struktur platinreicher Aluminium-Platin-Legierungen, 
+Zeitschrift für anorganische und allgemeine Chemie 623(1-6) (1997) 362-368. 
+[31] C. Wolverton, V. Ozoliņš, First-principles aluminum database: Energetics of binary 
+Al alloys and compounds, Physical Review B 73(14) (2006) 144104. 
+[32] W.D. Callister, D.G. Rethwisch, Materials science and engineering: an introduction, 
+wiley New York2018. 
+[33] J.W. Christian, The theory of transformations in metals and alloys, Newnes2002. 
+[34] P.N. Nakashima, A.E. Smith, J. Etheridge, B.C. Muddle, The bonding electron 
+density in aluminum, Science 331(6024) (2011) 1583-1586.31 
+[35] A. McAlister, The Ag-Al (silver-aluminum) system, Bulletin of Alloy Phase 
+Diagrams 8(6) (1987) 526-533. 
+[36] Y. Chen, Z. Zhang, Z. Chen, A. Tsalanidis, M. Weyland, S. Findlay, L.J. Allen, J. 
+Li, N.V. Medhekar, L. Bourgeois, The enhanced theta-prime (θ′) precipitation in an 
+Al-Cu alloy with trace Au additions, Acta Materialia 125 (2017) 340-350. 
+[37] M.-X. Zhang, P.M. Kelly, M.A. Easton, J.A. Taylor, Crystallographic study of grain 
+refinement in aluminum alloys using the edge-to-edge matching model, Acta Materialia 
+53(5) (2005) 1427-1438. 
+[38] P. Kelly, H.-P. Ren, D. Qiu, M.-X. Zhang, Identifying close-packed planes in 
+complex crystal structures, Acta materialia 58(8) (2010) 3091-3095. 
+[39] M. Von Heimendahl, Precipitation in aluminum-gold, Acta Metallurgica 15(9) (1967) 
+1441-1452. 
+[40] L. Bourgeois, C. Dwyer, M. Weyland, J.-F. Nie, B.C. Muddle, Structure and 
+energetics of the coherent interface between the θ′ precipitate phase and aluminium in 
+Al–Cu, Acta Materialia 59(18) (2011) 7043-7050. 
+[41] L. Bourgeois, Z. Zhang, J. Li, N.V. Medhekar, The bulk and interfacial structures of 
+the η (Al2Au) precipitate phase, Acta Materialia 105 (2016) 284-293. 
+[42] F.R.N. Nabarro, The strains produced by precipitation in alloys, Proceedings of the 
+Royal Society of London. Series A. Mathematical and Physical Sciences 175(963) (1940) 
+519-538. 
+[43] V. Ozoliņš, C. Wolverton, A. Zunger, Effects of anharmonic strain on the phase 
+stability of epitaxial films and superlattices: Applications to noble metals, Physical 
+Review B 57(8) (1998) 4816. 
+[44] K. Kim, B.-C. Zhou, C. Wolverton, Interfacial stability of θ′/Al in Al-Cu alloys, 
+Scripta Materialia 159 (2019) 99-103. 
+[45] V. Wang, N. Xu, J.-C. Liu, G. Tang, W.-T. Geng, VASPKIT: a user-friendly 
+interface facilitating high-throughput computing and analysis using VASP code, 
+Computer Physics Communications  (2021) 108033. 
+[46] M. De Jong, W. Chen, T. Angsten, A. Jain, R. Notestine, A. Gamst, M. Sluiter, C.K. 
+Ande, S. Van Der Zwaag, J.J. Plata, Charting the complete elastic properties of inorganic 
+crystalline compounds, Scientific data 2(1) (2015) 1-13. 
+[47] W.M. Haynes, CRC handbook of chemistry and physics, CRC press LLC, Boca 
+Raton, FL, 2017. 
+[48] S. Bhan, K. Schubert, Zum aufbau der systeme kobalt-germanium, rhodium-silizium 
+sowie einiger verwandter legierungen, International Journal of Materials Research 51(6) 
+(1960) 327-339. 
+[49] K. Chattopadhyay, On Al2M-type phases in splat cooled aluminium alloys,  (1978) 
+2730-2731.Supplementary Information 
+Predicting the Early Stages of Solid-State Precipitation in Al-rich 
+Al-Pt Alloys 
+Shenghan Su a, Laure Bourgeois a, b, *, Nikhil V. Medhekar a, * 
+ 
+a Department of Materials Science and Engineering, Monash University, VIC, 3800, 
+Australia. 
+b Monash Centre for Electron Microscopy, Monash University, VIC, 3800, Australia. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+* Corresponding authors.  
+E-mail: nikhil.medhekar@monash.edu; laure.bourgeois@monash.edu33
+S1. Details of Classical Nucleation Theory (CNT) Calculations 
+To predict the precipitation sequences, the energy change during nucleation of different 
+precipitate phases is calculated according to the classical nucleation theory (CNT) as 
+∆𝐺𝑡𝑜𝑡= 𝑉∆𝐺𝑐ℎ𝑒𝑚+ 𝑉∆𝐺𝑒𝑙+ 𝐴𝛾,                                                                                                          ( S1 ) 
+where 𝑉 is the volume of the nucleus, ∆𝐺𝑐ℎ𝑒𝑚 is the chemical energy, ∆𝐺𝑒𝑙 is the elastic 
+strain energy, 𝛾 is the interfacial energy, and 𝐴 is the area of the interfaces between the 
+precipitate phase and matrix. ∆𝐺𝑐ℎ𝑒𝑚 for a precipitate phase can be estimated by its 
+excess Helmholtz free energy per atom, ∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+ 𝑎𝑡.
+,  at a certain temperature 𝑇: 
+∆𝐺𝑐ℎ𝑒𝑚(𝑇) = ∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+ 𝑎𝑡.
+𝑉𝑎𝑡𝑜𝑚
+⁄
+,                                                                                                                 ( S2 ) 
+∆𝐹𝑒𝑥𝑐𝑒𝑠𝑠
+𝑎𝑡.
+= ∆𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑎𝑡.
+−𝑇𝑆𝑒𝑥𝑐𝑒𝑠𝑠
+𝑎𝑡.
+,                                                                                                             ( S3 ) 
+where 𝑉𝑎𝑡𝑜𝑚 is the atomic volume, ∆𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑎𝑡.
+ is the excess energy per atom calculated at 
+0K and 𝑆𝑒𝑥𝑐𝑒𝑠𝑠
+𝑎𝑡.
+ is the entropy contribution per atom at a certain temperature. Calculations 
+at 300K and 500K are carried out to represent precipitation at the room temperature and 
+the aging temperature. Because all precipitates are embedded in the Al matrix, 𝑉𝑎𝑡𝑜𝑚 is 
+calculated by the atomic volume of Al as 
+𝑉𝑎𝑡𝑜𝑚= (𝑎𝐴𝑙)3 4
+⁄
+= 16.5 Å3.                                                                                                                 ( S4 ) 
+For plate-like Al2Pt, the elastic energy can be calculated based on the Christian’s 
+approximation [1, 2]: 
+∆𝐺𝑒𝑙
+𝑝𝑙𝑎𝑡𝑒=
+𝜇
+1−𝜈
+𝜋
+4 𝜀2 𝑡
+2𝑅,                                                                                                                 ( S5 ) 
+where 𝜇 is the shear modulus, 𝜈 is the Poisson’s ratio, and 𝜀 is the tensile strain normal 
+to habit planes. Since Al and Al2Pt have very similar shear modulus, 𝜇 is assumed to be34
+the same for matrix and precipitates (25 GPa). The strain along the coherent direction can 
+also be ignored as it has little effect compared to the strain along the semicoherent 
+direction. The tensile strain can then be evaluated as  [2] 
+𝜀= 2
+𝑛𝑐𝑝𝑝𝑡.−𝑚𝑎𝑚𝑎𝑡𝑟𝑖𝑥
+𝑛𝑐𝑝𝑝𝑡.+𝑚𝑎𝑚𝑎𝑡𝑟𝑖𝑥.                                                                                                                             ( S6 ) 
+For spherical phases that are incoherent with the matrix, there is no constraint to 
+match the lattices and lattice sites between the precipitates and matrix. Therefore, 
+Nabarro’s approximation can be used to calculate the elastic strain energy of a spherical 
+inclusion of the unstrained radius volume as [3]  
+∆𝐺𝑒𝑙
+𝑠𝑝ℎ𝑒𝑟𝑒=
+6𝐸𝜀2
+1+4𝐸
+3𝐾
+,                                                                                                                                ( S7 ) 
+where 𝐸 is Young’s modulus of the matrix, 𝐾 is the bulk modulus of the precipitates, and 
+𝜀 is the strain. Assuming at least one unit cell of the precipitate phase needs to nucleate 
+to represent such phase, a minimum 𝜀 can be calculated as 
+𝜀= 1 −Min(|
+𝑚𝑎𝑥(𝑎,𝑏,𝑐)𝑝𝑝𝑡.
+𝑚𝑎𝑚𝑎𝑡𝑟𝑖𝑥
+|),                                                                                                                ( S8 ) 
+where 𝑚𝑎𝑥(𝑎, 𝑏, 𝑐)𝑝𝑝𝑡. is the maximum of lattice parameters of the precipitates, and 𝑚 
+is an integer from 1. The required number of Pt atoms are also calculated in terms of the 
+critical size of the nucleus  
+𝑛𝑐𝑟𝑖𝑡
+𝑃𝑡
+= ⌈𝑉𝑐𝑟𝑖𝑡
+𝑛𝑃𝑡
+𝑉𝑢𝑛𝑖𝑡⌉,                                                                                                                ( S9 ) 
+where 𝑉𝑐𝑟𝑖𝑡 is the critical volume of the precipitates calculated based on the critical radius, 
+and 
+𝑛𝑃𝑡
+𝑉𝑢𝑛𝑖𝑡 is the number of Pt atoms per unit of volume in the corresponding intermetallic 
+phase.35
+S2. Crystallographic Information and Thermodynamics of Metastable Phases 
+Here we investigate phases Al5Pt, Al21Pt5 and Al3Pt, whose crystal structures are not fully 
+known. For these phases, crystal structures are proposed based on intermetallic phases 
+between elements in the same group of Al and Pt.  
+Table S1 lists the calculated formation energies of different phases. The crystal 
+structures of these phases are adopted from intermetallic phases between elements in the 
+same group of Al and Pt based on the Materials Project database [4]. Amongst two 
+possibilities, the I4/mcm structure is found to be the most stable one for Al5Pt and is 
+selected for further calculations. For Al3Pt phase, the Pm3̅n structure is found to have the 
+lowest energy. Because Al3Pt (Pm3̅n) is stabilised by entropy at high temperatures, 
+entropy contributions are considered for all possible crystal structures of Al3Pt, see Figure 
+S1. It can be observed that the Pm3̅n structure remains to be the most stable one. A high-
+temperature stable phase denoted 𝜉 and of a composition close to Al3Pt was reported to 
+be stable above 801 ℃ [5]. Our newly proposed Al3Pt (Pm3̅n) phase is also stable at high 
+temperatures. Therefore, we calculate the XRD powder patterns of all possible structures 
+of Al3Pt. As shown in Figure S2, compared to the experimental measurements [5], Al3Pt 
+(Pnma) shows a similar noisy pattern to the 𝜉 phase. However, small peaks between 30° 
+and 40° suggests Al3Pt (Pnma) have a different crystal structure to 𝜉. Al3Pt (Pm3̅n) also 
+shows distinct peaks compared to 𝜉. Therefore, 𝜉 phase may differ from any possible 
+structure of Al3Pt considered in this work, or it could possibly contain more than one 
+phase. Because the Pm3̅n structure is the most stable one for Al3Pt, and the full crystal 
+structure of 𝜉 has not been solved [5], Al3Pt (Pm3̅n) is used for further calculations in 
+this work.36
+ 
+Chemical 
+formula 
+Space group 
+Original 
+structure 
+𝐸𝑓
+𝑎𝑡. (eV/atom) 
+ 
+Al5Pt 
+I4/mcm 
+Ga5Pd 
+-0.43 
+P21/m 
+Ga5Pt 
+-0.40 
+Al21Pt5 
+Pm3̅m 
+Ga21Ni5 
+-0.36 
+Al3Pt 
+ 
+Pnma 
+Ga3Pt 
+-0.48 
+Fm3̅m 
+Al3Ni 
+-0.33 
+P63/mmc 
+Ga3Pt 
+-0.45 
+I4/mmm 
+Ga3Pt 
+-0.44 
+Pm3̅n 
+In3Pt 
+-0.51 
+ 
+Table S1. Crystal structures and formation energies per atom ( 𝐸𝑓
+𝑎𝑡. ) of possible 
+metastable phases in the Al-Pt system. 
+Figure S1. Change in free energy of formation per atom from 0K to 1000K for Al3Pt 
+with different crystal structures. The Pm3̅n structure remains to be the most stable one 
+for Al3Pt.37
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure S2. Calculated XRD power patterns of Al3Pt (Pnma) and Al3Pt (Pm3̅n) based on 
+their DFT relaxed crystal structures.38
+S3. Interface Matching of Al3Pt and Al5Pt 
+We adopted Kelly et al.’s method [6, 7] to determine the interfacial structures between a 
+give precipitate phase, Al3Pt and Al5Pt, and Al matrix. Both Al3Pt (Pm3̅n)  and  Al5Pt 
+(I4/mcm) possess certain planes that can match Al matrix (see Figure S3, S4). For Al3Pt, 
+its (200) planes can match the (111) planes of Al. For Al5Pt, its pure Al layers on (002) 
+planes can match the (001) planes of Al. The best matches for these two precipitate phases 
+results in the following crystallographic relationships: (200)𝐴𝑙3𝑃𝑡||(111)𝐴𝑙 and 
+(002)𝐴𝑙5𝑃𝑡||(001)𝐴𝑙,
+ leading 
+to 
+interfaces,
+(200)𝐴𝑙3𝑃𝑡||(111)𝐴𝑙
+ and 
+(002)𝐴𝑙5𝑃𝑡||(001)𝐴𝑙. We then constructed supercells representing Al3Pt and Al5Pt 
+precipitate phases embedded in Al based on the above orientation relationship in order to 
+examine the stability of their interfaces using DFT calculations. The interfaces between 
+Al3Pt/Al5Pt and the Al matrix are not thermodynamically stable due to their positive 
+excess energy 𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ (see Table S2, S3). Therefore, a spherical shape is assumed for 
+Al3Pt and Al5Pt because there is no stable coherent interface found for these phases. 
+ 
+ 
+Figure S3. Crystal structures of (a) Al3Pt, (b) matched planes of the 
+(200)𝐴𝑙3𝑃𝑡||(111)𝐴𝑙, and (c) the interfaces between Al3Pt and Al matrix (marked in 
+red rectangular).39
+ 
+ 
+Thickness of Al3Pt 
+𝐸𝑓
+𝑎𝑡.(𝑒𝑉/𝑎𝑡𝑜𝑚) 
+𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+(𝑒𝑉/𝑎𝑡𝑜𝑚) 
+1 c 
+-0.06 
+0.01 
+2 c 
+-0.11 
+0.01 
+ 
+ 
+ 
+ 
+Thickness of Al5Pt 
+𝐸𝑓
+𝑎𝑡.(𝑒𝑉/𝑎𝑡𝑜𝑚) 
+𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+(𝑒𝑉/𝑎𝑡𝑜𝑚) 
+0.5 c 
+0.18 
+0.23 
+1 c 
+0.29 
+0.38 
+ 
+ 
+ 
+ 
+ 
+ 
+Table S2. Calculated formation energy per atom (𝐸𝑓
+𝑎𝑡.) and excess energy per solute 
+(𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+) of Al3Pt precipitates with different thickness. A positive 𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ indicates 
+thermodynamically unstable interfaces. 
+Figure S4. Crystal structures of (a) Al5Pt, (b) matched planes of the 
+(002)𝐴𝑙5𝑃𝑡||(001)𝐴𝑙, and (c) the interfaces between Al5Pt and Al matrix (marked in red 
+rectangular). 
+Table S3. Calculated formation energy per atom (𝐸𝑓
+𝑎𝑡.) and excess energy per solute 
+(𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+) of Al5Pt precipitates with different thickness. A positive 𝐸𝑒𝑥𝑐𝑒𝑠𝑠
+𝑠.
+ indicates 
+thermodynamically unstable interfaces.40
+S4. Comparing the nucleation behaviour of Al2Pt to 𝛉′ (Al2Cu) 
+Because Al2Pt shows certain similarities to θ′ (Al2Cu), we compared their nucleation 
+behaviour. In Figure S5, dark blue curves and light blue curves are references that show 
+the energy change during nucleation of θ′ and Al2Pt respectively. The phase Al2Pt has 
+much smaller nucleation energy barrier and critical radius compared to θ′. The medium 
+blue curves indicate the contribution of a certain parameter. The large difference in 
+chemical potential  is the major effects on nucleation, and the interfacial energy also have 
+noticeable effect. In contrast, the influence of the misfit strain is neglectable. 
+The thickness of Al2Pt affects precipitation as it leads to different strains: 𝜀=
+ −0.25,+0.15,+0.03 for 𝑡= 1 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑,1.5 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑, 2 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑, respectively. A 
+thickness of 2 𝑐θ′−𝐴𝑙2𝐶𝑢
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑 is most desired for θ′ . However, 1 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑 is more 
+favourable than 1.5 or 2 𝑐𝐴𝑙2𝑃𝑡
+𝑒𝑚𝑏𝑒𝑑𝑑𝑒𝑑 for Al2Pt for its lowest nucleation energy barrier and 
+critical number of Pt atoms. This is also because of the large chemical potential for Al2Pt 
+to nucleate outweighs the influence of elastic strain energy.41
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure S5. Determining influences of CNT parameters on the nucleation energy barrier 
+and critical radius at 500 K. Dark and light blue represent the references of θ′ (Al2Cu) 
+and Al2Pt. In (a), (b), and (c), a single parameter (chemical potential, interfacial energy, 
+strain) of θ′ is changed to the according value of Al2Pt.42
+S5. Comparing the nucleation behaviour of Al2Pt to Al6Pt 
+The Al6Pt phase was reported to precipitate from the solid solution after Al2Pt [8]. 
+Because the full crystal structure of Al6Pt is still unknown, we use crude approximations 
+to estimate its nucleation behaviour. Assuming Al6Pt has the same formation energy per 
+solute atom compared to Al2Pt (i.e., Al6Pt sits on the convex hull), an interfacial energy 
+of 296 mJ/m2 is required to allow Al6Pt has a same nucleation energy barrier to Al2Pt (see 
+Figure S6). This is a small interfacial energy considering the semicoherent interfacial 
+energies of Al2Pt and θ′ (Al2Cu) are around 500 mJ/m2. Because no stable phase has been 
+reported with a stoichiometric of Al6Pt, and an interface with low interfacial energy is 
+undermined, Al6Pt is unlikely to precipitate prior to Al2Pt. 
+ 
+Figure S6. Comparing energy change between Al6Pt and Al2Pt during nucleation. The 
+blue curves are spherical Al6Pt with different interfacial energies.43
+S6. Comparing the nucleation behaviour of Al2Pt to Al5Pt and Al3Pt 
+For phases Al5Pt and Al3Pt that contain lattice planes that match Al matrix planes well, 
+possible, yet unrevealed, low energy interfaces may facilitate their precipitation. 
+Following the similar process as in Sec. S5, interfacial energies of 302 mJ/m3 and 196 
+mJ/m3 are required for Al5Pt and Al3Pt respectively to obtain a same nucleation energy 
+barrier compared to Al2Pt (see Figure S7). These interfacial energies are reasonable when 
+considering their good interface matching. A noticeable obstacle is the larger critical 
+radius of Al5Pt and Al3Pt than that of Al2Pt, which may impede their precipitation from 
+the Pt solid solution. 
+ 
+ 
+ 
+Figure S7. Comparing the energy change of a spherical nucleus of Al3Pt and Al5Pt 
+under 500K with different interfacial energies to Al2Pt.44
+References 
+[1] J. Christian, Accommodation strains in martensite formation, and the use of a 
+dilatation parameter, Acta Metallurgica 6(5) (1958) 377-379. 
+[2] L. Bourgeois, Y. Zhang, Z. Zhang, Y. Chen, N.V. Medhekar, Transforming solid-state 
+precipitates via excess vacancies, Nature communications 11(1) (2020) 1-10. 
+[3] F.R.N. Nabarro, The strains produced by precipitation in alloys, Proceedings of the 
+Royal Society of London. Series A. Mathematical and Physical Sciences 175(963) (1940) 
+519-538. 
+[4] A. Jain, S.P. Ong, G. Hautier, W. Chen, W.D. Richards, S. Dacek, S. Cholia, D. Gunter, 
+D. Skinner, G. Ceder, Commentary: The Materials Project: A materials genome approach 
+to accelerating materials innovation, APL materials 1(1) (2013) 011002. 
+[5] B. Grushko, D. Kapush, J. Su, W. Wan, S. Hovmöller, Al-rich region of Al-Pt, Journal 
+of alloys and compounds 580 (2013) 618-625. 
+[6] M.-X. Zhang, P.M. Kelly, M.A. Easton, J.A. Taylor, Crystallographic study of grain 
+refinement in aluminum alloys using the edge-to-edge matching model, Acta Materialia 
+53(5) (2005) 1427-1438. 
+[7] P. Kelly, H.-P. Ren, D. Qiu, M.-X. Zhang, Identifying close-packed planes in complex 
+crystal structures, Acta materialia 58(8) (2010) 3091-3095. 
+[8] K. Chattopadhyay, P. Ramachandrarao, Metastable phase formation and 
+decomposition in a rapidly solidified aluminium-platinum alloy, Materials Science and 
+Engineering 38(1) (1979) 7-17.

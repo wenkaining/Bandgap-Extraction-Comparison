@@ -1,0 +1,153 @@
+arXiv:0710.3963v1  [cond-mat.mtrl-sci]  22 Oct 2007 Including nonlocality in exchange-correlation kernel from time-dependent current density functional theory: Application to the stopping power of electron liquids V. U. Nazarov,1 J. M. Pitarke,2, 3 Y. Takada,4 G. Vignale,5 and Y.-C. Chang1 1Research Center for Applied Sciences, Academia Sinica, Taipei 115, Taiwan 2CIC nanoGUNE Consolider, Mikeletegi Pasealekua 56, E-2009 Donostia, Basque Country 3Materia Kondentsatuaren Fisika Saila, UPV/EHU and Unidad Fisica de Materiales, CSIC-UPV/EHU, 644 Posta kutxatila, E-48080 Bilbo, Basque Country 4Institute for Solid State Physics, University of Tokyo, Kashiwa, Chiba 277-8581, Japan 5Department of Physics and Astronomy, University of Missouri, Columbia, Missouri 65211, USA Abstract We develop a scheme for building the scalar exchange-correlation (xc) kernel of time-dependent density functional theory (TDDFT) from the tensorial kernel of time-dependent current density functional theory (TDCDFT) and the Kohn-Sham current density response function.
+Resorting to the local approximation to the kernel of TDCDFT results in a nonlocal approximation to the kernel of TDDFT, which is free of the contradictions that plague the standard local density approx- imation (LDA) to TDDFT.
+As an application of this general scheme, we calculate the dynamical xc contribution to the stopping power of electron liquids for slow ions to ﬁnd that our results are in considerably better agreement with experiment than those obtained using TDDFT in the conventional LDA.
+PACS numbers: 71.15.Mb 1I. INTRODUCTION Starting with the pioneering work of Runge and Gross,1 time-dependent density func- tional theory (TDDFT) has evolved into a powerful tool for studying excitations in atomic, molecular, and condensed-matter systems.2,3,4,5,6 In the linear-response regime, the key quan- tity of TDDFT is the dynamical exchange and correlation (xc) kernel fxc(r, r′, ω) deﬁned as the Fourier transform with respect to time of the functional derivative fxc(r, r′, t −t′) = δVxc(r, t) δn(r′, t′) , where Vxc and n are the time-dependent xc potential and particle density, respectively.
+In contrast with the xc potential in static DFT,7,8 the dynamical xc potential is strongly nonlocal with respect to space coordinates,9 to the point that a local-density approximation (LDA), understood as the zeroth order term in a regular gradient expansion, does not exist.
+Indeed, the use of LDA to treat genuinely dynamical eﬀects (i.e., eﬀects not captured by the adiabatic approximation) is known to lead to severe contradictions within the theory.10 Despite impressive successes of TDDFT, there is still the want of a scheme for including nonlocality in xc kernels, accurate enough and practically convenient in applications.6 Contrary to ordinary TDDFT, the time-dependent current density functional theory11 (TDCDFT) is known to allow a consistent LDA, which is believed to be of about the same level of accuracy for the time-dependent phenomena as the standard LDA is for ground- state properties.
+In many concrete applications, however, (including the calculation of the stopping power of electron liquids described below) it is the scalar xc kernel of the ordinary TDDFT, rather than the tensorial xc kernel of the TDCDFT, that naturally enters the equations describing the many-body eﬀects.
+In this paper we exploit the fact that TDDFT and TDCDFT would be completely equiv- alent if the exact xc functionals were known, to construct a nonlocal approximation for the scalar xc kernel of TDDFT starting from the LDA for the tensorial xc kernel of TDCDFT.
+As we shall show below, the resulting nonlocal xc kernel of TDDFT satisﬁes the exact zero-force sum-rule, the violation of which within LDA to TDDFT had once provided the motivation for introducing TDCDFT.11 We believe that our new nonlocal xc kernel has a broad range of potential applications, particularly in transport theory.
+As a ﬁrst demonstration of its usefulness, we present here 2the results of calculations of the stopping power of an electron liquid for slow ions, wherein we ﬁnd that the contribution of the many-body dynamical xc eﬀects is not only numerically important, but also leads to better agreement with experiment when the new nonlocal expression for fxc is used in lieu of the conventional LDA.
+The organization of this paper is as follows.
+In Sec II we derive a formula expressing the exact scalar xc kernel of TDDFT through the exact tensorial xc kernel of TDCDFT and the Kohn-Sham current density response function. In Sec.
+III we summarize the formal TDDFT of the stopping power of an electron liquid for slow ions and discuss the diﬃculties the LDA runs into. In Sec.
+IV we give the details of our calculational procedure, present results and their discussion. Sec.
+V contains our conclusions.
+Appendix is devoted to the interrelations between scalar and tensorial zero-force sum rules within the exact and approximate theories. II.
+SCALAR XC KERNEL OF TDDFT FROM THE TENSORIAL XC KERNEL OF TDCDFT We start from the expression of the xc kernel of TDDFT12 (the dependence on r, r′, and ω is implied) fxc = χ−1 KS −χ−1 − 1 |r −r′|, (1) where χ is the longitudinal density response function and χKS is its single-particle Kohn- Sham (KS) counterpart.
+Similarly,11 ˆfxc,ij = ˆχ−1 KS,ij −ˆχ−1 ij −c ω2∇i 1 |r −r′| ∇′ j, (2) where ˆfxc,ij is the tensorial xc kernel of the TDCDFT, ˆχij and ˆχKS,ij are the many-body current density response function and its single-particle KS counterpart, respectively.
+In- verting the relation between the tensorial current density and the scalar density response functions χ = −c ω2∇i · ˆχij · ∇′ j, (3) we can write χ−1 = −ω2 c ∇−2∇·  ˆLˆχˆL −1 · ∇∇−2, 3where ˆL is the longitudinal projector operator ˆLij = ∇i∇j∇−2.
+Using a simple operator identity  ˆLˆχˆL −1 = ˆLˆχ−1 ˆL −ˆLˆχ−1  ˆT ˆχ−1 ˆT −1 ˆχ−1 ˆL, where ˆT = ˆ1 −ˆL is the transverse projector, we can write for the inverse scalar response function χ−1 =−ω2 c ∇−2∇·  ˆχ−1−ˆχ−1 ˆT ˆχ−1 ˆT −1 ˆχ−1  ·∇∇−2 (4) and similarly for χKS. Using Eqs.
+(1), (2), (4), and the KS counterpart of the latter, we readily arrive at fxc=−ω2 c ∇−2∇·  ˆfxc+  ˆχ−1 KS−ˆfxc h ˆT  ˆχ−1 KS−ˆfxc  ˆT i−1 ×  ˆχ−1 KS−ˆfxc  −ˆχ−1 KS  ˆT ˆχ−1 KS ˆT −1 ˆχ−1 KS  · ∇∇−2.
+(5) Equation (5) is our desired and central result: it expresses the scalar xc kernel of TDDFT in terms of its tensorial counterpart of TDCDFT.
+In the case of a bounded system, the exact scalar xc kernel satisﬁes the zero-force sum- rule10 Z fxc(r, r′, ω) ∇′n0(r′) dr′ = ∇Vxc(r), (6) where n0(r) and Vxc(r) are, respectively, the ground-state density and the xc potential.
+On the other hand, the tensorial ˆfxc and ˆχKS satisfy the corresponding sum-rules of TDCDFT.13 In Appendix A we prove an important result that with any approximation to the tensorial ˆfxc satisfying the zero-force sum rule, the corresponding scalar xc kernel of Eq. (5) satisﬁes the sum-rule (6). III.
+TDDFT OF THE STOPPING POWER OF ELECTRON LIQUID We now illustrate the usefulness of Eq. (5) by applying it to the problem of the stopping power of an electron liquid for slow ions.
+A. Formal TDDFT of the stopping power of electron liquid for a slow ion The stopping power dE/dx is the loss of energy per unit path of an ion moving through the electron liquid.
+The constant of proportionality between dE/dx and the ion velocity 4(for low velocity) deﬁnes the friction coeﬃcient Q, which can be written as14 Q = Q1 + Q2 where Q1 and Q2 are the single-particle and the many-body dynamical xc contribu- tions, respectively.
+The single-particle (binary-collisions) contribution Q1 can be expressed as15,16,17,18 Q1 = ¯n0 kFσtr(kF), (7) where kF is the Fermi wave-number, σtr(kF) is the transport cross-section of the elastic scattering in the KS potential of an electron at the Fermi level, and ¯n0 is the electron liquid density in the absence of the ion.
+As shown in Ref. 14, keeping the Q1 part of the friction coeﬃcient only is equivalent to using the adiabatic version of TDDFT.
+The many-body dynamical xc contribution Q2 is given by14 Q2 = − Z [∇rn0(r) · ˆv][∇r′n0(r′) · ˆv] × ∂Imfxc(r, r′, ω) ∂ω  ω=0dr dr′, (8) where fxc(r, r′, ω) is the scalar xc kernel of the inhomogeneous many-body system of an ion at rest in electron liquid and ˆv is the unit vector in the direction of the ion velocity.
+In the following, we focus on the calculation of Q2.
+B. Contradiction inherent in the LDA The simplest approximation, namely the LDA to the ordinary TDDFT,12 amounts to setting fxc(r, r′, ω) = f h xc,L[n0(r), ω] δ(r −r′), (9) where f h xc,L(n, ω) is the q →0 limit of the longitudinal xc kernel of a homogeneous electron liquid of density n. By spherical symmetry, substitution of Eq. (9) into Eq. (8) yields Q2 = −4π 3 ∞ Z 0 dr [r n′ 0(r)]2 ∂Imf h xc,L[n0(r), ω] ∂ω  ω=0.
+(10) 5In the limit of zero density of the electron liquid ¯n0 →0, the independent-electron part Q1 of Eq. (7) vanishes, but Q2 of Eq. (10) gives a ﬁnite value, because the gradient of the ground-state density n0(r) of an isolated atom is not zero and ∂Imf h xc,L(n, ω)/∂ω|ω=0 is negative.19 Thus, LDA to the scalar fxc yields a ﬁnite friction coeﬃcient even in the absence of the electron gas, indicating an obvious ﬂaw of the approximation.
+Table I shows this error quantitatively for a number of atoms in comparison with friction coeﬃcient at rs = 2.2.
+Atom He Be C O Ne Mg Si Q(rs = ∞) 0.04 0.11 0.17 0.24 0.30 0.36 0.43 Q(rs=2.2) 0.34 0.43 0.70 0.46 0.16 0.15 0.54 % 12 25 24 52 188 240 80 TABLE I: Inaccuracy of LDA to TDDFT: Friction coeﬃcient of free space (rs = ∞) and that of an electron liquid of rs = 2.2 for several atoms.
+Line 3 is the ratio of lines 1 and 2 (%).
+To check that Eq. (5) resolves this problem of the ﬁnite friction coeﬃcient of free space, it is suﬃcient to notice that an isolated atom is a bounded system and hence the sum-rule (6) holds, which, substituted into Eq. (8), yields zero identically.
+Moreover, LDA to TDCDFT satisﬁes the zero-force sum-rule by construction,11 ensuring, as is shown in the Appendix, that Eq. (6) holds for a bounded system even if the local version of TDCDFT is used in Eq. (5).28 IV.
+CALCULATIONAL PROCEDURE, RESULTS, AND DISCUSSION Our numerical procedure is to evaluate and invert operators entering Eq. (5) on an ortho- normal set of radial basis functions.
+For ˆχKS,ij, we have employed the standard method of using the static KS orbitals to build the independent-electron response function ˆχKS,ij(r, r′, ω) = 1 c n0(r)δ(r −r′) δij −1 4c× X αβ fα −fβ ω −ǫβ + ǫα + iη [ψ∗ α(r)∇iψβ(r) −ψβ(r)∇iψ∗ α(r)] ×  ψ∗ β(r′)∇′ jψα(r′) −ψα(r′)∇′ jψ∗ β(r′)  , (11) 6where ψα(r) and ǫα are the single-particle wave-function and eigenenergy, respectively, in the state α, and fα is the occupation number of this state.
+For ˆfxc,ij, we use LDA to TDCDFT as20 Z fxc,ik(r, r′, ω) jk(r′)dr′ = ic ω ×  −∇iV ALDA xc (r, ω) + 1 n0(r)∇k σxc,ik(r, ω)  , (12) where V ALDA xc (r, ω) = 1 iω ǫ′′ xc[n0(r)] ∇k jk(r), (13) ǫxc(n) is the xc energy density, σxc,ik(r, ω) = ˜ηxc[n0(r), ω] [∇k ui(r) + ∇i uk(r) −2 3 ∇sus(r) δik  + ˜ζxc[n0(r), ω] ∇sus(r) δik, (14) is the stress tensor, and u(r) = j(r)/n0(r) is the velocity ﬁeld.
+The viscosity coeﬃcients are given by29 ˜ζxc(n, ω) = −n2 iω  f h xc,L(n, ω) −4 3f h xc,T(n, ω) −ǫ′′ xc(n)  , ˜ηxc(n, ω) = −n2 iωf h xc,T(n, ω), (15) and f h xc,T(n, ω) is the transverse xc kernel of the homogeneous electron liquid of density n. In Fig. 1, we plot the results at rs = 1.59 corresponding to the valence electron-density of carbon.30 It is instructive that within 1 ≤Z1 ≤14 both TDCDFT and TDDFT give virtually the same result, which, we believe, is generally true for light atoms in high-density electron liquid.
+Then, at higher Z1, rather abruptly, the dynamical xc contribution almost vanishes in our present calculation, which can be understood qualitatively recalling that for heavy atoms in the electron liquid the charge-density distribution is close to that of isolated atoms, and hence Q2 should be small.
+In order to compare our result with experiment, we plot the friction coeﬃcient at rs = 2.2 versus the atomic number of a moving ion in Fig. 2. Results of the calculations with neglect of the dynamical xc [Eq. (7)], LDA to TDDFT [the sum of Eq. (7) and Eq. (10)], and 72 4 6 8 10 12 14 16 18 20 0 1 2 3  Single-particle theory  LDA to TDDFT  LDA to CDFT C r s =1.59     Friction coefficient (a.u.) Z 1 FIG.
+1: (Color online) Friction coeﬃcient of electron liquid of carbon density (rs = 1.59) versus the atomic number of an ion.
+Green squares are results with neglect of the dynamical xc [Eq. (7)].
+Blue triangles are results with the dynamical xc included within LDA to the conventional TDDFT [Eq. (10)].
+Red circles are results with the dynamical xc included with use of Eqs. (5) and (12)-(15).
+LDA to TDCDFT [the sum of Eq. (7) and Eq. (8) with fxc given by Eqs.
+(5) and (12)- (15)] are shown, together with the experimental data of Ref.
+21 for ions moving with the velocity of 0.5 a.u.
+at the distance of 1.2 a.u. from the last atomic plane of the (111) surface of aluminum.
+The inhomogeneity of the electron density an ion travels through is weak under these conditions, and we have used rs estimated experimentally.21 Moreover, the experimental stopping power is predominantly electronic since the trajectory of an ion is well separated from the lattice atoms.
+All together, these two conditions justify the comparison with the theory within the electron liquid model.
+The non-monotonic dependence of the friction coeﬃcient on the atomic number of the ion (so-called Z1-oscillations) is known to result within the single-particle theory from the competition between the increase in the electron liquid-ion interaction with the growing charge of the nucleus of the ion and its decrease due to the screening by shells of bounded electrons of the pseudo-atom as well as its resonant states.18 While LDA to TDDFT (triangles in Fig. 2) largely overestimates the friction coeﬃcient at Z1 ≥5, the results using Eq. (5) (circles in Fig. 2) are in good agreement with the experiment in a wide range of 3 ≤Z1 ≤18.
+A deviation occurs at small and large Z1, where the experimental friction coeﬃcient is lower than the independent-electrons calculations 82 4 6 8 10 12 14 16 18 20 0.0 0.5 1.0 1.5 2.0  Single-particle theory  LDA to TDDFT  LDA to CDFT  Experim ent  Friction coefficient (a.u.) Z 1 Al (111) r s =2.2 FIG.
+2: (Color online) Friction coeﬃcient of electron liquid of rs = 2.2 versus the atomic number of an ion.
+The green squares are the results with neglect of the dynamical xc as obtained from Eq. (7).
+Blue triangles are the results with the dynamical xc included within LDA to the conventional TDDFT as obtained from Eq. (10).
+Red circles are results with the dynamical xc included with use of Eq. (5) for xc kernel and Eqs.
+(12)-(15) of LDA to TDCDFT.
+Black solid squares are the measured stopping power of Al of Ref. 21 for ions (v = 0.5 a.u.) moving at a distance of 1.2 a.u. from the last atomic plane of the Al (111) surface.
+(open squares in Fig. 2).
+This feature has recently been reported as due to the ﬁnite velocity of ions.22 Hence it is an eﬀect of the deviation from linear dependence of stopping power on velocity.
+The same eﬀect gives a positive contribution at 8 ≤Z1 ≤12, suggesting that combined with the many-body eﬀects of the present theory the agreement with experiment can be further improved.31 In the range 13 ≤Z1 ≤17, the dynamical many-body eﬀects seem to be solely responsible for the enhancement of the friction coeﬃcient compared with the independent-electron theory.
+In Fig. 3, we plot the friction coeﬃcient at rs = 2 versus the atomic number of ions in the range 5 ≤Z1 ≤39.
+This is compared with the available measured stopping power for ions with the velocity of 0.68 a.u. channeled along the (110) direction in gold.
+Due to the channeling, collisions with the lattice atoms again do not give signiﬁcant contribution to the stopping power.
+It must be noted, however, that under channeling conditions the assumption of the nearly constant electron density is an uncontrolled approximation.
+One important qualitative conclusion we can draw from comparison of the theory and experiment in this 95 10 15 20 25 30 35 40 0 1 2 3  Single-particle theory  LDA to TDDFT  LDA to CDFT  Experim ent     Friction coefficient (a.u.) Z 1 Au r s =2.0 FIG.
+3: (Color online) Friction coeﬃcient of electron liquid of rs = 2 versus the atomic number of an ion.
+Green squares are the results with neglect of the dynamical xc [Eq. (7)].
+Blue triangles are the results with the dynamical xc included within LDA to the conventional TDDFT [Eq. (10)].
+Red circles are results with the dynamical xc included with use of Eqs. (5) and (12)-(15).
+Black solid squares are the measurements from Ref.
+23 of stopping power of Au for ions (v = 0.68 a.u.) channeled along the (110) direction.
+The black dotted line is the calculation of Ref.
+24 with the dynamical xc included within the linear-response theory of the homogeneous electron gas.
+case is that for Z1 ≥22 the role of dynamical xc eﬀects becomes negligible in both experiment and the present theory, while LDA to the TDDFT yields these eﬀects largely overestimated.
+Similar to the dip in Fig. 2, the underestimated theoretical values at 7 ≤Z1 ≤12 can be attributed to the eﬀect of ﬁnite velocity.22 However, within the range 16 ≤Z1 ≤19 the dynamical xc contribution is too small to account for the onset at the experimental data, nor can the persistent enhancement of the friction coeﬃcient in this range be attributed to the eﬀect of ﬁnite velocity within the independent-particle theory.
+Further studies are required to elucidate the nature of this onset, the inhomogeneity of electron density being the most plausible cause.
+The dotted line in Fig. 3 represents the friction coeﬃcient of silver obtained with the dynamical electron-electron interactions included in Ref.
+25 within the framework of the linear-response theory of the homogeneous electron gas.
+In the case of the non-degenerate plasma, an approach similar to that of Ref.
+25 has been reported in Refs. 26 and 27.
+10V. CONCLUSIONS We have rigorously expressed the dynamical xc kernel fxc(r, r′, ω) of TDDFT in the terms of its TDCDFT tensorial counterpart and the Kohn-Sham current density response function of independent electrons.
+Then, using the local density approximation to TDCDFT, we have built a nonlocal approximation to fxc(r, r′, ω) which satisﬁes the exact zero-force sum-rule for bounded systems.
+We believe that our new approximation will be broadly applicable to a variety of problems in electronic transport theory.
+As a ﬁrst application, we have calculated the dynamical xc contribution to the stopping power of an electron liquid for slow ions.
+In doing so we have resolved a basic diﬃculty of the conventional LDA – the ﬁnite friction coeﬃcient of free space – and we have improved the overall agreement between theory and experiment.
+APPENDIX A: RELATION BETWEEN SCALAR AND TENSORIAL ZERO- FORCE SUM-RULES The following sum-rules hold13 for the exact tensorial xc kernel Z ˆfxc,ij(r, r′, ω) n0(r′)dr′ = −c ω2∇i∇jVxc(r) (A1) and for the KS and the interacting current density response functions, respectively, c ω2 Z ˆχKS,ik(r, r′, ω) ∇′ k∇′ jVKS(r′) dr′ = c Z ˆχKS,ij(r, r′, ω) dr′ −n0(r) δij, (A2) c ω2 Z ˆχik(r, r′, ω) ∇′ k∇′ jV0(r′) dr′ = c Z ˆχij(r, r′, ω) dr′ −n0(r) δij, (A3) where V0(r) is the bare potential.
+In this Appendix, we prove that for any approximation to ˆfxc satisfying the sum-rule (A1), the corresponding scalar fxc obtained through Eq. (5) satisﬁes the sum-rule of Eq. (6).
+First, the validity of Eq. (A2) is independent on an approximation for ˆfxc, and it can be veriﬁed directly with use of the explicit representation of ˆχKS of Eq. (11).
+Second, Eq. (A3) 11holds if Eqs. (A1) and (A2) hold as can be seen by easily inverting the arguments of Ref.
+13 leading from Eqs.
+(A2) and (A3) to Eq. (A1).
+Equation (A3) can be rewritten as c ω2 Z ˆχik(r, r′, ω) ∇′ k∇′ jV0(r′) dr′ = c Z ˆχik(r, r′, ω) ∇′ kr′ j dr′ −n0(r) δij.
+(A4) The next step involves integration by parts requiring the response function to vanish at inﬁn- ity and, therefore, it applies to bounded systems only.
+In this case we can write multiplying Eq. (A4) scalarly from the left by ∇and using Eq. (3) Z χ(r, r′, ω)  ω2r′ j −∇′ jV0(r′)  dr′ = ∇jn0(r), and after the inversion Z χ−1(r, r′, ω)∇jn0(r′) dr′ = ω2rj −∇jV0(r).
+(A5) A similar relation holds for χKS Z χ−1 KS(r, r′, ω)∇jn0(r′) dr′ = ω2rj −∇jVKS(r).
+(A6) Subtracting Eq. (A5) from Eq. (A6) and using the deﬁnition of Eq. (1), we immediately arrive at Eq. (6).
+ACKNOWLEDGMENTS G. V. and Y. T. acknowledge, respectively, ﬁnancial support by the Department of Energy grant DE-FG02-05ER46203 and a Grant-in-Aid for Scientiﬁc Research in Priority Areas (No.17064004) of MEXT, Japan.
+1 E. Runge and E. K. U. Gross, Phys. Rev. Lett. 52, 997 (1984).
+2 M. Petersilka, U. J. Gossmann, and E. K. U. Gross, Phys. Rev. Lett. 76, 1212 (1996).
+3 A. Wasserman, N. T. Maitra, and K. Burke, Phys. Rev. Lett. 91, 263001 (2003).
+4 L. Reining, V. Olevano, A. Rubio, and G. Onida, Phys. Rev. Lett. 88, 066404 (2002).
+5 A. Marini, R. Del Sole, and A. Rubio, Phys. Rev. Lett. 91, 256402 (2003).
+126 K. Burke, J. Werschnik, and E. K. U. Gross, J. Chem.
+Phys. 123, 062206 (2005).
+7 P. Hohenberg and W. Kohn, Phys.
+Rev. 136, B864 (1964).
+8 W. Kohn and L. J. Sham, Phys.
+Rev. 140, A1133 (1965).
+9 J. P. Perdew and M. Levy, Phys. Rev. Lett. 51, 1884 (1983).
+10 G. Vignale, Phys. Lett. A 209, 206 (1995).
+11 G. Vignale and W. Kohn, Phys. Rev. Lett. 77, 2037 (1996).
+12 E. K. U. Gross and W. Kohn, Phys. Rev. Lett. 55, 2850 (1985).
+13 G. Vignale and W. Kohn, in Electronic Density Functional Theory: Recent Progress and New Directions, edited by J. Dobson, M. P. Das, and G. Vignale (Plenum Press, New York, 1998).
+14 V. U. Nazarov, J. M. Pitarke, C. S. Kim, and Y. Takada, Phys.
+Rev. B 71, 121106(R) (2005).
+15 J. Finneman, Ph.D. thesis, Aarhus University, the Institute of Physics (1968), unpublished.
+16 T. L. Ferrell and R. H. Ritchie, Phys.
+Rev. B 16, 115 (1977).
+17 P. M. Echenique, R. M. Nieminen, and R. H. Ritchie, Solid State Commun. 37, 779 (1981).
+18 P. M. Echenique, R. M. Nieminen, J. C. Ashley, and R. H. Ritchie, Phys.
+Rev. A 33, 897 (1986).
+19 Z. Qian and G. Vignale, Phys.
+Rev. B 65, 235121 (2002).
+20 G. Vignale, C. A. Ullrich, and S. Conti, Phys. Rev. Lett. 79, 4878 (1997).
+21 H. Winter, J. I. Juaristi, I. Nagy, A. Arnau, and P. M. Echenique, Phys.
+Rev. B 67, 245401 (2003).
+22 R. Vincent and I. Nagy, Nucl. Instr. Meth. B 256, 182 (2007).
+23 J. Bøttiger and F. Bason, Radiat.
+Eﬀects 2, 105 (1969).
+24 I. Nagy, A. Arnau, and P. M. Echenique, Phys.
+Rev. A 40, 987 (1989).
+25 I. Nagy, A. Arnau, P. M. Echenique, and E. Zaremba, Phys.
+Rev. B 40, R11983 (1989).
+26 K. Morawetz and G. R¨opke, Phys.
+Rev. E 54, 4134 (1996).
+27 A. Selchow and K. Morawetz, Phys.
+Rev. E 59, 1015 (1999).
+28 Notice that the sum-rule (6) does not hold for an extended system: this is why Q2 is diﬀerent from zero for an electron liquid of ﬁnite density.
+29 We have used the zero-temperature viscosities, which are valid for ω ≫T 2/EF .
+This is justiﬁed since in the experimentally accessible regime ω ∼0.1 a.u. and T 2/EF ∼10−6 a. u. at room temperature.
+30 The available experimental stopping power of carbon [D. Ward et al., Can. J. Phys.
+57, 645 (1979); G. H¨ogberg, Phys.
+Status Solidi B 46, 829 (1971)] is predominantly determined by 13collisions with lattice atoms, making it meaningless to compare with electron gas model calcu- lations. 31 Ref.
+22 attributes the overestimation by Ref.
+14 of the role of the many-body eﬀects to the use of the total ground-state density rather than that of the delocalized states only.
+The total density is, however, the basic variable of TDDFT and without any assumptions it enters the rigorous result of Eq. (8).
+The real source of the overestimation of the dynamical xc in Ref. 14 was, as Ref.
+14 had anticipated and the present work shows, use of LDA within TDDFT. 14

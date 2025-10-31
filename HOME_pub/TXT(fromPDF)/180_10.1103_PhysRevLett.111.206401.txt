@@ -1,0 +1,615 @@
+Non-Fermi-Liquid and Topological States with Strong Spin-Orbit Coupling
+Eun-Gook Moon,1 Cenke Xu,1 Yong Baek Kim,2 and Leon Balents3
+1Department of Physics, University of California, Santa Barbara, California 93106, USA
+2Department of Physics, University of Toronto, Toronto, Ontario M5S 1A7, Canada
+3Kavli Institute for Theoretical Physics, University of California, Santa Barbara, California 93106, USA
+(Received 12 December 2012; published 12 November 2013)
+We argue that a class of strongly spin-orbit-coupled materials, including some pyrochlore iridates
+and the inverted band gap semiconductor HgTe, may be described by a minimal model consisting of
+the Luttinger Hamiltonian supplemented by Coulomb interactions, a problem studied by Abrikosov
+and collaborators. It contains twofold degenerate conduction and valence bands touching quadratically
+at the zone center. Using modern renormalization group methods, we update and extend Abrikosov’s
+classic work and show that interactions induce a quantum critical non-Fermi-liquid phase, stable
+provided time-reversal and cubic symmetries are maintained. We determine the universal power-law
+exponents describing various observables in this Luttinger-Abrikosov-Beneslavskii state, which include
+conductivity, speciﬁc heat, nonlinear susceptibility, and the magnetic Gruneisen number. Furthermore,
+we determine the phase diagram in the presence of cubic and/or time-reversal symmetry breaking
+perturbations, which includes a topological insulator and Weyl semimetal phases. Many of these phases
+possess an extraordinarily large anomalous Hall effect, with the Hall conductivity scaling sublinearly
+with magnetization xy  M0:51.
+DOI: 10.1103/PhysRevLett.111.206401
+PACS numbers: 71.10.Hf, 75.70.Tj
+Divining the nature of critical non-Fermi-liquid (NFL)
+phases of electrons is one of the most outstanding problems
+in correlated electron systems, such as cuprates, pnictides,
+and heavy fermion materials [1–4]. Motivated by these
+materials, theoretical research has focused on models
+with large Fermi surfaces (or Fermi pockets). In spite of
+the recent technical advances [5], a clear resolution of
+experimental puzzles awaits deeper understanding.
+In this work, we uncover another venue for NFL physics.
+Recent theory and experiment have revealed a new frontier
+for correlated phenomena: Mott correlation physics in
+materials with strong spin-orbit coupling (SOC) [6,7]. Of
+particular interest in this regard are the 5d transition metal
+oxides, where compelling evidence has been built for Mott
+phenomena driven cooperatively by SOC and Coulomb
+interactions [6–8]. This paper explores distinct NFL states
+that exist only in the strong SOC regime.
+We are particularly motivated by the pyrochlore iridates
+A2Ir2O7, where A is a lanthanide element [9,10]. These
+materials display T > 0 metal-insulator transitions, with
+the
+metal-insulator
+transition
+temperature
+decreasing
+with increasing A radius. The progression culminates with
+Pr2Ir2O7, which is a highly unconventional metal down to
+the lowest temperatures [11,12]. It displays logarithmic
+NFL behavior of the magnetic susceptibility and a remark-
+ably enormous zero ﬁeld anomalous Hall effect (AHE) in
+the absence of any measurable magnetization [11,12].
+With these studies as motivation, we utilize prior studies
+of the electronic structure of pyrochlore iridates [13–15] to
+show that a minimal description for the electronic states in
+their paramagnetic phase is a storied Hamiltonian from
+semiconductor physics: the Luttinger model of inverted
+band gap semiconductors [16]. This model has gained
+recent notoriety for its relevance to HgTe, the starting
+material for some topological insulators [17–20]. While
+HgTe is a weakly correlated material where band structure
+alone provides a sufﬁcient description, in the 5d mate-
+rials, the Luttinger Hamiltonian must be supplanted by
+interactions.
+In this Letter, we carry out such an analysis, rediscover-
+ing and extending a storied analysis by Abrikosov and
+Beneslavskii of Coulomb forces on the Luttinger problem
+[21,22]. Using modern renormalization group (RG) tech-
+niques, we conﬁrm Abrikosov’s conclusion that long-range
+Coulomb interactions convert the quadratic band touching
+into a quantum critical NFL, prove the stability of the state
+within an  expansion, and calculate the full set of anoma-
+lous dimensions characterizing the state. Consequently,
+we
+call
+the
+resulting
+phase
+a
+Luttinger-Abrikosov-
+Beneslavskii (LAB) state. While the LAB phase is stable
+in the presence of time-reversal and cubic symmetries, we
+show that it is a ‘‘parent’’state for other exotic states that can
+be reached by breaking either or both of these: metallic and
+double-Weyl semimetallic phases with enormous AHEs,
+and topological insulators. We discuss the implications for
+the iridates at the end of the Letter.
+The LAB phase itself has striking properties. Its NFL
+nature is revealed directly by algebraic singularities in the
+electron spectral function (probed in angle-resolved
+photoemission) and in optical conductivity, as well as
+indirectly through many power-law thermodynamic and
+response functions.
+PRL 111, 206401 (2013)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+15 NOVEMBER 2013
+0031-9007=13=111(20)=206401(5)
+206401-1
+ 2013 American Physical SocietyWe now turn to the exposition of these results. We
+consider the paramagnetic band structure based on prior
+work [13–15], which argued that the states at the zone
+center ( point) near the Fermi energy are comprised of
+the
+four-dimensional
+representation,
+which
+can
+be
+described by ‘‘angular momentum’’ operators ~J (which
+are j ¼ 3=2 matrices) transforming as the T2 representa-
+tion of the cubic group. In our minimal model, we assume
+only these states close to  are important. Then, k  p
+theory and cubic symmetry determine the band structure
+in their vicinity to be precisely described by the Luttinger
+Hamiltonian with three effective mass parameters [16,23]
+H 0ðkÞ ¼ k2
+2 ~M0
+þ
+5
+4 k2  ð ~k  ~JÞ2
+2m
+ ðk2xJ2x þ k2yJ2y þ k2zJ2zÞ
+2Mc
+:
+This describes doubly degenerate bands with energy
+EðkÞ ¼ k2
+2M0
+
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ k2
+2m
+2
+þ m þ 2Mc
+4mM2c
+pcðkÞ
+s
+;
+(1)
+where pcðkÞ ¼ P
+ik4
+i  P
+ijk2
+i k2
+j and M0 ¼ ð4Mc ~M0Þ=
+ð4Mc  5 ~M0Þ. Henceforth, we assume M0 > m, which
+describes conduction and valence bands touching quadrati-
+cally at E ¼ k ¼ 0, where the chemical potential for the
+undoped material crosses.
+The LAB is obtained by adding to this the long-range
+Coulomb interaction. We implement the latter by a scalar
+potential ’, which in the Euclidean path integral formalism
+gives the action
+SL ¼
+Z
+dddxfc y½@  ie’ þ ^H 0c þ c0
+2 ð@i’Þ2g;
+(2)
+with ^H 0 ¼ H 0ði ~rÞ and c0 ¼ 1=4. Here, c is a four-
+component spinor, but subsequently we will artiﬁcially add
+an additional UðNfÞ ﬂavor index, which allows a check on
+our calculations by large Nf methods; the physical case is
+Nf ¼ 1. Equation (2) contains, in addition to the three
+mass parameters, the Coulomb coupling constant e. For
+e ¼ 0, scale invariance is manifest, with the scaling dimen-
+sions ½x1 ¼ 1, ½1 ¼ z, ½c  ¼ ðd=2Þ, ½ð1=mÞ ¼ z 
+2, and ½’ ¼ ðd þ z  2Þ=2. Here, we introduce the
+dynamic critical exponent (z), which is naturally z ¼ 2
+with e ¼ 0 but will become nontrivial with interactions.
+Directly in the physical case d ¼ 3, the dimension of the
+coupling constant is ½e2 ¼ 1, so Coulomb interactions are
+strongly relevant. Therefore, we employ the " ¼ 4  d
+expansion to control the RG analysis. As is familiar from
+quantum electrodynamics, three one loop Feynman dia-
+grams contribute to leading order in ": the fermion self-
+energy, boson self-energy, and vertex correction. Here, we
+show that the relevance of Coulomb interactions signals,
+rather than a ﬂow to strong coupling and a symmetry
+breaking instability, the formation of a new stable interact-
+ing ﬁxed point, which describes the critical non-Fermi-
+liquid LAB state (Abrikosov’s analysis tacitly assumes this
+stability).
+The RG is carried out perturbatively in e but nonpertur-
+batively in the mass parameters. Thus, a full treatment
+gives nontrivial and complete beta functions for the two
+dimensionless mass ratios m=M0 and m=Mc; these are
+given in the Supplemental Material [24]. The analysis of
+the full RG shows, however, that there is a single stable
+isotropic ﬁxed point corresponding to m=M0¼m=Mc¼0,
+so for simplicity, we quote in the main text only the results
+in the vicinity of this point.
+In this limit, the leading contribution to the bosonic self-
+energy becomes
+1
+Nf
+’ðq; 0Þ ¼ ð2mÞe2
+Z
+ddk
+ð2Þd
+1
+k4
+
+ q2;
+(3)
+where we took the ! ! 0 limit because frequency depen-
+dence is subdominant. The divergence should be absorbed
+by rescaling the bosonic ﬁeld ’ ! ebd‘’ upon reduc-
+tion of the hard momentum cutoff  ! ed‘, which
+deﬁnes the RG parameter ‘. This gives the bosonic anoma-
+lous dimension b ¼ 2Nfu [25], where the dimensionless
+coupling constant is u ¼ ðme2=82c04dÞ, which has the
+physical meaning in d ¼ 3 of the ratio of the real space
+cutoff to the effective Bohr radius. The frequency depen-
+dence of the one loop fermionic self-energy and the vertex
+correction both vanish, the result of a Ward identity. For
+k  0, the fermion self-energy gives mass corrections, e.g.,
+ð1=mÞ ¼ 8u=ð15mÞ  d‘
+to
+leading
+order.
+Detailed
+analysis is given in the Supplemental Material [24].
+Given these calculations, we choose z ¼ 2  8u=15 to
+keep the mass m ﬁxed, which gives the RG equations, to
+lowest order in m=Mc, m=M0,
+d
+d‘u ¼ "u  30Nf þ 8
+15
+u2;
+d
+d‘
+ m
+Mc
+
+¼ 0:152u
+ m
+Mc
+
+;
+d
+d‘
+ m
+M0
+
+¼  8
+15u
+ m
+M0
+
+:
+(4)
+From the ﬁrst equation above, we ﬁnd the ﬁxed point
+coupling and hence dynamical exponent
+u ¼
+15
+30Nf þ 8 ";
+z ¼ 2 
+4
+15Nf þ 4 ";
+(5)
+and since u > 0, the second line in Eq. (4) implies both
+m=M0 and m=Mc are irrelevant. This establishes the
+existence and nature of the stable, isotropic ﬁxed point
+describing the LAB phase. As a check, we have carried
+out a large Nf expansion, which gives the same bosonic
+anomalous dimension as in the " expansion at the one-loop
+level, supporting the stability of the LAB phase.
+PRL 111, 206401 (2013)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+15 NOVEMBER 2013
+206401-2The presence of the stable interacting ﬁxed point can be
+understood physically as a balance of partial dynamical
+screening of the Coulomb interactions by electron-hole
+pairs and mass enhancement of the same quasiparticles
+by pairs. This situation is in sharp contrast to the case of
+a vanishing indirect band gap, for which to leading order in
+the long-range Coulomb interaction electrons and holes are
+separately conserved, so there is no screening by virtual
+electron-hole pairs, and exciton formation destabilizes the
+putative gapless state [26].
+Using the RG, we can evaluate the anomalous dimension
+of any physical operator. By charge conservation, ½c yc  ¼
+d. Because of the isotropy of the ﬁxed point, there are only
+two nontrivial values for the other charge-conserving fer-
+mion bilinear operators. We obtain ½c yac  ¼ d þ 1 and
+½c yabc  ¼ d þ 12, where a are the (time-reversal in-
+variant) Dirac gamma matrices, ab ¼ ði=2Þ½a; b
+are time-reversal odd, and a; b ¼ 1; 2; . . . ; 5. Using the
+standard operator insertion technique, we ﬁnd 1 ¼
+ð6=15Nf þ 4Þ" and 12 ¼ ð3=15Nf þ 4Þ". These op-
+erators describe many physical observables, e.g., the
+‘‘angular momentum’’ operator Jz  c yð34  1
+2 12Þc .
+The negative anomalous dimension of these operators sug-
+gests a schematic picture of power-law excitons due to
+electron-hole attraction. For pairing channels, we ﬁnd positive
+anomalous dimensions, consistent with this view. The local
+pairing channel has pairing ¼ ðu=5Þ ¼ ð3=30Nf þ 8Þ.
+Using these results, we obtain thermodynamic responses
+such as the speciﬁc heat cv  Td=z  T1:7 and the spin
+susceptibility
+ðTÞ  a þ bTðdzþ212Þ=z  a þ bT0:5,
+with some constants a and b. Interestingly, the nonlinear
+susceptibility 3 ¼ @3M=@H3jH¼0  Tð3z412dÞ=z 
+T1:7 diverges, as in spin glasses but with completely
+different physics. Comparing the scaling of current
+and electric ﬁeld gives the usual result ½ij ¼ d  2.
+Consequently, the temperature and frequency dependence
+of the conductivity is ð!; TÞ  T1=zF ð!=TÞ, and a clean,
+undoped LAB is therefore a power-law insulator, where
+F ðxÞ is a scaling function for optical conductivity.
+We now turn to the effect of applied strain and Zeeman
+ﬁeld upon the LAB. These perturbations break cubic or
+time-reversal symmetries and thus destabilize the LAB.
+Because of the isotropic nature of the LAB ﬁxed point,
+the response to the Zeeman ﬁeld alone is to leading order
+independent of its direction (the cubic mass 1=Mc can be
+‘‘dangerously irrelevant,’’ however—see below), so we take
+it to lie along the (001) direction. We consider for simplicity
+tetragonal strain which preserves C4 rotation about this axis
+(in the absence of Zeeman ﬁeld, the direction of strain is
+again unimportant). This leads to the perturbations
+H 0 ¼ ðJ2z  5
+4Þ  H½cosðÞJz þ sinðÞJ3z;
+(6)
+where  parametrizes the strain, H is the Zeeman ﬁeld, and
+ controls the strength of the cubic Zeeman term allowed by
+the cubic symmetry [27,28]. Using the RG results, the
+dimensions of these perturbations are ½ ¼ z  1  2:1
+and ½H ¼ z  12  1:9; i.e., strain is slightly enhanced
+while the Zeeman ﬁeld is slightly suppressed by interac-
+tions. However, both dimensions are positive and close to 2,
+so that they are strongly relevant. They ﬂow to strong
+coupling under the RG, and the fate of the system must
+be reanalyzed in the limit.
+To do so, we assume, and check self-consistently, that
+interactions have weak effects at strong coupling, and simply
+solve the quadratic Hamiltonian (with m=M0 ¼ m=Mc ¼ 0)
+in the presence of the renormalized H 0. The result depends
+upon the dimensionless quantities  and the renormalized
+coupling
+ratio
+ ¼ ð=HÞR  =Hðz1Þ=ðz12Þ.
+For
+H ¼ 0 ( ¼ 1), we have time-reversal invariance, and we
+recover the known result that strain  > 0 induces a gapped,
+3d topological insulator phase, as observed in HgTe [19].
+The situation in an applied Zeeman ﬁeld is more interesting.
+Notice that for ~k ¼ k^z, Jz is a good quantum number, and
+there is no level repulsion between bands of different Jz. This
+allows (nondegenerate) bands to cross along this axis, which
+indeed occurs when jj is not too large. Further analysis in
+the Supplemental Material [24] shows that these crossings
+correspond to a pair of double-Weyl points, with linear
+dispersion along the z axis and quadratic dispersion normal
+to it. These points are strength 2 monopoles in momentum
+space. Away from the kz axis, electron and hole pockets may
+accidentally cross the Fermi energy. If this does not occur,
+one has a pristine double-Weyl semimetal, which occurs for
+the angular range 1 	  	 2, where 1 ¼ tan1½ð8 þ
+4
+ﬃﬃﬃ
+3
+p
+Þ=ð7
+ﬃﬃﬃ
+3
+p
+þ 26Þ
+and
+2 ¼ tan1½ð8  4
+ﬃﬃﬃ
+3
+p
+Þ=ð7
+ﬃﬃﬃ
+3
+p
+
+26Þ for  ¼ 0, as shown in the horizontal axis of Fig. 1.
+Weyl
+Weyl
+Insulator
+Metal
+0
+4
+2
+3
+4
+1
+2
+FIG. 1 (color online).
+Phase diagram of the perturbed LAB in
+the space of renormalized strain to Zeeman ﬁeld ratio  
+ð=HÞR versus cubic Zeeman angle . The subscript (R) is for
+anomalous dimensions of strain and Zeeman ﬁeld (see the text).
+‘‘Weyl’’ denotes the (double-)Weyl semimetal, ‘‘Ins.’’ the insu-
+lator, and ‘‘Metal’’ a metallic phase which has Weyl points
+shifted from the Fermi energy in the region below the dashed
+line. For H ¼ 0, the insulator is a topological insulator.
+PRL 111, 206401 (2013)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+15 NOVEMBER 2013
+206401-3When 0 < jj < 1, we observe insulating, double-Weyl
+semimetal and Weyl metal (with coexisting electron-hole
+pockets) phases, as shown in Fig. 1. Note that in all these
+phases, the Coulomb interactions become either unimpor-
+tant (in the insulator), screened (in the metal), or margin-
+ally irrelevant (in the Weyl semimetal), justifying our
+treatment of the phase diagram to a ﬁrst approximation.
+More subtle effects may make small modiﬁcations to
+this picture. Coulomb interactions can destabilize some of
+the quantum phase transitions in Fig. 1, leading to inter-
+mediate phases. When the magnetic ﬁeld is applied along a
+low symmetry axis, the double-Weyl points can split into
+multiple single-Weyl points, once the effects of the cubic
+mass 1=Mc are included, which are dangerously irrelevant
+in this case.
+A striking experimental consequence of this phase dia-
+gram is the AHE due to the Zeeman ﬁeld, which could
+originate either from an external magnetic ﬁeld or as an
+exchange ﬁeld due to local moments in the material. The
+latter is particularly interesting in light of the experimental
+results on Pr2Ir2O7, which shows a large AHE in a regime
+where the magnetization M is immeasurably small [11,12].
+On symmetry grounds, xy  0 implies M  0, but evi-
+dently xy is unusually large relative to M. This behavior is
+in fact characteristic of the LAB: since the Hall conduc-
+tivity has dimensions of inverse length, we expect xy 
+H1=ðz12Þ  H0:51. In the situation relevant for Pr2Ir2O7,
+the Zeeman ﬁeld is generated by Kondo exchange with the
+Pr moments, so H  JKM, with M the (dimensionless) Pr
+magnetization, which implies a highly unconventional sub-
+linear dependence of xy on M for the pristine LAB. If the
+Fermi level is displaced from the band touching by an
+amount F, then we expect, treating the above power as a
+square root, xy  ðe2=hÞ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðmH=@2Þ
+p
+SðH=FÞ, where S is a
+scaling function (see the Supplemental Material [24]). This
+gives an order of magnitude quantitative estimate
+xy  103 1 cm1 
+8>>><
+>>>:
+ﬃﬃﬃﬃﬃ
+m
+me
+q
+ﬃﬃﬃﬃﬃ
+JK
+Ry
+q
+ﬃﬃﬃﬃﬃ
+M
+p
+JKM  F
+ﬃﬃﬃﬃﬃ
+m
+me
+q
+JKﬃﬃﬃﬃﬃﬃﬃﬃ
+FRy
+p
+M
+JKM  F;
+(7)
+where Ry ¼ 13:6 eV is the Rydberg, and me is the electron
+mass. The lower regime gives xy  0:1 1 cm1, within
+an order of magnitude of observations in Pr2Ir2O7 [12], for
+parameters m  20me (estimated from the calculations in
+Ref. [15]), F  10 meV, JK  100 K (estimated from the
+measured Curie-Weiss temperature), and M  0:01.
+Another
+interesting
+experimental
+observation
+in
+Pr2Ir2O7 is a diverging magnetic Gruneisen number
+H ¼ ð1=TÞð@T=@HÞjS in the zero ﬁeld limit [29–31]. In
+a purely electronic system with no local moment contribu-
+tion to the entropy, we can readily obtain the behavior of
+the LAB in the low temperature limit
+HðH; TÞ ¼ 
+d  y0z
+y0ðz  12Þ
+1
+H ;
+(8)
+which depends upon the exponent y0 deﬁning the tempera-
+ture dependence of the speciﬁc heat C  Ty0 of the LAB
+phase. In the Weyl metal, y0 ¼ 1 and H < 0, while for
+isolated double-Weyl points, y0 ¼ 2 and H > 0. Thus,
+one may imagine a sign change of the Gruneisen number
+when ﬁeld or strain is varied. Note that in Pr2Ir2O7, there is
+certainly a large local moment contribution to the entropy,
+so that Eq. (8) is not literally applicable. Nevertheless, the
+LAB physics may play some role in this quantity.
+In conclusion, we have described a novel NFL phase
+occurring in correlated strong SOC systems, with a natural
+connection to the pyrochlore iridates. Even with weak
+correlation effects, some of the phenomena discussed
+here can be observed with only minor modiﬁcations, and
+it would be interesting to search for them in HgTe. Future
+theoretical studies should include a more comprehensive
+treatment of the breaking of cubic symmetries and the
+effects of disorder and doping.
+We thank T. Hsieh, L. Fu, and P. Gegenwart for discus-
+sions on the Luttinger model and the Gruneisen number.
+This work was supported by NSF Grant No. DMR-1151208
+and the Hellman Family Foundation (E. G.M. and C. X.),
+the David and Lucile Packard Foundation, the Alfred P.
+Sloan Foundation (C. X.), Grant No. NSF-DMR-1206809
+(L. B.), and NSERC, CIFAR (Y. B. K.). Y. B. K. and L.B.
+acknowledge support and hospitality from the Aspen Center
+for Physics, funded by NSF Grant No. PHY-1066293, and
+the KITP, funded by NSF Grant No. PHY-1125915.
+[1] L. Taillefer, Annu. Rev. Condens. Mater. Phys. 1, 51
+(2010).
+[2] P. J. Hirschfeld, M. M. Korshunov, and I. I. Mazin, Rep.
+Prog. Phys. 74, 124508 (2011).
+[3] A. Chubukov, Annu. Rev. Condens. Mater. Phys. 3, 57
+(2012).
+[4] P. Gegenwart, Q. Si, and F. Steglich, Nat. Phys. 4, 186
+(2008).
+[5] See, for example, M. A. Metlitski and S. Sachdev, Phys.
+Rev. B 82, 075127 (2010); 82, 075128 (2010).
+[6] D. Pesin and L. Balents, Nat. Phys. 6, 376 (2010).
+[7] B. J. Kim et al., Phys. Rev. Lett. 101, 076402 (2008).
+[8] B. J. Kim, H. Ohsumi, T. Komesu, S. Sakai, T. Morita, H.
+Takagi, and T. Arima, Science 323, 1329 (2009).
+[9] D. Yanagishima and Y. Maeno, J. Phys. Soc. Jpn. 70, 2880
+(2001).
+[10] K. Matsuhira, M. Wakeshima, R. Nakanishi, T. Yamada,
+A. Nakamura, W. Kawano, S. Takagi, and Y. Hinatsu,
+J. Phys. Soc. Jpn. 76, 043706 (2007).
+[11] S. Nakatsuji, Y. Machida, Y. Maeno, T. Tayama, T.
+Sakakibara,
+J.
+Duijn,
+L.
+Balicas,
+J.
+Millican,
+R.
+Macaluso, and J. Chan, Phys. Rev. Lett. 96, 087204 (2006).
+[12] Y. Machida, S. Nakatsuji, S. Onoda, T. Tayama, and T.
+Sakakibara, Nature (London) 463, 210 (2010).
+PRL 111, 206401 (2013)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+15 NOVEMBER 2013
+206401-4[13] X. Wan, A. M. Turner, A. Vishwanath, and S. Y. Savrasov,
+Phys. Rev. B 83, 205101 (2011).
+[14] W. Witczak-Krempa and Y. B. Kim, Phys. Rev. B 85,
+045124 (2012).
+[15] B.-J. Yang and Y. B. Kim, Phys. Rev. B 82, 085111 (2010).
+[16] J. M. Luttinger, Phys. Rev. 102, 1030 (1956).
+[17] M. Z. Hasan and C. L. Kane, Rev. Mod. Phys. 82, 3045
+(2010).
+[18] X.-L. Qi and S.-C. Zhang, Rev. Mod. Phys. 83, 1057
+(2011).
+[19] B. A. Bernevig, T. L. Hughes, and S.-C Zhang, Science
+314, 1757 (2006).
+[20] M. Konig, S. Wiedmann, C. Brune, A. Roth, H. Buhmann,
+L. W. Molenkamp, X.-L. Qi, and S.-C. Zhang, Science
+318, 766 (2007).
+[21] A. A. Abrikosov and S. D. Beneslavskii, Sov. Phys. JETP
+32, 699 (1971).
+[22] A. A. Abrikosov, Sov. Phys. JETP 39, 709 (1974).
+[23] S. Murakami, N. Nagaosa, and S.-C. Zhang, Phys. Rev. B
+69, 235206 (2004).
+[24] See
+Supplemental
+Material
+at
+http://link.aps.org/
+supplemental/10.1103/PhysRevLett.111.206401
+for
+detailed discussion on the minimal model and RG
+calculation.
+[25] In thisLetter, we perform the " ¼ 4  d expansion using the
+4  4 gammamatrices.Alternatively, one could use 16  16
+matrices in d ¼ 4 with a quarter of the number of fermion
+ﬂavors and calculate logarithmic divergences directly.
+[26] B. I. Halperin and T. M. Rice, Solid State Phys. 21, 115
+(1968).
+[27] L. Fu and C. L. Kane, Phys. Rev. B 76, 045302 (2007).
+[28] B. J. Roman and A. W. Ewald, Phys. Rev. B 5, 3914
+(1972).
+[29] L. Zhu, M. Garst, A. Rosch, and Q. Si, Phys. Rev. Lett. 91,
+066404 (2003).
+[30] P. Gegenwart, Y. Tokiwa, J. G. Donath, R. Ku¨chler, C.
+Bergmann, H. S. Jeevan, E. D. Bauer, J. L. Sarrao, C.
+Geibel, and F. Steglich, J. Low Temp. Phys. 161, 117
+(2010).
+[31] P. Gegenwart (private communication).
+PRL 111, 206401 (2013)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+15 NOVEMBER 2013
+206401-5

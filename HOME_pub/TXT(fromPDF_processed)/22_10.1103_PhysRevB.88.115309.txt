@@ -1,0 +1,445 @@
+PHYSICAL REVIEW B 88, 115309 (2013) Hydrostatic strain enhancement in laterally conﬁned SiGe nanostripes G. M. Vanacore,1,* M. Chaigneau,2 N. Barrett,3 M. Bollani,4 F. Boioli,5,† M. Salvalaglio,5 F. Montalenti,5 N. Manini,6 L. Caramella,6 P. Biagioni,1 D. Chrastina,7 G. Isella,7 O. Renault,8 M. Zani,1 R. Sordan,7 G. Onida,6 R. Ossikovski,2 H.-J. Drouhin,9 and A. Tagliaferri1,‡ 1CNISM and Dipartimento di Fisica, Politecnico di Milano, I-20133 Milano, Italy 2LPICM, Ecole Polytechnique, CNRS, F-91128 Palaiseau, France 3CEA Saclay, CEA DSM IRAMIS SPCSI, F-91191 Gif Sur Yvette, France 4CNR-IFN e L-NESS I-22100 Como, Italy 5Dipartimento di Scienza dei Materiali, Universit`a Milano Bicocca, I-20100 Milano, Italy 6Dipartimento di Fisica, Universit`a degli Studi di Milano, Via Celoria 16, I-20133 Milano, Italy 7CNISM e L-NESS, Dipartimento di Fisica, Politecnico di Milano, I-22100 Como, Italy 8CEA, LETI, MINATEC Campus, 38054 Grenoble Cedex 9, France 9LSI, Ecole Polytechnique, CNRS, F-91128 Palaiseau, France (Received 6 June 2013; published 20 September 2013) Strain engineering in SiGe nanostructures is fundamental for the design of optoelectronic devices at the nanoscale.
+Here we explore a new strategy, where SiGe structures are laterally conﬁned by the Si substrate, to obtain high tensile strain yet avoid the use of external stressors, thus improving the scalability.
+Spectromicroscopy techniques, ﬁnite element method simulations, and ab initio calculations are used to investigate the strain state of laterally conﬁned Ge-rich SiGe nanostripes.
+Strain information is obtained by tip-enhanced Raman spectroscopy with an unprecedented lateral resolution of ∼30 nm.
+The nanostripes exhibit a large tensile hydrostatic strain component, which is maximal at the center of the top free surface and becomes very small at the edges.
+The maximum lattice deformation is larger than the typical values of thermally relaxed Ge/Si(001) layers.
+This strain enhancement originates from a frustrated relaxation in the out-of-plane direction, resulting from the combination of the lateral conﬁnement induced by the substrate side walls and the plastic relaxation of the misﬁt strain in the (001) plane at the SiGe/Si interface.
+The effect of this tensile lattice deformation at the stripe surface is probed by work function mapping, which is performed with a spatial resolution better than 100 nm using x-ray photoelectron emission microscopy.
+The nanostripes exhibit a positive work function shift with respect to a bulk SiGe alloy, quantitatively conﬁrmed by electronic structure calculations of tensile-strained conﬁgurations.
+The present results have a potential impact on the design of optoelectronic devices at a nanometer-length scale.
+DOI: 10.1103/PhysRevB.88.115309 PACS number(s): 81.07.−b, 81.16.Nd, 68.35.Gy, 73.30.+y I. INTRODUCTION The introduction of SiGe heterostructures into mainstream Si technology has been identiﬁed as a possible solution to overcome the physical limitations of Si by opening new degrees of freedom via band structure engineering.1,2 Much work has also been devoted to ﬁnding the best deposition or fabrication strategy with which to apply tensile strain to pure Ge structures in order to reduce the energy difference gap = Edir gap −Eindir gap = 140 meV between the direct Edir gap and indirect Eindir gap band gaps,3–5 thus favoring population inversion and eventually lasing.6 A large tensile strain is necessary for enhanced gap shrinkage, and for the same lattice deformation, biaxial strain is more effective than uniaxial strain,7 possibly due to the larger hydrostatic component, which signiﬁcantly affects the shift of the valence and conduction band states.
+According to recent k·p calculations,7 Ge grown along the [001] direction acquires a direct band gap (i.e., gap = 0) with ∼1.7% biaxial strain (hydrostatic strain, εh ≈0.73%) or ∼4.6% uniaxial strain (εh ≈0.74%).
+The direct gap condition is thus obtained when the biaxial and the uniaxial conﬁgura- tions reach nearly the same hydrostatic strain,7 suggesting that this is the dominant component for the band gap narrowing.
+Different strained conﬁgurations have been explored in the literature.
+A two-dimensional (2D) Ge thin ﬁlm on Si has a thermally induced tensile biaxial strain of ∼0.23% (εh ≈0.1%), leading to a reduction of the difference between the direct and the indirect band gaps gap by ∼20 meV.8 A higher tensile deformation has been reached using external stressors.
+A silicon nitride layer has been used by de Kersauson et al.9 obtaining a tensile biaxial strain of ∼0.4% (εh ≈0.17%) in 1-μm-wide Ge wires, with an optical recombination of ∼1690 nm (gap reduced by 34.7 meV).
+Recently, Nam et al.10,11 used tungsten as material for the stressor layer to induce a biaxial tensile strain of 0.76% (εh ≈0.33%) and 1.13% (εh ≈0.49%) in 200-μm-wide Ge mesas showing light emission at 1710 nm (gap reduced by ∼66 meV) and 1750 nm (gap reduced by ∼98 meV), respectively.
+The papers reported in Refs.
+8–11 show a clear trend: enhanced gap shrinkage toward the direct band gap condition can be obtained by increasing the hydrostatic strain component.
+However, high tensile strain with external stressors has been reached only using thick stressor layers (0.5–1 μm) for basically large structures (>1 μm).
+This reduces considerably the scalability and compromises the application of these methods to the design of optoelectronic devices at a nanometer-length scale.
+In this paper, we use a strategy to obtain nanoscale structures with a high hydrostatic strain component, avoiding the use of external stressors.
+Thus, in principle, we are ready to follow the continued downscaling of SiGe heterostructures 115309-1 1098-0121/2013/88(11)/115309(15) ©2013 American Physical SocietyG. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) to increase the performances of integrated circuits.
+We use epitaxial deposition of Ge on a prepatterned Si surface with 150-nm-wide trenches to create laterally conﬁned Ge-rich SiGe nanostripes with a microscopic strain state that is able to maximize the hydrostatic strain component.
+Nanoscale resolved spectroscopic experiments, ﬁnite element method (FEM) simulations, and ab initio calculations have been used to map the strain ﬁeld within the nanostripes, with an unprecedented lateral resolution of ∼30 nm.
+A large tensile hydrostatic strain (εh ≈0.53%) is found, as the result of a frustrated relaxation in the out-of-plane direction, that is attributed to the geometrical constraints, combined with the plastic relaxation of the misﬁt strain in the (001) plane.
+The measured strain is larger than the typical thermal strain in Ge thin ﬁlms on Si(001) structures (εh ≈0.1%), and it is reached without using external stressors.
+The effect of the lattice deformation at the stripe surface is probed by work function mapping with a spatial resolution better than 100 nm.
+The ﬁtting of the work function results with electronic structure calculations of strained conﬁgurations and provides a quantitative conﬁrmation of the high tensile strain created inside the stripe.
+The present results have a potential impact on the design of optoelectronic devices at a nanometer- length scale for the achievement of band gap narrowing and, eventually, a direct gap condition for lasing in SiGe technology. II.
+EXPERIMENTAL DETAILS A. Sample fabrication SiGe nanostripes have been fabricated by low-energy plasma-enhanced chemical vapor deposition (LEPECVD)12 of Ge on Si substrates patterned by electron-beam lithography (EBL).13 An n+-type (As-doped) Si(001) substrate was patterned with a series of trenches (depth ≈110 nm, width ≈150 nm, period ≈1 μm) aligned along the [110] direction by means of EBL.
+Then we epitaxially deposited 15 nm of pure Ge by LEPECVD with a growth rate of 1.5 nm/s at a substrate temperature of 650 ◦C. Under these growth conditions, the migration length of Ge adatoms is much longer than the separ- ation between the nanostripes.14 This favors the gathering of Ge from the surrounding surface area into the trenches, which behave as material traps and represent preferential nucleation sites, since a total elastic energy minimum is reached at their base.15 The whole process leads to the formation of laterally conﬁned nanostripes.
+Any SiGe epitaxial layer formed between the structures was completely etched away by gently mechanical polishing performed after the Ge growth.
+The nanostripes exhibit a lateral width of ∼150 nm and a thickness of ∼110 ± 5 nm, as determined by several cross-sectional scanning electron microscopy (SEM) images after focused ion beam (FIB) processing (Fig. 1).
+High growth rate (1.5 nm/s), moderate substrate temperature (650 ◦C), and short deposition time (10 s) have been used in order to strongly reduce the Si incorporation from the substrate, leading to the formation of Ge-rich nanostructures.16 B. Tip-enhanced Raman scattering The tip-enhanced Raman scattering (TERS) setup consists of a Horiba Jobin Yvon Labram HR800 Raman spectrometer FIG. 1.
+Laterally conﬁned SiGe nanostripes.
+(a) Top-view SEM image of the periodic array of nanostripes.
+(b) Cross-section SEM image of a single nanostripe after FIB processing.
+During FIB processing, the ion beam hits the sample surface with an incidence angle of 52◦with respect to the normal direction.
+In this condition, the cross-section proﬁle of the nanostripe can be distinguished by possible ion-induced artifacts due to the amorphization of the cross-section surface, which could appear only along the 52◦tilted direction.
+optically coupled in an oblique backscattering geometry (65◦ with respect to the sample normal) to a Park Systems XE- 100 scanning tunneling microscope through a long-working- distance objective (50×, numerical aperture of 0.45).
+The optomechanical coupling is motorized along the x, y, and z axes and allows for an accurate automated alignment of the exciting light spot with respect to the tip apex in near-ﬁeld scattering (TERS) experiments.
+The excitation wavelength of 633 nm is provided by the built-in HeNe laser of the spectrometer.
+The polarization state of the incident radiation was set at p polarization (electric ﬁeld parallel to the scattering plane) by using a half-wave plate inserted in motorized rotating mount.
+Scanning tunneling microscopy (STM) tips were prepared by electrochemical etching from a 0.25-mm-diameter Au wire (Goodfellow) in a concentrated HCl/ethanol 1:1 mixture.17,18 Tips with a ﬁnal apex radius of ∼30 nm can be reproducibly fabricated using this technique.19 Tunneling experiments took place in air using a 1-V tip-positive sample bias voltage and a 0.1-nA tunneling current.
+Before every measurement sequence, native silicon and germanium oxides on the sample surface were removed by means of a diluted hydroﬂuoric acid solution (10% for 30 s at room temperature).
+TERS spectra were acquired using an integration time of 40 s and a spectral resolution of 0.8 cm−1 (600 tr/mm grating was used).
+C. X-ray photoelectron emission microscopy The x-ray photoelectron emission microscopy (XPEEM) experiments were carried out at the Tempo beamline of Soleil Synchrotron using a fully energy-ﬁltered photoelec- tron emission microscopy instrument (NanoESCA, Omicron Nanotechnology).20 This is composed of an electrostatic pho- toelectron emission microscopy column and an energy ﬁlter consisting of two hemispherical electron energy analyzers coupled by a transfer lens.
+Soft x rays with 90- and 160-eV photon energy have been used for core level and work function mapping.
+The sample was mounted such that the normal to the (001) surface was in the horizontal scattering plane containing the incoming wavevector.
+The light was incident at an angle of 23◦with respect to the (001) plane, and horizontal linear polarization of the incident light was chosen in order to have a preferential sensitivity along the [001] 115309-2HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) FIG. 2.
+Sample cleaning for XPEEM experiment.
+(a) Auger spectra monitoring the surface contamination during the different steps of the cleaning procedure on a Si test sample: precleaning (bottom), post-UV-ozone treatment (center), and postsputtering (top).
+(b) Photoemission spectrum of the Ge 3d core level measured on the nanostripes after the cleaning procedure.
+The absence of any shifted structure at the low kinetic energy side indicates the absence of germanium oxide.
+out-of-plane direction.
+The NanoESCA spectromicroscope was operated with a contrast aperture of 70 μm, an extractor voltage of 15 kV, a pass energy of 100 eV, and an entrance analyzer aperture of 1 mm, giving a spectrometer resolution of 0.4 eV. A ﬁeld-of-view (FoV) of 15 μm was used.
+All images were corrected for the inherent nonisochromaticity.21 Dark and ﬂat ﬁeld corrections for camera noise and detector inhomogeneities were also applied.
+A four-stage preparation protocol for the cleaning of the sample surface was used: (1) chemical etching of the native silicon and germanium oxide by diluted hydroﬂuoric acid (10% for 30 s at room temperature), (2) ultraviolet (UV)-ozone treatment by irradiation with a D2 lamp under O2 ﬂux (15 ÷ 20 min) for carbon removal,22,23 (3) removal of silicon oxide layer (covering the surface after the UV treatment) by in situ mild Ar+ sputtering (beam voltage ≈500 ÷ 1000 V, beam current ≈1 μA), and (4) thermal relax- ation of residual sputtering damage by in situ annealing below the diffusion threshold temperature (∼400 ◦C).
+Figure 2(a) reports the monitoring of the surface contaminations during the different steps of the cleaning procedure on a Si test sample using Auger electron spectroscopy, while Fig. 2(b) shows the photoemission spectrum of the Ge 3d core level measured on the nanostripes after the cleaning procedure.
+This indicates the absence of germanium-oxide contamination, since no chemical shifted structures appears at side of the spectrum that has low kinetic energy (deﬁned by E −EF, the electron energy measured with respect to the sample Fermi level EF). III.
+RESULTS AND DISCUSSION A. Nanoscale strain mapping Strain information is obtained by TERS, allowing for Raman spectroscopic imaging with high spatial resolution at the surface of the sample.24,25 The approach presents unique advantages compared to other techniques, namely, nanos- tructural investigation by transmission electron microscopy (TEM)26,27 and nanobeam x-ray diffraction (NXRD).13 Al- though diffraction by TEM has been shown to provide, in spe- ciﬁc cases, detailed strain information down to the nanometer scale,26 it is also a destructive technique that would require in- vasive thinning of the samples down to a length scale compara- ble to the size of the structure of interest.
+This procedure would induce a signiﬁcant elastic and possibly plastic relaxation that would make the reconstruction of the initial strain state difﬁcult and uncertain.27 Conversely, although NXRD shares the nondestructive character with TERS, it is limited to a lateral resolution of few hundred nanometers and is a bulk sensitive technique, unable to provide the surface information that is relevant for the optoelectronic application mentioned above.
+Tip-enhanced Raman scattering exploits the local ampliﬁ- cation of the electromagnetic ﬁeld at the apex of a sharp gold tip, stabilized by feedback control of the tunneling current between the tip and the sample.28 This converts the incoming far-ﬁeld radiation from a focalized laser beam into an enhanced near ﬁeld, spatially conﬁned in a region whose extent is roughly on the order of the tip apex radius (20–30 nm, with an improvement of the incident intensity of more than an order of magnitude with respect to far ﬁeld Raman investigations).26 The incident radiation is p polarized (electric ﬁeld parallel to the scattering plane), with the [110] crystallographic axis lying within the scattering plane, as schematically shown in Fig. 3(a), which maximizes both the TERS enhancement29 and the contrast between near ﬁeld and far ﬁeld.30 A region containing a single nanostripe is selected by STM imaging of the surface [Fig. 3(b)], and the TERS measurement is performed by scanning the tip over the chosen stripe.
+Figure 3(c) shows the baseline-corrected TERS spectra measured with the tip in tunneling position on the nanostripe and on the Si substrate.
+The most intense peaks related to the far-ﬁeld contribution from the Si bulk (the Si-Si ﬁrst-order mode at 520.7 cm−1 and the Si-Si second-order transverse acoustic phonon (2TA) overtone at 300 cm−1) are almost unchanged for the two tip positions.
+Over the nanostripe, additional features appear in the spectrum: a doublet structure at 553–575 cm−1 and a well-resolved peak at 380 cm−1.
+These ﬁndings can be understood considering that the far-ﬁeld radiation probes the same large scattering volume in the bulk Si even when the tip is on the small Ge stripe, whereas the locally enhanced near-ﬁeld component probes only the nanostripe (see the small light green hemispheres in the schematics in the inset of Fig. 3(c)).
+The doublet structure at 553–575 cm−1 is attributed to the second-order transverse optical phonon (2TO) overtones at W and L, respectively, of the Ge-Ge Raman mode,31,32 while the 380 cm−1 peak is assigned to the ﬁrst-order component of the Si-Ge Raman mode31,33 of the nanostripe due to long-range order lattice vibrations.
+Concerning this attribution for the 380 cm−1 peak, the Ge-Ge second-order longitudinal acoustic phonon (2LA) overtone32 at 382 cm−1 is negligible.
+Both theory34 and experiments32,35 report that the Ge-Ge 2TO peaks are six times more intense than the Ge-Ge 2LA component.
+In our spectra, the intensity of the peak of ∼380 cm−1 is always greater by one order of magnitude than the Ge-Ge 2TO overtone.
+115309-3G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) FIG.
+3. (Color online) TERS data.
+(a) Schematic representation of the TERS experiment; incident light has a p polarization, and the scattering plane is represented by the yz plane.
+(b) STM image of a single SiGe nanostripe.
+The dotted blue line represents the path over which the tip is scanned and Raman spectra were acquired.
+STM cross-section proﬁle across the nanostripe (inset).
+(c) Baseline-corrected TERS spectra measured with the STM tip in tunneling on the SiGe nanostripe (blue line) and on the Si substrate (black line).
+Qualitative schematics of the experimental geometry for the spectra shown in the main panels (inset); the far-ﬁeld and the near-ﬁeld interaction volumes within the sample are qualitatively represented by the blue and green areas, respectively; the electric ﬁeld polarization (E) and the scattering directions are deﬁned by the red and black arrows, respectively.
+(d) and (e) Background-subtracted intensity proﬁles of the Ge-Ge 2TO and the Si-Ge ﬁrst-order peaks, respectively, as derived by TERS spectra monitored as a function of the position across a single nanostripe along two scan lines of the tip acquired at two different position along the stripe axis.
+(f) Raman frequency proﬁles of the SiGe mode as a function of the position across the stripe for the two scan lines shown in (d) and (e).
+Moreover, as measured by photoelectron emission microscopy (see below), the stripes are rich in Ge, and for high-Ge-content alloys the Si-Ge peak has been theoretically predicted and experimentally found in the range 380–390 cm−1.16,36 Figures 3(d) and 3(e) shows representative intensity proﬁles of the Ge-Ge 2TO and of the ﬁrst-order Si-Ge peaks as a function of the position across a single nanostripe.
+From these line scans, the experimental spatial resolution can be estimated to be not worse than 30 nm: the nanostripe-related TERS peak proﬁles sharply rise from and fall below the noise level within a single scan step of 30 nm.
+Moreover, a similar value is also derived from a Gaussian deconvolution of the TERS proﬁle.
+The enhancement due to the near-ﬁeld contribution, and the main trend of the proﬁles, are reproducible within FIG.
+4. (Color online) Ge concentration mapping.
+(a) and (b) Background-subtracted Ge 3d and Si 2p core level XPEEM images (FoV is ∼12 μm) of the nanostripe array; Ge 3d and Si 2p photoe- mission spectra extracted on a single nanostripe (black squares) ﬁtted with Voigt line shape components (solid lines; insets).
+In the case of the Ge 3d spectrum, two spin-orbit split structures separated by 0.6 ± 0.1 eV and with a branching ratio of ∼1.5 have been considered.
+The weak component at the high-binding-energy side within the Si 2p spectrum is consistent with a 1 + ionization state.
+(c) Spatial map of the Ge concentration as obtained by monitoring the pixel-by-pixel Ge 3d and Si 2p peak peaks and ﬁtting their intensities with a standard quantiﬁcation model.
+the experimental uncertainty and are consistent with the stripe width of 150 nm.
+The Si-Ge Raman peak monitored across the stripe moves from higher to lower frequencies as the tip is moved from the side toward the center of the stripe [Fig. 3(f)].
+In heteroepitaxial SiGe structures, the frequency of the Raman peaks is strongly dependent on strain and Ge content.31,33 The composition of the nanostripes is obtained by XPEEM.
+The Ge concentration is measured by acquiring energy-ﬁltered photoelectrons image series of the Ge 3d (binding energy EB ≈29 eV) and Si 2p (EB ≈99 eV) core levels at the same kinetic energy of the emitted electrons (∼61 eV for an excitation with 90 and 160 eV photon energy, respectively).
+These XPEEM measurements are recorded as three-dimensional (3D) data sets of the photoemission intensity I (EK,x,y) as a function of the kinetic energy EK and of the position x and y within the FoV.
+The main panels in Figs. 4(a) and 4(b) represent the background-subtracted core level images, showing the photoemitted intensity at the peak energy of the Ge 3d and the Si 2p core levels, respectively.
+The insets show the spectra extracted from the 3D data set by 115309-4HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) averaging the photoemission signal at a given energy over a single nanostripe.
+The spatial map of the Ge concentration in Fig. 4(c) is then obtained by ﬁtting the local intensities of the Si 2p and Ge 3d core levels using a standard quantiﬁcation model (see Appendix A for further details).
+The nanostripes are Ge rich and exhibit an almost square concentration proﬁle with an average Ge concentration xGe ≈91 ± 3%.
+This evaluation is strictly valid for the region at the center of the stripe with an extension on the order of the XPEEM spatial resolution (∼100 nm), whereas variations of the concentration larger than the experimental uncertainty cannot be excluded toward the stripe wall boundary, as discussed later.
+The strain state of the nanostripes can be now obtained by ﬁtting the measured frequency31 of the Si-Ge Raman peak at 380 cm−1 with the expected strain-induced frequency shift for the employed TERS conﬁguration, evaluated using the alloy composition obtained with XPEEM.
+The ﬁrst-order Si-Ge peak has been used in order to rule out possible nonlinear effects present in the multiphonon processes that can conversely play a role in the second-order Ge-Ge spectral feature.
+In diamond-lattice, crystals the ﬁrst-order q = 0 optical phonon is triply degenerate with two transverse optical modes (TO1 and TO2) and one longitudinal optical mode (LO).
+Sym- metry breaking by the lattice distortion lifts the degeneracy, resulting in frequency splitting and modiﬁcation of the Raman polarizability tensors of the three modes37 (see Appendix C for a detailed description).
+In confocal backscattered far-ﬁeld Raman spectroscopy, only the longitudinal mode is excited.38 In the present near-ﬁeld TERS experiment, the Raman po- larizability tensors are also modiﬁed by the presence of the tip, leading to changes in the selection rules.
+Following the model by Ossikovski et al.,39 we consider a tip-ampliﬁcation tensor, accounting for the interaction between the tip and the electromagnetic ﬁeld, and determine the scattered intensities for the three phonon modes as a function of the angle ϑ between the light direction and the tip axis: ITO1 = ITO2 ∝(ab)2 (2 sin2 ϑ + cos2 ϑ) (1a) ILO ∝b4 cos2 ϑ (1b) where a and b are phenomenological tip-ampliﬁcation factors (with a > b) related to the longitudinal and transverse tip polarizability, respectively.
+Considering ϑ = 65◦and a typical experimental value of a/b ≈5.5 for the employed tip,30 the ratio ILO/ITO ≈10−3, demonstrating that the TERS signal in the present backscattered oblique conﬁguration is dominated by the two TO modes that are not normally accessible in a standard confocal Raman experiment, where the LO mode dominates.
+This analysis shows that a TERS experiment can give access to new information otherwise prohibited by the selection rules.
+The same qualitative and quantitative results are obtained by calculating Raman selection rules in the framework of the electromagnetic theory of near-ﬁeld Raman enhancement (see Appendix C).
+Since the transverse modes TO1 and TO2 are excited with the same probability and their splitting cannot be resolved, the strain-induced frequency shift of the ﬁrst-order q = 0 optical phonon peaks in the measured TERS spectra ω can be obtained by the average of the TO1 and TO2 mode frequencies (see Appendix C). This leads to FIG.
+5. (Color online) (a) Experimental spatial proﬁles (black and green squares) of the hydrostatic strain εh obtained by combining TERS and XPEEM data.
+The blue solid line represents the computed εh proﬁle as obtained by FEM simulations (see text).
+The red dashed line is the hydrostatic strain value in the case of a 2D thin ﬁlm.
+(b) Spatial map of the hydrostatic deformation in the xz plane obtained by FEM simulations.
+A strain ﬁeld is created by two 90◦dislocations at the interface between the SiGe stripe and the Si substrate (inset).
+the following expression: ω ≈3 4ω0 (xGe) [K11 (xGe) + K12 (xGe)] εh (2) which relates the Raman frequency shift ω and the hydro- static strain component εh = 1 3Tr {ε} (where ε is the strain tensor and Tr {. . .} is the trace operator) of the investi- gated structures.
+In Eq. (2), ω0 (. . .) is the composition- dependent unstrained mode frequency, K11 (. . .) and K12 (. . .) are the composition-dependent phonon deformation potentials (PDPs), and xGe is the Ge concentration in the stripe.
+Several authors40,41 reported that for xGe larger than 50%, the Si-Ge peak shifts to lower-frequency values as the strain changes from compressive (negative) to tensile (positive).
+Thus, the red shift of the Si-Ge peak, measured while moving from the edge to the center of the nanostripe [see Fig. 3(f)], is consistent with an increasing tensile distortion.
+The hydrostatic strain εh within the stripe can thus be obtained from Eq. (2) using the Si-Ge peak frequency trend determined by the TERS analysis.
+The parameters ωSi-Ge 0 , KSi-Ge 11 , and KSi-Ge 12 for the Si-Ge peak at 380 cm−1 are determined from the Ge concentration of the stripe, as measured by XPEEM, using their composition dependence reported in Ref.
+41, where bulklike values for the PDPs are calculated.
+As discussed below, the use of bulk PDPs leads to strain values, which are satisfactorily reproduced by the simulations of the strain ﬁeld inside the stripe.
+Within the range of values that has been reported in literature for the set of the ω0, K11, and K12 parameters, the relations provided by Ref.
+41 result in the lowest and most conservative strain values.
+The two strain proﬁles in Fig. 5(a) represent the results from two line scans at different positions along the stripe axis.
+The proﬁles have similar shape and intensity.
+The local differences of ∼30 nm are attributed to morphological changes in the section of the stripe at the scan positions.
+115309-5G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) B. Size-dependent frustrated lattice deformation The origin of the measured εh proﬁle across a single nanostripe is now discussed.
+The application to the TERS data of the strain-induced frequency shift described by Eq. (2), and based on Ossikovski et al.’s model,39 gives [Fig. 5(a)] a tensile hydrostatic strain εh that is maximal (∼5.3 × 10−3) at the center of the stripe and almost vanishes at the edges.
+Far from the edges moving toward the stripe center, strain values are noticeably higher than the typical hydrostatic thermal strain in a 2D ﬁlm (εh ≈0.1%).
+A better understanding of the origin of such tensile deformation can be obtained by applying elasticity theory using FEMs.
+An idealized geometry [Fig. 5(b)] is considered for the simulations, where the stripe section is a perfect rectangle of the width 150 nm (along the x direction) and the height 110 nm (z axis), corresponding to the experimental geometry.
+The exact shape of the stripe does not signiﬁcantly affect the hydrostatic strain εh at its surface, provided that the same aspect ratio and section are preserved [as measured in Fig. 1(b)].
+The robustness of this approach has been carefully veriﬁed by comparing the εh values calculated by FEM over a representative set of different stripe sections, characterized by rounded, smooth, or rough boundaries (see Appendix E).
+The size of the stripe in the third direction (y axis) is considered inﬁnite, allowing us to perform simpler 2D calculations.
+As the average Ge content is measured to be extremely high (xGe ≈91%), the height of the stripe is almost two orders of magnitude larger than the critical thickness for misﬁt-dislocation insertion in a ﬁlm with the corresponding Ge content.42 The simplest meaningful approach has been adopted to model the effect of the plastic relaxation.
+In the y direction, the strain is expected to relax in a ﬁlmlike mode due to the inﬁnite extension of the stripe.
+Thus, in the simulations, the initial εyy value was set equal to the thermal strain obtained in a ﬁlm εyy = +0.0023xGe;8 i.e., a full plastic relaxation of the epitaxial misﬁt has been assumed.
+The actual thermal-strain value inﬂuences the results only slightly; the main effect comes from the εzz strain relaxation arising from the geometrical constrictions along x, as described in the following.
+In order to tackle the strain relaxation along the x direction, expected to signiﬁcantly deviate from the ﬁlmlike behavior,43 an ordered array of straight edge dislocations has been explicitly considered to extend in the y direction (thus relaxing the strain along the x direction) and placed at the bottom interface between the stripe and the Si substrate [see the dislocation-induced strain ﬁeld in the inset of Fig. 5(b)].
+The technique used to treat dislocations within FEM is described in Ref. 44.
+After verifying that the system energy is minimized by a number Nd of such dislocations (the energy curve as a function of Nd, not shown, presents a ﬂat minimum, with values within the error for Nd equal to 14 and 15 in the present case), we computed the εh strain component, displayed in Fig. 5(b).
+As the misﬁt in the x direction is partially removed plastically (the top free surface allowing for some extra elastic relaxation), the main stress to which the stripe reacts is along the z direction due to the vertical walls boundary with the Si substrate, which tends to reduce the stripe lattice to the bulk Si one.
+The boundary region closer to the free surface is deformed more easily.
+As a result, the εh strain map is 0.1 0.2 0.3 0.4 0.5 x (nm) z (nm) Si Ge 0.1 0.9 tip position Raman Intensity (arb. units) Intensity Intensity FIG.
+6. (Color online) FDTD simulation of TERS experiment.
+Spatial map of the Raman signal (proportional to the fourth power of the electric ﬁeld) in a Si0.1Ge0.9 alloy in the xz plane during the interaction between the laser beam and a gold tip that has a radius of 30 nm and is separated 0.7 nm from the z = 0 plane (the (001) plane), calculated with a FDTD solver.
+The electromagnetic radiation from the laser is coming from the left side.
+Transversal (top inset) and longitudinal (left inset) proﬁles of the Raman intensity.
+strongly nonhomogenous, with the top portions becoming tensile strained in order to allow for a better relaxation of the whole system.
+In order to compare FEM simulations and experiments, the expected TERS results have been simulated for the ideal stripe with a strain state, as obtained from the theoretical calculations.
+The TERS simulation has taken into account the TERS probing volume by performing a weighted average of the εh values over it.
+The probing volume has been quantiﬁed from the lateral resolution, experimentally determined [see Figs. 3(d) and 3(e)], and from the near-ﬁeld penetration inside the stripe along the direction normal to its surface, as simulated by full- ﬁeld 3D ﬁnite-difference time-domain (FDTD) calculations.45 The FDTD simulations have been made using the following parameters: the dielectric constants for SiGe and Au are derived from the literature;46,47 a Gaussian beam was used to illuminate the tip that had the same wavelength (633 nm) and focal parameters as in the experimental setup; the mesh size is 0.1 nm around the gap between the tip and the sample surface and 0.3 nm all around the tip apex and the probing volume; perfectly matched layers are used at the boundaries of the simulation area and convergency tests have been run to ensure the validity of the results.
+The results of the FDTD simulations are presented in Fig. 6, showing the Raman signal (proportional to the fourth power of the electric ﬁeld) in the xz plane of a Si0.1Ge0.9 alloy during the laser beam interaction with a gold tip that has a radius of 30 nm (as experimentally demonstrated by Picardi et al.48 using the same tip preparation method adopted in this paper) and is separated 0.7 nm from the z = 0 plane (the (001) plane).
+The FDTD simulations allow us to estimate the attenuation of the TERS signal inside the SiGe nanostripe, resulting in a penetration depth of ∼3 nm that is otherwise not directly accessible by way of the experiment.
+The strain values obtained by the FEM simulations have been weighted along the z axis with the attenuation curve 115309-6HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) of the near ﬁeld inside the stripe, as calculated by FDTD simulations, and convoluted along x with a Gaussian function of 30 nm full width at half maximum, leading to the continuous curve displayed in Fig. 5(a).
+From a qualitative point of view, the comparison with experiments is satisfactory, as it conﬁrms the main trend, pointing out that high values of εh (some three times higher than the maximum expectation for a ﬂat ﬁlm) are possible in nanoscale structures such as the present ones.
+In the conﬁguration investigated, external stressors are not needed and the key role is played by the local lateral constraints, which are not present in ﬁlms or of negligible importance in larger microstructures.
+From a quantitative point of view, FEM simulations tend to underestimate the strain at the center of the stripe, bordering the experimental error bars.
+Small deviations from the here assumed uniform Ge distribution are compatible with the observed difference: a Ge-richer region close to the center of the stripe would induce a stronger reaction.
+Our simulations deliberately underestimate the complexity of the actual defect distribution in the stripe, with the aim of limiting the degrees of freedom needed to satisfactorily describe the system.
+For instance, we have not considered dislocations on the vertical walls.
+This assumption looks reasonable, as during stripe ﬁlling the free surface better allows for misﬁt-strain relaxation in the z direction with respect to the x one.
+As a consequence, dislocations relaxing εxx (i.e., the ones we considered) are expected to ﬁrst nucleate.
+And when they are present, they relax strain in the whole stripe [e.g., see Fig. 10(a) in Appendix E, and compare with Fig. 10(b)], therefore lowering the probability of nucleating a further family of misﬁt dislocations.
+We cannot rule out the presence of some defects on the vertical walls; nevertheless, the present FEM results show that εh values (locally) larger than the ﬁlm case are possible in a nanoscale structure without using external stressors and that the tensile strain has a different origin than the 2D geometry of a ﬁlm and larger microscale structures (thickness-dependent plastic and elastic and thermal relaxation processes), where it is strictly related to the local lateral constraints.
+C. Strain-induced work function changes The tensile strain ﬁeld inside the shallow volume of the stripe is responsible for a strong modiﬁcation of the surface electronic band structure, in particular for the shift and splitting of the conduction and valence bands.
+Recent experiments49,50 and ab initio calculations51 pointed out that the modiﬁcations of the valence band induced by the strain are correlated with changes in the work function.
+These changes result from the modiﬁcation of the surface electrostatic dipole51,52 and from the shift of the Fermi level due to the band structure warping as the lattice is deformed.53 No evidence of quantum conﬁnement effects on the electronic structure has been reported at the length scales investigated.54,55 Here we test these concepts by spatially mapping the work function of the nanostripes and provide a further quantitative conﬁrmation of the lattice deformation created at their surface.
+The work function is measured by acquiring XPEEM image series at the photoemission threshold.
+The spectra as a function of the ﬁnal state energy referred to the Fermi level E −EF are characterized by a sharp threshold depending on the local FIG.
+7. (Color online) Work function mapping.
+XPEEM images of the nanostripes’ array acquired with soft x-ray excitation at hν = 90 eV using secondary electrons of 4.6 eV (a) and 4.9 eV (b). The FoV is ∼15 μm.
+(c) Local work function map obtained from the experimental photoemission threshold spectra taken pixel by pixel and least-square ﬁtted to the secondary electron distribution described by Henke et al.’s model (Ref. 57; see Appendix B).
+work function of the emitting region.56 Figures 7(a) and 7(b) represents the laterally resolved photoemitted intensity using secondary electrons at a kinetic energy of 4.6 and 4.9 eV, respectively, where contrast inversion between the nanostripes and the surrounding Si bulk reﬂects different work function values.
+The work function map in Fig. 7(c) is ob- tained from the experimental pixel-by-pixel threshold spectra least-square ﬁtted to the full secondary electron distribution model described by Henke et al.57 (see Appendix B).
+After correction for the Schottky effect, taking into account the energy change of electrons extracted by an immersion lens (0.11 eV for an extraction voltage of 15 kV),58 we obtain substrate = 4.66 ± 0.02 eV at the Si substrate surface and stripe = 4.85 ± 0.03 eV inside the SiGe stripe surface.
+The value for the substrate is similar to that reported for n-type doped Si(001).59 The work function value of the SiGe stripe is larger than that of a bulk Si0.1Ge0.9 alloy (4.768 ± 0.015 eV)60 by ∼80 meV.
+The work function increase is consistent with a tensile deformation at the surface of the stripe.
+Under a tensile strain, the potential deformation theory61 predicts a signiﬁcant decrease in the energy of the conduction band minima for both  and L valleys and a slight increase of the valence band edge.
+This leads to a narrowing of the direct (in ) and indirect (in L) band gaps and to a lowering of the Fermi level, 115309-7G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) FIG.
+8. (Color online) DFT-LDA: work function calculation.
+Calculated band structure of the Ge(001)b(2 × 1) surface using DFT in LDA under different tensile strain conditions.
+In all panels, the ma- genta crosses represent the unstrained band structure, while the black circles describe the effect of the applied tensile strain.
+The dashed line deﬁnes the Fermi level.
+(a) Unstrained surface, where the size of points is proportional to the bulk partial weight of those bands states.
+Thin states are surface bands.
+(b) εxx = 0.01, εyy = 0, and εzz = 0.
+(c) εxx = 0, εyy = 0.01, and εzz = 0.
+(d) εxx = 0, εyy = 0, and εzz = 0.01.
+When in contact with n+ silicon, the Fermi energy of the Ge stripe moves up to pin the bulk states near −4 eV. (e) Calculated work function shift  as a function of the hydrostatic strain εh inside the nanostripes (see text for details).
+The comparison of the experimentally measured work function change (black dashed line) with the calculated values gives an estimation of the strain state of the nanostripe (gray region).
+The dashed green line represents the strain value as measured by TERS (∼0.53%).
+yielding a larger work function.
+A further contribution is the strain-induced modiﬁcation of the surface electrostatic dipole, which is predicted to decrease the work function in case of tensile strain (i.e., to have an opposite sign with respect to the band structure-induced variation): under tensile deformation, a lower electronic charge density is distributed outside the surface, reducing the dipole strength and thus lowering the work function.
+However, our experimental ﬁndings of an increase of the nanostripes’ work function compared to an unstrained bulk alloy are consistent with and supported by recent ab initio calculations,51 showing that the magnitude of the Fermi level shift is greater than that of the surface dipole strength.
+To obtain a quantitative estimation of the tensile defor- mation present at the surface of the nanostripes from the experimental work function shift, density functional theory (DFT) calculations under the local density approximation (LDA) have been performed, computing the band structure and the surface electrostatic potential of a strained Ge(001) slab.
+The tensile deformation along the main symmetry directions has been applied by increasing the cell sides.
+Details of the calculations are reported in the Appendix D. For a tensile strain, a downward shift of both the Fermi level and the conduction band is found, together with a reduction of the surface electrostatic dipole, partly canceling the effect of the conduction band lowering.
+Figure 8 shows the calculated band structure of the Ge(001)b(2 × 1) surface for the un- strained case [Fig. 8(a)] and for a tensile strain of 1% separately applied along the x axis [Fig. 8(b)], y axis [Fig. 8(c)], and z axis [Fig. 8(d)].
+The blue region in Fig. 8(e) represents the calculated values of the work function shift  as a function of the hydrostatic strain εh, considering the possible combinations for the nonzero components of the strain tensor (εxx, εyy, and εzz), which is consistent with the values obtained by the FEM simulations: εyy = 0.0023xGe (ﬁlmlike thermal strain due to full plastic relaxation along y), 0 < εxx < 0.02 (tensile strain due to the plastic relaxation along x and the compressive load along z), and −0.006 < εzz < 0 (compressive strain introduced by the vertical walls along z, attempting to enforce the Si lattice parameter).
+By comparing the estimated work function shift of ∼80 meV with the calculated values, the hydrostatic strain at the stripe surface is estimated to range from ∼0.4% to 0.65%, in substantial agreement with the value obtained from the TERS analysis (∼0.53%). IV.
+CONCLUSIONS AND OUTLOOK In this paper we presented the nanoscale mapping of composition and strain at the surface of SiGe nanostripes laterally conﬁned in 150-nm-wide Si trenches.
+Such stripes exhibit a high Ge concentration (∼91%), a positive shift of the work function (∼80 meV), and a tensile strain that is maximal at the center (εh ≈0.53%) and becomes very small at the edges.
+This strain behavior is understood to be the result of a frustrated relaxation in the out-of-plane direction due to the constrained geometry, combined with the plastic relaxation of the misﬁt strain in the (001) plane, leading to a tensile deformation at the top of the stripe.
+The positive work function shift is attributed to the warping of the surface electronic structure as induced by a tensile lattice deformation, providing further quantitative conﬁrmation of the strain state of the nanostripes.
+Our results represent the experimental demonstration that a high hydrostatic tensile strain can be achieved in nanoscale structures without using external stressor layers, such as a few micrometer-thick SiN layers whose dimensions and poor epitaxial coupling would limit the scalability and the perfor- mances of future devices.
+Optical interconnects, light emitting 115309-8HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) diodes, and infrared photodetectors would represent the main possible future applications for the proposed laterally conﬁned nanostripes.
+An experimental investigation of their optical properties is envisaged in order to probe their applicability in optoelectronic technology.
+The task is particularly demanding because state-of-the-art far-ﬁeld optical techniques, such as absorption, ellipsometry, and photoluminescence, provide volume-averaged information over the whole nanostructure volume, with very low sensitivity to the small strain volume at surface.
+The approach used in this paper shows possibilities for the achievement of band gap narrowing and, eventually, a direct gap condition for lasing, provided that a reduction of the Si incorporation is obtained and strategies for the quenching of defects formation are explored.
+Moreover, an enhancement of the strain is reasonably achievable through the exploration of different trench geometries.
+This makes the selective growth of Ge on a Si substrate patterned with seeding structures a technological pathway to a silicon-compatible and scalable process for the design of optoelectronic devices at a nanometer- length scale.
+ACKNOWLEDGMENTS Thanks are due to J. Leroy, B. Delomez, M. Lavayssierre, J. Rault, C. Mathieu, F. Sirotti, and M. Silly for technical assistance during XPEEM experiments; E. Gualtieri for the FIB measurements; E. Bonera for discussions; and S. Collin for preliminary optical microreﬂectivity measurements at the Laboratory for Photonics and Nanostructures, National Center for Scientiﬁc Research, Marcoussis, France.
+Our paper was supported by the Italian CARIPLO foundation trough the project No. 2011-0382 (Epitaxial Intersubband Detectors On Silicon, EIDOS) and the French National Research Agency (ANR) through the Recherche Technologique de Base program.
+Two of the authors (M.C. and R.O.) recognize ﬁnancial support within the D´etermination du Tenseur des Contraintes par Spectroscopie Raman Polarim´etrique R´esolue Spatialement research project (Contract No. ANR-09-NANO- 041).
+We acknowledge Soleil for the provision of synchrotron radiation and the European Theoretical Spectroscopy Facility (ETSF)62 for theoretical support for the electronic structure calculations through the User Project No. 458.
+APPENDIX A: GE CONCENTRATION MAPPING The Ge concentration within the nanostripes has been measured by acquiring energy-ﬁltered image series around the Ge 3d (binding energy EB ≈29 eV) and Si 2p (EB ≈99 eV) core levels using soft x-ray excitation at 90 and 160 eV, respectively.
+The local Ge concentration can be obtained from the total intensities using the usual relation63 Ii = (J0σλT ) xi where the subscript i stands for Si or Ge, J0 is the photon ﬂux, σ is the photoemission cross-section, λ is the inelastic mean free path (∼0.5 nm in a high-Ge-content SiGe alloy for photoelectrons at 60 eV),64 T is the analyzer transmission, and xi is the elemental concentration.
+The choice of the photon energies means that the kinetic energy (and thus λ and T ) FIG. 9.
+(Color online) Experimental secondary electron energy distributions (open squares and circles) as a function of E −EF for the Si bulk and the SiGe nanostripes, respectively.
+The red curves represent the best least-square ﬁtting of the experimental data using Henke et al.’s model (Ref. 57).
+are the same for both Si 2p and Ge 3d core levels.
+The Ge concentration can be readily obtained by xGe = IGe J0(hν)σGe(hν) IGe J0(hν)σGe(hν) + ISi J0(hν)σSi(hν′) where hν = 90 eV and hν′ = 160 eV. Using Yeh and Lin- dau’s cross-sections65 and the known response of the x-ray monochromator at the Tempo beamline, the spatial map of the Ge concentration is obtained [see Fig. 4(c)].
+This is the convolution between the real concentration map and a Gaussian function with a full width half maximum determined by the lateral resolution of the microscope.
+Deconvolution of the experimentally measured concentration proﬁle across a single 150-nm-wide stripe, using the combination of a Van Cittert method66 and a Lanczos ﬁlter,67 allowed us to estimate a spatial resolution for core level mapping of 96.7 ± 3.5 nm.
+The nanostripes are rich in Ge and exhibit an almost square concentration proﬁle with an average Ge concentration of 91 ± 2.6%.
+APPENDIX B: WORK FUNCTION MAPPING The work function  = E0 −EF, where E0 is the vacuum level and EF is the Fermi level of the sample surface, has been measured by acquiring XPEEM image series at the photoemission threshold.
+Figure 9 shows the threshold spectra extracted from the Si bulk and from a single nanostripe.
+The energy scale on the abscissa axis is represented by the ﬁnal state energy E referred to the sample Fermi level EF.
+If EK denotes the kinetic energy of the photoelectrons measured at the entrance of the imaging analyzer, then we can write that E −EF = EK + A where A is the work function of the analyzer.
+An electron that has a binding energy EB with respect to EF, excited with photons of energy hν, has a measured kinetic energy EK given 115309-9G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) by EK = hν −EB −A.
+At the photoemission threshold, hν −EB = , where  is the sample work function.
+Thus, the threshold measured kinetic energy E0 K is E0 K =  −A and the correspondent ﬁnal state energy referred to the Fermi level is (E −EF)0 = .
+The secondary electron energy distributions of Fig. 9 are thus characterized by a sharp threshold corresponding to the local work function  of the emitting region under consideration.
+The local work function map of the Si substrate and of the SiGe nanostripes (shown in Fig. 7(c)) has been obtained from the best least-square ﬁtting of the experimental pixel-by-pixel threshold spectra measured over the FoV to the full secondary electron distribution S(E −EF) described by Henke et al.:57 S (E −EF) = A (E −EF −) (E −EF − + B)4 where A is a scaling factor and B is a ﬁtting parameter.
+The accuracy of  using this procedure has been estimated to be ±20 meV.68 The deconvolution of the experimentally measured work function proﬁle across a single 150-nm-wide stripe from a Gaussian allowed us to estimate the spatial resolution to be ∼88 nm.
+The work function value measured for the SiGe stripes is stripe = 4.85 ± 0.03 eV, larger than the work function of a bulk Si0.1Ge0.9 alloy (4.768 ± 0.015 eV) obtained by the weighted sum of the intrinsic Si(001) (4.75 eV)59 and Ge(001) (4.77 eV).60 We exclude work function changes due to oxidation of germanium69 on the SiGe nanostripes, since no chemical shifted structure appears at the low kinetic energy side in the Ge 3d spectrum [see Fig. 2].
+APPENDIX C: STRAIN DETERMINATION FROM TERS 1.
+Strain-induced modiﬁcation of Raman polarizability In SiGe structures heteroepitaxially grown on Si substrates, the presence of strain due to the lattice deformation between the SiGe alloy and the Si bulk induces a shift of the Raman peaks.40 In diamond lattice crystals such as Si and Ge, the q = 0 Raman active optical phonon is triply degenerate and is composed of the TO1 and TO2 transversal modes and the LO longitudinal mode.
+The breaking of the cubic symmetry induced by the lattice distortion is able to lift the degeneracy, resulting in a frequency splitting and in a modiﬁcation of the Raman polarizability tensors Ri of the three modes,37 where i = 1 (TO1), 2 (TO2), and 3 (LO).
+The Ri tensor has the following matrix representation in the crystal reference framework identiﬁed by the [100] (x′ axis), [010] (y′ axis), and [001] (z axis) directions: R1 = ⎡ ⎢⎣ 0 0 0 0 0 1 0 1 0 ⎤ ⎥⎦ R2 = ⎡ ⎢⎣ 0 0 1 0 0 0 1 0 0 ⎤ ⎥⎦ R3 = ⎡ ⎢⎣ 0 1 0 1 0 0 0 0 0 ⎤ ⎥⎦.
+The detailed procedure to get the split mode frequencies and the strain-modiﬁed Raman polarizability tensors can be found in a number of references (see Ref. 37 for a review).
+Here we give only a brief overview of it that is sufﬁcient for the purpose of the present paper.
+Due to the stripe morphology and geometry, we consider a diagonal representation of the stress tensor experienced by the SiGe material of the stripe within the stripe reference framework identiﬁed by the [110] (x axis), [1-10] (y axis), and [001] (z axis) crystallographic directions: ε = ⎡ ⎢⎣ εxx 0 0 0 εyy 0 0 0 εzz ⎤ ⎥⎦.
+The frequency splitting for the ith mode ωi is obtained by the eigenvalues λi of the symmetric matrix K,70 which couples the PDPs with the strain components expressed within the crystal reference framework (where x′ is [100], y′ is [010], and z′ is [001]): K = ⎡ ⎢⎣ pεx′x′ + q(εy′y′ + εz′z′) 2rεx′y′ 2rεx′z′ 2rεx′y′ pεy′y′ + q (εx′x′ + εz′z′) 2rεy′z′ 2rεx′z′ 2rεy′z′ pεz′z′ + q(εy′y′ + εx′x′) ⎤ ⎥⎦ where p, q, and r are the so-called PDPs.
+In order to determine the strain components εx′x′, εy′y′, εz′z′, εx′y′, εx′z′, and εy′z′, the stress tensor ε expressed in the stripe reference framework (where x is [110], y is [1-10], and z is [001]) needs to be consequently transformed according to ε′ = T (δ)T εT (δ) where T(δ) = ⎡ ⎣ cos δ sin δ 0 −sinδ cos δ 0 0 0 1 ⎤ ⎦ is the corresponding rotation matrix; the rotation angle δ is 45◦ in this case.
+The rotated strain tensor ε′ is thus readily obtained 115309-10HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) as ε′ = 1 2 ⎡ ⎢⎣ εxx + εyy εxx −εyy 0 εxx −εyy εxx + εyy 0 0 0 2εzz ⎤ ⎥⎦ and thus εx′x′ = εy′y′ = εxx + εyy 2 	 εz′z′ = εzz εx′y′ = εxx −εyy 2 	 εy′z′ = εx′z′ = 0.
+The eigenvalues λi, where i = 1 (TO1), 2 (TO2), and 3 (LO), of the matrix K can thus be directly correlated to the components of the strain components εxx, εyy, and εzz: λ1 = pεx′x′ + qεy′y′ + qεz′z′ + rεx′y′ = εxx + εyy 2 	 (p + q) + qεzz + r εxx −εyy 2 	 λ2 = pεx′x′ + qεy′y′ + qεz′z′ −rεx′y′ = εxx + εyy 2 	 (p + q) + qεzz −r εxx −εyy 2 	 λ3 = pεz′z′ + q(εx′x′ + εy′y′) = pεzz + q(εxx + εyy).
+The strain-modiﬁed Raman polarizability tensors Ri∗are then determined with the eigenvectors vi of the matrix K using the following relation:71 Ri ∗= 3  k=1 v(k) i Rk where v(k) i denotes the kth component of the ith eigenvector.
+In our geometry, the eigenvectors vi are given by the expressions v1 = 1 √ 2 ⎡ ⎢⎣ 1 −1 0 ⎤ ⎥⎦ v2 = 1 √ 2 ⎡ ⎢⎣ 1 1 0 ⎤ ⎥⎦ v3 = 1 √ 2 ⎡ ⎢⎣ 0 0 1 ⎤ ⎥⎦ and thus the modiﬁed Raman tensors are R∗ 1 = 1 √ 2 ⎡ ⎢⎣ 0 0 −1 0 0 1 −1 1 0 ⎤ ⎥⎦ R∗ 2 = 1 √ 2 ⎡ ⎢⎣ 0 0 1 0 0 1 1 1 0 ⎤ ⎥⎦ R∗ 3 = 1 √ 2 R3 = 1 √ 2 ⎡ ⎢⎣ 0 1 0 1 0 0 0 0 0 ⎤ ⎥⎦. 2.
+Raman selection rules in TERS The strain-induced variation of the frequency of the q = 0 optical phonon can be obtained by the split mode frequencies of those modes that are excited within the given experimental geometry as determined by the Raman selection rules.70 In the case of standard confocal far-ﬁeld Raman spectroscopy in backscattered conﬁguration, only the longitudinal mode is excited.38 In the case of a near-ﬁeld TERS experiment, where a metal tip in tunneling contact with the sample surface is used as an optical antenna, the Raman polarizability tensors are modiﬁed by the presence of the tip, leading to a modiﬁcation of the selection rules.
+Ossikovski et al.39 recently proposed a simple model based on the introduction of a tip-ampliﬁcation tensor A, accounting for the interaction of the tip with the electromagnetic ﬁeld and considering that the electric ﬁeld component parallel to the tip axis is preferentially ampliﬁed compared with that perpendicular to it.
+Assuming the tip axis is along the z axis, the tensor A has the following diagonal representation: A = ⎡ ⎢⎣ b 0 0 0 b 0 0 0 a ⎤ ⎥⎦ where a and b are phenomenological tip-ampliﬁcation factors (with a > b).
+They are physically related to the longitudinal and transversal tip’s polarizability, respectively, and quantitatively depend on the tip geometry and material dielectric constant.
+The “effective” Raman polarizability tensors in the presence of the tip Ri∗∗are thus obtained by the following relation:39 Ri ∗∗= AT Ri ∗A which represents the action of the tip on both the incident and the scattered ﬁelds.
+Ri∗∗is thus given by the following matrix expressions: R∗∗ 1 = 1 √ 2 ⎡ ⎢⎣ 0 0 −ab 0 0 ab −ab ab 0 ⎤ ⎥⎦ R∗∗ 2 = 1 √ 2 ⎡ ⎢⎣ 0 0 ab 0 0 ab ab ab 0 ⎤ ⎥⎦ R∗∗ 3 = 1 √ 2 ⎡ ⎢⎣ 0 b2 0 b2 0 0 0 0 0 ⎤ ⎥⎦ The intensity Ii of the scattered radiation from the ith mode is given by the selection rule expression70 Ii ∝|Ri ∗∗E0|2 where E0 = E0 ⎡ ⎢⎣ 0 cos ϑ sin ϑ ⎤ ⎥⎦ is the electric ﬁeld of the incident electromagnetic radiation (far ﬁeld) and ϑ is the incidence angle of the light with respect to the z axis.
+The scattered intensities for the three phonon modes are thus given by the following expressions: I1 = I2 ∝(ab)2 (2 sin2 ϑ + cos2 ϑ) I3 ∝b4 cos2 ϑ Considering ϑ = 65◦and a typical value of a/b ≈5.5,30 the ratio I3/I1 ≈10−3; thus, the signal essentially depends by the two transversal modes, which are preferentially excited (with the same probability) with respect to the longitudinal one.
+The obtained result is also fully consistent with a quantum mechanical expression of the Raman selection rules.
+Breaking 115309-11G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) of the translational symmetry due to the presence of the surface lowers the symmetry of the crystal from spherical to cylindrical; thus, only the projection of the angular momentum along the z axis Lz is conserved during the photon-phonon scattering process:72 m′ phonon + m′′ phonon −mphonon = 0 where m′ phonon, m′′ phonon, and mphonon are the Lz quantum numbers for the incident photon, the scattered photon, and the phonon, respectively.
+Since the metal tip, which represents the near-ﬁeld source, can be assimilated to an emitting electric dipole, both incident and scattered photons have null Lz quan- tum numbers: m′ phonon = m′′ phonon = 0 and thus mphonon = 0.
+This means that a strong coupling between the near-ﬁeld radiation and the crystal lattice is allowed only for lattice vibrations with polarization along the z axis and angular and linear momenta completely lying in the xy plane, i.e., only for transversal modes. 3.
+Strain determination The frequency splitting for the ith mode ωi is related to the corresponding eigenvalue λi of the K matrix by the expression ω2 i = ω2 0 + λi and thus ωi = (ωi −ω0) ≈λi 2ω0 where ω0 is the unstrained mode frequency.
+From the Raman selection rules, in the TERS case we derived that the q = 0 Raman optical phonon peaks in the measured TERS spectra are featured by a superposition of the only two lineshapes associated to the transversal modes TO1 and TO2.
+Since they are excited with the same probability, the strain-induced frequency shift ω = ω −ω0 can be simply obtained by the average of the TO1 and TO2 mode frequency splittings:73,74 ω ≈ω1 + ω2 2 ≈λ1 + λ2 4ω0 Then, using the strain-dependent expression of λ1 and λ2 (see Appendix C, Sec.
+I), ω ≈ 1 2ω0 εxx + εyy 2 	 (p + q) + qεzz  .
+This relation can be conveniently expressed as a function of the trace of the strain tensor (εxx + εyy + εzz); thus, ω ≈ 1 2ω0 p + q 2 	 (εxx + εyy + εzz) + q −p 2 	 εzz  .
+The PDPs p and q can be then represented using a dimensional quantity (p = K11ω2 0 and q = K12ω2 0): ω ≈ω0 2  K11 + K12 2 	 (εxx + εyy + εzz) + K12 −K11 2 	 εzz  Considering that K11 ≈K12 for a high-Ge-content SiGe alloy38,41 (as in the case of the nanostripes studied in this paper), we can neglect the second term on the right side of the previous equation, leading to the following expression of the strain-induced frequency shift: ω ≈ω0 2 K11 + K12 2 	 (εxx + εyy + εzz)  which can be more conveniently expressed as a function of the hydrostatic strain εh = 1 3(εxx + εyy + εzz): ω ≈3ω0 4 (K11 + K12) εh ﬁnally obtaining Eq. (2) as reported in the main text.
+APPENDIX D: ELECTRONIC-STRUCTURE CALCULATIONS We addressed the structural and electronic properties of Ge(001) by means of DFT, using the plane-wave pseudopo- tential method as implemented in the Quantum Espresso (QE) package.75 We adopt the LDA for the exchange-correlation potential, whose accuracy has been demonstrated in a variety of systems.76,77 The well-known tendency of DFT-LDA to underestimate the gaps of semiconductors78 is not a signiﬁcant issue for the present calculations, where we address mainly changes in band energies as a function of (small) strains.
+Disagreement with experimental determinations of the strain variation of the valence bandwidth was reported79 but is probably less relevant for the positions of levels near the Fermi energy.
+We adopt a Perdew-Zunger LDA functional,80 the norm-conserving scalar-relativistic pseudopotential Ge.pz- bhs.
+UPF included in the QE package,81 and a 30-Ry (408 eV) cutoff for the plane-wave basis.
+The simulations are carried out in a standard supercell geometry.
+The conventional cell bulk lattice parameter is a = 561.6 pm, as obtained by a full relaxation of the bulk structure, slightly shorter than that of the experiment.
+The supercell is 2 × 1 to accommodate the formation of Ge-Ge buckled dimers.82 The low-temperature structure is known to be a c(4 × 2) ordered arrangement of these dimers,83,84 but in our room-temperature experimental conditions, the buckling is disordered.
+We represent this condition with the simplest b(2 × 1) geometry, implicitly neglecting dimer-dimer interactions.
+The k-point mesh involves 4 × 8 points, including . The slab representing the surface consists of 10 ﬁxed layers plus 3 surface layers on each side, where atoms are fully allowed to relax in all directions, until all force components are smaller than 0.4 pN. All computed band energies are referred to the vacuum reference potential outside the solid.
+This reference potential is determined by averaging the Hartree potential over a vacuum region at the middle between two copies of the periodically repeated 2.15-nm-thick Ge slab.
+A relatively thick (2.34 nm) vacuum region between periodic copies of the Ge slab makes the potential almost constant (within 0.01 meV) over a 1-nm-thick region.
+Strain is applied by increasing the cell sides by 1%.
+The atomic positions of the surface layers relax in all strained geometries, which implies that the z-oriented strain affects mostly the bulk layers.
+While the calculations are carried out for intrinsic Ge, as the Ge stripes are immersed in an n+ Si host, the Fermi level is taken to be pinned at the lowest bulk conduction states.
+Accordingly, the most reliable estimate of the work function at all regimes 115309-12HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) of strain is the one obtained by the position of these bulk band states referred to the vacuum level.
+For a tensile-strained Ge slab, we found a reduction of the surface electrostatic dipole at the surface but a shift of both the Fermi level and the conduction band opposite to the surface dipole decrease.
+DFT calculations have been performed considering a perfectly ordered surface.
+However, on a real surface, local disorder and defects allow relaxation of the atomic density toward its ideal value.
+Thus, the surface dipole could be less sensitive to the strain than predicted by the calculations, leading to a higher work function shift.
+Moreover an additional surface barrier, not directly taken into account in the DFT calculations, is experienced by an electron escaping from the nanostripe surface.
+This barrier is induced by a negative charge layer formed at the nanostripe surface, which occurs because of a redistribution of the space charge accumulating at the Si/SiGe interface as a consequence of the band bending following the thermal equilibrium condition at the heterojunction.
+Consid- ering the given doping level and Si/Ge natural band offset, we estimate that the order of magnitude of this barrier is ∼10 meV, which is within the experimental uncertainty for the measured work function value.
+This suggests that both strain and space charge arguments are consistent with an increase of the work function for the nanostripes with respect to the bulk case, as experimentally obtained by XPEEM, and that our DFT calculations are thus able to correctly describe the strain-induced electronic structure changes inside the stripe.
+APPENDIX E: SENSITIVITY ANALYSIS OF FEM SIMULATIONS In this section we address whether the idealized shape of the interface between the SiGe stripe and the Si substrate, used in the theoretical FEM simulations and exploited to extract the strain tensor, could signiﬁcantly alter the results.
+This is particularly important in the present scenario, in which the relevance of our experimental work relies on its consistency with FEM.
+Thus we have devoted some extra simulations to elucidate this point.
+The hydrostatic strain map reported in Fig. 5(b) is rep- resented again in Fig. 10(a) on a strain scale convenient to perform the comparison that follows.
+Let us start from a simple observation: if we remove the whole dislocation net, we obtain the new map shown in Fig. 10(b).
+The strain ﬁeld close to the lower interface is different because elastic relaxation only has little effect, so in the absence of linear defects, the misﬁt strain is basically maintained.
+However, the hydrostatic strain close to the upper free surface, i.e., the only one relevant for nanoelectronics tensor application and detected by TERS, is tensile as in Fig. 10(a) and rather close in value.
+One of the main points of the paper is to show that the present nanostructuring allows for a hydrostatic tensile strain that is FIG. 10.
+(Color online) Sensitivity analysis of FEM simulations.
+Simulated hydrostatic strain maps as obtained by FEM for different relaxation conditions, stripe shapes, and interface proﬁles: (a) both elastic and plastic (formation of dislocation) relaxation mechanisms for a rectangular stripe shape, (b) a rectangular shape with only elastic relaxation, (c) and (d) elastic relaxation for polygonal shape proﬁles (closer to the experimental shape reported in Fig. 1 of the main text), (e) elastic relaxation on a fully rounded shape, and (f) elastic relaxation for the case of a wavy interface proﬁle.
+signiﬁcantly higher than the typical thermal one in ﬂat ﬁlms (on the order of 0.1%).
+In this respect, to get the main effect, one does not need to explicitly consider dislocations.
+This allows us to investigate systematically the effect of the stripe shape and interface proﬁle, because elastic calculations are much faster than combined elastic-plastic simulations, such as the one reported in Fig. 10(a).
+Therefore, in Figs. 10(c)–10(f), we considered different shapes and proﬁles: the structures shown in Figs. 10(c) and 10(d) are perhaps closer to the experimental one reported in Fig. 1, in Fig. 10(e) we are considering a fully rounded shape, and in Fig. 10(f) we report the results for the case of a wavy interface.
+In all shown simulations, the hydrostatic strain close to the upper free surface is clearly always of the same order (∼0.3%).
+Accordingly, we deduce that the main conclusions of our paper depend mildly on the following: (1) The detailed dislocation distribution, density, etc. (2) The actual details of the stripe shape and interface proﬁle (for a given vertical-to-horizontal aspect ratio) Thus, our choice of an idealized rectangular shape seems to be well justiﬁed.
+*Present address: Physical Biology Center for Ultrafast Science and Technology, Arthur Amos Noyes Laboratory of Chemical Physics, California Institute of Technology, Pasadena, California 91125, USA. †Present address: UMET, University of Lille 1, Villeneuve d’Ascq, France.
+‡Corresponding author: alberto.tagliaferri@ﬁsi.polimi.it 1J. Xiang, W. Lu, Y. Hu, Y. Wu, H. Yan, and C. M. Lieber, Nature (London) 441, 489 (2006).
+2H. Ko, K. Takei, R. Kapadia, S. Chuang, H. Fang, P. W. Leu, K. Ganapathi, E. Plis, H. Sul Kim, S.-Y. Chen, M. Madsen, A. C. 115309-13G. M. VANACORE et al. PHYSICAL REVIEW B 88, 115309 (2013) Ford, Y.-L. Chueh, S. Krishna, S. Salahuddin, and A. Javey, Nature (London) 468, 286 (2010).
+3J. Liu, X. Sun, R. Camacho-Aguilera, L. C. Kimerling, and J. Michel, Opt. Lett. 35, 679 (2010).
+4C. Boztug, J. R. S´anchez-P´erez, F. F. Sudradjat, R. B. Jacobson, D. M. Paskiewicz, M. G. Lagally, and R. Paiella, Small 9, 622 (2013).
+5J. Greil, A. Lugstein, C. Zeiner, G. Strasser, and E. Bertagnolli, Nano Lett. 12, 6230 (2012).
+6D. Liang and J. E. Bowers, Nat. Photon. 4, 511 (2010).
+7O. Aldaghri, Z. Ikoni´c, and R. W. Kelsall, J. Appl.
+Phys. 111, 053106 (2012).
+8Y. Ishikawa, K. Wada, J. Liu, D. D. Cannon, H. C. Luan, J. Michel, and L. C. Kimerling, J. Appl.
+Phys. 98, 013501 (2005).
+9M. de Kersauson, M. El Kurdi, S. David, X. Checoury, G. Fishman, S. Sauvage, R. Jakomin, G. Beaudoin, I. Sagnes, and P. Boucaud, Opt.
+Express 19, 17925 (2011).
+10D. Nam, D. Sukhdeo, A. Roy, K. Balram, S.-L. Cheng, K. Huang, Z. Yuan, M. Brongersma, Y. Nishi, D. Miller, and K. Saraswat, Opt.
+Express 19, 25866 (2011).
+11D. Nam, D. Sukhdeo, S.-L. Cheng, A. Roy, K. C. Y. Huang, M. Brongersma, Y. Nishi, and K. Saraswat, Appl. Phys.
+Lett. 100, 131112 (2012).
+12G. Isella, D. Chrastina, B. R¨ossner, T. Hackbarth, H.-J. Herzog, U. K¨onig, and H. von K¨anel, Solid State Electron. 48, 1317 (2004).
+13D. Chrastina, G. M. Vanacore, M. Bollani, P. Boye, S. Sch¨oder, M. Burghammer, R. Sordan, G. Isella, M. Zani, and A. Tagliaferri, Nanotechnology 23, 155702 (2012).
+14G. M. Vanacore, M. Zani, G. Isella, J. Osmond, M. Bollani, and A. Tagliaferri, Phys.
+Rev. B 82, 125456 (2010).
+15Z. Zhong, W. Schwinger, F. Sch¨afﬂer, G. Bauer, G. Vastola, F. Montalenti, and L. Miglio, Phys. Rev. Lett. 98, 176102 (2007).
+16M. Bollani, D. Chrastina, A. Fedorov, R. Sordan, A. Picco, and E. Bonera, Nanotechnology 21, 475302 (2010).
+17J. P. Ibe, P. P. Bey, S. L. Brandow, R. A. Brizzolara, N. A. Burnham, D. P. DiLella, K. P. Lee, C. R. K. Marrian, and R. J. Colton, J. Vac. Sci. Technol. A 8, 3570 (1990).
+18L. Libioulle, Y. Houbion, and J. M. Gilles, J. Vac. Sci. Technol. B 13, 1325 (1995).
+19M. Chaigneau, G. Picardi, and R. Ossikovski, Surf.
+Sci. 604, 701 (2010).
+20A. Bailly, O. Renault, N. Barrett, L. F. Zagonel, P. Gentile, N. Pauc, F. Dhalluin, T. Baron, A. Chabli, J. C. Cezar, and N. B. Brookes, Nano Lett. 8, 3709 (2008).
+21M. Escher, K. Winkler, O. Renault, and N. Barrett, J. Electron Spectrosc. Relat. Phenom.
+178-179, 303 (2010).
+22V. Y. Fominski, O. I. Naoumenko, V. N. Nevolin, A. P. Alekhin, A. M. Markeev, and L. A. Vyukov, Appl. Phys. Lett. 68, 2243 (1996).
+23K. Choi, S. Ghosh, J. Lim, and C. M. Lee, Appl. Surf.
+Sci. 206, 355 (2003).
+24T. Yano, Y. Inouye, and S. Kawata, Nano Lett. 6, 1269 (2006).
+25G. Picardi, M. Chaigneau, and R. Ossikovski, Chem. Phys. Lett. 469, 161 (2009).
+26J.-E. Yang, W.-H. Park, C.-J. Kim, Z.-H. Kim, and M.-H. Jo, Appl. Phys. Lett. 92, 263111 (2008).
+27T. Sato, H. Matsumoto, K. Nakano, M. Konno, M. Fukui, I. Nagaoki, and Y. Taniguchi, J. Phys. Conf.
+Ser. 241, 012014 (2010).
+28L. Novotny and S. Stranick, Annu. Rev. Phys. Chem. 57, 303 (2006).
+29D. Mehtani, N. Lee, R. D. Hartschuh, A. Kisliuk, M. D. Foster, A. P. Sokolov, and J. F. Maguire, J. Raman Spectrosc. 36, 1068 (2005).
+30G. Picardi, Q. Nguyen, R. Ossikovski, and J. Schreiber, Appl. Spectrosc. 61, 1301 (2007).
+31Z. Sui, H. H. Burke, and I. P. Herman, Phys.
+Rev. B 48, 2162 (1993).
+32H. D. Fuchs, C. H. Grein, C. Thomsen, M. Cardona, W. L. Hansen, E. E. Haller, and K. Itoh, Phys.
+Rev. B 43, 4835 (1991).
+33F. Pezzoli, E. Grilli, M. Guzzi, S. Sanguinetti, D. Chrastina, G. Isella, H. von K¨anel, E. Wintersberger, J. Stangl, and G. Bauer, Mater. Sci. Semicond. Process. 9, 541 (2006).
+34W. Windl, K. Karch, P. Pavone, O. Schutt, and D. Strauch, Int. J. Quantum Chem. 56, 787 (1995).
+35B. A. Weinstein and M. Cardona, Phys.
+Rev. B 7, 2545 (1973).
+36W. J. Brya, Solid State Comm. 12, 253 (1973).
+37R. Ossikovski, Q. Nguyen, G. Picardi, and J. Schreiber, J. Appl.
+Phys. 103, 093525 (2008).
+38M. Cazayous, J. Groenen, F. Demangeot, R. Sirvin, M. Caumont, T. Remmele, M. Albrecht, S. Christiansen, M. Becker, H. P. Strunk, and H. Wawra, J. Appl.
+Phys. 91, 6772 (2002).
+39R. Ossikovski, Q. Nguyen, and G. Picardi, Phys.
+Rev. B 75, 045412 (2007).
+40F. Pezzoli, E. Bonera, E. Grilli, M. Guzzi, S. Sanguinetti, D. Chrastina, G. Isella, H. von K¨anel, E. Wintersberger, J. Stangl, and G. Bauer, J. Appl.
+Phys. 103, 093521 (2008).
+41M. Z. Hossain and H. T. Johnson, J. Appl. Phys. 107, 073515 (2010).
+42J. W. Matthews and A. E. Blakeslee, J. Cryst.
+Growth 27, 118 (1974).
+43R. Gatti, F. Boioli, M. Grydlik, M. Brehm, H. Groiss, M. Glaser, F. Montalenti, T. Fromherz, F. Schafﬂer, and L. Miglio, Appl. Phys.
+Lett. 98, 121908 (2011).
+44R. Gatti, A. Marzegalli, V. A. Zinovyev, F. Montalenti, and L. Miglio, Phys.
+Rev. B 78, 184104 (2008).
+45FDTD Solutions, Lumerical Solutions, Inc., Canada.
+46P. B. Johnson and R. W. Christy, Phys.
+Rev. B 6, 4370 (1972).
+47J. Humlicek, M. Garriga, M. I. Alonso, and M. Cardona, J. Appl.
+Phys. 65, 2827 (1989).
+48G. Picardi, Q. Nguyen, J. Schreiber, and R. Ossikovski, Eur. Phys. J. Appl.
+Phys. 40, 197 (2007).
+49K. Unal and H. K. Wickramasinghe, Appl. Phys.
+Lett. 90, 113111 (2007).
+50S. Shusterman, A. Raizman, A. Sher, Y. Paltiel, A. Schwarzman, E. Lepkifker, and Y. Rosenwaks, Nano Lett. 7, 2089 (2007).
+51P. W. Leu, A. Svizhenko, and K. Cho, Phys.
+Rev. B 77, 235305 (2008).
+52D. Sekiba, Y. Yoshimoto, K. Nakatsuji, Y. Takagi, T. Iimori, S. Doi, and F. Komori, Phys.
+Rev. B 75, 115404 (2007).
+53B. Shan and K. Cho, Phys. Rev. Lett. 94, 236602 (2005).
+54H. Takagi, H. Ogawa, Y. Yamazaki, A. Ishizaki, and T. Nakagiri, Appl. Phys. Lett. 56, 2379 (1990).
+55T. van Buuren, L. N. Dinh, L. L. Chase, W. J. Siekhaus, and L. J. Terminello, Phys. Rev. Lett. 80, 3803 (1998).
+56N. Barrett, J. Rault, I. Krug, B. Vilquin, G. Niu, B. Gautier, D. Albertini, P. Lecoeur, and O. Renault, Surf. Interface Anal. 42, 1690 (2010).
+57B. L. Henke, J. Liesegang, and S. D. Smith, Phys.
+Rev. B 19, 3004 (1979).
+58E. Guth and C. J. Mullin, Phys.
+Rev. 59, 867 (1941).
+59A. Novikov, Solid State Electron. 54, 8 (2010).
+60J. A. Dillon and H. E. Farnsworth, J. Appl.
+Phys. 28, 174 (1957).
+115309-14HYDROSTATIC STRAIN ENHANCEMENT IN LATERALLY . . .
+PHYSICAL REVIEW B 88, 115309 (2013) 61C. G. Van de Walle, Phys.
+Rev. B 39, 1871 (1989).
+62A. Y. Matsuura, N. Thrupp, X. Gonze, Y. Pouillon, G. Bruant, and G. Onida, Comput. Sci. Eng. 14, 22 (2012).
+63J. T. Grant and D. Briggs, Eds., Surface Analysis of Auger and X-Ray Photoelectron Spectroscopy (IM Publications, Chichester, UK, 2003).
+64S. Tanuma, C. J. Powell, and D. R. Penn, Surf. Interface Anal. 43, 689 (2011).
+65J. J. Yeh and I. Lindau, At. Data Nucl.
+Data Tables 32, 1 (1985).
+66H. H. Madden and J. E. Houston, J. Appl.
+Phys. 47, 3071 (1976).
+67A. Gelb and D. Cates, J. Sci. Comput. 36, 1 (2008).
+68O. Renault, R. Brochier, A. Roule, P.-H. Haumesser, B. Kr¨omker, and D. Funnemann, Surf. Interface Anal. 38, 375 (2006). 69S. Surnev, Surf.
+Sci. 282, 10 (1993).
+70E. Anastassakis, J. Appl.
+Phys. 82, 1582 (1997).
+71G. H. Loechelt, N. G. Cave, and J. Men´endez, J. Appl.
+Phys. 86, 6164 (1999).
+72M. Finazzi, P. Biagioni, M. Celebrano, and L. Du`o, Phys.
+Rev. B 76, 125414 (2007).
+73S. Narayanan, S. R. Kalidindi, and L. S. Schadler, J. Appl.
+Phys. 82, 2595 (1997).
+74S. J. Harris, A. E. O’Neill, W. Yang, P. Gustafson, J. Boileau, W. H. Weber, B. Majumdar, and S. Ghosh, J. Appl.
+Phys. 96, 7195 (2004).
+75P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo, A. Dal Corso, S. de Gironcoli, S. Fabris, G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari, F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov, P. Umari, and R. M. Wentz- covitch, J. Phys. Condens.
+Matter 21, 395502 (2009); see http://www.quantum-espresso.org.
+76W. E. Pickett, Comput. Phys. Rep. 9, 115 (1989).
+77R. Astala, S. M. Auerbach, and P. A. Monson, J. Phys. Chem. B 108, 9208 (2004).
+78X. Zheng, A. J. Cohen, P. Mori-S`anchez, X. Hu, and W. Yang, Phys. Rev. Lett. 107, 026403 (2011).
+79P. Modak, A. Svane, N. E. Christensen, T. Kotani, and M. van Schilfgaarde, Phys.
+Rev. B 79, 153203 (2009).
+80J. P. Perdew and A. Zunger, Phys.
+Rev. B 23, 5048 (1981).
+81X. Gonze, R. Stumpf, and M. Schefﬂer, Phys.
+Rev. B 44, 8503 (1991).
+82L. Spiess, A. J. Freeman, and P. Soukiassian, Phys.
+Rev. B 50, 2249 (1994).
+83Y. Yoshimoto, Y. Nakamura, H. Kawai, M. Tsukada, and M. Nakayama, Phys.
+Rev. B 61, 1965 (2000).
+84B. Stankiewicz and L. Jurczyszyn, Surf.
+Sci. 601, 1981 (2007). 115309-15

@@ -1,0 +1,1598 @@
+arXiv:1804.05824v2  [cond-mat.mtrl-sci]  24 Jul 2018
+Anisotropy of exchange stiﬀness based on atomic-scale magnetic properties
+in rare-earth permanent magnet Nd2Fe14B
+Yuta Toga,1 Masamichi Nishino,2, 1 Seiji Miyashita,3, 1 Takashi Miyake,4, 1 and Akimasa Sakuma5
+1ESICMM, National Institute for Materials Science (NIMS), Tsukuba, Japan
+2Research Center for Advanced Measurement and Characterization,
+National Institute for Materials Science (NIMS), Tsukuba, Japan
+3Department of Physics, The University of Tokyo, Tokyo, Japan
+4CD-FMat, National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba, Japan
+5Department of Applied Physics, Tohoku University, Sendai, Japan
+(Dated: July 25, 2018)
+We examine the anisotropic properties of the exchange stiﬀness constant, A, for rare-earth per-
+manent magnet, Nd2Fe14B, by connecting analyses with two diﬀerent scales of length, i.e., Monte
+Carlo (MC) method with an atomistic spin model and Landau-Lifshitz-Gilbert (LLG) equation
+with a continuous magnetic model. The atomistic MC simulations are performed on the spin model
+of Nd2Fe14B constructed from ab-initio calculations, and the LLG micromagnetics simulations are
+performed with the parameters obtained by the MC simulations. We clarify that the amplitude
+and the thermal property of A depend on the orientation in the crystal, which are attributed to
+the layered structure of Nd atoms and weak exchange couplings between Nd and Fe atoms. We
+also conﬁrm that the anisotropy of A signiﬁcantly aﬀects the threshold ﬁeld for the magnetization
+reversal (coercivity) given by the depinning process.
+I.
+INTRODUCTION
+In rare-earth permanent magnets such as Nd2Fe14B,
+SmCo5, Sm2Fe17N3, and so on, the rare-earth elements
+and the transition metals combine in atomic scale to
+produce strong magnetic anisotropy and strong ferro-
+magnetic order.
+The strong magnetic anisotropy orig-
+inated from the 4f-electrons of the rare-earth atom is
+maintained at room temperature (RT) by an interac-
+tion with the strong ferromagnetic order of the transi-
+tion metals [1, 2]. However, in Nd2Fe14B which is well
+known as the highest performance permanent magnet at
+RT [3–5], improvement of coercivity at high temperature
+is required for industrial application [6] because it has a
+relatively low Curie temperature (∼585 K) as compared
+with the other rare-earth magnets.
+Coercivity mechanism of Nd2Fe14B and the other rare-
+earth magnets has not been fully elucidated yet. To ana-
+lyze intrinsic magnetic properties of the rare-earth mag-
+nets (e.g., magnetization, magnetic anisotropy, exchange
+stiﬀness, Curie temperature, etc.), we should consider the
+inhomogeneous magnetic structures and thermal ﬂuctua-
+tions in an atomic scale (∼˚A). The rare-earth magnets in
+the practical use are polycrystalline materials composed
+of the main rare-earth magnet phase (∼µm), and mag-
+netic or non-magnetic grain boundary phases (∼nm).
+Therefore, the coercivity depends on not only the intrin-
+sic magnetic parameters, such as the anisotropy energy
+of the main phase but also on the magnetic properties of
+the grain boundary and microstructure of the main and
+grain phases [7, 8]. For this reason, study of the coer-
+civity requires analyses from the atomic scale (∼˚A) to
+the macroscopic scale (∼µm). This fact has inhibited to
+elucidate the coercivity in a systematic manner.
+Theoretically analyses for the coercivity in most have
+been carried out with a continuum model that uses the
+magnetic anisotropy constants, Ku, and the exchange
+stiﬀness constant, A as macroscopic parameters (see
+Eq. (2)). In the junction systems consisting of hard and
+soft magnetic phases [9–12], it has been indicated that
+both Ku and A have a large eﬀect on incoherent magne-
+tization reversals (i.e., nucleation and depinning) which
+reduce the coercivity from the value of the uniform re-
+versal. In order to elucidate the coercivity mechanism
+and improve the coercivity at high temperatures, it is
+important to clarify the temperature dependences of Ku
+and A. Therefore, many researchers in both experimen-
+tal and theoretical have studied the thermal properties of
+Ku [13–18]. However, regarding A for Nd2Fe14B, experi-
+mentally, the values are observed only at several temper-
+atures [19–22], and also there is no theoretical estimation
+of the temperature dependence as far as we know.
+The value of A is given as a macroscopic properties of
+exchange stiﬀness of continuous magnets at each temper-
+ature. This quantity is related to the domain wall (DW)
+width [23] and the critical (magnetization reversal) nu-
+cleus size [7]. For some other magnetic materials, YCo5
+and L10-type magnets (CoPt, FePd, FePt), Belashchenko
+indicated using ab-initio calculation that A depends on
+the orientation in the crystals[24]. And Fukazawa et al.
+also pointed out the anisotropic A for Sm(Fe, Co)12 com-
+pounds [25]. Recently, Nishino et al. examined the tem-
+perature dependence of DW width of Nd2Fe14B using an
+atomistic spin model constructed from ab-initio calcula-
+tions, and indicated that it also has an orientation depen-
+dence [26]. Although, in Ref. [24], the eﬀect of anisotropic
+A on coercivity is also discussed in a phenomenological
+way, microscopic understanding of the temperature and2
+orientation dependences of A is essential for the coerciv-
+ity mechanism in Nd2Fe14B magnet.
+In the present paper, by a comparison of the results
+obtained by a continuum model and those obtained by
+the atomistic spin model constructed from ab-initio cal-
+culations (same spin model as Ref. [18, 26, 27]), we study
+the temperature and the orientation dependence of A for
+Nd2Fe14B magnet.
+The comparison of the two diﬀer-
+ent scale models is done by making use of magnetic DW
+energy. This scheme has been used successful for FePt
+[28–30] and Co [31] magnetic materials. We ﬁnd that
+A has the anisotropic property in Nd2Fe14B. Moreover,
+the reason for the anisotropy is attributed to the weak
+exchange couplings of Nd and Fe atoms. Additionally,
+we performed micromagnetics simulations on the conﬁg-
+uration in which a soft magnetic phase is attached to
+(001) plane or (100) plane of a grain of Nd2Fe14B. The
+simulations predict that the anisotropy of A reduces the
+coercivity for the former conﬁguration because A of z-
+direction is larger than that of x-direction, while it en-
+hances the coercivity for the latter conﬁguration. The
+series of the calculation schemes in the present study cor-
+responds to the multiscale analysis[32, 33] that connects
+diﬀerent scales from ab-initio calculation to coercivity as
+macroscopic physics.
+II.
+MODELS AND METHOD
+A.
+Atomistic Spin Model
+To include the information of electronic states at an
+atomistic scale, we treat the (spin) magnetic moment of
+each atom as a classical spin and then construct a clas-
+sical Heisenberg model. The atomistic Hamiltonian has
+the form:
+H = −2
+X
+i<j
+˜Jijei · ej
+−
+X
+i∈Fe
+Di(ez
+i )2 +
+X
+i∈Nd
+X
+l=2,4,6
+Bml
+l,i ˆOml
+l,i ,
+(1)
+where ˜Jij is the Heisenberg exchange coupling constants
+including the spin amplitudes (SiSj) between the ith and
+jth sites, and ei is the normalized spin moment at the
+ith site. The coeﬃcient, Di, in the second term denotes
+the strength of the magnetic anisotropy of Fe sites. The
+third term is the magnetic anisotropy of Nd sites, which is
+formulated by the crystal ﬁeld theory for 4f-electrons[34,
+35], Bml
+l,i is the crystal electric ﬁeld coeﬃcient and ˆOml
+l,i is
+the Stevens operator. In the present study, Bml
+l,i takes a
+ﬁxed value, whereas ˆOml
+l,i depends on the state of a total
+angular momentum of 4f-electrons, J i. Here, we ﬁx J i
+parallel to the normalized spin moment on the ith site,
+i.e. J i = Jiei (Ji = 9/2 for Nd atom). For simplicity,
+we consider only the diagonal terms ml = 0.
+For these input parameters of Nd2Fe14B magnet,
+we
+adopt
+the
+same
+values
+in
+the
+previous
+stud-
+ies [18, 26, 27].
+Exchange coupling constants,
+˜Jij,
+were calculated with Liechtenstein’s formula [36] on the
+Korringa-Kohn-Rostoker (KKR) Green’s-function code,
+machikaneyama (akaikkr) [37]. In the present study,
+to reduce computational cost, we use only short-range
+exchange couplings within the range of rcut = 3.52 ˚A,
+in which primary Fe–Fe and Nd–Fe interactions are in-
+cluded. Anisotropy terms, Di and Bml
+l,i , were determined
+from the previous ﬁrst-principles calculation [38] and the
+experimental result [35], respectively. Consequently, the
+atomistic spin model uses many input parameters in a
+unit cell which includes 68 atoms (see Fig. 1 (a)). The
+previous study [18] conﬁrmed that the model and param-
+eters are highly reliable for the magnetic properties of the
+Nd2Fe14B magnet.
+B.
+Continuum Model
+Under the continuum approximation, the micromag-
+netic energy of the exchange couplings and the magnetic
+anisotropies at temperature T is expressed as follows [39]:
+Econt =
+Z
+V
+d3r
+
+X
+l=x,y,z
+Al(T ) (∇lm(r))2
+
+
++
+Z
+V
+d3r EK(T, θ(r)),
+(2)
+where m denotes a normalized magnetization vector,
+Al(T ) is the exchange stiﬀness constant of each direction
+(x, y, z) in the crystal, and EK is the magnetic anisotropy
+energy which is usually expressed as:
+EK(T, θ) = K1(T ) sin2 θ + K2(T ) sin4 θ + K4(T ) sin6 θ,
+(3)
+where Ku(T ) (u = 1, 2, 4) are the magnetic anisotropy
+constants and θ is the angle of magnetization measured
+from z-axis. The continuum model uses the temperature-
+dependent parameters to express the thermal eﬀects in-
+stead of thermal ﬂuctuations in the atomistic model.
+Micromagnetic simulations [39, 40] have been car-
+ried out based on the continuum approximation and
+Landau-Lifshitz-Gilbert (LLG) equation which describes
+time evolution of magnetization relaxation process (see
+Sec.III C). In the practical simulation, the real space in
+Eq. (2) is discretized with a grid whose width should
+be smaller than a DW width and a magnetostatic ex-
+change length [39]. In most micromagnetic simulations
+for Nd2Fe14B magnet, each grid size was set to (1-2 nm)3,
+and as the input parameters, experimentally observed
+values of Al(T ) and Ku(T ) were used.
+In the continuum model, many input parameters of
+Eq. (1) in atomic scale are expected to be renormalized
+in the few macroscopic parameters of Eq. (2) at each
+temperature.3
+FIG. 1.
+(a) Unit Cell of Nd2Fe14B including 68 atoms [5].
+Two types of spin conﬁgurations for Nd2Fe14B atomistic spin
+model: DW orientation is along (b) the yz-plane (Type I) and
+(c) the xy-plane (Type II). The arrows in ﬁgures describe the
+antiparallel (AP) boundary condition. These crystal struc-
+tures were plotted using vesta [41].
+C.
+Methods for determining Ku(T ) and A(T )
+In the present study, the macroscopic parameters are
+evaluated by comparing the energies of the DW and of
+the magnetic anisotropy obtained by the above two mod-
+els at each temperature. We use a Monte Carlo (MC)
+scheme to calculate Helmholtz free energies on the atom-
+istic spin model. In order to evaluate A, we consider the
+two quantities obtained from DW energy: Edw(T ) and
+Fdw(T ) [23, 29]. Edw is the DW energy in the continuum
+model, which is expressed by the following formula:
+Edw(T ) = 2
+p
+A(T )
+Z π
+0
+dθ
+p
+EK(T, θ).
+(4)
+To obtain A(T ), we need the values of Edw(T ) and
+EK(T, θ). We regard Edw(T ) to be equal to the DW free
+energy in the atomistic spin model, Fdw(T ), which is ex-
+pressed by the following formula:
+Fdw(T ) = T
+Z ∞
+T
+dT ′ Edw(T ′)
+(T ′)2
+.
+(5)
+The DW internal energy, Edw(T ), is deﬁned as an en-
+ergy diﬀerence between the internal energies obtained in
+diﬀerent boundary conditions with and without DW. For
+this calculation, we ﬁx the boundaries in the direction an-
+tiparallel (AP) or parallel (PA). Additionally, since the
+crystal structure of Nd2Fe14B has anisotropy, we con-
+sider two models with the two ﬁxed boundaries depicted
+in Fig. 1(b) and (c). Thus, we have two types of DWs [26].
+One is a DW along the yz-plane (type I), and the other is
+along the xy-plane (type II). We set the periodic bound-
+ary condition in the yz(xy)-plane for the model of type I
+(type II).
+To calculate EK(T, θ), we adopt the constrained MC
+(C-MC) method for the atomistic spin model. The C-MC
+method samples spin conﬁgurations under the condition
+of a ﬁxed angle of total magnetization, which allows us to
+calculate the angle dependence of the spin torque and the
+free energy [42]. By considering that EK is equal to the
+free energy of magnetic anisotropy, we calculate EK from
+the atomistic model. The previous study [18] showed the
+validity of the C-MC methods for calculating Ku(T ) in
+EK(T, θ) of the Nd2Fe14B atomistic spin model.
+Note
+that if Eq. (3) is given in the form EK = K1 sin2 θ (K2 =
+K4 = 0), Eq. (4) can be integrated analytically and gives
+the well known relation: Edw(T ) = 4
+p
+A(T )K1(T ).
+In the present paper, the MC and C-MC simulations
+run 100000-200000 MC steps for equilibrium and the fol-
+lowing 100000-200000 MC steps for taking statistical av-
+erages, where a MC step corresponds to one trial for each
+spin to be updated. We calculated the average of mag-
+netic anisotropy energies and DW energies from 8-20 dif-
+ferent runs with diﬀerent initial conditions and random
+sequences.
+III.
+RESULTS AND DISCUSSION
+A.
+Magnetic anisotropy and domain wall energy
+As mentioned above, the evaluation of the exchange
+stiﬀness constant requires precise calculations of the mag-
+netic anisotropy constants and the DW energy.
+First,
+we show the temperature dependence of the magnetic
+anisotropy constants calculated by the C-MC method in
+Fig. 2, which qualitatively agrees with previous experi-
+ments [14, 15]. There, we used the system of 10 × 10 × 7
+unit cells imposing the periodic boundary conditions. In
+uniaxial anisotropy, we study the quantities: FA(T ) ≡
+EK(T, θ = π/2) = EK(T, π/2) −EK(T, 0) = P
+u Ku(T ).
+Figure 2 shows that FA(T ) rapidly decreases with the
+temperature below 400 K. This temperature dependence
+is understood as a result of fragile thermal properties
+of Nd atoms.
+That is, while at low temperature, the
+anisotropy of Nd atoms is dominant, the anisotropy of4
+0
+200
+400
+600
+800
+1000
+Temp. (K)
+0
+5
+10
+Magnetic anisotropy (MJ/m3)
+K1
+K2
+K4
+FA
+700
+800
+900
+Temp. (K)
+0.0
+0.2
+0.4
+FA (MJ/m3)
+Lx
+6
+8
+10
+∞
+FIG. 2. Magnetic anisotropy constants and FA as a function
+of temperature for the system of 10 × 10 × 7 unit cells. In-
+set show FA(T ) for each system size, (Lx, Ly, Lz) = (6, 6, 4),
+(8, 8, 6), (10, 10, 7), and the extrapolation data (Lx ∝N 1/3 →
+∞).
+Nd atoms decreases with the temperature more rapidly
+than that of Fe atoms, because the exchange ﬁeld of a
+Nd atom (sum of exchange couplings that connect to a
+Nd atom) is much smaller (about 20-25 %) than that of
+a Fe atom (see also the detailed discussion in Ref. [18]).
+Additionally, owing to the higher order terms of the
+Nd anisotropy, B0
+4, B0
+6, the magnetization of Nd2Fe14B
+is tilted from the z-axis at low temperatures. This fact
+causes that the deviation from uniaxial anisotropy occurs
+in the region of −2K2 < K1 < 0 [43]. Note that Eq. (4) is
+deﬁned under the condition of uniaxial anisotropy. And
+thus, in the present paper, we discuss the DW energy
+and the exchange stiﬀness in the region of T ≥200 K.
+As a matter of practice, ﬁnite-size eﬀect of numeri-
+cal results about the magnetic anisotropy is signiﬁcant
+for the evaluation of the exchange stiﬀness and the DW
+width, especially at high temperatures.
+To avoid this
+problem, we extrapolate FA(T ) and
+R π
+0 dθ
+p
+EK(T, θ)
+[these are used in Eqs. (7) and (4)] to the thermodynamic
+limit (N →∞) using linear functions in N −1/3. Figure 3
+shows the typical ﬁtting results which indicate that the
+MC results are well ﬁtted with the linear functions. The
+extrapolated results for FA near the Curie temperature,
+TC, are summarized in the inset of Fig. 2, where we ﬁx
+as Ku = 0 above TC (= 870 K). We use these extrapo-
+lated results to evaluate the exchange stiﬀness and the
+DW width.
+Next, we focus on the DW energy. Figure 4 shows the
+temperature dependence of the DW internal energy, Edw,
+for the two DW types (see Fig. 1). We also plot Edw for
+three diﬀerent system sizes in the directions perpendic-
+ular to the DWs, i.e. Lx =14, 17, and 21 (Lz =10, 12,
+and 15), for type I (type II). From these results, it is con-
+ﬁrmed that these systems are large enough to calculate
+0.00 0.02 0.04 0.06
+N −1
+3
+0.84
+0.88
+0.92
+0.96
+1.00
+FA(T )
+0.00 0.02 0.04 0.06
+N −1
+3
+0.92
+0.94
+0.96
+0.98
+1.00
+R π
+0 dθ
+p
+EK(T, θ)
+200 K
+300 K
+400 K
+500 K
+600 K
+700 K
+800 K
+FIG.
+3.
+Finite
+size
+extrapolation
+of
+FA(T )
+and
+R π
+0 dθ
+p
+EK(T, θ). Solid lines are linear ﬁts to the Monte Carlo
+results for each system size (N is the total number of spins).
+Vertical axes are normalized at the values for N = 3264.
+Edw. To analyze in detail the temperature dependence,
+we divided Edw into the magnetic anisotropy term (EK
+dw)
+and the exchange term (EJ
+dw), and plot the contributions
+in Fig. 4. The DW energies of type I and type II show a
+qualitatively similar temperature dependence. Both en-
+ergy terms naturally vanish for T ≥TC, because DW
+does not appear even in the AP boundary condition. For
+T < TC, the anisotropy term decreases monotonically as
+the temperature increases whereas the exchange term in-
+creases and takes a peak value at the temperature, Th,
+slightly below TC.
+The temperature dependences are interpreted as fol-
+lows.
+The monotonic decrease of EK
+dw is merely due
+to the decrease of the thermally averaged magnetic mo-
+ments, which also corresponds to the decrease of FA(T )
+in Fig. 2. The magnetic anisotropy energy depends on
+the angle from z-axis of each spin, whereas the exchange
+coupling energy depends on the relative angle of spin
+pairs. Now, the DW energy is deﬁned as the diﬀerence of
+the internal energies between the PA (EPA) and the AP
+(EAP) boundary conditions, i.e., Edw(T ) = EPA −EAP.
+EJ
+dw is the part coming from the exchange term, thus it
+is inﬂuenced by the diﬀerence between the two bound-
+ary conditions in the ﬂuctuations of the relative angles
+of spin pairs. In the conﬁguration of the AP boundary
+condition, DW exists. In the DW, the ferromagnetic or-
+der is weakened because the spin conﬁguration is forcibly
+twisted, and the DW has a spiral non-collinear structure
+with the perpendicular (xy) component at low tempera-
+tures. This fact gives the diﬀerence of the energies EJ
+dw.
+We expect that EJ
+dw due to the formation of the non-
+collinear structure would be enhanced near the critical
+point where the width of DW increases.
+At a temperature Th which is slightly lower than TC,
+the proﬁle of perpendicular (xy) moments is destroyed by5
+(a) Type I (yz-plane)
+(b) Type II (xy-plane)
+FIG. 4.
+Temperature dependence of DW internal energy for
+three system sizes, (Lx, Ly, Lz), in the DWs of (a) Type I and
+(b) Type II. Total DW energy is divided into anisotropy and
+exchange terms, Edw = EK
+dw+EJ
+dw, for the largest system size
+of each DW type.
+the thermal ﬂuctuation. As a thermally averaged mag-
+netic structure, the non-collinear structure (the spiral
+structure) becomes a collinear structure. At this point,
+EJ
+dw takes the peak value at Th and then decreases rapidly
+and approaches zero towards TC.
+This break of the
+non-collinear structure was discussed in previous stud-
+ies as the disappearance of an xy–magnetization inside
+the DW [29, 44, 45].
+By those internal DW energies and Eq. (5), we can
+calculate DW free energies, Fdw. In Fig. 5, we plot the
+temperature dependence of Fdw and Edw (the same data
+shown in Fig. 4) for both DW types.
+The diﬀerences
+between Fdw and Edw correspond to the contribution of
+magnetic entropy. The diﬀerence in the DW energy be-
+tween type I and type II naturally indicates an anisotropy
+concerning to the direction in which DWs are generated.
+The DW prefers to be generated in the conﬁguration of
+type II. These observations imply the magnetization re-
+FIG. 5.
+Temperature dependence of DW free energy, Fdw
+and internal energy, Edw (same as Fig. 4 (a) and (b)), for
+each DW type.
+0
+200
+400
+600
+800
+1000
+Temp. (K)
+0
+5
+10
+15
+A (pJ/m)
+Ax (TypeI)
+Az (TypeII)
+0
+0.5
+1
+Temp./TC
+0
+10
+˜
+A (pJ/m)
+Exp.
+FIG. 6. Temperature dependence of exchange stiﬀness con-
+stant, A for each DW type. Solid (dotted) lines are ﬁtting
+results in the range of 200-860 K (200-400 K) using A(T ) =
+CM(T )n. Inset show the renormalized values, ˜
+A (see Eq. 6),
+and the green bar denotes the range of the experimental val-
+ues at room temperature [21, 22].
+versal starts from the z-plane. Moreover, the generation
+of the DW in the magnets would also depend on the
+grain boundary phase and the dipole-dipole interaction.
+We will discuss these properties in more realistic magne-
+tization reversal process in Sec. III C.
+B.
+Exchange stiﬀness constant
+The exchange stiﬀness constants, A, for the two direc-
+tions can be evaluated by using Eq. (4) and the numeri-
+cal results for the magnetic anisotropy and the DW en-
+ergy, whose temperature dependence are shown in Fig. 6.6
+0
+200
+400
+600
+800
+1000
+Temp. (K)
+0
+2
+4
+6
+8
+10
+12
+δdw (nm)
+Type I
+Type II
+FIG. 7. Temperature dependence of DW width, δdw, for each
+DW type. Circle lines are our calculation results from Ku(T )
+and Fdw. Square points are the previous numerical results
+which are evaluated directly from the snapshots of spin con-
+ﬁgurations while in MC simulations.
+Here, we deﬁne the value of A calculated from the con-
+ﬁguration of type I (type II) as the exchange stiﬀness
+constant of the x (z)-direction, Ax(z).
+Reﬂecting the
+anisotropy of the DW energy, the exchange stiﬀness con-
+stant naturally has the anisotropy depending on the di-
+rection in the crystal. For the comparison of A with ex-
+perimental values, it is reasonable to normalize the tem-
+perature dependence with TC, because the spin model
+overestimates (T MC
+C
+= 870 K) compared to experiment
+(T EXP
+C
+≃585 K). In addition, as pointed in the mean
+ﬁeld approximation[46], A is roughly proportional to TC,
+so that we also rescale the values of A:
+˜
+A(T ) = A(T )T EXP
+C
+T MC
+C
+.
+(6)
+The inset of Fig. 6 shows the rescaled data and experi-
+mental values (green bar) at RT [21, 22]. Although the
+experimental values have some variation (6.6-12.5 pJ/m),
+the calculation results are well consistent with the lower
+experimental values at RT.
+With A and Ku which have been obtained, the DW
+width, δdw, is calculated from the following relation [15,
+23] :
+δx(z)
+dw (T ) = π ∂ω(T )
+∂θ
+
+θ= π
+2
+= π
+s
+Ax(z)(T )
+FA(T ) ,
+(7)
+ω(T ) =
+q
+Ax(z)(T )
+Z θ
+0
+dθ
+p
+EK(T, θ)
+.
+To conﬁrm the validity of our evaluation procedure for
+A, in Fig. 7, we compared our results (circle) with those
+of the previous study (square) [26].
+In the previous study, δdw was evaluated directly from
+the snapshots of spin conﬁgurations using the same atom-
+istic Hamiltonian of the present study. Note that, we set
+the periodic boundary condition in the yz(xy)-plane for
+the model of type I (type II), whereas the previous cal-
+culation was performed under the open-boundary condi-
+tions for both models. Our results of δdw qualitatively
+agree with the previous results, although they tend to
+take a smaller value because the thermal ﬂuctuation be-
+comes smaller than the previous study due to the diﬀer-
+ence of boundary conditions. The comparisons with the
+previous experiments and the numerical study as men-
+tioned above guarantee our results concerning to A.
+Now, we study its thermal properties. The temper-
+ature dependence of A is often discussed in relation to
+magnetization by using the following expression:
+A(T ) = A(0)
+M(T )
+M(0)
+n
+,
+(8)
+where M(T ) is the amplitude of the magnetization (not
+shown, see Ref. [18]). Under a mean ﬁeld approxima-
+tion with homogeneous spin systems, the exponent n
+is 2 [30, 46].
+However, under more accurate methods,
+the exponent takes a value diﬀerent from 2, for exam-
+ple, FePt:
+n = 1.76 [30], hcp-Co:
+n = 1.79 [31].
+Thus we estimate n to examine the thermal properties
+for the Nd2Fe14B, by ﬁtting A(T ) in Fig. 6 with the
+form CM(T )n, where C is a ﬁtting constant.
+Note
+that n depends on the ﬁtting range of temperature
+nx(z) = 1.68 (1.84) in the range of 200-860 K, whereas
+nx(z) = 1.46 (1.69) in the range of 200-400 K. Fitting
+lines of the former and the latter are plotted by the solid
+and dotted lines in Fig. 6, respectively. Microscopically,
+Fe and Nd show diﬀerent thermal properties. Indeed, Nd
+atoms have weak exchange coupling and so do not have
+much inﬂuence on A, whereas they have a large magnetic
+moment (∼2.87 µB/atom).
+The magnetization of Nd
+atoms is decreased more rapidly with temperature than
+that of Fe atoms, which largely aﬀects the temperature
+dependence of total magnetization. Thus, intrinsically n
+depend on the ﬁtting range largely. However, the impor-
+tant point here is that nz always takes larger values than
+nx regardless of the ﬁtting range (we checked it). This
+relation implies the macroscopic exchange coupling in the
+z-direction is weaker than that in x-direction, not only
+for the coupling strength but also for thermal tolerance.
+As the reason for the anisotropy of A to crystal ori-
+entation, the crystal structure of Nd2Fe14B is naturally
+invoked.
+Nd2Fe14B has the layered structure of Fe-
+layer and NdFe-layer (B has little eﬀect on magnetic
+properties) along the z-axis as shown in Fig. 1 (a). In
+Nd2Fe14B, exchange couplings ( ˜Jij in Eq. (1)) are mainly
+contributed by bonding between Fe and Fe atoms, ˜JFe-Fe,
+and between Nd and Fe atoms, ˜JNd-Fe (| ˜JNd-Nd| is neg-
+ligibly small). Each bond of ˜JFe-Fe has much larger am-
+plitudes than ˜JNd-Fe ( ˜JFe-Fe : −4.35 - 22.34 meV, ˜JNd-Fe :
+−0.16 - 3.55 meV). Therefore, it is anticipated that the
+anisotropy of A comes from the inhomogeneous distribu-
+tion of the exchange couplings and the atom positions
+in the crystal structure. To support this anticipation in7
+0
+200
+400
+600
+800
+1000
+Temp. (K)
+0.5
+0.6
+0.7
+0.8
+0.9
+Az/Ax
+2.0 ˜JNd-Fe
+1.5 ˜JNd-Fe
+1.0 ˜JNd-Fe (default)
+0.5 ˜JNd-Fe
+FIG. 8.
+The anisotropy ratio of the exchange stiﬀness,
+Az/Ax, as a function of temperature for the four models with
+diﬀerent exchange coupling between Nd and Fe, ˜JNd-Fe.
+detail, we examine the relation between the anisotropy
+and the strength of ˜JNd-Fe.
+Figure 8 shows the ratio of Az to Ax for four models
+with diﬀerent values of ˜JNd-Fe. Beside the default model
+(1.0 ˜JNd-Fe, the ratio is calculated from Fig. 6), we also
+calculate other three cases with all the bonds ˜JNd-Fe re-
+duced by half (0.5 ˜JNd-Fe), increased by half (1.5 ˜JNd-Fe),
+and doubled (2.0 ˜JNd-Fe). It is clearly found that A gets
+close to isotropic (i.e., Az = Ax) as ˜JNd-Fe increase in
+the whole temperature range.
+As another feature, the ratio slowly decreases with the
+temperature for all the cases, which indicates that the
+temperature dependence of Ax and Az are diﬀerent. This
+diﬀerence corresponds to the diﬀerence between nx and
+nz in Eq. (8). As the temperature increases, the contri-
+bution of ˜JNd-Fe to A becomes smaller than that of ˜JFe-Fe
+because the spin moments of Nd atoms are more easily
+broken by thermal ﬂuctuations compared with those of
+Fe atoms. From the above analysis, we conclude that the
+reason of the anisotropy of A in Nd2Fe14B comes from
+the weakness of ˜JNd-Fe and the layered structure of Nd
+atoms.
+C.
+Eﬀect of anisotropic exchange on coercivity
+Let us consider the eﬀects of the anisotropy of A on the
+coercivity. In actual rare-earth magnets which are com-
+posed of main rare-earth magnet phase and (magnetic or
+non-magnetic) grain boundary phase, magnetization re-
+versal is considered to occur by nucleation near the inter-
+face and by the DW propagation. Thus, to study magne-
+tization reversal in such a process, we carried out micro-
+magnetic simulations for the two-phase models composed
+of the soft magnetic phase and the hard magnetic phase,
+depicted in Fig. 9 (a) and Fig. 9 (b). The soft phase rep-
+resents the grain boundary phase. The two models (a)
+and (b) are the same if we do not take into account the
+anisotropy of A and the dipole-dipole interaction.
+The simulations are based on the ﬁnite-diﬀerence
+method and the LLG equation [39, 40]:
+dMi
+dt
+= −
+|γ|
+1 + α2
+
+Mi × Heﬀ
+i
++
+α
+|Mi|Mi × (Mi × Heﬀ
+i )
+
+,
+(9)
+where Mi is the magnetization vector of ith cell, γ is the
+gyromagnetic ratio constant, and α is Gilbert damping
+constant. Both models (a) and (b) are discretized with a
+cubic cell of (1.0 nm)3 and we set |γ| = 2.21×105 m/A·sec
+(the value of free electron) and α = 1 (coercivity does not
+depend on α). Eﬀective magnetic ﬁeld on ith cell, Heﬀ
+i ,
+is deﬁned as the derivative of the micromagnetic energy,
+Econt
+i
+(obtained from Eq.(2)), with respect to Mi [47]:
+Heﬀ
+i
+= −1
+µ0
+∂Econt
+i
+∂Mi
++ Hexteu
+=
+X
+j∈n.n.
+2Aij
+|Mi|
+mj −mi
+d2
+ij
++ 2Ki
+1
+|Mi|(mi · eu)eu + Hexteu,
+(10)
+where, µ0 is the magnetic permeability of the vacuum,
+Hext is an external magnetic ﬁeld, j represents six nearest
+neighbor cells of the ith cell, mi = Mi/|Mi|, eu is the
+unit vector of the easy axis, dij is the distance between
+the centers of ith and jth cells (i.e. dij = 1.0 nm), Aij
+is the exchange stiﬀness costant, and Ki
+1 is the magnetic
+anisotropy constant (terms of Ki
+2 and Ki
+4 were omitted
+for simplicity).
+In the present study, we determine the input model
+parameters in Eq.(10) from the MC results at 400 K. The
+model parameters in the hard phases are set to |Mi| =
+1.38 T, Ki
+1 = 2.63 MJ/m3, Aij = 12.21 pJ/m for the pairs
+of iz = jz, and Aij = 9.10 pJ/m for the pairs of iz ̸= jz,
+where iz(jz) is the position of the i(j)th cell in the z-
+axis. In the soft phases, the model parameters are set to
+|Mi| = 1.38 T, Ki
+1 = 0 MJ/m3, and Aij = 9.10 pJ/m for
+all the pairs of (i, j). The diﬀerence of Aij in the direction
+for the hard phases reﬂects the anisotropy of A in the MC
+results. In addition, we assume Aij = 9.10 pJ/m for the
+bonds connecting the soft/hard interfaces.
+By
+applying
+the
+fourth-order Runge-Kutta
+algo-
+rithm [48]
+to
+the
+LLG
+equation
+with
+the
+above-
+constructed models, we simulated the magnetization re-
+versal dynamics and then evaluated the coercivity.
+In
+the simulation, we set the Runge-Kutta time step to
+0.1 ps, the magnetic ﬁeld (Hext) is reduced by 25 mT
+at each ﬁeld step, and the convergence condition under
+each ﬁeld is when the average of magnetization torque,
+|mi × Heﬀ
+i |, is lower than 1.0 mOe. Also, to avoid the
+case of mi×Heﬀ
+i
+∼0, at the beginning of each ﬁeld step,
+a disturbance is added to the magnetization vector of ev-
+ery cell as mi →(mi +v)/|mi +v|, where v is a random
+vector of length 10−4. Using the simulation conditions,8
+FIG. 9. Calculation models with open boundary conditions
+in which the soft magnetic phase (SP) is placed on (a) (001)
+surface and (b) (100) surface of the hard magnetic phase. (c)
+Coercivity without dipole-dipole interaction evaluated using
+each model including the MC results at 400 K as a function
+of soft phase thickness, sl. Dashed lines denote the analyt-
+ical results of the depinning type coercivity calculated form
+Eq. (11).
+(d) Hysteresis loops for the model (a) with four
+diﬀerent sl.
+the magnetization reversal of the hard phase (not includ-
+ing the soft phase) occurs at 4.80 T which is consistent
+with the Stoner-Wohlfarth limit, 2K1/Ms = 4.789 T.
+In such the two-phase models, a magnetization rever-
+sal is expected to start from the soft phase. Thus, we
+also examine the inﬂuence of soft phase thickness, sl. In
+Fig. 9 (c), we plot sl dependence of the coercivity for the
+models (a) and (b). It is clearly seen that the coercivity
+of the model (a) is weaker than that of the model (b)
+regardless of sl. The relation of the coercivities between
+the two models is also consistent with that of the magsni-
+tude of DW energy in each direction (see Fig. 5). Since
+the models (a) and (b) are equivalent in the absence of
+anisotropy of Aij in the hard phase, we can conclude
+that the diﬀerence of the coercivityu is attributed to the
+anisotropic A.
+It is also seen that as sl increases, the coercivity de-
+creases and gradually approaches a certain value for each
+model, and the diﬀerence between two models increases.
+As we will see in the following two paragraphs, this be-
+havior is explained as a change in magnetization reversal
+mechanism from nucleation type to depinning type. Here
+we deﬁne the nucleation type as a magnetization reversal
+of the whole system occurs by a nucleation which starts
+from nucleation at the surface of the soft phase with-
+out depinning at the interface of the soft and hard parts,
+while in the depinning type, the reversed magnetization
+in the soft phase is pinned at the interface until the mag-
+netic ﬁeld reaches the threshold of the depinning.
+Figure 9 (d) shows the hysteresis loops (showing the
+only upper part in the ﬁgure) for the model (a) with four
+diﬀerent sl. When the soft phase is thin (sl = 1, 3 nm),
+the magnetization of the hard phase is reversed at the
+same time as the nucleation at the soft phase (i.e., the
+nucleation type), whereas when the soft phase is thick
+(sl = 5, 7 nm), coercivity is determined not from the nu-
+cleation but from the depinning (i.e., the depinning type).
+The change between the nucleation type and depinning
+type were also pointed out in the previous studies for
+a one-dimensional model in which a soft phase of ﬁnite
+width is sandwiched between hard phases [9–12] and a
+corner defect model [49].
+In the one-dimentional model an analytical solution of
+the coercivity in the limit sl →∞, which means the
+depinning type, was also proposed as follows [10, 11]:
+Hdwp = 2KH
+1
+|M H|
+1 −ASKS
+1
+AHKH
+1
+
+1 +
+q
+AS|M S|
+AH|M H|
+2 ,
+(11)
+where |M S(H)|, KS(H)
+1
+, and AS(H) are the model param-
+eters of Eq. (10) in soft (hard) phase. To apply Eq. (11)
+to the three-dimensional models, as the value of AH, we
+use the value of Aij in the direction perpendicular to the
+soft/hard interface, and calculate Hdwp. Dashed lines in
+Fig. 9 (c) indicate Hdwp for the models, which seems to
+explain well the lower limit of depinning type coercivity
+for our three-dimensional models. Therefore, it is under-
+stood that the anisotropy of A has a large eﬀect on the
+coercivity of the depinning type compared with that of
+the nucleation type.
+Finally, we study the inﬂuence of the dipole-dipole in-
+teraction on the coercivity in the two models. Magnetic
+ﬁeld due to the dipole-dipole interaction is incorporated
+in Heﬀ
+i
+as the following form:
+Hdip
+i
+=
+X
+j
+K(rij)Mj,
+(12)
+where K(rij) is the demagnetization tensor [40], rij is the
+distance vector between i and j cells. Here the strength of
+the dipole-dipole interaction is determined automatically
+according to the distance of the pair and the magnetiza-
+tion vector of the cells. We calculate Hdip
+i
+of all the cells
+in O(NclogNc) computational time (Nc is the total num-
+ber of cells) by solving convolution integral using the fast
+Fourier transform method [50]. In the present study, we
+set the models (a) and (b) in Fig. 9 are cubic regardless
+of sl and M H = M S, and thus the models (a) and (b)
+have the same shape magnetic anisotropy.
+Upper ﬁgures of Fig. 10 show sl dependence of coerciv-
+ity for the two models (a) and (b) with dipole-dipole in-9
+FIG. 10. (upper ﬁgures) Coercivity with dipole-dipole inter-
+action for the models (a) and (b) in Fig. 9, as a function of
+soft phase thickness, sl. Dashed lines represent Hdwp calcu-
+lated from Eq. (11). (lower ﬁgures) Hysteresis loops for the
+two models in the cases of Ax > Az (red circles in the upper
+ﬁgures) with four diﬀerent sl.
+teraction. The red circles and the red dotted lines (Hdwp)
+represent the values of the coercivity which are calculated
+using the same input parameters (|Mi|, Ki
+1, and Aij) as
+those in Fig. 9 (c). Here, the diﬀerence of coercivity in
+the models (a) and (b) in Fig. 10 is mainly attributed
+to the dipole-dipole interaction, and the anisotropic A
+is a secondary eﬀect. Because dipole-dipole interaction
+prefers to construct the DW along z-axis (type I), in the
+model (b), the coercivity decreases compared with that
+in Fig. 9 (c). Conversely in the model (a), the coercivity
+increases in the region of sl ≥3nm. The dipole-dipole
+interaction inhibits to construct the DW (nucleation) in
+xy-plane.
+For this reason, the coercivity with dipole-
+dipole interaction depends on the arrangement of the soft
+phase, which works contrary to the eﬀect of anisotropic
+exchange stiﬀness, Ax > Az.
+These behaviors are conﬁrmed from the hysteresis
+loops in lower ﬁgures in Fig. 10. In the model (b), mag-
+netization reversal is clearly separated into the two parts,
+i.e., the small jump at the lower magnetic ﬁeld where only
+the soft phase is reversed (nucleation), and the jump at
+the higher magnetic ﬁeld where the DW is depinned at
+the interface (depinning). In contrast, in the model (a)
+they are not clearly distinguished. That is, in the model
+(a), the magnetization reversal mechanism becomes to
+approach the nucleation type from the depinning type
+by the dipole-dipole interaction. The dependence of the
+coercivity on the arrangement of the soft phase were sim-
+ilarly discussed in the most recent study (not including
+the anisotropy of A) [51].
+It is diﬃcult to clarify the eﬀect of anisotropic A on
+the coercivity under the dipole-dipole interaction by a
+simple comparison the models (a) and (b). Thus, we ex-
+changed the values of Ax,y and Az in the hard phase.
+Namely, we set the input parameters of the hard phase
+as Aij = 9.10 pJ/m for iz = jz, and Aij = 12.21 pJ/m for
+iz ̸= jz. The values of coercivity under these conditions
+are plotted by the blue circles and the blue lines (Hdwp)
+in the upper ﬁgures of Fig. 10. The anisotropy of A has a
+similar eﬀect on the coercivity as the case without dipole-
+dipole interaction. However, in the model (a), the diﬀer-
+ence in coercivity is relatively small. The anisotropic A
+strongly aﬀects the coercivity of the depinning type com-
+pared with the nucleation type. On the other hand, The
+magnetization reversal in the model (a) is the nucleation
+type rather than the depinning type. Therefore, we may
+conclude the dipole-dipole interaction in the model (a)
+suppresses the eﬀect of the anisotropy of A.
+IV.
+CONCLUSION
+Regarding the exchange stiﬀness constant,
+A,
+of
+Nd2Fe14B, we examined the temperature and orienta-
+tion dependences using the Monte Carlo simulations with
+the atomistic spin model constructed from the ab-initio
+calculation.
+We also conducted the coercivity calcula-
+tions based on the micromagnetics (LLG) simulations us-
+ing the continuum model with the parameters obtained
+by the atomic scale MC results at ﬁnite temperatures.
+In this way, we conﬁrmed that the lattice structure in
+the atomic scale aﬀects the coercivity as macroscopic
+physics. We found that A(T ) depends on the orienta-
+tion of the crystal with respect to not only the ampli-
+tude but also the exponent nx(z) in the scaling behav-
+ior:
+Ax(z)(T ) ∝M(T )nx(z); namely Ax(T ) > Az(T )
+and nx < nz.
+It is quantitatively conﬁrmed that the
+anisotropic properties of A come from the weak exchange
+couplings between Nd and Fe atoms and the layered
+structure of Nd atoms. Moreover, we also found that the
+anisotropic A(T ) aﬀects the coercivity of the depinning
+mechanism.
+We focused on only Nd2Fe14B magnet in the present
+paper.
+However, the essence of anisotropic A comes
+from the weak exchange coupling between rare-earth
+atoms and transition metals and the layered structure
+of rare-earth atoms.
+Thus, the features discussion for
+Nd2Fe14B are probably applicable to other rare-earth
+magnets. In fact, it was pointed out by ab-initio calcu-10
+lations that A have strong anisotropy for YCo5 [24] and
+Sm(Fe,Co)12 [25].
+Let us consider the coercivity from the viewpoint of
+the exchange spring magnet [52, 53] which is composed
+of hard and soft phase and expected to realize the highest
+performance magnet. Because realization of high perfor-
+mance requires a large coercivity and a large thickness
+of soft phase, the model (a) with Ax < Az (Fig. 10 (a)
+blue line) is the most suitable conditions in our model-
+ings. Most strong permanent magnets, Nd2Fe14B, YCo5
+and also L10-type magnet (CoPt, FePd, FePt) cannot
+reproduce the same condition because Ax > Az [24],
+whereas Sm(Fe,Co)12 would do because the anisotropy
+as Ax < Az [25].
+Therefore, Sm(Fe,Co)12 and other
+R(Fe,Co)12-type compounds (R is a rare-earth element)
+may have higher potential to realize strong performance
+exchange spring magnet rather than the other magnets.
+Finally, we point out another source of the anisotropy.
+In a recent experiment, it has been observed that the
+grain boundary phase takes diﬀerent crystal structures
+and chemical compositions depending on the orientation
+with the Nd2Fe14B main phase, i.e., the Nd-rich crys-
+talline paramagnetic phase form on the xy-plane of the
+main phase, whereas the Fe-rich amorphous ferromag-
+netic phase in the plane parallel to the z-axis[54]. In the
+present paper, we have studied the eﬀect of anisotropy
+of A on coercivity and of the orientation of the interface
+with the soft phase changes by using the same interac-
+tion for the interface. However, if the chemical structure
+is diﬀerent, the exchange interaction would be a diﬀer-
+ence due to another source of the anisotropy, which is
+studied with information of the structure in the future.
+In the continuum model, Eq. (2), we used the values
+of Ku and A obtained by the MC simulations which
+are the values of the bulk system.
+There, changes in
+atomic scale of magnetic anisotropy[55–57] and exchange
+coupling [58–61] near the interface or surface were not
+taken into consideration.
+The inﬂuences of interface
+and surface are important for the coercivity [6]. Thus,
+the accuracy multiscale analysis needs further develop-
+ment of connecting scheme from atomistic spin model to
+macrospin model would be necessary.
+As another point noted is the range of exchange in-
+teraction. In the atomistic spin model, Eq. (1), of the
+present study, we omitted the long-range contribution of
+˜Jij for simplicity and reduction of calculation cost. How-
+ever, the recent study [62] reported that RKKY-type ex-
+change coupling signiﬁcantly eﬀects on the DW width,
+and pointed out the importance of the long-range contri-
+bution. We also found that, by incorporating long-range
+exchange couplings up to 10.6 ˚A, the diﬀerence between
+type I and type II of Edw at 400 K reduces from 11.3 %
+(in Fig. 5) to 4.4 %. However, to make study the eﬀect
+clearly, we need precise information of the interaction at
+the long distance, and we postpone to study this problem
+later.
+Although there are still problems that must be con-
+cerned, we believe that the present paper will be helpful
+to elucidate coercivity mechanism in rare-earth perma-
+nent magnets.
+ACKNOWLEDGMENTS
+We acknowledge collaboration and fruitful discussions
+with Taro Fukazawa, Taichi Hinokihara, Shotaro Doi,
+Munehisa Matsumoto, Hisazumi Akai, and Satoshi Hiro-
+sawa. This work was partly supported by Elements Strat-
+egy Initiative Center for Magnetic Materials (ESICMM)
+under the auspices of MEXT; by MEXT as a social and
+scientiﬁc priority issue (Creation of New Functional De-
+vices and High-Performance Materials to Support Next-
+Generation Industries; CDMSI) to be tackled by using
+a post-K computer. The computation was performed on
+Numerical Materials Simulator at NIMS; the facilities of
+the Supercomputer Center, the Institute for Solid State
+Physics, the University of Tokyo; the supercomputer of
+ACCMS, Kyoto University.
+[1] K. H. J. Buschow, Rep. Prog. Phys. 40, 1179 (1977).
+[2] T.
+Miyake
+and
+H.
+Akai,
+J. Phys. Soc. Jpn. 87, 041009 (2018).
+[3] M. Sagawa, S. Fujimura, H. Yamamoto, Y. Matsuura,
+and K. Hiraga, IEEE Trans. Magn. 20, 1584 (1984).
+[4] J. J. Croat, J. F. Herbst, R. W. Lee, and F. E. Pinkerton,
+J. Appl. Phys. 55, 2078 (1984).
+[5] J. F. Herbst, J. J. Croat, F. E. Pinkerton,
+and W. B.
+Yelon, Phys. Rev. B 29, 4176 (1984).
+[6] S.
+Hirosawa,
+M.
+Nishino,
+and
+S.
+Miyashita,
+Adv. Nat. Sci: Nanosci. Nanotechnol. 8, 013002 (2017).
+[7] D. Givord, M. Rossignol,
+and V. M. T. S. Barthem,
+J. Magn. Magn. Mater. 258-259, 1 (2003).
+[8] J.
+Fischbacher,
+A.
+Kovacs,
+M.
+Gusenbauer,
+H.
+Oezelt,
+L.
+Exl,
+S.
+Bance,
+and
+T.
+Schreﬂ,
+J. Phys. D: Appl. Phys. (2018), DOI: 10.1088/1361-6463/aab7d1.
+[9] D. I. Paul, J. Appl. Phys. 53, 1649 (1982).
+[10] A.
+Sakuma,
+S.
+Tanigawa,
+and
+M.
+Tokunaga,
+J. Magn. Magn. Mater. 84, 52 (1990).
+[11] H.
+Kronmller
+and
+D.
+Goll,
+Physica B: Condensed Matter 319, 122 (2002).
+[12] S. Mohakud, S. Andraus, M. Nishino, A. Sakuma, and
+S. Miyashita, Phys. Rev. B 94, 054430 (2016).
+[13] S.
+Hirosawa,
+Y.
+Matsuura,
+H.
+Yamamoto,
+S.
+Fujimura,
+M.
+Sagawa,
+and
+H.
+Yamauchi,
+Jpn. J. Appl. Phys. 24, L803 (1985).
+[14] O.
+Yamada,
+H.
+Tokuhara,
+F.
+Ono,
+M.
+Sagawa,
+and
+Y.
+Matsuura,
+J. Magn. Magn. Mater. 5457, Part 1, 585 (1986).
+[15] K.-D.
+Durst
+and
+H.
+Kronm¨uller,
+J. Magn. Magn. Mater. 59, 86 (1986).
+[16] R. Skomski, J. Appl. Phys. 83, 6724 (1998).
+[17] R.
+Sasaki,
+D.
+Miura,
+and
+A.
+Sakuma,
+Appl. Phys. Express 8, 043004 (2015).11
+[18] Y.
+Toga,
+M.
+Matsumoto,
+S.
+Miyashita,
+H.
+Akai,
+S.
+Doi,
+T.
+Miyake,
+and
+A.
+Sakuma,
+Phys. Rev. B 94, 174433 & 219901 (2016).
+[19] H.
+M.
+Mayer,
+M.
+Steiner,
+N.
+Ster,
+H.
+Wein-
+furter,
+K.
+Kakurai,
+B.
+Dorner,
+P.
+A.
+Lindgrd,
+K.
+N.
+Clausen,
+S.
+Hock,
+and
+W.
+Rodewald,
+J. Magn. Magn. Mater. 97, 210 (1991).
+[20] H.
+M.
+Mayer,
+M.
+Steiner,
+N.
+Ster,
+H.
+We-
+infurter,
+B.
+Dorner,
+P.
+A.
+Lindgrd,
+K.
+N.
+Clausen,
+S.
+Hock,
+and
+R.
+Verhoef,
+J. Magn. Magn. Mater. 104-107, 1295 (1992).
+[21] J.-P. Bick, K. Suzuki, E. P. Gilbert, E. M. Forgan,
+R. Schweins, P. Lindner, C. Kbel,
+and A. Michels,
+Appl. Phys. Lett. 103, 122402 (2013).
+[22] K.
+Ono,
+N.
+Inami,
+K.
+Saito,
+Y.
+Takeichi,
+M.
+Yano,
+T.
+Shoji,
+A.
+Manabe,
+A.
+Kato,
+Y. Kaneko,
+D. Kawana,
+T. Yokoo,
+and S. Itoh,
+J. Appl. Phys. 115, 17A714 (2014).
+[23] S. Chikazumi, Physics of Ferromagnetism, International
+Series of Monographs on Physics (Oxford University
+Press, Oxford, New York, 1997).
+[24] K. D. Belashchenko, J. Magn. Magn. Mater. 270, 413 (2004).
+[25] T. Fukazawa, H. Akai, Y. Harashima,
+and T. Miyake,
+arXiv:1803.03165 (2018).
+[26] M. Nishino, Y. Toga, S. Miyashita, H. Akai, A. Sakuma,
+and S. Hirosawa, Phys. Rev. B 95, 094429 (2017).
+[27] T. Hinokihara, M. Nishino, Y. Toga, and S. Miyashita,
+Phys. Rev. B 97, 104427 (2018).
+[28] D. Hinzke, U. Nowak, R. W. Chantrell,
+and O. N.
+Mryasov, Appl. Phys. Lett. 90, 082507 (2007).
+[29] D.
+Hinzke,
+N.
+Kazantseva,
+U.
+Nowak,
+O.
+N.
+Mryasov,
+P.
+Asselin,
+and
+R.
+W.
+Chantrell,
+Phys. Rev. B 77, 094407 (2008).
+[30] U. Atxitia, D. Hinzke, O. Chubykalo-Fesenko, U. Nowak,
+H. Kachkachi, O. N. Mryasov, R. F. Evans, and R. W.
+Chantrell, Phys. Rev. B 82, 134440 (2010).
+[31] R. Moreno, R. F. L. Evans, S. Khmelevskyi, M. C.
+Mu˜noz, R. W. Chantrell,
+and O. Chubykalo-Fesenko,
+Phys. Rev. B 94, 104433 (2016).
+[32] S.
+Miyashita,
+M.
+Nishino,
+Y.
+Toga,
+T.
+Hinoki-
+hara,
+T. Miyake,
+S. Hirosawa,
+and A. Sakuma,
+Scripta Mater. 154, 259 (2018).
+[33] S. C. Westmoreland, R. F. L. Evans, G. Hrkac, T. Schreﬂ,
+G. T. Zimanyi, M. Winklhofer, N. Sakuma, M. Yano,
+A. Kato, T. Shoji, A. Manabe, M. Ito,
+and R. W.
+Chantrell, Scripta Mater. 148, 56 (2018).
+[34] K. W. H. Stevens, Proc. Phys. Soc. A 65, 209 (1952).
+[35] M. Yamada, H. Kato, H. Yamamoto, and Y. Nakagawa,
+Phys. Rev. B 38, 620 (1988).
+[36] A.
+I.
+Liechtenstein,
+M.
+I.
+Katsnelson,
+V.
+P.
+Antropov,
+and
+V.
+A.
+Gubanov,
+J. Magn. Magn. Mater. 67, 65 (1987).
+[37] http://kkr.issp.u-tokyo.ac.jp/.
+[38] Y.
+Miura,
+H.
+Tsuchiura,
+and
+T.
+Yoshioka,
+J. Appl. Phys. 115, 17A765 (2014).
+[39] J.
+E.
+Miltat
+and
+M.
+J.
+Donahue,
+in
+Handbook of Magnetism and Advanced Magnetic Materials,
+Vol. 2 (Wiley, New York, 2007) pp. 742–764.
+[40] Y.
+Nakatani,
+Y.
+Uesaka,
+and
+N.
+Hayashi,
+Jpn. J. Appl. Phys. 28, 2485 (1989).
+[41] K.
+Momma
+and
+F.
+Izumi,
+J. Appl. Crystallogr. 44, 1272 (2011).
+[42] P. Asselin, R. F. L. Evans, J. Barker, R. W. Chantrell,
+R. Yanes,
+O. Chubykalo-Fesenko, D. Hinzke,
+and
+U. Nowak, Phys. Rev. B 82, 054415 (2010).
+[43] J. Smit and H. Wijn, Ferrites (Philips Technical Library,
+1959).
+[44] L.
+N.
+Bulaevkiˇi
+and
+V.
+L.
+Ginzburg,
+Sov. Phys. JETP 18, 530 (1964).
+[45] N.
+Kazantseva,
+R.
+Wieser,
+and
+U.
+Nowak,
+Phys. Rev. Lett. 94, 037206 (2005).
+[46] H. Kronmller (John Wiley & Sons, Ltd, 2007).
+[47] H. Tsukahara, K. Iwano, C. Mitsumata, T. Ishikawa, and
+K. Ono, AIP Advances 8, 056226 (2018).
+[48] W. H. Press, S. A. Teukolsky, W. T. Vetterling,
+and
+B. P. Flannery, Numerical Recipes 3rd Edition: The Art
+of Scientiﬁc Computing, 3rd ed. (Cambridge University
+Press, Cambridge, UK ; New York, 2007).
+[49] S. Bance,
+H. Oezelt, T. Schreﬂ, G. Ciuta,
+N. M.
+Dempsey,
+D.
+Givord,
+M.
+Winklhofer,
+G.
+Hrkac,
+G.
+Zimanyi,
+O.
+Gutﬂeisch,
+T.
+G.
+Woodcock,
+T.
+Shoji,
+M.
+Yano,
+A.
+Kato,
+and
+A.
+Manabe,
+Appl. Phys. Lett. 104, 182408 (2014).
+[50] N.
+Hayashi,
+K.
+Saito,
+and
+Y.
+Nakatani,
+Jpn. J. Appl. Phys. 35, 6065 (1996).
+[51] W. Li, L. Z. Zhao, Q. Zhou, X. C. Zhong,
+and Z. W.
+Liu, Comput. Mater. Sci. 148, 38 (2018).
+[52] E.
+F.
+Kneller
+and
+R.
+Hawig,
+IEEE Trans. Magn. 27, 3588 (1991).
+[53] R.
+Skomski
+and
+J.
+M.
+D.
+Coey,
+Phys. Rev. B 48, 15812 (1993).
+[54] T.
+T.
+Sasaki,
+T.
+Ohkubo,
+and
+K.
+Hono,
+Acta Mater. 115, 269 (2016).
+[55] H.
+Moriya,
+H.
+Tsuchiura,
+and
+A.
+Sakuma,
+J. Appl. Phys. 105, 07A740 (2009).
+[56] Y.
+Toga,
+T.
+Suzuki,
+and
+A.
+Sakuma,
+J. Appl. Phys. 117, 223905 (2015).
+[57] Y.
+Tatetsu,
+S.
+Tsuneyuki,
+and
+Y.
+Gohda,
+Phys. Rev. Applied 6, 064029 (2016).
+[58] R.
+F.
+Sabiryanov
+and
+S.
+S.
+Jaswal,
+Phys. Rev. B 58, 12071 (1998).
+[59] Y. Toga, H. Moriya, H. Tsuchiura,
+and A. Sakuma,
+J. Phys.: Conf. Ser. 266, 012046 (2011).
+[60] D.
+Ogawa,
+K.
+Koike,
+S.
+Mizukami,
+T.
+Miyazaki,
+M.
+Oogane,
+Y.
+Ando,
+and
+H.
+Kato,
+Appl. Phys. Lett. 107, 102406 (2015).
+[61] N.
+Umetsu,
+A.
+Sakuma,
+and
+Y.
+Toga,
+Phys. Rev. B 93, 014408 (2016).
+[62] A. F. da Silva Jnior, M. F. de Campos, and A. S. Mar-
+tins, J. Magn. Magn. Mater. 442, 236 (2017).

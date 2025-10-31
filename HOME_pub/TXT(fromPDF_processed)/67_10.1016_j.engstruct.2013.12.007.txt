@@ -1,0 +1,120 @@
+A simple and robust elastoplastic constitutive model for concrete F. Poltronieri a, A. Piccolroaz a, D. Bigoni a,⇑, S. Romero Baivier b a Department of Civil, Environmental and Mechanical Engineering, University of Trento, Via Mesiano 77, I-38123 Trento, Italy b Vesuvius Group S.A., Rue de Douvrain 17, 7011 Ghlin, Belgium a r t i c l e i n f o Article history: Received 12 March 2013 Revised 3 December 2013 Accepted 9 December 2013 Available online 11 January 2014 Keywords: Rock-like materials Ceramics Elastoplasticity Hardening laws a b s t r a c t An elasto-plastic model for concrete, based on a recently-proposed yield surface and simple hardening laws, is formulated, implemented, numerically tested and validated against available test results.
+The yield surface is smooth and particularly suited to represent the behaviour of rock-like materials, such as concrete, mortar, ceramic and rock.
+A new class of isotropic hardening laws is proposed, which can be given both an incremental and the corresponding ﬁnite form.
+These laws describe a smooth transition from linear elastic to plastic behaviour, incorporating linear and nonlinear hardening, and may approach the perfectly plastic limit in the latter case.
+The reliability of the model is demonstrated by its capability of correctly describing the results yielded by a number of well documented triaxial tests on concrete sub- jected to various conﬁnement levels.
+Thanks to its simplicity, the model turns out to be very robust and well suited to be used in complex design situations, as those involving dynamic loads.
+ 2013 Elsevier Ltd.
+All rights reserved.
+1. Introduction The mechanical behaviour of concrete is rather complex – even under monotonic and quasi-static loading – because of a number of factors: (i) highly nonlinear and (ii) strongly inelastic response, (iii) anisotropic and (iv) eventually localized damage accumulation with (v) stiffness degradation, (vi) contractive and subsequently dilatant volumetric strain, leading to (vii) progressively severe cracking.
+This complexity is the macroscale counterpart of several concurrent and cooperative or antagonist micromechanisms of damage and stiffening, as for instance, pore collapse, microfracture opening and extension or closure, aggregate debonding, and interfacial fric- tion.
+It can therefore be understood that the constitutive modelling of concrete (but also of similar materials such as rock, soil and ceramic) has been the subject of an impressive research effort, which, broadly speaking, falls within the realm of elastoplasticity,1 where the term ‘plastic’ is meant to include the damage as a speciﬁc inelastic mechanism.
+In fact, elastoplasticity is a theoretical frame- work allowing the possibility of a phenomenological description of all the above-mentioned constitutive features of concrete in terms of: (i) yield function features, (ii) coupling elastic and plastic deformation, (iii) ﬂow-rule nonassociativity, and (iv) hardening sources and rules [3].
+However, the usual problem arising from a re- ﬁned constitutive description in terms of elastoplasticity is the com- plexity of the resulting model, which may lead to several numerical difﬁculties related to the possible presence of yield surface corners, discontinuity of hardening, lack of self-adjointness due to nonassoci- ativity and failure of ellipticity of the rate equations due to strain softening.
+As a consequence, reﬁned models often lack numerical robustness or slow down the numerical integration to a level that the model becomes of awkward, if not impossible, use.
+A ‘minimal’ and robust constitutive model, not obsessively accurate but able to capture the essential phenomena related to the progressive damage occurring during monotonic loading of concrete, is a necessity to treat complex load situations.
+The essential ‘ingredients’ of a constitutive model are a convex, smooth yield surface capable of an excellent interpolation of data and a hardening law describing a smooth transition between elas- ticity and a perfectly plastic behaviour.
+Exclusion of strain soften- ing, together with ﬂow rule associativity, is the key to preserve ellipticity, and thus well-posedness of the problem.
+In the present paper, an elastopalstic model is formulated, based on the so-called ‘BP yield surface’ [3,4,11] which is shown to correctly describe the damage envelope of concrete, and on an inﬁnite class of isotropic hardening rules (given both in incremental form and in the corresponding ﬁnite forms), depending on a hardening parameter.
+Within a certain interval for this parameter hardening is un- bounded (with linear hardening obtained as a limiting case), while outside this range a smooth hardening/perfectly-plastic transition is described.
+The proposed model does not describe certain phe- nomena which are known to occur in concrete, such as for instance 0141-0296/$ - see front matter  2013 Elsevier Ltd.
+All rights reserved.
+http://dx.doi.org/10.1016/j.engstruct.2013.12.007 ⇑Corresponding author.
+Tel.: +39 0461282507; fax: +39 0461282599.
+E-mail address: bigoni@ing.unitn.it (D. Bigoni).
+URL: http://www.ing.unitn.it/bigoni/ (D. Bigoni).
+1 The research on elastoplastic modelling of concrete has reached its apex in the seventies and eighties of the past century, when so many models have been proposed that are now hard to even only be summarized (see among others, [2,5,8,15]).
+Although nowadays other approaches are preferred, like those based on particle mechanics [13], the aim of the present article is to formulate a relatively simple and robust model, something that is difﬁcult to be achieved with advanced models.
+Engineering Structures 60 (2014) 81–84 Contents lists available at ScienceDirect Engineering Structures journal homepage: www.elsevier.com/locate/engstructanisotropy of damage, softening, and elastic degradation, but pro- vides a simple and robust tool, which is shown to correctly repre- sent triaxial test results at high conﬁning pressure. 2.
+Elastoplasticity and the constitutive model This section provides the elastoplastic constitutive model in terms of incremental equations.
+The form of the yield surface is given, depending on the stress invariants and a set of material parameters.
+A new class of hardening laws is formulated in order to describe a smooth transition from linear elastic to plastic behaviour. 2.1.
+Incremental constitutive equations The decomposition of the strain into the elastic (e) and plastic (p) parts as  ¼ e þ p ð1Þ yields the incremental elastic strain in the form _e ¼ _  _p: ð2Þ The ‘accumulated plastic strain’ is deﬁned as follows: pa ¼ Z t 0 j _pjds; ð3Þ where t is the time-like variable governing the loading increments.
+Introducing the ﬂow rule _p ¼ _kP; ð4Þ where P is the gradient of the plastic potential, we obtain that the rate of the accumulated plastic strain is proportional to the plastic multiplier (_k P 0) as _pa ¼ _ kjPj: ð5Þ A substitution of Eqs.
+(2) and (4) into the incremental elastic consti- tutive equation relating the increment of stress _ r to the increment of elastic strain _e through a fourth-order elastic tensor E as _r ¼ E _e, yields _r ¼ E _  _kEP : ð6Þ Note that, for simplicity, reference is made to isotropic elasticity, so that the elastic tensor E is deﬁned in terms of elastic modulus E and Poisson’s ratio m. During plastic loading, the stress point must satisfy the yield condition Fðr; kÞ ¼ 0 at every time increment, so that the Prager consistency can be written as _F ¼ Q  _r þ @F @k  _k ¼ 0; ð7Þ where Q ¼ @F=@r is the yield function gradient and k is the harden- ing parameters vector.
+By deﬁning the hardening modulus Hðr; kÞ as @F @k  _k ¼ _kHðr; kÞ; ð8Þ Eq. (7) can be rewritten in the form Q  _r  _kH ¼ 0 ð9Þ Further, the plastic multiplier can be obtained from Eqs.
+(6) and (9) _k ¼ Q  E _ H þ Q  EP : ð10Þ Finally, a substitution of Eqs.
+(10) into (6) yields the elasto-plastic constitutive equations in the rate form _r ¼ E _  Q  E _ H þ Q  EP EP; ð11Þ where, for simplicity, the associative ﬂow rule P ¼ Q, will be adopted in the sequel. 2.2.
+The BP yield surface The following stress invariants are used in the deﬁnition of the BP yield function [4] p ¼  trr 3 ; q ¼ ﬃﬃﬃﬃﬃﬃﬃ 3J2 p ; h ¼ 1 3 cos1 3 ﬃﬃﬃ 3 p 2 J3 J3=2 2   !
+; ð12Þ where h 2 ½0;p=3 is the Lode’s angle and J2 ¼ 1 2 tr S2; J3 ¼ 1 3 tr S3; S ¼ r  trr 3 I; ð13Þ in which S is the deviatoric stress and I is the identity tensor.
+The seven-parameters BP yield function F [4] is deﬁned as FðrÞ ¼ fðpÞ þ q gðhÞ ; ð14Þ in which the pressure-sensitivity is described through the ‘meridian function’ fðpÞ ¼ Mpc ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ p þ c pc þ c  p þ c pc þ c  m   2ð1  aÞ p þ c pc þ c þ a   s ; if p þ c pc þ c 2 ½0; 1; ð15Þ and fðpÞ ¼ þ1; if ðp þ cÞ=ðpc þ cÞ R ½0; 1.
+The Lode-dependence of yielding is described by the ‘deviatoric function’ (proposed by [12] and independently by [4]) gðhÞ ¼ 1 cos½b p 6  1 3 arccosðc cos 3hÞ : ð16Þ The seven, non-negative material parameters M > 0; pc > 0; c P 0; 0 < a < 2; m > 1; 0 6 b 6 2; 0 6 c < 1 deﬁne the shape of the associated yield surface.
+In particular, M controls the pressure-sensitivity, pc and c are the yield strengths un- der ideal isotropic compression and tension, respectively.
+Parame- ters a and m deﬁne the distortion of the meridian section, while b and c model the shape of the deviatoric section. 2.3.
+An inﬁnite class of hardening laws In order to simulate the nonlinear hardening of concrete, the following class of hardening rules in incremental form is proposed: _pc ¼ k1 ð1 þ dpaÞn _ pa; ð17Þ _c ¼ X _pc; ð18Þ where four material parameters have been introduced: k1 > 0; d P 0; n > 0; and 0 < X < 1.
+A substitution of the ﬂow rule (4) into (17) and (18) yields _pc ¼ _ k k1 ð1 þ dpaÞn jPj; ð19Þ _c ¼ _k Xk1 ð1 þ dpaÞn jPj: ð20Þ Eqs.
+(17) and (18) can be integrated in order to obtain the hardening laws in ﬁnite form as follows 82 F. Poltronieri et al. / Engineering Structures 60 (2014) 81–84pc ¼ pc0 þ k1 d logð1 þ dpaÞ; n ¼ 1; pc0 þ k1 d ð1þdpaÞn11 ðn1Þð1þdpaÞn1 ; n – 1; 8 < : ð21Þ c  c0 ¼ Xðpc  pc0Þ: ð22Þ In order to gain insight on the physical meaning of the proposed class of hardening rules, let us consider the asymptotic behaviour of the ﬁnite form (21) as pa ! 0, which turns out to be independent of the parameters d and n and is given by the formula pc ¼ pc0 þ k1pa þ Oðp2 aÞ: ð23Þ This formula shows that, at an early stage of plastic deformation, the hardening is linear with a slope governed by the parameter k1.
+On the other hand, the hardening at a later stage of plastic deformation is governed by the parameters d and n.
+This is made clear by considering the asymptotic behaviour of the ﬁnite form (21) as pa !
+1: pc ¼ k1 d logðdpaÞ þ pc0 þ k1 d2pa þ Oðp2 a Þ; n ¼ 1; pc0 þ k1 ðn1Þd  k1 ðn1ÞdðdpaÞn1 þ Oðpn a Þ; n – 1: 8 < : ð24Þ Note that, for 0 < n 6 1; pc turns out to be unbounded and for n ¼ 1 there is a logarithmic growth of hardening.
+For n > 1; pc is bounded (Fig. 1) with a limit value given by pc0 þ k1 ðn  1Þd : With the deﬁnition of the hardening law, the proposed elastoplastic constitutive model is ready to be calibrated, implemented and tested, which is the subject of the following Sections, where two members of the class of hardening laws will be analyzed, namely, n ¼ 1 and n ¼ 2, the former corresponding to the logarithmic growth of hardening and the latter approaching the perfectly plastic behaviour.
+3. Calibration of material parameters and comparison with experimental results 3.1.
+Calibration of the BP yield surface The BP yield surface has been calibrated on the basis of avail- able experiments [6,7,9,10,14], to model the behaviour of concrete in the p–q plane (Fig. 2) and in the biaxial r1=fc–r2=fc plane (Fig. 3), where fc (taken positive) deﬁnes the failure for compressive uniax- ial stress.
+We have assumed a ratio between fc and the failure stress in uniaxial tension ft equal to 10.
+The parameter values which have been found to provide the better interpolation of experimental data for the three concretes (identiﬁed by their uni- axial compressive strengths fc ¼ 31:7 MPa, fc ¼ 46:9 MPa, and fc ¼ 62:1 MPa) reported by [7] are given in Table 1. 3.2.
+A validation of the model against triaxial tests The above-presented constitutive model has been implemented in a UMAT routine of ABAQUS Standard Ver. 6.11 [1].
+Triaxial compression tests at high pressure on cylindrical concrete specimen (experimental data taken from [7]) have been simulated using two different hardening laws of the class (17)– (18), namely n ¼ 1, corresponding to logarithmic hardening, and n ¼ 2, which provides a smooth transition to perfect plasticity.
+The values of parameters (identifying elastic behaviour and hard- ening) used in the simulations are reported in Table 2.
+Results of the numerical simulations (one axisymmetric biqua- dratic ﬁnite element with eight nodes – so called ‘CAX8 ’– has been employed) are presented in Figs. 4–6 , reporting the axial stress r11 plotted in terms of axial 11 and radial 22 strains.
+The three ﬁgures Fig. 1.
+The inﬁnite class of hardening laws corresponding to Eq. (21).
+Curves are obtained by setting the parameters k1 and d to the conventional values k1 ¼ 10; 000 MPa, d ¼ 30, and varying the parameter n. Fig. 2.
+The meridian section (p–q plane) of the BP yield surface interpolating experimental results for three concretes (data taken from [7]).
+Black (white) spots denote results relative to unconﬁned (conﬁned) compression. Fig. 3.
+The BP yield surface in the biaxial plane interpolating experimental results for concrete.
+Table 1 Yield function parameters employed for the simulation of triaxial compression tests.
+Concrete’s compression strength M m a b c pc (MPa) c (MPa) fc = 31.7 MPa 0.435 2.5 1.99 0.6 0.98 120 1.02 fc = 46.9 MPa 0.38 2 1.99 0.6 0.98 300 1.9 fc = 62.1 MPa 0.33 2.5 1.99 0.6 0.98 320 2.1 F. Poltronieri et al. / Engineering Structures 60 (2014) 81–84 83refer to the three different concretes, identiﬁed by their different uniaxial compressive strength.
+Different colours2 of the lines de- note simulations performed at different conﬁning pressure, namely: {19, 24, 44} MPa for Fig. 4, {18, 35, 51, 70} MPa for Fig. 5, and {14, 35, 69} MPa for Fig. 6.
+The solid lines correspond to the logarithmic hardening laws (21) and (22) with n ¼ 1.
+The dashed lines correspond to the hard- ening laws (21) and (22) with n ¼ 2.
+It is clear from the ﬁgures that both the hardening laws perform correctly, but the hardening rule with n ¼ 1 leads to a more stable numerical behaviour, while with n ¼ 2 failure can be approached.
+4. Conclusions A reasonably simple inelastic model for concrete has been for- mulated on the basis of a recently-proposed yield function and a class of hardening rules, which may describe a smooth transition from linear elastic to perfectly plastic behaviour.
+The model has been implemented into a numerical routine and successfully vali- dated against available triaxial experiments at different conﬁning pressures.
+Although the presented constitutive approach cannot compete in accuracy with more sophisticated models, it has been proven to be robust for numerical calculations, so that it results par- ticularly suitable for complex design situations where easy of cali- bration, fast convergence and stability become important factors.
+Acknowledgments Part of this work was prepared during secondment of D.B. at Enginsoft (TN).
+D.B. and A.P. gratefully acknowledge ﬁnancial sup- port from European Union FP7 project under contract number PIAP-GA-2011-286110-INTERCER2.
+S.R.B. gratefully acknowledges ﬁnancial support from European Union FP7 project under contract number PIAPP-GA-2013-609758-HOTBRICKS.
+References [1] Abaqus 6.11, 2011.
+User Manual <http://simulia.com>.
+[2] Bazant ZP, Adley MD, Carol I, Jirasek M, Akers SA, Rohani B, Cargile JD, Caner FC.
+Large-strain generalization of microplane model for concrete and application. J. Eng.
+Mech-ASCE 2000;126:971–80.
+[3] Bigoni D. Nonlinear Solid Mechanics.
+Bifurcation Theory and Material Instability.
+Cambridge University Press; 2012.
+[4] Bigoni D, Piccolroaz A. Yield criteria for quasibrittle and frictional materials. Int. J. Solids Struct. 2004;41:2855–78.
+[5] Chen WF, Han DJ.
+Plasticity for structural engineers.
+Springer-Verlag; 1988.
+[6] He Z, Song Y. Failure mode and constitutive model of plain high-strength high- performance concrete under biaxial compression after exposure to high temperatures. Acta Mech.
+Solida Sinica 2008;21:149–59.
+[7] Kotsovos MD, Newman JB.
+Mathematical description of deformational behavior of concrete under generalized stress beyond ultimate strength.
+ACI J 1980;77:340–6.
+[8] Krajcinovic D, Basista M, Sumarac D. Micromechanically inspired phenomenological damage model. J. Appl. Mech.
+ASME 1991;58:305–10.
+[9] Kupfer, H., Hilsdorf, H.K., Rusch, H. (1969) Behaviour of concrete under biaxial stress. Proc. ACI 66, 656-666.
+[10] Lee S-K, Song Y-C, Han S-H. Biaxial behavior of plain concrete of nuclear containment building. Nucl. Eng.
+Des. 2004;227:143–53.
+[11] Piccolroaz A, Bigoni D. Yield criteria for quasibrittle and frictional materials: a generalization to surfaces with corners. Int.
+J. Solids Struct 2009;46:3587–96.
+[12] Podgórski J. General failure criterion for isotropic media. J. Eng. Mech.
+ASCE 1985;111:188–99.
+[13] Schauffert EA, Cusatis G. Lattice Discrete Particle Model for Fiber-Reinforced Concrete. I: Theory. J. Eng. Mech.
+ASCE 2012;138:826–33.
+[14] Tasuji ME, Slate FO, Nilson AH.
+StressÜstrain response and fracture of concrete in biaxial loading.
+ACIJ 1978;75:306–12.
+[15] Yazdani S, Schreyer HL.
+Combined plasticity and damage mechanics model for plain concrete. J. Eng.
+Mech-ASCE 1990;116:1435–50.
+Table 2 Elastic and hardening parameters employed for the simulation of triaxial compression tests.
+Material E (MPa) m k1 (MPa) d X fc = 31.7 MPa n = 1 13,000 0.18 25,000 220 0.0085 n = 2 13,000 0.18 25,000 80 0.0085 fc = 46.9 MPa n = 1 11,200 0.18 223,000 2300 0.00633 n = 2 11,200 0.18 100,000 190 0.00633 fc = 62.1 MPa n = 1 43,000 0.18 210,000 220 0.00656 n = 2 43,000 0.18 210,000 220 0.00656 Fig. 4.
+Comparison between the simulation of triaxial tests at different conﬁning pressures and the relative experiments (taken from [7], concrete with fc ¼ 31:7 MPa).
+The solid [the dashed] lines correspond to the case n ¼ 1 [n ¼ 2]. Fig. 5.
+Comparison between the simulation of triaxial tests at different conﬁning pressures and the relative experiments (taken from [7], concrete with fc ¼ 46:9 MPa).
+The solid [the dashed] lines correspond to the case n ¼ 1 [n ¼ 2]. Fig. 6.
+Comparison between the simulation of triaxial tests at different conﬁning pressures and the relative experiments (taken from [7], concrete with fc ¼ 62:1 MPa).
+The solid [the dashed] lines correspond to the case n ¼ 1 [n ¼ 2].
+2 For interpretation of colour in Figs. 4–6, the reader is referred to the web version of this article.
+84 F. Poltronieri et al. / Engineering Structures 60 (2014) 81–84

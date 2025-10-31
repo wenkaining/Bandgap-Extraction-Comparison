@@ -1,0 +1,708 @@
+Seeing Structural Evolution of Organic Molecular Nano-crystallites
+Using 4D Scanning Confocal Electron Diffraction
+Mingjian Wua,∗, Christina Harreißa, Colin Ophusb, Erdmann Spieckera,∗∗
+aInstitute of Micro- and Nanostructure Research & Center for Nanoanalysis and Electron Microscopy (CENEM),
+Department of Materials Science, Universit¨at Erlangen-N¨urnberg, Cauerstraße 3, D-91058 Erlangen, Germany.
+bNational Center for Electron Microscopy, Molecular Foundry, Lawrence Berkeley National Laboratory, 1 Cyclotron Road, Berkeley, CA, USA, 94720
+Abstract
+Direct observation of organic molecular nanocrystals and their evolution using electron microscopy is extremely challenging, due to
+their radiation sensitivity and complex structure. Here, we introduce 4D-scanning confocal electron diffraction (4D-SCED), which
+enables direct in situ observation of bulk heterojunction (BHJ) thin ﬁlms. 4D-SCED combines confocal electron microscopy with
+a pixelated detector to record focused spot-like diffraction patterns with high angular resolution, using an order of magnitude lower
+dose than previous methods. We apply it to study an active layer in organic solar cells, namely DRCN5T:PC71BM BHJ thin ﬁlms.
+Structural details of DRCN5T nano-crystallites oriented both in- and out-of-plane are imaged at 5 nm resolution and dose budget of
+~5 e−/ ˚A2. We use in situ annealing to observe the growth of the donor crystals, evolution of the crystal orientation, and progressive
+enrichment of PC71BM at interfaces. This highly dose-efﬁcient method opens new possibilities for studying beam sensitive soft
+materials.
+Keywords: 4D-STEM, in situ, organic molecular crystals, organic solar cells
+The properties of organic semiconductors and device perfor-
+mance, particularly in bulk heterojunction (BHJ) organic so-
+lar cells, is dictated by the nano-crystalline structure and mor-
+phology. This is due to the high anisotropy of opto-electronic
+properties of the constituent molecules or polymers, and their
+directional assembly into (semi-)crystals. The orientation rela-
+tionship between molecule, crystal and morphological features,
+interface character of donor/acceptor components, degree of
+net-work percolation of the nano-scaled carrier transport chan-
+nels in BHJ therefore govern the device performance, which all
+evolve sensitively depending on the processing conditions [1–
+5]. However, revealing the nanoscale structures at high spatial
+resolution using electron microscopy methods is challenged by
+radiation sensitivity of these soft materials [6, 7] and the com-
+plexity of their structures. Diffraction imaging, also called four
+dimensional-scanning transmission electron microscopy (4D-
+STEM) [8], or nano-beam diffraction (NBD), with a small con-
+vergence angle α has recently demonstrated its power to reveal
+a multitude of nanoscale structural details in a very broad range
+of material samples, e.g. in refs [9–11]. Mapping the orienta-
+tion of π-stacking in organic semiconductors molecular crystals
+was recently demonstrated under cryogenic temperatures [12],
+opening a new application ﬁeld in beam sensitive soft materials
+[13]. Cryo-freezing the samples is one of the general strategies
+to slow down the structural damage and extend the dose toler-
+ance by up to an order of magnitude before the structures break
+∗Corresponding author
+∗∗Corresponding author
+Email addresses: mingjian.wu@fau.de (Mingjian Wu),
+erdmann.spiecker@fau.de (Erdmann Spiecker)
+down by the incident electron beam [7, 12].
+Working at cryogenic temperature, however, makes in situ
+observation of thermal treatment induced structural evolution
+more difﬁcult. In 4D-STEM, pixelated detectors/cameras are
+used to record the full 2D diffraction pattern at each probed
+sample position, allowing full reciprocal space details of the
+scattered intensities to be analyzed afterwards. Radical devel-
+opments have pushed the limits of detection efﬁciency and cam-
+era speed [13], as well as ever growing computational and soft-
+ware algorithms. The standard NBD setup available on most
+TEMs, is however, neither optimized for dose efﬁciency nor for
+angular resolution. This is because a focused probe is interact-
+ing with a small sample region (high dose under a given probe
+current) and far ﬁeld diffraction disks spread the signal over
+many pixels of the detector/camera (Fig. 1a). In applications of
+diffraction imaging, it is the position of Bragg reﬂections, their
+summed intensities, and their in-plane orientations which pro-
+vide rich information on the crystalline phase [9], strain state
+[10, 11] and orientation [12] of the underlying diffracting lat-
+tices. The distribution of intensity in the beam disks does not
+typically contain additional information, but rather spreads the
+already low signal to many detector pixels. This lowers the
+SNR for a given detector, complicates the post-acquisition pro-
+cessing [13], and reduces the angular resolution because of disk
+overlap, when study large unit cell samples such as organic
+crystals (typically few nanometers). For example, the Bragg
+angle for a 2 nm lattice spacing is only 0.6 mrad using 200
+keV incident electrons, comparable to the probe semiangle in
+many NBD experiments.
+To mitigate the challenge of our limited dose budget, we
+October 7, 2021
+arXiv:2110.02373v1  [cond-mat.mtrl-sci]  5 Oct 2021Figure 1: (a) Typical STEM setup where detector(s) is(are) located at far-ﬁeld.
+(b) Defocusing the probe mitigate limited dose budget for radiative sensitive
+samples. (c) Scheme of a sim-pliﬁed optic path to realize scanning confocal
+electron diffrac-tion. (d) A simple geometric consideration of spatial and an-
+gular resolution.
+can defocus the probe at the cost of spatial resolution, or use
+a shorter camera length, i.e. apply angular under-sampling to
+enhance SNR. Both approaches however would not improve
+the angular resolution of the diffraction patterns. Reducing the
+convergence angle is another possible solution, which could be
+achieved by using (1) condenser zoom, (2) customized small
+probe-deﬁning apertures as recently explored [13], or (3) an ob-
+jective lens with longer focal length, e.g. condenser mini lens
+in low-mag (LM-)STEM or Lorentz STEM [14]. Condenser
+zoom can lower the convergence semi-angle to 0.5–1 mrad [15],
+which can still cause disk overlap for lattice planes of ~1.2–
+2.4 nm distances using a 200 keV primary beam. Customized
+apertures require replacement of the standard apertures, reduc-
+ing the ﬂexibility of the instrument. In addition, cutting down
+the convergence angle with a smaller aperture by a factor of n
+lead to lowering of current by a factor of n2 which may result in
+a very low beam current which can make the experiments chal-
+lenging to perform. Using a long focal length for the objective
+lenses suffers from very large aberrations [14], as probe correc-
+tion of these weak lens are not routinely available. Furthermore,
+using a weak objective lens means a long camera length, caus-
+ing diffraction patterns that produce signals beyond the cam-
+era/detector ﬁeld of view. Dedicated alignment of the projec-
+tion system may shrink the effective camera length. However,
+medium to high angle scattering would still be blocked by the
+differential pump aperture in the projection chamber. There-
+fore, for diffraction imaging studies of soft materials, we want
+to develop alternative ﬂexible methods, optimized for both dose
+efﬁciency and angular resolution, while retaining sufﬁcient spa-
+tial resolution.
+Here, we introduce a new diffraction imaging modality
+which, in contrast to 4D-STEM, uses the imaging mode of the
+microscope rather than the diffraction mode. This confocal op-
+tical setting [16, 17], albeit differing from typical scanning con-
+focal electron microscopy (SCEM), is combined with a small
+convergence angle α and a large sample defocus z to obtain
+sharp diffraction spots. We call this technique 4D scanning
+confocal electron diffraction (4D-SCED) and use it to study
+the structure of molecular nano-crystallites in BHJ thin ﬁlms
+composed of DRCN5T:PC71BM. We show that the 4D-SCED
+method has (1) high angular resolution for investigating the rich
+structural information of the molecular crystals, and (2) it can
+reduce dose by about an order of magnitude compared to the
+standard NBD setup used in many 4D-STEM applications. We
+further demonstrate that 4D-SCED even enables in situ moni-
+toring of structural evolution and growth of nano-crystallites at
+elevated temperatures.
+In a diffraction limited STEM setup, where small con-
+vergence angles are applied, and lens aberration can be well
+omitted, spatial and angular resolution is well described by the
+Abbe equation:
+d ≈
+λ
+2sinα
+(1)
+In a typical NBD setup, the sample plane is coincident with
+plane of probe with sharply focused probe of size d at the left
+side of the equation; and detector is at far ﬁeld, or conjugate
+plane of the aperture, which deﬁnes α, thus disk patterns are
+detected (Fig. 1a). Due to the reciprocal relationship, one can
+optimize spatial or angular resolution on either side of the equa-
+tion for a given incident electron wavelength. In view of the re-
+ciprocal relationship, exchanging the planes of probing and de-
+tection would allow for an extended illumination area (reduced
+dose) and sharply focused diffraction spots (high SNR and an-
+gular resolution) on a standard instrument without customized
+apertures.
+Examining the beam path in the case of a defocused probe
+(obtained by raising the sample, Fig. 1b), the cross-over of the
+direct and Bragg-diffracted beams are generated between the
+sample and the far-ﬁeld diffraction pattern. Detection of these
+cross-over points can be easily realized using a confocal optics
+setting (Fig. 1c). In this setup, the detector plane is set to the
+confocal plane which is conjugate to the cross-over pattern (fo-
+cal plane), i.e., the diffraction/intermediate lens is working in an
+imaging mode. Focused diffraction information is then formed
+at the stable confocal plane. Lowering the sample relative to the
+beam focus can also create a diffraction pattern at the confocal
+plane, but the pattern is rotated by 180◦. Scanning (shifting)
+the probe over the sample creates a 2D real space image grid,
+therefore de-scan of the probe after the imaging lens is required
+to stabilize the image of probe (and thus also the diffraction
+patterns) on the detection plane (Fig. 1c). This requirement
+is typical for scanning confocal electron microscopy (SCEM)
+[16]. Since it is the diffraction information which is of interest,
+and the full diffraction pattern is recorded in 4D datasets, we
+2call this setup 4D scanning confocal electron diffraction (4D-
+SCED). A similar optical setting which can obtain spot diffrac-
+tion patterns in TEM (without scanning, and thus not spatially
+resolved) was proposed by Midgley [18] and Morniroli et al.
+[19]. In both cases, spatial resolution and dose efﬁciency was
+not considered, and a large convergence angle (up to a few de-
+grees) and large defocus (tens of µm to mm) were applied. 4D-
+SCED in contrast uses a small convergence angle and appropri-
+ate defocus value to balance spatial and angular resolution, as
+will be discussed in the following.
+We use a simple geometric model (Fig. 1d) to examine the
+experimental parameters and discuss the achievable spatial and
+angular resolution.
+As illustrated, the diffraction “spots” in
+SCED are not identical to that of real far ﬁeld pattern, e.g.,
+selected area electron diffraction (SAED) using parallel illumi-
+nation, due to the intrinsic z-sensitivity of scattering signals in
+confocal setup [20]. The separation of the diffraction informa-
+tion, g ∼zθB (θB is the Bragg angle), is dependent on the defo-
+cus z, while the spread of the diffraction spots depends on the
+coherent length along the sample normal direction and can be
+estimated geometrically to be in the order of tθB, for a sample
+with thickness t. At defocus values comparable to sample thick-
+ness, the complete wave-optical simulation and full dynam-
+ical beam-specimen interaction should be considered, which
+has been explored in detail with the goal of extracting high-
+resolution 3D information in SCEM, e.g. in refs [17, 21]. To
+obtain sharp spot patterns for nanoscale crystallography studies,
+we want to suppress the diffraction information between the pri-
+mary beam and the diffraction beam, and therefore the spread of
+the diffraction spots should be far smaller than the separation,
+giving the condition z ≫t. In addition, a homogeneously thin,
+ﬂat sample without tilt/bending is desirable in order to position
+a region of interest at the same defocus z. For a typical TEM
+specimen with t < 100 nm, a defocus z > 2 µm already results
+in a sharp spot diffraction pattern (cf. supporting information
+Fig. S1). For a given defocus, the spatial resolution is gov-
+erned by the interaction area of the probe which is determined
+approximately by the convergence semi-angle α and defocus z
+via (Fig. 1d)
+∆R ≈zα
+Therefore, at a given defocus z, smaller convergence angle α
+is preferred to gain higher spatial resolution. For small probe
+convergence, the probe size d at focus is limited by diffrac-
+tion via the Abbe relationship given in Eq. 1.
+The angular
+resolution can then be estimated to be on the order of d/z
+[18]. For a 200 keV primary beam energy (λ = 2.504 pm)
+and a convergence semi-angle of α = 1 mrad, a probe size of
+~1.2 nm can be achieved. With defocus set to z = 5 µm, a spa-
+tial resolution of ~5 nm and angular resolution of ~0.24 mrad
+would be expected. A more quantitative insight requires wave-
+optical simulation, which will be addressed in a follow up work.
+However, the ultimate achievable spatial resolution of beam-
+sensitive samples is typically determined by the available dose
+budget and detection efﬁciency, as well as speed of the used
+camera (cf. method section).
+With 4D-SCED, we have characterized the active layer of a
+Figure 2: (a) molecular and crystal structure of donner component DRCN5T
+and acceptor component PC71BM. (b) (elastically ﬁltered) selection area elec-
+tron diffraction pattern from a sample region of 3.5 µm across. The inset shows
+an indexed single diffraction pattern of a face-on DRCN5T crystalline domain
+extracted from a SCED dataset (cf. Fig. 3). (c) azimuth integrated SAED as
+function of the accumulative dose. Scale bars: 2 mrad. Details in text.
+BHJ solar cell and show the highly improved dose efﬁciency
+and angular resolution compared to 4D-STEM (or NBD) un-
+der identical illumination condition (and thus dose budget).
+For this purpose, we choose a BHJ ﬁlm comprising a blend
+of a small molecule quinquethiophene-based electron donor
+DRCN5T and a fullerene acceptor PC71BM which has been
+treated by solvent vapor annealing (SVA) in CS2 for 840s. So-
+lar cells based on this system has been shown to have high efﬁ-
+ciency and stability [3]. Moreover, the nanomorphology and
+crystallinity show a clear correlation to device performance,
+which has been shown to depend sensitively on the process-
+ing conditions [2]. In a recent structural analysis using graz-
+ing incidence wide angle X-ray scattering (GIWAXS), the unit
+cell structure of the small molecule crystal DRCN5T was de-
+termined, and a coexistence of (molecular) face-on and edge-
+on crystalline domains were deduced [22].
+The molecular
+orientation, particularly the π-stacking orientation, within the
+nanoscale percolating ﬁber network is the key to understand
+the transport properties. However, the important question of
+how the molecular orientation (which can be determined on av-
+erage from other techniques such as GIWAX) locally relates to
+the nano-morphology of the donor-acceptor blend and how both
+evolve upon processing have not yet been answered.
+Figure 2a shows the chemical structure of PC71BM and
+3Figure 3: Comparison of the raw diffraction signal intensity of SCED and NBD under identical dose conditions and spatial and angular sampling from fresh areas
+of a solvent vapor annealed DRCN5T:PC71BM blend sample. (a) SCEM-ADF image simultaneously ob-tained during the SCED data acquisition. (b) STEM-ADF
+image simultaneously obtained during NBD data acquisition. Single raw diffraction patterns extracted from the marked dots in (a) and (b) representing the edge-on
+and face-on DRCN5T nano-crystallites respectively, are extracted and show as insets below. (c) Line proﬁles comparing the signal to noise of raw patterns represent
+more than an order of magnitude higher SNR, whole pattern signal analysis shown in Fig. S3.
+DRCN5T, respectively. The in-plane tiling and out-of-plane
+stacking of the small molecule is also schematically depicted.
+Figure 2b present an elastically ﬁltered SAED (cf. method)
+pattern of the sample acquired at room temperature (RT) with
+a total electron dose of ~0.8 e−/ ˚A2. In the experiment, the
+diffraction rings fade out very rapidly. A time series (and thus
+accumulated dose) of the SAED was recorded, and the azimuth
+integrated proﬁles as function of accumulative dose is plotted
+in Fig. 2c.
+While the in-plane molecule planes, i.e., {100}
+diffraction ring at 0.55 nm−1, survived beyond ~15 e−/ ˚A2, the
+π-stacking, i.e., {010} diffraction ring at 2.65 nm−1, can only
+withstand a beam dose below ~5 e−/ ˚A2. We note that this crit-
+ical dose is comparable to that of Polyethylene and is orders
+of magnitude more vulnerable than metal organic frame-works,
+which can tolerate ~100–1000 e−/ ˚A2, as measured in con-
+trolled experiments [7]. The individual diffraction rings follow
+different trends upon beam bombardment that reveal the time
+evolution of structural damage. It is apparent that almost all
+in-plane diffraction rings {h0l} expand to higher values while
+the {010} diffraction ring shrinks, indicating that the crystal
+order of the π-stacking expands immediately upon beam bom-
+bardment while the in-plane order of the molecule is gradu-
+ally shrinking. Working under cryogenic temperature helps to
+preserve the crystalline order of the small molecule to about 4
+times the total electron dose compared to RT (Fig. S2). How-
+ever, ice formation was observed (in both SAED and real space
+imaging) upon illumination. This disturbed the analysis of the
+native structure of the sample. The SCED and NBD 4D-STEM
+experiments were therefore performed at RT.
+To illustrate the enhanced SNR of 4D-SCED compared to
+NBD 4D-STEM using standard apertures, we compare the
+datasets acquired from the same sample at neighboring fresh
+areas, under identical dose conditions. We emphasize here the
+smallest available convergence of 0.85 mrad on our instrument
+was applied. Figure 3a–b show the sample areas and representa-
+tive raw diffraction patterns extracted from the marked regions
+using 4D-SCED (Fig. 3a) and NBD 4D-STEM (Fig. 3b), re-
+spectively. Each of the two patterns represent edge-on (color
+dot) and face-on crystallite (gray dot). In the face-on case the
+spots from the {h0l} planes, separated by angles < 1 mrad are
+clearly resolved in the SCED mode showing very high signal in-
+tensity, while they are heavily overlapping in the NBD mode.
+Apart from the disc overlap, the SNR is much inferior to that in
+SCED. With customized smaller apertures, thus smaller beam
+disks, more concentrated diffraction signals are expected, and
+the difference would be less striking. At same beam ﬂux, the
+difference of SNR will dependent on the exact shape of probe
+proﬁle and electron-sample interaction circle in the respective
+setups. The line intensity proﬁles from the NDB and SCED
+data are extracted along the blue and red lines, respectively,
+and are shown in Fig. 3c. The dashed lines compare data from
+the edge-on domains while solid lines compare the data from
+face-on domains. Obviously, almost all diffraction peaks in
+4D-SCED show an order-of-magnitude higher intensity com-
+pared to NBD. This is most prominently revealed by the {603}
+peaks which are clearly visible in SCED, while in NDB they
+are buried in the noise ﬂoor. Comparing the SNR from the
+whole maps (cf.
+Fig.
+S3) reveals an average enhancement
+of the peak intensity by an order-of-magnitude in 4D-SCED.
+Since the noise level (~10 counts in current case) is intrinsic
+to the camera, the SNR level in SCED is therefore about an
+order-of-magnitude higher than NDB under the applied acqui-
+sition conditions. This means under same detectability criteria
+of our camera, SCED requires much less dose for Bragg peak
+detection, corresponding to higher dose efﬁciency.
+With its high angular resolution, the patterns acquired via
+SCED enables mapping of the orientation of nano-crystallites
+not only in edge-on (large diffraction angles) but also in face-on
+orientation (small diffraction angles). Furthermore, the sharp
+diffraction spots in SCED can be used to locally analyze the
+crystallographic structure of individual nano-crystallites, which
+4Figure 4: Visualization of the orientation of donor nano-crystallites and distribution of the PC71BM acceptor. Scheme (a) uses a color wheel method to encode the
+edge-on domain orientation at a probed location; (b) demonstrates our ability to determine the grain orientation of the face-on domains. (c) Visualization of the
+whole scanned ﬁeld of view. Insets on the right are raw dif-fraction patterns extracted from the white dots. With virtual annual aperture including only the angular
+range of PC71BM in each diffraction pattern, the location of the acceptor is shown in (d). Scale bars: 500 nm in (a) and (c); 2 mrad in insets of (c).
+is more difﬁcult in the comparable NBD experiments.
+To
+demonstrate this, the inset in Fig. 2b shows an indexed SCED
+pattern extracted from a face-on domain, which agrees well
+to that obtained from GIWAX studies [22]. Since the charge
+carrier transport properties of molecular crystals are highly
+anisotropic, the orientation of the molecular crystals in the do-
+mains and the micrometer scale percolation of the domains are
+critical to pinpoint the device performance. Figure 4 visual-
+izes the orientation of edge-on crystal domains using the color
+wheel method, and the location of the face-on domains are dis-
+played as superimposed grayscale maps. The short color seg-
+ments represent the backbone of DRCN5T molecules, which
+is perpendicular to the {010} diffraction g-vectors (schemat-
+ically shown in Fig. 4a). It is now clear that the π-stacking
+of the DRCN5T molecules is aligned along the long axes of
+the nanoscale ﬁber structures, and the π-stacking plane normal,
+i.e., ⟨010⟩direction, along the short axis of ﬁbers. In this sam-
+ple (SVA treated in CS2 for 840s), the face-on domains cover
+roughly circular areas ranging from a few tens up to a sev-
+eral hundred nanometers in size. Within a face-on domain, the
+molecular crystals show tilted and twisted diffraction patterns
+(top-right insets in Fig. 4c) indicating either a strong bending of
+the domain or the existence of sub-grains and grain boundaries.
+Furthermore, successive raw diffraction patterns across the in-
+terface of edge-on domains reveal that PC71BM is enriched
+mainly at the donor interface. This is best visualized in the
+(virtual) annual dark ﬁeld image using the diffraction informa-
+tion characteristic to PC71BM, i.e., between 1.8 and 2.3 nm−1,
+in Fig. 4d. We note that mapping the PC71BM was not feasible
+using a simple virtual aperture method due to the much inferior
+angular resolution and overlapping diffraction information. In
+samples which have undergone SVA using CHCl3 as the sol-
+vent, similar ﬁber-like edge-on domains were observed but the
+face-on domains also resemble a ﬁber-like shape (cf. Fig. S5).
+Considering that the DRCN5T molecule has a ﬂat π-conjugate
+plane and its ﬂat tiling into crystalline grains, electron wave-
+function overlapping along the molecule out-of-plane direction,
+i.e., the molecular crystal [010] direction, is not likely [16]. The
+high-mobility direction of charge carrier transfer is dominated
+by pathways in the crystal a-c plane, which is determined to
+coincident with the long axes of the ﬁber.
+Finally, we use 4D-SCED to study the structural evolution
+of DRCN5T:PC71BM during annealing at elevated tempera-
+tures by in situ heating the sample thin ﬁlm in the vacuum of
+TEM. Figure 5a show the temperature proﬁle applied during
+the experiment. 4D-SCED datasets were recorded sequentially
+with only few seconds between scans, to move the sample to a
+nearby fresh (un-illuminated) region. Figure 5b–f show visual-
+izations of the sample morphology and orientation at different
+thermal annealing steps. The as-casted samples show already
+a certain degree of π-stacking ordering, but barely any face-on
+domains. Very small (< 50 nm long) edge-on domains were
+visible, having a rod-like shape in projection. The acceptor
+component PC71BM appears homogeneous. After the sample
+have been annealed under 100◦C for ∼8 min, a few tiny face-
+on domains spanning only 3–4 probed pixels (15—20 nm) start
+to emerge. Here, the growth of the edge-on domains in size
+is not yet obvious. After raising the temperature to 120◦C and
+holding for about 8 min, growth of both edge-on and face on
+domains were observed, which is accompanied by phase sepa-
+ration of the PC71BM. Raising the temperature again to 140◦C
+and holding 8 min, the edge-on domains become sharper and
+enrichment of PC71BM towards the edge-on DRCN5T domains
+were observed. Finally, after the sample has been held at 160◦C
+for about 10 mins, the edge-on domains grow to an apparent
+length of 300-–500 nm and large face-on domains also appear.
+Further annealing does not result in additional growth, which is
+likely due to the completed phase separation and depletion of
+5Figure 5: Observing the structural evolution upon thermal annealing of DRCN5T:PCBM thin ﬁlm in the TEM. (a) Temperature proﬁle applied in the experiment.
+The red brackets with (b) – (f) indicate the time (of about 2 minutes each) spent on the SCED data acuisition. The data at each stage is visualized in (b)—(f) with
+the same scheme used in Fig. 4. Scale bars: 200 nm.
+the small molecules. Interestingly, during the growth of ﬁber-
+like edge-on crystalline domains, the aspect ratio about 3–4
+seem to remain throughout the entire thermal annealing pro-
+cessing. With the observed crystallographic orientation rela-
+tionship to the ﬁber morphology, this indicates the growth of
+the nano-crystallites must be faster in the crystallographic a-c
+plane, and much slower expanding along the π-stacking ⟨010⟩
+direction. This further hint that the growth (attachment of new
+molecules to crystalline seeds) via out-of-plane π-electron in-
+teraction is weaker than the in-plane interaction in this materials
+system.
+In conclusion, we have demonstrated 4D-SCED as a highly
+dose-efﬁcient and high angular resolution diffraction imaging
+method. Under optimized acquisition parameters, we observed
+the annealing-induced growth and structural evolution of nano-
+crystallites at sub-5 nm spatial resolution, under a dose budget
+of ~5 e−/ ˚A2. When coupled to state-of-the-art high DQE de-
+tectors and more advanced data mining algorithms to extract
+subtle signals out of the large datasets like those used in NBD
+studies, we expect further improvements in the dose efﬁciency.
+We believe this new 4D-STEM experimental setup will open
+new possibilities in the study of nano-crystallography of soft
+materials.
+Materials and methods
+Sample preparation.
+The bulk heterojunction thin ﬁlms were fabricated by a spin-coating
+process on ITO-coated (thickness: 350 nm to 400 nm) glass sub-
+strates (1.0×1.0 in2, Hans Weidner GmbH, N¨urnberg Germany). Pre-
+structured ITO coated glass substrates were subsequently cleaned in
+acetone and isopropyl alcohol for 10 min each.
+After drying, the
+substrates were bladed with 40 nm poly(3,4-ethylenedioxythiophene)
+polystyrene sulfonate (PEDOT:PSS, Clevios P VP Al 4083, Her-
+aeus, Hanau, Germany). The DRCN5T bulk ﬁlms were spin-coated
+(1500 rpm) under inert gas atmosphere from the solutions of DRCN5T
+(purity ≥99%, 1-Material Inc., Dorval, Canada) and PC71BM (pu-
+rity ≥99%, Solenne B.V., Groningen, Netherlands) (1:0.8 wt.%) in
+chloroform leading to a ﬁlm thickness of about 80 nm as estimated
+by a proﬁlometer. The DRCN5T and PC71BM solutions were stirred
+at 40◦C and 150 rpm before mixing and spin-coating. For the SVA
+post-processing procedure, the samples were loaded in the middle of a
+closed Petri dish containing 120 µl of carbon disulﬁde (CS2) solvent.
+Electron Microscopy.
+Energy ﬁltered selected area electron diffraction experiments were
+performed on a ThermoFisher Scientiﬁc (TFS) monochromated, dou-
+ble Cs corrected Titan Themis microscope operating at 300 kV, and
+NBD 4D-STEM and 4D-SCED on a TFS probe corrected Spectra mi-
+croscope equiped with a X-CFEG gun and operated at 200 kV. The
+Themis is equiped with a regular Ceta (Scintilator coupled CMOS)
+camera capable to run at a maximum frame rate of
+35 fps @
+512 × 512 pixels with dynamic range of about 13-bit (operated via
+6TIA software), and the Spectra is coupled to a high sensitivity Ceta-
+S camera with maximum speed of 300 fps @ 512 × 512 pixels with
+dynamic range of about 12-bit (operated via Velox). For NBD, the op-
+tics were set to micro-probe STEM mode, with the smallest standard
+50 µm C2 aperture and at the limit of convergence zoom. The smallest
+achievable convergence semi-angle are calibrated to be α = 0.7 mrad
+(on the Themis) and α = 0.85 mrad (on the Spectra), respectively. On
+both microscopes, we noticed the factory alignment displays wrong
+convergence angle almost half of our calibrated values. To reach the
+confocal diffraction condition, basic column alignment of micro-probe
+STEM (at the smallest α) were performed ﬁrst, then diffraction lens
+was switched to imaging mode. Image magniﬁcation is ﬁrst set to a
+high value, ∼100 kx, to conﬁrm that the confocal plane is properly
+reached, which is done by going through focus of the probe-deﬁning
+(i.e, C3) lens and ﬁnd the minimum size of the probe. After this point,
+defocusing is achieved only done via moving sample up and down.
+The magniﬁcation of diffraction pattern will change upon shifting the
+sample, give full ﬂexibility to tune/balance of the desired spatial and
+angular resolution. For a given defocus (i.e., sample offset) value,
+the image magniﬁcation is set so to appropriately cover the range of
+diffraction vectors of interest on the camera. The scan and de-scan
+pivot points were carefully aligned. Finally the shape of probe is de-
+termined by the aberrations of the probe-forming lens, and distortions
+of the diffraction pattern can be corrected by carefully aligning the
+objective imaging lens (cf. Fig. S7).
+4D datasets acquisition due to dose limited resolution.
+In all experiments, cameras were operated at their highest speed and
+other acquisition parameters (probe current, dwell time, defocus and
+scanning pixel distance) were estimated to keep both total and insta-
+neous dose budget well below 10 e−/ ˚A2. To estimate the dose limited
+resolution in a scanning probe experiment, we can use instaneous dose
+at any probing point
+D
+e−
+˚A2
+
+= Ip ·10−12 [C/s]·6.24·1018 
+e−
+·tpx ·10−12 [s]
+π ·∆R2  ˚A2
+with Ip probe current (in pA), tpx dwell time at each pixel (in ms) and D
+dose budget (in e−/ ˚A2) that can be evaluated from SAED experiments,
+to be
+∆R
+ ˚A
+
+≈45
+q
+Ip [pA]·tpx [ms]/D
+
+e−/ ˚A2
+.
+Considering the experiments performed on the Titan Themis platform,
+inserting the fastest camera frame time (roughly equals to the dwell
+time) tpx = 13.5 ms and dose bugest D = 5 e−/ ˚A2, a dose limited
+resolution of ∆R ≈74 ˚A is obtainable when setting probe current to
+Ip = 1 pA. With the smallest available convergence angle on our mi-
+croscope under mirco-probe mode α = 0.7 mrad, a defocus value
+z > ∆R/α ≈10 µm is needed. On the Spectra platform (smallest
+α = 0.85 mrad) at the same dose budget of D = 5 e−/ ˚A2 and probe
+current of Ip = 1 pA, with shorter dwell time tpx = 3.5 ms, spatial res-
+olution ∆R ≈38 ˚A is possible. To achieve this condition, a defocus
+value z > ∆R/α ≈4.5 µm is required. The scan pixel distance (sam-
+pling size) is set to slightly larger than the abovementioned resolution
+limit. For in situ experiments, it is important to balance spatial res-
+olution required to reveal small structures in the early state, ﬁeld of
+view to cover statistical relevant sample region, reasonable short time
+of data acquisition to minimize image distortion due to thermal drift.
+We took the following experimental parameters: 180 × 180 grid area
+with 4 nm STEM probe step size, defocus of 2.5 µm and probe cur-
+rent below the measurable quantity of 1 pA in the ﬁrst few frames,
+and STEM probe step size increased to ∼6 nm when large structured
+emerged and ﬁeld of view was limited.
+Data handling, pre-processing and visualization.
+The acquired data were pre-processed in Gatan DigitalMicrograph
+software with public plugins and homemade scripts. The acquired data
+is ﬁrstly aligned to account for the shift of center beam. Elliptical
+distortion of the sum diffraction pattern was observed in some of the
+SCED experiments, which can be hardware corrected using the ob-
+jective lens stigmator (cf. Fig. S6). The distortion was observed to
+not depend on the scanning position when the scanning ﬁeld is within
+few micrometers. This makes the post-acquisition software correction
+of individual pattern feasible based on the distortion evaluated from
+the summed patterns. For this, we applied the evaluation and correc-
+tion method developed by Mitchell and Van den Berg [23]. Due to
+the high SNR in the SCED datasets, the diffraction signals at small
+angles were obvious and straightforward for subsequent analysis us-
+ing simple virtual apertures; and no hardware elastic ﬁltering (like in
+Fig.2b) or post-processing background subtraction [24] were neces-
+sary. The 2D orientation map of edge-on crystal domains was ob-
+tained by directly evaluating the virtual dark ﬁeld image intensities
+using sector apertures of radius between 2.6 and 2.8 nm−1 and angular
+increment of n degrees. In this way a total of 360/n dark-ﬁeld images
+were calculated, and each image corresponds to in-plane diffraction
+angle φ = ni deﬁned by the sequence i of the virtual apertures. This
+reduces the 4D dataset to a 3D dark ﬁeld image data cube. At any
+(real space) scanning pixels, we search for the maximum intensity M
+along the dark ﬁeld sequence and mark its location φ, which together
+deﬁnes 2D grid of complex numbers M(x,y)eiφ(x,y) (equivalent to 2D
+vectors). For face-on crystallites or overlapping crystallites, multiple
+diffraction spot may appear at same diffraction angle q, and the above
+algorithm fails to capture same orientation crystal domains with slight
+out-of-plane tilt (which result in change of the center of Lauer circle
+and ﬂicking of diffraction spots intensities). For this, we apply a ro-
+tation invariant template matching method to ﬁnd location of face-on
+domains and determine its rotation angle. Here, the rotation invariant
+template matching is converted to a shift invariant template matching
+via cross-correlation of the polar transformed diffraction patterns. Fi-
+nally, the processed data in form of 2D vectors were visualized using
+Python with Matplotlib, OpenCV and numpy.
+Author contributions
+MW and ES conceived the idea and designed the experiments. CH
+prepared the samples and performed extensive TEM characterization
+of the samples. MW and CH performed the in situ experiments. MW
+developed 4D-SCED technically, and implemented algorithms to ana-
+lyze the data, drafted the manuscript with input from all authors. CO
+examined the 4D datasets to verify the results using alternative analy-
+sis and visualization routines. All authors have given approval to the
+ﬁnal version of the manuscript.
+Acknowledgments
+We
+acknowledge
+ﬁnancial
+support
+from
+Deutsche
+For-
+schungsgemeinschaft
+(DFG)
+via
+the
+research
+training
+school
+GRK 1896: “In-Situ Microscopy with Electrons, X-rays and Scanning
+Probes” and the Cluster of Excellence EXC 315 “Engineering of
+Advanced Materials”. SFB 953 “Syntetic Carbon Allotropes”. Work
+at the Molecular Foundry was supported by the Ofﬁce of Science,
+Ofﬁce of Basic Energy Sciences, of the U.S. Department of Energy
+under Contract No. DE-AC02-05CH11231.
+7Abbreviations
+DRCN5T:
+2,2’-[(3,3”’,3””,4’-tetraoctyl[2,2’:5’,2”:5”,2”’:5”’,2””-
+quinquethiophene]-5,5””-diyl)bis[(Z)-methylidyne(3-ethyl-4-oxo-
+5,2-thiazolidinediylidene)]]bis-propanedinitrile
+PC71BM: Phenyl-C71-butyric acid methyl ester
+Supporting Information
+Supporting ﬁgures S1-S6.
+References
+[1] T. Kassar, N. S. G¨uldal, M. Berlinghof, T. Ameri, A. Kratzer, B. C.
+Schroeder, G. L. Destri, A. Hirsch, M. Heeney, I. McCulloch, C. J.
+Brabec, and T. Unruh, “Real-Time Investigation of Intercalation and
+Structure Evolution in Printed Polymer:Fullerene Bulk Heterojunction
+Thin Films,” Advanced Energy Materials, vol. 6, no. 5, pp. 1–8, 2016.
+[2] J. Min, N. S. G¨uldal, J. Guo, C. Fang, X. Jiao, H. Hu, T. Heum¨uller,
+H. Ade, and C. J. Brabec, “Gaining further insight into the effects of
+thermal annealing and solvent vapor annealing on time morphological
+development and degradation in small molecule solar cells,” Journal of
+Materials Chemistry A, vol. 5, no. 34, pp. 18101–18110, 2017.
+[3] J. Min, X. Jiao, V. Sgobba, B. Kan, T. Heum¨uller, S. Rechberger,
+E. Spiecker, D. M. Guldi, X. Wan, Y. Chen, H. Ade, and C. J. Brabec,
+“High efﬁciency and stability small molecule solar cells developed by
+bulk microstructure ﬁne-tuning,” Nano Energy, vol. 28, pp. 241–249,
+2016.
+[4] K. Sun, Z. Xiao, E. Hanssen, M. F. Klein, H. H. Dam, M. Pfaff, D. Gerth-
+sen, W. W. Wong, and D. J. Jones, “The role of solvent vapor annealing
+in highly efﬁcient air-processed small molecule solar cells,” Journal of
+Materials Chemistry A, vol. 2, no. 24, pp. 9048–9054, 2014.
+[5] W. Wang, S. Pr¨oller, M. A. Niedermeier, V. K¨orstgens, M. Philipp, B. Su,
+D. Mosegu´ı Gonz´alez, S. Yu, S. V. Roth, and P. M¨uller-Buschbaum,
+“Development of the morphology during functional stack build-up of
+P3HT:PCBM bulk heterojunction solar cells with inverted geometry,”
+ACS Applied Materials and Interfaces, vol. 7, no. 1, pp. 602–610, 2015.
+[6] Q. Chen, C. Dwyer, G. Sheng, C. Zhu, X. Li, C. Zheng, and Y. Zhu,
+“Imaging Beam-Sensitive Materials by Electron Microscopy,” Advanced
+Materials, vol. 32, no. 16, p. 1907619, 2020.
+[7] R. F. Egerton, “Radiation damage to organic and inorganic specimens in
+the TEM,” Micron, vol. 119, pp. 72–87, 2019.
+[8] C. Ophus, “Four-Dimensional Scanning Transmission Electron Mi-
+croscopy (4D-STEM): From Scanning Nanodiffraction to Ptychography
+and Beyond,” Microscopy and Microanalysis, no. 2019, pp. 563–582,
+2019.
+[9] Y. Deng, C. Gammer, J. Ciston, P. Ercius, C. Ophus, K. Bustillo, C. Song,
+R. Zhang, D. Wu, Y. Du, Z. Chen, H. Dong, A. G. Khachaturyan, and
+A. M. Minor, “Hierarchically-structured large superelastic deformation in
+ferroelastic-ferroelectrics,” Acta Materialia, vol. 181, pp. 501–509, 2019.
+[10] V. B. Ozdol, C. Gammer, X. G. Jin, P. Ercius, C. Ophus, J. Ciston, and
+A. M. Minor, “Strain mapping at nanometer resolution using advanced
+nano-beam electron diffraction,” Applied Physics Letters, vol. 106, no. 25,
+2015.
+[11] T. C. Pekin, J. Ding, C. Gammer, B. Ozdol, C. Ophus, M. Asta, R. O.
+Ritchie, and A. M. Minor, “Direct measurement of nanostructural change
+during in situ deformation of a bulk metallic glass,” Nature Communica-
+tions, vol. 10, no. 1, pp. 1–7, 2019.
+[12] O. Panova, C. Ophus, C. J. Takacs, K. C. Bustillo, L. Balhorn, A. Salleo,
+N. Balsara, and A. M. Minor, “Diffraction imaging of nanocrystalline
+structures in organic semiconductor molecular thin ﬁlms,” Nature Mate-
+rials, vol. 18, no. August, 2019.
+[13] K. C. Bustillo, S. E. Zeltmann, M. Chen, J. Donohue, J. Ciston, C. Ophus,
+and A. M. Minor, “4D-STEM of Beam-Sensitive Materials,” Accounts of
+Chemical Research, 2021.
+[14] S. McVitie, D. McGrouther, S. McFadzean, D. MacLaren, K. O’Shea, and
+M. Benitez, “Aberration corrected Lorentz scanning transmission electron
+microscopy,” Ultramicroscopy, vol. 152, pp. 57–62, 2015.
+[15] M. Wu and E. Spiecker, “Correlative micro-diffraction and differential
+phase contrast study of mean inner potential and subtle beam-specimen
+interaction,” Ultramicroscopy, vol. 176, pp. 233–245, may 2017.
+[16] S. P. Frigo, Z. H. Levine, and N. J. Zaluzec, “Submicron imaging of
+buried integrated circuit structures using scanning confocal electron mi-
+croscopy,” Applied Physics Letters, vol. 81, no. 11, pp. 2112–2114, 2002.
+[17] P. Wang, G. Behan, A. I. Kirkland, P. D. Nellist, E. C. Cosgriff, A. J.
+D’Alfonso, A. J. Morgan, L. J. Allen, A. Hashimoto, M. Takeguchi,
+K. Mitsuishi, and M. Shimojo, “Bright-ﬁeld scanning confocal electron
+microscopy using a double aberration-corrected transmission electron mi-
+croscope,” Ultramicroscopy, vol. 111, no. 7, pp. 877–886, 2011.
+[18] P. A. Midgley, “A simple new method to obtain high angular resolution
+ω-q patterns,” Ultramicroscopy, vol. 76, no. 3, pp. 91–96, 1999.
+[19] J. P. Morniroli, F. Houdellier, C. Roucau, J. Puiggal´ı, S. Gest´ı, and
+A. Redja¨ımia, “LACDIF, a new electron diffraction technique obtained
+with the LACBED conﬁguration and a Cs corrector: Comparison with
+electron precession,” Ultramicroscopy, vol. 108, no. 2, pp. 100–115,
+2008.
+[20] C. Zheng, Y. Zhu, S. Lazar, and J. Etheridge, “Three dimensional con-
+focal imaging using coherent elastically scattered electrons,” European
+Microscopy Congress 2016: Proceedings, pp. 19–20, 2016.
+[21] C. Dwyer, S. Lazar, L. Y. Chang, and J. Etheridge, “Image formation
+in the scanning transmission electron microscope using object-conjugate
+detectors,” Acta Crystallographica Section A: Foundations of Crystallog-
+raphy, vol. 68, no. 2, pp. 196–207, 2012.
+[22] M. Berlinghof, S. Langner, C. Harreiß, E. M. Schmidt, R. Siris,
+F. Bertram, C. Shen, J. Will, T. Schindler, A. Prihoda, S. Rechberger, G. S.
+Duesberg, R. B. Neder, E. Spiecker, C. J. Brabec, and T. Unruh, “Crystal-
+structure of active layers of small molecule organic photovoltaics before
+and after solvent vapor annealing,” Zeitschrift f¨ur Kristallographie - Crys-
+talline Materials, vol. 235, pp. 15–28, feb 2020.
+[23] D. R. Mitchell and J. A. Van den Berg, “Development of an ellipse ﬁtting
+method with which to analyse selected area electron diffraction patterns,”
+Ultramicroscopy, vol. 160, pp. 140–145, 2016.
+[24] O. Panova, X. C. Chen, K. C. Bustillo, C. Ophus, M. P. Bhatt, N. Balsara,
+and A. M. Minor, “Orientation mapping of semicrystalline polymers us-
+ing scanning electron nanobeam diffraction,” Micron, vol. 88, pp. 30–36,
+2016.
+8

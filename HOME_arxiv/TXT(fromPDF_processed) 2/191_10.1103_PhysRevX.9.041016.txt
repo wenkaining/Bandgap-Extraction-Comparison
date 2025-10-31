@@ -1,0 +1,551 @@
+Spin Seebeck imaging of spin-torque switching in antiferromagnetic Pt/NiO heterostructures Isaiah Gray,1, 2 Takahiro Moriyama,3 Nikhil Sivadas,1 Gregory M. Stiehl,4 John T. Heron,5 Ryan Need,6 Brian J. Kirby,6 David H. Low,1 Katja C. Nowack,4, 2 Darrell G. Schlom,7, 2 Daniel C. Ralph,4, 2 Teruo Ono,3 and Gregory D. Fuchs1, 2 1School of Applied and Engineering Physics, Cornell University, Ithaca NY 14853 2Kavli Institute for Nanoscale Science, Ithaca NY 14853 3Institute for Chemical Research, Kyoto University, Uji, Kyoto, 611-0011, Japan 4Department of Physics, Cornell University, Ithaca NY 14853 5Department of Materials Science and Engineering, University of Michigan, Ann Arbor, Michigan 6NIST Center for Neutron Research, National Institute of Standards and Technology, Gaithersburg, Maryland 20899 7Department of Materials Science and Engineering, Cornell University, Ithaca, NY 14853 (Dated: March 4, 2019) As electrical control of N´eel order opens the door to reliable antiferromagnetic spintronic devices, understanding the microscopic mechanisms of antiferromagnetic switching is crucial.
+Spatially- resolved studies are necessary to distinguish multiple nonuniform switching mechanisms; however, progress has been hindered by the lack of tabletop techniques to image the N´eel order.
+We demon- strate spin Seebeck microscopy as a sensitive, table-top method for imaging antiferromagnetic order in thin ﬁlms, and apply this technique to study spin-torque switching in NiO/Pt and Pt/NiO/Pt heterostructures.
+We establish the interfacial antiferromagnetic spin Seebeck eﬀect in NiO as a probe of surface N´eel order, resolving antiferromagnetic spin domains within crystalline twin domains.
+By imaging before and after applying current-induced spin torque, we resolve spin domain rotation and domain wall motion, acting simultaneously.
+We correlate the changes in spin Seebeck images with electrical measurements of the average N´eel orientation through the spin Hall magnetoresistance, conﬁrming that we image antiferromagnetic order.
+I. INTRODUCTION Antiferromagnets (AFs), long relegated to a support- ing role as the pinning layers in ferromagnetic spintronic devices [1, 2], are emerging as the active element in an- tiferromagnetic spintronic devices [3–5].
+In constrast to ferromagnets (FMs), AFs are insensitive to magnetic ﬁelds [6] and exhibit dynamics at the THz frequency scale [7, 8].
+Additionally, AFs have magnetotransport eﬀects that enable electrical readout [9, 10].
+Taking advantage of these attractive properties, however, requires overcom- ing the challenge of reliably manipulating the N´eel order.
+Recent breakthroughs in electrical [11, 12] and opti- cal [13] control provide a path toward reliable devices.
+In particular, electrical switching was demonstrated in the metals CuMnAs [11, 14] and Mn2Au [15] using N´eel spin-orbit torque, in which the sign of the spin-orbit ﬁeld from DC current within the material alternates on each lattice site to coherently rotate the N´eel vector [16].
+Re- cently, electrical switching of an AF via spin-torque was also demonstrated in insulating NiO [17–19] after several predictions [20, 21].
+In this mechanism, the DC current passing through an adjacent Pt layer generates a spin current through the spin Hall eﬀect, which then exerts an antidamping torque on the spins at the Pt/NiO in- terface.
+Switching by antidamping spin torque does not require that the spin sublattices form inversion partners, which is required for N´eel spin-orbit torque, and hence it is a more general approach that could enable all-electrical control over a wider variety of AFs.
+Previous experiments have shown that AF switching is nonuniform [14, 22, 23] and heavily inﬂuenced by local magneto-elastic coupling [24].
+Nominally identical sam- ples display switching eﬃciency that varies by up to a factor of 7 at the same current density [17], demonstrat- ing a need for better understanding the switching process at the domain level.
+Systematic spatially-resolved studies are necessary to ﬁrmly establish the spin rotation mech- anisms, the fraction of the domains that switch, and the reproducibility of switching.
+A primary challenge when imaging antiferromagnetism is to ﬁnd an experimental probe that is sensitive to the N´eel order and also provides the sub-µm resolution nec- essary to resolve domains.
+XMLD-PEEM has been the most reliable technique [22, 25]; however, it requires a coherent x-ray source that is available at only a few facil- ities.
+Second-harmonic [26, 27] and quadratic magneto- optical techniques [28] are available in a table-top format, but the small signal sizes create a need for background subtraction, which can be a problem because antiferro- magnets are diﬃcult to fully saturate.
+As an alternative, recent demonstrations of the AF anomalous Nernst eﬀect [29] and AF spin Seebeck eﬀect [30, 31] open up the pos- sibility of using spin-thermal eﬀects as an imaging probe, because they can be directly sensitive to the N´eel order [3].
+Previous work both from our group and others have demonstrated high-sensitivity imaging of ferromagnetic order via the anomalous Nernst and longitudinal spin Seebeck eﬀects [32–36], suggesting that a practical and sensitive magneto-thermal microscope for N´eel order can also be developed.
+In this work we use antiferromagnetic longitudinal spin arXiv:1810.03997v2 [cond-mat.mtrl-sci]  1 Mar 20192 FIG. 1.
+Demonstration of antiferromagnetic longitudinal spin Seebeck eﬀect (LSSE) microscopy.
+(a) Schematic of the mea- surement.
+A Ti:Sapphire laser focused to 650 nm spot size thermally generates a local spin current Js at the Pt/NiO interface, with spin polarization σ parallel to the local N´eel orientation N. The sign of σ is determined by the spin direction of the uncompensated monolayer.
+Js is transduced into a charge current via the inverse spin Hall eﬀect in the Pt, resulting in a voltage between the contacts.
+We measure the projection of N transverse to the voltage contacts, which is Nx in this conﬁguration.
+(b) AFM amplitude image of a 10 µm × 50 µm Hall cross of MgO/4 nm Pt/6 nm NiO(111).
+Diagonal lines, highlighted with white lines, indicate crystal grain (T domain) boundaries.
+(c) AF LSSE image of the same sample.
+T-domain walls are visible in AF LSSE images due to the ordinary Seebeck eﬀect.
+Additional contrast within the T-domains are spin (S)-domains at the Pt/NiO: blue (red) contrast represents spins pointing right (left).
+Seebeck eﬀect (AF LSSE) microscopy to image spin- orbit torque switching in Pt/NiO(111)/Pt trilayers and NiO(111)/Pt bilayers.
+We provide the ﬁrst experimen- tal demonstration of interfacial AF LSSE and use it as a direct probe of the N´eel order to resolve 1-10 µm-size S(spin)-domains within crystalline T(twin)-domains.
+By imaging before and after spin-torque switching, we reveal the eﬀects of anti-damping spin torque on the N´eel order of NiO, showing switching by both domain rotation and domain wall motion.
+In particular, we show that switch- ing occurs by continuous rotation of the N´eel orientation rather than by ﬂopping between in-plane easy axes, and we resolve current-polarity-dependent domain wall mo- tion that cannot be observed with device-level transport measurements.
+The organization of this paper is as follows: we dis- cuss the antiferromagnetic domain structure in NiO and present initial SSE images.
+We then establish the interfa- cial AF LSSE as the source of signal, and we study spin- torque-induced domain rotation and domain wall motion. II.
+IMAGING N´EEL ORDER WITH SPIN SEEBECK MICROSCOPY A. Resolving spin and twin domains in NiO NiO is a collinear insulating antiferromagnet [37] with a N´eel temperature TN of 523 K in bulk [38].
+Su- perexchange between Ni atoms along the ⟨100⟩direc- tions aligns the spins in ferromagnetic {111} planes, in which spins on one plane are antiparallel to spins on the adjacent plane [25].
+Magnetostriction along ⟨111⟩from the AF ordering causes crystallographic twinning, form- ing four T(twin)-domains in bulk NiO [39] and two T- domains in (111) epitaxial thin ﬁlms [40].
+Within each T-domain, dipolar next-nearest-neighbor coupling intro- duces a weak additional in-plane anisotropy along the three equivalent [11¯2] directions [41].
+In bulk crystals the spins form S(spin)-domains along these three directions [42].
+In thin ﬁlms, however, magnetoelastic stresses, the AF equivalent of the demagnetization ﬁeld in FMs [24], introduce an additional eﬀective anisotropy.
+This spa- tially inhomogeneous anisotropy pulls the spins out of well-deﬁned [11¯2] directions, resulting in a disordered in- plane S-domain structure [43].
+We resolve the spin domains in Pt/NiO bilayers and Pt/NiO/Pt trilayers with spin Seebeck eﬀect microscopy [35] using a geometry illustrated in Fig. 1(a).
+We fo- cus 3-ps-pulses from a Ti:Sapphire laser down to a 650 nm spot size, which produces a local out-of-plane ther- mal gradient, especially at the Pt/NiO interfaces (see the supporting information for more details [44]).
+We denote the interfacial temperature drop by ∆T. The thermal gradient generates a local spin current Js that diﬀuses into the Pt parallel to the surface normal ˆn with polar- ization σ.
+Within the Pt, the spin current is transduced into a charge current Jc ∝Js×σ via the inverse spin Hall eﬀect, which results in a voltage drop across the sample.
+By raster scanning the focused laser over the sample, we build a map of the ISHE voltage.
+An example AF LSSE image of an epitaxial MgO/4 nm Pt/6 nm NiO(111) device, deposited by sputtering and patterned into a 10 µm × 50 µm Hall cross by opti-3 FIG.
+2. Mechanism of the interfacial antiferromagnetic spin Seebeck eﬀect (AF LSSE).
+(a) Schematic illustrating the interfacial AF LSSE.
+A thermal gradient localized at an uncompensated interface produces spin current with polarization σ parallel to the interfacial uncompensated monolayer (stop in the diagram), while no spin current occurs at a compensated interface.
+(b,c) AF LSSE images of (c) uncompensated MgAl2O4(111)/165 nm NiO(111)/6 nm Pt and (d) compensated MgO(001)/136 nm NiO(001)/6 nm Pt.
+The lack of a signal from NiO(001) indicates that the contrast originates from the uncompensated interface.
+cal photolithography, is shown in Fig. 1(c), alongside the corresponding atomic force microscopy (AFM) image in Fig. 1(b).
+We acquire all images at room temperature and zero magnetic ﬁeld using 3.4 mJ/cm2 laser ﬂuence.
+We show in the supporting information that AF LSSE signal is unaﬀected by magnetic ﬁeld up to ±250 mT, the largest ﬁeld we can apply in our setup.
+Note the voltage we plot is not the actual spin Seebeck voltage but rather a lock-in voltage after ampliﬁcation, mixing, and normal- ization to account for impedance matching, which is also described in the supporting information.
+Characteristic sharp straight lines in the atomic force microscopy image show T-domain walls between twinned in-plane crystal grains.
+They are also visible in the AF LSSE images, since thermal discontinuity causes an artifact in the sig- nal from the ordinary Seebeck eﬀect [45].
+Contrast within T-domains in the AF LSSE images show S-domains: examples are highlighted in black en- closures in Fig. 1(c).
+The image contrast represents the in-plane component of the N´eel vector at the NiO/Pt in- terface transverse to the voltage contacts, which is Nx throughout this work (in the next section, we present evidence for this assertion, based on an interfacial AF LSSE as the signal source).
+Since we currently cannot saturate the N´eel vector along a given direction while imaging, which would require applying an in situ mag- netic ﬁeld greater than the spin-ﬂop ﬁeld (5 T in NiO [46]), we cannot calibrate the AF LSSE voltage to an ab- solute N´eel orientation.
+This is an intrinsic diﬃculty of detecting antiferromagnetism and is also experienced by other imaging techniques, including XMLD-PEEM.
+In- stead, the AF LSSE voltage represents the strength of the projection without absolute calibration, where posi- tive (blue) signal shows spins pointing right and negative (red) signal shows spins pointing left.
+The size, shape, and distribution of S- and T-domains are consistent with previous XMLD-PEEM imaging studies of thin-ﬁlm NiO [43, 47].
+B. Evidence for interfacial antiferromagnetic LSSE We attribute the signal in our images to an interfa- cial AF LSSE.
+Although the ferromagnetic LSSE is well- established both in bulk [48–50] and at the interface [51– 53], the AF LSSE was initially predicted not to exist for a collinear AF[54] and was only recently observed [30, 31].
+In a collinear AF, the two spin sublattices pro- duce two degenerate magnon modes [55], which produce spin current in opposite directions under a thermal gradi- ent.
+Therefore, unless the degeneracy is lifted there is no net spin current [54].
+The degeneracy can be lifted in the AF bulk by applying a large magnetic ﬁeld [30, 31] or by exploiting anisotropies that result in additional magnon modes [56, 57].
+The degeneracy can also be lifted by in- version symmetry breaking at the interface, resulting in an interfacial AF LSSE that has been predicted [58] but not previously been reported.4 The mechanism of the interfacial AF LSSE is schemat- ically illustrated in Fig. 2(a).
+AF interfaces can be un- compensated, meaning the layer closest to the surface contains an excess of one sublattice, or compensated, in which adjacent spins are antiparallel in each growth plane.
+Although both types of AFs have no bulk moment, an interfacial thermal gradient at the uncompensated in- terface will couple more strongly to the spins on the in- terfacial layer than to the spins on the adjacent layer, and therefore will generate a net spin current Js ∥∆T ˆn with polarization σ parallel to the spin direction at the uncom- pensated monolayer [58], which is stop if the Pt is above the NiO and sbottom if the Pt is beneath the NiO.
+At the compensated interface, the symmetry between magnon modes is preserved, and an interfacial thermal gradient should produce no net spin current.
+Although the un- compensated interface in the schematic in Fig. 2(a) is atomically ﬂat, the presence of roughness in real samples does not alter the interpretation of the AF LSSE signal as long as the lateral length scale of height variations is much smaller than the laser spot diameter (see the sup- porting information [44] for more details).
+Our experimental test of interfacial AF LSSE is shown in Fig. 2(b) and (c).
+We take AF LSSE im- ages of MBE-grown MgAl2O4/165 nm NiO(111)/Pt and MgO(001)/136 nm NiO(001)/Pt, which have uncompen- sated and compensated interfaces, respectively.
+Both samples are patterned into 20 µm-wide Hall bars with similar growth conditions and sample resistances.
+We ﬁnd that AF LSSE images of NiO(001) show negligi- ble signal compared with NiO(111), which is consis- tent with the picture of the interfacial AF LSSE and also suggests that bulk AF LSSE [56, 59] does not sig- niﬁcantly contribute to our signal.
+This interpretation is further supported by ﬁnite-element simulations, dis- cussed in the supporting information, which show that the laser-induced thermal proﬁle is dominated by tem- perature drops at the Pt/NiO interfaces rather than a temperature gradient in the NiO bulk.
+We can further distinguish between an AF LSSE at an uncompensated interface and a possible FM LSSE orig- inating from pinned uncompensated moments (UMs).
+These UMs could arise from interfacial roughness [60] or defects, both at the interface and in the bulk of the AF [61], and would be detectable by other magnetometry techniques.
+Therefore, we perform scanning SQUID mi- croscopy at 4 K to search for microscopic moments, and polarized neutron reﬂectometry at room temperature to detect a global moment at 1 T applied ﬁeld.
+Both sets of measurements were made on sputtered samples and are described in more detail in the supporting information [44].
+We ﬁnd no magnetic moment within sensitivity, which places an upper limit of 8 × 10−4 µB/Ni on the local moment that could be present.
+From this value we calculate a maximum bulk magnetization of 110 A/m in our NiO, three orders of magnitude less than the bulk magnetization in YIG at room temperature.
+Based on these measurements we rule out a FM LSSE and con- clude that the AF LSSE signal in NiO arises from the uncompensated interface. III.
+IMAGING SPIN-TORQUE SWITCHING IN Pt/NiO/Pt TRILAYERS Having established a mechanism for the signal con- trast, we move onto image current-induced spin-torque switching in Hall crosses, initially following the proce- dure in Refs. [17] and [18].
+We apply DC writing cur- rent and characterize the N´eel state electrically, using the antiferromagnetic analog of spin Hall magnetoresis- tance (SMR) [62–64] by measuring the change in the Hall resistance RH: RH = −∆RSMR sin θ cos θ, where θ is the angle between the spatially-averaged N´eel vector N and the reading current JR.
+To maximize ∆RH, we ap- ply writing current to two of the arms of the Hall cross such that the current density in the center of the device ﬂows along ±45◦(schematically illustrated in Fig. 3(b)).
+Using a ﬁnite-element simulation described further in the supporting information [44], we estimate a writing current density of 8.0 × 107 A/cm2 at the corners and 3.1 × 107 A/cm2 in the center of the cross.
+Hereafter we refer only to the density in the center of the cross, JW .
+After each application of writing current, we measure the Hall resistance RH by applying a reading current density JR = 1.5 × 106 A/cm2 from A to B and measuring the voltage from C to D in Fig. 3(b).
+We initially employ epitaxial sputtered 4 nm Pt/6 nm NiO(111)/4 nm Pt trilayers, following the argument of Ref.
+[17] (further demonstrated in Ref.
+[65] in synthetic antiferromagnets) that spin torque at both the top and bottom interface of the NiO leads to more coherent ro- tation of the N´eel orientation throughout the AF thick- ness.
+There is a potential complication interpreting the AF LSSE images in trilayers because both Pt/NiO inter- faces can contribute to the signal.
+Separately comparing AF LSSE images of single-interface Pt/NiO and NiO/Pt samples (shown in the supporting information) indicates that in the sputtered samples, the signal from the bot- tom interface dominates, which may reﬂect higher inter- face quality at the bottom than the top Pt/NiO interface.
+This Pt/NiO/Pt trilayer has also been annealed at 200 ◦C for 20 min to increase the S-domain size, however, we also ﬁnd that annealing decreases domain wall motion as described in the supporting information [44].
+AF LSSE images of a 4 nm Pt/6 nm NiO/4 nm Pt trilayer before and after four sequential applications of JW = 3.1 × 107A/cm2 are shown in Fig. 3(b), with the writing current direction alternating between +45◦and −45◦.
+Although most domains are unaltered, we observe changes in contrast (highlighted inside the black dashed enclosures) at a sample corner, where the current den- sity is highest, and at T-domain boundaries, where the spins are less strongly exchange-coupled.
+To quantify these changes to the N´eel orientation, we calculate se- quential diﬀerences between images, shown in Fig. 3(d).5 FIG. 3.
+AF LSSE imaging of spin-torque switching in a 4 nm Pt/6 nm NiO(111)/4 nm Pt trilayer.
+(a) The initial image, taken before applying current.
+(b) Schematic of the writing process.
+We apply current to two arms of the Hall cross such that the current density in the center ﬂows along 45◦diagonals.
+(c) Imaging while toggling between I45◦and I−45◦.
+Highlighted in dashed line are changes in contrast at the top right corner, where the current density is greatest, and near T-domain boundaries, where the spins are less strongly exchange-coupled and more likely to switch.
+(d) Successive diﬀerences between the AF LSSE images in (a), showing the domains that switch more clearly.
+Both positive and negative contrast in diﬀerence images may reﬂect domains rotating in opposite directions.
+(e) RH and the integrated AF LSSE signal, ⟨VAF LSSE⟩, measured while toggling between I45◦and I−45◦.
+Values corresponding to the images shown are labeled.
+(f) ⟨VAF LSSE⟩plotted as a function of SMR, measured through changes in the Hall resistance RH.
+The near-linear correlation shows the small-angle correspondence between ⟨VAF LSSE⟩and RH.
+We observe both positive and negative changes in con- trast in diﬀerent parts of the sample, which could be due to diﬀerent S-domains rotating in opposite directions, as seen in imaging studies of switching in CuMnAs [22].
+At the current density used, we estimate that the maximum Oersted ﬁeld is ∼10 mT. We show in the supporting in- formation [44] that the AF LSSE signal is unaﬀected by ﬁeld up to ±250 mT, which rules out the Oersted ﬁeld from the writing current as the mechanism responsible for switching.
+To compare AF LSSE imaging with electrical measure- ments of N´eel order using RH, we take the average of all the pixels in and near the cross center in each image (described in the supporting information [44]) to obtain the integrated AF LSSE signal, ⟨VAF LSSE⟩.
+Although ⟨VAF LSSE⟩and RH are both measures of the average N´eel orientation in the cross center, they have diﬀerent symmetries: RH ∝cos θ sin θ, where θ is the angle be- tween the average N´eel vector and the SMR reading cur- rent JR, while ⟨VAF LSSE⟩∝cos φ, where φ is the angle between the average N´eel vector and the voltage contacts.
+Since we apply JR along x in this device, here θ = φ−π/2 and ⟨VAF LSSE⟩∝−sin θ.
+In this sample, most of the changes in contrast occur where N appears to be nearly saturated in the +x-direction, so that locally θ ≈0.
+Near θ = 0, sin θ cos θ ≈sin θ.
+Therefore, ⟨VAF LSSE⟩tracks RH point-by-point, shown in Fig. 3(e).
+Plotting one ver- sus the other yields a near-linear correlation with nega- tive slope, shown in Fig. 3(f) with a linear ﬁt drawn as a guide to the eye.
+This correspondence indicates that changes in contrast indeed represent antiferromagnetic switching.
+We expect that AF switching can occur either by do- main rotation, which would manifest in the AF LSSE images as changes of contrast level within S-domains, or by domain wall motion.
+The switching in Fig. 3 man- ifests as changes in contrast within domains while do- main walls remain stationary within the resolution limit, which indicates domain rotation.
+In this sample we ob- serve changes in color shade but not changes in sign of Nx (blue to red or vice versa), which indicates that N rotates by acute angles.
+Although we cannot obtain an absolute angle of rotation, we can obtain a lower bound by taking the maximum and minimum VAF LSSE to cor- respond to θ = 90◦and −90◦, respectively.
+In this case we estimate that the average N´eel vector at the corner6 rotates 22◦between images 1 and 2 in Fig. 3(c), and 10◦ between images 2 and 3.
+Previous studies of magnetic ﬁeld-induced domain ro- tation in 120 nm-thick NiO [64] modeled switching as 120◦ﬂopping between ⟨11¯2⟩in-plane easy axes.
+In our samples, however, the S-domains have random in-plane orientation, which is consistent with XMLD-PEEM im- ages of similar Pt/NiO/Pt trilayers [17].
+This is con- sistent with an increased role of magnetoelastic stress in our 6 nm-thick samples, which favors a multidomain state with zero average strain.
+While the eﬀective ﬁeld from in-plane anisotropy is HAz = 11 mT in bulk NiO [57], the destressing ﬁeld reported in 120 nm-thick NiO in Ref.
+[64] is 46 mT. We expect the destressing ﬁeld to be even higher in 6 nm NiO.
+Therefore, because the spins are not restricted to the ⟨11¯2⟩axes in our samples, they can switch by continuous in-plane rotation. IV.
+RESOLVING DOMAIN ROTATION AND DOMAIN WALL MOTION IN MgO/Pt/NiO BILAYERS After correlating the AF LSSE images with electrical readout of the N´eel order through SMR in Pt/NiO/Pt trilayers, we move on to imaging switching in the sput- tered NiO(111)/Pt bilayer from Fig. 1 after applying cur- rent along the device channel.
+The bilayer does not have the potential diﬃculty of superposing signal from two Pt/NiO interfaces.
+Furthermore, applying current along the device channel yields more uniform current density, leading to larger-scale, more easily resolvable changes in image contrast.
+Fig. 4(a) shows AF LSSE images before switching, and then after applying progressively greater current densities, from 5.0 × 107 A/cm2 at 20 mA to 1.1 × 108 A/cm2 at 42 mA, ﬁrst at positive po- larity (ﬂowing down) and then negative polarity (ﬂowing up).
+Prominent regions of switching are highlighted in the black enclosure as a guide to the eye.
+Because the switching in Fig. 4 is spatially distributed and nonuniform, and AF LSSE and SMR have diﬀerent symmetries, we cannot correlate the AF LSSE signal with SMR like we do in Fig. 3.
+Therefore, we compare our AF LSSE images to theoretical models of switching. Refs.
+[17] and [18] model switching in the high-current limit as coherent rotation of spins within an S-domain (domain rotation), which we observe in Fig. 3. The model in Ref.
+[19] distinguishes three separate switching mechanisms, with predictions summarized as follows: (1) The out-of-plane component of the spin torque ro- tates spins within the easy plane, rotating all S-domains by the same angle.
+(2) The in-plane component of the spin torque creates an additional eﬀective anisotropy, resulting in a transla- tional ponderomotive force Fpond proportional to J2 W on the S-domain wall.
+Fpond rotates N ∥JW and is current polarity-independent.
+(3) The spin torque directly rotates the spins within the domain walls, leading to a chiral domain wall force FDW that goes as JW .
+FDW can rotate N either towards or perpendicular to JW , depending on the domain wall chirality, therefore it should have no net eﬀect on RH with randomly oriented S-domains.
+FDW should also reverse direction when JW reverses.
+To quantitatively characterize the switching, we take AF LSSE image diﬀerences as in Fig. 3.
+We take cumu- lative diﬀerences from the initial state in Fig. 4(b), which show polarity-independent switching, and sequential dif- ferences between adjacent pairs of AF LSSE images in Fig. 4(c), which better illustrate polarity-dependent switching.
+After applying 30 mA (seen in image 3 - 1) and in subsequent diﬀerence images in Fig. 4(b), we see large-scale, nearly uniform positive (blue) contrast in the lower half of the cross, labeled domain rotation.
+More uniform contrast in the diﬀerence images than in the AF LSSE images themselves indicate that diﬀer- ent S-domains are rotating by the same angle, consis- tent with the out-of-plane spin torque in mechanism 1 in Ref. [19].
+This domain rotation saturates after +30 mA (7.5×107 A/cm2), and does not reverse when the current polarity reverses.
+We primarily observe |Nx| increasing - blue domains become more blue and red domains more red - which means N rotates ⊥JW .
+From images 3 and 4 in the AF LSSE images in Fig. 4(a), we resolve switching by domain wall motion, which appears as a negative (red) horizontal stripe in the sequential 4 - 3 image in Fig. 4(c).
+Domain rotation and domain wall motion occurs in response to writing cur- rent as low as 4 mA (1.0 × 107 A/cm2).
+Interestingly, we ﬁnd that the domains continue to move for 2-3 hours after the current is turned oﬀ(shown in the supporting information [44]), which may be due to magnetoelastic stresses causing subthreshold domain wall creep after the spin torque rotates the S-domains out-of-equilibrium.
+Al- though the domain conﬁguration after +42 mA in 4 does not creep in time, domain wall motion reverses after ap- plying -20 mA, seen in 5 - 4, and subsequently almost ceases, seen by weaker contrast in 6 - 5 after applying -30 mA. DW motion that reverses when the current po- larity is reversed points to the chiral force FDW as the origin.
+In Fig. 4(d) we show SMR measurements of a similar MgO/Pt/NiO cross while applying the same cur- rents, ﬁrst positive and then negative.
+We ﬁnd RH does not depend on current polarity, which is consistent with the prediction that the eﬀects of FDW would not be re- ﬂected by changes in RH.
+Summarizing our results, we identify both domain rotation and domain wall motion acting simultane- ously, which are consistent with the out-of-plane spin torque and chiral domain force, respectively, described in Ref.[19].
+At the current densities applied, from 1.0 × 107 A/cm2 to 1.0 × 108 A/cm2, we do not observe N rotating towards JW from the ponderomotive force Fpond, which is expected to dominate at higher current densities (above 7 −9 × 107 A/cm2, depending on the strain).
+Further imaging studies on thicker NiO samples7 FIG.
+4. Switching in the MgO/Pt/NiO bilayer from Fig. 1 after applying current along the channel direction.
+(a) AF LSSE images, before applying current and then after applying ﬁrst positive (down) and negative (up) current.
+Some prominent regions of switching are highlighted in black line, including domain growth after +42 mA and domain wall motion after -20 mA. (b) Cumulative diﬀerences from the initial state (1).
+Large-scale patterns of nearly uniform positive contrast in the lower half of the device show diﬀerent S-domains rotating by the same in-plane angle.
+(c) Sequential diﬀerences between the AF LSSE images in (a).
+We observe domain wall motion after +42 mA that reverses direction when the current polarity is reversed, consistent with theoretical predictions of a chiral domain wall force FDW .
+(d) SMR measurements of the average N´eel orientation for a similar MgO/Pt/NiO bilayer after applying the same currents, ﬁrst positive and then negative (labeled in mA).
+RH does not depend on current polarity, which is consistent with domain wall motion due to FDW .
+may be required to observe Fpond.
+Our results complement the XMLD-PEEM images of switching in Refs. [17] and [19]. Although Ref.
+[17] shows domain wall motion and Ref.
+[19] appears to show domain rotation in response to current, distinguishing several simultaneously acting switching mechanisms re- quires systematic repeated imaging of multiple samples, which may not be practical with limited beam time at a synchrotron facility.
+V. CONCLUSION In conclusion, we demonstrate interfacial AF LSSE as the basis for a powerful tabletop technique for imaging in-plane N´eel order in an AF insulator.
+This magneto- thermal microscope uses equipment that is readily avail- able in many laboratories, thus enabling in-depth and high-throughput studies of AF spintronics, which was previously limited by the availability of a few coherent x-ray facilities.
+Using this capability, we probe the mi- croscopic behavior of spin torque switching of N´eel order in Pt/NiO/Pt trilayers and Pt/NiO bilayers.
+We ﬁnd that switching occurs by domain rotation and domain wall motion acting simultaneously, and that magnetoe- lastic stresses play an important role in determining both the equilibrium domain structure and the fraction of do- mains that switch.
+These insights provide critical un- derstanding of spin torque switching in NiO and point the way towards systematic optimization of antiferro-8 magnetic spintronic devices.
+Moreover, we expect AF LSSE microscopy to extend to a wide variety of anti- ferromagnetic insulators with uncompensated interfaces, which can aid in the development of new device technolo- gies based on diﬀerent antiferromagnets.
+ACKNOWLEDGMENTS We thank Rembert Duine, Yaroslav Tserkovnyak, Ja- son Bartell, Emrah Turgut, and Farhan Rana for useful discussions.
+This research was supported by the Cor- nell Center for Materials Research with funding from the NSF MRSEC program (DMR-1719875) and by JSPS KAKENHI Grant Numbers JP15H05702, JP17H04924, and JP17H05181.
+This work made use of the CCMR Shared Facilities and the Cornell NanoScale Facility, an NNCI member supported by NSF Grant ECCS-1542081.
+N.S. acknowledges National Science Foundation [Plat- form for the Accelerated Realization, Analysis, and Dis- covery of Interface Materials (PARADIM)] under Coop- erative Agreement No. DMR-1539918 and Cornell Uni- versity Center for Advanced Computing for his time at Cornell University.
+S1 Supplemental Information for “Spin Seebeck imaging of spin-torque switching in antiferromagnetic Pt/NiO heterostructures” S1.
+EPITAXIAL GROWTH OF Pt/NiO AND Pt/NiO/Pt The uncompensated and compensated Pt/NiO bilayers in Fig. 2 of the main text are MgAl2O4(111)/136 nm NiO(111)/6 nm Pt and MgO(001)/168 nm NiO(001)/6 nm Pt, respectively, grown by molecular-beam epitaxy (MBE).
+The MgAl2O4(111) is annealed at 900 ◦C before depositing NiO(111) at 50 ◦C, and the MgO(001) is annealed at 700 ◦C before depositing NiO(001 at 500 ◦C. RHEED images of both the NiO(111) and NiO(001) surface as well as the θ −2θ scans are shown in Fig. S1. FIG. S1.
+(a,b) RHEED images of the uncompensated NiO(111) and compensated NiO(001) surfaces from the MBE-grown samples in Fig. 2 of the main text.
+(c,d) The corresponding θ −2θ scans, showing epitaxial (111) and (001) growth.
+All other NiO/Pt and Pt/NiO/Pt ﬁlms in the main text and supporting information are grown by magnetron sputtering at room temperature on MgO(111) single-crystal substrates, similar to the samples in Ref. [17].
+Fig- ure S2 shows the RHEED images for each interface in the Pt/NiO/Pt trilayer, which indicate epitaxial (111) crystal orientation for each layer. S2.
+EXPERIMENTAL DETAILS OF AF LSSE MICROSCOPY Our measurement circuit, schematically shown in Figure S3, is similar to that described in [32] and [35].
+We generate local heating with 3 ps-wide pulses from a Ti:Sapphire laser, at a repetition rate of 76 MHz, which we focus down to a 650 nm diameter spot.
+The laser pulse train produces a spin Seebeck voltage pulse train, VAF LSSE, at the same repetition rate.
+The duration of each VAF LSSE voltage pulse is equal to the time duration of the interfacial temperature drop ∆T [32], which we estimate from the ﬁnite-element simulations in Fig. S20 and Fig. S21 to be 50 ps.
+We feed the pulses into a 50 Ωcoplanar waveguide transmission line.
+After amplifying the pulses we perform homodyne detection by electrically mixing the pulses with a train of 600 ps-wide square pulses produced by an arbitrary waveform generator (AWG).
+Longer mixing pulses yield larger signal, but if the mixing pulses are too long the signal-to-noise decreases because we are more exposed to noise between thermal pulses.
+Through experienceS2 FIG. S2.
+RHEED images showing epitaxial (111) growth at the top interface of the top Pt layer (a,b), the top Pt/NiO interface (c,d), and the bottom Pt/NiO interface (e,f).
+we have found 600 ps width to be a good compromise.
+We synchronize the laser repetition rate to the external AWG pulse train frequency using a Coherent Synchro-lock AP 9th-harmonic locking mechanism inside the laser cavity.
+To take advantage of low-noise lock-in detection techniques, we modulate the intensity of the laser beam at 100 kHz with a photoelastic modulator and a polarizer. FIG. S3.
+Schematic of the measurement circuit.
+3 ps pulses from a Ti:Sapphire laser at 76 MHz repetition rate generate voltage pulses, which are ampliﬁed and mixed with a reference voltage pulse train from an arbitrary waveform generator (AWG).
+We modulate the laser intensity at 100 kHz with a photoelastic modulator (PEM) and detect the resulting voltage with a lock-in ampliﬁer.
+Note that impedance mismatch between the sample resistance and the 50 Ωtransmission line results in an overall signal scaling factor that depends on sample resistance, which ranges between 450 Ωand 650 Ωin our Hall crosses.
+To remove this dependence, all AF LSSE images, both in the main text and in the supplementary information, haveS3 been normalized by the factor (Rsample + 50 Ω)/50 Ω. S3.
+CHARACTERIZATION OF THE AF LSSE SIGNAL A. Note on annealing of NiO samples S-domains in NiO become larger and more uniform with heat treatment [47].
+We present two kinds of samples in this work: unannealed samples that have undergone no heat treatment, and samples that have been annealed at 200 ◦C for 20 min. In Fig. 3 of the main text, we show switching of an annealed sample because the spatially localized rotation is easier to interpret and correlates better with SMR measurements.
+The other samples in the main text are unannealed.
+While unannealed samples have 2-5 µm S-domain size and are better resolved compared to the submicron domain size in unannealed samples, we ﬁnd unannealed samples have a factor of 5 greater switching eﬃciency measured through SMR as well as greater and more spatially widespread changes in AF LSSE images.
+This can be seen by comparing AF LSSE and SMR measurements of switching in unannealed Pt/NiO/Pt in Fig.S18 and annealed Pt/NiO/Pt in Fig. 3 of the main text, both performed at I±45◦with the same 4.1 × 107 A/cm2 current density.
+B. Eﬀects of heating and laser ﬂuence on S-domain structure We perform AF LSSE imaging on an unannealed 10 µm-wide Pt/NiO/Pt trilayer sample as a function of laser ﬂuence, ﬁrst to check linearity of the signal at low ﬂuence and second to determine the eﬀect of laser-induced heating on the N´eel order at high ﬂuence.
+Fig. S4(a) shows that from 1.8 mJ/cm2 to 5.6 mJ/cm2, the S-domain structure is unaﬀected, and Fig. S4(b) shows that the integrated AF LSSE signal over the whole sample scales linearly with ﬂuence.
+Since the images in the main text are taken at 3.4 mJ/cm2 ﬂuence, this result suggests that in those images, the laser probes the N´eel order without perturbing it. FIG. S4.
+(a) AF LSSE images of an unannealed 10 µm-wide Pt/NiO/Pt Hall cross at 3 diﬀerent laser ﬂuences.
+Below 5.6 mJ/cm2, the antiferromagnetic domain structure is not aﬀected by laser heating.
+(d) The average AF LSSE image signal as a function of ﬂuence, showing that the signal scales linearly with ﬂuence.
+We then image repeatedly at 5.6 mJ/cm2 laser ﬂuence, which heats the top NiO surface to a maximum of 390 K as estimated from ﬁnite-element calculations.
+This is comparable to the temperature change that we estimate from applying a writing current density of 4 × 107A/cm2, so it is reasonable to think the laser may aﬀect the local N´eel orientation.
+In Fig. S5 we plot the initial image (1), an image after scanning the laser over the sample 4 times without applying current (2), another image taken immediately afterwards (3), and the image diﬀerences (2 −1 and 3 −2).
+We observe that the S-domains initially have mostly positive Nx in 1.
+After repeatedly scanning the laser, we see in 2 that the dominant positive orientation has disappeared but the T-domain structure is unchanged.
+3 is nearly pixel-for-pixel identical to 2, which means that the laser has no further eﬀect after 2.
+Laser heating locally destabilizes the N´eel order until the S-domains are stable in local lowest-energy conﬁgurations, which is why the orientation is more random in 2 and repeats almost exactly in 3.
+This process is irreversible and occurs almost uniformly over the whole sample (seen in 2 −1), quite diﬀerent from the localized domain rotation and domain wall motion produced by spin-torque switching. S4 FIG. S5.
+Repeated imaging of an unannealed 10 µm-wide Hall cross at 5.6 mJ/cm2 ﬂuence, which results in an estimated maximum ∆T = 90 K at the top NiO surface.
+The image is initially dominated by positive Nx projection in 1.
+Laser heating locally destabilizes the S-domain orientations, causing local ﬂopping of the N´eel orientation as seen in 2 and 2 −1.
+Once the domains reach their local lowest-energy orientations, they are unaﬀected by further laser heating, as shown in 3 and 3 −2. FIG. S6.
+AF LSSE imaging of a Pt/NiO/Pt trilayer as a function of background temperature.
+Heat treatment increases S-domain size, randomizes the S-domain orientation, and makes the spins more uniform within the S-domains.
+We further investigate the eﬀect of background heating on the N´eel orientation by imaging an annealed trilayer with larger S-domains as a function of temperature in Fig. S6.
+The T-domain orientation is unchanged upon heating, as we expect.
+Although the overall S-domain orientation is randomized, the spins within the S-domain become more uniform upon heating, in agreement with previous XMLD-PEEM imaging studies of annealing [47].
+C. Characterizing T-domains with atomic force microscopy In addition to antiferromagnetic S-domain contrast, we observe sharp straight lines of contrast in the AF LSSE images that represent nonmagnetic T-domain walls between crystal grains.
+Within a T-domain, the sample surface is thermally isotropic in the plane, therefore conventional Seebeck voltages from laser-induced in-plane thermal gradients cancel in detail.
+At a T-domain boundary, however, there is a discontinuity in in-plane thermal conductivity.
+This results in a dipole-like artifact in the AF LSSE images from the conventional Seebeck eﬀect, with positive voltage on one side of the boundary and negative voltage on the other.
+T-domain boundaries are also visible in atomic force microscopy (AFM) as local peaks or valleys, oﬀering a method to check our AF LSSE image interpretation.
+In Fig. S7, we compare AF LSSE images with AFM images in both MgO/Pt/NiO bilayer and Pt/NiO/Pt trilayer samples.
+We present raw AF LSSE and AFM images in Fig. S7(a) and (b), and highlight T-domain walls in (c) and (d).
+In the bilayer, all major T-domain walls seen in the AF LSSE image are also present in the AFM image.
+In the trilayer, however, some apparent T-domain lines in the AFM images do not appear in the AF LSSE image.
+Because we expect the AFM image to show T-domain walls at both the top and bottom Pt/NiO interfaces, domain walls thatS5 FIG. S7.
+Comparing T-domain boundaries in AF LSSE images, visible as sharp diagonal lines, to atomic force microscopy (AFM) images.
+(a) AF LSSE images of the MgO/Pt/NiO bilayer in Fig. 1 and 4 of the main text and a Pt/NiO/Pt trilayer.
+(b) Corresponding AFM amplitude images.
+T-domain lines in the AFM also appear in the AF LSSE image in the bilayer, while many T-domain lines in the AFM image of the trilayer do not appear in the AF LSSE image.
+(c,d) The same AF LSSE and AFM images with dashed lines to highlight T-domain boundaries that are seen with both techniques.
+do not show in the AF LSSE image indicates that the AF LSSE signal in the trilayers is more sensitive to a single interface.
+This interpretation agrees with separate imaging of MgO/NiO/Pt and MgO/Pt/NiO bilayers in section S6 that suggests stronger contribution to the AF LSSE signal from the bottom interface than the top.
+D. Control measurements on non-magnetic Pt/MgO We perform control images on non-magnetic 10 nm Pt/20 nm MgO, sputtered on sapphire, to check for non- magnetic artifacts in our signal.
+For example, inhomogeneities in ﬁlm thickness could cause local inhomogeneities in resistivity, which could lead to voltages from conventional in-plane Seebeck eﬀects.
+In addition, high local current densities can create sample defects which could appear like switching in the AF LSSE images.
+We image 10 µm-wide Hall crosses of Pt/MgO at the same 3.4 mJ/cm2 laser ﬂuence we use for Pt/NiO/Pt, after applying similar current densities.
+Results are shown in Fig. S8.
+Note we make electrical contact to the bottom and right branches in an L-shape instead of the top and bottom contacts as in the Pt/NiO/Pt samples.
+This is done so that we can apply current along 45◦diagonals with only two contacts.
+We observe submicron contrast which may represent local resistance ﬂuctuations from surface roughness in the Pt layer, which we expect to be more prominent in the polycrystalline Pt/MgO samples than in the epitaxial Pt/NiO/Pt samples.
+Taking the diﬀerence after applying I+ and I−, we observe nearly spatially uniform changes in contrast, which are repeatable.
+Their origin is unknown: we speculate that they may be due to current-induced motion of sample defects.
+However, non-magnetic changes in contrast do not resemble local domain ﬂopping or large domain motion.
+In addition, the overall magnitude of the non-magnetic signal is 5-10 times smaller than the AF LSSE signals from Pt/NiO/Pt, as we show in Fig. S9 by plotting images of Pt/MgO, unannealed Pt/NiO/Pt, and annealed Pt/NiO/Pt all on the same color scale.
+We conclude that spurious non-magnetic signal does not contribute signiﬁcantly to the AF LSSE images of NiO. S4.
+TESTING FOR UNCOMPENSATED FM MOMENTS We systematically check for uncompensated moments in Pt/NiO/Pt samples that are distinct from the top and bottom uncompensated AF monolayers.
+These uncompensated moments would contribute to the VAF LSSE signalS6 FIG. S8.
+Imaging 10 µm-wide Hall crosses of non-magnetic 10 nm Pt/20 nm MgO to check for non-magnetic artifacts in AF LSSE images.
+We make voltage contact to the bottom and right branch in an L-shape to apply current along 45◦diagonals in the center.
+Non-magnetic contrast may be due to in-plane Seebeck voltages from local resistance ﬂuctuations.
+We observe repeatable changes in contrast after applying 4 × 107A/cm2 current density.
+Although the origin of the change in contrast is unknown, it is nearly uniform over the sample and does not exhibit domain ﬂopping or domain motion.
+through a ferromagnetic spin Seebeck eﬀect.
+Possible sources include bulk uncompensated moments in the NiO [61], interfacial uncompensated moments separate from the {111} interfacial uncompensated AF monolayers [25], canted moments at the Pt/NiO interfaces from symmetry breaking, and proximity-induced magnetization in the Pt.
+We ﬁrst take AF LSSE images of an unannealed Pt/NiO/Pt sample at ±2.5 kG, the largest ﬁeld we can apply in our setup, as shown in Fig. S10 below.
+The AF LSSE signal is nearly pixel-for-pixel identical at ±2.5 kG, which we expect since the spin-ﬂop ﬁeld in NiO is near 7 T [46] and the threshold ﬁeld for domain motion is 1.5 T [42].
+We perform polarized neutron reﬂectometry (PNR) on an unpatterned Pt/NiO/Pt ﬁlm at room temperature to measure any overall magnetic moment in the ﬁlm stack at 0.7 T applied ﬁeld.
+The spin asymmetry plot is shown in Fig. S11.
+Within our sensitivity we measure no spin asymmetry and thus no net moment.
+We place an upper bound on the magnetization that could be present by modeling the expected spin asymmetry from a single polarized monolayer, which we choose in order to simulate uncompensated interfacial moments.
+We obtain a maximum magnetization of 0.75 µB/Ni, ruling out a fully magnetized (1.9 µB/Ni) monolayer.
+Uncompensated moments could still be present if they are pinned by the N´eel order and the N´eel orientation averages to zero on the scale of microns to tens of microns.
+In Figure S12 we search for local moments by performing scanning SQUID microscopy, which directly images magnetic ﬂux with ∼1 µm resolution, on an annealed 10 µm-wide Pt/NiO/Pt Hall cross at a temperature of 7 K. In Fig. S12(a) we locate the sample by imaging the ﬂux while applying DC current through the vertical branch, and then in Fig. S11(b) we image the same region again with no current applied.
+The sample edges are outlined in white.
+Out-of-plane moments would produce signal in the width of the channel, while in-plane moments would produce signal at the sample edges.
+However, Fig. S12(b) shows no contrast within sensitivity, so we do not measure any moment.
+By modeling the expected response from a magnetized surface monolayer, similarly to the PNR results, we calculate an upper bound of 8 × 10−4 µB/Ni.
+From this value we calculate a maximum bulk magnetization of 110 A/m, three orders of magnitude less than the 140 kA/m bulk magnetization of YIG at room temperature.
+The combination of insensitivity of the AF LSSE signal to magnetic ﬁeld with null results from PNR and scanning SQUID leads us to conclude that the AF LSSE image signal originates from an antiferromagnetic spin Seebeck eﬀect in NiO, rather than a ferromagnetic SSE from uncompensated moments. S5.
+AVERAGING PROCESS FOR AF LSSE IMAGES In the main text, we compare images of the N´eel orientation with the electrical readout by averaging the pixels in the AF LSSE images in and near the center of the 10 µm-wide Hall cross and comparing to RH.
+As shown in Figure S13, we average pixels within a 12 µm-wide square centered on the cross center to ensure that contributions from the corners are incorporated.
+The correct dimensions that should be used for the averaging window are not obvious, since current ﬂow is non-uniform within the cross.
+Therefore, the error bars on the average VAF LSSE in Fig. 3(e)in the main text are determined by calculating the change in the average VAF LSSE after varying the dimensions of the averaging window by 2 pixels in both the x and y-directions.
+In principle the pixels within the averaging windowS7 FIG. S9.
+Comparing the magnitude of (a) non-magnetic signal from Pt/MgO to AF LSSE signal from (b) unannealed and (c) annealed Pt/NiO/Pt by plotting them side-by-side on the same color scale.
+At the same ﬂuence and current density, and normalizing by sample resistance, the magnitude of non-magnetic signal from Pt/MgO is a factor of 5-20 less than the magnitude of AF LSSE signal from Pt/NiO/Pt. should also be weighted by the spatially-varying current density, but as a ﬁrst approximation we average all pixels equally. S6.
+EFFECTS OF ROUGHNESS AND TWO Pt/NiO INTERFACES ON THE AF LSSE SIGNAL A. Eﬀects of interfacial roughness at the Pt/NiO interface Here we discuss the interfacial AF LSSE in the context of real samples, with surface and interface roughness.
+Surface defects could cause artifacts in the AF LSSE images, for example, from resistance variations in the Pt layer.
+These artifacts originate from the charge Seebeck eﬀect and are non-magnetic.
+We can distinguish them from AF LSSE signal by taking diﬀerence images.
+Local height variations in the NiO [60] could have a greater eﬀect on the overall AF LSSE signal because an atomic step of one monolayer could cause Js from the AF LSSE to locally reverse direction, as shown in Fig. S14.
+We distinguish two possible eﬀects of random height variation depending on its lateralS8 FIG. S10.
+AF LSSE images of Pt/NiO/Pt at ±2.5 kG magnetic ﬁeld.
+We observe no change in contrast within our sensitivity, which is consistent with an antiferromagnetic AF LSSE origin since the spin-ﬂop ﬁeld for NiO is 7 T and the threshold ﬁeld for domain wall motion is 1.5 T. FIG. S11.
+The spin asymmetry plot from polarized neutron reﬂectometry on an unpatterned Pt/NiO/Pt ﬁlm, performed at 295 K and 0.7 T applied ﬁeld.
+No net moment is observed.
+From the noise level, we estimate an upper bound on the magnetization from one monolayer of 0.75 µB/Ni atom. length scale.
+If the lateral length scale of surface roughness is much less than the 650 nm laser spot size, the laser averages over the roughness, as shown in Fig. S14(a).
+From AFM scans, we estimate the surface height variation to be about 1 nm, or 2-3 unit cells, and the lateral length scale of the height variation to be tens of nanometers.
+Although the sign of the averaged signal depends on the exact distribution of the height steps, the presence of atomic steps at the nanometer scale does not fundamentally alter the interpretation of the AF LSSE voltage as reporting Nx with a consistent sign inside S-domains.
+If the lateral scale of height variation is comparable to or greater than the laser spot size – in other words, if the average thickness varies from pixel to pixel, as illustrated in Fig. S14(b), we would expect the AF LSSE voltage to contain contributions from both the spin structure and local thickness variations, which would manifest as nonuniformity and sign changes in the AF LSSE signal within a single S-domain.
+We argue that local thickness variations does not signiﬁcantly contribute to the AF LSSE signal.
+First, the annealed samples in Fig. 3 in the main text, as well as those shown in Fig. S6 and S7, contain S-domains that are 3-10 µm wide.
+From AFM images, we know that the sample thickness is not uniform to within one monolayer over a distance of several µm.
+Therefore, if thickness variations made a signiﬁcant contribution to our signal, we would expect to observe signal variation, including sign changes, inside the S-domain.
+Instead, we ﬁnd the contrast is almost uniform within the S-domains. S9 FIG. S12.
+Scanning SQUID images of an annealed 10 µm-wide Pt/NiO/Pt Hall cross at 7 K, with ∼1 µm resolution.
+(a) Magnetic ﬂux generated by running 1 mA current through the sample.
+(b) Flux after turning oﬀthe current.
+The sample edges are outlined in white.
+From the lack of contrast observed, we estimate an upper bound of 8 × 10−4 µB/Ni local moment from a magnetized surface monolayer. FIG. S13.
+The AF LSSE images from Figure 3 of the main text.
+We obtain the average VAF LSSE values in Fig. 3(c) and Fig. 3(e) by averaging all the pixels in each image within a 12 µm × 12 µm square region centered on the cross center, represented by the dashed lines. FIG. S14.
+Potential eﬀects of surface roughness on the AF LSSE signal.
+Region 1 shows the ideal, atomically ﬂat interface.
+Region 2 represents roughness in the form of random atomic steps, which decreases the overall signal but does not change its interpretation.
+Region 3 shows a ﬂat interface with an average height one monolayer diﬀerent than Region 1, resulting in the opposite sign in the AF LSSE signal within the same S-domain.
+Second, AF LSSE contrast from thickness variations would exhibit characteristic switching patterns that we do not observe.
+In Fig. S14(c) we illustrate how a uniform S-domain with a thickness step of one monolayer (the most extreme case) would respond under domain rotation.
+Upon ﬁrst imaging, we would obtain a sign reversal as the probe crosses the step.
+After imaging domain rotation from spin torque, we expect ∆VAF LSSE in the two regions to be anticorrelated – if the blue region becomes bluer, the red region should become redder, and vice versa.
+Therefore, if signal contrast were dominated by interfacial steps, the diﬀerence image should inherit the pixel-to-pixel nonuniformity of the AFS10 LSSE images.
+In the AF switching images in Fig. 4 of the main text, we see the opposite eﬀect: the diﬀerence images are more uniform than the AF LSSE images themselves.
+Within the region labeled domain rotation, blue domains become more blue and red domains less red, corresponding to a uniform increase in Nx.
+In addition, thickness variations would not move under applied current, therefore the domain wall motion and domain expansion in Fig. 4 of the main text is not due to surface roughness.
+Third, although we expect contrast due to thickness variations not to be aﬀected by heat treatment up to the 200 ◦C annealing temperature, we ﬁnd that S-domains in annealed samples are more uniform and an order of magnitude larger than in unannealed samples.
+Based on these reasons, we conclude that in our samples the AF LSSE images represent spin contrast and not surface roughness.
+Further studies, perhaps comparing diﬀerent growth methods, are necessary to elucidate the role of surface roughness in interfacial AF LSSE.
+B. Eﬀects of two Pt/NiO interfaces on the AF LSSE signal Finite-element simulations of laser heating in Pt/NiO/Pt trilayers in Fig. S20 and S21 show that the thermal depth proﬁle is dominated by temperature discontinuities at the Pt/NiO interfaces.
+The temperature drop across each interface is nearly equal, suggesting that both interfaces can contribute to the AF LSSE signal in trilayers.
+This is a potential diﬃculty if the sign of the uncompensated interfacial spins is opposite for the top and bottom interface, or if the spins at the top and bottom interfaces represent two diﬀerent S-domains.
+Therefore, we measure the contributions of the two interfaces separately by imaging control samples of unannealed MgO/4 nm Pt/10 nm NiO and MgO/10 nm NiO/4 nm Pt, patterned into 10 µm × 50 µm Hall crosses, using the same 3.4 mJ/cm2 ﬂuence we use in the main text.
+Results are shown in Fig. S15.
+T-domains are visible in all images and S-domain contrast is visible at least in sample 2 in Fig. S15(a).
+T-domain walls are more numerous and prominent in images of a single interface, seen especially in Fig. S14(a), than in the Pt/NiO/Pt images.
+In addition, the LSSE signal from the NiO/Pt interface in (b) is a factor of 5 weaker than the signal from the Pt/NiO interface in (a).
+This result is not suprising, because the AF LSSE voltage we measure depends on the spin mixing conductance at the Pt/NiO interface, which in turn depends on surface roughness, and we expect the bottom interface to be less rough than the top. FIG. S15.
+Control LSSE images of (a) MgO/4 nm Pt/10 nm NiO and (b) MgO/10 nm NiO/4 nm Pt, to separately image spin Seebeck signal from the bottom and top Pt/NiO interfaces, respectively.
+Weaker contrast from the top interface in (b) compared to the bottom in (a) may reﬂect diﬀerences in interface quality.
+Even though the single-interface images suggest that the bottom NiO/Pt interface contributes more to the net AF LSSE signal than the top, we consider the eﬀects of diﬀerent interface terminations, assuming a continuous S-domain in thickness, in Fig. S16.
+Simulations in Fig. S21 show that the sign of the interfacial thermal gradient ∆T is the same at both interfaces.
+The sign of the spin current Js must follow that of the thermal gradient in linear response.
+Using Jc ∝Js × σ, we show in Fig. S16 that Jc and therefore the AF LSSE voltage from each interface adds together when the top and bottom spins are parallel (a) and cancels out when they are antiparallel (b).
+This result would initially seem to hinder imaging of switching in trilayers, because only regions with antiparallel top and bottom spins contribute to switching according to the argument of Refs. [17] and [65].
+However, we argueS11 FIG. S16.
+Schematic showing the interfacial spin Seebeck voltage produced from two Pt/NiO interfaces.
+Jc adds together when the interfacial uncompensated spins are parallel (a) and cancels out when the spins are antiparallel (b).
+AF LSSE imaging should still show switching, as follows: although we expect that spatial variation between parallel and antiparallel spins occurs on the nanometer scale, we also expect that the exchange coupling between spins causes domain rotation on the scale of hundreds of nanometers.
+Therefore the parallel regions that contribute to the AF LSSE signal are dragged along by the antiparallel regions that contribute to switching.
+The 650 nm laser spot size averages out surface roughness to yield a net signal that is proportional to Nx. S7.
+DOMAIN WALL CREEP IN IN A Pt/NiO BILAYER Fig. 4 in the main text shows domain rotation and domain wall motion in a MgO/Pt/NiO bilayer in response to current densities between 5.0×107 A/cm2 and 1.1×108 A/cm2.
+In Fig. S17 we image after applying 1.0×107 A/cm2, image again after 30 minutes, and take sequential and cumulative image diﬀerences. FIG. S17.
+AF LSSE images of the Pt/NiO bilayer from Fig. 4 in the main text before applying current, after applying 4 mA (1 × 107 A/cm2), and after 30 minutes without stimulus.
+Initial domain rotation is followed by domain wall motion.
+We observe apparent domain rotation immediately after switching in 2 −1.
+3 −2 shows domain wall motion after 30 minutes, even with no stimulus (also shown later in Section S8).
+The cumulative diﬀerence in 3 −1 resembles the diﬀerences in Fig. 4(b) in the main text, but fainter.
+We speculate that after the spin torque rotates the S-domains out of equilibrium, magnetoelastic stresses exert forces on the domain wall which result in subthreshold domain wall creep.
+As discussed in the main text, the switched states after +30 mA and +42 mA are stable in time, meaning they do not relax back, but the domain wall motion after +42 mA requires less current to reverse (at most -20 mA), which suggests that the switched state is metastable. S12 FIG. S18.
+Switching at I±45◦in an unannealed trilayer, where the switching eﬃciency measured with ∆RH/RH is increased by a factor of 5 (0.02% to 0.1%) from the annealed sample in Fig. 3 in the main text.
+(a) AF LSSE images while toggling between I±45◦as in Fig. 3 of the main text.
+In addition, we image twice after applying current in 2 and 2 ′ to resolve domain wall creep.
+(b) Sequential diﬀerences between the images in (a).
+In addition to domain rotation above the cross center, we observe stripes of alternating sign that correspond to a combination of domain rotation and domain wall motion, highlighted in dashed line.
+3 −2, taken after 30 minutes, shows that after switching the domains relax in the opposite direction in which they initially rotated or moved.
+Domain wall motion decreases with repeated toggling in a training-like eﬀect.
+(c) RH and ⟨VAF LSSE⟩while toggling between I45◦and I−45◦.
+Values of RH and ⟨VAF LSSE⟩corresponding to AF LSSE images are labeled.
+Decreased domain motion corresponds to decreased ∆RH.
+(d) RH vs time after switching in a similar sample.
+The inset shows that RH approximately exponentially relaxes over 2-3 hours opposite to the direction of initial switching, consistent with the domain wall creep that we image.
+(e) ⟨VAF LSSE⟩vs RH.
+Although the switching is less uniform than in Fig. 3 in the main text, we still ﬁnd a correlation. S8.
+AF LSSE IMAGES OF SWITCHING IN UNANNEALED Pt/NiO/Pt AT I±45◦ In Fig. 3 of the main text, we study switching of an annealed Pt/NiO/Pt trilayer at I±45◦.
+In Fig. S18, we perform the same switching and imaging procedure on an unannealed Pt/NiO/Pt trilayer, where the SMR response is 5 times larger (∆RH/RH = 0.1% compared to 0.02%.) We present AF LSSE images after applying current at ±45◦in Fig. S17(a), and additionally image after waiting 30 minutes without applying current in image 2 ′ to resolve domain creep.
+We take AF LSSE image diﬀerences in Fig. S18(b) and compare to concurrently taken SMR measurements in Fig. S18(c).
+We ﬁnd switching patterns consistent with the domain rotation and domain wall motion identiﬁed in Fig. 4 in the main text, although the signal-to-noise in this sample is lower.
+In the diﬀerence images in Fig. S18(b), we observe relatively large-scale contrast that is more uniform than the AF LSSE images themselves, indicating uniform S-domain rotation from the out-of-plane component of the spin torque as described in the main text.
+The regions of rotation are highlighted in dashed line in both Fig. S18(a) and (b).
+Slight changes in contrast in the AF LSSE signal near theS13 center of the cross show that the S-domains rotate by acute angles, similar to Fig. 3 in the main text.
+Inspection of 2 ′ −2, which represents the diﬀerence between the N´eel order just after current is applied and after 30 minutes without stimulus, reveals that the S-domains continue to evolve after the current is removed.
+In particular, we see that they relax opposite to the direction in which they were pushed by the current.
+We see a corresponding time variation in the SMR in a similar sample: Fig. S18(d) shows RH(t) after switching at the same current density.
+After switching, RH relaxes approximately exponentially in the direction opposite to its initial switch, as predicted by models of subthreshold magnetoelastic domain creep, over a 3-hour period.
+Fig. S18(b) also reveals that domain rotation and domain wall motion is diminished after the third successive switching attempt at the same current density.
+By measuring RH after each image, we ﬁnd that the switching eﬃciency decreases by a factor of 2, and continues to decrease until ∆RH stabilizes at 60 mΩ, 13 times smaller than the initial 750 mΩchange.
+Decreased switching eﬃciency after repeated switching is consistent across all the samples we measure.
+This behavior may be analogous to the training eﬀect in exchange-biased antiferromagnet/ferromagnet bilayers, where the magnitude of exchange bias and coercivity decrease after repeated reversals.
+In Fig. S18(c), we track sequential averaged AF LSSE signal and the concurrently measured RH, and in Fig. S18(e) we plot one versus the other, similarly to Fig. 3(e) and Fig. 3(f) in the main text.
+As discussed in the main text, in general we cannot directly compare ⟨VAF LSSE⟩to RH, since they have diﬀerent symmetries.
+We can make a correspondence in Fig. 3 of the main text, since most of the change in contrast is localized to a spot on the corner where Nx is nearly saturated.
+Although the changes in contrast in Fig. S18 are less spatially uniform than in Fig. 3, most of the contrast is still positive Nx of similar hue.
+Therefore, ⟨VAF LSSE⟩still roughly tracks RH in Fig. S18(c), and plotting one versus the other in Fig. S18(e) shows a correlation, although not as strong as the correlation in Fig. 3. of the main text.
+Comparing the unannealed sample with the annealed sample in Fig. 3 of the main text, we ﬁnd that the S-domains in the unannealed sample are submicron in size, while the domains in the annealed sample are 2-10 µm in size.
+The unannealed sample exhibits more prominent domain wall motion than the annealed sample, consistent with the factor-of-5-larger SMR response, which suggests that the larger and uniform S-domains in the annealed sample require a higher threshold current for domain wall motion.
+This opens up the possibility of increasing switching eﬃciency by controlling the S-domain size, which will require further imaging studies. S9.
+CHARACTERIZATION OF SPIN-TORQUE SWITCHING A. Experimental procedure for spin-torque switching and SMR reading We use a Keithley 2400 sourcemeter for both spin-torque writing and electrical reading in all samples.
+The switching in Fig. 3 of the main text is done with DC current, applied for 5 s using a current density of 3.1×107 A/cm2.
+Note that while applying current at ±45◦requires four electrical contacts, AF LSSE microscopy only works with two contacts: stray capacitance between four contacts at high frequencies causes signal leakage, making the images diﬃcult to interpret.
+Therefore, we wire bond the two AF LSSE voltage contacts, and we perform spin-torque switching and SMR measurement using a probe station to make temporary contacts.
+In Fig. 4, where we apply writing current along the VAF LSSE voltage contacts, we do not have this diﬃculty.
+In the sample in Fig. 4, we apply writing current using a series of 10 2 ms-wide DC pulses.
+B. SMR while toggling I±45◦ To characterize both reproducibility of spin-torque switching at a given writing current density and the magnitude of switching as a function of current density, we measure RH in an unannealed 15 µm-wide Hall cross after toggling between 45◦and −45◦writing current directions as described in the main text.
+Results are shown in Fig. S19: each point represents RH after toggling the current direction.
+We ﬁnd a much larger (100s of mΩ) change in RH after the ﬁrst several switching attempts at a given current density than the ∼50 mΩchanges that follow, which is consistent with a decrease in antiferromagnetic domain wall motion.
+Surprisingly, the polarity of switching seems to reverse, between N rotating towards JW and N rotating perpendicular to JW , at 3.2×107A/cm2, 3.9×107A/cm2, and 4.2×107A/cm2.
+This may be due to the chiral domain force FDW documented by Ref.
+[19] and our work, which can result in both N ∥JW and N ⊥JW , combined with diﬀerent current thresholds for diﬀerent regions of the sample.
+Further studies are necessary to determine long-term switching reproducibility in multidomain samples. S14 FIG. S19.
+RH in a 15 µm-wide Pt/NiO/Pt cross as a function of writing current density, alternating between I45◦and I−45◦ at each point.
+An initial ∆RH of 100s of mΩis consistently followed by ∼50mΩchanges, which may be correlated with the decrease in domain wall motion that we observe in LSSE images.
+At 3.2, 3.9, and 4.2 ×107A/cm2, highlighted in the plot, the polarity of the switching seems to reverse, which may be due to diﬀerent threshold current densities for switching in diﬀerent spatial regions of the sample. FIG. S20.
+(a) Schematic of the NiO/Pt bilayer.
+(b) Thermal depth proﬁle at 25 ps, near peak heating.
+Most of the thermal gradient occurs at the Pt/NiO interface.
+(c) Temperature vs time at two points 0.5 nm above and below the Pt/NiO interface.
+The Pt layer heats to a maximum of 450 K, while the NiO layer heats to 360 K. (d-f) The same plots for the Pt/NiO bilayer.
+Again the Pt layer heats more than the NiO, so the sign of the thermal gradient is reversed. S10.
+FINITE-ELEMENT CALCULATIONS OF LASER HEATING We perform ﬁnite-element calculations of laser heating in Pt/NiO/Pt trilayers using the COMSOL Multiphysics R ⃝ software package.
+We calculate the temperature proﬁle by solving the radially symmetric heat diﬀusion equation, modeling the laser as a distributed heat source that exponentially decays with thickness according to the skin depths of Pt and NiO.
+We ﬁrst separately model heating in MgO/Pt/NiO and MgO/NiO/Pt bilayer samples in Fig. S20 at the 3.4 mJ/cm2S15 FIG. S21.
+Finite-element calculations of laser heating.
+(a) The temperature at the NiO surface, following a 3 ps laser pulse at 3.4 mJ/cm2 ﬂuence.
+We estimate a peak temperature change of 70◦C. (b) Temperature as a function of depth at peak heating, 50 ps after pulse arrival.
+We assume a thermal conductance of 500 MW/m2 · K at both Pt/NiO interfaces, which is typical for epitaxial, lattice-matched interfaces [? ].
+The temperature drop across each interface is about 30◦C compared with 2◦C drop across the NiO thickness, leading us to conclude the interfacial spin Seebeck eﬀect is more strongly excited than the bulk.
+ﬂuence used in the experiment.
+We plot in Fig. S20(b) and (e) the temperature depth proﬁle near peak heating at 25 ps in the Pt/NiO and NiO/Pt samples, respectively.
+The proﬁles are dominated by the thermal resistance between Pt and NiO, assuming an interface thermal conductance of 500 MW/m2 · K, which is high even for epitaxial interfaces [? ] and thus probably an overestimation.
+Therefore, in Fig. S20(c) and (f) we plot temperature vs time for two points 0.5 nm above and below the interface.
+Because NiO is nearly transparent at the 785 nm laser wavelength, the Pt layer heats more than the NiO.
+The sign of the thermal gradient is therefore opposite for NiO/Pt than for Pt/NiO. We estimate peak heating of the NiO layer to be 55 K for Pt on top and 45 K for Pt on the bottom.
+We estimate about 5 K background heating, because the sample does not completely cool to room temperature after 13 ns, when the next pulse arrives.
+We then simulate laser heating of the Pt/NiO/Pt trilayers in Fig. S21 at the same ﬂuence.
+In this case the sign of the thermal gradient is the same at both interfaces.
+In Fig. S21(a) we plot the temperature at the NiO surface as a function of time after the heating pulse arrives.
+We estimate that at 3.4 mJ/cm2 ﬂuence, the top surface of the top Pt layer reaches a maximum temperature of 400 K, and the top surface of the NiO reaches a maximum temperature of 370 K. In Fig. S21(b) we plot the temperature depth proﬁle near peak heating, which is 50 ps after the arrival of the 3 ps pulse.
+Although we do not know the values of the interface and bulk antiferromagnetic spin Seebeck coeﬃcients, the thermal proﬁle suggests that the interface AF LSSE is more strongly excited than the bulk. S11.
+FINITE-ELEMENT SIMULATIONS OF CURRENT FLOW IN A CROSS During the switching process, we apply current to adjacent arms of the cross such that the current ﬂows along a 45◦diagonal in the center, which means that the current density is spatially nonuniform.
+We simulate the spatial current proﬁle in COMSOL in Fig. S22.
+We estimate current densities of 3.8 × 107A/cm2 within the channel, 3.1 × 107A/cm2 at the center of the cross, and 8 × 107A/cm2 at the corner.
+Higher current density at the corner is consistent with the switching proﬁle in annealed NiO, shown in Figure 3 of the main text, where most of the repeatable switching occurs at the corner.
+Since annealing stabilizes the S-domains in local low-energy conﬁgurations, higher current density is necessary to rotate them.
+Similar current densities within the channel and at the center of the cross are consistent with switching occurring in both regions in unannealed samples. S12.
+COMMERCIAL DISCLAIMER Certain commercial equipment is identiﬁed in this paper to foster understanding.
+Such identiﬁcation does not imply recommendation or endorsement by NIST, nor does it imply that the materials or equipment available are necessarilyS16 FIG. S22.
+Simulated magnitude of current density during the switching process, when the current is applied along a 45◦diagonal.
+We estimate densities of 3.8 × 107A/cm2 within the channel, 3.1 × 107A/cm2 at the center of the cross, and 8.0 × 107A/cm2 at the corner.
+This is consistent with switching occurring mostly at the sample corner in annealed samples, and also with switching occurring both within the cross channel and at the center in unannealed samples.
+the best available for the purpose.
+[1] B. Dieny, V. S. Speriosu, S. S. P. Parkin, B. A. Gurney, D. R. Wilhoit, and D. Mauri, Phys.
+Rev. B 43, 1297 (1991).
+[2] H. N. Fuke, K. Saito, Y. Kamiguchi, H. Iwasaki, and M. Sahashi, Journal of Applied Physics 81, 4004 (1997).
+[3] V. Baltz, A. Manchon, M. Tsoi, T. Moriyama, T. Ono, and Y. Tserkovnyak, Rev. Mod.
+Phys. 90, 015005 (2018).
+[4] T. Jungwirth, X. Marti, P. Wadley, and J. Wunderlich, Nature Nanotechnology 11, 231 (2016).
+[5] J. ˇZelezn´y, P. Wadley, K. Olejn´ık, A. Hoﬀman, and H. Ohno, Nature Physics 14, 220 (2018).
+[6] A. N. Bogdanov, A. V. Zhuravlev, and U. K. R¨oßler, Phys.
+Rev. B 75, 094425 (2007).
+[7] K. Olejn´ık, T. Seifert, Z. Kaˇspar, V. Nov´ak, P. Wadley, R. P. Campion, M. Baumgartner, P. Gambardella, P. Nˇemec, J. Wunderlich, J. Sinova, P. Kuˇzel, M. M¨uller, T. Kampfrath, and T. Jungwirth, Science Advances 4 (2018), 10.1126/sci- adv.aar3566.
+[8] P. Bowlan, S. A. Trugman, D. A. Yarotski, A. J. Taylor, and R. P. Prasankumar, Journal of Physics D: Applied Physics 51, 194003 (2018).
+[9] I. Fina, X. Marti, D. Yi, J. Liu, J. H. Chu, C. Rayan-Serrao, S. Suresha, A. B. Shick, J. ˇZelezn´y, T. Jungwirth, J. Fontcu- berta, and R. Ramesh, Nature Communications 5, 4671 (2014).
+[10] X. Marti, I. Fina, C. Frontera, J. Liu, P. Wadley, Q. He, R. J. Paull, J. D. Clarkson, J. Kudrnosk´y, I. Turek, J. Kune˘s, D. Yi, J.-H. Chu, C. T. Nelson, L. You, E. Arenholz, S. Salahuddin, J. Fontcuberta, T. Jungwirth, and R. Ramesh, Nature Materials 13, 367 (2014).
+[11] P. Wadley, B. Howells, J. ˇZelezn´y, C. Andrews, V. Hills, R. P. Campion, V. Nov´ak, K. Olejn´ık, F. Maccherozzi, S. S. Dhesi, S. Y. Martin, T. Wagner, J. Wunderlich, F. Freimuth, Y. Mokrousov, J. Kuneˇs, J. S. Chauhan, M. J. Grzybowski, A. W. Rushforth, K. W. Edmonds, B. L. Gallagher, and T. Jungwirth, Science 351, 587 (2016).
+[12] K. Olejn´ık, V. Schuler, X. Marti, V. Nov´ak, Z. Ka˘spar, P. Wadley, R. P. Campion, K. W. Edmonds, B. L. Gallagher, J. Garces, M. Baumgartner, P. Gambardella, and T. Jungwirth, Nature Communications 8, 15434 (2017).
+[13] T. Higuchi and M. Kuwata-Gonokami, Nature Communications 7, 10720 (2016).
+[14] P. Wadley, S. Reimers, M. Grzybowski, C. Andrews, M. Wang, J. S. Chauhan, B. L. Gallagher, R. P. Campion, K. W. Edmonds, S. S. Dhesi, F. Maccherozzi, V. Novak, J. Wunderlich, and T. Jungwirth, Nature Nanotechnology 13, 362 (2018).
+[15] S. Y. Bodnar, L. Smejkal, I. Turek, T. Jungwirth, O. Gomonay, J. Sinova, A. A. Sapozhnik, H. J. Elmers, M. Klaui, and M. Jourdan, Nature Communications 9, 348 (2018).
+[16] J. ˇZelezn´y, H. Gao, K. V´yborn´y, J. Zemen, J. Maˇsek, A. Manchon, J. Wunderlich, J. Sinova, and T. Jungwirth, Phys. Rev. Lett. 113, 157201 (2014).
+[17] T. Moriyama, K. Oda, T. Ohkochi, M. Kimata, and T. Ono, Scientiﬁc Reports 8, 14167 (2018).
+[18] X. Z. Chen, R. Zarzuela, J. Zhang, C. Song, X. F. Zhou, G. Y. Shi, F. Li, H. A. Zhou, W. J. Jiang, F. Pan, and Y. Tserkovnyak, Phys. Rev. Lett. 120, 207204 (2018).
+[19] L. Baldrati, O. Gomonay, A. Ross, M. Filianina, R. Lebrun, R. Ramos, C. Leveille, T. Forrest, F. Maccherozzi, E. Saitoh, J. Sinova, and M. Kl¨aui, arXiv 1810.11326 (2018).S17 [20] R. Cheng, J. Xiao, Q. Niu, and A. Brataas, Phys.
+Rev. Lett. 113, 057601 (2014).
+[21] P. M. Haney and A. H. MacDonald, Phys. Rev. Lett. 100, 196801 (2008).
+[22] M. J. Grzybowski, P. Wadley, K. W. Edmonds, R. Beardsley, V. Hills, R. P. Campion, B. L. Gallagher, J. S. Chauhan, V. Novak, T. Jungwirth, F. Maccherozzi, and S. S. Dhesi, Phys. Rev. Lett. 118, 057701 (2017).
+[23] A. A. Sapozhnik, M. Filianina, S. Y. Bodnar, A. Lamirand, M.-A. Mawass, Y. Skourski, H.-J. Elmers, H. Zabel, M. Kl¨aui, and M. Jourdan, Phys.
+Rev. B 97, 134429 (2018).
+[24] H. Gomonay and V. M. Loktev, Journal of Physics: Condensed Matter 14, 3959 (2002).
+[25] F. U. Hillebrecht, H. Ohldag, N. B. Weber, C. Bethke, U. Mick, M. Weiss, and J. Bahrdt, Phys. Rev. Lett. 86, 3419 (2001).
+[26] M. N´yvlt, F. Bisio, and J. Kirschner, Phys.
+Rev. B 77, 014435 (2008).
+[27] J.-Y. Chauleau, E. Haltz, C. Arr´et´ero, S. Fusil, and M. Viret, Nature Materials 16, 803 (2017).
+[28] T. Higo, H. Man, D. B. Gopman, L. Wu, T. Koretsune, O. M. J. van’t Erve, Y. P. Kabanov, D. Rees, Y. Li, M.-T. Suzuki, S. Patankar, M. Ikhlas, C. Chien, R. Arita, R. D. Shull, J. Orenstein, and S. Nakatsuji, Nature Photonics 12, 73 (2018).
+[29] M. Ikhlas, T. Tomita, T. Koretsune, M.-T. Suzuki, D. Nishio-Hamane, R. Arita, Y. Otani, and S. Nakatsuji, Nature Physics 13, 1085 (2017).
+[30] S. M. Wu, W. Zhang, A. KC, P. Borisov, J. E. Pearson, J. S. Jiang, D. Lederman, A. Hoﬀmann, and A. Bhattacharya, Phys. Rev. Lett. 116, 097204 (2016).
+[31] S. Seki, T. Ideue, M. Kubota, Y. Kozuka, R. Takagi, M. Nakamura, Y. Kaneko, M. Kawasaki, and Y. Tokura, Phys. Rev. Lett. 115, 266601 (2015).
+[32] J. M. Bartell, D. H. Ngai, Z. Leng, and G. D. Fuchs, Nature Communications 6, 8460 (2015).
+[33] F. Guo, J. M. Bartell, D. H. Ngai, and G. D. Fuchs, Phys.
+Rev. Applied 4, 044004 (2015).
+[34] F. Guo, J. M. Bartell, and G. D. Fuchs, Phys.
+Rev. B 93, 144415 (2016).
+[35] J. M. Bartell, C. L. Jermain, S. V. Aradhya, J. T. Brangham, F. Yang, D. C. Ralph, and G. D. Fuchs, Phys.
+Rev. Applied 7, 044004 (2017).
+[36] M. Weiler, M. Althammer, F. D. Czeschka, H. Huebl, M. S. Wagner, M. Opel, I.-M. Imort, G. Reiss, A. Thomas, R. Gross, and S. T. B. Goennenwein, Phys. Rev. Lett. 108, 106602 (2012).
+[37] T. Chatterji, G. J. McIntyre, and P.-A. Lindgard, Phys.
+Rev. B 79, 172403 (2009).
+[38] F. B. Lewis and N. H. Saunders, Journal of Physics C: Solid State Physics 6, 2525 (1973).
+[39] G. A. Slack, Journal of Applied Physics 31, 1571 (1960).
+[40] E. Lindahl, J. Lu, M. Ottosson, and J.-O. Carlsson, Journal of Crystal Growth 311, 4082 (2009).
+[41] E. Uchida, N. Fukuoka, H. Kondoh, and T. Takeda, Journal of the Physical Society of Japan 23, 1197 (1967).
+[42] S. Saito, M. Miura, and K. Kurosawa, Journal of Physics C: Solid State Physics 13, 1513 (1980).
+[43] J. St¨ohr, A. Scholl, T. J. Regan, S. Anders, J. L¨uning, M. R. Scheinfein, H. A. Padmore, and R. L. White, Phys. Rev. Lett. 83, 1862 (1999).
+[44] Supporting information is available online at URL.
+[45] The laser, in addition to the vertical thermal gradient that produces the spin Seebeck eﬀect, also generates an in-plane thermal gradient that produces electric ﬁelds from the ordinary Seebeck eﬀect.
+In a thermally isotropic region, these electric ﬁelds cancel out in detail.
+At the T-domain wall, there is an in-plane thermal discontinuity that results in positive voltage on one side of the wall and negative voltage on the other.
+[46] F. L. A. Machado, P. R. T. Ribeiro, J. Holanda, R. L. Rodr´ıguez-Su´arez, A. Azevedo, and S. M. Rezende, Phys.
+Rev. B 95, 104418 (2017).
+[47] K. Arai, T. Okuda, A. Tanaka, M. Kotsugi, K. Fukumoto, T. Ohkochi, T. Nakamura, T. Matsushita, T. Muro, M. Oura, Y. Senba, H. Ohashi, A. Kakizaki, C. Mitsumata, and T. Kinoshita, Phys.
+Rev. B 85, 104418 (2012).
+[48] K. Uchida, S. Takahashi, K. Harii, J. Ieda, W. Koshibae, K. Ando, S. Maekawa, and E. Saitoh, Nature 455, 778 (2008).
+[49] C. M. Jaworski, J. Yang, S. Mack, D. D. Awschalom, J. P. Heremans, and R. C. Myers, Nature Materials 9, 898 (2010).
+[50] A. Kehlberger, U. Ritzmann, D. Hinzke, E.-J. Guo, J. Cramer, G. Jakob, M. C. Onbasli, D. H. Kim, C. A. Ross, M. B. Jungﬂeisch, B. Hillebrands, U. Nowak, and M. Kl¨aui, Phys. Rev. Lett. 115, 096602 (2015).
+[51] J. Xiao, G. E. W. Bauer, K.-c.
+Uchida, E. Saitoh, and S. Maekawa, Phys.
+Rev. B 81, 214418 (2010).
+[52] J. Kimling, G.-M. Choi, J. T. Brangham, T. Matalla-Wagner, T. Huebner, T. Kuschel, F. Yang, and D. G. Cahill, Phys. Rev. Lett. 118, 057201 (2017).
+[53] B. L. Giles, Z. Yang, J. S. Jamison, J. M. Gomez-Perez, S. V´elez, L. E. Hueso, F. Casanova, and R. C. Myers, Phys. Rev. B 96, 180412 (2017).
+[54] Y. Ohnuma, H. Adachi, E. Saitoh, and S. Maekawa, Phys.
+Rev. B 87, 014423 (2013).
+[55] A. J. Sievers and M. Tinkham, Physical Review 129, 1566 (1963).
+[56] J. Holanda, D. S. Maior, O. A. Santos, L. H. Vilela-Le˜ao, J. B. S. Mendes, A. Azevedo, R. L. Rodr´ıguez-Su´arez, and S. M. Rezende, Applied Physics Letters 111, 172405 (2017).
+[57] S. M. Rezende, R. L. Rodr´ıguez-Su´arez, and A. Azevedo, Phys.
+Rev. B 93, 054412 (2016).
+[58] S. A. Bender, H. Skarsv˚ag, A. Brataas, and R. A. Duine, Phys. Rev. Lett. 119, 056804 (2017).
+[59] S. M. Rezende, R. L. Rodr´ıguez-Su´arez, and A. Azevedo, Phys.
+Rev. B 93, 014425 (2016).
+[60] M. Charilaou and F. Hellman, Journal of Applied Physics 117, 083907 (2015).
+[61] I. K. Schuller, R. Morales, X. Batlle, U. Nowak, and G. G¨untherodt, Journal of Magnetism and Magnetic Materials 416, 2 (2016).
+[62] H. Nakayama, M. Althammer, Y.-T. Chen, K. Uchida, Y. Kajiwara, D. Kikuchi, T. Ohtani, S. Gepr¨ags, M. Opel, S. Taka- hashi, R. Gross, G. E. W. Bauer, S. T. B. Goennenwein, and E. Saitoh, Phys. Rev. Lett.
+110, 206601 (2013).S18 [63] G. R. Hoogeboom, A. Aqeel, T. Kuschel, T. T. M. Palstra, and B. J. van Wees, Applied Physics Letters 111, 052409 (2017), https://doi.org/10.1063/1.4997588.
+[64] J. Fischer, O. Gomonay, R. Schlitz, K. Ganzhorn, N. Vlietstra, M. Althammer, H. Heubl, M. Opel, R. Gross, S. T. B. Goennenwein, and S. Gepr¨ags, Physical Review B 97, 014417 (2018).
+[65] T. Moriyama, W. Zhou, T. Seki, K. Takanashi, and T. Ono, Phys. Rev. Lett. 121, 167202 (2018).

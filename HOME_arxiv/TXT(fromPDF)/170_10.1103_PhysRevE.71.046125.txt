@@ -1,0 +1,2208 @@
+arXiv:cond-mat/0411263v1  [cond-mat.mtrl-sci]  10 Nov 2004
+Diﬀuse-interface model for rapid phase transformations in nonequilibrium systems
+Peter Galenko∗
+Institut f¨ur Raumsimulation, DLR, K¨oln, D-51170, Deutschland
+David Jou
+Departament de F´isica, Universitat Aut`onoma de Barcelona, 08193 Bellaterra, Catalonia, Spain
+(Dated: August 21, 2018)
+A thermodynamic approach to rapid phase transformations within a diﬀuse interface in a binary
+system is developed. Assuming an extended set of independent thermodynamic variables formed
+by the union of the classic set of slow variables and the space of fast variables, we introduce
+ﬁniteness of the heat and solute diﬀusive propagation at the ﬁnite speed of the interface advancing.
+To describe the transformation within the diﬀuse interface, we use the phase-ﬁeld model which
+allows us to follow the steep but smooth change of phases within the width of diﬀuse interface.
+The governing equations of the phase-ﬁeld model are derived for the hyperbolic model, model with
+memory, and for a model of nonlinear evolution of transformation within the diﬀuse-interface. The
+consistency of the model is proved by the condition of positive entropy production and by the
+outcomes of the ﬂuctuation-dissipation theorem. A comparison with the existing sharp-interface
+and diﬀuse-interface versions of the model is given.
+PACS numbers: 05.70.Fh; 05.70.Ln; 64.60.-i; 83.20.Hn
+I.
+INTRODUCTION
+Arising from phase transformations, a classic free-
+boundary problem introduces a model of phase interface
+with zero thickness. Within this problem, a sharp dis-
+continuity in properties or a jump of ﬂuxes and ther-
+modynamic functions occurs across the interface. The
+sharp-interface model has been a successful description of
+many physical phenomena in various systems [1]. How-
+ever, the sharp-interface model has diﬃculties in describ-
+ing situations when interfacial thickness becomes com-
+parable with the characteristic length of the considered
+phenomenon, and when a topology of the interface be-
+comes complicated or multiply connected. In order to
+avoid these diﬃculties in the sharp-interface model, an
+alternative model with a ﬁnite interfacial thickness was
+suggested for explaining phase transformations [2].
+Historically, the ﬁrst formulation of basic principles of
+diﬀuse interfaces was given by Poisson, Maxwell, and
+Gibbs [3] who suggested to consider interface as a re-
+gion with ﬁnite thickness in which a steep but smooth
+transition of physical properties of phases occurs. Lord
+Rayleigh, van der Waals, and Korteweg [4] applied ther-
+modynamical principles to develop gradient theories for
+the interfaces with non-zero thickness. Through the past
+century, ideas of diﬀuse interface given by these authors
+[3, 4] were reﬁned and applied in many physical phenom-
+ena (see, e.g., overviews in Ref. [5]).
+The diﬀuse-interface formalism has been widely ap-
+plied to phase transformations in condensed media. Bor-
+rowing the formalism of the Landau theory of phase
+transitions [6], the ﬁrst introduction of the diﬀuse inter-
+∗e-mail: Peter.Galenko@dlr.de; Fax: ++49-(2203)-6012255
+face into the theory of phase transformations was made
+by Landau and Khalatnikov [7] who labelled the diﬀer-
+ent phases by an additional order parameter to describe
+anomalous sound absorption of liquid helium.
+In its
+well-known form, the formal variational approach was es-
+tablished by Ginzburg and Landau for phase transitions
+from the normal to the superconducting phase [8]. On
+the basis of this approach, diﬀuse-interface models with
+order parameters have been developed by Halperin, Ho-
+henberg and Ma for the theory of critical phenomena [9],
+and by Allen and Cahn for antiphase domain coarsening
+[10].
+The diﬀuse-interface model has been also developed for
+the description of phase transformations of the ﬁrst or-
+der, especially, for the solidiﬁcation phenomenon. The
+diﬀuse-interface model of solidiﬁcation incorporates an
+order parameter in the form of a phase-ﬁeld variable [11].
+The phase-ﬁeld Φ has a constant value in homogeneous
+phases, e.g. Φ = −1 for unstable liquid phase which is
+transforming into the solid phase with Φ = +1. Between
+these phases in the interfacial region, the phase ﬁeld, Φ,
+changes steeply but smoothly from −1 to +1. In numer-
+ical solutions, it allows one to avoid explicit tracking of
+the interface and locate the interface at Φ = 0 [12]. As
+a particular case, the phase-ﬁeld model is reduced to the
+sharp interface limits [13] and adopts the major models
+of sharp interface (such as Hele-Shaw type models, classi-
+cal or modiﬁed Stefan problem, etc.). The phase-ﬁeld Φ
+is considered as an order parameter which is introduced
+to describe the moving interfacial boundary between the
+initially unstable phase and the ﬁnal phase.
+Several
+thermodynamically
+consistent
+phase-ﬁeld
+models have been proposed [14, 15, 16, 17]. These in-
+clude models for transformation in a pure system [14] up
+to the rather general modelling of multiphase transfor-
+mation in a multi-component system [17]. All of these2
+models assume local equilibrium in the system, being
+consistent with the basic hypothesis of the classic irre-
+versible thermodynamics (CIT) [18, 19]. This assump-
+tion leads to the examination of a number of transport
+processes with small and moderate deviations from ther-
+modynamic equilibrium and, as a consequence, relatively
+slow movement of the interface can be predicted.
+In
+principle, such an approach can be extended to the case
+when the condition of equilibrium is violated locally at
+the interface, e.g., as it has been made for solute trap-
+ping and kinetic eﬀects [20].
+However, the local equi-
+librium is missing both at the interface and within the
+bulk phases for rapid transformations such as rapid so-
+lidiﬁcation [21].
+In this case, the description of rapid
+phase trasformations might be provided by the formal-
+ism of extended irreversible thermodynamics (EIT) [22]
+which gives a causal description of transport processes
+and abandons the assumption of local equilibrium. An
+extension of the phase-ﬁeld methodology for rapid trans-
+formation, which is caused by signiﬁcant deviations from
+thermodynamic equilibrium, has been made recently [23].
+The main purpose of the present paper is to describe
+a thermodynamically consistent model for rapid phase
+transformation in a binary system under local nonequi-
+librium conditions.
+Using the phase-ﬁeld methodol-
+ogy, we derive the governing equations compatible with
+the macroscopic formalism of EIT and the microscopic
+ﬂuctuation-dissipation theorem.
+The paper is organized as follows. In Sec. II, a ther-
+modynamic description of a considered system is given.
+We introduce the dissipative diﬀusion ﬂuxes for heat
+and mass transport together with the phase-ﬁeld rate of
+change as independent variables. In Sec. III, the gen-
+eralized Gibbs equation and entropy balance applicable
+to rapid advancing of the diﬀuse interfaces are given. As
+a starting point of the present phase-ﬁeld model, an en-
+tropy functional is used in Sec. IV. The analysis of the
+present phase-ﬁeld model leads to the governing equa-
+tions for the hyperbolic system with dissipation. In Sec.
+V, a generalization of the hyperbolic phase-ﬁeld model
+is given using the ﬂux relaxation functions as well as a
+variational principle. In Sec. VI, the model equations
+are compared with the outcomes of the existing sharp-
+interface and diﬀuse-interface models.
+Finally, in Sec.
+VII we present a summary of our conclusions.
+II.
+DESCRIPTION OF THE SYSTEM
+A.
+Thermodynamic variables
+Let us consider an isobaric binary system at nonuni-
+form temperature T with no convective ﬂow and given
+concentration of atoms A and B. The local equilibrium
+hypothesis establishes that the local and instantaneous
+correlations among the properties of the system are the
+same as for the whole system at a global equilibrium.
+Describing the nonequilibrium system as an ensemble of
+small local volumes in internal equilibrium, CIT [19] is
+applicable to processes not too far from equilibrium. In
+addition to CIT, a local nonequilibrium formalism appli-
+cable to the strongly nonequilibrium systems has been
+developed in past two decades [22, 24, 25, 26].
+As a
+phenomenological theory, this formalism is well-known
+as EIT [22, 27] which goes beyond the hypothesis of lo-
+cal equilibrium and avoids the paradox of propagation of
+disturbances with an inﬁnite speed.
+A fundamental problem in attempting to describe sys-
+tems out of equilibrium is to select the relevant variables
+needed for a valid description of a nonequilibrium state.
+This problem has been intensively discussed in the liter-
+ature (see references in bibliographic overview [28]). A
+selection of the basic state space with the inclusion of
+the dissipative ﬂuxes is formulated in EIT [24] and tested
+against experimental data [29]. Accordingly, we extend
+the classic set of independent thermodynamic variables
+by the inclusion of dissipative ﬂuxes as additional basic
+variables.
+CIT is based on the local equilibrium hypothesis [18,
+19] which assumes instant relaxation of ﬂuxes to their
+steady-state values and describes the ensemble of atoms
+within local volumes by the Gibbs-Boltzmann statistics.
+In the standard formalism of the diﬀuse-interface using
+CIT, the set {C} of independent variables is assumed to
+consist of the conserved variables such as energy density
+e(⃗r, t) and concentration X(⃗r, t) = XB/(XA + XB) of
+the B component in the system, and the non-conserved
+phase-ﬁeld Φ(⃗r, t) variable [where t is the time, and ⃗r is
+the position-vector of a point within system]. This can
+be expressed formally as follows: {C} = {e, X, Φ}.
+The extended space of independent variables E is
+formed by the union of the classical set {C} and the
+additional space {F} of the ﬂuxes of heat ⃗q and solute
+⃗J, and also the rate of change ∂Φ/∂t of the phase-ﬁeld
+variable, i.e. {F} = {⃗q, ⃗J, ∂Φ/∂t}. This yields
+E = {C} ∪{F} = {e, X, Φ} ∪{⃗q, ⃗J, ∂Φ/∂t}.
+(1)
+Here {F} is the space of fast non-conserved thermody-
+namic variables.
+There are, in fact, diﬀerent possible choices of variables
+(ﬂuxes in EIT, microstructural details in theories with
+internal variables), and the speciﬁc choice to be adopted
+depends on the aims of the description and on the prob-
+lems to be analyzed. This does not mean that diﬀerent
+choices of variables are incompatible with each other. For
+instance, in the study of ﬂowing polymer solutions one
+may select as independent variables either the viscous
+pressure tensor or the conformation tensor describing the
+average microstructure of the macromolecules of the sys-
+tem; a Legendre transform exists which allows one to
+pass from one description to the other, in a similar way
+as it is possible, in equilibrium thermodynamics, to pass
+from a description using internal energy as independent
+variable to a description using absolute temperature as
+an independent variable [30].3
+Thus, our choice of the ﬂuxes as variables does not ex-
+clude other possibilities. To justify our choice, we com-
+ment on the qualitative grounds, the meaning and the
+relevance of ⃗q, ⃗J, and ∂Φ/∂t as variables.
+The ﬂuxes
+⃗q and ⃗J describe the exchanges of heat and matter be-
+tween the interface and the neighbouring bulk phases.
+The ﬂuxes do not instantaneously follow by the classical
+Fourier and Fick laws, relating them with temperature
+and concentration gradients, it takes them some time
+(usually rather short) to reach the value predicted by
+the classical transport equations. Obviously, when the
+interface motion is fast enough, the delay eﬀects in the
+dynamics of the ﬂuxes may play a determining role. This
+happens, for instance, when the velocity V of the inter-
+face becomes comparable or higher than l/τ, l being the
+mean-free-path of the particles and τ the relaxation time
+of the ﬂuxes. Thus, in these circumstances, ⃗q and ⃗J be-
+have as independent variables with their own dynamics,
+which has important consequences on the dynamics and
+stability of the interface [31, 32].
+The introduction of ∂Φ/∂t as a further independent
+variable is motivated by similar, though slightly diﬀerent
+consideration. Indeed, the space variation of Φ is related,
+among other factors, to the width of the interface. Thus,
+including ∂Φ/∂t as an independent variable allows for
+a more detailed description of the internal kinetics and
+shape of the interface. In the same way as in Newto-
+nian mechanics, where the initial position and velocity
+of a particle must be speciﬁed to determine their evo-
+lution, here we take both Φ and ∂Φ/∂t as independent
+variables. If inertial eﬀects are suﬃciently low in com-
+parison with dissipative eﬀects, ∂Φ/∂t will be directly
+determined in terms of Φ and its gradient by a dynamical
+equation. Otherwise, Φ and ∂Φ/∂t will be independent
+and an equation for ∂2Φ/∂t2 must be found.
+Consequently, with taking the above choice of vari-
+ables, one may distinguish between the two sets of inde-
+pendent variables as it follows. The variables from the
+set {C} are characterized as the slow variables, as their
+behavior is governed by conservation laws for energy and
+solute concentration plus the evolution of the phase-ﬁeld,
+and as they decay slowly in time. In contrast, the inde-
+pendent space {F} consists of non-conserved variables
+with relatively high rate of decay. The variables from
+{F} diﬀer from their classical value during intervals of
+the order of magnitude of the characteristic times τi for
+relaxation of the heat ﬂux, solute diﬀusion ﬂux, and rate
+of change of the phase-ﬁeld variable. For time intervals
+much longer than these relaxation times τi, the rate of
+variation of the ﬂuxes can be ignored.
+B.
+Relaxation times
+Generally, the relaxation times τi represent physically
+reasonable time estimations for the spontaneous return of
+the system to the steady state after some sudden pertur-
+bation. The relaxation times τT and τD for the heat and
+solute can be considered as the times needed for smooth-
+ing of inhomogeneities of temperature and concentration,
+respectively, by diﬀusion. The time τΦ of relaxation for
+the phase-ﬁeld can be evaluated from the velocity of the
+diﬀuse interface moving through the local volume with
+the characteristic spatial length. Consequently, the rate
+of decay of the heat ﬂux ⃗q, solute diﬀusive ﬂux ⃗J, and
+phase-ﬁeld rate of change ∂Φ/∂t are estimated by the
+following characteristic times
+τT = a/V 2
+T ,
+τD = D/V 2
+D,
+τΦ = l/V,
+(2)
+where a is the thermal diﬀusivity, VT the ﬁnite speed for
+heat diﬀusion (i.e. the speed of propagation of temper-
+ature disturbances), D the solute diﬀusion constant, VD
+the ﬁnite speed for diﬀusion (i.e. the speed of propaga-
+tion of concentration disturbances), V the velocity of the
+diﬀuse interface, and l the spatial length.
+For instance, the time τT is deﬁned by the phonon-
+electron and phonon-phonon interactions for heat diﬀu-
+sion in metallic systems and it is estimated in Ref. [33] to
+be in the range of 10−13s < τT < 10−11s. The time τD is
+deﬁned by the time for diﬀusion jumps of particles, which
+varies within a wide interval: 10−11s < τD < 10−7s in a
+binary alloy system or inorganic solution [34]. In addition
+to this, the time τΦ might be evaluated numerically from
+Eq. (2) assuming that the length l = W0 the width of
+the diﬀuse interface and the velocity V is the character-
+istic velocity for rapid adiabatic transformations. Thus,
+for numeric evaluation of τΦ in a pure system, one may
+accept the following expression
+τΦ = W0χ/(µ0Q),
+(3)
+where Q is the heat of transformation, χ is the heat ca-
+pacity (so that relation Q/χ is considered as the charac-
+teristic temperature for adiabatic transformation), and
+µ0 the coeﬃcient for atomic kinetics.
+Taking the val-
+ues for pure nickel, e.g., Q/χ = 418 K [35], µ0 = 0.52
+m/(s·K) [36], and W0 = 5 · 10−9 m, one gets τΦ =
+2.30 · 10−11 s. This value for τΦ ﬁts well to the time of
+diﬀuse-interface kinetics which might be calculated from
+the “thin-interface” analyses of Karma and Rappel [37]
+extended by Bragard et al. [38].
+It is also reasonable to evaluate the relaxation time for
+the phase-ﬁeld in a binary system using outcomes of the
+phase-ﬁeld model via “thin-interface” analyses of Karma
+and Rappel [37]. Namely, for the nonisothermal solidi-
+ﬁcation of a binary system, Ramirez et al. [39] derived
+the time τΦ for the phase-ﬁeld as a function of X and Φ.
+It is described by
+τΦ = W 2
+0
+Γ
+ 1
+µ0
++ a1a2
+W0
+D
+DQ
+aχ +
+m(1 −k)X
+1 + k −(1 −k)Φ
+
+.(4)
+For numeric evaluation, we accept the following ma-
+terial parameters for a Cu-Ni metallic system in Eq.
+(4): diﬀuse-interface width W0 = 1 · 10−9 m, Gibbs-
+Thomson coeﬃcient Γ = 1.3 · 10−7 K·m [40], atomic4
+TABLE I: Relaxation time for the ﬂuxes of heat, solute diﬀusion, and phase-ﬁeld
+System
+τT (s)
+τD (s)
+τΦ (s)
+Carbon tetrachloride
+2.50 · 10−13, Ref. [42]
+—
+—
+Benzene
+1.22 · 10−13, Ref. [42]
+—
+—
+Nickel
+1.20 · 10−11, Ref. [43]
+—
+2.30 · 10−11, Ref. [44]
+Diluted alloy Ni - 0.7 at.% B
+—
+1.54 · 10−11, Ref. [45]
+—
+Concentrated alloy Cu - 30 at.% Ni
+—
+0.75 · 10−11, Ref. [46]
+7.92 · 10−11, Ref. [47]
+kinetics coeﬃcient µ0 = 0.24 m/(s·K) [40], constants
+a1 = 0.8839... and a2 = 0.6267... [37], solute diﬀusion
+constant D = 3 · 10−9 m2/s [40], thermal diﬀusivity
+a = 1.5 · 10−5 m2/s [40], adiabatic temperature (rela-
+tion of latent heat and heat capacity) Q/χ = 402 K [41],
+slope of the liquidus line m = 4.38 K/at.% [41], solute
+partitioning coeﬃcient k = 0.81 [41]. As a result follow-
+ing from Eq. (4), one gets τΦ = 7.92 · 10−11 s for the
+values of X = 70 at.% and Φ = 0.5.
+The values for the relaxation times for some pure and
+binary systems are summarized in Table I.
+It can be
+seen, e.g. for metals and alloys, that even though the
+heat speed VT is much larger than the solute diﬀusion
+speed VD, the relaxation times for ⃗q and ⃗J have the same
+order of magnitude, i.e. τT ≈τD. Therefore, a front of
+the heat proﬁle moves with a speed much higher than a
+front of the solute diﬀusive proﬁle. However, due to the
+fast thermal diﬀusion, a >> D, the relaxation of the heat
+ﬂux ⃗q proceeds approximately at the same characteristic
+time as the relaxation for solute diﬀusion ﬂux ⃗J.
+III.
+ENTROPY APPROACH
+A.
+Generalized Gibbs equation
+For the local nonequilibrium system described in Sec.
+II, we postulate the existence of a local generalized en-
+tropy density s whose set of variables is the extended
+space E by Eq. (1). The generalized Gibbs equation for
+s is described by
+ds(e, X, Φ, ⃗q, ⃗J, ∂Φ/∂t) = dse(e, X, Φ)
++dsne(⃗q, ⃗J, ∂Φ/∂t) = ∂se
+∂e de + ∂se
+∂X dX + ∂se
+∂Φ dΦ
++∂sne
+∂⃗q
+· d⃗q + ∂sne
+∂⃗J
+· d ⃗J +
+∂sne
+∂(∂Φ/∂t)d
+∂Φ
+∂t
+
+.
+(5)
+In Eq. (5), se is a local equilibrium contribution deﬁned
+on the set {C} of the classic slow variables {e, X, Φ}, and
+sne is a ﬂux-dependent purely nonequilibrium part of the
+generalized entropy deﬁned on the space {F} consisting
+of the ﬂuxes {⃗q, ⃗J, ∂Φ/∂t} as the independent fast vari-
+ables.
+The derivatives of the entropy density with respect to
+classical variables and their ﬂuxes appearing in Eq. (5)
+are described by
+∂se
+∂e = 1
+T ,
+∂se
+∂X = −∆µ
+T ,
+∂se
+∂Φ = (1 −X)∂sA
+∂Φ + X ∂sB
+∂Φ ,
+∂sne
+∂⃗q
+= −αq⃗q,
+∂sne
+∂⃗J
+= −αj ⃗J,
+∂sne
+∂(∂Φ/∂t) = −αφ
+∂Φ
+∂t ,
+(6)
+where ∆µ = µA −µB is the diﬀerence of the chemical
+potentials for components A and B, respectively, and
+sA and sB are the entropies for pure components A and
+B, respectively. The chemical potentials and entropies
+of components can be chosen for every concrete system
+(see, e.g., Refs. [15, 17]).
+In Eqs. (6), the coeﬃcients αi are scalars which do not
+depend on ⃗q, ⃗J, and ∂Φ/∂t and are assumed to be
+αq =
+ τT
+κT 2
+
+X,Φ ,
+αj = τD
+T D
+∂(∆µ)
+∂X
+
+T,Φ
+,
+αφ =
+
+a0
+τΦW0Q
+T µ0
+
+T,X
+,
+(7)
+where κ is the thermal conductivity, a0 a dimension-
+less factor (dependent on the model of the diﬀuse in-
+terface, speciﬁcally leading to the sharp-interface asymp-
+totic limit), and Q the heat of the transformation.
+After integration, Eq. (5) can be written in the form
+s(e, X, Φ, ⃗q, ⃗J, ∂Φ/∂t) = se(e, X, Φ) + sne(⃗q, ⃗J, ∂Φ/∂t),
+sne(⃗q, ⃗J, ∂Φ/∂t) = −αq
+2 ⃗q · ⃗q −αj
+2
+⃗J · ⃗J −αφ
+2
+∂Φ
+∂t
+2
+.
+(8)
+Consequently, we arrive to a generalized entropy density
+given by an expansion around its local equilibrium value
+up to second-order in the ﬂuxes. In the limit of inﬁnite
+speeds (VT →∞, VD →∞, and V →∞), one gets
+τT →0, τD →0, and τΦ →0.
+In such a case, the
+term sne vanishes and Eq. (8) gives the entropy density
+se(e, X, Φ) for local equilibrium system.5
+B.
+Entropy balance
+For the system described by the extended set E of vari-
+ables, Eq. (1), the local balance laws for the energy and
+concentration are given by
+∂e
+∂t + ∇· ⃗q = 0,
+∂X
+∂t + ∇· ⃗J = 0,
+(9)
+and the evolution of entropy density is deﬁned by
+∂s
+∂t + ∇· ⃗JS = σS.
+(10)
+The change of the total entropy S in time t is described
+by
+dS
+dt =
+dS
+dt
+
+ex
++
+dS
+dt
+
+in
+,
+(11)
+where
+dS
+dt
+
+ex
+= −
+Z
+v
+∇· ⃗JSdv = −
+Z
+ω
+⃗JS · ⃗ndω,
+(12)
+is the external exchange of entropy due to entropy ﬂux
+⃗JS and
+dS
+dt
+
+in
+=
+Z
+v
+σSdv,
+(13)
+is the internal production of entropy due to dissipation
+within the system. In Eqs. (12) and (13): ω is the outer
+surface of sub-volume v, ⃗n the normal vector to the sur-
+face, and σS the local entropy production.
+IV.
+HYPERBOLIC PHASE-FIELD MODEL
+In this section, the important class of hyperbolic mod-
+els with dissipation is considered. We work out the ex-
+plicit evolution equations for the variables including the
+relaxation terms.
+A.
+An entropy functional
+Now we use an entropy functional of the following form
+S =
+Z
+v
+
+s(e, X, Φ, ⃗q, ⃗J, ∂Φ/∂t)
+−ε2
+e
+2 |∇e|2 −ε2
+x
+2 |∇X|2 −
+ε2
+φ
+2 |∇Φ|2
+dv.
+(14)
+Here εe, εx, and εφ are constants for the energy, concen-
+tration, and phase-ﬁeld, respectively. In the functional
+(14) the gradient terms |∇e|2, |∇X|2, and |∇Φ|2 are used
+to describe spatial inhomogeneity within the ﬁelds ac-
+cording to previous diﬀuse-interface models [8, 10, 12].
+It is logical to include gradient terms in Eq. (14) [of the
+so-called “Ginzburg-Landau form”] because, as stressed
+before, our interest is focused on interfaces with steep
+gradients. In addition, the extension (1) gives the en-
+tropy density s based also on the ﬂuxes ⃗q, ⃗J, and ∂Φ/∂t
+as independent variables.
+To obtain the evolution of the entropy, Eq. (11),
+and consider the several parts of the entropy exchange,
+Eqs. (12)-(13), we diﬀerentiate Eq. (14) with respect to
+time. Combining the terms, after some algebra one ob-
+tains
+dS
+dt =
+Z
+v
+∂s
+∂e + ε2
+e∇2e
+ ∂e
+∂t
+
+dv +
+Z
+v
+ ∂s
+∂X + ε2
+x∇2X
+ ∂X
+∂t
+
+dv +
+Z
+v
+ ∂s
+∂Φ + ε2
+φ∇2Φ
+ ∂Φ
+∂t
+
+dv
++
+Z
+v
+"
+∂s
+∂⃗q
+∂⃗q
+∂t
+
++ ∂s
+∂⃗J
+ 
+∂⃗J
+∂t
+!
++
+∂s
+∂(∂Φ/∂t)
+∂2Φ
+∂t2
+#
+dv
+−
+Z
+ω
+
+ε2
+e
+∂e
+∂t
+
+∇ne + ε2
+x
+∂X
+∂t
+
+∇nX + ε2
+φ
+∂Φ
+∂t
+
+∇nΦ
+
+dω,
+(15)
+where ∇n is the gradient vector pointed by the normal
+vector ⃗n.6
+Now we substitute the balance laws for energy and
+concentration, Eqs. (9), into Eq. (15), and then use the
+theorem of divergence. One gets
+dS
+dt = −
+Z
+ω
+
+ε2
+e
+∂e
+∂t
+
+∇ne +
+∂s
+∂e + ε2
+e∇2e
+
+qn + ε2
+x
+∂X
+∂t
+
+∇nX +
+ ∂s
+∂X + ε2
+x∇2X
+
+Jn + ε2
+φ
+∂Φ
+∂t
+
+∇nΦ
+
+dω
++
+Z
+v
+
+⃗q · ∇
+∂s
+∂e + ε2
+e∇2e
+
++ ∂s
+∂⃗q
+∂⃗q
+∂t + ⃗J · ∇
+ ∂s
+∂X + ε2
+x∇2X
+
++ ∂s
+∂⃗J
+∂⃗J
+∂t + ∂Φ
+∂t
+ ∂s
+∂Φ + ε2
+φ∇2Φ
+
++
+∂s
+∂(∂Φ/∂t)
+∂2Φ
+∂t2
+
+dv,
+(16)
+where qn and Jn are the diﬀusion ﬂuxes pointed by the
+normal vector ⃗n.
+Using Eq. (6), the change of the entropy, Eqs. (11)-
+(13), is obtained from Eq. (16). This yields
+dS
+dt = −
+Z
+ω
+JSdω +
+Z
+v
+σSdv,
+(17)
+where
+JS = ε2
+e
+∂e
+∂t
+
+∇ne +
+∂s
+∂e + ε2
+e∇2e
+
+qn
++ε2
+x
+∂X
+∂t
+
+∇nX +
+ ∂s
+∂X + ε2
+x∇2X
+
+Jn
++ε2
+φ
+∂Φ
+∂t
+
+∇nΦ
+(18)
+is the projection of the entropy ﬂux vector on the normal
+vector ⃗n, and
+σS = ⃗q ·
+
+∇
+∂s
+∂e + ε2
+e∇2e
+
+−αq
+∂⃗q
+∂t
+
++ ⃗J ·
+"
+∇
+ ∂s
+∂X + ε2
+x∇2X
+
+−αj
+∂⃗J
+∂t
+#
++∂Φ
+∂t
+ ∂s
+∂Φ + ε2
+φ∇2Φ −αφ
+∂2Φ
+∂t2
+
+> 0
+(19)
+is the local entropy production which has a bilinear form
+in the ﬂuxes (⃗q, ⃗J, and ∂Φ/∂t) and their respective con-
+jugate forces (expressions inside the square brackets).
+B.
+Governing equations and thermodynamic
+consistency
+Relation (18) is well known from the phase-ﬁeld model
+based on CIT (see, e.g., Ref. [15]), whereas the entropy
+production (19) includes the additional terms −αq∂⃗q/∂t,
+−αj∂⃗J/∂t, and −αφ∂2Φ/∂t2 related to the nonequilib-
+rium part of the generalized entropy. This is due to the
+special form for entropy, Eq. (8), and has a clear physical
+meaning: far from equilibrium, the dissipative ﬂuxes pro-
+vide ordering that leads to a decrease of the entropy pro-
+duction near a steady state as compared with the local-
+equilibrium state characterized by the same values of e,
+X, and Φ.
+The production σS of the generalized entropy, Eq. (8)
+is positive due to the statement of the second law of ther-
+modynamics. This condition implies a relation between
+ﬂuxes and forces which, in the simplest cases, is assumed
+to be linear. For Eq. (19), it gives the following set of
+equations:
+- evolution equations for heat and solute diﬀusion ﬂuxes
+
+
+
+
+
+⃗q
+⃗J
+
+
+
+
+
+= (M)
+
+
+
+
+
+
+
+
+
+
+
+∇
+∂s
+∂e + ε2
+e∇2e
+
+−αq
+∂⃗q
+∂t
+∇
+ ∂s
+∂X + ε2
+x∇2X
+
+−αj
+∂⃗J
+∂t
+
+
+
+
+
+
+
+
+
+
+
+,
+(20)
+- evolution equation for the phase-ﬁeld
+∂Φ
+∂t = Mφ
+ ∂s
+∂Φ + ε2
+φ∇2Φ −αφ
+∂2Φ
+∂t2
+
+,
+(21)
+where
+(M) =
+
+
+
+Mee Mex
+Mxe Mxx
+
+
+
+(22)
+is the matrix of mobilities for thermal and solutal trans-
+port, and Mφ is the mobility of the diﬀuse interface.7
+Dependent on composition, the interface mobility is as-
+sumed to be
+Mφ = (1 −X)M A
+φ + XM B
+φ > 0,
+(23)
+where M A
+φ and M B
+φ are the interface mobility for the
+transformation in pure systems consisting of A or B
+components, respectively. In various formulations of the
+phase-ﬁeld model [20, 37], the mobilities of M A
+φ and M B
+φ
+are proportional to the atomic interface kinetic coeﬃcient
+µ0 and inversely proportional to the interface width W0,
+so that Mφ ∼µ0/W0.
+The matrix (22) of transport and the interface mobility
+(23) are assumed to be positively deﬁned for the positive
+entropy production σS. The matrix (22) can be consid-
+ered as symmetric, so that the matrix can be regarded as
+being positive with the inequality: MeeMxx > M 2
+ex. Note
+that the linear phenomenological laws given by Eqs. (20)
+and (21) adopt the representation theorem of isotropic
+tensors [48] according to which ﬂuxes and forces of dif-
+ferent tensorial rank do not couple as far as linear re-
+lations are involved (this independence of processes of
+diﬀerent tensorial rank is also known as the Curie princi-
+ple). In our case, the vectors of heat and solute diﬀusion
+ﬂuxes cannot give rise to the ﬂux of the scalar phase-ﬁeld
+ﬂux in a linear description. More complicated nonlinear
+relations between ﬂuxes and forces consistent with posi-
+tive entropy production in EIT are considered elsewhere
+[22, 24, 27].
+For simplicity, we ignore both kinds of “cross coupling”
+eﬀects in Eq. (20), so that Mex = Mxe = 0.
+Then,
+substitution of the ﬂuxes from Eq. (20) into the balances
+(9), respectively, gives
+- the governing equation for energy density
+τT
+∂2e
+∂t2 + ∂e
+∂t = −∇·
+h
+Mee∇
+∂s
+∂e + ε2
+e∇2e
+i
+,
+(24)
+- the governing equation for solute concentration
+τD
+∂2X
+∂t2 + ∂X
+∂t = −∇·
+h
+Mxx∇
+ ∂s
+∂X + ε2
+x∇2X
+i
+, (25)
+in which τT = αqMee is the relaxation time for the heat
+diﬀusion ﬂux, and τD = αjMxx is the relaxation time for
+solute diﬀusion (see Eqs. (2) and Table I). After simpli-
+fying the transformation, Eq. (21) leads to
+- the governing equation for the phase-ﬁeld
+τΦ
+∂2Φ
+∂t2 + ∂Φ
+∂t = Mφ
+ ∂s
+∂Φ + ε2
+φ∇2Φ
+
+,
+(26)
+where τΦ = αφMφ is the timescale of the phase-ﬁeld ki-
+netics. According to Eq. (26), the acceleration ∂2Φ/∂t2
+of the phase-ﬁeld appears due to introduction of both
+Φ and ∂Φ/∂t as independent variables and characterizes
+inertial eﬀects inside the width of diﬀuse interface.
+Equations (24)-(26) are the central outcome of our pro-
+posal [or, to mention a more complicated setting, we
+could also refer to equations (20)-(21)]. The role of the
+relaxation times is clear: they characterize the delay with
+which ⃗q and ⃗J reduce to their classical expressions (corre-
+sponding to classical transport equations), and the delay
+with which the inertial eﬀects in the dynamics of the
+interfacial region are lost.
+The relaxation terms may
+be neglected in many circumstances, but become crucial
+in some important situations, leading, for instance, to a
+maximum possible value for the speed of advancement of
+the interface (in contrast to classic theory which allows
+for an inﬁnite speed of propagation), and to the possibil-
+ity of oscillatory phenomena in the width of the interface.
+Thus, the role of the new terms is not simply to add some
+new undetermined parameters (relaxation times) allow-
+ing for an improved ﬁt of experimental results. These
+terms also play an important conceptual role, as they
+drastically change the possible kinds of behavior of the
+system.
+Some comments on the consistency of our proposal can
+be outlined. First of all, we may refer to its internal con-
+sistency as a thermodynamic (macroscopic) theory. Sec-
+ond, one must check its consistency with microscopic de-
+scriptions based, for instance, on kinetic theory, or on lin-
+ear response theory, or in other statistical (microscopic)
+theories.
+Finally, one must check its consistency with
+experimental results.
+Here, we comment on the internal thermodynamic
+consistency and, in the next Section, we shall refer to
+its consistency with a statistical theory, based on the
+ﬂuctuation-dissipation theorem. In this theoretical pa-
+per we do not refer to experimental results. We assume
+that a consistent nonequilibrium thermodynamic theory
+should satisfy two main conditions:
+(i) the generalized or extended entropy must be maxi-
+mum at equilibrium;
+(ii) the entropy production must be positive.
+To these two conditions one could add two more re-
+quirements:
+(iii) the second diﬀerential of the entropy with respect
+to its basic variables (which is related to the dynamics
+of the variables) must be negative in order to lead to dy-
+namically stable solutions;
+(iv) the generalized equations of state obtained by diﬀer-
+entiation of the generalized entropy must have a physical
+meaning consistent with experiments.
+It can be seen immediately that the essential condi-
+tions (i) and (ii) are satisﬁed in our proposal. Indeed,
+the form (8) and (14) of the entropy guarantees that ho-
+mogeneous equilibrium state has the maximum entropy
+as compared to nonequilibrium states with the same local
+values of e, X and Φ. Furthermore, introduction of the
+constitutive equations (20)-(21) into the expression (19)
+of the entropy production yields for the latter a deﬁnite
+positive expression:
+σS =
+
+⃗q, ⃗J
+
+(M)−1
+
+
+
+
+
+⃗q
+⃗J
+
+
+
+
+
++ M −1
+φ
+∂Φ
+∂t
+2
+> 0. (27)8
+As we noted, the transport matrix (M) and the inter-
+face mobility Mφ are assumed to be positively deﬁned
+for the positive entropy production, σS > 0.
+If one
+included higher-order nonlinear terms into the entropy
+(8) or in the constitutive equations (20)-(21), thermody-
+namic consistency would be more diﬃcult to check than
+in our second-order approximation (8). This approxima-
+tion is suﬃcient to deal with a wide range of physical
+problems.
+We shall not deal with conditions (iii) and (iv), which
+are subtler and typically involve nonlinear eﬀects. For an
+indication of their analysis in some situations involving
+only ⃗q as nonequilibrium variables, the reader is referred
+to the monograph [24].
+V.
+GENERALIZATION OF THE MODEL
+The governing equations (24)-(26) present causal prop-
+agation of heat and mass signals and a dissipative-wave
+advancing of a diﬀuse interface. We generalize them into
+evolution equations which are nonlinear in time. First,
+equations of state are considered from the point of view
+of the relaxation functions for the ﬂuxes. Second, non-
+linear evolution equations of a general type are derived
+from a variational formulation.
+A.
+Relaxation functions for the ﬂuxes
+Let’s take into consideration a prehistory of the change
+of the phase-ﬁeld in a point of a system. Such a prehis-
+tory must be taken if the system is not in local equi-
+librium.
+We shall use a functional description with a
+memory function.
+We use the entropy functional (14), as before, to derive
+the equations of the model. In the absence of local equi-
+librium, one may incorporate the prehistory of the diﬀu-
+sion process. Then, the connections between the ﬂuxes,
+⃗q, ⃗J, and ∂Φ/∂t, from the one side, and driving forces,
+∇(δS/δe), ∇(δS/δX), and δS/δΦ, from the other side,
+are deﬁned by the following integral forms:
+- relaxation of the heat ﬂux
+⃗q(⃗r, t) =
+Z t
+−∞
+Dq(t −t∗)∇δS(t∗,⃗r)
+δe
+dt∗,
+(28)
+- relaxation of the solute diﬀusion ﬂux
+⃗J(⃗r, t) =
+Z t
+−∞
+Dj(t −t∗)∇δS(t∗,⃗r)
+δX
+dt∗,
+(29)
+- relaxation of the phase-ﬁeld rate of change
+1
+Mφ
+∂Φ(⃗r, t)
+∂t
+= −
+Z t
+−∞
+Dφ(t −t∗)δS(t∗,⃗r)
+δΦ
+dt∗,
+(30)
+where DR = {Dq, Dj, Dφ} are the relaxational kernels for
+the ﬂuxes, and the variational derivatives are obtained
+from the following expressions
+δS
+δe = ∂s
+∂e + ε2
+e∇2e,
+δS
+δX = ∂s
+∂X + ε2
+x∇2X,
+δS
+δΦ = ∂s
+∂Φ + ε2
+φ∇2Φ.
+(31)
+After substitution of expressions for the heat ﬂux re-
+laxation, Eq. (28), and the solute diﬀusion relaxation,
+Eq. (29), into the balance laws for energy and solute con-
+centration, Eq. (9), respectively, one can get the following
+integro-diﬀerential equations
+∂e(⃗r, t)
+∂t
+= −∇·
+Z t
+−∞
+Dq(t −t∗)∇δS(t∗,⃗r)
+δe
+dt∗,
+∂X(⃗r, t)
+∂t
+= −∇·
+Z t
+−∞
+Dj(t −t∗)∇δS(t∗,⃗r)
+δX
+dt∗.(32)
+Together with relaxation of the phase-ﬁeld, Eq. (30), the
+general system evolution during phase transformation is
+described by Eqs. (32).
+When the relaxation functions DR are specially de-
+ﬁned, Eqs. (30) and (32) can be reduced to known mod-
+els. Particularly, for the important class of dissipative
+and hyperbolic models, one can take the relaxation ker-
+nels in the following forms
+DR =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DR(0) ≡const,
+wave propagation,
+DR(0)δ(t −t∗),
+dissipation,
+DR(0) exp
+
+−t −t∗
+τ
+
+, wave and dissipation,
+(33)
+where DR(0) = {Dq(0), Dj(0), Dφ(0)} are the relax-
+ational kernels for the ﬂuxes at present time t = t∗, and
+τ = {τT , τD, τΦ} are the characteristic relaxation times
+for the ﬂuxes.
+The
+diﬀerent
+transformations within
+the
+diﬀuse-
+interface are described by diﬀerent kernels in the inte-
+grals (28)-(30). As it follows from Eq. (33), the relax-
+ation functions DR describe the memory of the system
+by assigning diﬀerent weights to diﬀerent moments in the
+past. Dissipation corresponds to a zero-memory transfor-
+mation, i.e. the only relevant contributions are the ”last”
+ones.
+In contrast to this situation, the inﬁnite mem-
+ory transformation with DR ≡const leads to undamped
+wave propagation of the heat, solute, or the interface
+advancement. In between, the combination of the wave
+and dissipative regimes described by the exponentional
+law can be observed during rapid phase transformations.
+This is the case of hyperbolic phase-ﬁeld model described
+in Sec. IV. For the latter case, the relevance of all con-
+tributions to the ﬂuxes decreases as the system moves to
+the past.
+In Sec. IV, the model macroscopic consistency of the
+statements of EIT has been shown. Now, the consistency9
+of our macroscopic approach with a microscopic descrip-
+tion is veriﬁed in relation to the outcomes following from
+the ﬂuctuation-dissipation theorem.
+The memory functions introduced in Eqs. (28)-(30)
+may be related to our analysis of the dynamics of the
+ﬂuxes ⃗q and ⃗J and of ∂Φ/∂t proposed by constitutive
+equations (20)-(21). To do this, ﬁrst, we may consider the
+ﬂuctuation-dissipation theorem relating response mem-
+ory functions to the time-correlation function of the cor-
+responding ﬂuxes (see, e.g., Ref. [49]). This will allow us
+to show the consistency of our macroscopic formulation
+with the microscopic basis provided by the ﬂuctuation-
+dissipation theorem.
+The corresponding expressions are
+Dq(t −t∗) =
+1
+kBT 2 ⟨b⃗q(t)b⃗q(t∗)⟩eq,
+Dj(t −t∗) =
+1
+kBT ⟨b⃗J(t)b⃗J(t∗)⟩eq,
+Dφ(t −t∗) =
+1
+kBT ⟨d
+∂tΦ(t)
+d
+∂tΦ(t∗)⟩eq.
+(34)
+Here kB is Boltzmann’s constant, ⃗q, ⃗J, and ∂tΦ stand
+for the microscopic operators for the heat ﬂux, diﬀusion
+ﬂux and the time derivative of Φ, respectively, and ⟨...⟩eq
+means an average over an equilibrium ensemble in statis-
+tical mechanics (as, for instance, the canonical one).
+Relations (34) play an important role in modern statis-
+tical mechanics, and may be formally derived from the Li-
+ouville equation in the framework of linear-response the-
+ory or from information theory [49, 50]. However, from a
+practical point of view, the computation of the evolution
+of the microscopic operators for ⃗q, ⃗J or ∂tΦ on purely mi-
+croscopic grounds is an overwhelming task exceeding ac-
+tual capabilities. Such an evolution is either obtained by
+computer simulations, or tentatively given by a reason-
+able form inspired on phenomenological grounds. Thus,
+our evolution equations (20)-(21) for ⃗q, ⃗J and ∂tΦ may be
+considered as a macroscopic modelling of the evolution
+of the ﬂuxes, which according to Eq. (34) is equivalent
+to proposing a form for the corresponding memory func-
+tions introduced in Eqs. (28)-(30). In general terms, it
+could be said that, according to Eq. (34), the study of
+the evolution of the ﬂuxes around equilibrium is equiva-
+lent to the determination of the corresponding memory
+functions.
+Constitutive equations (20)-(21) imply that ﬂuctua-
+tions of ⃗q and ⃗J near a homogeneous equilibrium state
+will decay exponentially as ⃗q(t) = ⃗q(0) exp(−t/τT ) and
+⃗J(t) = ⃗J(0) exp(−t/τD). Introducing these expressions
+into Eq. (34) one obtains
+Dq(t −t∗) =
+1
+kBT 2 ⟨b⃗q(0)b⃗q(0)⟩eq exp
+
+−t −t∗
+τT
+
+,
+Dj(t −t∗) =
+1
+kBT ⟨b⃗J(0)b⃗J(0)⟩eq exp
+
+−t −t∗
+τD
+
+,(35)
+which may be rewritten as
+Dq(t −t∗) = Dq(0) exp
+
+−t −t∗
+τT
+
+,
+Dj(t −t∗) = Dj(0) exp
+
+−t −t∗
+τD
+
+.
+(36)
+Indeed, when the microscopic expressions for ⃗q and
+⃗J corresponding to an ideal gas are introduced into
+Eq. (36) and the equilibrium average is performed (over
+a Maxwell-Boltzmann distribution function), the results
+for the Dq(0) and Dj(0) are equivalent to those obtained
+from the kinetic theory of gases in the time-relaxation
+approximation [49].
+Note, ﬁnally, that the usual transport coeﬃcients
+(thermal conductivity, diﬀusion coeﬃcient) may be ob-
+tained (when the relaxation time is suﬃciently short) by
+integration of Eq. (34), as
+λ =
+1
+kBT 2
+Z ∞
+−∞
+⟨b⃗q(t)b⃗q(0)⟩eqdt,
+D =
+1
+kBT
+Z ∞
+−∞
+⟨b⃗J(t)b⃗J(0)⟩eqdt,
+(37)
+which are the well-known Green-Kubo formulae for trans-
+port coeﬃcients [24, 49, 50].
+Thus, our macroscopic
+formalism is consistent with the microscopic ﬂuctuation-
+dissipation theorem. It provides, in fact, a phenomeno-
+logical complement to the ﬂuctuation-dissipation expres-
+sions, which are the formal expressions from which it is
+diﬃcult to obtain on exact grounds the form of the mem-
+ory functions.
+B.
+A variational principle and Euler-Lagrange
+equations
+We assume, as above, that the generalized entropy
+density s is a continuous and diﬀerentiable function de-
+ﬁned by the local equilibrium contribution se and ﬂux-
+dependent nonequilibrium part sne with the total set of
+variables (1) and generalized Gibbs equation (5). The
+balance equations for the heat and solute are the same,
+Eqs. (9), and the local evolution of the entropy density
+is described by Eqs. (10).
+A generalization can be given by introducing the gen-
+eralized terms for derivatives into the entropy density
+with respect to classical variables (e, X, Φ) and ﬂuxes
+(⃗q, ⃗J, ∂Φ/∂t), and also by introducing general forms of
+the entropy ﬂux ⃗JS and the source σS in Eq. (10). De-
+pending on their own tensorial character, these are
+∂s
+∂e
+
+⃗q
+= βe
+1(e, Iq),
+ ∂s
+∂X
+
+⃗J
+= βX
+1 (X, Ij),
+ ∂s
+∂Φ
+
+∂Φ
+∂t
+= βΦ
+1 (Φ, I ∂Φ
+∂t ),
+∂s
+∂⃗q
+
+e
+= βe
+2(e, Iq)⃗q,10
+ ∂s
+∂⃗J
+
+X
+= βX
+2 (X, Ij) ⃗J,
+
+∂s
+∂(∂Φ/∂t)
+
+Φ
+= βΦ
+2 (Φ, I ∂Φ
+∂t )∂Φ
+∂t ,
+⃗JS = βe
+3(e, Iq)⃗q + βX
+3 (X, Ij) ⃗J + βΦ
+3 (Φ, I ∂Φ
+∂t )∂Φ
+∂t ,
+σS = βe
+4(e, Iq) + βX
+4 (X, Ij) + βΦ
+4 (Φ, I ∂Φ
+∂t ),
+(38)
+where
+Iq = ⃗q · ⃗q,
+Ij = ⃗J · ⃗J,
+I ∂Φ
+∂t =
+∂Φ
+∂t
+2
+(39)
+are the single scalar invariants of the extended set (1)
+of variables, and βi are the scalar functions depending
+on classic variables (e, X, Φ) and invariants Ii.
+Then,
+utilizing Eqs. (38), the generalized Gibbs equation (5)
+gives the time derivative of the entropy density as follows:
+∂s
+∂t = βe
+1(e, Iq)∂e
+∂t + βe
+2(e, Iq)⃗q · ∂⃗q
+∂t
++βX
+1 (X, Ij)∂X
+∂t + βX
+2 (X, Ij) ⃗J · ∂⃗J
+∂t
++βΦ
+1 (Φ, I ∂Φ
+∂t )∂Φ
+∂t + βΦ
+2 (Φ, I ∂Φ
+∂t )∂Φ
+∂t
+∂2Φ
+∂t2 .
+(40)
+Locally, Eq. (10) is satisﬁed as a balance law and, for
+the entire system, one can postulate extremal condition
+in the Lagrangian form of L =
+R
+v(∂s/∂t+∇· ⃗JS−σS)dv →
+extr, implying an extremal diﬀerence between the “ki-
+netic” part
+R
+v(∂s/∂t+∇· ⃗JS)dv and the “potential” part
+R
+v σSdv for the whole nonequilibrium system. Then, the
+entropy density satisﬁes the following variational princi-
+ple [51]
+δL = δ
+Z
+v
+dv
+∂s
+∂t + ∇· ⃗JS −σS
+
+= 0,
+(41)
+in which the variation δ is carried out only on the noncon-
+served ﬂux variables ⃗q, ⃗J, and ∂Φ/∂t, i.e. δ is taken only
+over the space {F} from the set (1) while the variables e,
+X, and Φ from the set {C} remain constant during the
+variation. Also, during the variation, the tangent ther-
+modynamic space [time and spatial derivatives from the
+set (1)] is ﬁxed. From this it follows that Eq. (41) is a
+variational principle of a restricted type.
+Using balance laws (9), substitution of Eqs. (38) and
+(40) into variational principle (41) leads to
+δ
+Z
+v
+dv
+
+(βe
+3 −βe
+1)∇· ⃗q +
+
+βe
+2
+∂⃗q
+∂t + ∇βe
+3
+
+· ⃗q −βe
+4
++(βX
+3 −βX
+1 )∇· ⃗J +
+ 
+βX
+2
+∂⃗J
+∂t + ∇βX
+3
+!
+· ⃗J −βX
+4
++βΦ
+1
+∂Φ
+∂t + βΦ
+3 ∇∂Φ
+∂t +
+
+βΦ
+2
+∂2Φ
+∂t2 + ∇βΦ
+3
+ ∂Φ
+∂t −βΦ
+4
+
+= 0.
+(42)
+Variation of Eq. (42) is obtained by taking as constants
+the time derivatives, gradients and divergences.
+Since
+δIq = 2⃗q·δ⃗q, δIj = 2 ⃗J·δ ⃗J, and δI ∂Φ
+∂t = 2(∂Φ/∂t)δ(∂Φ/∂t)
+from Eq. (42) one gets
+Z
+v
+dv
+
+2
+∂βe
+3
+∂Iq
+−∂βe
+1
+∂Iq
+
+⃗q(∇· ⃗q) + βe
+2
+∂⃗q
+∂t + 2∂βe
+2
+∂Iq
+⃗q⃗q · ∂⃗q
+∂t + ∇βe
+3 −2∂βe
+4
+∂Iq
+⃗q
+
+δ⃗q
++
+Z
+v
+dv
+
+2
+∂βX
+3
+∂Ij
+−∂βX
+1
+∂Ij
+
+⃗J(∇· ⃗J) + βX
+2
+∂⃗J
+∂t + 2∂βX
+2
+∂Ij
+⃗J ⃗J · ∂⃗J
+∂t + ∇βX
+3 −2∂βX
+4
+∂Ij
+⃗J
+
+δ ⃗J
++
+Z
+v
+dv
+
+2 ∂βΦ
+1
+∂I ∂Φ
+∂t
+∂Φ
+∂t
+2
++ 2 ∂βΦ
+3
+∂I ∂Φ
+∂t
+∂Φ
+∂t ∇∂Φ
+∂t + βΦ
+2
+∂2Φ
+∂t2 + 2 ∂βΦ
+2
+∂I ∂Φ
+∂t
+∂2Φ
+∂t2
+∂Φ
+∂t
+2
++ ∇βΦ
+3 −2 ∂βΦ
+4
+∂I ∂Φ
+∂t
+∂Φ
+∂t
+
+δ
+∂Φ
+∂t
+
+= 0.
+(43)
+Due to arbitrary variation of δ⃗q, δ ⃗J, and δ(∂Φ/∂t), the
+Euler-Lagrange equations directly follow from Eq. (43).
+These are
+- evolution equation for the heat ﬂux
+∂βe
+2
+∂Iq
+⃗q⃗q + βe
+2U
+
+· ∂⃗q
+∂t11
++
+∂βe
+3
+∂Iq
+−∂βe
+1
+∂Iq
+
+∇· ⃗q −∂βe
+4
+∂Iq
+
+⃗q = −1
+2∇βe
+3, (44)
+- evolution equation for the solute diﬀusion ﬂux
+∂βX
+2
+∂Ij
+⃗J ⃗J + βX
+2 U
+
+· ∂⃗J
+∂t
++
+∂βX
+3
+∂Ij
+−∂βX
+1
+∂Ij
+
+∇· ⃗J −∂βX
+4
+∂Ij
+
+⃗J = −1
+2∇βX
+3 ,
+(45)
+- evolution equation for the phase-ﬁeld
+ 
+∂βΦ
+2
+∂I ∂Φ
+∂t
+∂Φ
+∂t
+2
++ 1
+2βΦ
+2
+!
+∂2Φ
+∂t2
++
+"
+∂βΦ
+3
+∂I ∂Φ
+∂t
+∇∂Φ
+∂t + ∂βΦ
+1
+∂I ∂Φ
+∂t
+∂Φ
+∂t −∂βΦ
+4
+∂I ∂Φ
+∂t
+#
+∂Φ
+∂t = −1
+2∇βΦ
+3 ,
+(46)
+where U is the unit tensor of second rank.
+Eqs. (44)-(46) are nonlinear evolution equations for ⃗q,
+⃗J, and ∂Φ/∂t and they are of the general form of evo-
+lution equations (20)-(21).
+Indeed, the nonlinearity is
+clearly seen from the following form of these equations:
+τT (e, ⃗q)∂⃗q
+∂t + ⃗q = Mee(e, ⃗q)∇βe
+3,
+τD(X, ⃗J)∂⃗J
+∂t + ⃗J = Mxx(X, ⃗J)∇βX
+3 ,
+τΦ
+
+Φ, ∂Φ
+∂t
+ ∂2Φ
+∂t2 + ∂Φ
+∂t = MΦ
+
+Φ, ∂Φ
+∂t
+
+∇βΦ
+3 ,(47)
+where τi and Mi are the functions of the classic set
+{C} = {e, X, Φ} as well as nonlinear functions of the
+ﬂuxes which can be explicitly found from Eqs. (44)-(46)
+and relations (38)-(39). Thus, taking the generalized evo-
+lution of the entropy density, Eq. (40), and using varia-
+tional principle (41), we arrive to nonlinear general evo-
+lution equations for ﬂuxes, Eqs. (47), which might be
+merely reduced to the evolution equations (20)-(21) of
+the hyperbolic phase-ﬁeld model.
+VI.
+RELATION TO EXISTING MODELS
+It is interesting to note that sharp-interface and
+diﬀuse-interface models with relaxation of ﬂuxes have
+been used to describe transient processes in various
+nonequilibrium systems (see monograph [52], Chapter 4).
+Therefore we synthesize here several previous and very
+recent results in comparison with the developed hyper-
+bolic model (Sec. IV) and generalized model (Sec. V) of
+rapid phase transformation.
+A.
+Superconductivity
+Ginzburg and Landau established their variational
+principle for the continuous transition from the normal
+to the superconducting phase [8]. They used a free en-
+ergy density with a gradient term which has been further
+used in many phenomena (e.g., in description of spinodal
+decomposition [53] or crystal growth [54]).
+As a logi-
+cal extension, the transition between the normal and the
+superconducting phases can be described with the de-
+lay given by equations of the hyperbolic model [starting
+from the functional of the form (14)] or using generalized
+models with memory, Sec. V A.
+Generally, equations (24)-(26) are consistent with the
+generalized entropy density given by Eq. (8). The equa-
+tions are reduced to the classic equations from Refs.
+[8, 53, 54] when the times τT , τD, and τΦ tend to zero.
+Furthermore, the entropy density (8) together with the
+evolution equations (20) has been justiﬁed microscopi-
+cally [24, 26] for the one-component system and from
+Grad’s procedure for monatomic gases.
+The choice of thermodynamic potential is important,
+as it governs the transition from metastable state to the
+stable one. Normally, the potential for transition is in-
+cluded in the expression for entropy density (or for free
+energy density) in the form of a double-well function
+or by a monotonically increasing function incorporating
+nonequilibrium conditions at the interface [8, 12, 38]. In
+the present paper, we do not give an explicit form of se
+in Eq. (8) and present governing equations (24)-(26) [or
+variational derivatives (31)] in a general form. The choice
+of the thermodynamic potential might be given for the
+problem under consideration.
+B.
+Glass transition, structural relaxation and
+phase separation
+J¨ackle et al. [55] considered isothermal phase trans-
+formation in the presence of additional slow structural
+relaxation variables. Considering the dynamics based on
+the relaxational chemical potential, these authors refer
+their model to systems with phase separation and to slow
+structural relaxation in polymeric solutions in the prox-
+imity of the glass transition temperature. The calcula-
+tion has shown that, even at the early stages of phase
+separation, equation for chemical potential with memory
+may give pronounced deviations from the predictions of
+classic linear Cahn-Hillard’s model [53].
+Phase separation during spinodal decomposition may
+proceed under local nonequilibrium conditions in solute
+diﬀusion ﬁeld oﬀered by rapid quenching.
+As it has
+been demonstrated in computational modeling [56], the
+rapidly quenched liquid mixtures under decomposition
+exhibit non-equilibrium patterns, evolving with univer-
+salities diﬀerent from those extracted from the Cahn and
+Hillard’s model.
+Local nonequilibrium separation in liquids can be de-12
+scribed in terms of EIT as a model for isothermal spin-
+odal decomposition in a binary system [23], in conditions
+of large deviation from thermodynamic equilibrium. The
+dynamics of the diﬀusion ﬂux ⃗J as a fast variable from
+the set (1) is consistent with the characteristic time of
+local rearrangement of particles (atoms or molecules) or
+with the time of relaxation of diﬀusive ﬂux to its local
+equilibrium steady-state value. The model equation for
+spinodal decomposition of a binary system is the gener-
+alized Cahn-Hillard equation of the form of Eq. (25) for
+local nonequilibrium solute redistribution. In this case,
+the dynamics of rapidly quenched decomposition is de-
+scribed for short periods of time or large gradients of
+chemical composition.
+C.
+Shear ﬂow, viscoelastic ﬂuids and
+diﬀusion-reaction systems
+The system of coupled evolution equations (20)-(21)
+describes, in fact, a process of phase separation under
+shear if temperature is replaced by viscous pressure ten-
+sor. In this case, one may get the condition deﬁning the
+spinodal line in non-equilibrium states [see monograph
+[30], Chapter 6]. As a reduced one, equation of type (20)
+or (32), endowed with homogeneous Dirichlet boundary
+conditions, has been introduced to model the behavior of
+certain viscoelastic ﬂuids and to predict the velocity of
+ﬂow [57].
+In addition, equation of type (32) is used to predict
+a wavefront in time-delayed reaction-diﬀusion systems of
+the generalized Fisher’s equation [58]. The speed of the
+travelling wave depends on the relaxation time and there-
+fore spreading of population in reaction-diﬀusion system
+might be predicted with great ﬂexibility. One of the con-
+sequences of this equation, reduced to Eqs. (24) or (25)
+for modelling a hyperbolic reaction-diﬀusion system [with
+εe = 0 or εx = 0, respectively], might be considered in
+an exciting example suggested by Fort and Mendez in
+Ref. [59] for neolitic advancing of human groups across
+Europe. They have shown, in particular, that hyperbolic
+reaction-diﬀusion equations of type of Eqs. (24) or (25)
+predict the population spreading during the European
+past in agreement with the existing archaeological data.
+D.
+Rapid solidiﬁcation
+At deep supercoolings in a solidifying system, or at
+high velocity of the solid-liquid interface, it is necessary
+to take into account local nonequilibrium eﬀects in so-
+lute diﬀusion and to use a non-Fickian model for trans-
+port processes which is compatible with EIT [21, 40].
+The problem of rapid solidiﬁcation within the sharp-
+interface limit is described by generalized Stefan prob-
+lem (so-called “self-consistent hyperbolic Stefan prob-
+lem” [31, 32]) which takes into account local nonequilib-
+rium both at the interface and within the bulk phases. In
+such a case, the spatio-temporal evolution of solute con-
+centration is described by the partial diﬀerential equation
+(25) of a hyperbolic type [with εx = 0] which takes into
+account the relaxation of solute diﬀusion ﬂux to the lo-
+cal thermodynamical equilibrium in a rapidly solidifying
+system.
+Advancing of the diﬀuse-interface with a higher ve-
+locity comparable with the solute diﬀusion speed is also
+described by the phase-ﬁeld model with relaxation of the
+diﬀusion ﬂux [23]. It has been shown that choosing the
+concrete form of the entropy (as the thermodynamic po-
+tential), one may recover the existing models based on
+the CIT and analyze solidiﬁcation under local nonequi-
+librium conditions.
+E.
+Motion of antiphase domains
+In the description of diﬀuse interface kinetics, Allen
+and Cahn [10] proposed a model for evolution of the
+non-conserved order ﬁeld during antiphase domain coars-
+ening. For isotropic interfaces, gradient ﬂow gives the
+Allen-Cahn equation by taking τΦ = 0 in Eq. (26). This
+equation is true in the case of low inertial eﬀects in com-
+parison with the dissipative eﬀects.
+With ﬁnite relax-
+ation time, τΦ, and ﬁnite acceleration, ∂2Φ/∂t2, Eq. (26)
+predicts the evolution of coarsening with relaxation. It is
+reasonable to say that the generalized Allen-Cahn equa-
+tion (26) is true for the case of signiﬁcant inertial eﬀects
+during the motion of antiphase domains.
+As an advancing of the Allen and Cahn’s model, the
+process of the interface motion by mean curvature with
+delayed response has been analyzed recently. Rotstein
+et al.
+[60] developed the phase-ﬁeld model based on
+equations similar to Eqs. (28) and (30). These authors
+described the ﬁrst-order transition with the delayed re-
+sponse of the system due to slow relaxation of internal
+variables. Using the exponential relaxation function for
+wave and dissipative mode, Eq. (33), which leads to the
+hyperbolic phase-ﬁeld model, the dynamics of the per-
+turbed motion of interface by mean curvature has been
+considered. It has been shown in Ref. [60] that internal
+relaxing eﬀects induce damped oscillations in the inter-
+facial motion during crystalline coarsening. As opposed
+to the classic parabolic phase-ﬁeld model, the hyperbolic
+phase-ﬁeld model predicts these interfacial oscillations in
+qualitative consistency with the oscillations on the sur-
+face of quantum crystals [61] and in crystallization waves
+in helium [62]. From a mathematical viewpoint, a search
+for existence and uniqueness of the solution and some
+well-posedness results for the problem of motion by mean
+curvature using the phase-ﬁeld model with memory are
+beginning to be presented (see Ref. [63]).13
+F.
+Complex (dusty) plasmas
+Recent investigation into the ﬁeld of complex (dusty)
+plasma physics show that this system exhibits a com-
+plicated behavior which depends on the behavior of its
+“subsystems” which are represented by electrons, ions,
+neutral gas, and charged dust particles. All of them have
+their own relaxation time to local equilibrium; therefore,
+interaction among them may lead to a delay of relaxation
+to local equilibrium in plasma. Moreover, in the elec-
+tronic subsystem of plasma, local equilibrium does not
+exist, that stimulates development of theories beyond lo-
+cal equilibrium [64]. Interaction of diﬀerent subsystems
+in complex (dusty) plasmas with missing local thermody-
+namic equilibrium in the electronic subsystem, makes the
+description of observed experimental data of this object
+rather complicated.
+Experimental results of Morﬁll et al. [65] from plasma
+observations exhibit unusual behavior from weak colli-
+sionless interaction of gases to ﬂuid ﬂow with further
+possible crystallization of plasma. These results are de-
+scribed by means of molecular dynamic simulations [65].
+The ﬁeld approach, also, seems to be also applicable due
+to the fact that during transitions in plasma, the char-
+acteristic size of patterns is on the mesoscopic or even
+macroscopic scale.
+The ﬁeld approach to a heat- and
+electronically-conducting ﬂuid has been demonstrated in
+ionized gases [51] using equations of generalized type of
+Eqs. (44)-(46).
+VII.
+CONCLUSIONS
+The diﬀuse-interface model for rapid phase transfor-
+mation in metastable binary systems has been presented.
+To describe the steep but smooth change of phases within
+the width of diﬀuse interface, we use the formalism of the
+phase-ﬁeld model.
+Rapid phase transformations may proceed under lo-
+cal nonequilibrium conditions. In our phenomenological
+macroscopic description, we extend the classic set of in-
+dependent thermodynamic variables by inclusion of dis-
+sipative ﬂuxes as additional basic variables. The evolu-
+tion of the ﬂuxes is characterized by their own dynamics
+with relaxation times τ summarized in Table I. Thus,
+the extended set (1) of variables allows one to describe
+phase transformations with ﬁnite interface velocity that
+is comparable or even higher than l/τ, where l is the
+mean-free-path of particles (atoms).
+The evolution equations for the hyperbolic phase-ﬁeld
+model with dissipation are derived from an entropy func-
+tional (14) based on the extended set (1) of independent
+thermodynamic variables. This model yields a deﬁnite
+positive entropy production (27) in consistency with the
+second law of thermodynamics.
+Generalization of the model has been done by introduc-
+ing memory functions and using a variational principle.
+As a result, the consistency of the macroscopic approach
+with the microscopic ﬂuctuation-dissipation theorem has
+been found for the phase-ﬁeld with memory [Eqs. (34)-
+(37)]; and nonlinear evolution equations [Eqs. (44)-(46)]
+are derived from the variational principle (41).
+The derived equations for the evolution of diﬀuse inter-
+face were correlated with existing models of nonequilib-
+rium transport processes and for systems under phase
+transformation.
+Particularly, we compare our deriva-
+tion to models of superconductivity, phase separation,
+viscoelastic or electronically-conducting ﬂuids, interface
+motion by mean curvature, rapidly solidifying systems,
+and reaction-diﬀusion systems.
+Acknowledgments
+P.G. acknowledges ﬁnancial support from the German
+Research Foundation (DFG - Deutsche Forschungsge-
+meinschaft) under the project No.
+HE 1601/13.
+He
+also acknowledges the support of the Administration of
+the Physical Statistics Group during his stay in Universi-
+tat Aut`onoma de Barcelona. D.J. acknowledges ﬁnancial
+support from the Direcci`on General de Investigaci`on of
+the Spanish Ministry of Science and Technology BFM
+2003-06033 and the Direcci`o General de Recerca of the
+Generalitat of Catalonia under grant 2001 SGR-00186.
+[1] J.R. Ockendon and W.R. Hodgkins (Editors), Moving
+Boundary Problems in Heat Flow and Diﬀusion (Oxford
+Univ. Press, Oxford, 1975); D.G. Wilson, A.D. Solomon,
+and P.T. Boggs (Editors), Moving Boundary Problems
+(Academic Press, New York, 1978); A. Friedman, Vari-
+ational Principles and Free-Boundary Problems, (Wiley,
+New York, 1982).
+[2] G. Caginalp, Arch. Rat. Mech. Anal. 92, 205 (1986).
+[3] S.D. Poisson, Nouvelle Th´eorie de l’Action Capillaire
+(Paris, Bachelier, 1831); J.C. Maxwell, Capillary action
+In:Encyclopaedia Britannica, 9th Edition (1876). The
+Scientiﬁc Papers of James Clerk Maxwell, Vol.2, p.541
+(New York, Dover, 1952); J.W. Gibbs, On the equilib-
+rium of heterogeneous substances, Trans. Conn. Acad.
+3, 108 (1876). The Scientiﬁc Papers of J. Willard Gibbs
+London, Longmans, Green, 1906 p.55.
+[4] Lord Rayleigh, Phil. Mag. 33, 209 (1892); J.D. van der
+Waals, J. Stat. Phys. 20, 179 (1979), translation from
+the original work of 1893; D.J. Korteweg, Arch. N´eerl.
+Sci. Exactes Nat. Ser. II 6, 1 (1901).
+[5] H.E. Stanley, Introduction to Phase Transitions and Crit-
+ical Phenomena (Oxford, Oxford Univ. Press, 1971); J.S.
+Rowlinson and B. Widom, Molecular Theory of Capillar-
+ity (Oxford, Clarendon, 1989).
+[6] L.D. Landau, JETP 7, 19 (1937); see also D. ter Haar
+(Editor): Collected Papers of L.D. Landau (Pergamon14
+Press, Oxford, 1965), p.193.
+[7] L.D. Landau and I.M. Khalatnikov, Dokl. Akad. Nauk
+SSSR 96, 469 (1954); see also D. ter Haar (Editor): Col-
+lected Papers of L.D. Landau (Pergamon Press, Oxford,
+1965), p.626.
+[8] V.L. Ginzburg and L.D. Landau, JETP 20, 1064 (1950);
+see also D. ter Haar (Editor): Collected Papers of L.D.
+Landau (Pergamon Press, Oxford, 1965), p.546.
+[9] B.I. Halperin, P.C. Hohenberg, and S.-K. Ma, Phys. Rev.
+B 10, 139 (1974).
+[10] S.E. Allen and J.W. Cahn, Acta Metall. 27, 1085 (1979).
+[11] G.J. Fix, in: Free Boundary Problems: Theory and Ap-
+plications, Eds. A. Fasano and M. Primicerio (Pitman,
+Boston, 1983) p. 580; J.B. Collins and H. Levine, Phys.
+Rev. B 31, 6119 (1985); J.S. Langer, in: Directions in
+Condensed Matter Physics, Eds. G. Grinstein and G.
+Mazenko (World Scientiﬁc, Philadelphia, 1986) p. 165.
+[12] L.Q. Chen, Annu. Rev. Mater. Res. 32, 113 (2002); W.J.
+Boettinger, J.A. Warren, C. Beckermann, and A. Karma,
+ibidem 32, 163 (2002).
+[13] G. Caginalp, Phys. Rev. A 39, 5887 (1989); G. Caginalp
+and E.A. Socolovsky, J. Comp. Phys. 95, 85 (1991).
+[14] O. Penrose and P.C. Fife, Physica D 43, 44 (1990).
+[15] Z. Bi and R.F. Sekerka, Physica A 261, 95 (1998).
+[16] D.M. Anderson, G.B. McFadden, and A.A. Wheeler,
+Physica D 135, 175 (2000).
+[17] H. Garcke, B. Nestler, and B. Stinner, SIAM J. Appl.
+Math. 64, 775 (2004).
+[18] L. Onsager, Phys. Rev. 37, 495 (1931); I. Progogine,
+Introduction to Thermodynamics of Irreversible Process
+(Interscience, New York, 1967).
+[19] S. De Groot and P. Mazur, Non-equilibrium Thermo-
+dynamics (North-Holland, Amsterdam, 1962); P. Glans-
+dorﬀand I. Prigogine, Thermodynamic Theory of Struc-
+ture, Stability and Fluctuations (Wiley, New York, 1971).
+[20] A.A. Wheeler, W.J. Boettinger, and G.B. McFadden,
+Phys. Rev. E 47, 1893 (1993); S.L. Wang and R.F. Sek-
+erka, Phys. Rev. E 53, 3760 (1996); W.J. Boettinger and
+J.A. Warren, J. Cryst. Growth 200, 583 (1999).
+[21] P. Galenko and S. Sobolev, Phys. Rev. E 55, 343 (1997);
+P. Galenko, Phys. Rev. B 65, 144103 (2002).
+[22] D. Jou, J. Casas-Vazquez, and G. Lebon, Rep. Prog.
+Phys. 51, 1005 (1988).
+[23] P. Galenko, Phys. Lett. A 287, 190 (2001).
+[24] D. Jou, J. Casas-Vazquez, and G. Lebon, Extended Ir-
+reversible Thermodynamics, 2nd Ed. (Springer, Berlin,
+1996).
+[25] D. Joseph and L. Preziosi, Rev. Mod. Phys. 61, 41
+(1989); ibidem 62, 375 (1990).
+[26] I. M¨uller and T. Ruggeri, Extended Thermodynamics
+(Springer, New York, 1993).
+[27] D. Jou, J. Casas-Vazquez, and G. Lebon, Rep. Prog.
+Phys. 62, 1035 (1999).
+[28] D. Jou, J. Casas-Vazquez, and G. Lebon, J. Non-Equilib.
+Thermodyn. 23, 277 (1998).
+[29] R. Luzzi, A.R. Vasconcellos, J. Casas-Vazquez, and D.
+Jou, Physica A 248, 111 (1998).
+[30] D. Jou, J. Casas-Vazquez, and M. Criado-Sancho, Ther-
+modynamics of Fluids Under Flow (Springer, Berlin,
+2000).
+[31] P. K. Galenko and D. A. Danilov, Phys. Lett. A 278, 129
+(2000).
+[32] P.K. Galenko and D.A. Danilov, J. Cryst Growth 216,
+512 (2000); Phys. Rev. E 69, 051608 (2004).
+[33] R. Peierls, Quantum Theory of Solids (Oxford University
+Press, London, 1955).
+[34] P. Galenko, Kristallograﬁya 38(6), 238 (1993) [Crystal-
+logr. Rep. 38, 836 (1993)]; Phys. Lett. 190, 292 (1994).
+[35] M. Barth, F. Joo, B. Wei, and D.M. Herlach, J. Non-
+Crystalline Solids 156-158, 398 (1993).
+[36] J.J. Hoyt, B. Sadigh, M. Asta, and S.M. Foiles, Acta
+Mater. 47, 3181 (1999).
+[37] A. Karma and W.-J. Rappel, Phys. Rev. E 57, 4323
+(1998).
+[38] J. Bragard, A. Karma, Y. H. Lee, and M. Plapp, Interface
+Science 10(2-3), 121 (2002).
+[39] J.C. Ramirez, C. Beckermann, A. Karma, and H.-J.
+Diepers, Phys. Rev. E 69, 051607 (2004).
+[40] P.K. Galenko and D.A. Danilov, Phys. Lett. A 235, 271
+(1997); J. Cryst. Growth 197, 992 (1999).
+[41] R. Willnecker, D.M. Herlach, and B. Feuerbacher, Appl.
+Phys. Lett. 56, 324 (1990).
+[42] R.E. Nettleton, Phys. Fluids 3, 216 (1960).
+[43] Evaluated from Eq. (2) for τT in which the thermal dif-
+fusivity a = 1.2 · 10−5 (m2/s) and the thermal speed
+VT = 103 (m/s) are accepted from Ref. [31].
+[44] Evaluated from Eq. (3) with the material parameters
+given in Sec. II B.
+[45] Evaluated from Eq. (2) for τD in which the diﬀusion con-
+stant D = 5.5·10−9 (m2/s) and the solute diﬀusion speed
+VD = 18.9 (m/s) are accepted from Ref. [40].
+[46] Evaluated from Eq. (2) for τD in which the diﬀusion con-
+stant D = 3 · 10−9 (m2/s) and the solute diﬀusion speed
+VD = 20 (m/s) are accepted from Ref. [40].
+[47] Evaluated from Eq. (4) with the material parameters
+given in Sec. II B.
+[48] C. Truesdell and W. Noll, The Non-Linear Field The-
+ories. In: Handbuch der Physik, III. Editor S. Flugge
+(Springer, Berlin, 1960).
+[49] P. Resibois and M. de Leener, Classical Kinetic Theory of
+Fluids (Wiley, New York, 1977); J. P. Hansen, and I.R.
+McDonald, Theory of Simple Liquids (Academic, New
+York, 1986).
+[50] D.N. Zubarev, V. Morozov, and G. R¨opke, Statisti-
+cal Mechanics of Nonequilibrium Processes (2 volumes),
+(Akademie Verlag, Berlin, 1977); R. Luzzi, A.R. Vascon-
+cellos, and J.G. Ramos, Foundation of a Nonequilibrium
+Ensemble Formalism (Kluwer, Dordrecht, 2002).
+[51] F. Vazquez and J.A. del Rio, Phys. Rev. E 47, 178 (1993).
+[52] R. Temam, Iniﬁnite-Dimensional Dynamical Systems in
+Mechanics and Physics, 2nd Edition (Springer, New
+York, 1997).
+[53] J.W. Cahn and J.E. Hillard, J. Chem. Phys. 28, 258
+(1958).
+[54] J.W. Cahn, Acta Metall. 8, 554 (1960).
+[55] J. J¨ackle and H.L. Frish, J. Polymer Sci. Phys. Ed. 23,
+675 (1985); K. Binder, H.L. Frish, and J. J¨ackle, J. Chem
+Phys. 85, 1505 (1986).
+[56] S. Bastea and J.L. Lebovitz, Phys. Rev. E 52, 3821
+(1995).
+[57] W.E. Olmstead, S.H. Davis, S. Rosenblat, and W.I.
+Kath, SIAM J. Appl. Math. 46, 171 (1986); B.R. Duﬀy,
+P. Freitas, and M. Grinfeld, SIAM J. Math. Anal. 33,
+1090 (2002).
+[58] J. Fort and V. Mendez, Rep. Prog. Phys. 65, 895 (2002).
+[59] J. Fort and V. Mendez, Phys. Rev. Lett. 82, 867 (1999).
+[60] H.G. Rotstein, S. Brandon, A. Novick-Cohen, and A.
+Nepomnyashchy, SIAM J. Appl. Math. 62, 264 (2001).15
+[61] A.F. Andreev and A.Y. Parshin, Sov. Phys. JETP 48,
+763 (1978).
+[62] A.Y. Keshishev, A.Y. Parshin, and A.V. Babkin, Sov.
+Phys. JETP 30, 56 (1990).
+[63] A. Novick-Cohen, In: Free Boundary Problems. Proceed-
+ings of the Research Institute for Mathematical Sciences.
+Kyoto University meeting No. 1210 on May 5th, 2001.
+(RIMS, Kyoto, Japan, 2000) p. 129; M. Grasselli and
+H.G. Rotstein, J. Mathematical Analysis and Applica-
+tions 261, 205 (2001); M. Grasselli and V. Pata, J. Evo-
+lution Equations 4, 27 (2004).
+[64] I.V. Tokatly and O. Pankratov, Phys. Rev. B 62, 2759
+(2000).
+[65] G. E. Morﬁll, S. A. Khrapak, A. V. Ivlev, B. A. Klumov,
+M. Rubin-Zuzic, and H. M. Thomas, Physica Scripta
+T107, 59 (2004).

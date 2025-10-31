@@ -1,0 +1,453 @@
+Long-range corrected hybrid meta-generalized-gradient approximations with dispersion corrections You-Sheng Lin, Chen-Wei Tsai, Guan-De Li, and Jeng-Da Chai    Citation: J. Chem.
+Phys. 136, 154109 (2012); doi: 10.1063/1.4704370  View online: http://dx.doi.org/10.1063/1.4704370  View Table of Contents: http://jcp.aip.org/resource/1/JCPSA6/v136/i15  Published by the AIP Publishing LLC.
+Additional information on J. Chem. Phys.
+Journal Homepage: http://jcp.aip.org/  Journal Information: http://jcp.aip.org/about/about_the_journal  Top downloads: http://jcp.aip.org/features/most_downloaded  Information for Authors: http://jcp.aip.org/authors  Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissionsTHE JOURNAL OF CHEMICAL PHYSICS 136, 154109 (2012) Long-range corrected hybrid meta-generalized-gradient approximations with dispersion corrections You-Sheng Lin,1 Chen-Wei Tsai,1 Guan-De Li,1 and Jeng-Da Chai1,2,a) 1Department of Physics, National Taiwan University, Taipei 10617, Taiwan 2Center for Theoretical Sciences and Center for Quantum Science and Engineering, National Taiwan University, Taipei 10617, Taiwan (Received 9 January 2012; accepted 2 April 2012; published online 20 April 2012) We propose a long-range corrected hybrid meta-generalized-gradient approximation (GGA) func- tional, based on a global hybrid meta-GGA functional, M05 [Y. Zhao, N. E. Schultz, and D. G. Truhlar, J. Chem.
+Phys. 123, 161103 (2005)], and empirical atom-atom dispersion corrections.
+Our resulting functional, ωM05-D, is shown to be accurate for a very wide range of applications, such as thermochemistry, kinetics, noncovalent interactions, equilibrium geometries, frontier orbital ener- gies, fundamental gaps, and excitation energies.
+In addition, we present three new databases, IP131 (131 ionization potentials), EA115 (115 electron afﬁnities), and FG115 (115 fundamental gaps), con- sisting of experimental molecular geometries and accurate reference values, which will be useful in the assessment of the accuracy of density functional approximations.
+© 2012 American Institute of Physics.
+[http://dx.doi.org/10.1063/1.4704370] I. INTRODUCTION Because of its satisfactory accuracy and modest cost in many applications, Kohn-Sham density functional the- ory (KS-DFT) (Refs. 1 and 2) has become one of the most popular electronic structure methods for large ground-state systems.3–6 Its extension for treating excited-state systems, time-dependent density functional theory (TDDFT),7,8 has also been widely used.
+The crucial ingredient of KS-DFT, the exact exchange- correlation (XC) energy functional Exc[ρ], however, remains unknown and needs to be approximated.
+Functionals based on the local density approximation (LDA), modeling the XC energy density locally with that of a uniform electron gas (UEG), have been quite successful for nearly free electron systems,3,4 though still insufﬁciently accurate for most quan- tum chemical applications.
+Functionals based on the gener- alized gradient approximations (GGAs), additionally incor- porating the gradient of local density into the LDA, have achieved reasonable accuracy in many applications.
+As an extension of the GGA (for rather restricted set of density variables), meta-GGA (MGGA) offers itself quite naturally.
+Functionals depending directly on the Laplacian of the den- sity have not been pursued intensively, because of the difﬁ- culty of numerical evaluation.
+MGGAs, which adopt the ki- netic energy density as a substitute for the Laplacian, have shown evidences of superiority over GGAs.9–11 However, the LDA, GGAs, and MGGAs (commonly de- noted as DFAs for density functional approximations) are based on the localized model XC holes, while the exact XC hole should be fully nonlocal.
+Currently, perhaps the most successful approaches to taking into account the nonlocality of XC hole are provided by hybrid DFT methods, incorpo- rating a fraction of the exact Hartree-Fock (HF) exchange a)Author to whom correspondence should be addressed.
+Electronic mail: jdchai@phys.ntu.edu.tw. into the DFAs.
+Hybrid density functionals have achieved remarkable accuracy and have expanded the usefulness of DFT for many applications.
+Noticeably, global hybrid MGGA functionals,12–20 where the XC energy density depends on the local density, the gradient of local density, a fraction of ex- act exchange, as well as the exact KS kinetic energy den- sity (a function of the occupied KS orbitals),21–24 have been shown to potentially perform better than global hybrid GGA functionals,15–20,25,26 due to the additional ingredient of ki- netic energy density in global hybrid MGGA functionals.
+In global hybrid functionals, a small fraction of the exact HF exchange is added to a semilocal density func- tional.
+In certain situations, especially in the asymptotic re- gions of molecular systems, a large fraction (even 100%) of HF exchange is needed.
+Aiming to remedy this, long- range corrected (LC) hybrid DFT schemes have been actively developed.27–37 LC hybrids retain the full HF exchange only for the long-range electron-electron interactions, and thereby resolve a signiﬁcant part of the self-interaction problems as- sociated with global hybrid functionals.
+On the other hand, the development of accurate short- range (SR) exchange density functionals ESR x [ρ], plays an important role in the progress of LC-DFT.
+In the ﬁrst LC scheme, an ansatz for the conversion of any Ex to ESR x was proposed by Iikura et al.,27 and has become widely used.
+However, their resulting LC hybrid GGA functionals do not outperform the corresponding global hybrid GGA functionals for thermochemistry.
+In 2006, Vydrov et al. pro- posed a different LC scheme,31 based on integrating a GGA model exchange hole.
+Their resulting LC-ωPBE functional has shown improved performance for thermochemistry and barrier heights, and is comparable to global hybrid GGA func- tionals such as B3LYP.38,39 However, further improvements following this direction require the development of more ac- curate model exchange holes, which is a quite challenging task.
+0021-9606/2012/136(15)/154109/12/$30.00 © 2012 American Institute of Physics 136, 154109-1 Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-2 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) Another approach to more accurate LC hybrid function- als was proposed by Chai and Head-Gordon.35 First, aug- menting the SR local spin density exchange energy density by a ﬂexible enhancement factor (of the Becke’s 1997 form40) and fully reoptimizing the LC functional on a diverse train- ing set, yields the ωB97 functional.
+Second, including an ad- justable fraction of SR HF exchange in the ωB97 functional with the similar reoptimization procedure, leads to the ωB97X functional.
+ωB97 and ωB97X have been shown to be accurate across a diverse set of test data, containing thermochemistry, kinetics, and noncovalent interactions.35 However, problems associated with the lack of nonlocal- ity of the DFA correlation hole, such as the lack of disper- sion interactions (the missing of van der Waals forces), are not resolved by the LC hybrid schemes.
+The correlation func- tionals in typical LC hybrids are treated semilocally, which cannot capture the long-range (LR) correlation effects.41,42 To remedy this, the DFT-D scheme was applied43 to extend the ωB97X functional with damped atom-atom dispersion cor- rections, denoted as ωB97X-D.36 Consequently, ωB97X-D can obtain dispersive effects with essentially zero additional computational cost relative to ωB97X.
+As an alternative ap- proach, ωB97X has also been combined with the double- hybrid methods,44–48 which mix both the HF exchange and nonlocal orbital correlation energy from the second-order per- turbation energy expression in wave function theory.
+The re- sulting ωB97X-2 functional37 has yielded very high accuracy for thermochemistry, kinetics, and noncovalent interactions, though its ﬁfth-order scaling with respect to system size may limit its applicability to larger systems.
+As the ωB97 series are LC hybrid GGAs, it seems a natu- ral step to develop LC hybrid MGGAs and to assess their per- formance.
+In this work, we propose a new LC hybrid MGGA- D functional, denoted as ωM05-D, which is shown to be ac- curate for a wide range of applications, when compared with the two closely related functionals: a global hybrid MGGA functional (M05-2X) (Ref. 19) and a LC hybrid GGA-D func- tional (ωB97X-D).36 The rest of this paper is organized as follows.
+In Sec. II, we brieﬂy describe the relevant schemes developed in the LC hybrid approach. In Sec.
+III, we propose a new SR exchange functional, which serves as suitable basis functionals for systematically generating accurate LC hybrid MGGA functionals.
+The performance of the ωM05-D func- tional is compared with other functionals in Sec.
+IV (on the training set), and in Sec.
+V (on some test sets).
+In Sec. VI, we give our conclusions. II.
+RATIONALES OF LC HYBRID SCHEMES For the LC hybrid schemes, one ﬁrst deﬁnes the long- range and short-range operators to partition the Coulomb op- erator.
+The most popular type of splitting operator used is the standard error function (erf), 1 r12 = erf(ωr12) r12 + erfc(ωr12) r12 , (1) where r12 ≡|r12| = |r1 −r2| (atomic units are used through- out this paper).
+On the right hand side of Eq. (1), the ﬁrst term is long-ranged, while the second term is short-ranged.
+The pa- rameter ω deﬁnes the range of these operators.
+In this work, we employ the erf/erfc partition, and use the following expression (as suggested in the recent LC hy- brid schemes35,36,49) for the LC hybrid functionals (cx is a fractional number to be determined): ELC-DFA xc = ELR-HF x + cxESR-HF x + (1 −cx)ESR-DFA x + EDFA c , (2) where ELR-HF x , the LR-HF exchange, is computed by the oc- cupied KS orbitals ψiσ(r) with the LR operator, ELR-HF x = −1 2  σ occ.
+ i,j  ψ∗ iσ(r1)ψ∗ jσ(r2) × erf(ωr12) r12 ψjσ(r1)ψiσ(r2)dr1dr2.
+(3) ESR-HF x , the SR-HF exchange, is computed similarly to the above but with the SR operator, ESR-HF x = −1 2  σ occ.
+ i,j  ψ∗ iσ(r1)ψ∗ jσ(r2) × erfc(ωr12) r12 ψjσ(r1)ψiσ(r2)dr1dr2.
+(4) ESR-DFA x is the SR exchange approximated by DFAs, and EDFA c is the correlation functional the same as that of the full Coulomb interaction.
+In view of the ELC-DFA xc in Eq. (2), as ELR-HF x and ESR-HF x are well deﬁned, and accurate approximations for EDFA c are widely available, the accuracy of ESR-DFA x is thus closely re- lated to the accuracy of a LC hybrid functional.35,36 The ana- lytical form of the SR-LDA (the simplest SR-DFA) exchange functional ESR-LDA x can be obtained by the integration of the square of the LDA density matrix with the SR operator,50 ESR-LDA x =  σ  eSR-LDA xσ (ρσ)dr.
+(5) Here, eSR-LDA xσ (ρσ) is the SR-LDA exchange energy density for σ-spin, eSR-LDA xσ (ρσ) = eLDA xσ F(aσ), (6) where eLDA xσ (ρσ) = −3 2  3 4π 1/3 ρ4/3 σ (r) (7) is the LDA exchange energy density for σ-spin, kFσ ≡(6π2ρσ(r))1/3 is the local Fermi wave vector, and aσ ≡ω/(2kFσ) is a dimensionless parameter controlling the value of the attenuation function F(aσ), F(aσ) = 1 −8 3aσ √πerf  1 2aσ  −3aσ + 4a3 σ +  2aσ −4a3 σ  exp  −1 4a2σ  	 .
+(8) To develop a possible SR-DFA exchange functional ESR-DFA x based on the knowledge of a DFA exchange func- tional EDFA x , there are three schemes as follows.
+Consider the Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-3 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) general expression of DFA exchange functional, which is EDFA x =  σ  eLDA xσ (ρσ)F DFA xσ dr, (9) where F DFA xσ is the DFA enhancement factor for σ-spin.
+De- pending on the type of DFA, F DFA xσ = 1 for a LDA, F DFA xσ = F GGA xσ (ρσ, ∇ρσ) for a GGA, F DFA xσ = F MGGA xσ (ρσ, ∇ρσ, τσ) for a meta-GGA, where ρσ(r) is the spin density, ∇ρσ(r) is the spin density gradient, and τσ = 1 2 occ.
+ i |∇ψiσ|2 (10) is the spin kinetic energy density.
+The ﬁrst scheme was proposed by Iikura, Tsuneda, Yanai, and Hirao (ITYH),27,28,33 where ESR-DFA x can be obtained by substituting a modiﬁed Fermi wave vector, kσ = kFσ  F DFA xσ (11) into SR exchange energy density of Eq. (6), which a priori produces ESR-DFA x from any EDFA x , and reduces nicely to ESR-LDA x from a ELDA x .
+Although the ITYH scheme pos- sesses an admirable simplicity, some of its deﬁciencies (which potentially limit its accuracy) have been found.51 The second scheme was proposed by Vydrov, Heyd, Krukau, and Scuseria (VHKS),31,32 where for a given spher- ically averaged exchange hole hDFA x (r, r12), ESR-DFA x is evalu- ated as ESR-DFA x = 2π  ρ(r)dr  ∞ 0 erfc(ωr12)hDFA x (r, r12)r12dr12.
+(12) The pivot of this scheme is the engineering of the DFA exchange hole.
+The GGA model exchange hole of Ernzer- hof and Perdew52 (EP) provides a framework for modeling any GGA exchange hole.
+It has made considerable appear- ances in real applications after parametrization to reproduce the Perdew, Burke, and Ernzerhof (PBE) GGA.53 In 2008, Henderson, Janesko, and Scuseria51 (HJS) proposed another general model for the spherically averaged exchange hole cor- responding to a GGA exchange functional, based on the work of EP.
+The HJS model improves upon the EP model by pre- cisely reproducing the energy of the parent GGA, and by enabling fully analytic evaluation of range-separated hybrid density functionals.
+For meta-GGA, the TPSS exchange and correlation hole models have been “reverse-engineered”.54 However, the resulting LC-TPSS functional (a LC hybrid MGGA) has no satisfactory long-range correction effect.31 The third scheme was proposed by Chai and Head- Gordon (CHG),35,36 where ESR-DFA x is evaluated as ESR-DFA x =  σ  eSR-LDA xσ (ρσ)F DFA xσ dr.
+(13) This simple scheme is expected to work well for a small ω.
+For highly parametrized EDFA x , such as the B97,40 M05,18 and M08 (Ref. 26) functionals, the CHG scheme is particularly attractive due to its simplicity.
+However, how large is not too large for the ω suitable for the CHG scheme? In Secs.
+III– V, we will compare the performance of two new LC hybrid MGGA-D functionals, where one is developed by the CHG scheme, while the other is developed by a new scheme pro- vided in this work, and our results help to answer the above question. III.
+LC HYBRID MGGA-D FUNCTIONALS In this section, we introduce our new LC hybrid MGGA- D functionals.
+Note that LC-TPSS has been developed by utilizing the TPSS exchange hole (based on the VHKS scheme),31 but it is found that LC-TPSS does not beneﬁt much by admixture of HF exchange.
+The M11 functional49 has been developed based on the extension of a global hybrid MGGA functional, M08,26 to LC-DFT, following the CHG scheme.35 Parallel to the strategy of the ωB97 series,35,36 we choose to modify the M05 functional.
+The M05 functional is a global hybrid MGGA functional with a powerful form,18,19 and our work is based on modifying this functional.
+Its exchange part consists of the PBE exchange functional and a reason- able kinetic-energy-density enhancement factor.
+The PBE ex- change is a theoretically sound starting point because it satis- ﬁes the correct UEG limit and also has reasonable behavior at large values of the reduced spin density gradient sσ.
+To satisfy the UEG limit of SR exchange, we replace the PBE exchange energy density ePBE xσ (ρσ, ∇ρσ) with the SR- PBE exchange energy density eSR-PBE xσ (ρσ, ∇ρσ) generated by the HJS model exchange hole (based on the VHKS scheme), whose virtues are indicated in Sec. II.
+To achieve a ﬂexi- ble functional form, we retain the kinetic-energy-density en- hancement factor (similar to the CHG scheme).
+We denote this resulting functional as SR-M05 (short-range M05) ex- change, as it reduces to the M05 exchange at ω = 0.
+ESR-M05 x =  σ  eSR-PBE xσ (ρσ, ∇ρσ)f (wσ)dr, (14) where f (wσ) is the kinetic-energy-density enhancement factor, f (wσ) = m  i=0 aiwi σ.
+(15) wσ is a function of tσ, and tσ is a function of the kinetic energy density τ σ of electrons with spin σ, as designed by Becke,23 wσ = (tσ −1)/(tσ + 1), (16) where tσ = τ LDA σ /τσ, (17) τ LDA σ ≡3 10(6π2)2/3ρ5/3 σ .
+(18) In general, the enhancement factor should be ω-dependent.
+But from the works of LC-TPSS (Ref. 31) and M11,49 the optimal ω for a LC hybrid MGGA is expected to be small as well.
+For a sufﬁciently small ω value, our proposed functional form, inspired by the VHKS and CHG schemes, should be a good approximation.
+We use the same form for the correlation functional as the M05 correlation functional, which can be decomposed into Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-4 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) same-spin EM05 cσσ and opposite-spin EM05 cαβ components, EM05 c =  σ EM05 cσσ + EM05 cαβ .
+(19) For the opposite-spin terms, EM05 cαβ =  eLDA cαβ gαβ  s2 av  dr, (20) gαβ  s2 av  = n  i=0 cαβ,iui αβ, (21) uαβ = γαβs2 av 1 + γαβs2av , (22) γαβ = 0.0062, (23) s2 av = 1 2  s2 α + s2 β  , (24) and for the same-spin terms, EM05 cσσ =  eLDA cσσ gσσ  s2 σ   1 −τ W σ τσ  dr, (25) gσσ  s2 σ  = n  i=0 cσσ,iui σσ, (26) uσσ = γσσs2 σ 1 + γσσs2σ , (27) γσσ = 0.06.
+(28) 1 −τ W σ /τσ is a self-interaction correction factor proposed by Becke,22 in which τ W σ is the von Weizsa¨cker kinetic energy density55 given by τ W σ = |∇ρσ|2 8ρσ .
+(29) In a one-electron case, τσ = τ W σ , so Eq. (25) vanishes in any one-electron system.
+The correlation energy densities eLDA cαβ and eLDA cσσ are derived from the Perdew-Wang parametrization of the LDA correlation energy,56 using the approach of Stoll et al.,57 eLDA cαβ (ρα, ρβ) = eLDA c (ρα, ρβ) −eLDA c (ρα, 0) −eLDA c (0, ρβ), (30) eLDA cσσ = eLDA c (ρσ, 0).
+(31) Based on the above functional expansions, we propose a new LC hybrid MGGA functional, ωM05-D. It contains a fraction of the SR-HF exchange, EωM05-D xc = ELR-HF x + cxESR-HF x + ESR-M05 x + EM05 c .
+(32) We enforce the exact UEG limit for the ωM05-D func- tional by imposing the following constraints: cσσ,0 = 1, (33) cαβ,0 = 1, (34) and a0 + cx = 1.
+(35) Following the general form of the DFT-D scheme,43 our total energy EDFT-D = EKS-DFT + Edisp (36) is computed as the sum of a KS-DFT part and an empirical atomic-pairwise dispersion correction.
+We choose to use the same form of unscaled dispersion correction as implemented in ωB97X-D,36 Edisp = − Nat−1  i=1 Nat  j=i+1 Cij 6 R6 ij fdamp(Rij), (37) where Nat is the number of atoms in the system, Cij 6 is the dispersion coefﬁcient for atom pair ij, and Rij is an interatomic distance.
+The damping function, fdamp(Rij) = 1 1 + a(Rij/Rr)−12 (38) enforces the conditions of zero dispersion correction at short interatomic separations and correct asymptotic pairwise vdW potentials.
+Here, Rr is the sum of vdW radii of the atomic pair ij, and the only non-linear parameter, a, controls the strength of dispersion corrections.
+To achieve an optimized functional for well-balanced performance across typical applications, we use the same diverse training set described in Ref. 35, which contains 412 accurate experimental and accurate theoretical results, including the 18 atomic energies from the H atom to the Ar atom,58 the atomization energies of the G3/99 set (223 molecules),59–61 the ionization potentials (IPs) of the G2-1 set62 (40 molecules, excluding SH2(2A1) and N2(2) cations due to the known convergence problems for semilocal density functionals60), the electron afﬁnities (EAs) of the G2-1 set (25 molecules), the proton afﬁnities (PAs) of the G2-1 set (8 molecules), the 76 barrier heights of the NHTBH38/04 and HTBH38/04 sets,15,63 and the 22 noncovalent interactions of the S22 set.64 The S22 data are weighted ten times more than the others.
+All the parameters in ωM05-D are determined self-consistently by a least-square ﬁtting procedure described in Ref. 35.
+For the non-linear parameter optimization, we focus on a range of possible ω values (0.0, 0.1, 0.2, 0.3, and 0.4 bohr−1), and optimize the corresponding a values in the steps described in Ref. 36.
+M05 and M05-2X (Refs. 18 and 19) both used m= 11 in Eq. (15) and n = 4 in Eqs. (21) and (26).
+However, during the optimization procedure of ωM05-D, we found that the statis- tical errors are close for m= 10 and m= 11, while the one with m= 11 has parameters signiﬁcantly larger.
+A recent study by Wheeler and Houk has shown that large magnitude of the pa- rameters in Eq. (15) may result in large grid errors.65 More- over, the use of large parameters increases the possibility of convergence difﬁculty as well as the over-ﬁtting effects.
+Thus, we choose m = 10 instead of 11 in Eq. (15).
+The optimized Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-5 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) TABLE I. Optimized parameters for ωM05-D. Here, the non-linear param- eter a is deﬁned in Eq. (38), and others are deﬁned in Eq. (32).
+a 30.0 ω 0.2 bohr−1 cx 0.369592 i ai cαβ, i cσσ, i 0 0.630408 1.00000 1.00000 1 −0.219121 −0.95491 −5.26863 2 −0.14411 12.138 17.9935 3 1.27732 −35.1041 −17.6408 4 −1.59959 19.5804 0.625687 5 −5.94702 6 13.5822 7 10.5048 8 −28.7168 9 −6.89761 10 19.0574 parameters of the ωM05-D functional are given in Table I, in which the ω value is same as that of ωB97X-D, while the frac- tion of SR-HF exchange, cx, is larger than that of ωB97X-D (≈0.22).
+This helps to reduce the self-interaction error (SIE) of the functional, as can be seen in Sec.
+V. We also tried a simple model (based on the CHG scheme), where the SR-PBE exchange energy density eSR-PBE xσ (ρσ, ∇ρσ) used in Eq. (14) is substituted with eSR-LDA xσ (ρσ)F PBE x (sσ), that is, the SR-LDA exchange energy density in Eq. (6) multiplied by the PBE enhancement factor.
+We tried this because the mathematical form of the latter is signiﬁcantly simpler than that of the former, and is the model on which M11 based.
+The parametrization is the same for this simple model, which we denoted by ωM05s-D. Compared to ωM05-D, the optimal ω value is also 0.2 bohr−1, but the cor- responding optimal a value is found to be 100 and the linear parameters are also larger. IV.
+RESULTS FOR THE TRAINING SET All calculations are performed with a development ver- sion of Q-CHEM 3.2.66 Spin-restricted theory is used for singlet states and spin-unrestricted theory for others, unless noted otherwise.
+For the binding energies of the weakly bound systems, the counterpoise correction67 is employed to reduce basis set superposition error (BSSE).
+Results for the training set are computed using the 6- 311++G(3df,3pd) basis set with the ﬁne grid, EML(75,302), consisting of 75 Euler-Maclaurin radial grid points68 and 302 Lebedev angular grid points.69 The error for each en- try is deﬁned as error = theoretical value −reference value.
+The notation used for characterizing statistical er- rors is as follows: mean signed errors (MSEs), mean ab- solute errors (MAEs), root-mean-square (rms) errors, maxi- mum negative errors (Max(−)), and maximum positive errors (Max(+)).
+First, we show the results of the ﬁrst iteration of ﬁt- ting procedure, comparing the new LC scheme with the CHG scheme (the simple model) for ω = 0.1, 0.2, 0.3, and 0.4 bohr−1.
+We optimize ωM05 and ωM05s using the corresponding ωPBE and ωPBEs orbitals, and denote these optimized functionals as ωM05* and ωM05s*.
+The statistical errors are believed to be quite close to those obtained self-consistently.
+As can be seen in Table II, the difference between the performance of ωM05* and ωM05s* is notice- able for ω = 0.2 bohr−1, and becomes larger for a larger ω value.
+Therefore, a LC hybrid MGGA functional with a larger ω value (such as M11 with ω = 0.25 bohr−1) may perform better with our new scheme than with the CHG scheme.
+In subsequent iterations, we include the dispersion cor- rections, increase the training weight of S22 set, and found the functionals optimized with ω = 0.2 bohr−1.
+To view the effect of the long-range correction and the dispersion corrections, we also consider the functional form M05 and M05-D. The latter is the limiting case where ω = 0 for ωM05-D, of which TABLE II.
+Comparisons between the ωM05* and ωM05s* functionals (deﬁned in the text) for different ω values.
+Statistical errors are in kcal/mol.
+ω (bohr−1) 0.1 0.1 0.2 0.2 0.3 0.3 0.4 0.4 System Error ωM05* ωM05s* ωM05* ωM05s* ωM05* ωM05s* ωM05* ωM05s* Atoms MSE −0.15 0.24 0.05 0.63 0.23 0.97 0.46 1.33 (18) MAE 2.02 2.09 1.81 2.35 2.00 3.36 3.22 5.05 G3/99 MSE 0.06 0.09 0.05 0.03 −0.04 −0.12 −0.18 −0.27 (223) MAE 1.77 1.79 1.66 1.76 1.78 2.02 2.10 2.35 IP MSE −0.58 −1.48 −0.84 −1.36 −0.38 −0.32 0.30 0.73 (40) MAE 2.75 3.06 2.81 3.08 2.68 2.81 2.64 2.79 EA MSE −1.50 −1.70 −1.29 −1.15 −0.94 −0.70 −0.64 −0.39 (25) MAE 2.50 2.56 2.33 2.22 2.07 1.97 1.98 1.91 PA MSE −1.65 −2.68 −1.49 −2.71 −1.07 −2.11 −0.78 −1.54 (8) MAE 1.87 2.68 1.83 2.82 1.79 2.53 1.86 2.43 NHTBH MSE −1.26 −1.09 −0.68 −0.39 0.08 0.40 0.85 1.17 (38) MAE 1.98 1.82 1.51 1.40 1.46 1.67 1.71 1.95 HTBH MSE −1.96 −1.95 −1.95 −1.68 −1.61 −1.24 −1.21 −0.84 (38) MAE 2.19 2.08 2.12 1.84 1.95 1.56 1.86 1.47 S22 MSE 2.65 1.91 1.80 1.06 1.01 0.56 0.45 0.26 (22) MAE 2.65 1.91 1.80 1.06 1.02 0.67 0.71 0.63 All MSE −0.31 −0.42 −0.30 −0.35 −0.21 −0.18 −0.11 −0.02 (412) MAE 2.03 2.03 1.86 1.90 1.84 2.01 2.06 2.28 Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-6 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) TABLE III.
+Statistical errors (in kcal/mol) of the training set.
+The M05-D* and M05* functionals are deﬁned in the text.
+M05-2X was not particularly parametrized using this training set.
+System Error ωM05-D ωM05s-D M05-D* M05* M05-2X ωB97X-D Atoms MSE 0.37 0.83 0.18 −0.48 −3.01 −0.05 (18) MAE 2.02 2.28 2.61 1.98 5.10 2.57 G3/99 MSE −0.03 −0.03 −0.10 −0.05 2.01 −0.24 (223) MAE 1.62 1.73 1.78 1.78 3.65 1.93 IP MSE −0.80 −1.33 0.06 0.27 1.10 0.19 (40) MAE 2.86 3.04 2.84 2.51 3.35 2.74 EA MSE −1.02 −0.98 −0.54 −0.84 −0.23 0.07 (25) MAE 2.12 2.13 2.13 2.35 2.48 1.91 PA MSE −1.48 −2.66 −0.94 −1.76 −1.26 1.42 (8) MAE 2.10 3.07 1.31 2.17 1.51 1.50 NHTBH MSE −0.94 −0.59 −1.38 −1.32 0.13 −0.45 (38) MAE 1.57 1.53 2.04 2.08 1.75 1.51 HTBH MSE −2.82 −2.33 −2.95 −1.77 −0.65 −2.57 (38) MAE 2.83 2.37 3.08 2.14 1.51 2.70 S22 MSE −0.01 −0.01 0.04 3.46 0.73 −0.08 (22) MAE 0.27 0.21 0.23 3.46 0.87 0.21 All MSE −0.51 −0.49 −0.49 −0.21 1.02 −0.36 (412) MAE 1.83 1.89 1.99 2.05 3.05 1.96 the corresponding optimal a value is found to be 2.
+We reop- timize M05 and M05-D functionals on the same training set using the M05-2X orbitals, truncate their functional expan- sions at the same orders m = 10 and n = 4, and denote these two reoptimized functionals as M05* and M05-D*.
+Just like the ωB97X functional without dispersion correction, all data in the training set are equally weighted in the least-squares ﬁtting for M05*.
+The overall performance of our new ωM05-D is com- pared with the trial simple model ωM05s-D, M05-D*, M05*, and M05-2X,19 as well as existing ωB97X-D (a LC hybrid GGA-D).36 Note that M05 (Ref. 18) and M05-2X share the same functional form, but the former is distracted to deal with transition-metal compounds, so the latter should be our con- cern.
+In the ωB97 series, ωB97X-D has the closest relation- ship to ωM05-D, while ωB97 and ωB97X, developed with- out dispersion corrections, are expected to perform poorly for noncovalent interactions.
+In Table III, the ﬁrst comparison (ωM05-D vs. ωM05s- D) partially determines the choice of our proposed func- tional.
+Although ωM05-D performs worse than ωM05s-D for HTBH, the overall performance of ωM05-D in the training set is the best.
+A second comparison between ωM05-D and M05-D* in- dicates that the exact long-range exchange indeed leads to an overall improvement to MGGA, although not as large as that to GGA.31,35,36 The third comparison is between M05-D* and M05*.
+The cooperation of the training weight and the empir- ical dispersion corrections leads to a signiﬁcant improvement in the results for noncovalent interactions (the S22 data) and a modest overall change.
+Recently, there have been the up- dated reference values for the S22 set.70 We have also ex- amined the performance of ωM05-D against the updated S22 reference values.
+As shown in the supplementary material,71 the overall performance of the functional against the up- dated reference values is similar to that against the original ones.
+V. RESULTS FOR THE TEST SETS To test the performance of ωM05-D outside its training set, we also evaluate its performance on various test sets in- volving 48 atomization energies in the G3/05 test set,72 30 chemical reaction energies taken from the NHTBH38/04 and HTBH38/04 databases,15,63 29 noncovalent interactions,63,64 166 optimized geometry properties of covalent systems,73 12 intermolecular bond lengths,64 4 dissociation curves of sym- metric radical cations as well as three new databases, consist- ing of 131 vertical IPs, 115 vertical EAs, and 115 fundamen- tal gaps.
+For excitation energies, we perform TDDFT calcu- lations for 19 valence excitation energies, 23 Rydberg exci- tation energies, and one long-range charge-transfer excitation curve of two well-separated molecules.
+Each EA can be eval- uated by two different ways, and each fundamental gap can be evaluated by three different ways, so there are a total of 1038 pieces of data in the test sets, which are larger and more diverse than the training set.
+Unspeciﬁed detailed information of the test sets as well as the basis sets, and numerical grids used is given in Ref.
+35. A. Atomization energies, reaction energies, and noncovalent interactions Table IV summarized the general energetic results in the same way as in Ref.
+36, for convenience of further compar- isons.
+Since the 30 chemical reaction energies are taken from the NHTBH38/04 and HTBH38/04 databases calculated in Table III, the EML(75,302) grid is used.
+In Table IV, the com- parison between ωM05-D and ωM05s-D shows noticeable difference in atomization energies, and makes great inﬂuence on the choice of our proposed functional.
+B. Equilibrium geometries Satisfactory predictions of molecular geometries of co- valent and non-covalent systems by density functionals are Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-7 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) TABLE IV.
+Statistical errors (in kcal/mol) of the test sets.
+System Error ωM05-D ωM05s-D M05-2X ωB97X-D G3/05 MSE −0.85 −1.67 0.00 0.25 (48) MAE 3.21 3.79 5.24 3.02 RE MSE −0.58 −0.65 −0.86 −0.24 (30) MAE 1.49 1.32 1.65 1.63 Non-covalent MSE −0.11 −0.05 0.50 −0.15 (29) MAE 0.31 0.30 0.61 0.43 All MSE −0.58 −0.95 −0.11 0.01 (107) MAE 1.94 2.15 2.98 1.93 necessary for practical use.
+For covalent systems, we perform geometry optimizations for each functional on the equilib- rium experimental test set (EXTS),73 while for non-covalent systems, we compute the intermolecular bond lengths of 12 weakly bound complexes taken from the S22 set,64 using 6- 311++G(3df,3pd) basis set with the EML(75,302) grid.
+As shown in Table V, performance of all the hybrid functionals in predicting optimized geometries of EXTS is similar, while the performance of simple model (ωM05s-D) is somewhat worse for the intermolecular bond lengths.
+We decide our proposed model to be ωM05-D in this subsection.
+For brevity, the per- formance of ωM05s-D will not be shown for subsequent cal- culations.
+C. Dissociation of symmetric radical cations Common semilocal functionals are generally accurate for systems near equilibrium.
+However, due to considerable self- interaction errors in semilocal functionals, spurious fractional charge dissociation occurs.32,74,75 This situation becomes am- pliﬁed for symmetric charged radicals X+ 2 , such as H+ 2 , He+ 2 , Ne+ 2 , and Ar+ 2 .
+Gr¨afenstein and co-workers have obtained qualitatively correct result for these systems76,77 using self- interaction-corrected DFT proposed by Perdew and Zunger,78 and conﬁrmed that the errors of standard DFT methods should be dominated by the SIEs.
+We perform unrestricted calculations with the aug-cc- pVQZ basis set and a high-quality EML(250,590) grid.
+The DFT results are compared with results from HF theory, and TABLE V. Statistical errors (in Å) of EXTS (Ref. 73) and bond lengths of 12 weakly bound complexes from the S22 set (Ref. 64).
+The results of ωB97X-D are taken from Ref. 36.
+System Error ωM05-D ωM05s-D M05-2X ωB97X-D EXTS (166) MSE 0.003 0.001 −0.004 −0.002 MAE 0.010 0.009 0.009 0.009 rms 0.019 0.014 0.014 0.013 Max(−) −0.081 −0.083 −0.082 −0.078 Max(+) 0.177 0.067 0.054 0.055 Weak (12) MSE −0.041 −0.069 −0.021 −0.044 MAE 0.061 0.078 0.062 0.064 rms 0.083 0.102 0.080 0.085 Max(−) −0.189 −0.195 −0.165 −0.198 Max(+) 0.043 0.029 0.140 0.056 FIG.
+1. Dissociation curve of H+ 2 .
+Zero level is set to E(H) + E(H+) for each method.
+the very accurate CCSD(T) theory (coupled-cluster theory with iterative singles and doubles and perturbative treatment of triple substitutions).79,80 The HF method is exact in Fig. 1, and gives qualitatively correct results from Figs. 2–4.
+Al- though ωM05-D has the same amount of LR-HF exchange as ωB97X-D, the larger fraction of SR-HF exchange included in ωM05-D helps to reduce its remaining SIE.
+Therefore, the er- ror of ωM05-D is smaller than that of ωB97X-D, especially for larger cations (e.g., Ne+ 2 and Ar+ 2 ).
+The global hybrid functional M05-2X exhibits the undesirable X+ 2 dissociation curves, displaying a spurious energy barrier at intermediate bond length R. D. Frontier orbital energies Let IP(N) be the ionization potential and EA(N) be the electron afﬁnity of the N-electron system, which are deﬁned as IP(N) = EN−1 −EN, (39) FIG.
+2. Dissociation curve of He+ 2 .
+Zero level is set to E(He) + E(He+) for each method.
+Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-8 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) FIG.
+3. Dissociation curve of Ne+ 2 .
+Zero level is set to E(Ne) + E(Ne+) for each method.
+EA(N) = EN −EN+1, (40) respectively, with EN being the total energy of N-electron sys- tem.
+For the exact DFT, the vertical ionization potential of a neutral molecule is identical to the minus HOMO (highest oc- cupied molecular orbital) energy of the neutral molecule,3,81 IP(N) = −ϵN(N), (41) and the vertical electron afﬁnity of a neutral molecule is iden- tical to the minus HOMO energy of the anion (since EA(N) = IP(N + 1) by deﬁnition), EA(N) = −ϵN+1(N + 1), (42) where ϵM(N) is the Mth orbital energy of N-electron system.
+The vertical electron afﬁnity of a neutral molecule may also be approximated by the minus LUMO (lowest unoccupied molecular orbital) energy of the neutral molecule, but it is proved that there exists a difference between the vertical EA FIG.
+4. Dissociation curve of Ar+ 2 .
+Zero level is set to E(Ar) + E(Ar+) for each method. TABLE VI.
+Statistical errors (in eV) for the IP131 database.
+Error is de- ﬁned as −ϵN(N) −IPvertical.
+Experimental geometries and reference values are used for all molecules.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE −1.48 −2.06 −1.64 (18) MAE 1.48 2.06 1.64 rms 1.74 2.16 1.98 Molecules MSE −0.68 −1.23 −0.92 (113) MAE 0.68 1.23 0.92 rms 0.76 1.27 1.00 Total MSE −0.79 −1.34 −1.02 (131) MAE 0.79 1.34 1.02 rms 0.96 1.43 1.18 and the minus LUMO energy,  xc = ϵN+1(N + 1) −ϵN+1(N), (43) where the difference  xc arises from the discontinuity of exchange-correlation potentials.82–84 Recent study shows that  xc is close to zero for LC hybrid functionals,85 so the minus LUMO energy calculated by a LC hybrid functional should be close to the vertical EA.
+To evaluate the performance of the functionals on the HOMO energy of the neutral molecule, we collect a new database, IP131, which consists of experimental ver- tical IPs of 18 atoms and 113 molecules in the experi- mental geometries.
+The geometries and most of the refer- ence values are collected from the NIST database.86 Other publications87 are adopted for the experimental vertical IPs of some molecules.
+The DFT calculations are performed with 6-311++G(3df,3pd) basis and EML(75,302) grid.
+As can be seen in Table VI, ωM05-D gives the best results.
+The global hybrid M05-2X gives the worst results here due to its incor- rect long-range XC-potential behavior.
+To evaluate the performance of the functionals on the ver- tical electron afﬁnity, we construct another database called EA115, which consists of 18 atoms and 97 molecules.
+For the molecular geometries, it is a subset of IP131.
+Because experimental vertical EAs are not as widely available as ex- perimental vertical IPs, the reference values of vertical EAs are obtained via the accurate CCSD(T) calculations (using Eq. (40)).
+The CCSD(T) correlation energies in the basis- set limit are extrapolated from calculations using the aug-cc- pVTZ and aug-cc-pVQZ basis sets:88 E∞ XY = Ecorr X X3 −Ecorr Y Y 3 X3 −Y 3 , (44) where X = 3 and Y= 4 for the aug-cc-pVTZ and aug-cc- pVQZ basis, respectively.
+The electron afﬁnities are evalu- ated in two different ways, as shown in Table VII for the mi- nus HOMO energy of the anion, and Table VIII for the minus LUMO energy of the neutral molecule.
+Clearly, the LC hybrid functionals outperform the global hybrid M05-2X. The refer- ence values and molecular geometries of IP131 and EA115 are given in the supplementary material71 along with detailed DFT results.
+Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-9 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) TABLE VII.
+Statistical errors (in eV) for the EA115 database.
+Error is de- ﬁned as −ϵN + 1(N + 1) −EAvertical.
+Experimental geometries and CCSD(T) reference values are used for all molecules.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE −0.46 −1.21 −0.53 (18) MAE 0.49 1.21 0.57 rms 0.73 1.35 0.84 Moelcules MSE −0.54 −1.18 −0.54 (97) MAE 0.55 1.18 0.56 rms 0.80 1.32 0.82 Total MSE −0.53 −1.18 −0.54 (115) MAE 0.55 1.18 0.56 rms 0.79 1.32 0.82 E. Fundamental gaps The fundamental gap Eg of a molecule with N electrons is deﬁned as Eg = IP(N) −EA(N). (45) Following Eqs.
+(39) and (40) for the deﬁnitions of IP and EA, three self-consistent ﬁeld (SCF) calculations (for the neutral molecule, cation and anion) are required to obtain the funda- mental gap of a molecule. Using Eqs.
+(41) and (42), the fun- damental gap of a molecule can also be obtained by two SCF calculations (for the neutral molecule and anion).
+Following Janak’s theorem,89 the fundamental gap can be approximated by the HOMO-LUMO gap84  KS = ϵN+1(N) −ϵN(N), (46) and we can obtain the fundamental gap of a system using only one calculation. But from Eqs.
+(41)–(43), (45), and (46), we know that there exists a difference between the fundamental gap and HOMO-LUMO gap, Eg =  KS +  xc.
+(47) As previously mentioned,  xc has been shown to be close to zero for LC hybrid functionals,85 so the HOMO-LUMO gap calculated by a LC hybrid functional should be close to the fundamental gap.
+To evaluate the performance of the functionals on fun- damental gap, we construct another database called FG115, TABLE VIII.
+Statistical errors (in eV) of the minus LUMO energy of the neutral molecule for the EA115 database.
+Experimental geometries and CCSD(T) reference values are used for all molecules.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE −0.27 0.57 −0.02 (18) MAE 0.73 1.02 0.74 rms 0.92 1.12 0.89 Moelcules MSE −0.24 0.60 0.05 (97) MAE 0.60 0.75 0.52 rms 0.69 0.94 0.60 Total MSE −0.24 0.60 0.04 (115) MAE 0.62 0.79 0.55 rms 0.73 0.97 0.65 TABLE IX.
+Statistic errors (in eV) of HOMO-LUMO gaps for the FG115 database.
+The energy gap of each system is evaluated by only one SCF calculation.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE −1.14 −2.56 −1.55 (18) MAE 1.43 2.56 1.79 rms 1.62 2.79 2.05 Molecules MSE −0.62 −2.00 −1.15 (97) MAE 0.73 2.00 1.15 rms 0.93 2.13 1.34 Total MSE −0.70 −2.08 −1.21 (115) MAE 0.84 2.08 1.25 rms 1.07 2.24 1.48 which shares the same molecular geometries with the EA115 database.
+For consistency, the reference values of fundamen- tal gaps are also obtained via the CCSD(T) calculations de- scribed in Sec. V D (using Eqs.
+(39), (40), and (45)).
+To examine the performance of density functionals, we evaluate the fundamental gaps using three different estimates, with 6-311++G(3df,3pd) basis and EML(75,302) grid.
+The results are shown from Tables IX–XI, in order of increasing the number of SCF calculations required for each molecule.
+In the estimate requiring three calculations, the results are sim- ilar for the three functionals.
+ωB97X-D gives worse results than other functionals in the estimate requiring two calcula- tions.
+In the simplest estimate, the HOMO-LUMO gap, which requires only one SCF calculation for each system, ωM05-D signiﬁcantly outperforms the other two functionals.
+The refer- ence values of FG115 and detailed HOMO-LUMO gap results by DFT methods are given in the supplementary material.71 F. Excitation energies To assess the performance of density functionals on excitation energies, we perform TDDFT calculations on ﬁve small molecules,90 which include nitrogen gas (N2), carbon monoxide (CO), water (H2O), ethylene (C2H4), and formaldehyde (CH2O), with 6-311(2+,2+)G** basis and EML(99,590) grid.
+The molecular geometries, experimental values of excitation energy are taken from Ref. 90.
+The detail TABLE X. Statistic errors (in eV) of fundamental gaps for the FG115 database, each evaluated by the difference of HOMO energies between the neutral molecule and anion.
+The energy gap of each system is evaluated by two SCF calculations.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE −0.95 −0.83 −1.04 (18) MAE 0.98 0.87 1.08 rms 1.17 1.00 1.30 Molecules MSE −0.31 −0.42 −0.55 (97) MAE 0.56 0.51 0.72 rms 0.70 0.60 0.85 Total MSE −0.41 −0.48 −0.63 (115) MAE 0.62 0.57 0.78 rms 0.79 0.68 0.93 Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-10 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) TABLE XI.
+Statistic errors (in eV) of IP-EA values for the FG115 database.
+The energy gap of each system is evaluated by three SCF calculations.
+System Error ωM05-D M05-2X ωB97X-D Atoms MSE 0.28 0.33 0.28 (18) MAE 0.35 0.36 0.36 rms 0.60 0.63 0.59 Molecules MSE 0.34 0.42 0.22 (97) MAE 0.44 0.50 0.39 rms 0.73 0.78 0.68 Total MSE 0.33 0.40 0.23 (115) MAE 0.43 0.48 0.39 rms 0.71 0.75 0.66 FIG. 5.
+The lowest CT excitation of C2H4···C2F4 dimer along the inter- molecular distance R (in Å).
+For all functionals, the excitation at 5 Å is set to zero. FIG. 6.
+The lowest CT excitation of C2H4···C2F4 dimer along the inter- molecular distance R (in Å). TABLE XII.
+Vertical excitation energies (in eV) of several low-lying excited states of N2, CO, water, formaldehyde, and ethylene using 6- 311(2+,2+)G** basis set.
+The geometries and experimental values are taken from Ref. 90.
+Molecule State Expt.
+ωM05-D M05-2X ωB97X-D V1 g 9.31 9.30 9.42 9.38 V1− u 9.97 8.76 8.35 9.31 V1 u 10.27 10.14 10.51 9.82 N2 V3+ u 7.75 7.86 8.30 7.17 V3g 8.04 7.94 8.12 7.82 V3 u 8.88 8.74 8.35 8.23 V3− u 9.67 8.76 9.26 9.31 V3u 11.19 11.30 11.72 10.98 V1 8.51 8.51 8.74 8.47 V1− 9.88 9.36 9.11 9.78 CO V3 6.32 6.66 7.03 6.07 V3+ 8.51 8.47 8.87 8.00 V3 9.36 9.19 9.11 8.88 V3− 9.88 9.36 9.55 9.78 R1B1 7.4 7.68 8.04 7.23 R1A2 9.1 9.14 9.60 8.63 H2O R1A1 9.7 9.73 10.29 9.20 R1B1 10.0 9.72 10.32 9.17 R1A1 10.17 10.06 10.71 9.49 R3B1 7.2 7.27 7.66 6.89 R1B3u 7.11 7.53 7.61 7.02 V1B1u 7.60 7.80 8.07 7.52 R1B1g 7.80 7.87 8.07 7.59 R1B2g 8.01 8.15 8.19 7.66 R1Ag 8.29 8.36 8.52 7.87 C2H4 R1B3u 8.62 8.76 8.80 8.36 V3B1u 4.36 4.64 4.99 4.12 R3B3u 6.98 7.43 7.48 6.92 R3B1g 7.79 7.47 7.82 7.50 R3B2g 7.79 8.06 8.07 7.56 R3Ag 8.15 8.12 8.11 7.63 V1A2 4.07 3.63 3.68 3.88 R1B2 7.11 7.48 7.92 6.96 R1B2 7.97 8.13 8.58 7.66 R1A1 8.14 9.13 9.47 8.74 R1A2 8.37 8.30 8.84 7.84 CH2O R1B2 8.88 8.86 9.21 8.52 V3A2 3.50 3.02 3.12 3.21 V3A1 5.86 5.70 6.02 5.29 R3B2 6.83 7.33 7.74 6.81 R3B2 7.79 7.97 8.37 7.50 R3A1 7.96 8.06 8.45 7.56 MAE Valence 0.31 0.46 0.32 Rydberg 0.22 0.47 0.35 results and mean absolute errors of all excited states are listed in Table XII.
+The new ωM05-D functional yields excellent performance, especially for the Rydberg excitations.
+Note that ωM05-D outperforms ωB97X-D in both HOMO energies and Rydberg excitations due to the larger fraction of short-range HF exchange included in ωM05-D (both functionals possess the same amount of LR-HF exchange).
+Following Dreuw et al., we perform TDDFT calculations for the lowest charge-transfer (CT) excitation between ethy- Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-11 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) lene and tetraﬂuroethylene, with a separation of R. Dreuw et al. have shown that the exact CT excitation energy from the HOMO of donor to the LUMO of acceptor should have the following asymptote:91 ωCT(R →∞) ≈−1 R + IPD −EAA, (48) where IPD is the ionization potential of donor and EAA is the electron afﬁnity of acceptor.
+Figure 5 shows the trend of the excitation curves, and indicates the LC hybrid functionals ob- viously outperforms the global hybrid M05-2X. For the val- ues of the excitation energies, as shown in Fig. 6, ωM05-D is about 0.2 eV better than ωB97X-D. VI.
+CONCLUSIONS We have developed a LC hybrid MGGA-D functional, called ωM05-D, which includes 100% long-range exact ex- change, a fraction (≈37%) of short-range exact exchange, a modiﬁed M05 exchange density functional for short-range in- teraction, the M05 correlation density functional,18,19 and em- pirical atomic-pairwise dispersion corrections.
+For the modi- ﬁed short-range M05 exchange density functional, we have investigated two models.
+After comparisons in the training set and test sets, we decide to propose the one based on our new LC scheme ωM05-D, and marked the trial one as ωM05s- D. When the constraint of ω = 0 is applied, ωM05-D and ωM05s-D are both reduced to the existing M05 functional form18,19 with the same empirical atomic-pairwise dispersion corrections.
+The constrained form (ω = 0), when re-optimized on the same training set, provides worse performance on the training set, indicating that the single extra degree of freedom corresponding to long-range exchange is of physical signiﬁ- cance to a hybrid MGGA.
+Since ωM05-D is a parametrized functional, we test it against the trial simple model ωM05s-D as well as two closely related functionals (M05-2X (Ref. 19) and ωB97X-D (Ref. 36)) on a separate independent test set of data, which includes further atomization energies, reaction energies, non- covalent interaction energies, equilibrium geometries, energy curve for homonuclear diatomic cation dissociations, frontier orbital energies, and fundamental gaps.
+The three databases assessing frontier orbital energies and fundamental gaps are presented for the ﬁrst time.
+For excitation energies, we cal- culate valence and Rydberg excitations, as well as a charge- transfer excited state.
+Compared to ωM05s-D, noticeable difference in transferability for atomization energies largely decides our proposed model.
+ωM05-D consistently outper- forms M05-2X (and performs comparably to ωB97X-D) on the test sets, and shows smaller SIE and better asymptotic behavior relative to both the M05-2X and ωB97X-D. ACKNOWLEDGMENTS This work was supported by National Science Council of Taiwan (Grant No.
+NSC98-2112-M-002-023-MY3), National Taiwan University (Grant Nos.
+99R70304 and 10R80914- 1), and NCTS of Taiwan.
+We are grateful to partial sup- port of computer resources from the groups of Dr. J.-L. Kuo (Academia Sinica) and Dr. Y.-C. Cheng (NTU).
+1P. Hohenberg and W. Kohn, Phys.
+Rev. 136, B864 (1964). 2W.
+Kohn and L. J. Sham, Phys.
+Rev. 140, A1133 (1965).
+3R. G. Parr and W. Yang, Density-Functional Theory of Atoms and Molecules (Oxford University Press, New York, 1989).
+4R. M. Dreizler and E. K. U. Gross, Density Functional Theory: An Ap- proach to the Quantum Many Body Problem (Springer-Verlag, Berlin, 1990).
+5E. Engel and R. M. Dreizler, Density Functional Theory: An Advanced Course (Springer-Verlag, Berlin, 2011).
+6W. Kohn, A. D. Becke, and R. G. Parr, J. Phys.
+Chem. 100, 12974 (1996).
+7M. E. Casida, Recent Advances in Density Functional Methods, Part I (World Scientiﬁc, Singapore, 1995).
+8E. K. U. Gross, J. F. Dobson, and M. Petersilka, Density Functional Theory II (Springer, Heidelberg, 1996).
+9T. V. Voorhis and G. E. Scuseria, J. Chem.
+Phys. 109, 400 (1998).
+10J. Tao, J. P. Perdew, V. N. Staroverov, and G. E. Scuseria, Phys. Rev. Lett. 91, 146401 (2003).
+11Y. Zhao and D. G. Truhlar, J. Chem.
+Phys. 125, 194101 (2006).
+12A. D. Becke, J. Chem.
+Phys. 104, 1040 (1996).
+13A. D. Boese and N. C. Handy, J. Chem.
+Phys. 116, 9559 (2002).
+14V. N. Staroverov, G. E. Scuseria, J. Tao, and J. P. Perdew, J. Chem.
+Phys. 119, 12129 (2003).
+15Y. Zhao, B. J. Lynch, and D. G. Truhlar, J. Phys. Chem. A 108, 2715 (2004).
+16J. G. Hill, J. A. Platts, and H.-J. Werner, Phys. Chem. Chem.
+Phys. 8, 4072 (2006).
+17A. D. Boese and J. M. L. Martin, J. Chem.
+Phys. 121, 3405 (2004).
+18Y. Zhao, N. E. Schultz, and D. G. Truhlar, J. Chem.
+Phys. 123, 161103 (2005).
+19Y. Zhao, N. E. Schultz, and D. G. Truhlar, J. Chem. Theory Comput. 2, 364 (2006).
+20Y. Zhao and D. G. Truhlar, Theor. Chem.
+Acc. 120, 215 (2008). 21A. D. Becke, Int. J. Quantum Chem. 23, 1915 (1983).
+22A. D. Becke, J. Chem.
+Phys. 109, 2092 (1998).
+23A. D. Becke, J. Chem. Phys. 112, 4020 (2000).
+24H. L. Schmider and A. D. Becke, THEOCHEM 527, 51 (2000).
+25Y. Zhao and D. G. Truhlar, Acc. Chem.
+Res. 41, 157 (2008).
+26Y. Zhao and D. G. Truhlar, J. Chem. Theory Comput. 4, 1849 (2008).
+27H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, J. Chem.
+Phys. 115, 3540 (2001).
+28Y. Tawada, T. Tsuneda, S. Yanagisawa, T. Yanai, and K. Hirao, J. Chem.
+Phys. 120, 8425 (2004).
+29I. C. Gerber and J. G. Ángyán, Chem. Phys. Lett. 415, 100 (2005).
+30I. C. Gerber, J. G. Ángyán, M. Marsman, and G. Kresse, J. Chem.
+Phys. 127, 054101 (2007).
+31O. A. Vydrov, J. Heyd, A. V. Krukau, and G. E. Scuseria, J. Chem.
+Phys. 125, 074106 (2006).
+32O. A. Vydrov and G. E. Scuseria, J. Chem.
+Phys. 125, 234109 (2006).
+33J.-W. Song, T. Hirosawa, T. Tsuneda, and K. Hirao, J. Chem.
+Phys. 126, 154105 (2007).
+34A. J. Cohen, P. Mori-Sánchez, and W. Yang, J. Chem.
+Phys. 126, 191109 (2007).
+35J.-D. Chai and M. Head-Gordon, J. Chem.
+Phys. 128, 084106 (2008).
+36J.-D. Chai and M. Head-Gordon, Phys. Chem. Chem.
+Phys. 10, 6615 (2008).
+37J.-D. Chai and M. Head-Gordon, J. Chem.
+Phys. 131, 174105 (2009).
+38A. D. Becke, J. Chem.
+Phys. 98, 5648 (1993).
+39P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch, J. Phys.
+Chem. 98, 11623 (1994).
+40A. D. Becke, J. Chem.
+Phys. 107, 8554 (1997).
+41J. F. Dobson, K. McLennan, A. Rubio, J. Wang, T. Gould, H. M. Le, and B. P. Dinte, Aust. J. Chem. 54, 513 (2001).
+42S. Kristyan and P. Pulay, Chem. Phys.
+Lett. 229, 175 (1994).
+43X. Wu, M. C. Vargas, S. Nayak, V. Lotrich, and G. Scoles, J. Chem.
+Phys. 115, 8748 (2001); Q. Wu and W. Yang, ibid.
+116, 515 (2002); U. Zimmerli, M. Parrinello, and P. Koumoutsakos, ibid.
+120, 2693 (2004); S. Grimme, J. Comput.
+Chem. 25, 1463 (2004); S. Grimme, ibid.
+27, 1787 (2006); J. Antony and S. Grimme, Phys. Chem. Chem.
+Phys. 8, 5287 (2006); P. Ju- reˇcka, J. ˇCerný, P. Hobza, and D. R. Salahub, J. Comput. Chem.
+28, 555 (2006); A. Goursot, T. Mineva, R. Kevorkyants, and D. Talbi, J. Chem. Theory Comput.
+3, 755 (2007); S. Grimme, J. Antony, T. Schwabe, and C. Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions154109-12 Lin et al. J. Chem.
+Phys. 136, 154109 (2012) Mück-Lichtenfeld, Org. Biomol. Chem.
+5, 741 (2007); J. ˇCerný, P. Jureˇcka, P. Hobza, and H. Valdés, J. Phys. Chem.
+A 111, 1146 (2007); C. Morgado, M. A. Vincent, I. H. Hillier, and X. Shan, Phys. Chem. Chem.
+Phys. 9, 448 (2007); M. Kabeláˇc, H. Valdés, E. C. Sherer, C. J. Cramer, and P. Hobza, ibid.
+9, 5000 (2007); P. Jureˇcka and P. Hobza, ibid. 9, 5291 (2007).
+44S. Grimme, J. Chem.
+Phys. 124, 034108 (2006).
+45T. Schwabe and S. Grimme, Phys. Chem. Chem.
+Phys. 9, 3397 (2007).
+46A. Tarnopolsky, A. Karton, R. Sertchook, D. Vuzman, and J. M. L. Martin, J. Phys. Chem. A 112, 3 (2008).
+47T. Benighaus, R. A. DiStasio, Jr., R. C. Lochan, J.-D. Chai, and M. Head- Gordon, J. Phys. Chem. A 112, 2702 (2008).
+48Y. Zhang, X. Xu, and W. A. Goddard III, Proc. Natl. Acad. Sci.
+U.S.A. 106, 4963 (2009).
+49R. Peverati and D. G. Truhlar, J. Phys. Chem. Lett. 2, 2810 (2011).
+50P. M. W. Gill, R. D. Adamson, and J. A. Pople, Mol. Phys. 88, 1005 (1996).
+51T. M. Henderson, B. G. Janesko, and G. E. Scuseria, J. Chem.
+Phys. 128, 194105 (2008).
+52M. Ernzerhof and J. P. Perdew, J. Chem.
+Phys. 109, 3313 (1998).
+53J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett.
+77, 3865 (1996); 78, 1396(E) (1997).
+54L. A. Constantin, J. P. Perdew, and J. Tao, Phys.
+Rev. B 73, 205104 (2006).
+55C. F. von Weizsacker, Z. Phys. 96, 431 (1935).
+56J. P. Perdew and Y. Wang, Phys.
+Rev. B 45, 13244 (1992).
+57H. Stoll, C. M. E. Pavlidou, and H. Preuss, Theor. Chim.
+Acta 49, 143 (1978).
+H. Stoll, E. Golka, and H. Preuss, ibid. 55, 29 (1980).
+58S. J. Chakravorty, S. R. Gwaltney, E. R. Davidson, F. A. Parpia, and C. F. Fischer, Phys.
+Rev. A 47, 3649 (1993).
+59L. A. Curtiss, K. Raghavachari, P. C. Redfern, and J. A. Pople, J. Chem.
+Phys. 106, 1063 (1997).
+60L. A. Curtiss, P. C. Redfern, K. Raghavachari, and J. A. Pople, J. Chem.
+Phys. 109, 42 (1998).
+61L. A. Curtiss, K. Raghavachari, P. C. Redfern, and J. A. Pople, J. Chem.
+Phys. 112, 7374 (2000).
+62J. A. Pople, M. Head-Gordon, D. J. Fox, K. Raghavachari, and L. A. Curtiss, J. Chem.
+Phys. 90, 5622 (1989).
+63Y. Zhao, N. González-García, and D. G. Truhlar, J. Phys. Chem.
+A 109, 2012 (2005); ibid.
+110, 4942(E) (2006).
+64P. Jureˇcka, J. Šponer, J. ˇCerný, and P. Hobza, Phys. Chem. Chem.
+Phys. 8, 1985 (2006).
+65S. E. Wheeler and K. N. Houk, J. Chem. Theory Comput. 6, 395 (2010).
+66Y. Shao, L. Fusti-Molnar, Y. Jung, J. Kussmann, C. Ochsenfeld, S. T. Brown, A. T. B. Gilbert, L. V. Slipchenko, S. V. Levchenko, D. P. O’Neill, R. A. DiStasio, Jr., R. C. Lochan, T. Wang, G. J.O. Beran, N. A. Besley, J. M. Herbert, C. Y. Lin, T. V. Voorhis, S. H. Chien, A. Sodt, R. P. Steele, V. A. Rassolov, P. E. Maslen, P. P. Korambath, R. D. Adamson, B. Austin, J. Baker, E. F. C. Byrd, H. Dachsel, R. J. Doerksen, A. Dreuw, B. D. Duni- etz, A. D. Dutoi, T. R. Furlani, S. R. Gwaltney, A. Heyden, S. Hirata, C.-P. Hsu, G. Kedziora, R. Z. Khalliulin, P. Klunzinger, A. M. Lee, M. S. Lee, W. Liang, I. Lotan, N. Nair, B. Peters, E. I. Proynov, P. A. Pieniazek, Y. M. Rhee, J. Ritchie, E. Rosta, C. D. Sherrill, A. C. Simmonett, J. E. Subotnik, H. L. Woodcock III, W. Zhang, A. T. Bell, A. K. Chakraborty, D. M. Chip- man, F. J. Keil, A. Warshel, W. J. Hehre, H. F. Schaefer III, J. Kong, A. I. Krylov, P. M. W. Gill, and M. Head-Gordon, Phys. Chem. Chem.
+Phys. 8, 3172 (2006).
+67S. F. Boys and F. Bernardi, Mol. Phys. 19, 553 (1970).
+68C. W. Murray, N. C. Handy, and G. J. Laming, Mol. Phys. 78, 997 (1993).
+69V. I. Lebedev, Zh. Vychisl.
+Mat. Mat. Fiz. 15, 48 (1975); 16, 293 (1976); Sibirsk.
+Mat. Zh. 18, 132 (1977).
+70M. S. Marshall, L. A. Burns, and C. D. Sherrill, J. Chem.
+Phys. 135, 194102 (2011).
+71See supplementary material at http://dx.doi.org/10.1063/1.4704370 for the reference values and molecular geometries of the IP131, EA115, and FG115 databases, as well as some detailed DFT results.
+72L. A. Curtiss, P. C. Redfern, and K. Raghavachari, J. Chem.
+Phys. 123, 124107 (2005).
+73R. A. DiStasio, Jr., R. P. Steele, Y. M. Rhee, Y. Shao, and M. Head-Gordon, J. Comput. Chem. 28, 839 (2007).
+74T. Bally and G. N. Sastry, J. Phys. Chem.
+A 101, 7923 (1997); B. Braïda, P. C. Hiberty, and A. Savin, ibid.
+102, 7872 (1998); P. Mori-Sánchez, A. J. Cohen, and W. Yang, J. Chem.
+Phys. 125, 201102 (2006); A. Ruzsinszky, J. P. Perdew, G. I. Csonka, O. A. Vydrov, and G. E. Scuseria, ibid. 126, 104102 (2007).
+75A. D. Dutoi and M. Head-Gordon, Chem. Phys. Lett. 422, 230 (2006). 76J.
+Gräfenstein, E. Kraka, and D. Cremer, J. Chem. Phys. 120(2), 524 (2004).
+77J. Gräfenstein, E. Kraka, and D. Cremer, Phys. Chem. Chem.
+Phys. 6, 1096 (2004).
+78J. P. Perdew and A. Zunger, Phys.
+Rev. B 23, 5048 (1981).
+79G. D. Purvis and R. J. Bartlett, J. Chem.
+Phys. 76, 1910 (1982).
+80K. Raghavachari, G. W. Trucks, J. A. Pople, and M. Head-Gordon, Chem. Phys. Lett. 157, 479 (1989).
+81M. Levy, J. P. Perdew, and V. Sahni, Phys.
+Rev. A 30, 2745 (1984).
+82L. J. Sham and M. Schlüter, Phys. Rev. Lett. 51, 1888 (1983).
+83L. J. Sham and M. Schlüter, Phys.
+Rev. B 32, 3883 (1985).
+84J. P. Perdew and M. Levy, Phys. Rev. Lett. 51 (1983).
+85T. Tsuneda, J.-W. Song, S. Suzuki, and K. Hirao, J. Chem.
+Phys. 133, 174101 (2010).
+86NIST Computational Chemistry Comparison and Benchmark Database, NIST Standard Reference Database Number 101, Release 15b, edited by Russell D. Johnson III, August 2011, see http://cccbdb.nist.gov/. 87P. M. W. Gill, B. G. Johnson, J. A. Pople, and M. J. Frisch, Int. J. Quan- tum Chem. Symp.
+26, 319 (1992); C. R. Brundle, M. B. Robin, N. A. Kuebler, and H. J. Basch, J. Am. Chem.
+Soc. 94, 1451 (1972); W. von Niessen, L. Åsbrink, and G. Bieri, J. Electron Spectrosc. Relat. Phenom.
+26, 173 (1982); E. A. Colbourne, J. M. Dyke, E. P.F. Lee, A. Morris, and I. R. Trickle, Mol. Phys. 35, 873 (1978); D. C. Frost, S. T. Lee, and C. A. McDowell, Chem. Phys. Lett.
+17, 153 (1972); G. Bieri, L. Åsbrink, and W. von Niessen, J. Electron Spectrosc. Relat. Phenom.
+27, 129 (1982); T. Cvitas, H. Güsten, L. Klasinc, I. Novak, and H. Vansik, Z. Naturforsch.
+A 32A, 1528 (1977); G. Bieri, L. Åsbrink, and W. von Niessen, J. Electron Spectrosc. Relat.
+Phenom. 23, 281 (1981); L. Åsbrink, W. von Niessen, and G. Bieri, ibid.
+21, 93 (1980); U. Gelius, C. J. Allan, D. A. Allison, H. Siegbahn, and K. Siegbahn, Chem. Phys. Lett.
+11, 224 (1971); L. Åsbrink, A. Svensson, W. von Niessen, and G. Bieri, J. Electron Spectrosc. Relat. Phenom.
+24, 293 (1981); G. Bieri and L. Åsbrink, ibid.
+20, 149 (1980); W. von Niessen, G. Bieri, and L. Åsbrink, ibid. 21, 175 (1980).
+88A. Halkier, T. Helgaker, P. Jørgensen, W. Klopper, H. Koch, J. Olsen, and A. K. Wilson, Chem. Phys. Lett. 286, 243 (1998).
+89J. F. Janak, Phys.
+Rev. B 18, 7165 (1978).
+90S. Hirata and M. Head-Gordon, Chem. Phys. Lett. 314, 291 (1999).
+91A. Dreuw, J. L. Weisman, and M. Head-Gordon, J. Chem.
+Phys. 119, 2943 (2003).
+Downloaded 27 Sep 2013 to 129.72.2.27.
+This article is copyrighted as indicated in the abstract.
+Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions

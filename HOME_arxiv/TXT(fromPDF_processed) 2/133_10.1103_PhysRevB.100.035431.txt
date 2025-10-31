@@ -1,0 +1,430 @@
+Impact ionization dynamics in small band-gap 2D materials from a coherent phonon mechanism Stephan Michael and Hans Christian Schneider Department of Physics and Research Center OPTIMAS, TU Kaiserslautern, P.O. Box 3049, 67653 Kaiserslautern, Germany We study theoretically the role of carrier multiplication due to impact ionization after an ultrafast optical excitation in a model system of a quasi-two dimensional material with a small band gap.
+As a mechanism for the photo-induced band gap narrowing we use coherent phonons, which mimics the quenching of an insulator phase.
+We discuss the importance of impact ionization in the ultrafast response, and investigate the interplay between carrier and band dynamics.
+Our model allows us to compare with recent experiments and identify signatures of carrier multiplication in typical electronic distribution curves as measured by time-resolved photoemission spectroscopy.
+In particular we investigate the inﬂuence of the shape of the bands on the carrier multiplication and the respective contributions of band and carrier dynamics to electronic distribution curves.
+I. INTRODUCTION Recent developments in time- and angle-resolved pho- toemission spectroscopy (trARPES) have opened up the possibility to study the material response after ultrafast optical excitation using photoemission techniques.
+[1–3] This progress has facilitated the study of correlated and nanoscale quantum materials.
+[4] Besides graphene, [5– 9] other two-dimensional materials, [10] in particular transition-metal dichalcogenides (TMDC), [11–13] have been the center of current investigations.
+Associated with this topic is an active interest in metal-insulator transitions.
+[14] Besides Mott insulators [13, 15–20] these transitions can appear as excitonic and Peierls insulators, where a formation of a charge density wave (CDW) and a periodic lattice distortion occur.
+[21] However, charge density waves are observed in many solids and their ori- gin is still under debate.
+[22–26] Further, changing the symmetry of a material via optically induced phase tran- sitions oﬀers new ways to manipulate material properties on ultrafast timescales.
+[27, 28] Research about the ultra- fast response of two dimensional materials like TMDC in connection with their rich electronic phase diagrams, e.g., superconductivity [29, 30] or CDW phases, may well be important for understanding the basic physics for the de- sign of future ultrafast (optoelectronic or optospintronic) devices.
+[31–33] Materials like 1T-TaS2, 2H-TaSe2, and 1T-TiSe2 have been studied in some detail, [34–36] but there still is a controversy about the origin of the CDW phases in those materials, especially for 1T-TiSe2. In Refs.
+37–46 an exci- tonic insulator mechanism was identiﬁed.
+However, there are also arguments that an electron-lattice interaction with the help of the Jahn-Teller eﬀect leads to a Peierls- like CDW transition and the accompanying opening of a gap.
+[47–50] To our knowledge, the prevailing explana- tion is a combination of exciton-formation and electron- phonon coupling.
+[43–45, 48, 50–60] In this context, the chirality of the CDW [61–64] and a softening of phonon modes [59, 65] have also been discussed.
+The present paper is devoted to a study of non- equilibrium carrier dynamics during an optically induced phase change between an “insulator” and a “metallic” phase in a system with a small band gap, where carrier- scattering processes may lead to carrier multiplication due to impact ionization.
+On the basis of experimen- tal results and a simple model calculation it has recently been argued in Ref.
+66 that in 1T-TiSe2 excitation by an ultrafast optical pulse induces carrier multiplication and gap-closing dynamics, which amplify each other during the quenching of the CDW phase.
+In this paper, we in- vestigate theoretically in more detail this interplay be- tween carrier dynamics (in particular, carrier multiplica- tion) and quasi-particle band-structure change, i.e., gap quenching.
+We employ a dynamical model that is ca- pable of describing aspects of the ultrafast response of small band-gap 2D materials.
+We assume an electron- phonon based mechanism behind the formation of the CDW state, but we do not attempt a microscopic de- scription of the complete change between insulator and metallic phase.
+Instead, we restrict our attention to the onset of the phase transition starting from the CDW in- sulator phase, and model the relevant lattice dynamics by coherent phonons.
+These coherent phonons interact with the optically excited electronic dynamics and, in turn, change the quasi-particle band structure via a modula- tion of hybridization between electronic orbitals centered at the ions that oscillate with the coherent phonon.
+An important goal of this paper is to study the interplay between carrier multiplication eﬀects and quasi-particle band-structure dynamics by dynamical calculations for a concrete mechanism.
+In particular we explore the con- sequences for quantities accessible in recent experiments, where carrier multiplication and band-strucure dynamics cannot easily be disentangled.
+[66] In particular, we study the inﬂuence of diﬀerent excitation scenarios, and com- pare the results for diﬀerent band structures (parabolic and Mexican-hat shaped bands).
+The outline of this paper is as follows.
+In Sec. II we ﬁrst introduce a model composed of a tight-binding band structure and carrier-phonon interaction in which the quenching of the insulator phase is due to the cou- arXiv:1808.07815v1 [cond-mat.mtrl-sci]  23 Aug 20182 pling to coherent phonons.
+In a nonequilibrium situa- tion, this electron-phonon coupling results in the change in quasi-particle bands associated with a Peierls-like tran- sition. In Sec.
+III we set up the equations of motion for the relevant distribution functions including the optical- excitation contribution and Coulomb interaction.
+Nu- merical results are presented in Sec. IV.
+We discuss here in particular the inﬂuence of model parameters on the carrier dynamics the interplay of carrier multiplication and gap-closing dynamics and their signatures in elec- tronic distribution curves.
+Technical details concerning the tight-binding model and the numerical solution of the dynamical equations including the gap dynamics are col- lected in Appendices A and B.
+We conclude the paper in Sec. V. II.
+QUASI-PARTICLE ELECTRONIC STRUCTURE CALCULATION As we want to describe carrier dynamics that accom- pany the quenching of a small band-gap insulator phase, we ﬁrst need to address how the quasiparticle band struc- ture changes during this phase transition.
+While a variety of diﬀerent models for charge-density-wave insulators ex- ist, [22] the classiﬁcation for materials like 1T-TiSe2 or 1T-TaS2 is not straightforward.
+Among other reasons, this is because electron-electron and electron-phonon in- teractions may both play an important role in the phase transition dynamics.
+As we focus here on the carrier dy- namics, it is beyond the scope of this paper to include such complex interdependencies.
+Instead of determin- ing the insulator phase from the normal phase, we start from a TB model of the band structure in the insula- tor phase and describe the quenching of this phase as an eﬀective misalignment of the atomic positions of the diﬀerent atoms in the unit cell.
+This eﬀective atomic displacement after an optical excitation enters our calcu- lation as a coherent phonon.
+A. Tight-Binding Model We employ a tight-binding model to describe a quasi- two dimensional material with two atomic species Ad and Ap in the insulator phase.
+The parameters are chosen such as to reproduce some important characteristics of electronic states in TMDCs.
+In the case of a TMDC, the atomic species Ad is the transition metal (e.g. Ti) with d- type or f-type valence orbitals and the atomic species Ap is the chalcogen (e.g., Se) with p-type valence orbitals.
+For instance, in Refs.
+52 and 54 it was found that for 1T-TiSe2 only the three hopping parameters ddσ, ppσ and pdπ contribute signiﬁcantly to the behavior of states with energies close to the Fermi energy.
+This allows one to use a restricted model that includes only these hopping parameters.
+As we do not attempt a microscopic model of the physics underlying the phase transition and as we are mainly interested in the electronic dynamics close to the small band gap, which is the indicator of the CDW and typically opens at high symmetry points, such as Γ or M points, we use a simple two-band tight-binding model to capture the characteristics of the carrier and band dy- namics around the gap after an ultrashort optical exci- tation.
+We explain the relation of this ansatz to existing tight-binding models of transition-metal dichalcogenides in Appendix A. For now, we take the model tight-binding hamiltonian in the form HTB = ϵp 0  cps k †cps k + ϵc 0  cds k †cds k + 2Vpp  cos(kxex) + cos(kyey)  (cps k )†cps k + Vpd(cps k )†cds k + Vdpcds† k bcps k + 2Vdd  cos(kxex) + cos(kyey)  (cds k )†cds k (1) where ϵp 0, ϵd 0 are the on-site energies, and Vpp, Vpd, Vdp, Vdd are the tight-binding coupling-elements and e is the distance vector between two neighboring unit cells.
+As we do not include spin-orbit coupling, we do not explicitly write out the spin-dependence s in the following.
+This model yields a conduction band mainly consisting of a d-type transition metal orbital and a valence band mainly originating from a p-type chalcogen orbital.
+In the neighborhood of this point the band structure has the shape of a Mexican hat with a small band gap and pro- nounced band mixing for the model parameters chosen here, see Sec. IV.
+Close to the high symmetry point the band structure possesses rotational symmetry.
+We stress that the simplicity of this model and the high symmetry are not too restrictive, because a fast angular redistri- bution of carriers due to electron-phonon scattering [67] will smooth out the eﬀects of anisotropy, and our results should also be transferable to non-parabolic band struc- tures.
+B. Quasi-particle band dynamics and the eﬀective Hamiltonian This subsection is concerned with determination of the carrier states that accompany the onset of the phase change and that we will sometimes refer to simply as “band dynamics”.
+We do not attempt a microscopic ab- initio description of the coupled electron-ion system and the transition from normal phase transition to charge- density wave phase.
+Instead, we use an eﬀective hamilto- nian for the system in the charge-density wave state that already incorporates the lattice distortion induced by the electron-phonon interaction.
+In this model, the coher- ent phonon leads to an ionic displacement that causes a change of the hybridization between electronic orbitals centered at diﬀerent ions, which changes the eﬀective hamiltonian.
+Due to the dependence on the phonon dy- namics, the eﬀective hamiltonian becomes time depen- dent.3 We begin with the free phonon Hamiltonian for the coherent phonon, i.e. q = 0, HPh = ℏω0  b0b† 0 + 1 2  (2) describes a coherent phonon (cpn) with q = 0 that leads to a distortion consistent with the symmetry of the mate- rial, e.g., the A1g mode, in which the two kinds of atoms are displaced in the unit cell.
+The coherent phonon cou- ples to the electrons by modulating the p-d hybridization He-cpn = X k gpd 0 (b0 + b† 0)(cp k+0)†cd k + h. c. (3) where gpd 0 is the matrix element for the coupling of elec- trons to the coherent phonon in the orbital basis.
+We assume for simplicity that this matrix element is k- independent.
+The interaction of electrons with a coherent phonon includes a mean-ﬁeld contribution H(mf) e-cpn = X k X l1,l2 gl1l2 0 (B0 + B† 0)cl1† k+0cl2 k + h.c.
+(4) where B0 = ⟨b0⟩is the coherent phonon amplitude, and l1, l2 ∈{p, d} denotes the orbital index.
+The mean-ﬁeld part of the coupling hamiltonian to the coherent phonon does not contain phonon operators and can be combined with HTB to an eﬀective hamiltonian for the carrier sys- tem that describes the states around the Fermi energy Heﬀ= HTB + H(mf) e-cpn (5) As Heﬀis time dependent its eigenvalues ϵb,k and eigen- vectors Ψb,k(r) are calculated for every time-step of the dynamical calculation.
+Thus, matrix elements gb1b2 0 and ρb1b2 k generally involve time-dependent basis states as will be discussed in Appendix B.
+In this time-dependent eigenbasis, nb k = ρbb k can be interpreted as the occupa- tion of the state |b, k⟩at that time and gb1b2 0,k the cor- responding phonon matrix element.
+In particular, the matrix element gpd 0 in the orbital basis is related to ma- trix elements gcc 0,k and gvv 0,k in the time-dependent basis.
+Assuming that the coherences in this equation-of-motion die out faster than the dynamics of interest, we obtain the equation of motion d dtB0 = −(iω0 + γP deph)B0 + 1 iℏ X k X b  (gbb 0,k)∗nb k  = −(iω0 + γP deph)B0 + 1 iℏ  X k (gcc 0,k)∗nc k + X k (gvv 0,k)∗nv k  (6) The coupling matrix elements gpd 0 , which are oﬀdiago- nal with respect to the orbital index, inﬂuence the band occupations nb k via gbb 0,k matrix elements, which are diag- onal with respect to the band index, and thus drive the coherent phonon amplitude Eq. (6). III.
+CARRIER DYNAMICS VIA EQUATION OF MOTION TECHNIQUE A. Optical excitation We model the optical excitation after a recent experi- ment on 1T-TiSe2 in Ref.
+66, where carriers were excited with an 1.6 eV pulse around 200 meV above the Fermi level into a Ti 3d band around the M-point.
+Around this high symmetry point, only a small band-gap exists be- tween the Ti 3d band and a back-folded Se 4p band.
+As the holes, which are likely created in a Se 4p(x,y) bands, never appear close to the Fermi surface, we do not include these band states in our two-band tight-binding model.
+Further, the dispersions of the bands of interest are dif- ferent (i.e., have very diﬀerent curvature in our simpliﬁed case), so that in the ﬁrst few hundred femtoseconds the excited holes have no chance to reach the Fermi surface and no eﬃcient contribution to the ultrafast carrier and band response around Fermi surface is possible, as found in experiment.
+[66] Thus, we model the optical excitation between the conduction band “c” mainly originating from the d-type orbital of atom species Ad and a third band v′ below the Fermi surface by d dtpb1b2 k  opt = −  iωb1b2 k + γP deph  pb1b2 k −iΩb1b2 k  nb1 k −nb2 k  (7) and d dtnb1 k  opt = −  iΩb1b2 k pb1b2 k + h.c.  (8) where b ∈{c, v′}, and we have again suppressed the spin index.
+The major contribution to the coherent phonon ampli- tude dynamics originates from the excitation of electrons into the conduction band.
+This is in accordance to situ- ations, where optical excitation can trigger a displacive A1g CDW amplitude mode by exciting electrons from bonding to antibonding states, e.g., in 1T-TiSe2.
+[58] It is also supported by other investigations, which have found that the A1g mode shows a strong coupling to conduction electrons.
+[68, 69] While the eﬀects of excitonic contribu- tions likely have to be included to obtain quantitative agreement (e.g., for the speed of the gap dynamics), [66] the qualitative picture of the onset of a phase transition due to ultrafast optical excitation can be described by co- herent phonons.
+In such a model, carrier multiplication also has an contribution to the dynamics of the coherent phonon amplitude, as we show in the following.
+B. Carrier-carrier Coulomb scattering The Coulomb scattering to describe the carrier dynam- ics in the ﬁrst few hundred femtoseconds after the ultra- fast optical excitation is also included in the equation of4 motion for the density matrix.
+As the Coulomb inter- action leads to transitions between quasiparticle states, which change dynamically, we use time-dependent Bloch states.
+This entails not only the correction of the band- energies but also a re-calculation of the interaction- matrix elements.
+In general, it is associated with a transformation of diagonal density-contributions nb k into oﬀ-diagonal coherence-contributions in conjunction with correlated correction-terms in the equation-of-motion.
+This general consequences are described and the level of approximation for the system under investigation is explained in appendix B, where we assume a suﬃ- ciently high dephasing for these coherences, which is likely for the system under investigation, and hence the oﬀ-diagonal coherence-contributions in conjunction with correlated correction-terms in the equation-of-motion can be neglected.
+Thus, we implement the time-dependent basis in the description of the carrier dynamics us- ing time-dependent band-energies and wave-functions in- cluding time-dependent Coulomb-matrix elements due to the basis transformation with of-course a time-dependent screening.
+Importantly, the band dynamics here leads to an additional re-distribution of carriers into the new equi- librium distribution and changes the ratio between intra and interband scattering pathways.
+The derivation of the Coulomb scattering equations it- self can be established in various ways.
+For instance, with cluster expansion techniques or with the Green’s func- tion technique under the use of the Kadanoﬀ-Baym equa- tions, by applying the second-order Born approximation for the self-energy.[13] For the carrier-carrier scattering we neglect coherences and obtain the following equation of motion for the Coulomb scattering in Markov approx- imation d dtnb k = 2π ℏ X k2k3 X b2b3b4 c W  N in −N out δ (∆ϵ) (9) with c W =W bb2b3b4 kk2k3k4  W bb2b3b4* kk2k3k4 −W bb2b4b3* kk2k4k3  (10) N in =  1 −nb k  nb2 k2  1 −nb3 k3  nb4 k4 (11) N out =nb k  1 −nb2 k2  nb3 k3  1 −nb4 k4  (12) ∆ϵ =ϵb k −ϵb2 k2 + ϵb3 k3 −ϵb4 k4 (13) where W bb2b3b4 kk2k3k4 are the screened Coulomb-Matrix ele- ments, nb k is the carrier distribution and ϵb k the corre- sponding energy on k for the band b ∈{c, v}.
+The spin- index s is neglected.
+The screened Coulomb potential is W bb2b3b4 kk2k3k4 = X q w (q) Ibb4 kk4 (q) Ib2b3 k2k3 (−q) (14) with the overlap integrals Ibb4 kk4(q) = Z Ψb k(r)∗eiqrΨb4 k4(r) d3r (15) 0.0  1.0  -1.0  -1.0  -0.5  0.5  0.0  k (nm-1) E-EF (eV)  c  v  v’  EX  FIG. 1.
+Band structure of the unexcited material on a high symmetry point in the Brillouin zone on the Fermi surface in radial in-plane direction.
+The blue curves are the conduction band c and the valence band v calculated from the tight- binding Hamiltonian.
+The black curve is a third band v′ not included in the two-band tight-binding model far bellow the Fermi surface used for the ultrafast optical excitation with an 1.6 eV pulse (red arrow).
+The vertically dashed line is the Fermi surface and the horizontal dashed line is the high symmetry point in the Brillouin zone.
+and w(q) = ε−1(q)v(q).
+Further, Ψb k(r) are the eigen- functions of the time-dependent tight-binding Hamilto- nian in Eq. (5), v(q) is the unscreened Coulomb potential including a background dielectric constant εb and A the normalization area.
+In the derivation of the Coulomb scattering equations, the screened Coulomb potential can be naturally in- cluded.
+The time-dependent screening of the Coulomb interaction is taken into account using the static limit of Lindhard dielectric function ε(q) = 1 −1 A X k,b V bbbb k,k−q,k,k−q nλ k−q −nλ k ϵλ k−q −ϵλ k (16) where V bb2b3b k,k2,k3,k4 are the Coulomb-matrix elements cal- culated from the unscreened Coulomb potential v (q). IV.
+NUMERICAL RESULTS To investigate the ultrafast response of a small band- gap 2D material after an ultrafast optical excitation, and particularly of the role of impact ionization and carrier multiplication in the conduction band, we assume the setup shown in Fig. 1, which we discuss here ﬁrst.
+From the tight-binding Hamiltonian Eq. (1) from Sec.
+II A, we5 obtain two Mexican-hat shaped bands close to the Fermi surface, a conduction band “c” and a valence band “v”.
+Further, we assume a lattice temperature of 100 K and the band gap is measured as the nearest distance between the two Mexican-hat shaped bands, which is 100 meV for the unexcited band structure.
+The lattice temperature is below the transition temperature and the band-gap is adapted to that of the CDW phase of a typical material like TiSe2 as reported for example in Ref. 38.
+The opti- cal excitation is modeled as excitation originating from a third band “v′” not included in the two-band tight- binding model as explained in Sect.
+III A. As indicated in Fig. 1, the v′ band is far below the Fermi surface and the ultrafast optical excitation by a pulse with a 1.6 eV photon energy excites carriers into the conduction band around 200 meV above the Fermi surface as measured by trARPES experiments on TiSe2 reported in Ref. 66.
+For the unexcited material we assume a Fermi distribu- tion and thus we obtain a nearly empty conduction band with negligible band corrections due to coherent phonons, see Sect.
+II B and weak screening.
+After the ultrashort optical excitation, eﬀects such as band dynamics induced by coherent phonons and a carrier redistribution due to Coulomb scattering, see Sect.
+III B, will determine the material response as investigated in the following.
+A. Characteristics of band- and carrier response First, we discuss the essential characteristics of the dy- namical results for the excitation described above.
+A technical aspect is to clarify and investigate the eﬀect of the basis transformation of the electron-phonon matrix element between the time-dependent basis of band states and the atomic eigenbasis, which creates k-dependent phonon matrix elements from initially constant values in the atomic eigenbasis.
+The Mexican-hat shaped electronic band-structure shown in Fig. 1 is modeled using the tight-binding pa- rameters ϵp 0 = 1.95 eV, ϵd 0 = −1.95 eV for the on-site energies, and Vpp = −Vdd = −0.5 eV, Vpd = 0.05 eV for the coupling elements.
+For the coherent phonons, we take ℏω0 = 12.4 meV and γP deph = 5.0 ps−1.
+The electron-phonon matrix element controls the inﬂuence of the optical phonon on the band dynamics and plays an import role in our model.
+To study its inﬂuence, we present calculations using the values of gpd 0 = 8.0 meV and gpd 0 = 10.0 meV in the orbital basis for this matrix element.
+The optical excitation is patterned after the ex- perimental conditions in Ref.
+66 and taken to be a Gaus- sian pulse with 1.6 eV photon energy, temporal width of σT = 14 fs assuming a Rabi energy ℏΩ0 = 10 meV.
+This results in an excitation of electrons in the conduc- tion band around 200 meV above the unexcited Fermi surface.
+After analyzing the consequences of the k-dependent basis transformation we will introduce a further sim- pliﬁed model which assumes an averaged value of the k (nm-1)  nc  E-EF (meV)  FIG. 2.
+Band dynamics (top) and carrier distribution in the conduction band (bottom) at −25 fs (solid green), 25 fs (dashed black), 100 fs (dotted black), 175 fs (solid black), 250 fs (dashed red) after an ultrashort optical excitation by a σT = 14 fs pulse centered at 0 fs.
+Between -25 fs and 25 fs the optical excitation mainly determines the carrier dynamics and the non-equilibrium carrier distribution lead to a closing of the gap.
+After 25 fs the optical does not contribute any more.
+Now the carrier scattering and the eﬀect of gap-closing increase the impact ionization, which contributes to a fur- ther gap-closing until a quasi-equilibrium after about 200 fs is reached.
+electron-phonon matrix element and neglect the inﬂu- ence of the basis transformation.
+In this case we treat the phonon matrix element as a parameter with ˜gcc 0 = 8.0 meV. 1.
+Band and carrier response after optical excitation The essential characteristics of the dynamical results are discussed for the setup with gpd 0 = 10.0 meV, because eﬀects of band renormalization and carrier multiplication are clearly visible in this case.
+In Fig. 2 snapshots of the band and carrier dynamics of the conduction band are shown.
+Before the optical excitation the valence band is full and the conduction band nearly empty.
+The band gap of the Mexican-hat shaped bands is 100 meV at the crease of the Mexican hat k0 ≃0.35 nm−1.
+At around 0 fs the ultrafast optical pulse excites carriers from the lower lying v′ band into the conduction band c at around 200 meV above the unexcited Fermi energy cf.
+Fig. 1. Be- tween -25 fs and 25 fs mainly optical excitation occurs, but also carrier scattering and the onset of impact ioniza- tion.
+The combination of these eﬀects and the mexican- hat band structure lead to a small second peak at the6 k (nm-1) nv  nc  FIG. 3.
+Carrier distribution in the conduction and valence band before and long after the pulse.
+t = −25 fs (green dashed line) and t = 250 fs for the setup with gpd 0 = 10.0 meV (solid black line), gpd 0 = 8.0 meV (dashed black line) and ˜gcc 0 = 8.0 meV (solid red line).
+As electrons are optically ex- cited into the conduction band, the valence band dynamics are exclusively due to interband scattering, i.e., carrier multi- plication.
+The setups with gpd 0 = 10.0 meV and ˜gcc 0 = 8.0 meV exhibit similar carrier distributions after 250 fs. band bottom k0.
+Due to the comparatively large band gap of 100 meV, the impact ionization initially is not very eﬃcient.
+However, after 25 fs, i.e., after the optical ex- citation is over, the hot carriers in the conduction band lead to a gap closing due to the coherent phonon dynam- ics and a more eﬃcient screening.
+The gap closing leads to a more eﬃcient impact ionization, as will be discussed in detail in connection with Fig. 4. Fig. 4 supports the following scenario: The hot carriers relax from the ﬁrst peak induced by the optical excitation via impact ion- ization into the second peak at the band bottom.
+The impact ionization induces a carrier multiplication in the conduction band, which results in a further gap closing.
+The smaller gap makes impact ionization even more eﬃ- cient, which speeds-up the relaxation of the hot carriers, which is visible in the distances between the snapshots in Fig. 2, but more clearly in Fig. 4 below.
+Thus there is a mutual ampliﬁcation between gap closing and impact ionization.
+The latter occurs predominantly at the band bottom k0 of the mexican hat and thus feeds the sec- ond peak on the band bottom of the conduction band in Figure 2 until no more phase space for electron-electron scattering is available and a quasi-equilibrium distribu- tion is reached.
+We next investigate details of the carrier and band-gap dynamics for the same parameters as in Fig. 2, which are marked by solid black lines in Figs. 3 and 4.
+We defer Band gap (meV)  Carrier density  ( x 1010 cm-2)  Time (fs)  FIG.
+4. Gap closing (bottom) and carrier density in the con- duction band (top) vs. time.
+After the optical excitation an induced gap closing and a delayed carrier multiplication correlated to the gap closing is visible for the setup with gpd 0 = 8.0 meV (dashed black line), gpd 0 = 10.0 meV (solid black line), and ˜gcc 0 = 8.0 meV (solid red line).
+The setup with gpd 0 = 10.0 meV and ˜gcc 0 = 8.0 meV have a similar time evolution of the carrier density and the gap closing.
+Between 100 fs and 200 fs (short times after optical excitation) only small derivations are visible, which vanish after 200 fs.
+a discussion of the diﬀerent parameters (dashed and red curves in Figs. 3 and 4) to the next subsection.
+The solid black lines in Fig. 3 shows the carrier distribution of the conduction and valence band 250 fs after the optical ex- citation.
+As the optical excitation is into the conduction band, the increase of the hole density around the top of the valence band k0 in the ﬁrst 250 fs after the op- tical excitation indicates the eﬀect of impact ionization as all the carrier dynamics is exclusively due to Coulomb scattering.
+In Figure 4 the solid black lines depict the time-dependence of the conduction-band carrier density and the band gap.
+The fast increase of the carrier den- sity due to the ultrafast optical excitation occurs around the center of the pulse at 0 fs.
+This induces a gap closing via coherent phonons that is clearly visible for times later than 50 fs.
+Finally, and importantly, there is a delayed increase of the carrier density that is exclusively due to impact ionization from carriers originating from the va- lence band.
+This impact ionization therefore eﬀectively acts a carrier excitation mechanism which drives the dis- tributions in the conduction and valence bands further away from equilibrium.
+The coupling of the nonequilib- rium carriers to the coherent phonon increases the band-7 Time (fs)  Band gap (meV)  Carrier density  ( x 1010 cm-2)  FIG. 5.
+Gap closing (bottom) and carrier density in the con- duction band (top) vs. time for setups with averaged phonon matrix elements of 4.0 meV (dotted), 6.0 meV (solid) and 8.0 meV (dashed).
+gap shrinkage further.
+2. Inﬂuence of electron-phonon matrix elements on response In Figure 3 and Figure 4 we study the inﬂuence of the electron-phonon coupling and also the consequence of using and an averaged value of the phonon matrix el- ement ˜g0.
+We ﬁrst replace the electron-phonon matrix elements gpd 0 = 10 meV used so far by an averaged ma- trix element ˜gcc 0 = 8.0 meV.
+With this replacement, we obtain similar ﬁnal carrier distributions after 250 fs as shown in Figure 3, similar carrier densities and band- gap dynamics as shown in Fig. 4 and thus also a similar carrier multiplication of slightly above 70% at 250 fs.
+To show the sensitivity of the results on the electron-phonon coupling matrix element, we also show a calculation with gpd 0 = 8.0 meV.
+This leads to a sizable diﬀerence in the ﬁ- nal carrier distributions, reduces the band-gap shrinkage and also the carrier multiplication to about 50 % for the setup with gpd 0 = 8.0 meV.
+Therefore, for a simulation of real materials and their electron-phonon matrix elements it is important to take into account the basis transfor- mation.
+However, in the spirit of our model, we will use averaged electron-phonon matrix elements, which are ca- pable of reproducing the dynamical calculations, albeit for a slightly diﬀerent value of the electron-phonon ma- trix elements.
+This is suﬃcient for the more qualitative analysis of the present paper.
+In Fig. 5 we analyze the inﬂuence of diﬀerent values of the averaged electron-phonon coupling matrix element ˜g0 by comparing ˜gcc 0 = 8.0 meV, 4.0 meV, and 6.0 meV.
+Because the quenching of the insulator phase is due to the coherent phonon dynamics, the gap closing depends on the strength of the electron-phonon matrix.
+Due to eﬃciency of the coupling between carrier and band dy- namics, the mutual ampliﬁcation between impact ion- ization and gap closing leads to a gap minimum of 15 meV for the setup with ˜gcc 0 = 8.0 meV, 58 meV for the setup with ˜gcc 0 = 6.0 meV and 81 meV for the setup with ˜gcc 0 = 4.0 meV.
+Besides the gap closing also the carrier multiplication is visible in Fig. 5 via the time-evolution of the carrier density in the conduction band.
+After 300 fs a carrier multiplication of 74 % (˜gcc 0 = 8.0 meV), 42 % (˜gcc 0 = 6.0 meV), and 26 % (˜gcc 0 = 4.0 meV) is reached.
+B. Comparison to experimental results and inﬂuence of diﬀerent excitation scenarios An important objective of this paper is to provide re- sults that can be compared with recent experimental pho- toemission data.
+In particular, the energy distribution curves of photoemitted electrons cannot unambiguously be interpreted without some theoretical model.
+[66] As we cannot compute the cross sections that would be needed for a quantitative comparison with the energy distribu- tion curves, we present a qualitative comparison using a broadening of the conduction and valence distribution by the typical experimental energy resolution of 150 meV (FWHM).
+The broadened distributions are deﬁned by Nb(E) = X k nb k g∆E(ϵb k −E) (17) where g∆E(ϵb k −E) is a Gaussian of width ∆E.
+The important point for the comparison with experiment are the energy dependent features, not the numerical value of the Nbs.
+In the following, we ﬁrst illustrate the spectral and kinetic response with the help of the broadened distribu- tions using our two band model and the electron-phonon matrix element gpd 0 = 10.0 meV in the orbital basis in- cluding the basis transformation of the electron-phonon matrix elements.
+We ﬁrst show results for our model us- ing the band-gap of TiSe2 in the charge-density wave phase which are intended to be compared to electron distribution curves for small band-gap materials.
+After- wards we analyze the dependence of the response on the optical excitation by a parameter study for diﬀerent Rabi frequencies and excitation energies.
+The broadened distributions for conduction and va- lence bands, together with the band dispersions are shown in Figure 6 for diﬀerent times.
+We focus on the8 Nc  k (nm-1)  Energy (meV) Nv  FIG. 6.
+Time-dependent band dispersion (top), broadened carrier distribution function in the conduction band (middle) and valence band (bottom) at 25 fs (dashed black), 100 fs (dotted black), 175 fs (solid black), 250 fs (dashed red) after an ultrashort optical excitation at 0 fs.
+After 200 fs a quasi- equilibrium is almost reached in both bands.
+The dynamics of the distribution function in the valence band is mainly due to the gap closing and reshaping of the bands as the eﬀect of impact ionization is hardly visible due to the broadening.
+Note that for a better comparison between the Nc and Nv curves, Nv has been multiplied by a factor of 16.
+distribution of conduction electrons ﬁrst.
+In the ﬁrst 25 fs, the ultrafast optical excitation creates a peak in this distribution function at 200 meV above the Fermi en- ergy.
+After 100 fs the hot-carrier relaxation due to im- pact ionization induced by the gap closing is clearly vis- ible in the broadened distribution function.
+However, in a Mexican-hat shaped band-structure the interpretation of the broadened electron distribution is not straightfor- ward because a time-dependent increase in the conduc- tion band is a combination of band-dispersion eﬀects and the on-going carrier multiplication.
+As we have seen in Figure 3 and Figure 4 the eﬀects of carrier multiplica- tion dominate the increase of the carrier signal at later times.
+The mutual ampliﬁcation between impact ioniza- tion and gap closing, which has already been discussed, continues as shown by the snapshots for the band and distribution functions in Figure 6 until there is no more phase space for electron-electron scattering available and a quasi-equilibrium distribution is reached after 250 fs.
+Starting from a value of the band-gap that is realistic for small-bandgap material like 1T-TiSe2 we thus obtain in our model calculation a signal of ultrafast carrier dynam- ics that is in agreement with experimental results, such Time (fs)  Band gap (meV)  Carrier density  ( x 1010 cm-2)  FIG.
+7. Gap closing (bottom) and carrier density in the con- duction band (top) vs. time for diﬀerent excitation energies of 150 (dotted), 200 (solid) and 250 (dashed) meV above the Fermi energy.
+as those reported in Ref. 66.
+Our calculated “signal” can be explained in terms of a mutual ampliﬁcation between gap closing, which goes along with the quenching of the insulator phase, and impact ionization.
+In the present pa- per, the band gap dynamics are due to coherent phonons and are therefore applicable to a Peierls-like insulator.
+It is to be expected that a similar connection between gap closing and impact ionization occurs also for an excitonic- insulator phase-change mechanism.
+It may be even more pronounced in the excitonic-insulator case, because there the characteristic response times are faster than the re- sponse time of a Peierls insulator, cf. Ref.
+14, which indi- cates that the important electron-electron coupling ma- trix elements in that case are larger.
+However, because of the slower gap response in the Peierls (electron-phonon coupling) case, the connection between gap closing and carrier multiplication can be more easily disentangled in the model used here.
+Turning to the broadened valence band distributions, shown in Fig. 6 (bottom), the holes at the top of the Mexican-hat shaped valence band created by impact ion- ization are hardly visible.
+This is because the broadening of the distribution function almost completely removes the dip in the microscopic valence band distributions nv shown in Fig. 3.
+This is in agreement with our earlier study using a parabolic valence-band and experimental results in Ref. 66.
+The dynamics of the Mexican hat in- troduces new features, such as the bump of the broadened9 Carrier density  ( x 1010 cm-2) Band gap (meV)  Time (fs)  FIG. 8.
+Gap closing (bottom) and carrier density in the con- duction band (top) vs. time for diﬀerent Rabi energies of 6.6 (dotted), 10.0 (solid) and 15.0 (dashed) meV. valence band distribution around the top of the ﬁlled va- lence band, which is due to the changing band dispersion.
+The shift of the broadened distribution function is due to the band shift of the valence band as shown in Fig. 6 (top).
+These results give a simple microscopic picture of electronic dynamics underlying the electron distribution curves observed, e.g, in Ref. 66 for TiSe2.
+We plot and discuss the band and carrier dynamics in this paper up to about 250 fs, which is the onset of the phase transition.
+At longer times the system can go further into a diﬀerent phase where the back-folded valence band disappears, or the system can return to the insulator phase by cooling processes due to carrier-phonon scattering.
+Both eﬀects are not included in the present study and are left for future investigations.
+After analyzing the characteristic response of the sys- tem, we study its dependence on the optical excitation by varying the Rabi frequency and photon energy of the ul- trafast optical excitation.
+The quantitative diﬀerences between a calculation with and without the electron- phonon basis transformation are insigniﬁcant for this analysis and for the sake of simplicity, we use an av- eraged electron-phonon matrix element ˜gcc 0 = 6.0 meV.
+We take this as a reference value in the following param- eter study as it is an intermediate value of the coupling so that a reduction and an increase still show an inter- esting gap closing dynamics.
+The value of ˜gcc 0 = 10.0 was chosen in Fig. 6 because it exhibits a relatively fast dynamics (of the gap closing and the carrier dynamics) for which structures in the distribution function are most easily visible.
+In Fig. 7 we compare diﬀerent excitation photon ener- gies, which lead to diﬀerent energies at which the elec- trons are created in the conduction band.
+We call this the excitation energy EX and measure it from the un- excited Fermi energy EF, as sketched in Fig. 2.
+We an- alyze the cases of EX = 150 meV, 200 meV (which has been used so far and constitutes our reference setup in the following) and 250 meV.
+For the setup with EX − EF = 250 meV, carriers are excited around 200 meV above the conduction-band bottom; the distance to the band bottom is reduced to 100 meV for the setup with EX −EF = 150 meV. As shown in Fig. 7(top) the car- rier density created during the optical pulse in the con- duction band is only slightly diﬀerent for the three se- tups, but its subsequent time evolution is diﬀerent.
+How- ever, the corresponding band gap changes for the diﬀer- ent excitation energies in Fig. 7(bottom) deviate only by around 20 meV, i.e., 10 meV for each band, which is much smaller than the diﬀerence of the excitation en- ergies.
+The most important contribution to the diﬀer- ence in carrier densities for the three excitation energies must therefore be due to diﬀerent carrier multiplication eﬀects, and the impact ionization is most eﬃcient for the setup with EX −EF = 250 meV. Fig. 7 further shows that the eﬃciency of the mutual ampliﬁcation between impact ionization and gap closing increases nonlinearly.
+After 250 fs the values for the the carrier multiplication are 73%, 42% and 14%, respectively, for the excitation energies of EX −EF = 250 meV, 200 meV and 150 meV.
+The corresponding band gaps are 52 meV, 60 meV, and 67 meV.
+This nonlinearity is mainly due to repeated in- terband scattering processes that become possible for electrons excited at higher energies.
+During their scat- tering dynamics toward the band bottom these electrons can contribute to the carrier multiplication process twice or more times.
+In Fig. 8 we investigate the dependence of the dynam- ics on the excitation strength.
+We compare three ampli- tudes of the Rabi energy ℏΩ0: 6.6 meV, 10.0 meV (our reference setup and the value used so far) and 15.0 meV.
+In diﬀerence to Fig. 7, the carrier density created in the conduction band by the optical excitation is diﬀerent for the three cases.
+The carrier density is the driving force of the coherent-phonon amplitude, which induces an atomic displacement responsible for the band gap dynamics, so that we obtain a higher initial band gap reduction for larger values of ℏΩ0 and this band gap remains smaller due to the mutual ampliﬁcation between gap closing and impact ionization.
+The gap closing evidently saturates in Fig. 8(bottom).
+The eﬀect of impact ionization can be assessed from the carrier multiplication in Fig. 8(top), which is 33%, 42% and 43%, respectively for Rabi ener- gies ℏΩ0 = 6.6 meV, 10.0 meV and 15 meV.
+This carrier multiplication shows only a comparatively small increase between the two smaller Rabi energies whereas we have a pronounced diﬀerence in the gap closing.
+The diﬀer-10 Carrier density  ( x 1010 cm-2)  Band gap (meV)  Time (fs)  FIG. 9.
+Gap closing (bottom) and carrier density in the conduction band (top) vs. time for a parabolic (red) and a Mexican-hat shaped (black) band with phonon matrix ele- ment ˜gcc 0 = 6.0 meV. ence between the dynamical scenarios shown in Fig. 8 is therefore mainly due to the diﬀerent gap closing re- lated to the initial photoexcited carrier density and the saturation of the gap closing is mainly responsible for the saturation of the carrier multiplication.
+Parentheti- cally we remark that a saturation of the gap quenching of the charge-density wave state has been observed in the charge-density wave material RTe3 where only an incom- plete suppression of the charge-density wave occurs; here, we ﬁnd an indication of a saturation for comparatively small electron-phonon coupling.
+[70] C. Inﬂuence of diﬀerent band shapes As already mentioned, we are interested in elucidat- ing the inﬂuence of the band structure on measurable quantities, in particular energy distribution curves pro- duced by photoemission experiments.
+In order to un- derstand the calculated broadened distribution functions that can be compared with experiment, we here ﬁrst dis- cuss the inﬂuence of the band shape on the carrier dy- namics without added broadening, and use for the com- parison a parabolic band and the Mexican hat shaped band that we have based our calculations on so far.
+For a meaningful comparison, we deﬁne the parabolic band setup using all band parameters of the Mexican-hat like Carrier density  ( x 1010 cm-2) Band gap (meV)  Time (fs)  FIG. 10.
+Gap closing (bottom) and carrier density in the conduction band (top) vs. time for a parabolic (red) and a Mexican-hat shaped (black) band with phonon matrix ele- ment ˜gcc 0 = 8.0 meV. band setup, except a change of the on-site energies ϵp 0 and ϵd 0 from 1.95 eV to 2.0 eV. In this way, the parabolic and the Mexican-hat shaped bands have the same band gap, but in the parabolic case it occurs at k = 0 and in the Mexican-hat band case at k0.
+The band structures are plotted in Figs. 11(top) and 12(top) as dotted lines.
+In Fig. 9 and Fig. 10 the gap closing and carrier den- sity in the conduction band vs. time is shown for the parabolic and Mexican-hat shaped band structures with ˜gcc 0 = 6.0 meV and ˜gcc 0 = 8.0 meV, respectively.
+Due to the diﬀerent band shape, the ”tuning” of the band dis- persion and the optical excitation is slightly diﬀerent.
+We have already seen in Fig. 7 that such a small diﬀerence in excitation energy will also lead to a slightly diﬀerent optically excited carrier density for the two band struc- tures.
+However, the further time evolution of the carrier density is mainly determined by the diﬀerent band dis- persions.
+The origin of the steeper band dispersion for the Mexican-hat shaped band is the characteristic band gap minimum at a k0 ̸= 0 (i.e., not at the high-symmetry point), and a local band gap maximum at k = 0 (the high symmetry point) in contrast to the parabolic case, where the global band gap minimum is at k = 0.
+The eﬃciency of the impact ionization depends on the size of the band gap and the k-dependent Bloch wavefunctions, which in- clude band mixing eﬀects, as well as the available phase space for the scattering process.
+The band mixing is connected to the position of the band gap minimum and,11 Nc  k (nm-1) Nv  Energy (meV)  FIG. 11.
+Band dynamics (top) and broadened carrier distri- bution function in the conduction band (middle) and valence band (bottom) at 25 fs (dashed) and 250 fs (solid) after an ultrashort optical excitation at 0 fs for a parabolic (red) and a Mexican-hat shaped (black) band with phonon matrix ele- ment ˜gcc 0 = 6.0 meV. thus, diﬀerent between the parabolic and Mexican-hat setups.
+These qualitative diﬀerences between the band struc- tures should lead to diﬀerent carrier dynamics, and we compare these dynamics in Figs. 9–12.
+In a parabolic band, the hot carriers relax directly into the high sym- metry k = 0 point, while in the case of the Mexican- hat shaped band, hot carriers relax more into the band minimum k0 and reach the local maximum at the high symmetry k = 0 point only with a delay.
+Therefore, band gap minima on diﬀerent k positions combined with a diﬀerent k dependence of the available phase space re- sults in diﬀerent eﬃciency for impact ionization for equal band gap minima.
+We ﬁrst focus on Figs. 9 and Fig. 10 where we compare the gap closing and conduction-band carrier density between Mexican-hat and parabolic bands for diﬀerent electron-phonon couplings.
+A higher impact ionization eﬃciency for the Mexican-hat shaped band induces a diﬀerence in the carrier density between the two band structures, as can be seen from splitting of the curves above 100 fs in Figs. 9 and Fig. 10, respectively.
+The mutual ampliﬁcation between impact ionization and band gap closing ampliﬁes the diﬀerence in the tempo- ral evolution of the band gap (see splitting of the curves at a slightly later time around 150 fs) and of the im- pact ionization eﬃciency.
+Therefore, the diﬀerence be- tween the two band structures increases for band gap Nc  k (nm-1) Nv  Energy (meV)  FIG. 12.
+Band dynamics (top) and broadened carrier distri- bution function in the conduction band (middle) and valence band (bottom) at 25 fs (dashed) and 250 fs (solid) after an ultrashort optical excitation at 0 fs for a parabolic (red) and a Mexican-hat shaped (black) band with phonon matrix ele- ment ˜gcc 0 = 8.0 meV. and conduction-band carrier density with time.
+In Fig. 9 this results in a band gap of 60 meV and 62 meV and a carrier multiplication of 42% and 35% (factor: 1.2) for the Mexican-hat structures compared to the respective calculation with the parabolic bands.
+In Fig. 10 for the larger electron-phonon coupling ˜gcc 0 = 8.0 meV we have band gaps of 15 meV and 26 meV after 250 fs, and car- rier multiplications of 74% and 50% (factor: 1.5) for the Mexican-hat and parabolic bands, respectively.
+Depend- ing on the electron-phonon matrix element the inﬂuence of the band shape can therefore be substantial.
+In Figs. 11 and 12 we compare the time evolution of the band structure and broadened carrier distributions for the Mexican-hat and parabolic bands.
+As the broad- ened distributions average over all k states in a given energy range set by ∆E in Eq. (17) they are inﬂuenced both by the carrier redistribution dynamics (i.e., carrier multiplication) and by the band structure, especially if the band structure changes.
+In our earlier paper, [66] we presented a simple parabolic model without band mix- ing and without a dynamically changing band structure.
+With the present calculation for parabolic and Mexican- hat shaped bands and a consistent inclusion of band mix- ing eﬀects, we can investigate the contribution of the dynamical band structure to the electron distribution curves.12 Fig. 11 and Fig. 12 are for diﬀerent electron-phonon couplings and are obtained from the same dynamical cal- culations as Figs. 9 and 10, respectively.
+For a broad- ening that corresponds to state-of-the-art photoemission experiments, the broadened carrier distributions created by the optical excitation around 25 fs are similar for the Mexican hat and parabolic bands, but a diﬀerence of the weighted carrier distribution in the conduction band can be seen after 250 fs.
+In the parabolic-band case, there are only rigid band shifts and negligible changes in band cur- vature so that the change in the broadened distribution reﬂects essentially only the redistribution by scattering processes and the increase in the number of carriers due to carrier multiplication.
+In the Mexican-hat band struc- ture, there are pronounced changes in the band curvature that also inﬂuence the broadened distribution functions.
+While there are quantitative diﬀerences to the parabolic case, we observe a similar behavior of the broadened dis- tribution function that is in qualitative agreement with the carrier multiplication factors determined from Figs. 9 and 10.
+We conclude that the behavior of computed broadened distribution functions, which are the quantity we compare to experimental electron-distribution curves and which are similar to experimental results on TiSe2, are an unambiguous indicator of carrier multiplication.
+The energy dependent signatures found in Figs. 11 and 12 are only inﬂuenced to a small extent by changes in the spectral properties of the carriers, even though the dynamical changes in the curvature of the Mexican hat band structure model likely overestimates those occur- ring in a real small-band gap material.
+In the valence band, a characteristic bump below the Fermi energy appears only in the broadened distribution function in the Mexican-hat shaped band.
+The erosion of this bump, which is not visible in the parabolic band, in- dicates the eﬀect of carrier multiplication.
+In TiSe2 the Se 4p band, as opposed to the Ti 3d, does not show a Mexican hat-like structure and therefore it is diﬃcult to observe characteristics of impact ionization in the valence band with the energy broadening introduced by current experimental photoemission setups.
+Because the tempo- ral evolution of the valence band signal is more inﬂuenced by the band and less inﬂuenced by the carrier dynamics, the diﬀerence between diﬀerent band shapes, in partic- ular in Fig. 11, is more pronounced than the diﬀerences between the two snapshots at diﬀerent times.
+V. CONCLUSION We investigated carrier multiplication dynamics due to impact ionization after ultrafast optical excitation in a model band structure of a quasi-two dimensional ma- terial with small band gaps.
+The photo-induced band gap narrowing close to the Fermi surface is incorporated using the coupling to coherent phonons, which mimics the quenching of an insulator phase.
+We used a dy- namical approach that includes time-dependent band- energies and wave-functions, which make the Coulomb- matrix elements and the static screening eﬀectively time- dependent.
+Using this model, we were able to quantify the contribution of impact ionization in the ultrafast re- sponse of small band-gap 2D materials and discussed the importance of the interplay between carrier and band dynamics.
+We computed broadened distribution func- tions that can be compared to energy distribution curves as they are measured in time-dependent photoemission spectroscopy, and we discussed the signatures of impact ionization and gap closing in these curves.
+We also in- vestigated the inﬂuence dynamical changes in the band curvature, as these changes will also inﬂuence energy dis- tribution curves and cannot, at present experimental res- olutions, be distinguished from carrier multiplication ef- fects.
+To this end, we compared a parabolic band struc- ture with that of a Mexican hat and found that the char- acteristic change in energy distribution curves in, e.g., TiSe2, [66] are indeed mainly due to carrier multiplica- tion eﬀects, and only to a small extent due to changes in the spectral function of the electrons.
+Our computed energy dependent distribution curves compare well with experiments on TiSe2 and, even though we consider a speciﬁc coupling mechanism to a coherent phonon, we believe that our results capture a general trend in small band-gap 2D materials.
+Appendix A: Tight-binding model For our tight-binding model we assume a quasi-two di- mensional material like TMDCs with two kind of atoms Ad and Ap.
+In the case of a TMDC, atom sort Ad would be the transition metal atom (e.g. Ti) with d- type or f-type valence orbital and atom sort Ap would be the chalcogen atoms (e.g. Se) with p-type valence or- bitals.
+The unit cell would consist of one Ad and two Ap atoms.
+For example the lattice vectors L1 = (l1, −l2, 0), L2 = (l1, l2, 0) and L2 = (0, 0, l3) would span a unit cell with the atom basis Bd = (0, 0, 0) for Ad, Bp,1 = (b1, b2, b3) for the ﬁrst Ap and Bp,2 = (b1, b2, −b3) for the second Ap.
+The nearest-neighboring Ad or Ap atoms in the same plane would have a hexagonal or tetrago- nal symmetry.
+To model an accurate bandstructure for a TMDC around the Fermi surface the three t2g (i.e. dxy, dzx, dxy) and eventually the energetically higher two eg (i.e. d3z2−r2, dx2−y2) orbitals of the atom of sort Ad and the six p-orbitals of the two atoms of sort Ap might be considered.[54] Weak interactions between neighboring orbitals are usually neglected and the remaining interactions are ex- pressed in terms of Slater-Koster integrals.[71] The bond integrals between two orbitals are distinguished between σ, π or eventually δ bondings.
+For example, as described in Ref.
+52 and 54 for TiSe2, only the three hopping path- ways ddσ, ppσ and pdπ contribute signiﬁcantly to the behavior of charges close to the Fermi energy.
+The re- sulting band structure around the high symmetry points13 under investigation of the small band-gap TMDCs is of- ten highly un-isotropic like in TiSe2 as reported, e.g., in Ref. 38.
+For this material, the non-isotropic band disper- sion of the Ti 3d band is non-parabolic, i.e., an ellipsoid, and has a Mexican-hat shape geometry in the CDW in- sulator phase.
+Regarding the investigated band dynamics of such a material in the insulator phase, we avoid a material re- alistic description, where the insulator phase is deter- mined from the normal phase, to investigate the role of diﬀerent kinds of interactions in the phase transition.
+In- stead we model the TB Hamiltonian already in the insu- lator phase and describe the band dynamics via an eﬀec- tive atomic displacement as disturbance of the insulator phase.
+To model the small band-gap around the fermi surface, we use a simple two-band tight-binding model capable to describe the characteristics of the carrier and band-dynamics of such a material after an ultrashort op- tical excitation.
+Thus, we obtain an isotropic band-shape around a high symmetry point.
+The validity of this as- sumption is additionally motivated at the end of this sec- tion.
+To transform a more material-realistic TB model into a simpler model with high symmetry capable to describe the characteristics of the carrier and band-dynamics close to the important high-symmetry point, a lot of more or less sophisticated transformation can be done.
+A simple way of doing it, is to disregard the t2g and to consider only one d orbital, e.g., dxy, of Ad and one p orbital, e.g., py, of Ap and give only Vppσ, Vdpσ and Vddσ ﬁnite values.
+In the spirit of such a transformation, we use the following eﬀective tight-binding hamiltonian to describe the investigated small band-gap insulator phase HTB = ϵp 0cps† k cps k + ϵc 0(cds k )†cds k + 2Vpp  cos(kxex) + cos(kyey)  (cps k )†cps k + Vpde−ik·dpd(cps k )†cds k + Vdpeik·dpd(cds k ) †cps k + 2Vdd  cos(kxex) + cos(kyey)  (cds k )†cds k (A1) where ϵp 0, ϵd 0 are the on-site energies, Vpp, Vpd = Vdp, Vdd are the tight-binding coupling-elements and dpd is the relative distance vector between the two eﬀective atoms within the unit cell.
+As we do not include spin-orbit cou- pling, we do not explicitly write out the spin-dependence in the following.
+The outcome is a conduction band mainly originating from a d-type transition metal or- bital and a valence band mainly originating from a p- type chalcogen orbital.
+In the region of the examined high symmetry point, we obtain a angular symmetric Mexican-hat shaped band with a small band gap and a high band mixing.
+However, assuming a fast angular redistribution of carrier via electron-phonon scattering as e.g. reported in Ref. 67, the fundamental results of this investigation are also transferable to non-parabolic band structures.
+Appendix B: Equation-of-motion in the time-dependent eigenbasis We start from the total Hamiltonian Htot = Hqp + Hint (B1) consisting of a quasi-particle hamiltonian Hqp and an interaction hamiltonian Hint.
+If the quasi-particle part is time-dependent, as discussed in section II B, where Hqp = Heﬀ= HCohPh + HTB, the eigenvalues and eigen- vectors of this Hamiltonian have to be calculated for ev- ery time-step of the dynamical calculation.
+Such a time- dependent basis is associated with a basis transformation of the whole equation of motion for every time step as discussed in the following.
+We start using the eigenbasis of quasi-particle hamil- tonian Hqp(t0) at a time t0.
+In this basis the equation of motion for the reduced density matrix ρb1b2 k = ⟨cb2† k cb1 k ⟩ is d dtρb1b2 k = dρb1b2 k dt  qp + dρb1b2 k dt  int (B2) The quasi-particle part of the equation-of-motion can be written as dρb1b2 k dt  qp = hb1b2 k ρb1b2 k −hb2b1 k ρb2b1 k (B3) and the interaction part can be written in the general form of dρb1b2 k dt  int = X Γ[ρ] (B4) i.e. a sum over correlation contributions Γ, which are functionals of the density matrices ρ.
+For a time t1 > t0, the equation of motion d dt ˜ρb1b2 k in the new eigenbasis of the system at time t1 takes the form d dt ˜ρb1b2 k = d dt h U †ρb1b2 k U i =dU † dt ρb1b2 k U + U † dρb1b2 k dt U + U †ρb1b2 k dU dt (B5) where U is a unitary matrix of the basis transformation between the eigenbasis at the time t0 and the eigenbasis at the time t1.
+For the quasi-particle part we obtain U † dρb1b2 k dt |qpU = U †hb1b2 k UU †ρb1b2 k U −U †T b2b1 k UU †ρb2b1 k U = ˜hb1b2 k ˜ρb1b2 k −˜hb2b1 k ˜ρb2b1 k = d˜ρb1b2 k dt |qp (B6) The transformation of the interaction part can be done in an analogous fashion, but the derivation depends on14 the level of approximation employed for the interaction.
+We assume here that the interaction part can ﬁnally be written in a general form as dρb1b2 k dt  int = X ˜Γ[˜ρ] (B7) One advantage of such a basis transformation is that ˜nb k = ˜ρbb k can be interpreted as the occupation of the state |bk⟩at time t1.
+Therefore, the intuitive physical picture used in common approximation schemes is pre- served.
+However, the basis transformation is associated with a transformation of diagonal density-contributions nb k into oﬀ-diagonal coherence-contributions in conjunc- tion with correlated correction-terms in the equation-of- motion as shown above.
+In the case of a suﬃciently strong dephasing of the coherences, the oﬀ-diagonal contributions in conjunction with the correction from the correlation contribution can be neglected in the equation of motion.
+Then, the car- rier occupation adapts instantaneously to the new band structure.
+We assume that the composition of the bands does not change too fast and approximate the result of this adaptation to be ˜nb k ≈nb k. We thus implement the time-dependent basis in the description of the carrier dynamics using time-dependent band-energies and wave- functions including time-dependent Coulomb-matrix el- ements due to the basis transformation with a time- dependent screening.
+The band dynamics here lead to an additional re-distribution of carriers into the new equilib- rium distribution and a diﬀerent pronunciation of intra- and inter-band scattering pathways.
+For example the Coulomb scattering terms for the oc- cupation ˜nb k at time t1 can be written as d dt ˜nb k = 2π ℏ X k2k3 X b2b3b4 fˆW  ˜N in −˜N out δ(∆˜ϵ) (B8) with fˆW = ˜W bb2b3b4 kk2k3k4  ˜W bb2b3b4* kk2k3k4 −˜W bb2b4b3* kk2k4k3  (B9) ˜N in =  1 −˜nb k  ˜nb2 k2  1 −˜nb3 k3  ˜nb4 k4 (B10) ˜N out = ˜nb k  1 −˜nb2 k2  ˜nb3 k3  1 −˜nb4 k4  (B11) ∆˜ϵ = ˜ϵb k −˜ϵb2 k2 + ˜ϵb3 k3 −˜ϵb4 k4 (B12) [1] T. Rohwer, S. Hellmann, M. Wiesenmayer, C. Sohrt, A. Stange, B. Slomski, A. Carr, Y. Liu, L. M. Avila, M. Kall¨ane, et al., Nature 471, 490 (2011), ISSN 0028-0836, URL http://www.nature.com/doifinder/ 10.1038/nature09829.
+[2] J. A. Sobota, S. L. Yang, D. Leuenberger, A. F. Kem- per, J. G. Analytis, I. R. Fisher, P. S. Kirchmann, T. P. Devereaux, and Z. X. Shen, Journal of Electron Spectroscopy and Related Phenomena 195, 249 (2014), ISSN 03682048, 1401.3078, URL http://dx.doi.org/ 10.1016/j.elspec.2014.01.005.
+[3] S. Eich, A. Stange, A. V. Carr, J. Urbancic, T. Pop- mintchev, M. Wiesenmayer, K. Jansen, A. Ruﬃng, S. Jakobs, T. Rohwer, et al., Journal of Electron Spec- troscopy and Related Phenomena 195, 231 (2014), ISSN 03682048, URL http://dx.doi.org/10.1016/j. elspec.2014.04.013.
+[4] C. L. Smallwood, R. A. Kaindl, and A. Lan- zara, EPL (Europhysics Letters) 115, 27001 (2016), ISSN 0295-5075, 1610.00202, URL http://stacks.iop.org/0295-5075/115/i=2/a=27001?
+key=crossref.fc96d0688dcc85d1c7738f1d4cc5a942.
+[5] I. Gierz, Journal of Electron Spectroscopy and Re- lated Phenomena 219, 53 (2017), ISSN 0368- 2048, URL http://www.sciencedirect.com/science/ article/pii/S0368204816301657.
+[6] I. Gierz, J. C. Petersen, M. Mitrano, C. Cacho, E. Turcu, E. Springate, A. St¨ohr, A. K¨ohler, U. Starke, and A. Cav- alleri, Nature Materials 12, 1119 (2013), ISSN 1476-1122, 1304.1389, URL http://arxiv.org/abs/1304.1389{\% }0Ahttp://dx.doi.org/10.1038/nmat3757.
+[7] T. Stroucken, J. H. Gr¨onqvist, and S. W. Koch, Phys.
+Rev. B 87, 245428 (2013), URL https://link.aps.org/ doi/10.1103/PhysRevB.87.245428.
+[8] M. T. Mihnev, F. Kadi, C. J. Divin, T. Winzer, S. Lee, C.-H. Liu, Z. Zhong, C. Berger, W. A. de Heer, E. Malic, et al., Nat. Commun.
+7, 11617 (2016), ISSN 2041-1723, URL http://www.nature.com/doifinder/ 10.1038/ncomms11617.
+[9] F. Kadi, T. Winzer, A. Knorr, and E. Malic, Scientiﬁc Reports 5, 16841 (2015), ISSN 2045- 2322, 1508.06783, URL http://arxiv.org/abs/1508.
+06783{\%}0Ahttp://dx.doi.org/10.1038/srep16841.
+[10] G. R. Bhimanapati, Z. Lin, V. Meunier, Y. Jung, J. Cha, S. Das, D. Xiao, Y. Son, M. S. Strano, V. R. Cooper, et al., ACS Nano 9, 11509 (2015), ISSN 1936086X.
+[11] M. Chhowalla, H. S. Shin, G. Eda, L.-J. Li, K. P. Loh, and H. Zhang, Nature Chemistry 5, 263 (2013), ISSN 1755-4330, 1205.1822, URL http://www.nature.
+com/doifinder/10.1038/nchem.1589.
+[12] D. Voiry, A. Mohite, and M. Chhowalla, Chem. Soc.
+Rev. 44, 2702 (2015), ISSN 0306-0012, URL http://xlink.
+rsc.org/?DOI=C5CS00151J.
+[13] A. Steinhoﬀ, M. Florian, M. R¨osner, M. Lorke, T. O. Wehling, C. Gies, and F. Jahnke, 2D Materials 3, 031006 (2016), URL http://stacks.iop.org/2053-1583/3/i= 3/a=031006.
+[14] S. Hellmann, T. Rohwer, M. Kall¨ane, K. Hanﬀ, C. Sohrt, A. Stange, A. Carr, M. Murnane, H. Kapteyn, L. Kipp, et al., Nat. Commun.
+3, 1069 (2012), ISSN 2041-1723, URL http://www.nature.com/doifinder/ 10.1038/ncomms2078.
+[15] S. Ghatak, A. N. Pal, and A. Ghosh, Acs Nano 5, 7707 (2011).
+[16] T. Cheiwchanchamnangij and W. R. Lambrecht, Phys.
+Rev. B 85, 205302 (2012).15 [17] A. Chernikov, C. Ruppert, H. M. Hill, A. F. Rigosi, and T. F. Heinz, Nature Photonics 9, 466 (2015).
+[18] H. Chen, X. Wen, J. Zhang, T. Wu, Y. Gong, X. Zhang, J. Yuan, C. Yi, J. Lou, P. M. Ajayan, et al., Nat. Com- mun. 7, 12512 (2016).
+[19] A. Steinhoﬀ, M. Florian, M. R¨osner, G. Sch¨onhoﬀ, T. O. Wehling, and F. Jahnke, Nature communications 8, 1166 (2017).
+[20] B. H. Moon, J. J. Bae, M.-K. Joo, H. Choi, G. H. Han, H. Lim, and Y. H. Lee, Nat. Commun. 9, 2052 (2018).
+[21] G. Gr¨uner, Reviews of Modern Physics 60, 1129 (1988), ISSN 00346861.
+[22] X. Zhu, Y. Cao, J. Zhang, E. W. Plummer, and J. Guo, Proceedings of the National Academy of Sciences 112, 2367 (2015), ISSN 0027-8424, 1503.01858, URL http:// www.pnas.org/lookup/doi/10.1073/pnas.1424791112.
+[23] F. Flicker and J. Van Wezel, Nat. Commun.
+6, 7034 (2015), ISSN 2041-1723, 1502.06816, URL http://www.
+nature.com/doifinder/10.1038/ncomms8034.
+[24] D.-N. Cho, J. van den Brink, H. Fehske, K. W. Becker, and S. Sykora, Scientiﬁc Reports 6, 22548 (2016), ISSN 2045-2322, 1603.01157, URL http://www.nature.com/ articles/srep22548.
+[25] M. Leroux, L. Cario, A. Bosak, and P. Rodi`ere, Phys.
+Rev. B 97, 195140 (2018).
+[26] Y. Nakata, K. Sugawara, S. Ichinokura, Y. Okada, T. Hi- tosugi, T. Koretsune, K. Ueno, S. Hasegawa, T. Taka- hashi, and T. Sato, npj 2D Materials and Applications 2, 12 (2018).
+[27] S. Wall, D. Wegkamp, L. Foglia, K. Appavoo, J. Nag, R. Haglund, J. St¨ahler, and M. Wolf, Nat. Commun.
+3, 721 (2012), ISSN 2041-1723, 1012.1468, URL http:// www.nature.com/doifinder/10.1038/ncomms1719.
+[28] T. Mizokawa, K. Takubo, T. Sudayama, Y. Wakisaka, N. Takubo, K. Miyano, N. Matsumoto, S. Nagata, T. Katayama, M. Nohara, et al., Journal of Supercon- ductivity and Novel Magnetism 22, 67 (2009).
+[29] S. Sykora, A. Huebsch, and K. W. Becker, EPL (Euro- physics Letters) 85, 57003 (2009).
+[30] S. Kim, K. Kim, and B. I. Min, Scientiﬁc Reports 5, 15052 (2015), ISSN 2045-2322, URL http://www.
+nature.com/articles/srep15052.
+[31] T. Ritschel, J. Trinckauf, K. Koepernik, B. B¨uchner, M. v. Zimmermann, H. Berger, Y. I. Joe, P. Abba- monte, and J. Geck, Nature Physics 11, 328 (2015), ISSN 1745-2473, 1409.7341, URL http://www.nature.
+com/doifinder/10.1038/nphys3267.
+[32] M. Gu and J. M. Rondinelli, Scientiﬁc Reports 6, 25121 (2016), ISSN 2045-2322, URL http://www.nature.com/ articles/srep25121.
+[33] A. Khitun, G. Liu, and A. A. Balandin, arXiv preprint arXiv:1612.00028 (2016).
+[34] K. Rossnagel, Journal of Physics: Condensed Matter 23, 213001 (2011).
+[35] M. Porer, U. Leierseder, J.-M. M´enard, H. Dachraoui, L. Mouchliadis, I. E. Perakis, U. Heinzmann, J. Demsar, K. Rossnagel, and R. Huber, Nature Materials 13, 857 (2014), ISSN 1476-1122, URL http://www.nature.com/ doifinder/10.1038/nmat4042.
+[36] K.-W. Zhang, C.-L. Yang, B. Lei, P. Lu, X.-B. Li, Z.-Y. Jia, Y.-H. Song, J. Sun, X. Chen, J.-X. Li, et al., Science Bulletin 63, 426 (2018).
+[37] C. Monney, H. Cercellier, F. Clerc, C. Battaglia, E. F. Schwier, C. Didiot, M. G. Garnier, H. Beck, P. Aebi, H. Berger, et al., Phys.
+Rev. B 79, 045116 (2009), URL https://link.aps.org/doi/10. 1103/PhysRevB.79.045116.
+[38] C. Monney, E. F. Schwier, M. G. Garnier, N. Mar- iotti, C. Didiot, H. Beck, P. Aebi, H. Cercellier, J. Marcus, C. Battaglia, et al., Phys.
+Rev. B 81, 155104 (2010), URL https://link.aps.org/doi/10. 1103/PhysRevB.81.155104.
+[39] M. Cazzaniga, H. Cercellier, M. Holzmann, C. Mon- ney, P. Aebi, G. Onida, and V. Olevano, Phys.
+Rev. B 85, 195111 (2012), URL https://link.aps.org/doi/ 10.1103/PhysRevB.85.195111.
+[40] C. Monney, G. Monney, P. Aebi, and H. Beck, Phys.
+Rev. B 85, 235150 (2012), URL https://link.aps.org/doi/ 10.1103/PhysRevB.85.235150.
+[41] G. Li, W. Z. Hu, D. Qian, D. Hsieh, M. Z. Hasan, E. Mo- rosan, R. J. Cava, and N. L. Wang, Phys. Rev. Lett.
+99, 027404 (2007), URL https://link.aps.org/doi/ 10.1103/PhysRevLett.99.027404.
+[42] C. Monney, C. Battaglia, H. Cercellier, P. Aebi, and H. Beck, Phys. Rev. Lett.
+106, 106404 (2011), URL https://link.aps.org/doi/10.1103/PhysRevLett. 106.106404.
+[43] A. Kogar, M. S. Rak, S. Vig, A. A. Husain, F. Flicker, Y. I. Joe, L. Venema, G. J. MacDougall, T. C. Chiang, E. Fradkin, et al., Science 358, 1314 (2017).
+[44] C. Chen, B. Singh, H. Lin, and V. M. Pereira, arXiv preprint arXiv:1712.04967 (2017).
+[45] D. Pasquier and O. V. Yazyev, arXiv preprint arXiv:1805.11560 (2018).
+[46] D. Goleˇz, P. Werner, and M. Eckstein, Phys.
+Rev. B 94, 035121 (2016).
+[47] K. Rossnagel, L. Kipp, and M. Skibowski, Phys.
+Rev. B 65, 235101 (2002), URL https://link.aps.org/doi/ 10.1103/PhysRevB.65.235101.
+[48] T. E. Karam, J. Hu, and G. A. Blake, ACS Photonics 5, 1228 (2018).
+[49] H. P. Hughes, Journal of Physics C: Solid State Physics 10, L319 (1977).
+[50] M. Hellgren, J. Baima, R. Bianco, M. Calandra, F. Mauri, and L. Wirtz, Phys. Rev. Lett. 119, 176401 (2017).
+[51] T. E. Kidd, T. Miller, M. Y. Chou, and T.-C. Chiang, Phys. Rev. Lett.
+88, 226402 (2002), URL https://link.
+aps.org/doi/10.1103/PhysRevLett.88.226402.
+[52] J. van Wezel, P. Nahai-Williamson, and S. S. Sax- ena, Physica Status Solidi (B) 247, 592 (2010), ISSN 03701972.
+[53] C. Monney, G. Monney, P. Aebi, and H. Beck, New Jour- nal of Physics 14, 075026 (2012), ISSN 1367-2630, URL http://stacks.iop.org/1367-2630/14/i=7/a=075026?
+key=crossref.020eee40fac0dd1e0eb2c27c6c8aa015.
+[54] J. Van Wezel, P. Nahai-Williamson, and S. S. Saxena, Phys.
+Rev. B 81, 165109 (2010), URL https://link.
+aps.org/doi/10.1103/PhysRevB.81.165109.
+[55] V.-N. Phan, K. W. Becker, and H. Fehske, Phys.
+Rev. B 88, 205123 (2013), URL https://link.aps.org/doi/ 10.1103/PhysRevB.88.205123.
+[56] H. Watanabe, K. Seki, and S. Yunoki, Phys.
+Rev. B 91, 205135 (2015), URL https://link.aps.org/doi/ 10.1103/PhysRevB.91.205135.
+[57] R. Bianco, M. Calandra, and F. Mauri, Phys.
+Rev. B 92, 094107 (2015), URL https://link.aps.org/doi/ 10.1103/PhysRevB.92.094107.16 [58] C. Monney, M. Puppin, C. W. Nicholson, M. Hoesch, R. T. Chapman, E. Springate, H. Berger, A. Ma- grez, C. Cacho, R. Ernstorfer, et al., Phys.
+Rev. B 94, 165165 (2016), URL https://link.aps.org/doi/ 10.1103/PhysRevB.94.165165.
+[59] M. Maschek, S. Rosenkranz, R. Hott, R. Heid, M. Merz, D. Zocco, A. Said, A. Alatas, G. Karapetrov, S. Zhu, et al., Phys.
+Rev. B 94, 214507 (2016).
+[60] B. Singh, C.-H. Hsu, W.-F. Tsai, V. M. Pereira, and H. Lin, Phys.
+Rev. B 95, 245136 (2017).
+[61] J. Ishioka, Y. H. Liu, K. Shimatake, T. Kurosawa, K. Ichimura, Y. Toda, M. Oda, and S. Tanda, Phys. Rev. Lett.
+105, 176401 (2010), URL https://link.aps.org/ doi/10.1103/PhysRevLett.105.176401.
+[62] J.-P. Castellan, S. Rosenkranz, R. Osborn, Q. Li, K. E. Gray, X. Luo, U. Welp, G. Karapetrov, J. P. C. Ruﬀ, and J. van Wezel, Phys. Rev. Lett.
+110, 196404 (2013), URL https://link.aps.org/doi/10. 1103/PhysRevLett.110.196404.
+[63] A. Silva, J. Henke, and J. van Wezel, Phys.
+Rev. B 97, 045151 (2018).
+[64] B. Hildebrand, T. Jaouen, M.-L. Mottas, G. Monney, C. Barreteau, E. Giannini, D. Bowler, and P. Aebi, Phys. Rev. Lett. 120, 136404 (2018).
+[65] F. Weber, S. Rosenkranz, J.-P. Castellan, R. Os- born, G. Karapetrov, R. Hott, R. Heid, K.-P. Bohnen, and A. Alatas, Phys. Rev. Lett.
+107, 266401 (2011), URL https://link.aps.org/doi/10. 1103/PhysRevLett.107.266401.
+[66] S. Mathias, S. Eich, J. Urbancic, S. Michael, A. V. Carr, S. Emmerich, A. Stange, T. Popmintchev, T. Rohwer, M. Wiesenmayer, et al., Nat. Commun.
+7, 12902 (2016), ISSN 20411723.
+[67] M. Mittendorﬀ, T. Winzer, E. Malic, A. Knorr, C. Berger, W. A. de Heer, H. Schneider, M. Helm, and S. Winnerl, Nano Letters 14, 1504 (2014).
+[68] A. Donkov, I. Eremin, J. Knolle, and M. M. Korshunov, J. Supercond. Nov. Magn. 22, 37 (2009).
+[69] B. Chakraborty, A. Bera, D. V. S. Muthu, S. Bhowmick, U. V. Waghmare, and A. K. Sood, Phys.
+Rev. B 85, 161403 (2012), URL https://link.aps.org/doi/10. 1103/PhysRevB.85.161403.
+[70] L. Rettig, R. Cort´es, J.-H. Chu, I. R. Fisher, F. Schmitt, R. G. Moore, Z.-X. Shen, P. S. Kirchmann, M. Wolf, and U. Bovensiepen, Nat. Commun. 7, 10459 (2016).
+[71] J. C. Slater and G. F. Koster, Phys.
+Rev. 94, 1498 (1954), URL https://link.aps.org/doi/10. 1103/PhysRev.94.1498.

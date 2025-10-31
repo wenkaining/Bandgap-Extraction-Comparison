@@ -1,0 +1,592 @@
+Quantifying Mn diﬀusion through transferred
+versus directly-grown graphene barriers
+Patrick J. Strohbeen, Sebastian Manzo, Vivek Saraswat, Katherine Su, Michael
+S. Arnold, and Jason K. Kawasaki∗
+Materials Science and Engineering, University of Wisconsin Madison, Madison,
+Wisconsin, 53706, USA
+E-mail: jkawasaki@wisc.edu
+Abstract
+We quantify the mechanisms for manganese (Mn) diﬀusion through graphene in
+Mn/graphene/Ge (001) and Mn/graphene/GaAs (001) heterostructures for samples
+prepared by graphene layer transfer versus graphene growth directly on the semicon-
+ductor substrate. These heterostructures are important for applications in spintronics;
+however, challenges in synthesizing graphene directly on technologically important sub-
+strates such as GaAs necessitate layer transfer and anneal steps, which introduce de-
+fects into the graphene. In-situ photoemission spectroscopy measurements reveal that
+Mn diﬀusion through graphene grown directly on a Ge (001) substrate is 1000 times
+lower than Mn diﬀusion into samples without graphene (Dgr,direct ∼4 × 10−18cm2/s,
+Dno−gr ∼5×10−15 cm2/s at 500◦C). Transferred graphene on Ge suppresses the Mn in
+Ge diﬀusion by a factor of 10 compared to no graphene (Dgr,transfer ∼4×10−16cm2/s).
+For both transferred and directly-grown graphene, the low activation energy (Ea ∼
+0.1−0.5 eV) suggests that Mn diﬀusion through graphene occurs primarily at graphene
+defects. This is further conﬁrmed as the diﬀusivity prefactor, D0, scales with the de-
+fect density of the graphene sheet. Similar diﬀusion barrier performance is found on
+1
+arXiv:2106.01239v3  [cond-mat.mtrl-sci]  11 Sep 2021GaAs substrates; however, it is not currently possible to grow graphene directly on
+GaAs. Our results highlight the importance of developing graphene growth directly on
+functional substrates, to avoid the damage induced by layer transfer and annealing.
+keywords: graphene, diﬀusion, epitaxy, photoemission, defect
+1
+Introduction
+Graphene is a promising monolayer diﬀusion barrier for applications such as oxidation resis-
+tance,1 metal contacts to semiconductors,2,3 and semiconductor spintronics.4 Compared to
+conventional diﬀusion barriers that typically need to be tens of nanometers thick, graphene
+can remain eﬀective as a diﬀusion barrier down to thicknesses of several atomic layers,2 and in
+select cases a single atomic layer.3 This extreme thinness is highly attractive for applications
+where a nearly electronically transparent interface is desired, for example, spin injection via
+tunneling.4 Moreover, recent reports of “remote epitaxy” suggest it is possible to synthesize
+epitaxial ﬁlms through a monolayer graphene barrier,5–7 opening the possibility of epitaxial
+metal/graphene/semiconductor heterostructures that would otherwise not be stable due to
+signiﬁcant metal/semiconductor interdiﬀusion.8
+A fundamental challenge, however, is that graphene cannot be synthesized directly on
+arbitrary substrates. While graphene can be grown by chemical vapor deposition (CVD)
+on Ge and noble metal surfaces (e.g., Cu, Ag, Pt), the high synthesis temperatures and
+catalytic reactions at the surface currently preclude growth directly on technologically im-
+portant compound semiconductor substrates such as GaAs and InP. The use of non-native
+substrates necessitates post-synthesis large-area graphene layer transfer and annealing, which
+can damage the graphene by introducing contaminants such as oxides and polymer residues,
+and creating tears, wrinkles, and point defects on the larger length scales relevant to device
+applications.9 Previous studies have explored the qualitative impacts of defects on graphene
+diﬀusion barriers.2,10,11 However, the speciﬁc eﬀect of the layer transfer process, elevated
+2temperatures during growth, and a quantiﬁcation of the diﬀusivity through graphene has
+not yet been reported.
+Here we quantify the eﬀectiveness of layer-transferred vs directly-grown graphene as a
+monolayer diﬀusion barrier for Mn ﬁlms, grown on GaAs and Ge substrates. The choice
+of Mn on a semiconductor is motivated by applications in spintronics. For example, the
+Mn-containing half metallic ferromagnets NiMnSb and Co2MnSi are promising materials for
+spin injection into GaAs.12,13 Sample structures consisted of a thin Mn ﬁlm (1.64 × 1016
+atoms/cm2, ∼24 ˚A) grown by molecular-beam epitaxy (MBE) on graphene-terminated Ge
+or GaAs (001) substrates. We evaluate two graphene preparations: (1) epitaxial graphene
+that is directly grown on a Ge substrate and (2) transferred graphene that is grown on a
+sacriﬁcial Cu foil and then wet transferred to a Ge or GaAs substrate. We show that the
+combination of graphene transfer and pre-growth annealing creates tears and pinholes in the
+graphene, as quantiﬁed by Raman spectroscopy and identiﬁed by scanning electron micrso-
+copy (SEM) and atomic force microscopy (AFM). In-situ x-ray photoemission spectroscopy
+(XPS) measurements reveal that both transferred and directly-grown graphene suppress
+diﬀusion into the semiconductor substrate.
+Directly-grown graphene on Ge signiﬁcantly
+outperforms the layer transferred versions, decreasing the diﬀusivity at 500◦C two orders of
+magnitude compared to the layer transferred version. We quantify the eﬀective diﬀusivities
+and activation energies for Mn diﬀusion on graphene-terminated Ge and GaAs, and discuss
+mechanisms for diﬀusion with and without tears and pinholes.
+2
+Experimental
+CVD growth of graphene on Ge (001) and Cu foils. We use two preparations of
+graphene: graphene that is grown by chemical vapor deposition (CVD) directly on Ge (001),
+and graphene that is grown by CVD on Cu foils and then layer transferred onto Ge (001) or
+GaAs (001). For CVD graphene growth on Ge (001) we followed growth conditions described
+3in Refs.14,15 CVD graphene on Cu foils was performed at 1050 ◦C using ultra high purity
+CH4, as described in Ref.7
+Graphene transfer onto Ge (001) and GaAs (001). Our graphene transfer pro-
+cess is similar to other polymer-assisted wet transfers reported in previous works.7,16 The
+graphene/Cu foils were cut into 5 by 5 mm pieces and ﬂattened using cleaned glass slides.
+Approximately 300 nm of 495K C2 PMMA (Chlorobenzene base solvent, 2% by wt., Mi-
+croChem) was spin coated on the graphene/Cu foil substrate at 2000 RPM for 2 minutes and
+left to cure at room temperature for 24 hours. Graphene on the backside of the Cu foil was
+removed via reactive ion etching using 90 W O2 plasma at a pressure of 100 mTorr for 30s.
+The Cu foil was then etched by placing the PMMA/graphene/Cu foil stack on the surface of
+an etch solution containing 1-part ammonium persulfate (APS-100, Transene) and 3-parts
+H2O. After 16 hours of etching at room temperature, the ﬂoating PMMA/graphene mem-
+brane was scooped up with a clean glass slide and sequentially transferred into ﬁve 5-minute
+water baths to rinse the etch residuals. Prior to scooping the graphene with the GaAs (001)
+substrate, the native oxide is etched in a 10% HCl bath for 30 seconds. The GaAs is then
+rinsed in isopropanol and nitrogen dried. Prior to scooping with the Ge (001) substrate, the
+native oxide is etched in a hot (90◦C) RO water bath for 15 minutes. Immediately after the
+etching process, the substrate is used to scoop the PMMA/graphene membrane from the
+ﬁnal water bath. To remove water at the graphene/substrate interface, samples were baked
+in air at 50◦C for 5 minutes, then slowly ramped to 150◦C and baked for another 10 minutes.
+The PMMA was dissolved by submerging the sample in an acetone bath at 80◦C for 3 hours.
+Samples are then rinsed in isopropanol and dried with nitrogen.
+Graphene surface preparation and manganese ﬁlm growth. Bare Ge substrates
+were sequentially degreased for 15 minutes in acetone, 15 minutes in isopropanol baths, and
+then etched in reverse-osmosis (RO) water at 90◦C for 30 minutes. No solvent treatments
+were performed to the bare GaAs substrates. All samples were indium-bonded to a molyb-
+denum sample holder to ensure good thermal contact. Samples were outgassed in a high
+4vacuum load lock (p < 5 × 10−8 Torr) for at least 1 hour at 150◦C prior to transferring into
+the ultra-high vacuum (UHV) molecular beam epitaxy (MBE) chamber (p < 5×10−10 Torr).
+In the MBE chamber, the graphene-terminated samples were further outgassed at ∼
+300◦C to remove residual organic contaminants. Select graphene samples were characterized
+by SEM, AFM, and Raman spectroscopy after the ∼300◦C outgas (labelled “pre-anneal” in
+Fig. 1). Following the ∼300◦C outgas, graphene samples were annealed at roughly 600◦C
+to remove native oxides. Removal of surface oxides was conﬁrmed via reﬂection high energy
+electron diﬀraction (RHEED). For the bare GaAs substrate, a thick GaAs buﬀer layer was
+grown to smoothen the surface before Mn growth. No buﬀer layers were grown on the other
+samples.
+Thin Mn ﬁlms (1.64×1016 atoms/cm2) were grown at room temperature, using an elemen-
+tal eﬀusion cell. The thickness was measured using an in-situ quartz crystal microbalance
+(QCM) that has been calibrated through ex-situ Rutherford backscattering spectroscopy
+(RBS).
+In-situ photoemission. Immediately following growth, samples were transferred through
+an ultrahigh vacuum manifold (p < 5×10−9 Torr) to a connected photoemission spectroscopy
+chamber. X-ray photoemission specroscopy (XPS) measurements were conducted using a
+non-monochromated Omicron DAR-400 dual anode x-ray source (Al Kα, hν = 1486.6 eV)
+and an Omicron EA125 hemispherical analyzer. The total energy resolution of the analyzer
+in the experimental conﬁguration was measured to be 1.08 eV using an Au standard. The
+photoemission chamber pressure was maintained at < 3 × 10−10 Torr during the measure-
+ments.
+At each anneal step the samples were ramped from room temperature to the desired an-
+neal setpoint temperature over 5 minutes. The sample was held at temperature (±10◦C) for
+5 minutes and then rapidly cooled to room temperature. Sample temperature was measured
+by a thermocouple attached to the sample manipulator, roughly 1 cm away from the sample.
+The thermocouple was calibrated using the melting point of indium and the arsenic desorp-
+5tion temperature of As-capped GaAs. The sample was transferred immediately following the
+cool down back into the photoemission stage before beginning the next XPS measurement.
+Raman and scanning electron microscopy. Graphene was characterized using ﬁeld
+emission scanning electron microscopy (SEM) (Zeiss LEO 1530 Gemini).
+Raman spec-
+troscopy was performed using a 532 nm wavelength laser (Horiba LabRAM HR Evolution
+Spectrometer). The laser power is ﬁxed at 10 mW and a 300 gr/mm diﬀraction grating is
+used for every scan. This results in a spectral resolution of 2.5 cm−1 and a spatial resolu-
+tion of 0.5 µm. Each scan presented is an average spectrum consisting of 400 scans over a
+representative 100 µm2 area of the graphene surface.
+3
+Results and Discussion
+6Figure 1: Defects in direct-growth vs layer transferred graphene. “Pre-anneal” refers
+to samples lightly outgassed at 300◦C to remove adsorbates. “Post-anneal” refers to samples
+annealed at 600◦C in ultrahigh vacuum to remove substrate native oxides. (a) SEM images
+for the direct-growth graphene (gr) on Ge (001) substrates before and after annealing. (b)
+SEM images for the layer-transferred graphene on Ge (001). (c) SEM images for the layer-
+transferred graphene on GaAs (001). Yellow arrows indicate wrinkles and grain boundaries,
+green arrows denote tears and holes in the graphene layer. (d) Raman spectra before and
+after annealing. The peaks marked by * are from the Ge substrate. For a description of the
+D and G peak ﬁtting, see Supporting Information Fig. ??.
+7Fig. 1 illustrates the diﬀerences between the directly-grown graphene versus graphene
+that has been layer transferred onto Ge. We ﬁrst examine the samples after light outgassing
+at 300◦C to remove solvents and adsorbates, but before full annealing (labelled “pre-anneal”,
+Fig.
+1).
+For direct-growth graphene on Ge, the primary feature observed by scanning
+electron microscopy (SEM) is faceting of the Ge (001) surface (Fig. 1a, left), as has been
+observed previously.17 In contrast, the layer-transferred graphene on Ge displays a network
+of grain boundaries and wrinkles as labelled by the yellow arrows (Fig.
+1b, left).
+The
+grain boundaries originate from graphene growth on polycrystalline Cu foils (Supporting
+Information Fig. ??). Atomic force microscopy (AFM) measurements conﬁrm the grain
+boundaries and wrinkles for transferred graphene (Fig. ??b, left). Neither layer transferred
+nor directly grown graphene show obvious signs of holes or tears prior to annealing in SEM
+or AFM measurements. Raman spectroscopy (Fig. 1d) shows the ID/IG integrated intensity
+ratio for the direct and layer transferred graphene on Ge before anneal are similar (0.3 and
+0.5, respectively), indicative of a similar defect density.18,19 Layer-transferred graphene on
+GaAs (001) exhibits qualitatively similar surface morphology and Raman spectra as the
+graphene transferred onto Ge (001) (Fig. 1c, left).
+After annealing in ultrahigh vacuum at 600◦C, which is necessary to remove substrate
+native oxides prior to ﬁlm deposition,20,21 we observe stark contrast between the two diﬀerent
+graphene preparations. For directly grown graphene on Ge, our Raman, SEM, and AFM
+measurements display negligible diﬀerences before and after annealing (Fig. 1a, right). AFM
+measurements reveal faint wrinkles in the graphene layer formed after annealing (Supporting
+Information Fig. ??), but no obvious formation of tears (Fig. 1a) and negligible changes
+in the Raman ID/IG ratio (Fig. 1d, red curves). In contrast, for layer-transferred graphene
+our SEM and AFM measurements reveal holes and tears that appear to originate at grain
+boundaries (green arrows in Fig. 1b (right) and Supporting Information Fig. ??). This
+increase in defect density is further conﬁrmed through Raman spectroscopy, where we observe
+a dramatic increase in the Raman ID/IG ratio for transferred graphene after annealing (Fig.
+81d, blue curves), indicating the creation of tears and other defects. We observe a similar
+increase in the tear density and Raman ID/IG ratio for transferred graphene on GaAs after
+annealing (Fig. 1c).
+We hypothesize that the anneal-induced tears are created by desorption of native oxides
+that are trapped between the substrate and layer transferred graphene. Previous in-situ
+XPS measurements demonstrate that layer transferred graphene on III-V substrates con-
+tains oxides trapped at the graphene/III-V interface.22 Desorption of these interfacial oxides
+creates pinholes in the graphene. We expect transferred graphene/Ge to behave similarly. In
+contrast, graphene that is directly grown on Ge does not have these interfacial contaminants,
+and thus does not show an increased defect density after annealing.
+We now measure the diﬀusion barrier performance for Mn thin ﬁlms grown on the above
+graphene-terminated samples. After loading the graphene/Ge samples into vacuum and an-
+nealing at 600 C, Mn thin ﬁlms (1.64 × 1016 atoms/cm2, ∼24 ˚A) were grown by molecular
+beam epitaxy (MBE) at room temperature. After growth, samples were transferred via an
+ultrahigh vacuum manifold to a connected X-ray photoemission spectroscopy (XPS) cham-
+ber. In this way, we measure clean XPS spectra of samples that have not been exposed to
+air. Further details are described in Methods.
+Figure 2c presents in-situ photoemission spectra tracking the evolution of Mn surface
+composition for Mn ﬁlms grown on Ge substrates, with and without a graphene barrier.
+Each sample was subjected to a series of anneal steps at increasing temperature up to 500
+◦C. To eliminate variations in sample alignment, all spectra are normalized to the integrated
+Ge 3p core level intensity.
+For the Mn ﬁlm grown directly on Ge (black curves), with
+increasing anneal temperature the intensity of the Mn 2p rapidly decreases, corresponding
+to a decrease in the relative surface Mn composition. For Mn on transferred graphene (blue
+curves) and on direct-growth graphene (red curves), the Mn 2p core level decay is suppressed.
+To compare the relative changes in surface Mn concentration, we ﬁt the Mn 2p and Ge
+3p core levels to Doniach-Sunjic23 and Voigt lineshapes, respectively, and plot the relative
+9Figure 2: In-situ photoemission measurements of Mn on graphene(gr)/Ge. (a)
+Schematic layer structure and measurement geometry. (b) Half Gaussian composition pro-
+ﬁles as a function of depth from the surface. We use this model to extract diﬀusion length
+λ. (c) Mn 2p core level spectra for Mn thin ﬁlms grown directly on bare Ge (black), trans-
+ferred graphene/Ge (blue), and direct-growth graphene on Ge (red) at increasing anneal
+temperatures, using an Al Kα source (hν = 1486.6 eV). Samples were rapidly heated to the
+anneal temperature, held for 5 minutes, rapidly cooled, and measured at room temperature.
+Symbols are experimental data and curves are ﬁts to a Doniach-Sunjic lineshape. (d) Nor-
+malized Mn intensity ratio RMn = (IMn2p/Isub)T
+(IMn2p/Isub)0 , tracking the relative change in Mn surface
+composition as a function of anneal temperature T. For substrate normalization we use sub
+= Ge 3p. (e) Calculated Mn diﬀusion lengths λ at each anneal temperature.
+change in Mn / Ge intensity ratio, RMn = (IMn2p/Isub)T
+(IMn2p/Isub)0 (Fig. 2d, sub = Ge 3p). Here the
+numerator with subscript T refers to the Mn 2p / Ge 3p intensity ratio after anneal at
+temperature T and the denominator with subscript 0 refers to the Mn 2p / Ge 3p intensity
+ratio as-grown, before additional annealing. This normalization procedure cancels out the
+instrumental sensitivity, alignment, and photoemission cross section.
+We ﬁnd that the directly-grown graphene performs best as a diﬀusion barrier, with RMn
+decreasing to only 0.7 after an anneal up to 500◦C, compared to RMn = 0.05 for the sample
+without graphene. Transferred graphene also suppresses interdiﬀusion compared to the bare
+10Figure 3: In-situ photoemission measurements of Mn on graphene(gr)/GaAs. (a)
+Core level spectra and ﬁts for Mn/GaAs (black) and Mn/transferred-gr/GaAs (blue) at
+increasing anneal temperatures. Data points represent experimental photoemission results
+and the traces represent the ﬁts. (b) Normalized Mn intensity RMn = (IMn2p/Isub)T
+(IMn2p/Isub)0 , tracking
+the relative change in Mn surface composition as a function of anneal temperature T. For
+substrate normalization we use sub = Ga 3p. (c) Calculated diﬀusion lengths at each anneal
+temperature.
+substrate. For the no graphene sample there is a distinct onset of interdiﬀusion around
+150◦C, at which point RMn rapidly decreases. There is no distinct onset for the samples with
+graphene barriers. Together, these results demonstrate that both transferred and directly-
+grown graphene are eﬀective solid state diﬀusion barriers for Mn in Ge, and that directly-
+grown graphene is most eﬀective.
+We next estimate the temperature-dependent diﬀusion length based on the relative
+changes in the Mn 2p / Ge 3p intensity ratio, RMn. For a very thin Mn ﬁlm on a semi-inﬁnite
+substrate, the solution to the diﬀusion equation is a half Gaussian composition proﬁle (Fig.
+112b)
+cMn(z, λ) = ntotal
+√πλexp
+−z2
+4λ2
+
+(1)
+where λ is the diﬀusion length and ntotal = 1.64×1016 atoms/cm2 is the total areal density of
+Mn deposited. We deﬁne the as-deposited initial condition such that the Mn concentration
+at the surface (z = 0) is equal to the density of pure Mn, i.e. cMn(0, λ0) = c0 = 8.2 × 1022
+atoms/cm3. This yields an initial diﬀusion length of λ0 = 11 ˚A. For simplicity, we let the
+Ge composition proﬁle be cGe(z) = c0 −cMn(z), assuming that pure Mn, pure Ge, and the
+diﬀused Mn-Ge have approximately the same atomic densities and layer spacings.
+From these composition proﬁles we calculate the expected intensity ratios for Mn 2p and
+Ge 3p, as a function of the diﬀusion length. The intensity of core level x is given by
+Ix = fxσx
+∞
+X
+i=0
+nx,iexp
+
+−zi
+λx,imfpcosφ
+
+(2)
+where nx,i is the two-dimensional density of atomic layer i, zi is the depth from the surface,
+λx,imfp is the inelastic mean free path (20 ˚A for Mn 2p, 26 ˚A for Ge 3p, 22.1 ˚A for Ga
+3p24), φ = 0◦is the emission angle from surface normal, fx is an instrument sensitivity
+factor, and σx is the photoemission cross section. We rewrite the composition proﬁles in
+terms of atomic density, nx,i = d ∗cx(z, t), where d is the atomic layer spacing, and calculate
+the photoemission intensities IMn and IGe, subject to the initial condition λ0 = 11 ˚A. We
+then compute the normalized Mn intensity ratio RMn = (IMn/IGe)T
+(IMn/IGe)0 , such that fx and σx are
+cancelled out. In this way, the experimentally measured RMn is uniquely deﬁned by the
+diﬀusion length λ after each sequential anneal.
+Fig. 2(e) shows the estimated diﬀusion length, obtained by ﬁtting the experimentally
+measured RMn to the calculated intensity ratios from Eqs 1 and 2. We ﬁnd that compared
+to the bare Ge substrate, directly-grown graphene on Ge suppresses the diﬀusion length by
+a factor of just under 11 and layer transferred graphene suppresses the diﬀusion length by a
+factor 3.5, at a temperature of 500 ◦C.
+12In-situ photoemission measurements for Mn on GaAs substrates reveal similar behavior
+as the samples on Ge (Fig. 3). For the Mn directly on GaAs (Fig. 3a, black curves), in the
+as-grown spectrum we observe a secondary component at higher binding energy, indicative
+of reactions or secondary phases between Mn and GaAs. This reacted component grows
+with increased annealing. We attribute these secondary components to the formation of
+Mn2As and MnGa phases, as has been observed previously at Mn/GaAs interfaces without
+graphene.25 Comparison of the normalized Mn 2p intensity RMn and the estimated diﬀusion
+length reveal that like Ge, transferred graphene suppresses interdiﬀusion into GaAs.
+Figure 4: Calculated diﬀusion coeﬃcients for Mn on Ge and GaAs, with and with-
+out graphene (gr). (a) Diﬀusivity vs inverse temperature for Mn/Ge (black), Mn/layer
+transferred graphene/Ge (blue), and Mn/direct-growth graphene/Ge (red).
+Symbols are
+experimental data, the line is an Arrhenius ﬁt. (b) Diﬀusivity vs inverse temperature for
+Mn/GaAs (black) and Mn/layer transferred graphene/GaAs (blue). The open symbols rep-
+resent previously reported diﬀusivity for Mn on GaAs (no graphene) from Refs.26–28 (c)
+Schematic diﬀusion processes.
+We now use the diﬀusion length to estimate the diﬀusivity via λ2 = Dt. Since each
+sample is subjected to a series of anneals at increasing temperature, we approximate the
+13cumulative diﬀusion length squared after N anneal steps as a sum of the previous diﬀusion
+steps
+λ2
+total,N =
+N
+X
+i=1
+D(Ti)∆ti,
+(3)
+where ∆ti is the time increment of anneal step i and D(Ti) is the diﬀusivity from the anneal
+at temperature Ti. Since each anneal is for a constant amount of time (∆ti = 5 minutes),
+we rewrite Equation 3 to solve for D(Ti) contribution of an individual anneal step.
+D(Ti=N) = λ2
+total,N
+∆t
+−
+N−1
+X
+m=1
+D(Tm)
+(4)
+We plot the diﬀusivity D(Ti) as a function of temperature in Fig. 4. From an Arrhenius
+ﬁt, D(T) = D0exp(−Ea/kBT), we extract activation energies Ea and diﬀusivity prefactors
+D0 as listed in Table I. We ﬁnd that at 500 ◦C, the diﬀusivity for Mn on directly-grown
+graphene / Ge (red curve) is a factor of 1000 lower than the diﬀusivity on bare Ge (black
+curve). Mn on transferred graphene / Ge is only a factor of 10 lower (blue curve). Similar
+behavior is observed for transferred graphene/GaAs compared to bare GaAs. To benchmark
+the accuracy of our method, we ﬁnd that our experimentally determined diﬀusivities for
+Mn on bare GaAs (Fig.
+4(b), ﬁlled black circles) are in good agreement with previous
+experiments (open black circles).26–28
+Table 1: Diﬀusivity refactors D0, activation energies Ea, and diﬀusivity at 500 ◦C, for Mn
+diﬀusion into Ge and GaAs, extracted from in-situ XPS. The graphene ID/IG integrated
+intensity ratio is from Raman Spectroscopy before Mn ﬁlm growth (Fig. 1)
+ID/IG
+D0 (cm2/s)
+Ea (eV)
+D(500◦C) (cm2/s)
+post-anneal
+Ge
+–
+6.0 × 10−10
+0.81
+5 × 10−15
+transfer gr/Ge
+0.93
+6.0 × 10−13
+0.50
+4 × 10−16
+direct-growth gr/Ge
+0.26
+3.0 × 10−17
+0.13
+4 × 10−18
+GaAs
+–
+1.3 × 10−11
+0.79
+4 × 10−16
+transfer gr/GaAs
+1.96
+5.2 × 10−17
+0.21
+7 × 10−18
+.
+We now discuss the mechanisms for Mn diﬀusion based on the experimentally determined
+14Ea and D0. Our experimentally determined activation energy of 0.8 eV for Mn diﬀusing into
+bare GaAs and Ge agrees well with previous experiments and DFT calculations for Mn
+interstitial diﬀusion into GaAs (0.7 −0.8 eV29).
+Substitutional diﬀusion is expected to
+exhibit a higher activation energy of 2-3 eV.30
+In comparison, Ea for Mn diﬀusion into graphene-terminated substrates is considerably
+lower: 0.1 eV for directly-grown graphene on Ge, and 0.2-0.5 eV for transferred graphene
+on GaAs and Ge. We immediately rule out transverse diﬀusion through pristine graphene,
+since diﬀusion through graphene in the absence of defects is expected to have a very large
+activation energy barrier of Ea ∼12 eV.31 This is because the eﬀective pore size of graphene
+is small (∼0.7 ˚A radius of a carbon ring, less than half the radius of a Mn atom). Therefore,
+we expect that Mn diﬀusion through graphene occurs primarily through defect-mediated
+processes.
+The range of measured activation energies suggests several mechanisms for Mn diﬀusion
+through graphene defects may be possible. At high temperatures (T > 200◦C, or 1000/T <
+2.1 K−1), we speculate that our extracted Ea is lower on graphene-terminated substrates
+than on bare substrates due to reactions being catalyzed at graphene defects, since graphene
+defects are known to be chemically active.2,32 At this point we do not have suﬃcient data
+to determine the mechanisms of diﬀusion lower temperatures, T < 200◦C (or 1000/T > 2.1
+K−1, Fig. 4 dotted lines). The range of measured activation energies may also reﬂect a
+convolution of surface and bulk diﬀusion, in which Mn adatoms ﬁrst diﬀuse laterally to
+reactive pinhole sites before then diﬀusing into the substrate (Fig.
+4c).
+First-principles
+calculations suggest that the activation energy for lateral diﬀusion of Mn on graphene is
+60 meV33 and Cu on graphene is 10-20 meV,34 similar to the activation energies extracted
+from our photoemission measurements (Table 1). More detailed experiments with lateral
+and depth resolution, at a broader range of temperatures, are needed to fully understand
+the detailed diﬀusion mechanisms through graphene.
+While a low activation energy barrier favors a large diﬀusivity, the origin of the dramatic
+15decrease of diﬀusivity for graphene-terminated samples is the reduction of the prefactor D0.
+We interpret D0 to scale as an attempt rate for diﬀusion. For Mn on bare GaAs and Ge
+substrates, the attempt rates of 10−11−10−10 cm2/s are high because there are many available
+sites for interstitial diﬀusion into the substrate. On the other hand, attempt rates are lower
+on the graphene-terminated substrates because Mn diﬀusion through graphene requires a
+defect in the graphene. This rate is higher for layer transferred graphene (10−17 −10−13
+cm2/s) than for directly-grown graphene (10−17 cm2/s), since the layer-transferred graphene
+has a higher defect density as quantiﬁed by our Raman, SEM, and AFM measurements (Fig.
+1 and Supporting Information Fig. ??). Note that ﬁlm/substrate interactions35 and doping36
+can modify Raman intensity ratios,37 therefor it is diﬃcult to make direct comparisons of
+gr/Ge and gr/GaAs defect densities based on the ID/IG ratio (Fig. 1d). Further experiments
+are required to correlate speciﬁc defect types (e.g. tears, wrinkles, pinholes, vacancies) with
+speciﬁc values of the diﬀusivity.
+4
+Conclusions
+Our results show that layer-transferred and directly-grown graphene suppress Mn diﬀusion
+into semiconductor substrates. The directly-grown graphene displays superior diﬀusion bar-
+rier performance due to a lower defect density, as quantiﬁed by Raman spectroscopy and SEM
+after annealing but before Mn ﬁlm growth. Translating these performance enhancements to
+functional substrates at wafer scale will require direct graphene synthesis approaches on the
+substrate of interest. For example, CVD approaches using small molecules,38 activated pre-
+cursors,39 or plasma-enhanced CVD processes40–42 show promise for reducing the graphene
+synthesis temperature, and may be a route for graphene growth directly on GaAs and other
+technologically important compound semiconductors.
+Supporting Information: SEM images of graphene grown on Cu foils; AFM mea-
+surements of directly grown graphene on Ge, transferred graphene on Ge, and transferred
+16graphene on GaAs; and Raman ﬁtting of the graphene D and amorphous carbon peaks.
+5
+Acknowledgment
+Mn ﬁlm growth, graphene transfer, and photoemission experiments by PJS, SM, and JKK
+were primarily supported by the CAREER program National Science Foundation (DMR-
+1752797). In-situ photoemission experiments and analysis by PJS and JKK was partially
+supported by the NSF Division of Materials Research through the University of Wisconsin
+Materials Research Science and Engineering Center (Grant No. DMR-1720415). Graphene
+synthesis and characterization by VS, KS, and MSA are supported by the U.S. Department
+of Energy, Oﬃce of Science, Basic Energy Sciences, under award no. DE-SC0016007. We
+gratefully acknowledge the use of Raman and electron microscopy facilities supported by
+the NSF through the University of Wisconsin Materials Research Science and Engineering
+Center under Grant No. DMR-1720415.
+6
+References
+References
+(1) Topsakal, M.; S¸ahin, H.; Ciraci, S. Graphene Coatings: An Eﬃcient Protection from
+Oxidation. Phys. Rev. B 2012, 85.
+(2) Roy, S. S.; Arnold, M. S. Improving Graphene Diﬀusion Barriers via Stacking Multiple
+Layers and Grain Size Engineering. Adv. Funct. Mater. 2013, 23, 3638–3644.
+(3) Hong, J.; Lee, S.; Lee, S.; Han, H.; Mahata, C.; Yeon, H.-W.; Koo, B.; Kim, S.-I.;
+Nam, T.; Byun, K.; Min, B.-W.; Kim, Y.-W.; Kim, H.; Joo, Y.-C.; Lee, T. Graphene
+as an Atomically Thin Barrier to Cu Diﬀusion into Si. Nanoscale 2014, 6, 7503–7511.
+17(4) Cobas, E.; Friedman, A. L.; van’t Erve, O. M.; Robinson, J. T.; Jonker, B. T. Graphene
+as a Tunnel Barrier: Graphene-based Magnetic Tunnel Junctions. Nano Lett. 2012, 12,
+3000–3004.
+(5) Lu, Z.; Sun, X.; Xie, W.; Littlejohn, A.; Wang, G.-C.; Zhang, S.; Washington, M. A.;
+Lu, T.-M. Remote Epitaxy of Copper on Sapphire through Monolayer Graphene Buﬀer.
+Nanotechnology 2018, 29, 445702.
+(6) Kim, Y.; Cruz, S. S.; Lee, K.; Alawode, B. O.; Choi, C.; Song, Y.; Johnson, J. M.; Hei-
+delberger, C.; Kong, W.; Choi, S.; Qiao, K.; Almansouri, I.; Fitzgerald, E. A.; Kong, J.;
+Kolpak, A. M.; Hwang, J.; Kim, J. Remote Epitaxy through Graphene Enables Two-
+Dimensional Material-based Layer Transfer. Nature 2017, 544, 340–343.
+(7) Du, D.; Manzo, S.; Zhang, C.; Saraswat, V.; Genser, K. T.; Rabe, K. M.; Voyles, P. M.;
+Arnold, M. S.; Kawasaki, J. K. Epitaxy, Exfoliation, and Strain-Induced Magnetism in
+Rippled Heusler Membranes. Nat. Commun. 2021, 12, 2494.
+(8) Sands, T.; Palmstrøm, C.; Harbison, J.; Keramidas, V.; Tabatabaie, N.; Cheeks, T.;
+Ramesh, R.; Silberberg, Y. Stable and Epitaxial Metal/III-V Semiconductor Het-
+erostructures. Materials Science Reports 1990, 5, 99–170.
+(9) Ma, L.-P.; Ren, W.; Cheng, H.-M. Transfer Methods of Graphene from Metal Sub-
+strates: A Review. Small Methods 2019, 3, 1900049.
+(10) Oh, S.; Jung, Y.; Kim, J. Eﬀects of Defect Density on Ultrathin Graphene-based Metal
+Diﬀusion Barriers. J. Vac. Sci. Technol. 2015, 33, 061510.
+(11) Yuan, J.; Ma, L.-P.; Pei, S.; Du, J.; Su, Y.; Ren, W.; Cheng, H.-M. Tuning the Electrical
+and Optical Properties of Graphene by Ozone Treatment for Patterning Monolithic
+Transparent Electrodes. ACS Nano 2013, 7, 4233–4241.
+18(12) Farshchi, R.; Ramsteiner, M. Spin Injection from Heusler Alloys into Semiconductors:
+A Materials Perspective. J. Appl. Phys. 2013, 113, 191101.
+(13) Dong, X.; Adelmann, C.; Xie, J.; Palmstrøm, C.; Lou, X.; Strand, J.; Crowell, P.;
+Barnes, J.-P.; Petford-Long, A. Spin Injection from the Heusler Alloy Co2MnGe into
+Al0.1Ga0.9As/ GaAs Heterostructures. Appl. Phys. Lett. 2005, 86, 102107.
+(14) Kiraly, B.; Jacobberger, R. M.; Mannix, A. J.; Campbell, G. P.; Bedzyk, M. J.;
+Arnold, M. S.; Hersam, M. C.; Guisinger, N. P. Electronic and Mechanical Proper-
+ties of Graphene-Germanium Interfaces Grown by Chemical Vapor Deposition. Nano
+Lett. 2015, 15, 7414–7420.
+(15) Wang, G.; Zhang, M.; Zhu, Y.; Ding, G.; Jiang, D.; Qinglei, G.; Liu, S.; Xie, X.;
+Chu, P. K.; Di, Z.; Wang, X. Direct Growth of Graphene Film on Germanium Substrate.
+Sci. Rep. 2013, 3, 2465.
+(16) Park, H.; Lim, C.; Lee, C.-J.; Kang, J.; Kim, J.; Choi, M.; Park, H. Optimized
+Poly(Methyl Methacrylate)-Mediated Graphene-Transfer Process for Fabrication of
+High-Quality Graphene Layer. Nanotechnology 2018, 29, 415303.
+(17) McElhinny, K. M.; Jacobberger, R. M.; Zaug, A. J.; Arnold, M. S.; Evans, P. G.
+Graphene-induced Ge (001) surface faceting. Surface Science 2016, 647, 90–95.
+(18) Tuinstra, F.; Koenig, J. L. Raman spectrum of graphite. The Journal of chemical
+physics 1970, 53, 1126–1130.
+(19) Can¸cado, L. G.; Jorio, A.; Martins Ferreira, E. H.; Stavale, F.; Achete, C. A.; Ca-
+paz, R. B.; Moutinho, M. V. O.; Lombardo, A.; Kulmala, T. S.; Ferrari, A. C. Quan-
+tifying Defects in Graphene via Raman Spectroscopy at Diﬀerent Excitation Energies.
+Nano Lett. 2011, 11, 3190–3196.
+19(20) SpringThorpe, A.; Ingrey, S.; Emmerstorfer, B.; Mandeville, P.; Moore, W. Measure-
+ment of GaAs surface oxide desorption temperatures. Applied physics letters 1987, 50,
+77–79.
+(21) Oh, J.; Campbell, J. C. Thermal desorption of Ge native oxides and the loss of Ge from
+the surface. Journal of electronic materials 2004, 33, 364–367.
+(22) Manzo, S.; Strohbeen, P. J.; Lim, Z.-H.; Saraswat, V.; Arnold, M. S.; Kawasaki, J. K.
+Defect-seeded lateral epitaxy and exfoliation on graphene-terminated surfaces. arXiv
+preprint arXiv:2106.00721 2021,
+(23) Doniach, S.; Sunjic, M. Many-Electron Singularity in X-ray Photoemission and X-ray
+Line Spectra from Metals. J. Phys. C: Solid State Phys. 1970, 3, 285–291.
+(24) Tanuma, S.; Powell, C. J.; Penn, D. R. Calculation of electron inelastic mean free paths
+(IMFPs) VII. Reliability of the TPP-2M IMFP predictive equation. Surf. Interface
+Anal. 2003, 35, 268–275.
+(25) Hilton, J. L.; Schultz, B. D.; McKernan, S.; Palmstrøm, C. J. Interfacial Reactions of
+Mn/GaAs Thin Films. Appl. Phys. Lett. 2004, 84, 3145–3147.
+(26) Seltzer, M. S. Diﬀusion of Manganese into Gallium Arsenide. J. Phys. Chem. Solids
+1965, 26, 243–250.
+(27) Adell, J.; Ulfat, I.; Ilver, L.; Sadowski, J.; Karlsson, K.; Kanski, J. Thermal Diﬀusion
+of Mn through GaAs Overlayers on (Ga,Mn)As. J. Phys.: Condens. Matter 2011, 23,
+085003.
+(28) Vikhrova, O. V.; Danilov, Y. A.; Drozdov, M. N.; Zvonkov, B. N.; Kalent’eva, I. L.
+Manganese Diﬀusion in InGaAs/GaAs Quantum Well Structures. J. Synch. Investig.
+2012, 6, 508–510.
+20(29) Edmonds, K. W.; Boguslawski, P.; Wang, K. Y.; Campion, R. P.; Novikov, S. N.;
+Farley, N. R. S.; Gallagher, B. L.; Foxon, C. T.; Sawicki, M.; Dietl, T.; Buon-
+giorno Nardelli, M.; Bernholc, J. Mn Interstitial Diﬀusion in (Ga,Mn)As. Phys. Rev.
+Lett. 2004, 92, 037201.
+(30) Raebiger, H.; Ganchenkova, M.; von Boehm, J. Diﬀusion and Clustering of Substitu-
+tional Mn in (Ga,Mn)As. Appl. Phys. Lett. 2006, 89, 012505.
+(31) Leenaerts, O.; Parteons, B.; Peeters, F. M. Graphene: A Perfect Nanoballoon. Appl.
+Phys. Lett. 2008, 93, 193107.
+(32) Yoon, T.; Mun, J. H.; Cho, B. J.; Kim, T.-S. Penetration and Lateral Diﬀusion Char-
+acteristics of Polycrystalline Graphene Barriers. Nanoscale 2014, 6, 151–156.
+(33) Liu, X.; Wang, C.-Z. Growth mode and structures of magnetic Mn clusters on graphene.
+RSC advances 2016, 6, 64595–64604.
+(34) Han, Y.; Lii-Rosales, A.; Tringides, M. C.; Evans, J. W.; Thiel, P. A. Energetics of
+Cu adsorption and intercalation at graphite step edges. Physical Review B 2019, 99,
+115415.
+(35) Obraztsov, A. N.; Tyurnina, A. V.; Obraztsova, E. A.; Zolotukhin, A. A.; Liu, B.;
+Chin, K.-C.; Wee, A. T. Raman scattering characterization of CVD graphite ﬁlms.
+Carbon 2008, 46, 963–968.
+(36) Das, A.; Pisana, S.; Chakraborty, B.; Piscanec, S.; Saha, S. K.; Waghmare, U. V.;
+Novoselov, K. S.; Krishnamurthy, H. R.; Geim, A. K.; Ferrari, A. C., et al. Monitoring
+dopants by Raman scattering in an electrochemically top-gated graphene transistor.
+Nature nanotechnology 2008, 3, 210–215.
+(37) Ferralis, N. Probing mechanical properties of graphene with Raman spectroscopy. Jour-
+nal of materials science 2010, 45, 5135–5149.
+21(38) Li, Z.; Wu, P.; Wang, C.; Fan, X.; Zhang, W.; Zhai, X.; Zeng, C.; Li, Z.; Yang, J.;
+Hou, J. Low-Temperature Growth of Graphene by Chemical Vapor Deposition using
+Solid and Liquid Carbon Sources. ACS Nano 2011, 5, 3385–3390.
+(39) Lee, S.; Toney, M. F.; Ko, W.; Randel, J. C.; Jung, H. J.; Munakata, K.; Lu, J.;
+Geballe, T. H.; Beasley, M. R.; Sinclair, R.; Manoharan, H. C.; Salleo, A. Laser-
+Synthesized Epitaxial Graphene. ACS Nano 2010, 4, 7524–7530.
+(40) Vishwakarma, R.; Zhu, R.; Abuelwafa, A. A.; Mabuchi, Y.; Adhikari, S.; Ichimura, S.;
+Soga, T.; Umeno, M. Direct Synthesis of Large-Area Graphene on Insulating Substrates
+at Low Temperature using Microwave Plasma CVD. ACS Omega 2019, 4, 11263–11270.
+(41) Mischke, J.; Pennings, J.; Weisenseel, E.; Kerger, P.; Rohwerder, M.; Mertin, W.;
+Bacher, G. Direct Growth of Graphene on GaN via Plasma-Enhanced Chemical Vapor
+Deposition under N2 Atmosphere. 2D Mater. 2020, 7, 035019.
+(42) Li, N.; Zhen, Z.; Zhang, R.; Xu, Z.; Zheng, Z.; He, L. Nucleation and Growth Dynamics
+of Graphene Grown by Radio Frequency Plasma-Enhanced Chemical Vapor Deposition.
+Sci. Rep. 2021, 11, 6007.
+22Supporting Information: Quantifying Mn
+diﬀusion through transferred versus
+directly-grown graphene barriers
+Patrick J. Strohbeen, Sebastian Manzo, Vivek Saraswat, Katherine Su, Michael
+S. Arnold, and Jason K. Kawasaki∗
+Materials Science and Engineering, University of Wisconsin Madison, Madison,
+Wisconsin, 53706, USA
+E-mail: jkawasaki@wisc.edu
+1
+arXiv:2106.01239v3  [cond-mat.mtrl-sci]  11 Sep 2021Figure S-1: SEM of CVD graphene grown on Cu foil. Plan-view scanning electron
+microscopy (SEM) image of the graphene as-grown on copper foil via standard chemical
+vapor deposition (CVD) growth techniques. The main structure observed in the graphene
+is a few large-scale wrinkles and grain boundaries. The well-ordered parallel line structure
+observed is a result of the underlying structure of the Cu foil.
+2Figure S-2: AFM characterization of gr/Ge (001) surfaces. (a) Atomic force mi-
+croscopy (AFM) images of the graphene directly grown on Ge (001) substrates before (left)
+and after (right) annealing. Prior to annealing, the morphology is dominated by facets from
+the underlying Ge (001).? Features from the graphene are less obvious. After annealing
+at 600◦C, the graphene develops large-scale wrinkles; however, no noticeable tears or holes
+have formed. (b) AFM images of transferred graphene on Ge (001) substrates before (left)
+and after (right) annealing. Prior to annealing the major defect structure is the wrinkles
+and grain boundaries observed originally via SEM prior to the transfer process (Fig S-1).
+The underlying terrace structure of the Cu foil also produces a very small ripple-like wrinkle
+in the graphene at regular intervals. After annealing, the graphene appears to rip apart at
+some of the grain boundaries, forming a network of tears in the graphene.
+3Figure S-3: Deconvolution near the Raman D peak for transferred graphene. For
+transferred graphene after annealing, we observe broad peaks (labelled 1 and 3) in the vicinity
+of the graphene D peak. We attribute these broad peaks to amorphous carbonaceous species
+from polymer residuals, consistent with previous studies.?
+To extract the D component
+(labelled 0) and quantify an integrated ID/IG ratio, we ﬁt the data using multiple Gaussian
+lineshapes.
+4

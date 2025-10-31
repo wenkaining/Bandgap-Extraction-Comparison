@@ -1,0 +1,316 @@
+Spin Seebeck Imaging of Spin-Torque Switching in Antiferromagnetic Pt=NiO Heterostructures Isaiah Gray,1,2 Takahiro Moriyama,3 Nikhil Sivadas,1 Gregory M. Stiehl,4 John T. Heron,5 Ryan Need,6 Brian J. Kirby,6 David H. Low,1 Katja C. Nowack,4,2 Darrell G. Schlom,7,2 Daniel C.
+Ralph,4,2 Teruo Ono,3 and Gregory D. Fuchs 1,2,* 1School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA 2Kavli Institute for Nanoscale Science, Ithaca, New York 14853, USA 3Institute for Chemical Research, Kyoto University, Uji, Kyoto, 611-0011, Japan 4Department of Physics, Cornell University, Ithaca, New York 14853, USA 5Department of Materials Science and Engineering, University of Michigan, Ann Arbor, Michigan 48109, USA 6NIST Center for Neutron Research, National Institute of Standards and Technology, Gaithersburg, Maryland 20899, USA 7Department of Materials Science and Engineering, Cornell University, Ithaca, New York 14853, USA (Received 8 October 2018; revised manuscript received 9 August 2019; published 22 October 2019) As electrical control of N´eel order opens the door to reliable antiferromagnetic spintronic devices, understanding the microscopic mechanisms of antiferromagnetic switching is crucial.
+Spatially resolved studies are necessary to distinguish multiple nonuniform switching mechanisms; however, progress has been hindered by the lack of tabletop techniques to image the N´eel order.
+We demonstrate spin Seebeck microscopy as a sensitive tabletop method for imaging antiferromagnetism in thin films and apply this technique to study spin-torque switching in Pt=NiO and Pt=NiO=Pt heterostructures.
+We establish the interfacial antiferromagnetic spin Seebeck effect in NiO as a probe of surface N´eel order.
+By imaging before and after applying current-induced spin torque, we resolve spin domain rotation and domain wall motion.
+We correlate the changes in spin Seebeck images with electrical measurements of the average N´eel orientation through the spin Hall magnetoresistance, confirming that we image antiferromagnetic order.
+DOI: 10.1103/ PhysRevX.9.041016 Subject Areas: Condensed Matter Physics, Spintronics I. INTRODUCTION Antiferromagnets (AFs), long relegated to a supporting role as the pinning layers in ferromagnetic spintronic devices [1,2], are emerging as the active element in antiferromagnetic spintronic devices [3–5].
+In contrast to ferromagnets (FMs), AFs are insensitive to magnetic fields [6] and exhibit dynamics at the terahertz frequency scale [7,8].
+Additionally, AFs have magnetotransport effects that enable electrical readout [9,10].
+Taking advantage of these attractive properties, however, requires overcoming the challenge of reliably manipulating N´eel order.
+Recent breakthroughs in electrical [11,12] and optical [13,14] control provide a path toward reliable devices.
+In particular, electrical switching was demonstrated in the metals CuMnAs [11,15] and Mn2Au [16] using N´eel spin- orbit torque, in which the sign of the spin-orbit field from a dc current within the material alternates on each lattice site to coherently rotate the N´eel vector [17].
+Recently, elec- trical switching of an AF via spin torque was also demonstrated in insulating NiO [18–20] after several predictions [21,22].
+In this mechanism, the dc current passing through an adjacent Pt layer generates a spin current through the spin Hall effect, which then exerts an antidamping torque on the spins at the Pt=NiO interface.
+Switching by antidamping spin torque does not require that the spin sublattices form inversion partners, which is required for N´eel spin-orbit torque; hence, it is a more general approach that could enable all-electrical control over a wider variety of AFs.
+Previous experiments have shown that AF switching is nonuniform [15,23,24] and heavily influenced by local magnetoelastic stresses [25].
+Nominally identical samples display switching efficiency that varies by almost an order of magnitude at the same current density [18], demonstrat- ing a need for better understanding the switching process at *Corresponding author.
+gdf9@cornell.edu Published by the American Physical Society under the terms of the Creative Commons Attribution 4.0 International license.
+Further distribution of this work must maintain attribution to the author(s) and the published article’s title, journal citation, and DOI.
+PHYSICAL REVIEW X 9, 041016 (2019) 2160-3308=19=9(4)=041016(10) 041016-1 Published by the American Physical Societythe domain level.
+Systematic spatially resolved studies are necessary to firmly establish the spin rotation mechanisms, the fraction of the domains that switch, and the reprodu- cibility of switching.
+A primary challenge when imaging antiferromagnetism is to find an experimental probe that is sensitive to N´eel order and also provides the submicrometer resolution necessary to resolve domains.
+X-ray magnetic linear dichroism photoemission electron microscopy (XMLD- PEEM) has been the most reliable technique [23,26]; however, it requires a coherent x-ray source that is available at only a few facilities.
+Second-harmonic [27,28] and quadratic magneto-optical techniques [29,30] are available in a tabletop format, but the small signal sizes create a need for background subtraction, which can be a problem because antiferromagnets are difficult to fully saturate.
+Scanning-probe magnetometers are also available in tab- letop format but require stray fields to be produced from the AF [31].
+As an alternative, recent demonstrations of the AF anomalous Nernst effect [32] and AF spin Seebeck effect [33,34] open up the possibility of using spin-thermal effects as an imaging probe, because they can be directly sensitive to N´eel order [3].
+Previous work from both our group and others demonstrates high-sensitivity imaging of ferromag- netic order via the anomalous Nernst and longitudinal spin Seebeck effects [35–39], suggesting that a practical and sensitive magnetothermal microscope for N´eel order can also be developed.
+In this work, we use antiferromagnetic longitudinal spin Seebeck effect (AF LSSE) microscopy to image spin-orbit torque switching in Pt=NiOð111Þ bilayers and Pt=NiOð111Þ=Pt trilayers.
+We provide the first experi- mental demonstration of interfacial AF LSSE and use it as a direct probe of the N´eel order to resolve 1–10-μm-size antiferromagnetic spin domains.
+By repeatedly imaging before and after spin-torque switching while varying the current density and direction in a variety of samples, we reveal effects of antidamping spin torque on the N´eel order of NiO that would be difficult to establish either with device-level transport measurements or with limited beam time at an XMLD-PEEM facility.
+In particular, we show that switching occurs simultaneously by continuous rota- tion of the N´eel orientation within AF domains and by current polarity-dependent AF domain wall motion.
+The organization of this paper is as follows: We discuss the antiferromagnetic domain structure in NiO and present initial SSE images.
+We then establish the interfacial AF LSSE as the source of our signal, and we study spin- torque-induced domain rotation and domain wall motion. II.
+IMAGING NÉEL ORDER WITH SPIN SEEBECK MICROSCOPY A. Resolving antiferromagnetic domains in NiO NiO is a collinear insulating antiferromagnet with a N´eel temperature TN of 523 K in the bulk [40].
+Superexchange between Ni atoms along the h100i directions aligns the spins in ferromagnetic f111g planes, in which spins on one plane are antiparallel to spins on the adjacent plane [26].
+In the bulk, the AF domain structure is well known: Magnetostriction along h111i from the AF ordering causes crystallographic twinning, forming four T (twin) domains [41].
+Within each T domain, dipolar next-nearest-neighbor coupling introduces a weak additional in-plane anisotropy along the three equivalent ½11¯2 directions, forming three S (spin) domains per T domain [42,43].
+In thin films, however, magnetoelastic stresses, the AF equivalent of the demagnetization field in FMs [25], introduce an addi- tional effective anisotropy.
+This spatially inhomogeneous anisotropy pulls the spins out of well-defined ½11¯2 directions, resulting in a disordered in-plane AF domain structure [44]. FIG.
+1. Demonstration of AF LSSE microscopy.
+(a) Schematic of the measurement.
+A Ti:sapphire laser focused to 650 nm spot size thermally generates a local spin current Js at the Pt=NiO interface, with spin polarization σ parallel to the local N´eel orientation N. The sign of σ is determined by the spin direction of the uncompensated monolayer.
+Js is transduced into a charge current via the inverse spin Hall effect in the Pt, resulting in a voltage between the contacts.
+(b) AF LSSE image of a 10 μm × 50 μm Hall cross of MgO/5 nm Pt/7 nm NiO(111).
+Blue (red) contrast represents interfacial spins pointing right (left).
+Sharp straight lines highlighted by black dashed line are artifacts from the ordinary Seebeck effect, which may be due to scratches in the MgO substrate.
+(c) AFM height map of the same sample.
+Ordinary Seebeck artifacts in the AF LSSE image are accompanied by 1-nm-deep valleys in the height.
+ISAIAH GRAY et al. PHYS. REV.
+X 9, 041016 (2019) 041016-2We resolve the spin domains in Pt=NiO bilayers and Pt=NiO=Pt trilayers with spin Seebeck effect microscopy [39] using a geometry illustrated in Fig. 1(a).
+We focus 3-ps-wide, 785 nm wavelength pulses from a Ti:sapphire laser down to a 650 nm spot size, which produces a local out-of-plane thermal gradient.
+We show in Supplemental Material [45] that the thermal gradient is dominated by an interfacial temperature drop ΔT at the Pt=NiO interfaces. In Sec.
+II B, we establish that ΔT generates a spin current Js with polarization σint parallel to the orientation sint of the closest monolayer of spins to the Pt interface.
+Within the Pt, the spin current is transduced into a charge current Jc ∝Js × σint via the inverse spin Hall effect (ISHE), which results in a voltage drop across the sample.
+By raster scanning the focused laser over the sample, we build a map of the ISHE voltage, which reports the in-plane component of sint perpendicular to the voltage contacts.
+An example AF LSSE image of an epitaxial MgO/5 nm Pt/7 nm NiO(111) device, deposited by sputtering and patterned into a 10 μm × 50 μm Hall cross by optical photolithography, is shown in Fig. 1(b).
+Blue and red contrast show interfacial spins pointing right and left, respectively.
+We acquire all images at room temperature and a zero magnetic field using 3.4 mJ=cm2 laser fluence.
+By combining finite-element simulations of laser heating with electrical calibration using transient resistivity changes, we measure that this laser fluence locally heats the Pt and NiO layers to 360 and 330 K peak temperature, respectively, from the ambient temperature of 293 K. Note that the voltage we plot—denoted VAF LSSE—is not the actual spin Seebeck voltage but rather a lock-in voltage after amplification, mixing, and normalization to account for impedance matching, which is also described in Supplemental Material [45].
+Sharp straight lines in the AF LSSE image in Fig. 1(b), highlighted with black dashed lines, are also visible in the corresponding atomic force microscopy height map in Fig. 1(c) and may be due to polishing scratches in the MgO(111) substrate.
+Thermal discontinuities at these scratches cause artifacts in the AF LSSE signal from the ordinary Seebeck effect and are discussed further in Supplemental Material [45].
+The rest of the contrast in the AF LSSE image in Fig. 1(b) represents antiferromag- netic spin domains: Examples are highlighted in black enclosures.
+Since the Pt is beneath the NiO in this sample and the voltage contacts are along y, in Fig. 1(b), we measure the Nx component of the bottom interfacial monolayer sbottom.
+Currently, we cannot saturate the N´eel vector along a given direction while imaging, which would require apply- ing an in situ magnetic field greater than the spin-flop field (5 T in NiO [46]).
+Therefore, we cannot calibrate the AF LSSE voltage to an absolute N´eel orientation.
+This limitation is an intrinsic difficulty of detecting antiferromagnetism and is also experienced by other imaging techniques, including XMLD-PEEM.
+Instead, the AF LSSE voltage represents the strength of the pro- jection without absolute calibration.
+The size, shape, and distribution of AF domains are consistent with previous XMLD-PEEM imaging studies of thin-film NiO [44,47].
+Note that only domains larger than the 650 nm laser spot size are resolved; some contrast in Fig. 1(b) extends down to the single-pixel limit and may represent incompletely resolved domains.
+B. Evidence for interfacial antiferromagnetic LSSE We attribute the signal in our images to an interfacial AF LSSE.
+Although the ferromagnetic LSSE is well established both in the bulk [48–50] and at the interface [51–53], the AF LSSE was initially predicted not to exist for a collinear AF [54] and was only recently observed [33,34].
+In a collinear AF, the two spin sublattices produce two degenerate magnon modes [55], which produce spin current in opposite directions under a thermal gradient.
+Therefore, unless the degeneracy is lifted, there is no net spin current [54].
+The degeneracy can be lifted in the AF bulk by applying a large magnetic field [33,34] or by exploiting anisotropies that result in additional magnon modes [56,57].
+The degeneracy can also be lifted by inversion symmetry breaking at the interface, resulting in an interfacial AF LSSE that has been predicted [58] but has not been previously reported.
+The mechanism of the interfacial AF LSSE is schemati- cally illustrated in Figs. 2(a) and 2(b).
+AF interfaces can be uncompensated as in Fig. 2(a), meaning the layer closest to the surface contains an excess of one sublattice, or compensated as in Fig. 2(b), in which adjacent spins are antiparallel in each growth plane.
+In the uncompensated case, an interfacial temperature difference ΔT across the surface normal ˆn induces a local spin current JskΔT ˆn whose polarization effectively alternates in sign at each monolayer, following the local spin polarization.
+The layer closest to the Pt interface—sint—is more strongly exchange coupled to the spins in the Pt layer than the other layers are [59], and, therefore, a net spin current Js diffuses into the Pt with polarization σksint [58].
+Note that sint is stop if the Pt is above the NiO and sbottom if the Pt is beneath the NiO.
+At the compensated interface, illustrated in Fig. 2(b), the symmetry between magnon modes is preserved.
+Therefore, the spin current produced by ΔT is zero on every h111i plane as long as the in-plane spatial extent of ΔT (650 nm for the laser spot) is much greater than the in-plane lattice spacing [0.4 nm in NiO(001)].
+Although the uncompen- sated interface in the schematic in Fig. 2(a) is atomically flat, the presence of roughness in real samples does not alter the interpretation of the AF LSSE signal as long as the lateral length scale of average height variation is also much smaller than the laser spot diameter (see Supplemental Material [45] for more details).
+SPIN SEEBECK IMAGING OF SPIN-TORQUE SWITCHING IN … PHYS. REV.
+X 9, 041016 (2019) 041016-3Our experimental test of interfacial AF LSSE is shown in Figs. 2(c) and 2(d).
+We take AF LSSE images of MBE- grown MgAl2O4=165 nm NiOð111Þ=Pt and MgO(001)/ 136 nm NiOð001Þ=Pt, which have uncompensated and compensated interfaces, respectively.
+Both samples are patterned into 20-μm-wide Hall bars with similar growth conditions, sample resistivities, and interface qualities as shown in Supplemental Material [45].
+Since the Pt is above the NiO, we measure stop here.
+We find that AF LSSE images of NiO(001) yield an order of magnitude lower voltage compared with NiO(111).
+The residual contrast in NiO(001) images is nearly uniform and does not resemble domains; it may be due to capacitive coupling or other small experimental artifacts.
+Although the preferred spin orientation in MgOð001Þ=NiOð001Þ is not well established [19,20], recent XMLD-PEEM and magneto-optical images of 10-nm-thick NiO(001) on MgO(001) indicate approx- imately 10° out-of-plane tilt [30], which would reduce VAF LSSE by 2%.
+If the spins in our 136-nm-thick NiO(001) are relaxed to the bulk orientation, they would point 35° out of plane (the angle between f11¯2g and f001g).
+This result would reduce VAF LSSE by 20%, which is still not enough to account for the order-of-magnitude difference.
+Therefore, our results are consistent with a model of an uncompen- sated interface.
+Our results also indicate that bulk AF LSSE [56,60] does not significantly contribute to our signal.
+This interpretation is further supported by finite-element simu- lations, discussed in Supplemental Material [45], which show that the laser-induced thermal profile is dominated by temperature drops at the Pt=NiO interfaces rather than a temperature gradient in the NiO bulk.
+We can further distinguish between an AF LSSE at an uncompensated interface and a possible FM LSSE origi- nating from pinned uncompensated moments (UMs) [61].
+These UMs could arise from interfacial roughness [62] or defects, both at the interface and in the bulk of the AF [63], and would be detectable by other magnetometry tech- niques.
+Therefore, we perform scanning SQUID micros- copy at 4 K to search for microscopic moments and polarized neutron reflectometry at room temperature to detect a global moment at 1 T applied field.
+Both sets of measurements are made on sputtered samples and are described in more detail in Supplemental Material [45].
+We find no magnetic moment within sensitivity, which places an upper limit of 8 × 10−4μB=Ni on the local moment that could be present.
+From this value, we calculate a maximum bulk magnetization of 110 A=m in our NiO, 3 orders of magnitude less than the bulk magnetization in YIG at room temperature.
+Based on these measurements, we rule out a FM LSSE and conclude that the AF LSSE signal in NiO arises from the uncompensated interface. III.
+IMAGING SPIN-TORQUE SWITCHING IN Pt=NiO=Pt TRILAYERS Having established a mechanism for the signal contrast, we move onto image current-induced spin-torque switching in Hall crosses, initially following the proce- dure in Refs. [18,19].
+We apply a dc writing current and characterize the N´eel state electrically, using the antiferro- magnetic analog of spin Hall magnetoresistance (SMR) FIG.
+2. Mechanism of the interfacial AF LSSE.
+(a) Schematic illustrating the interfacial AF LSSE at an uncompensated interface.
+A thermal gradient produces spin current Js with polarization σ parallel to the spin orientation of the interfacial uncompensated monolayer (stop in the diagram).
+(b) Schematic illustrating the lack of AF LSSE at a compensated interface.
+The net spin current produced by every monolayer is zero.
+(c),(d) AF LSSE images of uncompensated MgAl2O4 (111)/165 nm NiO(111)/6 nm Pt and compensated MgO(001)/136 nm NiO(001)/6 nm Pt, respectively.
+The lack of VAF LSSE signal from NiO(001) compared to NiO(111) indicates that VAF LSSE originates from the uncompensated interface.
+ISAIAH GRAY et al. PHYS. REV.
+X 9, 041016 (2019) 041016-4[64–66] by measuring the change in the Hall resistance RH: RH ¼ −ΔRSMR sin θ cos θ, where θ is the angle between the spatially averaged N´eel vector N and the reading current JR.
+To maximize ΔRH, we apply a writing current to two of the arms of the Hall cross such that the current density in the center of the device flows along 45° [schematically illustrated in Fig. 3(b)].
+Using a finite- element simulation described further in Supplemental Material [45], we estimate a writing current density of 8.0 × 107 A=cm2 at the corners and 3.1 × 107 A=cm2 in the center of the cross.
+Hereafter, we refer only to the density in the center of the cross, JW.
+After each application of writing current, we measure the Hall resistance RH by applying a reading current density JR ¼ 1.5 × 106 A=cm2 from A to B and measuring the voltage from C to D in Fig. 3(b).
+We initially employ epitaxial sputtered 5 nm Pt/13 nm NiO(111)/5 nm Pt trilayers, following the argument of Ref.
+[18] (further demonstrated in Ref.
+[67] in synthetic antiferromagnets) that spin torque at both the top and bottom interfaces of the NiO leads to more coherent rotation of the N´eel orientation throughout the AF thickness.
+There is a potential complication interpreting the AF LSSE images in trilayers, because both Pt=NiO interfaces can contribute to the signal; however, we show in Supplemental Material [45] that the presence of two simultaneously contributing inter- faces does not alter the interpretation of VAF LSSE as long as the AF domains are continuous in thickness, which we expect for our trilayer samples.
+The AF domains in the trilayer are substantially larger (5–10 μm) than the domains in the bilayer in Fig. 1 (submicrometer to 2 μm), which most likely is due to differing growth conditions but which requires further study.
+AF LSSE images of a trilayer before and after four sequential applications of JW ¼3.1×107 A=cm2 are shown in Figs. 3(a) and 3(c), with the writing current direction alternating between þ45° and −45°.
+Although most domains are unaltered, we observe changes in contrast (highlighted inside the black dashed enclosures) at a sample corner, where the current density is highest, and near apparent substrate scratches, where the spins may be less strongly exchange coupled.
+To quantify these changes to the N´eel orientation, we calculate sequential differences between images, shown in Fig. 3(d).
+We observe both positive and negative changes in contrast in different parts of the sample, which could be due to different AF domains FIG. 3.
+AF LSSE imaging of spin-torque switching in a 5 nm Pt/13 nm NiO(111)/5 nm Pt trilayer.
+(a) The initial image, taken before applying the current.
+(b) Schematic of the writing process.
+We apply a current to two arms of the Hall cross such that the current density in the center flows along 45° diagonals.
+(c) Imaging while toggling between I45° and I−45°.
+Highlighted in dashed lines are changes in contrast at the top right corner, where the current density is greatest, and near apparent substrate scratches, where the spins may be less strongly exchange coupled.
+(d) Successive differences between the AF LSSE images in (a), showing the domains that switch more clearly.
+Both positive and negative contrast in difference images may reflect domains rotating in opposite directions.
+(e) RH and the integrated AF LSSE signal hVAF LSSEi, measured while toggling between I45° and I−45°.
+Values corresponding to the images shown are labeled.
+(f) hVAF LSSEi plotted as a function of SMR, measured through changes in the Hall resistance RH.
+The near-linear correlation shows the small-angle correspondence between hVAF LSSEi and RH.
+SPIN SEEBECK IMAGING OF SPIN-TORQUE SWITCHING IN … PHYS. REV.
+X 9, 041016 (2019) 041016-5rotating in opposite directions, as seen in imaging studies of switching in CuMnAs [23].
+At the current density used, we estimate that the maximum Oersted field is approximately 10 mT. We show in Supplemental Material [45] that the AF LSSE signal is unaffected by field up to 250 mT, which rules out the Oersted field from the writing current as the mechanism responsible for switching.
+To compare AF LSSE imaging with electrical measure- ments of N´eel order using RH, we take the average of all the pixels in and near the cross center in each image (described in Supplemental Material [45]) to obtain the integrated AF LSSE signal hVAF LSSEi.
+Although hVAF LSSEi and RH are both measures of the average N´eel orientation in the cross center, they have different symmetries: RH ∝cos θ sin θ, where θ is the angle between the average N´eel vector and the SMR reading current JR, while hVAF LSSEi ∝cos ϕ, where ϕ is the angle between the average N´eel vector and the voltage contacts.
+Since we apply JR along x in this device, here θ ¼ ϕ −π=2 and hVAF LSSEi ∝−sin θ.
+In this sample, most of the changes in contrast occur where N appears to be nearly saturated in the þx direction, so that locally θ ≈0.
+Near θ ¼ 0, sin θ cos θ ≈sin θ.
+Therefore, hVAF LSSEi tracks RH point by point, shown in Fig. 3(e).
+Plotting one versus the other yields a near-linear correlation with a negative slope, shown in Fig. 3(f) with a linear fit drawn as a guide to the eye.
+This correspondence indicates that changes in contrast indeed represent antiferromagnetic switching.
+We expect that AF switching can occur either by domain rotation, which would manifest in the AF LSSE images as changes of contrast level within domains, or by domain wall motion.
+The switching in Fig. 3 manifests as changes in contrast within domains while domain walls remain stationary within the resolution limit, which indicates domain rotation.
+In this sample, we observe changes in color shade but not changes in sign of Nx (blue to red or vice versa), which indicates that N rotates by acute angles.
+Although we cannot obtain an absolute angle of rotation, we can obtain a lower bound by taking the maximum and minimum VAF LSSE to correspond to θ ¼ 90° and −90°, respectively.
+In this case, we estimate that the average N´eel vector at the corner rotates 22° between images 1 and 2 in Fig. 3(c) and 10° between images 2 and 3.
+Previous studies of magnetic-field-induced domain rota- tion in 120-nm-thick NiO [66] model switching as 120° flopping between h11¯2i in-plane easy axes.
+In our samples, however, the domains have random in-plane orientation, which is consistent with XMLD-PEEM images of similar Pt=NiO=Pt trilayers [18].
+This domain configuration is consistent with an increased role of magnetoelastic stress in our 6-nm-thick samples, which favors a multidomain state with zero average strain.
+While the effective field from in- plane anisotropy is HAz ¼ 11 mT in bulk NiO [57], the destressing field reported in 120-nm-thick NiO in Ref.
+[66] is 46 mT. We expect the destressing field to be even higher in 6 nm NiO.
+Therefore, because the spins are not restricted to the h11¯2i axes in our samples, they can switch by continuous in-plane rotation. IV.
+RESOLVING DOMAIN ROTATION AND DOMAIN WALL MOTION IN MgO=Pt=NiO BILAYERS After correlating the AF LSSE images with an electrical readout of the N´eel order through SMR in Pt=NiO=Pt trilayers, we move on to imaging switching in the sputtered NiOð111Þ=Pt bilayer from Fig. 1 after applying a current along the device channel.
+The bilayer does not have the potential difficulty of superposing signal from two Pt=NiO interfaces.
+Furthermore, applying a current along the device channel yields more uniform current density, leading to larger-scale, more easily resolvable changes in image contrast.
+Figure 4(a) shows AF LSSE images before switching and then after applying progressively greater current densities, from 5.0 × 107 A=cm2 at 20 mA to 1.1 × 108 A=cm2 at 42 mA, first at positive polarity (flowing down) and then negative polarity (flowing up).
+Prominent regions of switching are highlighted in the black enclosure as a guide to the eye.
+Because the switching in Fig. 4 is spatially distributed and nonuniform, and AF LSSE and SMR have different symmetries, we cannot correlate the AF LSSE signal with SMR like we do in Fig. 3.
+Therefore, we compare our AF LSSE images to theoretical models of switching.
+References [18,19] model switching in the high-current limit as coherent rotation of spins within an AF domain (domain rotation), which we observe in Fig. 3. The model in Ref.
+[20] distinguishes three separate switching mech- anisms, with predictions summarized as follows.
+(1) The out-of-plane component of the spin current rotates spins within the easy plane, rotating all AF domains by the same angle.
+(2) The in-plane component of the spin torque creates an additional effective anisotropy, resulting in a trans- lational ponderomotive force Fpond proportional to J2 W on the AF domain wall.
+Fpond rotates NkJW and is current polarity independent.
+(3) The spin torque directly rotates the spins within the domain walls, leading to a chiral domain wall force FDW that goes as JW.
+FDW can rotate N either towards or perpendicular to JW, depending on the domain wall chirality; therefore, it should have no net effect on RH with randomly oriented domains.
+FDW should also reverse direction when JW reverses.
+To quantitatively characterize the switching, we take sequential image differences in Fig. 4(b).
+Cumulative difference images as well as AF LSSE images after þ20 and −42 mA are given in Supplemental Material [45].
+After applying 30 mA, as seen in image 2–1, we see large- scale, nearly uniform positive (blue) contrast in the lower ISAIAH GRAY et al. PHYS. REV.
+X 9, 041016 (2019) 041016-6half of the cross, labeled domain rotation.
+More uniform contrast in the difference images than in the AF LSSE images themselves indicates that different AF domains are rotating by the same angle, consistent with the out-of-plane spin torque in mechanism 1 in Ref. [20].
+This domain rotation saturates after þ30 mA (7.5 × 107 A=cm2) and does not reverse when the current polarity reverses.
+We primarily observe jNxj increasing—blue domains become more blue and red domains more red—which means N rotates ⊥JW.
+From images 2 and 3 in the AF LSSE images in Fig. 4(a), we resolve switching by domain wall motion, which appears as a negative (red) horizontal stripe in the sequen- tial 3–2 image in Fig. 4(b).
+Domain rotation and domain wall motion occur in response to a writing current as low as 4 mA (1.0 × 107 A=cm2).
+Interestingly, we find that the domains continue to move for 2–3 hr after the current is turned off (shown in Supplemental Material [45]), which may be due to magnetoelastic stresses causing subthreshold domain wall creep after the spin torque rotates the domains out of equilibrium.
+Although the domain configuration after þ42 mA in 3 does not creep in time, the domain wall motion reverses after applying −20 mA, seen in 4–3, and subsequently almost ceases, seen by weaker contrast in 5–4 after applying −30 mA. DW motion that reverses when the current polarity is reversed points to the chiral force FDW as the origin.
+In Fig. 4(c), we show SMR measurements of a similar MgO=Pt=NiO cross while applying the same currents, first positive and then negative.
+We find that RH does not depend on current polarity, which is consistent with the prediction that the effects of FDW would not be reflected by changes in RH.
+Summarizing our results, we identify both domain rotation and domain wall motion acting simultaneously, which are consistent with the out-of-plane spin torque and chiral domain force, respectively, described in Ref. [20].
+At the current densities applied, from 1.0 × 107 to 1.0 × 108 A=cm2, we do not observe N rotating towards JW from the ponderomotive force Fpond, which is expe- cted to dominate at higher current densities (above 7–9 × 107 A=cm2, depending on the strain).
+Further im- aging studies on thicker NiO samples with less strain may be required to observe Fpond. FIG.
+4. Switching in the Pt=NiO bilayer from Fig. 1 after applying a current along the channel direction.
+(a) AF LSSE images before and after applying current.
+We apply first a positive current, flowing down, and then a negative current, flowing up.
+Some prominent regions of switching are highlighted in the black line, including domain growth after þ42 mA and domain wall motion after −20 mA. (b) Sequential differences from the initial state (1).
+Large-scale patterns of nearly uniform positive contrast in the lower portion of 2–1 show different AF domains rotating by the same angle.
+We observe domain wall motion after þ42 mA that reverses direction when the current polarity is reversed, consistent with theoretical predictions of a chiral domain wall force FDW.
+(c) SMR measurements of the average N´eel orientation for a similar Pt=NiO bilayer after applying the same currents, first positive and then negative (labeled in mA).
+RH does not depend on current polarity, which is consistent with domain wall motion due to FDW.
+SPIN SEEBECK IMAGING OF SPIN-TORQUE SWITCHING IN … PHYS. REV.
+X 9, 041016 (2019) 041016-7Our results complement the XMLD-PEEM images of switching in Refs. [18,20]. Although Ref.
+[18] shows domain wall motion and Ref.
+[20] appears to show domain rotation in response to current, distinguishing several simultaneously acting switching mechanisms requires sys- tematic repeated imaging of multiple samples, which may not be practical with the limited beam time at a synchrotron facility.
+V. CONCLUSION In conclusion, we demonstrate interfacial AF LSSE as the basis for a powerful tabletop technique for imaging in- plane N´eel order in an AF insulator.
+This magnetothermal microscope uses equipment that is readily available in many laboratories, thus enabling in-depth and high- throughput studies of AF spintronics, which was previously limited by the availability of a few coherent x-ray facilities.
+Using this capability, we probe the microscopic behavior of spin-torque switching of N´eel order in Pt=NiO=Pt trilayers and Pt=NiO bilayers.
+We find that switching occurs by domain rotation and domain wall motion acting simulta- neously and that magnetoelastic stresses play an important role in determining both the equilibrium domain structure and the fraction of domains that switch.
+These insights provide critical understanding of spin-torque switching in NiO and point the way towards systematic optimization of antiferromagnetic spintronic devices.
+Moreover, we expect AF LSSE microscopy to extend to a wide variety of antiferromagnetic insulators with uncompensated interfa- ces, which can aid in the development of new device technologies based on different antiferromagnets.
+ACKNOWLEDGMENTS We thank Rembert Duine, Yaroslav Tserkovnyak, Jason Bartell, Emrah Turgut, and Farhan Rana for useful dis- cussions.
+This research was supported by the Cornell Center for Materials Research with funding from the NSF MRSEC program (DMR-1719875) and by JSPS KAKENHI Grants No. JP15H05702, No. JP17H04924, and No. JP17H05181.
+This work made use of the CCMR Shared Facilities and the Cornell NanoScale Facility, an NNCI member supported by NSF Grant No. NNCI- 1542081.
+N. S. acknowledges National Science Foundation [Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials (PARADIM)] under Cooperative Agreement No. DMR- 1539918 and Cornell University Center for Advanced Computing for his time at Cornell University.
+[1] B. Dieny, V. S. Speriosu, S. S. P. Parkin, B. A. Gurney, D. R. Wilhoit, and D. Mauri, Giant Magnetoresistive in Soft Ferromagnetic Multilayers, Phys.
+Rev. B 43, 1297 (1991).
+[2] H. N. Fuke, K. Saito, Y. Kamiguchi, H. Iwasaki, and M. Sahashi, Spin-Valve Giant Magnetoresistive Films with Antiferromagnetic Ir-Mn Layers, J. Appl.
+Phys. 81, 4004 (1997).
+[3] V. Baltz, A. Manchon, M. Tsoi, T. Moriyama, T. Ono, and Y. Tserkovnyak, Antiferromagnetic Spintronics, Rev. Mod.
+Phys. 90, 015005 (2018).
+[4] T. Jungwirth, X. Marti, P. Wadley, and J. Wunderlich, Antiferromagnetic Spintronics, Nat.
+Nanotechnol. 11, 231 (2016).
+[5] J. Železný, P. Wadley, K. Olejník, A. Hoffman, and H. Ohno, Spin Transport and Spin Torque in Antiferromag- netic Devices, Nat. Phys. 14, 220 (2018).
+[6] A. N. Bogdanov, A. V. Zhuravlev, and U. K. Rößler, Spin- Flop Transition in Uniaxial Antiferromagnets: Magnetic Phases, Reorientation Effects, and Multidomain States, Phys.
+Rev. B 75, 094425 (2007).
+[7] K. Olejník, T. Seifert, Z. Kašpar, V. Novák, P. Wadley, R. P. Campion, M. Baumgartner, P. Gambardella, P. Němec, J. Wunderlich, J. Sinova, P. Kužel, M. Müller, T. Kampfrath, and T. Jungwirth, Terahertz Electrical Writing Speed in an Antiferromagnetic Memory, Sci. Adv. 4, eaar3566 (2018).
+[8] P. Bowlan, S. A. Trugman, D. A. Yarotski, A. J. Taylor, and R. P. Prasankumar, Using Ultrashort Terahertz Pulses to Directly Probe Spin Dynamics in Insulating Antiferromag- nets, J. Phys.
+D 51, 194003 (2018).
+[9] I. Fina, X. Marti, D. Yi, J. Liu, J. H. Chu, C. Rayan-Serrao, S. Suresha, A. B. Shick, J. Železný, T. Jungwirth, J. Fontcuberta, and R. Ramesh, Anisotropic Magnetoresist- ance in an Antiferromagnetic Semiconductor, Nat. Commun. 5, 4671 (2014).
+[10] X. Marti, I. Fina, C. Frontera, J. Liu, P. Wadley, Q. He, R. J. Paull, J. D. Clarkson, J. Kudrnoský, I. Turek, J. Kuneš, D. Yi, J.-H. Chu, C. T. Nelson, L. You, E. Arenholz, S. Salahuddin, J. Fontcuberta, T. Jungwirth, and R. Ramesh, Room-Temperature Antiferromagnetic Memory Resistor, Nat. Mater. 13, 367 (2014).
+[11] P. Wadley et al., Electrical Switching of an Antiferromagnet, Science 351, 587 (2016).
+[12] K. Olejník, V. Schuler, X. Marti, V. Novák, Z. Kašpar, P. Wadley, R. P. Campion, K. W. Edmonds, B. L. Gallagher, J. Garces, M. Baumgartner, P. Gambardella, and T. Jungwirth, Antiferromagnetic CuMnAs Multi-Level Memory Cell with Microelectronic Compatibility, Nat. Commun. 8, 15434 (2017).
+[13] T. Higuchi and M. Kuwata-Gonokami, Control of Antiferro- magnetic Domain Distribution via Polarization-Dependent Optical Annealing, Nat. Commun. 7, 10720 (2016).
+[14] S. Manz, M. Matsubara, T. Lottermoser, J. Buchi, A. Iyama, T. Kimura, D. Meier, and M. Fiebig, Reversible Optical Switching of Antiferromagnetism in TbMnO3, Nat.
+Photon- ics 10, 653 (2016).
+[15] P. Wadley, S. Reimers, M. Grzybowski, C. Andrews, M. Wang, J. S. Chauhan, B. L. Gallagher, R. P. Campion, K. W. Edmonds, S. S. Dhesi, F. Maccherozzi, V. Novak, J. Wunderlich, and T. Jungwirth, Current Polarity-Dependent Manipulation of Antiferromagnetic Domains, Nat.
+Nanotechnol. 13, 362 (2018).
+[16] S. Y. Bodnar, L. Smejkal, I. Turek, T. Jungwirth, O. Gomonay, J. Sinova, A. A. Sapozhnik, H. J. Elmers, ISAIAH GRAY et al. PHYS. REV.
+X 9, 041016 (2019) 041016-8M. Klaui, and M. Jourdan, Writing and Reading Antiferro- magnetic Mn2Au by N´eel Spin-Orbit Torques and Large Anisotropic Magnetoresistance, Nat. Commun. 9, 348 (2018).
+[17] J. Železný, H. Gao, K. Výborný, J. Zemen, J. Mašek, A. Manchon, J. Wunderlich, J. Sinova, and T. Jungwirth, Relativistic N´eel-Order Fields Induced by Electrical Current in Antiferromagnets, Phys. Rev. Lett. 113, 157201 (2014).
+[18] T. Moriyama, K. Oda, T. Ohkochi, M. Kimata, and T. Ono, Spin Torque Control of Antiferromagnetic Moments in NiO, Sci. Rep. 8, 14167 (2018).
+[19] X. Z. Chen, R. Zarzuela, J. Zhang, C. Song, X. F. Zhou, G. Y. Shi, F. Li, H. A. Zhou, W. J. Jiang, F. Pan, and Y. Tserkovnyak, Antidamping-Torque-Induced Switching in Biaxial Antiferromagnetic Insulators, Phys. Rev. Lett. 120, 207204 (2018).
+[20] L. Baldrati, O. Gomonay, A. Ross, M. Filianina, R. Lebrun, R. Ramos, C. Leveille, T. Forrest, F. Maccherozzi, E. Saitoh, J. Sinova, and M. Kläui, Mechanism of N´eel Order Switch- ing in Antiferromagnetic Thin Films Revealed by Magneto- transport and Direct Imaging, arXiv:1810.11326.
+[21] R. Cheng, J. Xiao, Q. Niu, and A. Brataas, Spin Pumping and Spin-Transfer Torques in Antiferromagnets, Phys. Rev. Lett. 113, 057601 (2014).
+[22] P. M. Haney and A. H. MacDonald, Current-Induced Torques due to Compensated Antiferromagnets, Phys. Rev. Lett. 100, 196801 (2008).
+[23] M. J. Grzybowski, P. Wadley, K. W. Edmonds, R. Beardsley, V. Hills, R. P. Campion, B. L. Gallagher, J. S. Chauhan, V. Novak, T. Jungwirth, F. Maccherozzi, and S. S. Dhesi, Imaging Current-Induced Switching of Antiferromagnetic Domains in CuMnAs, Phys. Rev. Lett. 118, 057701 (2017).
+[24] A. A. Sapozhnik, M. Filianina, S. Yu.
+Bodnar, A. Lamirand, M.-A. Mawass, Y. Skourski, H.-J. Elmers, H. Zabel, M. Kläui, and M. Jourdan, Direct Imaging of Antiferromagnetic Domains in Mn2Au Manipulated by High Magnetic Fields, Phys.
+Rev. B 97, 134429 (2018).
+[25] H. Gomonay and V. M. Loktev, Magnetostriction and Magnetoelastic Domains in Antiferromagnets, J. Phys. Condens.
+Matter 14, 3959 (2002).
+[26] F. U. Hillebrecht, H. Ohldag, N. B. Weber, C. Bethke, U. Mick, M. Weiss, and J. Bahrdt, Magnetic Moments at the Surface of Antiferromagnetic NiO(100), Phys. Rev. Lett. 86, 3419 (2001).
+[27] M. Nývlt, F. Bisio, and J. Kirschner, Second Harmonic Generation Study of the Antiferromagnetic NiO(001) Sur- face, Phys.
+Rev. B 77, 014435 (2008).
+[28] J.-Y. Chauleau, E. Haltz, C. Arr´et´ero, S. Fusil, and M. Viret, Multi-Stimuli Manipulation of Antiferromagnetic Domains Assessed by Second-Harmonic Imaging, Nat. Mater. 16, 803 (2017).
+[29] T. Higo, H. Man, D. B. Gopman, L. Wu, T. Koretsune, O. M. J. van’t Erve, Y. P. Kabanov, D. Rees, Y. Li, M.-T. Suzuki, S. Patankar, M. Ikhlas, C. L. Chien, R. Arita, R. D. Shull, J. Orenstein, and S. Nakatsuji, Large Magneto- Optical Kerr Effect and Imaging of Magnetic Octupole Domains in an Antiferromagnetic Metal, Nat.
+Photonics 12, 73 (2018).
+[30] J. Xu, C. Zhou, M. Jia, D. Shi, C. Liu, H. Chen, G. Chen, G. Zhang, Y. Liang, and J. Li, Imaging Antiferromagnetic Domains in Nickel-Oxide Thin Films by Magneto-Optical Voigt Effect, arXiv:1906.06844.
+[31] I. Gross, W. Akhtar, V. Garcia, L. J. Martínez, S. Chouaieb, K. Garcia, C. Carr´et´ero, A. Barth´el´emy, P. Appel, P. Maletinsky, J. V. Kim, J. Y. Chauleau, N. Jaouen, M. Viret, M. Bibes, S. Fusil, and V. Jacques, Real-Space Imaging of Non-Collinear Antiferromagnetic Order with a Single-Spin Magnetometer, Nature (London) 549, 252 (2017).
+[32] M. Ikhlas, T. Tomita, T. Koretsune, M.-T. Suzuki, D. Nishio- Hamane, R. Arita, Y. Otani, and S. Nakatsuji, Large Anomalous Nernst Effect at Room Temperature in a Chiral Antiferromagnet, Nat. Phys. 13, 1085 (2017).
+[33] S. M. Wu, W. Zhang, K. C. Amit, P. Borisov, J. E. Pearson, J. S. Jiang, D. Lederman, A. Hoffmann, and A. Bhattacharya, Antiferromagnetic Spin Seebeck Effect, Phys. Rev. Lett. 116, 097204 (2016).
+[34] S. Seki, T. Ideue, M. Kubota, Y. Kozuka, R. Takagi, M. Nakamura, Y. Kaneko, M. Kawasaki, and Y. Tokura, Thermal Generation of Spin Current in an Antiferromagnet, Phys. Rev. Lett. 115, 266601 (2015).
+[35] M. Weiler, M. Althammer, F. D. Czeschka, H. Huebl, M. S. Wagner, M. Opel, I.-M. Imort, G. Reiss, A. Thomas, R. Gross, and S. T. B. Goennenwein, Local Charge and Spin Currents in Magnetothermal Landscapes, Phys. Rev. Lett. 108, 106602 (2012).
+[36] J. M. Bartell, D. H. Ngai, Z. Leng, and G. D. Fuchs, Towards a Table-Top Microscope for Nanoscale Magnetic Imaging Using Picosecond Thermal Gradients, Nat. Commun. 6, 8460 (2015).
+[37] F. Guo, J. M. Bartell, D. H. Ngai, and G. D. Fuchs, Phase- Sensitive Imaging of Ferromagnetic Resonance Using Ultrafast Heat Pulses, Phys.
+Rev. Applied 4, 044004 (2015).
+[38] F. Guo, J. M. Bartell, and G. D. Fuchs, Ferromagnetic Resonance Phase Imaging in Spin Hall Multilayers, Phys.
+Rev. B 93, 144415 (2016).
+[39] J. M. Bartell, C. L. Jermain, S. V. Aradhya, J. T. Brangham, F. Yang, D. C. Ralph, and G. D. Fuchs, Imaging Magneti- zation Structure and Dynamics in Ultrathin Y3Fe5O12=Pt Bilayers with High Sensitivity Using the Time-Resolved Longitudinal Spin Seebeck Effect, Phys. Rev. Applied 7, 044004 (2017).
+[40] F. B. Lewis and N. H. Saunders, The Thermal Conductivity of NiO and CoO at the N´eel Temperature, J. Phys. C 6, 2525 (1973).
+[41] G. A. Slack, Crystallography and Domain Walls in Anti- ferromagnetic NiO Crystals, J. Appl.
+Phys. 31, 1571 (1960).
+[42] E. Uchida, N. Fukuoka, H. Kondoh, and T. Takeda, Magnetic Anisotropy of Single Crystals of NiO and MnO, J. Phys. Soc.
+Jpn. 23, 1197 (1967).
+[43] S. Saito, M. Miura, and K. Kurosawa, Optical Observations of Antiferromagnetic S Domains in NiO (111) Platelets, J. Phys. C 13, 1513 (1980).
+[44] J. Stöhr, A. Scholl, T. J. Regan, S. Anders, J. Lüning, M. R. Scheinfein, H. A. Padmore, and R. L. White, Images of the Antiferromagnetic Structure of a NiO(100) Surface by Means of X-Ray Magnetic Linear Dichroism Spectromicro- scopy, Phys. Rev. Lett. 83, 1862 (1999).
+[45] See Supplemental Material at http://link.aps.org/ supplemental/10.1103/PhysRevX.9.041016 for structural SPIN SEEBECK IMAGING OF SPIN-TORQUE SWITCHING IN … PHYS. REV.
+X 9, 041016 (2019) 041016-9characterization of Pt=NiO and Pt=NiO=Pt, further control experiments establishing AF LSSE, and characterization of laser-induced heating.
+[46] F. L. A. Machado, P. R. T. Ribeiro, J. Holanda, R. L. Rodríguez-Suárez, A. Azevedo, and S. M. Rezende, Spin- Flop Transition in the Easy-Plane Antiferromagnet Nickel Oxide, Phys.
+Rev. B 95, 104418 (2017).
+[47] K. Arai, T. Okuda, A. Tanaka, M. Kotsugi, K. Fukumoto, T. Ohkochi, T. Nakamura, T. Matsushita, T. Muro, M. Oura, Y. Senba, H. Ohashi, A. Kakizaki, C. Mitsumata, and T. Kinoshita, Three-Dimensional Spin Orientation in Antifer- romagnetic Domain Walls of NiO Studied by X-Ray Magnetic Linear Dichroism Photoemission Electron Microscopy, Phys.
+Rev. B 85, 104418 (2012).
+[48] K. Uchida, S. Takahashi, K. Harii, J. Ieda, W. Koshibae, K. Ando, S. Maekawa, and E. Saitoh, Observation of the Spin Seebeck Effect, Nature (London) 455, 778 (2008).
+[49] C. M. Jaworski, J. Yang, S. Mack, D. D. Awschalom, J. P. Heremans, and R. C. Myers, Observation of the Spin- Seebeck Effect in a Ferromagnetic Semiconductor, Nat. Mater. 9, 898 (2010).
+[50] A. Kehlberger, U. Ritzmann, D. Hinzke, E.-J. Guo, J. Cramer, G. Jakob, M. C. Onbasli, D. H. Kim, C. A. Ross, M. B. Jungfleisch, B. Hillebrands, U. Nowak, and M. Kläui, Length Scale of the Spin Seebeck Effect, Phys. Rev. Lett. 115, 096602 (2015).
+[51] J. Xiao, G. E. W. Bauer, K. C. Uchida, E. Saitoh, and S. Maekawa, Theory of Magnon-Driven Spin Seebeck Effect, Phys.
+Rev. B 81, 214418 (2010).
+[52] J. Kimling, G.-M. Choi, J. T. Brangham, T. Matalla-Wagner, T. Huebner, T. Kuschel, F. Yang, and D. G. Cahill, Pico- second Spin Seebeck Effect, Phys. Rev. Lett. 118, 057201 (2017).
+[53] B. L. Giles, Z. Yang, J. S. Jamison, J. M. Gomez-Perez, S. V´elez, L. E. Hueso, F. Casanova, and R. C. Myers, Thermally Driven Long-Range Magnon Spin Currents in Yttrium Iron Garnet due to Intrinsic Spin Seebeck Effect, Phys.
+Rev. B 96, 180412(R) (2017).
+[54] Y. Ohnuma, H. Adachi, E. Saitoh, and S. Maekawa, Spin Seebeck Effect in Antiferromagnets and Compensated Ferrimagnets, Phys.
+Rev. B 87, 014423 (2013).
+[55] A. J. Sievers and M. Tinkham, Far Infrared Antiferromag- netic Resonance in MnO and NiO, Phys.
+Rev. 129, 1566 (1963).
+[56] J. Holanda, D. S. Maior, O. A. Santos, L. H. Vilela-Leão, J. B. S. Mendes, A. Azevedo, R. L. Rodríguez-Suárez, and S. M. Rezende, Spin Seebeck Effect in the Antiferromagnet Nickel Oxide at Room Temperature, Appl. Phys.
+Lett. 111, 172405 (2017).
+[57] S. M. Rezende, R. L. Rodríguez-Suárez, and A. Azevedo, Diffusive Magnonic Spin Transport in Antiferromagnetic Insulators, Phys.
+Rev. B 93, 054412 (2016).
+[58] S. A. Bender, H. Skarsvåg, A. Brataas, and R. A. Duine, Enhanced Spin Conductance of a Thin-Film Insulating Antiferromagnet, Phys. Rev. Lett. 119, 056804 (2017).
+[59] S. A. Bender and Y. Tserkovnyak, Interfacial Spin and Heat Transfer between Metals and Magnetic Insulators, Phys.
+Rev. B 91, 140402(R) (2015).
+[60] S. M. Rezende, R. L. Rodríguez-Suárez, and A. Azevedo, Theory of the Spin Seebeck Effect in Antiferromagnets, Phys.
+Rev. B 93, 014425 (2016).
+[61] I. Gray, G. M. Stiehl, J. T. Heron, A. B. Mei, D. G. Schlom, R. Ramesh, D. C. Ralph, and G. D. Fuchs, Imaging Un- compensated Moments and Exchange-Biased Emergent Ferromagnetism in FeRh Thin Films, arXiv:1906.07243.
+[62] M. Charilaou and F. Hellman, Roughness Effects in Un- compensated Antiferromagnets, J. Appl.
+Phys. 117, 083907 (2015).
+[63] I. K. Schuller, R. Morales, X. Batlle, U. Nowak, and G. Güntherodt, Role of the Antiferromagnetic Bulk Spins in Exchange Bias, J. Magn. Magn. Mater. 416, 2 (2016).
+[64] H. Nakayama, M. Althammer, Y.-T. Chen, K. Uchida, Y. Kajiwara, D. Kikuchi, T. Ohtani, S. Geprägs, M. Opel, S. Takahashi, R. Gross, G. E. W. Bauer, S. T. B. Goennenwein, and E. Saitoh, Spin Hall Magnetoresistance Induced by a Nonequilibrium Proximity Effect, Phys. Rev. Lett. 110, 206601 (2013).
+[65] G. R. Hoogeboom, A. Aqeel, T. Kuschel, T. T. M. Palstra, and B. J. van Wees, Negative Spin Hall Magnetoresistance of Pt on the Bulk Easy-Plane Antiferromagnet NiO, Appl. Phys.
+Lett. 111, 052409 (2017).
+[66] J. Fischer, O. Gomonay, R. Schlitz, K. Ganzhorn, N. Vlietstra, M. Althammer, H. Huebl, M. Opel, R. Gross, S. T. B. Goennenwein, and S. Geprägs, Spin Hall Magneto- resistance in Antiferromagnet/Heavy-Metal Heterostruc- tures, Phys.
+Rev. B 97, 014417 (2018).
+[67] T. Moriyama, W. Zhou, T. Seki, K. Takanashi, and T. Ono, Spin-Orbit-Torque Memory Operation of Synthetic Antiferromagnets, Phys. Rev. Lett. 121, 167202 (2018).
+ISAIAH GRAY et al. PHYS. REV.
+X 9, 041016 (2019) 041016-10

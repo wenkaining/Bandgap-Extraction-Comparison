@@ -1,0 +1,763 @@
+
+View
+Online 
+Export
+Citation
+RESEARCH ARTICLE |  APRIL 22 2024
+Electron mobility of SnO2 from first principles 
+Amanda Wang  
+ ; Kyle Bushick 
+ ; Nick Pant 
+ ; Woncheol Lee 
+ ; Xiao Zhang 
+ ; Joshua Leveillee 
+ ;
+Feliciano Giustino 
+ ; Samuel Poncé 
+ ; Emmanouil Kioupakis 
+Appl. Phys. Lett. 124, 172103 (2024)
+https://doi.org/10.1063/5.0198885
+ CHORUS
+Articles You May Be Interested In
+First principles calculations of intrinsic mobilities in tin-based oxide semiconductors SnO, SnO2, and
+Ta2SnO6
+J. Appl. Phys. (November 2019)
+Clarification of the relative magnitude of exciton binding energies in ZnO and SnO2
+Appl. Phys. Lett. (January 2022)
+Density functional theory study of the electronic and optical properties of Si incorporated SnO2
+AIP Advances (November 2019)
+ 17 June 2025 14:32:55Electron mobility of SnO2 from first principles
+Cite as: Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+Submitted: 19 January 2024 . Accepted: 9 April 2024 .
+Published Online: 22 April 2024
+Amanda Wang,1,a)
+Kyle Bushick,1
+Nick Pant,1,2
+Woncheol Lee,3
+Xiao Zhang,1
+Joshua Leveillee,4,5,b)
+Feliciano Giustino,4,5
+Samuel Ponce,6,7
+and Emmanouil Kioupakis1
+AFFILIATIONS
+1Department of Materials Science and Engineering, University of Michigan, Ann Arbor, Michigan 48109, USA
+2Applied Physics Program, University of Michigan, Ann Arbor, Michigan 48109, USA
+3Department of Electrical and Computer Engineering, University of Michigan, Ann Arbor, Michigan 48109, USA
+4Oden Institute for Computational Engineering and Sciences, The University of Texas at Austin, Austin, Texas 78712, USA
+5Department of Physics, The University of Texas at Austin, Austin, Texas 78712, USA
+6European Theoretical Spectroscopy Facility, Institute of Condensed Matter and Nanosciences,
+Universite catholique de Louvain, Chemin des Etoiles 8, B-1348 Louvain-la-Neuve, Belgium
+7WEL Research Institute, Avenue Pasteur, 6, 1300 Wavre, Belgium
+a)Author to whom correspondence should be addressed: amandw@umich.edu
+b)Present address: Theoretical Division, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA; and Center for
+Nonlinear Studies (CNLS), Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA
+ABSTRACT
+The transparent conducting oxide SnO2 is a wide bandgap semiconductor that is easily n-type doped and widely used in various electronic
+and optoelectronic applications. Experimental reports of the electron mobility of this material vary widely depending on the growth
+conditions and doping concentrations. In this work, we calculate the electron mobility of SnO2 from first principles to examine the
+temperature and doping concentration dependence and to elucidate the scattering mechanisms that limit transport. We include both
+electron–phonon scattering and electron-ionized impurity scattering to accurately model scattering in a doped semiconductor. We find a
+strongly anisotropic mobility that favors transport in the direction parallel to the c-axis. At room temperature and intrinsic carrier concentra-
+tions, the low-energy polar-optical phonon modes dominate scattering, while ionized-impurity scattering dominates above 1018 cm3.
+Published under an exclusive license by AIP Publishing. https://doi.org/10.1063/5.0198885
+Rutile SnO2 is a transparent conductor that finds applications in
+devices such as photovoltaics, sensors, and transistors.1–3 The ease of
+n-type doping by unintentionally incorporated hydrogen or through
+impurities (F, Sb) enables free-electron concentrations in the
+1016–1020cm3 range.4 Since the first synthesis of SnO2 single crys-
+tals,5 numerous experimental studies have reported a wide range of
+electron mobility values.6–12 In contrast, first-principles computational
+studies of electron transport in SnO2, which enable the determination
+of the theoretical upper mobility limit and the differentiation of the
+various electron-scattering mechanisms, have emerged only recently.
+These existing studies use models and approximations, such as the
+Fr€ohlich and acoustic deformation potential (ADP) scattering models
+and the relaxation time approximation (RTA), to calculate electron
+mobility.13,14 While they reduce the computational cost needed to
+quantify electron scattering and its effect on transport, they have lim-
+ited accuracy.15,16
+In contrast to models, maximally localized Wannier functions
+(MLWFs) provide an efficient and predictive computational frame-
+work to interpolate the key quantities of carrier transport (electron
+energies, phonon frequencies, scattering matrix elements) determined
+from first principles to fine Brillouin-zone (BZ) sampling grids.17–19
+MLWFs exploit the spatial localization of electron and phonon wave-
+functions in real space to interpolate these quantities to arbitrary
+wave-vectors. The MLWFs are constructed using first-principles calcu-
+lation on a coarse BZ grid and retain first-principles accuracy when
+interpolating to the fine grids needed to capture electron-scattering
+processes. The interpolated quantities are then used to iteratively solve
+the Boltzmann transport equation (BTE) and calculate mobility val-
+ues.20 To make a meaningful comparison to experiment, mobility cal-
+culations need to include the two dominant forms of scattering in
+heavily doped semiconductors: electron–phonon scattering and
+electron-ionized impurity scattering. The phonon-limited mobility
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-1
+Published under an exclusive license by AIP Publishing
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+ 17 June 2025 14:32:55(intrinsic mobility) represents the upper limit in defect-free semicon-
+ductors. However, because SnO2 is often doped to high carrier concen-
+trations and has shallow donor energies,4 the resulting ionized dopants
+also constitute a significant source of scattering. While doping
+increases the carrier concentration and hence the conductivity, it is
+important to also consider how mobility is adversely affected by the
+resulting increased ionized-impurity concentration. By including the
+scattering rates from both electron–phonon and electron-ionized
+impurity interactions, the combined effect of the two scattering mecha-
+nisms can be captured in the solution of the BTE.16
+In this work, we calculate the electron mobility in rutile SnO2 as a
+function of temperature and doping concentration from first princi-
+ples, accounting for scattering by both phonons and ionized impuri-
+ties. We study the temperature dependence of the phonon-limited
+mobility and identify the polar-optical phonons as the dominant scat-
+tering modes, finding that at room temperature, the low-energy polar-
+optical phonons around 30 meV contribute to 82% of the scattering.
+The total mobility, limited by both phonons and ionized impurities,
+decreases with increasing carrier concentration due to increasing scat-
+tering from ionized dopants. The mobility is anisotropic and highest
+along the c-axis, due to lower electron effective mass and reduced scat-
+tering along this direction. We also calculate the Hall mobility and find
+good agreement with the highest experimentally measured room-
+temperature mobility values of 260 cm2/Vs.9
+To calculate the electron mobility of SnO2, we iteratively solve the
+Boltzmann transport equation using material parameters obtained
+from density functional theory (DFT), density functional perturbation
+theory (DFPT), and many-body perturbation theory (G0W0 method)
+as summarized herein. Specifics of calculation parameters are provided
+in the supplementary material.
+We used Quantum ESPRESSO21,22 to carry out DFT structural-
+relaxation calculations within the local density approximation (LDA).
+The calculated lattice parameters and other material properties of
+SnO2 are in good agreement with previous experimental and theoreti-
+cal studies (Table I). The phonons and electron–phonon matrix ele-
+ments were calculated using DFPT.23 The phonon dispersion and
+frequencies at the C point are shown in Fig. S2 and Table SI.24,25
+To improve the description of the band structure, we used the
+G0W0 method within BerkeleyGW26,27 to calculate quasiparticle cor-
+rections to energies of the electronic states.28–30 The quasiparticle cor-
+rections
+improve
+the
+severely
+underestimated
+LDA
+bandgap
+(0.749eV) to a value of 3.182 eV that is in better agreement with exper-
+iment (Table I). The G0W0 bandgap is still lower than the experimen-
+tal value of 3.59 eV,31 but it is the curvature of the bands that affects
+the calculation of transport properties. The electron effective masses
+evaluated from the G0W0 quasiparticle band structure, depicted in
+Fig. 1, are in good agreement with both experiment and previous theo-
+retical studies (Table I).31–36
+We used the EPW code19 to calculate the electron mobility. The
+quasiparticle energies, phonon frequencies, and electron–phonon cou-
+pling matrix elements were calculated on an 8  8  12 Brillouin-zone
+sampling grid and interpolated to finer grids using the maximally
+localized
+Wannier
+function
+method
+as
+implemented
+in
+Wannier90.17,37 We include both dipole and quadrupole corrections to
+the interpolation of the long-range components of the electron–
+phonon matrix elements.38–40 The quadrupole tensor (Table SII) was
+calculated using ABINIT41–43 with LDA pseudopotentials without
+nonlinear core corrections,44 while the dipole corrections are handled
+by EPW.19 The interpolated quantities were used to solve the linearized
+BTE to calculate the phonon-limited and ionized-impurity-limited16
+electron drift and Hall45 mobilities as a function of temperature and
+carrier concentration. The equations used for the mobility calculations
+are reported in Sec. S2. We assume complete donor ionization and set
+the carrier concentration equal to the ionized-impurity concentration.
+TABLE I. Structural, electronic, and optical properties of rutile SnO2, as calculated in this work and compared to previous theoretical and experimental studies. The structural
+parameters were obtained through a relaxation with the LDA functional and valence pseudopotentials. Semicore pseudopotentials and experimental lattice parameters were
+used for G0W0 quasiparticle corrections to the band structure.  denotes values from quasiparticle G0W0 calculations.
+a ( ˚A)
+c ( ˚A)
+u
+Eg (eV)
+m ? c
+m k c
+e?
+0
+ek
+0
+e?
+1
+ek
+1
+This work
+4.788
+3.248
+0.307
+3.182
+0.309
+0.211
+14.73
+10.65
+5.05
+5.31
+Previous theory
+4.72732
+3.20032
+0.30632
+3.6532
+0.2632
+0.2132
+1234
+7.034
+3.734
+3.934
+Experiment
+4.74033
+3.19033
+0.30633
+3.5931
+0.29935
+0.23435
+13.536
+9.5836
+3.78536
+4.17536
+FIG. 1. (a) Unit cell of rutile SnO2. The tin atoms are shown in gray, and the oxygen atoms, in red. (b) and (c) Conduction band energies referenced to the conduction band
+minimum (CBM) along high-symmetry paths X-C-X and Z-C-Z, with the effective masses along each direction labeled.
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-2
+Published under an exclusive license by AIP Publishing
+ 17 June 2025 14:32:55To examine the temperature dependence, we set the carrier concentra-
+tion at 1017 cm3 and calculated the mobilities from 100 to 600 K. We
+also investigated the carrier-concentration dependence over the
+1016–1020cm3 range at 300 K.
+We find that the room-temperature electron drift mobility of
+SnO2, considering the combined effects of both phonon and ionized-
+impurity scattering, for a carrier concentration of 1017cm3 is 373cm2/
+Vs in the direction parallel to the c-axis and 228cm2/Vs perpendicular
+to the c-axis. This anisotropy reflects the difference in effective masses,
+where m is heavier in the perpendicular direction. The anisotropy in
+the mobilities is stronger than in the effective masses (1.64 compared to
+1.46), indicating that, in addition to a directional dependence in the
+band curvature, there is also anisotropy in the scattering rates.
+We next examine the temperature dependence of the drift mobil-
+ity and its decomposition in terms of scattering by phonons and ion-
+ized impurities (Fig. 2). The phonon-limited mobility decreases with
+increasing temperature, as expected due to higher phonon occupations
+at elevated temperatures. We fit the temperature dependence of the
+phonon-limited mobility according to46
+lph T
+ð Þ ¼
+1
+llow
+e
+Tlow=T þ
+1
+lhigh
+e
+Thigh=T
+ 
+!1
+:
+(1)
+The first term on the right-hand side represents lower-energy phonon
+modes that dominate scattering at lower temperatures, while the second
+term represents higher-energy phonon modes that dominate at higher
+temperatures. In polar semiconductors where macroscopic electric fields
+created by longitudinal-optical phonons can couple to electrons, polar-
+optical phonons are often the dominant source of phonon scattering.15
+Our calculations confirm that the polar-optical modes contribute the
+most to limiting the mobility. The Tlow and Thigh that we fit (Table SIII)
+correspond to the energies of polar-optical Eu modes with approximate
+frequencies of 30–40 and 80meV, respectively. These same polar-
+optical modes also have the largest mode-resolved electron self-energies
+(Fig. S3). The spectral decomposition of scattering rates in Fig. 2(b)
+show that at room temperature, the lower-energy Eu optical phonon
+modes with energies of 30–40meV dominate scattering, contributing to
+82% of the scattering rate, as the occupations of the higher-energy Eu
+mode is low (4%–6%). Because the dominant longitudinal-optical
+modes are well-described by dipole interactions, the inclusion of quad-
+rupole interactions changes the mobilities by less than 1% (Sec. S5).
+We also found that the ionized-impurity-limited mobility
+increases with increasing temperature. This is because carriers with
+higher kinetic energy are less affected by impurities at higher tempera-
+tures. The temperature dependence of the ionized-impurity-limited
+mobility is characterized by a power-law model,
+lii T
+ð Þ ¼ l0
+T
+300
+
+a
+;
+(2)
+where we normalize temperature and set l0 to the ionized-impurity-
+limited mobility at 300 K. For SnO2, we find that a is close to 1 for
+both directions (Table SIII), indicating that there is a nearly linear
+dependence of the ionized-impurity-limited mobility on temperature.
+The total drift mobility, which includes the effects of both pho-
+non and ionized-impurity scattering, is dominated by phonon scatter-
+ing, as seen by its decreasing value with increasing temperature. We
+characterize the temperature dependence of the total mobility by com-
+bining the previous two equations according to a Matthiessen’s rule-
+like expression as follows:47
+ltotal T
+ð Þ ¼
+1
+llow
+e
+Tlow=T þ
+1
+lhigh
+e
+Thigh=T þ 1
+l0
+T
+300
+
+a
+ 
+!1
+; (3)
+where the fitted parameters are listed in Table SIII. We find that for a
+moderate dopant concentration of 1017cm3, ionized-impurity scatter-
+ing is weak, and electron-phonon scattering dominates the mobility.
+Furthermore, Matthiessen’s rule does not describe SnO2 well across the
+entire temperature range, which can be seen in both the difference in
+parameters fit for the total mobility compared to those for the individual
+mobilities as well as through a direct comparison of total mobilities to
+those computed with Matthiessen’s rule (Fig. S4). This behavior has also
+been seen in other semiconductors.16 While the scattering rates are
+assumed to be independent and can be added together, this does not
+mean the inverse of the mobilities can likewise be added together because
+of self-consistency in the solution of the BTE and state-dependent scat-
+tering rates.16 Matthiessen’s rule is only a good approximation in SnO2 at
+high temperatures, at which phonon scattering dominates.
+Next, we examine the dependence of the drift mobility on the car-
+rier concentration. While higher doping concentrations introduce
+more free electrons, they also contribute more scattering by ionized
+donor impurities. Our results [Fig. 3(a)] show that the high mobility
+values in the low-doping regime (dominated by phonon scattering)
+decrease by approximately 50% in the high-doping limit. We fit the
+carrier-concentration dependence of total mobility with the empirical
+expression of Caughey and Thomas as follows:48
+FIG. 2. (a) Electron drift mobility of rutile
+SnO2 along k c and ?c as a function
+of temperature at a carrier concentration of
+1017 cm3. (b) Spectral decomposition of
+the angularly averaged electron–phonon
+scattering rates by phonon energy at
+300 K, for carriers 3kbT=2 from the band
+edge. The dashed line is the cumulative
+integral of the scattering rates, and 82%
+represents the contribution from the lower-
+energy polar-optical phonon modes.
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-3
+Published under an exclusive license by AIP Publishing
+ 17 June 2025 14:32:55ltotal n
+ð Þ ¼ lmin þ lmax  lmin
+1 þ
+n=nref
+
+b ;
+(4)
+where lmax is the intrinsic mobility if phonons are the only source of
+scattering, lmin is the mobility when ionized impurity scattering is
+dominant, b characterizes how quickly the mobility changes between
+the two limits, and nref is the doping concentration for which the
+mobility value is halfway between the two extremes.49 The fitted
+parameters are listed in Table SIV.
+Finally, to compare to experimental Hall measurements, we cal-
+culate the room-temperature electron Hall mobility of rutile SnO2 as a
+function of carrier concentration and find good agreement with exper-
+imental values. The fitted Caughey–Thomas parameters for the Hall
+mobility are listed in Table SIV. Across the examined range of carrier
+concentrations, the Hall mobility values are similar to the drift mobility
+and follow the same trend (Fig. 3). Experimental measurements of the
+Hall mobility at various carrier concentrations are also shown in
+Fig. 3(b) for comparison. The agreement is excellent in the direction
+perpendicular to the c-axis, while our calculations slightly overestimate
+mobility compared to experiment along the parallel direction.
+We compare our results to previous theoretical investigations of
+carrier transport in SnO2 to explore how different models and approxi-
+mations affect the calculated mobility values. A study of tin-based
+oxide semiconductors by Hu et al.13 used the RTA to calculate the
+phonon-limited drift and Hall mobility of SnO2. Reference 13 calcu-
+lates the acoustic phonon-limited mobility using the ADP scattering
+model, the optical phonon-limited mobility using the Fr€ohlich model,
+and combines the two using Matthiessen’s rule to obtain the total
+phonon-limited mobility. It finds the room-temperature drift mobility
+parallel to the c-axis to be 229 cm2/Vs and perpendicular to be
+166cm2/V s. The anisotropy in these mobility values is lower than the
+anisotropy in our mobility values, but do agree with the anisotropy of
+our effective masses. This is likely because Ref. 13 assumes isotropic
+phonon scattering and only considers anisotropy in the directionally
+dependent effective masses. The mobility values in Ref. 13 are lower
+than ours at nondegenerate concentrations (below 1019cm3), despite
+the fact that it does not consider scattering by ionized impurities. This
+difference could be attributed to the use of the RTA, which underesti-
+mates mobilities compared to iterative solutions of the BTE. The RTA
+sums scattering processes into a scattering rate that only accounts for
+scattering out of a given state, while iteration allows for scattering back
+into a state that increases the lifetime and consequently the mobility.50
+In fact, we find that the room-temperature phonon-limited mobility
+calculated using the RTA is 40% lower than iterative solutions of the
+BTE (Fig. S5). Reference 13 also calculates the Hall mobility to com-
+pare it to experiment, finding a room-temperature Hall factor of 1.38,
+which is higher than our Hall factors that range between 0.98 and 1.12
+across the temperatures and carrier concentrations (Fig. S6). This dis-
+crepancy could be due to the methodology differences for computing
+the Hall factor. Reference 13 uses energy-averaged scattering times
+that assume parabolic bands and isotropy, while our work uses the
+BTE augmented with a magnetic field term, which takes into account
+the full details of the band structure and scattering processes.
+A computational study on mobility in SnO2 that does take into
+account both phonon and ionized-impurity scattering was performed
+by Li et al.14 Similar to our work, the scattering mechanisms are com-
+bined by summing the individual scattering rates, which is more accu-
+rate than applying Matthiessen’s rule to the individual mobilities. To
+calculate the scattering rates, Ref. 14 uses the ADP and Fr€ohlich mod-
+els for acoustic and polar-optical phonons, respectively, and the
+Brooks–Herring model for ionized impurities. The mobility is calcu-
+lated with the RTA using the relaxation times from the summed scat-
+tering rates. In contrast to this work, Ref. 14 obtains an average
+mobility by averaging along the different directions. The total average
+mobility that Ref. 14 finds is lower than our mobilities in both direc-
+tions, most likely due to the fact that, similar to Ref. 13, this study does
+not use an iterative solution of the BTE.
+Many experimental measurements of mobility have been
+reported for SnO2,6–8,10,11 but we compare our results to that of
+Fonstad and Rediker9 and Bierwagen and Galazka12 because they spec-
+ify the direction of mobility measured. Since our work finds that the
+mobility values are strongly directionally dependent, a proper compar-
+ison to experiment must take this anisotropy into account. The
+mobility is highest along the c direction, which implies that aligning
+the c-axis along the direction of the transport would result in better
+performance for SnO2 electronic devices. The anisotropy we find at
+room temperature is stronger than that found by Bierwagen and
+Galazka12 through van der Pauw measurements, which can be seen by
+our relatively larger mobility along the c-axis. The overestimation of
+mobility can be attributed to extra sources of scattering in experiment
+that our theory does not take into account, such as point defects and
+dislocations. This implies that to optimize device performance, it
+would be best to focus on minimizing other sources of scattering as the
+intrinsic mobility of the material itself is high. Thin-film devices in par-
+ticular would benefit most from a reduction in interface roughness,
+which accounts for the largest additional source of scattering.
+FIG. 3. Room-temperature electron mobil-
+ity of rutile SnO2 along k c and ? c as a
+function
+of
+carrier
+concentration.
+The
+dashed lines are fits to the Caughey–
+Thomas model. (a) Drift mobility and (b)
+Hall mobility compared to experimentally
+measured Hall values. The experimental
+values are from Bierwagen and Galazka (B
+& G) and Fonstad and Rediker (F & R).9,12
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-4
+Published under an exclusive license by AIP Publishing
+ 17 June 2025 14:32:55Overestimation of the mobility can also be due to overscreening of the
+electron–phonon matrix elements by DFT.45
+In summary, we calculate the phonon and ionized-impurity-
+limited electron drift and Hall mobility of rutile SnO2 and examine its
+dependence on temperature and carrier concentration. We find that
+the mobility along the c-axis is approximately 1.6 times higher than in
+the perpendicular direction. The low-frequency polar-optical phonon
+modes contribute the most to scattering near room temperature, while
+high-frequency polar-optical modes dominate at higher temperatures.
+We also examine the carrier-concentration dependence of the mobil-
+ity, including the effects of both phonon and ionized-impurity scatter-
+ing, and find that the trend is described well by the empirical
+Caughey–Thomas model observed in other semiconductors. We also
+find good agreement between our calculated Hall mobility values and
+experimental measurement, particularly along the direction perpendic-
+ular to the c-axis. Our work provides rigorous, first-principles insight
+into the dominant scattering mechanisms and the upper bounds to the
+electron mobility in rutile SnO2 and can guide the further development
+of SnO2-based electronic devices.
+See the supplementary material for more details on the calcula-
+tion parameters and convergence, the full-band structure calculated
+with the LDA functional and with G0W0, the phonon dispersion and
+frequencies, the quadrupole tensor, the highest mode-resolved self-
+energies, the fitted mobility parameters, a comparison of mobilities cal-
+culated with Matthiessen’s rule, a comparison of the RTA and BTE
+mobilities, and the Hall factors.
+The work was supported as part of the Computational
+Materials Sciences Program funded by the U.S. Department of
+Energy, Office of Science, Basic Energy Sciences under Award No.
+DE-SC0020129. Computational resources were provided by the
+National Energy Research Scientific Computing (NERSC) Center,
+a DOE Office of Science User Facility, under Contract No.
+DEAC02–05CH11231. A.W. was supported by the Department of
+Defense
+(DoD)
+through
+the
+National
+Defense
+Science
+&
+Engineering
+Graduate
+(NDSEG)
+Fellowship
+Program.
+K.B.
+acknowledges the support of the U.S. Department of Energy,
+Office of Science, Office of Advanced Scientific Computing
+Research, Department of Energy Computational Science Graduate
+Fellowship under Award No. DE-SC0020347. N.P. gratefully
+acknowledges the support of the Natural Sciences and Engineering
+Research Council of Canada (NSERC) Postgraduate Doctoral
+Scholarship. S.P. acknowledges support from the Fonds de la
+Recherche
+Scientifique
+de
+Belgique
+(FRS-FNRS),
+by
+the
+Consortium des Equipements de Calcul Intensif (CECI), and by
+the Walloon Region in the strategic axe FRFS-WEL-T.
+AUTHOR DECLARATIONS
+Conflict of Interest
+The authors have no conflicts to disclose.
+Author Contributions
+Amanda Wang: Data curation (lead); Formal analysis (lead);
+Investigation (lead); Methodology (equal); Writing – original draft
+(lead). Kyle Bushick: Formal analysis (equal); Methodology (equal);
+Writing – review & editing (equal). Nick Pant: Formal analysis
+(equal); Methodology (equal); Writing – review & editing (equal).
+Woncheol Lee: Investigation (equal); Methodology (equal); Writing –
+review
+&
+editing
+(equal).
+Xiao
+Zhang:
+Investigation
+(equal);
+Methodology (equal); Writing – review & editing (equal). Joshua
+Leveillee: Investigation (equal); Methodology (equal); Writing – review
+& editing (equal). Feliciano Giustino: Resources (equal); Supervision
+(equal); Writing – review & editing (equal). Samuel Ponce:
+Methodology (equal); Supervision (equal); Writing – review & editing
+(equal). Emmanouil Kioupakis: Conceptualization (lead); Funding
+acquisition (lead); Resources (lead); Supervision (lead); Writing – orig-
+inal draft (supporting); Writing – review & editing (equal).
+DATA AVAILABILITY
+The data that support the findings of this study are available from
+the corresponding author upon reasonable request.
+REFERENCES
+1G. K. Dalapati, H. Sharma, A. Guchhait, N. Chakrabarty, P. Bamola, Q. Liu, G.
+Saianand, A. M. S. Krishna, S. Mukhopadhyay, A. Dey, T. K. S. Wong, S. Zhuk,
+S. Ghosh, S. Chakrabortty, C. Mahata, S. Biring, A. Kumar, C. S. Ribeiro, S.
+Ramakrishna, A. K. Chakraborty, S. Krishnamurthy, P. Sonar, and M. Sharma,
+“Tin oxide for optoelectronic, photovoltaic and energy storage devices: A
+review,” J. Mater. Chem. A 9(31), 16621–16684 (2021).
+2S. Das and V. Jayaraman, “SnO2: A comprehensive review on structures and
+gas sensors,” Prog. Mater. Sci. 66, 112–255 (2014).
+3K. Jenifer, S. Arulkumar, S. Parthiban, and J. Y. Kwon, “A review on the recent
+advancements in tin oxide-based thin-film transistors for large-area electron-
+ics,” J. Electron. Mater. 49(12), 7098–7111 (2020).
+4Z. Galazka, “Tin oxide (SnO2),” in Transparent Semiconducting Oxides (Jenny
+Stanford Publishing, 2020), pp. 463–557.
+5J. A. Marley and T. C. MacAvoy, “Growth of stannic oxide crystals from the
+vapor phase,” J. Appl. Phys. 32(12), 2504–2505 (1961).
+6M. Nagasawa, S. Shionoya, and S. Makishima, “Vapor reaction growth of SnO2
+single crystals and their properties,” Jpn. J. Appl. Phys., Part 1 4(3), 195 (1965).
+7D. F. Morgan and D. A. Wright, “Electrical properties of single crystals of
+antimony-doped stannic oxide,” Br. J. Appl. Phys. 17(3), 337 (1966).
+8D. F. Crabtree, R. N. S. M. Mehdi, and D. A. Wright, “Electron mobility and
+infra-red absorption in reduced tin oxide crystals,” J. Phys. D: Appl. Phys.
+2(11), 1503–1505 (1969).
+9C. G. Fonstad and R. H. Rediker, “Electrical properties of high-quality stannic
+oxide crystals,” J. Appl. Phys. 42(7), 2911–2918 (1971).
+10P. Turkes, C. Pluntke, and R. Helbig, “Thermal conductivity of SnO2 single
+crystals,” J. Phys. C: Solid State Phys. 13(26), 4941 (1980).
+11M. Feneberg, C. Lidig, K. Lange, M. E. White, M. Y. Tsai, J. S. Speck, O. Bierwagen,
+and R. Goldhahn, “Anisotropy of the electron effective mass in rutile SnO2 deter-
+mined by infrared ellipsometry,” Phys. Status Solidi A 211(1), 82–86 (2014).
+12O. Bierwagen and Z. Galazka, “The inherent transport anisotropy of rutile tin
+dioxide (SnO2) determined by van der Pauw measurements and its conse-
+quences for applications,” Appl. Phys. Lett. 112(9), 092105 (2018).
+13Y. Hu, J. Hwang, Y. Lee, P. Conlin, D. G. Schlom, S. Datta, and K. Cho, “First
+principles calculations of intrinsic mobilities in tin-based oxide semiconductors
+SnO, SnO2, and Ta2SnO6,” J. Appl. Phys. 126(18), 185701 (2019).
+14Z. Li, P. Graziosi, and N. Neophytou, “Electron and hole mobility of SnO2 from
+full-band electron–phonon and ionized impurity scattering computations,”
+Crystals 12(11), 1591 (2022).
+15S. Ponce, W. Li, S. Reichardt, and F. Giustino, “First-principles calculations of
+charge carrier mobility and conductivity in bulk semiconductors and two-
+dimensional materials,” Rep. Prog. Phys. 83(3), 036501 (2020).
+16J. Leveillee, X. Zhang, E. Kioupakis, and F. Giustino, “Ab initio calculation of
+carrier mobility in semiconductors including ionized-impurity scattering,”
+Phys. Rev. B 107(12), 125207 (2023).
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-5
+Published under an exclusive license by AIP Publishing
+ 17 June 2025 14:32:5517N. Marzari, A. A. Mostofi, J. R. Yates, I. Souza, and D. Vanderbilt, “Maximally
+localized Wannier functions: Theory and applications,” Rev. Mod. Phys. 84(4),
+1419–1475 (2012).
+18F. Giustino, “Electron-phonon interactions from first principles,” Rev. Mod.
+Phys. 89(1), 015003 (2017).
+19H. Lee, S. Ponce, K. Bushick, S. Hajinazar, J. Lafuente-Bartolome, J. Leveillee, C.
+Lian, J.-M. Lihm, F. Macheda, H. Mori, H. Paudyal, W. H. Sio, S. Tiwari, M.
+Zacharias, X. Zhang, N. Bonini, E. Kioupakis, E. R. Margine, and F. Giustino,
+“Electron–phonon physics from first principles using the EPW code,” npj
+Comput. Mater. 9(1), 156 (2023).
+20S. Ponce, E. R. Margine, and F. Giustino, “Towards predictive many-body cal-
+culations of phonon-limited carrier mobilities in semiconductors,” Phys. Rev. B
+97(12), 121201 (2018).
+21P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C. Cavazzoni, D.
+Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo, A. D. Corso, S. de Gironcoli,
+S. Fabris, G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj, M.
+Lazzeri, L. Martin-Samos, N. Marzari, F. Mauri, R. Mazzarello, S. Paolini, A.
+Pasquarello, L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A. P. Seitsonen,
+A. Smogunov, P. Umari, and R. M. Wentzcovitch, “QUANTUM ESPRESSO: A
+modular and open-source software project for quantum simulations of materi-
+als,” J. Phys.: Condens. Matter 21(39), 395502 (2009).
+22P. Giannozzi, O. Andreussi, T. Brumme, O. Bunau, M. B. Nardelli, M.
+Calandra, R. Car, C. Cavazzoni, D. Ceresoli, M. Cococcioni, N. Colonna, I.
+Carnimeo, A. D. Corso, S. de Gironcoli, P. Delugas, R. A. DiStasio, A. Ferretti,
+A. Floris, G. Fratesi, G. Fugallo, R. Gebauer, U. Gerstmann, F. Giustino, T.
+Gorni, J. Jia, M. Kawamura, H.-Y. Ko, A. Kokalj, E. K€uc¸€ukbenli, M. Lazzeri, M.
+Marsili, N. Marzari, F. Mauri, N. L. Nguyen, H.-V. Nguyen, A. Otero-de-la-
+Roza, L. Paulatto, S. Ponce, D. Rocca, R. Sabatini, B. Santra, M. Schlipf, A. P.
+Seitsonen, A. Smogunov, I. Timrov, T. Thonhauser, P. Umari, N. Vast, X. Wu,
+and S. Baroni, “Advanced capabilities for materials modelling with Quantum
+ESPRESSO,” J. Phys.: Condens. Matter 29(46), 465901 (2017).
+23S. Baroni, S. De Gironcoli, A. Dal Corso, and P. Giannozzi, “Phonons and
+related crystal properties from density-functional perturbation theory,” Rev.
+Mod. Phys. 73(2), 515–562 (2001).
+24P. D. Borges, L. M. R. Scolfaro, H. W. Leite Alves, and E. F. da Silva, “DFT
+study of the electronic, vibrational, and optical properties of SnO2,” Theor.
+Chem. Acc. 126(1–2), 39–44 (2010).
+25R. S. Katiyar, P. Dawson, M. M. Hargreave, and G. R. Wilkinson, “Dynamics of
+the rutile structure. III. Lattice dynamics, infrared and Raman spectra of SnO2,”
+J. Phys. C: Solid State Phys. 4(15), 2421 (1971).
+26M. S. Hybertsen and S. G. Louie, “Electron correlation in semiconductors and
+insulators: Band gaps and quasiparticle energies,” Phys. Rev. B 34(8),
+5390–5413 (1986).
+27J. Deslippe, G. Samsonidze, D. A. Strubbe, M. Jain, M. L. Cohen, and S. G.
+Louie, “BerkeleyGW: A massively parallel computer package for the calculation
+of the quasiparticle and optical properties of materials and nanostructures,”
+Comput. Phys. Commun. 183(6), 1269–1289 (2012).
+28B.-C. Shih, Y. Xue, P. Zhang, M. L. Cohen, and S. G. Louie, “Quasiparticle band
+gap of ZnO: High accuracy from the conventional G0W0 approach,” Phys. Rev.
+Lett. 105(14), 146401 (2010).
+29M. R. Filip, C. E. Patrick, and F. Giustino, “GW quasiparticle band structures of
+stibnite, antimonselite, bismuthinite, and guanajuatite,” Phys. Rev. B 87(20),
+205125 (2013).
+30J. Deslippe, G. Samsonidze, M. Jain, M. L. Cohen, and S. G. Louie, “Coulomb-hole
+summations and energies for GW calculations with limited number of empty orbi-
+tals: A modified static remainder approach,” Phys. Rev. B 87(16), 165124 (2013).
+31M. Feneberg, C. Lidig, K. Lange, R. Goldhahn, M. D. Neumann, N. Esser, O.
+Bierwagen, M. E. White, M. Y. Tsai, and J. S. Speck, “Ordinary and extraordi-
+nary dielectric functions of rutile SnO2 up to 20 eV,” Appl. Phys. Lett. 104(23),
+231106 (2014).
+32A. Schleife, J. B. Varley, F. Fuchs, C. R€odl, F. Bechstedt, P. Rinke, A. Janotti,
+and C. G. Van de Walle, “Tin dioxide from first principles: Quasiparticle elec-
+tronic states and optical properties,” Phys. Rev. B 83(3), 035116 (2011).
+33P.
+Villars
+and
+K.
+Cenzual,
+see
+https://materials.springer.com/isp/crystallo
+graphic/docs/sd_1300805 for “SnO2 rutile-type (SnO2) crystal structure: Datasheet
+from ‘PAULING FILE Multinaries Edition–2022’ in SpringerMaterials.”
+34M. Dou and C. Persson, “Comparative study of rutile and anatase SnO2 and
+TiO2: Band-edge structures, dielectric functions, and polaron effects,” J. Appl.
+Phys. 113(8), 083703 (2013).
+35K. J. Button, C. G. Fonstad, and W. Dreybrodt, “Determination of the electron
+masses in stannic oxide by submillimeter cyclotron resonance,” Phys. Rev. B
+4(12), 4539–4542 (1971).
+36R. Summitt, “Infrared absorption in single-crystal stannic oxide: Optical lattice-
+vibration modes,” J. Appl. Phys. 39(8), 3762–3767 (1968).
+37G. Pizzi, V. Vitale, R. Arita, S. Bl€ugel, F. Freimuth, G. Geranton, M. Gibertini,
+D. Gresch, C. Johnson, T. Koretsune, J. Iba~nez-Azpiroz, H. Lee, J.-M. Lihm, D.
+Marchand, A. Marrazzo, Y. Mokrousov, J. I. Mustafa, Y. Nohara, Y. Nomura, L.
+Paulatto, S. Ponce, T. Ponweiser, J. Qiao, F. Th€ole, S. S. Tsirkin, M.
+Wierzbowska, N. Marzari, D. Vanderbilt, I. Souza, A. A. Mostofi, and J. R.
+Yates, “Wannier90 as a community code: New features and applications,”
+J. Phys.: Condens. Matter 32(16), 165902 (2020).
+38G. Brunin, H. P. C. Miranda, M. Giantomassi, M. Royo, M. Stengel, M. J.
+Verstraete, X. Gonze, G.-M. Rignanese, and G. Hautier, “Electron-phonon
+beyond Fr€ohlich: Dynamical quadrupoles in polar and covalent solids,” Phys.
+Rev. Lett. 125(13), 136601 (2020).
+39G. Brunin, H. P. C. Miranda, M. Giantomassi, M. Royo, M. Stengel, M. J.
+Verstraete, X. Gonze, G.-M. Rignanese, and G. Hautier, “Phonon-limited elec-
+tron mobility in Si, GaAs, and GaP with exact treatment of dynamical quadru-
+poles,” Phys. Rev. B 102(9), 094308 (2020).
+40V. A. Jhalani, J.-J. Zhou, J. Park, C. E. Dreyer, and M. Bernardi, “Piezoelectric
+electron-phonon interaction from ab initio dynamical quadrupoles: Impact on
+charge transport in Wurtzite GaN,” Phys. Rev. Lett. 125(13), 136602 (2020).
+41A. H. Romero, D. C. Allan, B. Amadon, G. Antonius, T. Applencourt, L. Baguet, J.
+Bieder, F. Bottin, J. Bouchet, E. Bousquet, F. Bruneval, G. Brunin, D. Caliste, M. C^ote,
+J. Denier, C. Dreyer, P. Ghosez, M. Giantomassi, Y. Gillet, O. Gingras, D. R.
+Hamann, G. Hautier, F. Jollet, G. Jomard, A. Martin, H. P. C. Miranda, F. Naccarato,
+G. Petretto, N. A. Pike, V. Planes, S. Prokhorenko, T. Rangel, F. Ricci, G.-M.
+Rignanese, M. Royo, M. Stengel, M. Torrent, M. J. van Setten, B. Van Troeye, M. J.
+Verstraete, J. Wiktor, J. W. Zwanziger, and X. Gonze, “ABINIT: Overview and focus
+on selected capabilities,” J. Chem. Phys. 152(12), 124102 (2020).
+42X. Gonze, B. Amadon, G. Antonius, F. Arnardi, L. Baguet, J.-M. Beuken, J.
+Bieder, F. Bottin, J. Bouchet, E. Bousquet, N. Brouwer, F. Bruneval, G. Brunin,
+T. Cavignac, J.-B. Charraud, W. Chen, M. C^ote, S. Cottenier, J. Denier, G.
+Geneste, P. Ghosez, M. Giantomassi, Y. Gillet, O. Gingras, D. R. Hamann, G.
+Hautier, X. He, N. Helbig, N. Holzwarth, Y. Jia, F. Jollet, W. Lafargue-Dit-
+Hauret, K. Lejaeghere, M. A. L. Marques, A. Martin, C. Martins, H. P. C.
+Miranda, F. Naccarato, K. Persson, G. Petretto, V. Planes, Y. Pouillon, S.
+Prokhorenko, F. Ricci, G.-M. Rignanese, A. H. Romero, M. M. Schmitt, M.
+Torrent, M. J. van Setten, B. Van Troeye, M. J. Verstraete, G. Zerah, and J. W.
+Zwanziger, “The ABINIT project: Impact, environment and recent develop-
+ments,” Comput. Phys. Commun. 248, 107042 (2020).
+43M. Royo and M. Stengel, “First-principles theory of spatial dispersion:
+Dynamical quadrupoles and flexoelectricity,” Phys. Rev. X 9(2), 021050 (2019).
+44M. J. van Setten, M. Giantomassi, E. Bousquet, M. J. Verstraete, D. R. Hamann,
+X. Gonze, and G.-M. Rignanese, “The PseudoDojo: Training and grading a 85
+element optimized norm-conserving pseudopotential table,” Comput. Phys.
+Commun. 226, 39–54 (2018).
+45S. Ponce, F. Macheda, E. R. Margine, N. Marzari, N. Bonini, and F. Giustino,
+“First-principles predictions of Hall and drift mobilities in semiconductors,”
+Phys. Rev. Res. 3(4), 043022 (2021).
+46K. Bushick, K. A. Mengle, S. Chae, and E. Kioupakis, “Electron and hole mobil-
+ity of rutile GeO2 from first principles: An ultrawide-bandgap semiconductor
+for power electronics,” Appl. Phys. Lett. 117(18), 182104 (2020).
+47S. Reif-Acherman, “Augustus Matthiessen: His studies on electrical conductivities
+and the origins of his ‘rule’ [scanning our past],” Proc. IEEE 103(4), 713–721 (2015).
+48D. M. Caughey and R. E. Thomas, “Carrier mobilities in silicon empirically
+related to doping and field,” Proc. IEEE 55(12), 2192–2193 (1967).
+49F. Schwierz, “An electron mobility model for wurtzite GaN,” Solid-State
+Electron. 49(6), 889–895 (2005).
+50R. Claes, G. Brunin, M. Giantomassi, G.-M. Rignanese, and G. Hautier,
+“Assessing the quality of relaxation-time approximations with fully automated
+computations of phonon-limited mobilities,” Phys. Rev. B 106(9), 094302
+(2022).
+Applied Physics Letters
+ARTICLE
+pubs.aip.org/aip/apl
+Appl. Phys. Lett. 124, 172103 (2024); doi: 10.1063/5.0198885
+124, 172103-6
+Published under an exclusive license by AIP Publishing
+ 17 June 2025 14:32:55

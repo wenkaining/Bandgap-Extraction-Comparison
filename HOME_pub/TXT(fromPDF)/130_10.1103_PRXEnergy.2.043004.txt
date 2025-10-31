@@ -1,0 +1,1195 @@
+PRX ENERGY 2, 043004 (2023)
+Metal Halide Thermoelectrics: Prediction of High-Performance CsCu2I3
+Jong Woong Park ,1 Young-Kwang Jung ,2,* and Aron Walsh
+3,4,†
+1Department of Materials Science and Engineering, Yonsei University, Seoul 03722, South Korea
+2Department of Chemical Engineering and Biotechnology, University of Cambridge, Cambridge CB3 0AS,
+United Kingdom
+3Department of Materials, Imperial College London, Exhibition Road, London SW7 2AZ, United Kingdom
+4Department of Physics, Ewha Womans University, Seoul 03760, South Korea
+ (Received 5 May 2023; revised 8 August 2023; accepted 24 August 2023; published 6 October 2023)
+Thermoelectric devices can directly convert waste heat into electricity, which makes them an important
+clean energy technology. The underlying materials performance can be evaluated by the dimensionless
+ﬁgure of merit ZT. Metal halides are attractive candidates due to their chemical ﬂexibility and ease of
+processing; however, the maximum ZT realized (ZT = 0.15) falls far below the level needed for com-
+mercialization (ZT > 1). Using a ﬁrst-principles procedure, we assess the thermoelectric potential of
+copper halide CsCu2I3, which features one-dimensional Cu-I connectivity. The n-type crystal is predicted
+to exhibit a maximum ZT of 2.2 at 600 K along the b axis. The strong phonon anharmonicity of this
+system is shown by locally stable noncentrosymmetric Amm2 structures that are averaged to form the
+observed centrosymmetric Cmcm space group. Our work provides insights into the structure-property
+relations in metal halide thermoelectrics and suggests a path forward to engineer higher-performance
+heat-to-electricity conversion.
+DOI: 10.1103/PRXEnergy.2.043004
+I. INTRODUCTION
+Thermoelectric materials—which enable the direct con-
+version of waste heat to electricity—have received great
+attention as one of the most promising renewable energy
+technologies [1]. The performance of thermoelectric mate-
+rials is evaluated by the dimensionless ﬁgure of merit, ZT:
+ZT =
+S2σT
+κelec + κlatt
+.
+(1)
+Here S is the Seebeck coeﬃcient, σ is the electrical
+conductivity, T is the temperature, κelec is the electronic
+thermal conductivity, and κlatt is the lattice thermal conduc-
+tivity [the power factor (PF) is deﬁned as S2σ]. Because
+of the recent progress in calculation methods for electron
+(hole) and phonon transport in solid crystals, computa-
+tional studies have sought to discover novel compounds
+that possess a high ZT [2–5]. Although the trade-oﬀeﬀect
+*yj359@cam.ac.uk
+†a.walsh@imperial.ac.uk
+Published by the American Physical Society under the terms of
+the Creative Commons Attribution 4.0 International license. Fur-
+ther distribution of this work must maintain attribution to the
+author(s) and the published article’s title, journal citation, and
+DOI.
+between the parameters that control ZT makes the opti-
+mization challenging, search for an intrinsically low κlatt
+material is still crucial to maximize performance [6]. In
+other words, high thermoelectric performance requires the
+phonons to be disrupted like in a glass but the electrons
+to have a high mobility like in crystalline semiconductors
+(i.e., phonon-glass electron crystal) [7].
+A. Metal halide thermoelectrics
+Metal halides have been studied for their uses in vari-
+ous applications, including solar cells [8,9], light-emitting
+diodes [10,11], and memristors [12,13]. These materials
+are also known to have an intrinsically “ultralow” κlatt
+(< 1 W/m K) [14–16], and several reports have started
+to suggest their potential for thermoelectric applications
+(Table I).
+However, the highest maximum ZT of 0.15 achieved
+for halide perovskite CsSnI3 [18] is far from competing
+with top thermoelectric materials such as SnSe whose
+maximum ZT is > 2.6 [29]. In addition, studies were
+mainly conducted on conventional halide perovskites,
+while emerging low-dimensional metal halides have yet
+to be explored. Recently, we reported a high thermoelec-
+tric potential in metal halide Cs3Cu2I5 for the ﬁrst time
+where asymmetric heat and charge transport in the material
+enables a high maximum ZT of 2.6 at 600 K [28].
+2768-5608/23/2(4)/043004(13)
+043004-1
+Published by the American Physical SocietyPARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+TABLE I.
+Representative works on metal halide studies for thermoelectric devices with their κlatt and ZT values. The mentioned
+values are for room temperature unless indicated otherwise. NW, Nanowire.
+Compound
+κlatt (W/m K)
+ZT
+κ measurement
+Ref.
+Conventional
+CsSnI3
+0.38
+0.11 (320 K)
+NW thermometry
+[15]
+perovskites
+CsSnI3
+0.28
+0.08 (323 K)
+3-ω method
+[17]
+CsSnI3
+0.60
+0.15 (550 K)
+Laser ﬂash method
+[18]
+CsSnI3 + SnCl2 1%
+0.38
+0.14 (345 K)
+3-ω method
+[19]
+CsSnI3 + PbI2 0.5%
+0.14 (523 K)
+Laser ﬂash method
+[20]
+CsSn0.8Ge0.2I3
+0.12 (473 K)
+Laser ﬂash method
+[21]
+CsSnBr3
+0.64
+Laser ﬂash method
+[18]
+CsPbI3
+0.45
+NW thermometry
+[15]
+CsPbBr3
+0.42
+NW thermometry
+[15]
+CsPbBr3
+0.44 (tot.)
+3-ω method
+[22]
+CsPbBr3
+0.46 (tot.)
+FDTR
+[23]
+CsPbCl3
+0.49 (tot.)
+3-ω method
+[24]
+Cs2SnI6
+0.29
+Laser ﬂash method
+[25]
+Low-dimensional
+Cs2SnI2Cl2
+0.60 (300 K)
+Laser ﬂash method
+[26]
+metal halides
+CsPb2Br5
+0.32 (tot.)
+3-ω method
+[22]
+Cs2PbI2Cl2
+0.45 (300 K)
+Laser ﬂash method
+[26]
+Cs2PbI2Cl2
+0.37 (295 K)
+Laser ﬂash method
+[27]
+Cs4PbCl6
+0.30 (tot.)
+3-ω method
+[24]
+Cs3Cu2I5
+0.02
+2.6 (600 K)
+Phono3py (theory)
+[28]
+CsCu2I3
+0.05 (300 K)
+0.4 (300 K)
+Phono3py (theory)
+This study
+0.02 (600 K, b axis)
+2.2 (600 K, b axis)
+In this article, we present CsCu2I3 as a candidate for
+thermoelectric applications on the basis of ﬁrst-principles
+predictions. CsCu2I3 is one of the copper-based low-
+dimensional halide compounds where one-dimensional
+(1D) [Cu2I3]−anionic chains are separated by Cs+ cations.
+By performing lattice dynamics simulations, we found that
+heat transport in the material is highly anisotropic where
+κlatt in the a-b plane (perpendicular to the chains) is about
+2 times lower than that along the c axis (chain direc-
+tion). We also conﬁrmed that the experimentally reported
+Cmcm structure of the material is not dynamically stable
+but an average of Amm2 structures during our phonon anal-
+ysis. Interestingly, electron transport in the material shows
+an opposite anisotropy compared to the phonon transport;
+electron mobility in the a-b plane is 1.5 times higher than
+that along the c axis. Because of this unique anisotropy
+of heat and electron transport in a single material, we
+predict that CsCu2I3 in the Amm2 structure reaches a ZT
+of 2.2 at 600 K along the b axis, having potential as a
+next-generation thermoelectric material.
+II. RESULTS AND DISCUSSION
+A. First-principles thermoelectrics workﬂow
+The workﬂow to predict ZT from ﬁrst principles is
+shown in Fig. 1. In principle, this only requires prior
+knowledge of a crystal structure and all other properties
+can be directly calculated in turn. As the ﬁrst step, the crys-
+tal structure of a compound of interest should be optimized
+to a local minimum in the potential energy surface. If
+the compound shows imaginary phonon modes, additional
+crystal structure optimization and/or anharmonic correc-
+tions should be applied to obtain a dynamically stable
+structure, so that reliable thermal properties can be calcu-
+lated [30]. With the dynamically stable crystal structure,
+bulk properties can be assessed. Results from steps 2–4
+are given as inputs for calculating carrier lifetimes and
+transport properties—S, σ, and κelec (step 5), while lat-
+tice thermal conductivity κlatt is obtained from anharmonic
+phonon calculations (steps 6 and 7). Finally, thermoelec-
+tric properties such as ZT and thermodynamic eﬃciency
+(η) are predicted by combining the outputs from steps 5
+and 7. Computational details are provided in Sec. IV.
+B. Structural analysis
+CsCu2I3 has been reported in a Cmcm space group
+[31,32], where 1D [Cu2I3]−anionic chains are separated
+by Cs+ cations, as shown in Fig. 2. When the experi-
+mentally known structure was adopted and optimized, we
+found that imaginary phonon modes are persistent across
+the ﬁrst Brillouin zone [see Fig. 3(a)], which conﬁrms
+dynamic structural instability of the Cmcm structure. (This
+will be further discussed in Sec. II C.) To obtain a dynam-
+ically stable crystal structure, we deformed the Cmcm
+structure along the eigenvector of its imaginary  phonon
+mode, which results in a structural transition to a new
+lower-symmetry Amm2 phase. The structural transition
+from Cmcm to Amm2 occurs with atomic positions shifted
+along the directions indicated by the arrows in Figs. 2(a)
+043004-2METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+FIG. 1.
+Diagram
+for
+ﬁrst-principles
+thermoelectrics
+assessment
+workﬂow
+(total nine steps). Steps that are optional
+or only required in certain cases are
+shown with gray boxes and arrows.
+and 2(c). Cs and I atoms move within the b axis and a-
+b plane, respectively, while Cu atoms move along the c
+axis. The Cu—I—Cu bond angle for Cmcm is alternately
+71.54◦and 71.16 ◦, while polyhedra distortion in Amm2
+results in bond angles of 61.39◦and 81.42◦, as shown in
+Figs. 2(e) and 2(f). In Cmcm, the Cu—I bond lengths in the
+[CuI4]3−tetrahedron are of a similar value (2.62 and 2.61
+Å, two each), as opposed to the bonds in Amm2 all hav-
+ing a diﬀerent value (2.66, 2.65, 2.58, and 2.61 Å). Thus,
+while the crystal system is maintained as orthorhombic, the
+crystal symmetry is lowered from centrosymmetric Cmcm
+to noncentrosymmetric Amm2. Comparison of the calcu-
+lated lattice parameters of Cmcm and Amm2, as well as the
+experimental values from X-ray diﬀraction measurements
+are provided in Table II. The structural transition results
+in a0 decreasing by 0.30%, while b0 increases by 0.84%,
+with both changes due to the movements of Cs and I
+atoms. In contrast, c0 is equivalent in both structures, as the
+shift in Cu atoms evens out macroscopically. Amm2 has an
+expanded volume of 0.70% compared to Cmcm. The elas-
+tic and dielectric tensors calculated from Cmcm and Amm2
+phases are provided in the Supplemental Material [34].
+C. Dynamic structural instability
+The phonon dispersions of Cmcm and Amm2 are illus-
+trated together with the atom-projected phonon density of
+states (PDOS) in Fig. 3(a) and 3(b), respectively. While
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+FIG. 2.
+Projected crystal structure of CsCu2I3 (a) Cmcm and (b) Amm2 through the a-b plane, and to the b-c plane of (c) Cmcm
+and (d) Amm2. Arrows indicate the directions that atoms move when the Cmcm-to-Amm2 transition occurs. The maximum atomic
+displacement during the transition is from the Cu atoms (0.22 Å). Polyhedron analysis of (e) Cmcm and (f) Amm2. Cu—I—Cu bond
+angles of each structure are indicated.
+043004-3PARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+TABLE II.
+Calculated lattice parameters (a0, b0, c0) and vol-
+ume (V0) of the conventional orthorhombic unit cell for both
+polymorphs of CsCu2I3, and the experimental values from X-ray
+diﬀraction measurements.
+a0 (Å)
+b0 (Å)
+c0 (Å)
+V0 (Å3)
+Cmcm
+10.06
+13.08
+6.10
+802.3
+Amm2
+10.03
+13.19
+6.10
+807.9
+Expt. [33]
+10.55
+13.17
+6.10
+847.4
+the Materials Project [35] repository, as well as computa-
+tional [36] and experimental [33] reports, indicate CsCu2I3
+as a Cmcm structure, dynamic structural instability of
+Cmcm is evident by the numerous imaginary modes shown
+in Fig. 3(a). The eigenvector components for the imagi-
+nary mode at the  point of Cmcm are shown by arrows
+in Figs. 2(a) and 2(c). Using ModeMap [37], the corre-
+sponding energy as a function of the distortion amplitude
+along the eigenvectors illustrated in Figs. 2(a) and 2(c) is
+shown in Fig. 4. A characteristic double-well potential-
+energy curve is shown. The saddle point corresponds to
+the Cmcm structure, while the two wells indicate the lower
+symmetry Amm2 structure as a local minimum. Thus, the
+energy-lowering distortion causes a structural transition
+to a ground-state polymorph, Amm2, with an energy 2.84
+meV/atom lower than Cmcm. As shown in Fig. 3(b), the
+absence of imaginary phonon modes indicates the dynamic
+stability of Amm2. However, as the depth of the potential
+energy well is relatively shallow, the well would be eas-
+ily ﬁlled at room temperature (kBT ∼25.7 meV), and at
+this state a mixture of Amm2 and Cmcm structures would
+exist. Hence, we propose that the previously reported cen-
+trosymmetric Cmcm structure is a macroscopic average
+over locally noncentrosymmetric Amm2 structures. This
+phenomenon is similar to the case of SnSe, where the
+superposition of the locally ordered structure (Pnma) leads
+to the average structure (Cmcm) [38]. The simulated XRD
+patterns of the Cmcm and Amm2 structures are displayed
+in Fig. S1 within the Supplemental Material [34]. As
+anticipated, additional peaks corresponding to the Amm2
+structure are observed. However, the intensity ratio of
+these peaks to the main ones is signiﬁcantly low. This
+makes it diﬃcult to distinguish them, particularly given
+the typical signal-to-noise ratio associated with standard
+XRD techniques. In addition, in the Amm2 structure, a
+lack of inversion symmetry causes a spontaneous electric
+polarization. As shown in Figs. 2(a) and 2(c), polarization
+mainly occurs within the a-b plane by the shift of Cs and
+I atoms, while minute polarization along the c axis corre-
+sponds to the movement of Cu atoms. The corresponding
+piezoelectric tensor of the Amm2 structure is provided in
+Table S1 within the Supplemental Material [34].
+D. Ultralow lattice thermal conductivity
+Figure 5 shows the κlatt of Amm2 CsCu2I3, as a function
+of temperature along diﬀerent crystallographic directions.
+Because CsCu2I3 is experimentally reported to have a
+melting point at about 644 K [33,39], the temperature
+range for calculating κlatt as well as transport and ther-
+moelectric properties discussed later is set up to 600 K.
+Amm2 shows an unexpectedly low κlatt (i.e., ultralow κlatt)
+of a value under 0.1 W/m K for all directions even at 300
+K; 0.05, 0.03, and 0.08 W/m K for the a, b, and c axes,
+respectively. The isotropically averaged κlatt (κavg) at 300
+K is 0.05 W/m K, which is lower than one of the top ther-
+moelectric materials, SnSe (0.2 W/m K at 300 K [40]).
+The value is slightly higher compared to Cs3Cu2I5 (κavg =
+(a)
+(b)
+FIG. 3.
+Phonon dispersions of CsCu2I3 in (a) Cmcm and (b) Amm2 structures. The atom-projected phonon density of states is plotted
+to the right of the phonon dispersion.
+043004-4METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+FIG. 4.
+Potential energy surface along the eigenvector com-
+ponents [arrows in Figs. 2(a) and 2(c)] for the imaginary mode
+at the  point of the phonon band structure of Cmcm CsCu2I3.
+Filled circles represent calculated data points, and the solid line
+is a ﬁt to a polynomial function.
+0.02 W/m K at room temperature [28]), which was calcu-
+lated at a similar level of theory. At 600 K, the κlatt values
+are 0.02 W/m K along the a and b axes, and 0.04 W/m K
+along the c axis (κavg being 0.03 W/m K). The anisotropy
+of CsCu2I3, having a higher κlatt along the c axis, can be
+ascribed to a weaker chemical bonding towards the c axis
+of the unit cell [41]. It is worth noting that the c axis is
+parallel to the [Cu2I3]−chains.
+Acoustic phonon modes and low-frequency optic modes
+act as the primary heat carriers in crystals, mainly con-
+tributing to κlatt. As shown in Fig. 3(b), the low-lying optic
+modes of Amm2 are relatively ﬂat, which leads to low
+group velocities (vλ), one of the reasons for its ultralow
+κlatt. In addition, the high density of the low-lying optic
+modes produces a large number of scattering channels at
+this frequency range, causing short phonon lifetimes (τλ).
+FIG. 5.
+Lattice thermal conductivity (κlatt) of the CsCu2I3,
+Amm2 structure, as a function of temperature along diﬀerent crys-
+tallographic axes. “Avg.” refers to the isotropically averaged κlatt
+(κavg) along the three (a, b, and c) axes.
+Figure S2 within the Supplemental Material [34] shows
+avoided crossings of the acoustic and low-frequency optic
+modes along the –Y direction. Avoided crossing is a
+characteristic feature shown when a “rattler” is present in
+the material [42]. PDOS shown in Fig. 3(b) indicates that
+lower-frequency phonon modes mostly comprise motions
+of Cs atoms. Thus, we can infer that Cs atoms behave
+as the rattler, rattling within the space between [Cu2I3]−
+chains. Figure S3 within the Supplemental Material [34]
+shows the Cs—I bonds (total ten), and the broad range
+of bond lengths from 3.81 to 4.21 Å contributes to the
+anharmonicity of CsCu2I3. This is similar to the origin
+of anharmonicity of SnSe [43]. We note that ﬂuctua-
+tions between Cmcm and Amm2 could also contribute to
+the scattering of the heat transport, but such higher-order
+anharmonicity is not considered here.
+(a)
+(b)
+(c)
+FIG. 6.
+Modal properties of the lattice thermal conductivity (κlatt) of the CsCu2I3 Amm2 structure at 300 K: (a) group velocity norms
+(vλ), (b) lifetimes (τλ), and (c) mean free paths (	λ = vλ × τλ).
+043004-5PARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+(a)
+(b)
+FIG. 7.
+Electronic band structures of (a) Cmcm and (b) Amm2 CsCu2I3, (a) Cmcm and (b) Amm2 structure (the valence band
+maximum is set to 0 eV).
+To further understand the origins of the ultralow κlatt of
+CsCu2I3, we analyzed the modal contributions to the net
+transport (Fig. 6). The net transport κlatt is a sum of the
+individual phonon modes (λ):
+κlatt =
+1
+NV0
+
+λ
+κλ =
+1
+NV0
+
+λ
+Cλvλ ⊗vλτλ.
+(2)
+Here N is the number of unit cells in the crystal (equivalent
+to the number of wave vectors included in the Brillouin
+zone summation), V0 is the volume of the crystallographic
+unit cell, and Cλ is the modal heat capacity. The frequency
+spectra of vλ, τλ, and the phonon mean free path (	λ =
+vλ × τλ) at 300 K are shown in Figs. 6(a)–6(c), respec-
+tively [44]. In the entire frequency range, the majority of vλ
+falls within the range 1–103 m/s, and the fastest modes are
+seen in the 0–0.2-THz frequency range. The fastest modes
+correspond to the acoustic phonon bands that are relatively
+dispersive compared to the optic modes. The overall spec-
+tra are comparable to (CH3NH3)PbI3 (MAPbI3) [45], a 3D
+perovskite reported to have an ultralow κlatt of 0.05 W/m K
+at 300 K, while the fastest modes have a lower vλ in
+CsCu2I3. In addition, a number of modes have a very low
+vλ, from 10−12 to 10−10 m/s, unseen in the vλ spectra of
+MAPbI3 [45] and Cs3Cu2I5 [28]. These modes correspond
+to the low-lying optic modes in the 0.2–2.4-THz frequency
+range that are relatively ﬂat. The low vλ is attributed to the
+heavy elements that constitute CsCu2I3.
+Lifetimes τλ mostly fall within the range 10−1–101 ps,
+while a number of phonon modes within the 0–0.2-THz
+frequency range (acoustic phonon modes) have a τλ longer
+than 10 ps. The overall spectra is similar to MAPbI3 [45]
+and Cs3Cu2I5 [28], while the longest τλ of CsCu2I3 are
+longer compared to Cs3Cu2I5 (longest being 11 ps). The
+combination of a low vλ and τλ leads to the majority of
+the modes having 	λ shorter than 100 nm, which is why
+CsCu2I3 shows an ultralow κlatt. The low-frequency modes
+(acoustic and low-lying optic modes) have a relatively
+faster vλ and longer τλ, resulting in a longer 	λ compared
+to the high-frequency modes. This matches with the fact
+that acoustic and low-lying optic modes are the primary
+heat carriers.
+E. Electronic structure and transport properties
+The electronic band structures of Cmcm and Amm2 are
+illustrated in Figs. 7(a) and 7(b), respectively. Both Cmcm
+and Amm2 phases have a direct band gap (Eg) at the 
+point, with Eg values of 3.23 and 3.08 eV, respectively.
+The calculated Eg is similar to the experimental value esti-
+mated from the optical absorption spectrum, 3.49 eV [39].
+As shown in Fig. S4 within the Supplemental Material
+[34], upper valence bands are dominated by Cu 3d and I
+5p orbitals, while lower conduction bands arise from the
+FIG. 8.
+Mobility (μ) of the CsCu2I3 Amm2 structure, as a func-
+tion of temperature along diﬀerent crystallographic axes. “Avg.”
+refers to the isotropically averaged μ along the three (a, b, and c)
+axes (electron concentration of 6 × 1018 cm−3).
+043004-6METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+hybridization of Cu 4s and I 5p orbitals. For the conduc-
+tion band minimum, I 5s contributes more compared to I
+5p. Calculation of the orbitals that comprise band edges are
+in good agreement with previous reports [33,39]. The con-
+tribution of Cs orbitals on those band edges is negligible,
+which is the well-known feature of low-dimensional metal
+halides [46,47]. The corresponding orbitals are also equiv-
+alent to the electronic band structure of Cs3Cu2I5 [28]. The
+upper valence band is relatively ﬂat, having a hole eﬀec-
+tive mass of 0.83 me at the valence band maximum, while
+the lower conduction band is relatively dispersive with an
+electron eﬀective mass of 0.31 me at the conduction band
+minimum. The conduction band has multiple valleys (
+point, Z point, and along the S-R and Y-T directions), and
+the energy diﬀerence between the ﬁrst and second conduc-
+tion band edges is 0.57 eV for Amm2. The dispersive nature
+and multiple valleys lead to a high σ and S, respectively,
+suggesting the possibility of CsCu2I3 as a promising n-type
+thermoelectric material.
+Figure 8 shows the calculated electron mobility μ of
+Amm2 as a function of temperature along diﬀerent crystal-
+lographic directions at the optimal electron concentration
+ne (6 × 1018 cm−3) at which thermoelectric properties are
+maximized [ne will be further discussed in Fig. 10(a)
+below]. Similar to κlatt, μ is anisotropic, with μ being
+lower along the c axis. The isotropically averaged μ is
+21.4 cm2/V s at 300 K, which is slightly higher than the
+μ of Cs3Cu2I5 [28] (18.2 cm2/V s at room temperature).
+Figure S5 within the Supplemental Material [34] shows μ
+of Cmcm and Amm2 by the individual scattering mech-
+anisms. Acoustic deformation potential (ADP), ionized
+impurity (IMP), and polar optical phonon (POP) scatter-
+ing mechanisms were considered for both structures, and
+for Amm2 (noncentrosymmetric), the piezoelectric (PIE)
+scattering mechanism was considered as well. Here μ is
+limited by POP scattering for both structures, followed by
+IMP and ADP scattering. POP scattering is dominant in
+many of the top thermoelectric materials including SnSe
+(a)
+(d)
+(b)
+(c)
+(e)
+FIG. 9.
+Transport and thermoelectric properties of the CsCu2I3 Amm2 structure, as a function of temperature along diﬀerent crystal-
+lographic axes. (a) Electrical conductivity (σ); (b) Seebeck coeﬃcient (S); (c) power factor (PF = S2σ); (d) electronic (κelec, dashed
+lines) and lattice (κlatt, solid lines) thermal conductivities (inset shows an enlarged view of κelec); and (e) ﬁgure of merit (ZT) (electron
+concentration of 6 × 1018 cm−3).
+043004-7PARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+[48] and Cs3Cu2I5 [28]. In Amm2, PIE scattering has the
+smallest contribution to the total μ, as its polarization is
+minute.
+The electronic transport properties—σ, S, PF, and
+κelec—of Amm2 as a function of temperature and ne are
+shown in Fig. S6 within the Supplemental Material [34].
+Here σ and κelec are proportional to ne, but have an inverse
+relationship with temperature. On the other hand, |S| is
+disproportionate with ne, and increases with temperature.
+Figure 9 shows σ, S, PF, and κelec as a function of tem-
+perature along diﬀerent crystallographic directions (ne =
+6 × 1018 cm−3); σ, κelec, and PF are higher along the a and
+b axes, which reﬂects the anisotropy of μ; |S| is almost
+equivalent along all axes. Along the b axis, PF goes up to
+109.66 µW/m K2 at 470 K.
+F. Thermoelectric properties
+By combining the phonon and electron transport prop-
+erties using Eq. (1), ZT for CsCu2I3 as a function of
+temperature along diﬀerent crystallographic axes is pre-
+dicted [Fig. 9(e)]. Because of the anisotropy of σ, κlatt,
+and κelec, ZT is also anisotropic, showing a lower value
+along the c axis. At 600 K, it reaches a value of 2.2
+along the b axis, while the a and c axes have a ZT of 1.7
+and 0.8, respectively. Notably, a high ZT is obtained at a
+lower temperature compared to the state-of-the-art ther-
+moelectric material, n-type SnSe, which has a ZT of 2.0
+above 700 K [49]. The origin of a high ZT is a combi-
+nation of ultralow κlatt and high PF. Figure 10(a) shows
+the isotropically averaged ZT of CsCu2I3 as a function of
+temperature and ne. The ﬁgure of merit ZT is maximized
+at ne = 6 × 1018 cm−3, and the maximum ZT achievable
+at this condition is 1.5 at 600 K. As mentioned above,
+the highest ZT from a conventional halide perovskite was
+only 0.15, so this work may derive more attention towards
+CsCu2I3 and other low-dimensional metal halides.
+The thermodynamic eﬃciency η of thermoelectric gen-
+erators can be calculated as
+η = TH −TC
+TH
+
+1 + ZT −1
+
+1 + ZT + TC/TH
+,
+(3)
+where TH and TC are the hot side and cold side tempera-
+tures of the generator, respectively. The average ZT (ZT) is
+deﬁned as
+ZT =
+1
+(TH −TC)
+ TH
+TC
+ZTdT.
+(4)
+Using these equations, we plotted η as a function of TH,
+while TC is ﬁxed to 200 K [Fig. 10(b)]. A maximum η of
+13.1% is achieved when the temperature diﬀerence is 400
+K (TH = 400 K), and ZT is 0.8.
+The main concern when fabricating CsCu2I3 for ther-
+moelectric applications would be whether the optimal ne
+could be achieved by doping. Currently, doping of low-
+dimensional metal halides is underexplored, but below
+we address some of the doping strategies that can be
+implemented. Similar to the doping approaches of 3D per-
+ovskites, doping in low-dimensional metal halides could
+be achieved by either (1) adding dopant sources to the
+precursor solution, (2) postsynthesis solution doping or
+(3) postsynthesis vapor doping [50]. The speciﬁc methods
+could be adding atomic dopants, and molecular dopants
+(a)
+(b)
+FIG. 10.
+(a) Calculated ﬁgure of merit (ZT) as a function of electron concentration and temperature. Isotropically averaged ZT are
+given by solid lines, and ZT along the b axis (at 600 K) by the gray dotted line. (b) Thermodynamic eﬃciency (η, red), average ZT
+(ZT, blue), and ZT (gray) as a function of the hot side temperature, TH, of the CsCu2I3 Amm2 structure.
+043004-8METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+by surface doping. The Cu atoms of CsCu2I3 mainly con-
+tribute to the edge of the band structure [50] (cf. Fig. S4
+within the Supplemental Material [34]). Thus, substituting
+Cu+ with +2 charged ions is more likely to produce the
+necessary states to tune ne, compared to the doping of Cs
+and I.
+Another crucial factor when making a thermoelectric
+module out of a material is the stability of its bulk form.
+Several experimental studies have synthesized single crys-
+tal CsCu2I3 and veriﬁed its air stability, the longest being
+up to 45 d while maintaining high phase purity and crys-
+talline quality [47,51,52]. Excellent thermal stability up to
+614 K without phase change is also veriﬁed via diﬀeren-
+tial scanning calorimetry [33]. Therefore, combined with
+encapsulation technologies to enhance oxygen and mois-
+ture resistance, it is expected that stable thermoelectric
+generators are feasible.
+The ﬁgure of merit ZT of CsCu2I3 is relatively low com-
+pared to Cs3Cu2I5. However, it is reported that CsCu2I3
+is more stable than Cs3Cu2I5 when dopants are added,
+and the unstable Cs3Cu2I5 decompose and form CsCu2I3
+[53]. Thus, although a higher optimal ne is required for
+CsCu2I3 (6 × 1018 cm−3, compared to 4 × 1018 cm−3
+for Cs3Cu2I5), it may be achieved more easily. In addi-
+tion, whether this high thermoelectric performance is
+shown only for CsCu2I3 and Cs3Cu2I5, or from low-
+dimensional metal halides in general, requires further
+investigation. Through our initial calculations, copper-
+based metal halides K2CuX3 and CsCu2X3 (X = Cl, Br)
+are also expected to have a high potential as an n-type ther-
+moelectric material. Changing the alkali metals or halo-
+gens to those in the same group of the periodic table is also
+worth a try. Thus, investigating Cs3Cu2X5 and Rb2CuX3
+(X = Cl, Br) as well as RbCu2Y3 (Y = Br, I) could be
+possible.
+III. CONCLUSIONS
+In this paper, we reported a new direction for metal
+halide thermoelectrics with a predictive study on the struc-
+ture, properties, and performance of CsCu2I3.
+The dynamic structural instability of the previously
+known Cmcm structure of CsCu2I3 was investigated. We
+reported a new, ground-state Amm2 structure of CsCu2I3
+and compared its basic bulk properties with Cmcm. The
+ultralow κlatt of Amm2 and its origins were studied in
+detail. Additionally, the electronic transport properties as
+well as ZT were ﬁrst reported in this work. We predict that
+CsCu2I3 is a new promising n-type thermoelectric mate-
+rial, and require further investigations in low-dimensional
+metal halides.
+The centrosymmetric Cmcm structure is a macroscopic
+average over locally noncentrosymmetric Amm2 struc-
+tures. The octahedra distortion leads to an energy-lowering
+structural transition from Cmcm to Amm2, the energy being
+2.84 meV/atom lower. The lack of inversion symmetry in
+Amm2 results in a spontaneous lattice polarization mainly
+within the a-b plane.
+Amm2 shows an ultralow κlatt with κavg at 300 K of
+0.05 W/m K, with the values being higher along the c axis
+(i.e., anisotropic). The low vλ is due to the low-frequency
+optic modes being relatively ﬂat. Avoided crossings of
+the acoustic and low-lying optic modes are shown from
+the dispersion, which is the cause of short τλ. Cs atoms
+between the [Cu2I3]−chains behave as rattlers, and the
+inequivalent Cs—I bond lengths give rise to a strong
+anharmonicity. The structural transition between Cmcm
+and Amm2 could also contribute to the phonon scattering.
+The conduction band of CsCu2I3 is relatively disper-
+sive and has multiple valleys, which is the reason for its
+high σ and S, respectively, characteristics of a novel n-type
+thermoelectric material. POP is the dominant scattering
+mechanism for both Cmcm and Amm2, and PIE scattering
+is also considered in Amm2 because of its lack of inversion
+symmetry. Similar to κlatt, the electronic properties are also
+anisotropic (superior along the a and b axes).
+The predicted ZT of CsCu2I3 reaches 2.2 at 600 K along
+the b axis (ne = 6 × 1018 cm−3), comparable to the ZT
+of state-of-the-art thermoelectric materials. The origin of
+high ZT is a combination of ultralow κlatt and high PF. A
+thermodynamic eﬃciency η of 13.1% is achievable when
+CsCu2I3 is used in a thermoelectric generator (TH = 600
+K, TC = 200 K).
+IV. METHODS
+A. Density functional theory calculations
+Calculations of the total energy, electronic band struc-
+ture, and inputs for the AMSET package such as the dielec-
+tric, elastic, and piezoelectric constants were performed
+using density functional theory (DFT) within periodic
+boundary conditions through the Vienna ab initio simu-
+lation package (VASP) [54,55]. The projector-augmented-
+wave (PAW) [56,57] method was employed to explic-
+itly treat the valence states of Cs, Cu, and I atoms as
+9 (5s25p66s1), 17 (2p63d104s1), and 7 (5s25p5) electrons,
+respectively.
+For structure optimization, the Perdew-Burke-Ernzerhof
+exchange-correlation functional revised for solids (PBEsol)
+[58] was used with a 6 × 6 × 8 -centered k mesh, a plane-
+wave kinetic energy cutoﬀof 700 eV, and the convergence
+criteria set to 10−8 eV and 10−4 eV/Å for the total energy
+and atomic forces, respectively. The elastic and dielectric
+constant was calculated using the ﬁnite-displacement (FD)
+method and density functional perturbation theory, respec-
+tively. The bulk modulus was calculated using the Phonopy
+[59] code by ﬁtting the energy volume to the third-order
+Birch-Murnaghan equation of state [60].
+Calculations of the electronic band structure and elec-
+tron transport were done using the hybrid DFT functional
+043004-9PARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+of Heyd, Scuseria, and Ernzerhof (HSE06) [61]. Com-
+pared to the structure optimization, a denser k mesh of
+12 × 12 × 16 was used, while the kinetic energy cutoﬀwas
+lowered to 400 eV. The hole and electron eﬀective mass,
+m∗, was calculated using the sumo [62] code, which uses
+parabolic ﬁtting by the equation
+1
+m∗= ∂2E(k)
+∂k2
+1
+ℏ2 ,
+(5)
+where E(k) is the band energy as a function of the electron
+wave vector k, and ℏis the reduced Plank constant. The
+electronic band structure calculated above was used as the
+input.
+B. Structure distortion
+Harmonic-level phonon calculations were performed
+using the Phonopy [59] code with VASP as the force calcu-
+lator. The second-order interatomic force constants (IFCs)
+were computed using the supercell FD approach with a
+3 × 3 × 3 k mesh of step size 0.01 Å. A total of 11 dis-
+placements for Cmcm and 22 displacements for Amm2
+were calculated. A 2 × 2 × 3 supercell of the 12-atom unit
+cell (144 atoms) was employed for both structures. The
+ModeMap [37] code was used to compute the displace-
+ment of the atoms, uj ,l (j th atom in the lth unit cell), along
+an imaginary-mode eigenvector, Wλ,j (λ is the phonon
+mode), at the  point:
+uj ,l =
+1
+√namj
+ℜ
+ 
+λ
+QλWλ,j e−iqrj ,l
+
+.
+(6)
+Here mj is the atomic mass, na is the number of atoms
+in the supercell used to model the displacement, Qλ is the
+distortion amplitude, q is the phonon wave vector, and rj ,l
+is the atomic position. Postprocessing was also performed
+using the code to map the energy, U(Q), as a function
+of Qλ along the given Wλ,j (cf. Fig. 4). The ground-state
+structure, Amm2, was then obtained using the structure at
+the energy minimum.
+C. Phonon and electron transport
+The κlatt calculations were carried out using the
+Phono3py
+[63]
+code,
+solving
+the
+linearized
+Boltz-
+mann transport equation (BTE) using the single-mode
+relaxation-time approximation (RTA) [Eq. (2)]. The third-
+order IFCs were calculated with an FD step size of 0.03 Å,
+and a total of 5568 displacements were considered in a 48-
+atom unit cell. A q mesh of 12 × 12 × 16 was employed to
+compute the lattice thermal conductivity. Graphical anal-
+ysis of the modal properties were performed using the
+Phonopy-power-tool [44] code. Convergence tests for the
+lattice thermal conductivity over a q mesh, and distribu-
+tion of force norms for the force sets can be found in Fig.
+S7 within the Supplemental Material [34].
+Unlike the BoltzTraP [64] code, the AMSET [65] pack-
+age uses DFT band structures to solve the BTE without
+the constant RTA. Comparison between computational
+and experimental values can be found from several stud-
+ies, which validate the accuracy of the AMSET package
+[65,66]. Combined with κlatt, which was calculated at a
+similar level of theory to our work, the predicted ZT
+values agree well with experimental measurements [66].
+The characteristic scattering rate, τe, is calculated using
+Matthiessen’s rule:
+1
+τe
+=
+1
+τ ADP +
+1
+τ IMP +
+1
+τ POP +
+1
+τ PIE .
+(7)
+The mode-dependent scattering rates, from state |nk⟩to
+state |mk + q⟩, are calculated using Fermi’s golden rule:
+˜τ −1
+nk→mk+q = 2π
+ℏ|gnm(k, q)|2δ(εnk −εmk+q)
+(8)
+with ε the electron energy, δ the Dirac delta function,
+and g the coupling matrix element. The electron trans-
+port properties were computed by the generalized transport
+coeﬃcients
+Ln
+αβ = e2
+ 
+αβ
+(ε)(ε −εF)n
+
+−∂f 0
+∂ε
+
+dε,
+(9)
+where α and β denote Cartesian coordinates, αβ(ε) is
+the spectral conductivity, εF is the Fermi level at a cer-
+tain doping concentration and temperature, and f 0 is the
+Fermi-Dirac distribution. The properties are obtained as
+σαβ = L0
+αβ,
+(10)
+Sαβ = 1
+eT
+L1
+αβ
+L0
+αβ
+,
+(11)
+καβ =
+1
+e2T
+(L1
+αβ)
+2
+L0
+αβ
+−L2
+αβ
+
+.
+(12)
+As mentioned above, the required material parameters
+such as the dielectric, elastic, and piezoelectric constants,
+phonon frequencies, and deformation potential were deter-
+mined by DFT calculations (Table S1 within the Supple-
+mental Material [34]). As the valence bands are relatively
+ﬂat, calculations were only conducted under n-type doping
+conditions, in the doping range from 1016 to 1021, and the
+temperature range from 200 to 600 K. The interpolation
+factor was set to 10 for all AMSET calculations. Conver-
+gence tests for the electron transport calculations over a k
+mesh and the interpolation factor can be found in Fig. S6
+within the Supplemental Material [34].
+Spin-orbit coupling (SOC) was not included in calcu-
+lating the electron transport properties since we conﬁrmed
+043004-10METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+that the eﬀect of SOC on the electronic band structure is
+small in this Cu-based compound—unlike Sn- or Pb-based
+metal halides [67,68], even for the noncentrosymmetric
+Amm2 phase. Figure S8 within the Supplemental Mate-
+rial [34] shows changes in the band structure of Cmcm and
+Amm2 CsCu2I3 with and without SOC.
+An online repository containing the optimized crystal
+structures, force constant sets, and raw AMSET input-
+output ﬁles is available from Zenodo [69].
+ACKNOWLEDGMENTS
+This work was supported by a National Research Foun-
+dation of Korea (NRF) grant funded by the Korean gov-
+ernment (Grant No. 2018M3D1A1058536). Via member-
+ship of the UK’s HEC Materials Chemistry Consortium,
+which is funded by EPSRC (EP/L000202), this work
+used the ARCHER2 UK National Supercomputing Service
+[70]. Y.-K.J. acknowledges UKRI funding for Marie Sk
+lodowska-Curie Actions Postdoctoral Fellowships 2021
+(EP/X025756/1).
+J.W.P. performed the calculations and data analysis and
+wrote the original draft under the supervision of Y.-K.J.
+and A.W., while all authors contributed to discussing the
+results and reﬁning the text.
+The authors declare that they have no competing ﬁnan-
+cial interests or personal relationships that could have
+inﬂuenced the work reported in this paper.
+[1] L. E. Bell, Cooling, heating, generating power, and recov-
+ering waste heat with thermoelectric systems, Science 321,
+5895 (2008).
+[2] A. Jain, Y. Shin, and K. A. Persson, Computational predic-
+tions of energy materials using density functional theory,
+Nat. Rev. Mater. 1, 15004 (2016).
+[3] P. Gorai, V. Stevanovi´c, and E. S. Toberer, Computation-
+ally guided discovery of thermoelectric materials, Nat. Rev.
+Mater. 2, 17053 (2017).
+[4] K. B. Spooner, A. M. Ganose, W. W. Leung, J. Buckeridge,
+B. A. Williamson, R. G. Palgrave, and D. O. Scanlon,
+BaBi2O6: A promising n-type thermoelectric oxide with the
+PbSb2O6 crystal structure, Chem. Mater. 33, 18 (2021).
+[5] T. Deng, J. Recatala-Gomez, M. Ohnishi, D. M. Repaka,
+P. Kumar, A. Suwardi, A. Abutaha, I. Nandhakumar, K.
+Biswas, M. B. Sullivan, and G. Wu, Electronic trans-
+port descriptors for the rapid screening of thermoelectric
+materials, Mater. Horiz. 8, 2463 (2021).
+[6] S. Hao, V. P. Dravid, M. Kanatzidis, and C. Wolver-
+ton, Computational strategies for design and discovery of
+nanostructured thermoelectrics, npj Comput. Mater. 5, 58
+(2019).
+[7] R. D. M., CRC Handbook of Thermoelectrics (CRC Press,
+Boca Raton, 2010).
+[8] A. Kojima, K. Teshima, Y. Shirai, and T. Miyasaka,
+Organometal halide perovskites as visible-light sensitizers
+for photovoltaic cells, J. Am. Chem. Soc. 131, 17 (2009).
+[9] B. Lee, C. C. Stoumpos, N. Zhou, F. Hao, C. Malliakas,
+C.-Y. Yeh, T. J. Marks, M. G. Kanatzidis, and R. P. Chang,
+Air-stable molecular semiconducting iodosalts for solar cell
+applications: Cs2SnI6 as a hole conductor, J. Am. Chem.
+Soc. 136, 43 (2014).
+[10] Z.-K. Tan, R. S. Moghaddam, M. L. Lai, P. Docampo, R.
+Higler, F. Deschler, M. Price, A. Sadhanala, L. M. Pazos,
+D. Credgington, F. Hanusch, T. Bein, H. J. Snaith, and R. H.
+Friend, Bright light-emitting diodes based on organometal
+halide perovskite, Nat. Nanotechnol. 9, 687 (2014).
+[11] T. Jun, K. Sim, S. Iimura, M. Sasase, H. Kamioka, J. Kim,
+and H. Hosono, Lead-free highly eﬃcient blue-emitting
+Cs3Cu2I5 with 0D electronic structure, Adv. Mater. 30,
+1804547 (2018).
+[12] Z. Xiao, Y. Yuan, Y. Shao, Q. Wang, Q. Dong, C. Bi,
+P. Sharma, A. Gruverman, and J. Huang, Giant switch-
+able photovoltaic eﬀect in organometal trihalide perovskite
+devices, Nat. Mater. 14, 193 (2015).
+[13] J.-M. Yang, Y. K. Jung, J. H. Lee, Y. C. Kim, S. Y. Kim,
+S. Seo, D. A. Park, J. H. Kim, S. Y. Jeong, I. T. Han,
+and J. H. Park, Asymmetric carrier transport in ﬂexible
+interface-type memristor enables artiﬁcial synapses with
+sub-femtojoule energy consumption, Nanoscale Horiz. 6,
+987 (2021).
+[14] A. Pisoni, J. Ja´cimovi´c, O. S. Bariši´c, M. Spina, R. Gaál, L.
+Forró, and E. Horváth, Ultra-low thermal conductivity in
+organic-inorganic hybrid perovskite CH3NH3PbI3, J. Phys.
+Chem. Lett. 5, 14 (2014).
+[15] W. Lee, H. Li, A. B. Wong, D. Zhang, M. Lai, Y. Yu,
+Q. Kong, E. Lin, J. J. Urban, J. C. Grossman, and P.
+Yang, Ultralow thermal conductivity in all-inorganic halide
+perovskites, Proc. Natl. Acad. Sci. USA 114, 33 (2017).
+[16] M. A. Haque, A. N. Gandi, R. Mohanraman, Y. Weng, B.
+Davaasuren, A. Emwas, C. Combe, D. Baran, A. Rothen-
+berger, U. Schwingenschlögl, H. N. Alshareef, S. Dong,
+and T. Wu, A 0D lead-free hybrid crystal with ultralow
+thermal conductivity, Adv. Funct. Mater. 29, 1809166
+(2019).
+[17] W. Tang, T. Liu, and O. Fenwick, High thermoelectric
+performance based on CsSnI3 thin ﬁlms with improved
+stability, J. Mater. Chem. A 10, 7020 (2022).
+[18] H. Xie, S. Hao, J. Bao, T. J. Slade, G. J. Snyder, C. Wolver-
+ton, and M. G. Kanatzidis, All-inorganic halide perovskites
+as potential thermoelectric materials: Dynamic cation oﬀ-
+centering induces ultralow thermal conductivity, J. Am.
+Chem. Soc. 142, 20 (2020).
+[19] T. Liu, X. Zhao, J. Li, Z. Liu, F. Liscio, S. Milita, B.
+C. Schroeder, and O. Fenwick, Enhanced control of self-
+doping in halide perovskites for improved thermoelectric
+performance, Nat. Commun. 10, 5750 (2019).
+[20] S. Yu, F. Qian, M. Hu, Z. Ge, J. Feng, and X. Chong,
+Enhanced thermoelectric performance in inorganic CsSnI3
+perovskite by doping with PbI2, Mater. Lett. 308, 131127
+(2022).
+[21] F. Qian, M. Hu, J. Gong, C. Ge, Y. Zhou, J. Guo,
+M. Chen, Z. Ge, N. P. Padture, Y. Zhou, and J. Feng,
+Enhanced thermoelectric performance in lead-free inor-
+ganic CsSn1−xGexI3 perovskite semiconductors, J. Phys.
+Chem. C 124, 22 (2020).
+[22] T. Haeger, M. Wilmes, R. Heiderhoﬀ, and T. Riedl, Simulta-
+neous mapping of thermal conductivity, thermal diﬀusivity,
+043004-11PARK, JUNG, and WALSH
+PRX ENERGY 2, 043004 (2023)
+and volumetric heat capacity of halide perovskite thin ﬁlms:
+A novel nanoscopic thermal measurement technique, J.
+Phys. Chem. Lett. 10, 11 (2019).
+[23] G. A. Elbaz, W. L. Ong, E. A. Doud, P. Kim, D. W. Paley, X.
+Roy, and J. A. Malen, Phonon speed, not scattering, diﬀer-
+entiates thermal transport in lead halide perovskites, Nano
+Lett. 17, 9 (2017).
+[24] T. Haeger, M. Ketterer, J. Bahr, N. Pourdavoud, M. Runkel,
+R. Heiderhoﬀ, and T. Riedl, Thermal properties of CsPbCl3
+thin ﬁlms across phase transitions, J. Phys. Mater. 3,
+024004 (2020).
+[25] A. Bhui, T. Ghosh, K. Pal, K. S. Rana, K. Kundu, A. Soni,
+and K. Biswas, Intrinsically low thermal conductivity in the
+n-type vacancy-ordered double perovskite Cs2SnI6: Octa-
+hedral rotation and anharmonic rattling, Chem. Mater. 34,
+7 (2022).
+[26] Z. Zeng, C. Chen, C. Zhang, Q. Zhang, and Y. Chen, Crit-
+ical phonon frequency renormalization and dual phonon
+coexistence in layered ruddlesden-popper inorganic per-
+ovskites, Phys. Rev. B 105, 184303 (2022).
+[27] P. Acharyya, T. Ghosh, K. Pal, K. Kundu, K. S. Rana, J.
+Pandey, U. V. Soni, A. Waghmare, and K. Biswas, Intrinsi-
+cally ultralow thermal conductivity in Ruddlesden-Popper
+2D perovskite Cs2PbI2Cl2: Localized anharmonic vibra-
+tions and dynamic octahedral distortions, J. Am. Chem.
+Soc. 142, 36 (2020).
+[28] Y.-K. Jung, I. T. Han, Y. C. Kim, and A. Walsh, Prediction
+of high thermoelectric performance in the low-dimensional
+metal halide Cs3Cu2I5, npj Comput. Mater. 7, 51 (2021).
+[29] L.-D. Zhao, S.-H. Lo, Y. Zhang, H. Sun, G. Tan, C. Uher,
+C. Wolverton, V. P. Dravid, and M. G. Kanatzidis, Ultralow
+thermal conductivity and high thermoelectric ﬁgure of
+merit in SnSe crystals, Nature 508, 373 (2014).
+[30] I. Pallikara, P. Kayastha, J. M. Skelton, and L. D. Whalley,
+The physical signiﬁcance of imaginary phonon modes in
+crystals, Electron. Struct. 4, 033002 (2022).
+[31] N. Jouini, L. Guen, and M. Tournoux, Structure cristalline
+de CsCu2I3, Rev. Chim. Mineral 17, 486 (1980).
+[32] T. Jun, T. Handa, K. Sim, S. Iimura, M. Sasase, J. Kim, Y.
+Kanemitsu, and H. Hosono, One-step solution synthesis of
+white-light-emitting ﬁlms via dimensionality control of the
+Cs −Cu −I system, APL Mater. 7, 111113 (2019).
+[33] R. Roccanova, A. Yangui, G. Seo, T. D. Creason, Y. Wu,
+D. Y. Kim, M. H. Du, and B. Saparov, Bright luminescence
+from nontoxic CsCu2X3 (X = Cl, Br, I), ACS Mater. Lett.
+1, 4 (2019).
+[34] See Supplemental Material at http://link.aps.org/supple
+mental/10.1103/PRXEnergy.2.043004 for the calculated
+bulk properties of both structures; simulated XRD pat-
+terns; zoomed phonon dispersion and atom-projected den-
+sity of states; Cs—I interatomic distances in the Amm2
+structure; electronic band structure of the Amm2 structure
+by its individual orbital contribution; calculated electron
+mobility as a function of temperature; convergence test
+for calculated transport and thermoeletric properties of the
+Amm2 structure; convergence test for calculated lattice
+thermal conductivity of the Amm2 structure; and compar-
+ison of the spin-orbit coupling eﬀect to the electronic band
+structure.
+[35] A. Jain, S. P. Ong, G. Hautier, W. Chen, W. D. Richards, S.
+Dacek, S. Cholia, D. Gunter, D. Skinner, G. Ceder, and K.
+A. Persson, Commentary: The materials project: A materi-
+als genome approach to accelerating materials innovation,
+APL Mater. 1, 011002 (2013).
+[36] J. Sun and C. A. Ullrich, Optical properties of CsCu2X3 (X
+= Cl, Br, and I): A comparative study between hybrid time-
+dependent density-functional theory and the Bethe-Salpeter
+equation, Phys. Rev. Mater. 4, 095402 (2020).
+[37] J. M. Skelton, L. A. Burton, S. C. Parker, A. Walsh, C.-
+E. Kim, A. Soon, J. Buckeridge, A. A. Sokol, C. R. A.
+Catlow, A. Togo, and I. Tanaka, Anharmonicity in the
+high-temperature Cmcm phase of SnSe: Soft modes and
+three-phonon interactions, Phys. Rev. Lett. 117, 075502
+(2016).
+[38] B. Jiang, J. Neu, D. Olds, S. A. J. Kimber, K. Page, and
+T. Siegrist, The curious case of the structural phase tran-
+sition in SnSe insights from neutron total scattering, Nat.
+Commun. 14, 3211 (2023).
+[39] S. Cheng, A. Beitlerova, R. Kucerkova, E. Mihokova, M.
+Nikl, Z. Zhou, G. Ren, and Y. Wu, Non-hygroscopic, self-
+absorption free, and eﬃcient 1D CsCu2I3 perovskite single
+crystal for radiation detection, ACS Appl. Mater. Interfaces
+13, 10 (2021).
+[40] F. Serrano-Sánchez, M. Gharsallah, N. M. Nemes, F. J.
+Mompean, J. L. Martínez, and J. A. Alonso, Record See-
+beck coeﬃcient and extremely low thermal conductivity in
+nanostructured SnSe, Appl. Phys. Lett. 106, 083902 (2015).
+[41] P. Ying, X. Li, Y. Wang, J. Yang, C. Fu, W. Zhang, X.
+Zhao, and T. Zhu, Hierarchical chemical bonds contributing
+to the intrinsically low thermal conductivity in α-MgAgSb
+thermoelectric materials, Adv. Funct. Mater. 27, 1604145
+(2017).
+[42] W. Rahim, J. M. Skelton, and D. O. Scanlon, Ca4Sb2O and
+Ca4Bi2O: Two promising mixed-anion thermoelectrics, J.
+Mater. Chem. A 9, 20417 (2021).
+[43] L. D. Zhao, C. Chang, G. Tan, and M. G. Kanatzidis,
+SnSe: A remarkable new thermoelectric material, Energy
+Environ. Sci. 9, 3044 (2016).
+[44] J. M. Skelton, Phono3py-power-tools, https://github.com/
+skelton-group/Phono3py-Power-Tools (accessed 20 March
+2022).
+[45] L. D. Whalley, J. M. Skelton, J. M. Frost, and A. Walsh,
+Phonon anharmonicity, lifetimes, and thermal transport in
+(CH3NH3)PbI3 from many-body perturbation theory, Phys.
+Rev. B 94, 220301 (2016).
+[46] Y.-K. Jung, J. Calbo, J.-S. Park, L. D. Whalley, S. Kim,
+and A. Walsh, Intrinsic doping limit and defect-assisted
+luminescence in Cs4PbBr6, J. Mater. Chem. A 7, 20254
+(2019).
+[47] R. Lin, Q. Guo, Q. Zhu, Y. Zhu, W. Zheng, and F. Huang,
+All-inorganic CsCu2I3 single crystal with high-PLQY (≈
+15.7%) intrinsic white-light emission via strongly local-
+ized 1D excitonic recombination, Adv. Mater. 31, 1905079
+(2019).
+[48] J. Ma, Y. Chen, and W. Li, Intrinsic phonon-limited charge
+carrier mobilities in thermoelectric SnSe, Phys. Rev. B 97,
+205207 (2018).
+[49] J. Wei, L. Yang, Z. Ma, P. Song, M. Zhang, J. Ma, F. Yang,
+and X. Wang, Review of current high-ZT thermoelectric
+materials, J. Mater. Sci. 55, 12642 (2020).
+[50] E. Amerling, H. Lu, B. W. Larson, A. E. Maughan, A.
+Phillips, E. Lafalce, L. Whittaker-Brooks, J. J. Berry, M. C.
+043004-12METAL HALIDE THERMOELECTRICS. . .
+PRX ENERGY 2, 043004 (2023)
+Beard, Z. V. Vardeny, and B. J. L., A multi-dimensional per-
+spective on electronic doping in metal halide perovskites,
+ACS Energy Lett. 6, 3 (2021).
+[51] Z. Li, Z. Li, Z. Shi, and X. Fang, Facet-dependent,
+fast response, and broadband photodetector based on
+highly stable all-inorganic CsCu2I3 single crystal with
+1D electronic structure, Adv. Funct. Mater. 30, 2002634
+(2020).
+[52] R. Li, Q. Zhu, Q. Guo, Y. Zhu, W. Zheng, and F. Huang,
+Dual self-trapped exciton emission with ultrahigh pho-
+toluminescence quantum yield in CsCu2I3 and Cs3Cu2I5
+perovskite single crystals, J. Phys. Chem. C 124, 20469
+(2020).
+[53] R. Fan, S. Fang, S. Liang, Z. Liang, and H. Zhong, Control-
+lable one-step doping synthesis for the white-light emission
+of cesium copper iodide perovskites, Photonics Res. 9, 5
+(2021).
+[54] G. Kresse and J. Furthmüller, Eﬃcient iterative schemes for
+ab initio total-energy calculations using a plane-wave basis
+set, Phys. Rev. B 54, 11169 (1996).
+[55] G. Kresse and J. Furthmüller, Eﬃciency of ab-initio total
+energy calculations for metals and semiconductors using a
+plane-wave basis set, Comput. Mater. Sci. 6, 1 (1996).
+[56] G. Kresse and D. Joubert, From ultrasoft pseudopotentials
+to the projector augmented-wave method, Phys. Rev. B 59,
+1758 (1999).
+[57] P. E. Blöchl, Projector augmented-wave method, Phys. Rev.
+B 50, 17953 (1994).
+[58] J. P. Perdew, A. Ruzsinszky, G. I. Csonka, O. A. Vydrov,
+G. E. Scuseria, L. A. Constantin, X. Zhou, and K. Burke,
+Restoring the density-gradient expansion for exchange
+in solids and surfaces, Phys. Rev. Lett. 100, 136406
+(2008).
+[59] A. Togo and I. Tanaka, First principles phonon calculations
+in materials science, Scr. Mater. 108, 1 (2015).
+[60] F. Birch, Finite elastic strain of cubic crystals, Phys. Rev.
+71, 809 (1947).
+[61] J. Heyd, G. E. Scuseria, and M. Ernzerhof, Hybrid function-
+als based on a screened Coulomb potential, J. Chem. Phys.
+118, 8207 (2003).
+[62] A. M. Ganose, A. J. Jackson, and D. O. Scanlon, sumo:
+Command-line tools for plotting and analysis of periodic
+ab initio calculations, J. Open Source Softw. 3, 717 (2018).
+[63] A. Togo, L. Chaput, and I. Tanaka, Distributions of phonon
+lifetimes in Brillouin zones, Phys. Rev. B 91, 094306
+(2015).
+[64] G. K. Madsen and D. J. Singh, BoltzTraP. A code for calcu-
+lating band-structure dependent quantities, Comput. Phys.
+Commun. 175, 67 (2006).
+[65] A. M. Ganose, J. Park, A. Faghaninia, R. Woodsrobinson,
+K. A. Persson, and A. Jain, Eﬃcient calculation of car-
+rier scattering rates from ﬁrst principles, Nat. Commun. 12,
+2222 (2021).
+[66] Jan-Hendrik Pöhls, S. Chanakian, J. Park, A. M. Ganose,
+A. Dunn, N. Friesen, A. Bhattacharya, B. Hogan, S. Bux,
+A. Jain, A. Mar, and A. Zevalkink, Experimental validation
+of high thermoelectric performance in RECuZnP2 predicted
+by high-throughput DFT calculations, Mater. Horiz. 8, 209
+(2021).
+[67] Y.-K. Jung, J.-H. Lee, A. Walsh, and A. Soon, Inﬂuence
+of Rb/Cs cation-exchange on inorganic Sn halide per-
+ovskites: from chemical structure to physical properties,
+Chem. Mater. 29, 7 (2017).
+[68] A. Amat, E. Mosconi, E. Ronca, C. Quarti, P. Umari, M.
+K. Nazeeruddin, M. Gratzel, and F. De Angelis, Cation-
+induced band-gap tuning in organohalide perovskites:
+Interplay of spin–orbit coupling and octahedra tilting, Nano
+Lett. 14, 6 (2014).
+[69] https://doi.org/10.5281/zenodo.8307511.
+[70] http://www.archer2.ac.uk.
+043004-13

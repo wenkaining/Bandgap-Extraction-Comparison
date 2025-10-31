@@ -1,0 +1,1257 @@
+Rapid spin depolarization in the layered 2D Ruddlesden Popper perovskite
+(BA)(MA)PbI
+Michael Kempf,1 Philipp Moser,2 Maximilian Tomoscheit,1 Julian Schr¨oer,1 Jean-Christophe Blancon,3 Rico
+Schwartz,1 Swarup Deb,1 Aditya Mohite,3 Andreas V. Stier,2 Jonathan J. Finley,2 and Tobias Korn1, ∗
+1Institute of Physics, Rostock University, 18059 Rostock, Germany
+2Walter Schottky Institute, TUM School of Natural Sciences,
+Technical University of Munich , 85748 Garching, Germany
+3Department of Chemical and Biomolecular Engineering,
+Rice University, 6100 Main St., Houston, TX77005-1827, USA
+We report temperature-dependent spectroscopy on the layered (n=4) two-dimensional (2D)
+Ruddlesden-Popper perovskite (BA)(MA)PbI. Helicity-resolved steady-state photoluminescence
+(PL) reveals no optical degree of polarization.
+Time-resolved PL shows a photocarrier lifetime
+on the order of nanoseconds. From simultaneaously recorded time-resolved differential reflectivity
+(TR∆R) and time-resolved Kerr ellipticity (TRKE), a photocarrier lifetime of a few nanoseconds
+and a spin dephasing time on the order of picoseconds was found. This stark contrast in lifetimes
+clearly explains the lack of spin polarization in steady-state PL. While we observe clear temperature-
+dependent effects on the PL dynamics that can be related to structural dynamics, the spin dephasing
+is nearly T-independent. Our results highlight that spin dephasing in 2D (BA)(MA)PbI occurs at
+time scales faster than the exciton recombination time, which poses a bottleneck for applications
+aimingto utilize this degree of freedom.
+I.
+INTRODUCTION
+The first perovskite, CaTiO3, was discovered in 1839
+by Gustav Rose, fortuitously starting a debate lasting
+over a hundred years about their general crystal struc-
+ture [1, 2].
+Since then, perovskites have been a topic
+of intense research for a multitude of features, from
+high temperature superconductivity [3–5], giant mag-
+netoresistance [6], oxide fuel cells [7] to efficient solar
+cells [8, 9].
+Especially, they have been shown to host
+exceptionally high quantum efficiency in terms of their
+optoelectronic performance [10–12]. This combined with
+the presence of spin-orbit interaction, particuarly strong
+in lead-halide-based perovskites, and a resulting broken
+spin degeneracy makes them highly appealing for spin-
+optoelectronic devices [13–16]. However, an indisputable
+challenge to their application is the (photo-)degradation
+of perovskites resulting in a notably short device life-
+time [17].
+In recent years, layered two-dimensional (2D) per-
+ovskites have emerged as a viable alternative as several
+groups have reported an increase in lifetime of 2D per-
+ovskites devices [18–20].
+Being two-dimensional by
+design, it is relatively straightforward to exploit quantum
+confinement effects to tune their band gap by adjustment
+of the layer number, making them perfectly suited for
+multi-junction devices [21].
+In that way the efficiency
+limit of a single junction can be overcome [22, 23]. One
+example of such a layered perovskite is butylamonium
+methylamonium lead iodide, (BA)2(MA)n−1PbnI3n+1.
+Its band gap can be tailored from 1.5 to 2.3 eV by re-
+ducing the layer number from bulk to a stack of single
+∗tobias.korn@uni-rostock.de
+layers, thereby covering almost the whole visible spectral
+range [17, 23, 24]. Being a relatively new system, fun-
+damental properties of the layered perovskite materials
+have not been fully explored, particularly in the direc-
+tion of their spin and carrier dynamics [25], vital aspects
+to be explored for practical applications. With a change
+of dimensionality from 3D to 2D, there is a potential for
+breaking inversion symmetry in the out-of-plane direc-
+tion at the interfaces of layered perovskites, which leads
+to Rashba-like spin orbit coupling that in turn impacts
+spin dynamics [13, 26–28], motivating intense research.
+In that perspective, through transient spectroscopy
+the coupling of polaronic states and excitons [29], spin-
+selective excitation [30], the reduced mass and binding
+energies were studied [21, 25, 31]. Time- and helicity-
+resolved photoluminescence (TRPL and HRPL) revealed
+layer-number dependent orbit-orbit interaction [32] and
+through various time-resolved pump-probe measurement
+techniques Land´e factors were determined [33], carrier
+thermalization [34] was observed and the formation of
+spin domains driven by spin currents was measured [28].
+However, basic parameters such as spin dephasing
+times, and the dominant spin dephasing mechanisms for
+excitons and resident carriers, are still under intense in-
+vestigation and debate [27]. Even within the class of lead-
+halide perovskites, reported exciton spin dephasing times
+range from picoseconds up to nanoseconds [29, 32, 35, 36]
+and are strongly influenced by material and experimental
+parameters such as spacers, choice of cation, temperat-
+ure, dimensionality and layer number, as Table I shows.
+Thus, it is necessary to study the individual material con-
+figuration, over a wide temperature range, ideally using
+multiple spectroscopy techniques to determine the dy-
+namics.
+In this paper we use the combination of TRPL, HRPL,
+time-resolved Kerr ellipticity (TRKE) and time-resolved
+arXiv:2309.09784v1  [cond-mat.mes-hall]  18 Sep 20232
+SDT
+Material
+T(K) n Dim
+1.5 ps [35] (PEA)(MA)PbI
+300
+- 3D
+7 ps [35]
+(PEA)(MA)PbI
+300
+4 2D
+10 ps [36] (BA)2(MA)PbI
+300
+2 2D
+40 ps [29] (BA)2(FA)PbI7
+77
+2 2D
+1 ns [37]
+CH3NH3PbClxI3−x 4
+- 3D
+3.4 ns [32] (PEA)(MA)PbBr
+300
+5 2D
+Table I. Spin dephasing times (SDT) for different lead hal-
+ide perovskites compiled from literature values. Temperature
+(T), layer number (n) and sample dimensionality (Dim).
+differential reflectivity (TR∆R) to study spin dephas-
+ing and photocarrier lifetimes in (BA)(MA)PbI with a
+layer number of four (n=4) over a temperature range
+from a few Kelvin to ambient conditions. Remarkably,
+we find significant changes in the PL dynamics with
+temperature, indicating a strong influence of exciton-
+phonon interaction and hinting at a crystallographic
+phase change around 140 K. By contrast, spin dephasing
+occurs on significantly shorter, few-picosecond timescales
+and only slightly decreases throughout the whole temper-
+ature range. Consequently, steady-state HRPL shows no
+discernible spin contrast.
+II.
+RESULTS AND DISCUSSION
+A.
+Transmission and PL of layered (BA)(MA)PbI
+In this work, we use few-layer (BA)(MA)PbI top and
+bottom encapsulated in thin hexagonal boron nitride
+(hBN) layers, which serve to protect the perovskite from
+deterioration in ambient conditions [38]. The left panel
+of figure 1a shows an optical microscope image of a typ-
+ical sample, where the (BA)(MA)PbI layer appears in
+brown and the top and bottom hBN layers in light blue.
+At first glance the perovskite exhibits the thickness of
+a bulk crystal, but a spacer every few layers (for n=4
+every fourth), separates the bulk, in out of plane dir-
+ection, into individual 2D perovskite layers, giving the
+crystal its distinctive layered character (sketched on the
+right hand side of figure 1a).
+The high resolution false-color maps in figure 1b-d
+show a low-temperature (T=6 K) photoluminescence
+(PL) measurement from the region marked by the black
+square in panel 1a. The intensity(b), center position(c)
+and full width at half maximum(d) are extracted from a
+Gaussian fit around the exciton peak. While the intens-
+ity map shows some variation, exciton center position and
+full width at half maximum are extraordinarily uniform,
+indicating high sample quality.
+White-light transmission spectroscopy at 4 K, shown
+in figure 1e, reveals a prominent transmission dip at ∼
+1.9 eV, associated with the ground state exciton of the
+n=4 (BA)(MA)PbI [18, 21, 39, 40]. The single particle
+band gap of 2.08 eV, extracted by Blancon et al. from
+fitting an excitonic Rydberg series with a modified 2D
+1.85
+1.90
+1.95
+0
+10
+20
+PL Intensity (kcounts)
+Energy (eV)
+ Contra
+ Co
+c)
+10
+20
+30
+40
+10
+20
+30
+40
+Y Axis (µm)
+X Axis (µm)
+1875
+1905
+Center pos. (meV)
+10
+20
+30
+40
+10
+20
+30
+40
+Y Axis (µm)
+X Axis (µm)
+0.5
+5.7
+Intensity (arb. u.)
+10
+20
+30
+40
+10
+20
+30
+40
+Y Axis (µm)
+X Axis (µm)
+4
+20
+FWHM (meV)
+FWHM (meV)
+b)
+d)
+f)
+e)
+1.9
+2.0
+2.1
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Transmission (arb. u.)
+Energy (eV)
+Eg
+X0
+n=4
+20µm
+n=4
+z
+a)
+X
+Y
+Figure 1.
+(a) Left: Optical microscope image of an hBN-
+encapsulated (BA)(MA)PbI (n=4) perovskite sample on top
+of Si/SiO2 substrate. The black rectangle indicates the ap-
+proximate area of the PL maps presented in (b-d) Right:
+Sketch of a layered perovskite with n=4. In the out-of-plane
+direction (z) stacks of four layers are separated by a spacer.(b-
+d) False-color maps of intensity (b), center position (c) and
+full width at half maximum (d) extracted from Gaussian fits of
+a PL scan measured on sample shown in (a) at 6 K and with
+an excitation energy of 2.33 eV. (e) White-light absorption
+spectra of the (BA)(MA)PbI (n=4) perovskite.
+The neut-
+ral exciton and the band gap are marked with X0 and Eg,
+respectively.(f) Helicity-resolved PL spectra for co- (black,
+solid) and contra- (red, dotted) polarized setup configuration,
+excited at 2.33 eV and measured at 6 K.
+hydrogen model [21], is marked for reference, showing
+the large exciton binding energy of ∼200 meV.
+Due to spin-dependent selection rules for optical ex-
+citation and recombination [37], it is possible to couple
+pseudospin values with involved emitting states [32, 41].
+The most simple experimental evidence for this are
+helicity-resolved PL experiments where a circularly po-
+larized laser is used for excitation and luminescence of a
+chosen helicity is recorded using a retardation plate and
+analyzer. The degree of polarization P can be defined as:
+P = I(Co) −I(Contra)
+I(Co) + I(Contra)
+(1)
+where I(Co) and I(Contra) are the PL intensities cor-
+responding to co- and cross-polarized detection helicity3
+b)
+a)
+0
+5
+10
+15
+4
+10
+2
+10
+2
+10
+3
+10
+2
+10
+3
+10
+100
+200
+ 
+Time (ns)
+ 6 K
+ 
+TRPL Amplitude (log., V)
+ 120 K
+ 
+ 140 K
+ 
+ 260 K
+0
+100
+200
+5
+10
+6
+10
+2
+10
+4
+10
+0
+4
+8
+Temperature (K)
+ Time-integrated PL
+Amplitude (log., counts)
+ 
+A1
+Lifetime (ns)
+t1
+t2
+A2
+c)
+Figure 2.
+(a) Selected TRPL traces of a temperature series
+from 6 to 260 K measured with an excitation laser energy of
+3.06 eV. The traces are shifted and in logarithmic scale for
+better visibility. The instrument response function is added
+in gray as reference. (b) The fitting parameters, amplitude
+and lifetime, extracted from a bi-exponential fit applied to
+the measurement series from (a). A1 and τ1 describing the
+first exponential term are colored red while A2 and τ2 for
+the second term are colored blue.(c)Time-integrated PL amp-
+litude of the temperature series shown in (a).
+configurations with respect to excitation. Spectra recor-
+ded at a nominal sample temperature of 6 K and excit-
+ation energy of 2.33 eV, with co- and cross-circular con-
+figurations are shown in figure 1f. For these traces, we
+have combined four measurement configurations, i.e. the
+co-circular helicities of excitation and detection (σ+/σ+
+and σ−/σ−) and the cross-circular helicities (σ+/σ−and
+σ−/σ+) to suppress any setup-related artifacts.
+Evid-
+ently, the PL emission does not portray any measurable
+degree of polarization. In order to explain this loss of
+polarization we turn to time-resolved spectroscopy.
+Figure 2a shows a series of TRPL traces at various
+temperatures from 6 to 260 K, obtained by exciting the
+sample with a laser energy of 3.06 eV and a 50 ps pulse
+train (repetition rate 10 MHz, average power 10 nW). The
+PL from the sample is filtered through a long pass with
+450 nm onset wavelength to suppress the excitation laser
+and detected with an avalanche photodiode. The indi-
+vidual traces are fitted with a bi-exponential function,
+from which we extract the fit parameters for amplitude
+(A1,2) and decay time (τ1,2), respectively (see Fig.2b).
+At low temperatures, the dynamics is dominated by the
+fast component of the decay (τ1 ∼0.35 ns), while the
+slow component (τ2 ∼8 ns) only contributes a small
+amplitude to the total signal.
+As the temperature in-
+creases, the relative contribution of the slow compon-
+ent increases, while its lifetime decreases monotonously
+up to 120 K. This behavior is consistent with previous
+studies of exciton dynamics in layered perovskites [42],
+where the fast component is associated with the radi-
+ative lifetime of excitons within the light cone. As the
+temperature increases, the growing phonon population
+leads to an increased scattering rate of excitons out of
+the light cone. These momentum-dark excitons created
+by exciton-phonon scattering can either be scattered back
+into the light cone or recombine via non-radiative decay
+channels, and the combination of these processes con-
+tributes to the slow component and the decrease of its
+lifetime. In the temperature range from 6 K to 120 K,
+the time-integrated PL intensity also decreases mono-
+tonously (see Fig.2c) due to the increased probability
+of excitons accessing non-radiative decay channels via
+exciton-phonon scattering, consistent with previous stud-
+ies [33, 43].
+Remarkably, we observe a clear change
+of the TRPL dynamics as the temperature increases to
+140 K, as both fast and slow component lifetimes increase
+significantly, accompanied by a small increase of time-
+integrated PL intensity.
+The drastic jump in lifetimes
+coincides with the temperature range were a crystallo-
+graphic phase change, from orthorombic to tetragonal,
+is observed for 3D (MA)PbI [44–47]. Although steady-
+state PL in our samples shows no drastic energy shift
+in that temperature regime, our TRPL data suggests an
+impact of such a phase change on exciton-phonon inter-
+action and non-radiative decay channels. As the temper-
+ature is increased further, the fast and slow component
+amplitudes and time constants start to approach similar
+values, and above 220 K, the PL decay becomes mono-
+exponential with a lifetime of about 2 ns. Together with
+the further decrease of time-integrated PL intensity, this
+indicates that exciton-phonon scattering is so prominent
+that hardly any recombination can occur before excitons
+are scattered out of the light cone, and that the rate
+for non-radiative decay becomes larger than the rate for
+backscattering into the light cone.
+Given our insight into the photoluminescence dynam-
+ics from TRPL and the absence of polarization in steady-
+state PL experiments, we can infer that spin dephasing
+in our samples has to occur on timescales that are a small
+fraction of the recombination times. To resolve these fast
+dynamics, we turn to pump-probe experiments.
+B.
+Spin dephasing and photocarrier lifetimes
+To gain insight into the photocarrier dynamics and
+their spin dephasing mechanism at short timescales, we
+use a two-color pump-probe spectroscopy setup with tem-
+poral resolution of ∼700 fs [48].
+We use a circularly
+polarized pump pulse (either σ−or σ+), to induce a
+spin polarization of certain helicity into the system [49].
+The out-of-equilibrium carrier population and spin po-
+larization can be simultaneously detected by recording
+the total differential reflectivity (≡TR∆R) and ellipti-
+city through polarization-resolved differential reflectivity
+(≡TRKE) signals, as depicted in figure 3a.
+Depend-
+ing on the induced spin polarization, the TRKE signal
+flips its sign, as shown in figure 3b. Therefore, pure spin4
+0
+50
+100
+0.0
+0.5
+1.0
+ pump 2.08eV
+ pump 2.17eV
+Kerr amplitude (mV)
+Time delay (ps)
+-20
+0
+20
+40
+60
+80
+-1.0
+-0.5
+0.0
+0.5
+1.0
+ s+
+ 
+s-
+Time delay (ps)
+a)
+b)
+c)
+pump
+pump
+ 
+Δt
+ 
+sample
+BP
+Δt
+pump
+probe
+A
+B
+WP
+TRDR
+Lock-In
+TRKE
+Lock-In
+l/4
+1.9
+2.0
+2.1
+0.0
+0.3
+0.6
+Kerr amplitude (mV)
+Energy (eV)
+ A1
+X0
+d)
+Kerr amplitude (mV)
+Eg
+Figure 3. (a) Simplified TRKE, TR∆R setup. The reflected
+probe beam is analyzed using a Wollaston prism (WP), an
+achromatic quarter-wave plate (λ/4) and a band pass (BP).
+The difference and sum signals from the photo diodes A and
+B are amplified and measured by two separate Lock-In amp-
+lifiers for the TRKE and TR∆R measurements, respectively.
+For further setup details see Ref. [48]. (b) Sign flip of Kerr ro-
+tation signal trace with change of excitation helicity. (c) Max-
+imum Kerr rotation signal amplitude for pumping at 2.17 eV
+while the probe energy is varied from below the exciton res-
+onance to slightly above the band gap. Exciton and band gap
+energies are marked with X0 and Eg, respectively. (d) Kerr
+rotation signal traces for excitation laser energies at the band
+gap (2.08 eV) and off-resonantly above the gap (2.17 eV). The
+probe laser energy is kept resonant to X0 at 1.89 eV.
+dynamics can be separated out from spurious, non-spin-
+dependent signals by subtracting TRKE traces for op-
+posite excitation helicity i.e. TRKE(σ−) - TRKE(σ+).
+In the following discussion we refer the subtracted TRKE
+signal as TRKE signal, if not explicitly stated otherwise.
+To find suitable parameters for further measurements,
+different probe and pump laser configurations were
+tested. At a sample temperature of 6 K and fixed pump
+energy of 2.17 eV, the probe energy was varied from 1.8 to
+2.1 eV, as shown in figure 3c. This pump energy is above
+the calculated band gap energy of 2.08 eV. The signal
+amplitude maximum is close to the X0 resonance, which
+is expected for a Kerr ellipticity resonance curve [48, 50].
+The slight red shift can be explained through the pump
+laser induced carrier densities and a resulting band-gap
+renormalization [51]. For all following TRKE measure-
+ments a probe laser energy of 1.89 eV is used. Having
+found the optimal probe energy, we also test the influ-
+ence of the pump energy.
+Figure 3d shows exemplary
+Kerr traces for pump energies of 2.08 eV (at the calcu-
+lated band gap) and 2.17 eV (90 meV above the calcu-
+lated band gap). While we observe a difference in max-
+imum signal amplitude, which can be attributed to the
+variation in absorption coefficient at the given energies,
+0
+100
+200
+300
+4
+6
+8
+10
+TRKE Lifetime (ps)
+Temperature (K)
+tK1
+tK2
+ TRKE
+ TRDR
+0
+100
+200
+300
+0
+1
+2
+3
+TRDR Lifetime (ns)
+Temperature (K)
+tD1
+tD2
+ 
+-10
+0
+10
+20
+30
+40
+1500
+3000
+0.01
+1
+0.01
+1
+0.01
+1
+0.01
+1
+ 
+Time (ps)
+ 
+Amplitude (shifted, norm., V)
+ 
+ 
+ 
+300K
+200K
+100K
+5.2K
+a)
+b)
+c)
+tK
+Figure 4.
+(a) Selected TRKE (solid) and TR∆R (dotted)
+traces of a temperature series measured from 5.2 to 300 K.
+Excitation and probe laser energies are fixed at 2.08 eV and
+1.89 eV, respectively. The x-axis scale is changed at 50 ps to
+accommodate the strongly contrasting decay in TRKE and
+TR∆R amplitude, while the individual traces are normalized
+for better comparability. (b,c) Lifetimes extracted with bi-
+and mono-exponential fits of the measurement series in (a).
+τK, τK1 and τK2 from TRKE data in (b), τ∆1 and τ∆2 from
+TR∆R data in (c).
+there is no discernible change in the spin dynamics due
+to the excess energy. This indicates that energy relax-
+ation does not induce additional spin dephasing in that
+energy range. We note that this observation is in contrast
+to a previous study by Todd et al., where a pronounced
+decrease in spin dephasing time was observed as excess
+energy was increased [36]. For all following TRKE meas-
+urements, the pump energy was kept fixed at 2.08 eV to
+obtain the optimum signal-to-noise ratio.
+We note that Kerr rotation and ellipticity measure spin
+polarization (uncompensated spins per unit area), in con-
+trast to HRPL, which measures the degree of spin polar-
+ization (the percentage of uncompensated spins). Thus,
+in TRKE spectroscopy, a decrease in the Kerr amplitude
+can originate either from spin dephasing or from the loss
+of the spin carriers themselves via recombination. This
+makes it essential to know the photocarrier lifetime when
+interpreting TRKE data.
+In our setup, schematically
+shown in figure 3a, this was distinctively realized in a way5
+that TRKE and TR∆R were measured simultaneously
+(see methods), ensuring identical measurement paramet-
+ers and material properties as well as reducing the re-
+quired measurement time by a factor of two.
+This is
+specifically important for sensitive materials such as per-
+ovskites which suffer from photodegradation [20, 52, 53].
+Figure 4a shows simultaneously measured TRKE
+(solid) and TR∆R (dotted) traces at various temperat-
+ures from 5.2 to 300 K. Within the first 50 ps, the TR∆R
+signal and thus the carrier density remains nearly con-
+stant, practically independent of temperature. On the
+other hand, the TRKE signal decays completely.
+We
+thus conclude that the spin dephases within a few pico-
+seconds while the population of photoexcited carriers re-
+mains essentially constant on this short timescale. After
+the change in x-axis scale the decay of the TR∆R signal,
+on the order of nanoseconds and in qualitative agreement
+with our TRPL photocarrier lifetime results, becomes ap-
+parent. This strong and graphic contrast between spin
+dephasing and photocarrier lifetime explains why no spin
+polarization was observed in the steady-state PL meas-
+urements (see figure 1f). The exciton spin polarization
+is already lost before a substantial fraction of recombin-
+ation occurs.
+Fitting the individual TRKE and the TR∆R traces
+with exponential fit functions the lifetimes τK,K1,K2 and
+τ∆1,2 are extracted and plotted over temperature in fig-
+ures 4b,c, respectively.
+We first discuss the TRKE lifetimes in more detail.
+From the experimental traces, we can see that at low
+temperatures, the decay has two components requiring
+a bi-exponential fit, but at temperatures of 200 K and
+more, the traces can be well-described by a single ex-
+ponential. We note that Giovanni et al. also observed
+a bi-exponential decay in CH3NH3PbI3 thin films at
+low temperatures with values comparable to our results,
+and attributed the components to the electron and hole
+spin dephasing [49].
+However, many other works only
+utilized single exponential decay times [32, 35, 36, 41].
+Without the ability to reliably assign the components of
+the decay to a specific carrier, e.g., by observing spin
+precession and extracting the g factors [44, 54], and to
+approximately capture the decay dynamics throughout
+the whole temperature range of our study, we utilized
+a mono-exponential fit with lifetimes denoted by τK in
+Fig. 4b.
+Clearly, we observe only a weak temperature depend-
+ence of τK throughout the whole temperature range, with
+a decrease from about 6 ps at liquid-helium temperat-
+ure to about 4 ps at room temperature, with the most
+of the decrease occurring at temperatures above 200 K.
+Given the significant changes in exciton recombination
+dynamics evidenced in TRPL, and the obvious changes
+to the phonon population and exciton-phonon interac-
+tion with rising temperature, this is rather remarkable.
+To put this observation into perspective, we review the
+potential spin dephasing processes discussed in previous
+studies.
+Mostly, either the Elliott-Yafet (EY) [55, 56]
+or the Dyakonov-Perel (DP) [57] mechanisms have been
+suggested to be the dominant spin dephasing mechan-
+ism in layered perovoskites [35, 36, 49]. The main differ-
+ence between both mechanisms is how momentum scat-
+tering influences the dephasing: in the EY mechanism,
+with each momentum scattering event, there is a finite
+possibility for a spin flip, so that increased scattering
+rates reduce the spin dephasing time. In the DP mech-
+anism, dephasing occurs due to spin precession in an ef-
+fective, momentum-dependent magnetic field, which may
+result from Dresselhaus or Rashba-type spin-orbit inter-
+action.
+Momentum scattering leads to random fluctu-
+ations of the orientation and magnitude of this effect-
+ive field and causes dephasing of a spin ensemble.
+In
+the common motional narrowing regime, the product of
+precession frequency ΩK averaged over the whole en-
+semble and the momentum scattering time τ ∗is smal-
+ler than unity (ΩKτ ∗< 1), and the spin dephasing time
+τs is inversely proportional to the momentum scattering
+time:
+1
+τs ∝Ω2
+Kτ ∗, so that increased momentum scatter-
+ing rates increase the spin dephasing time.
+Addition-
+ally, excitonic spin dephasing in perovskites has been at-
+tributed to the exchange Coulomb interaction between
+electron and hole [29] based on a mechanism developed
+by Maille, de Andrada e Silva and Sham (MSS) [58].
+Here, the electron-hole exchange effectively acts like a
+fluctuating in-plane magnetic field whose magnitude and
+direction depend linearly on the exciton center-of-mass
+momentum K. In the motional narrowing regime, the
+MSS mechanism shows a behavior analogous to the DP
+mechanism.
+Naturally, these different mechanisms will yield a dif-
+ferent temperature dependence: as the temperature in-
+creases, the momentum scattering time decreases due to
+the growing phonon population. Additionally, in the case
+of the EY mechanism, the spin mixing introduced by
+spin-orbit interaction increases with increasing energy,
+so that the probability for a spin flip during a scatter-
+ing event also increases, leading to a monotonous de-
+crease of spin dephasing time with increasing temper-
+ature. By contrast, in case of the DP and MSS mechan-
+isms, the decreasing momentum scattering time should
+increase spin dephasing time with temperature. Addi-
+tionally, however, an increase in energy and center-of-
+mass momentum will also increase the effective field and
+corresponding precession frequency ΩK, partially com-
+pensating the decreasing momentum scattering time and
+potentially leading to a complex, non-monotonous tem-
+perature dependence of the spin dephasing time. With
+these qualitatively different temperature dependencies,
+our observations point towards the EY mechanism as be-
+ing dominant in our samples. Given the few-ps absolute
+values of the spin dephasing time observed in our study,
+it is likely that a significant fraction of the exciton spin
+dephasing occurs before they reach thermal equilibrium
+with the lattice, especially at low temperatures, so that
+the increasing phonon population only impacts the mo-
+mentum scattering rate at intermediate temperatures.6
+Next, we discuss the differential reflectivity results.
+Both τ∆1 and τ∆2, extracted from the TR∆R data, re-
+main rather stable over the whole temperature range, in
+contrast to the TRPL lifetimes. This discrepancy can be
+expected, as the TRPL dynamics strongly depend on ex-
+citon center-of-mass momentum, while TR∆R probes the
+individual occupation of conduction and valence bands at
+the probe energy and is thus rather insensitive to the
+temperature-dependent exciton-phonon scattering pro-
+cesses discussed above. However, both TRPL and TR∆R
+lifetimes are of the same order of magnitude and far ex-
+ceed the observed spin dephasing times.
+It is interesting to contrast the dynamics observed in
+our perovskite samples with those in other 2D systems.
+Here, two well-studied, yet very different examples are
+semiconductor quantum wells based on direct gap semi-
+conductors like GaAs and monolayers of transition metal
+dichalcogenides (TMDCs).
+For excitons in GaAs-based quantum wells (QWs),
+spin dephasing is driven by the MSS mechanism.
+At
+liquid-helium temperatures, exciton spin dephasing times
+in GaAs-based QWs are typically a few tens of pico-
+seconds [59], while exciton lifetimes are on the order of
+about 200 ps, so that a finite circular polarization degree
+can be observed in steady-state PL. Due to the low ex-
+citon binding energies in GaAs QWs, the spin dynamics
+is dominated by free charge carriers above liquid-nitrogen
+temperatures [60]. In that temperature range, holes have
+picosecond spin dephasing times, while electron spin de-
+phasing is driven by the D’Yakonov-Perel mechanism
+due to electron spin precession in Rashba and Dressel-
+haus spin-orbit fields combined with momentum scatter-
+ing. Electron spin dephasing times in QWs strongly de-
+pend on well width, crystal growth direction and carrier
+density [61], and can exceed 100 ns in modulation-doped
+quantum wells.
+By contrast, in monolayer TMDCs, the exciton bind-
+ing energies are on the order of 500 meV [62, 63], so
+that excitons are stable well beyond room temperature.
+The peculiar band structure coupling spin and valley de-
+grees of freedom [64] should suppress spin dephasing, and
+first steady-state helicity-resolved PL measurements re-
+vealed high PL circular polarization degrees [65]. How-
+ever, exciton lifetimes in monolayers are on the order
+of picoseconds at low temperatures [66, 67], and the
+first helicity-resolved TRPL studies showed that exciton
+spin dephasing rivals exciton recombination [68].
+The
+main mechanism driving spin dephasing is attributed
+to long-range Coulomb exchange interaction [69], ana-
+logous to the MSS mechanism.
+With increasing tem-
+perature [70], the steady-state PL circular polarization
+degree decreases, as the exciton lifetime increases due
+to excitons being scattered out of the light cone while
+the spin dephasing rate increases due to occupation of
+higher-momentum exciton states.
+For resident carri-
+ers in TMDC monolayers, however, spin dephasing is
+strongly suppressed due to spin-valley coupling, so that
+spin dephasing times of more than 100 ns for electrons
+and about 10 µs for holes could be observed at low tem-
+peratures [71, 72].
+While in these two examples of 2D systems, exciton
+lifetimes and spin dephasing times are comparable, al-
+beit on different timescales, so that a finite PL polariz-
+ation degree is observable in steady-state measurements
+and spin polarization can potentially be transferred from
+excitons to resident carriers, the combination of long ex-
+citon lifetimes and short exciton spin dephasing times in
+our samples negates either possibility. However we note
+that this is not generally the case for perovskites, as spin
+dynamics of resident carriers could be observed in both,
+2D [33] and 3D [44] perovskite systems.
+C.
+Conclusion
+In
+summary,
+we
+have
+studied
+spin
+dephasing
+and photocarrier dynamics in the layered perovskite
+(BA)(MA)PbI using several optical micro-spectroscopy
+techniques that allow us to address an individual sample
+encapsulated between hexagonal boron nitride layers. We
+observe significant changes of the photoluminescence dy-
+namics throughout the studied temperature range from
+6 to 300 K, which also include hints at a crystallo-
+graphic phase transition at intermediate temperatures.
+Both, photoluminescence lifetimes and photocarrier life-
+times measured by differential reflectivity are in the
+nanosecond range.
+By contrast, spin dephasing times
+throughout the investigated temperature range are on the
+order of a few picoseconds, and the spin dynamics do not
+change drastically with temperature. Consequently, in
+steady-state, helicity-resolved photoluminescence meas-
+urements, we observe no spin polarization due to the
+large disparity of photocarrier lifetimes and spin deph-
+asing times. Our study motivates further systematic in-
+vestigations of spin dephasing in layered perovskites to
+determine the dominant dephasing mechanism and its
+dependence on material parameters.
+III.
+METHODS
+A.
+Sample fabrication
+The
+RPP
+(Ruddlesden-Popper
+perovskite)
+(BA)2(MA)n−1PbnI3n+1
+with
+the
+perovskite
+layer
+thickness of n=4 was synthetized and purified following
+previously reported methods [23, 73]. The RPPs studied
+here are mechanically exfoliated and stacked using
+the dry viscoelastic transfer method [74] in between
+hBN onto a Si/SiO2 substrate.
+For the transmission
+measurement the hBN encapsulated RPP is stacked on
+top of an single-mode optical fiber core [21].7
+B.
+Optical measurements
+All optical measurements were performed in a flow
+cryostat with a temperature variability from 4 to 300 K.
+Inherent to this cooling technique, the sample was kept
+under vacuum for the whole measurement time and thus
+protected from environmental degradation by oxygen and
+water.
+For the steady-state PL measurements the sample was
+excited with a 2.33 eV continuous-wave diode-pumped
+solid-state laser using a power of 10 nW, focused to a
+diffraction limited spot size of about 1 µm. The sample
+was cooled to a temperature of 6 K. The PL light emit-
+ted by the sample is collected using the same object-
+ive, filtered by a 560 nm (2.21 eV) long pass and ana-
+lyzed with a combination of a spectrometer and a charge-
+coupled-device. To obtain the PL map of the sample (fig-
+ure 1b) the cryostat, with the sample inside, was moved
+in relation to the fixed laser spot through a computer-
+controlled xy stage. The polarization-resolved measure-
+ments were achieved by placing a linear polarizer and
+an achromatic quarter-wave plate (λ/4) in the excita-
+tion and the detection beam path. The laser intrinsically
+emits linearly polarized light and both linear polarizers
+were set parallel to this orientation throughout the meas-
+urements. For the co-polarized configuration the fast axis
+of both λ/4 was set to an angle of either 45° or -45°, while
+for contra-polarization one was set to 45° and the other
+to -45° or inverted. The angle was measured between the
+fast axis of the λ/4 and the orientation of the linear po-
+larizers. For the transmission data white light from a Xe
+lamp was coupled into the single mode fiber, which had
+the sample on the other side (compare sample fabrica-
+tion). The varied white light signal was then collimated
+and reflected via a multimode fiber into a spectrograph.
+The whole setup was inside a helium exchange dip stick,
+which was inside a He dewar. The time-resolved PL was
+measured with a 3.06 eV pulsed diode laser, a 10 MHz
+repetition rate and an excitation power of 10 nW. The
+temporal pulse width of the used laser in that power re-
+gime is around 50 ps, so the instrument response function
+is mostly defined by the detection. Here, the fundamental
+laser wavelength is filtered out by a 450 nm (2.72 eV) long
+pass, while the PL signal is measured though a commer-
+cial single photon avalanche diode using time-correlated
+single photon counting electronics.
+In our TRKE-TR∆R setup two separately energetic-
+ally tunable pulsed lasers (Toptica: femtoFiberPro) were
+used, one for the pump and the other for the probe
+laser beam.
+Each system emits with a pulse repeti-
+tion rate of 80 MHz (pulse repetition period of 12.5 ns),
+a spectral width of 6 meV, a pulse duration of about
+210 fs and a tunable energy range from 480 to 700 nm
+(1.77-2.58 eV). Probe and pump pulses were electron-
+ically time-synchronized and amplitude-modulated with
+different chopping frequencies, adding up to a sum mod-
+ulation frequency of 922 Hz.
+A mechanical delay line
+changed the path length of both beams and so the time
+offset of both pulses.
+Here the pump and probe path
+were shortened and elongated, respectively, yielding a
+maximum measurement time interval of 4 ns. Through
+an achromatic λ/4 plate, the pump beam was circularly
+polarized to either left- or right-handed chirality. Both
+beams are set to a laser power of 20 µW and are focused
+with an 20x objective onto the sample, yielding a spot
+size of 3 µm and excitation power density of 7 W/cm2.
+After reflection the pump beam was filtered out by a
+band pass while the polarization and signal amplitude of
+the probe beam were measured. The polarization of the
+probe beam was analyzed for its ellipticity by a combin-
+ation of a λ/4, a Wollaston prism and two photodiodes
+(ThorLabs PDB210A Si Photodetector) [48, 50].
+The
+difference signal of the two diodes was fed into a lock-
+in amplifier, yielding the TRKE signal. The sum signal
+of the diodes was obtained using an external adder and
+fed into a second lock-in amplifier, yielding the TR∆R
+signal. Both lock-in amplifiers were fed the same refer-
+ence frequency given by the modulation sum-frequency
+(922 Hz). The setup is schematically shown in figure 3a.
+With this approach it was possible to measure the TRKE
+and TR∆R at the same time, cutting the needed meas-
+urement time in half, compared to, as commonly per-
+formed, subsequent measurements. In detail, the TRKE
+setup is described elsewhere [48].
+IV.
+ACKNOWLEDGEMENTS
+The authors gratefully acknowledge technical support
+by C. Ermer and fruitful discussions with E. Klein and
+C. Klinke.
+S. Deb acknowledges financial support by
+the Humboldt foundation. The authors also acknowledge
+financial support by the DFG via the following grants:
+SFB1277 (project No.
+314695032), SFB1477 (project
+No. 441234705), SPP2244 (project No. 443361515) and
+KO3612/7-1 (project No. 467549803).
+[1] L.
+Ortega-San-Martin,
+in
+Revolution
+of
+Perovskite
+(Springer Singapore, 2020) pp. C1–C1.
+[2] H.-R. Wenk and A. Bulakh, Minerals Their Constitution
+and Origin (Cambridge University Press, 2016) p. 672.
+[3] J. G. Bednorz and K. A. M¨uller, Zeitschrift f¨ur Physik B
+Condensed Matter 64, 189 (1986).
+[4] R. J. Cava, B. Batlogg, R. B. van Dover, D. W. Murphy,
+S. Sunshine, T. Siegrist, J. P. Remeika, E. A. Rietman,
+S. Zahurak, and G. P. Espinosa, Physical Review Letters
+58, 1676 (1987).
+[5] Y.
+Matsumoto,
+K.
+Kaminaga,
+K.
+Suzuki,
+and
+S. Maruyama 10.21203/rs.3.rs-1856661/v1 (2022).8
+[6] R. von Helmolt, J. Wecker, B. Holzapfel, L. Schultz, and
+K. Samwer, Physical Review Letters 71, 2331 (1993).
+[7] N. H. Menzler, F. Tietz, S. Uhlenbruck, H. P. Buchkre-
+mer, and D. St¨over, Journal of Materials Science 45, 3109
+(2010).
+[8] H. J. Snaith, The Journal of Physical Chemistry Letters
+4, 3623 (2013).
+[9] L. Etgar, P. Gao, Z. Xue, Q. Peng, A. K. Chandiran,
+B. Liu, M. K. Nazeeruddin, and M. Gr¨atzel, Journal of
+the American Chemical Society 134, 17396 (2012).
+[10] M. Shao, T. Bie, L. Yang, Y. Gao, X. Jin, F. He,
+N. Zheng, Y. Yu, and X. Zhang, Advanced Materials 34,
+2107211 (2021).
+[11] M. A. Green, E. D. Dunlop, G. Siefer, M. Yoshita,
+N. Kopidakis, K. Bothe, and X. Hao, Progress in Photo-
+voltaics: Research and Applications 31, 3 (2022).
+[12] Yukta, N. Parikh, R. D. Chavan, P. Yadav, M. K. Naz-
+eeruddin, and S. Satapathi, ACS Applied Materials &
+Interfaces 14, 29744 (2022).
+[13] Y. Zhai, S. Baniya, C. Zhang, J. Li, P. Haney, C.-X.
+Sheng, E. Ehrenfreund, and Z. V. Vardeny, Science Ad-
+vances 3, 10.1126/sciadv.1700704 (2017).
+[14] M. Kepenekian and J. Even, The Journal of Physical
+Chemistry Letters 8, 3362 (2017).
+[15] J. Li and P. M. Haney, Physical Review B 93, 155432
+(2016).
+[16] Y.-H. Kim, Y. Zhai, H. Lu, X. Pan, C. Xiao, E. A. Gauld-
+ing, S. P. Harvey, J. J. Berry, Z. V. Vardeny, J. M. Luther,
+and M. C. Beard, Science 371, 1129 (2021).
+[17] G. Niu, X. Guo, and L. Wang, Journal of Materials
+Chemistry A 3, 8970 (2015).
+[18] C. Ortiz-Cervantes, P. Carmona-Monroy, and D. Solis-
+Ibarra, ChemSusChem 12, 1560 (2019).
+[19] D. Sirbu, F. H. Balogun, R. L. Milot, and P. Docampo,
+Advanced Energy Materials 11, 2003877 (2021).
+[20] X. Qin, Z. Zhao, Y. Wang, J. Wu, Q. Jiang, and J. You,
+Journal of Semiconductors 38, 011002 (2017).
+[21] J.-C. Blancon, A. V. Stier, H. Tsai, W. Nie, C. C.
+Stoumpos, B. Traor´e, L. Pedesseau, M. Kepenekian,
+F. Katsutani, G. T. Noe, J. Kono, S. Tretiak, S. A.
+Crooker, C. Katan, M. G. Kanatzidis, J. J. Crochet,
+J. Even, and A. D. Mohite, Nature Communications 9,
+10.1038/s41467-018-04659-x (2018).
+[22] G. E. Eperon, M. T. H¨orantner, and H. J. Snaith, Nature
+Reviews Chemistry 1, 10.1038/s41570-017-0095 (2017).
+[23] D. H. Cao, C. C. Stoumpos, O. K. Farha, J. T. Hupp,
+and M. G. Kanatzidis, Journal of the American Chemical
+Society 137, 7843 (2015).
+[24] J.-C. Blancon, H. Tsai, W. Nie, C. C. Stoumpos, L. Ped-
+esseau, C. Katan, M. Kepenekian, C. M. M. Soe, K. Ap-
+pavoo, M. Y. Sfeir, S. Tretiak, P. M. Ajayan, M. G.
+Kanatzidis, J. Even, J. J. Crochet, and A. D. Mohite,
+Science 355, 1288 (2017).
+[25] J.-C.
+Blancon,
+J.
+Even,
+C.
+C.
+Stoumpos,
+M.
+G.
+Kanatzidis, and A. D. Mohite, Nature Nanotechnology
+15, 969 (2020).
+[26] J. Yin,
+P. Maity,
+L. Xu,
+A. M. El-Zohry,
+H. Li,
+O. M. Bakr,
+J.-L. Br´edas, and O. F. Mohammed,
+Chemistry
+of
+Materials
+30,
+8538
+(2018),
+ht-
+tps://doi.org/10.1021/acs.chemmater.8b03436.
+[27] A. Privitera, M. Righetto, F. Cacialli, and M. K. Riede,
+Advanced Optical Materials 9, 2100215 (2021).
+[28] A. Ashoka, S. Nagane, N. Strkalj, A. Sharma, B. Roose,
+A. J. Sneyd, J. Sung, J. L. MacManus-Driscoll, S. D.
+Stranks, S. Feldmann, and A. Rao, Nature Materials
+10.1038/s41563-023-01550-z (2023).
+[29] S. A. Bourelle, F. V. A. Camargo, S. Ghosh, T. Neu-
+mann, T. W. J. van de Goor, R. Shivanna, T. Winkler,
+G. Cerullo, and F. Deschler, Nature Communications 13,
+10.1038/s41467-022-30953-w (2022).
+[30] X. Chen, H. Lu, K. Wang, Y. Zhai, V. Lunin, P. C. Ser-
+cel, and M. C. Beard, Journal of the American Chemical
+Society 143, 19438 (2021).
+[31] M. Dyksik, S. Wang, W. Paritmongkol, D. K. Maude,
+W. A. Tisdale, M. Baranowski, and P. Plochocka, The
+Journal of Physical Chemistry Letters 12, 1638 (2021).
+[32] M. Wang, H. Zou, J. Zhang, T. Wu, H. Xu, S. Haacke,
+and B. Hu, The Journal of Physical Chemistry Letters
+11, 3647 (2020).
+[33] E. Kirstein, E. A. Zhukov, D. R. Yakovlev, N. E. Kop-
+teva, C. Harkort, D. Kudlacik, O. Hordiichuk, M. V. Ko-
+valenko, and M. Bayer, Nano Letters 23, 205 (2022).
+[34] J. M. Richter, F. Branchi, F. V. de Almeida Camargo,
+B. Zhao, R. H. Friend, G. Cerullo, and F. Deschler,
+Nature Communications 8, 10.1038/s41467-017-00546-z
+(2017).
+[35] X. Chen, H. Lu, Z. Li, Y. Zhai, P. F. Ndione, J. J. Berry,
+K. Zhu, Y. Yang, and M. C. Beard, ACS Energy Letters
+3, 2273 (2018).
+[36] S. B. Todd, D. B. Riley, A. Binai-Motlagh, C. Clegg,
+A.
+Ramachandran,
+S.
+A.
+March,
+J.
+M.
+Hoffman,
+I.
+G.
+Hill,
+C.
+C.
+Stoumpos,
+M.
+G.
+Kanatzidis,
+Z.-G.
+Yu,
+and
+K.
+C.
+Hall,
+APL
+Materials
+7,
+081116
+(2019),
+https://pubs.aip.org/aip/apm/article-
+pdf/doi/10.1063/1.5099352/13390650/081116 1 online.pdf.
+[37] P. Odenthal, W. Talmadge, N. Gundlach, R. Wang,
+C. Zhang, D. Sun, Z.-G. Yu, Z. V. Vardeny, and Y. S. Li,
+Nature Physics 13, 894 (2017).
+[38] M. Seitz, P. Gant, A. Castellanos-Gomez, and F. Prins,
+Nanomaterials 9, 10.3390/nano9081120 (2019).
+[39] P. Cheng, P. Wang, Z. Xu, X. Jia, Q. Wei, N. Yuan,
+J. Ding, R. Li, G. Zhao, Y. Cheng, K. Zhao, and S. F.
+Liu, ACS Energy Letters 4, 1830 (2019).
+[40] C. M. M. Soe, G. P. Nagabhushana, R. Shivaramaiah,
+H. Tsai, W. Nie, J.-C. Blancon, F. Melkonyan, D. H.
+Cao, B. Traor´e, L. Pedesseau, M. Kepenekian, C. Katan,
+J. Even, T. J. Marks, A. Navrotsky, A. D. Mohite, C. C.
+Stoumpos, and M. G. Kanatzidis, Proceedings of the Na-
+tional Academy of Sciences 116, 58 (2018).
+[41] M. Zhou, J. S. Sarmiento, C. Fei, X. Zhang, and H. Wang,
+The Journal of Physical Chemistry Letters 11, 1502
+(2020).
+[42] T. T. H. Do, A. Granados del ´Aguila, J. Xing, S. Liu, and
+Q. Xiong, The Journal of Chemical Physics 153, 064705
+(2020).
+[43] S.
+Sun,
+T.
+Salim,
+N.
+Mathews,
+M.
+Duchamp,
+C. Boothroyd, G. Xing, T. C. Sum, and Y. M. Lam,
+Energy Environ. Sci. 7, 399 (2014).
+[44] E. Kirstein, D. R. Yakovlev, E. A. Zhukov, J. H¨ocker,
+V. Dyakonov, and M. Bayer, ACS Photonics 9, 1375
+(2022).
+[45] R. F. Hossain, M. Min, L.-C. Ma, S. R. Sakri, and
+A. B. Kaul, npj 2D Materials and Applications 5,
+10.1038/s41699-021-00214-3 (2021).
+[46] J. Wu, J. Chen, and H. Wang, JACS Au 10.1021/jac-
+sau.3c00060 (2023).9
+[47] P. S. Whitfield, N. Herron, W. E. Guise, K. Page, Y. Q.
+Cheng, I. Milas, and M. K. Crawford, Scientific Reports
+6, 10.1038/srep35685 (2016).
+[48] M. Kempf, A. Schubert, R. Schwartz, and T. Korn, Re-
+view of Scientific Instruments 92, 113904 (2021).
+[49] D. Giovanni, H. Ma, J. Chua, M. Gr¨atzel, R. Ramesh,
+S. Mhaisalkar, N. Mathews, and T. C. Sum, Nano Letters
+15, 1553 (2015).
+[50] M. M. Glazov, I. A. Yugova, S. Spatzek, A. Schwan,
+S. Varwig, D. R. Yakovlev, D. Reuter, A. D. Wieck, and
+M. Bayer, Physical Review B 82, 155325 (2010).
+[51] T. N. Lin, S. R. M. Santiago, S. P. Caigas, C. T. Yuan,
+T. Y. Lin, J. L. Shen, and Y. F. Chen, npj 2D Materials
+and Applications 3, 10.1038/s41699-019-0129-z (2019).
+[52] X. Fu, D. A. Jacobs, F. J. Beck, T. Duong, H. Shen,
+K. R. Catchpole, and T. P. White, Physical Chemistry
+Chemical Physics 18, 22557 (2016).
+[53] K. Zhang, J. Duan, F. Liu, J. Zhang, and H. Wang,
+Journal of Materials Science 56, 677 (2020).
+[54] G.
+Garcia-Arellano,
+G.
+Tripp´e-Allard,
+L.
+Legrand,
+T. Barisien, D. Garrot, E. Deleporte, F. Bernardot,
+C. Testelin, and M. Chamarro, The Journal of Physical
+Chemistry Letters 12, 8272 (2021).
+[55] R. J. Elliott, Phys. Rev. 96, 266 (1954).
+[56] Y. Yafet, Solid State Physics, edited by F. Seitz and
+D. Turnbull, Vol. 14 (Academic, New York, 1963) p. 2.
+[57] M. Dyakonov and V. Perel, Soviet physics JETP 33, 1053
+(1971).
+[58] M. Z. Maialle, E. A. de Andrada e Silva, and L. J. Sham,
+Phys. Rev. B 47, 15776 (1993).
+[59] T. Amand and X. Marie, Exciton spin dynamics in
+semiconductor quantum wells, in Spin Physics in Semi-
+conductors, edited by M. I. Dyakonov (Springer Berlin
+Heidelberg, Berlin, Heidelberg, 2008) pp. 55–89.
+[60] A. Malinowski, R. S. Britton, T. Grevatt, R. T. Harley,
+D. A. Ritchie, and M. Y. Simmons, Phys. Rev. B 62,
+13034 (2000).
+[61] T. Korn, Physics Reports 494, 415 (2010).
+[62] A. Chernikov, T. C. Berkelbach, H. M. Hill, A. Rigosi,
+Y. Li, B. Aslan, D. R. Reichman, M. S. Hybertsen, and
+T. F. Heinz, Phys. Rev. Lett. 113, 076802 (2014).
+[63] M. M. Ugeda, A. J. Bradley, S.-F. Shi, F. H. da Jornada,
+Y. Zhang, D. Y. Qiu, W. Ruan, S.-K. Mo, Z. Hussain,
+Z.-X. Shen, F. Wang, S. G. Louie, and M. F. Crommie,
+Nature Materials 13, 1091 (2014).
+[64] D. Xiao, G.-B. Liu, W. Feng, X. Xu, and W. Yao, Phys.
+Rev. Lett. 108, 196802 (2012).
+[65] K. F. Mak, K. He, J. Shan, and T. F. Heinz, Nature
+Nanotechnology 7, 494 (2012).
+[66] C. Poellmann, P. Steinleitner, U. Leierseder, P. Nagler,
+G. Plechinger, M. Porer, R. Bratschitsch, C. Sch¨uller,
+T. Korn, and R. Huber, Nature Materials 14, 889 (2015).
+[67] C. Robert, D. Lagarde, F. Cadiz, G. Wang, B. Las-
+sagne, T. Amand, A. Balocchi, P. Renucci, S. Tongay,
+B. Urbaszek, and X. Marie, Phys. Rev. B 93, 205423
+(2016).
+[68] D. Lagarde, L. Bouet, X. Marie, C. R. Zhu, B. L. Liu,
+T. Amand, P. H. Tan, and B. Urbaszek, Phys. Rev. Lett.
+112, 047401 (2014).
+[69] M. M. Glazov,
+T. Amand,
+X. Marie,
+D. Lagarde,
+L. Bouet, and B. Urbaszek, Phys. Rev. B 89, 201302
+(2014).
+[70] H. Zeng, J. Dai, W. Yao, D. Xiao, and X. Cui, Nature
+Nanotechnology 7, 490 (2012).
+[71] P. Dey, L. Yang, C. Robert, G. Wang, B. Urbaszek,
+X. Marie, and S. A. Crooker, Phys. Rev. Lett. 119,
+137401 (2017).
+[72] J. Li, M. Goryca, K. Yumigeta, H. Li, S. Tongay, and
+S. A. Crooker, Phys. Rev. Mater. 5, 044001 (2021).
+[73] C. C. Stoumpos, D. H. Cao, D. J. Clark, J. Young, J. M.
+Rondinelli, J. I. Jang, J. T. Hupp, and M. G. Kanatzidis,
+Chemistry of Materials 28, 2852 (2016).
+[74] A.
+Castellanos-Gomez,
+M.
+Buscema,
+R.
+Molenaar,
+V. Singh, L. Janssen, H. S. J. van der Zant, and G. A.
+Steele, 2D Materials 1, 011002 (2014).

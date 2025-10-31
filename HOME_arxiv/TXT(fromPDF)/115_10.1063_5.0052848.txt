@@ -1,0 +1,1799 @@
+arXiv:2104.14611v1  [cond-mat.mtrl-sci]  29 Apr 2021
+Optical phonon modes, static and high frequency dielectric constants, and
+effective electron mass parameter in cubic In2O3
+Megan Stokey,1, a) Rafał Korlacki,1 Sean Knight,1, 2 Alexander Ruder,1 Matthew Hilﬁker,1 Zbigniew
+Galazka,3 Klaus Irmscher,3 Yuxuan Zhang,4 Hongping Zhao,4 Vanya Darakchieva,2 and Mathias
+Schubert1, 2, 5
+1)Department of Electrical and Computer Engineering, University of Nebraska-Lincoln, Lincoln, NE 68588,
+USA
+2)Terahertz Materials Analysis Center and Center for III-N Technology, C3NiT – Janz`en,
+Department of Physics, Chemistry and Biology (IFM), Link¨oping University, 58183 Link¨oping,
+Sweden
+3)Leibniz-Institut f¨ur Kristallz¨uchtung, 12489 Berlin, Germany
+4)Department of Electrical and Computer Engineering; and Department of Materials Science and Engineering,
+The Ohio State University, Columbus, OH 43210 USA
+5)Leibniz Institut f¨ur Polymerforschung e.V., 01069 Dresden, Germany
+(Dated: 3 May 2021)
+A complete set of all optical phonon modes predicted by symmetry for bixbyite structure indium oxide is reported
+here from a combination of far-infrared and infrared spectroscopic ellipsometry, as well as ﬁrst principle calculations.
+Dielectric function spectra measured on high quality, marginally electrically conductive melt grown single bulk crys-
+tals are obtained on a wavelength-by-wavelength (a.k.a. point-by-point) basis and by numerical reduction of a subtle
+free charge carrier Drude model contribution. A four-parameter semi-quantum model is applied to determine all six-
+teen pairs of infrared-active transverse and longitudinal optical phonon modes, including the high-frequency dielectric
+constant, ε∞= 4.05 ± 0.05. The Lyddane-Sachs-Teller relation then gives access to the static dielectric constant,
+εDC = 10.55 ± 0.07. All experimental results are in excellent agreement with our density functional theory calcu-
+lations and with previously reported values, where existent. We also perform optical Hall effect measurements and
+determine for the unintentionally doped n-type sample a free electron density of n = (2.81 ± 0.01) × 1017 cm−3,
+mobility of µ = (112 ± 3) cm2/(Vs), and an effective mass parameter of (0.208 ± 0.006)me. Density and mobil-
+ity parameters compare very well with results of electrical Hall effect measurements. Our effective mass parameter,
+which is measured independently of any other experimental technique, represents the bottom curvature of the Γ point
+in In2O3 in agreement with previous extrapolations. We use terahertz spectroscopic ellipsometry to measure the quasi-
+static response of In2O3, and our model validates the static dielectric constant obtained from the Lyddane-Sachs-Teller
+relation.
+I.
+INTRODUCTION
+Indium oxide (In2O3) is a sesquioxide of continued interest
+as a part of the broader transparent semiconducting oxide fam-
+ily. In2O3 crystallizes in a stable phase with bixbyite structure
+and cubic crystal symmetry. Similarly to other transparent
+semiconducting oxides, In2O3 is classiﬁed as a wide bandgap
+(2.9 eV) material.1 When doped with tin, In2O3 shows
+high electrical conductivity.2–4 These properties lend In2O3
+to applications in transparent electrodes,5–8 gas sensing,9–11
+nanowire technology,12 high-voltage transistors,13–15 Schottky
+diodes,16,17 and ultra-violet light emitting devices,18–21 for ex-
+ample.
+In2O3 with high structural quality has been produced by
+thin ﬁlm and bulk growth methods. Most existing works study
+thin ﬁlm samples and as a result, most of the applications
+are designed around thin ﬁlm samples as well.22 Bierwagen
+and Speck reported high quality thin ﬁlms grown by plasma-
+assisted molecular beam epitaxy (PAMBE);4,23 Yang et al. re-
+ported similarly high quality thin ﬁlms grown by metal or-
+ganic vapor phase epitaxy;24 and Karim, Feng, and Zhao re-
+ported high quality thin ﬁlms grown by low pressure chem-
+ical vapor deposition,25 for example. Recently, Galazka et
+al.
+developed a high quality single crystal bulk growth
+method, and thereby provided substrates with large surface
+areas for epitaxy.26 The structural quality of epitaxial layers
+a)Electronic mail: mstokey@huskers.unl.edu; http://ellipsometry.unl.edu
+grown, e.g., by PAMBE, is typically higher than for polycrys-
+talline ﬁlms and lower than or comparable to bulk crystals.
+With increasing availability of bulk samples, the possibilities
+for homoepitaxial and heteroepitaxial growth are becoming
+abundant.27,28
+In2O3 is commonly n type and unintentionally doped
+(UID). High quality thin ﬁlms and bulk crystals, UID and
+doped with tin, were investigated recently by Feneberg et al.29
+The free electron density varied from 3.7 × 1017 −1.2 ×
+1021 cm−3 and can be well controlled. Electrically insulating
+high quality single crystalline In2O3 has not yet been reported.
+The effective conduction band mass parameter in In2O3 has
+been widely studied. Reported effective mass values range
+from 0.13-0.55 m0 (m0 is the free electron mass),29–32 with
+rather large spread among results from experimental and the-
+oretical investigations.
+Experimental results were reported
+from combined electrical Hall effect and Seebeck effect
+measurements,30–32 combined electrical Hall effect and in-
+frared ellipsometry measurements,29 and angle resolved pho-
+toemission measurements.33,34 Many reports of conduction
+band mass parameters exist which were obtained from ﬁrst
+principle calculations in various approximations.35–39 Perhaps
+the most accurate theory result was provided by Fuchs and
+Bechstedt37 using ﬁrst principles density functional theory
+(DFT) calculations with nonlocal potential resulting from a
+HSE03 hybrid functional and quasi-particle correction. For
+the bcc polymorph, the effective electron mass at the Γ point
+is almost direction independent and amounts to 0.22 me using
+the HSE03 functional.37 The conduction band is nonparabolic,
+with smaller nonparabolicity than in InN but remains non-2
+negligible.40 Fuchs and Bechstedt gave an approximation for
+the conduction band
+EC (k) = 1
+2
+
+Eg +
+r
+E2g + 4
+me
+m⋆−1
+
+EkEg
+
+,
+(1)
+where Ek = (ℏ2/2me)k2 and the direct bandgap energy Eg
+is obtained from kp calculations. The nonparabolicity of the
+effective mass, i.e., its k dependence, can be determined by
+matching calculated band structure data against Eq. 1, which
+permits one to obtain m⋆(k) when considering that the inverse
+of the second derivative of the left side in Eq. 1 is related to
+the k-dependent effective mass parameter
+m⋆(k)
+me
+=
+
+1 +
+me/m⋆−1
+1 + 4(me/m⋆−1)EkEg
+−1
+,
+(2)
+where m⋆denotes the effective mass at Γ.37 According
+to Fuchs and Bechstedt37 the effective mass raises to ap-
+proximately 0.3 me for free electron densities exceeding
+1020 cm−3 in agreement with experimental investigations.
+Feneberg et al.
+used a method combining infrared ellip-
+sometry and electrical Hall effect measurements, introduced
+by Kasic et al.41 for GaN thin ﬁlms, and reported effective
+mass parameters for n type In2O3 bulk samples and epitax-
+ial thin ﬁlms with free electron densities ranging from 5 ×
+1018 . . . 1021cm−3.29 A strong variation of the effective mass
+parameter was observed with carrier density, from 0.18 me for
+the lowest detectable carrier density to approximately 0.44 me
+at 1021cm−3, and explained by near Γ point conduction band
+nonparabolicity. A similar conduction band nonparabolicity
+was observed previously for wurtzite structure InN, where the
+effective mass varies from 0.05 me for perpendicular polariza-
+tion and 0.037 me for parallel polarization at the band bottom
+to 0.15 me for both polarization directions when approaching
+free electron densities of 1020cm−3.40 A simpliﬁed approxi-
+mation for the free electron density n dependence of the con-
+duction band mass m⋆was reported by Feneberg et al.
+m⋆(n) =
+q
+m⋆2(0) + 2Cℏ2m⋆(0)(3π2n)
+2
+3 ,
+(3)
+and matching experimental data resulted in the zero density
+effective mass parameter m⋆(0) = (0.18±0.02) m0 and non-
+parabolocity parameter C = 0.5 ± 0.02 eV−1. The zero den-
+sity effective mass value extrapolated using Eq. 3 is in very
+good agreement with the Γ point effective mass from HSE03
+results in Fuchs and Bechstedt.
+The electrical mobility decreases with increasing carrier
+concentration due to impurity scattering and electron-electron
+interactions.
+In2O3 single crystals grown from melt have
+been studied systematically using different heat treatments
+at temperatures from 200◦C to 1400◦C.42 Annealing under
+non-reducing conditions lead to free electron densities in the
+1017 cm−3 range. Typical electron mobility parameters were
+reported between 140-180 cm2/(Vs).
+Such annealed sam-
+ples revealed transmittance spectra with sharp absorption edge
+at 440 nm wavelength with high transparency in the visible
+range.42 A new crystal growth technique, “Levitation-Assisted
+Self-Seeding Crystal Growth Method” with subsequent an-
+nealing in O2-containing atmosphere resulted in improved
+electron mobility of 190 cm2/(Vs) in the low 1017 cm−3 free
+electron density range.43 Comparison between mobility ob-
+tained from electrical Hall effect measurements and broaden-
+ing parameter showed very good agreement between free elec-
+tron mobility determined by infrared ellipsometry and electri-
+cal Hall effect measurements. It is noted that in this com-
+parison performed by Feneberg et al.,29 electrical mobility is
+obtained by the same measurement which determines the elec-
+tron density, and which in turn was used there to determine the
+effective mass.
+In2O3 is known to develop a surface charge accumulation
+similarly to indium nitride.44–46 It has been posed that this
+is caused by oxygen vacancies.47 Additionally, Scherer et al.
+showed that bulk In2O3 crystals cleaved in ultra-high vacuum
+did not show any electron accumulation layer.48 While this
+effect is necessary for applications in gas sensing, it hinders
+performance of transistor and diode technologies and must be
+controlled.
+An early vibrational study by White and Keramidas of in-
+frared and Raman spectra from powder In2O3 revealed lim-
+ited sets of mode parameters. Only 11 out of the 16 transverse
+optical (TO) mode frequencies and none of the longitudinal
+optical (LO) mode frequencies were reported.49 Hamberg and
+Granqvist, in a large study of sets of indium oxide thin ﬁlms
+obtained by evaporation, reported on similar subsets of data.50
+Analysis of reﬂectance measured on pellet samples by So-
+batta et al. added the LO mode parameters for the 11 TO mode
+parameters identiﬁed earlier.51 More recently, thin-ﬁlm sam-
+ples have been studied and a complete set of Raman modes
+have been described.52,53 Infrared ellipsometry was used by
+Feneberg et al. on a large set of samples in the spectral range
+above 300 cm−1. Highly accurate TO mode frequencies for a
+subset of 8 modes from the 11 modes already characterized by
+Sobatta et al. and White and Keramidas were reported. The
+LO mode parameters were not determined and the focus was
+directed to determine Drude model parameters for the differ-
+ently doped samples in order to determine the density depen-
+dence of the effective mass parameters.
+Phonon mode parameters obtained from ﬁrst principles cal-
+culations are not available in the literature.
+Hamberg and Granqvist determined the static dielectric
+constant (εDC ≈8.9 −9.5) and the high frequency dielec-
+tric constant (ε∞= 4) from analysis of broadband reﬂec-
+tion and transmission data obtained from polycrystalline thin
+ﬁlms deposited by e-beam evaporation.50 No other experi-
+mental results for the static dielectric constant appears to be
+available.
+Typical capacitance measurement conﬁgurations
+for radio frequency determination of the static dielectric con-
+stant require highly insulating material which has not been
+grown yet. Therefore, capacitance measurements, e.g., as re-
+ported for insulating β-Ga2O3 are not available for In2O3.54
+Zhang et al. obtained εDC = 9.05 from DFT calculations.34
+Walsh et al. determined εDC = 9.0 using interatomic poten-
+tial calculations.55 The high frequency dielectric constant is
+mostly agreed upon both by experiment (e.g., Feneberg et al.:
+4.08 ± 0.02)29 and theory (e.g., Fuchs and Bechstedt: 4.0).37
+With the Lyddane-Sachs-Teller relationship,56
+εDC = ε∞
+N
+Y
+l=1
+ω2
+LO,l
+ω2
+TO,l
+,
+(4)
+and knowledge of all infrared active transverse (TO; ωTO) and
+longitudinal optical (LO; ωTO) phonon modes and accurate
+value of ε∞, εDC can be determined. However, as discussed
+above only 11 out of the N = 16 phonon mode pairs, ωTO,l
+and ωLO,l, are known so far, while for l = 12, . . . , 16 neither3
+ 
+(a) 
+(b)
+FIG. 1. (a) Conventional unit cell of In2O3 and the corresponding (b)
+primitive cell described in the text. Large (gray) spheres represent
+indium atoms and the smaller (red) spheres represent oxygen atoms.
+experimental nor theoretical results seem to exist.
+In this work, we report a combined terahertz, far-infrared,
+and infrared spectroscopic ellipsometry, optical Hall effect,
+and density functional theory investigation.
+We perform
+and analyze measurements on a high quality, unintention-
+ally doped, marginally electrically conductive single crys-
+tal of cubic In2O3. We obtain and report the static dielec-
+tric constant, the optical phonons, and the free charge carrier
+properties. We observe and determine all remaining TO and
+LO phonon mode parameters from our ellipsometry measure-
+ments. We also report the complete set of zone center op-
+tical phonon modes from our theoretical investigation. We
+report the static dielectric constant from the full set of opti-
+cal phonon modes and the Lyddane-Sachs-Teller relation. We
+further demonstrate excellent agreement with our LST extrap-
+olation by comparing model-calculated with measured THz
+ellipsometry measurements. Our optical Hall effect measure-
+ments reveal density, n, mobility, µ, and effective mass pa-
+rameters which determine an independently measured exper-
+imental value closest to the zero density effective mass pa-
+rameter, m⋆(0). We compare our results where available with
+previous reports, and we compare and discuss our optical Hall
+effect with electrical Hall effect results.
+II.
+THEORY
+A.
+Crystal Structure and Symmetry
+In2O3 crystallizes in the cubic bixbyte structure (space
+group No. 206, Ia¯3). The primitive cell contains 40 atoms,
+which results in the total of 117 optical phonon modes, which
+at the Brillouin-zone center belong to the irreducible repre-
+sentation:
+Γopt = 4Ag + 5Au + 4Eg + 5Eu + 14Tg + 16Tu.
+E and T modes are double- and triple-degenerate, respec-
+tively. Modes Ag, Eg, and Tg (g - gerade) are Raman-active;
+modes Tu are IR-active (and the focus of the present study);
+and modes Au and Eu (u - ungerade) are silent.
+B.
+Density Functional Theory
+DFT calculations were performed by a plane wave DFT
+code Quantum ESPRESSO (QE).57 We used the local density
+approximation exchange-correlationfunctional of Perdew and
+Wang (PW)58,59 and optimized norm-conserving Vanderbilt
+(ONCV) scalar-relativistic pseudopotentials.60 As the start-
+ing point, we used structural parameters from the Materi-
+als Project.61,62 [doi: 10.17188/1198812] The initial structure
+was ﬁrst relaxed to force levels less than 10−6 Ry Bohr−1.
+A regular shifted 2 × 2 × 2 Monkhorst-Pack grid was used
+for sampling of the Brillouin zone.63 A convergence thresh-
+old of 1 × 10−12 Ry was used to reach self-consistency with
+the electronic wavefunction cutoff of 120 Ry. The relaxed cell
+was used for subsequent phonon calculations. The phonon
+frequencies, Born effective charges, and IR intensities were
+computed at the Γ-point of the Brillouin zone using density
+functional perturbation theory,64 as implemented in the Quan-
+tum ESPRESSO package, with the convergence threshold for
+self-consistency of 1 × 10−18 Ry. The parameters of the TO
+modes were obtained from the dynamical matrix computed
+at the Γ-point. The parameters of the LO modes were ob-
+tained by setting a small displacement from the Γ-point in or-
+der to include the long-range Coulomb interactions of Born
+effective charges in the dynamical matrix (the so called non-
+analytical terms). Mode displacement patterns were rendered
+using XCrysDen65 running under Silicon Graphics Irix 6.5.
+C.
+Spectroscopic Ellipsometry
+Spectroscopic ellipsometry is a non-invasive and non-
+destructive measurement technique which measures the
+change in polarization of light (˜ρ) caused by interaction with
+the sample. In reﬂection ellipsometry this change is described
+by
+˜ρ = ˜rp
+˜rs
+= tan(Ψ)ei∆,
+(5)
+where ˜rp and ˜rs are the Fresnel reﬂection coefﬁcients for the
+light polarized parallel (p) to and perpendicular (s) to the plane
+of incidence.
+The rotation of the light’s polarization state
+about the axis of propagation is deﬁned as Ψ and the rela-
+tive phase shift between the parallel and perpendicular com-
+ponents is deﬁned as ∆. Hence, for each wavenumber, angle
+of incidence, and sample position a (Ψ, ∆) pair is measured.
+D.
+Four-Parameter Semi-Quantum Model
+To ﬁt for the parameters describing each phonon mode
+found in the dielectric function, the four-parameter semi-
+quantum (FPSQ) model ﬁrst described by Gervais and Periou
+can be used.66,67 This model allows one to ﬁt directly for TO
+and LO mode frequencies, ωTO,l and ωLO,l, and the determi-
+nation of their independent broadening parameters, γTO,l and4
+γLO,l, respectively
+ε = ε∞
+N
+Y
+l=1
+ω2
+LO,l −ω2 −iωγLO,l
+ω2
+TO,l −ω2 −iωγTO,l
+,
+(6)
+and ε∞is the high-frequency dielectric constant.67 The prod-
+uct runs over all N
+= 16 phonons (TO-LO pairs) with
+Tu symmetry. The Lyddane-Sachs-Teller (LST) relation56 in
+Eq. 4 then permits calculation of the static dielectric constant,
+using all other parameters in Eq. 6 determined from analysis
+of the wavenumber-by-wavenumber obtained ε.
+E.
+Drude Free Charge Carrier Model
+The FPSQ model is further modiﬁed to account for free
+charge carrier contributions via the addition of a Drude term:67
+εFC = −
+ω2
+p
+ω(ω + iγp),
+(7)
+where ωp is the plasma frequency
+ω2
+p =
+−e2n
+ε∞ε0m⋆,
+(8)
+and where n, m⋆, and γp describe the free charge carrier vol-
+ume density, the effective mass, and the plasma broadening
+parameter, respectively. From the plasma broadening param-
+eter, the optical mobility parameter, µ, can be found via:
+γp =
+e
+m⋆µ.
+(9)
+F.
+Optical Hall Effect
+The optical Hall effect experiment and analysis procedure
+is summarized by Schubert et al.68 Derived from the equation
+of motion, the dielectric function component for free charge
+carriers under the effect of an external magnetic ﬁeld can be
+written as follows:
+ε(ω) = ω2
+p
+
+−ω2I −iωγ + iω
+
+
+0
+b3
+−b2
+−b3
+0
+b1
+b2
+−b1
+0
+
+ωc
+
+
+−1
+.
+(10)
+Here, ωc is the cyclotron frequency
+ωc = qB
+m⋆.
+(11)
+Note that the signature of ωc depends on the type of the free
+charge carriers and hence, the signs of the optical Hall effect
+data reveal n or p type conductivity.68 The external magnetic
+ﬁeld is given in the ellipsometer coordinate system (x,y,z) as
+B = B(b1, b2, b3) where B = |B|. The optical Hall effect ex-
+periment gives access to the cyclotron frequency, therefore, if
+plasma frequency and broadening parameters are known from
+zero-ﬁeld ellipsometry measurements, Ns, m⋆, and µ can all
+be determined independently from each other, and without use
+of an additional separate experiment, e.g., an electrical Hall
+effect measurement. One further has the opportunity to com-
+pare density and mobility parameters obtained from optical
+and electrical techniques. It is noteworthy to point out the
+very different mechanisms of transport which are tested in an
+optical and in an electrical measurement. For a traditional
+electrical Hall conﬁguration, for example, transport and scat-
+tering phenomena are collected over macroscopic distances
+across the sample; while for optical measurements, the lat-
+eral displacement of the free charge carriers is on the order
+of nanometers. In an ideal crystal without defects, both tech-
+niques will determine very similar if not the same results.
+In these optical Hall effect experiments, the ellipsometry
+data are recorded using the Mueller matrix convention as op-
+posed to the Ψ and ∆convention for the zero magnetic ﬁeld
+measurements. The Mueller matrix formalism allows accurate
+capture of the small optical birefringence induced by the op-
+tical Hall effect which are then observable in the off-diagonal
+Mueller matrix elements. The Mueller matrix is used to de-
+scribe the sample interaction with incoming light described by
+a Stokes vector as follows:
+
+
+
+S0
+S1
+S2
+S3
+
+
+
+output
+=
+
+
+
+M11 M12 M13 M14
+M21 M22 M23 M24
+M31 M32 M33 M34
+M41 M42 M43 M44
+
+
+
+
+
+
+S0
+S1
+S2
+S3
+
+
+
+input
+.
+(12)
+Here, the elements of the Stokes vector are deﬁned as S0 =
+Ip + Is, S1 = Ip −Is, S2 = I45 −I−45, S3 = Iσ+ −
+Iσ−. In this deﬁnition, Ip, Is, I45, I−45, Iσ+, and Iσ−are
+the intensities for the p-, s-, +45◦, -45◦, right handed, and left
+handed circularly polarized light components, respectively.69
+III.
+EXPERIMENT
+A.
+Crystal Growth
+The investigated crystal sample was prepared from a bulk
+crystal grown from the melt by a novel technique ”Levitation-
+Assisted Self-Seeding Crystal Growth Method,” as described
+in detail elsewhere.26 The free electron concentration was
+determined from electrical Hall measurements to be 2.65 ×
+10−17 cm−3, and the Hall electrical mobility is 158 cm2/(Vs)
+(resistivity 0.15 Ωcm) The crystal with surface area of 10 ×
+10 mm2 and thickness of 500 µm with (111) surface orienta-
+tion was annealed in air at temperatures of 1000◦C for 40 h.
+Processes for annealing and control of electron density have
+been reported previously.26 The full width at half maximum
+(FWHM) of the rocking curves of (222) reﬂexes was ≈30 arc
+sec. The investigated crystal samples were epi-ready polished.
+The sample was then investigated by ellipsometry and optical
+Hall effect without further treatment.
+B.
+Far-infrared and Infrared Ellipsometry
+The spectra were measured at room temperature in ambi-
+ent conditions on two different ellipsometer instruments. The
+infrared spectral range (650 - 3000 cm−1) was measured on
+a commercial variable angle of incidence spectroscopic ellip-
+someter (IR-VASE Mark-II; J.A. Woollam Co., Inc.). The far-
+infrared spectral range (50 - 650 cm−1) was measured on an
+in-house built FIR-VASE instrument.70 Measurements were
+performed at Φa = 50◦, 60◦, and 70◦angles of incidence.
+Multiple azimuthal rotations were not necessary, though they5
+were performed to ensure the cubic symmetry of the optical
+response. Only one azimuthal rotation is included in this anal-
+ysis since all rotational data are in excellent agreement with
+each other. Exemplary experimental data in the FIR range is
+shown in Fig. 7.
+C.
+Optical Hall Effect Experiment
+The same sample was then mounted in our in-house opti-
+cal Hall effect setup as described by K¨uhne et al.70 Due to
+the window setup of the superconducting magnet, the angle
+of incidence is limited to only Φa= 45◦. The optical Hall ef-
+fect was measured in the far-infrared and in the infrared range.
+Measurements were taken at zero ﬁeld, at B = +7 T, and at
+B = −7 T with the sample maintained at room temperature
+throughout the measurements. The magnetic ﬁeld was ori-
+ented parallel to the incoming beam with the magnetic ﬁeld
+strength B⊥= B/
+√
+2 perpendicular to the sample surface for
+all measurements.
+D.
+Terahertz Ellipsometry
+To further investigate the dielectric constants and free
+charge carrier contributions at quasi-static conditions, el-
+lipsometry was measured in the THz spectrum from 670-
+900 GHz. The THz ellipsometer is an in-house built instru-
+ment operating in the rotating analyzer conﬁguration allowing
+the measurement of the upper left 3 × 3 Mueller matrix ele-
+ments. Further information on the instrument can be found in
+K¨uhne et al.70 Data from this instrument is shown in Fig. 10.
+IV.
+RESULTS
+A.
+Density Functional Theory Calculations
+The parameters of the DFT-calculated TO and LO phonon
+modes are listed in Table I and labelled by Tu −i, i =
+1, . . . 16. Renderings of the atomic displacement pattern for
+the TO modes are shown in Fig. 2 (modes Tu-1 to Tu-4),
+Fig. 3 (Tu-5 to Tu-8), Fig. 4 (Tu-9 to Tu-12), and Fig. 5 (Tu-
+13 to Tu-16). Because every Tu mode is triple degenerate,
+three eigenvectors with labels a, b, and c are shown for every
+phonon mode. The corresponding transition dipoles for each
+such triplet are mutually orthogonal. We note that we observe
+16 mode pairs as predicted by group theory. We also note
+that the intensities of the TO and LO modes are very small
+for modes 13-16 which may explain why these modes remain
+undetected thus far.
+B.
+Phonon Mode Analysis from Ellipsometry Data
+To perform this analysis, WVASE32TM (J.A. Woollam Co.,
+Inc.) software was utilized. We assume no ﬁnite nanometer-
+scale surface roughness as such roughness does not contribute
+to the ellipsometric data in the infrared and far-infrared spec-
+tral regions.67 It is worth noting here that if a surface accumu-
+lation layer had been present on this sample, it was not observ-
+able in optical Hall effect measurements nor in our zero ﬁeld
+spectroscopic ellipsometry measurements. Initial analysis is
+ 
+Tu-1 (a)                     Tu-1 (b)                     Tu-1 (c) 
+Tu-2 (a)                     Tu-2 (b)                     Tu-2 (c) 
+Tu-3 (a)                     Tu-3 (b)                     Tu-3 (c) 
+Tu-4 (a)                     Tu-4 (b)                     Tu-4 (c) 
+FIG. 2. Rendering of atomic displacement patterns (phonon eigen-
+vectors) for IR-active TO phonon modes Tu-1 to Tu-4. Note that LO
+mode displacements, except for different magnitude, are equivalent
+to their corresponding TO pair partner because of the cubic crystal
+symmetry.
+ 
+Tu-5 (a)                     Tu-5 (b)                     Tu-5 (c) 
+Tu-6 (a)                     Tu-6 (b)                     Tu-6 (c) 
+Tu-7 (a)                     Tu-7 (b)                     Tu-7 (c) 
+Tu-8 (a)                     Tu-8 (b)                     Tu-8 (c) 
+FIG. 3. Same as Fig. 2 for Tu-5 to Tu-8.6
+TABLE I. Parameters for infrared and far-infrared active phonon
+modes obtained from DFT calculations in this work. Frequencies,
+ωTO and ωLO, and intensities, A2
+TO and A2
+LO, respectively, of TO
+and LO modes are presented for all Tu modes. Values for ε∞and
+εDC are determined as 4.735, and 10.74, respectively, using the LST
+relationship.
+Mode
+ωTO
+ωLO
+A2
+TO
+A2
+LO
+(cm−1)
+(cm−1)
+( (D/ ˚A)2
+amu )
+( (D/ ˚A)2
+amu )
+Tu-1
+588.61
+611.35
+6.284
+94.215
+Tu-2
+553.45
+569.28
+5.686
+33.028
+Tu-3
+527.83
+540.15
+6.272
+17.549
+Tu-4
+460.07
+503.84
+0.075
+46.718
+Tu-5
+409.12
+460.01
+48.867
+0.060
+Tu-6
+386.87
+394.19
+6.593
+1.829
+Tu-7
+363.37
+383.47
+75.398
+0.888
+Tu-8
+330.41
+339.21
+37.789
+0.919
+Tu-9
+310.89
+312.26
+6.310
+0.141
+Tu-10
+260.02
+260.09
+0.139
+0.011
+Tu-11
+214.71
+216.00
+1.816
+0.217
+Tu-12
+171.00
+171.29
+0.297
+0.042
+Tu-13
+152.81
+152.85
+0.038
+0.006
+Tu-14
+148.44
+148.48
+0.038
+0.006
+Tu-15
+123.27
+123.32
+0.031
+0.005
+Tu-16
+100.86
+100.86
+< 10−4
+< 10−4
+ 
+Tu-9 (a)                     Tu-9 (b)                     Tu-9 (c) 
+Tu-10 (a)                   Tu-10 (b)                  Tu-10 (c) 
+Tu-11 (a)                   Tu-11 (b)                  Tu-11 (c) 
+Tu-12 (a)                   Tu-12 (b)                  Tu-12 (c) 
+FIG. 4. Same as Fig. 2 for Tu-9 to Tu-12.
+done using a wavenumber-by-wavenumber approach where a
+model dielectric function is allowed to ﬁt for each wavenum-
+ber independently to ﬁnd a best-match model of the real and
+imaginary dielectric values. In a subtle modiﬁcation to this
+approach, we also added a free charge carrier contribution to
+the model dielectric function, according to Eq. 7. This step is
+performed to reduce the otherwise small increase in the imag-
+inary part of ε towards the far-infrared spectral range, which
+is caused by the absorption of the low density free electrons
+present in our sample. The resulting Drude model param-
+ 
+Tu-13 (a)                   Tu-13 (b)                  Tu-13 (c) 
+Tu-14 (a)                   Tu-14 (b)                  Tu-14 (c) 
+Tu-15 (a)                   Tu-15 (b)                  Tu-15 (c) 
+Tu-16 (a)                   Tu-16 (b)                  Tu-16 (c) 
+FIG. 5. Same as Fig. 2 for Tu-13 to Tu-16.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:DYHQXPEHUFP
+
+
+
+DϭϮ
+Dϯϯ
+ϱϬ
+ϲϬ
+ϳϬ
+ϳϬ
+ϲϬ
+ϱϬ
+FIG. 6.
+Experimental (green open symbols), wavenumber-by-
+wavenumber best-match model (red solid line) calculated M12 and
+M33. Vertical blue solid lines indicate TO modes, and blue dashed
+lines indicate LO modes identiﬁed in this work. Note that the zero-
+valued off-diagonal elements of the Mueller matrix are excluded as
+well as elements M21 and M22 as they show no additional informa-
+tion.
+eters will be discussed further below. The resulting dielec-
+tric function with added free charge carrier contributions lead
+to the therefrom calculated Mueller matrix data which excel-
+lently match with the experimental data in Fig. 6. Selected ex-
+perimental and best-model calculated data in the far-infrared
+spectral region emphasizing small yet distinct signatures of
+phonon modes unidentiﬁed previously in the long wavelength
+range are shown in Fig. 7.
+Figure 8 summarizes the wavenumber-by-wavenumber
+best-model parameter ε(ω) and Fig. 9 emphasises the far-
+infrared spectral region. We were then able to best-model
+match the dielectric function using the FPSQ model in Eq. 6.7
+
+
+
+
+
+
+
+:DYHQXPEHUFP
+
+ Dϯϯ
+ϳϬ
+ϲϬ
+ϱϬ
+FIG. 7. Same as Fig. 6 for M33 with the far-infrared spectral region
+expanded emphasizing the spectral range of modes 10-16.
+Implementing sixteen TO-LO pair parameters and ε∞we
+were able to ﬁnd excellent agreement between the best-match
+model and the wavenumber-by-wavenumberproduced dielec-
+tric function, as shown in Fig. 8. Note that we present the
+imaginary parts of ε and ε−1 since these immediately reveal
+frequency and broadening of the TO and LO mode parame-
+ters, as one can assess from Eq. 6. We note further that small
+additional features in the far-infrared range, Fig. 9, are most
+likely due to noise increasing rapidly for wavenumbers below
+100 cm−1 towards the THz range, best seen in Fig. 7. This
+noise is due to the loss of detected intensity in the far-infrared
+probe beam. All best-match model parameters and uncertain-
+ties are summarized in Table II. We identify all mode pairs
+predicted by our DFT calculations and their broadening pa-
+rameters. We note that the generalized Lowndes condition is
+fulﬁlled, where the sum of all LO broadening parameters is
+larger or equal to the sum of all TO broadening parameters.41
+While several modes are small in the lower spectral range,
+they remain detectable and were able to be ﬁt for with lim-
+ited interference. All modes are indicated in Fig. 8. Values
+which were range limited are designated in Table II with an
+asterisk and as a result have very large uncertainty. This can
+be attributed to the small magnitude of the modes (seen in the
+DFT analysis as well) and growing noise in the lower spectral
+range.
+Also shown in Table II are previously reported TO phonon
+frequencies as found by Feneberg et al.29 and TO and LO
+mode frequencies as observed by Sobotta et al.51 Our val-
+ues are in excellent agreement with the eight TO modes deter-
+mined by Feneberg et al., except for the small mode Tu −4,
+which was not observed there. Also, Feneberg et al.
+did
+not determine any LO mode parameters, and modes below
+300 cm−1remained inaccessible. The phonon modes reported
+by Sobotta et al. is the most comprehensive data set to date,
+and is in reasonable agreement with our results, except for the
+lack of the far-infrared modes. We note that speciﬁcally LO
+modes are inherently difﬁcult to obtain from reﬂectance data
+of pellets and low quality samples which may explain some
+of the discrepancies between data of Sobotta et al. and our
+results. Modes 12-16 remained unobserved previously and
+can only be compared against our own DFT calculations. We
+note the overall very good agreement between our experimen-
+
+
+
+
+
+
+
+
+
+
+
+
+
+:DYHQXPEHUFP
+
+
+
+
+
+
+
+E
+D
+,P^İ`
+,P^İ`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FIG. 8. Wavenumber-by-wavenumber best-match model calculated
+(green solid lines) and best-match model dielectric function calcu-
+lated (red solid line) showing the imaginary (a) and innverse imagi-
+nary (b) parts of the dielectric function. Vertical blue solid lines in-
+dicate TO modes and blue dotted lines indicate LO modes identiﬁed
+in this work.
+tal and DFT results.
+C.
+Free Electron Parameters
+The free electron parameters were characterized via opti-
+cal Hall effect measurements and compared to electrical Hall
+effect results. Data are shown in Fig. 11. We note that for
+analysis of the optical Hall effect data only one more param-
+eter is needed, ωc. The other two parameters, ωp and γp, are
+already determined during the phonon mode analysis step by
+matching the zero ﬁeld ellipsometry parameters to the best-
+model dielectric function. As discussed previously,68 the op-
+tical Hall effect signatures are proportional to ωc, and hence,
+combining zero ﬁeld measurements with optical Hall effect
+measurements provides the third parameter from experiment.
+This then leads to determination of n, µ and m⋆. Here we ﬁnd
+n = (2.81 ± 0.01) × 1017 cm−3 in excellent agreement with
+the electrical Hall effect density of n = 2.65 × 1017) cm−3.
+These values are also in agreement with those reported by
+Galazka on similar samples in 2014.43 Due to this relatively8
+TABLE II. FPSQ model parameters for TO and LO modes obtained from best-match model dielectric function analysis. ε∞and εDC are
+determined as 4.05 and 10.55 using the LST relationship. Included are data obtained by Feneberg et al.29 and Sobottoa et al.51 observed by
+infrared ellipsometry and combined far-infrared and infrared reﬂectance, respectively. All numericals in units of cm−1.
+ωTO
+ωLO
+Mode
+This work
+Ref. 29
+Ref. 51
+This work
+Ref. 51
+γTO
+γLO
+Tu-1
+594.9 ± 0.7
+595.5
+612
+624 ± 0.3
+625
+8.83 ± 0.4
+16 ± 0.5
+Tu-2
+561.0 ± 0.9
+560.5
+570
+579.1 ± 0.3
+578
+8.59 ± 0.7
+10.0 ± 0.8
+Tu-3
+534.0 ± 1.3
+534.1
+542
+549.1 ± 5.9
+548
+11.0 ± 0.9
+14.7 ± 0.9
+Tu-4
+470.0 ± 0.1
+-
+489
+518.0 ± 0.6
+513
+21 ± 0.2
+12*
+Tu-5
+408.2 ± 0.2
+408.0
+409
+470.1 ± 0.2
+-
+8.0*
+23.2 ± 0.1
+Tu-6
+384.7 ± 0.1
+386.2
+380
+394.0 ± 0.1
+391
+5.4 ± 0.2
+8.5 ± 0.1
+Tu-7
+362.2 ± 0.2
+361.7
+362
+383.2 ± 0.1
+381
+5.6 ± 0.3
+8.5 ± 0.2
+Tu-8
+327.3 ± 0.1
+327.3
+322
+337.4 ± 0.1
+352
+5.3 ± 0.2
+6.9 ± 0.1
+Tu-9
+309.7 ± 1.2
+307.3
+301
+310.4 ± 1.1
+318
+6.5 ± 1.1
+5.4 ± 0.1
+Tu-10
+260.2 ± 5.3
+-
+245
+260.9 ± 4.7
+245
+16.7 ± 0.1
+15.6 ± 0.1
+Tu-11
+216.3 ± 0.4
+-
+205
+217.6 ± 0.2
+224
+3.0 ± 0.4
+2.8 ± 0.4
+Tu-12
+172 ± 0.9
+-
+-
+172.4 ± 0.1
+-
+4.2 ± 0.9
+4.1 ± 0.2
+Tu-13
+154.2 ± 1.1
+-
+-
+154.4 ± 1.1
+-
+3.5 ± 1.2
+3.5 ± 0.4
+Tu-14
+150.5 ± 1.2
+-
+-
+150.6 ± 2.1
+-
+2.1 ± 0.9
+2.0 ± 0.2
+Tu-15
+126.4 ± 1.7
+-
+-
+126.7 ± 0.3
+-
+6.9 ± 2.4
+6.8 ± 2.4
+Tu-16
+99.0 ± 0.2
+-
+-
+99.1 ± 0.2
+-
+2.3 ± 0.8
+2.3 ± 0.8
+low carrier density, the optical Hall effect data signatures are
+markedly small.
+Nonetheless, our best-match model pro-
+vides a consistent ﬁt.
+We also obtain the effective mass
+m⋆= (0.208 ± 0.006) m0 which is very similar to the zero
+density value, m⋆(0) = 0.18 m0 reported by Feneberg et al.29
+This value was obtained from matching a nonparabolic band
+approximation model for the effective mass parameter to a set
+of samples from which effective mass and free electron den-
+sity parameters were determined. This data set and best-match
+function m⋆(n) is reproduced in Fig. 12, where our result is
+included. The effective mass measured in our work by opti-
+cal Hall effect corresponds to one order of magnitude lower
+electron density than reached by Feneberg et al., and is thus
+closer to the zero density value. Within our error bar, our
+value matches excellently with the zero density effective mass
+extrapolated previously. We also ﬁnd the free electron mobil-
+ity, µ = (112 ± 3) cm2/(Vs) from optical Hall effect which is
+slightly lower than the value of 158 cm2/(Vs) obtained from
+electrical Hall effect, which is also within the range reported
+by Galazka, Uecker, and Fornari on similar oxygen annealed
+samples (130 −190 cm2/(Vs)).43
+D.
+Static and high frequency dielectric constants
+In order to determine the high frequency dielectric con-
+stant, we extended the spectral range for our wavelength-
+by-wavelength analysis far above the phonon mode range,
+to 3000 cm−1. At frequencies far above the phonon modes
+yet far enough below the onset of excitonic and band-to-band
+transitions so that dispersion introduced by the latter is negli-
+gible, a good approximation for ε∞can be found. Our analy-
+sis resulted in 4.05 ± 0.05. This is in good agreement with our
+DFT predicted value (4.128) as well as the value previously
+reported by Feneberg et al. (4.08).29 Using the LST relation-
+ship, the static dielectric constant, εDC, can then be calculated
+since we have determined the complete set of phonon modes.
+With the values listed in Table II we obtain here 10.55 ± 0.07.
+This value is in agreement with our DFT value of 10.74. We
+further conducted ellipsometry measurements at THz frequen-
+cies in order to directly evaluate the static dielectric permittiv-
+ity parameters. While the free carrier concentration is small
+(the smallest for which effective mass parameters have been
+reported so far), due to the rather thick sample, our sample
+is opaque in the THz range. Hence, THz measurements can
+only be made in reﬂection and no substrate interferences can
+be detected. Such Fabry-Perot interference fringes increase
+sensitivity to the quasi-static DC permittivity, as demonstrated
+recently for β-Ga2O3.71 Figure 10 depicts measured and best-
+model calculated THz Mueller matrix data measured at 50◦
+angle of incidence.
+The best-model calculated data were
+obtained without further parameter variations only using the
+static dielectric constant and the Drude model in Eq. 7 contri-
+butions with the parameters for n, µ, and m⋆from optical Hall
+effect as discussed above. The very good agreement between
+measured and model-calculated THz Mueller matrix data is
+indicative of the correctness of the static DC permittivity for
+In2O3, which has not been determined from experiment at DC
+or quasi-static frequencies previously.
+V.
+CONCLUSIONS
+By using a combined approach of spectroscopic ellipsom-
+etry, DFT calculations, and optical Hall effect measurements
+we are able to provide a thorough investigation of the elec-
+trical and optical phonon mode properties of In2O3. All six-
+teen TO-LO pairs have been identiﬁed and their respective
+broadening parameters quantiﬁed. These values ﬁnd excel-
+lent agreement with the limited sets of phonon mode informa-
+tion previously reported, and we introduce phonons in the far-
+infrared spectrum not detected thus far. Also our measured
+phonon modes are in excellent agreement with the results
+of our DFT calculations. Furthermore, by means of optical
+Hall effect measurements, we determine the effective electron
+mass at the lowest yet detected free electron density, which is
+in excellent agreement with the zero density effective electron
+mass in In2O3 predicted previously from extrapolation.9
+
+
+
+
+
+
+
+
+
+
+
+:DYHQXPEHUFP
+
+
+
+
+E
+D
+,P^İ`
+,P^İ`
+
+
+
+
+
+
+
+
+
+
+
+
+FIG. 9. Same as Fig. 8 with the far-infrared spectral region expanded
+emphasizing the spectral range of modes 11-16.
+0.70
+0.75
+0.80
+0.85
+0.90
+-1.0
+-0.5
+0.0
+0.5
+1.0
+Φa= 50°
+Mij
+Photon Energy (THz)
+12
+13
+21
+22
+23
+ M 31
+32
+33
+ M
+ M
+ M
+ M
+ M
+ M
+ M
+FIG. 10. Zero-magnetic-ﬁeld THz Mueller matrix ellipsometry data
+Mij measured at 50◦angle of incidence (Symbols: experiment; solid
+lines: best model calculated data). A very good agreement is ob-
+served. Noise at approximately 0.75 and 0.85 THz is due to atmo-
+spheric absorption. The best-match model calculated data are ob-
+tained using εDC = 10.55 and the Drude model parameters ωp and
+γp parameterized using the result from the optical Hall effect mea-
+surement shown in Fig. 11. No further parameter variation was done
+to match the THz data spectral range.
+Dϭϯ
+DϮϯ
+DϯϮ
+Dϯϭ
+
+
+
+
+
+
+
+
+
+
+:DYHQXPEHUFP
+
+
+
+
+
+
+
+
+FIG. 11. Experimental (symbols) and best-match model calculated
+(solid lines) optical Hall effect data as difference data between +7 T
+and −7 T at φa= 45◦angle of incidence. The model calculated lines
+are obtained using the wavelength-by-wavelength data for ε shown
+in Fig. 8 and the Drude model parameters n = 2.81 × 1017 cm−3,
+m⋆= (0.208 ± 0.006) m0, and µ = (112 ± 3) cm2/(Vs).
+(
+(
+(
+(
+(
+
+
+
+
+
+
+
+
+PP
+Q+DOOFP
+
+2Q$O2
+2Q<6=
+%XON
+7KLV:RUN
+FIG. 12. Data from Ref. 29 showing the evolution of effective mass
+against the free charge density for different sample types with the
+addition of our sample. Here, the nonparabolic band dependence
+model of the effective mass is shown with the dashed line according
+to Feneberg et al. in Ref. 29.
+VI.
+ACKNOWLEDGMENTS
+This work was supported in part by the National Science
+Foundation (NSF) under award NSF DMR 1755479, NSF
+DMR 1808715, by the Nebraska Materials Research Science
+and Engineering Center award DMR 1420645, in the frame-
+work of GraFOx, a Leibniz-Science Campus partially funded
+by the Leibniz Association - Germany, by Air Force Ofﬁce
+of Scientiﬁc Research under awards FA9550-18-1-0360 and
+FA9550-19-S-0003, by the Swedish Research Council VR
+award No. 2016-00889, the Swedish Foundation for Strate-
+gic Research Grant Nos.
+RIF14-055 and EM16-0024, by10
+the Swedish Governmental Agency for Innovation Systems
+VINNOVA under the Competence Center Program Grant No.
+2016–05190, by the Knut and Alice Wallenbergs Foundation
+supported grant ’Wide-bandgap semiconductors for next gen-
+eration quantum components’, by the Swedish Government
+Strategic Research Area in Materials Science on Functional
+Materials at Link¨oping University, and Faculty Grant SFO
+Mat LiU No. 2009-00971. Mathias Schubert acknowledges
+the University of Nebraska Foundation and the J. A. Wool-
+lam Foundation for ﬁnancial support.
+The data that support the ﬁndings of this study are available
+from the corresponding author upon reasonable request.
+1P. D. C. King, T. D. Veal, F. Fuchs, C. Y. Wang, D. J. Payne, A. Bourlange,
+H. Zhang, G. R. Bell, V. Cimalla, O. Ambacher, R. G. Egdell, F. Bechstedt,
+and C. F. McConville, Phys. Rev. B 79, 205211 (2009).
+2R.
+Bel
+Hadj
+Tahar,
+T.
+Ban,
+Y.
+Ohya,
+and
+Y.
+Takahashi,
+Journal of Applied Physics 83, 2631 (1998),
+https://doi.org/10.1063/1.367025.
+3Y.
+Shigesato,
+S.
+Takaki,
+and
+T.
+Hara-
+noh,
+Journal of Applied Physics 71, 3356 (1992),
+https://doi.org/10.1063/1.350931.
+4O. Bierwagen and J. S. Speck, physica status solidi (a) 211, 48 (2014),
+https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssa.201330224.
+5T. Minami, Semiconductor Science and Technology 20, S35 (2005).
+6C.
+Lungenschmied,
+G.
+Dennler,
+H.
+Neugebauer,
+S.
+N.
+Sariciftci,
+M.
+Glatthaar,
+T.
+Meyer,
+and
+A.
+Meyer,
+Solar Energy Materials and Solar Cells 91, 379 (2007),
+selected
+Pa-
+pers from the European Conference on Hybrid and Organic Solar Cells –
+ECHOS ’06.
+7A. S. A. C. Diniz, Renewable Energy 36, 1153 (2011).
+8S. I. Kim, S. H. Cho, S. R. Choi, M. C. Oh, J. H. Jang,
+and P. K.
+Song, Thin Solid Films 517, 4061 (2009), the proceedings of the 1st Inter-
+national Conference on Microelectronics and Plasma Technology (ICMAP
+2008).
+9M.
+Bartic,
+C.-I.
+Baban,
+H.
+Suzuki,
+M.
+Ogita,
+and
+M.
+Isai,
+Journal of the American Ceramic Society 90, 2879 (2007),
+https://ceramics.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1551-2916.2007.01842.x.
+10A.
+Tischner,
+T.
+Maier,
+C.
+Stepper,
+and
+A.
+K¨ock,
+Sensors and Actuators B: Chemical 134, 796 (2008).
+11S.
+Kannan,
+H.
+Steinebach,
+L.
+Rieth,
+and
+F.
+Solzbacher,
+Sensors and Actuators B: Chemical 148, 126 (2010).
+12P.
+Nguyen,
+H.
+T.
+Ng,
+T.
+Yamada,
+M.
+K.
+Smith,
+J.
+Li,
+J.
+Han,
+and
+M.
+Meyyappan,
+Nano Letters 4, 651 (2004),
+https://doi.org/10.1021/nl0498536.
+13P.
+K.
+Nayak,
+M.
+N.
+Hedhili,
+D.
+Cha,
+and
+H.
+N.
+Alshareef,
+Applied Physics Letters 103, 033518 (2013),
+https://doi.org/10.1063/1.4816060.
+14S.-Y.
+Han,
+G.
+S.
+Herman,
+and
+C.-h.
+Chang,
+Journal of the American Chemical Society 133, 5166 (2011),
+pMID:
+21417268, https://doi.org/10.1021/ja104864j.
+15Y.
+G.
+Kim,
+T.
+Kim,
+C.
+Avis,
+S.
+Lee,
+and
+J.
+Jang,
+IEEE Transactions on Electron Devices 63, 1078 (2016).
+16J.
+K.
+Sheu,
+Y.
+K.
+Su,
+G.
+C.
+Chi,
+M.
+J.
+Jou,
+and
+C.
+M.
+Chang,
+Applied Physics Letters 72, 3317 (1998),
+https://doi.org/10.1063/1.121636.
+17J. Zhang,
+Y. Li,
+B. Zhang,
+H. Wang,
+Q. Xin,
+and A. Song,
+Nature communications 6, 7561 (2015).
+18Z. P. Wei, D. L. Guo, B. Liu, R. Chen, L. M. Wong, W. F. Yang, S. J.
+Wang, H. D. Sun, and T. Wu, Applied Physics Letters 96, 031902 (2010),
+https://doi.org/10.1063/1.3284654.
+19J. Gao, R. Chen, D. H. Li, L. Jiang, J. C. Ye, X. C. Ma, X. D. Chen, Q. H.
+Xiong, H. D. Sun, and T. Wu, Nanotechnology 22, 195706 (2011).
+20H.
+Ouacha,
+U.
+Kleineberg,
+and
+H.
+Albrithen,
+Journal of Physics D: Applied Physics 50, 455102 (2017).
+21L.-C.
+Chen,
+C.-H.
+Tien,
+and
+W.-C.
+Liao,
+Journal of Physics D: Applied Physics 44, 165101 (2011).
+22T. Nagata, in Single Crystals of Electronic Materials, Woodhead Publish-
+ing Series in Electronic and Optical Materials, edited by R. Fornari (Wood-
+head Publishing, 2019) pp. 523 – 546.
+23O. Bierwagen, Semiconductor Science and Technology 30, 024001 (2015).
+24F.
+Yang,
+J.
+Ma,
+X.
+Feng,
+and
+L.
+Kong,
+Journal of Crystal Growth 310, 4054 (2008).
+25M.
+R.
+Karim,
+Z.
+Feng,
+and
+H.
+Zhao,
+Crystal Growth & Design 18, 4495 (2018),
+https://doi.org/10.1021/acs.cgd.8b00483.
+26Z. Galazka, R. Uecker, K. Irmscher, D. Schulz, D. Klimm, M. Al-
+brecht, M. Pietsch, S. Ganschow, A. Kwasniewski,
+and R. Fornari,
+Journal of Crystal Growth 362, 349 (2013).
+27S.
+Sadofev,
+Y.
+Cho,
+O.
+Brandt,
+M.
+Ramsteiner,
+R.
+Calarco,
+H. Riechert,
+S. C. Erwin, Z. Galazka,
+M. Korytov, M. Albrecht,
+R. Uecker,
+and R. Fornari, Applied Physics Letters 101, 172102 (2012),
+https://doi.org/10.1063/1.4761985.
+28L.
+Liu,
+S.
+Chen,
+X.
+Liang,
+and
+Y.
+Pei,
+Advanced Electronic Materials 5, 1900550 (2019),
+https://onlinelibrary.wiley.com/doi/pdf/10.1002/aelm.201900550.
+29M. Feneberg, J. Nixdorf, C. Lidig, R. Goldhahn, Z. Galazka, O. Bierwagen,
+and J. S. Speck, Phys. Rev. B 93, 045203 (2016).
+30J.
+De
+Wit,
+J.
+Van
+Der
+Bom,
+and
+J.
+De
+Groot,
+Journal of Solid State Chemistry 25, 101 (1978).
+31N.
+Preissler,
+O.
+Bierwagen,
+A.
+T.
+Ramu,
+and
+J.
+S.
+Speck,
+Phys. Rev. B 88, 085305 (2013).
+32R.
+L.
+Weiher,
+Journal of Applied Physics 33, 2834 (1962),
+https://doi.org/10.1063/1.1702560.
+33V.
+Scherer,
+C.
+Janowitz,
+A.
+Krapf,
+H.
+Dwelk,
+D.
+Braun,
+and
+R.
+Manzke,
+Applied Physics Letters 100, 212108 (2012),
+https://doi.org/10.1063/1.4719665.
+34K.
+H.
+L.
+Zhang,
+V.
+K.
+Lazarov,
+T.
+D.
+Veal,
+F.
+E.
+Oropeza,
+C.
+F.
+McConville,
+R.
+G.
+Egdell,
+and
+A.
+Walsh,
+Journal of Physics: Condensed Matter 23, 334211 (2011).
+35H.
+Peelaers,
+E.
+Kioupakis,
+and
+C.
+G.
+Van
+de
+Walle,
+Applied Physics Letters 115, 082105 (2019),
+https://doi.org/10.1063/1.5109569.
+36S. Z. Karazhanov, P. Ravindran, P. Vajeeston, A. Ulyashin, T. G. Finstad,
+and H. Fjellv˚ag, Phys. Rev. B 76, 075129 (2007).
+37F. Fuchs and F. Bechstedt, Phys. Rev. B 77, 155107 (2008).
+38H. Odaka, S. Iwata, N. Taga, S. Ohnishi, Y. Kaneta,
+and Y. Shigesato,
+Japanese Journal of Applied Physics 36, 5551 (1997).
+39S. H. Brewer and S. Franzen, Chemical Physics 300, 285 (2004).
+40T. Hofmann, V. Darakchieva, B. Monemar, H. Lu, W. Schaff, and M. Schu-
+bert, J. Electron. Mater. 37, 611 (2008).
+41A. Kasic, M. Schubert, S. Einfeldt, D. Hommel,
+and T. E. Tiwald,
+Phys. Rev. B 62, 7365 (2000).
+42Z. Galazka, K. Irmscher, M. Pietsch, T. Schulz, R. Uecker, D. Klimm, and
+R. Fornari, CrystEngComm 15, 2220 (2013).
+43Z.
+Galazka,
+R.
+Uecker,
+and
+R.
+Fornari,
+Journal of Crystal Growth 388, 61 (2014).
+44V. Darakchieva, T. Hofmann, M. Schubert, B. Sernelius, B. Mon-
+emar, P. Persson, F. Giuliani, E. Alves, H. Lu,
+and W. Schaff,
+Applied Physics Letters 94, 022109 (2009).
+45T.
+Nagata,
+O.
+Bierwagen,
+Z.
+Galazka,
+M.
+Imura,
+S.
+Ueda,
+H.
+Yoshikawa,
+Y.
+Yamashita,
+and
+T.
+Chikyow,
+Applied Physics Express 10, 011102 (2016).
+46T. Nagata, O. Bierwagen, Z. Galazka, M. Imura, S. Ueda, Y. Yamashita,
+and T. Chikyow, Japanese Journal of Applied Physics 58, SDDG06 (2019).
+47A.
+Walsh,
+Applied Physics Letters 98, 261910 (2011),
+https://doi.org/10.1063/1.3604811.
+48V. Scherer, C. Janowitz, Z. Galazka, M. Nazarzadehmoaﬁ, and R. Manzke,
+EPL (Europhysics Letters) 113, 26003 (2016).
+49W.
+B.
+White
+and
+V.
+G.
+Keramidas,
+Spectrochimica Acta Part A: Molecular Spectroscopy 28, 501 (1972).
+50I. Hamberg and C. G. Granqvist, Journal of Applied Physics 60, R123–R160 (1986).
+51H.
+Sobotta,
+H.
+Neumann,
+G.
+K¨uhn,
+and
+V.
+Riede,
+Crystal Research and Technology 25, 61 (1990),
+https://onlinelibrary.wiley.com/doi/pdf/10.1002/crat.2170250112.
+52B. Garcia-Domene,
+H. M. Ortiz,
+O. Gomis,
+J. A. Sans,
+F. J.
+Manj´on,
+A.
+Mu˜noz,
+P.
+Rodr´ıguez-Hern´andez,
+S.
+N.
+Achary,
+D. Errandonea,
+D. Mart´ınez-Garc´ıa,
+A. H. Romero,
+A. Singhal,
+and
+A.
+K.
+Tyagi,
+Journal of Applied Physics 112, 123511 (2012),
+https://doi.org/10.1063/1.4769747.
+53C.
+Kranert,
+R.
+Schmidt-Grund,
+and
+M.
+Grundmann,
+physica status solidi (RRL) – Rapid Research Letters 8, 554 (2014),
+https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssr.201409004.
+54A.
+Fiedler,
+R.
+Schewski,
+Z.
+Galazka,
+and
+K.
+Irmscher,
+ECS Journal of Solid State Science and Technology 8, Q3083 (2019).
+55A.
+Walsh,
+C.
+R.
+A.
+Catlow,
+A.
+A.
+Sokol,
+and
+S.
+M.
+Woodley,
+Chemistry of Materials 21, 4962 (2009),
+https://doi.org/10.1021/cm902280z.11
+56R. H. Lyddane, R. Sachs, and E. Teller, Phys. Rev. 59, 613 (1941).
+57Quantum ESPRESSO is available from http://www.quantum-espresso.org.
+See also:
+P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car,
+C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococcioni, I. Dabo, A. D.
+Corso, S. de Gironcoli, S. Fabris, G. Fratesi, R. Gebauer, U. Gerstmann,
+C. Gougoussis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari,
+F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbrac-
+cia, S. Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov, P. Umari,
+and R. M. Wentzcovitch, J. Phys.: Cond. Mat. 21, 395502 (2009).
+58J. P. Perdew and Y. Wang, Phys. Rev. B 45, 13244 (1992).
+59J. P. Perdew and Y. Wang, Phys. Rev. B 98, 079904 (2018).
+60M.
+J.
+van
+Setten,
+M.
+Giantomassi,
+E.
+Bousquet,
+M.
+J.
+Ver-
+straete,
+D.
+R.
+Hamann,
+X.
+Gonze,
+and
+G.
+M.
+Rignanese,
+Comput. Phys. Commun. 226, 39 (2018), 1710.10138.
+61A. Jain, S. P. Ong, G. Hautier, W. Chen, W. D. Richards, S. Dacek, S. Cho-
+lia, D. Gunter, D. Skinner, G. Ceder,
+and K. A. Persson, APL Mat. 1,
+011002 (2013).
+62T. M. Project, .
+63H. J. Monkhorst and J. D. Pack, Phys. Rev. B 13, 5188 (1976).
+64S. Baroni, S. de Gironcoli, A. D. Corso, S. Baroni, S. de Gironcoli, and
+P. Giannozzi, Rev. Mod. Phys. 73, 515 (2001).
+65A. Kokalj, J. Mol. Graph. Model. 17, 176 (1999). Code available from
+http://www.xcrysden.org.
+66F. Gervais and B. Piriou, J. Phys. C: Solid State Physics 7, 2374 (1974).
+67M. Schubert, Infrared Ellipsometry on Semiconductor Layer Structures:
+Phonons, Plasmons and Polaritons, Springer Tracts in Modern Physics,
+Vol. 209 (Springer, Berlin, 2004).
+68M. Schubert, P. Kuehne, V. Darakchieva, and T. Hofmann, J. Opt. Soc. Am.
+A 33, 1553 (2016).
+69H. Fujiwara, Spectroscopic Ellipsometry (John Wiley & Sons, New York,
+2007).
+70P. K¨uhne, C. M. Herzinger, M. Schubert, J. A. Woollam, and T. Hofmann,
+Rev. Sci. Instrum. 85, 071301 (2014).
+71P. Gopalan, S. Knight, A. Chanana, M. Stokey, P. Ranga, M. A.
+Scarpulla,
+S.
+Krishnamoorthy,
+V.
+Darakchieva,
+Z.
+Galazka,
+K.
+Irmscher,
+A.
+Fiedler,
+S.
+Blair,
+M.
+Schubert,
+and
+B.
+Sensale-Rodriguez,
+Applied Physics Letters 117, 252103 (2020),
+https://doi.org/10.1063/5.0031464.

@@ -1,0 +1,1002 @@
+rsc.li/nanoscale
+ Nanoscale
+rsc.li/nanoscale
+ISSN 2040-3372
+PAPER
+Shuping Xu, Chongyang Liang et al.   
+Organelle-targeting surface-enhanced Raman scattering 
+(SERS) nanosensors for subcellular pH sensing 
+Volume 10
+Number 4
+28 January 2018
+Pages 1549-2172
+ Nanoscale
+This is an Accepted Manuscript, which has been through the  
+Royal Society of Chemistry peer review process and has been 
+accepted for publication.
+Accepted Manuscripts are published online shortly after acceptance, 
+before technical editing, formatting and proof reading. Using this free 
+service, authors can make their results available to the community, in 
+citable form, before we publish the edited article. We will replace this 
+Accepted Manuscript with the edited and formatted Advance Article as 
+soon as it is available.
+You can find more information about Accepted Manuscripts in the 
+Information for Authors.
+Please note that technical editing may introduce minor changes to the 
+text and/or graphics, which may alter content. The journal’s standard 
+Terms & Conditions and the Ethical guidelines still apply. In no event 
+shall the Royal Society of Chemistry be held responsible for any errors 
+or omissions in this Accepted Manuscript or any consequences arising 
+from the use of any information it contains. 
+Accepted Manuscript
+View Article Online
+View Journal
+This article can be cited before page numbers have been issued, to do this please use:  T. Vogl, M. W.
+Doherty, B. Buchler, Y. Lu and P. K. Lam, Nanoscale, 2019, DOI: 10.1039/C9NR04269E.Journal Name
+Atomic localization of quantum emitters in multilayer
+hexagonal boron nitride†
+Tobias Vogl,∗a‡ Marcus W. Doherty,b Ben C. Buchler,a Yuerui Lu,c and Ping Koy Lam∗a
+The recent discovery of single-photon emitting defects hosted by the two-dimensional wide band
+gap semiconductor hexagonal boron nitride (hBN) has inspired a great number of experiments.
+Key characteristics of these quantum emitters are their capability to operate at room temperature
+with a high luminosity. In spite of large theoretical and experimental research efforts, the exact na-
+ture of the emission remains unresolved. In this work we utilize layer-by-layer etching of multilayer
+hBN to localize the quantum emitters with atomic precision. Our results suggest the position of
+the emitters correlates with the fabrication method: emitters formed under plasma treatment are
+always in close proximity to the crystal surface, while emitters created under electron irradiation
+are distributed randomly throughout the entire crystal. This disparity could be traced back to the
+lower kinetic energy of the ions in the plasma compared to the kinetic energy of the electrons in
+the particle accelerator. The emitter distance to the surface also correlates with the excited state
+lifetime: near-surface emitters have a shorter compared to emitters deep within the crystal. Finite-
+difference time-domain and density functional theory simulations show that optical and electronic
+effects are not responsible for this difference, indicating effects such as coupling to surface defects
+or phonons might cause the reduced lifetime. Our results pave a way toward identiﬁcation of the
+defect, as well as engineering the emitter properties.
+Introduction
+The recent discovery of quantum emitters in two-dimensional
+(2D) materials attracted considerable attention, due to their ap-
+plications in photonic quantum technologies1. These include un-
+conditionally secure communication2, quantum simulators3 and
+quantum computing4, which fueled the development of single-
+photon sources (SPSs). In contrast to their counterparts in 3D,
+quantum emitters hosted by 2D lattices are not surrounded by
+any high refractive index medium. This eliminates total internal
+and Fresnel reﬂection of emitted single-photons, making it possi-
+ble to have intrinsically near-ideal extraction efﬁciency. Quan-
+tum emission has been reported from a diversity of materials,
+a Centre for Quantum Computation and Communication Technology, Department
+of Quantum Science, Research School of Physics and Engineering, The Australian
+National University, Acton ACT 2601, Australia.
+E-mail: tobias.vogl@uni-jena.de,
+ping.lam@anu.edu.au
+b Laser Physics Centre, Research School of Physics and Engineering, The Australian
+National University, Acton, ACT 2601, Australia.
+c Centre for Quantum Computation and Communication Technology, Research School
+of Electrical, Energy and Materials Engineering, The Australian National University,
+Acton ACT 2601, Australia.
+†
+Electronic
+Supplementary
+Information
+(ESI)
+available:
+See
+DOI:
+00.0000/00000000.
+‡ Present address: Institute of Applied Physics, Abbe Center of Photonics, Friedrich-
+Schiller-Universität Jena, 07745 Jena, Germany.
+in semiconducting transition metal dichalcogenides (TMDs)5–12
+and insulating hexagonal boron nitride (hBN)13. The large band
+gap of the latter even allows one to resolve the zero phonon line
+(ZPL) at room temperature and thwarts non-radiative recombi-
+nation of the localized exciton. Thus, single-photon emitters in
+hBN have an intrinsically high quantum efﬁciency which leads
+to signiﬁcantly brighter emission13,14. In addition, single-photon
+sources based on hBN are suitable for many practical ﬁeld appli-
+cations due to their resistance to ionizing radiation15, tempera-
+ture stability over a huge range spanning 800K16,17, long-term
+operation18 and capabilities for integration with photonic net-
+works19,20, as well as easy handling. While these emitters can
+occur naturally13, it is common to enhance the defect formation
+synthetically through chemical21 or plasma etching18,22, γ-ray15,
+ion23 and electron irradiation23,24 or near-deterministic stress-
+induced activation25.
+The generally accepted model for the single-photon emission is
+based on a localized exciton. These ﬂuorescent point-like defects
+introduce trap states into the electronic band gap, acting thus as
+an effective two-level system. In deﬁance of several attempts to
+identify the origin of the ﬂuorescence using group theory and ab
+initio density functional theory (DFT) calculations26–28, the ex-
+act nature of the defects remains controversial. Possible defect
+candidates include the CBVN, VBCN, VNNB and VB defects (CBVN:
+Journal Name, [year], [vol.],1–11 | 1
+Page 1 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269Ea carbon atom replaces a boron atom with an adjacent nitrogen
+vacancy; VBCN: a carbon atom substitutes for a nitrogen atom
+with an adjacent boron vacancy; VNNB: a nitrogen occupying the
+lattice site of a boron atom with an adjacent nitrogen vacancy;
+VB: single boron vacancy). It was recently noted, however, that
+widely used generalized gradient functionals can perform poorly
+and lead to misassignment of the defect states, hence, hybrid or
+long-range corrected functionals should be applied29. Moreover,
+DFT calculations often assume monolayered supercells due to the
+exponential scaling with the number of atoms and limited compu-
+tational resources, while most experimental works involve multi-
+layer hBN. For yet not fully understood reasons, the optical emis-
+sion signatures of quantum emitters hosted by mono- and multi-
+layer hBN differ substantially13.
+On the experimental side, research efforts toward the identiﬁ-
+cation30,31 are hampered by the strongly varying optical emission
+properties. These vary not only from defect to defect on differ-
+ent hBN crystals, but also for defects on the same host crystal.
+ZPLs have been reported in the UV32 and in the the visible spec-
+trum from 550 to 800nm16,18,33,34 and the excited state lifetimes
+vary from 20ns down to 0.3ns18,19. A conclusive explanation for
+this requires additional experimental analysis. What is deﬁnitely
+known is the power saturation behavior is that of an idealized
+two- or multi-level system and the emitters exhibit an in-plane
+dipole. This indicates a low symmetry in-plane defect that is po-
+tentially comprised of vacancies and impurities.
+The variations in ZPL position cannot be explained alone by lo-
+cal strain in the crystal environment. The shifts caused by strain
+are too small to account for the variety of ZPLs35. Of particular
+note is that the ZPLs seem to bunch in groups around 560nm18,
+580nm36, 640nm13,33 and 714nm33. We deﬁne these as groups
+1 through 4, respectively. It is believed that a different point-like
+defect is responsible for each group with the crystal lattice locally
+strained or changed otherwise, thus explaining the spread around
+these wavelengths. Shifts of the transition line caused by differ-
+ent isotopes would be much smaller than the emission linewidth.
+The vibronic bandshape of most defects is very similar, indicating
+that they have the same symmetry group. We note that there are
+occasional ZPLs falling into neither of these categories. It is likely
+that these originate from surface contaminants. Moreover, the
+bandshape of these differ from the bandshape typical for other
+emitters in the four groups, which supports this conjecture.
+Using super-resolution techniques, these defects have been lo-
+calized in 2D with sub-diffraction resolution37. The direct imag-
+ing on the atomic scale using high-resolution scanning transmis-
+sion electron microscopy (STEM) is limited to a few layers, as
+the images contain information from all layers (essentially being
+a projection of all layers onto 2D). One way around this is to
+use a more advanced method like high-angle annular dark-ﬁeld
+imaging (HAADF), with which it is possible to detect the pres-
+ence of a vacancy within a few layers (maybe up to 3-5 layers).
+A vacancy would change the detected intensity by changing the
+scattering probability locally, and thus this would reveal such a
+defect with the exact location in the XY plane.
+However, this
+still does not contain any information about the Z direction. Re-
+cently, a method to correlate optical and electron characteriza-
+tions of quantum emitters in very thin hBN was demonstrated31.
+This method, however, also yields no information about the Z di-
+rection. In addition, detecting the presence of a vacancy using
+HAADF cannot be used on thicker crystals, because the intensity
+contrast would be too low.
+In this work, we localize the quantum emitters hosted by mul-
+tilayer hBN in the third dimension with atomic precision.
+We
+develop deterministic layer-by-layer plasma etching of hBN. This
+way we can remove a single hBN monolayer at a time and check
+ex-situ when the defect disappears. We thereby measure the pre-
+cise distance of the emitter from the surface of the host crystal.
+While this is a destructive technique, it allows us to extract the ex-
+act number of layers in which the defect was located. Repeating
+our experiment for many defects allows us to generate sufﬁcient
+statistics. We also model photophysical properties theoretically
+with ﬁnite-difference time-domain simulations and density func-
+tional theory.
+Results and Discussion
+Layer-by-layer etching of hBN
+Our approach to extract the location of the defects in the Z di-
+rection is to selectively remove one hBN monolayer at a time and
+check after each step, if the defect is still present. We ﬁrst devel-
+oped the layer-by-layer etching of hBN using an oxygen plasma.
+We note that similar etching of hBN on the atomic scale was re-
+ported recently using an argon plasma38. While this is an impor-
+tant milestone, however, Park et al. etched ∼20 layers at a time
+and scaled this down to monolayer etching38. Nevertheless, with
+this technique as well as our method (see below), it is possible to
+fabricate large hBN monolayers. These are very difﬁcult to obtain
+using mechanical exfoliation alone, due to the poor optical con-
+trast of hBN, which has a zero-crossing in the visible spectrum39.
+We mechanically exfoliated hexagonal boron nitride from bulk
+crystal onto a viscoelastic polymer. Thin, but still several nm thick
+hBN ﬂakes were selected by optical contrast for dry transfer to
+a Si substrate terminated with a layer of thermally grown SiO2
+(262nm). For the etching we used an oxygen plasma generated
+from a microwave ﬁeld and empirically optimized the plasma pa-
+rameters (see Methods). The crystal thickness after each succes-
+sive etching step is measured with a phase-shift interferometer
+(PSI), which is a much faster method than using an atomic force
+microscope (AFM) at the cost of a lower lateral resolution. Figure
+1(a) shows the PSI image prior to any plasma treatment and after
+2 min of etching time, where the crystal thickness decreased. The
+top ﬂake consists of 9 and 7 atomic layers, respectively. The op-
+tical path length (OPL) difference between the substrate and the
+crystal (measured along the white dashed lines in Figure 1(a))
+at a PSI wavelength of λ = 532nm after each cumulative etching
+step is shown in Figure 1(b). It can be seen that the etched thick-
+ness is linear with time. The OPL can be converted to physical
+thickness using rigorous coupled-wave analysis (RCWA) simula-
+tions40, as shown in Figure 1(c). The simulations assume the re-
+fractive index of hBN to be 1.849, which was extracted by ﬁtting
+an RCWA model to data pairs consisting of AFM and PSI measure-
+ments. It is worth noting that the relation between OPL and phys-
+2 |
+1–11
+Journal Name, [year], [vol.],
+Page 2 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269Eical thickness d is nonlinear for large OPLs18. The data points in
+Figure 1(c) correspond to the PSI measurements (colored accord-
+ingly). Since the physical thickness of hBN is 0.4 −0.45nm per
+layer41, we can extract that the crystal presented here was etched
+layer-by-layer from 9 layers to monolayer, with an etching rate of
+1 layer per 63s. A microscope image with an artiﬁcially-enhanced
+optical contrast of the bilayer is shown in Figure 1(d). At the op-
+timized plasma conditions, this atomic layer-by-layer etching is
+highly reliable, with no fails (i.e. 0 or 2 layers etched) out of 31
+runs. Moreover, we used the same technique on TMDs without
+failures and the method was also used for precise layer-by-layer
+thinning of black phosphorus42 or MoS2 43. Assuming the failure
+probability to be ≤0.1% would reproduce our etching success of
+hBN with a high probability of 96.9%. Deviating from the ideal
+plasma conditions (63s etching time, for all details see Methods)
+results in process failures. This is evident by the fact that reducing
+the etching time by 10s resulted into 2 out of 6 crystals not being
+etched and increasing the etching time by 10s resulted in two lay-
+ers being etched in 1 out of 3 cases (see Supporting Information,
+Figure S1). The reason why multiple layers can be etched without
+doubling the etching time is because it takes some time to start
+cracking the bonds, once that process starts, a faster etching rate
+can be achieved.
+It is important to note that the plasma may damage the sub-
+strate. The OPL is dependent on the SiO2 thickness and the RCWA
+simulations assume this to be ﬁxed. We checked the thickness of
+a SiO2 layer ex-situ after each etching step using variable angle
+spectroscopic ellipsometry (VASE). After 7min at 100W of cumu-
+lative plasma treatment, the thickness of a SiO2 layer decreased
+from 262.68(1) to 262.46(1)nm (see Figure 1(e)), so on aver-
+age the SiO2 thinning is 0.03nm per step. According to the RCWA
+simulations such substrate thickness difference results in a change
+of the OPL much smaller than the resolution of the PSI (0.1nm).
+Therefore, we can neglect this effect. This is, however, in gen-
+eral dependent on the type of plasma. For a comparison: using
+a CF4 plasma at 100W for 1min results in a thickness change of
+0.22nm of the SiO2 and using a CF4 plasma at 500W for 3min in
+the plasma ﬁeld maximum (see Methods) etches 12.49nm.
+Creation of quantum emitters
+The fabrication of multilayer hBN ﬂakes for hosting single-photon
+emitter is similar to the procedure above. After transfer to the
+substrate, the ﬂakes are treated with an oxygen plasma at dif-
+ferent conditions and successively annealed in a rapid thermal
+annealer18 (see also Methods). To locate the defects each ﬂake
+is scanned in a custom-built confocal micro-photoluminescence
+(µPL) system with a resolution ranging from 0.2 to 1µm. Initially,
+the ﬂakes are scanned with a 1µm grid and identiﬁed defects are
+located with a smaller step size of 0.2µm, preventing accidentally
+missing any known defect location during subsequent scans. The
+pump laser, with its wavelength at 522nm, is blocked by a long-
+pass ﬁlter and the emission is collected in-reﬂection. The defects
+almost exclusively occur at the edges of the host crystal ﬂakes,
+due to a lower defect formation energy at these locations. Defects
+can, however, also form along crystal cracks within the ﬂake. The
+defect formation energy there is lower as well. The spectra of
+three sample emitters are shown in Figure 2(a), which have their
+ZPLs at 559.78(7), 565.15(6) and 650.16(7)nm and Lorentzian
+linewidths of 2.24(10), 2.51(9) and 4.39(9)nm, respectively. All
+sample emitters presented here emit more than 80% of their pho-
+toluminescence (PL) into the ZPL, which allows for a high quan-
+tum efﬁciency. Time-resolved photoluminescence reveals a single-
+exponential decay of the excited state population for each defect
+with lifetimes 770(7), 549(7) and 794(13)ps, respectively (see
+Figure 2(b)). The excitation laser is pulsed at a repetition rate of
+20.8MHz and a pulse length of 300fs. While this allows for high
+peak intensities, two-photon absorption of the band gap of hBN is
+still impossible, because EhBN = 6eV > 2×2.38eV = 2×Elaser. To
+prove that the localized exciton emits indeed non-classical light
+we utilize a Hanbury Brown and Twiss (HBT)-type interferome-
+ter, which allows for measuring the second order correlation func-
+tion (see Figure 2(c)). We ﬁt a three-level model with excited and
+meta-stable shelving state to our data. The correlation function is
+then given by
+g(2) (τ) = 1−Ae−|τ|/t1 +Be−|τ|/t2
+with the anti- and bunching-amplitudes A, B, and the charac-
+teristic lifetimes t1, t2.
+For the three sample emitters we ﬁnd
+g(2) (0) = 0.142(37),0.196(53) and 0.234(44), respectively. There
+was no background correction44 necessary due to the low detec-
+tor noise compared to the single-photon brightness.
+This also
+means that the observed ﬁnite multi-photon probability is not
+caused by detector dark counts, but rather noise sources excited
+by the laser.
+Note that the experimental data was normalized
+such that for inﬁnite time delay g(2)(τ →∞) = 1. The lifetimes ex-
+tracted from the correlation function measurements agree well
+with the lifetimes measured with time-resolved PL. As already
+mentioned, the literature reports ZPLs typically bunch around
+certain wavelengths. In fact, in our experiments we have seen this
+to happen around 560nm, 590nm and 640nm, as the histogram
+in Figure 2(d) shows. With our fabrication method, however, we
+were not able to create emitters with ZPLs > 700nm with sta-
+tistical signiﬁcance. In addition, sometimes we created an emit-
+ter not falling into any of the groups deﬁned above. We believe
+that these are contaminating ﬂuorescent molecules adsorbed onto
+the surface of hBN. Their emission is typically much weaker and
+their spectrum broader compared to the other emitters (see Fig-
+ure 2(e)).
+Atomic localization of quantum emitters
+With 93 quantum emitters fabricated and characterized, we could
+utilize the atomic etching of hBN, removing one layer at a
+time. After each cumulative plasma etching step, the ﬂakes were
+scanned again and we checked if the defect survived (see Sup-
+porting Information, Figure S2 for the process ﬂow). It is pos-
+sible that this etching creates new emitters, but at the layer-by-
+layer etching parameters, we expect the linear defect formation
+density to be ∼0.02µm−1 (i.e. one defect forms on average per
+50µm crystal edge length)18. Thus, it is unlikely that an emitter
+is removed and at the same time a new one forms at the same
+Journal Name, [year], [vol.],1–11 | 3
+Page 3 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269Elocation. In addition, as the photophysics of the defects vary sub-
+stantially, it would be even more unlikely that a newly created
+emitter that formed at the location of a previous emitter has sim-
+ilar photophysical properties (in terms of e.g. ZPL, lifetime, and
+dipole orientation). In fact, we did see occasionally new defects
+appear at new locations, but they are not counted toward the
+statistics in this study. The histogram of the number layer after
+which the defect disappeared is shown in Figure 3(a). The best ﬁt
+to any univariate distribution reveals a Poisson distribution with
+a mean of 3.8. This means that the emitters are very close to the
+surface.
+When looking at how the photophysics evolve as the top layers
+are successively etched, it becomes clear that the emission is sta-
+ble until the emitter is removed (see Figure 3(b)). The photolu-
+minescence does not decrease gradually nor change its lineshape
+or other photophysical properties. Rather the PL from the de-
+fects disappears suddenly entirely, and for all upon removal. This
+means the quantum emitters are well isolated within one layer
+with no appreciable inter-layer interaction. In principle, it is pos-
+sible the wave function of the trapped charge carrier is spread
+over multiple layers, thus the defect could enter a dark state even
+if some layers above the layer containing the chemical defect are
+etched (while the defect itself is not etched yet). There is, how-
+ever, no further evidence supporting this conjecture. In addition,
+all the emitters with ZPLs falling not into one of the categories in
+the histogram in Figure 2(d) disappeared after the ﬁrst etching
+step. This is evidence for the fact that these emitters are indeed
+surface contaminants. As expected, the Raman shift after each
+etching step remained constant, indicating that there is not much
+strain in the crystal, which would relax as the layers are etched.
+One could argue emitters that are counted as etched actually just
+enter a dark state temporarily. This is very unlikely, as previous
+experiments found during the time when the emitter is in the dark
+state there is still light emission from the defect, but usually it is
+much weaker compared to the normal emission34,45.
+The extracted layer number is believed to be highly accurate.
+Assuming a failure probability ≤0.1% (see above) results in a
+success probability of 77.2% that all layer numbers are correct
+(in total there were 258 etching steps). However, as all samples
+were etched at the same time, there is a chance that if one pro-
+cess failed, many samples would be affected. A process fail could
+be that it took a longer time for the plasma to ignite or to stabi-
+lize the gases (both ignition and stabilization happens at a higher
+plasma power, which is subsequently regulated down to the set
+power), so to exclude this possibility the plasma parameters are
+recorded in-situ.
+The results so far prove emitters (formed by oxygen plasma
+treatment) are always very close to the surface. This raises a few
+questions: (1) Why are the emitters close to the surface? (2)
+Are emitters always close to the surface, or does this depend on
+the defect formation method? (3) Is this an explanation for the
+shorter excited state lifetime of the plasma treated quantum emit-
+ters?
+The dominant ion species in the plasma is O2+ (at lower pres-
+sure and higher power O+ becomes more dominant). The ex-
+pected ion energy during the defect formation plasma treatment
+is ∼10eV. Unfortunately, this ion energy is too low for Monte
+Carlo methods like SRIM46, preventing an accurate calculation
+of the projected ion range in matter (in this case hBN). However,
+in our case the plasma treatment is a chemical and not physical
+process.
+This means the process is mostly limited to the crys-
+tal surface, as the ions have only low kinetic energy and cannot
+penetrate deep into the crystal. The kinetic energy of the ions is
+similar to the defect formation energy in hBN, which is on the
+order of a few eV47. Moreover, the OB and ON defect have forma-
+tion energies of 5.19 and 2.20eV, respectively, so they could easily
+be produced by the ions48. The oxygen radicals are highly reac-
+tive and are thus likely producing defects. It was recently pointed
+out, however, that it is unclear whether the defects are actually
+created using the plasma processing or one of the many other
+methods, or if preexisting, initially dark defects are activated via
+modiﬁcation or restructuring of the crystal environment49. Both
+options are possible and our data so far does not allow to favor
+one over the other explanation.
+While the oxygen plasma only acts onto the crystal surface, de-
+fect diffusion is also an important consideration. Without the ex-
+act knowledge of the chemical defect structure this is impossible
+to estimate, but at least a few things are known: First, hBN has
+strong sp2-hybridized covalent bonds, so the defect diffusion ac-
+tivation energy (that is the energy required to move along the
+reaction path) is rather large. It is expected that diffusion is pre-
+dominantly in-plane and not inter-layer due to the direct in-plane
+bonds, so diffusion deep into the crystal is not likely. For hBN,
+due to the heteronuclear structure, defect diffusion is partially
+suppressed, as homonuclear B-B and N-N are energetically unfa-
+vorable (these homonuclear bonds are temporarily formed as the
+defects moves along the reaction path)50. This results in a lower
+vacancy migration compared to homonuclear graphene. The dif-
+fusion activation energy calculated with DFT range from 2.6 to
+6.0eV at 0K for vacancies and divacancies, with the structures of-
+ten relaxing to their initial conﬁguration50. This already shows
+the smaller defect diffusion. Furthermore, at the rapid anneal-
+ing temperature of 850◦C (in this experiment), only the boron
+vacancy has a diffusion coefﬁcient larger than 1Å2s−1 50. Future
+calculations have to show how the diffusion of other point-like
+complexes scales. It is worth noting, that the result of the defect
+diffusion activation energy from DFT calculations shows a small
+dependency on the speciﬁcally used pseudopotential51.
+To address the second question, we repeat the experiment
+with emitters fabricated with electron irradiation23,24. The elec-
+tron accelerating voltage was 10kV with an electron ﬂuence of
+∼1018 cm−2. Given the thickness of the hBN ﬂakes being ≪1µm,
+the kinetic energy of the electrons is sufﬁcient to fully transmit
+through the hBN crystals (see Supporting Information, Figure
+S3(a)). The energy loss of the electrons is dominated by colli-
+sions with the boron and nitrogen nuclei, as the radiative stopping
+power is much smaller at 10keV kinetic electron energy (see Sup-
+porting Information, Figure S3(b)). Therefore, bremsstrahlung
+does not play any role. With the projected range of the electrons
+being 1.4µm at 10keV, it is expected that emitters created or ac-
+tivated by electron irradiation are not exclusively near the crystal
+surface. Monte Carlo simulations of electron trajectories through
+4 |
+1–11
+Journal Name, [year], [vol.],
+Page 4 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269Ethe hBN crystal (see Supporting Information, Figure S3(c,d)) also
+conﬁrm this. Repeating the atomic etching on these new emitters
+conﬁrms this, as none of the emitters was found within the ﬁrst
+ten layers, and the emitters being randomly positioned within the
+crystal. Etching at much larger steps (∼10s of layers at a time,
+even though we note this was not calibrated sufﬁciently) shows
+that defects created by electron irradiation are formed through-
+out the crystal (see Figure 3(c)).
+More precisely, the emitters
+form not exclusively at the crystal edges or dislocations anymore,
+in agreement with previous experiments24. Interestingly, the ex-
+cited state lifetime of these emitters is typically longer compared
+to the plasma etched ones, with lifetimes ranging from 2 −3ns
+(see Supporting Information, Figure S4 for a characterization of
+quantum emitters created under electron irradiation).
+Theoretical modeling
+Finally, we address the third question.
+Within the crystal, the
+photon density of states is decreased compared to vacuum. This
+is a Purcell-like effect, where the radiative lifetime is modiﬁed
+as the dielectric environment changes. The Purcell factor ε as a
+function of emitter distance to the surface d is calculated using
+ﬁnite-difference time-domain (FDTD) simulations (see Methods)
+and shown is in Figure 3(d). The Purcell factor (and thus the ex-
+cited state lifetime of an ideal dipole) oscillates and reaches 1 in
+the limit d ≫λ. In this limit there is no enhancement or suppres-
+sion. It becomes clear that this effect only makes up a few percent
+in lifetime changes, so this alone cannot explain the shorter life-
+time. It is still noteworthy, that there is enhancement very close to
+the surface, while deeper (45−145nm) there is suppression. The
+electric ﬁeld mode proﬁles in both limits show the emitter deep
+within hBN emits like an ideal dipole, while the emitter at the sur-
+face emits stronger into the crystal than into vacuum (see Figure
+3(e,f)). This means the actual emitter brightness is even larger
+than experiments so far suggest. For emitters in cavities52, this
+does not matter, as both directions are captured by the cavity. As
+the different lifetime is not solely due to a Purcell-like effect, we
+use density functional theory calculations to investigate if surface
+states could be the cause for the shorter lifetime. We calculate the
+electronic band structure of hBN for one (1L), ten (10L), and 100
+layers (100L) of hBN (see Figure 3(g-i)). The calculations show,
+that as more layers are added also more energy bands are added.
+Due to layer-layer interactions these bands spread, but there are
+no genuine isolated surface bands introduced into the band gap.
+This implies that, unless the defect levels are very close to one of
+the band edges, surface states do not inﬂuence the lifetime of the
+defect. Therefore, we conclude that the shorter defect lifetime in
+our experiments is likely due to interaction with surface defects
+introducing additional decay pathways, or with surface phonons
+making existing decay pathways faster. It is worth noting, differ-
+ent defect structures, if involved, would most likely exhibit differ-
+ent lifetimes as well. Finally, the fact that the lifetime is constant
+during the layer-by-layer etching (see above) does not contradict
+our model, as the close distance to the surface makes lifetime
+changes too small (i.e. the lifetime change from an emitter being
+in layer number 2 to an emitter being in layer number 1 would
+be hardly measurable).
+Conclusions
+In this work, we have developed deterministic atomically layer-
+by-layer etching of hBN with an oxygen plasma. This was utilized
+to destructively localize quantum emitters hosted by hBN. We
+found that emitters fabricated by a different plasma process are
+always very close to the surface, within a few layers, while emit-
+ters fabricated by intense electron irradiation are located through-
+out the entire crystal thickness. For both creation methods, emit-
+ters are more likely to form at ﬂake edges and grain boundaries.
+It is notable that they also form away from these domains, in
+what appears to be undistorted crystal. Creation near the surface
+is a likely explanation for the shorter excited state lifetime hBN
+quantum emitters exhibit when fabricated by plasma etching. The
+emitter lifetime is inﬂuenced by additional decay pathways intro-
+duced by surface defects, or interactions with surface phonons
+making existing decay pathways faster. In contrast, emitters deep
+within the crystal have lifetimes ∼3−6 times longer, as they are
+well isolated from the environment and surface effects.
+Considering now the implications that our observations have
+for the identity of the quantum emitters. Our etching study is
+consistent with the conﬁnement of the emitting defect to a single
+layer, as per past observation of the emitters in monolayer sam-
+ples13. The creation of deep defects away from a boundary by
+electron irradiation is an important observation. It implies that
+the defect can be a product of radiation damage and so is fur-
+ther evidence that it involves a vacancy or interstitial. Speciﬁcally
+either a nitrogen vacancy VN, a boron-vacancy VB, an intralayer
+interstitial or an interlayer interstitial. To identify which, we need
+to interpret the effects of annealing.
+At our annealing temperature of 850◦C, it is known that the
+VB is mobile, whilst VN is not. It is reasonable to expect that
+the interlayer interstitials are also mobile due to the low inter-
+layer bond energies of the material. Upon annealing, we observe
+improved photostability and linewidth, but no signiﬁcant change
+in the number of emitters18. We attribute the improved optical
+properties to the removal of interstitials and single VB, which we
+expect to lead to an improved charge stability and reduced elec-
+trical noise since these defects likely act as donors or acceptors.
+If the density of the VB created by the radiation is low, then our
+annealing observation would imply that the defect does not in-
+volve VB. This is because if the defects were single VB, then the
+number of emitters would decrease with annealing, and if it were
+a complex involving one or more VB, then the number of emit-
+ters would increase until saturation of the other constituents of
+the complex (i.e. VN or impurities). However, we are not nec-
+essarily drawing this conclusion here, since our intense electron
+irradiation may have rather created a very high density of VB,
+which even without annealing, could have saturated the creation
+of emitters (i.e. by creating VB in close proximity to VN or an
+impurity). In this case, the defect may well involve VB. Unfortu-
+nately, we cannot determine which VB density limit our radiation
+produced because there is insufﬁcient information about the VB
+creation cross-section for electron radiation. Future work should
+focus on establishing the VB density created before annealing and
+Journal Name, [year], [vol.],1–11 | 5
+Page 5 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269Erelating this to the creation / destruction / no change of emitters
+during annealing to establish whether or not VB is involved in the
+defect.
+The creation of the defects by the oxygen plasma may imply
+that the defect involves oxygen impurities through their incorpo-
+ration at the surface. Generalizing this hypothesis to the creation
+of deep emitters by electron irradiation, this would imply that
+oxygen is also a deep impurity in our samples. This appears rea-
+sonable given that O may also form similar sp2 bonds as B and
+N if it can donate an electron to a nearby acceptor. Future work
+should seek to combine variation of oxygen impurity and radi-
+ation damage to ascertain whether the defect is indeed an O-V
+complex.
+The results might also allow for a direct identiﬁcation of the de-
+fect, as the knowledge of optically active defects very close to the
+surface might allow for imaging with high-resolution tunneling
+electron microscopes. A full understanding of the defect nature is
+required for tuning and engineering speciﬁc properties that will
+ultimately lead to a wider applicability in various scenarios.
+Methods
+Plasma etching
+The oxygen plasma was generated from a microwave ﬁeld (PVA
+TePla).
+Prior to any experiments, the plasma chamber was
+cleaned for 5min at 500W to remove any contaminants.
+We
+found the optimal single layer etching conditions empirically at
+a plasma power of 102W for 63s at a pressure of 0.332mbar and
+a gas ﬂow rate of 300cm3/min (deviating from this by 10% de-
+creases the success probability). All experiments were carried our
+at room temperature. The plasma time includes about 2−3s dur-
+ing which the plasma ignites and the gases are stabilized. The
+plasma ﬁeld is highly anisotropic and varies across the plasma
+chamber. Thus, for repeatable results it is crucial to place the
+substrates always at the same position in the chamber. Unless
+stated otherwise, this position is at the plasma ﬁeld minimum. It
+should be mentioned that the optimal parameters reported here
+depend on the speciﬁc gas pump, plasma generator and geometry
+of the chamber, which requires to optimize these parameters on
+every other system individually.
+Fabrication and optical characterization
+Thin ﬂakes of hBN were mechanically exfoliated from bulk crys-
+tal (used as received from HQGraphene) to a viscoelastic stamp
+(Gel-Pak WF-40-X4) using the tape method. Crystals with thick-
+nesses down to ∼5nm can be identiﬁed by optical contrast with
+a standard optical microscope and are subsequently transferred
+by dry contact to a Si substrate with a 262nm thermally grown
+oxide layer.
+For the quantum emitters, we used crystals with
+thicknesses ranging from ∼5 −100nm. The emitters were cre-
+ated during an oxygen plasma etching step at 200W for 1min in
+the plasma ﬁeld maximum (at a pressure of 0.332mbar and a gas
+ﬂow rate of 300cm3/min). These are harsher plasma conditions
+than the layer-by-layer plasma etching, but ensures a higher de-
+fect density. Moreover, the defect density is linearly proportional
+to the plasma power18. After the plasma treatment, the samples
+are rapidly thermally annealed at 850◦C in an Ar atmosphere at
+a gas ﬂow rate of 500cm3/min. The electron irradiated emitters
+have been fabricated using a scanning electron microscope in an
+FEI Helios 600 NanoLab, where the electrons were accelerated
+using a high voltage of 10kV. The samples were irradiated with
+a ﬂuence of f = 1018 cm−2, which was calculated with f = I·t
+e·A,
+where I is the electron current, t is the frame time, e is the elec-
+tron charge, and A is the frame area. The irradiation took place
+at room temperature at a pressure < 2.2mPa. After electron irra-
+diation, the emitters were not thermally annealed24. For emitter
+localization, a custom-built µPL setup was used which utilized an
+ultrashort-pulsed 522nm laser with a pulse length of 300fs at a
+repetition rate of 20.8MHz. The laser was focused to the diffrac-
+tion limit with a Olympus 100×/0.9 dry objective and the samples
+were scanned using Newport translation stages with a spatial res-
+olution up to 0.2µm. The emission was collected in-reﬂection for
+1s through the same objective and frequency-ﬁltered using Sem-
+rock RazorEdge ultrasteep long-pass edge ﬁlters. The light is cou-
+pled via a grating to either a CCD or a single-photon avalanche
+diode (SPAD) from Micro Photon Devices allowing to extract the
+spectrum or the temporally and spectrally resolved photolumines-
+cence. The correlation between excitation pulse and arrival time
+of the ﬂuorescence photon is given by a PicoHarp 300. For mea-
+suring the second-order correlation function we utilize another
+diode laser at 512nm and two SPADs.
+Finite-difference time-domain simulations
+The ﬁnite difference time-domain simulations were performed
+using Lumerical FDTD Solutions, a commercial grade simulator
+based on the FDTD method53. To calculate the Purcell enhance-
+ment and emitter dynamics, an in-plane dipole emitter at 560nm
+was deﬁned in the center within a slab of hBN, with a dielectric
+constant of 3.42 at 532nm (this was obtained from experiments).
+The slab was thinned down from one direction (which is equiv-
+alent to moving the emitter to the surface) and the Purcell en-
+hancement as well as the electric ﬁeld mode proﬁle was recorded
+for each crystal thickness. A dynamic mesh was chosen to capture
+all potential emitter dynamics. The simulations assume perfectly
+matched layer boundary conditions, which are reﬂectionless or
+absorbing boundaries, to account for the ﬁnite memory size.
+Density functional theory calculations
+The DFT calculations have been performed with QuantumATK
+with the Virtual NanoLab front end54,55.
+QuantumATK uti-
+lizes numerical linear combination of atomic orbitals basis sets
+and the density matrix for closed or periodic systems is calcu-
+lated by diagonalization of the Kohn-Sham Hamiltonian. Mono-
+layer hBN crystals have been deﬁned using a supercell contain-
+ing two atoms and the geometry has been optimized using a
+21 × 21 × 1 Monkhorst-Pack reciprocal space grid. The optimiza-
+tion converged when all forces were below 0.001eVÅ−1. The elec-
+tron exchange-correlation was described with the Perdew-Burke-
+Ernzerhof (PBE) functional in the generalized gradient approxi-
+mation56. For all atoms a double zeta polarized basis set was cho-
+sen and band structure was routed along high symmetry points.
+6 |
+1–11
+Journal Name, [year], [vol.],
+Page 6 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269EThe ten- and 100-layer hBN crystals have been constructed in a
+similar way, with the lattice constant c also geometrically opti-
+mized and the k-sampling in this direction chosen such that it
+does not inﬂuence the simulation results.
+Conﬂicts of interest
+There are no conﬂicts to declare.
+Acknowledgements
+This work was funded by the Australian Research Council
+(CE170100012, FL150100019, DE140100805, DP180103238,
+DE170100169). We thank the ACT Node of the Australian Na-
+tional Fabrication Facility for access to their nano- and microfab-
+rication facilities. We also thank H. Tan for access to the TRPL
+system and C. Corr and F. Karouta for useful discussions about
+plasma processing.
+References
+1 J. L. O’Brien, A. Furusawa and J. Vuˇckovi´c, Nat. Photon.,
+2009, 3, 687–695.
+2 N. Gisin, G. Ribordy, W. Tittel and H. Zbinden, Rev. Mod.
+Phys., 2002, 74, 145–195.
+3 A. Aspuru-Guzik and P. Walther, Nat. Phys., 2012, 8, 285–291.
+4 T. D. Ladd, F. Jelezko, R. Laﬂamme, Y. Nakamura, C. Monroe
+and J. L. O’Brien, Nature, 2010, 464, 45–53.
+5 P. Tonndorf, R. Schmidt, R. Schneider, J. Kern, M. Buscema,
+G. A. Steele, A. Castellanos-Gomez, H. S. J. van der Zant, S. M.
+de Vasconcellos and R. Bratschitsch, Optica, 2015, 2, 347–
+352.
+6 A. Srivastava, M. Sidler, A. V. Allain, D. S. Lembke, A. Kis and
+A. Imamoˇglu, Nat. Nanotechnol., 2015, 10, 491–496.
+7 M. Koperski, K. Nogajewski, A. Arora, V. Cherkez, P. Mallet,
+J.-Y. Veuillen, J. Marcus, P. Kossacki and M. Potemski, Nat.
+Nanotechnol., 2015, 10, 503–506.
+8 Y.-M. He, G. Clark, J. R. Schaibley, Y. He, M.-C. Chen, Y.-J.
+Wei, X. Ding, Q. Zhang, W. Yao, X. Xu, C.-Y. Lu and J.-W. Pan,
+Nat. Nanotechnol., 2015, 10, 497–502.
+9 C. Chakraborty, L. Kinnischtzke, K. M. Goodfellow, R. Beams
+and A. N. Vamivakas, Nat. Nanotechnol., 2015, 10, 507–511.
+10 C. Palacios-Berraquero, M. Barbone, D. M. Kara, X. Chen,
+I. Goykhman, D. Yoon, A. K. Ott, J. Beitner, K. Watanabe,
+T. Taniguchi, A. C. Ferrari and M. Atatüre, Nat. Commun.,
+2016, 7, 12978.
+11 A. Branny, G. Wang, S. Kumar, C. Robert, B. Lassagne,
+X. Marie, B. D. Gerardot and B. Urbaszek, Appl. Phys. Lett.,
+2016, 108, 142101.
+12 J. Klein, M. Lorke, M. Florian, F. Sigger, J. Wierzbowski,
+J. Cerne, K. Müller, T. Taniguchi, K. Watanabe, U. Wurst-
+bauer, M. Kaniber, M. Knap, R. Schmidt, J. J. Finley and A. W.
+Holleitner, 2019.
+13 T. T. Tran, K. Bray, M. J. Ford, M. Toth and I. Aharonovich,
+Nat. Nanotechnol., 2016, 11, 37–41.
+14 T. T. Tran, D. Wang, Z.-Q. Xu, A. Yang, M. Toth, T. W. Odom
+and I. Aharonovich, Nano Lett., 2017, 17, 2634–2639.
+15 T. Vogl, K. Sripathy, A. Sharma, P. Reddy, J. Sullivan, J. R.
+Machacek, L. Zhang, F. Karouta, B. C. Buchler, M. W. Doherty,
+Y. Lu and P. K. Lam, Nat. Commun., 2019, 10, 1202.
+16 A. Dietrich, M. Bürk, E. S. Steiger, L. Antoniuk, T. T. Tran,
+M. Nguyen, I. Aharonovich, F. Jelezko and A. Kubanek, Phys.
+Rev. B, 2018, 98, 081414.
+17 M. Kianinia, B. Regan, S. A. Tawﬁk, T. T. Tran, M. J. Ford,
+I. Aharonovich and M. Toth, ACS Photonics, 2017, 4, 768–
+773.
+18 T. Vogl, G. Campbell, B. C. Buchler, Y. Lu and P. K. Lam, ACS
+Photonics, 2018, 5, 2305–2312.
+19 A. W. Schell, H. Takashima, T. T. Tran, I. Aharonovich and
+S. Takeuchi, ACS Photonics, 2017, 4, 761–767.
+20 T. Vogl, Y. Lu and P. K. Lam, J. Phys. D: Appl. Phys., 2017, 50,
+295101.
+21 N. Chejanovsky, M. Rezai, F. Paolucci, Y. Kim, T. Rendler,
+W. Rouabeh, F. Fávaro de Oliveira, P. Herlinger, A. Denisenko,
+S. Yang, I. Gerhardt, A. Finkler, J. H. Smet and J. Wrachtrup,
+Nano Lett., 2016, 16, 7037–7045.
+22 Z.-Q. Xu, C. Elbadawi, T. T. Tran, M. Kianinia, X. Li, D. Liu,
+T. B. Hoffman, M. Nguyen, S. Kim, J. H. Edgar, X. Wu, L. Song,
+S. Ali, M. Ford, M. Toth and I. Aharonovich, Nanoscale, 2018,
+10, 7957–7965.
+23 S. Choi, T. T. Tran, C. Elbadawi, C. Lobo, X. Wang, S. Juod-
+kazis, G. Seniutinas, M. Toth and I. Aharonovich, ACS Appl.
+Mater. Interfaces, 2016, 8, 29642–29648.
+24 H. Ngoc My Duong, M. A. P. Nguyen, M. Kianinia, T. Ohshima,
+H. Abe, K. Watanabe, T. Taniguchi, J. H. Edgar, I. Aharonovich
+and M. Toth, ACS Appl. Mater. Interfaces, 2018, 10, 24886–
+24891.
+25 N. V. Proscia, Z. Shotan, H. Jayakumar, P. Reddy, C. Cohen,
+M. Dollar, A. Alkauskas, M. Doherty, C. A. Meriles and V. M.
+Menon, Optica, 2018, 5, 1128–1134.
+26 S. A. Tawﬁk, S. Ali, M. Fronzi, M. Kianinia, T. T. Tran,
+C. Stampﬂ, I. Aharonovich, M. Toth and M. J. Ford, Nanoscale,
+2017, 9, 13575–13582.
+27 M. Abdi, J.-P. Chou, A. Gali and M. B. Plenio, ACS Photonics,
+2018, 5, 1967–1976.
+28 A. Sajid, J. R. Reimers and M. J. Ford, Phys. Rev. B, 2018, 97,
+064101.
+29 J. R. Reimers, A. Sajid, R. Kobayashi and M. J. Ford, J. Chem.
+Theory Comput., 2018, 14, 1602–1613.
+30 G. I. López-Morales, N. V. Proscia, G. E. López, C. A. Meriles
+and V. M. Menon, 2018.
+31 F. Hayee, L. Yu, J. L. Zhang, C. J. Ciccarino, M. Nguyen, A. F.
+Marshall, I. Aharonovich, J. Vuˇckovi´c, P. Narang, T. F. Heinz
+and J. A. Dionne, 2019.
+32 R. Bourrellier, S. Meuret, A. Tararan, O. Stéphan, M. Kociak,
+L. H. G. Tizei and A. Zobelli, Nano Lett., 2016, 16, 4317–4321.
+33 T. T. Tran, C. Elbadawi, D. Totonjian, C. J. Lobo, G. Grosso,
+H. Moon, D. R. Englund, M. J. Ford, I. Aharonovich and
+M. Toth, ACS Nano, 2016, 10, 7331–7338.
+34 Z. Shotan, H. Jayakumar, C. R. Considine, M. Mackoit, H. Fed-
+der, J. Wrachtrup, A. Alkauskas, M. W. Doherty, V. M. Menon
+and C. A. Meriles, ACS Photonics, 2016, 3, 2490–2496.
+Journal Name, [year], [vol.],1–11 | 7
+Page 7 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269E35 G. Grosso, H. Moon, B. Lienhard, S. Ali, D. K. Efetov, M. M.
+Furchi, P. Jarillo-Herrero, M. J. Ford, I. Aharonovich and
+D. Englund, Nat. Commun., 2017, 8, 705.
+36 I. H. Abidi, N. Mendelson, T. T. Tran, A. Tyagi, M. Zhuang,
+L.-T. Weng, B. Ozyilmaz, I. Aharonovich, M. Toth and Z. Luo,
+2019.
+37 M. Kianinia, C. Bradac, B. Sontheimer, F. Wang, T. T. Tran,
+M. Nguyen, S. Kim, Z.-Q. Xu, D. Jin, A. W. Schell, C. J. Lobo,
+I. Aharonovich and M. Toth, Nat. Commun., 2018, 9, 874.
+38 H. Park, G. H. Shin, K. J. Lee and S.-Y. Choi, Nanoscale, 2018,
+10, 15205–15212.
+39 R. V. Gorbachev, I. Riaz, R. R. Nair, R. Jalil, L. Britnell, B. D.
+Belle, E. W. Hill, K. S. Novoselov, K. Watanabe, T. Taniguchi,
+A. K. Geim and P. Blake, Small, 2011, 7, 465–468.
+40 J. Yang, Z. Wang, F. Wang, R. Xu, J. Tao, S. Zhang, Q. Qin,
+B. Luther-Davies, C. Jagadisch and Y. Lu, Light Sci. Appl.,
+2002, 5, e16046.
+41 L. H. Li and Y. Chen, Adv. Funct. Mater., 2016, 26, 2594–2608.
+42 J. Pei, X. Gai, J. Yang, X. Wang, Z. Yu, D.-Y. Choi, B. Luther-
+Davies and Y. Lu, Nat. Commun., 2016, 7, 10450.
+43 S. Xiao, P. Xiao, X. Zhang, D. Yan, X. Gu, F. Qin, Z. Ni, Z. J.
+Han and K. K. Ostrikov, Sci. Rep., 2016, 6, 19945.
+44 A. Beveratos, R. Brouri, T. Gacoin, J.-P. Poizat and P. Grangier,
+Phys. Rev. A, 2001, 64, 061802.
+45 X. Li, G. D. Shepard, A. Cupo, N. Camporeale, K. Shayan,
+Y. Luo, V. Meunier and S. Strauf, ACS Nano, 2017, 11, 6652–
+6660.
+46 J. F. Ziegler, M. Ziegler and J. Biersack, Nucl. Instr. Meth. Phys.
+Res. B, 2010, 268, 1818–1823.
+47 B. Huang and H. Lee, Phys. Rev. B, 2012, 86, 245406.
+48 N. L. McDougall, J. G. Partridge, R. J. Nicholls, S. P. Russo and
+D. G. McCulloch, Phys. Rev. B, 2017, 96, 144106.
+49 M. Toth and I. Aharonovich, Annu. Rev. Phys. Chem., 2019,
+70, 123–142.
+50 A. Zobelli, C. P. Ewels, A. Gloter and G. Seifert, Phys. Rev. B,
+2007, 75, 094104.
+51 S. K. Estreicher, D. J. Backlund, C. Carbogno and M. Schefﬂer,
+Angew. Chem. Int. Ed., 2011, 50, 10221–10225.
+52 T. Vogl, R. Lecamwasam, B. C. Buchler, Y. Lu and P. K. Lam,
+arXiv:1902.03019, 2019.
+53 Lumerical Solutions, Inc., https://www.lumerical.com/products/fdtd-
+solutions/.
+54 S. Smidstrup, D. Stradi, J. Wellendorff, P. A. Khomyakov, U. G.
+Vej-Hansen, M.-E. Lee, T. Ghosh, E. Jónsson, H. Jónsson and
+K. Stokbro, Phys. Rev. B, 2017, 96, 195309.
+55 Synopsys
+QuantumATK,
+version
+2016.3
+with
+the
+Virtual
+NanoLab
+front
+end,
+https://www.synopsys.com/silicon/quantumatk.html.
+56 J. P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett., 1996,
+77, 3865–3868.
+8 |
+1–11
+Journal Name, [year], [vol.],
+Page 8 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269E20 μm
+(a)
+2 min
+O2 plasma 
+9 layers
+7 layers
+OPL [nm]
+120
+96
+72
+48
+24
+0
+(b)
+3.56 nm
+2.84 nm
+2.43 nm
+1.99 nm
+1.64 nm
+1.26 nm
+0.86 nm
+0.46 nm
+(c)
+20 μm
+2 layers
+(d)
+100 W O2
+100 W
+CF4
+500 W CF4
+(e)
+Fig. 1 Layer-by-layer etching of hBN. (a) PSI image of an hBN ﬂake prior to any plasma treatment (left) and after 2min at 100W of oxygen plasma
+treatment (right). The thickness of the thin ﬂake at the top is reduced from 9 to 7 atomic layers. The white dashed lines show the direction at which the
+traces in (b) are measured. (b) Optical path length difference along the white lines in (a) measured ex-situ after each plasma etching step. The dashed
+lines denote the average. The start point of each is not equal. (c) RCWA simulation of the OPL difference for hBN on 262nm SiO2 on Si (black line).
+The points visualize how the measured OPL can be converted into physical thickness of the ﬂake. The physical thickness for each measured OPL is
+displayed in black next to the corresponding data point. (d) Microscope image (1000× magniﬁcation) of an hBN ﬂake after 7min at 100W of oxygen
+plasma treatment. The crystal consists only of two atomic layers (for clarity the bilayer is shown). The inset shows a strongly contrast-enhanced image
+of the crystal. (e) Thickness of the SiO2 layer on the Si substrate measured ex-situ after each plasma etching step. After 7min at 100W (O2), the
+thickness changed only marginally, by less than 0.22nm. After one additional minute at 100 (CF4), the thickness further decreased by 0.22nm. After
+three additional minutes at 500W (CF4) in the plasma ﬁeld maximum, the thinning was substantial with 12.49nm decrease. The error bars are shorter
+than the size of the symbols. A signiﬁcant change in the SiO2 thickness would change the OPL.
+Journal Name, [year], [vol.],1–11 | 9
+Page 9 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269E(a)
+t
+(b)
+(c)
+(d)
+(e)
+Fig. 2 Photophysics of the emitters. (a) Normalized spectra (vertically offset for clarity) of 3 sample emitters with their ZPLs at 559.78(7), 565.15(6)
+and 650.16(7)nm. Their corresponding Lorentzian linewidths are 2.24(10), 2.51(9) and 4.39(9)nm, respectively. (b) Time-resolved photoluminescence
+reveals a single-exponential decay of the excited state population with lifetimes 770(7), 549(7) and 794(13)ps for the emitters, respectively. The data
+is normalized and vertically offset for clarity. (c) The second-order correlation function dips to 0.142(37), 0.196(53) and 0.234(44) at zero time delay
+(obtained from ﬁts). There was no background correction applied. The re-emission peaks are present, but not visible on the scales displayed. The
+data is normalized such that g(2)(τ →∞) = 1 and vertically offset for clarity. (d) Histogram of the distribution of zero phonon lines from 93 defects. The
+ZPLs bunch around 560nm (group 1, blue), 590nm (group 2, green) and 640nm (group 3, red). It is believed that defects falling into neither of these
+categories (excluded area, grayed out) originates from surface contaminants. (e) Sample spectrum of such an emitter from the excluded area in (d).
+The emission of these emitters is typically comparably weak and broad.
+10 |
+1–11
+Journal Name, [year], [vol.],
+Page 10 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269EhBN
+hBN
+(e)
+(h)
+vacuum
+hBN
+(f)
+(d)
+1L
+10L
+100L
+(a)
+(c)
+(b)
+(g)
+0-50
+50-100
+100-150
+150-200
+(i)
+Fig. 3 Atomic localization of quantum emitters. (a) Probability density of locating the emitters in layer N (i.e. it disappeared after N etching steps). The
+average value is 3.8. The black points are the best ﬁt to any univariate distribution (here a Poisson distribution). The emitters have been created by
+oxygen plasma treatment. (b) Spectral evolution of one emitter as consecutive layers are removed from the top side. The emission line is relatively
+stable and suddenly fully disappears after the fourth etching step. (c) Probability density of locating the emitters in layer N (i.e. it disappeared after
+N etching steps). The emitters have been created by electron irradiation. (d) FDTD simulations of the Purcell effect of a dipole emitter close to the
+hBN-vacuum interface. The emitter lifetime or Purcell factor ε oscillates as the emitter gets moved deeper into the crystal. In the limit of d ≫λ there
+is no enhancement or suppression and the electric ﬁeld mode proﬁle in this limit is shown in (e). For the limit d ≪λ the electric ﬁeld mode proﬁle is
+shown in (f). The emission is stronger into the crystal than into the vacuum (as the crystal has a higher dielectric constant). (g-i) DFT calculations of
+the band structure routed along high-symmetry points for 1L, 10L, and 100L hBN, respectively. Due to layer-layer interactions the bands added by the
+layers spread, but no deep energy band appears, meaning that the interaction with surface states is likely low.
+Journal Name, [year], [vol.],
+1–11 | 11
+Page 11 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269EPage 12 of 12
+Nanoscale
+Nanoscale Accepted Manuscript
+Published on 17 July 2019. Downloaded by Nottingham Trent University on 7/17/2019 5:22:10 PM. 
+View Article Online
+DOI: 10.1039/C9NR04269E

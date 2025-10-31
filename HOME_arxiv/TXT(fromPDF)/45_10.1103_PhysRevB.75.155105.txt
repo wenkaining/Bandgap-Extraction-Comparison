@@ -1,0 +1,494 @@
+arXiv:cond-mat/0607406v1  [cond-mat.mtrl-sci]  17 Jul 2006
+DIPC
+Quantum Monte Carlo modelling of the spherically averaged structure factor of a
+many-electron system
+R. Gaudoin1, J. M. Pitarke1,2
+1Donostia International Physics Center (DIPC) and Unidad F´ısica Materiales CSIC-UPV/EHU,
+Manuel de Lardizabal Pasealekua, E-20018 Donostia, Basque Country, Spain
+2Materia Kondentsatuaren Fisika Saila, Zientzi Fakultatea, Euskal Herriko Unibertsitatea
+644 Posta kutxatila, E-48080 Bilbo, Basque Country, Spain
+(Dated: June 22, 2021)
+The interaction and exchange-correlation contributions to the ground-state energy of an arbitrary
+many-electron system can be obtained from a spherical average of the wavevector-dependent diagonal
+structure factor (SF). We model the continuous-k spherically averaged SF using quantum Monte
+Carlo calculations in ﬁnite simulation cells. We thus derive a method that allows to substantially
+reduce the troublesome Coulomb ﬁnite-size errors that are usually present in ground-state energy
+calculations. To demonstrate this, we perform variational Monte Carlo calculations of the interaction
+energy of the homogeneous electron gas. The method is, however, equally applicable to arbitrary
+inhomogeneous systems.
+PACS numbers: 71.15.-m,71.10.Ca,71.45.Gm
+Together with density-functional theory (DFT) [1, 2],
+Quantum Monte Carlo (QMC) calculations belong to the
+bedrock of computational solid state physics [3].
+One
+major problem, the focus of this paper, encountered in
+QMC solid-state applications are the Coulomb ﬁnite-size
+eﬀects. These originate in the periodic Ewald interaction
+that is typically used to model the electron-electron (e-e)
+Coulomb interaction in a periodic geometry [4]. When
+using the Ewald interaction, the long-range nature of the
+Coulomb interaction yields spurious contributions to the
+interaction energy caused by the interaction of an elec-
+tron with the periodically repeated copies of its exchange-
+correlation (xc) hole. Such ﬁnite-size eﬀects are usually
+dealt with by increasing the system size and monitor-
+ing the convergence of the relevant data. However, the
+Coulomb ﬁnite-size errors of the interaction energy are
+known to scale as 1/N, N being the number of electrons
+in the supercell, and convergence is therefore slow [5, 6].
+An alternative involves replacing the periodic Ewald in-
+teraction by a ”model periodic Coulomb” (MPC) inter-
+action that converges faster [7, 8].
+In this Letter, we present an approach that reduces
+ﬁnite-size errors by keeping the true Coulomb interaction
+and going to the core of the issue by using QMC to model
+the spherical average of the diagonal structure factor (SF)
+of extended systems. This is in contrast to a paper [9]
+we recently learnt of that uses the (non-spherically aver-
+aged) SF to correct QMC data at long wavelengths. Our
+starting point is the link between the interaction energy
+and the spherically averaged wavevector-dependent diag-
+onal SF Sk of an arbitrary many-electron system. Since
+large k wavevectors are related to small electron separa-
+tions, the large-k behavior of QMC simulations ought to
+be correct. This is not the case for the small-k behavior
+(long wavelengths), which in the case of a ﬁnite simula-
+tion cell yields spurious Ewald interactions. However, the
+long-range (small-k) behaviour can be obtained diﬀer-
+ently, either from the known constraint Sk→0 = 0 [10] or
+from alternative calculations based on, e.g. the random-
+phase approximation (RPA) which is known to describe
+collective excitations correctly and becomes exact at long
+wavelengths [11]. We aim to have the best of both worlds!
+The method we propose bears some resemblance to the
+MPC interaction. However, while the MPC modiﬁes the
+interaction, here we keep the standard Coulomb interac-
+tion and model the QMC correlations in a k dependent
+way. The advantage is that our method ought to yield
+improvements where others fail [12], e.g. the exchange
+hole is known to be long-ranged, decaying as 1/r4. In
+a ﬁnite simulation cell this results in a ﬁnite size error
+of the exchange energy ∝N −2/3. The error at large r,
+however, corresponds to Sk at small k where it can be
+replaced easily by the correct asymptotic value.
+The interaction energy of an arbitrary many-electron
+system is usually expressed as the sum of the Hartree
+energy (which in the case of an inﬁnite Jellium model
+is exactly cancelled by the Coulomb energy due to the
+presence of the positive background) and the so-called xc
+interaction energy Uxc. Uxc corresponds to the attractive
+interaction between each electron and its own xc hole.
+Starting from the spherical average nxc(r, u) of the xc
+hole density nxc(r, r′) at r′ around an electron at r, one
+ﬁnds [13]
+Uxc = N
+π
+Z
+dk (Sk −1),
+(1)
+where Sk is the spherical average of the diagonal struc-
+ture factor Sk,k:
+Sk = 1 + 4π
+N
+Z
+dr n(r)
+Z
+du u2 sin(ku)
+ku
+nxc(r, u),
+(2)
+n(r) being the electron density at r.
+Implicitly we are considering an inﬁnite system: k is
+a continuous variable. However, Sk for a QMC system
+contains irregularly spaced delta peaks that on integra-
+tion give the QMC Uxc. Our model (see Fig. 1) assumes2
+xc
+ρ
+ρxc
+QMC
+L
+SF
+EWALD
+REAL
+u=−u
+ρ
+ρ−
+ρ−
+u=0
+u=u
+u=L
+ 0
+ 0
+FIG. 1: An electron at u = 0 inside a box of size L is sur-
+rounded by a periodic xc-hole ρQMC
+xc
+. Uxc is the Coulomb en-
+ergy between the electron and its xc-hole ρxc. Our method ef-
+fectively replaces ρ−ρQMC
+xc
+(EWALD in the ﬁgure) by the den-
+sity ρ (SF) beyond a given cutoﬀu0. Clearly, the interaction
+between an electron and its xc hole at u = L, 2L, . . . is more
+accurate (closer to REAL) and converges much faster than in
+the standard QMC case (EWALD). Close to the boundary of
+the box ρxc and ρQMC
+xc
+diverge as both have to integrate to
+−1. Since ρxc in the SF case jumps to 0 at u0 this sum-rule
+is violated, but the resulting error can be corrected for easily
+(see text).
+that correlations are non-periodic and beyond a cutoﬀ
+radius u0 are due only to variations in the density, so
+that beyond u0 there is no contribution to Uxc. For u0,
+we choose the Wigner-Seitz radius uWS of the simulation
+cell, and the structure factor Sk can then be sampled di-
+rectly during the QMC run. We ﬁnd:
+Sk = SI
+k + SII
+k ,
+(3)
+SI
+k = 1
+N
+*X
+i̸=j
+sin k|rj −ri|
+k|rj −ri|
+Θ (u0 −|rj −ri|)
++
+QMC
+,
+(4)
+SII
+k = −3
+2
+f
+N
+X
+q
+˜g(˜k, ˜q)˜nq˜n−q,
+(5)
+˜g(˜q, ˜k) = 1
+˜k˜q
+ 
+sin(˜k −˜q)
+˜k −˜q
+−sin(˜k + ˜q)
+˜k + ˜q
+!
+,
+(6)
+using the dimensionless quantities ˜nq = V nq, ˜k = ku0,
+and ˜q = |q|u0. f = 4πu3
+0/(3V ) is the volume fraction of
+the super cell that contributes to SI
+k, V is its total vol-
+ume, and nq denotes the Fourier transform of the electron
+density n(r). Apart from n(r) the sampling of Sk only
+needs |rj −ri| which is readily available in most QMC
+codes making the SF easy to implement. SII
+k , which is
+due solely to variations in the density, cancels the Hartree
+0
+1
+2
+3
+4
+k
+0
+0.2
+0.4
+0.6
+0.8
+1
+Sk
+analytic - HF
+N=614 (corr.)
+N=614 (raw)
+N=54 (corr.)
+N=54 (raw)
+0.4
+0.6
+0.8
+1
+0.2
+0.3
+FIG. 2:
+This ﬁgure shows the raw QMC and the adjusted
+Hartree-Fock SF for the smallest and the largest system (2*27
+and 2*307 electrons respectively) as well as the exact result.
+contribution [14] to Eq. (4). Note that the k is continu-
+ous even in the case of a periodic system for which the q
+vectors are discrete. This is deliberate, as the sampling
+of a periodic QMC system models an extended (non pe-
+riodic, continuous k) system.
+Equations (4) and (5) do not include the entire xc hole
+in the QMC sampling, as f < 1. As a result, our raw
+SF diﬀers from zero at k = 0. This corresponds to the
+amount of the xc hole that is missed and which is lo-
+cated in the corners of the simulation cell beyond the
+cutoﬀradius [15]. However, due to the periodic bound-
+ary conditions the QMC description in these corners is
+unlikely to be accurate, so not much information is lost.
+Below we show that some of the residual error can be
+corrected for easily and eﬃciently.
+We performed Hartree-Fock (HF) and Variational
+Monte Carlo (VMC) calculations for the homogeneous
+electron gas, using the CASINO package [16]. The calcu-
+lations employ plane-wave Slater determinants with and
+without a Jastrow factor. The latter corresponds to HF
+calculations where the exact result is known [11]. The
+systems we studied are non-polarised in a face-centered
+cubic simulation cell with the number of electrons rang-
+ing from 2∗27 to 2∗307 at rs = 1. This corresponds to a
+Wigner-Seitz radius uWS ranging from 3.420 to 7.689 in
+atomic units, which we use throughout. The interaction
+energy is evaluated using either our SF-based approach
+or the standard Ewald interaction. The SF is sampled at
+1000 equally spaced points ranging from 0 to 10. In the
+case of VMC calculations, the Jastrow factor was con-
+verged using several iterations of variance minimisation.
+Let us ﬁrst look at a pure Slater determinant of plane
+waves. Fig. 2 plots our HF calculation of the SF next
+to the exact Hartree-Fock SF. Fig. 3 shows the conver-
+gence of Uxc to the known HF (exchange) energy. The
+Ewald data shows the familiar ﬁnite-size errors, while the3
+0
+100
+200
+300
+N/2
+-0.48
+-0.47
+-0.46
+-0.45
+Uxc
+ N 
+MC - Ewald
+SF raw
+SF corrected
+FIG. 3:
+Convergence of the potential energy with system
+size (2*27 to 2*307 electrons) using a Slater determinant only.
+The solid line is the HF result for an inﬁnite system.
+0
+1
+2
+3
+4
+5
+k
+0
+0.2
+0.4
+0.6
+0.8
+1
+Sk
+N=614 (corr.)
+N=614 (raw)
+N=54 (corr.)
+N=54 (raw)
+RPA
+0
+0.4
+0.8
+0
+0.1
+0.2
+FIG. 4:
+The ﬁgure shows the raw QMC and the adjusted
+Slater-Jastrow SF for the smallest and the largest system
+(2*27 and 2*307 electrons respectively). The RPA SF is also
+shown. It seems incorrect for k > 0.5. Hence, only for systems
+large enough such that 0.5 >∼kc would interpolation with the
+RPA SF improve Uxc.
+SF yields an interaction (exchange) energy that is essen-
+tially ﬂat, consistent with the elimination of the Coulomb
+ﬁnite-size error.
+A similar analysis can be performed with the correlated
+Slater-Jastrow many-electron wavefunction (Figs. 4 and
+5). As in the case of the HF calculation, the Ewald data
+exhibits ﬁnite-size errors, which should scale as 1/N. In
+contrast, our SF-based calculations exhibit a systematic
+error with the opposite sign.
+The Coulomb ﬁnite-size
+error has been eliminated, but we are missing a bit of
+the xc hole (located at the corners of the simulation cell),
+which yields a structure factor Sk that diﬀers from zero
+0
+100
+200
+300
+N/2
+-0.554
+-0.552
+-0.55
+-0.548
+-0.546
+-0.544
+-0.542
+-0.54
+Uxc
+ N 
+MC - Ewald
+SF raw
+SF corrected
+FIG. 5:
+Convergence of the potential energy with system
+size (2*27 to 2*307 electrons) using a Slater-Jastrow wave-
+function.
+The standard Ewald result is shown next to the
+raw and corrected SF result.
+at k = 0 resulting in an erroneous xc interaction energy.
+We now analyse the behavior of the structure factor
+Sk at small k. As the system size increases, one would
+expect the SF to improve at small k. Fig. 2 shows our
+variational HF calculation of the SF, for two systems.
+The SF is essentially correct beyond a system-size de-
+pendent minimum k0. At k < k0, the SF levels oﬀand
+at k = 0 approaches a value that equals the error in the
+xc hole. The crossover k0 obviously goes to zero as the
+system size increases. Since our xc-hole is expected to
+be accurate inside a sphere of radius u0, one expects the
+SF to be accurate beyond 2π/(2u0), 2u0 being the char-
+acteristic length scale of the simulation cell. Indeed, a
+cutoﬀk0 = π/u0 seems plausible.
+We have looked at
+the k0 values at which our HF structure factor and the
+exact one start to diverge markedly, and we have found
+k0 ∼4.2/u0. This rough estimate implies an accurate
+HF xc hole within a radius ∼3u0/4 from a given elec-
+tron. Using k0 = 4.2/u0 and letting our calculated HF
+structure factor go to 0 linearly at smaller k produces a
+new corrected estimate of Uxc shown in Fig. 3. There is
+no longer a systematic error due to the system size and
+the corrected SF exhibits ﬂuctuations that are consider-
+ably smaller than those of the uncorrected SF. Statistical
+noise and a shell structure remain, of course.
+Figs. 4-5 repeat the analysis for the correlated Slater-
+Jastrow wavefunction. Here we use the VMC SF of the
+largest system as the reference[18].
+Interestingly, the
+VMC structure factor seems to remain correct at unex-
+pectedly small values of k. We have found k0 ∼2.1/u0,
+corresponding to a correct xc hole up to a surprisingly
+large u = 1.5u0! Possibly, S0 = 0 poses such a strong
+constraint on the relatively shapeless[17] SF that the SF
+has little choice but to be accurate at ”too small” k espe-
+cially as in contrast to the HF case, the true interacting4
+SF is also quadratic for k →0 [18].
+The behavior of
+the SF around k = 0 is therefore qualitatively correct.
+Nevertheless, a correction is needed. We chose a simple
+scheme, multiplying S(k) by k/k0 when k < k0. We did
+not use the RPA for interpolation as its region of validity
+seems to begin at values of k smaller than our smallest
+k0 (see also Fig. 4). By looking at the ﬁnal convergence
+of the xc interaction energy Uxc with system size, we see
+again that the estimates for Uxc are noisy but essentially
+ﬂat, which is a signature of Coulomb ﬁnite-size errors
+having been eliminated.
+QMC being inherently statistical in nature, we close
+with a discussion of error bars. Errors of the SF at dif-
+ferent k are correlated and so the direct evaluation of
+an error for an xc interaction energy Uxc derived in the
+way described here is non-trivial. However, observe that
+in a ﬁnite system the SF-based Uxc and the usual Uxc
+coincide. Even for a inﬁnite system, as the simulation
+cell increases their values become more and more simi-
+lar as they contain similar if not identical information.
+Hence, it seems reasonable to assume that the error bars
+of the standard Uxc can be used for the SF data. We
+have evaluated both the SF-based and the standard Uxc
+for a homogeneous electron gas with 2 ∗51 electrons, for
+10 statistically independent yet identical runs averaging
+over 1000 QMC steps. The estimates for Uxc diﬀer by an
+oﬀset, due to the diﬀerent ﬁnite-size errors, nevertheless,
+the estimated standard deviations are similar: 0.00182
+using the Ewald interaction, 0.00216 using the uncor-
+rected SF, and 0.00173 using the corrected SF. These re-
+sults are consistent with an error bar of 0.0015 derived by
+blocking. The estimates for Uxc were correlated, with the
+correlation between the Ewald calculation and the un-
+corrected and corrected SF-based calculations being 0.64
+and 0.74 respectively. The two SF-based calculations had
+a correlation coeﬃcient of 0.88. Thus the error-bars for
+the standard Ewald data can be used also for the SF
+based data.
+In conclusion, we have devised a new method to eval-
+uate QMC xc interaction energies Uxc that do not suf-
+fer from spurious interactions of electrons with periodic
+copies of their xc hole.
+The method is robust[17] and
+easy to implement. Applying our method to Slater and
+Slater-Jastrow type many-body wavefunctions of a ho-
+mogeneous electron gas, we have shown how to eﬃciently
+handle and eliminate residual Coulomb ﬁnite-size errors.
+Our approach is equally applicable to arbitrary inho-
+mogeneous many-electron systems. Spherical averaging
+reduces the information contained in any QMC system
+to a smooth one-dimensional curve. Each value of S(k)
+therefore contains more information (hence less statisti-
+cal noise) than S(k, −k) and no spherical self-averaging
+need be assumed. In future, we aim to apply our method
+to the case of Jellium surfaces and real solids. In the case
+of the homogeneous electron gas that we have considered
+here, we have shown that SF-based calculations of the
+xc interaction energy can be improved considerably by
+simply letting the SF go to the correct long-wavelength
+limit at k = 0. For more complex inhomogeneous many-
+electron systems it might be advantageous, however, to
+splice together structure factors obtained from RPA at
+small k and QMC at larger k.
+J.M.P. thanks the hospitality of the TCM Group at
+the Cavendish Laboratory, where this work was initiated,
+and thanks R. J. Needs for enjoyable discussions. The
+authors acknowledge partial support by the University
+of the Basque Country, the Basque Unibertsitate eta Ik-
+erketa Saila, the MCyT, and the EC 6th framework Net-
+work of Excellence NANOQUANTA (Grant No. NMP4-
+CT-2004-500198).
+[1] W. Kohn and L. J. Sham, Phys. Rev. 140, A1133 (1965).
+[2] R. M. Dreizler and E. K. U. Gross, Density-Functional
+Theory. An Approach to the Quantum Many-Body Prob-
+lem, Springer, 1990.
+[3] W. M. C. Foulkes, L. Mitas, R. J. Needs, and G. Ra-
+jagopal, Rev. Mod. Phys. 73, 33, 2001.
+[4] Extended systems are approximated by a ﬁnite number
+of electrons in a box with periodic boundary conditions.
+[5] D. M. Ceperley, Phys. Rev. B 18, 3126 (1978).
+[6] D. M. Ceperley and B. J. Alder, Phys. Rev. B 36, 2092
+(1987).
+[7] L. M. Fraser, W. M. C. Foulkes, G. Rajagopal, R. J.
+Needs, S. D. Kenny, and A. J. Williamson, Phys. Rev. B
+53, 1814 (1996).
+[8] A. J. Williamson, G. Rajagopal, R. J. Needs, L. M.
+Fraser, W. M. C. Foulkes, Y. Wang, and M.-Y. Chou,
+Phys. Rev. B 55, R4851 (1997).
+[9] S. Chiesa, D. M. Ceperley, R. M. Martin, M. Holzmann,
+cond-mat/0605004
+[10] Sk=0 −1 = −1 is the integrated xc hole.
+[11] P. Nozieres and D. Pines, The Theory of Quantum Liq-
+uids, Addison-Wesley, 1989.
+[12] W. M. C. Foulkes, private communication.
+[13] D. Langreth and J. P. Perdew, Phys. Rev. B 15, 2884
+(1977).
+[14] For a homogeneous inﬁnite many-electron system this
+term becomes the more familiar Sk = Nδk,0.
+[15] Interestingly,
+for
+some
+Slater-Jastrow
+wavefunctions
+SF(k = 0) < 0 suggesting that too much electron density
+was expelled from the vicinity of an electron. This might
+be an artifact of the speciﬁc Jastrow function we used.
+[16] R. J. Needs, M. Towler, N. Drummond, and P. Kent,
+CASINO version 1.7 User manual (University of Cam-
+bridge, 2004).
+[17] Incidentally, due to the shapelessness of the SF accurate
+integrals can be obtained using relatively coarse grids.
+[18] The correct structure factor of a homogeneous electron
+gas goes as Sk = k2/2ωp for (k →0). ωp = (4πn)1/2 is
+the bulk-plasmon energy and n the electron density.

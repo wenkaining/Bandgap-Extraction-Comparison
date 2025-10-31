@@ -1,0 +1,164 @@
+Measuring Temperature Gradients over Nanometer Length Scales Eric A. Hoffmann,*,† Henrik A. Nilsson,‡ Jason E. Matthews,† Natthapon Nakpathomkun,† Ann I. Persson,† Lars Samuelson,‡ and Heiner Linke*,† Physics Department and Materials Science Institute, UniVersity of Oregon, Eugene, Oregon 97403-1274, and Solid State Physics/The Nanometer Structure Consortium, Lund UniVersity, Box 118, S-221 00, Lund, Sweden Received November 11, 2008 ABSTRACT When a quantum dot is subjected to a thermal gradient, the temperature of electrons entering the dot can be determined from the dot’s thermocurrent if the conductance spectrum and background temperature are known.
+We demonstrate this technique by measuring the temperature difference across a 15 nm quantum dot embedded in a nanowire.
+This technique can be used when the dot’s energy states are separated by many kT and will enable future quantitative investigations of electron-phonon interaction, nonlinear thermoelectric effects, and the efﬁciency of thermoelectric energy conversion in quantum dots.
+Quantum and ﬁnite-size effects modify the thermal properties of electronic mesoscopic devices.
+Examples of novel thermal and thermoelectric phenomena demonstrated by mesoscopic devices include the quantization of the electronic thermal conductance,1 energy-modulated thermovoltage2 in quantum point contacts (QPCs), and nonlinear phenomena, such as thermal diode behavior in quantum dots.3 Applications of mesoscopic thermal effects include the use of low-dimen- sional systems with sharp features in the electronic density of states for efﬁcient thermoelectric energy conversion.4 For example, quantum dots5,6 and nanowires7,8 are being explored for use as efﬁcient thermoelectric devices.
+A challenge when performing a low-temperature, quantita- tive, mesoscopic thermal experiment is the measurement of the temperature difference across the small device under conditions where electronic and lattice temperatures can be very different.
+In the ﬁeld of mesoscopic thermoelectrics, such thermometry is often accomplished using the thermo- voltage of a QPC to measure temperature differences within a two-dimensional electron gas.1,2,9,10 Thermal experiments using micrometer-length nanotubes and nanowires often exploit the temperature dependence of local resistors to determine the lattice temperature difference across the device.8,11-15 Recently, we proposed a novel thermometry technique,16 which uses a two-terminal quantum dot to measure separately the electron gas temperature on the source and drain sides of a quantum dot that has been placed in a temperature gradient.
+Crucially, this technique measures the temperature of precisely those electrons which enter the dot, rather than the temperature of separate electrons (or phonons) in the vicinity.
+This can be a signiﬁcant advantage, for example, in the study of thermal phenomena in quantum dots that depend on electronic temperature, such as inelastic processes or thermoelectric phenomena.
+In such experiments, the use of quantum-dot thermometry signiﬁcantly simpliﬁes device layout and fabrication, because the same quantum dot is used for both experiment and thermometry.
+An example applica- tion of this local thermometry technique is to embed a quantum dot into a nanowire in order to answer fundamental questions about the nature of electron-phonon (e-ph) interaction and its role in heat ﬂow in nanowire-based devices.
+Here we present the experimental demonstration of quantum-dot thermometry.
+Speciﬁcally, we use a quantum dot deﬁned by a double barrier within a nanowire that is placed on an electrically insulating substrate and to which metal Ohmic contacts are attached (see Figure 1a).
+During thermometry measurements, a temperature difference and bias voltage, V, are applied along the nanowire and across the quantum dot.
+A heating current, IH, heats the electron gas in the metallic source contact (sc) while the electron gas in the metallic drain contact (dc) is expected to stay at or near the background cryostat temperature, T0, creating a temperature difference over the length of the nanowire (Figure 2).
+In the following, we discuss how we measure the temperature rises, ∆Ts,d, above T0 experienced by the * Corresponding authors, ehoffma1@uoregon.edu and linke@uoregon.edu.
+† University of Oregon. ‡ Lund University.
+NANO LETTERS 2009 Vol. 9, No. 2 779-783 10.1021/nl8034042 CCC: $40.75 2009 American Chemical Society Published on Web 01/21/2009electron gas inside the nanowire near the source and drain sides of the quantum dot, respectively (see Figure 2).
+Our method makes use of the fact that, when the nanowire drain is electrically grounded, the applied temperature difference, ∆Ts - ∆Td, causes a net electron charge current, Ith, known as the thermocurrent.
+Under appropriate gate and bias conditions (see Figure 1b), Ith depends only on the temperature of the electrons entering the dot, and on the dot’s energy-dependent transmission function, τ(ε).
+Transmission information can be obtained from conductance spectroscopy; speciﬁcally, the second differential conductance, ∂2I/∂V2, provides the necessary information about the dot’s transport properties, and a mathematical comparison of Ith to ∂2I/∂V2 determines ∆Ts,d.
+The original theoretical proposal16 for this method considered the regime in which the width of the dot’s transmission resonances, Γ, is larger than the thermal energy kT and where, for a given Γ, a numerically determined integration factor is needed to determine ∆Ts,d.
+Here we report an experiment in the regime where Γ , kT.
+In this limit, ∆Ts,d can be determined directly from the ratio Ith/(∂2I/∂V2), without numerical calibration.
+To demon- strate this, we begin with the Landauer equation for the two- terminal current through a one-dimensional constriction17 I ) 2e h ∫-∞ ∞[fs(ε, V) - fd(ε, V)]τ(ε) dε (1) where fs,d-1 ) es,d + 1 are the Fermi-Dirac distributions in the source and drain, respectively.
+We assume that the bias voltage, V, drops symmetrically by V/2 across each barrier so that s,d ) (ε - µ ( eV/2)/kTs,d, where µ is controlled by the gate voltage.
+In the following, we assume that transmis- sion resonances are separated by many kT and that Γ , kT. We consider a single resonance, which is centered at energy ε0 and is so sharp that τ(ε) limits to a Dirac delta function, τ(ε) ) Aδ(ε - ε0), where A is an unknown constant.
+Inserting this expression for τ(ε) into eq 1 and integrating gives I ) A2e h [fs(ε0, V) - fd(ε0, V)] (2) In general, current through the nanowire depends on both Ts and Td.
+However, using the gate and bias voltages, one can align either the source or drain electrochemical potential with the resonance at ε0, while keeping the opposite electrochemical potential several kT from any resonance (see Figure 1b and insets of Figure 3a).
+In such a conﬁguration, only one Fermi-Dirac distribution in eq 2 is ﬁnite near ε0 and current through the dot depends on only one temperature: Ts or Td.
+Therefore, under these single-temperature bias conditions, the thermocurrent, Ith, can be written Ith|s,d ) ∆Ts,d ∂I ∂Ts,d where the subscripts denote which respective electrochemical potential, source or drain, is aligned with the resonance.
+After differentiating eq 2 with respect to Ts,d, Ith becomes Ith|s,d ) ∆Ts,dA2e h [- ∂fs,d ∂s,d s,d Ts,d] (3) This alone is not sufﬁcient to determine ∆Ts,d because A is unknown.
+However, the second differential conductance, ∂2I/∂V2, provides additional information and resolves this issue.
+Under the same single-temperature bias conditions, and again using eq 2, the second differential conductance is ∂2I ∂V2|s,d ) e2 4k2 1 Ts,d A2e h [( ∂fs,d ∂s,d 2fs,d - 1 Ts,d ] (4) The bracketed parts of eqs 3 and 4 have terms in common.
+This is the primary reason for comparing Ith to ∂2I/∂V2 rather than the (conventional) differential conductance, ∂I/∂V. In particular, we consider the ratio R ≡Ith ⁄ ∂2I ∂V2 (5) To approximate R under the single-temperature bias condi- tions, we deﬁne Rs,d as the ratio of eq 3 over eq 4 R ≈Rs,d ≡Ith ⁄ ∂2I ∂V2|s,d ) -∆Ts,d 4k2 e2 Ts,d s,d 2fs,d - 1 and A conveniently drops out.
+By expressing this ratio in Figure 1.
+(a) An SEM image of the InAs nanowire with source and drain contacts.
+The indicated InP/InAs/InP quantum dot (QD) embedded in the nanowire is not resolved by the SEM.
+The voltage, V, biases the nanowire electrically, and the heating current, IH, biases the nanowire thermally.
+The voltage probe (p) assists in tuning the heating voltages, V( (see text for details).
+(b) Differential conduc- tance as a function of bias voltage and gate energy with brighter color indicating larger differential conductance.
+The dot is in the few-electron Coulomb-blockade regime and, in the center Coulomb diamond, is ﬁlled with an odd number of electrons.
+The average charging energy of the dot is 12.9 meV.
+The (blue) horizontal lines indicate regions where the assumptions leading to eq 6 are satisﬁed and at which gate and bias values the thermometry data was taken (see Figure 4 and Figure 5). Figure 2.
+A schematic (not to scale) of the temperature proﬁle along a nanowire (nw) with an embedded quantum dot (QD), a heated metallic source contact (sc), and an unheated metallic drain contact (dc).
+In the source and drain contacts, the electron gas temperature rises by ∆Tsc and ∆Tdc above the cryostat temperature, T0, respectively.
+In the nanowire, the electron gas temperature rises by ∆Ts,d near the source and drain sides of the quantum dot, respectively (∆Tsc g ∆Ts g ∆Td g ∆Tdc).
+780 Nano Lett., Vol. 9, No. 2, 2009bias voltage and deﬁning the voltage values Vs,d0 ≡-2(ε0 - µ)/e, Rs,d can be written Rs,d ) ∆Ts,d 2k e (V - Vs,d 0) coth( e 4k V - Vs,d 0 ∆Ts,d + T0) (6) This equation is the main theoretical result of this Letter.
+Note that it is only valid when either the source or drain electrochemical potential is near a resonance of the quantum dot, but not both, and when Γ,kT. In the remainder of the paper we will discuss our experimental device and setup, present experimental data, explain how ∆Ts,d are extracted from the data, and conclude with comparison to numerical modeling.
+The experimental device (see Figure 1a) is an InAs nanowire about 55 nm in diameter and 1.2 µm long grown using chemical beam epitaxy.
+Two 5 nm InP barriers embedded during growth deﬁne an InAs quantum dot about 15 nm in length.
+After growth, the nanowire is deposited onto an n-doped Si wafer capped with a 100 nm electrically insulating SiOx layer.
+The n-doped wafer serves as a back- gate (see Figure 2), and Ni/Au electrical contacts are deﬁned at both ends of the nanowire using electron beam lithography.
+For further growth and fabrication details, see ref 18.
+Electron-electron Coulomb interaction splits degenerate quantum energy levels into single-electron energy states (the so-called Coulomb blockade).
+The classical charging energy is on average 12.9 meV (see Figure 1b), and the quantum energy spacing is as large as 40 meV.
+In all experiments, T0 < 5 K = 0.4 meV guaranteeing that the energy levels are spaced in energy by much more than the thermal energy.
+Near energy resonances (quantum energy levels split by Coulomb blockade), the transmission function of the double- barrier quantum dot is Lorentzian.19 The InP barriers provide long electron lifetimes and make each Lorentzian very sharp.
+In fact, theoretical ﬁts of differential conductance peaks that assume an inﬁnitely sharp Lorentzian (see eq 1 in ref 20) ﬁt our data very well.
+The inset of Figure 3b is such a ﬁt and Figure 3.
+(a) Modeled thermocurrent, Ith (red), and second differential conductance, ∂2I/∂V2 (blue), as a function of bias voltage calculated using eq 1 and a Lorentzian τ(ε) with Γ ) 10 µeV , kT ) 190 µeV ) 2.2 K. Near a resonant energy (see insets), both Ith and ∂2I/∂V2 have a zero-crossing, and their ratio (green) behaves according to eq 6 (dashed).
+(Insets) When biased negatively, heated electrons ﬂow through the dot, while cold electrons ﬂow when positively biased.
+(b) Experimental data of Ith (red), ∂2I/∂V2 (blue), their ratio (green), and theory eq 6 (dashed) as a function of bias voltage.
+For these data, IH ) 150 µA, ∆Ts ) 230 mK, ∆Td ) 160 mK, and T0 ) 2.2 K. (Inset) Differential conductance, G, measured at T0 ) 550 mK in units of 2e2/h × 10-3 as the resonant energy of the dot is swept via the back-gate.
+The (black) dots are experimental data, and the solid (blue) line is a theoretical ﬁt (see text for details). Figure 4.
+(a) The (green) data points are the ratio R ) Ith/(∂2I/∂V2) measured at four different heating currents, IH, as indicated and at T0 ) 2.94 K. The left data sets determine ∆Ts, and the right sets ∆Td.
+The (violet) dashed lines are eq 6 based on the mean of the histograms in (b).
+The data sets and theory have been multiplied and/or offset for clarity.
+(b) Histograms of the values of ∆Ts,d, obtained by solving eq 6, at IH ) 115 µA shown in (a).
+The dot indicates the mean of the data, and the error bars encompass 67% of the histogram data.
+Nano Lett., Vol. 9, No. 2, 2009 781uses T0 (measured with a calibrated Cernox sensor heat sunk in the same way as the device) and the capacitance ratio R ) Cg/CΣ (determined from Coulomb Blockade diamonds).
+The center of the transmission resonance is the only ﬁtting parameter.
+The ﬁts indicate that temperature smearing is the dominant peak-broadening mechanism over our experimental background temperature range.
+Therefore, in our analysis below, we assume Γ , kT0 and the validity of eq 6.
+In mesoscopic experiments, it is standard practice to use an ac heating current IH and take advantage of lock-in ampliﬁcation techniques in order to improve the signal-to- noise ratio.
+We use a lock-in ampliﬁer to measure the frequency-doubled electrical current which ﬂows in response to IH.
+This current is the differential thermocurrent, Ith, because it is the change in electrical current which ﬂows as a result of the change in the thermal gradient.
+In the experiment, the ac heating current is created by applying two heating voltages, V(, which are out of phase with each other by one-half cycle.
+The relative amplitudes of the two heating voltages are tuned so that their sum is zero at the nanowire’s source contact.
+This voltage balancing prevents V( from biasing the nanowire.
+In practice, their sum cannot be tuned to exactly zero.
+A concern is that second-order nonlinear processes create a frequency-doubled current, which appears as a phantom thermocurrent.
+However, quantitatively this nonlinear signal is 2 orders of magnitude smaller than the thermocurrent and behaves qualitatively different than the thermocurrent traces.
+Therefore, the effect of the small residual heating voltage at the nanowire is negligible.
+For the data taken at 2.94 K, IH has an rms amplitude of up to 460 µA and a frequency of 62.5 Hz.
+Concurrent with measurements of Ith, we apply an ac bias with an amplitude of 67 µV and a frequency of 40 Hz and measure ∂I/∂V using a lock-in ampliﬁer.
+∂2I/∂V2 is then calculated by taking a numerical derivative.
+Raw data of Ith and ∂2I/∂V2 as well as their ratios R ) Ith/(∂2I/∂V2) are shown in Figure 3b and Figure 4a.
+In order to extract ∆Ts and ∆Td from the raw data, each R data point is assigned a temperature rise by numerically solving eq 6 using Mathematica.
+Histograms of the numerically deter- mined ∆Ts,d data (see Figure 4b) are then used to calculate a mean ∆Ts,d as well as to deﬁne error bars, which encompass two-thirds of the data points and are not necessarily sym- metric about the mean.
+The data outside the error bars are typically systematic errors associated with the divergence of R when ∂2I/∂V2 approaches zero.
+Using the mean value from the histogram to plot eq 6 on top of the original data provides an additional conﬁrmation that the resulting curve agrees with the data.
+∆Ts,d determined from this analysis and plotted versus heating current at a constant background temperature exhibit a consistent trend and a good signal-to- error ratio (see Figure 5).
+To conﬁrm whether the results for ∆Ts and ∆Td in Figure 5 are reasonable, we performed ﬁnite element modeling.
+We used COMSOL’s Multiphysics Electromagnetics and Heat Transfer modes complemented by a custom e-ph coupling term of the form Σ(Ten - Tphn), where the coupling constant, Σ, and the exponent, n, depend on the material and the e-ph interaction mechanism.
+Distinct electron (Te) and phonon (Tph) temperatures are modeled explicitly.
+In addition to the nanowire itself, the model includes the metallic leads in their entirety, the 100 nm SiOx layer, the top 10 µm of the n-doped Si wafer, and the embedded quantum dot, whose precise position along the nanowire was found via SEM imaging.
+In the metallic leads and nanowire, we use the electrical conductivity, σ, and phonon mean free path, λ, as input parameters and calculate the electronic and phononic thermal conductivities via the Wiedemann-Franz law and Debye model, respectively.
+We ﬁrst calculate the temperature rise in the heated source contact, ∆Tsc, in the absence of a nanowire.
+For the source and drain metal leads we use σAu ) 4.05 × 107 Ω-1 m-1 (measured), λAu ) 100 nm (comparable to the smallest dimension of the Au heating wire), ΣAu ) 1.8 × 109 W m-3 K-5 (averaged value from refs 21 and 22), and nAu ) 5 (from refs 21 and 22).
+The dashed line in Figure 5 shows the predicted ∆Tsc as a function of heating current.
+The corre- sponding temperature rise in the drain contact, ∆Tdc, is found to be negligible and is not shown in the ﬁgure.
+After establishing these temperatures in the metallic source and drain contacts, we turn our attention to the nanowire temperatures.
+Assuming that the total thermal conductance of the nanowire is dominated by the large electronic thermal resistance of the quantum dot, one would expect that ∆Ts ≈ ∆Tsc and ∆Td ≈∆Tdc ≈0.
+However, this expectation is not consistent with our experimental results, which show that ∆Ts is only about half as large as the calculated ∆Tsc, and ∆Td is, in fact, on the same order as ∆Ts (see Figure 5).
+Therefore, in addition to electronic heat ﬂow, the nanowire must inﬂuence ∆Td by some other mechanism; we consider Joule heating and e-ph interaction.
+Additional modeling results show that Joule heating inside the nanowire is too small to explain the observed ∆Td.
+Instead, we hypothesize that e-ph interaction inside the nanowire allows the electron Figure 5.
+A plot of the temperature rises, ∆Tsc, ∆Ts, and ∆Td (see Figure 2) measured at T0 ) 2.94 K as a function of the heating current, IH.
+The circular data points and error bars are obtained from histograms (see Figure 4).
+The dashed line is a numerical calculation of ∆Tsc.
+(The change in drain temperature is negligible.) The solid lines are numerical calculations of ∆Ts,d, which use T0 + ∆Tsc and T0 as boundary conditions.
+See text for modeling details.
+782 Nano Lett., Vol. 9, No. 2, 2009gas to couple to phononic heat ﬂow.
+Conceptually, heated electrons inside the nanowire between the source contact and the quantum dot give thermal energy to the nanowire’s phonons via e-ph collisions, thereby decreasing ∆Ts.
+These heated phonons pass through the quantum dot much easier than electrons and carry heat along the nanowire.
+On the drain side of the dot, warm phonons couple to cool electrons, thereby increasing ∆Td.
+To perform a qualitative test of our hypothesis, we used the previously calculated electron and phonon temperatures of the metallic source and drain contacts as boundary conditions for the nanowire and calculated ∆Ts,d in the presence of e-ph coupling inside the nanowire.
+We varied the parameters σnw, λnw, Σnw, and nnw (we used integer values only) to reproduce the experimental ∆Ts and ∆Td data in Figure 5.
+The parameters σnw ) 8.7 × 103 Ω-1 m-1, λnw ) 100 nm (comparable to the nanowire diameter), Σnw ) 8.4 × 1010 W m3- K-1, and nnw ) 1 provide a good approxima- tion of the dependence of ∆Ts and ∆Td on IH.
+Our σnw is comparable to values found in ref 23 and, for a 2 × 1017 cm-3 carrier concentration, Σnw ) 2.6 × 106 eV s-1 K-1 carrier-1, which is within 2 orders of magnitude of the value reported for a trench-type quantum wire etched in a 2DEG.24 We conclude that our measured values of ∆Ts and ∆Td are consistent with a model where e-ph coupling allows signiﬁcant heat ﬂow past the quantum dot into the electron gas on the nanowire’s drain side.
+We caution that Σnw and nnw are codependent ﬁt parameters and that other combina- tions of the two might also ﬁt our data.
+In conclusion, we have developed and demonstrated the use of a quantum dot with very narrow transmission resonances for local thermometry of the electrons entering the quantum dot.
+We have measured temperature differences as large as 0.74 K across a 15 nm quantum dot at 2.94 K. Strictly speaking, the concept of an electron temperature is only meaningful when the electrons establish a thermal distribution.
+The good agreement of our data with theory (Figure 3b and Figure 4)) suggests that in our experiment the assumption of Fermi-Dirac distributions is resonable and that any nonequilibrium effects are relatively small.
+It is important to note that the length scale of electron thermal- ization puts an upper bound on the spatial precision to which these measured temperatures can be assigned.
+Our thermom- etry results agree with a ﬁnite element model that includes e-ph coupling as a pathway for heat ﬂow in nanowires.
+This insight might be important for thermal managment in nanowire-based applications, such as high-speed transistors, LEDs, and thermoelectric devices.
+Because of the practical challenges involved, few experiments have quantiﬁed e-ph interaction in mesoscopic systems.24 As demonstrated here, quantum-dot thermometry could be put to use testing quantitative predictions of the strength and temperature dependence of e-ph coupling in nanowires. Acknowledgment.
+This research was supported by ONR, ONR Global, the Swedish Research Council (VR), the Foundation for Strategic Research (SSF), the Knut and Alice Wallenberg Foundation, and an NSF-IGERT Fellowship.
+References (1) Molenkamp, L. W.; Gravier, T.; van Houten, H.; Buijk, O. J. A.; Mabesoone, M. A. A.; Foxon, C. T. Phys. ReV.
+Lett. 1992, 68, 3765– 3768.
+(2) Molenkamp, L. W.; Staring, A. A. M.; Alphenaar, B. W.; van Houten, H.; Beenakker, C. W. J. Semicond.
+Sci. Technol. 1994, 9, 903–906.
+(3) Scheibner, R.; Ko¨nig, M.; Reuter, D.; Wieck, A. D.; Gould, C.; Buhmann, H.; Molenkamp, L. W. New J. Phys. 2008, 10, 8. (4) Mahan, G. D.; Sofo, J. O. Proc. Natl. Acad. Sci.
+U.S.A. 1996, 93, 7436–7439.
+(5) Humphrey, T. E.; Newbury, R.; Taylor, R. P.; Linke, H. Phys. ReV.
+Lett. 2002, 89, 116801.
+(6) O’Dwyer, M. F.; Humphrey, T. E.; Linke, H. Nanotechnology 2006, 17, S338–S343.
+(7) Hicks, L. D.; Dresselhaus, M. S. Phys.
+ReV. B 1993, 47, 16631–16634.
+(8) Boukai, A. I.; Bunimovich, Y.; Tahir-Kheli, J.; Yu, J. K.; Goddard, W. A.; Heath, J. R. Nature 2008, 451, 168–171.
+(9) Scheibner, R.; Novik, E. G.; Borzenko, T.; Ko¨nig, M.; Reuter, D.; Wieck, A. D.; Buhmann, H.; Molenkamp, L. W. Phys.
+ReV. B 2007, 75, 041301.
+(10) Nicholls, J. T.; Chiatti, O. J. Phys.: Condens.
+Matter 2008, 20, 164210.
+(11) Hone, J.; Ellwood, I.; Muno, M.; Mizel, A.; Cohen, M. L.; Zettl, A.; Rinzler, A. G.; Smalley, R. E. Phys. ReV. Lett.
+1998, 80, 1042–1045.
+(12) Small, J. P.; Perez, K. M.; Kim, P. Phys. ReV. Lett. 2003, 91, 256801.
+(13) Shi, L.; Li, D. Y.; Yu, C. H.; Jang, W. Y.; Kim, D.; Yao, Z.; Kim, P.; Majumdar, A. J. Heat Trans. 2003, 125, 881–888.
+(14) Llaguno, M. C.; Fischer, J. E.; Johnson, A. T.; Hone, J. Nano Lett. 2004, 4, 45–49.
+(15) Seol, J. H.; Moore, A. L.; Saha, S. K.; Zhou, F.; Shi, L.; Ye, Q. L.; Schefﬂer, R.; Mingo, N.; Yamada, T. J. Appl.
+Phys. 2007, 101, 023706.
+(16) Hoffmann, E. A.; Nakpathomkun, N.; Persson, A. I.; Linke, H.; Nilsson, H. A.; Samuelson, L. Appl. Phys. Lett. 2007, 91, 252114.
+(17) Datta, S. Electronic Transport in Mesoscopic Systems; Cambridge University Press: Cambridge, 1995.
+(18) Thelander, C.; Bjo¨rk, M. T.; Larsson, M. W.; Hansen, A. E.; Wallenberg, L. R.; Samuelson, L. Solid State Commun. 2004, 131, 573–579.
+(19) Ferry, D. K.; Goodnick, S. K. Transport in Nanostructures; Cambridge University Press: Cambridge, 1997; eq 3.68.
+(20) Foxman, E. B.; McEuen, P. L.; Meirav, U.; Wingreen, N. S.; Meir, Y.; Belk, P. A.; Belk, N. R.; Kastner, M. A.; Wind, S. J. Phys.
+ReV. B 1993, 47, 10020–10023.
+(21) Henny, M.; Birk, H.; Huber, R.; Strunk, C.; Bachtold, A.; Kru¨ger, M.; Scho¨nenberger, C. Appl. Phys. Lett. 1997, 71, 773–775.
+(22) Giazotto, F.; Heikkila¨, T. T.; Luukanen, A.; Savin, A. M.; Pekola, J. P. ReV. Mod.
+Phys. 2006, 78, 217–274. (23) Hansen, A. E.; Bjo¨rk, M. T.; Fasth, C.; Thelander, C.; Samuelson, L. Phys. ReV. B 2005, 71, 5.
+(24) Sugaya, T.; Bird, J. P.; Ferry, D. K.; Sergeev, A.; Mitin, V.; Jang, K. Y.; Ogura, M.; Sugiyama, Y. Appl. Phys.
+Lett. 2002, 81, 727–729. NL8034042 Nano Lett., Vol. 9, No. 2, 2009 783
